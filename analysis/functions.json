@@ -56,6 +56,84 @@
       "eligible": false,
       "exclusion": "Inferred generated native registration thunk with an opaque on-disk body",
       "symbol": "GetItemLevelRecyclingWarningThreshold"
+    },
+    {
+      "start_rva": 47900496,
+      "end_rva": 47900538,
+      "file_offset": 47897936,
+      "original_sha256": "6f0d5cb9af142cc472884c129246917dbb2d7287e3cbe3b18e8eb30bdf70932b",
+      "eligible": false,
+      "exclusion": "Compiler-generated structured exception handling funclet",
+      "symbol": "Delay-load exception filter (descriptive alias)",
+      "confidence": "high-confidence inferred",
+      "source": "FortniteGameCode/DelayLoadFilterProbe.cpp",
+      "boundary_method": "amd64-coff-funclet",
+      "candidate_symbol": "WideDelayLoadFilterProbe$filt$0",
+      "seh_scopes": [
+        {
+          "parent_rva": 23148784,
+          "parent_unwind_rva": 67174060,
+          "scope_record_rva": 67174088
+        }
+      ],
+      "status": "partial",
+      "verification": {
+        "start_rva": 47900496,
+        "end_rva": 47900538,
+        "file_offset": 47897936,
+        "original_unwind_rva": 66849944,
+        "candidate_symbol": "WideDelayLoadFilterProbe$filt$0",
+        "reference_image_sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102",
+        "candidate_object_sha256": "8cdfb217d0cf925717165e697fc45074c5f6125a8b5b9e1d28f2136afd57a0df",
+        "method": "raw-pe-to-coff-funclet-bytes",
+        "original_size": 42,
+        "candidate_size": 42,
+        "original_sha256": "6f0d5cb9af142cc472884c129246917dbb2d7287e3cbe3b18e8eb30bdf70932b",
+        "candidate_sha256": "6598aa544e6657aa339e2eb79553cda92b6b0ebaa8286f7d323eaeb3be6ae4a8",
+        "status": "partial",
+        "first_difference_offset": 12
+      }
+    },
+    {
+      "start_rva": 47900544,
+      "end_rva": 47900586,
+      "file_offset": 47897984,
+      "original_sha256": "de533b234b4d5ebf1d969d2008ddd1770ca08471b7c9b0a11403f53cdbc76152",
+      "eligible": false,
+      "exclusion": "Compiler-generated structured exception handling funclet",
+      "symbol": "Delay-load exception filter (descriptive alias)",
+      "confidence": "high-confidence inferred",
+      "source": "FortniteGameCode/DelayLoadFilterProbe.cpp",
+      "boundary_method": "amd64-coff-funclet",
+      "candidate_symbol": "DelayLoadFilterProbe$filt$0",
+      "seh_scopes": [
+        {
+          "parent_rva": 23148752,
+          "parent_unwind_rva": 67174028,
+          "scope_record_rva": 67174044
+        },
+        {
+          "parent_rva": 23461552,
+          "parent_unwind_rva": 67191424,
+          "scope_record_rva": 67191440
+        }
+      ],
+      "status": "exact",
+      "verification": {
+        "start_rva": 47900544,
+        "end_rva": 47900586,
+        "file_offset": 47897984,
+        "original_unwind_rva": 68358632,
+        "candidate_symbol": "DelayLoadFilterProbe$filt$0",
+        "reference_image_sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102",
+        "candidate_object_sha256": "8cdfb217d0cf925717165e697fc45074c5f6125a8b5b9e1d28f2136afd57a0df",
+        "method": "raw-pe-to-coff-funclet-bytes",
+        "original_size": 42,
+        "candidate_size": 42,
+        "original_sha256": "de533b234b4d5ebf1d969d2008ddd1770ca08471b7c9b0a11403f53cdbc76152",
+        "candidate_sha256": "de533b234b4d5ebf1d969d2008ddd1770ca08471b7c9b0a11403f53cdbc76152",
+        "status": "exact"
+      }
     }
   ]
 }

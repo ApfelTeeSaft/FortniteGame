@@ -51,8 +51,12 @@ def instruction_at(decoder, data, rva, offset):
 
 
 def validate_runtime_body(decoder, data, start):
-    instructions = list(decoder.disasm(data, start))
-    end = start + len(data)
+    # MSVC can include an INT3 after a funclet return in the .pdata extent.
+    # Exclude trailing traps from control-flow validation only. The matcher
+    # still compares every byte in the original and candidate ranges.
+    body = data.rstrip(b"\xcc")
+    instructions = list(decoder.disasm(body, start))
+    end = start + len(body)
     if (
         not instructions or instructions[-1].address + instructions[-1].size != end
         or instructions[-1].mnemonic != "ret" or instructions[-1].op_str
@@ -87,10 +91,14 @@ def compare_function(original, candidate, record, exports, decoder, unwind_table
     evidence = {}
     if boundary == "pe-runtime-function":
         original_entries, candidate_entries = unwind_tables
-        verified_end, original_unwind = checked_runtime_range(original, original_entries, start)
+        verified_end, original_unwind = checked_runtime_range(
+            original, original_entries, start, decoder
+        )
         if verified_end != end:
             raise ValueError(f"Original runtime-function does not end at recorded RVA {end:#x}")
-        candidate_end, candidate_unwind = checked_runtime_range(candidate, candidate_entries, rva)
+        candidate_end, candidate_unwind = checked_runtime_range(
+            candidate, candidate_entries, rva, decoder
+        )
         size = candidate_end - rva
         _, actual = code_at(candidate, rva, size)
         validate_runtime_body(decoder, expected, start)
@@ -105,24 +113,30 @@ def compare_function(original, candidate, record, exports, decoder, unwind_table
         method = "raw-pe-leaf-bytes"
     else:
         raise ValueError(f"Unrecognized boundary method {boundary!r}")
-    prefix = next(
-        (i for i, pair in enumerate(zip(expected, actual)) if pair[0] != pair[1]),
-        min(len(expected), len(actual)),
-    )
-    equal = expected == actual
     result = {
         "start_rva": start,
         "end_rva": end,
         "file_offset": offset,
         "candidate_export": symbol,
         "candidate_rva": rva,
-        "original_size": len(expected),
-        "candidate_size": size,
         "method": method,
+        **evidence,
+    }
+    return {**result, **byte_comparison(decoder, expected, actual, start, rva)}
+
+
+def byte_comparison(decoder, expected, actual, start, candidate_start):
+    prefix = next(
+        (i for i, pair in enumerate(zip(expected, actual)) if pair[0] != pair[1]),
+        min(len(expected), len(actual)),
+    )
+    equal = expected == actual
+    result = {
+        "original_size": len(expected),
+        "candidate_size": len(actual),
         "original_sha256": digest(expected),
         "candidate_sha256": digest(actual),
         "status": "exact" if equal else "partial" if prefix else "unmatched",
-        **evidence,
     }
     if not equal:
         result["first_difference"] = {
@@ -130,7 +144,7 @@ def compare_function(original, candidate, record, exports, decoder, unwind_table
             "expected_bytes": expected[prefix:prefix + 12].hex(),
             "actual_bytes": actual[prefix:prefix + 12].hex(),
             "expected_instruction": instruction_at(decoder, expected, start, prefix),
-            "actual_instruction": instruction_at(decoder, actual, rva, prefix),
+            "actual_instruction": instruction_at(decoder, actual, candidate_start, prefix),
         }
     return result
 

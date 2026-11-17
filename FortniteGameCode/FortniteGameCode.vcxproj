@@ -37,6 +37,7 @@
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
+      <AdditionalDependencies>vcruntime.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <NoEntryPoint>true</NoEntryPoint>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>false</EnableCOMDATFolding>
@@ -45,6 +46,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DelayLoadFilterProbe.cpp" />
     <ClCompile Include="Probe.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

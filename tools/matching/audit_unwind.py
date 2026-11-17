@@ -9,7 +9,9 @@ from capstone import Cs, CS_ARCH_X86, CS_MODE_64
 
 from tools.matching.compare import validate_runtime_body
 from tools.matching.pe import REFERENCE, code_at, file_hash, open_image
-from tools.matching.unwind import checked_runtime_range, runtime_entries, small_stack_prologue
+from tools.matching.unwind import (
+    checked_runtime_range, prologue_matches, read_prologue, runtime_entries,
+)
 
 
 def ida_ranges(path, reference_hash):
@@ -34,24 +36,24 @@ def audit(reference, ida_inventory=None):
     with open_image(reference) as image:
         entries = runtime_entries(image)
         for entry in entries:
-            prologue = small_stack_prologue(image, entry)
+            prologue = read_prologue(image, entry)
             if prologue is None:
                 continue
             counters["supported_unwind"] += 1
             start, end, unwind = entry
             try:
-                _, prefix = code_at(image, start, len(prologue))
+                _, prefix = code_at(image, start, prologue.size)
             except ValueError:
                 continue
             counters["file_backed_prologue"] += 1
-            if prefix != prologue:
+            if not prologue_matches(decoder, prefix, prologue):
                 continue
             counters["matching_prologue"] += 1
             row = {"start_rva": start, "end_rva": end, "unwind_rva": unwind}
             if ida_inventory is not None:
                 row["ida_chunks"] = ranges.get(start)
             try:
-                checked_runtime_range(image, entries, start)
+                checked_runtime_range(image, entries, start, decoder)
                 _, body = code_at(image, start, end - start)
                 validate_runtime_body(decoder, body, start)
             except ValueError as error:
@@ -62,7 +64,7 @@ def audit(reference, ida_inventory=None):
     return {
         "schema_version": 1,
         "reference_sha256": reference_hash,
-        "method": "version-1 single UWOP_ALLOC_SMALL",
+        "method": "version-1 flagless integer prologue",
         "runtime_slots": len(entries),
         **counters,
         "matching_ranges": matches,

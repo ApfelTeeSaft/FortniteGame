@@ -12,6 +12,8 @@ from tools.progress.generate import counts
 
 
 def test_probe(probe, alternate_toolchain, symbol, boundary):
+    decoder = Cs(CS_ARCH_X86, CS_MODE_64)
+    decoder.detail = True
     with open_image(probe) as image:
         image.parse_data_directories(directories=[0])
         start = next(
@@ -19,11 +21,9 @@ def test_probe(probe, alternate_toolchain, symbol, boundary):
             if entry.name == symbol.encode("ascii")
         )
         if boundary == "pe-runtime-function":
-            end, _ = checked_runtime_range(image, runtime_entries(image), start)
+            end, _ = checked_runtime_range(image, runtime_entries(image), start, decoder)
             size = end - start
         else:
-            decoder = Cs(CS_ARCH_X86, CS_MODE_64)
-            decoder.detail = True
             size = leaf_size(image, start, decoder)
         _, data = code_at(image, start, size)
 
@@ -79,6 +79,7 @@ def main():
     args = parser.parse_args()
     test_probe(args.probe, args.alternate_toolchain, "ProbeScale", "leaf")
     test_probe(args.probe, args.alternate_toolchain, "ProbeBranch", "pe-runtime-function")
+    test_probe(args.probe, args.alternate_toolchain, "ProbeFrame", "pe-runtime-function")
 
 
 if __name__ == "__main__":

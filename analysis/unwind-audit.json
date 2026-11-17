@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "reference_sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102",
-  "method": "version-1 single UWOP_ALLOC_SMALL",
+  "method": "version-1 flagless integer prologue",
   "runtime_slots": 253131,
-  "supported_unwind": 47239,
-  "file_backed_prologue": 47239,
-  "matching_prologue": 1,
-  "accepted_body": 0,
+  "supported_unwind": 138213,
+  "file_backed_prologue": 138213,
+  "matching_prologue": 3,
+  "accepted_body": 2,
   "matching_ranges": [
     {
       "start_rva": 47814348,
@@ -19,6 +19,28 @@
         ]
       ],
       "rejection": "Runtime-function range at RVA 0x2d996cc has no complete decoded body"
+    },
+    {
+      "start_rva": 47900496,
+      "end_rva": 47900538,
+      "unwind_rva": 66849944,
+      "ida_chunks": [
+        [
+          47900496,
+          47900538
+        ]
+      ]
+    },
+    {
+      "start_rva": 47900544,
+      "end_rva": 47900586,
+      "unwind_rva": 68358632,
+      "ida_chunks": [
+        [
+          47900544,
+          47900586
+        ]
+      ]
     }
   ]
 }

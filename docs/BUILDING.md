@@ -34,8 +34,20 @@ py -m tools.matching.fingerprint
 py -m tools.matching.verify_symbols
 py -m tools.matching.audit_unwind --ida-inventory local-output/ida-functions.jsonl
 py -m tools.matching.compare local-output/x64/ClientShipping/FortniteGameCode.dll
+py -m tools.matching.compare_funclets local-output/x64/ClientShipping/obj/DelayLoadFilterProbe.obj --verify
+py -m tools.matching.compare_funclets local-output/v140/DelayLoadFilterProbe.obj --verify
 ```
 
 The unwind audit accepts the full local IDA inventory to corroborate a matching range. Omit `--ida-inventory` to run the PE checks independently.
 
-The comparison report tracks the candidate image SHA-256 separately from individual raw-byte results. The current report has an empty function list and `whole_file_exact: false`. For both a leaf and a branching synthetic function, the test verifies exact equality, a byte mismatch, and rejection of a shortened original extent. The synthetic functions are excluded from the Fortnite manifest.
+The PE comparison reports `whole_file_exact: false` and has no matched
+functions in the linked comparison DLL. The two shipping-image funclet
+comparisons use the generated object files. `--verify` checks the recorded
+statuses and range hashes independently of changes to the object file's
+build metadata.
+
+The synthetic self-test verifies exact equality, a byte mismatch, and rejection
+of a shortened original extent for a leaf, a branching function, and a
+function with a large stack allocation and saved registers. The large-frame
+test disables security-cookie generation only for its two synthetic functions
+so it can exercise flagless unwind records in the standalone DLL.

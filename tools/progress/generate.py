@@ -17,6 +17,7 @@ SHA256 = re.compile(r"[0-9a-f]{64}")
 RAW_METHODS = {
     "leaf": "raw-pe-leaf-bytes",
     "pe-runtime-function": "raw-pe-runtime-function-bytes",
+    "amd64-coff-funclet": "raw-pe-to-coff-funclet-bytes",
 }
 
 
@@ -39,21 +40,27 @@ def counts(manifest):
         if status == "exact":
             verification = record["verification"]
             original = record["original_sha256"]
+            boundary = record.get("boundary_method", "leaf")
+            candidate_key, artifact_hash = (
+                ("candidate_symbol", "candidate_object_sha256")
+                if boundary == "amd64-coff-funclet"
+                else ("candidate_export", "candidate_image_sha256")
+            )
             required = {
                 "start_rva": start,
                 "end_rva": end,
                 "original_size": end - start,
                 "candidate_size": end - start,
-                "candidate_export": record["candidate_export"],
+                candidate_key: record[candidate_key],
                 "original_sha256": original,
                 "candidate_sha256": original,
                 "reference_image_sha256": reference,
-                "method": RAW_METHODS[record.get("boundary_method", "leaf")],
+                "method": RAW_METHODS[boundary],
                 "status": "exact",
             }
             if (
                 not SHA256.fullmatch(original)
-                or not SHA256.fullmatch(verification.get("candidate_image_sha256", ""))
+                or not SHA256.fullmatch(verification.get(artifact_hash, ""))
                 or not record.get("source")
                 or any(verification.get(key) != value for key, value in required.items())
             ):

@@ -14,4 +14,9 @@ $dll = Join-Path $out 'Probe.dll'
 & $compiler /nologo /c /O2 /Ob2 /Gy /MD /GS /fp:precise /EHsc "/Fo$object" $source
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 & $linker /nologo /DLL /NOENTRY /NODEFAULTLIB /INCREMENTAL:NO /OPT:REF /OPT:NOICF /MACHINE:X64 "/OUT:$dll" $object
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+$filter = Join-Path $root 'FortniteGameCode/DelayLoadFilterProbe.cpp'
+$filterObject = Join-Path $out 'DelayLoadFilterProbe.obj'
+& $compiler /nologo /c /O2 /Ob2 /Gy /MD /GS /fp:precise /EHsc "/Fo$filterObject" $filter
 exit $LASTEXITCODE

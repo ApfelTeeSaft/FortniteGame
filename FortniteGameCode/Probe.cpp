@@ -28,3 +28,24 @@ unsigned int ProbeBranchVariant(unsigned int value)
     }
     return ProbeScaleVariant(value) + 5u;
 }
+
+// These synthetic probes need flagless unwind records and no CRT dependencies.
+extern "C" __declspec(dllexport) __declspec(noinline) __declspec(safebuffers)
+unsigned int ProbeFrame(unsigned int value, void* pointer)
+{
+    void* volatile slots[32];
+    const unsigned int index = value & 31u;
+    slots[index] = pointer;
+    const unsigned int scaled = ProbeScale(value);
+    return scaled + value + (slots[index] != nullptr ? 7u : 0u);
+}
+
+extern "C" __declspec(dllexport) __declspec(noinline) __declspec(safebuffers)
+unsigned int ProbeFrameVariant(unsigned int value, void* pointer)
+{
+    void* volatile slots[32];
+    const unsigned int index = value & 31u;
+    slots[index] = pointer;
+    const unsigned int scaled = ProbeScale(value);
+    return scaled + value + (slots[index] != nullptr ? 8u : 0u);
+}

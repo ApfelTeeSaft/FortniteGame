@@ -12,12 +12,31 @@ The PE linker version is `14.0`. The Rich header contains several build numbers,
 
 Reflected strings include `/Script/FortniteGame`, `/Script/FortniteUI`, `/Script/Engine`, and `/Script/CoreUObject`. They identify logical packages inside the image. Native code boundaries for those packages remain unresolved. The RTTI counts measure marker hits and may include embedded strings outside RTTI descriptors.
 
-The [unwind audit](../analysis/unwind-audit.json) examined 47,239 file-backed
-runtime-function prologues with one version-1 `UWOP_ALLOC_SMALL` record.
-Only the PE entry point at `0x2D996CC` has the stack allocation described by
-its unwind record. IDA and the PE agree on its range, but it contains no
-complete decoded body ending in a near return. The audit covers this single
-unwind form. [Microsoft x64 exception handling](https://learn.microsoft.com/en-us/cpp/build/exception-handling-x64)
+The [unwind audit](../analysis/unwind-audit.json) examined 138,213 file-backed
+prologues with supported flagless version-1 integer unwind operations. This
+covers small and large stack allocations, nonvolatile integer register saves,
+and frame-pointer setup. Three prologues agree with their unwind records. The
+entry point at `0x02D996CC` lacks a complete body. The other two are SEH
+filters with complete bodies and one trailing trap each. [Microsoft x64 exception handling](https://learn.microsoft.com/en-us/cpp/build/exception-handling-x64)
+
+## Recovered compiler-generated filters
+
+The filters at `0x02DAE750` and `0x02DAE780` accept MSVC delay-load
+exception codes `0xC06D007E` and `0xC06D007F`. The saved IDA database
+corroborates the instruction boundaries. Three PE scope records point to the
+two RVAs and verify that they are exception filter targets. The local UE
+Windows D3D11 and D3D12 device sources both use an `IsDelayLoadException`
+predicate with these codes. The exact enclosing C++ function names remain
+inferred because their bodies are opaque.
+
+The C++ probe uses synthetic parent functions and lets MSVC generate the
+filters. The verifier finds the named COFF symbols, checks their independent
+runtime-function boundaries through the object's `.pdata` relocations, and
+reads the complete relocation-free code ranges. The small filter matches all
+42 bytes on both toolchains. The wider filter differs at offset `0x0C` in
+its exception-pointer spill displacement. The build covers a standalone
+layout reproduction and records both entries outside the progress denominator.
+[Function manifest](../analysis/functions.json)
 
 ## Local IDA export
 
@@ -61,11 +80,13 @@ The matcher resolves the candidate from a direct PE export. Its default
 `leaf` boundary method decodes a straight-line body through `ret` on both
 sides. For functions with internal branches, use
 `"boundary_method": "pe-runtime-function"`. This method requires a unique,
-non-overlapping runtime-function range in each image, a version-1 single
-`UWOP_ALLOC_SMALL` prologue matching the code, and a range that decodes
-through its final near return. Internal branch targets must land on decoded
-instruction boundaries. Chained unwind entries, handlers, indirect jumps,
-and branches leaving the range are outside this method's current scope.
+non-overlapping runtime-function range in each image, a supported version-1
+unwind prologue matching the code, and a body that decodes through its final
+near return. Internal branch targets must land on decoded instruction
+boundaries. The raw comparison includes any trailing `INT3` bytes covered
+by the runtime-function record. Chained unwind entries, handlers in the
+compared body, SIMD register saves, indirect jumps, and branches leaving the
+range are outside this method's current scope.
 
 Both methods check executable file backing and the original range hash before
 comparing the raw code bytes. Call displacements are compared as stored.
