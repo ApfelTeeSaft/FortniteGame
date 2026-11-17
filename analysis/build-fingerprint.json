@@ -1,0 +1,511 @@
+{
+  "schema_version": 1,
+  "reference_name": "FortniteClient-Win64-Shipping.exe",
+  "reference_sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102",
+  "size": 82298304,
+  "coff_timestamp_utc": "2018-02-14T18:25:22+00:00",
+  "machine": "0x8664",
+  "image_base": 5368709120,
+  "entry_rva": 47814348,
+  "subsystem": 2,
+  "linker_version": [
+    14,
+    0
+  ],
+  "rich_records": [
+    {
+      "product_id": 207,
+      "build": 65501,
+      "count": 2
+    },
+    {
+      "product_id": 199,
+      "build": 41118,
+      "count": 9
+    },
+    {
+      "product_id": 259,
+      "build": 24123,
+      "count": 7
+    },
+    {
+      "product_id": 260,
+      "build": 24123,
+      "count": 14
+    },
+    {
+      "product_id": 257,
+      "build": 24123,
+      "count": 4
+    },
+    {
+      "product_id": 147,
+      "build": 30729,
+      "count": 26
+    },
+    {
+      "product_id": 206,
+      "build": 61030,
+      "count": 133
+    },
+    {
+      "product_id": 257,
+      "build": 24610,
+      "count": 4
+    },
+    {
+      "product_id": 132,
+      "build": 30729,
+      "count": 1
+    },
+    {
+      "product_id": 131,
+      "build": 30729,
+      "count": 1
+    },
+    {
+      "product_id": 173,
+      "build": 30319,
+      "count": 4
+    },
+    {
+      "product_id": 156,
+      "build": 21202,
+      "count": 2
+    },
+    {
+      "product_id": 123,
+      "build": 50727,
+      "count": 2
+    },
+    {
+      "product_id": 239,
+      "build": 40116,
+      "count": 2
+    },
+    {
+      "product_id": 260,
+      "build": 22816,
+      "count": 24
+    },
+    {
+      "product_id": 156,
+      "build": 30319,
+      "count": 6
+    },
+    {
+      "product_id": 261,
+      "build": 22609,
+      "count": 264
+    },
+    {
+      "product_id": 260,
+      "build": 22609,
+      "count": 61
+    },
+    {
+      "product_id": 224,
+      "build": 31101,
+      "count": 1
+    },
+    {
+      "product_id": 261,
+      "build": 23026,
+      "count": 62
+    },
+    {
+      "product_id": 260,
+      "build": 23918,
+      "count": 71
+    },
+    {
+      "product_id": 261,
+      "build": 23506,
+      "count": 37
+    },
+    {
+      "product_id": 225,
+      "build": 31101,
+      "count": 2
+    },
+    {
+      "product_id": 0,
+      "build": 0,
+      "count": 26
+    },
+    {
+      "product_id": 260,
+      "build": 23026,
+      "count": 428
+    },
+    {
+      "product_id": 206,
+      "build": 65501,
+      "count": 10
+    },
+    {
+      "product_id": 208,
+      "build": 65501,
+      "count": 2
+    },
+    {
+      "product_id": 203,
+      "build": 65501,
+      "count": 47
+    },
+    {
+      "product_id": 1,
+      "build": 0,
+      "count": 1352
+    },
+    {
+      "product_id": 261,
+      "build": 24123,
+      "count": 30
+    },
+    {
+      "product_id": 260,
+      "build": 24215,
+      "count": 118
+    },
+    {
+      "product_id": 261,
+      "build": 24215,
+      "count": 697
+    },
+    {
+      "product_id": 256,
+      "build": 24215,
+      "count": 1
+    },
+    {
+      "product_id": 255,
+      "build": 24210,
+      "count": 1
+    },
+    {
+      "product_id": 258,
+      "build": 24215,
+      "count": 1
+    }
+  ],
+  "sections": [
+    {
+      "name": ".text",
+      "rva": 4096,
+      "virtual_size": 48393216,
+      "file_offset": 1536,
+      "file_size": 48393216,
+      "characteristics": "0x60000020",
+      "entropy": 7.988
+    },
+    {
+      "name": ".rdata",
+      "rva": 48398336,
+      "virtual_size": 20234240,
+      "file_offset": 48394752,
+      "file_size": 20234240,
+      "characteristics": "0x40000040",
+      "entropy": 5.365
+    },
+    {
+      "name": ".data",
+      "rva": 68632576,
+      "virtual_size": 8008032,
+      "file_offset": 68628992,
+      "file_size": 4981760,
+      "characteristics": "0xc0000040",
+      "entropy": 2.663
+    },
+    {
+      "name": ".pdata",
+      "rva": 76644352,
+      "virtual_size": 3037696,
+      "file_offset": 73610752,
+      "file_size": 3037696,
+      "characteristics": "0x40000040",
+      "entropy": 7.108
+    },
+    {
+      "name": ".tls",
+      "rva": 79683584,
+      "virtual_size": 512,
+      "file_offset": 76648448,
+      "file_size": 512,
+      "characteristics": "0xc0000040",
+      "entropy": 7.334
+    },
+    {
+      "name": ".gfids",
+      "rva": 79687680,
+      "virtual_size": 512,
+      "file_offset": 76648960,
+      "file_size": 512,
+      "characteristics": "0x40000040",
+      "entropy": 7.126
+    },
+    {
+      "name": "_RDATA",
+      "rva": 79691776,
+      "virtual_size": 32768,
+      "file_offset": 76649472,
+      "file_size": 32768,
+      "characteristics": "0x40000040",
+      "entropy": 7.407
+    },
+    {
+      "name": ".rsrc",
+      "rva": 79724544,
+      "virtual_size": 294400,
+      "file_offset": 76682240,
+      "file_size": 294400,
+      "characteristics": "0x40000040",
+      "entropy": 7.003
+    },
+    {
+      "name": ".reloc",
+      "rva": 80019456,
+      "virtual_size": 1589760,
+      "file_offset": 76976640,
+      "file_size": 1589760,
+      "characteristics": "0x40000040",
+      "entropy": 5.469
+    },
+    {
+      "name": ".idata",
+      "rva": 81612800,
+      "virtual_size": 30720,
+      "file_offset": 78566400,
+      "file_size": 30720,
+      "characteristics": "0xc0000040",
+      "entropy": 4.824
+    },
+    {
+      "name": ".text",
+      "rva": 81645568,
+      "virtual_size": 3695104,
+      "file_offset": 78597120,
+      "file_size": 3695104,
+      "characteristics": "0x60000020",
+      "entropy": 7.384
+    }
+  ],
+  "directories": {
+    "EXPORT": {
+      "rva": 68604944,
+      "size": 3352
+    },
+    "IMPORT": {
+      "rva": 81612800,
+      "size": 920
+    },
+    "RESOURCE": {
+      "rva": 79724544,
+      "size": 294208
+    },
+    "EXCEPTION": {
+      "rva": 76644352,
+      "size": 3037572
+    },
+    "SECURITY": {
+      "file_offset": 82292224,
+      "size": 6080
+    },
+    "BASERELOC": {
+      "rva": 83731936,
+      "size": 1608532
+    },
+    "DEBUG": {
+      "rva": 65994896,
+      "size": 84
+    },
+    "TLS": {
+      "rva": 65994984,
+      "size": 40
+    },
+    "IAT": {
+      "rva": 81636756,
+      "size": 6712
+    },
+    "DELAY_IMPORT": {
+      "rva": 68582684,
+      "size": 608
+    }
+  },
+  "runtime_function_slots": 253131,
+  "imports": [
+    "ADVAPI32.dll",
+    "api-ms-win-crt-conio-l1-1-0.dll",
+    "api-ms-win-crt-convert-l1-1-0.dll",
+    "api-ms-win-crt-environment-l1-1-0.dll",
+    "api-ms-win-crt-filesystem-l1-1-0.dll",
+    "api-ms-win-crt-heap-l1-1-0.dll",
+    "api-ms-win-crt-locale-l1-1-0.dll",
+    "api-ms-win-crt-math-l1-1-0.dll",
+    "api-ms-win-crt-runtime-l1-1-0.dll",
+    "api-ms-win-crt-stdio-l1-1-0.dll",
+    "api-ms-win-crt-string-l1-1-0.dll",
+    "api-ms-win-crt-time-l1-1-0.dll",
+    "api-ms-win-crt-utility-l1-1-0.dll",
+    "bcrypt.dll",
+    "d3d11.dll",
+    "d3d9.dll",
+    "dbghelp.dll",
+    "DSOUND.dll",
+    "dwmapi.dll",
+    "dxgi.dll",
+    "GDI32.dll",
+    "HID.DLL",
+    "IMM32.dll",
+    "IPHLPAPI.DLL",
+    "KERNEL32.dll",
+    "MSVCP140.dll",
+    "Normaliz.dll",
+    "ntdll.dll",
+    "ole32.dll",
+    "OLEAUT32.dll",
+    "OPENGL32.dll",
+    "POWRPROF.dll",
+    "SETUPAPI.dll",
+    "SHELL32.dll",
+    "USER32.dll",
+    "VCRUNTIME140.dll",
+    "VERSION.dll",
+    "WINHTTP.dll",
+    "WININET.dll",
+    "WINMM.dll",
+    "WLDAP32.dll",
+    "WS2_32.dll",
+    "X3DAudio1_7.dll",
+    "XAPOFX1_5.dll",
+    "XINPUT1_3.dll"
+  ],
+  "delay_imports": [
+    "ApexFramework_x64.dll",
+    "d3d12.dll",
+    "discord-rpc.dll",
+    "GfeSDK.dll",
+    "libcef.dll",
+    "libvorbisfile_64.dll",
+    "MF.dll",
+    "MFPlat.DLL",
+    "NvCloth_x64.dll",
+    "oo2core_5_win64.dll",
+    "PhysX3_x64.dll",
+    "PhysX3Common_x64.dll",
+    "PhysX3Cooking_x64.dll",
+    "PxFoundation_x64.dll",
+    "PxPvdSDK_x64.dll",
+    "SHLWAPI.dll",
+    "vivoxsdk_x64.dll",
+    "vulkan-1.dll"
+  ],
+  "export_count": 90,
+  "debug_directory_types": [
+    2,
+    12,
+    13
+  ],
+  "rtti_type_marker_counts": {
+    ".?AV": 397,
+    ".?AU": 21
+  },
+  "engine_build_strings": [
+    "++Fortnite+Release-2.5",
+    "++Fortnite+Release-2.5-CL-3889387",
+    "4.20.0-3889387"
+  ],
+  "reflected_script_packages": {
+    "/Script/AIModule": 256,
+    "/Script/Account": 13,
+    "/Script/AnalyticsBlueprintLibrary": 3,
+    "/Script/AndroidPermission": 3,
+    "/Script/AnimGraphRuntime": 97,
+    "/Script/AnimationCore": 16,
+    "/Script/AppleARKit": 12,
+    "/Script/AssetRegistry": 9,
+    "/Script/AudioMixer": 13,
+    "/Script/AudioPlatformConfiguration": 2,
+    "/Script/AugmentedReality": 7,
+    "/Script/AvfMediaFactory": 2,
+    "/Script/BlueprintContext": 3,
+    "/Script/BlueprintGraph": 1,
+    "/Script/BuildPatchServices": 8,
+    "/Script/CinematicCamera": 13,
+    "/Script/ClothingSystemRuntime": 13,
+    "/Script/ClothingSystemRuntimeInterface": 8,
+    "/Script/CommonUI": 58,
+    "/Script/Core": 1,
+    "/Script/CoreUObject": 65,
+    "/Script/Crashlytics": 2,
+    "/Script/DatasmithContent": 3,
+    "/Script/Engine": 1838,
+    "/Script/EngineMessages": 7,
+    "/Script/EngineSettings": 12,
+    "/Script/EpicCMSUIFramework": 12,
+    "/Script/EpicGameplayStatsRuntime": 10,
+    "/Script/Foliage": 21,
+    "/Script/FortniteGame": 2329,
+    "/Script/FortniteUI": 631,
+    "/Script/GameSubCatalog": 21,
+    "/Script/GameplayAbilities": 190,
+    "/Script/GameplayTags": 30,
+    "/Script/GameplayTasks": 13,
+    "/Script/Gauntlet": 4,
+    "/Script/GeometryCache": 11,
+    "/Script/HeadMountedDisplay": 12,
+    "/Script/Hotfix": 7,
+    "/Script/IOSRuntimeSettings": 7,
+    "/Script/ImmediatePhysics": 2,
+    "/Script/InputCore": 7,
+    "/Script/JsonUtilities": 3,
+    "/Script/Landscape": 57,
+    "/Script/LevelSequence": 17,
+    "/Script/LinearTimecode": 4,
+    "/Script/Lobby": 8,
+    "/Script/MRMesh": 4,
+    "/Script/MaterialShaderQualitySettings": 5,
+    "/Script/McpProfileSys": 27,
+    "/Script/MediaAssets": 17,
+    "/Script/MoviePlayer": 3,
+    "/Script/MovieScene": 81,
+    "/Script/MovieSceneCapture": 17,
+    "/Script/MovieSceneCore": 1,
+    "/Script/MovieSceneCoreTypes": 1,
+    "/Script/MovieSceneTracks": 117,
+    "/Script/NVIDIAGfeSDK": 17,
+    "/Script/NetUI": 2,
+    "/Script/OnlineSubsystem": 10,
+    "/Script/OnlineSubsystemUtils": 44,
+    "/Script/OodleHandlerComponent": 2,
+    "/Script/Overlay": 5,
+    "/Script/PacketHandler": 2,
+    "/Script/Paper2D": 44,
+    "/Script/Party": 9,
+    "/Script/PhysXVehicles": 20,
+    "/Script/ProceduralMeshComponent": 7,
+    "/Script/PurchaseFlow": 5,
+    "/Script/Qos": 12,
+    "/Script/Rejoin": 3,
+    "/Script/Renderer": 1,
+    "/Script/ScheduledEvents": 4,
+    "/Script/Serialization": 7,
+    "/Script/SessionMessages": 5,
+    "/Script/SignificanceManager": 2,
+    "/Script/Slate": 27,
+    "/Script/SlateCore": 84,
+    "/Script/SlateRemote": 2,
+    "/Script/SocialDefaults": 17,
+    "/Script/SocialTypes": 12,
+    "/Script/SubtitlesWidgets": 3,
+    "/Script/TcpMessaging": 2,
+    "/Script/TencentTSS": 2,
+    "/Script/UACCommon": 2,
+    "/Script/UMG": 131,
+    "/Script/UnrealEd": 1,
+    "/Script/Vivox": 1,
+    "/Script/WebBrowser": 3,
+    "/Script/WidgetCarousel": 2,
+    "/Script/WmfMediaFactory": 2
+  }
+}

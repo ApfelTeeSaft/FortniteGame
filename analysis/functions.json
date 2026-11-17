@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "reference_sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102",
+  "scope": "Identified eligible functions with verified on-disk boundaries",
+  "functions": [
+    {
+      "start_rva": 16196816,
+      "end_rva": 16196863,
+      "original_sha256": "10f3fb8d8f7ec84e18683a4c6cc7830632b49bf259ada871b887f6cf3648c7df",
+      "status": "unimplemented",
+      "eligible": false,
+      "exclusion": "Inferred generated native registration thunk with an opaque on-disk body",
+      "symbol": "GetBuildingMeshComponent"
+    },
+    {
+      "start_rva": 16198976,
+      "end_rva": 16199023,
+      "original_sha256": "12d7e3137d849b6f5ca5e981d82f4a5735326afdcc544de6bb3551778fe4f209",
+      "status": "unimplemented",
+      "eligible": false,
+      "exclusion": "Inferred generated native registration thunk with an opaque on-disk body",
+      "symbol": "GetBuildingAttachedTo"
+    },
+    {
+      "start_rva": 16242624,
+      "end_rva": 16242671,
+      "original_sha256": "9327fc031a6ad6c55220357014054c49d62fbf23cf83ec684419cfb15e5a5bb8",
+      "status": "unimplemented",
+      "eligible": false,
+      "exclusion": "Inferred generated native registration thunk with an opaque on-disk body",
+      "symbol": "GetNumOfItemsInPlot"
+    },
+    {
+      "start_rva": 17165152,
+      "end_rva": 17165199,
+      "original_sha256": "f12b4dd554c0f18fd6274a79650bd226776a5c04ba80dc19b0395ac68c2fee99",
+      "status": "unimplemented",
+      "eligible": false,
+      "exclusion": "Inferred generated native registration thunk with an opaque on-disk body",
+      "symbol": "IsWeaponHolstered"
+    },
+    {
+      "start_rva": 42468784,
+      "end_rva": 42468831,
+      "original_sha256": "ead7bde59706ec58a530dfe43d02ddfd84fa49d4ac759a6f44242759b2354a48",
+      "status": "unimplemented",
+      "eligible": false,
+      "exclusion": "Inferred generated native registration thunk with an opaque on-disk body",
+      "symbol": "IsCurrentWeaponFiring"
+    },
+    {
+      "start_rva": 42738800,
+      "end_rva": 42738847,
+      "original_sha256": "49c72dace80d9a49fa29c4e272a64d9f29e651b40857a2f1411418812c504c47",
+      "status": "unimplemented",
+      "eligible": false,
+      "exclusion": "Inferred generated native registration thunk with an opaque on-disk body",
+      "symbol": "GetItemLevelRecyclingWarningThreshold"
+    }
+  ]
+}
