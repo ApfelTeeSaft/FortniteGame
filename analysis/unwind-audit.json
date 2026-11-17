@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "reference_sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102",
+  "method": "version-1 single UWOP_ALLOC_SMALL",
+  "runtime_slots": 253131,
+  "supported_unwind": 47239,
+  "file_backed_prologue": 47239,
+  "matching_prologue": 1,
+  "accepted_body": 0,
+  "matching_ranges": [
+    {
+      "start_rva": 47814348,
+      "end_rva": 47814366,
+      "unwind_rva": 67744024,
+      "ida_chunks": [
+        [
+          47814348,
+          47814366
+        ]
+      ],
+      "rejection": "Runtime-function range at RVA 0x2d996cc has no complete decoded body"
+    }
+  ]
+}

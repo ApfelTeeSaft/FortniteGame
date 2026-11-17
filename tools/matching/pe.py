@@ -23,11 +23,15 @@ def open_image(path):
 
 
 def code_at(image, start, size):
+    return file_range(image, start, size, executable=True)
+
+
+def file_range(image, start, size, *, executable=False):
     if size <= 0:
-        raise ValueError("Function size must be positive")
+        raise ValueError("RVA range size must be positive")
     for section in image.sections:
         displacement = start - section.VirtualAddress
-        if not (section.Characteristics & 0x20000000):
+        if executable and not (section.Characteristics & 0x20000000):
             continue
         if 0 <= displacement and displacement + size <= min(
             section.SizeOfRawData, section.Misc_VirtualSize
@@ -36,7 +40,8 @@ def code_at(image, start, size):
             data = image.__data__[offset:offset + size]
             if len(data) == size:
                 return offset, data
-    raise ValueError(f"RVA {start:#x} + {size:#x} is not fully file-backed executable code")
+    kind = "executable range" if executable else "range"
+    raise ValueError(f"RVA {start:#x} + {size:#x} is not a file-backed {kind}")
 
 
 def digest(data):

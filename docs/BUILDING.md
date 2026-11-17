@@ -32,7 +32,10 @@ Use the original executable for the following commands. All comparisons read it 
 ```powershell
 py -m tools.matching.fingerprint
 py -m tools.matching.verify_symbols
+py -m tools.matching.audit_unwind --ida-inventory local-output/ida-functions.jsonl
 py -m tools.matching.compare local-output/x64/ClientShipping/FortniteGameCode.dll
 ```
 
-The comparison report tracks the candidate image SHA-256 separately from individual raw-byte results. The current report has an empty function list and `whole_file_exact: false`. The synthetic verification checks exact equality, a byte mismatch, and rejection of a shortened original extent. Those checks are excluded from the Fortnite manifest.
+The unwind audit accepts the full local IDA inventory to corroborate a matching range. Omit `--ida-inventory` to run the PE checks independently.
+
+The comparison report tracks the candidate image SHA-256 separately from individual raw-byte results. The current report has an empty function list and `whole_file_exact: false`. For both a leaf and a branching synthetic function, the test verifies exact equality, a byte mismatch, and rejection of a shortened original extent. The synthetic functions are excluded from the Fortnite manifest.

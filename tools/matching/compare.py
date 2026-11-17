@@ -7,8 +7,11 @@ from pathlib import Path
 
 from capstone import Cs, CS_ARCH_X86, CS_MODE_64
 from capstone import CS_GRP_CALL, CS_GRP_INT, CS_GRP_IRET, CS_GRP_JUMP, CS_GRP_RET
+from capstone import CS_GRP_BRANCH_RELATIVE
+from capstone.x86_const import X86_OP_IMM
 
 from tools.matching.pe import REFERENCE, code_at, digest, file_hash, open_image
+from tools.matching.unwind import checked_runtime_range, runtime_entries
 
 
 def leaf_size(image, rva, decoder):
@@ -47,7 +50,30 @@ def instruction_at(decoder, data, rva, offset):
     return None
 
 
-def compare_function(original, candidate, record, exports, decoder):
+def validate_runtime_body(decoder, data, start):
+    instructions = list(decoder.disasm(data, start))
+    end = start + len(data)
+    if (
+        not instructions or instructions[-1].address + instructions[-1].size != end
+        or instructions[-1].mnemonic != "ret" or instructions[-1].op_str
+    ):
+        raise ValueError(f"Runtime-function range at RVA {start:#x} has no complete decoded body")
+    boundaries = {instruction.address for instruction in instructions}
+    for instruction in instructions:
+        if {CS_GRP_INT, CS_GRP_IRET}.intersection(instruction.groups) or instruction.mnemonic in {
+            "hlt", "ud2", "syscall", "sysret", "retf", "retfq", "sti", "cli", "in", "out"
+        }:
+            raise ValueError(f"Unsupported instruction at RVA {instruction.address:#x}")
+        if (
+            CS_GRP_CALL not in instruction.groups
+            and {CS_GRP_JUMP, CS_GRP_BRANCH_RELATIVE}.intersection(instruction.groups)
+        ):
+            operand = instruction.operands[0]
+            if operand.type != X86_OP_IMM or operand.imm not in boundaries:
+                raise ValueError(f"Branch escapes verified boundaries at RVA {instruction.address:#x}")
+
+
+def compare_function(original, candidate, record, exports, decoder, unwind_tables):
     start, end = record["start_rva"], record["end_rva"]
     offset, expected = code_at(original, start, end - start)
     if digest(expected) != record["original_sha256"]:
@@ -57,10 +83,28 @@ def compare_function(original, candidate, record, exports, decoder):
     if entry is None or entry.forwarder:
         raise ValueError(f"Missing direct candidate export {symbol}")
     rva = entry.address
-    if leaf_size(original, start, decoder) != len(expected):
-        raise ValueError(f"Original leaf does not end at recorded RVA {end:#x}")
-    size = leaf_size(candidate, rva, decoder)
-    _, actual = code_at(candidate, rva, size)
+    boundary = record.get("boundary_method", "leaf")
+    evidence = {}
+    if boundary == "pe-runtime-function":
+        original_entries, candidate_entries = unwind_tables
+        verified_end, original_unwind = checked_runtime_range(original, original_entries, start)
+        if verified_end != end:
+            raise ValueError(f"Original runtime-function does not end at recorded RVA {end:#x}")
+        candidate_end, candidate_unwind = checked_runtime_range(candidate, candidate_entries, rva)
+        size = candidate_end - rva
+        _, actual = code_at(candidate, rva, size)
+        validate_runtime_body(decoder, expected, start)
+        validate_runtime_body(decoder, actual, rva)
+        method = "raw-pe-runtime-function-bytes"
+        evidence = {"original_unwind_rva": original_unwind, "candidate_unwind_rva": candidate_unwind}
+    elif boundary == "leaf":
+        if leaf_size(original, start, decoder) != len(expected):
+            raise ValueError(f"Original leaf does not end at recorded RVA {end:#x}")
+        size = leaf_size(candidate, rva, decoder)
+        _, actual = code_at(candidate, rva, size)
+        method = "raw-pe-leaf-bytes"
+    else:
+        raise ValueError(f"Unrecognized boundary method {boundary!r}")
     prefix = next(
         (i for i, pair in enumerate(zip(expected, actual)) if pair[0] != pair[1]),
         min(len(expected), len(actual)),
@@ -74,10 +118,11 @@ def compare_function(original, candidate, record, exports, decoder):
         "candidate_rva": rva,
         "original_size": len(expected),
         "candidate_size": size,
-        "method": "raw-pe-leaf-bytes",
+        "method": method,
         "original_sha256": digest(expected),
         "candidate_sha256": digest(actual),
         "status": "exact" if equal else "partial" if prefix else "unmatched",
+        **evidence,
     }
     if not equal:
         result["first_difference"] = {
@@ -107,10 +152,13 @@ def compare(reference, candidate, manifest):
             for entry in (directory.symbols if directory else [])
             if entry.name
         }
+        mapped = [record for record in manifest["functions"] if record.get("candidate_export")]
+        unwind_tables = None
+        if any(record.get("boundary_method") == "pe-runtime-function" for record in mapped):
+            unwind_tables = runtime_entries(original), runtime_entries(build)
         results = [
-            compare_function(original, build, record, exports, decoder)
-            for record in manifest["functions"]
-            if record.get("candidate_export")
+            compare_function(original, build, record, exports, decoder, unwind_tables)
+            for record in mapped
         ]
     for result in results:
         result["reference_image_sha256"] = original_hash

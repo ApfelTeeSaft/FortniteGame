@@ -12,11 +12,12 @@ The PE linker version is `14.0`. The Rich header contains several build numbers,
 
 Reflected strings include `/Script/FortniteGame`, `/Script/FortniteUI`, `/Script/Engine`, and `/Script/CoreUObject`. They identify logical packages inside the image. Native code boundaries for those packages remain unresolved. The RTTI counts measure marker hits and may include embedded strings outside RTTI descriptors.
 
-A separate static spot check looked for six common MSVC x64 stack-allocation and
-register-save prefixes at first-section runtime-function starts. The only
-observed match was the PE entry point at `0x2D996CC`. Its initial stack
-allocation and call are readable, followed by opaque bytes. This check helps
-prioritize candidates and makes no claim about all possible prologues.
+The [unwind audit](../analysis/unwind-audit.json) examined 47,239 file-backed
+runtime-function prologues with one version-1 `UWOP_ALLOC_SMALL` record.
+Only the PE entry point at `0x2D996CC` has the stack allocation described by
+its unwind record. IDA and the PE agree on its range, but it contains no
+complete decoded body ending in a near return. The audit covers this single
+unwind form. [Microsoft x64 exception handling](https://learn.microsoft.com/en-us/cpp/build/exception-handling-x64)
 
 ## Local IDA export
 
@@ -56,4 +57,19 @@ original RVA above the C++ definition along with the evidence for its identity.
 
 A function enters the eligible set when independent evidence establishes a unique start, complete code range, and original game or engine implementation. Keep identified but unresolved records visible with an exclusion reason. Exclude generated reflection thunks, compiler helpers, imports, duplicate or overlapping ranges, and third-party library code from this metric. IDA discovery and exception counts are reported independently of this denominator.
 
-The initial matcher accepts direct PE exports for straight-line leaf functions. It independently decodes a complete candidate ending in `ret`, checks executable file backing and the original range hash, then compares the raw bytes with no normalization. It reports a shared prefix as `partial` when bytes diverge, and `unmatched` if they diverge immediately. The manifest reserves distinct statuses for relocation-equivalent, instruction-equivalent, and unimplemented functions. Only complete raw equality with verification metadata counts toward the SVG.
+The matcher resolves the candidate from a direct PE export. Its default
+`leaf` boundary method decodes a straight-line body through `ret` on both
+sides. For functions with internal branches, use
+`"boundary_method": "pe-runtime-function"`. This method requires a unique,
+non-overlapping runtime-function range in each image, a version-1 single
+`UWOP_ALLOC_SMALL` prologue matching the code, and a range that decodes
+through its final near return. Internal branch targets must land on decoded
+instruction boundaries. Chained unwind entries, handlers, indirect jumps,
+and branches leaving the range are outside this method's current scope.
+
+Both methods check executable file backing and the original range hash before
+comparing the raw code bytes. Call displacements are compared as stored.
+A shared prefix yields `partial` when bytes diverge. An immediate difference
+yields `unmatched`. The manifest reserves distinct statuses for
+relocation-equivalent, instruction-equivalent, and unimplemented functions.
+Only complete raw equality with verification metadata counts toward the SVG.

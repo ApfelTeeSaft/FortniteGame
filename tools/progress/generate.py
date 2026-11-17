@@ -14,6 +14,10 @@ STATUSES = (
     "unmatched", "unimplemented", "unknown",
 )
 SHA256 = re.compile(r"[0-9a-f]{64}")
+RAW_METHODS = {
+    "leaf": "raw-pe-leaf-bytes",
+    "pe-runtime-function": "raw-pe-runtime-function-bytes",
+}
 
 
 def counts(manifest):
@@ -44,7 +48,7 @@ def counts(manifest):
                 "original_sha256": original,
                 "candidate_sha256": original,
                 "reference_image_sha256": reference,
-                "method": "raw-pe-leaf-bytes",
+                "method": RAW_METHODS[record.get("boundary_method", "leaf")],
                 "status": "exact",
             }
             if (
