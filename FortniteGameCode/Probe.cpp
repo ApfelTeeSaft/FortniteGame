@@ -1,4 +1,9 @@
 // Synthetic inputs for the comparison tool. These exports are not Fortnite functions.
+// The standalone v140 DLL has no CRT. Supply its floating-point usage marker.
+extern "C" {
+    int _fltused = 0;
+}
+
 extern "C" __declspec(dllexport) __declspec(noinline)
 unsigned int ProbeScale(unsigned int value)
 {
@@ -48,4 +53,18 @@ unsigned int ProbeFrameVariant(unsigned int value, void* pointer)
     slots[index] = pointer;
     const unsigned int scaled = ProbeScale(value);
     return scaled + value + (slots[index] != nullptr ? 8u : 0u);
+}
+
+extern "C" __declspec(dllexport) __declspec(noinline)
+double ProbeSimd(unsigned int value, double scale)
+{
+    const unsigned int scaled = ProbeScale(value);
+    return scale + static_cast<double>(scaled) + 3.0;
+}
+
+extern "C" __declspec(dllexport) __declspec(noinline)
+double ProbeSimdVariant(unsigned int value, double scale)
+{
+    const unsigned int scaled = ProbeScale(value);
+    return scale + static_cast<double>(scaled) + 4.0;
 }

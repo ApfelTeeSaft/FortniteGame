@@ -1,4 +1,4 @@
-"""Read AMD64 runtime-function ranges and corroborate integer stack prologues."""
+"""Read AMD64 runtime-function ranges and corroborate stack prologues."""
 
 from dataclasses import dataclass
 from struct import Struct
@@ -15,10 +15,14 @@ UWOP_ALLOC_SMALL = 2
 UWOP_SET_FPREG = 3
 UWOP_SAVE_NONVOL = 4
 UWOP_SAVE_NONVOL_FAR = 5
+UWOP_SAVE_XMM128 = 8
+UWOP_SAVE_XMM128_FAR = 9
 NONVOLATILE = {
     3: "rbx", 5: "rbp", 6: "rsi", 7: "rdi",
     12: "r12", 13: "r13", 14: "r14", 15: "r15",
 }
+NONVOLATILE_SIMD = {index: f"xmm{index}" for index in range(6, 16)}
+SAVED_REGISTERS = {*NONVOLATILE.values(), *NONVOLATILE_SIMD.values()}
 
 
 @dataclass(frozen=True)
@@ -42,7 +46,7 @@ def runtime_entries(image):
     return list(RUNTIME_FUNCTION.iter_unpack(raw))
 
 
-def read_prologue(image, entry):
+def read_prologue(image, entry, *, include_handlers=False):
     """Parse the supported version-1 operations without inferring missing slots."""
     start, end, unwind_rva = entry
     if not 0 < start < end or not unwind_rva or unwind_rva % 4:
@@ -50,7 +54,8 @@ def read_prologue(image, entry):
     try:
         _, header = file_range(image, unwind_rva, 4)
         version_flags, size, slots, frame = header
-        if version_flags != 1 or not slots or not 0 < size < end - start:
+        allowed = (1, 9, 17, 25) if include_handlers else (1,)
+        if version_flags not in allowed or not slots or not 0 < size < end - start:
             return None
         _, codes = file_range(image, unwind_rva + 4, (slots + slots % 2) * 2)
     except ValueError:
@@ -84,13 +89,17 @@ def read_prologue(image, entry):
             extra_slots, scale = (1, 8) if info == 0 else (2, 1)
         elif kind in (UWOP_SAVE_NONVOL, UWOP_SAVE_NONVOL_FAR) and register:
             extra_slots, scale = (1, 8) if kind == UWOP_SAVE_NONVOL else (2, 1)
+        elif kind in (UWOP_SAVE_XMM128, UWOP_SAVE_XMM128_FAR) and info in NONVOLATILE_SIMD:
+            register = NONVOLATILE_SIMD[info]
+            extra_slots, scale = (1, 16) if kind == UWOP_SAVE_XMM128 else (2, 1)
         else:
             return None
         if slot + extra_slots > slots:
             return None
         value = int.from_bytes(codes[slot * 2:(slot + extra_slots) * 2], "little") * scale
         slot += extra_slots
-        if value % 8 or (kind == UWOP_ALLOC_LARGE and not value):
+        alignment = 16 if kind in (UWOP_SAVE_XMM128, UWOP_SAVE_XMM128_FAR) else 8
+        if value % alignment or (kind == UWOP_ALLOC_LARGE and not value):
             return None
         operations.setdefault(offset, []).append(
             ("allocate", value) if kind == UWOP_ALLOC_LARGE else ("save", register, value)
@@ -113,10 +122,17 @@ def instruction_operation(instruction, frame_base, frame_offset, remaining_stack
     if name == "sub" and dest.type == X86_OP_REG and dest.reg == X86_REG_RSP:
         if source.type == X86_OP_IMM:
             return ("allocate", source.imm)
-    if name == "mov" and dest.type == X86_OP_MEM and source.type == X86_OP_REG:
+    if (
+        name in {"mov", "movaps", "movups", "movdqa", "movdqu", "movapd", "movupd",
+                 "vmovaps", "vmovups", "vmovdqa", "vmovdqu", "vmovapd", "vmovupd"}
+        and dest.type == X86_OP_MEM and source.type == X86_OP_REG
+    ):
         address = dest.mem
-        if dest.size == 8 and not (address.index or address.segment):
+        if dest.size in (8, 16) and not (address.index or address.segment):
             register = instruction.reg_name(source.reg)
+            expected_size = 16 if register in NONVOLATILE_SIMD.values() else 8
+            if source.size != expected_size or dest.size != expected_size:
+                return None
             base = instruction.reg_name(address.base)
             if base == "rsp":
                 return ("save", register, address.disp + remaining_stack)
@@ -167,7 +183,7 @@ def prologue_matches(decoder, data, prologue):
                 remaining_stack -= 8
             elif actual[0] == "allocate":
                 remaining_stack -= actual[1]
-        elif actual and actual[0] == "save" and actual[1] in NONVOLATILE.values():
+        elif actual and actual[0] == "save" and actual[1] in SAVED_REGISTERS:
             # MSVC may record a save at the end of the prologue even when the
             # store precedes the stack allocation. The stack slot must agree.
             declared_offset = saves.pop(actual, 0)

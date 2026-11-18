@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "reference_sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102",
-  "method": "version-1 flagless integer prologue",
+  "method": "version-1 integer and SIMD prologue, including handler records",
   "runtime_slots": 253131,
-  "supported_unwind": 138213,
-  "file_backed_prologue": 138213,
+  "supported_unwind": 153169,
+  "file_backed_prologue": 153169,
   "matching_prologue": 3,
   "accepted_body": 2,
   "matching_ranges": [

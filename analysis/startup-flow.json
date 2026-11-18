@@ -1,0 +1,727 @@
+{
+  "schema_version": 1,
+  "reference_sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102",
+  "scope": "Static direct-edge discovery with bounded decoding",
+  "start_rva": 47814348,
+  "block_limit": 32,
+  "instruction_limit": 64,
+  "limit_reached": true,
+  "pending_rvas": [
+    54203,
+    223698,
+    379765,
+    3064139,
+    6069368,
+    6101094,
+    83567086
+  ],
+  "blocks": [
+    {
+      "start_rva": 4791,
+      "end_rva": 4800,
+      "section_index": 0,
+      "file_offset": 2231,
+      "sha256": "cc1e966fbf66e1ba1326270c9d5b5b93eb57fb8a20c71e6b57c263405850b1ab",
+      "instruction_counts": {
+        "lea": 1,
+        "pop": 1,
+        "ret": 1
+      },
+      "stop": "return",
+      "edges": []
+    },
+    {
+      "start_rva": 17433,
+      "end_rva": 17467,
+      "section_index": 0,
+      "file_offset": 14873,
+      "sha256": "8567de12eaa385b1d7e80fae26812007601cb5cbef99fefe4031215e97f3b49b",
+      "instruction_counts": {
+        "call": 1,
+        "lea": 1,
+        "mov": 6
+      },
+      "stop": "indirect transfer",
+      "edges": [
+        {
+          "instruction_rva": 17465,
+          "kind": "fallthrough",
+          "target_rva": 17467,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 17467,
+      "end_rva": 17472,
+      "section_index": 0,
+      "file_offset": 14907,
+      "sha256": "e64722661f9c367cc3b7eb6b869af5e0f843cb0ddb6ea12f7aeaaa8874095382",
+      "instruction_counts": {
+        "jmp": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 17467,
+          "kind": "branch",
+          "target_rva": 6101077,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 54173,
+      "end_rva": 54203,
+      "section_index": 0,
+      "file_offset": 51613,
+      "sha256": "4d11177c5044084a317d3aa36b3d87934a5be59b4877cb5bd211d8f6105c77c8",
+      "instruction_counts": {
+        "call": 1,
+        "lea": 1,
+        "mov": 4,
+        "push": 1,
+        "sub": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 54198,
+          "kind": "call",
+          "target_rva": 223698,
+          "target_section_index": 0
+        },
+        {
+          "instruction_rva": 54198,
+          "kind": "fallthrough",
+          "target_rva": 54203,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 59593,
+      "end_rva": 59611,
+      "section_index": 0,
+      "file_offset": 57033,
+      "sha256": "f840e424b25a99230c1ab45ef1267555347b193f3ee22301f1944d9e655a3039",
+      "instruction_counts": {
+        "add": 1,
+        "call": 1,
+        "mov": 3
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 59606,
+          "kind": "call",
+          "target_rva": 251796,
+          "target_section_index": 0
+        },
+        {
+          "instruction_rva": 59606,
+          "kind": "fallthrough",
+          "target_rva": 59611,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 59611,
+      "end_rva": 59616,
+      "section_index": 0,
+      "file_offset": 57051,
+      "sha256": "869c4fc2d75210658a700da6a8bb808a3dfdfabc13ac19f097f34c0bb8c15479",
+      "instruction_counts": {
+        "jmp": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 59611,
+          "kind": "branch",
+          "target_rva": 263106,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 251796,
+      "end_rva": 251835,
+      "section_index": 0,
+      "file_offset": 249236,
+      "sha256": "ff2cd5348d4c17b28934e3049bc4923c30518182c4d81572cf77d4ba554fd1ab",
+      "instruction_counts": {
+        "jne": 1,
+        "lea": 1,
+        "mov": 5,
+        "push": 1,
+        "sub": 1,
+        "test": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 251829,
+          "kind": "branch",
+          "target_rva": 17433,
+          "target_section_index": 0
+        },
+        {
+          "instruction_rva": 251829,
+          "kind": "fallthrough",
+          "target_rva": 251835,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 251835,
+      "end_rva": 251840,
+      "section_index": 0,
+      "file_offset": 249275,
+      "sha256": "9dbdfdf58f7c7e91472980d7126bf1d6c5f07796bb8be3e9dc8a7268bb39e96e",
+      "instruction_counts": {
+        "jmp": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 251835,
+          "kind": "branch",
+          "target_rva": 255184,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 255184,
+      "end_rva": 255200,
+      "section_index": 0,
+      "file_offset": 252624,
+      "sha256": "5c71de8644d12e4b08e2f09aeaed79c92a01043902472303230771a14d52714e",
+      "instruction_counts": {
+        "lea": 1,
+        "mov": 2,
+        "pop": 1,
+        "ret": 1,
+        "xor": 1
+      },
+      "stop": "return",
+      "edges": []
+    },
+    {
+      "start_rva": 263106,
+      "end_rva": 263131,
+      "section_index": 0,
+      "file_offset": 260546,
+      "sha256": "43be130fdd5cffd0ba0e0e208c4ecbae46ad1b805ed981baaa3117920215cd94",
+      "instruction_counts": {
+        "call": 1,
+        "lea": 1,
+        "mov": 5
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 263126,
+          "kind": "call",
+          "target_rva": 54173,
+          "target_section_index": 0
+        },
+        {
+          "instruction_rva": 263126,
+          "kind": "fallthrough",
+          "target_rva": 263131,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 263131,
+      "end_rva": 263136,
+      "section_index": 0,
+      "file_offset": 260571,
+      "sha256": "62ad98028d066dadd673074a3deb714678cb21e06144b738ae10da4868e392cf",
+      "instruction_counts": {
+        "jmp": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 263131,
+          "kind": "branch",
+          "target_rva": 379765,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 375493,
+      "end_rva": 375527,
+      "section_index": 0,
+      "file_offset": 372933,
+      "sha256": "215a79a3ffe072e27e2be28fdd196f0479c96d778ec62224323d7d950856ee0b",
+      "instruction_counts": {
+        "jne": 1,
+        "lea": 1,
+        "mov": 2,
+        "push": 1,
+        "sub": 1,
+        "test": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 375521,
+          "kind": "branch",
+          "target_rva": 4790045,
+          "target_section_index": 0
+        },
+        {
+          "instruction_rva": 375521,
+          "kind": "fallthrough",
+          "target_rva": 375527,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 375527,
+      "end_rva": 375532,
+      "section_index": 0,
+      "file_offset": 372967,
+      "sha256": "74227977acfd1ab9a931d0377843912dfdd88df6227de054832ae0facacd5a8d",
+      "instruction_counts": {
+        "jmp": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 375527,
+          "kind": "branch",
+          "target_rva": 4791,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 2695140,
+      "end_rva": 2695152,
+      "section_index": 0,
+      "file_offset": 2692580,
+      "sha256": "aeabb6f42e815d1f5dfb6c8d34a545cbf9df3cb2466b1e5132435f4c00bb7491",
+      "instruction_counts": {
+        "jmp": 1,
+        "sub": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 2695147,
+          "kind": "branch",
+          "target_rva": 2783606,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 2705609,
+      "end_rva": 2705616,
+      "section_index": 0,
+      "file_offset": 2703049,
+      "sha256": "4db2fc19499126a9de47399e092d2b051f9d3daa2c19039feadfd985bddbb246",
+      "instruction_counts": {
+        "jmp": 1,
+        "push": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 2705611,
+          "kind": "branch",
+          "target_rva": 2695140,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 2710938,
+      "end_rva": 2710943,
+      "section_index": 0,
+      "file_offset": 2708378,
+      "sha256": "8de89a77d379ea18d0675c7fd5f91622cac0ed858bcc75a534d31e50c487e2ba",
+      "instruction_counts": {
+        "jmp": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 2710938,
+          "kind": "branch",
+          "target_rva": 6447050,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 2783606,
+      "end_rva": 2783611,
+      "section_index": 0,
+      "file_offset": 2781046,
+      "sha256": "57bcd09bf08a857e48d48bcae79043a620a3feef6e27d609e8110ff54e01f295",
+      "instruction_counts": {
+        "call": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 2783606,
+          "kind": "call",
+          "target_rva": 375493,
+          "target_section_index": 0
+        },
+        {
+          "instruction_rva": 2783606,
+          "kind": "fallthrough",
+          "target_rva": 2783611,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 2783611,
+      "end_rva": 2783616,
+      "section_index": 0,
+      "file_offset": 2781051,
+      "sha256": "9b6c5ee631b3977d4fed9ecf32d31423d1ce9f9df4f917524e2afa95a3964b81",
+      "instruction_counts": {
+        "jmp": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 2783611,
+          "kind": "branch",
+          "target_rva": 81649867,
+          "target_section_index": 10
+        }
+      ]
+    },
+    {
+      "start_rva": 3064134,
+      "end_rva": 3064139,
+      "section_index": 0,
+      "file_offset": 3061574,
+      "sha256": "a88c1e9ffb50138f7fb51219aa3a885786ec4e27bca8ba85e92a7171b36ca173",
+      "instruction_counts": {
+        "call": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 3064134,
+          "kind": "call",
+          "target_rva": 83567086,
+          "target_section_index": 10
+        },
+        {
+          "instruction_rva": 3064134,
+          "kind": "fallthrough",
+          "target_rva": 3064139,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 4790045,
+      "end_rva": 4790105,
+      "section_index": 0,
+      "file_offset": 4787485,
+      "sha256": "534520db88945ed7a05590fab641c63b8e859f02e72e8487c5e2dc75388369bb",
+      "instruction_counts": {
+        "add": 2,
+        "call": 1,
+        "lea": 2,
+        "mov": 7,
+        "neg": 1
+      },
+      "stop": "indirect transfer",
+      "edges": [
+        {
+          "instruction_rva": 4790103,
+          "kind": "fallthrough",
+          "target_rva": 4790105,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 4790105,
+      "end_rva": 4790110,
+      "section_index": 0,
+      "file_offset": 4787545,
+      "sha256": "18c71615a053bd1bcb5388a6dbb9e286ee4e2bf23636d39d06bf503976aff5a6",
+      "instruction_counts": {
+        "jmp": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 4790105,
+          "kind": "branch",
+          "target_rva": 59593,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 5614473,
+      "end_rva": 5614480,
+      "section_index": 0,
+      "file_offset": 5611913,
+      "sha256": "3954f0fb4df5ef19486c2b7eadd40b218e78a830ec8ed3c134883be78c44d434",
+      "instruction_counts": {
+        "jmp": 1,
+        "push": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 5614475,
+          "kind": "branch",
+          "target_rva": 7005958,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 6101077,
+      "end_rva": 6101094,
+      "section_index": 0,
+      "file_offset": 6098517,
+      "sha256": "ecd0bab7ec947f03b3c6a107ff09784032805250d7039bcda18b2ddd63e50336",
+      "instruction_counts": {
+        "jne": 1,
+        "mov": 2,
+        "test": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 6101088,
+          "kind": "branch",
+          "target_rva": 6069368,
+          "target_section_index": 0
+        },
+        {
+          "instruction_rva": 6101088,
+          "kind": "fallthrough",
+          "target_rva": 6101094,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 6447050,
+      "end_rva": 6447055,
+      "section_index": 0,
+      "file_offset": 6444490,
+      "sha256": "4ffdf925198db3889d2210c9618be84e738c018f2c4adcbe40914f915be9942c",
+      "instruction_counts": {
+        "jmp": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 6447050,
+          "kind": "branch",
+          "target_rva": 83220526,
+          "target_section_index": 10
+        }
+      ]
+    },
+    {
+      "start_rva": 7005958,
+      "end_rva": 7005970,
+      "section_index": 0,
+      "file_offset": 7003398,
+      "sha256": "a16ccefe9c422402886e89d7dca086979b293f426ab19e572f07b4aa016370cd",
+      "instruction_counts": {
+        "jmp": 1,
+        "sub": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 7005965,
+          "kind": "branch",
+          "target_rva": 3064134,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 47814348,
+      "end_rva": 47814357,
+      "section_index": 0,
+      "file_offset": 47811788,
+      "sha256": "e4e40c3a2c8894e0e261ed049832b24a1f3297ef2d7826ba053fb19ad19efef9",
+      "instruction_counts": {
+        "call": 1,
+        "sub": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 47814352,
+          "kind": "call",
+          "target_rva": 81654524,
+          "target_section_index": 10
+        },
+        {
+          "instruction_rva": 47814352,
+          "kind": "fallthrough",
+          "target_rva": 47814357,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 47814357,
+      "end_rva": 47814368,
+      "section_index": 0,
+      "file_offset": 47811797,
+      "sha256": "36e93582956fd1fce580f12f34051873522dd215df40d738d6a3c5c335deca08",
+      "instruction_counts": {
+        "and": 1,
+        "cwde": 1,
+        "fisttp": 1,
+        "nop": 1,
+        "pop": 1,
+        "xchg": 2
+      },
+      "stop": "undecodable or section end",
+      "edges": []
+    },
+    {
+      "start_rva": 81649867,
+      "end_rva": 81650034,
+      "section_index": 10,
+      "file_offset": 78601419,
+      "sha256": "f372a2519e3a8945fa8b80d5b3a01d432d706e6d403f155df01346b195d3bddc",
+      "instruction_counts": {
+        "add": 1,
+        "jmp": 1,
+        "lea": 1,
+        "movupd": 16,
+        "pop": 14
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 81650029,
+          "kind": "branch",
+          "target_rva": 2710938,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 81654524,
+      "end_rva": 81654696,
+      "section_index": 10,
+      "file_offset": 78606076,
+      "sha256": "1b9d2b4c6309f80934e5aac3b4efdcd7de1ce36823c64362622f8cde836d4c6d",
+      "instruction_counts": {
+        "jne": 1,
+        "lea": 1,
+        "movupd": 16,
+        "push": 15,
+        "test": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 81654690,
+          "kind": "branch",
+          "target_rva": 2695140,
+          "target_section_index": 0
+        },
+        {
+          "instruction_rva": 81654690,
+          "kind": "fallthrough",
+          "target_rva": 81654696,
+          "target_section_index": 10
+        }
+      ]
+    },
+    {
+      "start_rva": 81654696,
+      "end_rva": 81654701,
+      "section_index": 10,
+      "file_offset": 78606248,
+      "sha256": "d16538bfb9c9ce0b6187c4f2689732c9f538ee8c7ec616c6b93f7825b84bd041",
+      "instruction_counts": {
+        "jmp": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 81654696,
+          "kind": "branch",
+          "target_rva": 2705609,
+          "target_section_index": 0
+        }
+      ]
+    },
+    {
+      "start_rva": 83220526,
+      "end_rva": 83220698,
+      "section_index": 10,
+      "file_offset": 80172078,
+      "sha256": "9236921681bb41678bcba70c353605068e0709740455898170470e71d8465335",
+      "instruction_counts": {
+        "jne": 1,
+        "lea": 1,
+        "movupd": 16,
+        "push": 15,
+        "test": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 83220692,
+          "kind": "branch",
+          "target_rva": 7005958,
+          "target_section_index": 0
+        },
+        {
+          "instruction_rva": 83220692,
+          "kind": "fallthrough",
+          "target_rva": 83220698,
+          "target_section_index": 10
+        }
+      ]
+    },
+    {
+      "start_rva": 83220698,
+      "end_rva": 83220703,
+      "section_index": 10,
+      "file_offset": 80172250,
+      "sha256": "6514c77d6b6244664d0b4b2f64c34a74071cf6ea3c9e35ce9279c55de3144ba7",
+      "instruction_counts": {
+        "jmp": 1
+      },
+      "stop": "direct transfer",
+      "edges": [
+        {
+          "instruction_rva": 83220698,
+          "kind": "branch",
+          "target_rva": 5614473,
+          "target_section_index": 0
+        }
+      ]
+    }
+  ]
+}

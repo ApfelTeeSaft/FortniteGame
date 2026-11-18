@@ -36,7 +36,7 @@ def audit(reference, ida_inventory=None):
     with open_image(reference) as image:
         entries = runtime_entries(image)
         for entry in entries:
-            prologue = read_prologue(image, entry)
+            prologue = read_prologue(image, entry, include_handlers=True)
             if prologue is None:
                 continue
             counters["supported_unwind"] += 1
@@ -64,7 +64,7 @@ def audit(reference, ida_inventory=None):
     return {
         "schema_version": 1,
         "reference_sha256": reference_hash,
-        "method": "version-1 flagless integer prologue",
+        "method": "version-1 integer and SIMD prologue, including handler records",
         "runtime_slots": len(entries),
         **counters,
         "matching_ranges": matches,

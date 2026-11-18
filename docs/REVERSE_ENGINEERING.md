@@ -12,12 +12,35 @@ The PE linker version is `14.0`. The Rich header contains several build numbers,
 
 Reflected strings include `/Script/FortniteGame`, `/Script/FortniteUI`, `/Script/Engine`, and `/Script/CoreUObject`. They identify logical packages inside the image. Native code boundaries for those packages remain unresolved. The RTTI counts measure marker hits and may include embedded strings outside RTTI descriptors.
 
-The [unwind audit](../analysis/unwind-audit.json) examined 138,213 file-backed
-prologues with supported flagless version-1 integer unwind operations. This
-covers small and large stack allocations, nonvolatile integer register saves,
-and frame-pointer setup. Three prologues agree with their unwind records. The
+The [unwind audit](../analysis/unwind-audit.json) examined 153,169 file-backed
+prologues with supported version-1 unwind operations. This includes integer
+and SIMD register saves, frame-pointer setup, and records with exception or
+termination handlers. The code-range matcher accepts flagless records.
+Three prologues agree with their unwind records. The
 entry point at `0x02D996CC` lacks a complete body. The other two are SEH
 filters with complete bodies and one trailing trap each. [Microsoft x64 exception handling](https://learn.microsoft.com/en-us/cpp/build/exception-handling-x64)
+
+The SIMD probe keeps a double-precision argument alive across a call, causing
+the compiler to save a nonvolatile XMM register. It matches across v140 and
+v142. Changing the source register in the saved instruction fails prologue
+validation. The COFF regression checks reject truncated headers, symbol
+tables, and code sections with relocations. The leaf matcher also rejects
+`LOOP`, which Capstone identifies through its branch-relative group.
+
+## Startup control-flow discovery
+
+The [bounded static trace](../analysis/startup-flow.json) begins at the PE
+entry point and records 32 blocks with seven pending addresses. Each decoded
+range has a file offset, section index, hash, instruction counts, and outgoing
+direct edges. These metadata establish where the static decoder followed
+bytes. They leave original function boundaries and runtime reachability open.
+
+The entry-point call at `0x02D996D0` targets `0x04DDF2FC` in section 10.
+That block saves integer and SIMD registers, checks stack alignment, and
+transfers into section 0. A direct call at `0x002A7976` targets
+`0x0005BAC5`, where a frame setup and guard check are readable. Its disjoint
+continuations require further analysis. The saved IDA database has no
+function beginning at that address. The startup routine's purpose is unknown.
 
 ## Recovered compiler-generated filters
 
@@ -85,7 +108,7 @@ unwind prologue matching the code, and a body that decodes through its final
 near return. Internal branch targets must land on decoded instruction
 boundaries. The raw comparison includes any trailing `INT3` bytes covered
 by the runtime-function record. Chained unwind entries, handlers in the
-compared body, SIMD register saves, indirect jumps, and branches leaving the
+compared body, indirect jumps, and branches leaving the
 range are outside this method's current scope.
 
 Both methods check executable file backing and the original range hash before

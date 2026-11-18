@@ -30,7 +30,9 @@ def leaf_size(image, rva, decoder):
     else:
         raise ValueError(f"No file-backed candidate code at RVA {rva:#x}")
 
-    forbidden = {CS_GRP_CALL, CS_GRP_JUMP, CS_GRP_INT, CS_GRP_IRET}
+    forbidden = {
+        CS_GRP_CALL, CS_GRP_JUMP, CS_GRP_BRANCH_RELATIVE, CS_GRP_INT, CS_GRP_IRET,
+    }
     for instruction in decoder.disasm(machine_code, rva):
         if forbidden.intersection(instruction.groups) or instruction.mnemonic in {
             "hlt", "ud2", "int3", "syscall", "sysret"

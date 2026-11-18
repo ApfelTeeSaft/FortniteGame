@@ -24,7 +24,7 @@ The comparison DLL uses `/O2 /Ob2 /Gy /MD /GS /EHsc /fp:precise` with whole-prog
 
 ```powershell
 ./tools/matching/probe-v140.ps1
-py -m tools.matching.self_test local-output/x64/ClientShipping/FortniteGameCode.dll --alternate-toolchain local-output/v140/Probe.dll
+py -m tools.matching.self_test local-output/x64/ClientShipping/FortniteGameCode.dll --alternate-toolchain local-output/v140/Probe.dll --funclet-object local-output/v140/DelayLoadFilterProbe.obj
 ```
 
 Use the original executable for the following commands. All comparisons read it directly from disk.
@@ -33,6 +33,7 @@ Use the original executable for the following commands. All comparisons read it 
 py -m tools.matching.fingerprint
 py -m tools.matching.verify_symbols
 py -m tools.matching.audit_unwind --ida-inventory local-output/ida-functions.jsonl
+py -m tools.matching.trace_flow --blocks 32
 py -m tools.matching.compare local-output/x64/ClientShipping/FortniteGameCode.dll
 py -m tools.matching.compare_funclets local-output/x64/ClientShipping/obj/DelayLoadFilterProbe.obj --verify
 py -m tools.matching.compare_funclets local-output/v140/DelayLoadFilterProbe.obj --verify
@@ -47,7 +48,16 @@ statuses and range hashes independently of changes to the object file's
 build metadata.
 
 The synthetic self-test verifies exact equality, a byte mismatch, and rejection
-of a shortened original extent for a leaf, a branching function, and a
-function with a large stack allocation and saved registers. The large-frame
+of a shortened original extent for a leaf, a branching function, a
+function with a large stack allocation, and a function saving a nonvolatile
+SIMD register. Additional negative tests reject a changed SIMD register,
+truncated COFF files, code with relocations, and relative loops in the leaf
+matcher. The static trace test checks calls, returns, and pending addresses
+when its block limit is reached. The large-frame
 test disables security-cookie generation only for its two synthetic functions
 so it can exercise flagless unwind records in the standalone DLL.
+
+The static trace is bounded discovery over executable file-backed bytes. Use
+`--start 0x0005BAC5` to trace from the newly identified startup call target.
+Its output lists pending addresses when the traversal reaches its block limit.
+It provides instruction and edge metadata for subsequent IDA work.

@@ -18,8 +18,13 @@ def read_range(data, offset, size):
 
 
 def funclet_code(path, symbol_name):
-    data = path.read_bytes()
-    machine, section_count, _, symbols_at, symbol_count, optional, _ = HEADER.unpack_from(data)
+    return funclet_bytes(path.read_bytes(), symbol_name)
+
+
+def funclet_bytes(data, symbol_name):
+    machine, section_count, _, symbols_at, symbol_count, optional, _ = HEADER.unpack(
+        read_range(data, 0, HEADER.size)
+    )
     if machine != 0x8664 or optional or not symbols_at or not symbol_count:
         raise ValueError("Expected a standard AMD64 COFF object with symbols")
     read_range(data, HEADER.size, section_count * SECTION.size)
