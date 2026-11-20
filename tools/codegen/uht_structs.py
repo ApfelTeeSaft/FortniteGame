@@ -55,6 +55,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools" / "matching"))
 sys.path.insert(0, str(ROOT / "tools" / "codegen"))
 from compare import load_decrypted  # noqa: E402
+from genio import sync_tree  # noqa: E402
 from manifest_io import dump_compact  # noqa: E402
 from pe import PEImage  # noqa: E402
 from unwind import UNW_FLAG_CHAININFO, parse_unwind  # noqa: E402
@@ -283,9 +284,7 @@ def main() -> int:
         stats["registernatives_found"] += r["srn"] is not None
         stats["newstructops_found"] += r["nso"] is not None
 
-    GEN_DIR.mkdir(parents=True, exist_ok=True)
-    for old in GEN_DIR.rglob("*.gen.cpp"):
-        old.unlink()
+    outputs: dict[Path, str] = {}
     ctor_entries, ss_entries, symbols = [], [], {}
     defer_entries, srn_entries, ops_groups = [], [], defaultdict(list)
     for pkg_rva, pname in packages.items():
@@ -364,9 +363,7 @@ def main() -> int:
             f"\tFScriptStruct_{short}_StaticRegisterNatives{cpp}()\n\t{{\n"
             f"\t\tUScriptStruct::DeferCppStructOps(FName(TEXT(\"{name}\")),new UScriptStruct::TCppStructOps<{cpp}>);\n"
             f"\t}}\n}} ScriptStruct_{short}_StaticRegisterNatives{cpp};\n")
-        out = GEN_DIR / short / f"{cpp}.gen.cpp"
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(src, encoding="utf-8", newline="\n")
+        outputs[GEN_DIR / short / f"{cpp}.gen.cpp"] = src
         common = {"package": short, "struct": cpp}
         ctor_entries.append({"start_rva": f"0x{r['ctor']:08X}", "end_rva": f"0x{r['ctor_end']:08X}",
                              "name": zc, **common})
@@ -387,6 +384,7 @@ def main() -> int:
         symbols[f"?{crc_fn}@@YAIXZ"] = [f"0x{r['crc_fn']:08X}", "crc-content"]
         stats["structs"] += 1
 
+    stats["files_written"], stats["files_removed"] = sync_tree(GEN_DIR, outputs)
     head = {"schema_version": 1, "generated_by": "tools/codegen/uht_structs.py"}
     ops_entries = []
     for ops in sorted(ops_groups):

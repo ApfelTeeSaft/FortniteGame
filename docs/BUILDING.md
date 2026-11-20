@@ -51,13 +51,17 @@ image to `local-output/reference-dump/` (ignored). Only hashes and statistics go
 
 ## Generated code
 
-`FortniteGameCode/Source/Generated/UHT/*.gen.cpp` and `analysis/functions-uht-creators.json` are
+`FortniteGameCode/Source/Generated/UHT/**/*.gen.cpp` and `analysis/functions-uht-*.json` are
 produced from the reference's reflection data. Both need the decrypted image:
 
 ```
 python tools/analysis/reflection.py      # analysis/reflection-natives.json
 python tools/codegen/uht_creators.py     # generated sources, manifest, FuncParams evidence
+python tools/codegen/uht_structs.py      # USTRUCT registration code, manifests, evidence
+python tools/codegen/uht_enums.py        # UENUM registration code, manifests, evidence
 ```
+
+The generators rewrite only files whose content changed, so MSBuild recompiles only those.
 
 The generated sources are committed, so a checkout builds without the decrypted image.
 

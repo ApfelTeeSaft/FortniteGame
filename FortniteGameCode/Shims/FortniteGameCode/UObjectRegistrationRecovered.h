@@ -49,6 +49,66 @@ struct FCompiledInDeferStruct
 	}
 };
 
+// UObjectBase.h: deferred enum registration.
+class UEnum : public UObject
+{
+public:
+	enum class ECppForm
+	{
+		Regular,
+		Namespaced,
+		EnumClass
+	};
+};
+void UObjectCompiledInDeferEnum(UEnum* (*InRegister)(), const TCHAR* PackageName, const FName ObjectName, bool bDynamic, const TCHAR* DynamicPathName);
+UEnum* GetStaticEnum(UEnum* (*InRegister)(), UObject* EnumOuter, const TCHAR* EnumName);
+
+struct FCompiledInDeferEnum
+{
+	FCompiledInDeferEnum(UEnum* (*InRegister)(), const TCHAR* PackageName, const TCHAR* Name, bool bDynamic, const TCHAR* DynamicPackageName, const TCHAR* DynamicPathName)
+	{
+		if (bDynamic)
+		{
+			GetConvertedDynamicPackageNameToTypeName().Add(FName(DynamicPackageName), FName(Name));
+		}
+		UObjectCompiledInDeferEnum(InRegister, PackageName, Name, bDynamic, DynamicPathName);
+	}
+};
+
+// UObjectGlobals.h (UE4CodeGen_Private), shipping layout without metadata.
+typedef long long int64;
+typedef unsigned char uint8;
+class FText;
+namespace UE4CodeGen_Private
+{
+	enum class EDynamicType
+	{
+		NotDynamic,
+		Dynamic
+	};
+
+	struct FEnumeratorParam
+	{
+		const char* NameUTF8;
+		int64 Value;
+	};
+
+	struct FEnumParams
+	{
+		UObject* (*OuterFunc)();
+		EDynamicType DynamicType;
+		const char* NameUTF8;
+		EObjectFlags ObjectFlags;
+		FText (*DisplayNameFunc)(int32);
+		uint8 CppForm; // this is of type UEnum::ECppForm
+		const char* CppTypeUTF8;
+		const FEnumeratorParam* EnumeratorParams;
+		int32 NumEnumerators;
+	};
+
+	void ConstructUEnum(UEnum*& OutEnum, const FEnumParams& Params);
+}
+
 // Class.h: the parts of UScriptStruct that registration code touches. ICppStructOps keeps the
 // engine layout (vtable pointer, Size, Alignment) and constructor; the engine's further pure
 // virtual operations (construct, copy, serialize, ...) are omitted because no recovered code

@@ -1,0 +1,317 @@
+"""Generate UHT-shaped UENUM registration code from the reference's own reflection data.
+
+UnrealHeaderTool 4.20 (CodeGenerator.cpp, ExportGeneratedEnumInitCode) emits per enum:
+
+  static UEnum* <Enum>_StaticEnum()                file-static; static Singleton, GetStaticEnum(...)
+  static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_<Enum>(...)
+  uint32 Get_Z_Construct_UEnum_<Pkg>_<Enum>_CRC()  unreferenced without hot reload
+  UEnum* Z_Construct_UEnum_<Pkg>_<Enum>()           static ReturnEnum, local Enumerators[] and EnumParams
+
+and a .gen.cpp lists its enums before its structs, delegates and classes.
+
+Layout. ReturnEnum is a COMDAT .bss static, laid out in source order with the rest of its
+header. MSVC compiles file-static functions first, so the Singletons of all <Enum>_StaticEnum
+functions form a separate block at the start of the unity translation unit's .bss (and their
+code at the start of its .text), far from the ReturnEnums. The unity source order is
+recovered from the .data parameter records: FEnumParams, FStructParams and FFunctionParams
+are emitted in definition order. Consecutive FEnumParams records with no other UHT record
+between them are therefore enums declared one after another. No .bss address is used to
+form these runs.
+
+Each run gets two translation units, which reproduce the two blocks:
+- <First>.gen.cpp holds the constructors, so the ReturnEnums anchor each other;
+- <First>.static.gen.cpp holds the StaticEnum functions and FCompiledInDeferEnum objects, so
+  the Singletons anchor each other.
+Both anchor section-relative and leave-one-out. Code generation is unaffected by the split.
+
+Identification uses no bytes of the function each fact is checked against:
+
+* Z_Construct_UEnum_*: a 47-byte UHT singleton whose callee is ConstructUEnum, i.e. the callee
+  shared by the singletons that StaticEnum functions register.
+* EnumParams: the only FEnumParams record in .data with this NameUTF8 and package OuterFunc.
+* <Enum>_StaticEnum: 55-byte shape (package singleton called out of line). LEA-loads the
+  constructor and TEXT("<Enum>"). Its 85-byte form inlines the package singleton and is
+  left out, as for structs.
+* FCompiledInDeferEnum initializer: the only 66-byte registration initializer LEA-loading it.
+
+Get_..._CRC is not emitted: nothing references it in a shipping build, /OPT:REF removed it,
+and its constant is therefore not in the image.
+
+Outputs: FortniteGameCode/Source/Generated/UHT/Enums/<Package>/<FirstEnum>[.static].gen.cpp,
+analysis/functions-uht-enums.json, analysis/functions-uht-staticenum.json,
+analysis/functions-uht-enum-defer.json and analysis/uht-enum-symbols.json.
+
+Usage: python tools/codegen/uht_enums.py
+"""
+from __future__ import annotations
+
+import json
+import struct
+import sys
+from collections import Counter, defaultdict
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "tools" / "matching"))
+sys.path.insert(0, str(ROOT / "tools" / "codegen"))
+from compare import load_decrypted  # noqa: E402
+from genio import sync_tree  # noqa: E402
+from manifest_io import dump_compact  # noqa: E402
+from pe import PEImage  # noqa: E402
+from uht_creators import CREATOR_SIZE, MASK, TEMPLATE  # noqa: E402
+from uht_structs import CID_FIELDS, CID_TEMPLATE, cstr, shape, wstr  # noqa: E402
+from unwind import UNW_FLAG_CHAININFO, parse_unwind  # noqa: E402
+
+GEN_DIR = ROOT / "FortniteGameCode" / "Source" / "Generated" / "UHT" / "Enums"
+CTOR_MANIFEST = ROOT / "analysis" / "functions-uht-enums.json"
+SE_MANIFEST = ROOT / "analysis" / "functions-uht-staticenum.json"
+DEFER_MANIFEST = ROOT / "analysis" / "functions-uht-enum-defer.json"
+SYMBOLS = ROOT / "analysis" / "uht-enum-symbols.json"
+SE_TEMPLATE = bytes.fromhex(
+    "4883ec28488b05000000004885c07522e800000000488bd04c8d0500000000488d0d00000000e800000000"
+    "488905000000004883c428c3")
+SE_FIELDS = {"singleton": (0x07, "rel"), "package": (0x11, "rel"), "name": (0x1B, "rel"),
+             "ctor": (0x22, "rel"), "get_static_enum": (0x27, "rel"), "store": (0x2E, "rel")}
+OBJECT_FLAGS = {0x45: "RF_Public|RF_Transient|RF_MarkAsNative", 0x41: "RF_Public|RF_Transient"}
+CPP_FORM = {0: "UEnum::ECppForm::Regular", 1: "UEnum::ECppForm::Namespaced", 2: "UEnum::ECppForm::EnumClass"}
+PARAMS_SIZE = 0x48
+
+
+def main() -> int:
+    assert len(SE_TEMPLATE) == 55
+    img = PEImage()
+    dimg = load_decrypted(img)
+    if dimg is None:
+        print("needs the validated decrypted image", file=sys.stderr)
+        return 1
+    base = img.image_base
+    text = img.sections[0]
+    allrf = {rf.begin: rf for rf in img.runtime_functions()}
+    primary = sorted(b for b, rf in allrf.items() if text.contains_rva(b)
+                     and not parse_unwind(img, rf.unwind).flags & UNW_FLAG_CHAININFO)
+    stats = Counter()
+
+    def read(rva: int, n: int) -> bytes | None:
+        try:
+            return dimg.read(rva, n)
+        except ValueError:
+            return None
+
+    # Every 47-byte UHT singleton: (ReturnX slot, params record, callee).
+    singletons = {}
+    for p in primary:
+        if allrf[p].end - p != CREATOR_SIZE:
+            continue
+        b = read(p, CREATOR_SIZE)
+        if b is None or any(b[i] != TEMPLATE[i] for i in range(CREATOR_SIZE) if i not in MASK):
+            continue
+        singletons[p] = tuple(p + nxt + struct.unpack_from("<i", b, at)[0]
+                              for at, nxt in ((7, 0xB), (0x13, 0x17), (0x1F, 0x23)))
+
+    static_enums, defer_by_target = {}, defaultdict(list)
+    for p in primary:
+        n = allrf[p].end - p
+        if n == len(SE_TEMPLATE):
+            f = shape(read(p, n), p, SE_TEMPLATE, SE_FIELDS)
+            if f and f["store"] == f["singleton"] and f["ctor"] in singletons:
+                static_enums[f["ctor"]] = dict(f, rva=p)
+        elif n == len(CID_TEMPLATE):
+            f = shape(read(p, n), p, CID_TEMPLATE, CID_FIELDS)
+            if f:
+                defer_by_target[f["staticstruct"]].append(p)
+    gse = Counter(f["get_static_enum"] for f in static_enums.values()).most_common(1)[0][0]
+    static_enums = {k: v for k, v in static_enums.items() if v["get_static_enum"] == gse}
+    construct_enum = Counter(singletons[c][2] for c in static_enums).most_common(1)[0][0]
+
+    # Package singletons: the call targets of plain StaticEnums, named by FPackageParams.
+    construct_package = Counter(singletons[f["package"]][2] for f in static_enums.values()
+                                if f["package"] in singletons).most_common(1)[0][0]
+    packages = {}
+    for rva, (_, rec, callee) in singletons.items():
+        if callee == construct_package:
+            name = cstr(img, struct.unpack("<Q", img.read(rec, 8))[0] - base)
+            if name and name.startswith("/Script/"):
+                packages[rva] = name
+
+    # FEnumParams candidates in .data by (NameUTF8, OuterFunc).
+    ds = next(s for s in img.sections if s.name == ".data")
+    data = img.read(ds.rva, ds.rawsize)
+    records = defaultdict(list)
+    for off in range(0, len(data) - PARAMS_SIZE, 8):
+        outer, dyn, nameptr, oflags = struct.unpack_from("<QQQI", data, off)
+        if outer - base in packages and dyn == 0 and oflags in OBJECT_FLAGS and base <= nameptr < base + img.size_of_image:
+            n = cstr(img, nameptr - base)
+            if n:
+                records[(n, outer - base)].append(ds.rva + off)
+
+    enums = []
+    for ctor, (rf, rec, callee) in singletons.items():
+        if callee != construct_enum:
+            continue
+        stats["enum_constructors"] += 1
+        outer, dyn, nameptr, oflags, disp, form, cpptype, enumerators, num = struct.unpack(
+            "<QI4xQI4xQB7xQQi4x", img.read(rec, PARAMS_SIZE))
+        name = cstr(img, nameptr - base)
+        pkg = outer - base
+        if name is None or pkg not in packages or len(records.get((name, pkg), [])) != 1:
+            stats["record_not_unique"] += 1
+            continue
+        values = []
+        for i in range(num):
+            np_, val = struct.unpack("<Qq", img.read(enumerators - base + 16 * i, 16))
+            values.append((cstr(img, np_ - base), val))
+        if any(v[0] is None for v in values):
+            stats["enumerator_names_unreadable"] += 1
+            continue
+        se = static_enums.get(ctor)
+        if se is not None and wstr(img, se["name"]) != name:
+            se = None
+        if se is not None and se["package"] != pkg:
+            se = None
+        defer = defer_by_target.get(se["rva"], []) if se else []
+        enums.append(dict(ctor=ctor, ctor_end=allrf[ctor].end, rec=rec, name=name, pkg=pkg,
+                          pkg_name=packages[pkg], oflags=oflags, disp=disp - base if disp else 0,
+                          form=form, cpptype=cstr(img, cpptype - base), values=values,
+                          enumerators=enumerators - base, se=se,
+                          defer=defer[0] if len(defer) == 1 else None))
+
+    # Unity source order from .data records of every 47-byte singleton (creators, structs, enums).
+    order = sorted((rec, ctor) for ctor, (_, rec, _) in singletons.items() if ds.rva <= rec < ds.rva + ds.rawsize)
+    by_ctor = {e["ctor"]: e for e in enums}
+    runs, cur = [], []
+    for _, ctor in order:
+        e = by_ctor.get(ctor)
+        if e is not None and (not cur or cur[-1]["pkg"] == e["pkg"]):
+            cur.append(e)
+            continue
+        if cur:
+            runs.append(cur)
+        cur = [e] if e is not None else []
+    if cur:
+        runs.append(cur)
+    stats["runs"] = len(runs)
+    stats["runs_of_one"] = sum(len(r) == 1 for r in runs)
+
+    outputs: dict[Path, str] = {}
+    ctor_entries, se_entries, defer_entries, symbols = [], [], [], {}
+    for pkg_rva, pname in packages.items():
+        symbols[f"?Z_Construct_UPackage_{pname.replace('/', '_')}@@YAPEAVUPackage@@XZ"] = [
+            f"0x{pkg_rva:08X}", "package-params"]
+    used_files = Counter()
+    for run in runs:
+        short = run[0]["pkg_name"].rsplit("/", 1)[1]
+        pkg_fn = f"Z_Construct_UPackage_{run[0]['pkg_name'].replace('/', '_')}"
+        stem = run[0]["name"]
+        used_files[(short, stem.lower())] += 1
+        if used_files[(short, stem.lower())] > 1:
+            stem = f"{stem}_{used_files[(short, stem.lower())]}"
+        tu, stu = f"{short}/{stem}", f"{short}/{stem}.static"
+        head_text = (
+            "// Generated by tools/codegen/uht_enums.py from the reflection data of\n"
+            "// FortniteClient-Win64-Shipping.exe (++Fortnite+Release-2.5-CL-3889387). Do not edit by hand.\n"
+            f"// UENUM registration code of {run[0]['pkg_name']} in UnrealHeaderTool 4.20 output shape for a run of\n"
+            f"// {len(run)} enum(s) declared consecutively (consecutive FEnumParams records in .data).\n")
+        refs = (f"// Cross Module References\n\tUPackage* {pkg_fn}();  // RVA 0x{run[0]['pkg']:08X}\n"
+                + "".join(f"\tUEnum* Z_Construct_UEnum_{short}_{e['name']}();\n" for e in run))
+        ctor_parts = [head_text +
+                      f"// Constructors. The StaticEnum functions and registration objects are in {stem}.static.gen.cpp;\n"
+                      "// Get_..._CRC() is not emitted (unreferenced in shipping, removed by /OPT:REF).\n\n"
+                      '#include "FortniteGameCode/UObjectRegistrationRecovered.h"\n\n' + refs]
+        static_parts = [head_text +
+                        f"// StaticEnum functions and FCompiledInDeferEnum objects; constructors are in {stem}.gen.cpp.\n"
+                        "// MSVC compiles file-static functions first, so these Singletons form their own .bss block.\n\n"
+                        '#include "FortniteGameCode/UObjectRegistrationRecovered.h"\n\n' + refs]
+        for e in run:
+            name, zc = e["name"], f"Z_Construct_UEnum_{short}_{e['name']}"
+            se, cid = e["se"], e["defer"]
+            disp_expr = "nullptr"
+            if e["disp"]:
+                disp_expr = f"Unrecovered_EnumDisplayNameFn_0x{e['disp']:08X}"
+                ctor_parts.append(f"FText {disp_expr}(int32);  // RVA 0x{e['disp']:08X}\n")
+            se_note = (f"\t// Original FortniteClient-Win64-Shipping.exe: RVA 0x{se['rva']:08X} (end 0x{se['rva'] + len(SE_TEMPLATE):08X})\n"
+                       f"\t// Recovery: confirmed (TEXT(\"{name}\"), {zc}) | Matching: see analysis/functions-uht-staticenum.json\n"
+                       if se else "\t// StaticEnum: not the plain 55-byte form in the reference (package singleton inlined)\n")
+            cid_note = f"\t// Original dynamic initializer: RVA 0x{cid:08X}\n" if cid else ""
+            enumerators = "".join(f"\t\t\t\t{{ \"{n}\", {v} }},\n" for n, v in e["values"])
+            cpptype = f"\"{e['cpptype']}\"" if e["cpptype"] is not None else "nullptr"
+            static_parts.append(
+                f"{se_note}"
+                f"\tstatic UEnum* {name}_StaticEnum()\n\t{{\n\t\tstatic UEnum* Singleton = nullptr;\n"
+                f"\t\tif (!Singleton)\n\t\t{{\n"
+                f"\t\t\tSingleton = GetStaticEnum({zc}, {pkg_fn}(), TEXT(\"{name}\"));\n\t\t}}\n"
+                f"\t\treturn Singleton;\n\t}}\n"
+                f"{cid_note}"
+                f"\tstatic FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_{name}({name}_StaticEnum, "
+                f"TEXT(\"{e['pkg_name']}\"), TEXT(\"{name}\"), false, nullptr, nullptr);\n")
+            ctor_parts.append(
+                f"\t// Original FortniteClient-Win64-Shipping.exe: RVA 0x{e['ctor']:08X} (end 0x{e['ctor_end']:08X})\n"
+                f"\t// Original VA: 0x{base + e['ctor']:016X} | File offset: 0x{img.rva_to_off(e['ctor']):08X}\n"
+                f"\t// Recovery: confirmed (FEnumParams 0x{e['rec']:08X}, Enumerators 0x{e['enumerators']:08X}; "
+                f"values as in the reference) | Matching: see analysis/functions-uht-enums.json\n"
+                f"\tUEnum* {zc}()\n\t{{\n\t\tstatic UEnum* ReturnEnum = nullptr;\n\t\tif (!ReturnEnum)\n\t\t{{\n"
+                f"\t\t\tstatic const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {{\n{enumerators}\t\t\t}};\n"
+                f"\t\t\tstatic const UE4CodeGen_Private::FEnumParams EnumParams = {{\n"
+                f"\t\t\t\t(UObject*(*)()){pkg_fn},\n"
+                f"\t\t\t\tUE4CodeGen_Private::EDynamicType::NotDynamic,\n"
+                f"\t\t\t\t\"{name}\",\n\t\t\t\t{OBJECT_FLAGS[e['oflags']]},\n\t\t\t\t{disp_expr},\n"
+                f"\t\t\t\t(uint8){CPP_FORM.get(e['form'], e['form'])},\n\t\t\t\t{cpptype},\n"
+                f"\t\t\t\tEnumerators,\n\t\t\t\tsizeof(Enumerators) / sizeof(Enumerators[0]),\n\t\t\t}};\n"
+                f"\t\t\tUE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);\n\t\t}}\n"
+                f"\t\treturn ReturnEnum;\n\t}}\n")
+            ctor_entries.append({"start_rva": f"0x{e['ctor']:08X}", "end_rva": f"0x{e['ctor_end']:08X}",
+                                 "name": zc, "tu": tu})
+            symbols[f"?EnumParams@?4??{zc}@@YAPEAVUEnum@@XZ@4UFEnumParams@UE4CodeGen_Private@@B"] = [
+                f"0x{e['rec']:08X}", "name+package"]
+            if se:
+                se_entries.append({"start_rva": f"0x{se['rva']:08X}", "end_rva": f"0x{se['rva'] + len(SE_TEMPLATE):08X}",
+                                   "name": f"{name}_StaticEnum", "enum": name, "tu": stu})
+                stats["staticenum_plain"] += 1
+            if cid:
+                defer_entries.append({"start_rva": f"0x{cid:08X}", "end_rva": f"0x{cid + len(CID_TEMPLATE):08X}",
+                                      "name": f"dynamic initializer for Z_CompiledInDeferEnum_UEnum_{name}",
+                                      "enum": name, "tu": stu})
+                stats["defer_initializers"] += 1
+        for rel, body in ((tu, ctor_parts), (stu, static_parts)):
+            outputs[GEN_DIR / f"{rel}.gen.cpp"] = "".join(body)
+        stats["enums_emitted"] += len(run)
+
+    stats["files_written"], stats["files_removed"] = sync_tree(GEN_DIR, outputs)
+    head = {"schema_version": 1, "generated_by": "tools/codegen/uht_enums.py"}
+    src_tpl = "FortniteGameCode/Source/Generated/UHT/Enums/{tu}.gen.cpp"
+    obj_tpl = "Source/Generated/UHT/Enums/{tu}.gen.obj"
+    dump_compact(CTOR_MANIFEST, {**head,
+        "evidence": ("Z_Construct_UEnum_<Pkg>_<Enum>: 47-byte UHT singleton calling ConstructUEnum; EnumParams by "
+                     "content. Translation units group enums whose FEnumParams records are consecutive in .data. "
+                     "See docs/REVERSE_ENGINEERING.md."),
+        "entry_defaults": {"category": "uht-enum-constructor", "source": src_tpl, "object": obj_tpl,
+                           "symbol": "?{name}@@YAPEAVUEnum@@XZ", "name_confidence": "confirmed", "compact": True},
+        "functions": ctor_entries})
+    dump_compact(SE_MANIFEST, {**head,
+        "evidence": ("<Enum>_StaticEnum: 55-byte UHT shape passing Z_Construct_UEnum_* and TEXT(\"<Enum>\") to "
+                     "GetStaticEnum. File-static, so its Singleton lives in the plain .bss."),
+        "entry_defaults": {"category": "uht-staticenum", "source": src_tpl, "object": obj_tpl,
+                           "symbol": "?{enum}_StaticEnum@@YAPEAVUEnum@@XZ", "name_confidence": "confirmed",
+                           "compact": True},
+        "functions": se_entries})
+    dump_compact(DEFER_MANIFEST, {**head,
+        "evidence": ("Dynamic initializer of Z_CompiledInDeferEnum_UEnum_<Enum>: the only 66-byte registration "
+                     "initializer that LEA-loads the enum's StaticEnum."),
+        "entry_defaults": {"category": "uht-enum-compiledindefer", "source": src_tpl, "object": obj_tpl,
+                           "symbol": "??__EZ_CompiledInDeferEnum_UEnum_{enum}@@YAXXZ", "name_confidence": "confirmed",
+                           "compact": True},
+        "functions": defer_entries})
+    SYMBOLS.write_text(json.dumps({
+        "schema_version": 2,
+        "generated_by": "tools/codegen/uht_enums.py",
+        "evidence_codes": {
+            "package-params": "the 47-byte UHT singleton calling ConstructUPackage whose FPackageParams NameUTF8 is this package",
+            "name+package": "the only FEnumParams record in .data whose NameUTF8 is the enum name and whose OuterFunc is its package singleton",
+        },
+        "symbols": symbols,
+    }, separators=(",", ":")).replace('],"', '],\n"') + "\n", encoding="utf-8")
+    print(dict(stats), f"GetStaticEnum 0x{gse:08X}", f"ConstructUEnum 0x{construct_enum:08X}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -334,6 +334,64 @@ behaviour, not an engine difference.
 Open data question, which doesn't affect the matched code: `PropPointers` arrays are declared
 but not yet reconstructed (property-parameter recovery).
 
+### Enum constructors and `StaticEnum` (`tools/codegen/uht_enums.py`)
+
+UHT 4.20 emits per UENUM:
+1. a file-static `<E>_StaticEnum()` (static `Singleton`, `GetStaticEnum(ctor, package(), TEXT("<E>"))`);
+2. an `FCompiledInDeferEnum` object;
+3. `Get_..._CRC()`;
+4. `Z_Construct_UEnum_<Pkg>_<E>()`, with static `ReturnEnum` and local static `Enumerators[]` and
+   `EnumParams`.
+
+A `.gen.cpp` lists its enums before its structs, delegates and classes. All 1,094 enum
+singletons are LEA-loaded by exactly one `StaticEnum`:
+- 824 have the 55-byte plain form;
+- 270 have an 85-byte form that inlines the package singleton.
+
+`Get_..._CRC` is unreferenced in a shipping build. `/OPT:REF` removed it, so its constant is
+not in the image and it is not emitted.
+
+**Two blocks.** MSVC compiles file-static functions first. Their code starts each unity
+translation unit's `.text`, and their statics form a block at the start of its `.bss`, where
+all `StaticEnum` singletons sit. Each `ReturnEnum` sits elsewhere, in its header's COMDAT
+sequence, e.g. `[ReturnEnum][creators…][OuterClass][PrivateStaticClass]`. The two slots are
+never neighbours, unlike `Singleton`/`ReturnStruct` for structs.
+
+**Source order from `.data`.** UHT parameter records (`FEnumParams`, `FStructParams`,
+`FFunctionParams`) are emitted to `.data` in definition order. For 967 of 1,094 enums, the
+item whose record follows the enum's record also owns the next COMDAT `.bss` slot. This
+statistic only supported the design and is never used as evidence. The generator groups
+enums whose records are consecutive, with no other UHT record between, into runs, and never
+reads a `.bss` address to do so.
+
+Each run gets two translation units that reproduce the two blocks:
+- `<First>.gen.cpp`: the constructors, whose `ReturnEnum`s anchor each other;
+- `<First>.static.gen.cpp`: the `StaticEnum` functions and registration objects, whose
+  `Singleton`s anchor each other.
+
+A single translation unit would let the `Singleton` block outvote the `ReturnEnum`
+neighbours. The split doesn't change code generation.
+
+| Field | Evidence |
+| --- | --- |
+| `EnumParams` (`?EnumParams@?4??…`) | the only `FEnumParams` record in `.data` with this name and package `OuterFunc` |
+| `ReturnEnum` / `Singleton` | section-relative within the run (leave-one-out) |
+| constructor (in `StaticEnum`) | the exact constructor |
+| `TEXT("<E>")` | literal elimination against the registration initializer |
+| package singleton | its `FPackageParams` name |
+| `ConstructUEnum`, `GetStaticEnum`, `FName::FName`, `UObjectCompiledInDeferEnum` | corroborated |
+
+**Results.**
+- 695 constructors are exact. The other 399 have no neighbour: 284 runs hold a single enum,
+  and some runs are broken in the reference.
+- 252 `StaticEnum`s are exact. Others lack a `Singleton` neighbour (the static-function order
+  departs from record order), an exact constructor, or a unique literal.
+- The 824 registration initializers are relocation-equivalent, because of the package-name
+  literal.
+
+Enumerator values are emitted as the integers stored in the reference. The C++ enum
+declarations, including their underlying types, are not recovered.
+
 ## Naming confidence
 
 `confirmed` needs direct evidence such as an exported symbol, reflection string or
