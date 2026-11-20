@@ -3,15 +3,8 @@
 // Class ALobbyBeaconPlayerState: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F672A8, FClassParams RVA 0x02F67300.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ALobbyBeaconPlayerState();  // RVA 0x005C2220 (consensus OuterFunc)
-
-class ALobbyBeaconPlayerState
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ALobbyBeaconPlayerState_OnRep_InLobby_Statics
 {

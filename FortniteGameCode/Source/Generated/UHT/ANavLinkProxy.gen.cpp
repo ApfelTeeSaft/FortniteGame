@@ -3,20 +3,8 @@
 // Class ANavLinkProxy: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0395B720, FClassParams RVA 0x0395B7D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ANavLinkProxy();  // RVA 0x0248F770 (consensus OuterFunc)
-
-class ANavLinkProxy
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesANavLinkProxy();
-	static void execHasMovingAgents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsSmartLinkEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execResumePathFollowing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSmartLinkEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F2F0 (end 0x0248F312)
 // Original VA: 0x000000014248F2F0 | File offset: 0x0248E8F0

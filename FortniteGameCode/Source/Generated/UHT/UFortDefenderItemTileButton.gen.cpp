@@ -3,14 +3,48 @@
 // Class UFortDefenderItemTileButton: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C83308, FClassParams RVA 0x03C83320.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UFortDefenderItemTileButton
+struct Z_Construct_UFunction_UFortDefenderItemTileButton_HandleEquipSlotChanged_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289C300 (end 0x0289C32F)
+// Original VA: 0x000000014289C300 | File offset: 0x0289B900
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortDefenderItemTileButton_HandleEquipSlotChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDefenderItemTileButton_HandleEquipSlotChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortDefenderItemTileButton_HandleEquipSlotChanged: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UFortDefenderItemTileButton_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortDefenderItemTileButton_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortDefenderItemTileButton_HandleEquipSlotChanged, "HandleEquipSlotChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortDefenderItemTileButton_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C83320
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortDefenderItemTileButton_Statics::ClassParams = { &UFortDefenderItemTileButton::StaticClass, Z_Construct_UClass_UFortDefenderItemTileButton_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortDefenderItemTileButton_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortDefenderItemTileButton_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B4C0 (end 0x0289B4EF)
+// Original VA: 0x000000014289B4C0 | File offset: 0x0289AAC0
+// Recovery: confirmed (UHT singleton of UFortDefenderItemTileButton) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortDefenderItemTileButton()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortDefenderItemTileButton_Statics::ClassParams);
+	}
+	return OuterClass;
+}

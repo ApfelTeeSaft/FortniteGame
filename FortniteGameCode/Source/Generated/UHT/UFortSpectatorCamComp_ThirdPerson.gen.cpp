@@ -3,18 +3,8 @@
 // Class UFortSpectatorCamComp_ThirdPerson: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033F8498, FClassParams RVA 0x033F84D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson();  // RVA 0x010A5B60 (consensus OuterFunc)
-
-class UFortSpectatorCamComp_ThirdPerson
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSpectatorCamComp_ThirdPerson();
-	static void execSetAutoFollow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLazyAutoFollow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5040 (end 0x010A5062)
 // Original VA: 0x00000001410A5040 | File offset: 0x010A4640

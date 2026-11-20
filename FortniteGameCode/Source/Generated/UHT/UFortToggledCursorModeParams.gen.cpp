@@ -3,18 +3,8 @@
 // Class UFortToggledCursorModeParams: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0344A430, FClassParams RVA 0x0344A470.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortToggledCursorModeParams
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortToggledCursorModeParams();
-	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9230 (end 0x010E9252)
 // Original VA: 0x00000001410E9230 | File offset: 0x010E8830
@@ -29,6 +19,64 @@ void UFortToggledCursorModeParams::StaticRegisterNativesUFortToggledCursorModePa
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortToggledCursorModeParams_BreakParams: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortToggledCursorModeParams_BreakParams_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 27 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB280 (end 0x010EB2AF)
+// Original VA: 0x00000001410EB280 | File offset: 0x010EA880
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortToggledCursorModeParams_BreakParams()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortToggledCursorModeParams_BreakParams_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortToggledCursorModeParams_SetParams: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortToggledCursorModeParams_SetParams_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 26 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB2B0 (end 0x010EB2DF)
+// Original VA: 0x00000001410EB2B0 | File offset: 0x010EA8B0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortToggledCursorModeParams_SetParams()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortToggledCursorModeParams_SetParams_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortToggledCursorModeParams_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortToggledCursorModeParams_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortToggledCursorModeParams_BreakParams, "BreakParams" },
+	{ &Z_Construct_UFunction_UFortToggledCursorModeParams_SetParams, "SetParams" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortToggledCursorModeParams_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0344A470
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortToggledCursorModeParams_Statics::ClassParams = { &UFortToggledCursorModeParams::StaticClass, Z_Construct_UClass_UFortToggledCursorModeParams_Statics::DependentSingletons, 2, 0x00000280u, Z_Construct_UClass_UFortToggledCursorModeParams_Statics::FuncInfo, 2, Z_Construct_UClass_UFortToggledCursorModeParams_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortToggledCursorModeParams_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA360 (end 0x010EA38F)
+// Original VA: 0x00000001410EA360 | File offset: 0x010E9960
+// Recovery: confirmed (UHT singleton of UFortToggledCursorModeParams) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortToggledCursorModeParams()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortToggledCursorModeParams_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -3,17 +3,8 @@
 // Class UBuildingTurretComponent_MOBA: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03287440, FClassParams RVA 0x03287460.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBuildingTurretComponent_MOBA();  // RVA 0x00F78710 (consensus OuterFunc)
-
-class UBuildingTurretComponent_MOBA
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUBuildingTurretComponent_MOBA();
-	static void execOnAllyHarmed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F780A0 (end 0x00F780C2)
 // Original VA: 0x0000000140F780A0 | File offset: 0x00F776A0

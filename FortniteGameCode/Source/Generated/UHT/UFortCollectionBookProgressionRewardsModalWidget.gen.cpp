@@ -3,19 +3,8 @@
 // Class UFortCollectionBookProgressionRewardsModalWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C76B80, FClassParams RVA 0x03C76C10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget();  // RVA 0x02894810 (consensus OuterFunc)
-
-class UFortCollectionBookProgressionRewardsModalWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCollectionBookProgressionRewardsModalWidget();
-	static void execOnInputMethodChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnLevelProgressionSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSelectedButtonChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02894370 (end 0x02894392)
 // Original VA: 0x0000000142894370 | File offset: 0x02893970

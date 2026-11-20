@@ -3,32 +3,8 @@
 // Class AFortFXManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033127A0, FClassParams RVA 0x03312900.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortFXManager();  // RVA 0x00FDB4E0 (consensus OuterFunc)
-
-class AFortFXManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortFXManager();
-	static void execAddLightAnimationIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddMIDAnimationColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddMIDAnimationColorCurve(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddMIDAnimationFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddParticleAnimationFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddSplineMeshScaleAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddSplineMeshSnapAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPickupRarityMID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPickupStretchMIDFromPool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveLightAnimations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveMIDAnimations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveParticleAnimations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveSplineMeshAnimations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execReturnFXActorToPool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execReturnPickupStretchMIDToPool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSpawnPooledFXActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDAA30 (end 0x00FDAA52)
 // Original VA: 0x0000000140FDAA30 | File offset: 0x00FDA030

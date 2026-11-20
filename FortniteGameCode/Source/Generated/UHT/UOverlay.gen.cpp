@@ -3,17 +3,8 @@
 // Class UOverlay: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03698228, FClassParams RVA 0x03698240.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UOverlay();  // RVA 0x01BED800 (consensus OuterFunc)
-
-class UOverlay
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUOverlay();
-	static void execAddChildToOverlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED0C0 (end 0x01BED0E2)
 // Original VA: 0x0000000141BED0C0 | File offset: 0x01BEC6C0

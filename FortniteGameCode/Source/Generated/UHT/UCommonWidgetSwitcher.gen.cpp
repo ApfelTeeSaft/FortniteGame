@@ -3,15 +3,8 @@
 // Class UCommonWidgetSwitcher: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E86910, FClassParams RVA 0x02E869E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonWidgetSwitcher();  // RVA 0x002D05E0 (consensus OuterFunc)
-
-class UCommonWidgetSwitcher
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateNextWidget_Statics
 {

@@ -3,22 +3,8 @@
 // Class UWidgetSwitcher: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036AB4C0, FClassParams RVA 0x036AB530.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UWidgetSwitcher();  // RVA 0x01C07CB0 (consensus OuterFunc)
-
-class UWidgetSwitcher
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUWidgetSwitcher();
-	static void execGetActiveWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetActiveWidgetIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumWidgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetWidgetAtIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetActiveWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetActiveWidgetIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07B30 (end 0x01C07B52)
 // Original VA: 0x0000000141C07B30 | File offset: 0x01C07130

@@ -3,15 +3,8 @@
 // Class ABuildingFoundation: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032771F0, FClassParams RVA 0x03277370.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingFoundation();  // RVA 0x00F6C2A0 (consensus OuterFunc)
-
-class ABuildingFoundation
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ABuildingFoundation_EditorOnlyAddAdditionalWorld_Statics
 {

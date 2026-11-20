@@ -3,19 +3,8 @@
 // Class UBillboardComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038B1638, FClassParams RVA 0x038B16B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBillboardComponent();  // RVA 0x023E35A0 (consensus OuterFunc)
-
-class UBillboardComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUBillboardComponent();
-	static void execSetSprite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSpriteAndUV(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetUV(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2C60 (end 0x023E2C82)
 // Original VA: 0x00000001423E2C60 | File offset: 0x023E2260

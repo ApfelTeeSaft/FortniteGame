@@ -3,21 +3,8 @@
 // Class UFortLevelIndicator: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE3D40, FClassParams RVA 0x03CE3E10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortLevelIndicator();  // RVA 0x028D7240 (consensus OuterFunc)
-
-class UFortLevelIndicator
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortLevelIndicator();
-	static void execHandleItemForComparisonChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleItemToRepresentChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemForComparison(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetShouldShowMaximumLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6CC0 (end 0x028D6CE2)
 // Original VA: 0x00000001428D6CC0 | File offset: 0x028D62C0

@@ -3,15 +3,8 @@
 // Class UFortHealthSet: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0333D5E0, FClassParams RVA 0x0333D6A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHealthSet();  // RVA 0x00FFAF20 (consensus OuterFunc)
-
-class UFortHealthSet
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortHealthSet_OnRep_CurrentShield_Statics
 {

@@ -3,19 +3,8 @@
 // Class UMultiLineEditableText: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03697DB0, FClassParams RVA 0x03697E80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMultiLineEditableText();  // RVA 0x01BED6F0 (consensus OuterFunc)
-
-class UMultiLineEditableText
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUMultiLineEditableText();
-	static void execGetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIsReadOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED060 (end 0x01BED082)
 // Original VA: 0x0000000141BED060 | File offset: 0x01BEC660

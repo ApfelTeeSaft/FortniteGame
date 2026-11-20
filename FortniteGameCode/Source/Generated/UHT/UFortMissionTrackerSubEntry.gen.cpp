@@ -3,15 +3,8 @@
 // Class UFortMissionTrackerSubEntry: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE5FF8, FClassParams RVA 0x03CE6070.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMissionTrackerSubEntry();  // RVA 0x028D7580 (consensus OuterFunc)
-
-class UFortMissionTrackerSubEntry
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortMissionTrackerSubEntry_NotifyVisibilityChanged_Statics
 {

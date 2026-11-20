@@ -3,19 +3,8 @@
 // Class UExpandableArea: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03696758, FClassParams RVA 0x03696800.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UExpandableArea();  // RVA 0x01BED360 (consensus OuterFunc)
-
-class UExpandableArea
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUExpandableArea();
-	static void execGetIsExpanded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIsExpanded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIsExpanded_Animated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECE20 (end 0x01BECE42)
 // Original VA: 0x0000000141BECE20 | File offset: 0x01BEC420

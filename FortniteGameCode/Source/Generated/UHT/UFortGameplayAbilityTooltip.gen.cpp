@@ -3,26 +3,8 @@
 // Class UFortGameplayAbilityTooltip: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03326460, FClassParams RVA 0x03326520.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGameplayAbilityTooltip();  // RVA 0x00FE7B20 (consensus OuterFunc)
-
-class UFortGameplayAbilityTooltip
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortGameplayAbilityTooltip();
-	static void execGetApplicationTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTextForToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTextForTokenFromAbilityInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTextForTokenFromAbilityInstanceInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTextForTokenFromAbilitySpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTextForTokenFromAbilitySpecInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTokenizedDescriptionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execInitializeAbilityInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execInitializeAbilityInstanceInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7700 (end 0x00FE7722)
 // Original VA: 0x0000000140FE7700 | File offset: 0x00FE6D00

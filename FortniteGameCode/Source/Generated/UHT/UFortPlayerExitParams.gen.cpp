@@ -3,18 +3,8 @@
 // Class UFortPlayerExitParams: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x034494E0, FClassParams RVA 0x03449510.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortPlayerExitParams
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortPlayerExitParams();
-	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E91A0 (end 0x010E91C2)
 // Original VA: 0x00000001410E91A0 | File offset: 0x010E87A0
@@ -29,6 +19,64 @@ void UFortPlayerExitParams::StaticRegisterNativesUFortPlayerExitParams()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortPlayerExitParams_BreakParams: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPlayerExitParams_BreakParams_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 27 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB190 (end 0x010EB1BF)
+// Original VA: 0x00000001410EB190 | File offset: 0x010EA790
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPlayerExitParams_BreakParams()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPlayerExitParams_BreakParams_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPlayerExitParams_SetParams: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPlayerExitParams_SetParams_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 26 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB1C0 (end 0x010EB1EF)
+// Original VA: 0x00000001410EB1C0 | File offset: 0x010EA7C0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPlayerExitParams_SetParams()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPlayerExitParams_SetParams_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortPlayerExitParams_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPlayerExitParams_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPlayerExitParams_BreakParams, "BreakParams" },
+	{ &Z_Construct_UFunction_UFortPlayerExitParams_SetParams, "SetParams" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPlayerExitParams_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03449510
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPlayerExitParams_Statics::ClassParams = { &UFortPlayerExitParams::StaticClass, Z_Construct_UClass_UFortPlayerExitParams_Statics::DependentSingletons, 2, 0x00000280u, Z_Construct_UClass_UFortPlayerExitParams_Statics::FuncInfo, 2, Z_Construct_UClass_UFortPlayerExitParams_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortPlayerExitParams_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA240 (end 0x010EA26F)
+// Original VA: 0x00000001410EA240 | File offset: 0x010E9840
+// Recovery: confirmed (UHT singleton of UFortPlayerExitParams) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPlayerExitParams()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPlayerExitParams_Statics::ClassParams);
+	}
+	return OuterClass;
+}

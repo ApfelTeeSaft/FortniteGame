@@ -3,27 +3,8 @@
 // Class UFortExpeditionItem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0330F620, FClassParams RVA 0x0330F730.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionItem();  // RVA 0x00FDB670 (consensus OuterFunc)
-
-class UFortExpeditionItem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortExpeditionItem();
-	static void execGetBonusCriteriaBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBonusCriteriaTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetExpeditionSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetExpeditionSuccessChance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMinTargetPowerLevelToBegin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRemainingExpeditionDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRemainingExpeditionExpirationDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTargetPowerLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasExpeditionExpired(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsExpeditionCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsExpeditionInProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDAAF0 (end 0x00FDAB12)
 // Original VA: 0x0000000140FDAAF0 | File offset: 0x00FDA0F0

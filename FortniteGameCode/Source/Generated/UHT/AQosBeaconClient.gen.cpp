@@ -3,18 +3,8 @@
 // Class AQosBeaconClient: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F5ACD0, FClassParams RVA 0x02F5AD00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AQosBeaconClient();  // RVA 0x005A20C0 (consensus OuterFunc)
-
-class AQosBeaconClient
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAQosBeaconClient();
-	static void execClientQosResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerQosRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005A1E90 (end 0x005A1EB2)
 // Original VA: 0x00000001405A1E90 | File offset: 0x005A1490

@@ -3,15 +3,8 @@
 // Class UGameUserSettings: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038F8770, FClassParams RVA 0x038F8C80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameUserSettings();  // RVA 0x0241F0D0 (consensus OuterFunc)
-
-class UGameUserSettings
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UGameUserSettings_ApplyHardwareBenchmarkResults_Statics
 {

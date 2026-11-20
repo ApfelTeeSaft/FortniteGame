@@ -3,15 +3,8 @@
 // Class UFortItemManagementInventoryPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CCDDE0, FClassParams RVA 0x03CCE050.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemManagementInventoryPanel();  // RVA 0x028C9F60 (consensus OuterFunc)
-
-class UFortItemManagementInventoryPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortItemManagementInventoryPanel_AddItemStackToMulch_Statics
 {

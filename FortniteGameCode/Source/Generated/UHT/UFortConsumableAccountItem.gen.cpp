@@ -3,15 +3,8 @@
 // Class UFortConsumableAccountItem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032F71E8, FClassParams RVA 0x032F7210.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortConsumableAccountItem();  // RVA 0x00FCB870 (consensus OuterFunc)
-
-class UFortConsumableAccountItem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortConsumableAccountItem_CanActivateOnOthers_Statics
 {

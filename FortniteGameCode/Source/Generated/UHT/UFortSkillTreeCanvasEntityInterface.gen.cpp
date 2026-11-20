@@ -3,16 +3,66 @@
 // Class UFortSkillTreeCanvasEntityInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D134D8, FClassParams RVA 0x03D13500.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UFortSkillTreeCanvasEntityInterface
+struct Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayIntroTransitionBP_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5CE0 (end 0x028F5D0F)
+// Original VA: 0x00000001428F5CE0 | File offset: 0x028F52E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayIntroTransitionBP()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayIntroTransitionBP_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayIntroTransitionBP: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayOutroTransitionBP_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5D10 (end 0x028F5D3F)
+// Original VA: 0x00000001428F5D10 | File offset: 0x028F5310
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayOutroTransitionBP()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayOutroTransitionBP_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayOutroTransitionBP: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UFortSkillTreeCanvasEntityInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSkillTreeCanvasEntityInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayIntroTransitionBP, "PlayIntroTransitionBP" },
+	{ &Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayOutroTransitionBP, "PlayOutroTransitionBP" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSkillTreeCanvasEntityInterface_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D13500
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSkillTreeCanvasEntityInterface_Statics::ClassParams = { &UFortSkillTreeCanvasEntityInterface::StaticClass, Z_Construct_UClass_UFortSkillTreeCanvasEntityInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortSkillTreeCanvasEntityInterface_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortSkillTreeCanvasEntityInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F54F0 (end 0x028F551F)
+// Original VA: 0x00000001428F54F0 | File offset: 0x028F4AF0
+// Recovery: confirmed (UHT singleton of UFortSkillTreeCanvasEntityInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSkillTreeCanvasEntityInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSkillTreeCanvasEntityInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

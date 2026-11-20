@@ -3,15 +3,8 @@
 // Class UMcpProfile: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02FC70F0, FClassParams RVA 0x02FC71C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMcpProfile();  // RVA 0x007AF850 (consensus OuterFunc)
-
-class UMcpProfile
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UMcpProfile_DeleteAllProfiles_Statics
 {

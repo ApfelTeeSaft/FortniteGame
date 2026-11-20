@@ -3,17 +3,8 @@
 // Class UFortSocialListView: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D14958, FClassParams RVA 0x03D149A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSocialListView();  // RVA 0x028F5790 (consensus OuterFunc)
-
-class UFortSocialListView
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSocialListView();
-	static void execSetList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5050 (end 0x028F5072)
 // Original VA: 0x00000001428F5050 | File offset: 0x028F4650

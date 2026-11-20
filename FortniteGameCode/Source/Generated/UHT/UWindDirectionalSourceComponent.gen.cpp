@@ -3,22 +3,8 @@
 // Class UWindDirectionalSourceComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039CFCC0, FClassParams RVA 0x039CFD60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UWindDirectionalSourceComponent();  // RVA 0x024F0CF0 (consensus OuterFunc)
-
-class UWindDirectionalSourceComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUWindDirectionalSourceComponent();
-	static void execSetMaximumGustAmount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetMinimumGustAmount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetWindType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024F06C0 (end 0x024F06E2)
 // Original VA: 0x00000001424F06C0 | File offset: 0x024EFCC0

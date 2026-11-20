@@ -3,25 +3,8 @@
 // Class UFortOutpostAnalytics: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032C8D30, FClassParams RVA 0x032C8DD0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortOutpostAnalytics();  // RVA 0x00FA3DA0 (consensus OuterFunc)
-
-class UFortOutpostAnalytics
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortOutpostAnalytics();
-	static void execFireAnalyticsEvent_OutpostAttackWaveCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_OutpostAttackWaveStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_OutpostBuildingActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_OutpostBuildingDefended(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_OutpostDefenseEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_OutpostDefenseStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_OutpostLeaveOutpost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_OutpostLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_OutpostSupplyDropPickedUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3530 (end 0x00FA3552)
 // Original VA: 0x0000000140FA3530 | File offset: 0x00FA2B30

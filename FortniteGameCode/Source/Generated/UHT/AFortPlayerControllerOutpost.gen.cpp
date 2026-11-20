@@ -3,15 +3,8 @@
 // Class AFortPlayerControllerOutpost: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033C3B00, FClassParams RVA 0x033C3DA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerOutpost();  // RVA 0x01077790 (consensus OuterFunc)
-
-class AFortPlayerControllerOutpost
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortPlayerControllerOutpost_CanUpgradeBuilding_Statics
 {

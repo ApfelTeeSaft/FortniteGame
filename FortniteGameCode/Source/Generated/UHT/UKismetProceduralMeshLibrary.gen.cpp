@@ -3,24 +3,8 @@
 // Class UKismetProceduralMeshLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02FA22B0, FClassParams RVA 0x02FA2340.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UKismetProceduralMeshLibrary();  // RVA 0x0069BCB0 (consensus OuterFunc)
-
-class UKismetProceduralMeshLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUKismetProceduralMeshLibrary();
-	static void execCalculateTangentsForMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConvertQuadToTriangles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCopyProceduralMeshFromStaticMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCreateGridMeshTriangles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGenerateBoxMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSectionFromProceduralMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSectionFromStaticMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSliceProceduralMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069BAD0 (end 0x0069BAF2)
 // Original VA: 0x000000014069BAD0 | File offset: 0x0069B0D0

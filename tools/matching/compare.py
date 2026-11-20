@@ -46,7 +46,8 @@ SYMBOLS = REPO_ROOT / "analysis" / "symbols.json"
 # Generated symbol evidence: {symbol: {rva, evidence}} files written by analysis/codegen tools.
 # Literal elimination needs every copy enumerated; content with this many copies is skipped.
 ELIMINATION_LIMIT = 64
-GENERATED_SYMBOLS = ("uht-creator-symbols.json", "uht-struct-symbols.json", "uht-enum-symbols.json")
+GENERATED_SYMBOLS = ("uht-creator-symbols.json", "uht-struct-symbols.json", "uht-enum-symbols.json",
+                     "uht-class-symbols.json")
 SOLUTION = REPO_ROOT / "FortniteGameCode" / "FortniteGameCode.sln"
 OBJ_ROOT = REPO_ROOT / "FortniteGameCode" / "Build" / "ClientShipping" / "obj"
 DECRYPTED_REPORT = REPO_ROOT / "analysis" / "decrypted-reference.json"
@@ -99,6 +100,7 @@ class Resolver:
         self.observations: dict = {}
         self.by_addr: dict = {}
         self._literal_copies: dict[bytes, list[int]] = {}
+        self._groups: dict = {}
         self.entry_names: dict[int, str] = {}
 
     @staticmethod
@@ -168,45 +170,74 @@ class Resolver:
                                       + ", ".join(users[:2]) + (f" and {len(users) - 2} more" if len(users) > 2 else ""))]
         # Section-relative: neighbours in the object's data layout (same section name, sections
         # in object order), observed by other functions. Local first: the nearest observed
-        # neighbour on each side, extended outward while neighbours agree, gives that side's
-        # prediction. If the two sides agree, or only one side has observed neighbours, that
-        # prediction is used; a gap in the layout model elsewhere in a large unit then cannot
-        # outvote the immediate neighbours. If the sides disagree (a gap next to the symbol),
-        # the prediction supported by the most neighbours is used if it strictly outnumbers
-        # every alternative. The byte comparison decides, and a failed prediction is reported
-        # as unresolved.
+        # neighbour on each side gives that side's prediction. If the two sides agree, or only
+        # one side has an observed neighbour, that prediction is used; a gap in the layout model
+        # elsewhere in a large unit then cannot outvote the immediate neighbours. If the sides
+        # disagree (a gap next to the symbol), the prediction supported by the most neighbours
+        # is used if it strictly outnumbers every alternative. The byte comparison decides, and
+        # a failed prediction is reported as unresolved.
         sym = obj.symbol(symbol)
         if sym is None or sym.section <= 0:
             return []
-        group = obj.data_layout().get(obj.sections[sym.section - 1].name)
-        if not group:
+        items, index = self._layout_group(obj, objpath, obj.sections[sym.section - 1].name)
+        i = index.get(symbol)
+        if i is None:
             return []
-        mine = next((off for name, off, _ in group if name == symbol), None)
-        if mine is None:
-            return []
-        preds: dict[int, list[str]] = {}
-        neighbours: list[tuple[int, int, str]] = []
-        for name, off, _ in group:
-            if name == symbol:
-                continue
+        mine = items[i][0]
+
+        def observed_pred(j: int):
+            off, name = items[j]
             ovals, owho = self._observed(self.key(obj, objpath, name), exclude)
             if len(ovals) == 1:
-                pred = next(iter(ovals)) + mine - off
-                preds.setdefault(pred, []).append(f"{name} (seen in {owho})")
-                neighbours.append((off, pred, f"{name} (seen in {owho})"))
-        local = local_prediction(mine, neighbours)
+                return off, next(iter(ovals)) + mine - off, f"{name} (seen in {owho})"
+            return None
+
+        nearest = []
+        for step in (-1, 1):
+            j = i + step
+            while 0 <= j < len(items):
+                n = observed_pred(j)
+                if n is not None:
+                    nearest.append(n)
+                    break
+                j += step
+        local = local_prediction(mine, nearest)
         if local is not None:
             pred, basis = local
             extra = f" and {len(basis) - 1} more neighbours" if len(basis) > 1 else ""
             return [(pred, "section-relative (local) to " + basis[0] + extra)]
-        ranked = sorted(preds.items(), key=lambda kv: -len(kv[1]))
-        if ranked and (len(ranked) == 1 or len(ranked[0][1]) > len(ranked[1][1])):
-            pred, basis = ranked[0]
-            extra = f" and {len(basis) - 1} more neighbours" if len(basis) > 1 else ""
-            dissent = sum(len(b) for _, b in ranked[1:])
-            note = f" ({dissent} dissenting)" if dissent else ""
-            return [(pred, "section-relative to " + basis[0] + extra + note)]
-        return []
+        if len(nearest) < 2:
+            return []
+        # The sides disagree: a gap next to the symbol. Each side's run is the observed
+        # neighbours that agree with its nearest one, up to the first that does not. The
+        # strictly longer run's prediction is used; that side holds more of the symbol's own
+        # contiguous block. Equal runs resolve nothing.
+        runs = []
+        for step, (_, first, desc) in zip((-1, 1), nearest):
+            count, j = 0, i + step
+            while 0 <= j < len(items):
+                n = observed_pred(j)
+                if n is not None:
+                    if n[1] != first:
+                        break
+                    count += 1
+                j += step
+            runs.append((count, first, desc))
+        (lc, lp, ld), (rc, rp, rd) = runs
+        if lc == rc:
+            return []
+        count, pred, desc = max(runs)
+        extra = f" and {count - 1} more neighbours" if count > 1 else ""
+        return [(pred, "section-relative (longer run) to " + desc + extra + f" ({min(lc, rc)} dissenting)")]
+
+    def _layout_group(self, obj: CoffObject, objpath: str, secname: str):
+        """([(offset, symbol)] sorted by offset, {symbol: index}) of one section group, cached."""
+        k = (objpath, secname)
+        g = self._groups.get(k)
+        if g is None:
+            items = sorted((off, name) for name, off, _ in obj.data_layout().get(secname, []))
+            g = self._groups[k] = (items, {name: n for n, (_, name) in enumerate(items)})
+        return g
 
     def observe(self, idx: int, obj: CoffObject, objpath: str, relocs, cand_raw: bytes, ref: bytes,
                 start: int, image_base: int) -> None:

@@ -3,17 +3,8 @@
 // Class UAnimSequenceBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038A27E0, FClassParams RVA 0x038A2820.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAnimSequenceBase();  // RVA 0x023D6570 (consensus OuterFunc)
-
-class UAnimSequenceBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAnimSequenceBase();
-	static void execGetPlayLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D57F0 (end 0x023D5812)
 // Original VA: 0x00000001423D57F0 | File offset: 0x023D4DF0

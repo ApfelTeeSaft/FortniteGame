@@ -3,17 +3,8 @@
 // Class UFortEmoteItemDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03309970, FClassParams RVA 0x03309990.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortEmoteItemDefinition();  // RVA 0x00FD7A30 (consensus OuterFunc)
-
-class UFortEmoteItemDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortEmoteItemDefinition();
-	static void execGetCommandName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6B60 (end 0x00FD6B82)
 // Original VA: 0x0000000140FD6B60 | File offset: 0x00FD6160

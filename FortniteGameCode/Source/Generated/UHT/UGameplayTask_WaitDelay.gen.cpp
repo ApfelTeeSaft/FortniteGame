@@ -3,17 +3,8 @@
 // Class UGameplayTask_WaitDelay: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036C67C8, FClassParams RVA 0x036C6800.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTask_WaitDelay();  // RVA 0x01C9AC30 (consensus OuterFunc)
-
-class UGameplayTask_WaitDelay
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUGameplayTask_WaitDelay();
-	static void execTaskWaitDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9AA00 (end 0x01C9AA22)
 // Original VA: 0x0000000141C9AA00 | File offset: 0x01C9A000

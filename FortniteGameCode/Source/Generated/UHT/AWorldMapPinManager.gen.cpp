@@ -3,15 +3,8 @@
 // Class AWorldMapPinManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03451BC8, FClassParams RVA 0x03451C10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AWorldMapPinManager();  // RVA 0x010F1A00 (consensus OuterFunc)
-
-class AWorldMapPinManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AWorldMapPinManager_CreateWorldMapPin_Statics
 {

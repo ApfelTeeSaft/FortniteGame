@@ -3,15 +3,8 @@
 // Class UFortItemTransform: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CD9748, FClassParams RVA 0x03CD9770.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemTransform();  // RVA 0x028CF630 (consensus OuterFunc)
-
-class UFortItemTransform
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortItemTransform_OnRequestCloseItemPicker_Statics
 {

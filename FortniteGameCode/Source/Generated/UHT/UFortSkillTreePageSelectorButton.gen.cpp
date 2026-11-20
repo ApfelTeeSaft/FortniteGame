@@ -3,20 +3,8 @@
 // Class UFortSkillTreePageSelectorButton: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D138B0, FClassParams RVA 0x03D13930.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreePageSelectorButton();  // RVA 0x028F5630 (consensus OuterFunc)
-
-class UFortSkillTreePageSelectorButton
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSkillTreePageSelectorButton();
-	static void execGetButtonNodeCompletionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsSkillTreePageLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetSkillTreeNodeState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetStaticSkillTreePageData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4F60 (end 0x028F4F82)
 // Original VA: 0x00000001428F4F60 | File offset: 0x028F4560

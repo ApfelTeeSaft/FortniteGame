@@ -3,15 +3,8 @@
 // Class UFortMovieWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE68D0, FClassParams RVA 0x03CE6980.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMovieWidget();  // RVA 0x028D7610 (consensus OuterFunc)
-
-class UFortMovieWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortMovieWidget_GetMediaPlayer_Statics
 {

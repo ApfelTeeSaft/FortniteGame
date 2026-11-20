@@ -3,15 +3,8 @@
 // Class AFortTimeOfDayManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0340CEE0, FClassParams RVA 0x0340D2D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortTimeOfDayManager();  // RVA 0x010BE220 (consensus OuterFunc)
-
-class AFortTimeOfDayManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortTimeOfDayManager_BreakExponentialHeightFogValues_Statics
 {

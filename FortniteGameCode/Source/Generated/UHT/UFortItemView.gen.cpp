@@ -3,18 +3,8 @@
 // Class UFortItemView: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CD9810, FClassParams RVA 0x03CD98D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortItemView
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortItemView();
-	static void execSetInspectMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF240 (end 0x028CF262)
 // Original VA: 0x00000001428CF240 | File offset: 0x028CE840
@@ -29,6 +19,64 @@ void UFortItemView::StaticRegisterNativesUFortItemView()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortItemView_SetInspectMode: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemView_SetInspectMode_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D08C0 (end 0x028D08EF)
+// Original VA: 0x00000001428D08C0 | File offset: 0x028CFEC0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemView_SetInspectMode()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemView_SetInspectMode_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemView_SetItemToRepresent: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemView_SetItemToRepresent_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D08F0 (end 0x028D091F)
+// Original VA: 0x00000001428D08F0 | File offset: 0x028CFEF0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemView_SetItemToRepresent()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemView_SetItemToRepresent_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortItemView_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemView_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemView_SetInspectMode, "SetInspectMode" },
+	{ &Z_Construct_UFunction_UFortItemView_SetItemToRepresent, "SetItemToRepresent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemView_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CD98D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemView_Statics::ClassParams = { &UFortItemView::StaticClass, Z_Construct_UClass_UFortItemView_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortItemView_Statics::FuncInfo, 2, Z_Construct_UClass_UFortItemView_Statics::PropPointers, 18, nullptr, &Z_Construct_UClass_UFortItemView_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF660 (end 0x028CF68F)
+// Original VA: 0x00000001428CF660 | File offset: 0x028CEC60
+// Recovery: confirmed (UHT singleton of UFortItemView) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemView()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemView_Statics::ClassParams);
+	}
+	return OuterClass;
+}

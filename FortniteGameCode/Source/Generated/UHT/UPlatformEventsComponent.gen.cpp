@@ -3,19 +3,8 @@
 // Class UPlatformEventsComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039834C0, FClassParams RVA 0x03983520.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPlatformEventsComponent();  // RVA 0x024A9FC0 (consensus OuterFunc)
-
-class UPlatformEventsComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUPlatformEventsComponent();
-	static void execIsInLaptopMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsInTabletMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSupportsConvertibleLaptops(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A98D0 (end 0x024A98F2)
 // Original VA: 0x00000001424A98D0 | File offset: 0x024A8ED0

@@ -3,17 +3,8 @@
 // Class UAbilityTask_WaitVelocityChange: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F33698, FClassParams RVA 0x02F336C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitVelocityChange();  // RVA 0x0054D880 (consensus OuterFunc)
-
-class UAbilityTask_WaitVelocityChange
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAbilityTask_WaitVelocityChange();
-	static void execCreateWaitVelocityChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D0E0 (end 0x0054D102)
 // Original VA: 0x000000014054D0E0 | File offset: 0x0054C6E0

@@ -3,31 +3,8 @@
 // Class AFortWindManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03435FD0, FClassParams RVA 0x03436290.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortWindManager();  // RVA 0x010DC880 (consensus OuterFunc)
-
-class AFortWindManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortWindManager();
-	static void execAddWindImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddWindImpulseCylinder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBreakWindImpulseCylinder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBreakWindImpulseCylinderAdvanced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBreakWindImpulseCylinderDelta(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBreakWindImpulseRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurrentWindImpulseCylinderDelta(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetGlobalWindIntensityAndDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetWindManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasWindImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMakeWindImpulseCylinder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMakeWindImpulseRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveWindImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetWindImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetWindImpulseCylinderMagnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC160 (end 0x010DC182)
 // Original VA: 0x00000001410DC160 | File offset: 0x010DB760

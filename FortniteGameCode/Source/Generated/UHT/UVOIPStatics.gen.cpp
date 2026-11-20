@@ -3,17 +3,8 @@
 // Class UVOIPStatics: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039CFA00, FClassParams RVA 0x039CFA20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UVOIPStatics();  // RVA 0x024F0B70 (consensus OuterFunc)
-
-class UVOIPStatics
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUVOIPStatics();
-	static void execSetMicThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0600 (end 0x024F0622)
 // Original VA: 0x00000001424F0600 | File offset: 0x024EFC00

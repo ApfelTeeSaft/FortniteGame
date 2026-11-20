@@ -3,15 +3,8 @@
 // Class UCommonWidgetGroupBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E865D8, FClassParams RVA 0x02E86610.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonWidgetGroupBase();  // RVA 0x002D0580 (consensus OuterFunc)
-
-class UCommonWidgetGroupBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCommonWidgetGroupBase_AddWidget_Statics
 {

@@ -3,18 +3,8 @@
 // Class UFortOutpostStorageItemPicker: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CFD3B0, FClassParams RVA 0x03CFD3E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortOutpostStorageItemPicker();  // RVA 0x028E6AD0 (consensus OuterFunc)
-
-class UFortOutpostStorageItemPicker
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortOutpostStorageItemPicker();
-	static void execUseFilter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execUseFilters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E63E0 (end 0x028E6402)
 // Original VA: 0x00000001428E63E0 | File offset: 0x028E59E0

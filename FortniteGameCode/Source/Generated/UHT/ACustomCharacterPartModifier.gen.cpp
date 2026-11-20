@@ -3,18 +3,8 @@
 // Class ACustomCharacterPartModifier: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03288F10, FClassParams RVA 0x03288F80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class ACustomCharacterPartModifier
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesACustomCharacterPartModifier();
-	static void execGetAssociatedPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCharacterPartType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78010 (end 0x00F78032)
 // Original VA: 0x0000000140F78010 | File offset: 0x00F77610
@@ -29,10 +19,100 @@ void ACustomCharacterPartModifier::StaticRegisterNativesACustomCharacterPartModi
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_ACustomCharacterPartModifier_GetAssociatedPlayerPawn: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_ACustomCharacterPartModifier_GetAssociatedPlayerPawn_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F791E0 (end 0x00F7920F)
+// Original VA: 0x0000000140F791E0 | File offset: 0x00F787E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_ACustomCharacterPartModifier_GetAssociatedPlayerPawn()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACustomCharacterPartModifier_GetAssociatedPlayerPawn_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_ACustomCharacterPartModifier_GetCharacterPartType: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_ACustomCharacterPartModifier_GetCharacterPartType_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79210 (end 0x00F7923F)
+// Original VA: 0x0000000140F79210 | File offset: 0x00F78810
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_ACustomCharacterPartModifier_GetCharacterPartType()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACustomCharacterPartModifier_GetCharacterPartType_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_ACustomCharacterPartModifier_OnDayPhaseChanged: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_ACustomCharacterPartModifier_OnDayPhaseChanged_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79240 (end 0x00F7926F)
+// Original VA: 0x0000000140F79240 | File offset: 0x00F78840
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_ACustomCharacterPartModifier_OnDayPhaseChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACustomCharacterPartModifier_OnDayPhaseChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_ACustomCharacterPartModifier_PreDestruction: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_ACustomCharacterPartModifier_PreDestruction_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79270 (end 0x00F7929F)
+// Original VA: 0x0000000140F79270 | File offset: 0x00F78870
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_ACustomCharacterPartModifier_PreDestruction()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ACustomCharacterPartModifier_PreDestruction_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_ACustomCharacterPartModifier_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ACustomCharacterPartModifier_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ACustomCharacterPartModifier_GetAssociatedPlayerPawn, "GetAssociatedPlayerPawn" },
+	{ &Z_Construct_UFunction_ACustomCharacterPartModifier_GetCharacterPartType, "GetCharacterPartType" },
+	{ &Z_Construct_UFunction_ACustomCharacterPartModifier_OnDayPhaseChanged, "OnDayPhaseChanged" },
+	{ &Z_Construct_UFunction_ACustomCharacterPartModifier_PreDestruction, "PreDestruction" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ACustomCharacterPartModifier_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03288F80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ACustomCharacterPartModifier_Statics::ClassParams = { &ACustomCharacterPartModifier::StaticClass, Z_Construct_UClass_ACustomCharacterPartModifier_Statics::DependentSingletons, 2, 0x00880081u, Z_Construct_UClass_ACustomCharacterPartModifier_Statics::FuncInfo, 4, Z_Construct_UClass_ACustomCharacterPartModifier_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_ACustomCharacterPartModifier_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78650 (end 0x00F7867F)
+// Original VA: 0x0000000140F78650 | File offset: 0x00F77C50
+// Recovery: confirmed (UHT singleton of ACustomCharacterPartModifier) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ACustomCharacterPartModifier()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ACustomCharacterPartModifier_Statics::ClassParams);
+	}
+	return OuterClass;
+}

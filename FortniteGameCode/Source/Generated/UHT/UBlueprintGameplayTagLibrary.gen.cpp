@@ -3,45 +3,8 @@
 // Class UBlueprintGameplayTagLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036C1CC0, FClassParams RVA 0x036C1EA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBlueprintGameplayTagLibrary();  // RVA 0x01C936F0 (consensus OuterFunc)
-
-class UBlueprintGameplayTagLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUBlueprintGameplayTagLibrary();
-	static void execAddGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAppendGameplayTagContainers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBreakGameplayTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execDoesContainerMatchTagQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execDoesTagAssetInterfaceHaveTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEqualEqual_GameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEqualEqual_GameplayTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAllActorsOfClassMatchingTagQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDebugStringFromGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDebugStringFromGameplayTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumGameplayTagsInContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTagName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasAllMatchingGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasAllTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasAnyTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsGameplayTagValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMakeGameplayTagContainerFromArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMakeGameplayTagContainerFromTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMakeGameplayTagQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMakeLiteralGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMakeLiteralGameplayTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMatchesAnyTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMatchesTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNotEqual_GameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNotEqual_GameplayTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNotEqual_TagContainerTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNotEqual_TagTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C93190 (end 0x01C931B2)
 // Original VA: 0x0000000141C93190 | File offset: 0x01C92790

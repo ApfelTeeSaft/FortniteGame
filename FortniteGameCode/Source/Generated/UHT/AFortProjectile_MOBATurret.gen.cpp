@@ -3,17 +3,8 @@
 // Class AFortProjectile_MOBATurret: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033D5AF0, FClassParams RVA 0x033D5B20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortProjectile_MOBATurret();  // RVA 0x0108B5B0 (consensus OuterFunc)
-
-class AFortProjectile_MOBATurret
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortProjectile_MOBATurret();
-	static void execOnHomingTargetDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108AE60 (end 0x0108AE82)
 // Original VA: 0x000000014108AE60 | File offset: 0x0108A460

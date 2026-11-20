@@ -3,22 +3,121 @@
 // Class USynthComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03B48BA0, FClassParams RVA 0x03B48C90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class USynthComponent
+struct Z_Construct_UFunction_USynthComponent_IsPlaying_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 8 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A500 (end 0x0255A52F)
+// Original VA: 0x000000014255A500 | File offset: 0x02559B00
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_USynthComponent_IsPlaying()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USynthComponent_IsPlaying_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_USynthComponent_IsPlaying: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_USynthComponent_SetSubmixSend_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A530 (end 0x0255A55F)
+// Original VA: 0x000000014255A530 | File offset: 0x02559B30
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_USynthComponent_SetSubmixSend()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USynthComponent_SetSubmixSend_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_USynthComponent_SetSubmixSend: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_USynthComponent_SetVolumeMultiplier_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A560 (end 0x0255A58F)
+// Original VA: 0x000000014255A560 | File offset: 0x02559B60
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_USynthComponent_SetVolumeMultiplier()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USynthComponent_SetVolumeMultiplier_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_USynthComponent_SetVolumeMultiplier: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_USynthComponent_Start_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A590 (end 0x0255A5BF)
+// Original VA: 0x000000014255A590 | File offset: 0x02559B90
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_USynthComponent_Start()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USynthComponent_Start_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_USynthComponent_Start: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_USynthComponent_Stop_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 12 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A5C0 (end 0x0255A5EF)
+// Original VA: 0x000000014255A5C0 | File offset: 0x02559BC0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_USynthComponent_Stop()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USynthComponent_Stop_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_USynthComponent_Stop: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_USynthComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USynthComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USynthComponent_IsPlaying, "IsPlaying" },
+	{ &Z_Construct_UFunction_USynthComponent_SetSubmixSend, "SetSubmixSend" },
+	{ &Z_Construct_UFunction_USynthComponent_SetVolumeMultiplier, "SetVolumeMultiplier" },
+	{ &Z_Construct_UFunction_USynthComponent_Start, "Start" },
+	{ &Z_Construct_UFunction_USynthComponent_Stop, "Stop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USynthComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03B48C90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USynthComponent_Statics::ClassParams = { &USynthComponent::StaticClass, Z_Construct_UClass_USynthComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_USynthComponent_Statics::FuncInfo, 5, Z_Construct_UClass_USynthComponent_Statics::PropPointers, 18, nullptr, &Z_Construct_UClass_USynthComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A200 (end 0x0255A22F)
+// Original VA: 0x000000014255A200 | File offset: 0x02559800
+// Recovery: confirmed (UHT singleton of USynthComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USynthComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USynthComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

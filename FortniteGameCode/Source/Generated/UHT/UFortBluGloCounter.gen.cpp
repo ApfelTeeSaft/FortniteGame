@@ -3,17 +3,8 @@
 // Class UFortBluGloCounter: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C75990, FClassParams RVA 0x03C759B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBluGloCounter();  // RVA 0x02894460 (consensus OuterFunc)
-
-class UFortBluGloCounter
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortBluGloCounter();
-	static void execOnBluGloQuantityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02894040 (end 0x02894062)
 // Original VA: 0x0000000142894040 | File offset: 0x02893640

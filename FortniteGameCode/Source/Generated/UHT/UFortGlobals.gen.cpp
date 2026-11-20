@@ -3,52 +3,8 @@
 // Class UFortGlobals: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03336D20, FClassParams RVA 0x03337200.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGlobals();  // RVA 0x00FF36A0 (consensus OuterFunc)
-
-class UFortGlobals
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortGlobals();
-	static void execAreFriendCodesEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAccountLinkingUIConfig(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAccountLinkingUIURL(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaxTheaterListRefreshDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMinTheaterListRefreshDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIs50v50CalenderEventEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIs50v50ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIs_X_CalendarForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsAccountLinkingEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsAccountLinkingUIURLButtonEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsBROnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsDisplayingTwitchViewerNamesAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsEvent1ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsEvent2ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsEvent3ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsEvent4ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsEvent5ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsEvent6ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsEvent7ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsEvent8ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsEvent_X_ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsFrontendCraftingEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsFrontendStorageEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsNewRewardFlowEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPlatoonCalenderEventEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPlatoonForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsShootingTest3Enabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsTencentBuild(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsTwitchEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsWIFEEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShouldDisableParticleEffectsDuringMissionResults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShouldDisablePlayerTeleportDuringMissionResults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShouldFlushGPUWhenPlayerIsTeleportedAtEndOfZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShouldShowMissionResultsMovies(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShouldShowSkillTreeMovies(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShouldStreamOutTextureDataWhenPlayerIsTeleportedAtEndOfZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF3020 (end 0x00FF3042)
 // Original VA: 0x0000000140FF3020 | File offset: 0x00FF2620

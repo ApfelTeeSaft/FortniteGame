@@ -3,15 +3,8 @@
 // Class UFortVideoOptions: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D54D90, FClassParams RVA 0x03D54FB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortVideoOptions();  // RVA 0x02918B90 (consensus OuterFunc)
-
-class UFortVideoOptions
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortVideoOptions_AntiAliasingQualityChanged_Statics
 {

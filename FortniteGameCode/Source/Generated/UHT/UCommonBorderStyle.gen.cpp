@@ -3,17 +3,8 @@
 // Class UCommonBorderStyle: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E7B4E8, FClassParams RVA 0x02E7B510.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonBorderStyle();  // RVA 0x002C2C60 (consensus OuterFunc)
-
-class UCommonBorderStyle
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCommonBorderStyle();
-	static void execGetBackgroundBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2950 (end 0x002C2972)
 // Original VA: 0x00000001402C2950 | File offset: 0x002C1F50

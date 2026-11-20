@@ -3,23 +3,8 @@
 // Class UAudioMixerBlueprintLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03B47CA0, FClassParams RVA 0x03B47D20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAudioMixerBlueprintLibrary();  // RVA 0x0255A140 (consensus OuterFunc)
-
-class UAudioMixerBlueprintLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAudioMixerBlueprintLibrary();
-	static void execAddMasterSubmixEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddSourceEffectToPresetChain(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execClearMasterSubmixEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumberOfEntriesInSourceEffectChain(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveMasterSubmixEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveSourceEffectFromPresetChain(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBypassSourceEffectChainEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02559E50 (end 0x02559E72)
 // Original VA: 0x0000000142559E50 | File offset: 0x02559450

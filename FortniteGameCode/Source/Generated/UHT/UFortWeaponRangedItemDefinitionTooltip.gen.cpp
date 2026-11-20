@@ -3,19 +3,8 @@
 // Class UFortWeaponRangedItemDefinitionTooltip: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03430D38, FClassParams RVA 0x03430D70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortWeaponRangedItemDefinitionTooltip
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortWeaponRangedItemDefinitionTooltip();
-	static void execGetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTextForToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTokenizedDescriptionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8950 (end 0x010D8972)
 // Original VA: 0x00000001410D8950 | File offset: 0x010D7F50
@@ -31,8 +20,81 @@ void UFortWeaponRangedItemDefinitionTooltip::StaticRegisterNativesUFortWeaponRan
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetNumericValue: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetNumericValue_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 23 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D96C0 (end 0x010D96EF)
+// Original VA: 0x00000001410D96C0 | File offset: 0x010D8CC0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetNumericValue()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetNumericValue_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetTextForToken: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetTextForToken_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D96F0 (end 0x010D971F)
+// Original VA: 0x00000001410D96F0 | File offset: 0x010D8CF0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetTextForToken()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetTextForToken_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetTokenizedDescriptionText: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetTokenizedDescriptionText_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9720 (end 0x010D974F)
+// Original VA: 0x00000001410D9720 | File offset: 0x010D8D20
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetTokenizedDescriptionText()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetTokenizedDescriptionText_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortWeaponRangedItemDefinitionTooltip_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortWeaponRangedItemDefinitionTooltip_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetNumericValue, "GetNumericValue" },
+	{ &Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetTextForToken, "GetTextForToken" },
+	{ &Z_Construct_UFunction_UFortWeaponRangedItemDefinitionTooltip_GetTokenizedDescriptionText, "GetTokenizedDescriptionText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortWeaponRangedItemDefinitionTooltip_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03430D70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortWeaponRangedItemDefinitionTooltip_Statics::ClassParams = { &UFortWeaponRangedItemDefinitionTooltip::StaticClass, Z_Construct_UClass_UFortWeaponRangedItemDefinitionTooltip_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortWeaponRangedItemDefinitionTooltip_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UFortWeaponRangedItemDefinitionTooltip_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8C70 (end 0x010D8C9F)
+// Original VA: 0x00000001410D8C70 | File offset: 0x010D8270
+// Recovery: confirmed (UHT singleton of UFortWeaponRangedItemDefinitionTooltip) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortWeaponRangedItemDefinitionTooltip()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortWeaponRangedItemDefinitionTooltip_Statics::ClassParams);
+	}
+	return OuterClass;
+}

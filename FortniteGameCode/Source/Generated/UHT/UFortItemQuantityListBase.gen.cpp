@@ -3,22 +3,8 @@
 // Class UFortItemQuantityListBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CD8C60, FClassParams RVA 0x03CD8D20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemQuantityListBase();  // RVA 0x028CF520 (consensus OuterFunc)
-
-class UFortItemQuantityListBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortItemQuantityListBase();
-	static void execGetItemDefinitions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsEmptyList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemDefinitionsAndQuantities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemInspectMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemInstancesAndQuantities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemToCompareDefinitionsAndQuantities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF150 (end 0x028CF172)
 // Original VA: 0x00000001428CF150 | File offset: 0x028CE750

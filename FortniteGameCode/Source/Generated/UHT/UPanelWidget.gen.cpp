@@ -3,15 +3,8 @@
 // Class UPanelWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03698530, FClassParams RVA 0x036985E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPanelWidget();  // RVA 0x01BED890 (consensus OuterFunc)
-
-class UPanelWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UPanelWidget_AddChild_Statics
 {

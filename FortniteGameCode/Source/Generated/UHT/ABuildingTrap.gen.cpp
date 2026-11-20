@@ -3,15 +3,8 @@
 // Class ABuildingTrap: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03280530, FClassParams RVA 0x03280800.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingTrap();  // RVA 0x00F71F10 (consensus OuterFunc)
-
-class ABuildingTrap
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ABuildingTrap_AddDamageComponent_Statics
 {

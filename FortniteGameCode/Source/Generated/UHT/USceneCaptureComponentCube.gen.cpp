@@ -3,14 +3,49 @@
 // Class USceneCaptureComponentCube: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039A09E8, FClassParams RVA 0x039A0A10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class USceneCaptureComponentCube
+struct Z_Construct_UFunction_USceneCaptureComponentCube_CaptureScene_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C7130 (end 0x024C715F)
+// Original VA: 0x00000001424C7130 | File offset: 0x024C6730
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_USceneCaptureComponentCube_CaptureScene()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USceneCaptureComponentCube_CaptureScene_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_USceneCaptureComponentCube_CaptureScene: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_USceneCaptureComponentCube_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USceneCaptureComponentCube_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USceneCaptureComponentCube_CaptureScene, "CaptureScene" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USceneCaptureComponentCube_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039A0A10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USceneCaptureComponentCube_Statics::ClassParams = { &USceneCaptureComponentCube::StaticClass, Z_Construct_UClass_USceneCaptureComponentCube_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_USceneCaptureComponentCube_Statics::FuncInfo, 1, Z_Construct_UClass_USceneCaptureComponentCube_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_USceneCaptureComponentCube_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6DE0 (end 0x024C6E0F)
+// Original VA: 0x00000001424C6DE0 | File offset: 0x024C63E0
+// Recovery: confirmed (UHT singleton of USceneCaptureComponentCube) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USceneCaptureComponentCube()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USceneCaptureComponentCube_Statics::ClassParams);
+	}
+	return OuterClass;
+}

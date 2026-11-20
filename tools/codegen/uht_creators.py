@@ -29,6 +29,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools" / "matching"))
 from compare import load_decrypted  # noqa: E402
+from unity import UNIT_OBJECT, unit_of  # noqa: E402
+from genio import sync_tree  # noqa: E402
 from manifest_io import dump_compact  # noqa: E402
 from pe import PEImage  # noqa: E402
 
@@ -40,8 +42,6 @@ THUNK_MANIFEST = ROOT / "analysis" / "functions-uht-staticclass.json"
 # StaticRegisterNatives<Class>: call GetPrivateStaticClass; mov r8d, N; lea rdx, Funcs; mov rcx, rax; jmp.
 SRN_TEMPLATE = bytes.fromhex("4883ec28e80000000041b800000000488d1500000000488bc84883c428e900000000")
 SRN_MASK = set(range(5, 9)) | set(range(11, 15)) | set(range(18, 22)) | set(range(30, 34))
-# Types the shim already forward-declares; a class of that name cannot be redeclared here.
-SHIM_TYPES = {"UObject", "UClass", "UFunction"}
 SYMBOLS = ROOT / "analysis" / "uht-creator-symbols.json"
 CREATOR_SIZE = 47
 # Relocated displacement bytes of the standard creator (RF x3, FuncParams, call).
@@ -56,7 +56,8 @@ def creator_name(cls: str, fn: str) -> str:
     return f"Z_Construct_{kind}_{cls}_{fn}"
 
 
-def class_constructor(cls, arr, fns, zrva, emitted_fns, img, rdata, rd, base, rfs, externs, symbols) -> str:
+def class_constructor(cls, arr, fns, zrva, emitted_fns, img, rdata, rd, base, rfs, externs, symbols,
+                      evidence: str = "link-array") -> str:
     """UHT 4.20 Z_Construct_UClass_<Class> with its Statics, values decoded from FClassParams."""
     rec = int(arr["class_params_rva"], 16)
     (nreg, deps, ndeps, cflags, links, nfuncs, props, nprops, cfg, cppinfo, ifaces,
@@ -68,14 +69,18 @@ def class_constructor(cls, arr, fns, zrva, emitted_fns, img, rdata, rd, base, rf
         deps_expr = f"{statics}::DependentSingletons, {ndeps}"
     else:
         deps_expr = "nullptr, 0"
-    decl.append("\tstatic const FClassFunctionLinkInfo FuncInfo[];")
-    info = []
-    for fname, crva in sorted(fns, key=lambda x: x[0]):
-        cname = creator_name(cls, fname)
-        if fname not in emitted_fns:
-            externs.add(f"UFunction* {cname}();  // RVA 0x{crva:08X}, not emitted (FFunctionParams unresolved)")
-        info.append(f'\t{{ &{cname}, "{fname}" }},')
-    defs.append(f"const FClassFunctionLinkInfo {statics}::FuncInfo[] = {{\n" + "\n".join(info) + "\n};")
+    if fns:
+        decl.append("\tstatic const FClassFunctionLinkInfo FuncInfo[];")
+        info = []
+        for fname, crva in sorted(fns, key=lambda x: x[0]):
+            cname = creator_name(cls, fname)
+            if fname not in emitted_fns:
+                externs.add(f"UFunction* {cname}();  // RVA 0x{crva:08X}, not emitted (FFunctionParams unresolved)")
+            info.append(f'\t{{ &{cname}, "{fname}" }},')
+        defs.append(f"const FClassFunctionLinkInfo {statics}::FuncInfo[] = {{\n" + "\n".join(info) + "\n};")
+        funcs_expr = f"{statics}::FuncInfo, {nfuncs}"
+    else:
+        funcs_expr = "nullptr, 0"
     if nprops:
         decl.append("\tstatic const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending")
         props_expr = f"{statics}::PropPointers, {nprops}"
@@ -97,10 +102,10 @@ def class_constructor(cls, arr, fns, zrva, emitted_fns, img, rdata, rd, base, rf
     defs.append(
         f"// ClassParams: original RVA 0x{rec:08X}\n"
         f"const UE4CodeGen_Private::FClassParams {statics}::ClassParams = {{ &{cls}::StaticClass, {deps_expr}, "
-        f"0x{cflags:08X}u, {statics}::FuncInfo, {nfuncs}, {props_expr}, {cfg_expr}, "
+        f"0x{cflags:08X}u, {funcs_expr}, {props_expr}, {cfg_expr}, "
         f"&{statics}::StaticCppClassTypeInfo, {iface_expr} }};")
     end = rfs[zrva].end
-    symbols[f"?ClassParams@{statics}@@2UFClassParams@UE4CodeGen_Private@@B"] = [f"0x{rec:08X}", "link-array"]
+    symbols[f"?ClassParams@{statics}@@2UFClassParams@UE4CodeGen_Private@@B"] = [f"0x{rec:08X}", evidence]
     return (f"struct {statics}\n{{\n" + "\n".join(decl) + "\n};\n" + "\n".join(defs) + "\n"
             f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{zrva:08X} (end 0x{end:08X})\n"
             f"// Original VA: 0x{base + zrva:016X} | File offset: 0x{img.rva_to_off(zrva):08X}\n"
@@ -118,6 +123,10 @@ def main() -> int:
         return 1
     base = img.image_base
     refl = json.loads((ROOT / "analysis" / "reflection-natives.json").read_text(encoding="utf-8"))
+    # Z_Construct_UClass_* registered by each class's FCompiledInDefer initializer.
+    unity_ctor = {it["name"]: int(it["constructor"], 16)
+                  for u in json.loads((ROOT / "analysis" / "unity-order.json").read_text(encoding="utf-8"))["units"]
+                  for it in u["items"] if it["kind"] == "class"}
     rfs = {rf.begin: rf for rf in img.runtime_functions()}
     starts = set(rfs)
     rd = next(s for s in img.sections if s.name == ".rdata")
@@ -167,8 +176,7 @@ def main() -> int:
     creator_by_rva = {c: creator_name(cls, n) for cls, _, fns in classes for n, c in fns}
 
     GEN_DIR.mkdir(parents=True, exist_ok=True)
-    for old in GEN_DIR.glob("*.gen.cpp"):
-        old.unlink()
+    outputs: dict[Path, str] = {}
     entries, class_entries, native_entries, thunk_entries, symbols = [], [], [], [], {}
     natives_by_class = {c["class"]: c for c in refl["native_classes"]
                         if c["class"] and c["static_register_natives_rva"]}
@@ -187,22 +195,14 @@ def main() -> int:
             f"// Class {cls}: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.",
             f"// FClassFunctionLinkInfo array RVA {arr['array_rva']}, FClassParams RVA {arr['class_params_rva']}.",
             "",
-            '#include "FortniteGameCode/UE4CodeGenRecovered.h"',
+            '#include "FortniteGameCode/UHTRecovered.h"',
             "",
         ]
         externs, bodies, emitted_fns = set(), [], set()
         nat = natives_by_class.get(cls)
         if nat is not None and not is_srn(int(nat["static_register_natives_rva"], 16)):
             nat = None
-        if cls not in SHIM_TYPES:
-            members = ["\tstatic UClass* GetPrivateStaticClass();", "public:",
-                       "\tinline static UClass* StaticClass() { return GetPrivateStaticClass(); }"]
-            if nat is not None:
-                members.append(f"\tstatic void StaticRegisterNatives{cls}();")
-                members += [f"\tstatic void exec{f['name']}(UObject* Context, FFrame& Stack, void* const Z_Param__Result);"
-                            for f in nat["functions"]]
-            bodies.append(f"class {cls}\n{{\n" + "\n".join(members) + "\n};\n")
-        if nat is not None and cls not in SHIM_TYPES:
+        if nat is not None:
             srn = int(nat["static_register_natives_rva"], 16)
             arr_rva = int(nat["array_rva"], 16)
             pairs = "\n".join(f'\t\t{{ "{f["name"]}", &{cls}::exec{f["name"]} }},' for f in nat["functions"])
@@ -232,8 +232,23 @@ def main() -> int:
                 rec = hits[0][0] if len(hits) == 1 else None
                 why = "only FFunctionParams record naming this function with the class's consensus OuterFunc"
             if rec is None:
+                # The creator's code is the standard shape; only its FFunctionParams record is not
+                # identified (no unique record by name). It is emitted with the record declared, so
+                # its ReturnFunction static keeps its place in the unity layout.
                 stats["funcparams_unresolved"] += 1
-                bodies.append(f"// {cname}: FFunctionParams record not identified; creator not emitted.\n")
+                end = rfs[crva].end
+                bodies.append(
+                    f"struct {statics}\n{{\n"
+                    f"\tstatic const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: "
+                    f"{len(cands)} candidate(s) by name\n}};\n"
+                    f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{crva:08X} (end 0x{end:08X})\n"
+                    f"// Original VA: 0x{base + crva:016X} | File offset: 0x{img.rva_to_off(crva):08X}\n"
+                    f"// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json\n"
+                    f"UFunction* {cname}()\n{{\n\tstatic UFunction* ReturnFunction = nullptr;\n\tif (!ReturnFunction)\n\t{{\n"
+                    f"\t\tUE4CodeGen_Private::ConstructUFunction(ReturnFunction, {statics}::FuncParams);\n\t}}\n"
+                    f"\treturn ReturnFunction;\n}}\n")
+                entries.append({"start_rva": f"0x{crva:08X}", "end_rva": f"0x{end:08X}", "name": cname, "class": cls})
+                emitted_fns.add(fname)
                 continue
             stats["funcparams_resolved"] += 1
             outer, nameptr, oflags, superf, fflags, size, props, nprops, rpc, rpcr = struct.unpack(
@@ -285,7 +300,10 @@ def main() -> int:
                             "name": cname, "class": cls})
             emitted_fns.add(fname)
         zrva = consensus.get(cls)
-        if zrva is not None and arr["class_params_rva"] and cls not in SHIM_TYPES and is_creator(zrva):
+        if zrva is None and cls in unity_ctor:
+            zrva = unity_ctor[cls]
+            stats["class_constructor_from_unity_order"] += 1
+        if zrva is not None and arr["class_params_rva"] and is_creator(zrva):
             bodies.append(class_constructor(cls, arr, fns, zrva, emitted_fns, img, rdata, rd, base, rfs,
                                             externs, symbols))
             class_entries.append({"start_rva": f"0x{zrva:08X}", "end_rva": f"0x{rfs[zrva].end:08X}",
@@ -296,9 +314,14 @@ def main() -> int:
                                       "name": f"{cls}::StaticClass", "class": cls})
             stats["class_constructors"] += 1
         text = "\n".join(lines) + "\n".join(sorted(externs)) + "\n\n" + "\n".join(bodies)
-        (GEN_DIR / f"{cls}.gen.cpp").write_text(text, encoding="utf-8", newline="\n")
+        outputs[GEN_DIR / f"{cls}.gen.cpp"] = text
+    stats["files_written"], stats["files_removed"] = sync_tree(GEN_DIR, outputs, recursive=False)
     stats["classes"] = len(classes)
     stats["creators"] = len(entries)
+    # Objects are the unity translation units (tools/codegen/unity.py) the fragments are compiled in.
+    units = unit_of()
+    for e in entries + class_entries + native_entries + thunk_entries:
+        e["unit"] = units[("class", e["class"])]
     dump_compact(MANIFEST, {
         "schema_version": 1,
         "generated_by": "tools/codegen/uht_creators.py",
@@ -307,7 +330,7 @@ def main() -> int:
         "entry_defaults": {
             "category": "uht-ufunction-creator",
             "source": "FortniteGameCode/Source/Generated/UHT/{class}.gen.cpp",
-            "object": "Source/Generated/UHT/{class}.gen.obj",
+            "object": UNIT_OBJECT,
             "symbol": "?{name}@@YAPEAVUFunction@@XZ",
             "name_confidence": "confirmed",
             "compact": True,
@@ -323,7 +346,7 @@ def main() -> int:
         "entry_defaults": {
             "category": "uht-class-constructor",
             "source": "FortniteGameCode/Source/Generated/UHT/{class}.gen.cpp",
-            "object": "Source/Generated/UHT/{class}.gen.obj",
+            "object": UNIT_OBJECT,
             "symbol": "?{name}@@YAPEAVUClass@@XZ",
             "name_confidence": "confirmed",
             "compact": True,
@@ -336,7 +359,7 @@ def main() -> int:
                      "FNameNativePtrPair array, with the 34-byte UHT shape. See docs/REVERSE_ENGINEERING.md."),
         "entry_defaults": {"category": "uht-static-register-natives",
                            "source": "FortniteGameCode/Source/Generated/UHT/{class}.gen.cpp",
-                           "object": "Source/Generated/UHT/{class}.gen.obj",
+                           "object": UNIT_OBJECT,
                            "symbol": "?{name}@{class}@@SAXXZ", "name_confidence": "confirmed", "compact": True},
         "functions": native_entries})
     dump_compact(THUNK_MANIFEST, {**common,
@@ -344,7 +367,7 @@ def main() -> int:
                      "jmp GetPrivateStaticClass with no .pdata entry (outside the denominator)."),
         "entry_defaults": {"category": "uht-staticclass-thunk",
                            "source": "FortniteGameCode/Source/Generated/UHT/{class}.gen.cpp",
-                           "object": "Source/Generated/UHT/{class}.gen.obj",
+                           "object": UNIT_OBJECT,
                            "symbol": "?StaticClass@{class}@@SAPEAVUClass@@XZ", "name_confidence": "confirmed",
                            "compact": True},
         "functions": thunk_entries})

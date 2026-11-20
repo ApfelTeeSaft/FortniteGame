@@ -3,15 +3,8 @@
 // Class UCommonUIContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E858D0, FClassParams RVA 0x02E859A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonUIContext();  // RVA 0x002D0450 (consensus OuterFunc)
-
-class UCommonUIContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UCommonUIContext_InputMethodChangedDelegate__DelegateSignature_Statics
 {

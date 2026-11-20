@@ -3,17 +3,8 @@
 // Class UFortAsyncAction_TriggerNotification: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032BFD40, FClassParams RVA 0x032BFD90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_TriggerNotification();  // RVA 0x00F9F2A0 (consensus OuterFunc)
-
-class UFortAsyncAction_TriggerNotification
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAsyncAction_TriggerNotification();
-	static void execTriggerNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E660 (end 0x00F9E682)
 // Original VA: 0x0000000140F9E660 | File offset: 0x00F9DC60

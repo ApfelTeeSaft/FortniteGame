@@ -3,17 +3,8 @@
 // Class UFortSocialImportButton: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D14348, FClassParams RVA 0x03D14390.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSocialImportButton();  // RVA 0x028F56F0 (consensus OuterFunc)
-
-class UFortSocialImportButton
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSocialImportButton();
-	static void execDynamicHandleClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4FF0 (end 0x028F5012)
 // Original VA: 0x00000001428F4FF0 | File offset: 0x028F45F0

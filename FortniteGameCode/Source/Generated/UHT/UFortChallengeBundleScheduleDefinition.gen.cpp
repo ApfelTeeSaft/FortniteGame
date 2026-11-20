@@ -3,19 +3,8 @@
 // Class UFortChallengeBundleScheduleDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032DADC8, FClassParams RVA 0x032DAE20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortChallengeBundleScheduleDefinition();  // RVA 0x00FB0200 (consensus OuterFunc)
-
-class UFortChallengeBundleScheduleDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortChallengeBundleScheduleDefinition();
-	static void execDoesChallengeBundleScheduleExpire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBundleDefinitions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEventName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAFE70 (end 0x00FAFE92)
 // Original VA: 0x0000000140FAFE70 | File offset: 0x00FAF470

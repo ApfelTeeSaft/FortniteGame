@@ -3,17 +3,8 @@
 // Class AWorldMapPin: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03451B10, FClassParams RVA 0x03451B50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AWorldMapPin();  // RVA 0x010F19D0 (consensus OuterFunc)
-
-class AWorldMapPin
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAWorldMapPin();
-	static void execSetTheaterId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010F12B0 (end 0x010F12D2)
 // Original VA: 0x00000001410F12B0 | File offset: 0x010F08B0

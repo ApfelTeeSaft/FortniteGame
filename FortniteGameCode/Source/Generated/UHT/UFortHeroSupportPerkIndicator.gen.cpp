@@ -3,18 +3,8 @@
 // Class UFortHeroSupportPerkIndicator: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CA6D00, FClassParams RVA 0x03CA6D40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortHeroSupportPerkIndicator
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortHeroSupportPerkIndicator();
-	static void execSetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSupportTypeToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B38F0 (end 0x028B3912)
 // Original VA: 0x00000001428B38F0 | File offset: 0x028B2EF0
@@ -29,6 +19,64 @@ void UFortHeroSupportPerkIndicator::StaticRegisterNativesUFortHeroSupportPerkInd
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetItemToRepresent: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetItemToRepresent_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B4B90 (end 0x028B4BBF)
+// Original VA: 0x00000001428B4B90 | File offset: 0x028B4190
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetItemToRepresent()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetItemToRepresent_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetSupportTypeToRepresent: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetSupportTypeToRepresent_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B4BC0 (end 0x028B4BEF)
+// Original VA: 0x00000001428B4BC0 | File offset: 0x028B41C0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetSupportTypeToRepresent()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetSupportTypeToRepresent_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortHeroSupportPerkIndicator_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHeroSupportPerkIndicator_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetItemToRepresent, "SetItemToRepresent" },
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetSupportTypeToRepresent, "SetSupportTypeToRepresent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHeroSupportPerkIndicator_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CA6D40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHeroSupportPerkIndicator_Statics::ClassParams = { &UFortHeroSupportPerkIndicator::StaticClass, Z_Construct_UClass_UFortHeroSupportPerkIndicator_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortHeroSupportPerkIndicator_Statics::FuncInfo, 2, Z_Construct_UClass_UFortHeroSupportPerkIndicator_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortHeroSupportPerkIndicator_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3D20 (end 0x028B3D4F)
+// Original VA: 0x00000001428B3D20 | File offset: 0x028B3320
+// Recovery: confirmed (UHT singleton of UFortHeroSupportPerkIndicator) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHeroSupportPerkIndicator()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHeroSupportPerkIndicator_Statics::ClassParams);
+	}
+	return OuterClass;
+}

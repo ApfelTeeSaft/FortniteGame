@@ -3,29 +3,8 @@
 // Class UFortUIManagerWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D3DA60, FClassParams RVA 0x03D3DC70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIManagerWidget();  // RVA 0x0290AA00 (consensus OuterFunc)
-
-class UFortUIManagerWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortUIManagerWidget();
-	static void exec_BPGetCurrentUIState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCreateNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCreateUIStateTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurrentUIStateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNavigationManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetUIManagerWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsStateContentDisplayed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execKillConfirmationDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRegisterStateTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execReleaseNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetStateContentDisplayed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShowErrorDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execUnregisterStateTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A7A0 (end 0x0290A7C2)
 // Original VA: 0x000000014290A7A0 | File offset: 0x02909DA0

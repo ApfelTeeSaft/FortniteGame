@@ -3,15 +3,8 @@
 // Class ABuildingContainer: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0326FED0, FClassParams RVA 0x032700C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingContainer();  // RVA 0x00F664D0 (consensus OuterFunc)
-
-class ABuildingContainer
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ABuildingContainer_BounceContainer_Statics
 {

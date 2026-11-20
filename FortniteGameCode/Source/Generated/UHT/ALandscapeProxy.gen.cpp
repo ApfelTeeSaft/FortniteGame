@@ -3,26 +3,8 @@
 // Class ALandscapeProxy: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03629340, FClassParams RVA 0x03629590.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ALandscapeProxy();  // RVA 0x01A75AC0 (consensus OuterFunc)
-
-class ALandscapeProxy
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesALandscapeProxy();
-	static void execChangeComponentScreenSizeToUseSubSections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execChangeLODDistanceFactor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execChangeTessellationComponentScreenSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execChangeTessellationComponentScreenSizeFalloff(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execChangeUseTessellationComponentScreenSizeFalloff(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEditorApplySpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEditorSetLandscapeMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLandscapeMaterialScalarParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLandscapeMaterialTextureParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLandscapeMaterialVectorParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A750A0 (end 0x01A750C2)
 // Original VA: 0x0000000141A750A0 | File offset: 0x01A746A0

@@ -3,17 +3,8 @@
 // Class ABuildingFOBCoreSpawnPad: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03276F70, FClassParams RVA 0x03276F90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingFOBCoreSpawnPad();  // RVA 0x00F6C1D0 (consensus OuterFunc)
-
-class ABuildingFOBCoreSpawnPad
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesABuildingFOBCoreSpawnPad();
-	static void execGetCoreSpawnTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BD20 (end 0x00F6BD42)
 // Original VA: 0x0000000140F6BD20 | File offset: 0x00F6B320

@@ -3,22 +3,8 @@
 // Class AFortSafeZoneIndicator: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033F0190, FClassParams RVA 0x033F02C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortSafeZoneIndicator();  // RVA 0x0109DB10 (consensus OuterFunc)
-
-class AFortSafeZoneIndicator
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortSafeZoneIndicator();
-	static void execGetClockTickingAudioCurveValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMovementAudioCurveValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSafeZoneCenter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSafeZoneRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSafeZoneShrinkSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSafeZoneRadiusAndCenter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D180 (end 0x0109D1A2)
 // Original VA: 0x000000014109D180 | File offset: 0x0109C780

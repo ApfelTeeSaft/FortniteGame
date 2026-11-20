@@ -3,21 +3,8 @@
 // Class UCommonDynamicEntryBox: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E7C960, FClassParams RVA 0x02E7CA20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonDynamicEntryBox();  // RVA 0x002C2DD0 (consensus OuterFunc)
-
-class UCommonDynamicEntryBox
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCommonDynamicEntryBox();
-	static void execGetAllEntries(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumEntries(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execReset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetEntrySpacing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2A40 (end 0x002C2A62)
 // Original VA: 0x00000001402C2A40 | File offset: 0x002C2040

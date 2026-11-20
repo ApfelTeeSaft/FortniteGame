@@ -3,30 +3,8 @@
 // Class UWidgetInteractionComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036A9F70, FClassParams RVA 0x036AA0F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UWidgetInteractionComponent();  // RVA 0x01C00DF0 (consensus OuterFunc)
-
-class UWidgetInteractionComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUWidgetInteractionComponent();
-	static void execGet2DHitLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHoveredWidgetComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLastHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsOverFocusableWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsOverHitTestVisibleWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsOverInteractableWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execPressAndReleaseKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execPressKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execPressPointerKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execReleaseKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execReleasePointerKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execScrollWheel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSendKeyChar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCustomHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00B80 (end 0x01C00BA2)
 // Original VA: 0x0000000141C00B80 | File offset: 0x01C00180

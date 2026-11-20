@@ -3,15 +3,8 @@
 // Class ABuildingTrapCeiling_Falling: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03286C90, FClassParams RVA 0x03286CC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingTrapCeiling_Falling();  // RVA 0x00F78560 (consensus OuterFunc)
-
-class ABuildingTrapCeiling_Falling
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ABuildingTrapCeiling_Falling_TrapActivated_Statics
 {

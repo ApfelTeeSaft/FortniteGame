@@ -3,19 +3,8 @@
 // Class UEnvQueryGenerator_BlueprintBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03707870, FClassParams RVA 0x037078D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase();  // RVA 0x01D2F700 (consensus OuterFunc)
-
-class UEnvQueryGenerator_BlueprintBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUEnvQueryGenerator_BlueprintBase();
-	static void execAddGeneratedActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddGeneratedVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetQuerier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2F060 (end 0x01D2F082)
 // Original VA: 0x0000000141D2F060 | File offset: 0x01D2E660

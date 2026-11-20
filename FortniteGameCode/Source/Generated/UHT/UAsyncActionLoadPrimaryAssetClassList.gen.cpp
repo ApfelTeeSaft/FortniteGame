@@ -3,17 +3,8 @@
 // Class UAsyncActionLoadPrimaryAssetClassList: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038AAF60, FClassParams RVA 0x038AAF80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAsyncActionLoadPrimaryAssetClassList();  // RVA 0x023DB1C0 (consensus OuterFunc)
-
-class UAsyncActionLoadPrimaryAssetClassList
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAsyncActionLoadPrimaryAssetClassList();
-	static void execAsyncLoadPrimaryAssetClassList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA590 (end 0x023DA5B2)
 // Original VA: 0x00000001423DA590 | File offset: 0x023D9B90

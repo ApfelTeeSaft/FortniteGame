@@ -3,14 +3,49 @@
 // Class AExponentialHeightFog: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038EF598, FClassParams RVA 0x038EF5C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class AExponentialHeightFog
+struct Z_Construct_UFunction_AExponentialHeightFog_OnRep_bEnabled_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02410000 (end 0x0241002F)
+// Original VA: 0x0000000142410000 | File offset: 0x0240F600
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AExponentialHeightFog_OnRep_bEnabled()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AExponentialHeightFog_OnRep_bEnabled_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AExponentialHeightFog_OnRep_bEnabled: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_AExponentialHeightFog_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AExponentialHeightFog_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AExponentialHeightFog_OnRep_bEnabled, "OnRep_bEnabled" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AExponentialHeightFog_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038EF5C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AExponentialHeightFog_Statics::ClassParams = { &AExponentialHeightFog::StaticClass, Z_Construct_UClass_AExponentialHeightFog_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_AExponentialHeightFog_Statics::FuncInfo, 1, Z_Construct_UClass_AExponentialHeightFog_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_AExponentialHeightFog_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FC40 (end 0x0240FC6F)
+// Original VA: 0x000000014240FC40 | File offset: 0x0240F240
+// Recovery: confirmed (UHT singleton of AExponentialHeightFog) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AExponentialHeightFog()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AExponentialHeightFog_Statics::ClassParams);
+	}
+	return OuterClass;
+}

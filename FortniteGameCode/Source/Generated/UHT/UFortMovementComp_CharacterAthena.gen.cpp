@@ -3,19 +3,8 @@
 // Class UFortMovementComp_CharacterAthena: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0338A8F8, FClassParams RVA 0x0338A9D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortMovementComp_CharacterAthena
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortMovementComp_CharacterAthena();
-	static void execIsActivelySkydiving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsActivelyStrafingInAir(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPassivelySkydiving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A3B0 (end 0x0104A3D2)
 // Original VA: 0x000000014104A3B0 | File offset: 0x010499B0
@@ -31,8 +20,82 @@ void UFortMovementComp_CharacterAthena::StaticRegisterNativesUFortMovementComp_C
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelySkydiving: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelySkydiving_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BAE0 (end 0x0104BB0F)
+// Original VA: 0x000000014104BAE0 | File offset: 0x0104B0E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelySkydiving()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelySkydiving_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelyStrafingInAir: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelyStrafingInAir_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BB10 (end 0x0104BB3F)
+// Original VA: 0x000000014104BB10 | File offset: 0x0104B110
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelyStrafingInAir()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelyStrafingInAir_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsPassivelySkydiving: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsPassivelySkydiving_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104BB40 (end 0x0104BB6F)
+// Original VA: 0x000000014104BB40 | File offset: 0x0104B140
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsPassivelySkydiving()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsPassivelySkydiving_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortMovementComp_CharacterAthena_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMovementComp_CharacterAthena_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelySkydiving, "IsActivelySkydiving" },
+	{ &Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelyStrafingInAir, "IsActivelyStrafingInAir" },
+	{ &Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsPassivelySkydiving, "IsPassivelySkydiving" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMovementComp_CharacterAthena_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0338A9D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMovementComp_CharacterAthena_Statics::ClassParams = { &UFortMovementComp_CharacterAthena::StaticClass, Z_Construct_UClass_UFortMovementComp_CharacterAthena_Statics::DependentSingletons, 2, 0x00A00084u, Z_Construct_UClass_UFortMovementComp_CharacterAthena_Statics::FuncInfo, 3, Z_Construct_UClass_UFortMovementComp_CharacterAthena_Statics::PropPointers, 19, "Engine", &Z_Construct_UClass_UFortMovementComp_CharacterAthena_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104AB10 (end 0x0104AB3F)
+// Original VA: 0x000000014104AB10 | File offset: 0x0104A110
+// Recovery: confirmed (UHT singleton of UFortMovementComp_CharacterAthena) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMovementComp_CharacterAthena()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMovementComp_CharacterAthena_Statics::ClassParams);
+	}
+	return OuterClass;
+}

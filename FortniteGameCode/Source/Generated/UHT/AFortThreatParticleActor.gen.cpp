@@ -3,17 +3,8 @@
 // Class AFortThreatParticleActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0340AD08, FClassParams RVA 0x0340AD50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class AFortThreatParticleActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortThreatParticleActor();
-	static void execGetThreatClouds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD610 (end 0x010BD632)
 // Original VA: 0x00000001410BD610 | File offset: 0x010BCC10
@@ -27,8 +18,82 @@ void AFortThreatParticleActor::StaticRegisterNativesAFortThreatParticleActor()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_AFortThreatParticleActor_GetThreatClouds: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AFortThreatParticleActor_GetThreatClouds_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE8D0 (end 0x010BE8FF)
+// Original VA: 0x00000001410BE8D0 | File offset: 0x010BDED0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortThreatParticleActor_GetThreatClouds()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatParticleActor_GetThreatClouds_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AFortThreatParticleActor_OnThreatCloudsChanged: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AFortThreatParticleActor_OnThreatCloudsChanged_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE900 (end 0x010BE92F)
+// Original VA: 0x00000001410BE900 | File offset: 0x010BDF00
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortThreatParticleActor_OnThreatCloudsChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatParticleActor_OnThreatCloudsChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AFortThreatParticleActor_OnWorldReady: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AFortThreatParticleActor_OnWorldReady_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE930 (end 0x010BE95F)
+// Original VA: 0x00000001410BE930 | File offset: 0x010BDF30
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortThreatParticleActor_OnWorldReady()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortThreatParticleActor_OnWorldReady_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_AFortThreatParticleActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortThreatParticleActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortThreatParticleActor_GetThreatClouds, "GetThreatClouds" },
+	{ &Z_Construct_UFunction_AFortThreatParticleActor_OnThreatCloudsChanged, "OnThreatCloudsChanged" },
+	{ &Z_Construct_UFunction_AFortThreatParticleActor_OnWorldReady, "OnWorldReady" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortThreatParticleActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0340AD50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortThreatParticleActor_Statics::ClassParams = { &AFortThreatParticleActor::StaticClass, Z_Construct_UClass_AFortThreatParticleActor_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortThreatParticleActor_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_AFortThreatParticleActor_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortThreatParticleActor_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE1B0 (end 0x010BE1DF)
+// Original VA: 0x00000001410BE1B0 | File offset: 0x010BD7B0
+// Recovery: confirmed (UHT singleton of AFortThreatParticleActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortThreatParticleActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortThreatParticleActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

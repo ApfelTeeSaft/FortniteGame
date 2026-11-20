@@ -3,17 +3,8 @@
 // Class UFortHUDObjectiveSizeInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CB2498, FClassParams RVA 0x03CB24B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHUDObjectiveSizeInterface();  // RVA 0x028BBDF0 (consensus OuterFunc)
-
-class UFortHUDObjectiveSizeInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortHUDObjectiveSizeInterface();
-	static void execGetHeightEstimate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBAC0 (end 0x028BBAE2)
 // Original VA: 0x00000001428BBAC0 | File offset: 0x028BB0C0

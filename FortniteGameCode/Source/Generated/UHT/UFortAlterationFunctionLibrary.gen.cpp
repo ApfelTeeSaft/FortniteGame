@@ -3,17 +3,8 @@
 // Class UFortAlterationFunctionLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032B6F70, FClassParams RVA 0x032B6F90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAlterationFunctionLibrary();  // RVA 0x00F993F0 (consensus OuterFunc)
-
-class UFortAlterationFunctionLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAlterationFunctionLibrary();
-	static void execGetAlterationImpactPhysicalSurfaceEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98810 (end 0x00F98832)
 // Original VA: 0x0000000140F98810 | File offset: 0x00F97E10

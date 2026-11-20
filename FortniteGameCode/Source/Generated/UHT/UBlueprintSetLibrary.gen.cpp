@@ -3,28 +3,8 @@
 // Class UBlueprintSetLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038B4140, FClassParams RVA 0x038B4210.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBlueprintSetLibrary();  // RVA 0x023E3830 (consensus OuterFunc)
-
-class UBlueprintSetLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUBlueprintSetLibrary();
-	static void execSet_Add(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSet_AddItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSet_Clear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSet_Contains(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSet_Difference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSet_Intersection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSet_Length(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSet_Remove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSet_RemoveItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSet_ToArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSet_Union(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSetPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2D20 (end 0x023E2D42)
 // Original VA: 0x00000001423E2D20 | File offset: 0x023E2320

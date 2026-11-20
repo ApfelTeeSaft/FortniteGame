@@ -3,15 +3,8 @@
 // Class UFortTouchMoveStick: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D323E0, FClassParams RVA 0x03D32440.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTouchMoveStick();  // RVA 0x02904D60 (consensus OuterFunc)
-
-class UFortTouchMoveStick
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortTouchMoveStick_GetHalfHeight_Statics
 {

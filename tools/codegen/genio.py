@@ -4,8 +4,10 @@ from __future__ import annotations
 from pathlib import Path
 
 
-def sync_tree(root: Path, files: dict[Path, str], pattern: str = "*.gen.cpp") -> tuple[int, int]:
-    """Make `root` hold exactly `files` (path -> text) among files matching `pattern`.
+def sync_tree(root: Path, files: dict[Path, str], pattern: str = "*.gen.cpp",
+              recursive: bool = True) -> tuple[int, int]:
+    """Make `root` hold exactly `files` (path -> text) among files matching `pattern`
+    (in subdirectories too unless `recursive` is false).
 
     Returns (written, removed). Files whose text is unchanged keep their timestamps.
     """
@@ -18,7 +20,7 @@ def sync_tree(root: Path, files: dict[Path, str], pattern: str = "*.gen.cpp") ->
             written += 1
     keep = {p.resolve() for p in files}
     removed = 0
-    for old in root.rglob(pattern):
+    for old in (root.rglob(pattern) if recursive else root.glob(pattern)):
         if old.resolve() not in keep:
             old.unlink()
             removed += 1

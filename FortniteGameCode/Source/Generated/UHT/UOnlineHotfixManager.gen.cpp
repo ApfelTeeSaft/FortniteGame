@@ -3,15 +3,8 @@
 // Class UOnlineHotfixManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F6C0D0, FClassParams RVA 0x02F6C110.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UOnlineHotfixManager();  // RVA 0x005D33F0 (consensus OuterFunc)
-
-class UOnlineHotfixManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UOnlineHotfixManager_StartHotfixProcess_Statics
 {

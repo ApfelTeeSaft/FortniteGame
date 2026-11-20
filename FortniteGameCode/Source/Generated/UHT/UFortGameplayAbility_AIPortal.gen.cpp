@@ -3,15 +3,8 @@
 // Class UFortGameplayAbility_AIPortal: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03325B10, FClassParams RVA 0x03325B90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGameplayAbility_AIPortal();  // RVA 0x00FE7B50 (consensus OuterFunc)
-
-class UFortGameplayAbility_AIPortal
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalBuilding_Statics
 {

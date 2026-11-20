@@ -3,19 +3,8 @@
 // Class UFortOptionsTab: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CFD2A0, FClassParams RVA 0x03CFD300.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortOptionsTab();  // RVA 0x028E6AA0 (consensus OuterFunc)
-
-class UFortOptionsTab
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortOptionsTab();
-	static void execIsAthena(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPS4Platform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsXboxPlatform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E63B0 (end 0x028E63D2)
 // Original VA: 0x00000001428E63B0 | File offset: 0x028E59B0

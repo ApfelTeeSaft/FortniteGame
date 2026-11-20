@@ -3,15 +3,8 @@
 // Class UFortItemManagementScreen: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CD81F0, FClassParams RVA 0x03CD8470.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemManagementScreen();  // RVA 0x028CF490 (consensus OuterFunc)
-
-class UFortItemManagementScreen
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortItemManagementScreen_CancelInventoryPanelTileViewRefresh_Statics
 {

@@ -3,17 +3,8 @@
 // Class UAbilityTask_WaitGameplayEffectApplied: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F32780, FClassParams RVA 0x02F327A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied();  // RVA 0x0054D570 (consensus OuterFunc)
-
-class UAbilityTask_WaitGameplayEffectApplied
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAbilityTask_WaitGameplayEffectApplied();
-	static void execOnApplyGameplayEffectCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CE10 (end 0x0054CE32)
 // Original VA: 0x000000014054CE10 | File offset: 0x0054C410

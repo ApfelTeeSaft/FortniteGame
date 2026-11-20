@@ -3,18 +3,8 @@
 // Class UAbilityTask_WaitConfirm: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F324D0, FClassParams RVA 0x02F32500.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitConfirm();  // RVA 0x0054D4D0 (consensus OuterFunc)
-
-class UAbilityTask_WaitConfirm
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAbilityTask_WaitConfirm();
-	static void execOnConfirmCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execWaitConfirm(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CD80 (end 0x0054CDA2)
 // Original VA: 0x000000014054CD80 | File offset: 0x0054C380

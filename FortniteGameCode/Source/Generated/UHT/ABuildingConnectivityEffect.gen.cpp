@@ -3,15 +3,8 @@
 // Class ABuildingConnectivityEffect: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0326FC38, FClassParams RVA 0x0326FC70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingConnectivityEffect();  // RVA 0x00F66470 (consensus OuterFunc)
-
-class ABuildingConnectivityEffect
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ABuildingConnectivityEffect_OnConnect_Statics
 {

@@ -3,15 +3,8 @@
 // Class UFortDirectAcquisitionOfferDetailsWidgetBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C85100, FClassParams RVA 0x03C851B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDirectAcquisitionOfferDetailsWidgetBase();  // RVA 0x0289B610 (consensus OuterFunc)
-
-class UFortDirectAcquisitionOfferDetailsWidgetBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortDirectAcquisitionOfferDetailsWidgetBase_AutoEquip_Statics
 {

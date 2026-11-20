@@ -3,19 +3,8 @@
 // Class UFortCollectionBookSlotView: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C81B08, FClassParams RVA 0x03C81B90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookSlotView();  // RVA 0x0289B2E0 (consensus OuterFunc)
-
-class UFortCollectionBookSlotView
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCollectionBookSlotView();
-	static void execOnSelectedSlotButtonChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSlotButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSlotButtonCommitted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289ADF0 (end 0x0289AE12)
 // Original VA: 0x000000014289ADF0 | File offset: 0x0289A3F0

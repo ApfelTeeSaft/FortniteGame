@@ -3,15 +3,8 @@
 // Class UBuildingConnectivityComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0326FA70, FClassParams RVA 0x0326FBC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBuildingConnectivityComponent();  // RVA 0x00F66680 (consensus OuterFunc)
-
-class UBuildingConnectivityComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UBuildingConnectivityComponent_CanConnectTo_Statics
 {

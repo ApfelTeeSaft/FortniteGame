@@ -3,19 +3,8 @@
 // Class UCommonDateTimeTextBlock: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E7C7F8, FClassParams RVA 0x02E7C830.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonDateTimeTextBlock();  // RVA 0x002C2DA0 (consensus OuterFunc)
-
-class UCommonDateTimeTextBlock
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCommonDateTimeTextBlock();
-	static void execGetDateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDateTimeValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTimespanValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2A10 (end 0x002C2A32)
 // Original VA: 0x00000001402C2A10 | File offset: 0x002C2010

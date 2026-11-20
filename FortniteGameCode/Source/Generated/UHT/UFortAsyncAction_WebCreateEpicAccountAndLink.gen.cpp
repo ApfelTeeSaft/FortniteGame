@@ -3,17 +3,8 @@
 // Class UFortAsyncAction_WebCreateEpicAccountAndLink: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C60428, FClassParams RVA 0x03C60470.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_WebCreateEpicAccountAndLink();  // RVA 0x02887900 (consensus OuterFunc)
-
-class UFortAsyncAction_WebCreateEpicAccountAndLink
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAsyncAction_WebCreateEpicAccountAndLink();
-	static void execWebCreateEpicAccountAndLink(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02886F30 (end 0x02886F52)
 // Original VA: 0x0000000142886F30 | File offset: 0x02886530

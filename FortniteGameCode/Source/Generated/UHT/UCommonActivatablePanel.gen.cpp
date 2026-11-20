@@ -3,15 +3,8 @@
 // Class UCommonActivatablePanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E7B280, FClassParams RVA 0x02E7B450.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonActivatablePanel();  // RVA 0x002C2C00 (consensus OuterFunc)
-
-class UCommonActivatablePanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCommonActivatablePanel_AddInputActionHandler_Statics
 {

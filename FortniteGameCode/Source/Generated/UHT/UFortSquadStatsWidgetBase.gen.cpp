@@ -3,15 +3,8 @@
 // Class UFortSquadStatsWidgetBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D23CC0, FClassParams RVA 0x03D23D20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadStatsWidgetBase();  // RVA 0x028FB7B0 (consensus OuterFunc)
-
-class UFortSquadStatsWidgetBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortSquadStatsWidgetBase_GetLocalPlayerId_Statics
 {

@@ -3,15 +3,8 @@
 // Class AFortPlayerStateZone: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033D5138, FClassParams RVA 0x033D51E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerStateZone();  // RVA 0x0108B4D0 (consensus OuterFunc)
-
-class AFortPlayerStateZone
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortPlayerStateZone_GetNumOfAccumulatedItem_Statics
 {

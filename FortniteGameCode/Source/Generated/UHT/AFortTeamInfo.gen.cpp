@@ -3,19 +3,8 @@
 // Class AFortTeamInfo: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x034005F0, FClassParams RVA 0x03400670.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortTeamInfo();  // RVA 0x010B38B0 (consensus OuterFunc)
-
-class AFortTeamInfo
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortTeamInfo();
-	static void execGetTeamExperience(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSpottedActorDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2D70 (end 0x010B2D92)
 // Original VA: 0x00000001410B2D70 | File offset: 0x010B2370

@@ -3,19 +3,8 @@
 // Class UFortSurvivorSquadSelectorButton: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D2FE08, FClassParams RVA 0x03D2FE60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSurvivorSquadSelectorButton();  // RVA 0x02904AD0 (consensus OuterFunc)
-
-class UFortSurvivorSquadSelectorButton
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSurvivorSquadSelectorButton();
-	static void execTryGetPersonalityMatches(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetSquadMembers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetSummaryStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029043A0 (end 0x029043C2)
 // Original VA: 0x00000001429043A0 | File offset: 0x029039A0

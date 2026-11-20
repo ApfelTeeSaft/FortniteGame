@@ -3,24 +3,8 @@
 // Class UKismetStringTableLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03927050, FClassParams RVA 0x039270E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UKismetStringTableLibrary();  // RVA 0x02452CE0 (consensus OuterFunc)
-
-class UKismetStringTableLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUKismetStringTableLibrary();
-	static void execGetKeysFromStringTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMetaDataIdsFromStringTableEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRegisteredStringTables(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTableEntryMetaData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTableEntrySourceString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTableNamespace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsRegisteredTableEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsRegisteredTableId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02452B30 (end 0x02452B52)
 // Original VA: 0x0000000142452B30 | File offset: 0x02452130

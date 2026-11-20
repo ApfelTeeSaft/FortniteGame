@@ -3,15 +3,8 @@
 // Class UCommonListView: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E81C00, FClassParams RVA 0x02E81E40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonListView();  // RVA 0x002CA420 (consensus OuterFunc)
-
-class UCommonListView
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCommonListView_AddItem_Statics
 {

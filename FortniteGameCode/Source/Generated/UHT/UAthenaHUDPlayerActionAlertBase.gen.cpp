@@ -3,15 +3,8 @@
 // Class UAthenaHUDPlayerActionAlertBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C531D0, FClassParams RVA 0x03C53210.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase();  // RVA 0x0287F4D0 (consensus OuterFunc)
-
-class UAthenaHUDPlayerActionAlertBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_AlertPlayer_Statics
 {

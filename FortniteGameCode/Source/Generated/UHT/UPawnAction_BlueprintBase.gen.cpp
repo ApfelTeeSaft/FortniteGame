@@ -3,15 +3,8 @@
 // Class UPawnAction_BlueprintBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0370CE20, FClassParams RVA 0x0370CE80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPawnAction_BlueprintBase();  // RVA 0x01D31DA0 (consensus OuterFunc)
-
-class UPawnAction_BlueprintBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UPawnAction_BlueprintBase_ActionFinished_Statics
 {

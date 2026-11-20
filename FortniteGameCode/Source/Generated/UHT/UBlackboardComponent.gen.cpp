@@ -3,40 +3,8 @@
 // Class UBlackboardComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036FA0C0, FClassParams RVA 0x036FA270.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBlackboardComponent();  // RVA 0x01D231D0 (consensus OuterFunc)
-
-class UBlackboardComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUBlackboardComponent();
-	static void execClearValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLocationFromEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRotationFromEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValueAsBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValueAsClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValueAsEnum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValueAsFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValueAsInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValueAsName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValueAsObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValueAsRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValueAsString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValueAsVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsVectorValueSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetValueAsBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetValueAsClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetValueAsEnum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetValueAsFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetValueAsInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetValueAsName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetValueAsObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetValueAsRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetValueAsString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetValueAsVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D229E0 (end 0x01D22A02)
 // Original VA: 0x0000000141D229E0 | File offset: 0x01D21FE0

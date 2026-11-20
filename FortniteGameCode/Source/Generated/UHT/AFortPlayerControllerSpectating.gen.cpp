@@ -3,15 +3,8 @@
 // Class AFortPlayerControllerSpectating: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033C4120, FClassParams RVA 0x033C41A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerSpectating();  // RVA 0x01077830 (consensus OuterFunc)
-
-class AFortPlayerControllerSpectating
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowNextPlayer_Statics
 {

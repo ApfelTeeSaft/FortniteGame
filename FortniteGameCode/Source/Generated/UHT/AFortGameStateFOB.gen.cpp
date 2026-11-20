@@ -3,18 +3,8 @@
 // Class AFortGameStateFOB: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0332E770, FClassParams RVA 0x0332E7A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class AFortGameStateFOB
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortGameStateFOB();
-	static void execSetGameDifficultyExplicitly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetGameDifficultyRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE040 (end 0x00FEE062)
 // Original VA: 0x0000000140FEE040 | File offset: 0x00FED640
@@ -29,6 +19,64 @@ void AFortGameStateFOB::StaticRegisterNativesAFortGameStateFOB()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyExplicitly: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyExplicitly_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEEFA0 (end 0x00FEEFCF)
+// Original VA: 0x0000000140FEEFA0 | File offset: 0x00FEE5A0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyExplicitly()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyExplicitly_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyRow: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyRow_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEEFD0 (end 0x00FEEFFF)
+// Original VA: 0x0000000140FEEFD0 | File offset: 0x00FEE5D0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyRow()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyRow_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_AFortGameStateFOB_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortGameStateFOB_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyExplicitly, "SetGameDifficultyExplicitly" },
+	{ &Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyRow, "SetGameDifficultyRow" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortGameStateFOB_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0332E7A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortGameStateFOB_Statics::ClassParams = { &AFortGameStateFOB::StaticClass, Z_Construct_UClass_AFortGameStateFOB_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortGameStateFOB_Statics::FuncInfo, 2, Z_Construct_UClass_AFortGameStateFOB_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_AFortGameStateFOB_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE6C0 (end 0x00FEE6EF)
+// Original VA: 0x0000000140FEE6C0 | File offset: 0x00FEDCC0
+// Recovery: confirmed (UHT singleton of AFortGameStateFOB) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortGameStateFOB()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortGameStateFOB_Statics::ClassParams);
+	}
+	return OuterClass;
+}

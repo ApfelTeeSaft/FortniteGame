@@ -3,15 +3,8 @@
 // Class UMovieSceneEasingFunction: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0363BB08, FClassParams RVA 0x0363BB20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMovieSceneEasingFunction();  // RVA 0x01AC5390 (consensus OuterFunc)
-
-class UMovieSceneEasingFunction
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UMovieSceneEasingFunction_OnEvaluate_Statics
 {

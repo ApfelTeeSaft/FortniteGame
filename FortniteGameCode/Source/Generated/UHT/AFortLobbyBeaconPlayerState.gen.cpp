@@ -3,15 +3,8 @@
 // Class AFortLobbyBeaconPlayerState: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0335EDB0, FClassParams RVA 0x0335EEC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortLobbyBeaconPlayerState();  // RVA 0x0101E3D0 (consensus OuterFunc)
-
-class AFortLobbyBeaconPlayerState
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_CharacterGender_Statics
 {

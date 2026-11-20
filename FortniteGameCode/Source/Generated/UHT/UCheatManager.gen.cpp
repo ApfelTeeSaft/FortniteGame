@@ -3,15 +3,8 @@
 // Class UCheatManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038C68F0, FClassParams RVA 0x038C6CA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCheatManager();  // RVA 0x023F77C0 (consensus OuterFunc)
-
-class UCheatManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCheatManager_BugIt_Statics
 {

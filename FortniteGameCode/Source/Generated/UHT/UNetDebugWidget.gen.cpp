@@ -3,15 +3,8 @@
 // Class UNetDebugWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F54098, FClassParams RVA 0x02F54110.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UNetDebugWidget();  // RVA 0x00589630 (consensus OuterFunc)
-
-class UNetDebugWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UNetDebugWidget_StartTimer_Statics
 {

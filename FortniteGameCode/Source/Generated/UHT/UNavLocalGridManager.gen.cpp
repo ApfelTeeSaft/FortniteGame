@@ -3,23 +3,8 @@
 // Class UNavLocalGridManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0370C900, FClassParams RVA 0x0370C980.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UNavLocalGridManager();  // RVA 0x01D31D10 (consensus OuterFunc)
-
-class UNavLocalGridManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUNavLocalGridManager();
-	static void execAddLocalNavigationGridForBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddLocalNavigationGridForCapsule(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddLocalNavigationGridForPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddLocalNavigationGridForPoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFindLocalNavigationGridPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveLocalNavigationGrid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLocalNavigationGridDensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31AD0 (end 0x01D31AF2)
 // Original VA: 0x0000000141D31AD0 | File offset: 0x01D310D0

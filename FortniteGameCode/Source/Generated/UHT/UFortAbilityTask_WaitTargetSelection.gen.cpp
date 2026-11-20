@@ -3,15 +3,8 @@
 // Class UFortAbilityTask_WaitTargetSelection: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03296740, FClassParams RVA 0x032967A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityTask_WaitTargetSelection();  // RVA 0x00F81F80 (consensus OuterFunc)
-
-class UFortAbilityTask_WaitTargetSelection
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDataCancelledCallback_Statics
 {

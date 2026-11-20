@@ -3,15 +3,8 @@
 // Class ABuildingFlagSpawn: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03271190, FClassParams RVA 0x03271220.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingFlagSpawn();  // RVA 0x00F66590 (consensus OuterFunc)
-
-class ABuildingFlagSpawn
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ABuildingFlagSpawn_IsSpawnedObjectAwayFromBase_Statics
 {

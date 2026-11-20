@@ -3,15 +3,8 @@
 // Class USkeletalMeshComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039A7D20, FClassParams RVA 0x039A83A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USkeletalMeshComponent();  // RVA 0x024CCA10 (consensus OuterFunc)
-
-class USkeletalMeshComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_USkeletalMeshComponent_AccumulateAllBodiesBelowPhysicsBlendWeight_Statics
 {

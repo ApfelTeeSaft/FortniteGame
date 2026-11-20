@@ -3,28 +3,8 @@
 // Class UCameraComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038B9B30, FClassParams RVA 0x038B9C60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCameraComponent();  // RVA 0x023EAA00 (consensus OuterFunc)
-
-class UCameraComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCameraComponent();
-	static void execAddOrUpdateBlendable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCameraView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveBlendable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAspectRatio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetConstraintAspectRatio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFieldOfView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOrthoFarClipPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOrthoNearClipPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOrthoWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetPostProcessBlendWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetProjectionMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetUseFieldOfViewForLOD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9F40 (end 0x023E9F62)
 // Original VA: 0x00000001423E9F40 | File offset: 0x023E9540

@@ -3,18 +3,8 @@
 // Class UFortTooltipInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0341B708, FClassParams RVA 0x0341B730.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortTooltipInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortTooltipInterface();
-	static void execGetDisplayStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTooltip(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9470 (end 0x010C9492)
 // Original VA: 0x00000001410C9470 | File offset: 0x010C8A70
@@ -29,6 +19,63 @@ void UFortTooltipInterface::StaticRegisterNativesUFortTooltipInterface()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortTooltipInterface_GetDisplayStats: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortTooltipInterface_GetDisplayStats_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CBDE0 (end 0x010CBE0F)
+// Original VA: 0x00000001410CBDE0 | File offset: 0x010CB3E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortTooltipInterface_GetDisplayStats()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTooltipInterface_GetDisplayStats_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortTooltipInterface_GetTooltip: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortTooltipInterface_GetTooltip_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CBE10 (end 0x010CBE3F)
+// Original VA: 0x00000001410CBE10 | File offset: 0x010CB410
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortTooltipInterface_GetTooltip()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTooltipInterface_GetTooltip_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortTooltipInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTooltipInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTooltipInterface_GetDisplayStats, "GetDisplayStats" },
+	{ &Z_Construct_UFunction_UFortTooltipInterface_GetTooltip, "GetTooltip" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTooltipInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x0341B730
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTooltipInterface_Statics::ClassParams = { &UFortTooltipInterface::StaticClass, Z_Construct_UClass_UFortTooltipInterface_Statics::DependentSingletons, 2, 0x00084081u, Z_Construct_UClass_UFortTooltipInterface_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortTooltipInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CAC60 (end 0x010CAC8F)
+// Original VA: 0x00000001410CAC60 | File offset: 0x010CA260
+// Recovery: confirmed (UHT singleton of UFortTooltipInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTooltipInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTooltipInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

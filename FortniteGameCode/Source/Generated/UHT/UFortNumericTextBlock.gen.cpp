@@ -3,15 +3,8 @@
 // Class UFortNumericTextBlock: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CF2230, FClassParams RVA 0x03CF22C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortNumericTextBlock();  // RVA 0x028DE560 (consensus OuterFunc)
-
-class UFortNumericTextBlock
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortNumericTextBlock_DirectlySet_Statics
 {

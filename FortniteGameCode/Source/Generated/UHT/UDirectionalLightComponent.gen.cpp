@@ -3,25 +3,8 @@
 // Class UDirectionalLightComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038CFB80, FClassParams RVA 0x038CFCC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UDirectionalLightComponent();  // RVA 0x023FE930 (consensus OuterFunc)
-
-class UDirectionalLightComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUDirectionalLightComponent();
-	static void execSetCascadeDistributionExponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCascadeTransitionFraction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDynamicShadowCascades(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDynamicShadowDistanceMovableLight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDynamicShadowDistanceStationaryLight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetEnableLightShaftOcclusion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLightShaftOverrideDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOcclusionMaskDarkness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetShadowDistanceFadeoutFraction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDD00 (end 0x023FDD22)
 // Original VA: 0x00000001423FDD00 | File offset: 0x023FD300

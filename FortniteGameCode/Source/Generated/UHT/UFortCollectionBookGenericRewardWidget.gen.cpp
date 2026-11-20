@@ -3,15 +3,8 @@
 // Class UFortCollectionBookGenericRewardWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C760B0, FClassParams RVA 0x03C76170.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookGenericRewardWidget();  // RVA 0x02894610 (consensus OuterFunc)
-
-class UFortCollectionBookGenericRewardWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortCollectionBookGenericRewardWidget_ClearRewards_Statics
 {

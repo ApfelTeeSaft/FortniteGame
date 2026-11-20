@@ -3,18 +3,8 @@
 // Class UFortAsyncAction_SendQuestStatEvent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032BFC28, FClassParams RVA 0x032BFCA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_SendQuestStatEvent();  // RVA 0x00F9F270 (consensus OuterFunc)
-
-class UFortAsyncAction_SendQuestStatEvent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAsyncAction_SendQuestStatEvent();
-	static void execSendClientStatEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSendClientStatEventWithTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E630 (end 0x00F9E652)
 // Original VA: 0x0000000140F9E630 | File offset: 0x00F9DC30

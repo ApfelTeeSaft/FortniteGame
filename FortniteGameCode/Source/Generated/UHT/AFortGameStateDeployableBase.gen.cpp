@@ -3,15 +3,8 @@
 // Class AFortGameStateDeployableBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0332E650, FClassParams RVA 0x0332E6D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortGameStateDeployableBase();  // RVA 0x00FEE690 (consensus OuterFunc)
-
-class AFortGameStateDeployableBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortGameStateDeployableBase_GetDeployableBaseUseType_Statics
 {

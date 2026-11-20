@@ -3,36 +3,8 @@
 // Class UExponentialHeightFogComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038EF810, FClassParams RVA 0x038EFA10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UExponentialHeightFogComponent();  // RVA 0x0240FD00 (consensus OuterFunc)
-
-class UExponentialHeightFogComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUExponentialHeightFogComponent();
-	static void execSetDirectionalInscatteringColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDirectionalInscatteringExponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDirectionalInscatteringStartDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFogCutoffDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFogDensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFogHeightFalloff(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFogInscatteringColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFogMaxOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFullyDirectionalInscatteringColorDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetInscatteringColorCubemap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetInscatteringColorCubemapAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetInscatteringTextureTint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetNonDirectionalInscatteringColorDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetStartDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVolumetricFog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVolumetricFogAlbedo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVolumetricFogDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVolumetricFogEmissive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVolumetricFogExtinctionScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVolumetricFogScatteringDistribution(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240F9A0 (end 0x0240F9C2)
 // Original VA: 0x000000014240F9A0 | File offset: 0x0240EFA0

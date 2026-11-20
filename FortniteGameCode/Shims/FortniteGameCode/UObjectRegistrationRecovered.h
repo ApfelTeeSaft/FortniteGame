@@ -1,6 +1,6 @@
 // ABI declarations for UHT-generated registration code: FName construction, deferred struct
 // registration and C++ struct ops (UE4.20 Core NameTypes.h, CoreUObject UObjectBase.h and
-// Class.h). Not recovered code. Included only by generated USTRUCT translation units.
+// Class.h). Not recovered code. Included through UHTRecovered.h.
 //
 // FName here has the engine's shipping layout (ComparisonIndex, Number: 8 bytes, passed by value
 // in a register) and its out-of-line TCHAR constructor. EngineDecls.h declares a layout-only
@@ -49,17 +49,16 @@ struct FCompiledInDeferStruct
 	}
 };
 
-// UObjectBase.h: deferred enum registration.
-class UEnum : public UObject
-{
-public:
-	enum class ECppForm
-	{
-		Regular,
-		Namespaced,
-		EnumClass
+// UObjectBase.h: deferred enum registration. UEnum itself is declared in Classes.gen.h; its
+// ECppForm comes from FNGC_EXTRA_MEMBERS_UEnum below.
+class UEnum;
+#define FNGC_EXTRA_MEMBERS_UEnum \
+	enum class ECppForm \
+	{ \
+		Regular, \
+		Namespaced, \
+		EnumClass \
 	};
-};
 void UObjectCompiledInDeferEnum(UEnum* (*InRegister)(), const TCHAR* PackageName, const FName ObjectName, bool bDynamic, const TCHAR* DynamicPathName);
 UEnum* GetStaticEnum(UEnum* (*InRegister)(), UObject* EnumOuter, const TCHAR* EnumName);
 
@@ -109,36 +108,30 @@ namespace UE4CodeGen_Private
 	void ConstructUEnum(UEnum*& OutEnum, const FEnumParams& Params);
 }
 
-// Class.h: the parts of UScriptStruct that registration code touches. ICppStructOps keeps the
-// engine layout (vtable pointer, Size, Alignment) and constructor; the engine's further pure
-// virtual operations (construct, copy, serialize, ...) are omitted because no recovered code
-// calls them. The vtable is therefore a stand-in: its address is resolved from the reference,
-// never its contents.
-class UScriptStruct : public UObject
-{
-public:
-	struct ICppStructOps
-	{
-		ICppStructOps(int32 InSize, int32 InAlignment)
-			: Size(InSize)
-			, Alignment(InAlignment)
-		{
-		}
-		virtual ~ICppStructOps() {}
-
-	private:
-		int32 Size;
-		int32 Alignment;
-	};
-
-	template<class CPPSTRUCT>
-	struct TCppStructOps : public ICppStructOps
-	{
-		TCppStructOps()
-			: ICppStructOps(sizeof(CPPSTRUCT), alignof(CPPSTRUCT))
-		{
-		}
-	};
-
+// Class.h: the parts of UScriptStruct that registration code touches, added to its declaration
+// in Classes.gen.h. ICppStructOps keeps the engine layout (vtable pointer, Size, Alignment) and
+// constructor; the engine's further pure virtual operations (construct, copy, serialize, ...)
+// are omitted because no recovered code calls them. The vtable is therefore a stand-in: its
+// address is resolved from the reference, never its contents.
+#define FNGC_EXTRA_MEMBERS_UScriptStruct \
+	struct ICppStructOps \
+	{ \
+		ICppStructOps(int32 InSize, int32 InAlignment) \
+			: Size(InSize) \
+			, Alignment(InAlignment) \
+		{ \
+		} \
+		virtual ~ICppStructOps() {} \
+	private: \
+		int32 Size; \
+		int32 Alignment; \
+	}; \
+	template<class CPPSTRUCT> \
+	struct TCppStructOps : public ICppStructOps \
+	{ \
+		TCppStructOps() \
+			: ICppStructOps(sizeof(CPPSTRUCT), alignof(CPPSTRUCT)) \
+		{ \
+		} \
+	}; \
 	static void DeferCppStructOps(FName Target, ICppStructOps* InCppStructOps);
-};

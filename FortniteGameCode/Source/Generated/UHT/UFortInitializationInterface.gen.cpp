@@ -3,15 +3,8 @@
 // Class UFortInitializationInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0334A1F0, FClassParams RVA 0x0334A230.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortInitializationInterface();  // RVA 0x01006BD0 (consensus OuterFunc)
-
-class UFortInitializationInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortInitializationInterface_MatchStarted_Statics
 {

@@ -3,15 +3,8 @@
 // Class UFortPrototypingContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033D6038, FClassParams RVA 0x033D6070.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPrototypingContext();  // RVA 0x0108B6E0 (consensus OuterFunc)
-
-class UFortPrototypingContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortPrototypingContext_OnPrototypingStatusChanged__DelegateSignature_Statics
 {

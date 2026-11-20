@@ -3,15 +3,8 @@
 // Class UFortResultsWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D0A7E0, FClassParams RVA 0x03D0A8E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortResultsWidget();  // RVA 0x028ED500 (consensus OuterFunc)
-
-class UFortResultsWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortResultsWidget_GetRewardsByType_Statics
 {

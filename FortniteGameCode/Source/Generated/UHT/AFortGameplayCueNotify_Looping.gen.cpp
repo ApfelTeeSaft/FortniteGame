@@ -3,18 +3,8 @@
 // Class AFortGameplayCueNotify_Looping: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033266B0, FClassParams RVA 0x03326790.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortGameplayCueNotify_Looping();  // RVA 0x00FE7A90 (consensus OuterFunc)
-
-class AFortGameplayCueNotify_Looping
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortGameplayCueNotify_Looping();
-	static void execGetSpawnTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTargetComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7670 (end 0x00FE7692)
 // Original VA: 0x0000000140FE7670 | File offset: 0x00FE6C70

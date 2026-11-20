@@ -3,17 +3,8 @@
 // Class UGameplayTagReponseTable: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F49970, FClassParams RVA 0x02F499A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTagReponseTable();  // RVA 0x00565FC0 (consensus OuterFunc)
-
-class UGameplayTagReponseTable
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUGameplayTagReponseTable();
-	static void execTagResponseEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00565DB0 (end 0x00565DD2)
 // Original VA: 0x0000000140565DB0 | File offset: 0x005653B0

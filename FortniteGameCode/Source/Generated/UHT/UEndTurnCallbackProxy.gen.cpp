@@ -3,17 +3,8 @@
 // Class UEndTurnCallbackProxy: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02EAD690, FClassParams RVA 0x02EAD6C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEndTurnCallbackProxy();  // RVA 0x0032EA40 (consensus OuterFunc)
-
-class UEndTurnCallbackProxy
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUEndTurnCallbackProxy();
-	static void execEndTurn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E250 (end 0x0032E272)
 // Original VA: 0x000000014032E250 | File offset: 0x0032D850

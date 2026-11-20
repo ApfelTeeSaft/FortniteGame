@@ -3,15 +3,8 @@
 // Class AFortPlayerStateAthena: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033D4AC0, FClassParams RVA 0x033D4C50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerStateAthena();  // RVA 0x0108B380 (consensus OuterFunc)
-
-class AFortPlayerStateAthena
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortPlayerStateAthena_ClientReportDBNO_Statics
 {

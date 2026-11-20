@@ -3,17 +3,8 @@
 // Class UNavModifierComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0395BA20, FClassParams RVA 0x0395BA50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UNavModifierComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUNavModifierComponent();
-	static void execSetAreaClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F350 (end 0x0248F372)
 // Original VA: 0x000000014248F350 | File offset: 0x0248E950
@@ -27,4 +18,46 @@ void UNavModifierComponent::StaticRegisterNativesUNavModifierComponent()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UNavModifierComponent_SetAreaClass: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UNavModifierComponent_SetAreaClass_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248FEE0 (end 0x0248FF0F)
+// Original VA: 0x000000014248FEE0 | File offset: 0x0248F4E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UNavModifierComponent_SetAreaClass()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UNavModifierComponent_SetAreaClass_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UNavModifierComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UNavModifierComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UNavModifierComponent_SetAreaClass, "SetAreaClass" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UNavModifierComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0395BA50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UNavModifierComponent_Statics::ClassParams = { &UNavModifierComponent::StaticClass, Z_Construct_UClass_UNavModifierComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UNavModifierComponent_Statics::FuncInfo, 1, Z_Construct_UClass_UNavModifierComponent_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UNavModifierComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F9D0 (end 0x0248F9FF)
+// Original VA: 0x000000014248F9D0 | File offset: 0x0248EFD0
+// Recovery: confirmed (UHT singleton of UNavModifierComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UNavModifierComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UNavModifierComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

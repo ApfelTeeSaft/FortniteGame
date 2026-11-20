@@ -3,16 +3,67 @@
 // Class UFortRegisteredPlayerInfo: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033EF5C0, FClassParams RVA 0x033EF6F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UFortRegisteredPlayerInfo
+struct Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetAbilitySystemComponent_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E6E0 (end 0x0109E70F)
+// Original VA: 0x000000014109E6E0 | File offset: 0x0109DCE0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetAbilitySystemComponent()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetAbilitySystemComponent_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetAbilitySystemComponent: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetPlayerName_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109E710 (end 0x0109E73F)
+// Original VA: 0x000000014109E710 | File offset: 0x0109DD10
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetPlayerName()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetPlayerName_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetPlayerName: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UFortRegisteredPlayerInfo_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortRegisteredPlayerInfo_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetAbilitySystemComponent, "GetAbilitySystemComponent" },
+	{ &Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetPlayerName, "GetPlayerName" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortRegisteredPlayerInfo_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033EF6F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortRegisteredPlayerInfo_Statics::ClassParams = { &UFortRegisteredPlayerInfo::StaticClass, Z_Construct_UClass_UFortRegisteredPlayerInfo_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortRegisteredPlayerInfo_Statics::FuncInfo, 2, Z_Construct_UClass_UFortRegisteredPlayerInfo_Statics::PropPointers, 32, nullptr, &Z_Construct_UClass_UFortRegisteredPlayerInfo_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109DCD0 (end 0x0109DCFF)
+// Original VA: 0x000000014109DCD0 | File offset: 0x0109D2D0
+// Recovery: confirmed (UHT singleton of UFortRegisteredPlayerInfo) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortRegisteredPlayerInfo()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortRegisteredPlayerInfo_Statics::ClassParams);
+	}
+	return OuterClass;
+}

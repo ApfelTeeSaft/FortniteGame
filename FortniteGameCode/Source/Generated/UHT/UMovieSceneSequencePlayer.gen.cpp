@@ -3,15 +3,8 @@
 // Class UMovieSceneSequencePlayer: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0363F3B0, FClassParams RVA 0x0363F5A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMovieSceneSequencePlayer();  // RVA 0x01AC5510 (consensus OuterFunc)
-
-class UMovieSceneSequencePlayer
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UMovieSceneSequencePlayer_ChangePlaybackDirection_Statics
 {

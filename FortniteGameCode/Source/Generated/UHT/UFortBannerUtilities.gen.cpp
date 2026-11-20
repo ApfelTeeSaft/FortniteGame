@@ -3,39 +3,8 @@
 // Class UFortBannerUtilities: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032C82A0, FClassParams RVA 0x032C8420.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBannerUtilities();  // RVA 0x00FA3C50 (consensus OuterFunc)
-
-class UFortBannerUtilities
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortBannerUtilities();
-	static void execGetBannerColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerColorCategoryName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerColorCategoryRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerColorFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerColorItemFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerColorPrimaryColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerColorPrimaryColorFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerColorSecondaryColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerColorSecondaryColorFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerColorsForCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerIconCategoryName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerIconCategoryRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerIconItemFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerIconsForCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerLargeIconAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerLargeIconAssetFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerSmallIconAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerSmallIconAssetFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPrimaryColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRowNameForBannerColorItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRowNameForBannerIconItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSecondaryColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execLoadAndGetBannerLargeIconFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3470 (end 0x00FA3492)
 // Original VA: 0x0000000140FA3470 | File offset: 0x00FA2A70

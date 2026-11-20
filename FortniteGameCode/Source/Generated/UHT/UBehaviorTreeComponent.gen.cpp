@@ -3,19 +3,8 @@
 // Class UBehaviorTreeComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036F9A00, FClassParams RVA 0x036F9A50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBehaviorTreeComponent();  // RVA 0x01D23140 (consensus OuterFunc)
-
-class UBehaviorTreeComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUBehaviorTreeComponent();
-	static void execAddCooldownTagDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTagCooldownEndTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDynamicSubtree(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D229B0 (end 0x01D229D2)
 // Original VA: 0x0000000141D229B0 | File offset: 0x01D21FB0

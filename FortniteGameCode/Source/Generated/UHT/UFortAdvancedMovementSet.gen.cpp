@@ -3,15 +3,8 @@
 // Class UFortAdvancedMovementSet: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03297D30, FClassParams RVA 0x03297DE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAdvancedMovementSet();  // RVA 0x00F821C0 (consensus OuterFunc)
-
-class UFortAdvancedMovementSet
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortAdvancedMovementSet_OnRep_BrakingDecelerationFalling_Statics
 {

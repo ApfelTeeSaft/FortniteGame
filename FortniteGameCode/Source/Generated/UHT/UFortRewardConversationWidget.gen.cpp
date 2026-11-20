@@ -3,18 +3,8 @@
 // Class UFortRewardConversationWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D0AB50, FClassParams RVA 0x03D0AB80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortRewardConversationWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortRewardConversationWidget();
-	static void execGetDataFromSentence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsValidConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECEF0 (end 0x028ECF12)
 // Original VA: 0x00000001428ECEF0 | File offset: 0x028EC4F0
@@ -29,6 +19,63 @@ void UFortRewardConversationWidget::StaticRegisterNativesUFortRewardConversation
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortRewardConversationWidget_GetDataFromSentence: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortRewardConversationWidget_GetDataFromSentence_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE330 (end 0x028EE35F)
+// Original VA: 0x00000001428EE330 | File offset: 0x028ED930
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortRewardConversationWidget_GetDataFromSentence()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRewardConversationWidget_GetDataFromSentence_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortRewardConversationWidget_IsValidConversation: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortRewardConversationWidget_IsValidConversation_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE360 (end 0x028EE38F)
+// Original VA: 0x00000001428EE360 | File offset: 0x028ED960
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortRewardConversationWidget_IsValidConversation()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRewardConversationWidget_IsValidConversation_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortRewardConversationWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortRewardConversationWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortRewardConversationWidget_GetDataFromSentence, "GetDataFromSentence" },
+	{ &Z_Construct_UFunction_UFortRewardConversationWidget_IsValidConversation, "IsValidConversation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortRewardConversationWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D0AB80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortRewardConversationWidget_Statics::ClassParams = { &UFortRewardConversationWidget::StaticClass, Z_Construct_UClass_UFortRewardConversationWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortRewardConversationWidget_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortRewardConversationWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED590 (end 0x028ED5BF)
+// Original VA: 0x00000001428ED590 | File offset: 0x028ECB90
+// Recovery: confirmed (UHT singleton of UFortRewardConversationWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortRewardConversationWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortRewardConversationWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

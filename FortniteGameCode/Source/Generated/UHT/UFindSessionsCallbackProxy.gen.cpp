@@ -3,21 +3,8 @@
 // Class UFindSessionsCallbackProxy: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02EAD910, FClassParams RVA 0x02EAD980.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFindSessionsCallbackProxy();  // RVA 0x0032EA70 (consensus OuterFunc)
-
-class UFindSessionsCallbackProxy
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFindSessionsCallbackProxy();
-	static void execFindSessions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurrentPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaxPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPingInMs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetServerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E280 (end 0x0032E2A2)
 // Original VA: 0x000000014032E280 | File offset: 0x0032D880

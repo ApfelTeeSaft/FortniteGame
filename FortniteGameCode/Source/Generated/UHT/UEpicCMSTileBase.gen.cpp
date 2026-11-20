@@ -3,15 +3,8 @@
 // Class UEpicCMSTileBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E8CDE0, FClassParams RVA 0x02E8CE70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEpicCMSTileBase();  // RVA 0x002E3C70 (consensus OuterFunc)
-
-class UEpicCMSTileBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UEpicCMSTileBase_DynamicHandleIconLoadingStateChanged_Statics
 {

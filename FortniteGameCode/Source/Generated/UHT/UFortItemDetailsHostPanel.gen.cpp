@@ -3,15 +3,8 @@
 // Class UFortItemDetailsHostPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CCCCA0, FClassParams RVA 0x03CCCD90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemDetailsHostPanel();  // RVA 0x028C9DE0 (consensus OuterFunc)
-
-class UFortItemDetailsHostPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortItemDetailsHostPanel_HandleDifferentItemToCompareSet_Statics
 {

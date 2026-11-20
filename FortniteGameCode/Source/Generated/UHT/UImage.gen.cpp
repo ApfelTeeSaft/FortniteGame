@@ -3,25 +3,8 @@
 // Class UImage: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03696F00, FClassParams RVA 0x03696FC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UImage();  // RVA 0x01BED490 (consensus OuterFunc)
-
-class UImage
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUImage();
-	static void execGetDynamicMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBrushFromAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBrushFromAtlasInterface(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBrushFromMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBrushFromTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBrushFromTextureDynamic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECF40 (end 0x01BECF62)
 // Original VA: 0x0000000141BECF40 | File offset: 0x01BEC540

@@ -3,17 +3,8 @@
 // Class UFortAccountLinkingWindow: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C60128, FClassParams RVA 0x03C60160.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAccountLinkingWindow();  // RVA 0x02887640 (consensus OuterFunc)
-
-class UFortAccountLinkingWindow
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAccountLinkingWindow();
-	static void execIsPurchaseFree(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02886D20 (end 0x02886D42)
 // Original VA: 0x0000000142886D20 | File offset: 0x02886320

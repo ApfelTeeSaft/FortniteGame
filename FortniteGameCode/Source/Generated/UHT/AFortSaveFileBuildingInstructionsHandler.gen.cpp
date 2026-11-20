@@ -3,20 +3,8 @@
 // Class AFortSaveFileBuildingInstructionsHandler: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033F59E0, FClassParams RVA 0x033F5A80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortSaveFileBuildingInstructionsHandler();  // RVA 0x010A57C0 (consensus OuterFunc)
-
-class AFortSaveFileBuildingInstructionsHandler
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortSaveFileBuildingInstructionsHandler();
-	static void execAreBuildingsLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execLoadBuildings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execResetBuildings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSaveBuildings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4E30 (end 0x010A4E52)
 // Original VA: 0x00000001410A4E30 | File offset: 0x010A4430

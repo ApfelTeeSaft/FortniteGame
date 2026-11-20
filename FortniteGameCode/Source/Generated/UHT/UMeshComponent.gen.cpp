@@ -3,23 +3,8 @@
 // Class UMeshComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0394F0E0, FClassParams RVA 0x0394F170.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMeshComponent();  // RVA 0x02486AE0 (consensus OuterFunc)
-
-class UMeshComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUMeshComponent();
-	static void execGetMaterialIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaterials(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaterialSlotNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsMaterialSlotNameValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execPrestreamTextures(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetScalarParameterValueOnMaterials(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVectorParameterValueOnMaterials(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02485F70 (end 0x02485F92)
 // Original VA: 0x0000000142485F70 | File offset: 0x02485570

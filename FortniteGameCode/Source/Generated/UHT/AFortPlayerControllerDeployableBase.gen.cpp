@@ -3,15 +3,8 @@
 // Class AFortPlayerControllerDeployableBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033C2B90, FClassParams RVA 0x033C2C60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerDeployableBase();  // RVA 0x01077670 (consensus OuterFunc)
-
-class AFortPlayerControllerDeployableBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortPlayerControllerDeployableBase_ClientOnHordeTierComplete_Statics
 {

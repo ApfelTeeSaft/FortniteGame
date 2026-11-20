@@ -3,15 +3,8 @@
 // Class UMeshReconstructorBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03720CC0, FClassParams RVA 0x03720D40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMeshReconstructorBase();  // RVA 0x01D5EDE0 (consensus OuterFunc)
-
-class UMeshReconstructorBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UMeshReconstructorBase_ConnectMRMesh_Statics
 {

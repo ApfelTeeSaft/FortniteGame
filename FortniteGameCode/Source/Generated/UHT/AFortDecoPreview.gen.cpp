@@ -3,24 +3,8 @@
 // Class AFortDecoPreview: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032FF410, FClassParams RVA 0x032FF540.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortDecoPreview();  // RVA 0x00FCFED0 (consensus OuterFunc)
-
-class AFortDecoPreview
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortDecoPreview();
-	static void execCreatePreviewMID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTextureParameterValueFromMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnBounceMotionUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnInitializeDecoPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnUpdateScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnUpdateVisuals(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetScalarParameterValueOnAllPreviewMIDs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVectorParameterValueOnAllPreviewMIDs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCF9C0 (end 0x00FCF9E2)
 // Original VA: 0x0000000140FCF9C0 | File offset: 0x00FCEFC0

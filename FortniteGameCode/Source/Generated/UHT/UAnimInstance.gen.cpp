@@ -3,15 +3,8 @@
 // Class UAnimInstance: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0389A2B0, FClassParams RVA 0x0389A6E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAnimInstance();  // RVA 0x023CE4E0 (consensus OuterFunc)
-
-class UAnimInstance
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAnimInstance_BlueprintBeginPlay_Statics
 {

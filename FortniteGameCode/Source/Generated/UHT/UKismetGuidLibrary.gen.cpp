@@ -3,23 +3,8 @@
 // Class UKismetGuidLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039149A0, FClassParams RVA 0x03914A20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UKismetGuidLibrary();  // RVA 0x02431A00 (consensus OuterFunc)
-
-class UKismetGuidLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUKismetGuidLibrary();
-	static void execConv_GuidToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEqualEqual_GuidGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execInvalidate_Guid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsValid_Guid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNewGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNotEqual_GuidGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execParse_StringToGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02431760 (end 0x02431782)
 // Original VA: 0x0000000142431760 | File offset: 0x02430D60

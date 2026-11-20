@@ -3,19 +3,8 @@
 // Class AFortFrontEndCameraManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033116B8, FClassParams RVA 0x03311710.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortFrontEndCameraManager();  // RVA 0x00FDB5B0 (consensus OuterFunc)
-
-class AFortFrontEndCameraManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortFrontEndCameraManager();
-	static void execGetCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCameraActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDAA90 (end 0x00FDAAB2)
 // Original VA: 0x0000000140FDAA90 | File offset: 0x00FDA090

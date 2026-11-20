@@ -3,15 +3,8 @@
 // Class UAIPerceptionComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036F1BB0, FClassParams RVA 0x036F1C70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAIPerceptionComponent();  // RVA 0x01D1BBD0 (consensus OuterFunc)
-
-class UAIPerceptionComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAIPerceptionComponent_GetActorsPerception_Statics
 {

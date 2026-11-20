@@ -3,17 +3,8 @@
 // Class UVehicleAnimInstance: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F9CFE0, FClassParams RVA 0x02F9D000.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UVehicleAnimInstance();  // RVA 0x0067BE20 (consensus OuterFunc)
-
-class UVehicleAnimInstance
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUVehicleAnimInstance();
-	static void execGetVehicle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0067B7E0 (end 0x0067B802)
 // Original VA: 0x000000014067B7E0 | File offset: 0x0067ADE0

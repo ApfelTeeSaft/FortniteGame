@@ -3,24 +3,8 @@
 // Class UAthenaStatsScreenBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C5F300, FClassParams RVA 0x03C5F3C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaStatsScreenBase();  // RVA 0x028874F0 (consensus OuterFunc)
-
-class UAthenaStatsScreenBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAthenaStatsScreenBase();
-	static void execFormatStatValueAsElapsedTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLastUpdateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSecondTierPlaceTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetStatGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetStatValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetThirdTierPlaceTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetWinsTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnTabSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02886C30 (end 0x02886C52)
 // Original VA: 0x0000000142886C30 | File offset: 0x02886230

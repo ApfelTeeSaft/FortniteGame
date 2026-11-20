@@ -3,20 +3,103 @@
 // Class UARPlaneGeometry: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D5B450, FClassParams RVA 0x03D5B4B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UARPlaneGeometry
+struct Z_Construct_UFunction_UARPlaneGeometry_GetCenter_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02921A30 (end 0x02921A5F)
+// Original VA: 0x0000000142921A30 | File offset: 0x02921030
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UARPlaneGeometry_GetCenter()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UARPlaneGeometry_GetCenter_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UARPlaneGeometry_GetCenter: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UARPlaneGeometry_GetExtent_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02921A60 (end 0x02921A8F)
+// Original VA: 0x0000000142921A60 | File offset: 0x02921060
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UARPlaneGeometry_GetExtent()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UARPlaneGeometry_GetExtent_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UARPlaneGeometry_GetExtent: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UARPlaneGeometry_GetLocalToTrackingTransform_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02921A90 (end 0x02921ABF)
+// Original VA: 0x0000000142921A90 | File offset: 0x02921090
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UARPlaneGeometry_GetLocalToTrackingTransform()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UARPlaneGeometry_GetLocalToTrackingTransform_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UARPlaneGeometry_GetLocalToTrackingTransform: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UARPlaneGeometry_GetLocalToWorldTransform_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02921AC0 (end 0x02921AEF)
+// Original VA: 0x0000000142921AC0 | File offset: 0x029210C0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UARPlaneGeometry_GetLocalToWorldTransform()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UARPlaneGeometry_GetLocalToWorldTransform_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UARPlaneGeometry_GetLocalToWorldTransform: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UARPlaneGeometry_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UARPlaneGeometry_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UARPlaneGeometry_GetCenter, "GetCenter" },
+	{ &Z_Construct_UFunction_UARPlaneGeometry_GetExtent, "GetExtent" },
+	{ &Z_Construct_UFunction_UARPlaneGeometry_GetLocalToTrackingTransform, "GetLocalToTrackingTransform" },
+	{ &Z_Construct_UFunction_UARPlaneGeometry_GetLocalToWorldTransform, "GetLocalToWorldTransform" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UARPlaneGeometry_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D5B4B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UARPlaneGeometry_Statics::ClassParams = { &UARPlaneGeometry::StaticClass, Z_Construct_UClass_UARPlaneGeometry_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UARPlaneGeometry_Statics::FuncInfo, 4, Z_Construct_UClass_UARPlaneGeometry_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UARPlaneGeometry_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029217C0 (end 0x029217EF)
+// Original VA: 0x00000001429217C0 | File offset: 0x02920DC0
+// Recovery: confirmed (UHT singleton of UARPlaneGeometry) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UARPlaneGeometry()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UARPlaneGeometry_Statics::ClassParams);
+	}
+	return OuterClass;
+}

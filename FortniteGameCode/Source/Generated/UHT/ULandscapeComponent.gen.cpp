@@ -3,17 +3,8 @@
 // Class ULandscapeComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03628430, FClassParams RVA 0x03628580.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ULandscapeComponent();  // RVA 0x01A75B80 (consensus OuterFunc)
-
-class ULandscapeComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesULandscapeComponent();
-	static void execGetMaterialInstanceDynamic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A750D0 (end 0x01A750F2)
 // Original VA: 0x0000000141A750D0 | File offset: 0x01A746D0

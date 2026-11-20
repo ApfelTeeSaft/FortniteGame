@@ -3,15 +3,8 @@
 // Class UFortMovementSet: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0338AA48, FClassParams RVA 0x0338AAB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMovementSet();  // RVA 0x0104AB40 (consensus OuterFunc)
-
-class UFortMovementSet
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortMovementSet_OnRep_SpeedMultiplier_Statics
 {

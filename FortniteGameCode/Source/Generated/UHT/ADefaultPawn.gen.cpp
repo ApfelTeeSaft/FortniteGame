@@ -3,21 +3,8 @@
 // Class ADefaultPawn: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038CEB10, FClassParams RVA 0x038CEBA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ADefaultPawn();  // RVA 0x023FE400 (consensus OuterFunc)
-
-class ADefaultPawn
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesADefaultPawn();
-	static void execLookUpAtRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMoveForward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMoveRight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMoveUp_World(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTurnAtRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDB80 (end 0x023FDBA2)
 // Original VA: 0x00000001423FDB80 | File offset: 0x023FD180

@@ -3,19 +3,8 @@
 // Class UFortSimpleItemConditionIconIndicator: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D13150, FClassParams RVA 0x03D13190.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSimpleItemConditionIconIndicator();  // RVA 0x028F5460 (consensus OuterFunc)
-
-class UFortSimpleItemConditionIconIndicator
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSimpleItemConditionIconIndicator();
-	static void execGetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShouldCollapseWhenConditionIsFalse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4E40 (end 0x028F4E62)
 // Original VA: 0x00000001428F4E40 | File offset: 0x028F4440

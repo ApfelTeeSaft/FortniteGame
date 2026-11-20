@@ -3,17 +3,8 @@
 // Class UFortSquadSlotSelectorPopupMenu: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D22EF0, FClassParams RVA 0x03D22F10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortSquadSlotSelectorPopupMenu
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSquadSlotSelectorPopupMenu();
-	static void execGetHostButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB260 (end 0x028FB282)
 // Original VA: 0x00000001428FB260 | File offset: 0x028FA860
@@ -27,4 +18,45 @@ void UFortSquadSlotSelectorPopupMenu::StaticRegisterNativesUFortSquadSlotSelecto
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortSquadSlotSelectorPopupMenu_GetHostButton: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortSquadSlotSelectorPopupMenu_GetHostButton_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC630 (end 0x028FC65F)
+// Original VA: 0x00000001428FC630 | File offset: 0x028FBC30
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortSquadSlotSelectorPopupMenu_GetHostButton()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotSelectorPopupMenu_GetHostButton_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortSquadSlotSelectorPopupMenu_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadSlotSelectorPopupMenu_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadSlotSelectorPopupMenu_GetHostButton, "GetHostButton" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadSlotSelectorPopupMenu_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D22F10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadSlotSelectorPopupMenu_Statics::ClassParams = { &UFortSquadSlotSelectorPopupMenu::StaticClass, Z_Construct_UClass_UFortSquadSlotSelectorPopupMenu_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortSquadSlotSelectorPopupMenu_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortSquadSlotSelectorPopupMenu_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB670 (end 0x028FB69F)
+// Original VA: 0x00000001428FB670 | File offset: 0x028FAC70
+// Recovery: confirmed (UHT singleton of UFortSquadSlotSelectorPopupMenu) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadSlotSelectorPopupMenu()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadSlotSelectorPopupMenu_Statics::ClassParams);
+	}
+	return OuterClass;
+}

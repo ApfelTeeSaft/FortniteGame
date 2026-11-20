@@ -3,18 +3,8 @@
 // Class UFortDefenderItemDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032FFBC8, FClassParams RVA 0x032FFC30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDefenderItemDefinition();  // RVA 0x00FD00E0 (consensus OuterFunc)
-
-class UFortDefenderItemDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortDefenderItemDefinition();
-	static void execGetDefenderSubtype(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDefenderSubtypeTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFAB0 (end 0x00FCFAD2)
 // Original VA: 0x0000000140FCFAB0 | File offset: 0x00FCF0B0

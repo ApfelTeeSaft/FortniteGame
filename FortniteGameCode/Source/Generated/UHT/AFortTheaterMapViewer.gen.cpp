@@ -3,15 +3,8 @@
 // Class AFortTheaterMapViewer: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0340ABB8, FClassParams RVA 0x0340AC70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortTheaterMapViewer();  // RVA 0x010BE180 (consensus OuterFunc)
-
-class AFortTheaterMapViewer
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortTheaterMapViewer_HandleMarkedQuestsChanged_Statics
 {

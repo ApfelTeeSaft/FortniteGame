@@ -3,15 +3,8 @@
 // Class UFortTopBarPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D31D00, FClassParams RVA 0x03D31D20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTopBarPanel();  // RVA 0x02904CD0 (consensus OuterFunc)
-
-class UFortTopBarPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortTopBarPanel_AddIconToScreen_Statics
 {

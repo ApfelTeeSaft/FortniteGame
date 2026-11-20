@@ -3,18 +3,8 @@
 // Class ALevelScriptActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039304B0, FClassParams RVA 0x03930500.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ALevelScriptActor();  // RVA 0x02470290 (consensus OuterFunc)
-
-class ALevelScriptActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesALevelScriptActor();
-	static void execRemoteEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCinematicMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FE30 (end 0x0246FE52)
 // Original VA: 0x000000014246FE30 | File offset: 0x0246F430

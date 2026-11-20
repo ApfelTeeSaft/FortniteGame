@@ -3,32 +3,8 @@
 // Class UFortDeployableBaseLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033000A0, FClassParams RVA 0x033001B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDeployableBaseLibrary();  // RVA 0x00FD0170 (consensus OuterFunc)
-
-class UFortDeployableBaseLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortDeployableBaseLibrary();
-	static void execApplyTieredModifierSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBroadcastHordeTierComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execForceClearAllDefenders(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execForceDeployableBaseHordePlayersToResetAndRespawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execForceRestartDeployableBasePlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetGameDifficultyInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHordeTierStartStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPrimaryHordeMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTieredModifierSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGrantPlayersCompletedWaveRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsWorldItemDefValidToPersistForDeployableBasePlayerInventory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnPreHordeTierStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execResetDeployableBaseHordePlayerInventories(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDeployableBaseMatchJoinability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetupDeployableBaseCombatZoneInventoriesOnPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execUpdateDeployableBaseTierProgressionForPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFAE0 (end 0x00FCFB02)
 // Original VA: 0x0000000140FCFAE0 | File offset: 0x00FCF0E0

@@ -3,25 +3,8 @@
 // Class UImportanceSamplingLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038FEC90, FClassParams RVA 0x038FED30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UImportanceSamplingLibrary();  // RVA 0x02427DA0 (consensus OuterFunc)
-
-class UImportanceSamplingLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUImportanceSamplingLibrary();
-	static void execBreakImportanceTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execImportanceSample(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMakeImportanceTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNextSobolCell2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNextSobolCell3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNextSobolFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRandomSobolCell2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRandomSobolCell3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRandomSobolFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02427500 (end 0x02427522)
 // Original VA: 0x0000000142427500 | File offset: 0x02426B00

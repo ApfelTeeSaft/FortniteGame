@@ -3,17 +3,8 @@
 // Class UFortTeamActorInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03400220, FClassParams RVA 0x03400240.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTeamActorInterface();  // RVA 0x010B3B60 (consensus OuterFunc)
-
-class UFortTeamActorInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortTeamActorInterface();
-	static void execGetTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2E30 (end 0x010B2E52)
 // Original VA: 0x00000001410B2E30 | File offset: 0x010B2430

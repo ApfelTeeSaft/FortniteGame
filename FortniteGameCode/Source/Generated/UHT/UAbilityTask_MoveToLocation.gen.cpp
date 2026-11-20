@@ -3,17 +3,8 @@
 // Class UAbilityTask_MoveToLocation: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F2B380, FClassParams RVA 0x02F2B3D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UAbilityTask_MoveToLocation
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAbilityTask_MoveToLocation();
-	static void execMoveToLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00546460 (end 0x00546482)
 // Original VA: 0x0000000140546460 | File offset: 0x00545A60
@@ -27,4 +18,46 @@ void UAbilityTask_MoveToLocation::StaticRegisterNativesUAbilityTask_MoveToLocati
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UAbilityTask_MoveToLocation_MoveToLocation: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UAbilityTask_MoveToLocation_MoveToLocation_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005470C0 (end 0x005470EF)
+// Original VA: 0x00000001405470C0 | File offset: 0x005466C0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UAbilityTask_MoveToLocation_MoveToLocation()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAbilityTask_MoveToLocation_MoveToLocation_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UAbilityTask_MoveToLocation_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_MoveToLocation_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_MoveToLocation_MoveToLocation, "MoveToLocation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_MoveToLocation_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F2B3D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_MoveToLocation_Statics::ClassParams = { &UAbilityTask_MoveToLocation::StaticClass, Z_Construct_UClass_UAbilityTask_MoveToLocation_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_MoveToLocation_Statics::FuncInfo, 1, Z_Construct_UClass_UAbilityTask_MoveToLocation_Statics::PropPointers, 6, "Game", &Z_Construct_UClass_UAbilityTask_MoveToLocation_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005468D0 (end 0x005468FF)
+// Original VA: 0x00000001405468D0 | File offset: 0x00545ED0
+// Recovery: confirmed (UHT singleton of UAbilityTask_MoveToLocation) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_MoveToLocation()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_MoveToLocation_Statics::ClassParams);
+	}
+	return OuterClass;
+}

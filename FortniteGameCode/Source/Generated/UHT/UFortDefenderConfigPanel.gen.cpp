@@ -3,27 +3,8 @@
 // Class UFortDefenderConfigPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C82C60, FClassParams RVA 0x03C82D40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDefenderConfigPanel();  // RVA 0x0289B490 (consensus OuterFunc)
-
-class UFortDefenderConfigPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortDefenderConfigPanel();
-	static void execGetAmmoCountFromDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAmmoCountFromPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCompatibleAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCompatibleAmmoDef(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDefenderPawnWeaponItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSourceSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasAnyDefenders(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasWeaponForSelectedDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsWeaponSelectionValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSpawnDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execUnsummonDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AF10 (end 0x0289AF32)
 // Original VA: 0x000000014289AF10 | File offset: 0x0289A510

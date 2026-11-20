@@ -3,18 +3,8 @@
 // Class UAISense_Blueprint: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036F2640, FClassParams RVA 0x036F26E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAISense_Blueprint();  // RVA 0x01D1BE50 (consensus OuterFunc)
-
-class UAISense_Blueprint
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAISense_Blueprint();
-	static void execGetAllListenerActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAllListenerComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B230 (end 0x01D1B252)
 // Original VA: 0x0000000141D1B230 | File offset: 0x01D1A830

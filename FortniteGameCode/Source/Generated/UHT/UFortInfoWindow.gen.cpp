@@ -3,17 +3,8 @@
 // Class UFortInfoWindow: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CB2A28, FClassParams RVA 0x03CB2A50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortInfoWindow
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortInfoWindow();
-	static void execGetListWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBB50 (end 0x028BBB72)
 // Original VA: 0x00000001428BBB50 | File offset: 0x028BB150
@@ -27,4 +18,46 @@ void UFortInfoWindow::StaticRegisterNativesUFortInfoWindow()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortInfoWindow_GetListWidget: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortInfoWindow_GetListWidget_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD4B0 (end 0x028BD4DF)
+// Original VA: 0x00000001428BD4B0 | File offset: 0x028BCAB0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortInfoWindow_GetListWidget()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortInfoWindow_GetListWidget_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortInfoWindow_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortInfoWindow_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortInfoWindow_GetListWidget, "GetListWidget" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortInfoWindow_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CB2A50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortInfoWindow_Statics::ClassParams = { &UFortInfoWindow::StaticClass, Z_Construct_UClass_UFortInfoWindow_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortInfoWindow_Statics::FuncInfo, 1, Z_Construct_UClass_UFortInfoWindow_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortInfoWindow_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBEF0 (end 0x028BBF1F)
+// Original VA: 0x00000001428BBEF0 | File offset: 0x028BB4F0
+// Recovery: confirmed (UHT singleton of UFortInfoWindow) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortInfoWindow()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortInfoWindow_Statics::ClassParams);
+	}
+	return OuterClass;
+}

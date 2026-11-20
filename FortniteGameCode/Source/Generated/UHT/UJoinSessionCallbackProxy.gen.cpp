@@ -3,17 +3,8 @@
 // Class UJoinSessionCallbackProxy: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02EADEA8, FClassParams RVA 0x02EADED0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UJoinSessionCallbackProxy();  // RVA 0x0032EBC0 (consensus OuterFunc)
-
-class UJoinSessionCallbackProxy
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUJoinSessionCallbackProxy();
-	static void execJoinSession(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E370 (end 0x0032E392)
 // Original VA: 0x000000014032E370 | File offset: 0x0032D970

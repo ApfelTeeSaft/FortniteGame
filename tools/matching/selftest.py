@@ -101,7 +101,7 @@ def test_literal_elimination() -> None:
     obj = NS(symbols=[sym], sections=[NS(name=".rdata", data=lit, chars=0x40000040, relocs=[])],
              symbol=lambda name: sym if name == "$SG1" else None, data_layout=lambda: {})
     r = Resolver.__new__(Resolver)
-    r.functions, r.known, r.data_cache, r.data_notes, r._literal_copies = {}, {}, {}, {}, {}
+    r.functions, r.known, r.data_cache, r.data_notes, r._literal_copies, r._groups = {}, {}, {}, {}, {}, {}
     r.hay_rva, r.hay = 0x1000, b"\0\0" + lit + b"\0\0" + lit + b"\0\0" + lit
     copies = [0x1002, 0x1010, 0x101E]
     r.entry_names, r.observations = {1: "A", 2: "B", 3: "T"}, {}
@@ -126,9 +126,35 @@ def test_local_prediction() -> None:
     print("local section-relative: ok")
 
 
+def test_section_relative_runs() -> None:
+    """Gap next to the symbol: the strictly longer run of agreeing neighbours decides."""
+    from types import SimpleNamespace as NS
+    from compare import Resolver
+    names = [f"s{i}" for i in range(7)]
+    syms = {n: NS(name=n, section=1, value=8 * i, storage=3) for i, n in enumerate(names)}
+    obj = NS(symbols=list(syms.values()), sections=[NS(name=".bss", data=b"", chars=0xC0000080, relocs=[])],
+             symbol=lambda n: syms.get(n), data_layout=lambda: {".bss": [(n, 8 * i, 3) for i, n in enumerate(names)]})
+    r = Resolver.__new__(Resolver)
+    r.functions, r.known, r.data_cache, r.data_notes, r._literal_copies, r._groups = {}, {}, {}, {}, {}, {}
+    r.hay_rva, r.hay, r.by_addr = 0, b"", {}
+    r.entry_names = {10 + i: f"F{i}" for i in range(7)}
+    # Symbol s<i> is observed only by entry 10+i: s0..s2 in block A (base 0x1000), s4..s5 in
+    # block B (base 0x2000), s6 unobserved.
+    r.observations = {("o", f"s{i}"): {0x1000 + 8 * i: {10 + i}} for i in range(3)}
+    r.observations.update({("o", f"s{i}"): {0x2000 + 8 * i: {10 + i}} for i in (4, 5)})
+    got = r.resolve(obj, "o", "s3", exclude=13)
+    assert [g[0] for g in got] == [0x1018] and "longer run" in got[0][1], got    # 3 vs 2 neighbours
+    r.observations[("o", "s6")] = {0x2030: {16}}                                   # now 3 vs 3
+    assert r.resolve(obj, "o", "s3", exclude=13) == []
+    got = r.resolve(obj, "o", "s1", exclude=11)                                    # both sides in block A
+    assert [g[0] for g in got] == [0x1008] and "(local)" in got[0][1], got
+    print("section-relative runs: ok")
+
+
 def main() -> int:
     test_unwind()
     test_local_prediction()
+    test_section_relative_runs()
     test_literals()
     test_leave_one_out()
     test_literal_elimination()

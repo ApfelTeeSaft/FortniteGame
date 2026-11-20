@@ -3,15 +3,8 @@
 // Class AKeepItemContainer: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03446950, FClassParams RVA 0x03446A50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AKeepItemContainer();  // RVA 0x010E9C80 (consensus OuterFunc)
-
-class AKeepItemContainer
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AKeepItemContainer_GetContainerNameAndLevelKey_Statics
 {

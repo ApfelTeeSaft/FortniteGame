@@ -3,17 +3,8 @@
 // Class UAsyncTaskDownloadImage: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03690B40, FClassParams RVA 0x03690B70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAsyncTaskDownloadImage();  // RVA 0x01BE5EE0 (consensus OuterFunc)
-
-class UAsyncTaskDownloadImage
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAsyncTaskDownloadImage();
-	static void execDownloadImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5A00 (end 0x01BE5A22)
 // Original VA: 0x0000000141BE5A00 | File offset: 0x01BE5000

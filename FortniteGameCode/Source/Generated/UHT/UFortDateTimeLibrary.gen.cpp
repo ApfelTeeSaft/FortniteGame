@@ -3,18 +3,8 @@
 // Class UFortDateTimeLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032F9900, FClassParams RVA 0x032F9930.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDateTimeLibrary();  // RVA 0x00FCBC40 (consensus OuterFunc)
-
-class UFortDateTimeLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortDateTimeLibrary();
-	static void execGetMcpRelativeUtcNow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTimespanAsText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB1D0 (end 0x00FCB1F2)
 // Original VA: 0x0000000140FCB1D0 | File offset: 0x00FCA7D0

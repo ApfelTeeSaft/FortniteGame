@@ -3,18 +3,8 @@
 // Class UFortUIStateTrigger: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D4A2E8, FClassParams RVA 0x03D4A320.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIStateTrigger();  // RVA 0x02911E40 (consensus OuterFunc)
-
-class UFortUIStateTrigger
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortUIStateTrigger();
-	static void execEvalBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsLoggedIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02911760 (end 0x02911782)
 // Original VA: 0x0000000142911760 | File offset: 0x02910D60

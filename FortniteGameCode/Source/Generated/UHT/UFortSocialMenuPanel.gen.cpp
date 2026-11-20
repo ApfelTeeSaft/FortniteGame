@@ -3,17 +3,8 @@
 // Class UFortSocialMenuPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D14A20, FClassParams RVA 0x03D14A40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSocialMenuPanel();  // RVA 0x028F57C0 (consensus OuterFunc)
-
-class UFortSocialMenuPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSocialMenuPanel();
-	static void execSetOnSocialMenuPanelClosedDelegate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5080 (end 0x028F50A2)
 // Original VA: 0x00000001428F5080 | File offset: 0x028F4680

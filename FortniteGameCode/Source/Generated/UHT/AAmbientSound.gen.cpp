@@ -3,22 +3,121 @@
 // Class AAmbientSound: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03891D80, FClassParams RVA 0x03891DE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class AAmbientSound
+struct Z_Construct_UFunction_AAmbientSound_AdjustVolume_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8AC0 (end 0x023C8AEF)
+// Original VA: 0x00000001423C8AC0 | File offset: 0x023C80C0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AAmbientSound_AdjustVolume()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAmbientSound_AdjustVolume_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AAmbientSound_AdjustVolume: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AAmbientSound_FadeIn_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8AF0 (end 0x023C8B1F)
+// Original VA: 0x00000001423C8AF0 | File offset: 0x023C80F0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AAmbientSound_FadeIn()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAmbientSound_FadeIn_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AAmbientSound_FadeIn: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AAmbientSound_FadeOut_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8B20 (end 0x023C8B4F)
+// Original VA: 0x00000001423C8B20 | File offset: 0x023C8120
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AAmbientSound_FadeOut()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAmbientSound_FadeOut_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AAmbientSound_FadeOut: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AAmbientSound_Play_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 11 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8B50 (end 0x023C8B7F)
+// Original VA: 0x00000001423C8B50 | File offset: 0x023C8150
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AAmbientSound_Play()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAmbientSound_Play_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AAmbientSound_Play: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AAmbientSound_Stop_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 12 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8B80 (end 0x023C8BAF)
+// Original VA: 0x00000001423C8B80 | File offset: 0x023C8180
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AAmbientSound_Stop()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AAmbientSound_Stop_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AAmbientSound_Stop: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_AAmbientSound_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AAmbientSound_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AAmbientSound_AdjustVolume, "AdjustVolume" },
+	{ &Z_Construct_UFunction_AAmbientSound_FadeIn, "FadeIn" },
+	{ &Z_Construct_UFunction_AAmbientSound_FadeOut, "FadeOut" },
+	{ &Z_Construct_UFunction_AAmbientSound_Play, "Play" },
+	{ &Z_Construct_UFunction_AAmbientSound_Stop, "Stop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AAmbientSound_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03891DE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AAmbientSound_Statics::ClassParams = { &AAmbientSound::StaticClass, Z_Construct_UClass_AAmbientSound_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AAmbientSound_Statics::FuncInfo, 5, Z_Construct_UClass_AAmbientSound_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_AAmbientSound_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8520 (end 0x023C854F)
+// Original VA: 0x00000001423C8520 | File offset: 0x023C7B20
+// Recovery: confirmed (UHT singleton of AAmbientSound) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AAmbientSound()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AAmbientSound_Statics::ClassParams);
+	}
+	return OuterClass;
+}

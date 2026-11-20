@@ -3,15 +3,8 @@
 // Class UFortGameFeedbackBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C9B5C0, FClassParams RVA 0x03C9B640.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGameFeedbackBase();  // RVA 0x028AC3B0 (consensus OuterFunc)
-
-class UFortGameFeedbackBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortGameFeedbackBase_AddButtonWithFeedbackType_Statics
 {

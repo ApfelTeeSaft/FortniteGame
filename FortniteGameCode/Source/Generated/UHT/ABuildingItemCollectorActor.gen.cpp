@@ -3,15 +3,8 @@
 // Class ABuildingItemCollectorActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03278080, FClassParams RVA 0x032781A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingItemCollectorActor();  // RVA 0x00F6C350 (consensus OuterFunc)
-
-class ABuildingItemCollectorActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ABuildingItemCollectorActor_GetNumberOfTeamCaptures_Statics
 {

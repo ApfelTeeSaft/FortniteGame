@@ -3,17 +3,8 @@
 // Class ULevelSequencePlayer: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0371A978, FClassParams RVA 0x0371A9B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ULevelSequencePlayer();  // RVA 0x01D4EE70 (consensus OuterFunc)
-
-class ULevelSequencePlayer
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesULevelSequencePlayer();
-	static void execCreateLevelSequencePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4E890 (end 0x01D4E8B2)
 // Original VA: 0x0000000141D4E890 | File offset: 0x01D4DE90

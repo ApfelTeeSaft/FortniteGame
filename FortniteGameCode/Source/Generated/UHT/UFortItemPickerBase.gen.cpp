@@ -3,15 +3,8 @@
 // Class UFortItemPickerBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CD8640, FClassParams RVA 0x03CD8780.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemPickerBase();  // RVA 0x028CF4C0 (consensus OuterFunc)
-
-class UFortItemPickerBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortItemPickerBase_OnItemSelectionEvent__DelegateSignature_Statics
 {

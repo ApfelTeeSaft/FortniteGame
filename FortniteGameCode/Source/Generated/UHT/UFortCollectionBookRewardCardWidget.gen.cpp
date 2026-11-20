@@ -3,15 +3,8 @@
 // Class UFortCollectionBookRewardCardWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C811B0, FClassParams RVA 0x03C81260.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookRewardCardWidget();  // RVA 0x0289B180 (consensus OuterFunc)
-
-class UFortCollectionBookRewardCardWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortCollectionBookRewardCardWidget_OnDisplayedItemChangedEvent__DelegateSignature_Statics
 {

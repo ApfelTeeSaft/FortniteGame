@@ -3,15 +3,8 @@
 // Class UFortBaseCanvasNode: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CF1C20, FClassParams RVA 0x03CF1D60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBaseCanvasNode();  // RVA 0x028DE350 (consensus OuterFunc)
-
-class UFortBaseCanvasNode
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortBaseCanvasNode_OnNodeStateChanged__DelegateSignature_Statics
 {

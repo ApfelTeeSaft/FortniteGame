@@ -3,22 +3,8 @@
 // Class UPhysicalAnimationComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03978B80, FClassParams RVA 0x03978C00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPhysicalAnimationComponent();  // RVA 0x024A0A50 (consensus OuterFunc)
-
-class UPhysicalAnimationComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUPhysicalAnimationComponent();
-	static void execApplyPhysicalAnimationProfileBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execApplyPhysicalAnimationSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execApplyPhysicalAnimationSettingsBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBodyTargetTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSkeletalMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetStrengthMultiplyer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0540 (end 0x024A0562)
 // Original VA: 0x00000001424A0540 | File offset: 0x0249FB40

@@ -3,20 +3,8 @@
 // Class UFortAccountWidgetBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C60750, FClassParams RVA 0x03C607B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAccountWidgetBase();  // RVA 0x028876D0 (consensus OuterFunc)
-
-class UFortAccountWidgetBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAccountWidgetBase();
-	static void execGetNextSeasonChaseReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNextSeasonReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSeasonBannerInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleCurrentlyViewedAccountInfoChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02886D80 (end 0x02886DA2)
 // Original VA: 0x0000000142886D80 | File offset: 0x02886380

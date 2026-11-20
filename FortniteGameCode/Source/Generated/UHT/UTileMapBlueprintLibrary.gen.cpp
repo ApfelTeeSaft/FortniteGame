@@ -3,20 +3,8 @@
 // Class UTileMapBlueprintLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F960D0, FClassParams RVA 0x02F96120.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UTileMapBlueprintLibrary();  // RVA 0x006679A0 (consensus OuterFunc)
-
-class UTileMapBlueprintLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUTileMapBlueprintLibrary();
-	static void execBreakTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTileTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTileUserData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMakeTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00666EB0 (end 0x00666ED2)
 // Original VA: 0x0000000140666EB0 | File offset: 0x006664B0

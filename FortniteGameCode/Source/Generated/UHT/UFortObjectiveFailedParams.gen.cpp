@@ -3,18 +3,8 @@
 // Class UFortObjectiveFailedParams: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0344A280, FClassParams RVA 0x0344A2B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortObjectiveFailedParams
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortObjectiveFailedParams();
-	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9050 (end 0x010E9072)
 // Original VA: 0x00000001410E9050 | File offset: 0x010E8650
@@ -29,6 +19,64 @@ void UFortObjectiveFailedParams::StaticRegisterNativesUFortObjectiveFailedParams
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortObjectiveFailedParams_BreakParams: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortObjectiveFailedParams_BreakParams_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 27 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EAEF0 (end 0x010EAF1F)
+// Original VA: 0x00000001410EAEF0 | File offset: 0x010EA4F0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortObjectiveFailedParams_BreakParams()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortObjectiveFailedParams_BreakParams_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortObjectiveFailedParams_SetParams: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortObjectiveFailedParams_SetParams_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 26 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EAF20 (end 0x010EAF4F)
+// Original VA: 0x00000001410EAF20 | File offset: 0x010EA520
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortObjectiveFailedParams_SetParams()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortObjectiveFailedParams_SetParams_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortObjectiveFailedParams_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortObjectiveFailedParams_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortObjectiveFailedParams_BreakParams, "BreakParams" },
+	{ &Z_Construct_UFunction_UFortObjectiveFailedParams_SetParams, "SetParams" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortObjectiveFailedParams_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0344A2B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortObjectiveFailedParams_Statics::ClassParams = { &UFortObjectiveFailedParams::StaticClass, Z_Construct_UClass_UFortObjectiveFailedParams_Statics::DependentSingletons, 2, 0x00000280u, Z_Construct_UClass_UFortObjectiveFailedParams_Statics::FuncInfo, 2, Z_Construct_UClass_UFortObjectiveFailedParams_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortObjectiveFailedParams_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA0A0 (end 0x010EA0CF)
+// Original VA: 0x00000001410EA0A0 | File offset: 0x010E96A0
+// Recovery: confirmed (UHT singleton of UFortObjectiveFailedParams) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortObjectiveFailedParams()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortObjectiveFailedParams_Statics::ClassParams);
+	}
+	return OuterClass;
+}

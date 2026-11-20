@@ -3,15 +3,8 @@
 // Class ATimeOfDayController_BlueprintBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03268248, FClassParams RVA 0x03268450.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ATimeOfDayController_BlueprintBase();  // RVA 0x00F61060 (consensus OuterFunc)
-
-class ATimeOfDayController_BlueprintBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetPostProcessSettings_Statics
 {

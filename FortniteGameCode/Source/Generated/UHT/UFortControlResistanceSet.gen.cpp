@@ -3,15 +3,8 @@
 // Class UFortControlResistanceSet: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032F7898, FClassParams RVA 0x032F7930.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortControlResistanceSet();  // RVA 0x00FCB990 (consensus OuterFunc)
-
-class UFortControlResistanceSet
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortControlResistanceSet_OnRep_ControlResistance_Statics
 {

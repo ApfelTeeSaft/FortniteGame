@@ -3,15 +3,8 @@
 // Class USphereComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039B7ED0, FClassParams RVA 0x039B7F20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USphereComponent();  // RVA 0x024DC3A0 (consensus OuterFunc)
-
-class USphereComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_USphereComponent_GetScaledSphereRadius_Statics
 {

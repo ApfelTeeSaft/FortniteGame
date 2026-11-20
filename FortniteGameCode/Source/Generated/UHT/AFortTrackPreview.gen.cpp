@@ -3,17 +3,8 @@
 // Class AFortTrackPreview: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0341C980, FClassParams RVA 0x0341C9B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortTrackPreview();  // RVA 0x010CA9D0 (consensus OuterFunc)
-
-class AFortTrackPreview
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortTrackPreview();
-	static void execInitializeTrackPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9380 (end 0x010C93A2)
 // Original VA: 0x00000001410C9380 | File offset: 0x010C8980

@@ -3,17 +3,8 @@
 // Class UAthenaCustomizationSlotSelectorButton: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C51F10, FClassParams RVA 0x03C51F50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaCustomizationSlotSelectorButton();  // RVA 0x0287F350 (consensus OuterFunc)
-
-class UAthenaCustomizationSlotSelectorButton
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAthenaCustomizationSlotSelectorButton();
-	static void execSetCustomizationType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287ECC0 (end 0x0287ECE2)
 // Original VA: 0x000000014287ECC0 | File offset: 0x0287E2C0

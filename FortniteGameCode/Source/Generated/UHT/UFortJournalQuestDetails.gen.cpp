@@ -3,24 +3,8 @@
 // Class UFortJournalQuestDetails: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CDA480, FClassParams RVA 0x03CDA520.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortJournalQuestDetails();  // RVA 0x028CF720 (consensus OuterFunc)
-
-class UFortJournalQuestDetails
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortJournalQuestDetails();
-	static void execCanGotoQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCanPartyLeaderPlayQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCanPlayQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetActiveMissionTileType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFutureObjectives(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetVisibleObjectives(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCurrentQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF2D0 (end 0x028CF2F2)
 // Original VA: 0x00000001428CF2D0 | File offset: 0x028CE8D0

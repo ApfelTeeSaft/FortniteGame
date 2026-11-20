@@ -3,19 +3,8 @@
 // Class UFortGameData: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03318650, FClassParams RVA 0x03318E50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGameData();  // RVA 0x00FE1480 (consensus OuterFunc)
-
-class UFortGameData
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortGameData();
-	static void execGetPersonalXpBoost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTeamXpBoost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetXpPerAccountLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0B20 (end 0x00FE0B42)
 // Original VA: 0x0000000140FE0B20 | File offset: 0x00FE0120

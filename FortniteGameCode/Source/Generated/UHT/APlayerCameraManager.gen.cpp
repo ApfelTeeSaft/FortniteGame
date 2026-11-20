@@ -3,15 +3,8 @@
 // Class APlayerCameraManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03984320, FClassParams RVA 0x03984610.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_APlayerCameraManager();  // RVA 0x024A9DC0 (consensus OuterFunc)
-
-class APlayerCameraManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_APlayerCameraManager_AddCameraLensEffect_Statics
 {

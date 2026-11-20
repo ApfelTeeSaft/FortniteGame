@@ -3,15 +3,8 @@
 // Class UFortItemManagementItemPopupMenu: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CCE5B8, FClassParams RVA 0x03CCE5F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemManagementItemPopupMenu();  // RVA 0x028C9FD0 (consensus OuterFunc)
-
-class UFortItemManagementItemPopupMenu
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortItemManagementItemPopupMenu_GetHostButton_Statics
 {

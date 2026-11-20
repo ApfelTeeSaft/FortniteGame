@@ -3,18 +3,8 @@
 // Class UAsyncActionChangePrimaryAssetBundles: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038AB068, FClassParams RVA 0x038AB0A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles();  // RVA 0x023DB100 (consensus OuterFunc)
-
-class UAsyncActionChangePrimaryAssetBundles
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAsyncActionChangePrimaryAssetBundles();
-	static void execAsyncChangeBundleStateForMatchingPrimaryAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAsyncChangeBundleStateForPrimaryAssetList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA500 (end 0x023DA522)
 // Original VA: 0x00000001423DA500 | File offset: 0x023D9B00

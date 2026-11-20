@@ -3,20 +3,103 @@
 // Class UCommonTagVisibilityWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C5FC70, FClassParams RVA 0x03C5FCC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UCommonTagVisibilityWidget
+struct Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDElementVisibilityChanged_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028886C0 (end 0x028886EF)
+// Original VA: 0x00000001428886C0 | File offset: 0x02887CC0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDElementVisibilityChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDElementVisibilityChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDElementVisibilityChanged: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDResetToDefaults_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028886F0 (end 0x0288871F)
+// Original VA: 0x00000001428886F0 | File offset: 0x02887CF0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDResetToDefaults()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDResetToDefaults_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDResetToDefaults: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UCommonTagVisibilityWidget_Initialize_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02888720 (end 0x0288874F)
+// Original VA: 0x0000000142888720 | File offset: 0x02887D20
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UCommonTagVisibilityWidget_Initialize()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTagVisibilityWidget_Initialize_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UCommonTagVisibilityWidget_Initialize: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UCommonTagVisibilityWidget_OnVisibilitySetEvent_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02888750 (end 0x0288877F)
+// Original VA: 0x0000000142888750 | File offset: 0x02887D50
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UCommonTagVisibilityWidget_OnVisibilitySetEvent()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonTagVisibilityWidget_OnVisibilitySetEvent_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UCommonTagVisibilityWidget_OnVisibilitySetEvent: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UCommonTagVisibilityWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonTagVisibilityWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDElementVisibilityChanged, "HandleOnHUDElementVisibilityChanged" },
+	{ &Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDResetToDefaults, "HandleOnHUDResetToDefaults" },
+	{ &Z_Construct_UFunction_UCommonTagVisibilityWidget_Initialize, "Initialize" },
+	{ &Z_Construct_UFunction_UCommonTagVisibilityWidget_OnVisibilitySetEvent, "OnVisibilitySetEvent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonTagVisibilityWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C5FCC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonTagVisibilityWidget_Statics::ClassParams = { &UCommonTagVisibilityWidget::StaticClass, Z_Construct_UClass_UCommonTagVisibilityWidget_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UCommonTagVisibilityWidget_Statics::FuncInfo, 4, Z_Construct_UClass_UCommonTagVisibilityWidget_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UCommonTagVisibilityWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028875B0 (end 0x028875DF)
+// Original VA: 0x00000001428875B0 | File offset: 0x02886BB0
+// Recovery: confirmed (UHT singleton of UCommonTagVisibilityWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonTagVisibilityWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonTagVisibilityWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

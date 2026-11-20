@@ -3,32 +3,8 @@
 // Class UWidgetLayoutLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036AA370, FClassParams RVA 0x036AA480.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UWidgetLayoutLibrary();  // RVA 0x01C00E20 (consensus OuterFunc)
-
-class UWidgetLayoutLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUWidgetLayoutLibrary();
-	static void execGetMousePositionOnPlatform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMousePositionOnViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMousePositionScaledByDPI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPlayerScreenWidgetGeometry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetViewportScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetViewportSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetViewportWidgetGeometry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execProjectWorldLocationToWidgetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveAllWidgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSlotAsBorderSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSlotAsCanvasSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSlotAsGridSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSlotAsHorizontalBoxSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSlotAsOverlaySlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSlotAsUniformGridSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSlotAsVerticalBoxSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00BB0 (end 0x01C00BD2)
 // Original VA: 0x0000000141C00BB0 | File offset: 0x01C001B0

@@ -3,23 +3,8 @@
 // Class UFortCollectionBookProgressWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C76E60, FClassParams RVA 0x03C76F20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookProgressWidget();  // RVA 0x02894770 (consensus OuterFunc)
-
-class UFortCollectionBookProgressWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCollectionBookProgressWidget();
-	static void execHandleDetailsModalWidgetDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnCollectionBookLevelChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnCollectionBookLevelProgressionChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnCollectionBookPageSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnCollectionBookPreviewXPChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnDetailsButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSlottedItemOperationComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028942E0 (end 0x02894302)
 // Original VA: 0x00000001428942E0 | File offset: 0x028938E0

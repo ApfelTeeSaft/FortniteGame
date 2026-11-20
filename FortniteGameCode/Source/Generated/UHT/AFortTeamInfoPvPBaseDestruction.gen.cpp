@@ -3,15 +3,8 @@
 // Class AFortTeamInfoPvPBaseDestruction: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03400CF0, FClassParams RVA 0x03400DD0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortTeamInfoPvPBaseDestruction();  // RVA 0x010B3910 (consensus OuterFunc)
-
-class AFortTeamInfoPvPBaseDestruction
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortTeamInfoPvPBaseDestruction_GetStrategicBuildingActor_Statics
 {

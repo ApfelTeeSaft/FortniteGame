@@ -3,21 +3,8 @@
 // Class UFortCollectionBookPageDetailsWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C76480, FClassParams RVA 0x03C76520.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookPageDetailsWidget();  // RVA 0x028946A0 (consensus OuterFunc)
-
-class UFortCollectionBookPageDetailsWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCollectionBookPageDetailsWidget();
-	static void execHandleRewardDetailsModalWidgetDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnDetailsPageChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnPageProgressionUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnRewardDetailsButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSlotItemComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02894220 (end 0x02894242)
 // Original VA: 0x0000000142894220 | File offset: 0x02893820

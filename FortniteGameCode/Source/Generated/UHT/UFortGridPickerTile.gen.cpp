@@ -3,15 +3,8 @@
 // Class UFortGridPickerTile: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CA4390, FClassParams RVA 0x03CA4400.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGridPickerTile();  // RVA 0x028B3BC0 (consensus OuterFunc)
-
-class UFortGridPickerTile
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortGridPickerTile_ForwardClicked_Statics
 {

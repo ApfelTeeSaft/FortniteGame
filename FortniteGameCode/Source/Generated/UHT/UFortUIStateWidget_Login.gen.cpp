@@ -3,15 +3,8 @@
 // Class UFortUIStateWidget_Login: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D4A880, FClassParams RVA 0x03D4AAA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIStateWidget_Login();  // RVA 0x02911FD0 (consensus OuterFunc)
-
-class UFortUIStateWidget_Login
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortUIStateWidget_Login_ActivateWidgetOnFlowStack_Statics
 {

@@ -3,21 +3,8 @@
 // Class UFortItemCountTextBlock: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CCB570, FClassParams RVA 0x03CCB5F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemCountTextBlock();  // RVA 0x028C9D50 (consensus OuterFunc)
-
-class UFortItemCountTextBlock
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortItemCountTextBlock();
-	static void execHandleItemCountChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execInterpolateOverrideToValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCountStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOverrideValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9900 (end 0x028C9922)
 // Original VA: 0x00000001428C9900 | File offset: 0x028C8F00

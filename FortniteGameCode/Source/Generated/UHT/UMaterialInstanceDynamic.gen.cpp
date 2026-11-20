@@ -3,26 +3,8 @@
 // Class UMaterialInstanceDynamic: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0394D790, FClassParams RVA 0x0394D840.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMaterialInstanceDynamic();  // RVA 0x02486960 (consensus OuterFunc)
-
-class UMaterialInstanceDynamic
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUMaterialInstanceDynamic();
-	static void execCopyInterpParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCopyParameterOverrides(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_CopyMaterialInstanceParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_GetScalarParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_GetTextureParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_GetVectorParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_InterpolateMaterialInstanceParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetScalarParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTextureParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVectorParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02485F10 (end 0x02485F32)
 // Original VA: 0x0000000142485F10 | File offset: 0x02485510

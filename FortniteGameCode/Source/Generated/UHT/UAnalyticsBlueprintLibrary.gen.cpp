@@ -3,15 +3,8 @@
 // Class UAnalyticsBlueprintLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03B89BD0, FClassParams RVA 0x03B89DB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAnalyticsBlueprintLibrary();  // RVA 0x026817B0 (consensus OuterFunc)
-
-class UAnalyticsBlueprintLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAnalyticsBlueprintLibrary_EndSession_Statics
 {

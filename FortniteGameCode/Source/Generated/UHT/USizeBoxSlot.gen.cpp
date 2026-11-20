@@ -3,19 +3,8 @@
 // Class USizeBoxSlot: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0369D3C0, FClassParams RVA 0x0369D410.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class USizeBoxSlot
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUSizeBoxSlot();
-	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2B20 (end 0x01BF2B42)
 // Original VA: 0x0000000141BF2B20 | File offset: 0x01BF2120
@@ -31,8 +20,82 @@ void USizeBoxSlot::StaticRegisterNativesUSizeBoxSlot()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_USizeBoxSlot_SetHorizontalAlignment: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_USizeBoxSlot_SetHorizontalAlignment_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 19 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF38F0 (end 0x01BF391F)
+// Original VA: 0x0000000141BF38F0 | File offset: 0x01BF2EF0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_USizeBoxSlot_SetHorizontalAlignment()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBoxSlot_SetHorizontalAlignment_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_USizeBoxSlot_SetPadding: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_USizeBoxSlot_SetPadding_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3920 (end 0x01BF394F)
+// Original VA: 0x0000000141BF3920 | File offset: 0x01BF2F20
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_USizeBoxSlot_SetPadding()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBoxSlot_SetPadding_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_USizeBoxSlot_SetVerticalAlignment: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_USizeBoxSlot_SetVerticalAlignment_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3950 (end 0x01BF397F)
+// Original VA: 0x0000000141BF3950 | File offset: 0x01BF2F50
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_USizeBoxSlot_SetVerticalAlignment()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USizeBoxSlot_SetVerticalAlignment_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_USizeBoxSlot_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USizeBoxSlot_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USizeBoxSlot_SetHorizontalAlignment, "SetHorizontalAlignment" },
+	{ &Z_Construct_UFunction_USizeBoxSlot_SetPadding, "SetPadding" },
+	{ &Z_Construct_UFunction_USizeBoxSlot_SetVerticalAlignment, "SetVerticalAlignment" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USizeBoxSlot_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0369D410
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USizeBoxSlot_Statics::ClassParams = { &USizeBoxSlot::StaticClass, Z_Construct_UClass_USizeBoxSlot_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_USizeBoxSlot_Statics::FuncInfo, 3, Z_Construct_UClass_USizeBoxSlot_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_USizeBoxSlot_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3040 (end 0x01BF306F)
+// Original VA: 0x0000000141BF3040 | File offset: 0x01BF2640
+// Recovery: confirmed (UHT singleton of USizeBoxSlot) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USizeBoxSlot()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USizeBoxSlot_Statics::ClassParams);
+	}
+	return OuterClass;
+}

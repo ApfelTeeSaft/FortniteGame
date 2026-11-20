@@ -3,17 +3,8 @@
 // Class UFortAsyncAction_ShowConfirmation: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C6A2D0, FClassParams RVA 0x03C6A310.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_ShowConfirmation();  // RVA 0x0288CA40 (consensus OuterFunc)
-
-class UFortAsyncAction_ShowConfirmation
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAsyncAction_ShowConfirmation();
-	static void execShowConfirmationDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C560 (end 0x0288C582)
 // Original VA: 0x000000014288C560 | File offset: 0x0288BB60

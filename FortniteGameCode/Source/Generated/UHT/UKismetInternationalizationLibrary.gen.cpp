@@ -3,26 +3,8 @@
 // Class UKismetInternationalizationLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03915430, FClassParams RVA 0x039154E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UKismetInternationalizationLibrary();  // RVA 0x02431A60 (consensus OuterFunc)
-
-class UKismetInternationalizationLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUKismetInternationalizationLibrary();
-	static void execClearCurrentAssetGroupCulture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurrentAssetGroupCulture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurrentCulture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurrentLanguage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurrentLocale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCurrentAssetGroupCulture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCurrentCulture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCurrentLanguage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCurrentLanguageAndLocale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCurrentLocale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024317C0 (end 0x024317E2)
 // Original VA: 0x00000001424317C0 | File offset: 0x02430DC0

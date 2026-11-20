@@ -3,15 +3,8 @@
 // Class UFortGameOptions: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C9BC10, FClassParams RVA 0x03C9BD30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGameOptions();  // RVA 0x028AC3E0 (consensus OuterFunc)
-
-class UFortGameOptions
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortGameOptions_ConstructHUDTagList_Statics
 {

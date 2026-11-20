@@ -3,18 +3,8 @@
 // Class UKismetAnimationLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036547F0, FClassParams RVA 0x03654820.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UKismetAnimationLibrary();  // RVA 0x01B0E380 (consensus OuterFunc)
-
-class UKismetAnimationLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUKismetAnimationLibrary();
-	static void execK2_LookAt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_TwoBoneIK(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0C060 (end 0x01B0C082)
 // Original VA: 0x0000000141B0C060 | File offset: 0x01B0B660

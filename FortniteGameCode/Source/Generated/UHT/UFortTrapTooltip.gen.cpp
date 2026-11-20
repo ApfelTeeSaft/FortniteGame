@@ -3,19 +3,8 @@
 // Class UFortTrapTooltip: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0341CE68, FClassParams RVA 0x0341CEA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortTrapTooltip
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortTrapTooltip();
-	static void execGetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTextForToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTokenizedDescriptionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9530 (end 0x010C9552)
 // Original VA: 0x00000001410C9530 | File offset: 0x010C8B30
@@ -31,8 +20,81 @@ void UFortTrapTooltip::StaticRegisterNativesUFortTrapTooltip()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortTrapTooltip_GetNumericValue: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortTrapTooltip_GetNumericValue_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 23 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC230 (end 0x010CC25F)
+// Original VA: 0x00000001410CC230 | File offset: 0x010CB830
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortTrapTooltip_GetNumericValue()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTrapTooltip_GetNumericValue_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortTrapTooltip_GetTextForToken: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortTrapTooltip_GetTextForToken_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC260 (end 0x010CC28F)
+// Original VA: 0x00000001410CC260 | File offset: 0x010CB860
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortTrapTooltip_GetTextForToken()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTrapTooltip_GetTextForToken_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortTrapTooltip_GetTokenizedDescriptionText: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortTrapTooltip_GetTokenizedDescriptionText_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CC290 (end 0x010CC2BF)
+// Original VA: 0x00000001410CC290 | File offset: 0x010CB890
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortTrapTooltip_GetTokenizedDescriptionText()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTrapTooltip_GetTokenizedDescriptionText_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortTrapTooltip_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTrapTooltip_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTrapTooltip_GetNumericValue, "GetNumericValue" },
+	{ &Z_Construct_UFunction_UFortTrapTooltip_GetTextForToken, "GetTextForToken" },
+	{ &Z_Construct_UFunction_UFortTrapTooltip_GetTokenizedDescriptionText, "GetTokenizedDescriptionText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTrapTooltip_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0341CEA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTrapTooltip_Statics::ClassParams = { &UFortTrapTooltip::StaticClass, Z_Construct_UClass_UFortTrapTooltip_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortTrapTooltip_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UFortTrapTooltip_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CADC0 (end 0x010CADEF)
+// Original VA: 0x00000001410CADC0 | File offset: 0x010CA3C0
+// Recovery: confirmed (UHT singleton of UFortTrapTooltip) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTrapTooltip()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTrapTooltip_Statics::ClassParams);
+	}
+	return OuterClass;
+}

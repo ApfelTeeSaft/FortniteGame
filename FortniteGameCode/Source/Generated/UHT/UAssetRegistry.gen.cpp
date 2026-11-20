@@ -3,27 +3,8 @@
 // Class UAssetRegistry: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036B8AB0, FClassParams RVA 0x036B8B70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAssetRegistry();  // RVA 0x01C7FFD0 (consensus OuterFunc)
-
-class UAssetRegistry
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAssetRegistry();
-	static void execGetAllAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAllCachedPaths(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAssetByObjectPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAssetsByClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAssetsByPackageName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAssetsByPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSubPaths(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsLoadingAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRunAssetsThroughFilter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C7FCF0 (end 0x01C7FD12)
 // Original VA: 0x0000000141C7FCF0 | File offset: 0x01C7F2F0

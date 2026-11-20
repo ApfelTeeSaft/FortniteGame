@@ -3,17 +3,8 @@
 // Class UFortAsyncAction_MCPContextUpgradeItem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033686C0, FClassParams RVA 0x03368700.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortAsyncAction_MCPContextUpgradeItem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAsyncAction_MCPContextUpgradeItem();
-	static void execUpgradeItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01023580 (end 0x010235A2)
 // Original VA: 0x0000000141023580 | File offset: 0x01022B80
@@ -27,6 +18,64 @@ void UFortAsyncAction_MCPContextUpgradeItem::StaticRegisterNativesUFortAsyncActi
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextUpgradeItem_OnMCPRequestComplete__DelegateSignature: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextUpgradeItem_OnMCPRequestComplete__DelegateSignature_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010241F0 (end 0x0102421F)
+// Original VA: 0x00000001410241F0 | File offset: 0x010237F0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextUpgradeItem_OnMCPRequestComplete__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextUpgradeItem_OnMCPRequestComplete__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortAsyncAction_MCPContextUpgradeItem_UpgradeItem: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortAsyncAction_MCPContextUpgradeItem_UpgradeItem_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010244C0 (end 0x010244EF)
+// Original VA: 0x00000001410244C0 | File offset: 0x01023AC0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortAsyncAction_MCPContextUpgradeItem_UpgradeItem()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAsyncAction_MCPContextUpgradeItem_UpgradeItem_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextUpgradeItem_OnMCPRequestComplete__DelegateSignature, "OnMCPRequestComplete__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortAsyncAction_MCPContextUpgradeItem_UpgradeItem, "UpgradeItem" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03368700
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem_Statics::ClassParams = { &UFortAsyncAction_MCPContextUpgradeItem::StaticClass, Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem_Statics::FuncInfo, 2, Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023A60 (end 0x01023A8F)
+// Original VA: 0x0000000141023A60 | File offset: 0x01023060
+// Recovery: confirmed (UHT singleton of UFortAsyncAction_MCPContextUpgradeItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

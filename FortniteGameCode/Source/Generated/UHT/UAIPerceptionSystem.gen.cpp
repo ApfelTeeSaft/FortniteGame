@@ -3,21 +3,8 @@
 // Class UAIPerceptionSystem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036F1F20, FClassParams RVA 0x036F1F90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAIPerceptionSystem();  // RVA 0x01D1BC70 (consensus OuterFunc)
-
-class UAIPerceptionSystem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAIPerceptionSystem();
-	static void execGetSenseClassForStimulus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnPerceptionStimuliSourceEndPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRegisterPerceptionStimuliSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execReportEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execReportPerceptionEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B200 (end 0x01D1B222)
 // Original VA: 0x0000000141D1B200 | File offset: 0x01D1A800

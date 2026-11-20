@@ -3,15 +3,8 @@
 // Class UFortMainTabsScreenBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE54B0, FClassParams RVA 0x03CE5550.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMainTabsScreenBase();  // RVA 0x028D73F0 (consensus OuterFunc)
-
-class UFortMainTabsScreenBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortMainTabsScreenBase_ConstructTabs_Statics
 {

@@ -3,15 +3,8 @@
 // Class UCMSContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C5FB50, FClassParams RVA 0x03C5FBB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCMSContext();  // RVA 0x02887580 (consensus OuterFunc)
-
-class UCMSContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCMSContext_GetLatestEmergencyNotice_Statics
 {

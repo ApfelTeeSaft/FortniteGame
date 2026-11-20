@@ -3,15 +3,8 @@
 // Class UAnimNotifyState_Trail: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038A1DD0, FClassParams RVA 0x038A1E20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAnimNotifyState_Trail();  // RVA 0x023D6480 (consensus OuterFunc)
-
-class UAnimNotifyState_Trail
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAnimNotifyState_Trail_OverridePSTemplate_Statics
 {

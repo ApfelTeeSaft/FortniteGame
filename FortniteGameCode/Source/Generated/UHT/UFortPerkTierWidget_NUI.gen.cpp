@@ -3,16 +3,68 @@
 // Class UFortPerkTierWidget_NUI: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CFDB08, FClassParams RVA 0x03CFDB50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UFortPerkTierWidget_NUI
+struct Z_Construct_UFunction_UFortPerkTierWidget_NUI_OnGeneratePerk_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E71E0 (end 0x028E720F)
+// Original VA: 0x00000001428E71E0 | File offset: 0x028E67E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerkTierWidget_NUI_OnGeneratePerk()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerkTierWidget_NUI_OnGeneratePerk_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerkTierWidget_NUI_OnGeneratePerk: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPerkTierWidget_NUI_ProcessPerks_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7210 (end 0x028E723F)
+// Original VA: 0x00000001428E7210 | File offset: 0x028E6810
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerkTierWidget_NUI_ProcessPerks()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerkTierWidget_NUI_ProcessPerks_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerkTierWidget_NUI_ProcessPerks: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UFortPerkTierWidget_NUI_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPerkTierWidget_NUI_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPerkTierWidget_NUI_OnGeneratePerk, "OnGeneratePerk" },
+	{ &Z_Construct_UFunction_UFortPerkTierWidget_NUI_ProcessPerks, "ProcessPerks" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPerkTierWidget_NUI_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CFDB50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPerkTierWidget_NUI_Statics::ClassParams = { &UFortPerkTierWidget_NUI::StaticClass, Z_Construct_UClass_UFortPerkTierWidget_NUI_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortPerkTierWidget_NUI_Statics::FuncInfo, 2, Z_Construct_UClass_UFortPerkTierWidget_NUI_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortPerkTierWidget_NUI_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortPerkTierWidget_NUI_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6B60 (end 0x028E6B8F)
+// Original VA: 0x00000001428E6B60 | File offset: 0x028E6160
+// Recovery: confirmed (UHT singleton of UFortPerkTierWidget_NUI) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPerkTierWidget_NUI()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPerkTierWidget_NUI_Statics::ClassParams);
+	}
+	return OuterClass;
+}

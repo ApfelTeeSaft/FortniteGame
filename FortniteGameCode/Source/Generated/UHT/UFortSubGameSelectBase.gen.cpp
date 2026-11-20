@@ -3,19 +3,8 @@
 // Class UFortSubGameSelectBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D2EE50, FClassParams RVA 0x03D2EE90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSubGameSelectBase();  // RVA 0x02904A40 (consensus OuterFunc)
-
-class UFortSubGameSelectBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSubGameSelectBase();
-	static void execGetFullDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetIsOnSale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetShortDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02904370 (end 0x02904392)
 // Original VA: 0x0000000142904370 | File offset: 0x02903970

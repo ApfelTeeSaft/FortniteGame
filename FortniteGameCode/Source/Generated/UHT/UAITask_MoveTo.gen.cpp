@@ -3,17 +3,8 @@
 // Class UAITask_MoveTo: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036F93C0, FClassParams RVA 0x036F93F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAITask_MoveTo();  // RVA 0x01D22EF0 (consensus OuterFunc)
-
-class UAITask_MoveTo
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAITask_MoveTo();
-	static void execAIMoveTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22920 (end 0x01D22942)
 // Original VA: 0x0000000141D22920 | File offset: 0x01D21F20

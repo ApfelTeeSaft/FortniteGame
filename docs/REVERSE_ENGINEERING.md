@@ -91,9 +91,9 @@ same import, and the manifest records which.
     The prediction is used if the two sides agree, or if only one side has observed
     neighbours. A layout gap elsewhere in a large unit therefore cannot outvote the
     symbol's immediate neighbours. If the two sides disagree (a gap next to the symbol),
-    the prediction supported by the most neighbours is used, provided it strictly
-    outnumbers every alternative. A prediction that then fails to reproduce the reference
-    bytes is reported as an unresolved field, not as a byte difference.
+    each side's run of agreeing observed neighbours is counted, and the strictly longer run
+    decides; equal runs resolve nothing. A prediction that then fails to reproduce the
+    reference bytes is reported as an unresolved field, not as a byte difference.
 
   Nothing is masked. Every resolved field records its evidence in `analysis/functions.json`,
   and a wrong prediction simply fails the byte comparison. The repository owner approved
@@ -427,6 +427,63 @@ noexport ones) and 1,094 enums. No `.bss` address is read.
 `OuterClass`, `PrivateStaticClass`. Of 22,976 consecutive predicted pairs with known
 reference addresses, 22,296 (97 %) are adjacent. The 680 gaps sit at unit boundaries and
 at items not yet modelled, such as package-scope delegates.
+
+### Building the units
+
+**Class declarations (`tools/codegen/uht_classes.py`).** `IMPLEMENT_CLASS` passes everything
+`DECLARE_CLASS` defines to `GetPrivateStaticClassBody`. The decoder follows each class's
+`GetPrivateStaticClass` instruction stream to that call, reached through the `StaticClass`
+thunk that its `FCompiledInDefer` initializer names. It checks the common 151- and 162-byte
+forms against byte templates, and decodes 3,326 of 3,333 classes. The other seven are
+CoreUObject intrinsics that construct their `UClass` directly.
+
+The decoded values give:
+- the class hierarchy: every superclass resolves to a known class;
+- the declaration values: flags, cast flags, package, config name and `sizeof`, which
+  agrees with the `TClassCompiledInDefer` value for all 3,283 classes that have one;
+- `AddReferencedObjects` ownership: a class declares its own where its pointer differs from
+  its superclass's.
+
+`Generated/UHT/Classes.gen.h` declares every class this way, superclasses first, with real
+inheritance and an opaque member that only fixes `sizeof`. Each class fragment then holds
+the `IMPLEMENT_CLASS` body, plus `Z_Construct_UClass_*` for the 2,045 classes without
+UFunctions. Their `ClassParams` is the only `FClassParams`-shaped record naming the class's
+`StaticClass`. The `StaticClass` address also appears in property metadata, because
+`/OPT:ICF` folded `Z_Construct_UClass_<C>_NoRegister` into it; the record-shape checks
+exclude those.
+
+**Units (`tools/codegen/unity.py`).** One file per recovered unit `#include`s the items'
+fragments in table order. Only these files are compiled, and manifest objects are the unity
+objects. Two modelling points:
+- **Prologue.** The original units begin with engine headers whose namespace-scope objects
+  create the plain `.bss` section ahead of all COMDAT statics. `UnityPrologue.h` stands in for
+  them. Without it, the first struct's registration objects would put that section in the
+  middle of the COMDAT sequence.
+- **`StaticEnum`.** MSVC compiles file-static functions first, into a block whose order the
+  source order does not reproduce. Consecutive enums are adjacent in it, though. Each run of
+  consecutive enums' `StaticEnum` functions is therefore compiled as a unit of its own.
+
+**Results against per-item units.** Gains:
+
+| Category | Before | After |
+| --- | --- | --- |
+| Class constructors | 1,034 | 3,183 |
+| Enum constructors | 726 | 997 |
+| `StaticClass` thunks (outside the denominator) | 533 | 696 |
+
+`StaticEnum` holds at 309 and struct constructors at 1,517.
+
+Lower: UFunction creators 10,458 (from 10,556) and `StaticStruct` 1,401 (from
+1,426). In 65 of the 104 creators that lost their match, the reference slot just before
+them belongs to an item not yet modelled: package-scope delegate creators, the 587 structs
+whose `StaticStruct` inlines the package singleton, or the package constructor at its
+`init.gen.cpp` position. A per-item unit never had those neighbours; a unity unit
+needs them. Nothing was relaxed, and the affected fields are reported unresolved.
+
+The 3,283 `GetPrivateStaticClass` bodies are relocation-equivalent. Fields not yet resolved
+include `InternalConstructor<C>`, `InternalVTableHelperCtorCaller<C>`, the package and
+config literals, and the empty `StaticRegisterNatives` that ICF folds for classes without
+natives.
 
 ## Naming confidence
 

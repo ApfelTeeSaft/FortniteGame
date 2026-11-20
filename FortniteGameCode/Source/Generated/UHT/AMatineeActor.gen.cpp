@@ -3,15 +3,8 @@
 // Class AMatineeActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0394EB40, FClassParams RVA 0x0394ECE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AMatineeActor();  // RVA 0x02486630 (consensus OuterFunc)
-
-class AMatineeActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AMatineeActor_ChangePlaybackDirection_Statics
 {

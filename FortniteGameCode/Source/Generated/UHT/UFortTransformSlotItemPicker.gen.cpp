@@ -3,17 +3,8 @@
 // Class UFortTransformSlotItemPicker: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D327B8, FClassParams RVA 0x03D327D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTransformSlotItemPicker();  // RVA 0x02904E20 (consensus OuterFunc)
-
-class UFortTransformSlotItemPicker
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortTransformSlotItemPicker();
-	static void execRebuildSlottableItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02904610 (end 0x02904632)
 // Original VA: 0x0000000142904610 | File offset: 0x02903C10

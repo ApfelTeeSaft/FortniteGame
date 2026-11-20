@@ -3,17 +3,8 @@
 // Class APostProcessVolume: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0398E268, FClassParams RVA 0x0398E2C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class APostProcessVolume
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAPostProcessVolume();
-	static void execAddOrUpdateBlendable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B76F0 (end 0x024B7712)
 // Original VA: 0x00000001424B76F0 | File offset: 0x024B6CF0
@@ -27,4 +18,47 @@ void APostProcessVolume::StaticRegisterNativesAPostProcessVolume()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_APostProcessVolume_AddOrUpdateBlendable: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_APostProcessVolume_AddOrUpdateBlendable_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B85B0 (end 0x024B85DF)
+// Original VA: 0x00000001424B85B0 | File offset: 0x024B7BB0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_APostProcessVolume_AddOrUpdateBlendable()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_APostProcessVolume_AddOrUpdateBlendable_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_APostProcessVolume_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_APostProcessVolume_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_APostProcessVolume_AddOrUpdateBlendable, "AddOrUpdateBlendable" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_APostProcessVolume_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0398E2C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_APostProcessVolume_Statics::ClassParams = { &APostProcessVolume::StaticClass, Z_Construct_UClass_APostProcessVolume_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_APostProcessVolume_Statics::FuncInfo, 1, Z_Construct_UClass_APostProcessVolume_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_APostProcessVolume_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_APostProcessVolume_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7DB0 (end 0x024B7DDF)
+// Original VA: 0x00000001424B7DB0 | File offset: 0x024B73B0
+// Recovery: confirmed (UHT singleton of APostProcessVolume) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_APostProcessVolume()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_APostProcessVolume_Statics::ClassParams);
+	}
+	return OuterClass;
+}

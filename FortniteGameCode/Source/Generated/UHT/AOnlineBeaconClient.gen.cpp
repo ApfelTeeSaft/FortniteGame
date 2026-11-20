@@ -3,15 +3,8 @@
 // Class AOnlineBeaconClient: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02EAE310, FClassParams RVA 0x02EAE350.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AOnlineBeaconClient();  // RVA 0x0032E750 (consensus OuterFunc)
-
-class AOnlineBeaconClient
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AOnlineBeaconClient_ClientOnConnected_Statics
 {

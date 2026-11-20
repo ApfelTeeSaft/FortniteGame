@@ -3,17 +3,8 @@
 // Class UFortMicIndicatorWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE5AF0, FClassParams RVA 0x03CE5B40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMicIndicatorWidget();  // RVA 0x028D7490 (consensus OuterFunc)
-
-class UFortMicIndicatorWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortMicIndicatorWidget();
-	static void execSetPlayerUniqueId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6E10 (end 0x028D6E32)
 // Original VA: 0x00000001428D6E10 | File offset: 0x028D6410

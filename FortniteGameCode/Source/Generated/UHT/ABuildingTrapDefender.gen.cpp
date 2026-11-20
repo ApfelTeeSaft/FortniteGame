@@ -3,20 +3,8 @@
 // Class ABuildingTrapDefender: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03286E50, FClassParams RVA 0x03286F30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingTrapDefender();  // RVA 0x00F78590 (consensus OuterFunc)
-
-class ABuildingTrapDefender
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesABuildingTrapDefender();
-	static void execGetLastInteractErrorText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSpawnDefenderfromItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSupplyDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTakeWeaponAwayFromDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F77FB0 (end 0x00F77FD2)
 // Original VA: 0x0000000140F77FB0 | File offset: 0x00F775B0

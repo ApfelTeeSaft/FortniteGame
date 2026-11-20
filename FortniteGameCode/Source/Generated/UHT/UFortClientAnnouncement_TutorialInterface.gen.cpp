@@ -3,15 +3,8 @@
 // Class UFortClientAnnouncement_TutorialInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032E6220, FClassParams RVA 0x032E62F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface();  // RVA 0x00FC02B0 (consensus OuterFunc)
-
-class UFortClientAnnouncement_TutorialInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_HideTutorialWidget_Statics
 {

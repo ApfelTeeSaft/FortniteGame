@@ -3,27 +3,8 @@
 // Class UFortTooltip: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0341AF20, FClassParams RVA 0x0341AFE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTooltip();  // RVA 0x010CAB90 (consensus OuterFunc)
-
-class UFortTooltip
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortTooltip();
-	static void execBP_GetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBP_GetTextForToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBP_GetTokenizedDescriptionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBP_GetValueData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTextForToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTokenizedDescriptionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValueData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLocalizationFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLocalizationInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLocalizationText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9410 (end 0x010C9432)
 // Original VA: 0x00000001410C9410 | File offset: 0x010C8A10

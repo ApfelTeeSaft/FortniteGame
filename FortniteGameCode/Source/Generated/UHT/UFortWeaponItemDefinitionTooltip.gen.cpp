@@ -3,19 +3,8 @@
 // Class UFortWeaponItemDefinitionTooltip: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0342FFD8, FClassParams RVA 0x03430010.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortWeaponItemDefinitionTooltip
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortWeaponItemDefinitionTooltip();
-	static void execGetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTextForToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTokenizedDescriptionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D88C0 (end 0x010D88E2)
 // Original VA: 0x00000001410D88C0 | File offset: 0x010D7EC0
@@ -31,8 +20,81 @@ void UFortWeaponItemDefinitionTooltip::StaticRegisterNativesUFortWeaponItemDefin
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetNumericValue: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetNumericValue_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 23 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D9090 (end 0x010D90BF)
+// Original VA: 0x00000001410D9090 | File offset: 0x010D8690
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetNumericValue()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetNumericValue_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetTextForToken: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetTextForToken_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D90C0 (end 0x010D90EF)
+// Original VA: 0x00000001410D90C0 | File offset: 0x010D86C0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetTextForToken()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetTextForToken_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetTokenizedDescriptionText: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetTokenizedDescriptionText_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 29 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D90F0 (end 0x010D911F)
+// Original VA: 0x00000001410D90F0 | File offset: 0x010D86F0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetTokenizedDescriptionText()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetTokenizedDescriptionText_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortWeaponItemDefinitionTooltip_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortWeaponItemDefinitionTooltip_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetNumericValue, "GetNumericValue" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetTextForToken, "GetTextForToken" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinitionTooltip_GetTokenizedDescriptionText, "GetTokenizedDescriptionText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortWeaponItemDefinitionTooltip_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03430010
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortWeaponItemDefinitionTooltip_Statics::ClassParams = { &UFortWeaponItemDefinitionTooltip::StaticClass, Z_Construct_UClass_UFortWeaponItemDefinitionTooltip_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortWeaponItemDefinitionTooltip_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UFortWeaponItemDefinitionTooltip_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8BA0 (end 0x010D8BCF)
+// Original VA: 0x00000001410D8BA0 | File offset: 0x010D81A0
+// Recovery: confirmed (UHT singleton of UFortWeaponItemDefinitionTooltip) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortWeaponItemDefinitionTooltip()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortWeaponItemDefinitionTooltip_Statics::ClassParams);
+	}
+	return OuterClass;
+}

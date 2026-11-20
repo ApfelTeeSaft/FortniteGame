@@ -3,17 +3,8 @@
 // Class UFortItemDisplayNameText: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CCCFC0, FClassParams RVA 0x03CCCFE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortItemDisplayNameText
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortItemDisplayNameText();
-	static void execSetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C99C0 (end 0x028C99E2)
 // Original VA: 0x00000001428C99C0 | File offset: 0x028C8FC0
@@ -27,4 +18,46 @@ void UFortItemDisplayNameText::StaticRegisterNativesUFortItemDisplayNameText()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortItemDisplayNameText_SetItemToRepresent: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemDisplayNameText_SetItemToRepresent_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAA20 (end 0x028CAA4F)
+// Original VA: 0x00000001428CAA20 | File offset: 0x028CA020
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemDisplayNameText_SetItemToRepresent()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDisplayNameText_SetItemToRepresent_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortItemDisplayNameText_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemDisplayNameText_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemDisplayNameText_SetItemToRepresent, "SetItemToRepresent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemDisplayNameText_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CCCFE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemDisplayNameText_Statics::ClassParams = { &UFortItemDisplayNameText::StaticClass, Z_Construct_UClass_UFortItemDisplayNameText_Statics::DependentSingletons, 2, 0x00A00082u, Z_Construct_UClass_UFortItemDisplayNameText_Statics::FuncInfo, 1, Z_Construct_UClass_UFortItemDisplayNameText_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortItemDisplayNameText_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9E80 (end 0x028C9EAF)
+// Original VA: 0x00000001428C9E80 | File offset: 0x028C9480
+// Recovery: confirmed (UHT singleton of UFortItemDisplayNameText) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemDisplayNameText()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemDisplayNameText_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -3,17 +3,8 @@
 // Class UAthenaCompassBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C51BF0, FClassParams RVA 0x03C51C40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaCompassBase();  // RVA 0x0287F290 (consensus OuterFunc)
-
-class UAthenaCompassBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAthenaCompassBase();
-	static void execBindToModel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EC30 (end 0x0287EC52)
 // Original VA: 0x000000014287EC30 | File offset: 0x0287E230

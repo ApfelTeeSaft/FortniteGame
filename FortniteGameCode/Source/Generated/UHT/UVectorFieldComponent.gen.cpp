@@ -3,14 +3,49 @@
 // Class UVectorFieldComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039CF080, FClassParams RVA 0x039CF0C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UVectorFieldComponent
+struct Z_Construct_UFunction_UVectorFieldComponent_SetIntensity_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0F70 (end 0x024F0F9F)
+// Original VA: 0x00000001424F0F70 | File offset: 0x024F0570
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UVectorFieldComponent_SetIntensity()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UVectorFieldComponent_SetIntensity_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UVectorFieldComponent_SetIntensity: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UVectorFieldComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UVectorFieldComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UVectorFieldComponent_SetIntensity, "SetIntensity" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UVectorFieldComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039CF0C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UVectorFieldComponent_Statics::ClassParams = { &UVectorFieldComponent::StaticClass, Z_Construct_UClass_UVectorFieldComponent_Statics::DependentSingletons, 2, 0x00A80080u, Z_Construct_UClass_UVectorFieldComponent_Statics::FuncInfo, 1, Z_Construct_UClass_UVectorFieldComponent_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UVectorFieldComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0BD0 (end 0x024F0BFF)
+// Original VA: 0x00000001424F0BD0 | File offset: 0x024F01D0
+// Recovery: confirmed (UHT singleton of UVectorFieldComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UVectorFieldComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UVectorFieldComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

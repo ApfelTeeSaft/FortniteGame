@@ -13,12 +13,12 @@ typedef wchar_t TCHAR;
 #define TEXT(x) L##x
 #endif
 
-// Complete only so that UPackage* converts to UObject* as in engine code; no layout is implied.
-class UObject {};
+// Defined, with the recovered hierarchy, in Generated/UHT/Classes.gen.h (via UHTRecovered.h).
+class UObject;
 class UClass;
 class UFunction;
 class UScriptStruct;
-class UPackage : public UObject {};
+class UPackage;
 
 enum EObjectFlags
 {

@@ -3,20 +3,8 @@
 // Class UFortRewardInfoButton: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D0AF00, FClassParams RVA 0x03D0AFA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortRewardInfoButton();  // RVA 0x028ED680 (consensus OuterFunc)
-
-class UFortRewardInfoButton
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortRewardInfoButton();
-	static void execGetItemInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemInstanceQuantityPair(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetShowDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECFB0 (end 0x028ECFD2)
 // Original VA: 0x00000001428ECFB0 | File offset: 0x028EC5B0

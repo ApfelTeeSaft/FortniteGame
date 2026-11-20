@@ -3,18 +3,8 @@
 // Class UAthenaChallengeBundleScheduleScreenBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C51B40, FClassParams RVA 0x03C51B70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase();  // RVA 0x0287F260 (consensus OuterFunc)
-
-class UAthenaChallengeBundleScheduleScreenBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAthenaChallengeBundleScheduleScreenBase();
-	static void execGetChallengeBundleItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetChallengeBundleSchedules(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EC00 (end 0x0287EC22)
 // Original VA: 0x000000014287EC00 | File offset: 0x0287E200

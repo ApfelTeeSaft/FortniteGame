@@ -3,18 +3,8 @@
 // Class UFortCheatMenuFactory: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C75F28, FClassParams RVA 0x03C75F50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortCheatMenuFactory
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCheatMenuFactory();
-	static void execAddGrantCheatMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAddStoreCheatMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02894190 (end 0x028941B2)
 // Original VA: 0x0000000142894190 | File offset: 0x02893790
@@ -29,6 +19,63 @@ void UFortCheatMenuFactory::StaticRegisterNativesUFortCheatMenuFactory()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortCheatMenuFactory_AddGrantCheatMenu: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortCheatMenuFactory_AddGrantCheatMenu_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028952E0 (end 0x0289530F)
+// Original VA: 0x00000001428952E0 | File offset: 0x028948E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortCheatMenuFactory_AddGrantCheatMenu()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCheatMenuFactory_AddGrantCheatMenu_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortCheatMenuFactory_AddStoreCheatMenu: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortCheatMenuFactory_AddStoreCheatMenu_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02895310 (end 0x0289533F)
+// Original VA: 0x0000000142895310 | File offset: 0x02894910
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortCheatMenuFactory_AddStoreCheatMenu()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCheatMenuFactory_AddStoreCheatMenu_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortCheatMenuFactory_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCheatMenuFactory_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCheatMenuFactory_AddGrantCheatMenu, "AddGrantCheatMenu" },
+	{ &Z_Construct_UFunction_UFortCheatMenuFactory_AddStoreCheatMenu, "AddStoreCheatMenu" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCheatMenuFactory_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C75F50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCheatMenuFactory_Statics::ClassParams = { &UFortCheatMenuFactory::StaticClass, Z_Construct_UClass_UFortCheatMenuFactory_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortCheatMenuFactory_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortCheatMenuFactory_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028945E0 (end 0x0289460F)
+// Original VA: 0x00000001428945E0 | File offset: 0x02893BE0
+// Recovery: confirmed (UHT singleton of UFortCheatMenuFactory) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCheatMenuFactory()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCheatMenuFactory_Statics::ClassParams);
+	}
+	return OuterClass;
+}

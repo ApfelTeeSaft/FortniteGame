@@ -3,17 +3,8 @@
 // Class ASceneCaptureCube: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039A0A90, FClassParams RVA 0x039A0AC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class ASceneCaptureCube
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesASceneCaptureCube();
-	static void execOnInterpToggle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6AE0 (end 0x024C6B02)
 // Original VA: 0x00000001424C6AE0 | File offset: 0x024C60E0
@@ -27,4 +18,46 @@ void ASceneCaptureCube::StaticRegisterNativesASceneCaptureCube()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_ASceneCaptureCube_OnInterpToggle: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_ASceneCaptureCube_OnInterpToggle_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C70A0 (end 0x024C70CF)
+// Original VA: 0x00000001424C70A0 | File offset: 0x024C66A0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_ASceneCaptureCube_OnInterpToggle()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASceneCaptureCube_OnInterpToggle_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_ASceneCaptureCube_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ASceneCaptureCube_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ASceneCaptureCube_OnInterpToggle, "OnInterpToggle" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ASceneCaptureCube_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039A0AC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ASceneCaptureCube_Statics::ClassParams = { &ASceneCaptureCube::StaticClass, Z_Construct_UClass_ASceneCaptureCube_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ASceneCaptureCube_Statics::FuncInfo, 1, Z_Construct_UClass_ASceneCaptureCube_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_ASceneCaptureCube_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6CF0 (end 0x024C6D1F)
+// Original VA: 0x00000001424C6CF0 | File offset: 0x024C62F0
+// Recovery: confirmed (UHT singleton of ASceneCaptureCube) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ASceneCaptureCube()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ASceneCaptureCube_Statics::ClassParams);
+	}
+	return OuterClass;
+}

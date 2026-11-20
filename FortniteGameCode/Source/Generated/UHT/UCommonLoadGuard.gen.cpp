@@ -3,20 +3,8 @@
 // Class UCommonLoadGuard: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E81F30, FClassParams RVA 0x02E81FC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonLoadGuard();  // RVA 0x002CA480 (consensus OuterFunc)
-
-class UCommonLoadGuard
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCommonLoadGuard();
-	static void execBP_GuardAndLoadAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsLoading(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIsLoading(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLoadingText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA070 (end 0x002CA092)
 // Original VA: 0x00000001402CA070 | File offset: 0x002C9670

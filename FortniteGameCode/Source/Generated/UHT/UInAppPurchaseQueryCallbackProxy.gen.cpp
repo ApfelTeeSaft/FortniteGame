@@ -3,17 +3,8 @@
 // Class UInAppPurchaseQueryCallbackProxy: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02EADBE8, FClassParams RVA 0x02EADC10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy();  // RVA 0x0032EB00 (consensus OuterFunc)
-
-class UInAppPurchaseQueryCallbackProxy
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUInAppPurchaseQueryCallbackProxy();
-	static void execCreateProxyObjectForInAppPurchaseQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E310 (end 0x0032E332)
 // Original VA: 0x000000014032E310 | File offset: 0x0032D910

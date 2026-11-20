@@ -3,17 +3,8 @@
 // Class UAbilityTask_WaitGameplayEffectBlockedImmunity: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F32AF8, FClassParams RVA 0x02F32B20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayEffectBlockedImmunity();  // RVA 0x0054D600 (consensus OuterFunc)
-
-class UAbilityTask_WaitGameplayEffectBlockedImmunity
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAbilityTask_WaitGameplayEffectBlockedImmunity();
-	static void execWaitGameplayEffectBlockedByImmunity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CEA0 (end 0x0054CEC2)
 // Original VA: 0x000000014054CEA0 | File offset: 0x0054C4A0

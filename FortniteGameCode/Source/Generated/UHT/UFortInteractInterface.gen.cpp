@@ -3,17 +3,8 @@
 // Class UFortInteractInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0334A770, FClassParams RVA 0x0334A790.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortInteractInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortInteractInterface();
-	static void execServerOnAttemptInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01006360 (end 0x01006382)
 // Original VA: 0x0000000141006360 | File offset: 0x01005960
@@ -27,4 +18,45 @@ void UFortInteractInterface::StaticRegisterNativesUFortInteractInterface()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortInteractInterface_ServerOnAttemptInteract: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortInteractInterface_ServerOnAttemptInteract_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01007980 (end 0x010079AF)
+// Original VA: 0x0000000141007980 | File offset: 0x01006F80
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortInteractInterface_ServerOnAttemptInteract()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortInteractInterface_ServerOnAttemptInteract_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortInteractInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortInteractInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortInteractInterface_ServerOnAttemptInteract, "ServerOnAttemptInteract" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortInteractInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x0334A790
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortInteractInterface_Statics::ClassParams = { &UFortInteractInterface::StaticClass, Z_Construct_UClass_UFortInteractInterface_Statics::DependentSingletons, 2, 0x00104081u, Z_Construct_UClass_UFortInteractInterface_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortInteractInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006CE0 (end 0x01006D0F)
+// Original VA: 0x0000000141006CE0 | File offset: 0x010062E0
+// Recovery: confirmed (UHT singleton of UFortInteractInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortInteractInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortInteractInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

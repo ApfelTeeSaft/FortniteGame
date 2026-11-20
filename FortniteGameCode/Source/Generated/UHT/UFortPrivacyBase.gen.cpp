@@ -3,15 +3,8 @@
 // Class UFortPrivacyBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D00020, FClassParams RVA 0x03D000C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPrivacyBase();  // RVA 0x028E6DF0 (consensus OuterFunc)
-
-class UFortPrivacyBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortPrivacyBase_AddPrivacyButton_Statics
 {

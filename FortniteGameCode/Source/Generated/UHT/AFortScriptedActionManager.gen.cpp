@@ -3,17 +3,8 @@
 // Class AFortScriptedActionManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033F6BD8, FClassParams RVA 0x033F6C50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortScriptedActionManager();  // RVA 0x010A5830 (consensus OuterFunc)
-
-class AFortScriptedActionManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortScriptedActionManager();
-	static void execHandleClientEvent_Undefined(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4E90 (end 0x010A4EB2)
 // Original VA: 0x00000001410A4E90 | File offset: 0x010A4490

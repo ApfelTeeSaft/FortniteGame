@@ -3,15 +3,8 @@
 // Class UFortSquadSlotDetailsPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D21BA0, FClassParams RVA 0x03D21C60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotDetailsPanel();  // RVA 0x028FB530 (consensus OuterFunc)
-
-class UFortSquadSlotDetailsPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortSquadSlotDetailsPanel_GetIdOfSquadSlotToManageBP_Statics
 {

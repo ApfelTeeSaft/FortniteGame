@@ -3,15 +3,8 @@
 // Class AFortDeployableBaseManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03300D70, FClassParams RVA 0x03300F00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortDeployableBaseManager();  // RVA 0x00FD0020 (consensus OuterFunc)
-
-class AFortDeployableBaseManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortDeployableBaseManager_BroadcastHordeWaveStinger_Statics
 {

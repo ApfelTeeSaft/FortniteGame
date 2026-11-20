@@ -3,15 +3,8 @@
 // Class UMediaPlaylist: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03B64A40, FClassParams RVA 0x03B64B20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMediaPlaylist();  // RVA 0x025DE930 (consensus OuterFunc)
-
-class UMediaPlaylist
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UMediaPlaylist_Add_Statics
 {

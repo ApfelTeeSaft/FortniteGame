@@ -3,25 +3,8 @@
 // Class UInputComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038FFD30, FClassParams RVA 0x038FFDE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UInputComponent();  // RVA 0x02427F10 (consensus OuterFunc)
-
-class UInputComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUInputComponent();
-	static void execGetControllerAnalogKeyState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetControllerAnalogStickState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetControllerKeyTimeDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetControllerMouseDelta(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetControllerVectorKeyState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTouchState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsControllerKeyDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execWasControllerKeyJustPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execWasControllerKeyJustReleased(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02427530 (end 0x02427552)
 // Original VA: 0x0000000142427530 | File offset: 0x02426B30

@@ -3,15 +3,8 @@
 // Class UFortHUDContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CB1D90, FClassParams RVA 0x03CB22C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHUDContext();  // RVA 0x028BBD60 (consensus OuterFunc)
-
-class UFortHUDContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortHUDContext_AddPointOfInterest_Statics
 {

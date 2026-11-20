@@ -3,29 +3,8 @@
 // Class UFortOutpostFunctionLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0339AB30, FClassParams RVA 0x0339AC10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortOutpostFunctionLibrary();  // RVA 0x01056030 (consensus OuterFunc)
-
-class UFortOutpostFunctionLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortOutpostFunctionLibrary();
-	static void execActivateCraftingTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execDeactivateCraftingTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execDeployOutpostBuildingTagOnPlacementTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOutpostBuildingItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOutpostBuildingTagFromPlacementTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOutpostOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOutpostQuestMissionConfigData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPlacementTagFromOutpostBuildingTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCriticalMissionJoinability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOutpostDefenseActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOutpostGameDifficultyRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTransferItemFromStorage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTransferItemToStorage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01055C90 (end 0x01055CB2)
 // Original VA: 0x0000000141055C90 | File offset: 0x01055290

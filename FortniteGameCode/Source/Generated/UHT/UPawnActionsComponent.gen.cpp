@@ -3,20 +3,8 @@
 // Class UPawnActionsComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0370D340, FClassParams RVA 0x0370D3C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPawnActionsComponent();  // RVA 0x01D31EA0 (consensus OuterFunc)
-
-class UPawnActionsComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUPawnActionsComponent();
-	static void execK2_AbortAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_ForceAbortAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_PerformAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_PushAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31B60 (end 0x01D31B82)
 // Original VA: 0x0000000141D31B60 | File offset: 0x01D31160

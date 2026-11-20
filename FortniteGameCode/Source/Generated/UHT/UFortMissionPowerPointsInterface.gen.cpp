@@ -3,20 +3,8 @@
 // Class UFortMissionPowerPointsInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03389970, FClassParams RVA 0x033899C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMissionPowerPointsInterface();  // RVA 0x0104A990 (consensus OuterFunc)
-
-class UFortMissionPowerPointsInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortMissionPowerPointsInterface();
-	static void execGetAvailabilityWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetInitialRangeLerpValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaxRangeLerpValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPowerPointsCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A320 (end 0x0104A342)
 // Original VA: 0x000000014104A320 | File offset: 0x01049920

@@ -3,15 +3,8 @@
 // Class USeasonPassLevelWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D56A90, FClassParams RVA 0x03D56B00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USeasonPassLevelWidget();  // RVA 0x02918CB0 (consensus OuterFunc)
-
-class USeasonPassLevelWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_USeasonPassLevelWidget_AttemptClaim_Statics
 {

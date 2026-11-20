@@ -3,15 +3,8 @@
 // Class UAbilityTask_NetworkSyncPoint: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F2B4A8, FClassParams RVA 0x02F2B4E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_NetworkSyncPoint();  // RVA 0x00546900 (consensus OuterFunc)
-
-class UAbilityTask_NetworkSyncPoint
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAbilityTask_NetworkSyncPoint_OnSignalCallback_Statics
 {

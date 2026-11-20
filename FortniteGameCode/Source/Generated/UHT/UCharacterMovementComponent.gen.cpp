@@ -3,15 +3,8 @@
 // Class UCharacterMovementComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038C1E80, FClassParams RVA 0x038C2590.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCharacterMovementComponent();  // RVA 0x023EE150 (consensus OuterFunc)
-
-class UCharacterMovementComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCharacterMovementComponent_AddForce_Statics
 {

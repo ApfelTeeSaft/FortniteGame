@@ -3,15 +3,8 @@
 // Class UFortChatWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C75E00, FClassParams RVA 0x03C75E80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortChatWidget();  // RVA 0x028945B0 (consensus OuterFunc)
-
-class UFortChatWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortChatWidget_FocusChatEntry_Statics
 {

@@ -3,18 +3,8 @@
 // Class UAISense_Prediction: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036F2CD8, FClassParams RVA 0x036F2D10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAISense_Prediction();  // RVA 0x01D1BEF0 (consensus OuterFunc)
-
-class UAISense_Prediction
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAISense_Prediction();
-	static void execRequestControllerPredictionEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRequestPawnPredictionEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B2C0 (end 0x01D1B2E2)
 // Original VA: 0x0000000141D1B2C0 | File offset: 0x01D1A8C0

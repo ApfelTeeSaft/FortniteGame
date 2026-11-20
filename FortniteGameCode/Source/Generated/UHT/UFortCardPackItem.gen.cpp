@@ -3,19 +3,8 @@
 // Class UFortCardPackItem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032D0A38, FClassParams RVA 0x032D0A90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCardPackItem();  // RVA 0x00FAD8D0 (consensus OuterFunc)
-
-class UFortCardPackItem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCardPackItem();
-	static void execCanStoreOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetChoices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsChoicePack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACD80 (end 0x00FACDA2)
 // Original VA: 0x0000000140FACD80 | File offset: 0x00FAC380

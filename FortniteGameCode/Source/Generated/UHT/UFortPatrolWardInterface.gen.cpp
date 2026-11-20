@@ -3,15 +3,8 @@
 // Class UFortPatrolWardInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033A2E60, FClassParams RVA 0x033A2E90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPatrolWardInterface();  // RVA 0x0105DF00 (consensus OuterFunc)
-
-class UFortPatrolWardInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingDistance_Statics
 {

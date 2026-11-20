@@ -3,15 +3,8 @@
 // Class UFortCollectionBookPage: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032EEB70, FClassParams RVA 0x032EEBE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookPage();  // RVA 0x00FC6100 (consensus OuterFunc)
-
-class UFortCollectionBookPage
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortCollectionBookPage_GetPageState_Statics
 {

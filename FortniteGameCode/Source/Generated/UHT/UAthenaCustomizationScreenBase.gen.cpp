@@ -3,17 +3,8 @@
 // Class UAthenaCustomizationScreenBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C51E58, FClassParams RVA 0x03C51E80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaCustomizationScreenBase();  // RVA 0x0287F320 (consensus OuterFunc)
-
-class UAthenaCustomizationScreenBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAthenaCustomizationScreenBase();
-	static void execGetFavoriteItemForCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EC90 (end 0x0287ECB2)
 // Original VA: 0x000000014287EC90 | File offset: 0x0287E290

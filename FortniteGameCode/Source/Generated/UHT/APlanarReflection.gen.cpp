@@ -3,17 +3,8 @@
 // Class APlanarReflection: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03983200, FClassParams RVA 0x03983230.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class APlanarReflection
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAPlanarReflection();
-	static void execOnInterpToggle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A97E0 (end 0x024A9802)
 // Original VA: 0x00000001424A97E0 | File offset: 0x024A8DE0
@@ -27,4 +18,46 @@ void APlanarReflection::StaticRegisterNativesAPlanarReflection()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_APlanarReflection_OnInterpToggle: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_APlanarReflection_OnInterpToggle_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AA210 (end 0x024AA23F)
+// Original VA: 0x00000001424AA210 | File offset: 0x024A9810
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_APlanarReflection_OnInterpToggle()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_APlanarReflection_OnInterpToggle_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_APlanarReflection_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_APlanarReflection_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_APlanarReflection_OnInterpToggle, "OnInterpToggle" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_APlanarReflection_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03983230
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_APlanarReflection_Statics::ClassParams = { &APlanarReflection::StaticClass, Z_Construct_UClass_APlanarReflection_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_APlanarReflection_Statics::FuncInfo, 1, Z_Construct_UClass_APlanarReflection_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_APlanarReflection_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9D60 (end 0x024A9D8F)
+// Original VA: 0x00000001424A9D60 | File offset: 0x024A9360
+// Recovery: confirmed (UHT singleton of APlanarReflection) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_APlanarReflection()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_APlanarReflection_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -3,15 +3,8 @@
 // Class UFortLeaderboardEntryWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE3AB8, FClassParams RVA 0x03CE3AF0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortLeaderboardEntryWidget();  // RVA 0x028D71E0 (consensus OuterFunc)
-
-class UFortLeaderboardEntryWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortLeaderboardEntryWidget_OnLeaderboardEntryDataSet_Statics
 {

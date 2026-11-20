@@ -3,15 +3,8 @@
 // Class UFortMcpContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033690F0, FClassParams RVA 0x033696A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMcpContext();  // RVA 0x01023C20 (consensus OuterFunc)
-
-class UFortMcpContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortMcpContext_OnDownloadEULAComplete__DelegateSignature_Statics
 {

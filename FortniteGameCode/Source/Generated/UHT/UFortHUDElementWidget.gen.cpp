@@ -3,18 +3,85 @@
 // Class UFortHUDElementWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CB2360, FClassParams RVA 0x03CB23A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UFortHUDElementWidget
+struct Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDElementVisibilityChanged_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD240 (end 0x028BD26F)
+// Original VA: 0x00000001428BD240 | File offset: 0x028BC840
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDElementVisibilityChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDElementVisibilityChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDElementVisibilityChanged: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDResetToDefaults_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD270 (end 0x028BD29F)
+// Original VA: 0x00000001428BD270 | File offset: 0x028BC870
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDResetToDefaults()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDResetToDefaults_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDResetToDefaults: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortHUDElementWidget_OnVisibilitySetEvent_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BD2A0 (end 0x028BD2CF)
+// Original VA: 0x00000001428BD2A0 | File offset: 0x028BC8A0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortHUDElementWidget_OnVisibilitySetEvent()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortHUDElementWidget_OnVisibilitySetEvent_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortHUDElementWidget_OnVisibilitySetEvent: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UFortHUDElementWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHUDElementWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDElementVisibilityChanged, "HandleOnHUDElementVisibilityChanged" },
+	{ &Z_Construct_UFunction_UFortHUDElementWidget_HandleOnHUDResetToDefaults, "HandleOnHUDResetToDefaults" },
+	{ &Z_Construct_UFunction_UFortHUDElementWidget_OnVisibilitySetEvent, "OnVisibilitySetEvent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHUDElementWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CB23A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHUDElementWidget_Statics::ClassParams = { &UFortHUDElementWidget::StaticClass, Z_Construct_UClass_UFortHUDElementWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortHUDElementWidget_Statics::FuncInfo, 3, Z_Construct_UClass_UFortHUDElementWidget_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortHUDElementWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBD90 (end 0x028BBDBF)
+// Original VA: 0x00000001428BBD90 | File offset: 0x028BB390
+// Recovery: confirmed (UHT singleton of UFortHUDElementWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHUDElementWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHUDElementWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

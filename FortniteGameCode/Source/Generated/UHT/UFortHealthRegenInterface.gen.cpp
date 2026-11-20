@@ -3,22 +3,8 @@
 // Class UFortHealthRegenInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033EEE40, FClassParams RVA 0x033EEEB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHealthRegenInterface();  // RVA 0x0109DB40 (consensus OuterFunc)
-
-class UFortHealthRegenInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortHealthRegenInterface();
-	static void execGetHealthRegenDelayGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHealthRegenGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHealthRegenGameplayEffectClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetShieldRegenDelayGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetShieldRegenGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetShieldRegenGameplayEffectClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D1B0 (end 0x0109D1D2)
 // Original VA: 0x000000014109D1B0 | File offset: 0x0109C7B0

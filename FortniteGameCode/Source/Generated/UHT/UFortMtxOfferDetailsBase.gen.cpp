@@ -3,30 +3,8 @@
 // Class UFortMtxOfferDetailsBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE6D30, FClassParams RVA 0x03CE6E30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMtxOfferDetailsBase();  // RVA 0x028D7680 (consensus OuterFunc)
-
-class UFortMtxOfferDetailsBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortMtxOfferDetailsBase();
-	static void execGetBackground(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBaseQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBonusQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDetailsAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDetailsImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetGradient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNormalPrice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOfferId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSalePrice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetStoreOfferType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTileImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execUpdateMtxOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6F60 (end 0x028D6F82)
 // Original VA: 0x00000001428D6F60 | File offset: 0x028D6560

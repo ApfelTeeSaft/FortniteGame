@@ -3,19 +3,8 @@
 // Class UMediaBlueprintFunctionLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03B63AD8, FClassParams RVA 0x03B63B10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMediaBlueprintFunctionLibrary();  // RVA 0x025DE8D0 (consensus OuterFunc)
-
-class UMediaBlueprintFunctionLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUMediaBlueprintFunctionLibrary();
-	static void execEnumerateAudioCaptureDevices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEnumerateVideoCaptureDevices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEnumerateWebcamCaptureDevices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE670 (end 0x025DE692)
 // Original VA: 0x00000001425DE670 | File offset: 0x025DDC70

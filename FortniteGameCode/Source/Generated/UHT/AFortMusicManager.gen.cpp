@@ -3,19 +3,8 @@
 // Class AFortMusicManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0338AD40, FClassParams RVA 0x0338ADC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortMusicManager();  // RVA 0x0104A830 (consensus OuterFunc)
-
-class AFortMusicManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortMusicManager();
-	static void execChangeMusic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEventHeatPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEventHeatPercentTotal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A2F0 (end 0x0104A312)
 // Original VA: 0x000000014104A2F0 | File offset: 0x010498F0

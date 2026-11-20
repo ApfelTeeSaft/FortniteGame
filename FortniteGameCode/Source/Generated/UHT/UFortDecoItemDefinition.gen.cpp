@@ -3,15 +3,8 @@
 // Class UFortDecoItemDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032FF020, FClassParams RVA 0x032FF290.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDecoItemDefinition();  // RVA 0x00FD0050 (consensus OuterFunc)
-
-class UFortDecoItemDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortDecoItemDefinition_GetBlueprintClass_Statics
 {

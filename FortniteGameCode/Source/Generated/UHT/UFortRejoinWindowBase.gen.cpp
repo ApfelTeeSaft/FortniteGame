@@ -3,15 +3,8 @@
 // Class UFortRejoinWindowBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D0A440, FClassParams RVA 0x03D0A480.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortRejoinWindowBase();  // RVA 0x028ED470 (consensus OuterFunc)
-
-class UFortRejoinWindowBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortRejoinWindowBase_OnTimeoutTimeReached_Statics
 {

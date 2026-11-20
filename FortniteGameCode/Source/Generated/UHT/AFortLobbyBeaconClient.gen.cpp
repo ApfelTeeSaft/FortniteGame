@@ -3,27 +3,8 @@
 // Class AFortLobbyBeaconClient: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0335E650, FClassParams RVA 0x0335E710.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortLobbyBeaconClient();  // RVA 0x0101E220 (consensus OuterFunc)
-
-class AFortLobbyBeaconClient
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortLobbyBeaconClient();
-	static void execClientCreateOrJoinChatRoom(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerIncrementHomeBaseVersion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerSetCharacterGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerSetConsoleUniqueNetId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerSetCurrentCharacterXp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerSetGadget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerSetHeroId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerSetHeroSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerSetHeroType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerSetMatchmakingLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerTeamChatRoomReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101DC70 (end 0x0101DC92)
 // Original VA: 0x000000014101DC70 | File offset: 0x0101D270

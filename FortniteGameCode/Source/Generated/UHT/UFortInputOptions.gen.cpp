@@ -3,15 +3,8 @@
 // Class UFortInputOptions: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CB2F80, FClassParams RVA 0x03CB3000.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortInputOptions();  // RVA 0x028BBF20 (consensus OuterFunc)
-
-class UFortInputOptions
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortInputOptions_ChangeBinding_Statics
 {

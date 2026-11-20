@@ -3,25 +3,8 @@
 // Class UFortTooltipUIContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D31BF0, FClassParams RVA 0x03D31C90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTooltipUIContext();  // RVA 0x02904CA0 (consensus OuterFunc)
-
-class UFortTooltipUIContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortTooltipUIContext();
-	static void execGetCombinedDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetComparisonStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDisplayNameAndMultiBrushForTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTooltipAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTooltipStat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTooltipStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetUIDataForTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetUpgradeStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02904520 (end 0x02904542)
 // Original VA: 0x0000000142904520 | File offset: 0x02903B20

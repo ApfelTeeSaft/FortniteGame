@@ -3,15 +3,8 @@
 // Class UFortSurvivorSquadStatMatchBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D30070, FClassParams RVA 0x03D300A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSurvivorSquadStatMatchBase();  // RVA 0x02904B00 (consensus OuterFunc)
-
-class UFortSurvivorSquadStatMatchBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortSurvivorSquadStatMatchBase_OnStatMatchUpdated_Statics
 {

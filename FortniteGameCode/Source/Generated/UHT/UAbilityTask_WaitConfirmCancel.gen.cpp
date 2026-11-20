@@ -3,15 +3,8 @@
 // Class UAbilityTask_WaitConfirmCancel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F325D0, FClassParams RVA 0x02F32640.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitConfirmCancel();  // RVA 0x0054D500 (consensus OuterFunc)
-
-class UAbilityTask_WaitConfirmCancel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAbilityTask_WaitConfirmCancel_OnCancelCallback_Statics
 {

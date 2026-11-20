@@ -3,35 +3,8 @@
 // Class UKismetArrayLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03914700, FClassParams RVA 0x03914840.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UKismetArrayLibrary();  // RVA 0x024319D0 (consensus OuterFunc)
-
-class UKismetArrayLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUKismetArrayLibrary();
-	static void execArray_Add(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_AddUnique(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_Append(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_Clear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_Contains(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_Find(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_Get(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_Insert(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_IsValidIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_LastIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_Length(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_Remove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_RemoveItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_Resize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_Set(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_Shuffle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execArray_Swap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFilterArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetArrayPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02431730 (end 0x02431752)
 // Original VA: 0x0000000142431730 | File offset: 0x02430D30

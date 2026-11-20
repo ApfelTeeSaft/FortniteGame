@@ -3,15 +3,8 @@
 // Class UFortBuildingTrapSet: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032D01F8, FClassParams RVA 0x032D0240.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBuildingTrapSet();  // RVA 0x00FAD7E0 (consensus OuterFunc)
-
-class UFortBuildingTrapSet
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortBuildingTrapSet_OnRep_Durability_Statics
 {

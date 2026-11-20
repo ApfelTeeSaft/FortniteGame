@@ -3,15 +3,8 @@
 // Class UFortMediaSubtitlesPlayer: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02FBB5B0, FClassParams RVA 0x02FBB600.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMediaSubtitlesPlayer();  // RVA 0x00781710 (consensus OuterFunc)
-
-class UFortMediaSubtitlesPlayer
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortMediaSubtitlesPlayer_BindToMediaPlayer_Statics
 {

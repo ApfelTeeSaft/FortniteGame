@@ -3,22 +3,8 @@
 // Class UFortSchematicItemDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033F5CA0, FClassParams RVA 0x033F5D30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSchematicItemDefinition();  // RVA 0x010A5890 (consensus OuterFunc)
-
-class UFortSchematicItemDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSchematicItemDefinition();
-	static void execGetCraftingSuccessSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCraftingTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCraftingTimeForCharacter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetQuantityProduced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRecipe(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetResultWorldItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4EF0 (end 0x010A4F12)
 // Original VA: 0x00000001410A4EF0 | File offset: 0x010A44F0

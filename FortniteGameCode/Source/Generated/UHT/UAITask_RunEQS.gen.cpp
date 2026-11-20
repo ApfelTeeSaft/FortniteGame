@@ -3,17 +3,8 @@
 // Class UAITask_RunEQS: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036F9480, FClassParams RVA 0x036F94A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAITask_RunEQS();  // RVA 0x01D22F20 (consensus OuterFunc)
-
-class UAITask_RunEQS
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAITask_RunEQS();
-	static void execRunEQS(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22950 (end 0x01D22972)
 // Original VA: 0x0000000141D22950 | File offset: 0x01D21F50

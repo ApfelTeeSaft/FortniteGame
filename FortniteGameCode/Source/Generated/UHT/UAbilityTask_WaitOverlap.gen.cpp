@@ -3,18 +3,8 @@
 // Class UAbilityTask_WaitOverlap: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F33398, FClassParams RVA 0x02F333D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitOverlap();  // RVA 0x0054D810 (consensus OuterFunc)
-
-class UAbilityTask_WaitOverlap
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAbilityTask_WaitOverlap();
-	static void execOnHitCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execWaitForOverlap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D080 (end 0x0054D0A2)
 // Original VA: 0x000000014054D080 | File offset: 0x0054C680

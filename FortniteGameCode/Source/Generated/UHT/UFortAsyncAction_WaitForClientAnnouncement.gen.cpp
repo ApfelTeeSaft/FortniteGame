@@ -3,17 +3,8 @@
 // Class UFortAsyncAction_WaitForClientAnnouncement: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032BFE20, FClassParams RVA 0x032BFE60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_WaitForClientAnnouncement();  // RVA 0x00F9F2D0 (consensus OuterFunc)
-
-class UFortAsyncAction_WaitForClientAnnouncement
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAsyncAction_WaitForClientAnnouncement();
-	static void execWaitForClientAnnouncement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E690 (end 0x00F9E6B2)
 // Original VA: 0x0000000140F9E690 | File offset: 0x00F9DC90

@@ -3,19 +3,8 @@
 // Class UFortSkillTreeCanvasNode: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D133E0, FClassParams RVA 0x03D13450.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreeCanvasNode();  // RVA 0x028F5520 (consensus OuterFunc)
-
-class UFortSkillTreeCanvasNode
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSkillTreeCanvasNode();
-	static void execTryGetNodeDisplayData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetSkillTreeNodeState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetStaticSkillTreeNodeData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4EA0 (end 0x028F4EC2)
 // Original VA: 0x00000001428F4EA0 | File offset: 0x028F44A0

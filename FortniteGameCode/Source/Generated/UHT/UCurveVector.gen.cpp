@@ -3,17 +3,8 @@
 // Class UCurveVector: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038CD958, FClassParams RVA 0x038CD980.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCurveVector();  // RVA 0x023FE5C0 (consensus OuterFunc)
-
-class UCurveVector
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCurveVector();
-	static void execGetVectorValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDC70 (end 0x023FDC92)
 // Original VA: 0x00000001423FDC70 | File offset: 0x023FD270

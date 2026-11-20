@@ -3,15 +3,8 @@
 // Class UClothingSimulationInteractorNv: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039D9780, FClassParams RVA 0x039D97D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UClothingSimulationInteractorNv();  // RVA 0x02524930 (consensus OuterFunc)
-
-class UClothingSimulationInteractorNv
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UClothingSimulationInteractorNv_DisableGravityOverride_Statics
 {

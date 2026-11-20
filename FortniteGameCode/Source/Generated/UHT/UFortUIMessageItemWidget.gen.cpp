@@ -3,15 +3,8 @@
 // Class UFortUIMessageItemWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D48C58, FClassParams RVA 0x03D48CC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIMessageItemWidget();  // RVA 0x02911CA0 (consensus OuterFunc)
-
-class UFortUIMessageItemWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortUIMessageItemWidget_OnBeginRemove_Statics
 {

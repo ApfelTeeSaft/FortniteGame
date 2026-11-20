@@ -3,17 +3,8 @@
 // Class UFortPersistentResourceItemDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033AB560, FClassParams RVA 0x033AB580.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPersistentResourceItemDefinition();  // RVA 0x01065920 (consensus OuterFunc)
-
-class UFortPersistentResourceItemDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortPersistentResourceItemDefinition();
-	static void execIsEventItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01064F90 (end 0x01064FB2)
 // Original VA: 0x0000000141064F90 | File offset: 0x01064590

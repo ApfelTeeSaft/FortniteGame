@@ -3,17 +3,8 @@
 // Class UPawnNoiseEmitterComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039785F0, FClassParams RVA 0x03978640.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UPawnNoiseEmitterComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUPawnNoiseEmitterComponent();
-	static void execMakeNoise(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0510 (end 0x024A0532)
 // Original VA: 0x00000001424A0510 | File offset: 0x0249FB10
@@ -27,4 +18,46 @@ void UPawnNoiseEmitterComponent::StaticRegisterNativesUPawnNoiseEmitterComponent
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UPawnNoiseEmitterComponent_MakeNoise: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UPawnNoiseEmitterComponent_MakeNoise_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A1860 (end 0x024A188F)
+// Original VA: 0x00000001424A1860 | File offset: 0x024A0E60
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UPawnNoiseEmitterComponent_MakeNoise()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UPawnNoiseEmitterComponent_MakeNoise_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UPawnNoiseEmitterComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPawnNoiseEmitterComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPawnNoiseEmitterComponent_MakeNoise, "MakeNoise" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPawnNoiseEmitterComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03978640
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPawnNoiseEmitterComponent_Statics::ClassParams = { &UPawnNoiseEmitterComponent::StaticClass, Z_Construct_UClass_UPawnNoiseEmitterComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UPawnNoiseEmitterComponent_Statics::FuncInfo, 1, Z_Construct_UClass_UPawnNoiseEmitterComponent_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UPawnNoiseEmitterComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A09F0 (end 0x024A0A1F)
+// Original VA: 0x00000001424A09F0 | File offset: 0x0249FFF0
+// Recovery: confirmed (UHT singleton of UPawnNoiseEmitterComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPawnNoiseEmitterComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPawnNoiseEmitterComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

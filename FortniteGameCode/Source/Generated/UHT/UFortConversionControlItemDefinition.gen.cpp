@@ -3,24 +3,8 @@
 // Class UFortConversionControlItemDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032F8050, FClassParams RVA 0x032F8100.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortConversionControlItemDefinition();  // RVA 0x00FCB9F0 (consensus OuterFunc)
-
-class UFortConversionControlItemDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortConversionControlItemDefinition();
-	static void execGetFirstConversionTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaxConversionTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPointsForTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRequiredCatalysts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRequiredItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRequiredItemQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRewardName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTierFromSacrificePoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB170 (end 0x00FCB192)
 // Original VA: 0x0000000140FCB170 | File offset: 0x00FCA770

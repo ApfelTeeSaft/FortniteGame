@@ -3,15 +3,8 @@
 // Class UNavigationSystem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0395A4A0, FClassParams RVA 0x0395A6C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UNavigationSystem();  // RVA 0x0248FB80 (consensus OuterFunc)
-
-class UNavigationSystem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UNavigationSystem_FindPathToActorSynchronously_Statics
 {

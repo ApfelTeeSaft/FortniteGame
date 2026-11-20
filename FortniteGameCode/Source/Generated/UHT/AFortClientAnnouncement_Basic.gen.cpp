@@ -3,21 +3,8 @@
 // Class AFortClientAnnouncement_Basic: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032E52D0, FClassParams RVA 0x032E5330.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortClientAnnouncement_Basic();  // RVA 0x00FC0050 (consensus OuterFunc)
-
-class AFortClientAnnouncement_Basic
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortClientAnnouncement_Basic();
-	static void execOnRep_BasicData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDetailText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDisplayTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTitleText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFA80 (end 0x00FBFAA2)
 // Original VA: 0x0000000140FBFA80 | File offset: 0x00FBF080

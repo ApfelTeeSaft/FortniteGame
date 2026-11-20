@@ -3,18 +3,8 @@
 // Class UBlueprintGameplayStatsLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02FBF648, FClassParams RVA 0x02FBF670.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBlueprintGameplayStatsLibrary();  // RVA 0x007927B0 (consensus OuterFunc)
-
-class UBlueprintGameplayStatsLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUBlueprintGameplayStatsLibrary();
-	static void execEqualEqual_GameplayStatTagGameplayStatTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNotEqual_GameplayStatTagGameplayStatTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00792580 (end 0x007925A2)
 // Original VA: 0x0000000140792580 | File offset: 0x00791B80

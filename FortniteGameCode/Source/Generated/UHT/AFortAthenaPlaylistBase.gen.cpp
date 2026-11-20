@@ -3,14 +3,49 @@
 // Class AFortAthenaPlaylistBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033D5530, FClassParams RVA 0x033D5550.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class AFortAthenaPlaylistBase
+struct Z_Construct_UFunction_AFortAthenaPlaylistBase_OnInitializePlaylist_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B9E0 (end 0x0108BA0F)
+// Original VA: 0x000000014108B9E0 | File offset: 0x0108AFE0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortAthenaPlaylistBase_OnInitializePlaylist()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAthenaPlaylistBase_OnInitializePlaylist_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AFortAthenaPlaylistBase_OnInitializePlaylist: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_AFortAthenaPlaylistBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortAthenaPlaylistBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortAthenaPlaylistBase_OnInitializePlaylist, "OnInitializePlaylist" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortAthenaPlaylistBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033D5550
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortAthenaPlaylistBase_Statics::ClassParams = { &AFortAthenaPlaylistBase::StaticClass, Z_Construct_UClass_AFortAthenaPlaylistBase_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortAthenaPlaylistBase_Statics::FuncInfo, 1, Z_Construct_UClass_AFortAthenaPlaylistBase_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_AFortAthenaPlaylistBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B280 (end 0x0108B2AF)
+// Original VA: 0x000000014108B280 | File offset: 0x0108A880
+// Recovery: confirmed (UHT singleton of AFortAthenaPlaylistBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortAthenaPlaylistBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortAthenaPlaylistBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

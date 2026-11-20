@@ -3,17 +3,8 @@
 // Class UGameplayEffectCustomApplicationRequirement: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F46CB8, FClassParams RVA 0x02F46CD0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameplayEffectCustomApplicationRequirement();  // RVA 0x005645C0 (consensus OuterFunc)
-
-class UGameplayEffectCustomApplicationRequirement
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUGameplayEffectCustomApplicationRequirement();
-	static void execCanApplyGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005635A0 (end 0x005635C2)
 // Original VA: 0x00000001405635A0 | File offset: 0x00562BA0

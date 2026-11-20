@@ -3,15 +3,8 @@
 // Class UFortItemRatingIndicator: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CD9210, FClassParams RVA 0x03CD9290.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemRatingIndicator();  // RVA 0x028CF5A0 (consensus OuterFunc)
-
-class UFortItemRatingIndicator
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortItemRatingIndicator_HandleViewModelChanged_Statics
 {

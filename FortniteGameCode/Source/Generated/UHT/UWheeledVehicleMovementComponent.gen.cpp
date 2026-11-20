@@ -3,38 +3,8 @@
 // Class UWheeledVehicleMovementComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F9D910, FClassParams RVA 0x02F9DC40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UWheeledVehicleMovementComponent();  // RVA 0x0067BEC0 (consensus OuterFunc)
-
-class UWheeledVehicleMovementComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUWheeledVehicleMovementComponent();
-	static void execGetCurrentGear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEngineMaxRotationSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEngineRotationSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetForwardSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTargetGear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetUseAutoGears(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerUpdateState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAvoidanceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAvoidanceGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAvoidanceGroupMask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBrakeInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetGearDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetGearUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetGroupsToAvoid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetGroupsToAvoidMask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetGroupsToIgnore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetGroupsToIgnoreMask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetHandbrakeInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSteeringInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTargetGear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetThrottleInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetUseAutoGears(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0067B840 (end 0x0067B862)
 // Original VA: 0x000000014067B840 | File offset: 0x0067AE40

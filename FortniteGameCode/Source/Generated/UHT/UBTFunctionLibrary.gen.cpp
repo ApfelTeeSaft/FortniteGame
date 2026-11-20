@@ -3,43 +3,8 @@
 // Class UBTFunctionLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x037007D0, FClassParams RVA 0x03700990.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBTFunctionLibrary();  // RVA 0x01D28BE0 (consensus OuterFunc)
-
-class UBTFunctionLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUBTFunctionLibrary();
-	static void execClearBlackboardValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execClearBlackboardValueAsVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBlackboardValueAsActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBlackboardValueAsBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBlackboardValueAsClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBlackboardValueAsEnum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBlackboardValueAsFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBlackboardValueAsInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBlackboardValueAsName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBlackboardValueAsObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBlackboardValueAsRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBlackboardValueAsString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBlackboardValueAsVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOwnerComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOwnersBlackboard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBlackboardValueAsBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBlackboardValueAsClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBlackboardValueAsEnum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBlackboardValueAsFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBlackboardValueAsInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBlackboardValueAsName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBlackboardValueAsObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBlackboardValueAsRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBlackboardValueAsString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBlackboardValueAsVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execStartUsingExternalEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execStopUsingExternalEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D28790 (end 0x01D287B2)
 // Original VA: 0x0000000141D28790 | File offset: 0x01D27D90

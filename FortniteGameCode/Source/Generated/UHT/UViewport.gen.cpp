@@ -3,22 +3,8 @@
 // Class UViewport: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036A4450, FClassParams RVA 0x036A44C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UViewport();  // RVA 0x01BFB280 (consensus OuterFunc)
-
-class UViewport
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUViewport();
-	static void execGetViewLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetViewportWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetViewRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetViewLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetViewRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSpawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFAEE0 (end 0x01BFAF02)
 // Original VA: 0x0000000141BFAEE0 | File offset: 0x01BFA4E0

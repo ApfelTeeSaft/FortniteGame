@@ -3,15 +3,8 @@
 // Class UFortStatIcon: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D24928, FClassParams RVA 0x03D24970.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortStatIcon();  // RVA 0x028FB820 (consensus OuterFunc)
-
-class UFortStatIcon
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortStatIcon_HandleDifferentAttributeSetBP_Statics
 {

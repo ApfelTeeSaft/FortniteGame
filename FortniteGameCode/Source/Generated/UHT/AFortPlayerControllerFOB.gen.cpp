@@ -3,20 +3,8 @@
 // Class AFortPlayerControllerFOB: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033C2DD0, FClassParams RVA 0x033C2E20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerFOB();  // RVA 0x010776A0 (consensus OuterFunc)
-
-class AFortPlayerControllerFOB
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortPlayerControllerFOB();
-	static void execServerAttemptSelectFOBCore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerReloadFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerResetFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerSaveFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01077450 (end 0x01077472)
 // Original VA: 0x0000000141077450 | File offset: 0x01076A50

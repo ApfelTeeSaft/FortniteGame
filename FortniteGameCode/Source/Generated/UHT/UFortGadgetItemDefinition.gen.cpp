@@ -3,20 +3,8 @@
 // Class UFortGadgetItemDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03316A20, FClassParams RVA 0x03316AB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGadgetItemDefinition();  // RVA 0x00FE13F0 (consensus OuterFunc)
-
-class UFortGadgetItemDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortGadgetItemDefinition();
-	static void execGetDecoItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetGameplayAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLevelAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasChargeUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0A90 (end 0x00FE0AB2)
 // Original VA: 0x0000000140FE0A90 | File offset: 0x00FE0090

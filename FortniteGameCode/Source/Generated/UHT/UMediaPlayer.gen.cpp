@@ -3,15 +3,8 @@
 // Class UMediaPlayer: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03B643C0, FClassParams RVA 0x03B64850.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMediaPlayer();  // RVA 0x025DE900 (consensus OuterFunc)
-
-class UMediaPlayer
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UMediaPlayer_CanPause_Statics
 {

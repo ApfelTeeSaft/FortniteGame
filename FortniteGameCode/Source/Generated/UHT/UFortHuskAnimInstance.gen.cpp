@@ -3,19 +3,8 @@
 // Class UFortHuskAnimInstance: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03349808, FClassParams RVA 0x03349940.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHuskAnimInstance();  // RVA 0x01006A90 (consensus OuterFunc)
-
-class UFortHuskAnimInstance
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortHuskAnimInstance();
-	static void execAnimNotify_SleepingFullyBlended(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHuskAnimType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetHuskAnimType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010062A0 (end 0x010062C2)
 // Original VA: 0x00000001410062A0 | File offset: 0x010058A0

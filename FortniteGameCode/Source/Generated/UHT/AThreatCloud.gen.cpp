@@ -3,17 +3,8 @@
 // Class AThreatCloud: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03450EC0, FClassParams RVA 0x03450FD0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AThreatCloud();  // RVA 0x010F1910 (consensus OuterFunc)
-
-class AThreatCloud
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAThreatCloud();
-	static void execGetThreatVolume(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010F1280 (end 0x010F12A2)
 // Original VA: 0x00000001410F1280 | File offset: 0x010F0880

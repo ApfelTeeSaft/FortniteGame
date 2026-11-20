@@ -3,15 +3,8 @@
 // Class AFortClientAnnouncementManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032E6428, FClassParams RVA 0x032E6490.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortClientAnnouncementManager();  // RVA 0x00FC0020 (consensus OuterFunc)
-
-class AFortClientAnnouncementManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortClientAnnouncementManager_OnRep_CancelledAnnouncements_Statics
 {

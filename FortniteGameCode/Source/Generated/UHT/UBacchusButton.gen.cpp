@@ -3,15 +3,8 @@
 // Class UBacchusButton: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C5F498, FClassParams RVA 0x03C5F550.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBacchusButton();  // RVA 0x02887520 (consensus OuterFunc)
-
-class UBacchusButton
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UBacchusButton_OnClicked_Statics
 {

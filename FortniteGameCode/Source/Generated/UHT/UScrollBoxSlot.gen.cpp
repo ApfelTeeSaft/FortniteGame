@@ -3,18 +3,8 @@
 // Class UScrollBoxSlot: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0369CFE8, FClassParams RVA 0x0369D020.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UScrollBoxSlot
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUScrollBoxSlot();
-	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2AC0 (end 0x01BF2AE2)
 // Original VA: 0x0000000141BF2AC0 | File offset: 0x01BF20C0
@@ -29,6 +19,64 @@ void UScrollBoxSlot::StaticRegisterNativesUScrollBoxSlot()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UScrollBoxSlot_SetHorizontalAlignment: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UScrollBoxSlot_SetHorizontalAlignment_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 19 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF36B0 (end 0x01BF36DF)
+// Original VA: 0x0000000141BF36B0 | File offset: 0x01BF2CB0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UScrollBoxSlot_SetHorizontalAlignment()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UScrollBoxSlot_SetHorizontalAlignment_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UScrollBoxSlot_SetPadding: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UScrollBoxSlot_SetPadding_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF36E0 (end 0x01BF370F)
+// Original VA: 0x0000000141BF36E0 | File offset: 0x01BF2CE0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UScrollBoxSlot_SetPadding()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UScrollBoxSlot_SetPadding_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UScrollBoxSlot_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UScrollBoxSlot_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UScrollBoxSlot_SetHorizontalAlignment, "SetHorizontalAlignment" },
+	{ &Z_Construct_UFunction_UScrollBoxSlot_SetPadding, "SetPadding" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UScrollBoxSlot_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0369D020
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UScrollBoxSlot_Statics::ClassParams = { &UScrollBoxSlot::StaticClass, Z_Construct_UClass_UScrollBoxSlot_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UScrollBoxSlot_Statics::FuncInfo, 2, Z_Construct_UClass_UScrollBoxSlot_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UScrollBoxSlot_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2FD0 (end 0x01BF2FFF)
+// Original VA: 0x0000000141BF2FD0 | File offset: 0x01BF25D0
+// Recovery: confirmed (UHT singleton of UScrollBoxSlot) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UScrollBoxSlot()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UScrollBoxSlot_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -3,18 +3,8 @@
 // Class UFortMissionNeutralCompleteParams: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0344A0E0, FClassParams RVA 0x0344A110.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortMissionNeutralCompleteParams
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortMissionNeutralCompleteParams();
-	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E8FC0 (end 0x010E8FE2)
 // Original VA: 0x00000001410E8FC0 | File offset: 0x010E85C0
@@ -29,6 +19,64 @@ void UFortMissionNeutralCompleteParams::StaticRegisterNativesUFortMissionNeutral
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortMissionNeutralCompleteParams_BreakParams: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMissionNeutralCompleteParams_BreakParams_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 27 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EADD0 (end 0x010EADFF)
+// Original VA: 0x00000001410EADD0 | File offset: 0x010EA3D0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMissionNeutralCompleteParams_BreakParams()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionNeutralCompleteParams_BreakParams_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMissionNeutralCompleteParams_SetParams: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMissionNeutralCompleteParams_SetParams_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 26 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EAE00 (end 0x010EAE2F)
+// Original VA: 0x00000001410EAE00 | File offset: 0x010EA400
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMissionNeutralCompleteParams_SetParams()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMissionNeutralCompleteParams_SetParams_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortMissionNeutralCompleteParams_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMissionNeutralCompleteParams_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMissionNeutralCompleteParams_BreakParams, "BreakParams" },
+	{ &Z_Construct_UFunction_UFortMissionNeutralCompleteParams_SetParams, "SetParams" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMissionNeutralCompleteParams_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0344A110
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMissionNeutralCompleteParams_Statics::ClassParams = { &UFortMissionNeutralCompleteParams::StaticClass, Z_Construct_UClass_UFortMissionNeutralCompleteParams_Statics::DependentSingletons, 2, 0x00000280u, Z_Construct_UClass_UFortMissionNeutralCompleteParams_Statics::FuncInfo, 2, Z_Construct_UClass_UFortMissionNeutralCompleteParams_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortMissionNeutralCompleteParams_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9FF0 (end 0x010EA01F)
+// Original VA: 0x00000001410E9FF0 | File offset: 0x010E95F0
+// Recovery: confirmed (UHT singleton of UFortMissionNeutralCompleteParams) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMissionNeutralCompleteParams()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMissionNeutralCompleteParams_Statics::ClassParams);
+	}
+	return OuterClass;
+}

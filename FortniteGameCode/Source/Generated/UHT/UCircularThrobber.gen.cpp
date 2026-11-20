@@ -3,19 +3,8 @@
 // Class UCircularThrobber: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03691E70, FClassParams RVA 0x03691EE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCircularThrobber();  // RVA 0x01BE6170 (consensus OuterFunc)
-
-class UCircularThrobber
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCircularThrobber();
-	static void execSetNumberOfPieces(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetPeriod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5C70 (end 0x01BE5C92)
 // Original VA: 0x0000000141BE5C70 | File offset: 0x01BE5270

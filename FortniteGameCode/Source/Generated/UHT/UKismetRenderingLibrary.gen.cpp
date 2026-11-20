@@ -3,28 +3,8 @@
 // Class UKismetRenderingLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03925EF0, FClassParams RVA 0x03925FC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UKismetRenderingLibrary();  // RVA 0x02452C80 (consensus OuterFunc)
-
-class UKismetRenderingLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUKismetRenderingLibrary();
-	static void execBeginDrawCanvasToRenderTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBreakSkinWeightInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execClearRenderTarget2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConvertRenderTargetToTexture2DEditorOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCreateRenderTarget2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execDrawMaterialToRenderTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEndDrawCanvasToRenderTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execExportRenderTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execExportTexture2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMakeSkinWeightInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execReleaseRenderTarget2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRenderTargetCreateStaticTexture2DEditorOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02452AD0 (end 0x02452AF2)
 // Original VA: 0x0000000142452AD0 | File offset: 0x024520D0

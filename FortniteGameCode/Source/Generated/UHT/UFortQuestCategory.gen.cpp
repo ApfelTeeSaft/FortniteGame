@@ -3,18 +3,8 @@
 // Class UFortQuestCategory: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033E6DC0, FClassParams RVA 0x033E6E10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortQuestCategory
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortQuestCategory();
-	static void execGetUnseenQuestCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasUnseenQuests(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01095E40 (end 0x01095E62)
 // Original VA: 0x0000000141095E40 | File offset: 0x01095440
@@ -29,6 +19,64 @@ void UFortQuestCategory::StaticRegisterNativesUFortQuestCategory()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortQuestCategory_GetUnseenQuestCount: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortQuestCategory_GetUnseenQuestCount_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010969C0 (end 0x010969EF)
+// Original VA: 0x00000001410969C0 | File offset: 0x01095FC0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortQuestCategory_GetUnseenQuestCount()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQuestCategory_GetUnseenQuestCount_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortQuestCategory_HasUnseenQuests: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortQuestCategory_HasUnseenQuests_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010969F0 (end 0x01096A1F)
+// Original VA: 0x00000001410969F0 | File offset: 0x01095FF0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortQuestCategory_HasUnseenQuests()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortQuestCategory_HasUnseenQuests_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortQuestCategory_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortQuestCategory_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortQuestCategory_GetUnseenQuestCount, "GetUnseenQuestCount" },
+	{ &Z_Construct_UFunction_UFortQuestCategory_HasUnseenQuests, "HasUnseenQuests" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortQuestCategory_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033E6E10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortQuestCategory_Statics::ClassParams = { &UFortQuestCategory::StaticClass, Z_Construct_UClass_UFortQuestCategory_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortQuestCategory_Statics::FuncInfo, 2, Z_Construct_UClass_UFortQuestCategory_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortQuestCategory_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010964A0 (end 0x010964CF)
+// Original VA: 0x00000001410964A0 | File offset: 0x01095AA0
+// Recovery: confirmed (UHT singleton of UFortQuestCategory) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortQuestCategory()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortQuestCategory_Statics::ClassParams);
+	}
+	return OuterClass;
+}

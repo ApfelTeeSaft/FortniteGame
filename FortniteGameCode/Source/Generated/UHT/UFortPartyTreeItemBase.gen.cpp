@@ -3,15 +3,8 @@
 // Class UFortPartyTreeItemBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CFD450, FClassParams RVA 0x03CFD490.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPartyTreeItemBase();  // RVA 0x028E6B00 (consensus OuterFunc)
-
-class UFortPartyTreeItemBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortPartyTreeItemBase_ExpansionChanged_Statics
 {

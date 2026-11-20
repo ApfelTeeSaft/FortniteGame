@@ -3,15 +3,8 @@
 // Class UFortLoginStatus: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE5380, FClassParams RVA 0x03CE53C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortLoginStatus();  // RVA 0x028D73B0 (consensus OuterFunc)
-
-class UFortLoginStatus
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortLoginStatus_SetTitleText_Statics
 {

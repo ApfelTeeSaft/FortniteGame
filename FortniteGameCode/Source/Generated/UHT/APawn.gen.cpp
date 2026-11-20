@@ -3,15 +3,8 @@
 // Class APawn: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03978180, FClassParams RVA 0x039783C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_APawn();  // RVA 0x024A08A0 (consensus OuterFunc)
-
-class APawn
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_APawn_AddControllerPitchInput_Statics
 {

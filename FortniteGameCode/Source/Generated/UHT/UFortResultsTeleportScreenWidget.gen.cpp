@@ -3,15 +3,8 @@
 // Class UFortResultsTeleportScreenWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D0A5C0, FClassParams RVA 0x03D0A610.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortResultsTeleportScreenWidget();  // RVA 0x028ED4D0 (consensus OuterFunc)
-
-class UFortResultsTeleportScreenWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimePercentagePassedUpdated_Statics
 {

@@ -3,18 +3,8 @@
 // Class UFortNavSystem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03391AF0, FClassParams RVA 0x03391BD0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortNavSystem();  // RVA 0x01050C70 (consensus OuterFunc)
-
-class UFortNavSystem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortNavSystem();
-	static void execIsNavmeshInRadiusInitialized(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnNavDataRegistered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010500A0 (end 0x010500C2)
 // Original VA: 0x00000001410500A0 | File offset: 0x0104F6A0

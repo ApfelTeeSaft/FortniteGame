@@ -3,17 +3,8 @@
 // Class USubmixEffectSubmixEQPreset: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03B48540, FClassParams RVA 0x03B48560.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class USubmixEffectSubmixEQPreset
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUSubmixEffectSubmixEQPreset();
-	static void execSetSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02559EE0 (end 0x02559F02)
 // Original VA: 0x0000000142559EE0 | File offset: 0x025594E0
@@ -27,4 +18,46 @@ void USubmixEffectSubmixEQPreset::StaticRegisterNativesUSubmixEffectSubmixEQPres
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_USubmixEffectSubmixEQPreset_SetSettings: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_USubmixEffectSubmixEQPreset_SetSettings_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A4D0 (end 0x0255A4FF)
+// Original VA: 0x000000014255A4D0 | File offset: 0x02559AD0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_USubmixEffectSubmixEQPreset_SetSettings()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USubmixEffectSubmixEQPreset_SetSettings_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_USubmixEffectSubmixEQPreset_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USubmixEffectSubmixEQPreset_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USubmixEffectSubmixEQPreset_SetSettings, "SetSettings" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USubmixEffectSubmixEQPreset_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03B48560
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USubmixEffectSubmixEQPreset_Statics::ClassParams = { &USubmixEffectSubmixEQPreset::StaticClass, Z_Construct_UClass_USubmixEffectSubmixEQPreset_Statics::DependentSingletons, 2, 0x00101080u, Z_Construct_UClass_USubmixEffectSubmixEQPreset_Statics::FuncInfo, 1, Z_Construct_UClass_USubmixEffectSubmixEQPreset_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_USubmixEffectSubmixEQPreset_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A1D0 (end 0x0255A1FF)
+// Original VA: 0x000000014255A1D0 | File offset: 0x025597D0
+// Recovery: confirmed (UHT singleton of USubmixEffectSubmixEQPreset) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USubmixEffectSubmixEQPreset()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USubmixEffectSubmixEQPreset_Statics::ClassParams);
+	}
+	return OuterClass;
+}

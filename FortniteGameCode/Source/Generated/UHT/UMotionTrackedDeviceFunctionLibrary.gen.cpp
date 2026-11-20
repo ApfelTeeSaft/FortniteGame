@@ -3,15 +3,8 @@
 // Class UMotionTrackedDeviceFunctionLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x035E5AB0, FClassParams RVA 0x035E5BC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMotionTrackedDeviceFunctionLibrary();  // RVA 0x0199D380 (consensus OuterFunc)
-
-class UMotionTrackedDeviceFunctionLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingForComponent_Statics
 {

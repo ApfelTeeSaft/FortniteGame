@@ -3,15 +3,8 @@
 // Class UActorComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03891550, FClassParams RVA 0x03891790.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UActorComponent();  // RVA 0x023C85B0 (consensus OuterFunc)
-
-class UActorComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UActorComponent_Activate_Statics
 {

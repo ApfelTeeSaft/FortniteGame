@@ -3,19 +3,8 @@
 // Class UMeshVertexPainterKismetLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03953FE8, FClassParams RVA 0x03954020.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMeshVertexPainterKismetLibrary();  // RVA 0x0248B530 (consensus OuterFunc)
-
-class UMeshVertexPainterKismetLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUMeshVertexPainterKismetLibrary();
-	static void execPaintVerticesLerpAlongAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execPaintVerticesSingleColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemovePaintedVertices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248AE80 (end 0x0248AEA2)
 // Original VA: 0x000000014248AE80 | File offset: 0x0248A480

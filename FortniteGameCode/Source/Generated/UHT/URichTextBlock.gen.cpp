@@ -3,17 +3,8 @@
 // Class URichTextBlock: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03698AB8, FClassParams RVA 0x03698AF0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class URichTextBlock
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesURichTextBlock();
-	static void execSetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED1B0 (end 0x01BED1D2)
 // Original VA: 0x0000000141BED1B0 | File offset: 0x01BEC7B0
@@ -27,4 +18,46 @@ void URichTextBlock::StaticRegisterNativesURichTextBlock()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_URichTextBlock_SetText: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_URichTextBlock_SetText_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 8 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEE9B0 (end 0x01BEE9DF)
+// Original VA: 0x0000000141BEE9B0 | File offset: 0x01BEDFB0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_URichTextBlock_SetText()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_URichTextBlock_SetText_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_URichTextBlock_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_URichTextBlock_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_URichTextBlock_SetText, "SetText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_URichTextBlock_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03698AF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_URichTextBlock_Statics::ClassParams = { &URichTextBlock::StaticClass, Z_Construct_UClass_URichTextBlock_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_URichTextBlock_Statics::FuncInfo, 1, Z_Construct_UClass_URichTextBlock_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_URichTextBlock_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED980 (end 0x01BED9AF)
+// Original VA: 0x0000000141BED980 | File offset: 0x01BECF80
+// Recovery: confirmed (UHT singleton of URichTextBlock) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_URichTextBlock()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_URichTextBlock_Statics::ClassParams);
+	}
+	return OuterClass;
+}

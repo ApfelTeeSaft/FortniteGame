@@ -3,15 +3,8 @@
 // Class UFortGameplayAbility: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033255E0, FClassParams RVA 0x033259B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGameplayAbility();  // RVA 0x00FE7AF0 (consensus OuterFunc)
-
-class UFortGameplayAbility
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortGameplayAbility_ApplyAccuracyToTargetLocation_Statics
 {

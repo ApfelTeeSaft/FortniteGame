@@ -3,15 +3,8 @@
 // Class UFortWeaponAttrSet: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0342F300, FClassParams RVA 0x0342F3D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortWeaponAttrSet();  // RVA 0x010D8B40 (consensus OuterFunc)
-
-class UFortWeaponAttrSet
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_AccumulatedWeaponChanceToNotConsumeAmmo_Statics
 {

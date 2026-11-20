@@ -3,17 +3,8 @@
 // Class UFortHomeCMSScreenBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CB0C78, FClassParams RVA 0x03CB0CB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHomeCMSScreenBase();  // RVA 0x028BBE90 (consensus OuterFunc)
-
-class UFortHomeCMSScreenBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortHomeCMSScreenBase();
-	static void execAreTilesLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBB20 (end 0x028BBB42)
 // Original VA: 0x00000001428BBB20 | File offset: 0x028BB120

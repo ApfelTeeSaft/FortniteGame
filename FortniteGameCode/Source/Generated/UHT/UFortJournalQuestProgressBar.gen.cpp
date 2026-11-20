@@ -3,17 +3,8 @@
 // Class UFortJournalQuestProgressBar: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CDA5B0, FClassParams RVA 0x03CDA5F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortJournalQuestProgressBar();  // RVA 0x028CF750 (consensus OuterFunc)
-
-class UFortJournalQuestProgressBar
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortJournalQuestProgressBar();
-	static void execGetProgressDetails(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF300 (end 0x028CF322)
 // Original VA: 0x00000001428CF300 | File offset: 0x028CE900

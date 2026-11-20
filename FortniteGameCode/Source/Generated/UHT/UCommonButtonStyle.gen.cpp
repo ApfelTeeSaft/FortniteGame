@@ -3,31 +3,8 @@
 // Class UCommonButtonStyle: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E7B9F0, FClassParams RVA 0x02E7BB90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonButtonStyle();  // RVA 0x002C2D30 (consensus OuterFunc)
-
-class UCommonButtonStyle
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCommonButtonStyle();
-	static void execGetButtonPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCustomPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDisabledBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDisabledTextStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaterialBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNormalBaseBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNormalHoveredBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNormalHoveredTextStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNormalPressedBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNormalTextStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSelectedBaseBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSelectedHoveredBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSelectedHoveredTextStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSelectedPressedBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSelectedTextStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C29E0 (end 0x002C2A02)
 // Original VA: 0x00000001402C29E0 | File offset: 0x002C1FE0

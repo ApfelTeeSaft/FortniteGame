@@ -3,76 +3,8 @@
 // Class UFortItem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0334B3C0, FClassParams RVA 0x0334B7C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItem();  // RVA 0x01006D90 (consensus OuterFunc)
-
-class UFortItem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortItem();
-	static void execCanBeDropped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCanBeUnslotted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCanBeUpgraded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCanEvolve(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCanUpgradeItemRarity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execDoesMatchSearchString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetActiveAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAlterationSlots(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCoolDownTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDisplayNameWithoutPrefix(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEvolveRestrictionReasonText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFilterCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetItemDefinitionBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetItemGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLargePreviewImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLevelRelativeCostForRarityUpgrade(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLoadedAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaxLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaxTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNormalizedDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumInStack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOwningController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPreviewAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPrimaryCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRarity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRarityColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRaritySecondaryColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRecycleValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRemainingAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSchematicCraftingResultBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSchematicCraftingResultOrCraftedWeaponBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSchematicResultType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSearchTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSecondaryCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSmallPreviewImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTertiaryCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetUpgradeCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetUpgradeResourceItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetUpgradeRestrictionReasonText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasEvolutions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasRarityUpgrade(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsActivatable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsEquipable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsEquipped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsInStorageVault(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsInventoryOverflowItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsSchematicOrCraftedWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsSlotted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsTemporaryItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOwningControllerForTemporaryItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01006390 (end 0x010063B2)
 // Original VA: 0x0000000141006390 | File offset: 0x01005990

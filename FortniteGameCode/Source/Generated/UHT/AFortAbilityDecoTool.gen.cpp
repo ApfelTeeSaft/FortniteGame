@@ -3,20 +3,8 @@
 // Class AFortAbilityDecoTool: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0328F320, FClassParams RVA 0x0328F370.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortAbilityDecoTool();  // RVA 0x00F7D280 (consensus OuterFunc)
-
-class AFortAbilityDecoTool
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortAbilityDecoTool();
-	static void execAbilitySpawnDeco(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPlacementAbilityHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPlacementAbilityInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSpawnParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7C9E0 (end 0x00F7CA02)
 // Original VA: 0x0000000140F7C9E0 | File offset: 0x00F7BFE0

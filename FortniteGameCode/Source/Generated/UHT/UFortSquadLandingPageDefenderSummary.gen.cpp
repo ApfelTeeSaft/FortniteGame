@@ -3,15 +3,8 @@
 // Class UFortSquadLandingPageDefenderSummary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D162D0, FClassParams RVA 0x03D16310.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadLandingPageDefenderSummary();  // RVA 0x028F5920 (consensus OuterFunc)
-
-class UFortSquadLandingPageDefenderSummary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortSquadLandingPageDefenderSummary_HandleAddDefenderSquadDetailsBP_Statics
 {

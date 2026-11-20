@@ -3,25 +3,8 @@
 // Class UFortCollectionBookManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032EE9C0, FClassParams RVA 0x032EEAC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookManager();  // RVA 0x00FC60D0 (consensus OuterFunc)
-
-class UFortCollectionBookManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCollectionBookManager();
-	static void execCalculateBookXp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCalculatePageXp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCanSlotItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execClaimReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBookTotalXPToNextLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBookXPPercentToNextLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetItemInSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execPopulateCollectionBookRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSlotItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5540 (end 0x00FC5562)
 // Original VA: 0x0000000140FC5540 | File offset: 0x00FC4B40

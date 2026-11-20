@@ -3,17 +3,8 @@
 // Class UAbilityTask_ApplyRootMotionMoveToForce: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F2B0C8, FClassParams RVA 0x02F2B130.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce();  // RVA 0x00546830 (consensus OuterFunc)
-
-class UAbilityTask_ApplyRootMotionMoveToForce
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAbilityTask_ApplyRootMotionMoveToForce();
-	static void execApplyRootMotionMoveToForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00546400 (end 0x00546422)
 // Original VA: 0x0000000140546400 | File offset: 0x00545A00

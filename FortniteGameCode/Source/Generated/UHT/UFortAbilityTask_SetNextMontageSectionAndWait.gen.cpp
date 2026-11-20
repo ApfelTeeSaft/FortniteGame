@@ -3,18 +3,8 @@
 // Class UFortAbilityTask_SetNextMontageSectionAndWait: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03296248, FClassParams RVA 0x03296280.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait();  // RVA 0x00F81EE0 (consensus OuterFunc)
-
-class UFortAbilityTask_SetNextMontageSectionAndWait
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAbilityTask_SetNextMontageSectionAndWait();
-	static void execOnMontageBlendingOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetNextMontageSectionAndWait(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F817E0 (end 0x00F81802)
 // Original VA: 0x0000000140F817E0 | File offset: 0x00F80DE0

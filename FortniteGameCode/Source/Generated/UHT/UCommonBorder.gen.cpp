@@ -3,17 +3,8 @@
 // Class UCommonBorder: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E7B590, FClassParams RVA 0x02E7B5C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UCommonBorder
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCommonBorder();
-	static void execSetStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2920 (end 0x002C2942)
 // Original VA: 0x00000001402C2920 | File offset: 0x002C1F20
@@ -27,4 +18,46 @@ void UCommonBorder::StaticRegisterNativesUCommonBorder()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UCommonBorder_SetStyle: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UCommonBorder_SetStyle_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C36C0 (end 0x002C36EF)
+// Original VA: 0x00000001402C36C0 | File offset: 0x002C2CC0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UCommonBorder_SetStyle()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UCommonBorder_SetStyle_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UCommonBorder_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonBorder_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonBorder_SetStyle, "SetStyle" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonBorder_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E7B5C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonBorder_Statics::ClassParams = { &UCommonBorder::StaticClass, Z_Construct_UClass_UCommonBorder_Statics::DependentSingletons, 2, 0x00B00082u, Z_Construct_UClass_UCommonBorder_Statics::FuncInfo, 1, Z_Construct_UClass_UCommonBorder_Statics::PropPointers, 3, "CommonUI", &Z_Construct_UClass_UCommonBorder_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2C30 (end 0x002C2C5F)
+// Original VA: 0x00000001402C2C30 | File offset: 0x002C2230
+// Recovery: confirmed (UHT singleton of UCommonBorder) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonBorder()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonBorder_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -3,30 +3,8 @@
 // Class UTextRenderComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039C4AD0, FClassParams RVA 0x039C4C20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UTextRenderComponent();  // RVA 0x024E7B00 (consensus OuterFunc)
-
-class UTextRenderComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUTextRenderComponent();
-	static void execGetTextLocalSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTextWorldSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_SetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFont(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetHorizSpacingAdjust(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTextMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTextRenderColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVertSpacingAdjust(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetWorldSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetXScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetYScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024E70A0 (end 0x024E70C2)
 // Original VA: 0x00000001424E70A0 | File offset: 0x024E66A0

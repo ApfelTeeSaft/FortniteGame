@@ -3,19 +3,8 @@
 // Class UMaterialInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0394DC60, FClassParams RVA 0x0394DCD0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMaterialInterface();  // RVA 0x024869B0 (consensus OuterFunc)
-
-class UMaterialInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUMaterialInterface();
-	static void execGetBaseMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPhysicalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetForceMipLevelsToBeResident(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02485F40 (end 0x02485F62)
 // Original VA: 0x0000000142485F40 | File offset: 0x02485540

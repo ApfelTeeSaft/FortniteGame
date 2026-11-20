@@ -3,32 +3,8 @@
 // Class UFortHomebaseManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03340680, FClassParams RVA 0x03340820.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHomebaseManager();  // RVA 0x00FFB130 (consensus OuterFunc)
-
-class UFortHomebaseManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortHomebaseManager();
-	static void execAreNodeCostsMet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAreNodePrereqsMet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAreNodeQuestReqsMet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHomebaseName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNodeInstanceIdByNodeId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumAccountInventoryBonusTokens(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumAccountLimitedItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumOwnedNodesInPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumWorldInventoryBonusTokens(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOwnedNodes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPrereqNodeTypeName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSquadCopyById(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSquadPopulation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetWorkerInSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsNodeOwned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsSquadSlotUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA4D0 (end 0x00FFA4F2)
 // Original VA: 0x0000000140FFA4D0 | File offset: 0x00FF9AD0

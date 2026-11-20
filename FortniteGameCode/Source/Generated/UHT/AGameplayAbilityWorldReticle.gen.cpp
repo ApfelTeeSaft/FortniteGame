@@ -3,17 +3,8 @@
 // Class AGameplayAbilityWorldReticle: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F3D310, FClassParams RVA 0x02F3D3B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AGameplayAbilityWorldReticle();  // RVA 0x0055BE60 (consensus OuterFunc)
-
-class AGameplayAbilityWorldReticle
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAGameplayAbilityWorldReticle();
-	static void execFaceTowardSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B020 (end 0x0055B042)
 // Original VA: 0x000000014055B020 | File offset: 0x0055A620

@@ -3,15 +3,8 @@
 // Class AGameStateBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038F7FD0, FClassParams RVA 0x038F80B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AGameStateBase();  // RVA 0x0241F040 (consensus OuterFunc)
-
-class AGameStateBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AGameStateBase_GetPlayerRespawnDelay_Statics
 {

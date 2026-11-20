@@ -3,17 +3,8 @@
 // Class UHorizontalBox: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03696C48, FClassParams RVA 0x03696C60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UHorizontalBox();  // RVA 0x01BED430 (consensus OuterFunc)
-
-class UHorizontalBox
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUHorizontalBox();
-	static void execAddChildToHorizontalBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECEE0 (end 0x01BECF02)
 // Original VA: 0x0000000141BECEE0 | File offset: 0x01BEC4E0

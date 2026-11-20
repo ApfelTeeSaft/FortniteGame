@@ -3,22 +3,121 @@
 // Class UFortLobby: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE4290, FClassParams RVA 0x03CE42F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UFortLobby
+struct Z_Construct_UFunction_UFortLobby_OnBeginCursorOverPlayer_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7E60 (end 0x028D7E8F)
+// Original VA: 0x00000001428D7E60 | File offset: 0x028D7460
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortLobby_OnBeginCursorOverPlayer()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortLobby_OnBeginCursorOverPlayer_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortLobby_OnBeginCursorOverPlayer: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortLobby_OnEndCursorOverPlayer_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7E90 (end 0x028D7EBF)
+// Original VA: 0x00000001428D7E90 | File offset: 0x028D7490
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortLobby_OnEndCursorOverPlayer()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortLobby_OnEndCursorOverPlayer_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortLobby_OnEndCursorOverPlayer: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortLobby_OnNavigationLeft_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7EC0 (end 0x028D7EEF)
+// Original VA: 0x00000001428D7EC0 | File offset: 0x028D74C0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortLobby_OnNavigationLeft()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortLobby_OnNavigationLeft_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortLobby_OnNavigationLeft: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortLobby_OnNavigationRight_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7EF0 (end 0x028D7F1F)
+// Original VA: 0x00000001428D7EF0 | File offset: 0x028D74F0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortLobby_OnNavigationRight()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortLobby_OnNavigationRight_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortLobby_OnNavigationRight: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortLobby_OnPlayerClicked_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7F20 (end 0x028D7F4F)
+// Original VA: 0x00000001428D7F20 | File offset: 0x028D7520
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortLobby_OnPlayerClicked()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortLobby_OnPlayerClicked_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortLobby_OnPlayerClicked: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UFortLobby_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortLobby_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortLobby_OnBeginCursorOverPlayer, "OnBeginCursorOverPlayer" },
+	{ &Z_Construct_UFunction_UFortLobby_OnEndCursorOverPlayer, "OnEndCursorOverPlayer" },
+	{ &Z_Construct_UFunction_UFortLobby_OnNavigationLeft, "OnNavigationLeft" },
+	{ &Z_Construct_UFunction_UFortLobby_OnNavigationRight, "OnNavigationRight" },
+	{ &Z_Construct_UFunction_UFortLobby_OnPlayerClicked, "OnPlayerClicked" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortLobby_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE42F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortLobby_Statics::ClassParams = { &UFortLobby::StaticClass, Z_Construct_UClass_UFortLobby_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortLobby_Statics::FuncInfo, 5, Z_Construct_UClass_UFortLobby_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortLobby_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7300 (end 0x028D732F)
+// Original VA: 0x00000001428D7300 | File offset: 0x028D6900
+// Recovery: confirmed (UHT singleton of UFortLobby) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortLobby()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortLobby_Statics::ClassParams);
+	}
+	return OuterClass;
+}

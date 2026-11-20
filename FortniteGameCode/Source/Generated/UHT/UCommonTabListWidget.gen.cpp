@@ -3,15 +3,8 @@
 // Class UCommonTabListWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E82AF0, FClassParams RVA 0x02E82CE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonTabListWidget();  // RVA 0x002CA5C0 (consensus OuterFunc)
-
-class UCommonTabListWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonCreated__DelegateSignature_Statics
 {

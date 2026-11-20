@@ -3,15 +3,8 @@
 // Class UFortPlayerProfileBannerEditor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CFF6F0, FClassParams RVA 0x03CFF7D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPlayerProfileBannerEditor();  // RVA 0x028E6D00 (consensus OuterFunc)
-
-class UFortPlayerProfileBannerEditor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortPlayerProfileBannerEditor_CommitChosenIconAndColor_Statics
 {

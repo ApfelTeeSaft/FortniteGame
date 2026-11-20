@@ -3,15 +3,8 @@
 // Class UFortTierIndicator: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D31950, FClassParams RVA 0x03D319C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTierIndicator();  // RVA 0x02904C70 (consensus OuterFunc)
-
-class UFortTierIndicator
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortTierIndicator_ClearPreviewState_Statics
 {

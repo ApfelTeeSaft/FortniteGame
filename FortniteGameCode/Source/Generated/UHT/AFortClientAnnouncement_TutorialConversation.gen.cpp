@@ -3,17 +3,8 @@
 // Class AFortClientAnnouncement_TutorialConversation: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032E6050, FClassParams RVA 0x032E6090.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class AFortClientAnnouncement_TutorialConversation
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortClientAnnouncement_TutorialConversation();
-	static void execOnRep_TutorialData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFB10 (end 0x00FBFB32)
 // Original VA: 0x0000000140FBFB10 | File offset: 0x00FBF110
@@ -27,4 +18,47 @@ void AFortClientAnnouncement_TutorialConversation::StaticRegisterNativesAFortCli
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_AFortClientAnnouncement_TutorialConversation_OnRep_TutorialData: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AFortClientAnnouncement_TutorialConversation_OnRep_TutorialData_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC08F0 (end 0x00FC091F)
+// Original VA: 0x0000000140FC08F0 | File offset: 0x00FBFEF0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortClientAnnouncement_TutorialConversation_OnRep_TutorialData()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortClientAnnouncement_TutorialConversation_OnRep_TutorialData_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_AFortClientAnnouncement_TutorialConversation_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortClientAnnouncement_TutorialConversation_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortClientAnnouncement_TutorialConversation_OnRep_TutorialData, "OnRep_TutorialData" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortClientAnnouncement_TutorialConversation_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032E6090
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortClientAnnouncement_TutorialConversation_Statics::ClassParams = { &AFortClientAnnouncement_TutorialConversation::StaticClass, Z_Construct_UClass_AFortClientAnnouncement_TutorialConversation_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_AFortClientAnnouncement_TutorialConversation_Statics::FuncInfo, 1, Z_Construct_UClass_AFortClientAnnouncement_TutorialConversation_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_AFortClientAnnouncement_TutorialConversation_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortClientAnnouncement_TutorialConversation_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0120 (end 0x00FC014F)
+// Original VA: 0x0000000140FC0120 | File offset: 0x00FBF720
+// Recovery: confirmed (UHT singleton of AFortClientAnnouncement_TutorialConversation) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortClientAnnouncement_TutorialConversation()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortClientAnnouncement_TutorialConversation_Statics::ClassParams);
+	}
+	return OuterClass;
+}

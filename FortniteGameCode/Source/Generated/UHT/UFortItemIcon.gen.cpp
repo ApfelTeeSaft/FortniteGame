@@ -3,21 +3,8 @@
 // Class UFortItemIcon: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CCD1E0, FClassParams RVA 0x03CCD270.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortItemIcon
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortItemIcon();
-	static void execSetBrushSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetShadowColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C99F0 (end 0x028C9A12)
 // Original VA: 0x00000001428C99F0 | File offset: 0x028C8FF0
@@ -35,12 +22,118 @@ void UFortItemIcon::StaticRegisterNativesUFortItemIcon()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortItemIcon_SetBrushSize: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemIcon_SetBrushSize_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAA50 (end 0x028CAA7F)
+// Original VA: 0x00000001428CAA50 | File offset: 0x028CA050
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemIcon_SetBrushSize()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemIcon_SetBrushSize_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemIcon_SetColorAndOpacity: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemIcon_SetColorAndOpacity_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAA80 (end 0x028CAAAF)
+// Original VA: 0x00000001428CAA80 | File offset: 0x028CA080
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemIcon_SetColorAndOpacity()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemIcon_SetColorAndOpacity_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemIcon_SetItemDefinition: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemIcon_SetItemDefinition_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAAB0 (end 0x028CAADF)
+// Original VA: 0x00000001428CAAB0 | File offset: 0x028CA0B0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemIcon_SetItemDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemIcon_SetItemDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemIcon_SetOpacity: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemIcon_SetOpacity_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAAE0 (end 0x028CAB0F)
+// Original VA: 0x00000001428CAAE0 | File offset: 0x028CA0E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemIcon_SetOpacity()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemIcon_SetOpacity_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemIcon_SetShadowColorAndOpacity: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemIcon_SetShadowColorAndOpacity_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CAB10 (end 0x028CAB3F)
+// Original VA: 0x00000001428CAB10 | File offset: 0x028CA110
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemIcon_SetShadowColorAndOpacity()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemIcon_SetShadowColorAndOpacity_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortItemIcon_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemIcon_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemIcon_SetBrushSize, "SetBrushSize" },
+	{ &Z_Construct_UFunction_UFortItemIcon_SetColorAndOpacity, "SetColorAndOpacity" },
+	{ &Z_Construct_UFunction_UFortItemIcon_SetItemDefinition, "SetItemDefinition" },
+	{ &Z_Construct_UFunction_UFortItemIcon_SetOpacity, "SetOpacity" },
+	{ &Z_Construct_UFunction_UFortItemIcon_SetShadowColorAndOpacity, "SetShadowColorAndOpacity" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemIcon_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CCD270
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemIcon_Statics::ClassParams = { &UFortItemIcon::StaticClass, Z_Construct_UClass_UFortItemIcon_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortItemIcon_Statics::FuncInfo, 5, Z_Construct_UClass_UFortItemIcon_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortItemIcon_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9EB0 (end 0x028C9EDF)
+// Original VA: 0x00000001428C9EB0 | File offset: 0x028C94B0
+// Recovery: confirmed (UHT singleton of UFortItemIcon) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemIcon()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemIcon_Statics::ClassParams);
+	}
+	return OuterClass;
+}

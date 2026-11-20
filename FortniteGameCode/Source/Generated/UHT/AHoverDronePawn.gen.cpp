@@ -3,18 +3,8 @@
 // Class AHoverDronePawn: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0343E858, FClassParams RVA 0x0343E880.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AHoverDronePawn();  // RVA 0x010E3050 (consensus OuterFunc)
-
-class AHoverDronePawn
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAHoverDronePawn();
-	static void execGetAltitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsMaintainingConstantAltitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E2890 (end 0x010E28B2)
 // Original VA: 0x00000001410E2890 | File offset: 0x010E1E90

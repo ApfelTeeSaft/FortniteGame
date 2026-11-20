@@ -3,18 +3,8 @@
 // Class UGameInstance: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038F0B30, FClassParams RVA 0x038F0BB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameInstance();  // RVA 0x0240FEE0 (consensus OuterFunc)
-
-class UGameInstance
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUGameInstance();
-	static void execDebugCreatePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execDebugRemovePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FA00 (end 0x0240FA22)
 // Original VA: 0x000000014240FA00 | File offset: 0x0240F000

@@ -3,17 +3,8 @@
 // Class UAthenaGamePhaseWidgetBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C52308, FClassParams RVA 0x03C52340.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaGamePhaseWidgetBase();  // RVA 0x0287F3E0 (consensus OuterFunc)
-
-class UAthenaGamePhaseWidgetBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAthenaGamePhaseWidgetBase();
-	static void execHandleGamePhaseStepChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287ED20 (end 0x0287ED42)
 // Original VA: 0x000000014287ED20 | File offset: 0x0287E320

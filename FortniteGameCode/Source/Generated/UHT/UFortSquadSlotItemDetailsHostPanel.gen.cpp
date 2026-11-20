@@ -3,20 +3,8 @@
 // Class UFortSquadSlotItemDetailsHostPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D22790, FClassParams RVA 0x03D227E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortSquadSlotItemDetailsHostPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSquadSlotItemDetailsHostPanel();
-	static void execGetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetItemInSquadSlotBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsSquadSlotLockedBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB1A0 (end 0x028FB1C2)
 // Original VA: 0x00000001428FB1A0 | File offset: 0x028FA7A0
@@ -33,10 +21,99 @@ void UFortSquadSlotItemDetailsHostPanel::StaticRegisterNativesUFortSquadSlotItem
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetIdOfSquadSlotToManageBP: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetIdOfSquadSlotToManageBP_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC240 (end 0x028FC26F)
+// Original VA: 0x00000001428FC240 | File offset: 0x028FB840
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetIdOfSquadSlotToManageBP()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetIdOfSquadSlotToManageBP_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetItemInSquadSlotBP: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetItemInSquadSlotBP_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC270 (end 0x028FC29F)
+// Original VA: 0x00000001428FC270 | File offset: 0x028FB870
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetItemInSquadSlotBP()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetItemInSquadSlotBP_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_IsSquadSlotLockedBP: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_IsSquadSlotLockedBP_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC2A0 (end 0x028FC2CF)
+// Original VA: 0x00000001428FC2A0 | File offset: 0x028FB8A0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_IsSquadSlotLockedBP()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_IsSquadSlotLockedBP_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_SetIdOfSquadSlotToManageBP: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_SetIdOfSquadSlotToManageBP_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FC2D0 (end 0x028FC2FF)
+// Original VA: 0x00000001428FC2D0 | File offset: 0x028FB8D0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_SetIdOfSquadSlotToManageBP()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_SetIdOfSquadSlotToManageBP_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortSquadSlotItemDetailsHostPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadSlotItemDetailsHostPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetIdOfSquadSlotToManageBP, "GetIdOfSquadSlotToManageBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetItemInSquadSlotBP, "GetItemInSquadSlotBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_IsSquadSlotLockedBP, "IsSquadSlotLockedBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_SetIdOfSquadSlotToManageBP, "SetIdOfSquadSlotToManageBP" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadSlotItemDetailsHostPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D227E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadSlotItemDetailsHostPanel_Statics::ClassParams = { &UFortSquadSlotItemDetailsHostPanel::StaticClass, Z_Construct_UClass_UFortSquadSlotItemDetailsHostPanel_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortSquadSlotItemDetailsHostPanel_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_UFortSquadSlotItemDetailsHostPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB590 (end 0x028FB5BF)
+// Original VA: 0x00000001428FB590 | File offset: 0x028FAB90
+// Recovery: confirmed (UHT singleton of UFortSquadSlotItemDetailsHostPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadSlotItemDetailsHostPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadSlotItemDetailsHostPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

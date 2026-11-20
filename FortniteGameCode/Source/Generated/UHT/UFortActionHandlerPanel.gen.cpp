@@ -3,15 +3,8 @@
 // Class UFortActionHandlerPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C608E0, FClassParams RVA 0x03C60980.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortActionHandlerPanel();  // RVA 0x02887700 (consensus OuterFunc)
-
-class UFortActionHandlerPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortActionHandlerPanel_ActivateActionHandler_Statics
 {

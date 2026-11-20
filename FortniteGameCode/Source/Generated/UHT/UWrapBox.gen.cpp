@@ -3,18 +3,8 @@
 // Class UWrapBox: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036ABA90, FClassParams RVA 0x036ABAD0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UWrapBox();  // RVA 0x01C07DB0 (consensus OuterFunc)
-
-class UWrapBox
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUWrapBox();
-	static void execAddChildWrapBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetInnerSlotPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07BF0 (end 0x01C07C12)
 // Original VA: 0x0000000141C07BF0 | File offset: 0x01C071F0

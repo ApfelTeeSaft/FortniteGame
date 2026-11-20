@@ -3,15 +3,8 @@
 // Class UFortSquadSlotSurvivorTraitMatchesDetailWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D23448, FClassParams RVA 0x03D23490.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget();  // RVA 0x028FB6A0 (consensus OuterFunc)
-
-class UFortSquadSlotSurvivorTraitMatchesDetailWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortSquadSlotSurvivorTraitMatchesDetailWidget_HandleTraitValuesUpdatedBP_Statics
 {

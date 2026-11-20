@@ -3,17 +3,8 @@
 // Class UFortIndicator: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033499C8, FClassParams RVA 0x03349A00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortIndicator();  // RVA 0x01006AC0 (consensus OuterFunc)
-
-class UFortIndicator
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortIndicator();
-	static void execOnParentActorEndPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010062D0 (end 0x010062F2)
 // Original VA: 0x00000001410062D0 | File offset: 0x010058D0

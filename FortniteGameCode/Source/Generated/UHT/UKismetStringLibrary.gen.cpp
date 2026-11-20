@@ -3,79 +3,8 @@
 // Class UKismetStringLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03926AA0, FClassParams RVA 0x03926EA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UKismetStringLibrary();  // RVA 0x02452CB0 (consensus OuterFunc)
-
-class UKismetStringLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUKismetStringLibrary();
-	static void execBuildString_Bool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBuildString_Color(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBuildString_Float(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBuildString_Int(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBuildString_IntVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBuildString_Name(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBuildString_Object(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBuildString_Rotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBuildString_Vector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBuildString_Vector2d(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConcat_StrStr(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execContains(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_BoolToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_ByteToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_ColorToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_FloatToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_IntToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_IntVectorToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_NameToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_ObjectToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_RotatorToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_StringToColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_StringToFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_StringToInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_StringToName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_StringToRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_StringToVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_StringToVector2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_TransformToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_Vector2dToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_VectorToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCullArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEndsWith(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEqualEqual_StriStri(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEqualEqual_StrStr(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFindSubstring(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCharacterArrayFromString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCharacterAsNumber(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSubstring(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsNumeric(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execJoinStringArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execLeft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execLeftChop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execLeftPad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execLen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMatchesWildcard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNotEqual_StriStri(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNotEqual_StrStr(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execParseIntoArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execReplace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execReplaceInline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execReverse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRightChop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRightPad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSplit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execStartsWith(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTimeSecondsToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execToLower(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execToUpper(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTrim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTrimTrailing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02452B00 (end 0x02452B22)
 // Original VA: 0x0000000142452B00 | File offset: 0x02452100

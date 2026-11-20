@@ -3,29 +3,8 @@
 // Class ABuildingGameplayActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032779A0, FClassParams RVA 0x03277B00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingGameplayActor();  // RVA 0x00F6C2D0 (consensus OuterFunc)
-
-class ABuildingGameplayActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesABuildingGameplayActor();
-	static void execDisableAbilityDeliveryInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEnableAbilityDeliveryInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTargetingSourceTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_AddGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_ExecuteGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_ExecuteGameplayCueWithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_RemoveGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnRegisteredTouchComponentBeginOverlap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnRegisteredTouchComponentEndOverlap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAbilitySourceLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIgnoreInstigatorCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetInitialVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTouchComponentForAbilityDeliveryInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BD80 (end 0x00F6BDA2)
 // Original VA: 0x0000000140F6BD80 | File offset: 0x00F6B380

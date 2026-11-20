@@ -3,15 +3,8 @@
 // Class UParticleSystemComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039778C0, FClassParams RVA 0x03977BE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UParticleSystemComponent();  // RVA 0x024A0930 (consensus OuterFunc)
-
-class UParticleSystemComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UParticleSystemComponent_BeginTrails_Statics
 {

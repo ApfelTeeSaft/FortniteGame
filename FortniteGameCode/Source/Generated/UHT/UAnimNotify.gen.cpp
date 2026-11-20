@@ -3,17 +3,8 @@
 // Class UAnimNotify: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038A16D8, FClassParams RVA 0x038A1700.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAnimNotify();  // RVA 0x023D63C0 (consensus OuterFunc)
-
-class UAnimNotify
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAnimNotify();
-	static void execGetNotifyName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5790 (end 0x023D57B2)
 // Original VA: 0x00000001423D5790 | File offset: 0x023D4D90

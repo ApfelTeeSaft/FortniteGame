@@ -3,17 +3,8 @@
 // Class UFortStoreSummary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D2ED28, FClassParams RVA 0x03D2ED60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortStoreSummary();  // RVA 0x029049E0 (consensus OuterFunc)
-
-class UFortStoreSummary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortStoreSummary();
-	static void execSetCards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02904340 (end 0x02904362)
 // Original VA: 0x0000000142904340 | File offset: 0x02903940

@@ -3,18 +3,8 @@
 // Class UFortBrushSizeFunctionLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03421488, FClassParams RVA 0x034214B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBrushSizeFunctionLibrary();  // RVA 0x010CAA60 (consensus OuterFunc)
-
-class UFortBrushSizeFunctionLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortBrushSizeFunctionLibrary();
-	static void execGrowBrushSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShrinkBrushSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C93B0 (end 0x010C93D2)
 // Original VA: 0x00000001410C93B0 | File offset: 0x010C89B0

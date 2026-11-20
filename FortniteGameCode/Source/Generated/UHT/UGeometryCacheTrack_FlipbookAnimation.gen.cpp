@@ -3,17 +3,8 @@
 // Class UGeometryCacheTrack_FlipbookAnimation: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03714BD8, FClassParams RVA 0x03714C00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGeometryCacheTrack_FlipbookAnimation();  // RVA 0x01D400A0 (consensus OuterFunc)
-
-class UGeometryCacheTrack_FlipbookAnimation
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUGeometryCacheTrack_FlipbookAnimation();
-	static void execAddMeshSample(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3FDC0 (end 0x01D3FDE2)
 // Original VA: 0x0000000141D3FDC0 | File offset: 0x01D3F3C0

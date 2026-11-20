@@ -3,17 +3,8 @@
 // Class AGeometryCacheActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x037144A8, FClassParams RVA 0x037144D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AGeometryCacheActor();  // RVA 0x01D3FFD0 (consensus OuterFunc)
-
-class AGeometryCacheActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAGeometryCacheActor();
-	static void execGetGeometryCacheComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3FD60 (end 0x01D3FD82)
 // Original VA: 0x0000000141D3FD60 | File offset: 0x01D3F360

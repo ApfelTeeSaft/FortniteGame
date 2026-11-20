@@ -3,15 +3,8 @@
 // Class AFortPlayerMannequin: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033CB9E0, FClassParams RVA 0x033CBB30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerMannequin();  // RVA 0x0107FDA0 (consensus OuterFunc)
-
-class AFortPlayerMannequin
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortPlayerMannequin_CyclePartBP_Statics
 {

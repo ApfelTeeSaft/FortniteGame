@@ -3,17 +3,8 @@
 // Class UFortAsyncAction_LoadCampaignProfiles: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C69FF8, FClassParams RVA 0x03C6A030.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles();  // RVA 0x0288C980 (consensus OuterFunc)
-
-class UFortAsyncAction_LoadCampaignProfiles
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAsyncAction_LoadCampaignProfiles();
-	static void execLoadCampaignProfiles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C4D0 (end 0x0288C4F2)
 // Original VA: 0x000000014288C4D0 | File offset: 0x0288BAD0

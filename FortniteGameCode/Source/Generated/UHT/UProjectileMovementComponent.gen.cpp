@@ -3,19 +3,8 @@
 // Class UProjectileMovementComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039951A0, FClassParams RVA 0x039952B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UProjectileMovementComponent();  // RVA 0x024C2C10 (consensus OuterFunc)
-
-class UProjectileMovementComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUProjectileMovementComponent();
-	static void execLimitVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVelocityInLocalSpace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execStopSimulating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C24E0 (end 0x024C2502)
 // Original VA: 0x00000001424C24E0 | File offset: 0x024C1AE0

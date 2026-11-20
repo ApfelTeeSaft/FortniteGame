@@ -3,14 +3,50 @@
 // Class UFortExpeditionListItemWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C8F658, FClassParams RVA 0x03C8F690.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UFortExpeditionListItemWidget
+struct Z_Construct_UFunction_UFortExpeditionListItemWidget_OnItemChanged_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A4520 (end 0x028A454F)
+// Original VA: 0x00000001428A4520 | File offset: 0x028A3B20
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortExpeditionListItemWidget_OnItemChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortExpeditionListItemWidget_OnItemChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortExpeditionListItemWidget_OnItemChanged: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UFortExpeditionListItemWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortExpeditionListItemWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortExpeditionListItemWidget_OnItemChanged, "OnItemChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortExpeditionListItemWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C8F690
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortExpeditionListItemWidget_Statics::ClassParams = { &UFortExpeditionListItemWidget::StaticClass, Z_Construct_UClass_UFortExpeditionListItemWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortExpeditionListItemWidget_Statics::FuncInfo, 1, Z_Construct_UClass_UFortExpeditionListItemWidget_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortExpeditionListItemWidget_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortExpeditionListItemWidget_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A35C0 (end 0x028A35EF)
+// Original VA: 0x00000001428A35C0 | File offset: 0x028A2BC0
+// Recovery: confirmed (UHT singleton of UFortExpeditionListItemWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortExpeditionListItemWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortExpeditionListItemWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

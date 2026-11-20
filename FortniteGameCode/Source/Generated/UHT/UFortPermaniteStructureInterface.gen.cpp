@@ -3,15 +3,8 @@
 // Class UFortPermaniteStructureInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033AB4C0, FClassParams RVA 0x033AB4E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPermaniteStructureInterface();  // RVA 0x010658F0 (consensus OuterFunc)
-
-class UFortPermaniteStructureInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortPermaniteStructureInterface_OnBoundariesChanged_Statics
 {

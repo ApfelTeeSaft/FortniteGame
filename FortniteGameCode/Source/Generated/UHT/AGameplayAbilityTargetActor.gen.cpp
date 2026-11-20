@@ -3,15 +3,8 @@
 // Class AGameplayAbilityTargetActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F3BB38, FClassParams RVA 0x02F3BBC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AGameplayAbilityTargetActor();  // RVA 0x0055BD40 (consensus OuterFunc)
-
-class AGameplayAbilityTargetActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AGameplayAbilityTargetActor_CancelTargeting_Statics
 {

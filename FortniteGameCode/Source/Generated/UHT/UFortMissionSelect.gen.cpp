@@ -3,17 +3,8 @@
 // Class UFortMissionSelect: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE5BE0, FClassParams RVA 0x03CE5C00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMissionSelect();  // RVA 0x028D74C0 (consensus OuterFunc)
-
-class UFortMissionSelect
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortMissionSelect();
-	static void execNavigateMissionTiles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6E40 (end 0x028D6E62)
 // Original VA: 0x00000001428D6E40 | File offset: 0x028D6440

@@ -3,27 +3,8 @@
 // Class UFortHomebaseNodeItemUtilities: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CA7220, FClassParams RVA 0x03CA72E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHomebaseNodeItemUtilities();  // RVA 0x028B3D80 (consensus OuterFunc)
-
-class UFortHomebaseNodeItemUtilities
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortHomebaseNodeItemUtilities();
-	static void execAreAnyHomebaseNodeItemsUnseenForSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAreAnyHomebaseNodeItemsUnseenForSquadType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHomebaseNodeItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHomebaseNodeItemForSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHomebaseNodeItemForTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHomebaseNodeItemNameForTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHomebaseNodeItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHomebaseNodePageNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsHomebaseNodeItemUnseenForTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsSquadSlotUnseen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetHomebaseNodeState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3950 (end 0x028B3972)
 // Original VA: 0x00000001428B3950 | File offset: 0x028B2F50

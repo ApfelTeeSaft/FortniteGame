@@ -3,17 +3,8 @@
 // Class AFortWeatherAugment: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x034352F0, FClassParams RVA 0x03435310.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortWeatherAugment();  // RVA 0x010DC850 (consensus OuterFunc)
-
-class AFortWeatherAugment
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortWeatherAugment();
-	static void execGetWeatherTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC130 (end 0x010DC152)
 // Original VA: 0x00000001410DC130 | File offset: 0x010DB730

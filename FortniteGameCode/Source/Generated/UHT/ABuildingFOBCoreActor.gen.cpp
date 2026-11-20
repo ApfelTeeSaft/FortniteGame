@@ -3,15 +3,8 @@
 // Class ABuildingFOBCoreActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03276D70, FClassParams RVA 0x03276EF0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingFOBCoreActor();  // RVA 0x00F6C1A0 (consensus OuterFunc)
-
-class ABuildingFOBCoreActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ABuildingFOBCoreActor_GetFOBBoundsBoxOverlappedActors_Statics
 {

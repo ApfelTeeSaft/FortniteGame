@@ -3,15 +3,8 @@
 // Class UFortMissionTimerComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03389FE0, FClassParams RVA 0x0338A140.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMissionTimerComponent();  // RVA 0x0104A9D0 (consensus OuterFunc)
-
-class UFortMissionTimerComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortMissionTimerComponent_ClearMissionTimer_Statics
 {

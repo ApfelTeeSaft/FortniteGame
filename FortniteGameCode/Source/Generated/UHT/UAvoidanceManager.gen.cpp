@@ -3,20 +3,8 @@
 // Class UAvoidanceManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038B14D0, FClassParams RVA 0x038B1550.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAvoidanceManager();  // RVA 0x023E3560 (consensus OuterFunc)
-
-class UAvoidanceManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAvoidanceManager();
-	static void execGetAvoidanceVelocityForComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNewAvoidanceUID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetObjectCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRegisterMovementComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2C30 (end 0x023E2C52)
 // Original VA: 0x00000001423E2C30 | File offset: 0x023E2230

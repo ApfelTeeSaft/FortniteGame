@@ -3,20 +3,8 @@
 // Class UTurnBasedBlueprintLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02EAF3D0, FClassParams RVA 0x02EAF420.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UTurnBasedBlueprintLibrary();  // RVA 0x0032EDF0 (consensus OuterFunc)
-
-class UTurnBasedBlueprintLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUTurnBasedBlueprintLibrary();
-	static void execGetIsMyTurn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMyPlayerIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPlayerDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRegisterTurnBasedMatchInterfaceObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E4C0 (end 0x0032E4E2)
 // Original VA: 0x000000014032E4C0 | File offset: 0x0032DAC0

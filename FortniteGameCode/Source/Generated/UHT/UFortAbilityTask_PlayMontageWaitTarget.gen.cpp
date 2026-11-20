@@ -3,15 +3,8 @@
 // Class UFortAbilityTask_PlayMontageWaitTarget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03296100, FClassParams RVA 0x03296190.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget();  // RVA 0x00F81EA0 (consensus OuterFunc)
-
-class UFortAbilityTask_PlayMontageWaitTarget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortAbilityTask_PlayMontageWaitTarget_EnableScalingWithRateOfFire_Statics
 {

@@ -3,15 +3,8 @@
 // Class AFortInventory: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0334A938, FClassParams RVA 0x0334A9D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortInventory();  // RVA 0x01006850 (consensus OuterFunc)
-
-class AFortInventory
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortInventory_HandleInventoryLocalUpdate_Statics
 {

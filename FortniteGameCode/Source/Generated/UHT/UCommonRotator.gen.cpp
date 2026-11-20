@@ -3,15 +3,8 @@
 // Class UCommonRotator: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E82770, FClassParams RVA 0x02E827F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonRotator();  // RVA 0x002CA590 (consensus OuterFunc)
-
-class UCommonRotator
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCommonRotator_GetSelectedIndex_Statics
 {

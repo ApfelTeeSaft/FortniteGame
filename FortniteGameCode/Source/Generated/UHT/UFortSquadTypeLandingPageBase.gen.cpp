@@ -3,15 +3,8 @@
 // Class UFortSquadTypeLandingPageBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D243E0, FClassParams RVA 0x03D24470.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadTypeLandingPageBase();  // RVA 0x028FB7F0 (consensus OuterFunc)
-
-class UFortSquadTypeLandingPageBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortSquadTypeLandingPageBase_CreateAndAddSquadButton_Statics
 {

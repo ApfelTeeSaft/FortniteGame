@@ -3,15 +3,8 @@
 // Class UFortInventoryContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CBF530, FClassParams RVA 0x03CBFB30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortInventoryContext();  // RVA 0x028C1930 (consensus OuterFunc)
-
-class UFortInventoryContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortInventoryContext_ActivateItem_Statics
 {

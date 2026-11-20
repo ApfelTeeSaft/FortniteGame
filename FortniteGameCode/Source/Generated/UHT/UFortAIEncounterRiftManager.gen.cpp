@@ -3,17 +3,8 @@
 // Class UFortAIEncounterRiftManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032A63E0, FClassParams RVA 0x032A6490.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAIEncounterRiftManager();  // RVA 0x00F8C550 (consensus OuterFunc)
-
-class UFortAIEncounterRiftManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAIEncounterRiftManager();
-	static void execGetAssociatedMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8BD10 (end 0x00F8BD32)
 // Original VA: 0x0000000140F8BD10 | File offset: 0x00F8B310

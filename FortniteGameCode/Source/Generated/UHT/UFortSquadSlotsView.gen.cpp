@@ -3,30 +3,8 @@
 // Class UFortSquadSlotsView: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D238B0, FClassParams RVA 0x03D23A20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotsView();  // RVA 0x028FB710 (consensus OuterFunc)
-
-class UFortSquadSlotsView
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSquadSlotsView();
-	static void execGetIdOfSquadToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetIndexOfSelectedSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleButtonDoubleClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleHoveredButtonChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleRequestOpenSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleRequestViewInAll(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleSelectedButtonChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSelectSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIdOfSquadToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetInPreviewMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIsSelectionLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetSelectedSquadSlotSortTypes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetStaticSquadDataBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB2C0 (end 0x028FB2E2)
 // Original VA: 0x00000001428FB2C0 | File offset: 0x028FA8C0

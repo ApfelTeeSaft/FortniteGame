@@ -3,15 +3,8 @@
 // Class UFortUIManagerInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03428588, FClassParams RVA 0x034285A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIManagerInterface();  // RVA 0x010D4A40 (consensus OuterFunc)
-
-class UFortUIManagerInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortUIManagerInterface_KillConfirmation_Statics
 {

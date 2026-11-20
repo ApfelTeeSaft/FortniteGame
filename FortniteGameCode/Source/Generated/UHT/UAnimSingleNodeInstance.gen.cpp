@@ -3,15 +3,8 @@
 // Class UAnimSingleNodeInstance: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038A2B10, FClassParams RVA 0x038A2C00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAnimSingleNodeInstance();  // RVA 0x023D65F0 (consensus OuterFunc)
-
-class UAnimSingleNodeInstance
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAnimSingleNodeInstance_GetAnimationAsset_Statics
 {

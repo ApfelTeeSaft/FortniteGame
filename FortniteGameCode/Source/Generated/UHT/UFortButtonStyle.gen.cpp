@@ -3,22 +3,8 @@
 // Class UFortButtonStyle: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C75480, FClassParams RVA 0x03C75550.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortButtonStyle();  // RVA 0x028944F0 (consensus OuterFunc)
-
-class UFortButtonStyle
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortButtonStyle();
-	static void execGetBrushBySizeFromMultiSizeBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetButtonPaddingBySize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCustomPaddingBySize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFontBySize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFontBySizeFromMultiSizeFont(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMarginBySizeFromMultiSizeMargin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028940A0 (end 0x028940C2)
 // Original VA: 0x00000001428940A0 | File offset: 0x028936A0

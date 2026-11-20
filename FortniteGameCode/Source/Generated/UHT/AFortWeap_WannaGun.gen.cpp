@@ -3,15 +3,8 @@
 // Class AFortWeap_WannaGun: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0342A578, FClassParams RVA 0x0342A5B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortWeap_WannaGun();  // RVA 0x010D4950 (consensus OuterFunc)
-
-class AFortWeap_WannaGun
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortWeap_WannaGun_OnRep_LastHitActorClass_Statics
 {

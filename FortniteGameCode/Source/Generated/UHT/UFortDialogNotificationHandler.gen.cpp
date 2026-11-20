@@ -3,15 +3,8 @@
 // Class UFortDialogNotificationHandler: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03307950, FClassParams RVA 0x033079D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDialogNotificationHandler();  // RVA 0x00FD6FE0 (consensus OuterFunc)
-
-class UFortDialogNotificationHandler
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortDialogNotificationHandler_OnActionComplete__DelegateSignature_Statics
 {

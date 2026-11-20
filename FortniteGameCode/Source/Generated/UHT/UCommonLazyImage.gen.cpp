@@ -3,15 +3,8 @@
 // Class UCommonLazyImage: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E815B0, FClassParams RVA 0x02E81630.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonLazyImage();  // RVA 0x002CA3B0 (consensus OuterFunc)
-
-class UCommonLazyImage
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCommonLazyImage_ForwardLoadingStateChanged_Statics
 {

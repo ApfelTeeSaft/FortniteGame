@@ -3,22 +3,8 @@
 // Class UFortWeaponRangedItemDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03430B70, FClassParams RVA 0x03430C10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortWeaponRangedItemDefinition();  // RVA 0x010D8C40 (consensus OuterFunc)
-
-class UFortWeaponRangedItemDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortWeaponRangedItemDefinition();
-	static void execGetBulletShellFXTemplate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetProjectileTemplate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShouldSpawnBulletShellFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShouldTraceThroughPawns(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShouldUseNativeWeaponTrace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShouldUsePerfectAimWhenTargetingMinSpread(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8920 (end 0x010D8942)
 // Original VA: 0x00000001410D8920 | File offset: 0x010D7F20

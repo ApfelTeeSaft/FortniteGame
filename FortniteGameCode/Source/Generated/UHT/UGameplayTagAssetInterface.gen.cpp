@@ -3,20 +3,8 @@
 // Class UGameplayTagAssetInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036C1F90, FClassParams RVA 0x036C1FE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTagAssetInterface();  // RVA 0x01C938A0 (consensus OuterFunc)
-
-class UGameplayTagAssetInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUGameplayTagAssetInterface();
-	static void execGetOwnedGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasAllMatchingGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasAnyMatchingGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasMatchingGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C931C0 (end 0x01C931E2)
 // Original VA: 0x0000000141C931C0 | File offset: 0x01C927C0

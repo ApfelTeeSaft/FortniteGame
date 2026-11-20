@@ -3,15 +3,8 @@
 // Class UFortFrontEndContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C91B40, FClassParams RVA 0x03C92140.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortFrontEndContext();  // RVA 0x028A37D0 (consensus OuterFunc)
-
-class UFortFrontEndContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortFrontEndContext_AreProfilesAvailableToWIFE_Statics
 {

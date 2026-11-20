@@ -3,15 +3,8 @@
 // Class UEnvQueryContext_BlueprintBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x037074F0, FClassParams RVA 0x03707540.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEnvQueryContext_BlueprintBase();  // RVA 0x01D2F5E0 (consensus OuterFunc)
-
-class UEnvQueryContext_BlueprintBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UEnvQueryContext_BlueprintBase_ProvideActorsSet_Statics
 {

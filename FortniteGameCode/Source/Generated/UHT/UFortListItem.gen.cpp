@@ -3,15 +3,8 @@
 // Class UFortListItem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE3EB0, FClassParams RVA 0x03CE3F50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortListItem();  // RVA 0x028D7270 (consensus OuterFunc)
-
-class UFortListItem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortListItem_DoesItemHaveChildren_Statics
 {

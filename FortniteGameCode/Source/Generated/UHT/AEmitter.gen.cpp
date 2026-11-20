@@ -3,15 +3,8 @@
 // Class AEmitter: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038D7B20, FClassParams RVA 0x038D7C30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AEmitter();  // RVA 0x02404D50 (consensus OuterFunc)
-
-class AEmitter
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AEmitter_Activate_Statics
 {

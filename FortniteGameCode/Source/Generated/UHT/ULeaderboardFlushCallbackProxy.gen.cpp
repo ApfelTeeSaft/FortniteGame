@@ -3,17 +3,8 @@
 // Class ULeaderboardFlushCallbackProxy: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02EAE018, FClassParams RVA 0x02EAE040.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ULeaderboardFlushCallbackProxy();  // RVA 0x0032EC20 (consensus OuterFunc)
-
-class ULeaderboardFlushCallbackProxy
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesULeaderboardFlushCallbackProxy();
-	static void execCreateProxyObjectForFlush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E3D0 (end 0x0032E3F2)
 // Original VA: 0x000000014032E3D0 | File offset: 0x0032D9D0

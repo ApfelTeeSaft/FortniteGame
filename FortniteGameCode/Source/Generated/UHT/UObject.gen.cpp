@@ -3,7 +3,7 @@
 // Class UObject: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x034E75C0, FClassParams RVA 0x034E75E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UObject();  // RVA 0x013A77D0 (consensus OuterFunc)
 
 struct Z_Construct_UFunction_UObject_ExecuteUbergraph_Statics
@@ -24,4 +24,30 @@ UFunction* Z_Construct_UFunction_UObject_ExecuteUbergraph()
 		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UObject_ExecuteUbergraph_Statics::FuncParams);
 	}
 	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UObject_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UObject_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UObject_ExecuteUbergraph, "ExecuteUbergraph" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UObject_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x034E75E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UObject_Statics::ClassParams = { &UObject::StaticClass, Z_Construct_UClass_UObject_Statics::DependentSingletons, 1, 0x00000081u, Z_Construct_UClass_UObject_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UObject_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x013A77D0 (end 0x013A77FF)
+// Original VA: 0x00000001413A77D0 | File offset: 0x013A6DD0
+// Recovery: confirmed (UHT singleton of UObject) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UObject()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UObject_Statics::ClassParams);
+	}
+	return OuterClass;
 }

@@ -3,15 +3,8 @@
 // Class UInvalidationBox: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03697368, FClassParams RVA 0x036973B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UInvalidationBox();  // RVA 0x01BED530 (consensus OuterFunc)
-
-class UInvalidationBox
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UInvalidationBox_GetCanCache_Statics
 {

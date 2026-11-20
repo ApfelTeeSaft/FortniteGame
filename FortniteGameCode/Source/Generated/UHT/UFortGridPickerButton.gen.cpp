@@ -3,15 +3,8 @@
 // Class UFortGridPickerButton: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C9DC50, FClassParams RVA 0x03C9DCC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGridPickerButton();  // RVA 0x028AC440 (consensus OuterFunc)
-
-class UFortGridPickerButton
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortGridPickerButton_CreateGridWidget__DelegateSignature_Statics
 {

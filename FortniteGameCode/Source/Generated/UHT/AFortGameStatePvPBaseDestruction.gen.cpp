@@ -3,20 +3,8 @@
 // Class AFortGameStatePvPBaseDestruction: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0332EE00, FClassParams RVA 0x0332EE70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortGameStatePvPBaseDestruction();  // RVA 0x00FEE7E0 (consensus OuterFunc)
-
-class AFortGameStatePvPBaseDestruction
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortGameStatePvPBaseDestruction();
-	static void execGetExperienceRequiredForTeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaxTeamExperience(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaxTeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTeamLevelForExperienceAmount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE100 (end 0x00FEE122)
 // Original VA: 0x0000000140FEE100 | File offset: 0x00FED700

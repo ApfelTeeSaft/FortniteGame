@@ -3,21 +3,8 @@
 // Class UFortPlayerAnimInstance: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033ADBD0, FClassParams RVA 0x033AE270.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPlayerAnimInstance();  // RVA 0x010659C0 (consensus OuterFunc)
-
-class UFortPlayerAnimInstance
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortPlayerAnimInstance();
-	static void execAnimNotify_PlayFireFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAnimNotify_PlaySecondaryFireFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAnimNotify_StopFireFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCardinalDirectionFromAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRelativeAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01064FF0 (end 0x01065012)
 // Original VA: 0x0000000141064FF0 | File offset: 0x010645F0

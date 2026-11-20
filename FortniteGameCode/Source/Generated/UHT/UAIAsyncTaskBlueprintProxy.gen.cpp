@@ -3,17 +3,8 @@
 // Class UAIAsyncTaskBlueprintProxy: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036F0770, FClassParams RVA 0x036F07A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAIAsyncTaskBlueprintProxy();  // RVA 0x01D1BAA0 (consensus OuterFunc)
-
-class UAIAsyncTaskBlueprintProxy
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAIAsyncTaskBlueprintProxy();
-	static void execOnMoveCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B140 (end 0x01D1B162)
 // Original VA: 0x0000000141D1B140 | File offset: 0x01D1A740

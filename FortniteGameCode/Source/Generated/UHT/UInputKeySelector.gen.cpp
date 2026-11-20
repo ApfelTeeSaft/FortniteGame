@@ -3,24 +3,8 @@
 // Class UInputKeySelector: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03697100, FClassParams RVA 0x03697220.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UInputKeySelector();  // RVA 0x01BED4D0 (consensus OuterFunc)
-
-class UInputKeySelector
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUInputKeySelector();
-	static void execGetIsSelectingKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAllowGamepadKeys(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAllowModifierKeys(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetEscapeKeys(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetKeySelectionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetNoKeySpecifiedText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSelectedKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTextBlockVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECF70 (end 0x01BECF92)
 // Original VA: 0x0000000141BECF70 | File offset: 0x01BEC570

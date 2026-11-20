@@ -3,15 +3,8 @@
 // Class UFortMiniMapComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0337A140, FClassParams RVA 0x0337A240.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMiniMapComponent();  // RVA 0x01038780 (consensus OuterFunc)
-
-class UFortMiniMapComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortMiniMapComponent_OnRep_MiniMapData_Statics
 {

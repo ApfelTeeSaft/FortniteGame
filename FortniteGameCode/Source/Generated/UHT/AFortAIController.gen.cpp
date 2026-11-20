@@ -3,15 +3,8 @@
 // Class AFortAIController: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0329D2D0, FClassParams RVA 0x0329D4A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortAIController();  // RVA 0x00F87C60 (consensus OuterFunc)
-
-class AFortAIController
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortAIController_CreateBuildingActor_Statics
 {

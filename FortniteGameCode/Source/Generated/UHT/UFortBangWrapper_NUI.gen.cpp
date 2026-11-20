@@ -3,15 +3,8 @@
 // Class UFortBangWrapper_NUI: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C6BBC0, FClassParams RVA 0x03C6BC50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBangWrapper_NUI();  // RVA 0x0288CC90 (consensus OuterFunc)
-
-class UFortBangWrapper_NUI
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortBangWrapper_NUI_OnBangStateChanged_Statics
 {

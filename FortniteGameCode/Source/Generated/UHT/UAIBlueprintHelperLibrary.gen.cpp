@@ -3,27 +3,8 @@
 // Class UAIBlueprintHelperLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036F09E0, FClassParams RVA 0x036F0AA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAIBlueprintHelperLibrary();  // RVA 0x01D1BAE0 (consensus OuterFunc)
-
-class UAIBlueprintHelperLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAIBlueprintHelperLibrary();
-	static void execCreateMoveToProxyObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAIController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBlackboard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurrentPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsValidAIDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsValidAILocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsValidAIRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execLockAIResourcesWithAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSendAIMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSpawnAIFromClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execUnlockAIResourcesWithAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B170 (end 0x01D1B192)
 // Original VA: 0x0000000141D1B170 | File offset: 0x01D1A770

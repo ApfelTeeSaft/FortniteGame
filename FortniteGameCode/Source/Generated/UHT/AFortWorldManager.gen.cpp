@@ -3,15 +3,8 @@
 // Class AFortWorldManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0343C770, FClassParams RVA 0x0343C950.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortWorldManager();  // RVA 0x010E2FB0 (consensus OuterFunc)
-
-class AFortWorldManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortWorldManager_OnRep_InitialGlobalWind_Statics
 {

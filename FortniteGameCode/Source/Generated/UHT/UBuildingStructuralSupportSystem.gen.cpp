@@ -3,19 +3,8 @@
 // Class UBuildingStructuralSupportSystem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0327FD20, FClassParams RVA 0x0327FD70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBuildingStructuralSupportSystem();  // RVA 0x00F71F50 (consensus OuterFunc)
-
-class UBuildingStructuralSupportSystem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUBuildingStructuralSupportSystem();
-	static void execGetLogicalBuildingGroundSupportedActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsBuildingActorStructurallySupported(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_GetLogicalBuildingActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71AC0 (end 0x00F71AE2)
 // Original VA: 0x0000000140F71AC0 | File offset: 0x00F710C0

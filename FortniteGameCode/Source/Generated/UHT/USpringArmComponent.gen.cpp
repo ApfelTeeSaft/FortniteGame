@@ -3,19 +3,8 @@
 // Class USpringArmComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039BE3C0, FClassParams RVA 0x039BE490.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USpringArmComponent();  // RVA 0x024DD7F0 (consensus OuterFunc)
-
-class USpringArmComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUSpringArmComponent();
-	static void execGetTargetRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetUnfixedCameraPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsCollisionFixApplied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD5B0 (end 0x024DD5D2)
 // Original VA: 0x00000001424DD5B0 | File offset: 0x024DCBB0

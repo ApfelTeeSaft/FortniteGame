@@ -51,19 +51,26 @@ image to `local-output/reference-dump/` (ignored). Only hashes and statistics go
 
 ## Generated code
 
-`FortniteGameCode/Source/Generated/UHT/**/*.gen.cpp` and `analysis/functions-uht-*.json` are
-produced from the reference's reflection data. Both need the decrypted image:
+`FortniteGameCode/Source/Generated/UHT/**` and `analysis/functions-uht-*.json` are produced
+from the reference's reflection data. Regenerating them needs the decrypted image. Run the
+tools in this order:
 
 ```
 python tools/analysis/reflection.py      # analysis/reflection-natives.json
-python tools/analysis/unity_order.py     # analysis/unity-order.json (unity source order)
-python tools/codegen/uht_creators.py     # generated sources, manifest, FuncParams evidence
-python tools/codegen/uht_structs.py      # USTRUCT registration code, manifests, evidence
-python tools/codegen/uht_enums.py        # UENUM registration code, manifests, evidence
+python tools/analysis/unity_order.py     # analysis/unity-order.json (unity source order, units)
+python tools/codegen/uht_creators.py     # class fragments: StaticRegisterNatives, creators, constructor
+python tools/codegen/uht_structs.py      # USTRUCT fragments
+python tools/codegen/uht_enums.py        # UENUM fragments (constructor; StaticEnum in .static)
+python tools/codegen/uht_classes.py      # Classes.gen.h, IMPLEMENT_CLASS fragments
+python tools/codegen/unity.py            # Unity/*.gen.cpp: fragments in recovered order
 ```
 
-The generators rewrite only files whose content changed, so MSBuild recompiles only those.
+Only `Source/Generated/UHT/Unity/*.gen.cpp` is compiled. Each unity unit `#include`s per-item
+fragments in the order of the original unity file, after `UnityPrologue.h`, a stand-in for
+the engine headers' namespace-scope objects. `StaticEnum` fragments are compiled in per-run
+units (`<unit>.s<k>`).
 
+The generators rewrite only files whose content changed, so MSBuild recompiles only those.
 The generated sources are committed, so a checkout builds without the decrypted image.
 
 ## Verify

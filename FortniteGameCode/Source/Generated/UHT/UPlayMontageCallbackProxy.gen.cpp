@@ -3,21 +3,8 @@
 // Class UPlayMontageCallbackProxy: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03654950, FClassParams RVA 0x036549D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPlayMontageCallbackProxy();  // RVA 0x01B0E3B0 (consensus OuterFunc)
-
-class UPlayMontageCallbackProxy
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUPlayMontageCallbackProxy();
-	static void execCreateProxyObjectForPlayMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnMontageBlendingOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnMontageEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnNotifyBeginReceived(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnNotifyEndReceived(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0C090 (end 0x01B0C0B2)
 // Original VA: 0x0000000141B0C090 | File offset: 0x01B0B690

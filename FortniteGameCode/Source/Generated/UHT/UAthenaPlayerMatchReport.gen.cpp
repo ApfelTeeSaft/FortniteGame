@@ -3,21 +3,8 @@
 // Class UAthenaPlayerMatchReport: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03261990, FClassParams RVA 0x03261A50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaPlayerMatchReport();  // RVA 0x00F59B60 (consensus OuterFunc)
-
-class UAthenaPlayerMatchReport
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAthenaPlayerMatchReport();
-	static void execGetLootRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTotalBookXpEarned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTotalScoreEarned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTotalSeasonalXpEarned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetXpRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59300 (end 0x00F59322)
 // Original VA: 0x0000000140F59300 | File offset: 0x00F58900

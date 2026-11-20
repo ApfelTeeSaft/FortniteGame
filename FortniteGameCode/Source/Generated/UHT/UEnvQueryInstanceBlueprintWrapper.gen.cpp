@@ -3,20 +3,8 @@
 // Class UEnvQueryInstanceBlueprintWrapper: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03707EF0, FClassParams RVA 0x03707F80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper();  // RVA 0x01D2F8B0 (consensus OuterFunc)
-
-class UEnvQueryInstanceBlueprintWrapper
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUEnvQueryInstanceBlueprintWrapper();
-	static void execGetItemScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetResultsAsActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetResultsAsLocations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetNamedParam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2F090 (end 0x01D2F0B2)
 // Original VA: 0x0000000141D2F090 | File offset: 0x01D2E690

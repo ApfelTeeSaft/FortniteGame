@@ -3,29 +3,8 @@
 // Class UKismetNodeHelperLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03925B20, FClassParams RVA 0x03925C00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UKismetNodeHelperLibrary();  // RVA 0x02452C50 (consensus OuterFunc)
-
-class UKismetNodeHelperLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUKismetNodeHelperLibrary();
-	static void execBitIsMarked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execClearAllBits(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execClearBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEnumeratorName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEnumeratorUserFriendlyName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEnumeratorValueFromIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFirstUnmarkedBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRandomUnmarkedBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetUnmarkedBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValidValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasMarkedBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasUnmarkedBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMarkBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02452AA0 (end 0x02452AC2)
 // Original VA: 0x0000000142452AA0 | File offset: 0x024520A0

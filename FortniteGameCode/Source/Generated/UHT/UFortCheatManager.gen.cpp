@@ -3,15 +3,8 @@
 // Class UFortCheatManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032DDC90, FClassParams RVA 0x032DF480.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCheatManager();  // RVA 0x00FB03D0 (consensus OuterFunc)
-
-class UFortCheatManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortCheatManager_AddAllScores_Statics
 {

@@ -3,31 +3,8 @@
 // Class UFortUIScoreReport: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D4A150, FClassParams RVA 0x03D4A250.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIScoreReport();  // RVA 0x02911E00 (consensus OuterFunc)
-
-class UFortUIScoreReport
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortUIScoreReport();
-	static void execGetBadgeScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurrentPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDifficultBonusMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDifficultBonusScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLevelProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPlayerCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPlayerIDFromScoreReportIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPlayerScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetScoreReportIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetScoreReportIndicesByPlayerID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTeamScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetXpInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetXpToCompleteLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02911730 (end 0x02911752)
 // Original VA: 0x0000000142911730 | File offset: 0x02910D30

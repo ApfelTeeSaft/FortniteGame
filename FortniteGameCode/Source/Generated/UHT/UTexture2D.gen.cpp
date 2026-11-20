@@ -3,18 +3,8 @@
 // Class UTexture2D: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039C99D8, FClassParams RVA 0x039C9A70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UTexture2D();  // RVA 0x024ECC70 (consensus OuterFunc)
-
-class UTexture2D
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUTexture2D();
-	static void execBlueprint_GetSizeX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execBlueprint_GetSizeY(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC3B0 (end 0x024EC3D2)
 // Original VA: 0x00000001424EC3B0 | File offset: 0x024EB9B0

@@ -3,17 +3,8 @@
 // Class UFortTargetSelectionInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03400188, FClassParams RVA 0x034001A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortTargetSelectionInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortTargetSelectionInterface();
-	static void execGetTargetingTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2E00 (end 0x010B2E22)
 // Original VA: 0x00000001410B2E00 | File offset: 0x010B2400
@@ -27,4 +18,45 @@ void UFortTargetSelectionInterface::StaticRegisterNativesUFortTargetSelectionInt
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortTargetSelectionInterface_GetTargetingTransform: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortTargetSelectionInterface_GetTargetingTransform_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B41D0 (end 0x010B41FF)
+// Original VA: 0x00000001410B41D0 | File offset: 0x010B37D0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortTargetSelectionInterface_GetTargetingTransform()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortTargetSelectionInterface_GetTargetingTransform_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortTargetSelectionInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTargetSelectionInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTargetSelectionInterface_GetTargetingTransform, "GetTargetingTransform" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTargetSelectionInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x034001A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTargetSelectionInterface_Statics::ClassParams = { &UFortTargetSelectionInterface::StaticClass, Z_Construct_UClass_UFortTargetSelectionInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortTargetSelectionInterface_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortTargetSelectionInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B3B30 (end 0x010B3B5F)
+// Original VA: 0x00000001410B3B30 | File offset: 0x010B3130
+// Recovery: confirmed (UHT singleton of UFortTargetSelectionInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTargetSelectionInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTargetSelectionInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

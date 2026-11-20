@@ -3,17 +3,8 @@
 // Class UFortTransformKeyPicker: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D32538, FClassParams RVA 0x03D32550.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTransformKeyPicker();  // RVA 0x02904DC0 (consensus OuterFunc)
-
-class UFortTransformKeyPicker
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortTransformKeyPicker();
-	static void execRebuildTransformKeys(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029045E0 (end 0x02904602)
 // Original VA: 0x00000001429045E0 | File offset: 0x02903BE0

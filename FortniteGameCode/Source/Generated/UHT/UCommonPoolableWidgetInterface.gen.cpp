@@ -3,15 +3,8 @@
 // Class UCommonPoolableWidgetInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E82478, FClassParams RVA 0x02E824A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonPoolableWidgetInterface();  // RVA 0x002CA520 (consensus OuterFunc)
-
-class UCommonPoolableWidgetInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnAcquireFromPool_Statics
 {

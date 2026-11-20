@@ -3,15 +3,8 @@
 // Class AFortClientAnnouncement_Cinematic: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032E59B0, FClassParams RVA 0x032E59D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortClientAnnouncement_Cinematic();  // RVA 0x00FC0080 (consensus OuterFunc)
-
-class AFortClientAnnouncement_Cinematic
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortClientAnnouncement_Cinematic_OnPlayerSkippedCutscene_Statics
 {

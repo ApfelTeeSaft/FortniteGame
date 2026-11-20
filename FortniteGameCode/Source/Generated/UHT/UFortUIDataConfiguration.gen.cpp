@@ -3,17 +3,8 @@
 // Class UFortUIDataConfiguration: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D3CE70, FClassParams RVA 0x03D3D410.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIDataConfiguration();  // RVA 0x0290A9A0 (consensus OuterFunc)
-
-class UFortUIDataConfiguration
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortUIDataConfiguration();
-	static void execGetDefenderSubtypeIconMultiSizeBrushByTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A740 (end 0x0290A762)
 // Original VA: 0x000000014290A740 | File offset: 0x02909D40

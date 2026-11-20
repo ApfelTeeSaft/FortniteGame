@@ -3,15 +3,8 @@
 // Class UFortPartyContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0339CA50, FClassParams RVA 0x0339D1A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPartyContext();  // RVA 0x01056150 (consensus OuterFunc)
-
-class UFortPartyContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortPartyContext_OnAthenaReadyStateChanged__DelegateSignature_Statics
 {

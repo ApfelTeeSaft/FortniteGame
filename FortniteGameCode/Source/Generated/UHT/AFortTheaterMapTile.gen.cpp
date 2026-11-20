@@ -3,33 +3,8 @@
 // Class AFortTheaterMapTile: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0340A1D0, FClassParams RVA 0x0340A480.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortTheaterMapTile();  // RVA 0x010BE150 (consensus OuterFunc)
-
-class AFortTheaterMapTile
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortTheaterMapTile();
-	static void execDoesTileAllowQuickplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMissionAlertCategoryName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMissionAlertVisualTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetZoneDifficulty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasValidMissionData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsMissionAlertTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsTileHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsTileLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsTilePlayable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsTileQuestRecommended(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsTileSelectable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsTileValidForMarkedQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnDeselectWrapper(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnMouseOverBegin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnMouseOverEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSelectWrapper(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnTileClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD5B0 (end 0x010BD5D2)
 // Original VA: 0x00000001410BD5B0 | File offset: 0x010BCBB0

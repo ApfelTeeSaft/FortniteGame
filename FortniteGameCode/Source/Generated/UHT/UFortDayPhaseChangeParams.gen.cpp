@@ -3,18 +3,8 @@
 // Class UFortDayPhaseChangeParams: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03449960, FClassParams RVA 0x034499A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortDayPhaseChangeParams
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortDayPhaseChangeParams();
-	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E8E40 (end 0x010E8E62)
 // Original VA: 0x00000001410E8E40 | File offset: 0x010E8440
@@ -29,6 +19,64 @@ void UFortDayPhaseChangeParams::StaticRegisterNativesUFortDayPhaseChangeParams()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortDayPhaseChangeParams_BreakParams: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortDayPhaseChangeParams_BreakParams_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 27 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EAAD0 (end 0x010EAAFF)
+// Original VA: 0x00000001410EAAD0 | File offset: 0x010EA0D0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortDayPhaseChangeParams_BreakParams()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDayPhaseChangeParams_BreakParams_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortDayPhaseChangeParams_SetParams: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortDayPhaseChangeParams_SetParams_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 26 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EAB00 (end 0x010EAB2F)
+// Original VA: 0x00000001410EAB00 | File offset: 0x010EA100
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortDayPhaseChangeParams_SetParams()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortDayPhaseChangeParams_SetParams_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortDayPhaseChangeParams_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortDayPhaseChangeParams_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortDayPhaseChangeParams_BreakParams, "BreakParams" },
+	{ &Z_Construct_UFunction_UFortDayPhaseChangeParams_SetParams, "SetParams" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortDayPhaseChangeParams_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x034499A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortDayPhaseChangeParams_Statics::ClassParams = { &UFortDayPhaseChangeParams::StaticClass, Z_Construct_UClass_UFortDayPhaseChangeParams_Statics::DependentSingletons, 2, 0x00000280u, Z_Construct_UClass_UFortDayPhaseChangeParams_Statics::FuncInfo, 2, Z_Construct_UClass_UFortDayPhaseChangeParams_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortDayPhaseChangeParams_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9E10 (end 0x010E9E3F)
+// Original VA: 0x00000001410E9E10 | File offset: 0x010E9410
+// Recovery: confirmed (UHT singleton of UFortDayPhaseChangeParams) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortDayPhaseChangeParams()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortDayPhaseChangeParams_Statics::ClassParams);
+	}
+	return OuterClass;
+}

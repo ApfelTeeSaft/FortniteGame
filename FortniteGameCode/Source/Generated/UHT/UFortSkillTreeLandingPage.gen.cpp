@@ -3,17 +3,8 @@
 // Class UFortSkillTreeLandingPage: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D139E8, FClassParams RVA 0x03D13A40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreeLandingPage();  // RVA 0x028F55A0 (consensus OuterFunc)
-
-class UFortSkillTreeLandingPage
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSkillTreeLandingPage();
-	static void execSetupEventBasedSkillTreePages(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4F00 (end 0x028F4F22)
 // Original VA: 0x00000001428F4F00 | File offset: 0x028F4500

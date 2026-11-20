@@ -3,15 +3,8 @@
 // Class APlayerController: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03985670, FClassParams RVA 0x03985FF0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_APlayerController();  // RVA 0x024A9E00 (consensus OuterFunc)
-
-class APlayerController
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_APlayerController_ActivateTouchInterface_Statics
 {

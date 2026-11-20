@@ -3,15 +3,8 @@
 // Class UCommonWidgetCarousel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E86490, FClassParams RVA 0x02E86530.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonWidgetCarousel();  // RVA 0x002D0540 (consensus OuterFunc)
-
-class UCommonWidgetCarousel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCommonWidgetCarousel_BeginAutoScrolling_Statics
 {

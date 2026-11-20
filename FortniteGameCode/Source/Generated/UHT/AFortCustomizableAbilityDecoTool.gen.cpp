@@ -3,15 +3,8 @@
 // Class AFortCustomizableAbilityDecoTool: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032F87B0, FClassParams RVA 0x032F8890.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortCustomizableAbilityDecoTool();  // RVA 0x00FCB7E0 (consensus OuterFunc)
-
-class AFortCustomizableAbilityDecoTool
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_BPOnEquip_Statics
 {

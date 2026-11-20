@@ -3,15 +3,8 @@
 // Class UFortItemInspectionScreen: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CCD3A0, FClassParams RVA 0x03CCD3E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemInspectionScreen();  // RVA 0x028C9F20 (consensus OuterFunc)
-
-class UFortItemInspectionScreen
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortItemInspectionScreen_GetCycleWidget_Statics
 {

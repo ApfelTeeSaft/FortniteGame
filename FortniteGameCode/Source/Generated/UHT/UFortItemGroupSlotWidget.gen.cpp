@@ -3,15 +3,8 @@
 // Class UFortItemGroupSlotWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D55F60, FClassParams RVA 0x03D56130.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemGroupSlotWidget();  // RVA 0x02918A00 (consensus OuterFunc)
-
-class UFortItemGroupSlotWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnAttributeBonusValueChanged__DelegateSignature_Statics
 {

@@ -3,18 +3,8 @@
 // Class UFortCollectionBookPicker: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C76758, FClassParams RVA 0x03C767A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookPicker();  // RVA 0x02894700 (consensus OuterFunc)
-
-class UFortCollectionBookPicker
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCollectionBookPicker();
-	static void execGetCurrentSlottedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSlotItemConfirmationComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02894280 (end 0x028942A2)
 // Original VA: 0x0000000142894280 | File offset: 0x02893880

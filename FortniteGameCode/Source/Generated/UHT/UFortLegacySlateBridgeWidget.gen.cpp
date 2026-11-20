@@ -3,18 +3,8 @@
 // Class UFortLegacySlateBridgeWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE3BE8, FClassParams RVA 0x03CE3C30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortLegacySlateBridgeWidget();  // RVA 0x028D7210 (consensus OuterFunc)
-
-class UFortLegacySlateBridgeWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortLegacySlateBridgeWidget();
-	static void execSetOnCloseHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execUpdateSlateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6C90 (end 0x028D6CB2)
 // Original VA: 0x00000001428D6C90 | File offset: 0x028D6290

@@ -3,17 +3,8 @@
 // Class UFortRewardExpeditionData: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D0AD30, FClassParams RVA 0x03D0AD50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortRewardExpeditionData
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortRewardExpeditionData();
-	static void execGetIconBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECF50 (end 0x028ECF72)
 // Original VA: 0x00000001428ECF50 | File offset: 0x028EC550
@@ -27,4 +18,46 @@ void UFortRewardExpeditionData::StaticRegisterNativesUFortRewardExpeditionData()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortRewardExpeditionData_GetIconBrush: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortRewardExpeditionData_GetIconBrush_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028EE3C0 (end 0x028EE3EF)
+// Original VA: 0x00000001428EE3C0 | File offset: 0x028ED9C0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortRewardExpeditionData_GetIconBrush()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortRewardExpeditionData_GetIconBrush_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortRewardExpeditionData_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortRewardExpeditionData_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortRewardExpeditionData_GetIconBrush, "GetIconBrush" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortRewardExpeditionData_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D0AD50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortRewardExpeditionData_Statics::ClassParams = { &UFortRewardExpeditionData::StaticClass, Z_Construct_UClass_UFortRewardExpeditionData_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortRewardExpeditionData_Statics::FuncInfo, 1, Z_Construct_UClass_UFortRewardExpeditionData_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortRewardExpeditionData_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED620 (end 0x028ED64F)
+// Original VA: 0x00000001428ED620 | File offset: 0x028ECC20
+// Recovery: confirmed (UHT singleton of UFortRewardExpeditionData) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortRewardExpeditionData()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortRewardExpeditionData_Statics::ClassParams);
+	}
+	return OuterClass;
+}

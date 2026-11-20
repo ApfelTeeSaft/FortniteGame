@@ -3,17 +3,8 @@
 // Class AFortBodyPartOverridePreviewActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032CE918, FClassParams RVA 0x032CE950.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortBodyPartOverridePreviewActor();  // RVA 0x00FAD020 (consensus OuterFunc)
-
-class AFortBodyPartOverridePreviewActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortBodyPartOverridePreviewActor();
-	static void execApplyMyCosmeticItemToHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACC30 (end 0x00FACC52)
 // Original VA: 0x0000000140FACC30 | File offset: 0x00FAC230

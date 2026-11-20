@@ -3,15 +3,8 @@
 // Class UFortBaseCanvasEntity: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CF19A0, FClassParams RVA 0x03CF1A10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBaseCanvasEntity();  // RVA 0x028DE320 (consensus OuterFunc)
-
-class UFortBaseCanvasEntity
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortBaseCanvasEntity_Intro_Statics
 {

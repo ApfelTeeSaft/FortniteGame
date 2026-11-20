@@ -3,17 +3,8 @@
 // Class UFortAccountBuffItem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03297470, FClassParams RVA 0x03297490.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortAccountBuffItem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAccountBuffItem();
-	static void execIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81870 (end 0x00F81892)
 // Original VA: 0x0000000140F81870 | File offset: 0x00F80E70
@@ -27,4 +18,46 @@ void UFortAccountBuffItem::StaticRegisterNativesUFortAccountBuffItem()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortAccountBuffItem_IsActive: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortAccountBuffItem_IsActive_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82890 (end 0x00F828BF)
+// Original VA: 0x0000000140F82890 | File offset: 0x00F81E90
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortAccountBuffItem_IsActive()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAccountBuffItem_IsActive_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortAccountBuffItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAccountBuffItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAccountBuffItem_IsActive, "IsActive" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAccountBuffItem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03297490
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAccountBuffItem_Statics::ClassParams = { &UFortAccountBuffItem::StaticClass, Z_Construct_UClass_UFortAccountBuffItem_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortAccountBuffItem_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAccountBuffItem_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortAccountBuffItem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82010 (end 0x00F8203F)
+// Original VA: 0x0000000140F82010 | File offset: 0x00F81610
+// Recovery: confirmed (UHT singleton of UFortAccountBuffItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAccountBuffItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAccountBuffItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

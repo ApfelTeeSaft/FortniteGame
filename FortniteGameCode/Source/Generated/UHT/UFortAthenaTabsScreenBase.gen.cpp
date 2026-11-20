@@ -3,20 +3,8 @@
 // Class UFortAthenaTabsScreenBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C6AAA0, FClassParams RVA 0x03C6AB10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAthenaTabsScreenBase();  // RVA 0x0288CB30 (consensus OuterFunc)
-
-class UFortAthenaTabsScreenBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAthenaTabsScreenBase();
-	static void execCanShowPrototypeTab(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCanShowSeasonShopTab(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleFeatureNavigateRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleFeatureStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C620 (end 0x0288C642)
 // Original VA: 0x000000014288C620 | File offset: 0x0288BC20

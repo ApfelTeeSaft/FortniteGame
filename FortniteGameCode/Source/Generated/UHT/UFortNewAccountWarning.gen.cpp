@@ -3,15 +3,8 @@
 // Class UFortNewAccountWarning: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CF0D18, FClassParams RVA 0x03CF0D50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortNewAccountWarning();  // RVA 0x028DE450 (consensus OuterFunc)
-
-class UFortNewAccountWarning
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortNewAccountWarning_HandleBackClicked_Statics
 {

@@ -3,15 +3,8 @@
 // Class UFortItemTileView: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CD95B0, FClassParams RVA 0x03CD96D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemTileView();  // RVA 0x028CF600 (consensus OuterFunc)
-
-class UFortItemTileView
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortItemTileView_OnInventoryUpdated__DelegateSignature_Statics
 {

@@ -3,22 +3,8 @@
 // Class UFortSocialItem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033F8020, FClassParams RVA 0x033F80C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSocialItem();  // RVA 0x010A5A90 (consensus OuterFunc)
-
-class UFortSocialItem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSocialItem();
-	static void execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLFGTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPresenceStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetUniquePlayerId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsLFG(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4FE0 (end 0x010A5002)
 // Original VA: 0x00000001410A4FE0 | File offset: 0x010A45E0

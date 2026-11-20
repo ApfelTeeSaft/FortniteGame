@@ -3,20 +3,8 @@
 // Class UFortMaterialProgressBar: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE59C0, FClassParams RVA 0x03CE5A50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMaterialProgressBar();  // RVA 0x028D7420 (consensus OuterFunc)
-
-class UFortMaterialProgressBar
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortMaterialProgressBar();
-	static void execSetBackgroundColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetProgressBarSectionColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetProgressBarSectionPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6DE0 (end 0x028D6E02)
 // Original VA: 0x00000001428D6DE0 | File offset: 0x028D63E0

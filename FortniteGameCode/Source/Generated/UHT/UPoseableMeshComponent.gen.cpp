@@ -3,26 +3,8 @@
 // Class UPoseableMeshComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0398DB40, FClassParams RVA 0x0398DBF0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPoseableMeshComponent();  // RVA 0x024B7F60 (consensus OuterFunc)
-
-class UPoseableMeshComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUPoseableMeshComponent();
-	static void execCopyPoseFromSkeletalComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBoneLocationByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBoneRotationByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBoneScaleByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBoneTransformByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execResetBoneTransformByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBoneLocationByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBoneRotationByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBoneScaleByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBoneTransformByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7780 (end 0x024B77A2)
 // Original VA: 0x00000001424B7780 | File offset: 0x024B6D80

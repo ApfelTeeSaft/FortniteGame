@@ -3,17 +3,8 @@
 // Class UAchievementWriteCallbackProxy: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02EAD290, FClassParams RVA 0x02EAD2C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAchievementWriteCallbackProxy();  // RVA 0x0032E930 (consensus OuterFunc)
-
-class UAchievementWriteCallbackProxy
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAchievementWriteCallbackProxy();
-	static void execWriteAchievementProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E160 (end 0x0032E182)
 // Original VA: 0x000000014032E160 | File offset: 0x0032D760

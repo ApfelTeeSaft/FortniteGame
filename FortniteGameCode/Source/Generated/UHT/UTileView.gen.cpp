@@ -3,15 +3,8 @@
 // Class UTileView: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036A2DA0, FClassParams RVA 0x036A2E10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UTileView();  // RVA 0x01BFB100 (consensus OuterFunc)
-
-class UTileView
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UTileView_RequestListRefresh_Statics
 {

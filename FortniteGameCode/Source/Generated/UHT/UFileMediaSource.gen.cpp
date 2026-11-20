@@ -3,17 +3,8 @@
 // Class UFileMediaSource: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03B637A0, FClassParams RVA 0x03B637D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFileMediaSource();  // RVA 0x025DE8A0 (consensus OuterFunc)
-
-class UFileMediaSource
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFileMediaSource();
-	static void execSetFilePath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE640 (end 0x025DE662)
 // Original VA: 0x00000001425DE640 | File offset: 0x025DDC40

@@ -3,17 +3,8 @@
 // Class UVoipListenerSynthComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02EAF4A0, FClassParams RVA 0x02EAF4C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UVoipListenerSynthComponent();  // RVA 0x0032EE20 (consensus OuterFunc)
-
-class UVoipListenerSynthComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUVoipListenerSynthComponent();
-	static void execIsIdling(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E4F0 (end 0x0032E512)
 // Original VA: 0x000000014032E4F0 | File offset: 0x0032DAF0

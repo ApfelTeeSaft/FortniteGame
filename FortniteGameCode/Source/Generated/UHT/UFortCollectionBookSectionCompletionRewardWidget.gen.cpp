@@ -3,18 +3,8 @@
 // Class UFortCollectionBookSectionCompletionRewardWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C81388, FClassParams RVA 0x03C813E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortCollectionBookSectionCompletionRewardWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCollectionBookSectionCompletionRewardWidget();
-	static void execHandleRewardDetailsModalWidgetDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnRewardDetailsButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AD30 (end 0x0289AD52)
 // Original VA: 0x000000014289AD30 | File offset: 0x0289A330
@@ -29,6 +19,64 @@ void UFortCollectionBookSectionCompletionRewardWidget::StaticRegisterNativesUFor
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_HandleRewardDetailsModalWidgetDeactivated: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_HandleRewardDetailsModalWidgetDeactivated_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B8E0 (end 0x0289B90F)
+// Original VA: 0x000000014289B8E0 | File offset: 0x0289AEE0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_HandleRewardDetailsModalWidgetDeactivated()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_HandleRewardDetailsModalWidgetDeactivated_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_OnRewardDetailsButtonClicked: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_OnRewardDetailsButtonClicked_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B910 (end 0x0289B93F)
+// Original VA: 0x000000014289B910 | File offset: 0x0289AF10
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_OnRewardDetailsButtonClicked()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_OnRewardDetailsButtonClicked_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_HandleRewardDetailsModalWidgetDeactivated, "HandleRewardDetailsModalWidgetDeactivated" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionCompletionRewardWidget_OnRewardDetailsButtonClicked, "OnRewardDetailsButtonClicked" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C813E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget_Statics::ClassParams = { &UFortCollectionBookSectionCompletionRewardWidget::StaticClass, Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget_Statics::FuncInfo, 2, Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B1F0 (end 0x0289B21F)
+// Original VA: 0x000000014289B1F0 | File offset: 0x0289A7F0
+// Recovery: confirmed (UHT singleton of UFortCollectionBookSectionCompletionRewardWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

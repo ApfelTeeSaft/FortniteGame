@@ -3,24 +3,8 @@
 // Class ALevelSequenceActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03719E00, FClassParams RVA 0x03719EF0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ALevelSequenceActor();  // RVA 0x01D4ED40 (consensus OuterFunc)
-
-class ALevelSequenceActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesALevelSequenceActor();
-	static void execAddBinding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSequence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRemoveBinding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execResetBinding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execResetBindings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBinding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetEventReceivers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSequence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4E830 (end 0x01D4E852)
 // Original VA: 0x0000000141D4E830 | File offset: 0x01D4DE30

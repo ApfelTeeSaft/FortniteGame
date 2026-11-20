@@ -3,15 +3,8 @@
 // Class AStrategicBuildingActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03450BD0, FClassParams RVA 0x03450DE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AStrategicBuildingActor();  // RVA 0x010F18E0 (consensus OuterFunc)
-
-class AStrategicBuildingActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AStrategicBuildingActor_ApplyProximityPulseEffects_Statics
 {

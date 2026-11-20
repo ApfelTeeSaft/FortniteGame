@@ -3,15 +3,8 @@
 // Class UCommonInputReflector: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E81448, FClassParams RVA 0x02E814A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonInputReflector();  // RVA 0x002CA380 (consensus OuterFunc)
-
-class UCommonInputReflector
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCommonInputReflector_ClearButtons_Statics
 {

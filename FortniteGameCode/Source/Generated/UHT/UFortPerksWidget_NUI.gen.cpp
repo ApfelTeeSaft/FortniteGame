@@ -3,15 +3,8 @@
 // Class UFortPerksWidget_NUI: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CFD910, FClassParams RVA 0x03CFD9D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPerksWidget_NUI();  // RVA 0x028E6C30 (consensus OuterFunc)
-
-class UFortPerksWidget_NUI
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortPerksWidget_NUI_OnGeneratePerk_Statics
 {

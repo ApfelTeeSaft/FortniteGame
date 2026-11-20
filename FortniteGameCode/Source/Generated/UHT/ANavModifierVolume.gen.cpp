@@ -3,17 +3,8 @@
 // Class ANavModifierVolume: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0395BAD0, FClassParams RVA 0x0395BB00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class ANavModifierVolume
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesANavModifierVolume();
-	static void execSetAreaClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F320 (end 0x0248F342)
 // Original VA: 0x000000014248F320 | File offset: 0x0248E920
@@ -27,4 +18,47 @@ void ANavModifierVolume::StaticRegisterNativesANavModifierVolume()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_ANavModifierVolume_SetAreaClass: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_ANavModifierVolume_SetAreaClass_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248FEB0 (end 0x0248FEDF)
+// Original VA: 0x000000014248FEB0 | File offset: 0x0248F4B0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_ANavModifierVolume_SetAreaClass()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ANavModifierVolume_SetAreaClass_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_ANavModifierVolume_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ANavModifierVolume_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ANavModifierVolume_SetAreaClass, "SetAreaClass" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ANavModifierVolume_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0395BB00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ANavModifierVolume_Statics::ClassParams = { &ANavModifierVolume::StaticClass, Z_Construct_UClass_ANavModifierVolume_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ANavModifierVolume_Statics::FuncInfo, 1, Z_Construct_UClass_ANavModifierVolume_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_ANavModifierVolume_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_ANavModifierVolume_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F7D0 (end 0x0248F7FF)
+// Original VA: 0x000000014248F7D0 | File offset: 0x0248EDD0
+// Recovery: confirmed (UHT singleton of ANavModifierVolume) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ANavModifierVolume()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ANavModifierVolume_Statics::ClassParams);
+	}
+	return OuterClass;
+}

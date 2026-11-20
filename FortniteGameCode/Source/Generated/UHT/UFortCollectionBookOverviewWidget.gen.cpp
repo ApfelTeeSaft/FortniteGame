@@ -3,15 +3,8 @@
 // Class UFortCollectionBookOverviewWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C76270, FClassParams RVA 0x03C76300.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookOverviewWidget();  // RVA 0x02894640 (consensus OuterFunc)
-
-class UFortCollectionBookOverviewWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortCollectionBookOverviewWidget_OnActivated_Statics
 {

@@ -3,20 +3,8 @@
 // Class UAthenaLeaderboardScreenBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C53AC0, FClassParams RVA 0x03C53BE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaLeaderboardScreenBase();  // RVA 0x0287F5F0 (consensus OuterFunc)
-
-class UAthenaLeaderboardScreenBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAthenaLeaderboardScreenBase();
-	static void execCanShowFriendsOnlyLeaderboard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnActiveLeaderboardTabChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnFriendsFilterChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnMatchTypeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EE40 (end 0x0287EE62)
 // Original VA: 0x000000014287EE40 | File offset: 0x0287E440

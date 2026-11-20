@@ -3,15 +3,8 @@
 // Class UFortMultiSizeItemCard: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CF0710, FClassParams RVA 0x03CF07D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMultiSizeItemCard();  // RVA 0x028DE420 (consensus OuterFunc)
-
-class UFortMultiSizeItemCard
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortMultiSizeItemCard_GetCardSize_Statics
 {

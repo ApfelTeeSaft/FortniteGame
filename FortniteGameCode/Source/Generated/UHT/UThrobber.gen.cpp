@@ -3,20 +3,8 @@
 // Class UThrobber: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0369E8C0, FClassParams RVA 0x0369E940.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UThrobber();  // RVA 0x01BF3260 (consensus OuterFunc)
-
-class UThrobber
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUThrobber();
-	static void execSetAnimateHorizontally(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAnimateOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAnimateVertically(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetNumberOfPieces(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2C70 (end 0x01BF2C92)
 // Original VA: 0x0000000141BF2C70 | File offset: 0x01BF2270

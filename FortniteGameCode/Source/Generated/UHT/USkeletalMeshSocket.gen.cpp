@@ -3,18 +3,8 @@
 // Class USkeletalMeshSocket: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039ADD28, FClassParams RVA 0x039ADD80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USkeletalMeshSocket();  // RVA 0x024D50D0 (consensus OuterFunc)
-
-class USkeletalMeshSocket
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUSkeletalMeshSocket();
-	static void execGetSocketLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execInitializeSocketFromLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D45C0 (end 0x024D45E2)
 // Original VA: 0x00000001424D45C0 | File offset: 0x024D3BC0

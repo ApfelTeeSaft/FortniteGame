@@ -3,20 +3,103 @@
 // Class AFortPawn_InteractablePawn: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033AB2F0, FClassParams RVA 0x033AB340.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class AFortPawn_InteractablePawn
+struct Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintCanInteract_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01065C00 (end 0x01065C2F)
+// Original VA: 0x0000000141065C00 | File offset: 0x01065200
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintCanInteract()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintCanInteract_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintCanInteract: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintGetInteractionString_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01065C30 (end 0x01065C5F)
+// Original VA: 0x0000000141065C30 | File offset: 0x01065230
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintGetInteractionString()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintGetInteractionString_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintGetInteractionString: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnBeginInteract_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01065C60 (end 0x01065C8F)
+// Original VA: 0x0000000141065C60 | File offset: 0x01065260
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnBeginInteract()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnBeginInteract_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnBeginInteract: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnInteract_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01065C90 (end 0x01065CBF)
+// Original VA: 0x0000000141065C90 | File offset: 0x01065290
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnInteract()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnInteract_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnInteract: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_AFortPawn_InteractablePawn_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPawn_InteractablePawn_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintCanInteract, "BlueprintCanInteract" },
+	{ &Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintGetInteractionString, "BlueprintGetInteractionString" },
+	{ &Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnBeginInteract, "BlueprintOnBeginInteract" },
+	{ &Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintOnInteract, "BlueprintOnInteract" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPawn_InteractablePawn_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033AB340
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPawn_InteractablePawn_Statics::ClassParams = { &AFortPawn_InteractablePawn::StaticClass, Z_Construct_UClass_AFortPawn_InteractablePawn_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortPawn_InteractablePawn_Statics::FuncInfo, 4, Z_Construct_UClass_AFortPawn_InteractablePawn_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_AFortPawn_InteractablePawn_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010656E0 (end 0x0106570F)
+// Original VA: 0x00000001410656E0 | File offset: 0x01064CE0
+// Recovery: confirmed (UHT singleton of AFortPawn_InteractablePawn) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPawn_InteractablePawn()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPawn_InteractablePawn_Statics::ClassParams);
+	}
+	return OuterClass;
+}

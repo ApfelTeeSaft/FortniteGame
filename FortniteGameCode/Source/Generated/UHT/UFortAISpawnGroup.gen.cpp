@@ -3,21 +3,8 @@
 // Class UFortAISpawnGroup: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032B5B00, FClassParams RVA 0x032B5BC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAISpawnGroup();  // RVA 0x00F99090 (consensus OuterFunc)
-
-class UFortAISpawnGroup
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAISpawnGroup();
-	static void execGetEnemy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumberOfEnemies(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsLargeSpawnGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPrototype(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsValidForEnemySpawners(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98780 (end 0x00F987A2)
 // Original VA: 0x0000000140F98780 | File offset: 0x00F97D80

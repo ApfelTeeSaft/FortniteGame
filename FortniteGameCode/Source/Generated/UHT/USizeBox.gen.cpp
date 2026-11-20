@@ -3,15 +3,8 @@
 // Class USizeBox: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0369D1B0, FClassParams RVA 0x0369D310.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USizeBox();  // RVA 0x01BF3010 (consensus OuterFunc)
-
-class USizeBox
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_USizeBox_ClearHeightOverride_Statics
 {

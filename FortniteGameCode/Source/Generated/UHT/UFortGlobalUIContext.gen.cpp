@@ -3,15 +3,8 @@
 // Class UFortGlobalUIContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C9D400, FClassParams RVA 0x03C9DBB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGlobalUIContext();  // RVA 0x028AC410 (consensus OuterFunc)
-
-class UFortGlobalUIContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnLoadingScreenVisibilityChangedDelegate__DelegateSignature_Statics
 {

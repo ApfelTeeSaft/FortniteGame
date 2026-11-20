@@ -3,15 +3,8 @@
 // Class UFortAIEncounterTargetInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032AC908, FClassParams RVA 0x032AC930.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAIEncounterTargetInterface();  // RVA 0x00F91400 (consensus OuterFunc)
-
-class UFortAIEncounterTargetInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortAIEncounterTargetInterface_GetObjectiveCompletionPercentage_Statics
 {

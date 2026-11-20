@@ -3,15 +3,8 @@
 // Class UFortItemWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CD9C30, FClassParams RVA 0x03CD9E40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemWidget();  // RVA 0x028CF6C0 (consensus OuterFunc)
-
-class UFortItemWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortItemWidget_OnGetItemToCompare__DelegateSignature_Statics
 {

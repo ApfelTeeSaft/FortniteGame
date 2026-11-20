@@ -3,16 +3,66 @@
 // Class UFortUIStateWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D4A5D8, FClassParams RVA 0x03D4A600.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UFortUIStateWidget
+struct Z_Construct_UFunction_UFortUIStateWidget_OnEnterState_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029137A0 (end 0x029137CF)
+// Original VA: 0x00000001429137A0 | File offset: 0x02912DA0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortUIStateWidget_OnEnterState()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUIStateWidget_OnEnterState_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortUIStateWidget_OnEnterState: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortUIStateWidget_OnExitState_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029137D0 (end 0x029137FF)
+// Original VA: 0x00000001429137D0 | File offset: 0x02912DD0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortUIStateWidget_OnExitState()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUIStateWidget_OnExitState_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortUIStateWidget_OnExitState: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UFortUIStateWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUIStateWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUIStateWidget_OnEnterState, "OnEnterState" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_OnExitState, "OnExitState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUIStateWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D4A600
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUIStateWidget_Statics::ClassParams = { &UFortUIStateWidget::StaticClass, Z_Construct_UClass_UFortUIStateWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortUIStateWidget_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortUIStateWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911F70 (end 0x02911F9F)
+// Original VA: 0x0000000142911F70 | File offset: 0x02911570
+// Recovery: confirmed (UHT singleton of UFortUIStateWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUIStateWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUIStateWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -3,15 +3,8 @@
 // Class UFortCollectionBookProgressionRewardDetailInspectWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C76A60, FClassParams RVA 0x03C76AB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookProgressionRewardDetailInspectWidget();  // RVA 0x028947B0 (consensus OuterFunc)
-
-class UFortCollectionBookProgressionRewardDetailInspectWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortCollectionBookProgressionRewardDetailInspectWidget_GetXPRequired_Statics
 {

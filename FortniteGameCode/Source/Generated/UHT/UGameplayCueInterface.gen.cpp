@@ -3,15 +3,8 @@
 // Class UGameplayCueInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F3D9B8, FClassParams RVA 0x02F3D9E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameplayCueInterface();  // RVA 0x0055BFB0 (consensus OuterFunc)
-
-class UGameplayCueInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UGameplayCueInterface_BlueprintCustomHandler_Statics
 {

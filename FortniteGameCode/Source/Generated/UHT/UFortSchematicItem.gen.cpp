@@ -3,19 +3,8 @@
 // Class UFortSchematicItem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033F5B30, FClassParams RVA 0x033F5B80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSchematicItem();  // RVA 0x010A5860 (consensus OuterFunc)
-
-class UFortSchematicItem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSchematicItem();
-	static void execGetRequiredTeamLevelToCraft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSchematicQuantityProduced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSchematicRecipe(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4EC0 (end 0x010A4EE2)
 // Original VA: 0x00000001410A4EC0 | File offset: 0x010A44C0

@@ -3,17 +3,8 @@
 // Class UBTService_BlueprintBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03700C30, FClassParams RVA 0x03700CF0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBTService_BlueprintBase();  // RVA 0x01D28CA0 (consensus OuterFunc)
-
-class UBTService_BlueprintBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUBTService_BlueprintBase();
-	static void execIsServiceActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D287C0 (end 0x01D287E2)
 // Original VA: 0x0000000141D287C0 | File offset: 0x01D27DC0

@@ -3,15 +3,8 @@
 // Class USplineMeshComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039BDF10, FClassParams RVA 0x039BE160.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USplineMeshComponent();  // RVA 0x024DD790 (consensus OuterFunc)
-
-class USplineMeshComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_USplineMeshComponent_GetBoundaryMax_Statics
 {

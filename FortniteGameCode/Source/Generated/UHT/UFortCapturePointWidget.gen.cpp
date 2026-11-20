@@ -3,17 +3,8 @@
 // Class UFortCapturePointWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C75C60, FClassParams RVA 0x03C75C80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCapturePointWidget();  // RVA 0x02894550 (consensus OuterFunc)
-
-class UFortCapturePointWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCapturePointWidget();
-	static void execOnCapturePointDataChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02894100 (end 0x02894122)
 // Original VA: 0x0000000142894100 | File offset: 0x02893700

@@ -3,15 +3,8 @@
 // Class UUINavigationManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D49680, FClassParams RVA 0x03D49700.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UUINavigationManager();  // RVA 0x02912030 (consensus OuterFunc)
-
-class UUINavigationManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UUINavigationManager_ClearStack_Statics
 {

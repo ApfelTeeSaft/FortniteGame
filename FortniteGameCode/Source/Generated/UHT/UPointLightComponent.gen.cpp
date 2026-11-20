@@ -3,22 +3,8 @@
 // Class UPointLightComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0398D5F0, FClassParams RVA 0x0398D6B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPointLightComponent();  // RVA 0x024B7EA0 (consensus OuterFunc)
-
-class UPointLightComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUPointLightComponent();
-	static void execGetUnitsConversionFactor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAttenuationRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLightFalloffExponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSoftSourceRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSourceLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSourceRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7750 (end 0x024B7772)
 // Original VA: 0x00000001424B7750 | File offset: 0x024B6D50

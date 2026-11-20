@@ -3,17 +3,8 @@
 // Class UFortResultsSummaryScreenWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D0A510, FClassParams RVA 0x03D0A530.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortResultsSummaryScreenWidget();  // RVA 0x028ED4A0 (consensus OuterFunc)
-
-class UFortResultsSummaryScreenWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortResultsSummaryScreenWidget();
-	static void execGetTotalScoreSortedScoreIndices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECE00 (end 0x028ECE22)
 // Original VA: 0x00000001428ECE00 | File offset: 0x028EC400

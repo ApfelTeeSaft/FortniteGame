@@ -3,15 +3,8 @@
 // Class ARadialForceActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039953E0, FClassParams RVA 0x03995430.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ARadialForceActor();  // RVA 0x024C2B40 (consensus OuterFunc)
-
-class ARadialForceActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ARadialForceActor_DisableForce_Statics
 {

@@ -3,19 +3,8 @@
 // Class UFortMtxStoreRootBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CF0400, FClassParams RVA 0x03CF04B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMtxStoreRootBase();  // RVA 0x028DE3B0 (consensus OuterFunc)
-
-class UFortMtxStoreRootBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortMtxStoreRootBase();
-	static void execAreOffersLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetStoreOfferType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleMtxPackagesRead(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DDF70 (end 0x028DDF92)
 // Original VA: 0x00000001428DDF70 | File offset: 0x028DD570

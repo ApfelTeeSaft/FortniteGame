@@ -3,17 +3,8 @@
 // Class UCommonUserWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E86258, FClassParams RVA 0x02E86280.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonUserWidget();  // RVA 0x002D04E0 (consensus OuterFunc)
-
-class UCommonUserWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCommonUserWidget();
-	static void execSetConsumePointerInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0240 (end 0x002D0262)
 // Original VA: 0x00000001402D0240 | File offset: 0x002CF840

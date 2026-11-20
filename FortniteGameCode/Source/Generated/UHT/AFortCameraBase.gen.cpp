@@ -3,17 +3,8 @@
 // Class AFortCameraBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032D04B0, FClassParams RVA 0x032D0550.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortCameraBase();  // RVA 0x00FAD110 (consensus OuterFunc)
-
-class AFortCameraBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortCameraBase();
-	static void execExhibit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACC90 (end 0x00FACCB2)
 // Original VA: 0x0000000140FACC90 | File offset: 0x00FAC290

@@ -3,17 +3,8 @@
 // Class UFortAsyncAction_MCPContextRecycleItems: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03368798, FClassParams RVA 0x033687E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems();  // RVA 0x01023A30 (consensus OuterFunc)
-
-class UFortAsyncAction_MCPContextRecycleItems
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAsyncAction_MCPContextRecycleItems();
-	static void execRecycleItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01023550 (end 0x01023572)
 // Original VA: 0x0000000141023550 | File offset: 0x01022B50

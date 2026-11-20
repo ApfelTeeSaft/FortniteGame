@@ -3,14 +3,49 @@
 // Class UFortSquadStatValueWithIcon: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D241C0, FClassParams RVA 0x03D24200.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UFortSquadStatValueWithIcon
+struct Z_Construct_UFunction_UFortSquadStatValueWithIcon_HandleDifferentAttributeSetBP_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FCA50 (end 0x028FCA7F)
+// Original VA: 0x00000001428FCA50 | File offset: 0x028FC050
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortSquadStatValueWithIcon_HandleDifferentAttributeSetBP()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSquadStatValueWithIcon_HandleDifferentAttributeSetBP_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortSquadStatValueWithIcon_HandleDifferentAttributeSetBP: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UFortSquadStatValueWithIcon_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadStatValueWithIcon_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadStatValueWithIcon_HandleDifferentAttributeSetBP, "HandleDifferentAttributeSetBP" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadStatValueWithIcon_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D24200
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadStatValueWithIcon_Statics::ClassParams = { &UFortSquadStatValueWithIcon::StaticClass, Z_Construct_UClass_UFortSquadStatValueWithIcon_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSquadStatValueWithIcon_Statics::FuncInfo, 1, Z_Construct_UClass_UFortSquadStatValueWithIcon_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortSquadStatValueWithIcon_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB780 (end 0x028FB7AF)
+// Original VA: 0x00000001428FB780 | File offset: 0x028FAD80
+// Recovery: confirmed (UHT singleton of UFortSquadStatValueWithIcon) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadStatValueWithIcon()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadStatValueWithIcon_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -3,20 +3,8 @@
 // Class UFortAbilityTask_SpawnProjectileAndWait: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03296510, FClassParams RVA 0x032965E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait();  // RVA 0x00F81F10 (consensus OuterFunc)
-
-class UFortAbilityTask_SpawnProjectileAndWait
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAbilityTask_SpawnProjectileAndWait();
-	static void execBeginSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFinishSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnProjectileDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSpawnProjectileAndWait(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81810 (end 0x00F81832)
 // Original VA: 0x0000000140F81810 | File offset: 0x00F80E10

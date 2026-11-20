@@ -3,15 +3,8 @@
 // Class AFortGameStateKeep: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0332E8B0, FClassParams RVA 0x0332E8D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortGameStateKeep();  // RVA 0x00FEE720 (consensus OuterFunc)
-
-class AFortGameStateKeep
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortGameStateKeep_OnRep_PermaniteBoundariesInfo_Statics
 {

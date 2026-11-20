@@ -3,15 +3,8 @@
 // Class APlayerState: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0398D280, FClassParams RVA 0x0398D380.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_APlayerState();  // RVA 0x024B7D50 (consensus OuterFunc)
-
-class APlayerState
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_APlayerState_GetPlayerName_Statics
 {

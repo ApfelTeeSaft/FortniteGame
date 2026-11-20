@@ -3,15 +3,8 @@
 // Class ABuildingLayoutRequirement: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03278300, FClassParams RVA 0x032783C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingLayoutRequirement();  // RVA 0x00F6C390 (consensus OuterFunc)
-
-class ABuildingLayoutRequirement
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ABuildingLayoutRequirement_ActivateRequirement_Statics
 {

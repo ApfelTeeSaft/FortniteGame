@@ -3,21 +3,8 @@
 // Class UMediaTexture: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03B64DB0, FClassParams RVA 0x03B64E30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UMediaTexture();  // RVA 0x025DE9C0 (consensus OuterFunc)
-
-class UMediaTexture
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUMediaTexture();
-	static void execGetAspectRatio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMediaPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetMediaPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE760 (end 0x025DE782)
 // Original VA: 0x00000001425DE760 | File offset: 0x025DDD60

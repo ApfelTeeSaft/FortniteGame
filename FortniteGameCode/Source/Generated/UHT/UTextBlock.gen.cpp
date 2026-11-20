@@ -3,28 +3,8 @@
 // Class UTextBlock: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0369E4D0, FClassParams RVA 0x0369E5F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UTextBlock();  // RVA 0x01BF31F0 (consensus OuterFunc)
-
-class UTextBlock
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUTextBlock();
-	static void execGetDynamicFontMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDynamicOutlineMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAutoWrapText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFont(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetJustification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetMinDesiredWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetShadowColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetShadowOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2C40 (end 0x01BF2C62)
 // Original VA: 0x0000000141BF2C40 | File offset: 0x01BF2240

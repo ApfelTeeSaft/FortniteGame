@@ -551,7 +551,7 @@
             "offset": "0x00000063",
             "symbol": "?CmdLine@FCommandLine@@0PA_WA",
             "rva": "0x04680E60",
-            "evidence": "section-relative to ?LoggingCmdLine@FCommandLine@@0PA_WA (seen in FCommandLine::GetForLogging) and 1 more neighbours (1 dissenting)"
+            "evidence": "section-relative (longer run) to ?LoggingCmdLine@FCommandLine@@0PA_WA (seen in FCommandLine::GetForLogging) and 1 more neighbours (1 dissenting)"
           }
         ],
         "unresolved_relocations": [
@@ -725,7 +725,7 @@
             "offset": "0x00000063",
             "symbol": "?LoggingOriginalCmdLine@FCommandLine@@0PA_WA",
             "rva": "0x04698E60",
-            "evidence": "section-relative (local) to ?LoggingCmdLine@FCommandLine@@0PA_WA (seen in FCommandLine::GetForLogging) and 1 more neighbours"
+            "evidence": "section-relative (local) to ?LoggingCmdLine@FCommandLine@@0PA_WA (seen in FCommandLine::GetForLogging)"
           }
         ],
         "unresolved_relocations": [

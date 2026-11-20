@@ -3,15 +3,8 @@
 // Class UFortAIEncounterSequence: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032A6680, FClassParams RVA 0x032A6750.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAIEncounterSequence();  // RVA 0x00F8C580 (consensus OuterFunc)
-
-class UFortAIEncounterSequence
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortAIEncounterSequence_EncounterBelongsToSequence_Statics
 {

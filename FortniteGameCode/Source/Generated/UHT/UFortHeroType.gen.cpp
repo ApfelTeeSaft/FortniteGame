@@ -3,20 +3,8 @@
 // Class UFortHeroType: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0333E100, FClassParams RVA 0x0333E1E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHeroType();  // RVA 0x00FFAFF0 (consensus OuterFunc)
-
-class UFortHeroType
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortHeroType();
-	static void execGetFemaleOverrideFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFrontendAnimClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaleOverrideFeedback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSubType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA4A0 (end 0x00FFA4C2)
 // Original VA: 0x0000000140FFA4A0 | File offset: 0x00FF9AA0

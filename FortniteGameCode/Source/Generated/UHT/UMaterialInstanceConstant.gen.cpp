@@ -3,19 +3,8 @@
 // Class UMaterialInstanceConstant: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0394D5A0, FClassParams RVA 0x0394D5E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UMaterialInstanceConstant
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUMaterialInstanceConstant();
-	static void execK2_GetScalarParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_GetTextureParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_GetVectorParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02485EE0 (end 0x02485F02)
 // Original VA: 0x0000000142485EE0 | File offset: 0x024854E0
@@ -31,8 +20,81 @@ void UMaterialInstanceConstant::StaticRegisterNativesUMaterialInstanceConstant()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetScalarParameterValue: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetScalarParameterValue_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486E70 (end 0x02486E9F)
+// Original VA: 0x0000000142486E70 | File offset: 0x02486470
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetScalarParameterValue()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetScalarParameterValue_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetTextureParameterValue: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetTextureParameterValue_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486EA0 (end 0x02486ECF)
+// Original VA: 0x0000000142486EA0 | File offset: 0x024864A0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetTextureParameterValue()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetTextureParameterValue_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetVectorParameterValue: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetVectorParameterValue_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486ED0 (end 0x02486EFF)
+// Original VA: 0x0000000142486ED0 | File offset: 0x024864D0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetVectorParameterValue()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetVectorParameterValue_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UMaterialInstanceConstant_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMaterialInstanceConstant_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetScalarParameterValue, "K2_GetScalarParameterValue" },
+	{ &Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetTextureParameterValue, "K2_GetTextureParameterValue" },
+	{ &Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetVectorParameterValue, "K2_GetVectorParameterValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMaterialInstanceConstant_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0394D5E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMaterialInstanceConstant_Statics::ClassParams = { &UMaterialInstanceConstant::StaticClass, Z_Construct_UClass_UMaterialInstanceConstant_Statics::DependentSingletons, 2, 0x00882080u, Z_Construct_UClass_UMaterialInstanceConstant_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UMaterialInstanceConstant_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486930 (end 0x0248695F)
+// Original VA: 0x0000000142486930 | File offset: 0x02485F30
+// Recovery: confirmed (UHT singleton of UMaterialInstanceConstant) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMaterialInstanceConstant()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMaterialInstanceConstant_Statics::ClassParams);
+	}
+	return OuterClass;
+}

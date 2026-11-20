@@ -3,15 +3,8 @@
 // Class UPaperFlipbook: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F939F0, FClassParams RVA 0x02F93A90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPaperFlipbook();  // RVA 0x006676B0 (consensus OuterFunc)
-
-class UPaperFlipbook
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UPaperFlipbook_GetKeyFrameIndexAtTime_Statics
 {

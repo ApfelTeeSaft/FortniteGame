@@ -3,15 +3,8 @@
 // Class UFortMcpProfileQuest: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03378270, FClassParams RVA 0x03378310.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMcpProfileQuest();  // RVA 0x01038560 (consensus OuterFunc)
-
-class UFortMcpProfileQuest
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortMcpProfileQuest_ClaimQuestReward_Statics
 {

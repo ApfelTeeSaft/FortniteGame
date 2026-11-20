@@ -3,18 +3,8 @@
 // Class UFortKeepEventInfo: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03354E20, FClassParams RVA 0x03354E60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortKeepEventInfo();  // RVA 0x0100C0E0 (consensus OuterFunc)
-
-class UFortKeepEventInfo
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortKeepEventInfo();
-	static void execGetWave(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNumberOfWaves(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BC60 (end 0x0100BC82)
 // Original VA: 0x000000014100BC60 | File offset: 0x0100B260

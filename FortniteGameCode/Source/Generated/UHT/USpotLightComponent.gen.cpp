@@ -3,18 +3,8 @@
 // Class USpotLightComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039BE2C8, FClassParams RVA 0x039BE310.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class USpotLightComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUSpotLightComponent();
-	static void execSetInnerConeAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOuterConeAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD580 (end 0x024DD5A2)
 // Original VA: 0x00000001424DD580 | File offset: 0x024DCB80
@@ -29,6 +19,64 @@ void USpotLightComponent::StaticRegisterNativesUSpotLightComponent()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_USpotLightComponent_SetInnerConeAngle: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_USpotLightComponent_SetInnerConeAngle_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DEDB0 (end 0x024DEDDF)
+// Original VA: 0x00000001424DEDB0 | File offset: 0x024DE3B0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_USpotLightComponent_SetInnerConeAngle()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USpotLightComponent_SetInnerConeAngle_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_USpotLightComponent_SetOuterConeAngle: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_USpotLightComponent_SetOuterConeAngle_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DEDE0 (end 0x024DEE0F)
+// Original VA: 0x00000001424DEDE0 | File offset: 0x024DE3E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_USpotLightComponent_SetOuterConeAngle()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_USpotLightComponent_SetOuterConeAngle_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_USpotLightComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USpotLightComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USpotLightComponent_SetInnerConeAngle, "SetInnerConeAngle" },
+	{ &Z_Construct_UFunction_USpotLightComponent_SetOuterConeAngle, "SetOuterConeAngle" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USpotLightComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039BE310
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USpotLightComponent_Statics::ClassParams = { &USpotLightComponent::StaticClass, Z_Construct_UClass_USpotLightComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_USpotLightComponent_Statics::FuncInfo, 2, Z_Construct_UClass_USpotLightComponent_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_USpotLightComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD7C0 (end 0x024DD7EF)
+// Original VA: 0x00000001424DD7C0 | File offset: 0x024DCDC0
+// Recovery: confirmed (UHT singleton of USpotLightComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USpotLightComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USpotLightComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

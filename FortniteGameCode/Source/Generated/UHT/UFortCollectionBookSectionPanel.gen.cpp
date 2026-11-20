@@ -3,30 +3,8 @@
 // Class UFortCollectionBookSectionPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C81600, FClassParams RVA 0x03C817E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookSectionPanel();  // RVA 0x0289B220 (consensus OuterFunc)
-
-class UFortCollectionBookSectionPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCollectionBookSectionPanel();
-	static void execOnBackActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnInputMethodChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnInspectActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnLogAllowedItemsActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnOpenPickerActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSectionChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSlotButtonCommitted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSlotButtonSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSlotItemActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSlotItemComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSlotItemConfirmationCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSlotPickerItemHovered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSlotPickerItemSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSlottedItemOperationComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AD60 (end 0x0289AD82)
 // Original VA: 0x000000014289AD60 | File offset: 0x0289A360

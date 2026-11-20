@@ -3,21 +3,8 @@
 // Class UCheckBox: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03691C30, FClassParams RVA 0x03691D20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCheckBox();  // RVA 0x01BE6110 (consensus OuterFunc)
-
-class UCheckBox
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCheckBox();
-	static void execGetCheckedState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsChecked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetCheckedState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIsChecked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5C10 (end 0x01BE5C32)
 // Original VA: 0x0000000141BE5C10 | File offset: 0x01BE5210

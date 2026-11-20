@@ -3,15 +3,8 @@
 // Class UAbilityTask_ApplyRootMotionMoveToActorForce: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F2AF10, FClassParams RVA 0x02F2AFE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce();  // RVA 0x00546800 (consensus OuterFunc)
-
-class UAbilityTask_ApplyRootMotionMoveToActorForce
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAbilityTask_ApplyRootMotionMoveToActorForce_ApplyRootMotionMoveToActorForce_Statics
 {

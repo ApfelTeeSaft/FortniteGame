@@ -3,15 +3,8 @@
 // Class UUserWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036A3BB0, FClassParams RVA 0x036A4160.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UUserWidget();  // RVA 0x01BFB1D0 (consensus OuterFunc)
-
-class UUserWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UUserWidget_AddToPlayerScreen_Statics
 {

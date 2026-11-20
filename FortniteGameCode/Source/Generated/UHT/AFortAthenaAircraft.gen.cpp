@@ -3,15 +3,8 @@
 // Class AFortAthenaAircraft: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032C0490, FClassParams RVA 0x032C0560.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortAthenaAircraft();  // RVA 0x00F9ECF0 (consensus OuterFunc)
-
-class AFortAthenaAircraft
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_AFortAthenaAircraft_FortAthenaAircraftDelegate__DelegateSignature_Statics
 {

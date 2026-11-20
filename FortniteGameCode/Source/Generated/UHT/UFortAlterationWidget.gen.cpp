@@ -3,20 +3,8 @@
 // Class UFortAlterationWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C69CC0, FClassParams RVA 0x03C69D10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortAlterationWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAlterationWidget();
-	static void execGetAlterationDefintion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRequiredLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsAlterationHighlighted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsAlterationUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C3E0 (end 0x0288C402)
 // Original VA: 0x000000014288C3E0 | File offset: 0x0288B9E0
@@ -33,10 +21,100 @@ void UFortAlterationWidget::StaticRegisterNativesUFortAlterationWidget()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortAlterationWidget_GetAlterationDefintion: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortAlterationWidget_GetAlterationDefintion_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CDB0 (end 0x0288CDDF)
+// Original VA: 0x000000014288CDB0 | File offset: 0x0288C3B0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortAlterationWidget_GetAlterationDefintion()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAlterationWidget_GetAlterationDefintion_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortAlterationWidget_GetRequiredLevel: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortAlterationWidget_GetRequiredLevel_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CDE0 (end 0x0288CE0F)
+// Original VA: 0x000000014288CDE0 | File offset: 0x0288C3E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortAlterationWidget_GetRequiredLevel()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAlterationWidget_GetRequiredLevel_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortAlterationWidget_IsAlterationHighlighted: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortAlterationWidget_IsAlterationHighlighted_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CE10 (end 0x0288CE3F)
+// Original VA: 0x000000014288CE10 | File offset: 0x0288C410
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortAlterationWidget_IsAlterationHighlighted()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAlterationWidget_IsAlterationHighlighted_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortAlterationWidget_IsAlterationUnlocked: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortAlterationWidget_IsAlterationUnlocked_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CE40 (end 0x0288CE6F)
+// Original VA: 0x000000014288CE40 | File offset: 0x0288C440
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortAlterationWidget_IsAlterationUnlocked()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAlterationWidget_IsAlterationUnlocked_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortAlterationWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAlterationWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAlterationWidget_GetAlterationDefintion, "GetAlterationDefintion" },
+	{ &Z_Construct_UFunction_UFortAlterationWidget_GetRequiredLevel, "GetRequiredLevel" },
+	{ &Z_Construct_UFunction_UFortAlterationWidget_IsAlterationHighlighted, "IsAlterationHighlighted" },
+	{ &Z_Construct_UFunction_UFortAlterationWidget_IsAlterationUnlocked, "IsAlterationUnlocked" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAlterationWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C69D10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAlterationWidget_Statics::ClassParams = { &UFortAlterationWidget::StaticClass, Z_Construct_UClass_UFortAlterationWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortAlterationWidget_Statics::FuncInfo, 4, Z_Construct_UClass_UFortAlterationWidget_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortAlterationWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C860 (end 0x0288C88F)
+// Original VA: 0x000000014288C860 | File offset: 0x0288BE60
+// Recovery: confirmed (UHT singleton of UFortAlterationWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAlterationWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAlterationWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

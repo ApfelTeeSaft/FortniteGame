@@ -3,15 +3,8 @@
 // Class UFortQuestObjectiveInfo: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033ED3C0, FClassParams RVA 0x033ED4A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestObjectiveInfo();  // RVA 0x0109DB70 (consensus OuterFunc)
-
-class UFortQuestObjectiveInfo
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortQuestObjectiveInfo_DisplayDynamicQuestUpdate_Statics
 {

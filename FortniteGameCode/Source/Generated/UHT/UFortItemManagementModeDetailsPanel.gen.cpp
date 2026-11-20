@@ -3,17 +3,8 @@
 // Class UFortItemManagementModeDetailsPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CCE9E8, FClassParams RVA 0x03CCEA50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortItemManagementModeDetailsPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortItemManagementModeDetailsPanel();
-	static void execGetItemManagementMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9B10 (end 0x028C9B32)
 // Original VA: 0x00000001428C9B10 | File offset: 0x028C9110
@@ -27,8 +18,82 @@ void UFortItemManagementModeDetailsPanel::StaticRegisterNativesUFortItemManageme
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_GetItemManagementMode: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_GetItemManagementMode_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB4D0 (end 0x028CB4FF)
+// Original VA: 0x00000001428CB4D0 | File offset: 0x028CAAD0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_GetItemManagementMode()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_GetItemManagementMode_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleDifferentItemManagementModeSetBP: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleDifferentItemManagementModeSetBP_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB500 (end 0x028CB52F)
+// Original VA: 0x00000001428CB500 | File offset: 0x028CAB00
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleDifferentItemManagementModeSetBP()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleDifferentItemManagementModeSetBP_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleHostSet: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleHostSet_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CB530 (end 0x028CB55F)
+// Original VA: 0x00000001428CB530 | File offset: 0x028CAB30
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleHostSet()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleHostSet_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortItemManagementModeDetailsPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemManagementModeDetailsPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_GetItemManagementMode, "GetItemManagementMode" },
+	{ &Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleDifferentItemManagementModeSetBP, "HandleDifferentItemManagementModeSetBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleHostSet, "HandleHostSet" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemManagementModeDetailsPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CCEA50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemManagementModeDetailsPanel_Statics::ClassParams = { &UFortItemManagementModeDetailsPanel::StaticClass, Z_Construct_UClass_UFortItemManagementModeDetailsPanel_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortItemManagementModeDetailsPanel_Statics::FuncInfo, 3, Z_Construct_UClass_UFortItemManagementModeDetailsPanel_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortItemManagementModeDetailsPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA030 (end 0x028CA05F)
+// Original VA: 0x00000001428CA030 | File offset: 0x028C9630
+// Recovery: confirmed (UHT singleton of UFortItemManagementModeDetailsPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemManagementModeDetailsPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemManagementModeDetailsPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

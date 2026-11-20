@@ -3,17 +3,8 @@
 // Class UNavRelevantComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0395BE20, FClassParams RVA 0x0395BE60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UNavRelevantComponent();  // RVA 0x0248FA90 (consensus OuterFunc)
-
-class UNavRelevantComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUNavRelevantComponent();
-	static void execSetNavigationRelevancy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F3B0 (end 0x0248F3D2)
 // Original VA: 0x000000014248F3B0 | File offset: 0x0248E9B0

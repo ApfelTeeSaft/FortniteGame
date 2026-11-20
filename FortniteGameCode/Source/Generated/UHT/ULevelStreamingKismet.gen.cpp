@@ -3,19 +3,8 @@
 // Class ULevelStreamingKismet: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03930960, FClassParams RVA 0x039309B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ULevelStreamingKismet();  // RVA 0x02470490 (consensus OuterFunc)
-
-class ULevelStreamingKismet
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesULevelStreamingKismet();
-	static void execLoadLevelInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execLoadLevelInstanceBySoftObjectPtr(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetShouldBeLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FEF0 (end 0x0246FF12)
 // Original VA: 0x000000014246FEF0 | File offset: 0x0246F4F0

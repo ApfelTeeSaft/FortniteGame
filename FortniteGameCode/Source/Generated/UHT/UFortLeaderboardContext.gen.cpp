@@ -3,19 +3,8 @@
 // Class UFortLeaderboardContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CE3A10, FClassParams RVA 0x03CE3A50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortLeaderboardContext();  // RVA 0x028D71B0 (consensus OuterFunc)
-
-class UFortLeaderboardContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortLeaderboardContext();
-	static void execCanShowGlobalLeaderboards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCanShowLeaderboards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCanShowStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6C60 (end 0x028D6C82)
 // Original VA: 0x00000001428D6C60 | File offset: 0x028D6260

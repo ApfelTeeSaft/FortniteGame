@@ -3,21 +3,8 @@
 // Class UFortCarriedObjectHolderInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032DA6A0, FClassParams RVA 0x032DA700.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCarriedObjectHolderInterface();  // RVA 0x00FB0140 (consensus OuterFunc)
-
-class UFortCarriedObjectHolderInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCarriedObjectHolderInterface();
-	static void execCanHoldObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAttachmentComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCarriedObjectAttachmentInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnCarriedObjectAttach(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnCarriedObjectDetach(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAFDE0 (end 0x00FAFE02)
 // Original VA: 0x0000000140FAFDE0 | File offset: 0x00FAF3E0

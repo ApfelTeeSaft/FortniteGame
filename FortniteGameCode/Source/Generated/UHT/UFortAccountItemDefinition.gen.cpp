@@ -3,17 +3,8 @@
 // Class UFortAccountItemDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032976E8, FClassParams RVA 0x03297750.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAccountItemDefinition();  // RVA 0x00F820B0 (consensus OuterFunc)
-
-class UFortAccountItemDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAccountItemDefinition();
-	static void execGetRecyclingRefunds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F818D0 (end 0x00F818F2)
 // Original VA: 0x0000000140F818D0 | File offset: 0x00F80ED0

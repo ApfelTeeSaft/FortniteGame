@@ -3,17 +3,8 @@
 // Class AFortGameplayMutator: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0332CC00, FClassParams RVA 0x0332CC20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortGameplayMutator();  // RVA 0x00FEE810 (consensus OuterFunc)
-
-class AFortGameplayMutator
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortGameplayMutator();
-	static void execIsMutatorActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE130 (end 0x00FEE152)
 // Original VA: 0x0000000140FEE130 | File offset: 0x00FED730

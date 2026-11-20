@@ -3,24 +3,8 @@
 // Class UNavigationPath: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03955A90, FClassParams RVA 0x03955B40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UNavigationPath();  // RVA 0x0248B8C0 (consensus OuterFunc)
-
-class UNavigationPath
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUNavigationPath();
-	static void execEnableDebugDrawing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEnableRecalculationOnInvalidation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDebugString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPathCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPathLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPartial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsStringPulled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248AEE0 (end 0x0248AF02)
 // Original VA: 0x000000014248AEE0 | File offset: 0x0248A4E0

@@ -3,17 +3,8 @@
 // Class ULogoutCallbackProxy: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02EAE198, FClassParams RVA 0x02EAE1C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class ULogoutCallbackProxy
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesULogoutCallbackProxy();
-	static void execLogout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E430 (end 0x0032E452)
 // Original VA: 0x000000014032E430 | File offset: 0x0032DA30
@@ -27,4 +18,46 @@ void ULogoutCallbackProxy::StaticRegisterNativesULogoutCallbackProxy()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_ULogoutCallbackProxy_Logout: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_ULogoutCallbackProxy_Logout_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032F720 (end 0x0032F74F)
+// Original VA: 0x000000014032F720 | File offset: 0x0032ED20
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_ULogoutCallbackProxy_Logout()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ULogoutCallbackProxy_Logout_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_ULogoutCallbackProxy_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ULogoutCallbackProxy_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ULogoutCallbackProxy_Logout, "Logout" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ULogoutCallbackProxy_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EAE1C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ULogoutCallbackProxy_Statics::ClassParams = { &ULogoutCallbackProxy::StaticClass, Z_Construct_UClass_ULogoutCallbackProxy_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_ULogoutCallbackProxy_Statics::FuncInfo, 1, Z_Construct_UClass_ULogoutCallbackProxy_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_ULogoutCallbackProxy_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032EC90 (end 0x0032ECBF)
+// Original VA: 0x000000014032EC90 | File offset: 0x0032E290
+// Recovery: confirmed (UHT singleton of ULogoutCallbackProxy) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ULogoutCallbackProxy()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ULogoutCallbackProxy_Statics::ClassParams);
+	}
+	return OuterClass;
+}

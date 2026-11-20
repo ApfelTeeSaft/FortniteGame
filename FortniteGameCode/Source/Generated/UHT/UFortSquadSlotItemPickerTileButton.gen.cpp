@@ -3,17 +3,8 @@
 // Class UFortSquadSlotItemPickerTileButton: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D229D8, FClassParams RVA 0x03D22A10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotItemPickerTileButton();  // RVA 0x028FB600 (consensus OuterFunc)
-
-class UFortSquadSlotItemPickerTileButton
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSquadSlotItemPickerTileButton();
-	static void execGetSlottingRestrictionReasons(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB200 (end 0x028FB222)
 // Original VA: 0x00000001428FB200 | File offset: 0x028FA800

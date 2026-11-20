@@ -3,20 +3,8 @@
 // Class UPhysicsSpringComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03982F60, FClassParams RVA 0x03982FE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPhysicsSpringComponent();  // RVA 0x024A9EF0 (consensus OuterFunc)
-
-class UPhysicsSpringComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUPhysicsSpringComponent();
-	static void execGetNormalizedCompressionScalar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSpringCurrentEndPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSpringDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSpringRestingPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A98A0 (end 0x024A98C2)
 // Original VA: 0x00000001424A98A0 | File offset: 0x024A8EA0

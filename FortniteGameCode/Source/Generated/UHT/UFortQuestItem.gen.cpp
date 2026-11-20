@@ -3,15 +3,8 @@
 // Class UFortQuestItem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033E5A80, FClassParams RVA 0x033E5C80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestItem();  // RVA 0x010964D0 (consensus OuterFunc)
-
-class UFortQuestItem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortQuestItem_CanPinQuest_Statics
 {

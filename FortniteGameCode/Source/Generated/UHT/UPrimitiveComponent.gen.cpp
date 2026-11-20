@@ -3,15 +3,8 @@
 // Class UPrimitiveComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0398FBF0, FClassParams RVA 0x03990540.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPrimitiveComponent();  // RVA 0x024B8060 (consensus OuterFunc)
-
-class UPrimitiveComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UPrimitiveComponent_AddAngularImpulse_Statics
 {

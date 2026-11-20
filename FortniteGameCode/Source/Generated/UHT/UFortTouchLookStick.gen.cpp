@@ -3,18 +3,8 @@
 // Class UFortTouchLookStick: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D322D0, FClassParams RVA 0x03D32300.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTouchLookStick();  // RVA 0x02904D30 (consensus OuterFunc)
-
-class UFortTouchLookStick
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortTouchLookStick();
-	static void execIsFireButtonUnderTouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFiringState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02904580 (end 0x029045A2)
 // Original VA: 0x0000000142904580 | File offset: 0x02903B80

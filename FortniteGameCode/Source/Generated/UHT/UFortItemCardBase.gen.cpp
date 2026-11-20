@@ -3,17 +3,8 @@
 // Class UFortItemCardBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CBFEE0, FClassParams RVA 0x03CBFF00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemCardBase();  // RVA 0x028C1990 (consensus OuterFunc)
-
-class UFortItemCardBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortItemCardBase();
-	static void execPortBrushSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C0E80 (end 0x028C0EA2)
 // Original VA: 0x00000001428C0E80 | File offset: 0x028C0480

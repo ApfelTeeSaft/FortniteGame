@@ -3,17 +3,8 @@
 // Class UGeometryCacheTrack_TransformGroupAnimation: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03714D20, FClassParams RVA 0x03714D40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UGeometryCacheTrack_TransformGroupAnimation
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUGeometryCacheTrack_TransformGroupAnimation();
-	static void execSetMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3FE20 (end 0x01D3FE42)
 // Original VA: 0x0000000141D3FE20 | File offset: 0x01D3F420
@@ -27,4 +18,45 @@ void UGeometryCacheTrack_TransformGroupAnimation::StaticRegisterNativesUGeometry
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UGeometryCacheTrack_TransformGroupAnimation_SetMesh: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UGeometryCacheTrack_TransformGroupAnimation_SetMesh_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D40490 (end 0x01D404BF)
+// Original VA: 0x0000000141D40490 | File offset: 0x01D3FA90
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UGeometryCacheTrack_TransformGroupAnimation_SetMesh()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGeometryCacheTrack_TransformGroupAnimation_SetMesh_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UGeometryCacheTrack_TransformGroupAnimation_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGeometryCacheTrack_TransformGroupAnimation_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGeometryCacheTrack_TransformGroupAnimation_SetMesh, "SetMesh" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGeometryCacheTrack_TransformGroupAnimation_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03714D40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGeometryCacheTrack_TransformGroupAnimation_Statics::ClassParams = { &UGeometryCacheTrack_TransformGroupAnimation::StaticClass, Z_Construct_UClass_UGeometryCacheTrack_TransformGroupAnimation_Statics::DependentSingletons, 2, 0x00102080u, Z_Construct_UClass_UGeometryCacheTrack_TransformGroupAnimation_Statics::FuncInfo, 1, nullptr, 0, "Engine", &Z_Construct_UClass_UGeometryCacheTrack_TransformGroupAnimation_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D40100 (end 0x01D4012F)
+// Original VA: 0x0000000141D40100 | File offset: 0x01D3F700
+// Recovery: confirmed (UHT singleton of UGeometryCacheTrack_TransformGroupAnimation) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGeometryCacheTrack_TransformGroupAnimation()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGeometryCacheTrack_TransformGroupAnimation_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -3,23 +3,8 @@
 // Class UFortMcpProfileAthena: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03370CE0, FClassParams RVA 0x03370DA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMcpProfileAthena();  // RVA 0x01030AB0 (consensus OuterFunc)
-
-class UFortMcpProfileAthena
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortMcpProfileAthena();
-	static void execCanPurchaseSeasonBook(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetActiveSeasonDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSeasonFriendMatchXpBoost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSeasonLevelInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSeasonLevelUpReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSeasonMatchXpBoost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasPurchasedSeasonBook(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0102F680 (end 0x0102F6A2)
 // Original VA: 0x000000014102F680 | File offset: 0x0102EC80

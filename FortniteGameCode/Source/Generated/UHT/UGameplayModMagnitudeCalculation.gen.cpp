@@ -3,17 +3,8 @@
 // Class UGameplayModMagnitudeCalculation: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F480A8, FClassParams RVA 0x02F480D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UGameplayModMagnitudeCalculation();  // RVA 0x005646D0 (consensus OuterFunc)
-
-class UGameplayModMagnitudeCalculation
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUGameplayModMagnitudeCalculation();
-	static void execCalculateBaseMagnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00563600 (end 0x00563622)
 // Original VA: 0x0000000140563600 | File offset: 0x00562C00

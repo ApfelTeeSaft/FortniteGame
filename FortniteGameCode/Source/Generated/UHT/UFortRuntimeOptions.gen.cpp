@@ -3,15 +3,8 @@
 // Class UFortRuntimeOptions: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033EFCA0, FClassParams RVA 0x033EFD90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortRuntimeOptions();  // RVA 0x0109DDE0 (consensus OuterFunc)
-
-class UFortRuntimeOptions
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortRuntimeOptions_OnHotfixApplied__DelegateSignature_Statics
 {

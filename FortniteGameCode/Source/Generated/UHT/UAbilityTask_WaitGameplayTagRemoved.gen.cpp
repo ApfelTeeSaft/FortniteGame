@@ -3,17 +3,8 @@
 // Class UAbilityTask_WaitGameplayTagRemoved: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F32F50, FClassParams RVA 0x02F32F70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayTagRemoved();  // RVA 0x0054D730 (consensus OuterFunc)
-
-class UAbilityTask_WaitGameplayTagRemoved
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAbilityTask_WaitGameplayTagRemoved();
-	static void execWaitGameplayTagRemove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CFC0 (end 0x0054CFE2)
 // Original VA: 0x000000014054CFC0 | File offset: 0x0054C5C0

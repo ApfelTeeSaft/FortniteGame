@@ -3,21 +3,8 @@
 // Class AFortPlayerControllerFrontEnd: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033C2F10, FClassParams RVA 0x033C2F70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerFrontEnd();  // RVA 0x010776D0 (consensus OuterFunc)
-
-class AFortPlayerControllerFrontEnd
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortPlayerControllerFrontEnd();
-	static void execIsInVoiceChat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsVoiceChatPlayerMuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsXboxPlatform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execUnMutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01077480 (end 0x010774A2)
 // Original VA: 0x0000000141077480 | File offset: 0x01076A80

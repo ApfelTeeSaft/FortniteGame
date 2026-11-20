@@ -3,17 +3,8 @@
 // Class UVerticalBox: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036A41E8, FClassParams RVA 0x036A4200.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UVerticalBox();  // RVA 0x01BFB210 (consensus OuterFunc)
-
-class UVerticalBox
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUVerticalBox();
-	static void execAddChildToVerticalBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFAE80 (end 0x01BFAEA2)
 // Original VA: 0x0000000141BFAE80 | File offset: 0x01BFA480

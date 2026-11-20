@@ -3,15 +3,8 @@
 // Class AWorldSettings: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039D0B28, FClassParams RVA 0x039D0CE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AWorldSettings();  // RVA 0x024F0B10 (consensus OuterFunc)
-
-class AWorldSettings
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AWorldSettings_OnRep_WorldGravityZ_Statics
 {

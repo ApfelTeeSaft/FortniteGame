@@ -3,15 +3,8 @@
 // Class UFortAISpawnerInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032B58A8, FClassParams RVA 0x032B58D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAISpawnerInterface();  // RVA 0x00F991B0 (consensus OuterFunc)
-
-class UFortAISpawnerInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortAISpawnerInterface_IsReadyToReceiveNewSpawnGroup_Statics
 {

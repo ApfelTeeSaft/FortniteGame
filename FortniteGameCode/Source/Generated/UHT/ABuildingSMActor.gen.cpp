@@ -3,15 +3,8 @@
 // Class ABuildingSMActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0327F2B0, FClassParams RVA 0x0327FA80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingSMActor();  // RVA 0x00F71E80 (consensus OuterFunc)
-
-class ABuildingSMActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_ABuildingSMActor_AttachBuildingActorToMe_Statics
 {

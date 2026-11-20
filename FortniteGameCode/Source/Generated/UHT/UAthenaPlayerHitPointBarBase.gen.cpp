@@ -3,17 +3,8 @@
 // Class UAthenaPlayerHitPointBarBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C5EAE0, FClassParams RVA 0x03C5EB40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaPlayerHitPointBarBase();  // RVA 0x028872E0 (consensus OuterFunc)
-
-class UAthenaPlayerHitPointBarBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAthenaPlayerHitPointBarBase();
-	static void execSetDataSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02886B70 (end 0x02886B92)
 // Original VA: 0x0000000142886B70 | File offset: 0x02886170

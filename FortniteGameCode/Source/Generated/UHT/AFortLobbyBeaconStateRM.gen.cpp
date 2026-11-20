@@ -3,14 +3,49 @@
 // Class AFortLobbyBeaconStateRM: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0335F348, FClassParams RVA 0x0335F370.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class AFortLobbyBeaconStateRM
+struct Z_Construct_UFunction_AFortLobbyBeaconStateRM_OnRep_LobbyTimeRemaining_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101F2C0 (end 0x0101F2EF)
+// Original VA: 0x000000014101F2C0 | File offset: 0x0101E8C0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortLobbyBeaconStateRM_OnRep_LobbyTimeRemaining()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortLobbyBeaconStateRM_OnRep_LobbyTimeRemaining_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_AFortLobbyBeaconStateRM_OnRep_LobbyTimeRemaining: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_AFortLobbyBeaconStateRM_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortLobbyBeaconStateRM_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortLobbyBeaconStateRM_OnRep_LobbyTimeRemaining, "OnRep_LobbyTimeRemaining" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortLobbyBeaconStateRM_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0335F370
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortLobbyBeaconStateRM_Statics::ClassParams = { &AFortLobbyBeaconStateRM::StaticClass, Z_Construct_UClass_AFortLobbyBeaconStateRM_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_AFortLobbyBeaconStateRM_Statics::FuncInfo, 1, Z_Construct_UClass_AFortLobbyBeaconStateRM_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_AFortLobbyBeaconStateRM_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101E550 (end 0x0101E57F)
+// Original VA: 0x000000014101E550 | File offset: 0x0101DB50
+// Recovery: confirmed (UHT singleton of AFortLobbyBeaconStateRM) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortLobbyBeaconStateRM()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortLobbyBeaconStateRM_Statics::ClassParams);
+	}
+	return OuterClass;
+}

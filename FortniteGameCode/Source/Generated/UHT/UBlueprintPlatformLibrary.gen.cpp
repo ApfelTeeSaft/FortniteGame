@@ -3,15 +3,8 @@
 // Class UBlueprintPlatformLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038B3E00, FClassParams RVA 0x038B3E80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBlueprintPlatformLibrary();  // RVA 0x023E3800 (consensus OuterFunc)
-
-class UBlueprintPlatformLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UBlueprintPlatformLibrary_CancelLocalNotification_Statics
 {

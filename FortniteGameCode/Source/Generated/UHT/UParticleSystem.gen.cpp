@@ -3,17 +3,8 @@
 // Class UParticleSystem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03972468, FClassParams RVA 0x039725E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UParticleSystem();  // RVA 0x0249EBA0 (consensus OuterFunc)
-
-class UParticleSystem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUParticleSystem();
-	static void execContainsEmitterType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E0B0 (end 0x0249E0D2)
 // Original VA: 0x000000014249E0B0 | File offset: 0x0249D6B0

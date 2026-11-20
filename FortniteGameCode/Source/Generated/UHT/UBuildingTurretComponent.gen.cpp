@@ -3,15 +3,8 @@
 // Class UBuildingTurretComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032871B0, FClassParams RVA 0x03287290.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBuildingTurretComponent();  // RVA 0x00F786E0 (consensus OuterFunc)
-
-class UBuildingTurretComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UBuildingTurretComponent_AttemptSetCurrentTarget_Statics
 {

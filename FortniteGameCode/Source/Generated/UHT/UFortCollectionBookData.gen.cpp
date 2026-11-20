@@ -3,17 +3,8 @@
 // Class UFortCollectionBookData: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032EE410, FClassParams RVA 0x032EE470.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookData();  // RVA 0x00FC6090 (consensus OuterFunc)
-
-class UFortCollectionBookData
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCollectionBookData();
-	static void execGetPageIdsFromCategoryId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5510 (end 0x00FC5532)
 // Original VA: 0x0000000140FC5510 | File offset: 0x00FC4B10

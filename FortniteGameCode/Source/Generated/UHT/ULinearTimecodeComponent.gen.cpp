@@ -3,19 +3,8 @@
 // Class ULinearTimecodeComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02FD3B98, FClassParams RVA 0x02FD3BF0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ULinearTimecodeComponent();  // RVA 0x007E0270 (consensus OuterFunc)
-
-class ULinearTimecodeComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesULinearTimecodeComponent();
-	static void execGetDropFrameNumber(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDropTimeCodeFrameNumber(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDropTimecodeFrameNumber(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007E0190 (end 0x007E01B2)
 // Original VA: 0x00000001407E0190 | File offset: 0x007DF790

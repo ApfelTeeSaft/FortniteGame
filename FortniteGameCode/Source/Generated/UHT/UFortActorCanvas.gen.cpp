@@ -3,18 +3,8 @@
 // Class UFortActorCanvas: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C60B80, FClassParams RVA 0x03C60BB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortActorCanvas();  // RVA 0x02887770 (consensus OuterFunc)
-
-class UFortActorCanvas
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortActorCanvas();
-	static void execAddActorIndicator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnHUDElementVisibilityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02886E10 (end 0x02886E32)
 // Original VA: 0x0000000142886E10 | File offset: 0x02886410

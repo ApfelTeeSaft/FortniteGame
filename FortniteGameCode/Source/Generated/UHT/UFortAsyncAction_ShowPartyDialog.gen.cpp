@@ -3,18 +3,8 @@
 // Class UFortAsyncAction_ShowPartyDialog: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C6A5D8, FClassParams RVA 0x03C6A620.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_ShowPartyDialog();  // RVA 0x0288CAA0 (consensus OuterFunc)
-
-class UFortAsyncAction_ShowPartyDialog
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAsyncAction_ShowPartyDialog();
-	static void execShowPartyLeaderManageDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShowPartyMemberManageDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C5C0 (end 0x0288C5E2)
 // Original VA: 0x000000014288C5C0 | File offset: 0x0288BBC0

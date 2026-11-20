@@ -3,17 +3,8 @@
 // Class AInteractiveFoliageActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03611CD8, FClassParams RVA 0x03611D70.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class AInteractiveFoliageActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAInteractiveFoliageActor();
-	static void execCapsuleTouched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A48780 (end 0x01A487A2)
 // Original VA: 0x0000000141A48780 | File offset: 0x01A47D80
@@ -27,4 +18,46 @@ void AInteractiveFoliageActor::StaticRegisterNativesAInteractiveFoliageActor()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_AInteractiveFoliageActor_CapsuleTouched: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AInteractiveFoliageActor_CapsuleTouched_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A48D30 (end 0x01A48D5F)
+// Original VA: 0x0000000141A48D30 | File offset: 0x01A48330
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AInteractiveFoliageActor_CapsuleTouched()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AInteractiveFoliageActor_CapsuleTouched_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_AInteractiveFoliageActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AInteractiveFoliageActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AInteractiveFoliageActor_CapsuleTouched, "CapsuleTouched" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AInteractiveFoliageActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03611D70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AInteractiveFoliageActor_Statics::ClassParams = { &AInteractiveFoliageActor::StaticClass, Z_Construct_UClass_AInteractiveFoliageActor_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_AInteractiveFoliageActor_Statics::FuncInfo, 1, Z_Construct_UClass_AInteractiveFoliageActor_Statics::PropPointers, 14, nullptr, &Z_Construct_UClass_AInteractiveFoliageActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A489C0 (end 0x01A489EF)
+// Original VA: 0x0000000141A489C0 | File offset: 0x01A47FC0
+// Recovery: confirmed (UHT singleton of AInteractiveFoliageActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AInteractiveFoliageActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AInteractiveFoliageActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

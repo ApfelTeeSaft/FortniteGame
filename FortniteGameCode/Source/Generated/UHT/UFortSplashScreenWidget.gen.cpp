@@ -3,15 +3,8 @@
 // Class UFortSplashScreenWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D14E18, FClassParams RVA 0x03D14E50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSplashScreenWidget();  // RVA 0x028F5860 (consensus OuterFunc)
-
-class UFortSplashScreenWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortSplashScreenWidget_CloseSplashScreen_Statics
 {

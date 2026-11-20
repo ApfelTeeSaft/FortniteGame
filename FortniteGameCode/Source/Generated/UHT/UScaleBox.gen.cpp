@@ -3,20 +3,8 @@
 // Class UScaleBox: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0369CA70, FClassParams RVA 0x0369CAE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UScaleBox();  // RVA 0x01BF2F10 (consensus OuterFunc)
-
-class UScaleBox
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUScaleBox();
-	static void execSetIgnoreInheritedScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetStretch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetStretchDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetUserSpecifiedScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2A00 (end 0x01BF2A22)
 // Original VA: 0x0000000141BF2A00 | File offset: 0x01BF2000

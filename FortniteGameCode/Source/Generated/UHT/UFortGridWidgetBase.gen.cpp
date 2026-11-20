@@ -3,26 +3,8 @@
 // Class UFortGridWidgetBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CA4A40, FClassParams RVA 0x03CA4B90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGridWidgetBase();  // RVA 0x028B3C20 (consensus OuterFunc)
-
-class UFortGridWidgetBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortGridWidgetBase();
-	static void execGetTileForObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTiles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetClearWidgetType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDataProvider(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetPeekOverflowTilePercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTileHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTilePadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTilesAcross(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTilesDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTileWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3890 (end 0x028B38B2)
 // Original VA: 0x00000001428B3890 | File offset: 0x028B2E90

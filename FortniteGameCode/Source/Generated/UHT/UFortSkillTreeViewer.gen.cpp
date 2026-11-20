@@ -3,28 +3,8 @@
 // Class UFortSkillTreeViewer: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D14160, FClassParams RVA 0x03D142C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreeViewer();  // RVA 0x028F56C0 (consensus OuterFunc)
-
-class UFortSkillTreeViewer
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSkillTreeViewer();
-	static void execBackOutOfSubPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCanBackOutOfSubPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execDrillDownToSubPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurrenciesNeededForPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPageAquiredNodes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPageLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPageTotalNodes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSelectedNodeId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetViewParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNavigateTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execShowPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetSkillTreePageStaticData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4FC0 (end 0x028F4FE2)
 // Original VA: 0x00000001428F4FC0 | File offset: 0x028F45C0

@@ -3,15 +3,8 @@
 // Class UPartyMemberState: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F61DC8, FClassParams RVA 0x02F61E10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPartyMemberState();  // RVA 0x005B8F20 (consensus OuterFunc)
-
-class UPartyMemberState
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UPartyMemberState_IsLocalPlayer_Statics
 {

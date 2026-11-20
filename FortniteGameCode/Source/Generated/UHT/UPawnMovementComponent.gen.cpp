@@ -3,23 +3,8 @@
 // Class UPawnMovementComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039784E0, FClassParams RVA 0x03978560.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPawnMovementComponent();  // RVA 0x024A09B0 (consensus OuterFunc)
-
-class UPawnMovementComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUPawnMovementComponent();
-	static void execAddInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConsumeInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLastInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPawnOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPendingInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsMoveInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_GetInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A04E0 (end 0x024A0502)
 // Original VA: 0x00000001424A04E0 | File offset: 0x0249FAE0

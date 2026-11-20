@@ -3,15 +3,8 @@
 // Class UFortWeaponItemDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0342FBF0, FClassParams RVA 0x0342FEB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortWeaponItemDefinition();  // RVA 0x010D8B70 (consensus OuterFunc)
-
-class UFortWeaponItemDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetAnalyticTags_Statics
 {

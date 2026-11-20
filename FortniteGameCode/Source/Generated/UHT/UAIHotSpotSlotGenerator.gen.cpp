@@ -3,15 +3,8 @@
 // Class UAIHotSpotSlotGenerator: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032602C8, FClassParams RVA 0x03260300.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAIHotSpotSlotGenerator();  // RVA 0x00F59780 (consensus OuterFunc)
-
-class UAIHotSpotSlotGenerator
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAIHotSpotSlotGenerator_AddSlot_Statics
 {

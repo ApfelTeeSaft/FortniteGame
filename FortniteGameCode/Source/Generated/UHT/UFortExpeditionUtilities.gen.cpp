@@ -3,30 +3,8 @@
 // Class UFortExpeditionUtilities: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C902D0, FClassParams RVA 0x03C903C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionUtilities();  // RVA 0x028A3740 (consensus OuterFunc)
-
-class UFortExpeditionUtilities
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortExpeditionUtilities();
-	static void execAreAnyExpeditionsComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAreExpeditionsUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCalculateExpeditionPercentageChanceForSuccess(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCalculateGlobalAndItemRatingModValuesBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execCalculateTotalPower(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAllExpeditionSquadIds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetExpeditionSquadPower(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetExpeditionSquadsThatMatchRequirements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMatchedCriteriaTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTotalExpeditionVehiclesAvailable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetVehicleTagFromSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetVehicleTagRequiredForExpedition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsSquadOnExpedition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTotalUnseenExpeditionsForTab(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3130 (end 0x028A3152)
 // Original VA: 0x00000001428A3130 | File offset: 0x028A2730

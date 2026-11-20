@@ -3,22 +3,8 @@
 // Class UStaticMeshComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039C3590, FClassParams RVA 0x039C36D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UStaticMeshComponent();  // RVA 0x024E7970 (consensus OuterFunc)
-
-class UStaticMeshComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUStaticMeshComponent();
-	static void execGetLocalBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnRep_StaticMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDistanceFieldSelfShadowBias(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetForcedLodModel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetReverseCulling(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetStaticMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7010 (end 0x024E7032)
 // Original VA: 0x00000001424E7010 | File offset: 0x024E6610

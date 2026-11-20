@@ -3,19 +3,8 @@
 // Class UFortItemCollectorWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CCB240, FClassParams RVA 0x03CCB280.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortItemCollectorWidget();  // RVA 0x028C9CC0 (consensus OuterFunc)
-
-class UFortItemCollectorWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortItemCollectorWidget();
-	static void execOnItemCollectorChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnItemCollectorStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnItemCollectorValuesChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C98A0 (end 0x028C98C2)
 // Original VA: 0x00000001428C98A0 | File offset: 0x028C8EA0

@@ -55,6 +55,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools" / "matching"))
 sys.path.insert(0, str(ROOT / "tools" / "codegen"))
 from compare import load_decrypted  # noqa: E402
+from unity import UNIT_OBJECT, unit_of  # noqa: E402
 from genio import sync_tree  # noqa: E402
 from manifest_io import dump_compact  # noqa: E402
 from pe import PEImage  # noqa: E402
@@ -321,7 +322,7 @@ def main() -> int:
             f"// USTRUCT {cpp} of {r['pkg_name']}: registration code in UnrealHeaderTool 4.20 output shape.\n"
             f"// FStructParams RVA 0x{r['rec']:08X}. The registration objects follow the CRC function\n"
             f"// instead of StaticStruct; see tools/codegen/uht_structs.py.\n\n"
-            '#include "FortniteGameCode/UObjectRegistrationRecovered.h"\n\n'
+            '#include "FortniteGameCode/UHTRecovered.h"\n\n'
             "// Cross Module References\n"
             f"\tUScriptStruct* {zc}();\n"
             f"\tUPackage* {pkg_fn}();  // RVA 0x{r['package']:08X}\n"
@@ -385,20 +386,25 @@ def main() -> int:
         stats["structs"] += 1
 
     stats["files_written"], stats["files_removed"] = sync_tree(GEN_DIR, outputs)
+    # Objects are the unity translation units (tools/codegen/unity.py) the fragments are compiled in.
+    units = unit_of()
+    for e in ctor_entries + ss_entries + defer_entries + srn_entries:
+        e["unit"] = units[("struct", e["struct"][1:])]
     head = {"schema_version": 1, "generated_by": "tools/codegen/uht_structs.py"}
     ops_entries = []
     for ops in sorted(ops_groups):
         (cpp, short), *rest = sorted(ops_groups[ops])
         e = {"start_rva": f"0x{ops:08X}", "end_rva": f"0x{ops + len(NSO_TEMPLATE):08X}",
-             "name": f"Z_Construct_UScriptStruct_{cpp}_Statics::NewStructOps", "package": short, "struct": cpp}
+             "name": f"Z_Construct_UScriptStruct_{cpp}_Statics::NewStructOps", "package": short, "struct": cpp,
+             "unit": units[("struct", cpp[1:])]}
         if rest:
-            e["folded_sources"] = [{"object": f"Source/Generated/UHT/Structs/{p2}/{c2}.gen.obj",
+            e["folded_sources"] = [{"object": UNIT_OBJECT.format(unit=units[("struct", c2[1:])]),
                                     "symbol": f"?NewStructOps@Z_Construct_UScriptStruct_{c2}_Statics@@SAPEAXXZ"}
                                    for c2, p2 in rest]
         ops_entries.append(e)
     stats["newstructops_functions"] = len(ops_entries)
     src_tpl = "FortniteGameCode/Source/Generated/UHT/Structs/{package}/{struct}.gen.cpp"
-    obj_tpl = "Source/Generated/UHT/Structs/{package}/{struct}.gen.obj"
+    obj_tpl = UNIT_OBJECT
     dump_compact(CTOR_MANIFEST, {**head,
         "evidence": ("Z_Construct_UScriptStruct_<Struct>: the 47-byte UHT singleton that the struct's StaticStruct "
                      "passes to GetStaticStruct. ReturnStructParams by content. See docs/REVERSE_ENGINEERING.md."),

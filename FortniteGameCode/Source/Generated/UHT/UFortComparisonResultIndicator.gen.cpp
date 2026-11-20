@@ -3,17 +3,8 @@
 // Class UFortComparisonResultIndicator: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C82018, FClassParams RVA 0x03C82050.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortComparisonResultIndicator();  // RVA 0x0289B3A0 (consensus OuterFunc)
-
-class UFortComparisonResultIndicator
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortComparisonResultIndicator();
-	static void execSetComparisonResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AE80 (end 0x0289AEA2)
 // Original VA: 0x000000014289AE80 | File offset: 0x0289A480

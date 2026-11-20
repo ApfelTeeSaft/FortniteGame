@@ -3,17 +3,8 @@
 // Class UMouseCursorBinding: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03697690, FClassParams RVA 0x036976B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UMouseCursorBinding
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUMouseCursorBinding();
-	static void execGetValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED030 (end 0x01BED052)
 // Original VA: 0x0000000141BED030 | File offset: 0x01BEC630
@@ -27,4 +18,45 @@ void UMouseCursorBinding::StaticRegisterNativesUMouseCursorBinding()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UMouseCursorBinding_GetValue: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UMouseCursorBinding_GetValue_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEE470 (end 0x01BEE49F)
+// Original VA: 0x0000000141BEE470 | File offset: 0x01BEDA70
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UMouseCursorBinding_GetValue()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UMouseCursorBinding_GetValue_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UMouseCursorBinding_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMouseCursorBinding_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMouseCursorBinding_GetValue, "GetValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMouseCursorBinding_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036976B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMouseCursorBinding_Statics::ClassParams = { &UMouseCursorBinding::StaticClass, Z_Construct_UClass_UMouseCursorBinding_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UMouseCursorBinding_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UMouseCursorBinding_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED5D0 (end 0x01BED5FF)
+// Original VA: 0x0000000141BED5D0 | File offset: 0x01BECBD0
+// Recovery: confirmed (UHT singleton of UMouseCursorBinding) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMouseCursorBinding()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMouseCursorBinding_Statics::ClassParams);
+	}
+	return OuterClass;
+}

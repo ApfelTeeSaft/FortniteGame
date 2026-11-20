@@ -3,15 +3,8 @@
 // Class UAthenaHUDContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C52C20, FClassParams RVA 0x03C52FB0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaHUDContext();  // RVA 0x0287F440 (consensus OuterFunc)
-
-class UAthenaHUDContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAthenaHUDContext_BeginUseFromHUD_Statics
 {

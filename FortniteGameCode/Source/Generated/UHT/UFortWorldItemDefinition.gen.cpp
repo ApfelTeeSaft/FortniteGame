@@ -3,21 +3,8 @@
 // Class UFortWorldItemDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03437030, FClassParams RVA 0x03437180.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortWorldItemDefinition();  // RVA 0x010DC9E0 (consensus OuterFunc)
-
-class UFortWorldItemDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortWorldItemDefinition();
-	static void execCanBeDisassembled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAmmoWorldItemDefinition_BP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDPSAtLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFabricationValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMaxDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC280 (end 0x010DC2A2)
 // Original VA: 0x00000001410DC280 | File offset: 0x010DB880

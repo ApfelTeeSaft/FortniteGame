@@ -3,25 +3,8 @@
 // Class UCrashlyticsBlueprintLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E86FE0, FClassParams RVA 0x02E87080.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCrashlyticsBlueprintLibrary();  // RVA 0x002D1DD0 (consensus OuterFunc)
-
-class UCrashlyticsBlueprintLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCrashlyticsBlueprintLibrary();
-	static void execLogException(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execLogMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBooleanKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFloatKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIntegerKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetStringKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetUserEmail(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetUserIdentifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetUserName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002D1DA0 (end 0x002D1DC2)
 // Original VA: 0x00000001402D1DA0 | File offset: 0x002D13A0

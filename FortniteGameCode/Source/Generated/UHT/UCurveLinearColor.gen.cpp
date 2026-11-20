@@ -3,17 +3,8 @@
 // Class UCurveLinearColor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038CD608, FClassParams RVA 0x038CD630.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCurveLinearColor();  // RVA 0x023FE530 (consensus OuterFunc)
-
-class UCurveLinearColor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCurveLinearColor();
-	static void execGetLinearColorValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDC10 (end 0x023FDC32)
 // Original VA: 0x00000001423FDC10 | File offset: 0x023FD210

@@ -3,14 +3,49 @@
 // Class ASkyLight: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039AEF98, FClassParams RVA 0x039AEFC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class ASkyLight
+struct Z_Construct_UFunction_ASkyLight_OnRep_bEnabled_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D54F0 (end 0x024D551F)
+// Original VA: 0x00000001424D54F0 | File offset: 0x024D4AF0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_ASkyLight_OnRep_bEnabled()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ASkyLight_OnRep_bEnabled_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_ASkyLight_OnRep_bEnabled: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_ASkyLight_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ASkyLight_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ASkyLight_OnRep_bEnabled, "OnRep_bEnabled" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ASkyLight_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039AEFC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ASkyLight_Statics::ClassParams = { &ASkyLight::StaticClass, Z_Construct_UClass_ASkyLight_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ASkyLight_Statics::FuncInfo, 1, Z_Construct_UClass_ASkyLight_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_ASkyLight_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D5070 (end 0x024D509F)
+// Original VA: 0x00000001424D5070 | File offset: 0x024D4670
+// Recovery: confirmed (UHT singleton of ASkyLight) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ASkyLight()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ASkyLight_Statics::ClassParams);
+	}
+	return OuterClass;
+}

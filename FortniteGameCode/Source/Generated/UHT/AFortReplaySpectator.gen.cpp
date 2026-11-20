@@ -3,17 +3,8 @@
 // Class AFortReplaySpectator: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033EF9B0, FClassParams RVA 0x033EF9E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortReplaySpectator();  // RVA 0x0109DA80 (consensus OuterFunc)
-
-class AFortReplaySpectator
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortReplaySpectator();
-	static void execSetCloudAltitudes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D150 (end 0x0109D172)
 // Original VA: 0x000000014109D150 | File offset: 0x0109C750

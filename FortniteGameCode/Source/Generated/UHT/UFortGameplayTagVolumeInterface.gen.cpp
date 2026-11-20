@@ -3,15 +3,8 @@
 // Class UFortGameplayTagVolumeInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0332CEF8, FClassParams RVA 0x0332CF10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortGameplayTagVolumeInterface();  // RVA 0x00FEE9D0 (consensus OuterFunc)
-
-class UFortGameplayTagVolumeInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortGameplayTagVolumeInterface_ApplyTags_Statics
 {

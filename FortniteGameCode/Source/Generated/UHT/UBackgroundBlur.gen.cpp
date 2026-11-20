@@ -3,23 +3,8 @@
 // Class UBackgroundBlur: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03690C90, FClassParams RVA 0x03690D50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UBackgroundBlur();  // RVA 0x01BE5F20 (consensus OuterFunc)
-
-class UBackgroundBlur
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUBackgroundBlur();
-	static void execSetApplyAlphaToBlur(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBlurRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBlurStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLowQualityFallbackBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5A30 (end 0x01BE5A52)
 // Original VA: 0x0000000141BE5A30 | File offset: 0x01BE5030

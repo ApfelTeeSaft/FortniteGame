@@ -3,19 +3,8 @@
 // Class AFortPlayerControllerPvP: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033C3E60, FClassParams RVA 0x033C3EA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerPvP();  // RVA 0x010777D0 (consensus OuterFunc)
-
-class AFortPlayerControllerPvP
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortPlayerControllerPvP();
-	static void execClientReceiveKillNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execClientShowGameOverWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execServerAttemptSelectFOBCore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01077570 (end 0x01077592)
 // Original VA: 0x0000000141077570 | File offset: 0x01076B70

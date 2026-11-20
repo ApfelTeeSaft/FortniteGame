@@ -3,23 +3,8 @@
 // Class UFortCollectionBookPrimaryPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C768F0, FClassParams RVA 0x03C769C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookPrimaryPanel();  // RVA 0x02894740 (consensus OuterFunc)
-
-class UFortCollectionBookPrimaryPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortCollectionBookPrimaryPanel();
-	static void execHandleSectionTileClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnBackActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnCollectionBookPageClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnCollectionBookPageSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnCollectionBookSectionClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnInputMethodChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnSummonInfoPanelExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028942B0 (end 0x028942D2)
 // Original VA: 0x00000001428942B0 | File offset: 0x028938B0

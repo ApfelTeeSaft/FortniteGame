@@ -3,17 +3,8 @@
 // Class AFortAthenaVehicle: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032C61A8, FClassParams RVA 0x032C61F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class AFortAthenaVehicle
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortAthenaVehicle();
-	static void execServerOnAttemptInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3350 (end 0x00FA3372)
 // Original VA: 0x0000000140FA3350 | File offset: 0x00FA2950
@@ -27,4 +18,47 @@ void AFortAthenaVehicle::StaticRegisterNativesAFortAthenaVehicle()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_AFortAthenaVehicle_ServerOnAttemptInteract: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_AFortAthenaVehicle_ServerOnAttemptInteract_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3EF0 (end 0x00FA3F1F)
+// Original VA: 0x0000000140FA3EF0 | File offset: 0x00FA34F0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_AFortAthenaVehicle_ServerOnAttemptInteract()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AFortAthenaVehicle_ServerOnAttemptInteract_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_AFortAthenaVehicle_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortAthenaVehicle_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortAthenaVehicle_ServerOnAttemptInteract, "ServerOnAttemptInteract" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortAthenaVehicle_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032C61F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortAthenaVehicle_Statics::ClassParams = { &AFortAthenaVehicle::StaticClass, Z_Construct_UClass_AFortAthenaVehicle_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortAthenaVehicle_Statics::FuncInfo, 1, Z_Construct_UClass_AFortAthenaVehicle_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_AFortAthenaVehicle_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortAthenaVehicle_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3900 (end 0x00FA392F)
+// Original VA: 0x0000000140FA3900 | File offset: 0x00FA2F00
+// Recovery: confirmed (UHT singleton of AFortAthenaVehicle) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortAthenaVehicle()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortAthenaVehicle_Statics::ClassParams);
+	}
+	return OuterClass;
+}

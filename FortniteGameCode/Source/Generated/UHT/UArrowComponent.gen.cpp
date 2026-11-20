@@ -3,17 +3,8 @@
 // Class UArrowComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038A3F50, FClassParams RVA 0x038A3F90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UArrowComponent();  // RVA 0x023D6680 (consensus OuterFunc)
-
-class UArrowComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUArrowComponent();
-	static void execSetArrowColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5850 (end 0x023D5872)
 // Original VA: 0x00000001423D5850 | File offset: 0x023D4E50

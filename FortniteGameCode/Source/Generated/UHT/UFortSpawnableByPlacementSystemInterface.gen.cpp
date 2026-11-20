@@ -3,18 +3,8 @@
 // Class UFortSpawnableByPlacementSystemInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033F8158, FClassParams RVA 0x033F8180.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortSpawnableByPlacementSystemInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSpawnableByPlacementSystemInterface();
-	static void execGetMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMissionGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5010 (end 0x010A5032)
 // Original VA: 0x00000001410A5010 | File offset: 0x010A4610
@@ -29,6 +19,63 @@ void UFortSpawnableByPlacementSystemInterface::StaticRegisterNativesUFortSpawnab
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMission: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMission_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A63E0 (end 0x010A640F)
+// Original VA: 0x00000001410A63E0 | File offset: 0x010A59E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMission()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMission_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMissionGuid: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMissionGuid_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A6410 (end 0x010A643F)
+// Original VA: 0x00000001410A6410 | File offset: 0x010A5A10
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMissionGuid()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMissionGuid_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortSpawnableByPlacementSystemInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSpawnableByPlacementSystemInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMission, "GetMission" },
+	{ &Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMissionGuid, "GetMissionGuid" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSpawnableByPlacementSystemInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x033F8180
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSpawnableByPlacementSystemInterface_Statics::ClassParams = { &UFortSpawnableByPlacementSystemInterface::StaticClass, Z_Construct_UClass_UFortSpawnableByPlacementSystemInterface_Statics::DependentSingletons, 2, 0x00104081u, Z_Construct_UClass_UFortSpawnableByPlacementSystemInterface_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortSpawnableByPlacementSystemInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5B30 (end 0x010A5B5F)
+// Original VA: 0x00000001410A5B30 | File offset: 0x010A5130
+// Recovery: confirmed (UHT singleton of UFortSpawnableByPlacementSystemInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSpawnableByPlacementSystemInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSpawnableByPlacementSystemInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

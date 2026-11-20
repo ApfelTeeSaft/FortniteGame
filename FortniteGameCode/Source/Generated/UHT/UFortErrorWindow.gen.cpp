@@ -3,19 +3,8 @@
 // Class UFortErrorWindow: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C8EB10, FClassParams RVA 0x03C8EB60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortErrorWindow();  // RVA 0x028A3490 (consensus OuterFunc)
-
-class UFortErrorWindow
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortErrorWindow();
-	static void execDismissErrors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetErrorEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execPutErrorEntries(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A2EF0 (end 0x028A2F12)
 // Original VA: 0x00000001428A2EF0 | File offset: 0x028A24F0

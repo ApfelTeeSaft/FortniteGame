@@ -3,19 +3,8 @@
 // Class UGameplayTask_SpawnActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036C6660, FClassParams RVA 0x036C66B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UGameplayTask_SpawnActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUGameplayTask_SpawnActor();
-	static void execBeginSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFinishSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSpawnActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9A9D0 (end 0x01C9A9F2)
 // Original VA: 0x0000000141C9A9D0 | File offset: 0x01C99FD0
@@ -31,8 +20,82 @@ void UGameplayTask_SpawnActor::StaticRegisterNativesUGameplayTask_SpawnActor()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UGameplayTask_SpawnActor_BeginSpawningActor: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UGameplayTask_SpawnActor_BeginSpawningActor_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9AEE0 (end 0x01C9AF0F)
+// Original VA: 0x0000000141C9AEE0 | File offset: 0x01C9A4E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UGameplayTask_SpawnActor_BeginSpawningActor()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGameplayTask_SpawnActor_BeginSpawningActor_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UGameplayTask_SpawnActor_FinishSpawningActor: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UGameplayTask_SpawnActor_FinishSpawningActor_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 6 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9AF10 (end 0x01C9AF3F)
+// Original VA: 0x0000000141C9AF10 | File offset: 0x01C9A510
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UGameplayTask_SpawnActor_FinishSpawningActor()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGameplayTask_SpawnActor_FinishSpawningActor_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UGameplayTask_SpawnActor_SpawnActor: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UGameplayTask_SpawnActor_SpawnActor_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9AF40 (end 0x01C9AF6F)
+// Original VA: 0x0000000141C9AF40 | File offset: 0x01C9A540
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UGameplayTask_SpawnActor_SpawnActor()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGameplayTask_SpawnActor_SpawnActor_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UGameplayTask_SpawnActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGameplayTask_SpawnActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGameplayTask_SpawnActor_BeginSpawningActor, "BeginSpawningActor" },
+	{ &Z_Construct_UFunction_UGameplayTask_SpawnActor_FinishSpawningActor, "FinishSpawningActor" },
+	{ &Z_Construct_UFunction_UGameplayTask_SpawnActor_SpawnActor, "SpawnActor" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGameplayTask_SpawnActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036C66B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGameplayTask_SpawnActor_Statics::ClassParams = { &UGameplayTask_SpawnActor::StaticClass, Z_Construct_UClass_UGameplayTask_SpawnActor_Statics::DependentSingletons, 2, 0x00880084u, Z_Construct_UClass_UGameplayTask_SpawnActor_Statics::FuncInfo, 3, Z_Construct_UClass_UGameplayTask_SpawnActor_Statics::PropPointers, 3, "Game", &Z_Construct_UClass_UGameplayTask_SpawnActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9ABC0 (end 0x01C9ABEF)
+// Original VA: 0x0000000141C9ABC0 | File offset: 0x01C9A1C0
+// Recovery: confirmed (UHT singleton of UGameplayTask_SpawnActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGameplayTask_SpawnActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGameplayTask_SpawnActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

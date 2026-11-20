@@ -3,15 +3,8 @@
 // Class AGameplayCueNotify_Actor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F3DD60, FClassParams RVA 0x02F3DE50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AGameplayCueNotify_Actor();  // RVA 0x0055BEC0 (consensus OuterFunc)
-
-class AGameplayCueNotify_Actor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AGameplayCueNotify_Actor_K2_EndGameplayCue_Statics
 {

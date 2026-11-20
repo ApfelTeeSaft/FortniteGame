@@ -3,15 +3,8 @@
 // Class USceneCaptureComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039A0700, FClassParams RVA 0x039A0830.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USceneCaptureComponent();  // RVA 0x024C6DB0 (consensus OuterFunc)
-
-class USceneCaptureComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_USceneCaptureComponent_ClearHiddenComponents_Statics
 {

@@ -3,15 +3,8 @@
 // Class UEmergencyNoticeBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C5FD38, FClassParams RVA 0x03C5FD60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEmergencyNoticeBase();  // RVA 0x028875E0 (consensus OuterFunc)
-
-class UEmergencyNoticeBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UEmergencyNoticeBase_HideNotice_Statics
 {

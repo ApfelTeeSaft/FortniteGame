@@ -3,20 +3,8 @@
 // Class UPathFollowingComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0370CB90, FClassParams RVA 0x0370CC00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPathFollowingComponent();  // RVA 0x01D31D40 (consensus OuterFunc)
-
-class UPathFollowingComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUPathFollowingComponent();
-	static void execGetPathActionType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPathDestination(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnActorBump(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnNavDataRegistered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31B00 (end 0x01D31B22)
 // Original VA: 0x0000000141D31B00 | File offset: 0x01D31100

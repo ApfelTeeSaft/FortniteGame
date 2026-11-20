@@ -3,22 +3,8 @@
 // Class AKeepHeartBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0343EDB0, FClassParams RVA 0x0343EE30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AKeepHeartBase();  // RVA 0x010E30B0 (consensus OuterFunc)
-
-class AKeepHeartBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAKeepHeartBase();
-	static void execIsKeepLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsKeepOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execLoadUserKeep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execResetUserKeep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSaveUserKeep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAllowLooting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E28F0 (end 0x010E2912)
 // Original VA: 0x00000001410E28F0 | File offset: 0x010E1EF0

@@ -3,15 +3,8 @@
 // Class AFortClientAnnouncement_Conversation: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032E5A60, FClassParams RVA 0x032E5AC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortClientAnnouncement_Conversation();  // RVA 0x00FC00B0 (consensus OuterFunc)
-
-class AFortClientAnnouncement_Conversation
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortClientAnnouncement_Conversation_CurrentSentenceAudioFinished_Statics
 {

@@ -3,20 +3,8 @@
 // Class UFortUITeamInfo: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03428C50, FClassParams RVA 0x03428D50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUITeamInfo();  // RVA 0x010D4AA0 (consensus OuterFunc)
-
-class UFortUITeamInfo
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortUITeamInfo();
-	static void execGetTeamHitPointFractions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTeamMemberIDs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTeamMembers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsTeamMemberSynchronizing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4410 (end 0x010D4432)
 // Original VA: 0x00000001410D4410 | File offset: 0x010D3A10

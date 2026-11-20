@@ -3,17 +3,8 @@
 // Class UAbilityTask_WaitAttributeChangeThreshold: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F32310, FClassParams RVA 0x02F32340.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold();  // RVA 0x0054D470 (consensus OuterFunc)
-
-class UAbilityTask_WaitAttributeChangeThreshold
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAbilityTask_WaitAttributeChangeThreshold();
-	static void execWaitForAttributeChangeThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CD20 (end 0x0054CD42)
 // Original VA: 0x000000014054CD20 | File offset: 0x0054C320

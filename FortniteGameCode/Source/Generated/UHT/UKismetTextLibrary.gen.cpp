@@ -3,58 +3,8 @@
 // Class UKismetTextLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0392F5D0, FClassParams RVA 0x0392F880.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UKismetTextLibrary();  // RVA 0x02470330 (consensus OuterFunc)
-
-class UKismetTextLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUKismetTextLibrary();
-	static void execAsCurrency_Float(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAsCurrency_Integer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAsCurrencyBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAsDate_DateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAsDateTime_DateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAsPercent_Float(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAsTime_DateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAsTimespan_Timespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAsTimeZoneDate_DateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAsTimeZoneDateTime_DateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAsTimeZoneTime_DateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_BoolToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_ByteToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_ColorToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_FloatToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_IntToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_NameToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_ObjectToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_RotatorToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_StringToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_TextToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_TransformToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_Vector2dToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execConv_VectorToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEqualEqual_IgnoreCase_TextText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEqualEqual_TextText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFindTextInLocalizationTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFormat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEmptyText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNotEqual_IgnoreCase_TextText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNotEqual_TextText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execStringTableIdAndKeyFromText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTextFromStringTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTextIsCultureInvariant(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTextIsEmpty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTextIsFromStringTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTextIsTransient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTextToLower(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTextToUpper(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTextTrimPreceding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTextTrimPrecedingAndTrailing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTextTrimTrailing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FE90 (end 0x0246FEB2)
 // Original VA: 0x000000014246FE90 | File offset: 0x0246F490

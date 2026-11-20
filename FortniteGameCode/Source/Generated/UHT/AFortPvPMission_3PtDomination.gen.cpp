@@ -3,15 +3,8 @@
 // Class AFortPvPMission_3PtDomination: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033DC9B8, FClassParams RVA 0x033DCA00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPvPMission_3PtDomination();  // RVA 0x01093130 (consensus OuterFunc)
-
-class AFortPvPMission_3PtDomination
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortPvPMission_3PtDomination_CapturePointSetterHackTimer_Statics
 {

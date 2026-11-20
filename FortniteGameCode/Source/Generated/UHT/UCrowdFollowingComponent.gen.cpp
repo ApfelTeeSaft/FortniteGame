@@ -3,17 +3,8 @@
 // Class UCrowdFollowingComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03701A90, FClassParams RVA 0x03701AE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCrowdFollowingComponent();  // RVA 0x01D290D0 (consensus OuterFunc)
-
-class UCrowdFollowingComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCrowdFollowingComponent();
-	static void execSuspendCrowdSteering(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D28820 (end 0x01D28842)
 // Original VA: 0x0000000141D28820 | File offset: 0x01D27E20

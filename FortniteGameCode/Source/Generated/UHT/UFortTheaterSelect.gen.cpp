@@ -3,18 +3,8 @@
 // Class UFortTheaterSelect: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D31820, FClassParams RVA 0x03D31870.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTheaterSelect();  // RVA 0x02904C40 (consensus OuterFunc)
-
-class UFortTheaterSelect
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortTheaterSelect();
-	static void execGetSurvivalCMSText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTheaterRecommendedRatingRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029044C0 (end 0x029044E2)
 // Original VA: 0x00000001429044C0 | File offset: 0x02903AC0

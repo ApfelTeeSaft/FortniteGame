@@ -3,15 +3,8 @@
 // Class AFortObjectiveBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03392A40, FClassParams RVA 0x03392D10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortObjectiveBase();  // RVA 0x01050BB0 (consensus OuterFunc)
-
-class AFortObjectiveBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortObjectiveBase_AttemptMissionSave_Statics
 {

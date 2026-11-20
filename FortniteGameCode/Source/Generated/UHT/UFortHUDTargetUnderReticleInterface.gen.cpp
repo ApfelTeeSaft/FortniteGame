@@ -3,21 +3,8 @@
 // Class UFortHUDTargetUnderReticleInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03349660, FClassParams RVA 0x033496C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHUDTargetUnderReticleInterface();  // RVA 0x010068B0 (consensus OuterFunc)
-
-class UFortHUDTargetUnderReticleInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortHUDTargetUnderReticleInterface();
-	static void execGetHUDTargetDifficultyRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHUDTargetDisplayModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHUDTargetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHUDTargetHealthPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHUDTargetUpgradeDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01006210 (end 0x01006232)
 // Original VA: 0x0000000141006210 | File offset: 0x01005810

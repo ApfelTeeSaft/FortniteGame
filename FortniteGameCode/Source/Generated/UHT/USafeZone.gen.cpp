@@ -3,17 +3,8 @@
 // Class USafeZone: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0369C8C8, FClassParams RVA 0x0369C900.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USafeZone();  // RVA 0x01BF2EB0 (consensus OuterFunc)
-
-class USafeZone
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUSafeZone();
-	static void execSetSidesToPad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF29D0 (end 0x01BF29F2)
 // Original VA: 0x0000000141BF29D0 | File offset: 0x01BF1FD0

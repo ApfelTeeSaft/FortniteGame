@@ -3,18 +3,8 @@
 // Class UFortKeepEventList: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03354F08, FClassParams RVA 0x03354F40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortKeepEventList();  // RVA 0x0100C110 (consensus OuterFunc)
-
-class UFortKeepEventList
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortKeepEventList();
-	static void execGetEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEventDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BC90 (end 0x0100BCB2)
 // Original VA: 0x000000014100BC90 | File offset: 0x0100B290

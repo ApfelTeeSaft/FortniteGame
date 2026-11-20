@@ -3,26 +3,8 @@
 // Class UFortPerkWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CFDCD0, FClassParams RVA 0x03CFDD80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortPerkWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortPerkWidget();
-	static void execGetIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPerkTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRequiredLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSupportBonusType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTooltipDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTooltipTitle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPerkHighlighted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPerkUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsTierPerk(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6470 (end 0x028E6492)
 // Original VA: 0x00000001428E6470 | File offset: 0x028E5A70
@@ -45,22 +27,208 @@ void UFortPerkWidget::StaticRegisterNativesUFortPerkWidget()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortPerkWidget_GetIcon: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPerkWidget_GetIcon_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E72A0 (end 0x028E72CF)
+// Original VA: 0x00000001428E72A0 | File offset: 0x028E68A0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerkWidget_GetIcon()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerkWidget_GetIcon_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerkWidget_GetPerkTier: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPerkWidget_GetPerkTier_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E72D0 (end 0x028E72FF)
+// Original VA: 0x00000001428E72D0 | File offset: 0x028E68D0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerkWidget_GetPerkTier()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerkWidget_GetPerkTier_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerkWidget_GetRequiredLevel: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPerkWidget_GetRequiredLevel_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7300 (end 0x028E732F)
+// Original VA: 0x00000001428E7300 | File offset: 0x028E6900
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerkWidget_GetRequiredLevel()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerkWidget_GetRequiredLevel_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerkWidget_GetSupportBonusType: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPerkWidget_GetSupportBonusType_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7330 (end 0x028E735F)
+// Original VA: 0x00000001428E7330 | File offset: 0x028E6930
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerkWidget_GetSupportBonusType()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerkWidget_GetSupportBonusType_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerkWidget_GetTooltipDescription: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPerkWidget_GetTooltipDescription_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7360 (end 0x028E738F)
+// Original VA: 0x00000001428E7360 | File offset: 0x028E6960
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerkWidget_GetTooltipDescription()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerkWidget_GetTooltipDescription_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerkWidget_GetTooltipTitle: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPerkWidget_GetTooltipTitle_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7390 (end 0x028E73BF)
+// Original VA: 0x00000001428E7390 | File offset: 0x028E6990
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerkWidget_GetTooltipTitle()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerkWidget_GetTooltipTitle_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerkWidget_HasAbility: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPerkWidget_HasAbility_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E73C0 (end 0x028E73EF)
+// Original VA: 0x00000001428E73C0 | File offset: 0x028E69C0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerkWidget_HasAbility()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerkWidget_HasAbility_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerkWidget_IsPerkHighlighted: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPerkWidget_IsPerkHighlighted_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E73F0 (end 0x028E741F)
+// Original VA: 0x00000001428E73F0 | File offset: 0x028E69F0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerkWidget_IsPerkHighlighted()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerkWidget_IsPerkHighlighted_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerkWidget_IsPerkUnlocked: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPerkWidget_IsPerkUnlocked_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7420 (end 0x028E744F)
+// Original VA: 0x00000001428E7420 | File offset: 0x028E6A20
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerkWidget_IsPerkUnlocked()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerkWidget_IsPerkUnlocked_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerkWidget_IsTierPerk: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPerkWidget_IsTierPerk_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E7450 (end 0x028E747F)
+// Original VA: 0x00000001428E7450 | File offset: 0x028E6A50
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerkWidget_IsTierPerk()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerkWidget_IsTierPerk_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortPerkWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPerkWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPerkWidget_GetIcon, "GetIcon" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_GetPerkTier, "GetPerkTier" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_GetRequiredLevel, "GetRequiredLevel" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_GetSupportBonusType, "GetSupportBonusType" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_GetTooltipDescription, "GetTooltipDescription" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_GetTooltipTitle, "GetTooltipTitle" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_HasAbility, "HasAbility" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_IsPerkHighlighted, "IsPerkHighlighted" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_IsPerkUnlocked, "IsPerkUnlocked" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_IsTierPerk, "IsTierPerk" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPerkWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CFDD80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPerkWidget_Statics::ClassParams = { &UFortPerkWidget::StaticClass, Z_Construct_UClass_UFortPerkWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortPerkWidget_Statics::FuncInfo, 10, Z_Construct_UClass_UFortPerkWidget_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortPerkWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6BA0 (end 0x028E6BCF)
+// Original VA: 0x00000001428E6BA0 | File offset: 0x028E61A0
+// Recovery: confirmed (UHT singleton of UFortPerkWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPerkWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPerkWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

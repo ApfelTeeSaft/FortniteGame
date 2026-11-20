@@ -3,40 +3,8 @@
 // Class UFortHomebaseUIContext: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CA7640, FClassParams RVA 0x03CA7810.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortHomebaseUIContext();  // RVA 0x028B3DB0 (consensus OuterFunc)
-
-class UFortHomebaseUIContext
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortHomebaseUIContext();
-	static void execGetEarlyGameNodePageId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEarlyGameNodeProgressionState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEarlyGameRootSkillTreeNodeId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetEarlyGameRootSkillTreePageId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetItemInSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetItemsInSquad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLocalPlayerHasHeroBackpack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLocalPlayerHasHeroHeadAccessories(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNodeAttributeBonusesForDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNodeDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNodeTagBonusesForDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumOwnedNodesInSkillTreePage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetQuestNodeColour(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRootSkillTreeNodeId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRootSkillTreePageId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetShowHeroBackpackForLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetShowHeroHeadAccessoriesForLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSquadIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTotalNodesInSkillTreePage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetWorkerSetBonusEffectModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsAnySquadSlotUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsInEarlyGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetShowHeroBackpackForLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetShowHeroHeadAccessoriesForLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3980 (end 0x028B39A2)
 // Original VA: 0x00000001428B3980 | File offset: 0x028B2F80

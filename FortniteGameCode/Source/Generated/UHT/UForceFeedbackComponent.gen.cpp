@@ -3,15 +3,8 @@
 // Class UForceFeedbackComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038F0650, FClassParams RVA 0x038F0710.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UForceFeedbackComponent();  // RVA 0x0240FE50 (consensus OuterFunc)
-
-class UForceFeedbackComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UForceFeedbackComponent_AdjustAttenuation_Statics
 {

@@ -3,14 +3,48 @@
 // Class UBlueprintAsyncActionBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038B2CD8, FClassParams RVA 0x038B2CF0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UBlueprintAsyncActionBase
+struct Z_Construct_UFunction_UBlueprintAsyncActionBase_Activate_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 5 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E3CE0 (end 0x023E3D0F)
+// Original VA: 0x00000001423E3CE0 | File offset: 0x023E32E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UBlueprintAsyncActionBase_Activate()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UBlueprintAsyncActionBase_Activate_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UBlueprintAsyncActionBase_Activate: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UBlueprintAsyncActionBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBlueprintAsyncActionBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBlueprintAsyncActionBase_Activate, "Activate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBlueprintAsyncActionBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038B2CF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBlueprintAsyncActionBase_Statics::ClassParams = { &UBlueprintAsyncActionBase::StaticClass, Z_Construct_UClass_UBlueprintAsyncActionBase_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UBlueprintAsyncActionBase_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UBlueprintAsyncActionBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E3710 (end 0x023E373F)
+// Original VA: 0x00000001423E3710 | File offset: 0x023E2D10
+// Recovery: confirmed (UHT singleton of UBlueprintAsyncActionBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBlueprintAsyncActionBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBlueprintAsyncActionBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -3,20 +3,8 @@
 // Class UDataTableFunctionLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038CE1C0, FClassParams RVA 0x038CE210.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UDataTableFunctionLibrary();  // RVA 0x023FE6C0 (consensus OuterFunc)
-
-class UDataTableFunctionLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUDataTableFunctionLibrary();
-	static void execEvaluateCurveTableRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDataTableColumnAsString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDataTableRowFromName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDataTableRowNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDCA0 (end 0x023FDCC2)
 // Original VA: 0x00000001423FDCA0 | File offset: 0x023FD2A0

@@ -3,17 +3,8 @@
 // Class UCommonUILibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E85A30, FClassParams RVA 0x02E85A50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonUILibrary();  // RVA 0x002D0480 (consensus OuterFunc)
-
-class UCommonUILibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCommonUILibrary();
-	static void execFindParentWidgetOfType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0210 (end 0x002D0232)
 // Original VA: 0x00000001402D0210 | File offset: 0x002CF810

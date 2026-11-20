@@ -3,15 +3,8 @@
 // Class UFortTrackMovementComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0341C830, FClassParams RVA 0x0341C900.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTrackMovementComponent();  // RVA 0x010CAD30 (consensus OuterFunc)
-
-class UFortTrackMovementComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortTrackMovementComponent_FlipDirection_Statics
 {

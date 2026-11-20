@@ -3,17 +3,8 @@
 // Class UFortAsyncAction_CreateHeadlessAccount: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C604F8, FClassParams RVA 0x03C60530.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_CreateHeadlessAccount();  // RVA 0x02887860 (consensus OuterFunc)
-
-class UFortAsyncAction_CreateHeadlessAccount
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAsyncAction_CreateHeadlessAccount();
-	static void execCreateHeadlessAccount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02886EA0 (end 0x02886EC2)
 // Original VA: 0x0000000142886EA0 | File offset: 0x028864A0

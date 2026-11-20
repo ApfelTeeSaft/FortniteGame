@@ -3,17 +3,8 @@
 // Class AFortPickupEffect: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033AD720, FClassParams RVA 0x033AD7D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPickupEffect();  // RVA 0x010657D0 (consensus OuterFunc)
-
-class AFortPickupEffect
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortPickupEffect();
-	static void execApplyCosmeticOverridesToMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01064F30 (end 0x01064F52)
 // Original VA: 0x0000000141064F30 | File offset: 0x01064530

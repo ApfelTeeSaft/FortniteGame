@@ -3,15 +3,8 @@
 // Class UFortUIStateWidget_NUI: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D4AD40, FClassParams RVA 0x03D4AE20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIStateWidget_NUI();  // RVA 0x02912000 (consensus OuterFunc)
-
-class UFortUIStateWidget_NUI
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortUIStateWidget_NUI_OnEnterState_Statics
 {

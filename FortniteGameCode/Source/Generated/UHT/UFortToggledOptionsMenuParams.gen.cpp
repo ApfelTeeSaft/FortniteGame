@@ -3,18 +3,8 @@
 // Class UFortToggledOptionsMenuParams: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0344A520, FClassParams RVA 0x0344A560.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortToggledOptionsMenuParams
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortToggledOptionsMenuParams();
-	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9290 (end 0x010E92B2)
 // Original VA: 0x00000001410E9290 | File offset: 0x010E8890
@@ -29,6 +19,64 @@ void UFortToggledOptionsMenuParams::StaticRegisterNativesUFortToggledOptionsMenu
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortToggledOptionsMenuParams_BreakParams: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortToggledOptionsMenuParams_BreakParams_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 27 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB340 (end 0x010EB36F)
+// Original VA: 0x00000001410EB340 | File offset: 0x010EA940
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortToggledOptionsMenuParams_BreakParams()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortToggledOptionsMenuParams_BreakParams_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortToggledOptionsMenuParams_SetParams: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortToggledOptionsMenuParams_SetParams_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 26 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EB370 (end 0x010EB39F)
+// Original VA: 0x00000001410EB370 | File offset: 0x010EA970
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortToggledOptionsMenuParams_SetParams()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortToggledOptionsMenuParams_SetParams_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortToggledOptionsMenuParams_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortToggledOptionsMenuParams_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortToggledOptionsMenuParams_BreakParams, "BreakParams" },
+	{ &Z_Construct_UFunction_UFortToggledOptionsMenuParams_SetParams, "SetParams" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortToggledOptionsMenuParams_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0344A560
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortToggledOptionsMenuParams_Statics::ClassParams = { &UFortToggledOptionsMenuParams::StaticClass, Z_Construct_UClass_UFortToggledOptionsMenuParams_Statics::DependentSingletons, 2, 0x00000280u, Z_Construct_UClass_UFortToggledOptionsMenuParams_Statics::FuncInfo, 2, Z_Construct_UClass_UFortToggledOptionsMenuParams_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortToggledOptionsMenuParams_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010EA3D0 (end 0x010EA3FF)
+// Original VA: 0x00000001410EA3D0 | File offset: 0x010E99D0
+// Recovery: confirmed (UHT singleton of UFortToggledOptionsMenuParams) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortToggledOptionsMenuParams()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortToggledOptionsMenuParams_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -3,22 +3,8 @@
 // Class UAthenaBattleBusItemDefinition: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03260570, FClassParams RVA 0x03260610.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaBattleBusItemDefinition();  // RVA 0x00F59810 (consensus OuterFunc)
-
-class UAthenaBattleBusItemDefinition
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAthenaBattleBusItemDefinition();
-	static void execGetBusPrefabClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFlightLoopingMusic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFlightLoopingSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetIgnitionSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLobbyLoopingMusic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLobbyLoopingSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59270 (end 0x00F59292)
 // Original VA: 0x0000000140F59270 | File offset: 0x00F58870

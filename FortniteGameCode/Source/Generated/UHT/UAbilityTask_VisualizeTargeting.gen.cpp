@@ -3,20 +3,8 @@
 // Class UAbilityTask_VisualizeTargeting: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F2BA70, FClassParams RVA 0x02F2BAC0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_VisualizeTargeting();  // RVA 0x00546A20 (consensus OuterFunc)
-
-class UAbilityTask_VisualizeTargeting
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAbilityTask_VisualizeTargeting();
-	static void execBeginSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFinishSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execVisualizeTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execVisualizeTargetingUsingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00546580 (end 0x005465A2)
 // Original VA: 0x0000000140546580 | File offset: 0x00545B80

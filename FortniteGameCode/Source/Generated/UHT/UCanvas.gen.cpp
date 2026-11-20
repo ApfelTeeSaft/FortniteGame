@@ -3,29 +3,8 @@
 // Class UCanvas: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038BFF10, FClassParams RVA 0x038C0060.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCanvas();  // RVA 0x023EE070 (consensus OuterFunc)
-
-class UCanvas
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCanvas();
-	static void execK2_Deproject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_DrawBorder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_DrawBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_DrawLine(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_DrawMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_DrawMaterialTriangle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_DrawPolygon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_DrawText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_DrawTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_DrawTriangle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_Project(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_StrLen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execK2_TextSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EDC70 (end 0x023EDC92)
 // Original VA: 0x00000001423EDC70 | File offset: 0x023ED270

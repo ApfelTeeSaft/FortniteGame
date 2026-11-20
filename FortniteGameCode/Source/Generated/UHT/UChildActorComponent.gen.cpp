@@ -3,17 +3,8 @@
 // Class UChildActorComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038C6DA0, FClassParams RVA 0x038C6DD0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UChildActorComponent();  // RVA 0x023F7830 (consensus OuterFunc)
-
-class UChildActorComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUChildActorComponent();
-	static void execSetChildActorClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F70F0 (end 0x023F7112)
 // Original VA: 0x00000001423F70F0 | File offset: 0x023F66F0

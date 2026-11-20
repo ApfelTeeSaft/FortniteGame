@@ -3,19 +3,8 @@
 // Class ADecalActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038CE7E0, FClassParams RVA 0x038CE820.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class ADecalActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesADecalActor();
-	static void execCreateDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDecalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDecalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDB50 (end 0x023FDB72)
 // Original VA: 0x00000001423FDB50 | File offset: 0x023FD150
@@ -31,8 +20,82 @@ void ADecalActor::StaticRegisterNativesADecalActor()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_ADecalActor_CreateDynamicMaterialInstance: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_ADecalActor_CreateDynamicMaterialInstance_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEC40 (end 0x023FEC6F)
+// Original VA: 0x00000001423FEC40 | File offset: 0x023FE240
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_ADecalActor_CreateDynamicMaterialInstance()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ADecalActor_CreateDynamicMaterialInstance_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_ADecalActor_GetDecalMaterial: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_ADecalActor_GetDecalMaterial_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FEC70 (end 0x023FEC9F)
+// Original VA: 0x00000001423FEC70 | File offset: 0x023FE270
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_ADecalActor_GetDecalMaterial()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ADecalActor_GetDecalMaterial_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_ADecalActor_SetDecalMaterial: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_ADecalActor_SetDecalMaterial_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FECA0 (end 0x023FECCF)
+// Original VA: 0x00000001423FECA0 | File offset: 0x023FE2A0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_ADecalActor_SetDecalMaterial()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ADecalActor_SetDecalMaterial_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_ADecalActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ADecalActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ADecalActor_CreateDynamicMaterialInstance, "CreateDynamicMaterialInstance" },
+	{ &Z_Construct_UFunction_ADecalActor_GetDecalMaterial, "GetDecalMaterial" },
+	{ &Z_Construct_UFunction_ADecalActor_SetDecalMaterial, "SetDecalMaterial" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ADecalActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038CE820
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ADecalActor_Statics::ClassParams = { &ADecalActor::StaticClass, Z_Construct_UClass_ADecalActor_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ADecalActor_Statics::FuncInfo, 3, Z_Construct_UClass_ADecalActor_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_ADecalActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FE3D0 (end 0x023FE3FF)
+// Original VA: 0x00000001423FE3D0 | File offset: 0x023FD9D0
+// Recovery: confirmed (UHT singleton of ADecalActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ADecalActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ADecalActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

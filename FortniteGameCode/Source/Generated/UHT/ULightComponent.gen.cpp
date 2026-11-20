@@ -3,34 +3,8 @@
 // Class ULightComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03930FE0, FClassParams RVA 0x039311F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ULightComponent();  // RVA 0x024704F0 (consensus OuterFunc)
-
-class ULightComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesULightComponent();
-	static void execSetAffectDynamicIndirectLighting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAffectTranslucentLighting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBloomScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBloomThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBloomTint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetEnableLightShaftBloom(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetForceCachedShadowsForMovablePrimitives(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIESTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIndirectLightingIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLightColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLightFunctionDisabledBrightness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLightFunctionFadeDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLightFunctionMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLightFunctionScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetShadowBias(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTemperature(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVolumetricScatteringIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FF20 (end 0x0246FF42)
 // Original VA: 0x000000014246FF20 | File offset: 0x0246F520

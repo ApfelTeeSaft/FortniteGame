@@ -3,18 +3,8 @@
 // Class APointLight: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0398D488, FClassParams RVA 0x0398D4C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class APointLight
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAPointLight();
-	static void execSetLightFalloffExponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B76C0 (end 0x024B76E2)
 // Original VA: 0x00000001424B76C0 | File offset: 0x024B6CC0
@@ -29,6 +19,64 @@ void APointLight::StaticRegisterNativesAPointLight()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_APointLight_SetLightFalloffExponent: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_APointLight_SetLightFalloffExponent_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B8550 (end 0x024B857F)
+// Original VA: 0x00000001424B8550 | File offset: 0x024B7B50
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_APointLight_SetLightFalloffExponent()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_APointLight_SetLightFalloffExponent_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_APointLight_SetRadius: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_APointLight_SetRadius_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B8580 (end 0x024B85AF)
+// Original VA: 0x00000001424B8580 | File offset: 0x024B7B80
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_APointLight_SetRadius()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_APointLight_SetRadius_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_APointLight_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_APointLight_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_APointLight_SetLightFalloffExponent, "SetLightFalloffExponent" },
+	{ &Z_Construct_UFunction_APointLight_SetRadius, "SetRadius" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_APointLight_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0398D4C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_APointLight_Statics::ClassParams = { &APointLight::StaticClass, Z_Construct_UClass_APointLight_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_APointLight_Statics::FuncInfo, 2, Z_Construct_UClass_APointLight_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_APointLight_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7D80 (end 0x024B7DAF)
+// Original VA: 0x00000001424B7D80 | File offset: 0x024B7380
+// Recovery: confirmed (UHT singleton of APointLight) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_APointLight()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_APointLight_Statics::ClassParams);
+	}
+	return OuterClass;
+}

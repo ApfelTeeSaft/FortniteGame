@@ -3,15 +3,8 @@
 // Class AFortQuickBars: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033EE670, FClassParams RVA 0x033EE770.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortQuickBars();  // RVA 0x0109DA50 (consensus OuterFunc)
-
-class AFortQuickBars
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AFortQuickBars_DisableSlot_Statics
 {

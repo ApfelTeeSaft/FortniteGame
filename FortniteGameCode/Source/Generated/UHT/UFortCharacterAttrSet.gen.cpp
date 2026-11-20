@@ -3,15 +3,8 @@
 // Class UFortCharacterAttrSet: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032DB540, FClassParams RVA 0x032DB5C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortCharacterAttrSet();  // RVA 0x00FB02A0 (consensus OuterFunc)
-
-class UFortCharacterAttrSet
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortCharacterAttrSet_OnRep_Fortitude_Statics
 {

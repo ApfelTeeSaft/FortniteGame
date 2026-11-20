@@ -3,15 +3,8 @@
 // Class UPlayerInput: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0398CF00, FClassParams RVA 0x0398CF80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UPlayerInput();  // RVA 0x024B7E40 (consensus OuterFunc)
-
-class UPlayerInput
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UPlayerInput_ClearSmoothing_Statics
 {

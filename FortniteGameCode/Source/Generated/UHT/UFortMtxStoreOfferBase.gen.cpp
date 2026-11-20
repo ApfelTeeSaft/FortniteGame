@@ -3,29 +3,8 @@
 // Class UFortMtxStoreOfferBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CF0240, FClassParams RVA 0x03CF0330.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortMtxStoreOfferBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortMtxStoreOfferBase();
-	static void execGetBackground(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBaseQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBonusQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDetailsAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDetailsImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetGradient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNormalPrice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOfferId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSalePrice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetStoreOfferType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTileImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DDF40 (end 0x028DDF62)
 // Original VA: 0x00000001428DDF40 | File offset: 0x028DD540
@@ -51,28 +30,262 @@ void UFortMtxStoreOfferBase::StaticRegisterNativesUFortMtxStoreOfferBase()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBackground: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBackground_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEB00 (end 0x028DEB2F)
+// Original VA: 0x00000001428DEB00 | File offset: 0x028DE100
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBackground()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBackground_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBaseQuantity: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBaseQuantity_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEB30 (end 0x028DEB5F)
+// Original VA: 0x00000001428DEB30 | File offset: 0x028DE130
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBaseQuantity()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBaseQuantity_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBonusQuantity: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBonusQuantity_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEB60 (end 0x028DEB8F)
+// Original VA: 0x00000001428DEB60 | File offset: 0x028DE160
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBonusQuantity()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBonusQuantity_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDescription: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDescription_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 8 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEB90 (end 0x028DEBBF)
+// Original VA: 0x00000001428DEB90 | File offset: 0x028DE190
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDescription()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDescription_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsAttributes: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsAttributes_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEBC0 (end 0x028DEBEF)
+// Original VA: 0x00000001428DEBC0 | File offset: 0x028DE1C0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsAttributes()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsAttributes_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsImage: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsImage_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEBF0 (end 0x028DEC1F)
+// Original VA: 0x00000001428DEBF0 | File offset: 0x028DE1F0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsImage()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsImage_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetGradient: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetGradient_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEC20 (end 0x028DEC4F)
+// Original VA: 0x00000001428DEC20 | File offset: 0x028DE220
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetGradient()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetGradient_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetName: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetName_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEC50 (end 0x028DEC7F)
+// Original VA: 0x00000001428DEC50 | File offset: 0x028DE250
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetName()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetName_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetNormalPrice: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetNormalPrice_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DEC80 (end 0x028DECAF)
+// Original VA: 0x00000001428DEC80 | File offset: 0x028DE280
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetNormalPrice()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetNormalPrice_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetOfferId: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetOfferId_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DECB0 (end 0x028DECDF)
+// Original VA: 0x00000001428DECB0 | File offset: 0x028DE2B0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetOfferId()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetOfferId_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetSalePrice: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetSalePrice_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DECE0 (end 0x028DED0F)
+// Original VA: 0x00000001428DECE0 | File offset: 0x028DE2E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetSalePrice()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetSalePrice_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetStoreOfferType: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetStoreOfferType_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DED10 (end 0x028DED3F)
+// Original VA: 0x00000001428DED10 | File offset: 0x028DE310
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetStoreOfferType()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetStoreOfferType_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortMtxStoreOfferBase_GetTileImage: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortMtxStoreOfferBase_GetTileImage_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DED40 (end 0x028DED6F)
+// Original VA: 0x00000001428DED40 | File offset: 0x028DE340
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortMtxStoreOfferBase_GetTileImage()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortMtxStoreOfferBase_GetTileImage_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortMtxStoreOfferBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMtxStoreOfferBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBackground, "GetBackground" },
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBaseQuantity, "GetBaseQuantity" },
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBonusQuantity, "GetBonusQuantity" },
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDescription, "GetDescription" },
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsAttributes, "GetDetailsAttributes" },
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetDetailsImage, "GetDetailsImage" },
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetGradient, "GetGradient" },
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetName, "GetName" },
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetNormalPrice, "GetNormalPrice" },
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetOfferId, "GetOfferId" },
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetSalePrice, "GetSalePrice" },
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetStoreOfferType, "GetStoreOfferType" },
+	{ &Z_Construct_UFunction_UFortMtxStoreOfferBase_GetTileImage, "GetTileImage" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMtxStoreOfferBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CF0330
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMtxStoreOfferBase_Statics::ClassParams = { &UFortMtxStoreOfferBase::StaticClass, Z_Construct_UClass_UFortMtxStoreOfferBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortMtxStoreOfferBase_Statics::FuncInfo, 13, Z_Construct_UClass_UFortMtxStoreOfferBase_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortMtxStoreOfferBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE380 (end 0x028DE3AF)
+// Original VA: 0x00000001428DE380 | File offset: 0x028DD980
+// Recovery: confirmed (UHT singleton of UFortMtxStoreOfferBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMtxStoreOfferBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMtxStoreOfferBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

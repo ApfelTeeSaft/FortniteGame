@@ -3,17 +3,8 @@
 // Class UAppleARKitAnchor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02FE2AB0, FClassParams RVA 0x02FE2AD0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UAppleARKitAnchor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAppleARKitAnchor();
-	static void execGetTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00806100 (end 0x00806122)
 // Original VA: 0x0000000140806100 | File offset: 0x00805700
@@ -27,4 +18,46 @@ void UAppleARKitAnchor::StaticRegisterNativesUAppleARKitAnchor()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UAppleARKitAnchor_GetTransform: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UAppleARKitAnchor_GetTransform_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x008064F0 (end 0x0080651F)
+// Original VA: 0x00000001408064F0 | File offset: 0x00805AF0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UAppleARKitAnchor_GetTransform()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UAppleARKitAnchor_GetTransform_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UAppleARKitAnchor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAppleARKitAnchor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAppleARKitAnchor_GetTransform, "GetTransform" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAppleARKitAnchor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02FE2AD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAppleARKitAnchor_Statics::ClassParams = { &UAppleARKitAnchor::StaticClass, Z_Construct_UClass_UAppleARKitAnchor_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UAppleARKitAnchor_Statics::FuncInfo, 1, Z_Construct_UClass_UAppleARKitAnchor_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UAppleARKitAnchor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x008063C0 (end 0x008063EF)
+// Original VA: 0x00000001408063C0 | File offset: 0x008059C0
+// Recovery: confirmed (UHT singleton of UAppleARKitAnchor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAppleARKitAnchor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAppleARKitAnchor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

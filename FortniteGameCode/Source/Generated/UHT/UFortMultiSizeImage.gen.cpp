@@ -3,19 +3,8 @@
 // Class UFortMultiSizeImage: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CF0590, FClassParams RVA 0x03CF05E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortMultiSizeImage();  // RVA 0x028DE3E0 (consensus OuterFunc)
-
-class UFortMultiSizeImage
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortMultiSizeImage();
-	static void execSetBrushSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetMultiSizeBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DDFA0 (end 0x028DDFC2)
 // Original VA: 0x00000001428DDFA0 | File offset: 0x028DD5A0

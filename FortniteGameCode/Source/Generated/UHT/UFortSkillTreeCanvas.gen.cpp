@@ -3,15 +3,8 @@
 // Class UFortSkillTreeCanvas: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D13240, FClassParams RVA 0x03D132A0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreeCanvas();  // RVA 0x028F5490 (consensus OuterFunc)
-
-class UFortSkillTreeCanvas
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelectionChanged_Statics
 {

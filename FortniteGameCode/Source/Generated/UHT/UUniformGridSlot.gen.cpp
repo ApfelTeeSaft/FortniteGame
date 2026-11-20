@@ -3,20 +3,8 @@
 // Class UUniformGridSlot: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036A3260, FClassParams RVA 0x036A32D0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UUniformGridSlot
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUUniformGridSlot();
-	static void execSetColumn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFAE20 (end 0x01BFAE42)
 // Original VA: 0x0000000141BFAE20 | File offset: 0x01BFA420
@@ -33,10 +21,100 @@ void UUniformGridSlot::StaticRegisterNativesUUniformGridSlot()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UUniformGridSlot_SetColumn: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UUniformGridSlot_SetColumn_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB820 (end 0x01BFB84F)
+// Original VA: 0x0000000141BFB820 | File offset: 0x01BFAE20
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UUniformGridSlot_SetColumn()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUniformGridSlot_SetColumn_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UUniformGridSlot_SetHorizontalAlignment: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UUniformGridSlot_SetHorizontalAlignment_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 19 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB850 (end 0x01BFB87F)
+// Original VA: 0x0000000141BFB850 | File offset: 0x01BFAE50
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UUniformGridSlot_SetHorizontalAlignment()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUniformGridSlot_SetHorizontalAlignment_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UUniformGridSlot_SetRow: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UUniformGridSlot_SetRow_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB880 (end 0x01BFB8AF)
+// Original VA: 0x0000000141BFB880 | File offset: 0x01BFAE80
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UUniformGridSlot_SetRow()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUniformGridSlot_SetRow_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UUniformGridSlot_SetVerticalAlignment: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UUniformGridSlot_SetVerticalAlignment_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 18 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB8B0 (end 0x01BFB8DF)
+// Original VA: 0x0000000141BFB8B0 | File offset: 0x01BFAEB0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UUniformGridSlot_SetVerticalAlignment()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UUniformGridSlot_SetVerticalAlignment_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UUniformGridSlot_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UUniformGridSlot_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UUniformGridSlot_SetColumn, "SetColumn" },
+	{ &Z_Construct_UFunction_UUniformGridSlot_SetHorizontalAlignment, "SetHorizontalAlignment" },
+	{ &Z_Construct_UFunction_UUniformGridSlot_SetRow, "SetRow" },
+	{ &Z_Construct_UFunction_UUniformGridSlot_SetVerticalAlignment, "SetVerticalAlignment" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UUniformGridSlot_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036A32D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UUniformGridSlot_Statics::ClassParams = { &UUniformGridSlot::StaticClass, Z_Construct_UClass_UUniformGridSlot_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UUniformGridSlot_Statics::FuncInfo, 4, Z_Construct_UClass_UUniformGridSlot_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UUniformGridSlot_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB190 (end 0x01BFB1BF)
+// Original VA: 0x0000000141BFB190 | File offset: 0x01BFA790
+// Recovery: confirmed (UHT singleton of UUniformGridSlot) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UUniformGridSlot()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UUniformGridSlot_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -3,17 +3,8 @@
 // Class AFortPvPMission_EnemyBaseDestruction: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033DCB18, FClassParams RVA 0x033DCB30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction();  // RVA 0x01093190 (consensus OuterFunc)
-
-class AFortPvPMission_EnemyBaseDestruction
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortPvPMission_EnemyBaseDestruction();
-	static void execGetCornerstoneForTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01092EC0 (end 0x01092EE2)
 // Original VA: 0x0000000141092EC0 | File offset: 0x010924C0

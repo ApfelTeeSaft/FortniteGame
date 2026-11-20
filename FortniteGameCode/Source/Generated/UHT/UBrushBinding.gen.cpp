@@ -3,17 +3,8 @@
 // Class UBrushBinding: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03691320, FClassParams RVA 0x03691340.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UBrushBinding
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUBrushBinding();
-	static void execGetValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5B20 (end 0x01BE5B42)
 // Original VA: 0x0000000141BE5B20 | File offset: 0x01BE5120
@@ -27,4 +18,45 @@ void UBrushBinding::StaticRegisterNativesUBrushBinding()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UBrushBinding_GetValue: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UBrushBinding_GetValue_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 10 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6A90 (end 0x01BE6ABF)
+// Original VA: 0x0000000141BE6A90 | File offset: 0x01BE6090
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UBrushBinding_GetValue()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UBrushBinding_GetValue_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UBrushBinding_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBrushBinding_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBrushBinding_GetValue, "GetValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBrushBinding_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03691340
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBrushBinding_Statics::ClassParams = { &UBrushBinding::StaticClass, Z_Construct_UClass_UBrushBinding_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UBrushBinding_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UBrushBinding_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6020 (end 0x01BE604F)
+// Original VA: 0x0000000141BE6020 | File offset: 0x01BE5620
+// Recovery: confirmed (UHT singleton of UBrushBinding) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBrushBinding()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBrushBinding_Statics::ClassParams);
+	}
+	return OuterClass;
+}

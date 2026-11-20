@@ -3,21 +3,8 @@
 // Class ABuildingGameplayActorConsumable: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03277BF0, FClassParams RVA 0x03277C80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ABuildingGameplayActorConsumable();  // RVA 0x00F6C300 (consensus OuterFunc)
-
-class ABuildingGameplayActorConsumable
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesABuildingGameplayActorConsumable();
-	static void execGetDeathFXTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOnConsumeGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOnConsumeMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execMakeOnConsumeGameplayEffectSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execPrepareOnConsumeGameplayEffectSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BDB0 (end 0x00F6BDD2)
 // Original VA: 0x0000000140F6BDB0 | File offset: 0x00F6B3B0

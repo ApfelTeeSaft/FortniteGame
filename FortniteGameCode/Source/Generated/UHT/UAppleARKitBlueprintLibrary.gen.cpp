@@ -3,18 +3,8 @@
 // Class UAppleARKitBlueprintLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02FE2BA8, FClassParams RVA 0x02FE2BD0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAppleARKitBlueprintLibrary();  // RVA 0x00806400 (consensus OuterFunc)
-
-class UAppleARKitBlueprintLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAppleARKitBlueprintLibrary();
-	static void execGetCurrentFrame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHitTestAtScreenPosition_TrackingSpace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00806130 (end 0x00806152)
 // Original VA: 0x0000000140806130 | File offset: 0x00805730

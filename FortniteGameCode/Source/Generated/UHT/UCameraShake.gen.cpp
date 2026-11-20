@@ -3,17 +3,8 @@
 // Class UCameraShake: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038BA210, FClassParams RVA 0x038BA2F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCameraShake();  // RVA 0x023EAA90 (consensus OuterFunc)
-
-class UCameraShake
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCameraShake();
-	static void execReceiveIsFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9FA0 (end 0x023E9FC2)
 // Original VA: 0x00000001423E9FA0 | File offset: 0x023E95A0

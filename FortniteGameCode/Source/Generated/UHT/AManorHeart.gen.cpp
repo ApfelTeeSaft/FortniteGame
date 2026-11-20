@@ -3,17 +3,8 @@
 // Class AManorHeart: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x034470C0, FClassParams RVA 0x03447100.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AManorHeart();  // RVA 0x010E9D10 (consensus OuterFunc)
-
-class AManorHeart
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAManorHeart();
-	static void execTravelToNewWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E8D50 (end 0x010E8D72)
 // Original VA: 0x00000001410E8D50 | File offset: 0x010E8350

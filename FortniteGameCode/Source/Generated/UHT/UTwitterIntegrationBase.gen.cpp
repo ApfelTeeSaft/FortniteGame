@@ -3,15 +3,8 @@
 // Class UTwitterIntegrationBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x039CBCB0, FClassParams RVA 0x039CBD30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UTwitterIntegrationBase();  // RVA 0x024ECF20 (consensus OuterFunc)
-
-class UTwitterIntegrationBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UTwitterIntegrationBase_AuthorizeAccounts_Statics
 {

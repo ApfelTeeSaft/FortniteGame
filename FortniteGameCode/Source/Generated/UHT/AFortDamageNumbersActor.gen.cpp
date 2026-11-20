@@ -3,17 +3,8 @@
 // Class AFortDamageNumbersActor: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032F93A8, FClassParams RVA 0x032F94F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AFortDamageNumbersActor();  // RVA 0x00FCB810 (consensus OuterFunc)
-
-class AFortDamageNumbersActor
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesAFortDamageNumbersActor();
-	static void execSetMaterialParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB050 (end 0x00FCB072)
 // Original VA: 0x0000000140FCB050 | File offset: 0x00FCA650

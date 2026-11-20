@@ -3,15 +3,8 @@
 // Class UFortRewardNotificationSubWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D0B4E0, FClassParams RVA 0x03D0B660.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortRewardNotificationSubWidget();  // RVA 0x028ED7B0 (consensus OuterFunc)
-
-class UFortRewardNotificationSubWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortRewardNotificationSubWidget_AddInputActionHandler_Statics
 {

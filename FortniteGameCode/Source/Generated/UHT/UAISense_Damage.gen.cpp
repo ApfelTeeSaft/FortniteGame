@@ -3,17 +3,8 @@
 // Class UAISense_Damage: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036F28C0, FClassParams RVA 0x036F28F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAISense_Damage();  // RVA 0x01D1BE80 (consensus OuterFunc)
-
-class UAISense_Damage
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAISense_Damage();
-	static void execReportDamageEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B260 (end 0x01D1B282)
 // Original VA: 0x0000000141D1B260 | File offset: 0x01D1A860

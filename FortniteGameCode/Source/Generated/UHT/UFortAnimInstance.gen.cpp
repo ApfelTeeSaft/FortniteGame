@@ -3,20 +3,8 @@
 // Class UFortAnimInstance: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032B7B80, FClassParams RVA 0x032B7CD0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAnimInstance();  // RVA 0x00F99520 (consensus OuterFunc)
-
-class UFortAnimInstance
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAnimInstance();
-	static void execAnimNotify_LeftFootStep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAnimNotify_RightFootStep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetFortAIPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetFortPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F988A0 (end 0x00F988C2)
 // Original VA: 0x0000000140F988A0 | File offset: 0x00F97EA0

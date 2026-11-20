@@ -3,56 +3,8 @@
 // Class UFortDirectAcquisitionOfferInfo: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C84C00, FClassParams RVA 0x03C84E90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortDirectAcquisitionOfferInfo();  // RVA 0x0289B640 (consensus OuterFunc)
-
-class UFortDirectAcquisitionOfferInfo
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortDirectAcquisitionOfferInfo();
-	static void execCreatePreviewItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBackground(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBannerOverrideTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBaseQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBonusQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCategoryText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurrencyItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDetailsAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDetailsImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFirstGrantItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFirstGrantQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFortStoreOfferCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFortStoreOfferType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetGradient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetItemOfferCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetItemQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetItemTypeText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMetaAsBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNormalPrice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOfferId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPriceItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetQuantityRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSalePrice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSaleText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSaleType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetShortDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSortPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetStorefrontName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTileImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTotalQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasDisplayAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasRequirement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsExclusive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsLockedByRequirement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPriceInMTX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPriceInRealMoney(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsUnique(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOfferHasDenyRequirements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AFD0 (end 0x0289AFF2)
 // Original VA: 0x000000014289AFD0 | File offset: 0x0289A5D0

@@ -3,22 +3,8 @@
 // Class UFortOnboardingAnalytics: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032C8AA0, FClassParams RVA 0x032C8B10.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortOnboardingAnalytics();  // RVA 0x00FA3D70 (consensus OuterFunc)
-
-class UFortOnboardingAnalytics
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortOnboardingAnalytics();
-	static void execFireAnalyticsEvent_CinematicSkipped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_MineCartDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_TutorialCanceled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_TutorialCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_TutorialStartupFailed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFireAnalyticsEvent_VinderTipPlayed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3500 (end 0x00FA3522)
 // Original VA: 0x0000000140FA3500 | File offset: 0x00FA2B00

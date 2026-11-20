@@ -3,21 +3,8 @@
 // Class UFortUIMessageManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D48DD0, FClassParams RVA 0x03D48E50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortUIMessageManager();  // RVA 0x02911CE0 (consensus OuterFunc)
-
-class UFortUIMessageManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortUIMessageManager();
-	static void execAddMessageItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNextMessageInQueue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumDisplayedItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleMessageDisplayed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleMessageRemoved(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02911640 (end 0x02911662)
 // Original VA: 0x0000000142911640 | File offset: 0x02910C40

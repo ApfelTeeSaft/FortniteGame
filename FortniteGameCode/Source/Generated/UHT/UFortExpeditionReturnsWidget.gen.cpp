@@ -3,15 +3,8 @@
 // Class UFortExpeditionReturnsWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C8FC10, FClassParams RVA 0x03C8FC40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionReturnsWidget();  // RVA 0x028A36B0 (consensus OuterFunc)
-
-class UFortExpeditionReturnsWidget
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortExpeditionReturnsWidget_OnExpeditionInProgressUpdated_Statics
 {

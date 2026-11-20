@@ -3,15 +3,8 @@
 // Class UFortTwitchLogin: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D3C7E0, FClassParams RVA 0x03D3C8B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTwitchLogin();  // RVA 0x0290A910 (consensus OuterFunc)
-
-class UFortTwitchLogin
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortTwitchLogin_CancelLoginFlow_Statics
 {

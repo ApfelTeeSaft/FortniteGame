@@ -3,20 +3,103 @@
 // Class UFortUINotificationQueue: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D49CD0, FClassParams RVA 0x03D49D30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UFortUINotificationQueue
+struct Z_Construct_UFunction_UFortUINotificationQueue_GetNextNotification_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02912D80 (end 0x02912DAF)
+// Original VA: 0x0000000142912D80 | File offset: 0x02912380
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortUINotificationQueue_GetNextNotification()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUINotificationQueue_GetNextNotification_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortUINotificationQueue_GetNextNotification: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortUINotificationQueue_RegisterToReceiveNotifications_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02912DB0 (end 0x02912DDF)
+// Original VA: 0x0000000142912DB0 | File offset: 0x029123B0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortUINotificationQueue_RegisterToReceiveNotifications()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUINotificationQueue_RegisterToReceiveNotifications_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortUINotificationQueue_RegisterToReceiveNotifications: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortUINotificationQueue_RemoveNotification_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02912DE0 (end 0x02912E0F)
+// Original VA: 0x0000000142912DE0 | File offset: 0x029123E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortUINotificationQueue_RemoveNotification()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUINotificationQueue_RemoveNotification_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortUINotificationQueue_RemoveNotification: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortUINotificationQueue_UnregisterToReceiveNotifications_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02912E10 (end 0x02912E3F)
+// Original VA: 0x0000000142912E10 | File offset: 0x02912410
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortUINotificationQueue_UnregisterToReceiveNotifications()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortUINotificationQueue_UnregisterToReceiveNotifications_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortUINotificationQueue_UnregisterToReceiveNotifications: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UFortUINotificationQueue_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUINotificationQueue_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUINotificationQueue_GetNextNotification, "GetNextNotification" },
+	{ &Z_Construct_UFunction_UFortUINotificationQueue_RegisterToReceiveNotifications, "RegisterToReceiveNotifications" },
+	{ &Z_Construct_UFunction_UFortUINotificationQueue_RemoveNotification, "RemoveNotification" },
+	{ &Z_Construct_UFunction_UFortUINotificationQueue_UnregisterToReceiveNotifications, "UnregisterToReceiveNotifications" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUINotificationQueue_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D49D30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUINotificationQueue_Statics::ClassParams = { &UFortUINotificationQueue::StaticClass, Z_Construct_UClass_UFortUINotificationQueue_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortUINotificationQueue_Statics::FuncInfo, 4, Z_Construct_UClass_UFortUINotificationQueue_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortUINotificationQueue_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911D80 (end 0x02911DAF)
+// Original VA: 0x0000000142911D80 | File offset: 0x02911380
+// Recovery: confirmed (UHT singleton of UFortUINotificationQueue) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUINotificationQueue()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUINotificationQueue_Statics::ClassParams);
+	}
+	return OuterClass;
+}

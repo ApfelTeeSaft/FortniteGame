@@ -3,23 +3,8 @@
 // Class USeasonPassScreenBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D56E80, FClassParams RVA 0x03D56FA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USeasonPassScreenBase();  // RVA 0x02918D10 (consensus OuterFunc)
-
-class USeasonPassScreenBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUSeasonPassScreenBase();
-	static void execGetAllLevelInfos(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLevelInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSeasonEndDate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSeasonPassLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSeasonPassLevelMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execNavigateToLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOwnsSeasonPass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02918950 (end 0x02918972)
 // Original VA: 0x0000000142918950 | File offset: 0x02917F50

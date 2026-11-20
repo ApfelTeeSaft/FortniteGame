@@ -3,17 +3,8 @@
 // Class UFortSeasonalEventManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033F7628, FClassParams RVA 0x033F7650.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSeasonalEventManager();  // RVA 0x010A5950 (consensus OuterFunc)
-
-class UFortSeasonalEventManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSeasonalEventManager();
-	static void execIsEventFlagActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4F80 (end 0x010A4FA2)
 // Original VA: 0x00000001410A4F80 | File offset: 0x010A4580

@@ -3,25 +3,8 @@
 // Class UFortSeasonPassLevelInfo: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D56930, FClassParams RVA 0x03D569E0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSeasonPassLevelInfo();  // RVA 0x02918AA0 (consensus OuterFunc)
-
-class UFortSeasonPassLevelInfo
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSeasonPassLevelInfo();
-	static void execGetLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLevelProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetNumRewardItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRewardItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSeasonPassMaxLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsFreeClaimed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsFreeUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPaidClaimed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPaidUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02918800 (end 0x02918822)
 // Original VA: 0x0000000142918800 | File offset: 0x02917E00

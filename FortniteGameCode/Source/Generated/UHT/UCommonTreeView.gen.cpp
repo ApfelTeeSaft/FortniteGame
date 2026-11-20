@@ -3,15 +3,8 @@
 // Class UCommonTreeView: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E83290, FClassParams RVA 0x02E832F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCommonTreeView();  // RVA 0x002CA6B0 (consensus OuterFunc)
-
-class UCommonTreeView
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCommonTreeView_DynamicHandleItemClickedCommonButton_Statics
 {

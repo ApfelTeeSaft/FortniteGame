@@ -3,19 +3,8 @@
 // Class UCameraAnimInst: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038B98B0, FClassParams RVA 0x038B9920.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCameraAnimInst();  // RVA 0x023EA9C0 (consensus OuterFunc)
-
-class UCameraAnimInst
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCameraAnimInst();
-	static void execSetDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9F10 (end 0x023E9F32)
 // Original VA: 0x00000001423E9F10 | File offset: 0x023E9510

@@ -3,24 +3,8 @@
 // Class UDecalComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038CE960, FClassParams RVA 0x038CEA20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UDecalComponent();  // RVA 0x023FE720 (consensus OuterFunc)
-
-class UDecalComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUDecalComponent();
-	static void execCreateDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDecalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFadeDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetFadeStartDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetDecalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFadeOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFadeScreenSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSortOrder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDCD0 (end 0x023FDCF2)
 // Original VA: 0x00000001423FDCD0 | File offset: 0x023FD2D0

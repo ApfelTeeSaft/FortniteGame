@@ -3,15 +3,8 @@
 // Class UAudioComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038ABBF0, FClassParams RVA 0x038ABEA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAudioComponent();  // RVA 0x023DB270 (consensus OuterFunc)
-
-class UAudioComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAudioComponent_AdjustAttenuation_Statics
 {

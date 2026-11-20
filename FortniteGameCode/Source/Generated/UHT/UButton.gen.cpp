@@ -3,22 +3,8 @@
 // Class UButton: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03691440, FClassParams RVA 0x03691510.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UButton();  // RVA 0x01BE6050 (consensus OuterFunc)
-
-class UButton
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUButton();
-	static void execIsPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetBackgroundColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetClickMethod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTouchMethod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5B50 (end 0x01BE5B72)
 // Original VA: 0x0000000141BE5B50 | File offset: 0x01BE5150

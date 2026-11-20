@@ -3,19 +3,8 @@
 // Class UCurveSourceInterface: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038CD700, FClassParams RVA 0x038CD740.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCurveSourceInterface();  // RVA 0x023FE560 (consensus OuterFunc)
-
-class UCurveSourceInterface
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCurveSourceInterface();
-	static void execGetBindingName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurves(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetCurveValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDC40 (end 0x023FDC62)
 // Original VA: 0x00000001423FDC40 | File offset: 0x023FD240

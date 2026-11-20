@@ -3,23 +3,8 @@
 // Class USlider: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0369DCB0, FClassParams RVA 0x0369DDA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USlider();  // RVA 0x01BF3100 (consensus OuterFunc)
-
-class USlider
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUSlider();
-	static void execGetValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetIndentHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSliderBarColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSliderHandleColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetStepSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2B80 (end 0x01BF2BA2)
 // Original VA: 0x0000000141BF2B80 | File offset: 0x01BF2180

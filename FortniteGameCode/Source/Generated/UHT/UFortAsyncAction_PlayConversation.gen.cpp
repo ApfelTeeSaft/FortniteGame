@@ -3,17 +3,8 @@
 // Class UFortAsyncAction_PlayConversation: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032BFA50, FClassParams RVA 0x032BFA90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortAsyncAction_PlayConversation
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAsyncAction_PlayConversation();
-	static void execPlayConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E5D0 (end 0x00F9E5F2)
 // Original VA: 0x0000000140F9E5D0 | File offset: 0x00F9DBD0
@@ -27,4 +18,46 @@ void UFortAsyncAction_PlayConversation::StaticRegisterNativesUFortAsyncAction_Pl
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortAsyncAction_PlayConversation_PlayConversation: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortAsyncAction_PlayConversation_PlayConversation_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9F780 (end 0x00F9F7AF)
+// Original VA: 0x0000000140F9F780 | File offset: 0x00F9ED80
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortAsyncAction_PlayConversation_PlayConversation()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAsyncAction_PlayConversation_PlayConversation_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortAsyncAction_PlayConversation_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAsyncAction_PlayConversation_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAsyncAction_PlayConversation_PlayConversation, "PlayConversation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAsyncAction_PlayConversation_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032BFA90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAsyncAction_PlayConversation_Statics::ClassParams = { &UFortAsyncAction_PlayConversation::StaticClass, Z_Construct_UClass_UFortAsyncAction_PlayConversation_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortAsyncAction_PlayConversation_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAsyncAction_PlayConversation_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortAsyncAction_PlayConversation_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9F200 (end 0x00F9F22F)
+// Original VA: 0x0000000140F9F200 | File offset: 0x00F9E800
+// Recovery: confirmed (UHT singleton of UFortAsyncAction_PlayConversation) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAsyncAction_PlayConversation()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAsyncAction_PlayConversation_Statics::ClassParams);
+	}
+	return OuterClass;
+}

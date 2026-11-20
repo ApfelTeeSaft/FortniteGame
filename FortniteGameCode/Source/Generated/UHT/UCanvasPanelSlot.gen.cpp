@@ -3,34 +3,8 @@
 // Class UCanvasPanelSlot: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036919F0, FClassParams RVA 0x03691B30.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCanvasPanelSlot();  // RVA 0x01BE60E0 (consensus OuterFunc)
-
-class UCanvasPanelSlot
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCanvasPanelSlot();
-	static void execGetAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAnchors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAutoSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLayout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetOffsets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetZOrder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAnchors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetAutoSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLayout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetMaximum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetMinimum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetOffsets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetZOrder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5BE0 (end 0x01BE5C02)
 // Original VA: 0x0000000141BE5BE0 | File offset: 0x01BE51E0

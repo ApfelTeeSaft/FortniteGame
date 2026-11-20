@@ -3,18 +3,8 @@
 // Class UFortActivatablePanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C60A90, FClassParams RVA 0x03C60AE0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortActivatablePanel();  // RVA 0x02887740 (consensus OuterFunc)
-
-class UFortActivatablePanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortActivatablePanel();
-	static void execRestoreCenterWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execRestoreScrollWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02886DE0 (end 0x02886E02)
 // Original VA: 0x0000000142886DE0 | File offset: 0x028863E0

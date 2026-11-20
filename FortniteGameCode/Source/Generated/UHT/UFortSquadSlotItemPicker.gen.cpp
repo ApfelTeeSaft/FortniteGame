@@ -3,15 +3,8 @@
 // Class UFortSquadSlotItemPicker: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D228E0, FClassParams RVA 0x03D22940.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotItemPicker();  // RVA 0x028FB5D0 (consensus OuterFunc)
-
-class UFortSquadSlotItemPicker
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortSquadSlotItemPicker_FortSquadSlotSortChanged__DelegateSignature_Statics
 {

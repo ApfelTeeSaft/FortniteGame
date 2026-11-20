@@ -3,17 +3,8 @@
 // Class UCurveFloat: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038CD438, FClassParams RVA 0x038CD460.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCurveFloat();  // RVA 0x023FE4F0 (consensus OuterFunc)
-
-class UCurveFloat
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCurveFloat();
-	static void execGetFloatValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDBE0 (end 0x023FDC02)
 // Original VA: 0x00000001423FDBE0 | File offset: 0x023FD1E0

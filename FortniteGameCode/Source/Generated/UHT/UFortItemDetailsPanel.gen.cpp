@@ -3,21 +3,8 @@
 // Class UFortItemDetailsPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CCCEB0, FClassParams RVA 0x03CCCF40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortItemDetailsPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortItemDetailsPanel();
-	static void execHandleCursorModeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleItemToCompareWithChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleItemToDetailChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemToCompareWith(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetItemToDetail(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9990 (end 0x028C99B2)
 // Original VA: 0x00000001428C9990 | File offset: 0x028C8F90
@@ -35,16 +22,154 @@ void UFortItemDetailsPanel::StaticRegisterNativesUFortItemDetailsPanel()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortItemDetailsPanel_HandleCursorModeChanged: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemDetailsPanel_HandleCursorModeChanged_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 3 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA8D0 (end 0x028CA8FF)
+// Original VA: 0x00000001428CA8D0 | File offset: 0x028C9ED0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_HandleCursorModeChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_HandleCursorModeChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToCompareSet: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToCompareSet_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA900 (end 0x028CA92F)
+// Original VA: 0x00000001428CA900 | File offset: 0x028C9F00
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToCompareSet()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToCompareSet_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToDetailSet: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToDetailSet_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA930 (end 0x028CA95F)
+// Original VA: 0x00000001428CA930 | File offset: 0x028C9F30
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToDetailSet()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToDetailSet_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToCompareWithChanged: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToCompareWithChanged_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA960 (end 0x028CA98F)
+// Original VA: 0x00000001428CA960 | File offset: 0x028C9F60
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToCompareWithChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToCompareWithChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToDetailChanged: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToDetailChanged_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA990 (end 0x028CA9BF)
+// Original VA: 0x00000001428CA990 | File offset: 0x028C9F90
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToDetailChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToDetailChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToCompareWith: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToCompareWith_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 4 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA9C0 (end 0x028CA9EF)
+// Original VA: 0x00000001428CA9C0 | File offset: 0x028C9FC0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToCompareWith()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToCompareWith_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToDetail: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToDetail_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CA9F0 (end 0x028CAA1F)
+// Original VA: 0x00000001428CA9F0 | File offset: 0x028C9FF0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToDetail()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToDetail_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortItemDetailsPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemDetailsPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemDetailsPanel_HandleCursorModeChanged, "HandleCursorModeChanged" },
+	{ &Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToCompareSet, "HandleDifferentItemToCompareSet" },
+	{ &Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToDetailSet, "HandleDifferentItemToDetailSet" },
+	{ &Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToCompareWithChanged, "HandleItemToCompareWithChanged" },
+	{ &Z_Construct_UFunction_UFortItemDetailsPanel_HandleItemToDetailChanged, "HandleItemToDetailChanged" },
+	{ &Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToCompareWith, "SetItemToCompareWith" },
+	{ &Z_Construct_UFunction_UFortItemDetailsPanel_SetItemToDetail, "SetItemToDetail" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemDetailsPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CCCF40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemDetailsPanel_Statics::ClassParams = { &UFortItemDetailsPanel::StaticClass, Z_Construct_UClass_UFortItemDetailsPanel_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortItemDetailsPanel_Statics::FuncInfo, 7, Z_Construct_UClass_UFortItemDetailsPanel_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortItemDetailsPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9E50 (end 0x028C9E7F)
+// Original VA: 0x00000001428C9E50 | File offset: 0x028C9450
+// Recovery: confirmed (UHT singleton of UFortItemDetailsPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemDetailsPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemDetailsPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

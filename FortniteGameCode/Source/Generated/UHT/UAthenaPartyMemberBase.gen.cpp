@@ -3,15 +3,8 @@
 // Class UAthenaPartyMemberBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C5E910, FClassParams RVA 0x03C5E990.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAthenaPartyMemberBase();  // RVA 0x02887280 (consensus OuterFunc)
-
-class UAthenaPartyMemberBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAthenaPartyMemberBase_MutedStateChanged_Statics
 {

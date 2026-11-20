@@ -3,15 +3,8 @@
 // Class UAbilityTask_WaitTargetData: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F33560, FClassParams RVA 0x02F33600.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitTargetData();  // RVA 0x0054D850 (consensus OuterFunc)
-
-class UAbilityTask_WaitTargetData
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UAbilityTask_WaitTargetData_BeginSpawningActor_Statics
 {

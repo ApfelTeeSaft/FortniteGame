@@ -3,17 +3,8 @@
 // Class ULeaderboardBlueprintLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02EADF68, FClassParams RVA 0x02EADF80.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_ULeaderboardBlueprintLibrary();  // RVA 0x0032EBF0 (consensus OuterFunc)
-
-class ULeaderboardBlueprintLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesULeaderboardBlueprintLibrary();
-	static void execWriteLeaderboardInteger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E3A0 (end 0x0032E3C2)
 // Original VA: 0x000000014032E3A0 | File offset: 0x0032D9A0

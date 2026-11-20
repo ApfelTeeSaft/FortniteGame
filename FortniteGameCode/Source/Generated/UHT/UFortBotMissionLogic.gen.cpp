@@ -3,15 +3,8 @@
 // Class UFortBotMissionLogic: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032CEB20, FClassParams RVA 0x032CEC50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBotMissionLogic();  // RVA 0x00FAD6E0 (consensus OuterFunc)
-
-class UFortBotMissionLogic
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortBotMissionLogic_ClearAllLocated_Statics
 {

@@ -3,29 +3,8 @@
 // Class UFortPerkWidget_NUI: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CFDF40, FClassParams RVA 0x03CFE050.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPerkWidget_NUI();  // RVA 0x028E6BD0 (consensus OuterFunc)
-
-class UFortPerkWidget_NUI
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortPerkWidget_NUI();
-	static void execGetCombinedTooltipDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetPerkTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRequiredLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSupportBonusType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTooltipDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTooltipTitle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHasAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPerkEmpty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPerkHighlighted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsPerkUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsTierPerk(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetTooltipContext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E64A0 (end 0x028E64C2)
 // Original VA: 0x00000001428E64A0 | File offset: 0x028E5AA0

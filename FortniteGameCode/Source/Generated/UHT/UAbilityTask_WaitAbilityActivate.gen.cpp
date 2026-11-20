@@ -3,20 +3,8 @@
 // Class UAbilityTask_WaitAbilityActivate: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F2BC00, FClassParams RVA 0x02F2BC50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitAbilityActivate();  // RVA 0x00546A50 (consensus OuterFunc)
-
-class UAbilityTask_WaitAbilityActivate
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUAbilityTask_WaitAbilityActivate();
-	static void execOnAbilityActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execWaitForAbilityActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execWaitForAbilityActivate_Query(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execWaitForAbilityActivateWithTagRequirements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005465B0 (end 0x005465D2)
 // Original VA: 0x00000001405465B0 | File offset: 0x00545BB0

@@ -3,17 +3,8 @@
 // Class USubtitleDisplay: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02FBB680, FClassParams RVA 0x02FBB6B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USubtitleDisplay();  // RVA 0x00781740 (consensus OuterFunc)
-
-class USubtitleDisplay
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUSubtitleDisplay();
-	static void execHasSubtitles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007816E0 (end 0x00781702)
 // Original VA: 0x00000001407816E0 | File offset: 0x00780CE0

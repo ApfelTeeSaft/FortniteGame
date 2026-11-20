@@ -3,17 +3,8 @@
 // Class UFortAISystem: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032B5EB0, FClassParams RVA 0x032B5F00.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAISystem();  // RVA 0x00F991E0 (consensus OuterFunc)
-
-class UFortAISystem
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAISystem();
-	static void execIsInCone2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F987B0 (end 0x00F987D2)
 // Original VA: 0x0000000140F987B0 | File offset: 0x00F97DB0

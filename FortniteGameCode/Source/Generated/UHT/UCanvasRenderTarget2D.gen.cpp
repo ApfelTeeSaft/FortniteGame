@@ -3,15 +3,8 @@
 // Class UCanvasRenderTarget2D: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038C0160, FClassParams RVA 0x038C01C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCanvasRenderTarget2D();  // RVA 0x023EE0A0 (consensus OuterFunc)
-
-class UCanvasRenderTarget2D
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UCanvasRenderTarget2D_CreateCanvasRenderTarget2D_Statics
 {

@@ -3,17 +3,8 @@
 // Class UFortTextStyleList: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D31738, FClassParams RVA 0x03D31760.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTextStyleList();  // RVA 0x02904C10 (consensus OuterFunc)
-
-class UFortTextStyleList
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortTextStyleList();
-	static void execGetTextStyles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02904490 (end 0x029044B2)
 // Original VA: 0x0000000142904490 | File offset: 0x02903A90

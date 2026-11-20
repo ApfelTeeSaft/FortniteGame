@@ -3,15 +3,8 @@
 // Class UHeadMountedDisplayFunctionLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x035E5120, FClassParams RVA 0x035E5310.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary();  // RVA 0x0199D320 (consensus OuterFunc)
-
-class UHeadMountedDisplayFunctionLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_AddDeviceVisualizationComponent_Statics
 {

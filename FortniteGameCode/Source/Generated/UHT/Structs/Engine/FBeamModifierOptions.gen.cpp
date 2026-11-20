@@ -4,7 +4,7 @@
 // FStructParams RVA 0x044D24F0. The registration objects follow the CRC function
 // instead of StaticStruct; see tools/codegen/uht_structs.py.
 
-#include "FortniteGameCode/UObjectRegistrationRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FBeamModifierOptions();

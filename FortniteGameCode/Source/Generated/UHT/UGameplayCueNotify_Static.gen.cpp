@@ -3,20 +3,8 @@
 // Class UGameplayCueNotify_Static: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02F3E000, FClassParams RVA 0x02F3E080.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UGameplayCueNotify_Static
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUGameplayCueNotify_Static();
-	static void execOnActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnExecute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execOnRemove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execWhileActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B0B0 (end 0x0055B0D2)
 // Original VA: 0x000000014055B0B0 | File offset: 0x0055A6B0
@@ -33,12 +21,118 @@ void UGameplayCueNotify_Static::StaticRegisterNativesUGameplayCueNotify_Static()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UGameplayCueNotify_Static_K2_HandleGameplayCue: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UGameplayCueNotify_Static_K2_HandleGameplayCue_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055C620 (end 0x0055C64F)
+// Original VA: 0x000000014055C620 | File offset: 0x0055BC20
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UGameplayCueNotify_Static_K2_HandleGameplayCue()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGameplayCueNotify_Static_K2_HandleGameplayCue_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UGameplayCueNotify_Static_OnActive: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UGameplayCueNotify_Static_OnActive_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055C650 (end 0x0055C67F)
+// Original VA: 0x000000014055C650 | File offset: 0x0055BC50
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UGameplayCueNotify_Static_OnActive()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGameplayCueNotify_Static_OnActive_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UGameplayCueNotify_Static_OnExecute: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UGameplayCueNotify_Static_OnExecute_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055C680 (end 0x0055C6AF)
+// Original VA: 0x000000014055C680 | File offset: 0x0055BC80
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UGameplayCueNotify_Static_OnExecute()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGameplayCueNotify_Static_OnExecute_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UGameplayCueNotify_Static_OnRemove: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UGameplayCueNotify_Static_OnRemove_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055C6B0 (end 0x0055C6DF)
+// Original VA: 0x000000014055C6B0 | File offset: 0x0055BCB0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UGameplayCueNotify_Static_OnRemove()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGameplayCueNotify_Static_OnRemove_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UGameplayCueNotify_Static_WhileActive: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UGameplayCueNotify_Static_WhileActive_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055C6E0 (end 0x0055C70F)
+// Original VA: 0x000000014055C6E0 | File offset: 0x0055BCE0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UGameplayCueNotify_Static_WhileActive()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UGameplayCueNotify_Static_WhileActive_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UGameplayCueNotify_Static_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGameplayCueNotify_Static_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGameplayCueNotify_Static_K2_HandleGameplayCue, "K2_HandleGameplayCue" },
+	{ &Z_Construct_UFunction_UGameplayCueNotify_Static_OnActive, "OnActive" },
+	{ &Z_Construct_UFunction_UGameplayCueNotify_Static_OnExecute, "OnExecute" },
+	{ &Z_Construct_UFunction_UGameplayCueNotify_Static_OnRemove, "OnRemove" },
+	{ &Z_Construct_UFunction_UGameplayCueNotify_Static_WhileActive, "WhileActive" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGameplayCueNotify_Static_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F3E080
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGameplayCueNotify_Static_Statics::ClassParams = { &UGameplayCueNotify_Static::StaticClass, Z_Construct_UClass_UGameplayCueNotify_Static_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UGameplayCueNotify_Static_Statics::FuncInfo, 5, Z_Construct_UClass_UGameplayCueNotify_Static_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UGameplayCueNotify_Static_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055C050 (end 0x0055C07F)
+// Original VA: 0x000000014055C050 | File offset: 0x0055B650
+// Recovery: confirmed (UHT singleton of UGameplayCueNotify_Static) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGameplayCueNotify_Static()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGameplayCueNotify_Static_Statics::ClassParams);
+	}
+	return OuterClass;
+}

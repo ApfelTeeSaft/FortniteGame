@@ -3,17 +3,8 @@
 // Class UFortBangWrapper: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C6BA70, FClassParams RVA 0x03C6BAD0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
-
-class UFortBangWrapper
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortBangWrapper();
-	static void execSetBangVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C740 (end 0x0288C762)
 // Original VA: 0x000000014288C740 | File offset: 0x0288BD40
@@ -27,4 +18,46 @@ void UFortBangWrapper::StaticRegisterNativesUFortBangWrapper()
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
 }
 
-// Z_Construct_UFunction_UFortBangWrapper_SetBangVisibility: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortBangWrapper_SetBangVisibility_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288E1C0 (end 0x0288E1EF)
+// Original VA: 0x000000014288E1C0 | File offset: 0x0288D7C0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortBangWrapper_SetBangVisibility()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortBangWrapper_SetBangVisibility_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+
+struct Z_Construct_UClass_UFortBangWrapper_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortBangWrapper_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortBangWrapper_SetBangVisibility, "SetBangVisibility" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortBangWrapper_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C6BAD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortBangWrapper_Statics::ClassParams = { &UFortBangWrapper::StaticClass, Z_Construct_UClass_UFortBangWrapper_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortBangWrapper_Statics::FuncInfo, 1, Z_Construct_UClass_UFortBangWrapper_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortBangWrapper_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CC60 (end 0x0288CC8F)
+// Original VA: 0x000000014288CC60 | File offset: 0x0288C260
+// Recovery: confirmed (UHT singleton of UFortBangWrapper) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortBangWrapper()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortBangWrapper_Statics::ClassParams);
+	}
+	return OuterClass;
+}

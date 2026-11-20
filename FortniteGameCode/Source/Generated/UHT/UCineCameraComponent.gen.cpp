@@ -3,22 +3,8 @@
 // Class UCineCameraComponent: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x036AEDC0, FClassParams RVA 0x036AEEA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCineCameraComponent();  // RVA 0x01C0B060 (consensus OuterFunc)
-
-class UCineCameraComponent
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCineCameraComponent();
-	static void execGetFilmbackPresetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetHorizontalFieldOfView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLensPresetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetVerticalFieldOfView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetFilmbackPresetByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetLensPresetByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0AC20 (end 0x01C0AC42)
 // Original VA: 0x0000000141C0AC20 | File offset: 0x01C0A220

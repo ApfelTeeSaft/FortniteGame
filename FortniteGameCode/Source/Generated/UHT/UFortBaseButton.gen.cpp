@@ -3,15 +3,8 @@
 // Class UFortBaseButton: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C75750, FClassParams RVA 0x03C75910.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortBaseButton();  // RVA 0x02894430 (consensus OuterFunc)
-
-class UFortBaseButton
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortBaseButton_ForceClick_Statics
 {

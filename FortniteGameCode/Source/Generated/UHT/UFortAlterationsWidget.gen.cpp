@@ -3,16 +3,67 @@
 // Class UFortAlterationsWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03C69A18, FClassParams RVA 0x03C69A60.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UFortAlterationsWidget
+struct Z_Construct_UFunction_UFortAlterationsWidget_OnGenerateAlteration_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D0B0 (end 0x0288D0DF)
+// Original VA: 0x000000014288D0B0 | File offset: 0x0288C6B0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortAlterationsWidget_OnGenerateAlteration()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAlterationsWidget_OnGenerateAlteration_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortAlterationsWidget_OnGenerateAlteration: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortAlterationsWidget_ProcessAlterations_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288D0E0 (end 0x0288D10F)
+// Original VA: 0x000000014288D0E0 | File offset: 0x0288C6E0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortAlterationsWidget_ProcessAlterations()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortAlterationsWidget_ProcessAlterations_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortAlterationsWidget_ProcessAlterations: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UFortAlterationsWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAlterationsWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAlterationsWidget_OnGenerateAlteration, "OnGenerateAlteration" },
+	{ &Z_Construct_UFunction_UFortAlterationsWidget_ProcessAlterations, "ProcessAlterations" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAlterationsWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C69A60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAlterationsWidget_Statics::ClassParams = { &UFortAlterationsWidget::StaticClass, Z_Construct_UClass_UFortAlterationsWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortAlterationsWidget_Statics::FuncInfo, 2, Z_Construct_UClass_UFortAlterationsWidget_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortAlterationsWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C8C0 (end 0x0288C8EF)
+// Original VA: 0x000000014288C8C0 | File offset: 0x0288BEC0
+// Recovery: confirmed (UHT singleton of UFortAlterationsWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAlterationsWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAlterationsWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

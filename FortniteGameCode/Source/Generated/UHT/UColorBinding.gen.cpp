@@ -3,18 +3,8 @@
 // Class UColorBinding: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03691F78, FClassParams RVA 0x03691FA0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UColorBinding();  // RVA 0x01BE61A0 (consensus OuterFunc)
-
-class UColorBinding
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUColorBinding();
-	static void execGetLinearValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetSlateValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5CA0 (end 0x01BE5CC2)
 // Original VA: 0x0000000141BE5CA0 | File offset: 0x01BE52A0

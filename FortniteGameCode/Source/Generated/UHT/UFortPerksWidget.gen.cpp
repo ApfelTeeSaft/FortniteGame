@@ -3,16 +3,67 @@
 // Class UFortPerksWidget: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CFD7D8, FClassParams RVA 0x03CFD820.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 
 
-class UFortPerksWidget
+struct Z_Construct_UFunction_UFortPerksWidget_OnGeneratePerkTier_Statics
 {
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E78A0 (end 0x028E78CF)
+// Original VA: 0x00000001428E78A0 | File offset: 0x028E6EA0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerksWidget_OnGeneratePerkTier()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerksWidget_OnGeneratePerkTier_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerksWidget_OnGeneratePerkTier: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UFunction_UFortPerksWidget_ProcessPerkTiers_Statics
+{
+	static const UE4CodeGen_Private::FFunctionParams FuncParams;  // record not identified: 2 candidate(s) by name
+};
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E78D0 (end 0x028E78FF)
+// Original VA: 0x00000001428E78D0 | File offset: 0x028E6ED0
+// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json
+UFunction* Z_Construct_UFunction_UFortPerksWidget_ProcessPerkTiers()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UFortPerksWidget_ProcessPerkTiers_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
 
-// Z_Construct_UFunction_UFortPerksWidget_ProcessPerkTiers: FFunctionParams record not identified; creator not emitted.
+struct Z_Construct_UClass_UFortPerksWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPerksWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPerksWidget_OnGeneratePerkTier, "OnGeneratePerkTier" },
+	{ &Z_Construct_UFunction_UFortPerksWidget_ProcessPerkTiers, "ProcessPerkTiers" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPerksWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CFD820
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPerksWidget_Statics::ClassParams = { &UFortPerksWidget::StaticClass, Z_Construct_UClass_UFortPerksWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortPerksWidget_Statics::FuncInfo, 2, Z_Construct_UClass_UFortPerksWidget_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortPerksWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6C00 (end 0x028E6C2F)
+// Original VA: 0x00000001428E6C00 | File offset: 0x028E6200
+// Recovery: confirmed (UHT singleton of UFortPerksWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPerksWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPerksWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

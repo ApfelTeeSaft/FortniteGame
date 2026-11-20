@@ -3,17 +3,8 @@
 // Class UEnvQueryManager: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03708508, FClassParams RVA 0x03708580.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEnvQueryManager();  // RVA 0x01D2FA10 (consensus OuterFunc)
-
-class UEnvQueryManager
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUEnvQueryManager();
-	static void execRunEQSQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2F0C0 (end 0x01D2F0E2)
 // Original VA: 0x0000000141D2F0C0 | File offset: 0x01D2E6C0

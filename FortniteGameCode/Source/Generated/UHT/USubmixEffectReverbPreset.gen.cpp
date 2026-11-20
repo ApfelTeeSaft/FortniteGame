@@ -3,18 +3,8 @@
 // Class USubmixEffectReverbPreset: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03B48A08, FClassParams RVA 0x03B48A40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USubmixEffectReverbPreset();  // RVA 0x0255A1A0 (consensus OuterFunc)
-
-class USubmixEffectReverbPreset
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUSubmixEffectReverbPreset();
-	static void execSetSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSettingsWithReverbEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02559EB0 (end 0x02559ED2)
 // Original VA: 0x0000000142559EB0 | File offset: 0x025594B0

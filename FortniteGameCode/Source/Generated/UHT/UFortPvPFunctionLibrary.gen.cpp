@@ -3,26 +3,8 @@
 // Class UFortPvPFunctionLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x033D6610, FClassParams RVA 0x033D66C0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPvPFunctionLibrary();  // RVA 0x0108B740 (consensus OuterFunc)
-
-class UFortPvPFunctionLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortPvPFunctionLibrary();
-	static void execDestroyAllFortPickupsWithItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execFirePvPVictoryMissionEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBaseBuildingCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetBaseDestructionTeamInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetDifficultyRowNamesFromPvPRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetMatchLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetRoundTimeAccumulated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTeamCornerstone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetTeamStrategicBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetMatchLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108AEF0 (end 0x0108AF12)
 // Original VA: 0x000000014108AEF0 | File offset: 0x0108A4F0

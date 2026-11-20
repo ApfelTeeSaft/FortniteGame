@@ -3,18 +3,8 @@
 // Class UFortQuestTrackerEntry: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D097C0, FClassParams RVA 0x03D09860.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestTrackerEntry();  // RVA 0x028ED350 (consensus OuterFunc)
-
-class UFortQuestTrackerEntry
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortQuestTrackerEntry();
-	static void execHandleHUDObjectiveCompletion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execHandleObjectiveEntryCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECCB0 (end 0x028ECCD2)
 // Original VA: 0x00000001428ECCB0 | File offset: 0x028EC2B0

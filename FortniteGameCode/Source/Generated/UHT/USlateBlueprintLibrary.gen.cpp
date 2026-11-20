@@ -3,27 +3,8 @@
 // Class USlateBlueprintLibrary: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0369D650, FClassParams RVA 0x0369D710.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_USlateBlueprintLibrary();  // RVA 0x01BF3070 (consensus OuterFunc)
-
-class USlateBlueprintLibrary
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUSlateBlueprintLibrary();
-	static void execAbsoluteToLocal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execAbsoluteToViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execEqualEqual_SlateBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetAbsoluteSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetLocalSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execIsUnderLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execLocalToAbsolute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execLocalToViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execScreenToViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execScreenToWidgetAbsolute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execScreenToWidgetLocal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2B50 (end 0x01BF2B72)
 // Original VA: 0x0000000141BF2B50 | File offset: 0x01BF2150

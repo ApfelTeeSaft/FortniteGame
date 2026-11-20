@@ -3,15 +3,8 @@
 // Class AKeepHeart: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0343EAE0, FClassParams RVA 0x0343EC90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_AKeepHeart();  // RVA 0x010E3080 (consensus OuterFunc)
-
-class AKeepHeart
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_AKeepHeart_DelayedVoteSuccess_Statics
 {

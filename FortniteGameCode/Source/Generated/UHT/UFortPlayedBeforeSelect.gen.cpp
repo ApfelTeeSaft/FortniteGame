@@ -3,15 +3,8 @@
 // Class UFortPlayedBeforeSelect: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03CFF5B8, FClassParams RVA 0x03CFF5F0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortPlayedBeforeSelect();  // RVA 0x028E6CD0 (consensus OuterFunc)
-
-class UFortPlayedBeforeSelect
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleNoClicked_Statics
 {

@@ -3,15 +3,8 @@
 // Class UEpicCMSTileCarousel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02E8CF50, FClassParams RVA 0x02E8CFF0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UEpicCMSTileCarousel();  // RVA 0x002E3CA0 (consensus OuterFunc)
-
-class UEpicCMSTileCarousel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UEpicCMSTileCarousel_GetCurrentPageIndex_Statics
 {

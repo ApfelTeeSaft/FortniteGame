@@ -3,17 +3,8 @@
 // Class UFortAnimNotify_PlayReloadFX: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x032BEB20, FClassParams RVA 0x032BEB40.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortAnimNotify_PlayReloadFX();  // RVA 0x00F9F040 (consensus OuterFunc)
-
-class UFortAnimNotify_PlayReloadFX
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortAnimNotify_PlayReloadFX();
-	static void execSetReloadStage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E4E0 (end 0x00F9E502)
 // Original VA: 0x0000000140F9E4E0 | File offset: 0x00F9DAE0

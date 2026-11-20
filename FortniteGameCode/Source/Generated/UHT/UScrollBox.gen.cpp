@@ -3,15 +3,8 @@
 // Class UScrollBox: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x0369CE20, FClassParams RVA 0x0369CF50.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UScrollBox();  // RVA 0x01BF2FA0 (consensus OuterFunc)
-
-class UScrollBox
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UFunction_UScrollBox_GetScrollOffset_Statics
 {

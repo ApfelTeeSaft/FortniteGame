@@ -3,15 +3,8 @@
 // Class UFortTabListWidgetBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D315E0, FClassParams RVA 0x03D316B0.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortTabListWidgetBase();  // RVA 0x02904BE0 (consensus OuterFunc)
-
-class UFortTabListWidgetBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-};
 
 struct Z_Construct_UDelegateFunction_UFortTabListWidgetBase_OnTabContentCreated__DelegateSignature_Statics
 {

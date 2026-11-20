@@ -3,17 +3,8 @@
 // Class UDropTimecodeToStringConversion: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x02FD3C78, FClassParams RVA 0x02FD3C90.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UDropTimecodeToStringConversion();  // RVA 0x007E0240 (consensus OuterFunc)
-
-class UDropTimecodeToStringConversion
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUDropTimecodeToStringConversion();
-	static void execConv_DropTimecodeToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007E0160 (end 0x007E0182)
 // Original VA: 0x00000001407E0160 | File offset: 0x007DF760

@@ -3,18 +3,8 @@
 // Class UCurveBase: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x038CD1F8, FClassParams RVA 0x038CD220.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UCurveBase();  // RVA 0x023FE4C0 (consensus OuterFunc)
-
-class UCurveBase
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUCurveBase();
-	static void execGetTimeRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execGetValueRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDBB0 (end 0x023FDBD2)
 // Original VA: 0x00000001423FDBB0 | File offset: 0x023FD1B0

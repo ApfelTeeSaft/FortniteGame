@@ -3,22 +3,8 @@
 // Class UFortSkillTreeNodeDetailsPanel: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.
 // FClassFunctionLinkInfo array RVA 0x03D13B90, FClassParams RVA 0x03D13C20.
 
-#include "FortniteGameCode/UE4CodeGenRecovered.h"
+#include "FortniteGameCode/UHTRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel();  // RVA 0x028F55D0 (consensus OuterFunc)
-
-class UFortSkillTreeNodeDetailsPanel
-{
-	static UClass* GetPrivateStaticClass();
-public:
-	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
-	static void StaticRegisterNativesUFortSkillTreeNodeDetailsPanel();
-	static void execHasSkillTreeNodeToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execSetSkillTreeNodeToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetNodeDisplayData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetNodeDisplayDataFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetNodeSquadAttributeData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-	static void execTryGetSkillTreeNodeState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
-};
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4F30 (end 0x028F4F52)
 // Original VA: 0x00000001428F4F30 | File offset: 0x028F4530
