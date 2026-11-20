@@ -164,3 +164,42 @@ UFunction* Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceTran
 	}
 	return ReturnFunction;
 }
+
+class UPaperGroupedSpriteComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPaperGroupedSpriteComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPaperGroupedSpriteComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPaperGroupedSpriteComponent_AddInstance, "AddInstance" },
+	{ &Z_Construct_UFunction_UPaperGroupedSpriteComponent_ClearInstances, "ClearInstances" },
+	{ &Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceCount, "GetInstanceCount" },
+	{ &Z_Construct_UFunction_UPaperGroupedSpriteComponent_GetInstanceTransform, "GetInstanceTransform" },
+	{ &Z_Construct_UFunction_UPaperGroupedSpriteComponent_RemoveInstance, "RemoveInstance" },
+	{ &Z_Construct_UFunction_UPaperGroupedSpriteComponent_SortInstancesAlongAxis, "SortInstancesAlongAxis" },
+	{ &Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceColor, "UpdateInstanceColor" },
+	{ &Z_Construct_UFunction_UPaperGroupedSpriteComponent_UpdateInstanceTransform, "UpdateInstanceTransform" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPaperGroupedSpriteComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F94380
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPaperGroupedSpriteComponent_Statics::ClassParams = { &UPaperGroupedSpriteComponent::StaticClass, Z_Construct_UClass_UPaperGroupedSpriteComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UPaperGroupedSpriteComponent_Statics::FuncInfo, 8, Z_Construct_UClass_UPaperGroupedSpriteComponent_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UPaperGroupedSpriteComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00667710 (end 0x0066773F)
+// Original VA: 0x0000000140667710 | File offset: 0x00666D10
+// Recovery: confirmed (UHT singleton of UPaperGroupedSpriteComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPaperGroupedSpriteComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPaperGroupedSpriteComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

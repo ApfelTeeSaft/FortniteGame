@@ -265,3 +265,48 @@ UFunction* Z_Construct_UFunction_ABuildingGameplayActor_SetTouchComponentForAbil
 	}
 	return ReturnFunction;
 }
+
+class ABuildingGameplayActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingGameplayActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingGameplayActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_DisableAbilityDeliveryInfo, "DisableAbilityDeliveryInfo" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_EnableAbilityDeliveryInfo, "EnableAbilityDeliveryInfo" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_GetTargetingSourceTransform, "GetTargetingSourceTransform" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_K2_AddGameplayCue, "K2_AddGameplayCue" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_K2_ExecuteGameplayCue, "K2_ExecuteGameplayCue" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_K2_ExecuteGameplayCueWithParams, "K2_ExecuteGameplayCueWithParams" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_K2_RemoveGameplayCue, "K2_RemoveGameplayCue" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_OnRegisteredTouchComponentBeginOverlap, "OnRegisteredTouchComponentBeginOverlap" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_OnRegisteredTouchComponentEndOverlap, "OnRegisteredTouchComponentEndOverlap" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_SetAbilitySourceLevel, "SetAbilitySourceLevel" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_SetIgnoreInstigatorCollision, "SetIgnoreInstigatorCollision" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_SetInitialVelocity, "SetInitialVelocity" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActor_SetTouchComponentForAbilityDeliveryInfo, "SetTouchComponentForAbilityDeliveryInfo" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingGameplayActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03277B00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingGameplayActor_Statics::ClassParams = { &ABuildingGameplayActor::StaticClass, Z_Construct_UClass_ABuildingGameplayActor_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ABuildingGameplayActor_Statics::FuncInfo, 13, Z_Construct_UClass_ABuildingGameplayActor_Statics::PropPointers, 12, nullptr, &Z_Construct_UClass_ABuildingGameplayActor_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_ABuildingGameplayActor_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6C2D0 (end 0x00F6C2FF)
+// Original VA: 0x0000000140F6C2D0 | File offset: 0x00F6B8D0
+// Recovery: confirmed (UHT singleton of ABuildingGameplayActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingGameplayActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingGameplayActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

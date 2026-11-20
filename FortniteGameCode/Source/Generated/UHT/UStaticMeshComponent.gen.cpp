@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UStaticMeshComponent_SetStaticMesh()
 	}
 	return ReturnFunction;
 }
+
+class UStaticMeshComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UStaticMeshComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UStaticMeshComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UStaticMeshComponent_GetLocalBounds, "GetLocalBounds" },
+	{ &Z_Construct_UFunction_UStaticMeshComponent_OnRep_StaticMesh, "OnRep_StaticMesh" },
+	{ &Z_Construct_UFunction_UStaticMeshComponent_SetDistanceFieldSelfShadowBias, "SetDistanceFieldSelfShadowBias" },
+	{ &Z_Construct_UFunction_UStaticMeshComponent_SetForcedLodModel, "SetForcedLodModel" },
+	{ &Z_Construct_UFunction_UStaticMeshComponent_SetReverseCulling, "SetReverseCulling" },
+	{ &Z_Construct_UFunction_UStaticMeshComponent_SetStaticMesh, "SetStaticMesh" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UStaticMeshComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039C36D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UStaticMeshComponent_Statics::ClassParams = { &UStaticMeshComponent::StaticClass, Z_Construct_UClass_UStaticMeshComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UStaticMeshComponent_Statics::FuncInfo, 6, Z_Construct_UClass_UStaticMeshComponent_Statics::PropPointers, 27, nullptr, &Z_Construct_UClass_UStaticMeshComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7970 (end 0x024E799F)
+// Original VA: 0x00000001424E7970 | File offset: 0x024E6F70
+// Recovery: confirmed (UHT singleton of UStaticMeshComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UStaticMeshComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UStaticMeshComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortKeepEventList_GetEventDescription()
 	}
 	return ReturnFunction;
 }
+
+class UFortKeepEventList
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortKeepEventList_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortKeepEventList_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortKeepEventList_GetEvent, "GetEvent" },
+	{ &Z_Construct_UFunction_UFortKeepEventList_GetEventDescription, "GetEventDescription" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortKeepEventList_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03354F40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortKeepEventList_Statics::ClassParams = { &UFortKeepEventList::StaticClass, Z_Construct_UClass_UFortKeepEventList_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortKeepEventList_Statics::FuncInfo, 2, Z_Construct_UClass_UFortKeepEventList_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortKeepEventList_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100C110 (end 0x0100C13F)
+// Original VA: 0x000000014100C110 | File offset: 0x0100B710
+// Recovery: confirmed (UHT singleton of UFortKeepEventList) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortKeepEventList()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortKeepEventList_Statics::ClassParams);
+	}
+	return OuterClass;
+}

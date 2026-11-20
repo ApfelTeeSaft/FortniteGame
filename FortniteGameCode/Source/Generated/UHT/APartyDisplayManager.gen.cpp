@@ -241,3 +241,46 @@ UFunction* Z_Construct_UFunction_APartyDisplayManager_ShowLoading()
 	}
 	return ReturnFunction;
 }
+
+class APartyDisplayManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_APartyDisplayManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_APartyDisplayManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_APartyDisplayManager_BeginLoadingAssetsForItem, "BeginLoadingAssetsForItem" },
+	{ &Z_Construct_UFunction_APartyDisplayManager_GetHeroPlayerPawnForCurrentDisplayedItem, "GetHeroPlayerPawnForCurrentDisplayedItem" },
+	{ &Z_Construct_UFunction_APartyDisplayManager_GetMeshForCurrentDisplayedItem, "GetMeshForCurrentDisplayedItem" },
+	{ &Z_Construct_UFunction_APartyDisplayManager_HandleLoadingAssetsForItemCompleted, "HandleLoadingAssetsForItemCompleted" },
+	{ &Z_Construct_UFunction_APartyDisplayManager_HideLoading, "HideLoading" },
+	{ &Z_Construct_UFunction_APartyDisplayManager_OnPawnBeginCursorOver, "OnPawnBeginCursorOver" },
+	{ &Z_Construct_UFunction_APartyDisplayManager_OnPawnClicked, "OnPawnClicked" },
+	{ &Z_Construct_UFunction_APartyDisplayManager_OnPawnEndCursorOver, "OnPawnEndCursorOver" },
+	{ &Z_Construct_UFunction_APartyDisplayManager_PlayEvolutionEffect, "PlayEvolutionEffect" },
+	{ &Z_Construct_UFunction_APartyDisplayManager_PlayLevelUpEffect, "PlayLevelUpEffect" },
+	{ &Z_Construct_UFunction_APartyDisplayManager_ShowItem, "ShowItem" },
+	{ &Z_Construct_UFunction_APartyDisplayManager_ShowLoading, "ShowLoading" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_APartyDisplayManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0344FF20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_APartyDisplayManager_Statics::ClassParams = { &APartyDisplayManager::StaticClass, Z_Construct_UClass_APartyDisplayManager_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_APartyDisplayManager_Statics::FuncInfo, 12, Z_Construct_UClass_APartyDisplayManager_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_APartyDisplayManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F1880 (end 0x010F18AF)
+// Original VA: 0x00000001410F1880 | File offset: 0x010F0E80
+// Recovery: confirmed (UHT singleton of APartyDisplayManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_APartyDisplayManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_APartyDisplayManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

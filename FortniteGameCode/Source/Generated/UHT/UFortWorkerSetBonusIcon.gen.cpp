@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_UFortWorkerSetBonusIcon_SetGameplayTag()
 	}
 	return ReturnFunction;
 }
+
+class UFortWorkerSetBonusIcon
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortWorkerSetBonusIcon_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortWorkerSetBonusIcon_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortWorkerSetBonusIcon_HandleDifferentGameplayTagSetBP, "HandleDifferentGameplayTagSetBP" },
+	{ &Z_Construct_UFunction_UFortWorkerSetBonusIcon_SetGameplayTag, "SetGameplayTag" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortWorkerSetBonusIcon_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D554F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortWorkerSetBonusIcon_Statics::ClassParams = { &UFortWorkerSetBonusIcon::StaticClass, Z_Construct_UClass_UFortWorkerSetBonusIcon_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortWorkerSetBonusIcon_Statics::FuncInfo, 2, Z_Construct_UClass_UFortWorkerSetBonusIcon_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortWorkerSetBonusIcon_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918BF0 (end 0x02918C1F)
+// Original VA: 0x0000000142918BF0 | File offset: 0x029181F0
+// Recovery: confirmed (UHT singleton of UFortWorkerSetBonusIcon) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortWorkerSetBonusIcon()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortWorkerSetBonusIcon_Statics::ClassParams);
+	}
+	return OuterClass;
+}

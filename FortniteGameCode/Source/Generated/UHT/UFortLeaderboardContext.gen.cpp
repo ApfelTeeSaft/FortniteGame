@@ -65,3 +65,36 @@ UFunction* Z_Construct_UFunction_UFortLeaderboardContext_CanShowStats()
 	}
 	return ReturnFunction;
 }
+
+class UFortLeaderboardContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortLeaderboardContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortLeaderboardContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortLeaderboardContext_CanShowGlobalLeaderboards, "CanShowGlobalLeaderboards" },
+	{ &Z_Construct_UFunction_UFortLeaderboardContext_CanShowLeaderboards, "CanShowLeaderboards" },
+	{ &Z_Construct_UFunction_UFortLeaderboardContext_CanShowStats, "CanShowStats" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortLeaderboardContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE3A50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortLeaderboardContext_Statics::ClassParams = { &UFortLeaderboardContext::StaticClass, Z_Construct_UClass_UFortLeaderboardContext_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortLeaderboardContext_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UFortLeaderboardContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D71B0 (end 0x028D71DF)
+// Original VA: 0x00000001428D71B0 | File offset: 0x028D67B0
+// Recovery: confirmed (UHT singleton of UFortLeaderboardContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortLeaderboardContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortLeaderboardContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

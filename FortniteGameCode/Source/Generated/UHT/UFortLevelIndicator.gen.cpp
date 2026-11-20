@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UFortLevelIndicator_SetShouldShowMaximumLevel()
 	}
 	return ReturnFunction;
 }
+
+class UFortLevelIndicator
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortLevelIndicator_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortLevelIndicator_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortLevelIndicator_HandleItemForComparisonChanged, "HandleItemForComparisonChanged" },
+	{ &Z_Construct_UFunction_UFortLevelIndicator_HandleItemToRepresentChanged, "HandleItemToRepresentChanged" },
+	{ &Z_Construct_UFunction_UFortLevelIndicator_SetItemForComparison, "SetItemForComparison" },
+	{ &Z_Construct_UFunction_UFortLevelIndicator_SetItemToRepresent, "SetItemToRepresent" },
+	{ &Z_Construct_UFunction_UFortLevelIndicator_SetShouldShowMaximumLevel, "SetShouldShowMaximumLevel" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortLevelIndicator_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE3E10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortLevelIndicator_Statics::ClassParams = { &UFortLevelIndicator::StaticClass, Z_Construct_UClass_UFortLevelIndicator_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortLevelIndicator_Statics::FuncInfo, 5, Z_Construct_UClass_UFortLevelIndicator_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_UFortLevelIndicator_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7240 (end 0x028D726F)
+// Original VA: 0x00000001428D7240 | File offset: 0x028D6840
+// Recovery: confirmed (UHT singleton of UFortLevelIndicator) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortLevelIndicator()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortLevelIndicator_Statics::ClassParams);
+	}
+	return OuterClass;
+}

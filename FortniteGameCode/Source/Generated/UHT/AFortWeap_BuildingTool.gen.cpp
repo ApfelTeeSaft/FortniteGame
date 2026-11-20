@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_AFortWeap_BuildingTool_OnRep_DefaultMetadata()
 	}
 	return ReturnFunction;
 }
+
+class AFortWeap_BuildingTool
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortWeap_BuildingTool_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortWeap_BuildingTool_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortWeap_BuildingTool_OnBlueprintPaperPulseUpdate, "OnBlueprintPaperPulseUpdate" },
+	{ &Z_Construct_UFunction_AFortWeap_BuildingTool_OnRep_DefaultMetadata, "OnRep_DefaultMetadata" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortWeap_BuildingTool_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0342A3D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortWeap_BuildingTool_Statics::ClassParams = { &AFortWeap_BuildingTool::StaticClass, Z_Construct_UClass_AFortWeap_BuildingTool_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortWeap_BuildingTool_Statics::FuncInfo, 2, Z_Construct_UClass_AFortWeap_BuildingTool_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_AFortWeap_BuildingTool_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D48C0 (end 0x010D48EF)
+// Original VA: 0x00000001410D48C0 | File offset: 0x010D3EC0
+// Recovery: confirmed (UHT singleton of AFortWeap_BuildingTool) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortWeap_BuildingTool()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortWeap_BuildingTool_Statics::ClassParams);
+	}
+	return OuterClass;
+}

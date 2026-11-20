@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortEmojiPreviewComponent_PushPreviewEmoji()
 	}
 	return ReturnFunction;
 }
+
+class UFortEmojiPreviewComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortEmojiPreviewComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortEmojiPreviewComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortEmojiPreviewComponent_PushPreviewEmoji, "PushPreviewEmoji" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortEmojiPreviewComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033098F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortEmojiPreviewComponent_Statics::ClassParams = { &UFortEmojiPreviewComponent::StaticClass, Z_Construct_UClass_UFortEmojiPreviewComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UFortEmojiPreviewComponent_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortEmojiPreviewComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD7A00 (end 0x00FD7A2F)
+// Original VA: 0x0000000140FD7A00 | File offset: 0x00FD7000
+// Recovery: confirmed (UHT singleton of UFortEmojiPreviewComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortEmojiPreviewComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortEmojiPreviewComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

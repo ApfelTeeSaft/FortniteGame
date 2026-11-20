@@ -65,3 +65,36 @@ UFunction* Z_Construct_UFunction_UFortChallengeBundleItem_GetPercentageComplete(
 	}
 	return ReturnFunction;
 }
+
+class UFortChallengeBundleItem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortChallengeBundleItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortChallengeBundleItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortChallengeBundleItem_GetAchievedCount, "GetAchievedCount" },
+	{ &Z_Construct_UFunction_UFortChallengeBundleItem_GetChallengeDefinitionBP, "GetChallengeDefinitionBP" },
+	{ &Z_Construct_UFunction_UFortChallengeBundleItem_GetPercentageComplete, "GetPercentageComplete" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortChallengeBundleItem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032DA980
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortChallengeBundleItem_Statics::ClassParams = { &UFortChallengeBundleItem::StaticClass, Z_Construct_UClass_UFortChallengeBundleItem_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortChallengeBundleItem_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UFortChallengeBundleItem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB01A0 (end 0x00FB01CF)
+// Original VA: 0x0000000140FB01A0 | File offset: 0x00FAF7A0
+// Recovery: confirmed (UHT singleton of UFortChallengeBundleItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortChallengeBundleItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortChallengeBundleItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

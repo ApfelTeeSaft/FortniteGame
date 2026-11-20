@@ -105,3 +105,38 @@ UFunction* Z_Construct_UFunction_UFortHUDTargetUnderReticleInterface_GetHUDTarge
 	}
 	return ReturnFunction;
 }
+
+class UFortHUDTargetUnderReticleInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHUDTargetUnderReticleInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHUDTargetUnderReticleInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHUDTargetUnderReticleInterface_GetHUDTargetDifficultyRating, "GetHUDTargetDifficultyRating" },
+	{ &Z_Construct_UFunction_UFortHUDTargetUnderReticleInterface_GetHUDTargetDisplayModifiers, "GetHUDTargetDisplayModifiers" },
+	{ &Z_Construct_UFunction_UFortHUDTargetUnderReticleInterface_GetHUDTargetDisplayName, "GetHUDTargetDisplayName" },
+	{ &Z_Construct_UFunction_UFortHUDTargetUnderReticleInterface_GetHUDTargetHealthPercentage, "GetHUDTargetHealthPercentage" },
+	{ &Z_Construct_UFunction_UFortHUDTargetUnderReticleInterface_GetHUDTargetUpgradeDisplayName, "GetHUDTargetUpgradeDisplayName" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHUDTargetUnderReticleInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x033496C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHUDTargetUnderReticleInterface_Statics::ClassParams = { &UFortHUDTargetUnderReticleInterface::StaticClass, Z_Construct_UClass_UFortHUDTargetUnderReticleInterface_Statics::DependentSingletons, 2, 0x00084081u, Z_Construct_UClass_UFortHUDTargetUnderReticleInterface_Statics::FuncInfo, 5, nullptr, 0, nullptr, &Z_Construct_UClass_UFortHUDTargetUnderReticleInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010068B0 (end 0x010068DF)
+// Original VA: 0x00000001410068B0 | File offset: 0x01005EB0
+// Recovery: confirmed (UHT singleton of UFortHUDTargetUnderReticleInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHUDTargetUnderReticleInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHUDTargetUnderReticleInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

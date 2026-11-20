@@ -1575,3 +1575,114 @@ UFunction* Z_Construct_UFunction_UUserWidget_UnregisterInputComponent()
 	}
 	return ReturnFunction;
 }
+
+class UUserWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UUserWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UUserWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UUserWidget_AddToPlayerScreen, "AddToPlayerScreen" },
+	{ &Z_Construct_UFunction_UUserWidget_AddToViewport, "AddToViewport" },
+	{ &Z_Construct_UFunction_UUserWidget_CancelLatentActions, "CancelLatentActions" },
+	{ &Z_Construct_UFunction_UUserWidget_Construct, "Construct" },
+	{ &Z_Construct_UFunction_UUserWidget_Destruct, "Destruct" },
+	{ &Z_Construct_UFunction_UUserWidget_GetAlignmentInViewport, "GetAlignmentInViewport" },
+	{ &Z_Construct_UFunction_UUserWidget_GetAnchorsInViewport, "GetAnchorsInViewport" },
+	{ &Z_Construct_UFunction_UUserWidget_GetAnimationCurrentTime, "GetAnimationCurrentTime" },
+	{ &Z_Construct_UFunction_UUserWidget_GetIsVisible, "GetIsVisible" },
+	{ &Z_Construct_UFunction_UUserWidget_GetOwningLocalPlayer, "GetOwningLocalPlayer" },
+	{ &Z_Construct_UFunction_UUserWidget_GetOwningPlayerPawn, "GetOwningPlayerPawn" },
+	{ &Z_Construct_UFunction_UUserWidget_IsAnimationPlaying, "IsAnimationPlaying" },
+	{ &Z_Construct_UFunction_UUserWidget_IsAnimationPlayingForward, "IsAnimationPlayingForward" },
+	{ &Z_Construct_UFunction_UUserWidget_IsAnyAnimationPlaying, "IsAnyAnimationPlaying" },
+	{ &Z_Construct_UFunction_UUserWidget_IsInViewport, "IsInViewport" },
+	{ &Z_Construct_UFunction_UUserWidget_IsInteractable, "IsInteractable" },
+	{ &Z_Construct_UFunction_UUserWidget_IsListeningForInputAction, "IsListeningForInputAction" },
+	{ &Z_Construct_UFunction_UUserWidget_IsPlayingAnimation, "IsPlayingAnimation" },
+	{ &Z_Construct_UFunction_UUserWidget_ListenForInputAction, "ListenForInputAction" },
+	{ &Z_Construct_UFunction_UUserWidget_OnAddedToFocusPath, "OnAddedToFocusPath" },
+	{ &Z_Construct_UFunction_UUserWidget_OnAnalogValueChanged, "OnAnalogValueChanged" },
+	{ &Z_Construct_UFunction_UUserWidget_OnAnimationFinished, "OnAnimationFinished" },
+	{ &Z_Construct_UFunction_UUserWidget_OnAnimationStarted, "OnAnimationStarted" },
+	{ &Z_Construct_UFunction_UUserWidget_OnDragCancelled, "OnDragCancelled" },
+	{ &Z_Construct_UFunction_UUserWidget_OnDragDetected, "OnDragDetected" },
+	{ &Z_Construct_UFunction_UUserWidget_OnDragEnter, "OnDragEnter" },
+	{ &Z_Construct_UFunction_UUserWidget_OnDragLeave, "OnDragLeave" },
+	{ &Z_Construct_UFunction_UUserWidget_OnDragOver, "OnDragOver" },
+	{ &Z_Construct_UFunction_UUserWidget_OnDrop, "OnDrop" },
+	{ &Z_Construct_UFunction_UUserWidget_OnFocusLost, "OnFocusLost" },
+	{ &Z_Construct_UFunction_UUserWidget_OnFocusReceived, "OnFocusReceived" },
+	{ &Z_Construct_UFunction_UUserWidget_OnKeyChar, "OnKeyChar" },
+	{ &Z_Construct_UFunction_UUserWidget_OnKeyDown, "OnKeyDown" },
+	{ &Z_Construct_UFunction_UUserWidget_OnKeyUp, "OnKeyUp" },
+	{ &Z_Construct_UFunction_UUserWidget_OnMotionDetected, "OnMotionDetected" },
+	{ &Z_Construct_UFunction_UUserWidget_OnMouseButtonDoubleClick, "OnMouseButtonDoubleClick" },
+	{ &Z_Construct_UFunction_UUserWidget_OnMouseButtonDown, "OnMouseButtonDown" },
+	{ &Z_Construct_UFunction_UUserWidget_OnMouseButtonUp, "OnMouseButtonUp" },
+	{ &Z_Construct_UFunction_UUserWidget_OnMouseCaptureLost, "OnMouseCaptureLost" },
+	{ &Z_Construct_UFunction_UUserWidget_OnMouseEnter, "OnMouseEnter" },
+	{ &Z_Construct_UFunction_UUserWidget_OnMouseLeave, "OnMouseLeave" },
+	{ &Z_Construct_UFunction_UUserWidget_OnMouseMove, "OnMouseMove" },
+	{ &Z_Construct_UFunction_UUserWidget_OnMouseWheel, "OnMouseWheel" },
+	{ &Z_Construct_UFunction_UUserWidget_OnPaint, "OnPaint" },
+	{ &Z_Construct_UFunction_UUserWidget_OnPreviewKeyDown, "OnPreviewKeyDown" },
+	{ &Z_Construct_UFunction_UUserWidget_OnPreviewMouseButtonDown, "OnPreviewMouseButtonDown" },
+	{ &Z_Construct_UFunction_UUserWidget_OnRemovedFromFocusPath, "OnRemovedFromFocusPath" },
+	{ &Z_Construct_UFunction_UUserWidget_OnTouchEnded, "OnTouchEnded" },
+	{ &Z_Construct_UFunction_UUserWidget_OnTouchGesture, "OnTouchGesture" },
+	{ &Z_Construct_UFunction_UUserWidget_OnTouchMoved, "OnTouchMoved" },
+	{ &Z_Construct_UFunction_UUserWidget_OnTouchStarted, "OnTouchStarted" },
+	{ &Z_Construct_UFunction_UUserWidget_PauseAnimation, "PauseAnimation" },
+	{ &Z_Construct_UFunction_UUserWidget_PlayAnimation, "PlayAnimation" },
+	{ &Z_Construct_UFunction_UUserWidget_PlayAnimationTo, "PlayAnimationTo" },
+	{ &Z_Construct_UFunction_UUserWidget_PlaySound, "PlaySound" },
+	{ &Z_Construct_UFunction_UUserWidget_PreConstruct, "PreConstruct" },
+	{ &Z_Construct_UFunction_UUserWidget_RegisterInputComponent, "RegisterInputComponent" },
+	{ &Z_Construct_UFunction_UUserWidget_RemoveFromViewport, "RemoveFromViewport" },
+	{ &Z_Construct_UFunction_UUserWidget_ReverseAnimation, "ReverseAnimation" },
+	{ &Z_Construct_UFunction_UUserWidget_SetAlignmentInViewport, "SetAlignmentInViewport" },
+	{ &Z_Construct_UFunction_UUserWidget_SetAnchorsInViewport, "SetAnchorsInViewport" },
+	{ &Z_Construct_UFunction_UUserWidget_SetColorAndOpacity, "SetColorAndOpacity" },
+	{ &Z_Construct_UFunction_UUserWidget_SetDesiredSizeInViewport, "SetDesiredSizeInViewport" },
+	{ &Z_Construct_UFunction_UUserWidget_SetForegroundColor, "SetForegroundColor" },
+	{ &Z_Construct_UFunction_UUserWidget_SetInputActionBlocking, "SetInputActionBlocking" },
+	{ &Z_Construct_UFunction_UUserWidget_SetInputActionPriority, "SetInputActionPriority" },
+	{ &Z_Construct_UFunction_UUserWidget_SetNumLoopsToPlay, "SetNumLoopsToPlay" },
+	{ &Z_Construct_UFunction_UUserWidget_SetOwningLocalPlayer, "SetOwningLocalPlayer" },
+	{ &Z_Construct_UFunction_UUserWidget_SetOwningPlayer, "SetOwningPlayer" },
+	{ &Z_Construct_UFunction_UUserWidget_SetPadding, "SetPadding" },
+	{ &Z_Construct_UFunction_UUserWidget_SetPlaybackSpeed, "SetPlaybackSpeed" },
+	{ &Z_Construct_UFunction_UUserWidget_SetPositionInViewport, "SetPositionInViewport" },
+	{ &Z_Construct_UFunction_UUserWidget_StopAllAnimations, "StopAllAnimations" },
+	{ &Z_Construct_UFunction_UUserWidget_StopAnimation, "StopAnimation" },
+	{ &Z_Construct_UFunction_UUserWidget_StopAnimationsAndLatentActions, "StopAnimationsAndLatentActions" },
+	{ &Z_Construct_UFunction_UUserWidget_StopListeningForAllInputActions, "StopListeningForAllInputActions" },
+	{ &Z_Construct_UFunction_UUserWidget_StopListeningForInputAction, "StopListeningForInputAction" },
+	{ &Z_Construct_UFunction_UUserWidget_Tick, "Tick" },
+	{ &Z_Construct_UFunction_UUserWidget_UnregisterInputComponent, "UnregisterInputComponent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UUserWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036A4160
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UUserWidget_Statics::ClassParams = { &UUserWidget::StaticClass, Z_Construct_UClass_UUserWidget_Statics::DependentSingletons, 2, 0x00B01081u, Z_Construct_UClass_UUserWidget_Statics::FuncInfo, 79, Z_Construct_UClass_UUserWidget_Statics::PropPointers, 20, nullptr, &Z_Construct_UClass_UUserWidget_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UUserWidget_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB1D0 (end 0x01BFB1FF)
+// Original VA: 0x0000000141BFB1D0 | File offset: 0x01BFA7D0
+// Recovery: confirmed (UHT singleton of UUserWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UUserWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UUserWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

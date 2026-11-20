@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UEnvQueryGenerator_BlueprintBase_GetQuerier()
 	}
 	return ReturnFunction;
 }
+
+class UEnvQueryGenerator_BlueprintBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UEnvQueryGenerator_BlueprintBase_AddGeneratedActor, "AddGeneratedActor" },
+	{ &Z_Construct_UFunction_UEnvQueryGenerator_BlueprintBase_AddGeneratedVector, "AddGeneratedVector" },
+	{ &Z_Construct_UFunction_UEnvQueryGenerator_BlueprintBase_DoItemGeneration, "DoItemGeneration" },
+	{ &Z_Construct_UFunction_UEnvQueryGenerator_BlueprintBase_GetQuerier, "GetQuerier" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x037078D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase_Statics::ClassParams = { &UEnvQueryGenerator_BlueprintBase::StaticClass, Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase_Statics::DependentSingletons, 2, 0x00101081u, Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase_Statics::FuncInfo, 4, Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2F700 (end 0x01D2F72F)
+// Original VA: 0x0000000141D2F700 | File offset: 0x01D2ED00
+// Recovery: confirmed (UHT singleton of UEnvQueryGenerator_BlueprintBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

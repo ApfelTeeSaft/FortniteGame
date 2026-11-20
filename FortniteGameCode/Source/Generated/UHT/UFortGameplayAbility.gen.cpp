@@ -623,3 +623,66 @@ UFunction* Z_Construct_UFunction_UFortGameplayAbility_SetupPreviewImageOverride(
 	}
 	return ReturnFunction;
 }
+
+class UFortGameplayAbility
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortGameplayAbility_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortGameplayAbility_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortGameplayAbility_ApplyAccuracyToTargetLocation, "ApplyAccuracyToTargetLocation" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_ApplyGameplayEffectContainer, "ApplyGameplayEffectContainer" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_BP_GetGameplayEffectContainer, "BP_GetGameplayEffectContainer" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_CalculateProjectileTrajectorySpline, "CalculateProjectileTrajectorySpline" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_ClearAIFocalPoint, "ClearAIFocalPoint" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_DoesTargetHaveProhibitedTagsForAI, "DoesTargetHaveProhibitedTagsForAI" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_DoesTargetHaveTags, "DoesTargetHaveTags" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_EquipAbilityWeapon, "EquipAbilityWeapon" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetAIAbilityTarget, "GetAIAbilityTarget" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetActivatingAbilityComponent, "GetActivatingAbilityComponent" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetActivatingPawn, "GetActivatingPawn" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetAimLocationNearestPawn, "GetAimLocationNearestPawn" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetCurrentAbilitySourceLevel, "GetCurrentAbilitySourceLevel" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetCurrentSourceItemDefinition, "GetCurrentSourceItemDefinition" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetCurrentSourceWeapon, "GetCurrentSourceWeapon" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetCustomAbilitySourceTransform, "GetCustomAbilitySourceTransform" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetDisplayStats, "GetDisplayStats" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetFireLocation, "GetFireLocation" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetFireRotation, "GetFireRotation" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetProjectileInitialValues, "GetProjectileInitialValues" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_GetTooltip, "GetTooltip" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_IsTargetOutsideOfMaxYawRotation, "IsTargetOutsideOfMaxYawRotation" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_K2_AbilityCompleted, "K2_AbilityCompleted" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_K2_ShouldUseDecoTool, "K2_ShouldUseDecoTool" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_K2_TriggerFromAnimation, "K2_TriggerFromAnimation" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_MakeGameplayEffectContainerSpec, "MakeGameplayEffectContainerSpec" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_OnAbilityInputReleased, "OnAbilityInputReleased" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_OnGenericNotifyFromAnimation, "OnGenericNotifyFromAnimation" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_QueryGameplayEffectContainerTargetExecutionModifiers, "QueryGameplayEffectContainerTargetExecutionModifiers" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_SetAIFocalPoint, "SetAIFocalPoint" },
+	{ &Z_Construct_UFunction_UFortGameplayAbility_SetupPreviewImageOverride, "SetupPreviewImageOverride" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortGameplayAbility_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033259B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortGameplayAbility_Statics::ClassParams = { &UFortGameplayAbility::StaticClass, Z_Construct_UClass_UFortGameplayAbility_Statics::DependentSingletons, 2, 0x00080080u, Z_Construct_UClass_UFortGameplayAbility_Statics::FuncInfo, 31, Z_Construct_UClass_UFortGameplayAbility_Statics::PropPointers, 54, nullptr, &Z_Construct_UClass_UFortGameplayAbility_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortGameplayAbility_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7AF0 (end 0x00FE7B1F)
+// Original VA: 0x0000000140FE7AF0 | File offset: 0x00FE70F0
+// Recovery: confirmed (UHT singleton of UFortGameplayAbility) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortGameplayAbility()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortGameplayAbility_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -84,3 +84,38 @@ UFunction* Z_Construct_UFunction_UCommonTreeView_SetSelection()
 	}
 	return ReturnFunction;
 }
+
+class UCommonTreeView
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonTreeView_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonTreeView_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonTreeView_DynamicHandleItemClickedCommonButton, "DynamicHandleItemClickedCommonButton" },
+	{ &Z_Construct_UFunction_UCommonTreeView_RequestRefresh, "RequestRefresh" },
+	{ &Z_Construct_UFunction_UCommonTreeView_SetItemExpansion, "SetItemExpansion" },
+	{ &Z_Construct_UFunction_UCommonTreeView_SetSelection, "SetSelection" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonTreeView_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E832F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonTreeView_Statics::ClassParams = { &UCommonTreeView::StaticClass, Z_Construct_UClass_UCommonTreeView_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UCommonTreeView_Statics::FuncInfo, 4, Z_Construct_UClass_UCommonTreeView_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UCommonTreeView_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA6B0 (end 0x002CA6DF)
+// Original VA: 0x00000001402CA6B0 | File offset: 0x002C9CB0
+// Recovery: confirmed (UHT singleton of UCommonTreeView) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonTreeView()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonTreeView_Statics::ClassParams);
+	}
+	return OuterClass;
+}

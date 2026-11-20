@@ -25,3 +25,36 @@ UFunction* Z_Construct_UFunction_UFortAIEncounterRiftManager_GetAssociatedMissio
 	}
 	return ReturnFunction;
 }
+
+class UFortAIEncounterRiftManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAIEncounterRiftManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAIEncounterRiftManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAIEncounterRiftManager_GetAssociatedMission, "GetAssociatedMission" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAIEncounterRiftManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032A6490
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAIEncounterRiftManager_Statics::ClassParams = { &UFortAIEncounterRiftManager::StaticClass, Z_Construct_UClass_UFortAIEncounterRiftManager_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortAIEncounterRiftManager_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAIEncounterRiftManager_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_UFortAIEncounterRiftManager_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortAIEncounterRiftManager_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C550 (end 0x00F8C57F)
+// Original VA: 0x0000000140F8C550 | File offset: 0x00F8BB50
+// Recovery: confirmed (UHT singleton of UFortAIEncounterRiftManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAIEncounterRiftManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAIEncounterRiftManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

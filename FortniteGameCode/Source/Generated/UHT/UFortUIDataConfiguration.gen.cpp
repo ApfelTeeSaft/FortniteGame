@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortUIDataConfiguration_GetDefenderSubtypeIcon
 	}
 	return ReturnFunction;
 }
+
+class UFortUIDataConfiguration
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortUIDataConfiguration_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUIDataConfiguration_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUIDataConfiguration_GetDefenderSubtypeIconMultiSizeBrushByTag, "GetDefenderSubtypeIconMultiSizeBrushByTag" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUIDataConfiguration_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D3D410
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUIDataConfiguration_Statics::ClassParams = { &UFortUIDataConfiguration::StaticClass, Z_Construct_UClass_UFortUIDataConfiguration_Statics::DependentSingletons, 2, 0x00000084u, Z_Construct_UClass_UFortUIDataConfiguration_Statics::FuncInfo, 1, Z_Construct_UClass_UFortUIDataConfiguration_Statics::PropPointers, 176, "Game", &Z_Construct_UClass_UFortUIDataConfiguration_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A9A0 (end 0x0290A9CF)
+// Original VA: 0x000000014290A9A0 | File offset: 0x02909FA0
+// Recovery: confirmed (UHT singleton of UFortUIDataConfiguration) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUIDataConfiguration()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUIDataConfiguration_Statics::ClassParams);
+	}
+	return OuterClass;
+}

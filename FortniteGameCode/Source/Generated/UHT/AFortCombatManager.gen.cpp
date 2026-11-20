@@ -84,3 +84,38 @@ UFunction* Z_Construct_UFunction_AFortCombatManager_OnThresholdChange()
 	}
 	return ReturnFunction;
 }
+
+class AFortCombatManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortCombatManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortCombatManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercent, "GetEventHeatPercent" },
+	{ &Z_Construct_UFunction_AFortCombatManager_GetEventHeatPercentTotal, "GetEventHeatPercentTotal" },
+	{ &Z_Construct_UFunction_AFortCombatManager_OnRep_CombatEventHeat, "OnRep_CombatEventHeat" },
+	{ &Z_Construct_UFunction_AFortCombatManager_OnThresholdChange, "OnThresholdChange" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortCombatManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032EFC00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortCombatManager_Statics::ClassParams = { &AFortCombatManager::StaticClass, Z_Construct_UClass_AFortCombatManager_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortCombatManager_Statics::FuncInfo, 4, Z_Construct_UClass_AFortCombatManager_Statics::PropPointers, 9, nullptr, &Z_Construct_UClass_AFortCombatManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5F80 (end 0x00FC5FAF)
+// Original VA: 0x0000000140FC5F80 | File offset: 0x00FC5580
+// Recovery: confirmed (UHT singleton of AFortCombatManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortCombatManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortCombatManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_UCommonInputReflector_OnButtonAdded()
 	}
 	return ReturnFunction;
 }
+
+class UCommonInputReflector
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonInputReflector_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonInputReflector_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonInputReflector_ClearButtons, "ClearButtons" },
+	{ &Z_Construct_UFunction_UCommonInputReflector_OnButtonAdded, "OnButtonAdded" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonInputReflector_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E814A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonInputReflector_Statics::ClassParams = { &UCommonInputReflector::StaticClass, Z_Construct_UClass_UCommonInputReflector_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UCommonInputReflector_Statics::FuncInfo, 2, Z_Construct_UClass_UCommonInputReflector_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UCommonInputReflector_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA380 (end 0x002CA3AF)
+// Original VA: 0x00000001402CA380 | File offset: 0x002C9980
+// Recovery: confirmed (UHT singleton of UCommonInputReflector) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonInputReflector()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonInputReflector_Statics::ClassParams);
+	}
+	return OuterClass;
+}

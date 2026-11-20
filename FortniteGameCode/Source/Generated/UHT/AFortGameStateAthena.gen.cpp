@@ -181,3 +181,43 @@ UFunction* Z_Construct_UFunction_AFortGameStateAthena_OnRep_WinningTeam()
 	}
 	return ReturnFunction;
 }
+
+class AFortGameStateAthena
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortGameStateAthena_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortGameStateAthena_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortGameStateAthena_GetAerialPhase, "GetAerialPhase" },
+	{ &Z_Construct_UFunction_AFortGameStateAthena_GetAircraft, "GetAircraft" },
+	{ &Z_Construct_UFunction_AFortGameStateAthena_GetBattleBusForPlayer, "GetBattleBusForPlayer" },
+	{ &Z_Construct_UFunction_AFortGameStateAthena_GetSafeZoneIndicator, "GetSafeZoneIndicator" },
+	{ &Z_Construct_UFunction_AFortGameStateAthena_OnRep_Aircraft, "OnRep_Aircraft" },
+	{ &Z_Construct_UFunction_AFortGameStateAthena_OnRep_CurrentPlaylistId, "OnRep_CurrentPlaylistId" },
+	{ &Z_Construct_UFunction_AFortGameStateAthena_OnRep_GamePhase, "OnRep_GamePhase" },
+	{ &Z_Construct_UFunction_AFortGameStateAthena_OnRep_WinningPlayerName, "OnRep_WinningPlayerName" },
+	{ &Z_Construct_UFunction_AFortGameStateAthena_OnRep_WinningTeam, "OnRep_WinningTeam" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortGameStateAthena_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0332E460
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortGameStateAthena_Statics::ClassParams = { &AFortGameStateAthena::StaticClass, Z_Construct_UClass_AFortGameStateAthena_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortGameStateAthena_Statics::FuncInfo, 9, Z_Construct_UClass_AFortGameStateAthena_Statics::PropPointers, 50, "Game", &Z_Construct_UClass_AFortGameStateAthena_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE660 (end 0x00FEE68F)
+// Original VA: 0x0000000140FEE660 | File offset: 0x00FEDC60
+// Recovery: confirmed (UHT singleton of AFortGameStateAthena) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortGameStateAthena()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortGameStateAthena_Statics::ClassParams);
+	}
+	return OuterClass;
+}

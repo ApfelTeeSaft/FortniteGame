@@ -1200,3 +1200,94 @@ UFunction* Z_Construct_UFunction_USceneComponent_ToggleVisibility()
 	}
 	return ReturnFunction;
 }
+
+class USceneComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_USceneComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USceneComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USceneComponent_DetachFromParent, "DetachFromParent" },
+	{ &Z_Construct_UFunction_USceneComponent_DoesSocketExist, "DoesSocketExist" },
+	{ &Z_Construct_UFunction_USceneComponent_GetAllSocketNames, "GetAllSocketNames" },
+	{ &Z_Construct_UFunction_USceneComponent_GetAttachParent, "GetAttachParent" },
+	{ &Z_Construct_UFunction_USceneComponent_GetAttachSocketName, "GetAttachSocketName" },
+	{ &Z_Construct_UFunction_USceneComponent_GetChildComponent, "GetChildComponent" },
+	{ &Z_Construct_UFunction_USceneComponent_GetChildrenComponents, "GetChildrenComponents" },
+	{ &Z_Construct_UFunction_USceneComponent_GetComponentVelocity, "GetComponentVelocity" },
+	{ &Z_Construct_UFunction_USceneComponent_GetForwardVector, "GetForwardVector" },
+	{ &Z_Construct_UFunction_USceneComponent_GetNumChildrenComponents, "GetNumChildrenComponents" },
+	{ &Z_Construct_UFunction_USceneComponent_GetParentComponents, "GetParentComponents" },
+	{ &Z_Construct_UFunction_USceneComponent_GetPhysicsVolume, "GetPhysicsVolume" },
+	{ &Z_Construct_UFunction_USceneComponent_GetRelativeTransform, "GetRelativeTransform" },
+	{ &Z_Construct_UFunction_USceneComponent_GetRightVector, "GetRightVector" },
+	{ &Z_Construct_UFunction_USceneComponent_GetShouldUpdatePhysicsVolume, "GetShouldUpdatePhysicsVolume" },
+	{ &Z_Construct_UFunction_USceneComponent_GetSocketLocation, "GetSocketLocation" },
+	{ &Z_Construct_UFunction_USceneComponent_GetSocketQuaternion, "GetSocketQuaternion" },
+	{ &Z_Construct_UFunction_USceneComponent_GetSocketRotation, "GetSocketRotation" },
+	{ &Z_Construct_UFunction_USceneComponent_GetSocketTransform, "GetSocketTransform" },
+	{ &Z_Construct_UFunction_USceneComponent_GetUpVector, "GetUpVector" },
+	{ &Z_Construct_UFunction_USceneComponent_IsAnySimulatingPhysics, "IsAnySimulatingPhysics" },
+	{ &Z_Construct_UFunction_USceneComponent_IsSimulatingPhysics, "IsSimulatingPhysics" },
+	{ &Z_Construct_UFunction_USceneComponent_IsVisible, "IsVisible" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_AddLocalOffset, "K2_AddLocalOffset" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_AddLocalRotation, "K2_AddLocalRotation" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_AddLocalTransform, "K2_AddLocalTransform" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_AddRelativeLocation, "K2_AddRelativeLocation" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_AddRelativeRotation, "K2_AddRelativeRotation" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_AddWorldOffset, "K2_AddWorldOffset" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_AddWorldRotation, "K2_AddWorldRotation" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_AddWorldTransform, "K2_AddWorldTransform" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_AttachTo, "K2_AttachTo" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_AttachToComponent, "K2_AttachToComponent" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_DetachFromComponent, "K2_DetachFromComponent" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_GetComponentLocation, "K2_GetComponentLocation" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_GetComponentRotation, "K2_GetComponentRotation" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_GetComponentScale, "K2_GetComponentScale" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_GetComponentToWorld, "K2_GetComponentToWorld" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_SetRelativeLocation, "K2_SetRelativeLocation" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_SetRelativeLocationAndRotation, "K2_SetRelativeLocationAndRotation" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_SetRelativeRotation, "K2_SetRelativeRotation" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_SetRelativeTransform, "K2_SetRelativeTransform" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_SetWorldLocation, "K2_SetWorldLocation" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_SetWorldLocationAndRotation, "K2_SetWorldLocationAndRotation" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_SetWorldRotation, "K2_SetWorldRotation" },
+	{ &Z_Construct_UFunction_USceneComponent_K2_SetWorldTransform, "K2_SetWorldTransform" },
+	{ &Z_Construct_UFunction_USceneComponent_OnRep_AttachChildren, "OnRep_AttachChildren" },
+	{ &Z_Construct_UFunction_USceneComponent_OnRep_AttachParent, "OnRep_AttachParent" },
+	{ &Z_Construct_UFunction_USceneComponent_OnRep_AttachSocketName, "OnRep_AttachSocketName" },
+	{ &Z_Construct_UFunction_USceneComponent_OnRep_Transform, "OnRep_Transform" },
+	{ &Z_Construct_UFunction_USceneComponent_OnRep_Visibility, "OnRep_Visibility" },
+	{ &Z_Construct_UFunction_USceneComponent_ResetRelativeTransform, "ResetRelativeTransform" },
+	{ &Z_Construct_UFunction_USceneComponent_SetAbsolute, "SetAbsolute" },
+	{ &Z_Construct_UFunction_USceneComponent_SetHiddenInGame, "SetHiddenInGame" },
+	{ &Z_Construct_UFunction_USceneComponent_SetRelativeScale3D, "SetRelativeScale3D" },
+	{ &Z_Construct_UFunction_USceneComponent_SetShouldUpdatePhysicsVolume, "SetShouldUpdatePhysicsVolume" },
+	{ &Z_Construct_UFunction_USceneComponent_SetVisibility, "SetVisibility" },
+	{ &Z_Construct_UFunction_USceneComponent_SetWorldScale3D, "SetWorldScale3D" },
+	{ &Z_Construct_UFunction_USceneComponent_SnapTo, "SnapTo" },
+	{ &Z_Construct_UFunction_USceneComponent_ToggleVisibility, "ToggleVisibility" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USceneComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039A1880
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USceneComponent_Statics::ClassParams = { &USceneComponent::StaticClass, Z_Construct_UClass_USceneComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_USceneComponent_Statics::FuncInfo, 60, Z_Construct_UClass_USceneComponent_Statics::PropPointers, 24, nullptr, &Z_Construct_UClass_USceneComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6E20 (end 0x024C6E4F)
+// Original VA: 0x00000001424C6E20 | File offset: 0x024C6420
+// Recovery: confirmed (UHT singleton of USceneComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USceneComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USceneComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

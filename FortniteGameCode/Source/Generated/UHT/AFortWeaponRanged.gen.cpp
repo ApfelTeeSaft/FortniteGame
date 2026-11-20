@@ -244,3 +244,46 @@ UFunction* Z_Construct_UFunction_AFortWeaponRanged_UseScopeTargeting()
 	}
 	return ReturnFunction;
 }
+
+class AFortWeaponRanged
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortWeaponRanged_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortWeaponRanged_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortWeaponRanged_DeactivateBeamFX, "DeactivateBeamFX" },
+	{ &Z_Construct_UFunction_AFortWeaponRanged_GetADSTransitionInTime, "GetADSTransitionInTime" },
+	{ &Z_Construct_UFunction_AFortWeaponRanged_GetADSTransitionOutTime, "GetADSTransitionOutTime" },
+	{ &Z_Construct_UFunction_AFortWeaponRanged_GetTimeToNextFire, "GetTimeToNextFire" },
+	{ &Z_Construct_UFunction_AFortWeaponRanged_InitializeBeamFX, "InitializeBeamFX" },
+	{ &Z_Construct_UFunction_AFortWeaponRanged_IsUsingFirstPersonCamera, "IsUsingFirstPersonCamera" },
+	{ &Z_Construct_UFunction_AFortWeaponRanged_IsUsingScope, "IsUsingScope" },
+	{ &Z_Construct_UFunction_AFortWeaponRanged_IsUsingScopeOrFirstPersonCamera, "IsUsingScopeOrFirstPersonCamera" },
+	{ &Z_Construct_UFunction_AFortWeaponRanged_ShouldDisplayAmmoCounter, "ShouldDisplayAmmoCounter" },
+	{ &Z_Construct_UFunction_AFortWeaponRanged_ShouldSpawnBulletShellFX, "ShouldSpawnBulletShellFX" },
+	{ &Z_Construct_UFunction_AFortWeaponRanged_UseFirstPersonTargeting, "UseFirstPersonTargeting" },
+	{ &Z_Construct_UFunction_AFortWeaponRanged_UseScopeTargeting, "UseScopeTargeting" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortWeaponRanged_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03430700
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortWeaponRanged_Statics::ClassParams = { &AFortWeaponRanged::StaticClass, Z_Construct_UClass_AFortWeaponRanged_Statics::DependentSingletons, 2, 0x00880084u, Z_Construct_UClass_AFortWeaponRanged_Statics::FuncInfo, 12, Z_Construct_UClass_AFortWeaponRanged_Statics::PropPointers, 43, "Game", &Z_Construct_UClass_AFortWeaponRanged_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8B00 (end 0x010D8B2F)
+// Original VA: 0x00000001410D8B00 | File offset: 0x010D8100
+// Recovery: confirmed (UHT singleton of AFortWeaponRanged) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortWeaponRanged()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortWeaponRanged_Statics::ClassParams);
+	}
+	return OuterClass;
+}

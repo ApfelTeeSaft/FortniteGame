@@ -83,3 +83,38 @@ UFunction* Z_Construct_UFunction_UFortCraftingBarWidget_SetHideCraftingBar()
 	}
 	return ReturnFunction;
 }
+
+class UFortCraftingBarWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCraftingBarWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCraftingBarWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStartedCrafting, "HandlePlayerStartedCrafting" },
+	{ &Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStoppedCrafting, "HandlePlayerStoppedCrafting" },
+	{ &Z_Construct_UFunction_UFortCraftingBarWidget_OnCompletedSetHidden, "OnCompletedSetHidden" },
+	{ &Z_Construct_UFunction_UFortCraftingBarWidget_SetHideCraftingBar, "SetHideCraftingBar" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCraftingBarWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C82180
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCraftingBarWidget_Statics::ClassParams = { &UFortCraftingBarWidget::StaticClass, Z_Construct_UClass_UFortCraftingBarWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortCraftingBarWidget_Statics::FuncInfo, 4, Z_Construct_UClass_UFortCraftingBarWidget_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortCraftingBarWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B3D0 (end 0x0289B3FF)
+// Original VA: 0x000000014289B3D0 | File offset: 0x0289A9D0
+// Recovery: confirmed (UHT singleton of UFortCraftingBarWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCraftingBarWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCraftingBarWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

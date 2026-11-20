@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortActorCanvas_OnHUDElementVisibilityChanged(
 	}
 	return ReturnFunction;
 }
+
+class UFortActorCanvas
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortActorCanvas_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortActorCanvas_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortActorCanvas_AddActorIndicator, "AddActorIndicator" },
+	{ &Z_Construct_UFunction_UFortActorCanvas_OnHUDElementVisibilityChanged, "OnHUDElementVisibilityChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortActorCanvas_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C60BB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortActorCanvas_Statics::ClassParams = { &UFortActorCanvas::StaticClass, Z_Construct_UClass_UFortActorCanvas_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortActorCanvas_Statics::FuncInfo, 2, Z_Construct_UClass_UFortActorCanvas_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortActorCanvas_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02887770 (end 0x0288779F)
+// Original VA: 0x0000000142887770 | File offset: 0x02886D70
+// Recovery: confirmed (UHT singleton of UFortActorCanvas) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortActorCanvas()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortActorCanvas_Statics::ClassParams);
+	}
+	return OuterClass;
+}

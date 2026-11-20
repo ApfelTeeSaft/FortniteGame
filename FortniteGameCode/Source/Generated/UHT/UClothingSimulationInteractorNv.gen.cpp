@@ -84,3 +84,37 @@ UFunction* Z_Construct_UFunction_UClothingSimulationInteractorNv_SetAnimDriveSpr
 	}
 	return ReturnFunction;
 }
+
+class UClothingSimulationInteractorNv
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UClothingSimulationInteractorNv_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UClothingSimulationInteractorNv_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UClothingSimulationInteractorNv_DisableGravityOverride, "DisableGravityOverride" },
+	{ &Z_Construct_UFunction_UClothingSimulationInteractorNv_EnableGravityOverride, "EnableGravityOverride" },
+	{ &Z_Construct_UFunction_UClothingSimulationInteractorNv_SetAnimDriveDamperStiffness, "SetAnimDriveDamperStiffness" },
+	{ &Z_Construct_UFunction_UClothingSimulationInteractorNv_SetAnimDriveSpringStiffness, "SetAnimDriveSpringStiffness" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UClothingSimulationInteractorNv_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039D97D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UClothingSimulationInteractorNv_Statics::ClassParams = { &UClothingSimulationInteractorNv::StaticClass, Z_Construct_UClass_UClothingSimulationInteractorNv_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UClothingSimulationInteractorNv_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_UClothingSimulationInteractorNv_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02524930 (end 0x0252495F)
+// Original VA: 0x0000000142524930 | File offset: 0x02523F30
+// Recovery: confirmed (UHT singleton of UClothingSimulationInteractorNv) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UClothingSimulationInteractorNv()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UClothingSimulationInteractorNv_Statics::ClassParams);
+	}
+	return OuterClass;
+}

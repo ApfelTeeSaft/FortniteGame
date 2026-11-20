@@ -604,3 +604,65 @@ UFunction* Z_Construct_UFunction_USplineMeshComponent_UpdateMesh()
 	}
 	return ReturnFunction;
 }
+
+class USplineMeshComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_USplineMeshComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USplineMeshComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetBoundaryMax, "GetBoundaryMax" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetBoundaryMin, "GetBoundaryMin" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetEndOffset, "GetEndOffset" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetEndPosition, "GetEndPosition" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetEndRoll, "GetEndRoll" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetEndScale, "GetEndScale" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetEndTangent, "GetEndTangent" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetForwardAxis, "GetForwardAxis" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetSplineUpDir, "GetSplineUpDir" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetStartOffset, "GetStartOffset" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetStartPosition, "GetStartPosition" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetStartRoll, "GetStartRoll" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetStartScale, "GetStartScale" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_GetStartTangent, "GetStartTangent" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetBoundaryMax, "SetBoundaryMax" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetBoundaryMin, "SetBoundaryMin" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetEndOffset, "SetEndOffset" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetEndPosition, "SetEndPosition" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetEndRoll, "SetEndRoll" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetEndScale, "SetEndScale" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetEndTangent, "SetEndTangent" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetForwardAxis, "SetForwardAxis" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetSplineUpDir, "SetSplineUpDir" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetStartAndEnd, "SetStartAndEnd" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetStartOffset, "SetStartOffset" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetStartPosition, "SetStartPosition" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetStartRoll, "SetStartRoll" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetStartScale, "SetStartScale" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_SetStartTangent, "SetStartTangent" },
+	{ &Z_Construct_UFunction_USplineMeshComponent_UpdateMesh, "UpdateMesh" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USplineMeshComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039BE160
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USplineMeshComponent_Statics::ClassParams = { &USplineMeshComponent::StaticClass, Z_Construct_UClass_USplineMeshComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_USplineMeshComponent_Statics::FuncInfo, 30, Z_Construct_UClass_USplineMeshComponent_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_USplineMeshComponent_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_USplineMeshComponent_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD790 (end 0x024DD7BF)
+// Original VA: 0x00000001424DD790 | File offset: 0x024DCD90
+// Recovery: confirmed (UHT singleton of USplineMeshComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USplineMeshComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USplineMeshComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

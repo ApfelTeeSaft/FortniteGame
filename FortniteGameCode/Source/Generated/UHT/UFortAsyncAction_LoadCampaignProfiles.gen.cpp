@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_LoadCampaignProfiles_LoadCampa
 	}
 	return ReturnFunction;
 }
+
+class UFortAsyncAction_LoadCampaignProfiles
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAsyncAction_LoadCampaignProfiles_LoadCampaignProfiles, "LoadCampaignProfiles" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C6A030
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles_Statics::ClassParams = { &UFortAsyncAction_LoadCampaignProfiles::StaticClass, Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C980 (end 0x0288C9AF)
+// Original VA: 0x000000014288C980 | File offset: 0x0288BF80
+// Recovery: confirmed (UHT singleton of UFortAsyncAction_LoadCampaignProfiles) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles_Statics::ClassParams);
+	}
+	return OuterClass;
+}

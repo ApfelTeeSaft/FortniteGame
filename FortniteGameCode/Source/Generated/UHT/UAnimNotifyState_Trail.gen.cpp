@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UAnimNotifyState_Trail_OverridePSTemplate()
 	}
 	return ReturnFunction;
 }
+
+class UAnimNotifyState_Trail
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAnimNotifyState_Trail_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAnimNotifyState_Trail_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAnimNotifyState_Trail_OverridePSTemplate, "OverridePSTemplate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAnimNotifyState_Trail_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038A1E20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAnimNotifyState_Trail_Statics::ClassParams = { &UAnimNotifyState_Trail::StaticClass, Z_Construct_UClass_UAnimNotifyState_Trail_Statics::DependentSingletons, 2, 0x00113080u, Z_Construct_UClass_UAnimNotifyState_Trail_Statics::FuncInfo, 1, Z_Construct_UClass_UAnimNotifyState_Trail_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UAnimNotifyState_Trail_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6480 (end 0x023D64AF)
+// Original VA: 0x00000001423D6480 | File offset: 0x023D5A80
+// Recovery: confirmed (UHT singleton of UAnimNotifyState_Trail) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAnimNotifyState_Trail()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAnimNotifyState_Trail_Statics::ClassParams);
+	}
+	return OuterClass;
+}

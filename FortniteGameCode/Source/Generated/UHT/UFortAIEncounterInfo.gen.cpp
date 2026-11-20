@@ -400,3 +400,55 @@ UFunction* Z_Construct_UFunction_UFortAIEncounterInfo_UnRegisterAISpawner()
 	}
 	return ReturnFunction;
 }
+
+class UFortAIEncounterInfo
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAIEncounterInfo_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAIEncounterInfo_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_CreateEncounterAssignment, "CreateEncounterAssignment" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_EncounterHasReservedSpawnRequestForEnemySpawner, "EncounterHasReservedSpawnRequestForEnemySpawner" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_GetCurrentSpawnAreaDirections, "GetCurrentSpawnAreaDirections" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_GetEncounterDataManager, "GetEncounterDataManager" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_GetEncounterTimeSeconds, "GetEncounterTimeSeconds" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_GetPawnNumberLimit, "GetPawnNumberLimit" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_GroupHasAIRemainingToSpawn, "GroupHasAIRemainingToSpawn" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_OnEncounterPawnDamaged, "OnEncounterPawnDamaged" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_OnFadeStarted, "OnFadeStarted" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_OnGameDifficultyChanged, "OnGameDifficultyChanged" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_OnGoalTakeDamage, "OnGoalTakeDamage" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_OnPeakStarted, "OnPeakStarted" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_OnRampStarted, "OnRampStarted" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_OnRestStarted, "OnRestStarted" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_RegisterAISpawner, "RegisterAISpawner" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_RequestActivation, "RequestActivation" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_SetEncounterActivationState, "SetEncounterActivationState" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_SetPawnNumberLimit, "SetPawnNumberLimit" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_SpawnAIPawnReservedForEnemySpawner, "SpawnAIPawnReservedForEnemySpawner" },
+	{ &Z_Construct_UFunction_UFortAIEncounterInfo_UnRegisterAISpawner, "UnRegisterAISpawner" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAIEncounterInfo_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032A5D90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAIEncounterInfo_Statics::ClassParams = { &UFortAIEncounterInfo::StaticClass, Z_Construct_UClass_UFortAIEncounterInfo_Statics::DependentSingletons, 2, 0x00800081u, Z_Construct_UClass_UFortAIEncounterInfo_Statics::FuncInfo, 20, Z_Construct_UClass_UFortAIEncounterInfo_Statics::PropPointers, 151, nullptr, &Z_Construct_UClass_UFortAIEncounterInfo_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortAIEncounterInfo_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C4F0 (end 0x00F8C51F)
+// Original VA: 0x0000000140F8C4F0 | File offset: 0x00F8BAF0
+// Recovery: confirmed (UHT singleton of UFortAIEncounterInfo) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAIEncounterInfo()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAIEncounterInfo_Statics::ClassParams);
+	}
+	return OuterClass;
+}

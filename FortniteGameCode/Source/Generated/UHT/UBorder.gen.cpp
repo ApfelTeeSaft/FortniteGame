@@ -225,3 +225,45 @@ UFunction* Z_Construct_UFunction_UBorder_SetVerticalAlignment()
 	}
 	return ReturnFunction;
 }
+
+class UBorder
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBorder_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBorder_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBorder_GetDynamicMaterial, "GetDynamicMaterial" },
+	{ &Z_Construct_UFunction_UBorder_SetBrush, "SetBrush" },
+	{ &Z_Construct_UFunction_UBorder_SetBrushColor, "SetBrushColor" },
+	{ &Z_Construct_UFunction_UBorder_SetBrushFromAsset, "SetBrushFromAsset" },
+	{ &Z_Construct_UFunction_UBorder_SetBrushFromMaterial, "SetBrushFromMaterial" },
+	{ &Z_Construct_UFunction_UBorder_SetBrushFromTexture, "SetBrushFromTexture" },
+	{ &Z_Construct_UFunction_UBorder_SetContentColorAndOpacity, "SetContentColorAndOpacity" },
+	{ &Z_Construct_UFunction_UBorder_SetDesiredSizeScale, "SetDesiredSizeScale" },
+	{ &Z_Construct_UFunction_UBorder_SetHorizontalAlignment, "SetHorizontalAlignment" },
+	{ &Z_Construct_UFunction_UBorder_SetPadding, "SetPadding" },
+	{ &Z_Construct_UFunction_UBorder_SetVerticalAlignment, "SetVerticalAlignment" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBorder_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036911A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBorder_Statics::ClassParams = { &UBorder::StaticClass, Z_Construct_UClass_UBorder_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UBorder_Statics::FuncInfo, 11, Z_Construct_UClass_UBorder_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_UBorder_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5FB0 (end 0x01BE5FDF)
+// Original VA: 0x0000000141BE5FB0 | File offset: 0x01BE55B0
+// Recovery: confirmed (UHT singleton of UBorder) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBorder()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBorder_Statics::ClassParams);
+	}
+	return OuterClass;
+}

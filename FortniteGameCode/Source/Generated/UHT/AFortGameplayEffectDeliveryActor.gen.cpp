@@ -261,3 +261,48 @@ UFunction* Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_SetIgnoreInsti
 	}
 	return ReturnFunction;
 }
+
+class AFortGameplayEffectDeliveryActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortGameplayEffectDeliveryActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortGameplayEffectDeliveryActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_BroadcastExplosion, "BroadcastExplosion" },
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_DoExplosion, "DoExplosion" },
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_GetCollisionComponent, "GetCollisionComponent" },
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_IsBeingKilled, "IsBeingKilled" },
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_Kill, "Kill" },
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_KillTimerExpired, "KillTimerExpired" },
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_OnComponentOverlap, "OnComponentOverlap" },
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_OnComponentTouch, "OnComponentTouch" },
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_OnExploded, "OnExploded" },
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_OnRep_IsBeingKilled, "OnRep_IsBeingKilled" },
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_OnTouched, "OnTouched" },
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_SetCollisionComponent, "SetCollisionComponent" },
+	{ &Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_SetIgnoreInstigatorCollision, "SetIgnoreInstigatorCollision" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortGameplayEffectDeliveryActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03326BD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortGameplayEffectDeliveryActor_Statics::ClassParams = { &AFortGameplayEffectDeliveryActor::StaticClass, Z_Construct_UClass_AFortGameplayEffectDeliveryActor_Statics::DependentSingletons, 2, 0x00800081u, Z_Construct_UClass_AFortGameplayEffectDeliveryActor_Statics::FuncInfo, 13, Z_Construct_UClass_AFortGameplayEffectDeliveryActor_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_AFortGameplayEffectDeliveryActor_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortGameplayEffectDeliveryActor_Statics::InterfaceParams, 3 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7AC0 (end 0x00FE7AEF)
+// Original VA: 0x0000000140FE7AC0 | File offset: 0x00FE70C0
+// Recovery: confirmed (UHT singleton of AFortGameplayEffectDeliveryActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortGameplayEffectDeliveryActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortGameplayEffectDeliveryActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

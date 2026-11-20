@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UAIPerceptionSystem_ReportPerceptionEvent()
 	}
 	return ReturnFunction;
 }
+
+class UAIPerceptionSystem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAIPerceptionSystem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAIPerceptionSystem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAIPerceptionSystem_GetSenseClassForStimulus, "GetSenseClassForStimulus" },
+	{ &Z_Construct_UFunction_UAIPerceptionSystem_OnPerceptionStimuliSourceEndPlay, "OnPerceptionStimuliSourceEndPlay" },
+	{ &Z_Construct_UFunction_UAIPerceptionSystem_RegisterPerceptionStimuliSource, "RegisterPerceptionStimuliSource" },
+	{ &Z_Construct_UFunction_UAIPerceptionSystem_ReportEvent, "ReportEvent" },
+	{ &Z_Construct_UFunction_UAIPerceptionSystem_ReportPerceptionEvent, "ReportPerceptionEvent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAIPerceptionSystem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036F1F90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAIPerceptionSystem_Statics::ClassParams = { &UAIPerceptionSystem::StaticClass, Z_Construct_UClass_UAIPerceptionSystem_Statics::DependentSingletons, 2, 0x00100086u, Z_Construct_UClass_UAIPerceptionSystem_Statics::FuncInfo, 5, Z_Construct_UClass_UAIPerceptionSystem_Statics::PropPointers, 3, "Game", &Z_Construct_UClass_UAIPerceptionSystem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1BC70 (end 0x01D1BC9F)
+// Original VA: 0x0000000141D1BC70 | File offset: 0x01D1B270
+// Recovery: confirmed (UHT singleton of UAIPerceptionSystem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAIPerceptionSystem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAIPerceptionSystem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

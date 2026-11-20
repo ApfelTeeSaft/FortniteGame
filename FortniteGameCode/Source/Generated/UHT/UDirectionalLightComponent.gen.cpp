@@ -185,3 +185,43 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetShadowDistanceFad
 	}
 	return ReturnFunction;
 }
+
+class UDirectionalLightComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UDirectionalLightComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UDirectionalLightComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeDistributionExponent, "SetCascadeDistributionExponent" },
+	{ &Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeTransitionFraction, "SetCascadeTransitionFraction" },
+	{ &Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowCascades, "SetDynamicShadowCascades" },
+	{ &Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDistanceMovableLight, "SetDynamicShadowDistanceMovableLight" },
+	{ &Z_Construct_UFunction_UDirectionalLightComponent_SetDynamicShadowDistanceStationaryLight, "SetDynamicShadowDistanceStationaryLight" },
+	{ &Z_Construct_UFunction_UDirectionalLightComponent_SetEnableLightShaftOcclusion, "SetEnableLightShaftOcclusion" },
+	{ &Z_Construct_UFunction_UDirectionalLightComponent_SetLightShaftOverrideDirection, "SetLightShaftOverrideDirection" },
+	{ &Z_Construct_UFunction_UDirectionalLightComponent_SetOcclusionMaskDarkness, "SetOcclusionMaskDarkness" },
+	{ &Z_Construct_UFunction_UDirectionalLightComponent_SetShadowDistanceFadeoutFraction, "SetShadowDistanceFadeoutFraction" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UDirectionalLightComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038CFCC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UDirectionalLightComponent_Statics::ClassParams = { &UDirectionalLightComponent::StaticClass, Z_Construct_UClass_UDirectionalLightComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UDirectionalLightComponent_Statics::FuncInfo, 9, Z_Construct_UClass_UDirectionalLightComponent_Statics::PropPointers, 21, nullptr, &Z_Construct_UClass_UDirectionalLightComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FE930 (end 0x023FE95F)
+// Original VA: 0x00000001423FE930 | File offset: 0x023FDF30
+// Recovery: confirmed (UHT singleton of UDirectionalLightComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UDirectionalLightComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UDirectionalLightComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

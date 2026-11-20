@@ -305,3 +305,49 @@ UFunction* Z_Construct_UFunction_UFortMcpProfileWorld_UnlockProfiles()
 	}
 	return ReturnFunction;
 }
+
+class UFortMcpProfileWorld
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMcpProfileWorld_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMcpProfileWorld_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_AbortDisintegration, "AbortDisintegration" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_BatchUpdatePlayers, "BatchUpdatePlayers" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_BatchUpdatePlayers_DeployableBase, "BatchUpdatePlayers_DeployableBase" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_BatchUpdatePlayers_Outpost, "BatchUpdatePlayers_Outpost" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_CraftWorldItem, "CraftWorldItem" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_DepositPostResources, "DepositPostResources" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_DestroyWorldItems, "DestroyWorldItems" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_DisassembleWorldItems, "DisassembleWorldItems" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_DisintegrateItems, "DisintegrateItems" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_FabricateItem, "FabricateItem" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_InitializeTheater, "InitializeTheater" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_LockProfiles, "LockProfiles" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_ModifyQuickbar, "ModifyQuickbar" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_StorageTransfer, "StorageTransfer" },
+	{ &Z_Construct_UFunction_UFortMcpProfileWorld_UnlockProfiles, "UnlockProfiles" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMcpProfileWorld_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03378C40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMcpProfileWorld_Statics::ClassParams = { &UFortMcpProfileWorld::StaticClass, Z_Construct_UClass_UFortMcpProfileWorld_Statics::DependentSingletons, 2, 0x00100084u, Z_Construct_UClass_UFortMcpProfileWorld_Statics::FuncInfo, 15, Z_Construct_UClass_UFortMcpProfileWorld_Statics::PropPointers, 7, "Engine", &Z_Construct_UClass_UFortMcpProfileWorld_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01038590 (end 0x010385BF)
+// Original VA: 0x0000000141038590 | File offset: 0x01037B90
+// Recovery: confirmed (UHT singleton of UFortMcpProfileWorld) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMcpProfileWorld()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMcpProfileWorld_Statics::ClassParams);
+	}
+	return OuterClass;
+}

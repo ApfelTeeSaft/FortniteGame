@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UFortNumericTextBlock_IsInterpolatingNumber()
 	}
 	return ReturnFunction;
 }
+
+class UFortNumericTextBlock
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortNumericTextBlock_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortNumericTextBlock_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortNumericTextBlock_DirectlySet, "DirectlySet" },
+	{ &Z_Construct_UFunction_UFortNumericTextBlock_GetCurrentValue, "GetCurrentValue" },
+	{ &Z_Construct_UFunction_UFortNumericTextBlock_InterpolateSet, "InterpolateSet" },
+	{ &Z_Construct_UFunction_UFortNumericTextBlock_IsInterpolatingNumber, "IsInterpolatingNumber" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortNumericTextBlock_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CF22C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortNumericTextBlock_Statics::ClassParams = { &UFortNumericTextBlock::StaticClass, Z_Construct_UClass_UFortNumericTextBlock_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortNumericTextBlock_Statics::FuncInfo, 4, Z_Construct_UClass_UFortNumericTextBlock_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortNumericTextBlock_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE560 (end 0x028DE58F)
+// Original VA: 0x00000001428DE560 | File offset: 0x028DDB60
+// Recovery: confirmed (UHT singleton of UFortNumericTextBlock) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortNumericTextBlock()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortNumericTextBlock_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFindTurnBasedMatchCallbackProxy_FindTurnBasedM
 	}
 	return ReturnFunction;
 }
+
+class UFindTurnBasedMatchCallbackProxy
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFindTurnBasedMatchCallbackProxy_FindTurnBasedMatch, "FindTurnBasedMatch" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EADA70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy_Statics::ClassParams = { &UFindTurnBasedMatchCallbackProxy::StaticClass, Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy_Statics::FuncInfo, 1, Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032EAA0 (end 0x0032EACF)
+// Original VA: 0x000000014032EAA0 | File offset: 0x0032E0A0
+// Recovery: confirmed (UHT singleton of UFindTurnBasedMatchCallbackProxy) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy_Statics::ClassParams);
+	}
+	return OuterClass;
+}

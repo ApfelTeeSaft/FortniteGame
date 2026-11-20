@@ -458,3 +458,57 @@ UFunction* Z_Construct_UFunction_UFortMatchmakingContext_StartQuickPlay()
 	}
 	return ReturnFunction;
 }
+
+class UFortMatchmakingContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMatchmakingContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMatchmakingContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_CancelMatchmaking, "CancelMatchmaking" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_CheckRejoinStatus, "CheckRejoinStatus" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_DisconnectFromLobby, "DisconnectFromLobby" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_EnterOutpost, "EnterOutpost" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_EnterPvPFOB, "EnterPvPFOB" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_GetCustomMatchmakingKey, "GetCustomMatchmakingKey" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_GetLobbyBeaconClient, "GetLobbyBeaconClient" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_GetLobbyWaitForPlayersTimeRemaining, "GetLobbyWaitForPlayersTimeRemaining" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_IsConnectedToGame, "IsConnectedToGame" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_IsCustomMatchmakingKeyEnabled, "IsCustomMatchmakingKeyEnabled" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_IsInLobby, "IsInLobby" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_IsJoinableGameAvailable, "IsJoinableGameAvailable" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_IsMatchmakingLocal, "IsMatchmakingLocal" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_IsOutpostPermitted, "IsOutpostPermitted" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_IsWorldRecordLoaded, "IsWorldRecordLoaded" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_JoinFromLobby, "JoinFromLobby" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_NeedToCheckRejoinStatus, "NeedToCheckRejoinStatus" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_ReadyUp, "ReadyUp" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_SetCustomMatchmakingKey, "SetCustomMatchmakingKey" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_StartCriticalMission, "StartCriticalMission" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_StartMatchmaking, "StartMatchmaking" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_StartOnboardingMission, "StartOnboardingMission" },
+	{ &Z_Construct_UFunction_UFortMatchmakingContext_StartQuickPlay, "StartQuickPlay" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMatchmakingContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03360850
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMatchmakingContext_Statics::ClassParams = { &UFortMatchmakingContext::StaticClass, Z_Construct_UClass_UFortMatchmakingContext_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UFortMatchmakingContext_Statics::FuncInfo, 23, Z_Construct_UClass_UFortMatchmakingContext_Statics::PropPointers, 24, "Game", &Z_Construct_UClass_UFortMatchmakingContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101E750 (end 0x0101E77F)
+// Original VA: 0x000000014101E750 | File offset: 0x0101DD50
+// Recovery: confirmed (UHT singleton of UFortMatchmakingContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMatchmakingContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMatchmakingContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

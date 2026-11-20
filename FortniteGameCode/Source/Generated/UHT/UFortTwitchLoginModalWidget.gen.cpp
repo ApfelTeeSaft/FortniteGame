@@ -24,3 +24,35 @@ UFunction* Z_Construct_UFunction_UFortTwitchLoginModalWidget_OnNativeHostContent
 	}
 	return ReturnFunction;
 }
+
+class UFortTwitchLoginModalWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTwitchLoginModalWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTwitchLoginModalWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTwitchLoginModalWidget_OnNativeHostContentChanged, "OnNativeHostContentChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTwitchLoginModalWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D3C950
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTwitchLoginModalWidget_Statics::ClassParams = { &UFortTwitchLoginModalWidget::StaticClass, Z_Construct_UClass_UFortTwitchLoginModalWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortTwitchLoginModalWidget_Statics::FuncInfo, 1, Z_Construct_UClass_UFortTwitchLoginModalWidget_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortTwitchLoginModalWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A940 (end 0x0290A96F)
+// Original VA: 0x000000014290A940 | File offset: 0x02909F40
+// Recovery: confirmed (UHT singleton of UFortTwitchLoginModalWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTwitchLoginModalWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTwitchLoginModalWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

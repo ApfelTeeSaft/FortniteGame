@@ -225,3 +225,44 @@ UFunction* Z_Construct_UFunction_AFortLobbyBeaconClient_ServerTeamChatRoomReady(
 	}
 	return ReturnFunction;
 }
+
+class AFortLobbyBeaconClient
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortLobbyBeaconClient_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortLobbyBeaconClient_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClient_ClientCreateOrJoinChatRoom, "ClientCreateOrJoinChatRoom" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClient_ServerIncrementHomeBaseVersion, "ServerIncrementHomeBaseVersion" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClient_ServerSetCharacterGender, "ServerSetCharacterGender" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClient_ServerSetConsoleUniqueNetId, "ServerSetConsoleUniqueNetId" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClient_ServerSetCurrentCharacterXp, "ServerSetCurrentCharacterXp" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClient_ServerSetGadget, "ServerSetGadget" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClient_ServerSetHeroId, "ServerSetHeroId" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClient_ServerSetHeroSquadId, "ServerSetHeroSquadId" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClient_ServerSetHeroType, "ServerSetHeroType" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClient_ServerSetMatchmakingLevel, "ServerSetMatchmakingLevel" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClient_ServerTeamChatRoomReady, "ServerTeamChatRoomReady" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortLobbyBeaconClient_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0335E710
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortLobbyBeaconClient_Statics::ClassParams = { &AFortLobbyBeaconClient::StaticClass, Z_Construct_UClass_AFortLobbyBeaconClient_Statics::DependentSingletons, 2, 0x0080028Du, Z_Construct_UClass_AFortLobbyBeaconClient_Statics::FuncInfo, 11, nullptr, 0, "Engine", &Z_Construct_UClass_AFortLobbyBeaconClient_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101E220 (end 0x0101E24F)
+// Original VA: 0x000000014101E220 | File offset: 0x0101D820
+// Recovery: confirmed (UHT singleton of AFortLobbyBeaconClient) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortLobbyBeaconClient()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortLobbyBeaconClient_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UVOIPStatics_SetMicThreshold()
 	}
 	return ReturnFunction;
 }
+
+class UVOIPStatics
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UVOIPStatics_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UVOIPStatics_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UVOIPStatics_SetMicThreshold, "SetMicThreshold" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UVOIPStatics_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039CFA20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UVOIPStatics_Statics::ClassParams = { &UVOIPStatics::StaticClass, Z_Construct_UClass_UVOIPStatics_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UVOIPStatics_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UVOIPStatics_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0B70 (end 0x024F0B9F)
+// Original VA: 0x00000001424F0B70 | File offset: 0x024F0170
+// Recovery: confirmed (UHT singleton of UVOIPStatics) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UVOIPStatics()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UVOIPStatics_Statics::ClassParams);
+	}
+	return OuterClass;
+}

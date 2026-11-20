@@ -125,3 +125,41 @@ UFunction* Z_Construct_UFunction_UStaticMesh_GetNumSections()
 	}
 	return ReturnFunction;
 }
+
+class UStaticMesh
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UStaticMesh_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UStaticMesh_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UStaticMesh_GetBoundingBox, "GetBoundingBox" },
+	{ &Z_Construct_UFunction_UStaticMesh_GetBounds, "GetBounds" },
+	{ &Z_Construct_UFunction_UStaticMesh_GetMaterial, "GetMaterial" },
+	{ &Z_Construct_UFunction_UStaticMesh_GetMaterialIndex, "GetMaterialIndex" },
+	{ &Z_Construct_UFunction_UStaticMesh_GetNumLODs, "GetNumLODs" },
+	{ &Z_Construct_UFunction_UStaticMesh_GetNumSections, "GetNumSections" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UStaticMesh_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039C32C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UStaticMesh_Statics::ClassParams = { &UStaticMesh::StaticClass, Z_Construct_UClass_UStaticMesh_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UStaticMesh_Statics::FuncInfo, 6, Z_Construct_UClass_UStaticMesh_Statics::PropPointers, 26, "Engine", &Z_Construct_UClass_UStaticMesh_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UStaticMesh_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7940 (end 0x024E796F)
+// Original VA: 0x00000001424E7940 | File offset: 0x024E6F40
+// Recovery: confirmed (UHT singleton of UStaticMesh) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UStaticMesh()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UStaticMesh_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerFrontEnd_UnMutePlayer()
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerControllerFrontEnd
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerControllerFrontEnd_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerControllerFrontEnd_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerControllerFrontEnd_IsInVoiceChat, "IsInVoiceChat" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerFrontEnd_IsVoiceChatPlayerMuted, "IsVoiceChatPlayerMuted" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerFrontEnd_IsXboxPlatform, "IsXboxPlatform" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerFrontEnd_MutePlayer, "MutePlayer" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerFrontEnd_UnMutePlayer, "UnMutePlayer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerControllerFrontEnd_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033C2F70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerControllerFrontEnd_Statics::ClassParams = { &AFortPlayerControllerFrontEnd::StaticClass, Z_Construct_UClass_AFortPlayerControllerFrontEnd_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortPlayerControllerFrontEnd_Statics::FuncInfo, 5, Z_Construct_UClass_AFortPlayerControllerFrontEnd_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_AFortPlayerControllerFrontEnd_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010776D0 (end 0x010776FF)
+// Original VA: 0x00000001410776D0 | File offset: 0x01076CD0
+// Recovery: confirmed (UHT singleton of AFortPlayerControllerFrontEnd) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerControllerFrontEnd()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerControllerFrontEnd_Statics::ClassParams);
+	}
+	return OuterClass;
+}

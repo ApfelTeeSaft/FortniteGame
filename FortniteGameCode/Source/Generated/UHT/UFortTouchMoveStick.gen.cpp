@@ -103,3 +103,38 @@ UFunction* Z_Construct_UFunction_UFortTouchMoveStick_SetStickPosition()
 	}
 	return ReturnFunction;
 }
+
+class UFortTouchMoveStick
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTouchMoveStick_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTouchMoveStick_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTouchMoveStick_GetHalfHeight, "GetHalfHeight" },
+	{ &Z_Construct_UFunction_UFortTouchMoveStick_HandleTouchEnded, "HandleTouchEnded" },
+	{ &Z_Construct_UFunction_UFortTouchMoveStick_HandleTouchStarted, "HandleTouchStarted" },
+	{ &Z_Construct_UFunction_UFortTouchMoveStick_SetMovementLockStatus, "SetMovementLockStatus" },
+	{ &Z_Construct_UFunction_UFortTouchMoveStick_SetStickPosition, "SetStickPosition" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTouchMoveStick_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D32440
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTouchMoveStick_Statics::ClassParams = { &UFortTouchMoveStick::StaticClass, Z_Construct_UClass_UFortTouchMoveStick_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortTouchMoveStick_Statics::FuncInfo, 5, nullptr, 0, nullptr, &Z_Construct_UClass_UFortTouchMoveStick_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904D60 (end 0x02904D8F)
+// Original VA: 0x0000000142904D60 | File offset: 0x02904360
+// Recovery: confirmed (UHT singleton of UFortTouchMoveStick) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTouchMoveStick()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTouchMoveStick_Statics::ClassParams);
+	}
+	return OuterClass;
+}

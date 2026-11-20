@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UHierarchicalInstancedStaticMeshComponent_Remov
 	}
 	return ReturnFunction;
 }
+
+class UHierarchicalInstancedStaticMeshComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UHierarchicalInstancedStaticMeshComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UHierarchicalInstancedStaticMeshComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UHierarchicalInstancedStaticMeshComponent_RemoveInstances, "RemoveInstances" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UHierarchicalInstancedStaticMeshComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038F9480
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UHierarchicalInstancedStaticMeshComponent_Statics::ClassParams = { &UHierarchicalInstancedStaticMeshComponent::StaticClass, Z_Construct_UClass_UHierarchicalInstancedStaticMeshComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UHierarchicalInstancedStaticMeshComponent_Statics::FuncInfo, 1, Z_Construct_UClass_UHierarchicalInstancedStaticMeshComponent_Statics::PropPointers, 13, nullptr, &Z_Construct_UClass_UHierarchicalInstancedStaticMeshComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241F200 (end 0x0241F22F)
+// Original VA: 0x000000014241F200 | File offset: 0x0241E800
+// Recovery: confirmed (UHT singleton of UHierarchicalInstancedStaticMeshComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UHierarchicalInstancedStaticMeshComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UHierarchicalInstancedStaticMeshComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

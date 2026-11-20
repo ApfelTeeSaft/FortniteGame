@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowPlatformRedeemCode_ShowPla
 	}
 	return ReturnFunction;
 }
+
+class UFortAsyncAction_ShowPlatformRedeemCode
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAsyncAction_ShowPlatformRedeemCode_ShowPlatformRedeemCode, "ShowPlatformRedeemCode" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C603A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode_Statics::ClassParams = { &UFortAsyncAction_ShowPlatformRedeemCode::StaticClass, Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02887890 (end 0x028878BF)
+// Original VA: 0x0000000142887890 | File offset: 0x02886E90
+// Recovery: confirmed (UHT singleton of UFortAsyncAction_ShowPlatformRedeemCode) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode_Statics::ClassParams);
+	}
+	return OuterClass;
+}

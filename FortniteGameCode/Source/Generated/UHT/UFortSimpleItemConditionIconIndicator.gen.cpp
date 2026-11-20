@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_ShouldCol
 	}
 	return ReturnFunction;
 }
+
+class UFortSimpleItemConditionIconIndicator
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSimpleItemConditionIconIndicator_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSimpleItemConditionIconIndicator_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_GetItemToRepresent, "GetItemToRepresent" },
+	{ &Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_SetItemToRepresent, "SetItemToRepresent" },
+	{ &Z_Construct_UFunction_UFortSimpleItemConditionIconIndicator_ShouldCollapseWhenConditionIsFalse, "ShouldCollapseWhenConditionIsFalse" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSimpleItemConditionIconIndicator_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D13190
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSimpleItemConditionIconIndicator_Statics::ClassParams = { &UFortSimpleItemConditionIconIndicator::StaticClass, Z_Construct_UClass_UFortSimpleItemConditionIconIndicator_Statics::DependentSingletons, 2, 0x00A00081u, Z_Construct_UClass_UFortSimpleItemConditionIconIndicator_Statics::FuncInfo, 3, Z_Construct_UClass_UFortSimpleItemConditionIconIndicator_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortSimpleItemConditionIconIndicator_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5460 (end 0x028F548F)
+// Original VA: 0x00000001428F5460 | File offset: 0x028F4A60
+// Recovery: confirmed (UHT singleton of UFortSimpleItemConditionIconIndicator) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSimpleItemConditionIconIndicator()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSimpleItemConditionIconIndicator_Statics::ClassParams);
+	}
+	return OuterClass;
+}

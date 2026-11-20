@@ -125,3 +125,39 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_RedirectVislog()
 	}
 	return ReturnFunction;
 }
+
+class UVisualLoggerKismetLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UVisualLoggerKismetLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UVisualLoggerKismetLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UVisualLoggerKismetLibrary_EnableRecording, "EnableRecording" },
+	{ &Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogBox, "LogBox" },
+	{ &Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogLocation, "LogLocation" },
+	{ &Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogSegment, "LogSegment" },
+	{ &Z_Construct_UFunction_UVisualLoggerKismetLibrary_LogText, "LogText" },
+	{ &Z_Construct_UFunction_UVisualLoggerKismetLibrary_RedirectVislog, "RedirectVislog" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UVisualLoggerKismetLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039CF4D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UVisualLoggerKismetLibrary_Statics::ClassParams = { &UVisualLoggerKismetLibrary::StaticClass, Z_Construct_UClass_UVisualLoggerKismetLibrary_Statics::DependentSingletons, 2, 0x00080080u, Z_Construct_UClass_UVisualLoggerKismetLibrary_Statics::FuncInfo, 6, nullptr, 0, nullptr, &Z_Construct_UClass_UVisualLoggerKismetLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0C90 (end 0x024F0CBF)
+// Original VA: 0x00000001424F0C90 | File offset: 0x024F0290
+// Recovery: confirmed (UHT singleton of UVisualLoggerKismetLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UVisualLoggerKismetLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UVisualLoggerKismetLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

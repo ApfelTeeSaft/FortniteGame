@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortTransformSlotItemPicker_RebuildSlottableIt
 	}
 	return ReturnFunction;
 }
+
+class UFortTransformSlotItemPicker
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTransformSlotItemPicker_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTransformSlotItemPicker_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTransformSlotItemPicker_RebuildSlottableItems, "RebuildSlottableItems" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTransformSlotItemPicker_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D327D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTransformSlotItemPicker_Statics::ClassParams = { &UFortTransformSlotItemPicker::StaticClass, Z_Construct_UClass_UFortTransformSlotItemPicker_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortTransformSlotItemPicker_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortTransformSlotItemPicker_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904E20 (end 0x02904E4F)
+// Original VA: 0x0000000142904E20 | File offset: 0x02904420
+// Recovery: confirmed (UHT singleton of UFortTransformSlotItemPicker) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTransformSlotItemPicker()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTransformSlotItemPicker_Statics::ClassParams);
+	}
+	return OuterClass;
+}

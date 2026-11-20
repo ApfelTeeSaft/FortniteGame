@@ -63,3 +63,37 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitCancel_WaitCancel()
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_WaitCancel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_WaitCancel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_WaitCancel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_WaitCancel_OnCancelCallback, "OnCancelCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitCancel_OnLocalCancelCallback, "OnLocalCancelCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitCancel_WaitCancel, "WaitCancel" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_WaitCancel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F32430
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_WaitCancel_Statics::ClassParams = { &UAbilityTask_WaitCancel::StaticClass, Z_Construct_UClass_UAbilityTask_WaitCancel_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_WaitCancel_Statics::FuncInfo, 3, Z_Construct_UClass_UAbilityTask_WaitCancel_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_UAbilityTask_WaitCancel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D4A0 (end 0x0054D4CF)
+// Original VA: 0x000000014054D4A0 | File offset: 0x0054CAA0
+// Recovery: confirmed (UHT singleton of UAbilityTask_WaitCancel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_WaitCancel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_WaitCancel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

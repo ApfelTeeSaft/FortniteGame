@@ -225,3 +225,44 @@ UFunction* Z_Construct_UFunction_UFortMcpProfileAthena_SetBattleRoyaleBanner()
 	}
 	return ReturnFunction;
 }
+
+class UFortMcpProfileAthena
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMcpProfileAthena_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMcpProfileAthena_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMcpProfileAthena_CanPurchaseSeasonBook, "CanPurchaseSeasonBook" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAthena_EndBattleRoyaleGame, "EndBattleRoyaleGame" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAthena_EquipBattleRoyaleCustomization, "EquipBattleRoyaleCustomization" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAthena_GetActiveSeasonDefinition, "GetActiveSeasonDefinition" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAthena_GetSeasonFriendMatchXpBoost, "GetSeasonFriendMatchXpBoost" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAthena_GetSeasonLevelInfo, "GetSeasonLevelInfo" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAthena_GetSeasonLevelUpReward, "GetSeasonLevelUpReward" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAthena_GetSeasonMatchXpBoost, "GetSeasonMatchXpBoost" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAthena_HasPurchasedSeasonBook, "HasPurchasedSeasonBook" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAthena_ReportConsumableUsed, "ReportConsumableUsed" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAthena_SetBattleRoyaleBanner, "SetBattleRoyaleBanner" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMcpProfileAthena_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03370DA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMcpProfileAthena_Statics::ClassParams = { &UFortMcpProfileAthena::StaticClass, Z_Construct_UClass_UFortMcpProfileAthena_Statics::DependentSingletons, 2, 0x00100084u, Z_Construct_UClass_UFortMcpProfileAthena_Statics::FuncInfo, 11, nullptr, 0, "Engine", &Z_Construct_UClass_UFortMcpProfileAthena_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01030AB0 (end 0x01030ADF)
+// Original VA: 0x0000000141030AB0 | File offset: 0x010300B0
+// Recovery: confirmed (UHT singleton of UFortMcpProfileAthena) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMcpProfileAthena()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMcpProfileAthena_Statics::ClassParams);
+	}
+	return OuterClass;
+}

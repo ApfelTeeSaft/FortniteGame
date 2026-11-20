@@ -124,3 +124,40 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_TryGetStaticS
 	}
 	return ReturnFunction;
 }
+
+class UFortSurvivorSquadStatMatchesBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_AddStatMatch, "AddStatMatch" },
+	{ &Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_GetIdOfSquadToManageBP, "GetIdOfSquadToManageBP" },
+	{ &Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_HandleDifferentSquadSetBP, "HandleDifferentSquadSetBP" },
+	{ &Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetIdOfSquadToManageBP, "SetIdOfSquadToManageBP" },
+	{ &Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_SetSummaryView, "SetSummaryView" },
+	{ &Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_TryGetStaticSquadDataBP, "TryGetStaticSquadDataBP" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D30670
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase_Statics::ClassParams = { &UFortSurvivorSquadStatMatchesBase::StaticClass, Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase_Statics::FuncInfo, 6, Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904B40 (end 0x02904B6F)
+// Original VA: 0x0000000142904B40 | File offset: 0x02904140
+// Recovery: confirmed (UHT singleton of UFortSurvivorSquadStatMatchesBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

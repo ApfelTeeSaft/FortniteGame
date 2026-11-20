@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchReceivedTurn()
 	}
 	return ReturnFunction;
 }
+
+class UTurnBasedMatchInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UTurnBasedMatchInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UTurnBasedMatchInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchEnded, "OnMatchEnded" },
+	{ &Z_Construct_UFunction_UTurnBasedMatchInterface_OnMatchReceivedTurn, "OnMatchReceivedTurn" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UTurnBasedMatchInterface_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E92460
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UTurnBasedMatchInterface_Statics::ClassParams = { &UTurnBasedMatchInterface::StaticClass, Z_Construct_UClass_UTurnBasedMatchInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UTurnBasedMatchInterface_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UTurnBasedMatchInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002FC650 (end 0x002FC67F)
+// Original VA: 0x00000001402FC650 | File offset: 0x002FBC50
+// Recovery: confirmed (UHT singleton of UTurnBasedMatchInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UTurnBasedMatchInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UTurnBasedMatchInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

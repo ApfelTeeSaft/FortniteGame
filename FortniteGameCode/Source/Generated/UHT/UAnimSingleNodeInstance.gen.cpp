@@ -264,3 +264,47 @@ UFunction* Z_Construct_UFunction_UAnimSingleNodeInstance_StopAnim()
 	}
 	return ReturnFunction;
 }
+
+class UAnimSingleNodeInstance
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAnimSingleNodeInstance_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAnimSingleNodeInstance_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_GetAnimationAsset, "GetAnimationAsset" },
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_GetLength, "GetLength" },
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_PlayAnim, "PlayAnim" },
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_SetAnimationAsset, "SetAnimationAsset" },
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_SetBlendSpaceInput, "SetBlendSpaceInput" },
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_SetLooping, "SetLooping" },
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_SetPlayRate, "SetPlayRate" },
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_SetPlaying, "SetPlaying" },
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_SetPosition, "SetPosition" },
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_SetPositionWithPreviousTime, "SetPositionWithPreviousTime" },
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_SetPreviewCurveOverride, "SetPreviewCurveOverride" },
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_SetReverse, "SetReverse" },
+	{ &Z_Construct_UFunction_UAnimSingleNodeInstance_StopAnim, "StopAnim" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAnimSingleNodeInstance_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038A2C00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAnimSingleNodeInstance_Statics::ClassParams = { &UAnimSingleNodeInstance::StaticClass, Z_Construct_UClass_UAnimSingleNodeInstance_Statics::DependentSingletons, 2, 0x00900088u, Z_Construct_UClass_UAnimSingleNodeInstance_Statics::FuncInfo, 13, Z_Construct_UClass_UAnimSingleNodeInstance_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UAnimSingleNodeInstance_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D65F0 (end 0x023D661F)
+// Original VA: 0x00000001423D65F0 | File offset: 0x023D5BF0
+// Recovery: confirmed (UHT singleton of UAnimSingleNodeInstance) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAnimSingleNodeInstance()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAnimSingleNodeInstance_Statics::ClassParams);
+	}
+	return OuterClass;
+}

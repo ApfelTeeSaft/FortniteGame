@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UFortSchematicItemDefinition_GetResultWorldItem
 	}
 	return ReturnFunction;
 }
+
+class UFortSchematicItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSchematicItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSchematicItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSchematicItemDefinition_GetCraftingSuccessSound, "GetCraftingSuccessSound" },
+	{ &Z_Construct_UFunction_UFortSchematicItemDefinition_GetCraftingTime, "GetCraftingTime" },
+	{ &Z_Construct_UFunction_UFortSchematicItemDefinition_GetCraftingTimeForCharacter, "GetCraftingTimeForCharacter" },
+	{ &Z_Construct_UFunction_UFortSchematicItemDefinition_GetQuantityProduced, "GetQuantityProduced" },
+	{ &Z_Construct_UFunction_UFortSchematicItemDefinition_GetRecipe, "GetRecipe" },
+	{ &Z_Construct_UFunction_UFortSchematicItemDefinition_GetResultWorldItemDefinition, "GetResultWorldItemDefinition" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSchematicItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033F5D30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSchematicItemDefinition_Statics::ClassParams = { &UFortSchematicItemDefinition::StaticClass, Z_Construct_UClass_UFortSchematicItemDefinition_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UFortSchematicItemDefinition_Statics::FuncInfo, 6, Z_Construct_UClass_UFortSchematicItemDefinition_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortSchematicItemDefinition_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5890 (end 0x010A58BF)
+// Original VA: 0x00000001410A5890 | File offset: 0x010A4E90
+// Recovery: confirmed (UHT singleton of UFortSchematicItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSchematicItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSchematicItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

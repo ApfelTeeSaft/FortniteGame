@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UInAppPurchaseQueryCallbackProxy_CreateProxyObj
 	}
 	return ReturnFunction;
 }
+
+class UInAppPurchaseQueryCallbackProxy
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UInAppPurchaseQueryCallbackProxy_CreateProxyObjectForInAppPurchaseQuery, "CreateProxyObjectForInAppPurchaseQuery" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EADC10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy_Statics::ClassParams = { &UInAppPurchaseQueryCallbackProxy::StaticClass, Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy_Statics::FuncInfo, 1, Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032EB00 (end 0x0032EB2F)
+// Original VA: 0x000000014032EB00 | File offset: 0x0032E100
+// Recovery: confirmed (UHT singleton of UInAppPurchaseQueryCallbackProxy) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy_Statics::ClassParams);
+	}
+	return OuterClass;
+}

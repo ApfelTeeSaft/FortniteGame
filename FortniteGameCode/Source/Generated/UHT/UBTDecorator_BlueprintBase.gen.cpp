@@ -285,3 +285,48 @@ UFunction* Z_Construct_UFunction_UBTDecorator_BlueprintBase_ReceiveTickAI()
 	}
 	return ReturnFunction;
 }
+
+class UBTDecorator_BlueprintBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBTDecorator_BlueprintBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBTDecorator_BlueprintBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_IsDecoratorExecutionActive, "IsDecoratorExecutionActive" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_IsDecoratorObserverActive, "IsDecoratorObserverActive" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_PerformConditionCheck, "PerformConditionCheck" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_PerformConditionCheckAI, "PerformConditionCheckAI" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_ReceiveExecutionFinish, "ReceiveExecutionFinish" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_ReceiveExecutionFinishAI, "ReceiveExecutionFinishAI" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_ReceiveExecutionStart, "ReceiveExecutionStart" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_ReceiveExecutionStartAI, "ReceiveExecutionStartAI" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_ReceiveObserverActivated, "ReceiveObserverActivated" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_ReceiveObserverActivatedAI, "ReceiveObserverActivatedAI" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_ReceiveObserverDeactivated, "ReceiveObserverDeactivated" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_ReceiveObserverDeactivatedAI, "ReceiveObserverDeactivatedAI" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_ReceiveTick, "ReceiveTick" },
+	{ &Z_Construct_UFunction_UBTDecorator_BlueprintBase_ReceiveTickAI, "ReceiveTickAI" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBTDecorator_BlueprintBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036FB580
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBTDecorator_BlueprintBase_Statics::ClassParams = { &UBTDecorator_BlueprintBase::StaticClass, Z_Construct_UClass_UBTDecorator_BlueprintBase_Statics::DependentSingletons, 2, 0x00100081u, Z_Construct_UClass_UBTDecorator_BlueprintBase_Statics::FuncInfo, 14, Z_Construct_UClass_UBTDecorator_BlueprintBase_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UBTDecorator_BlueprintBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D230E0 (end 0x01D2310F)
+// Original VA: 0x0000000141D230E0 | File offset: 0x01D226E0
+// Recovery: confirmed (UHT singleton of UBTDecorator_BlueprintBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBTDecorator_BlueprintBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBTDecorator_BlueprintBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

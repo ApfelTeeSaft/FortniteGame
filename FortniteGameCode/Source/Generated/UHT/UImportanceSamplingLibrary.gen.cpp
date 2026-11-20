@@ -185,3 +185,42 @@ UFunction* Z_Construct_UFunction_UImportanceSamplingLibrary_RandomSobolFloat()
 	}
 	return ReturnFunction;
 }
+
+class UImportanceSamplingLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UImportanceSamplingLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UImportanceSamplingLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UImportanceSamplingLibrary_BreakImportanceTexture, "BreakImportanceTexture" },
+	{ &Z_Construct_UFunction_UImportanceSamplingLibrary_ImportanceSample, "ImportanceSample" },
+	{ &Z_Construct_UFunction_UImportanceSamplingLibrary_MakeImportanceTexture, "MakeImportanceTexture" },
+	{ &Z_Construct_UFunction_UImportanceSamplingLibrary_NextSobolCell2D, "NextSobolCell2D" },
+	{ &Z_Construct_UFunction_UImportanceSamplingLibrary_NextSobolCell3D, "NextSobolCell3D" },
+	{ &Z_Construct_UFunction_UImportanceSamplingLibrary_NextSobolFloat, "NextSobolFloat" },
+	{ &Z_Construct_UFunction_UImportanceSamplingLibrary_RandomSobolCell2D, "RandomSobolCell2D" },
+	{ &Z_Construct_UFunction_UImportanceSamplingLibrary_RandomSobolCell3D, "RandomSobolCell3D" },
+	{ &Z_Construct_UFunction_UImportanceSamplingLibrary_RandomSobolFloat, "RandomSobolFloat" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UImportanceSamplingLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038FED30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UImportanceSamplingLibrary_Statics::ClassParams = { &UImportanceSamplingLibrary::StaticClass, Z_Construct_UClass_UImportanceSamplingLibrary_Statics::DependentSingletons, 2, 0x00080080u, Z_Construct_UClass_UImportanceSamplingLibrary_Statics::FuncInfo, 9, nullptr, 0, nullptr, &Z_Construct_UClass_UImportanceSamplingLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427DA0 (end 0x02427DCF)
+// Original VA: 0x0000000142427DA0 | File offset: 0x024273A0
+// Recovery: confirmed (UHT singleton of UImportanceSamplingLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UImportanceSamplingLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UImportanceSamplingLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

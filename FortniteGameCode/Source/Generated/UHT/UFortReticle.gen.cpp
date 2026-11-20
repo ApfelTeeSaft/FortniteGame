@@ -82,3 +82,37 @@ UFunction* Z_Construct_UFunction_UFortReticle_OnWeaponEquipped()
 	}
 	return ReturnFunction;
 }
+
+class UFortReticle
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortReticle_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortReticle_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortReticle_OnContextualReticleChanged, "OnContextualReticleChanged" },
+	{ &Z_Construct_UFunction_UFortReticle_OnPawnSet, "OnPawnSet" },
+	{ &Z_Construct_UFunction_UFortReticle_OnReticleColorChanged, "OnReticleColorChanged" },
+	{ &Z_Construct_UFunction_UFortReticle_OnWeaponEquipped, "OnWeaponEquipped" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortReticle_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D0A9F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortReticle_Statics::ClassParams = { &UFortReticle::StaticClass, Z_Construct_UClass_UFortReticle_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortReticle_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_UFortReticle_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED530 (end 0x028ED55F)
+// Original VA: 0x00000001428ED530 | File offset: 0x028ECB30
+// Recovery: confirmed (UHT singleton of UFortReticle) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortReticle()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortReticle_Statics::ClassParams);
+	}
+	return OuterClass;
+}

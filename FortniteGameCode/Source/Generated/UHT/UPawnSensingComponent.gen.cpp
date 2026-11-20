@@ -145,3 +145,41 @@ UFunction* Z_Construct_UFunction_UPawnSensingComponent_SetSensingUpdatesEnabled(
 	}
 	return ReturnFunction;
 }
+
+class UPawnSensingComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPawnSensingComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPawnSensingComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPawnSensingComponent_GetPeripheralVisionAngle, "GetPeripheralVisionAngle" },
+	{ &Z_Construct_UFunction_UPawnSensingComponent_GetPeripheralVisionCosine, "GetPeripheralVisionCosine" },
+	{ &Z_Construct_UDelegateFunction_UPawnSensingComponent_HearNoiseDelegate__DelegateSignature, "HearNoiseDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UPawnSensingComponent_SeePawnDelegate__DelegateSignature, "SeePawnDelegate__DelegateSignature" },
+	{ &Z_Construct_UFunction_UPawnSensingComponent_SetPeripheralVisionAngle, "SetPeripheralVisionAngle" },
+	{ &Z_Construct_UFunction_UPawnSensingComponent_SetSensingInterval, "SetSensingInterval" },
+	{ &Z_Construct_UFunction_UPawnSensingComponent_SetSensingUpdatesEnabled, "SetSensingUpdatesEnabled" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPawnSensingComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0370D5B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPawnSensingComponent_Statics::ClassParams = { &UPawnSensingComponent::StaticClass, Z_Construct_UClass_UPawnSensingComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UPawnSensingComponent_Statics::FuncInfo, 7, Z_Construct_UClass_UPawnSensingComponent_Statics::PropPointers, 13, nullptr, &Z_Construct_UClass_UPawnSensingComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31ED0 (end 0x01D31EFF)
+// Original VA: 0x0000000141D31ED0 | File offset: 0x01D314D0
+// Recovery: confirmed (UHT singleton of UPawnSensingComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPawnSensingComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPawnSensingComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

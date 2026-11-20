@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UAthenaMatchReadyDesktopPopup_UserDismissedDial
 	}
 	return ReturnFunction;
 }
+
+class UAthenaMatchReadyDesktopPopup
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaMatchReadyDesktopPopup_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaMatchReadyDesktopPopup_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaMatchReadyDesktopPopup_UserDismissedDialog, "UserDismissedDialog" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaMatchReadyDesktopPopup_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C5E860
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaMatchReadyDesktopPopup_Statics::ClassParams = { &UAthenaMatchReadyDesktopPopup::StaticClass, Z_Construct_UClass_UAthenaMatchReadyDesktopPopup_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UAthenaMatchReadyDesktopPopup_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UAthenaMatchReadyDesktopPopup_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02887240 (end 0x0288726F)
+// Original VA: 0x0000000142887240 | File offset: 0x02886840
+// Recovery: confirmed (UHT singleton of UAthenaMatchReadyDesktopPopup) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaMatchReadyDesktopPopup()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaMatchReadyDesktopPopup_Statics::ClassParams);
+	}
+	return OuterClass;
+}

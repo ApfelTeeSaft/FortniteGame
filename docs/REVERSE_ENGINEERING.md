@@ -196,6 +196,25 @@ Results:
 | 309 | relocation-equivalent: 208 classes have a single creator, so no sibling can predict its `ReturnFunction`; the rest sit across layout gaps |
 | 446 | not emitted: no unique `FFunctionParams` record |
 
+### Class constructors
+
+The same 47-byte shape also covers `Z_Construct_UClass_<Class>` (`ConstructUClass`), struct,
+enum and package constructors: 18,381 functions in all. For the 1,034 classes whose
+`FFunctionParams` records agree on one `OuterFunc`, the generator also emits the class
+constructor, with:
+- `FuncInfo[]` rebuilt from the function table;
+- `StaticCppClassTypeInfo`, flags, counts and config name decoded from `FClassParams`;
+- dependency, property and interface arrays declared but still pending.
+
+The fields resolve the same way as for creators:
+- `ClassParams` from the `FClassParams` record that references the class's function table;
+- `ConstructUClass` corroborated;
+- `OuterClass` section-relative, with UHT emitting the class constructor right after the
+  class's functions.
+
+1,031 are exact. The added `OuterClass` neighbour also resolves most single-creator classes,
+raising exact creators from 10,342 to 10,553.
+
 Open data questions, which don't affect creator code:
 - The reference keeps `FuncParams` in `.data`, while public 4.20 (`constexpr` `ENUM_CLASS_FLAGS`) puts it in `.rdata`.
 - `PropPointers` arrays are declared but not yet reconstructed (property-parameter recovery).

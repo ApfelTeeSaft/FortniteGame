@@ -84,3 +84,38 @@ UFunction* Z_Construct_UFunction_UCMSContext_MarkNewsAsViewed()
 	}
 	return ReturnFunction;
 }
+
+class UCMSContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCMSContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCMSContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCMSContext_GetLatestEmergencyNotice, "GetLatestEmergencyNotice" },
+	{ &Z_Construct_UFunction_UCMSContext_GetLatestNews, "GetLatestNews" },
+	{ &Z_Construct_UFunction_UCMSContext_IsNewNewsAvailable, "IsNewNewsAvailable" },
+	{ &Z_Construct_UFunction_UCMSContext_MarkNewsAsViewed, "MarkNewsAsViewed" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCMSContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C5FBB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCMSContext_Statics::ClassParams = { &UCMSContext::StaticClass, Z_Construct_UClass_UCMSContext_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UCMSContext_Statics::FuncInfo, 4, Z_Construct_UClass_UCMSContext_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UCMSContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02887580 (end 0x028875AF)
+// Original VA: 0x0000000142887580 | File offset: 0x02886B80
+// Recovery: confirmed (UHT singleton of UCMSContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCMSContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCMSContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -245,3 +245,46 @@ UFunction* Z_Construct_UFunction_UTextBlock_SetText()
 	}
 	return ReturnFunction;
 }
+
+class UTextBlock
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UTextBlock_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UTextBlock_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UTextBlock_GetDynamicFontMaterial, "GetDynamicFontMaterial" },
+	{ &Z_Construct_UFunction_UTextBlock_GetDynamicOutlineMaterial, "GetDynamicOutlineMaterial" },
+	{ &Z_Construct_UFunction_UTextBlock_GetText, "GetText" },
+	{ &Z_Construct_UFunction_UTextBlock_SetAutoWrapText, "SetAutoWrapText" },
+	{ &Z_Construct_UFunction_UTextBlock_SetColorAndOpacity, "SetColorAndOpacity" },
+	{ &Z_Construct_UFunction_UTextBlock_SetFont, "SetFont" },
+	{ &Z_Construct_UFunction_UTextBlock_SetJustification, "SetJustification" },
+	{ &Z_Construct_UFunction_UTextBlock_SetMinDesiredWidth, "SetMinDesiredWidth" },
+	{ &Z_Construct_UFunction_UTextBlock_SetOpacity, "SetOpacity" },
+	{ &Z_Construct_UFunction_UTextBlock_SetShadowColorAndOpacity, "SetShadowColorAndOpacity" },
+	{ &Z_Construct_UFunction_UTextBlock_SetShadowOffset, "SetShadowOffset" },
+	{ &Z_Construct_UFunction_UTextBlock_SetText, "SetText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UTextBlock_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0369E5F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UTextBlock_Statics::ClassParams = { &UTextBlock::StaticClass, Z_Construct_UClass_UTextBlock_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UTextBlock_Statics::FuncInfo, 12, Z_Construct_UClass_UTextBlock_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_UTextBlock_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF31F0 (end 0x01BF321F)
+// Original VA: 0x0000000141BF31F0 | File offset: 0x01BF27F0
+// Recovery: confirmed (UHT singleton of UTextBlock) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UTextBlock()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UTextBlock_Statics::ClassParams);
+	}
+	return OuterClass;
+}

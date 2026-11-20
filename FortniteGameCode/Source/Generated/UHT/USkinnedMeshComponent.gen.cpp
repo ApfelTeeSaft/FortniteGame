@@ -605,3 +605,64 @@ UFunction* Z_Construct_UFunction_USkinnedMeshComponent_UnHideBoneByName()
 	}
 	return ReturnFunction;
 }
+
+class USkinnedMeshComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_USkinnedMeshComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USkinnedMeshComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_BoneIsChildOf, "BoneIsChildOf" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_ClearSkinWeightOverride, "ClearSkinWeightOverride" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_ClearVertexColorOverride, "ClearVertexColorOverride" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_FindClosestBone_K2, "FindClosestBone_K2" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_GetBoneIndex, "GetBoneIndex" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_GetBoneName, "GetBoneName" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_GetNumBones, "GetNumBones" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_GetNumLODs, "GetNumLODs" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_GetParentBone, "GetParentBone" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_GetRefPosePosition, "GetRefPosePosition" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_GetSocketBoneName, "GetSocketBoneName" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_HideBoneByName, "HideBoneByName" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_IsBoneHiddenByName, "IsBoneHiddenByName" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_IsMaterialSectionShown, "IsMaterialSectionShown" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_SetCapsuleIndirectShadowMinVisibility, "SetCapsuleIndirectShadowMinVisibility" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_SetCastCapsuleDirectShadow, "SetCastCapsuleDirectShadow" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_SetCastCapsuleIndirectShadow, "SetCastCapsuleIndirectShadow" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_SetForcedLOD, "SetForcedLOD" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_SetMasterPoseComponent, "SetMasterPoseComponent" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_SetMinLOD, "SetMinLOD" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_SetPhysicsAsset, "SetPhysicsAsset" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_SetRenderStatic, "SetRenderStatic" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_SetSkeletalMesh, "SetSkeletalMesh" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_SetSkinWeightOverride, "SetSkinWeightOverride" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_SetVertexColorOverride_LinearColor, "SetVertexColorOverride_LinearColor" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_ShowAllMaterialSections, "ShowAllMaterialSections" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_ShowMaterialSection, "ShowMaterialSection" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_TransformFromBoneSpace, "TransformFromBoneSpace" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_TransformToBoneSpace, "TransformToBoneSpace" },
+	{ &Z_Construct_UFunction_USkinnedMeshComponent_UnHideBoneByName, "UnHideBoneByName" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USkinnedMeshComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039AEF20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USkinnedMeshComponent_Statics::ClassParams = { &USkinnedMeshComponent::StaticClass, Z_Construct_UClass_USkinnedMeshComponent_Statics::DependentSingletons, 2, 0x00B01081u, Z_Construct_UClass_USkinnedMeshComponent_Statics::FuncInfo, 30, Z_Construct_UClass_USkinnedMeshComponent_Statics::PropPointers, 32, "Engine", &Z_Construct_UClass_USkinnedMeshComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D5130 (end 0x024D515F)
+// Original VA: 0x00000001424D5130 | File offset: 0x024D4730
+// Recovery: confirmed (UHT singleton of USkinnedMeshComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USkinnedMeshComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USkinnedMeshComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

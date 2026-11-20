@@ -538,3 +538,62 @@ UFunction* Z_Construct_UFunction_AFortAIDirector_UnregisterPatrolWard()
 	}
 	return ReturnFunction;
 }
+
+class AFortAIDirector
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortAIDirector_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortAIDirector_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortAIDirector_Activate, "Activate" },
+	{ &Z_Construct_UFunction_AFortAIDirector_ConvertInvalidDirectionsToValidDirections, "ConvertInvalidDirectionsToValidDirections" },
+	{ &Z_Construct_UFunction_AFortAIDirector_Deactivate, "Deactivate" },
+	{ &Z_Construct_UFunction_AFortAIDirector_GetAmbientThreatEncounterSpawnLocations, "GetAmbientThreatEncounterSpawnLocations" },
+	{ &Z_Construct_UFunction_AFortAIDirector_GetEncounterDirectionFromVector, "GetEncounterDirectionFromVector" },
+	{ &Z_Construct_UFunction_AFortAIDirector_GetNumPlayers, "GetNumPlayers" },
+	{ &Z_Construct_UFunction_AFortAIDirector_GetRiftsFromClosestActiveEncounterTo, "GetRiftsFromClosestActiveEncounterTo" },
+	{ &Z_Construct_UFunction_AFortAIDirector_GetVectorFromEncounterDirection, "GetVectorFromEncounterDirection" },
+	{ &Z_Construct_UFunction_AFortAIDirector_IsAnyAIRelevantToPlayer, "IsAnyAIRelevantToPlayer" },
+	{ &Z_Construct_UFunction_AFortAIDirector_IsAnyActiveEncounterRelevantToDefender, "IsAnyActiveEncounterRelevantToDefender" },
+	{ &Z_Construct_UFunction_AFortAIDirector_IsAnyActiveEncounterRelevantToPlayer, "IsAnyActiveEncounterRelevantToPlayer" },
+	{ &Z_Construct_UFunction_AFortAIDirector_IsAnyEncounterGoalWithinDistanceOfPoint, "IsAnyEncounterGoalWithinDistanceOfPoint" },
+	{ &Z_Construct_UFunction_AFortAIDirector_IsLineTooCloseToPatrolWards, "IsLineTooCloseToPatrolWards" },
+	{ &Z_Construct_UFunction_AFortAIDirector_IsPointTooCloseToPatrolWards, "IsPointTooCloseToPatrolWards" },
+	{ &Z_Construct_UFunction_AFortAIDirector_OnDayPhaseChanged, "OnDayPhaseChanged" },
+	{ &Z_Construct_UFunction_AFortAIDirector_OnDirectorDeactivated, "OnDirectorDeactivated" },
+	{ &Z_Construct_UFunction_AFortAIDirector_OnFadeStarted, "OnFadeStarted" },
+	{ &Z_Construct_UFunction_AFortAIDirector_OnPawnDied, "OnPawnDied" },
+	{ &Z_Construct_UFunction_AFortAIDirector_OnPeakStarted, "OnPeakStarted" },
+	{ &Z_Construct_UFunction_AFortAIDirector_OnPlayerDied, "OnPlayerDied" },
+	{ &Z_Construct_UFunction_AFortAIDirector_OnPlayerSpawn, "OnPlayerSpawn" },
+	{ &Z_Construct_UFunction_AFortAIDirector_OnRampStarted, "OnRampStarted" },
+	{ &Z_Construct_UFunction_AFortAIDirector_OnRestStarted, "OnRestStarted" },
+	{ &Z_Construct_UFunction_AFortAIDirector_PostDayPhaseChanged, "PostDayPhaseChanged" },
+	{ &Z_Construct_UFunction_AFortAIDirector_ReceivePawnSpawned, "ReceivePawnSpawned" },
+	{ &Z_Construct_UFunction_AFortAIDirector_RegisterPatrolWard, "RegisterPatrolWard" },
+	{ &Z_Construct_UFunction_AFortAIDirector_UnregisterPatrolWard, "UnregisterPatrolWard" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortAIDirector_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0329F440
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortAIDirector_Statics::ClassParams = { &AFortAIDirector::StaticClass, Z_Construct_UClass_AFortAIDirector_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortAIDirector_Statics::FuncInfo, 27, Z_Construct_UClass_AFortAIDirector_Statics::PropPointers, 80, nullptr, &Z_Construct_UClass_AFortAIDirector_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortAIDirector_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87CA0 (end 0x00F87CCF)
+// Original VA: 0x0000000140F87CA0 | File offset: 0x00F872A0
+// Recovery: confirmed (UHT singleton of AFortAIDirector) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortAIDirector()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortAIDirector_Statics::ClassParams);
+	}
+	return OuterClass;
+}

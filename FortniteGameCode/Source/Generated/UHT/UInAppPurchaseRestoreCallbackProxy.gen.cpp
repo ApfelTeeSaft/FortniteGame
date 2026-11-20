@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UInAppPurchaseRestoreCallbackProxy_CreateProxyO
 	}
 	return ReturnFunction;
 }
+
+class UInAppPurchaseRestoreCallbackProxy
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UInAppPurchaseRestoreCallbackProxy_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UInAppPurchaseRestoreCallbackProxy_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UInAppPurchaseRestoreCallbackProxy_CreateProxyObjectForInAppPurchaseRestore, "CreateProxyObjectForInAppPurchaseRestore" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UInAppPurchaseRestoreCallbackProxy_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EADCF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UInAppPurchaseRestoreCallbackProxy_Statics::ClassParams = { &UInAppPurchaseRestoreCallbackProxy::StaticClass, Z_Construct_UClass_UInAppPurchaseRestoreCallbackProxy_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UInAppPurchaseRestoreCallbackProxy_Statics::FuncInfo, 1, Z_Construct_UClass_UInAppPurchaseRestoreCallbackProxy_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UInAppPurchaseRestoreCallbackProxy_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032EB30 (end 0x0032EB5F)
+// Original VA: 0x000000014032EB30 | File offset: 0x0032E130
+// Recovery: confirmed (UHT singleton of UInAppPurchaseRestoreCallbackProxy) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UInAppPurchaseRestoreCallbackProxy()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UInAppPurchaseRestoreCallbackProxy_Statics::ClassParams);
+	}
+	return OuterClass;
+}

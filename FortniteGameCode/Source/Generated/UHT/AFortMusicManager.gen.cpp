@@ -105,3 +105,40 @@ UFunction* Z_Construct_UFunction_AFortMusicManager_OnThresholdChange()
 	}
 	return ReturnFunction;
 }
+
+class AFortMusicManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortMusicManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortMusicManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortMusicManager_ChangeMusic, "ChangeMusic" },
+	{ &Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercent, "GetEventHeatPercent" },
+	{ &Z_Construct_UFunction_AFortMusicManager_GetEventHeatPercentTotal, "GetEventHeatPercentTotal" },
+	{ &Z_Construct_UFunction_AFortMusicManager_OnDayPhaseChanged, "OnDayPhaseChanged" },
+	{ &Z_Construct_UFunction_AFortMusicManager_OnThresholdChange, "OnThresholdChange" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortMusicManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0338ADC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortMusicManager_Statics::ClassParams = { &AFortMusicManager::StaticClass, Z_Construct_UClass_AFortMusicManager_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortMusicManager_Statics::FuncInfo, 5, Z_Construct_UClass_AFortMusicManager_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_AFortMusicManager_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortMusicManager_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A830 (end 0x0104A85F)
+// Original VA: 0x000000014104A830 | File offset: 0x01049E30
+// Recovery: confirmed (UHT singleton of AFortMusicManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortMusicManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortMusicManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

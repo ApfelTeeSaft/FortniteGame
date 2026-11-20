@@ -2501,3 +2501,160 @@ UFunction* Z_Construct_UFunction_APlayerController_WasInputKeyJustReleased()
 	}
 	return ReturnFunction;
 }
+
+class APlayerController
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_APlayerController_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_APlayerController_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_APlayerController_ActivateTouchInterface, "ActivateTouchInterface" },
+	{ &Z_Construct_UFunction_APlayerController_AddPitchInput, "AddPitchInput" },
+	{ &Z_Construct_UFunction_APlayerController_AddRollInput, "AddRollInput" },
+	{ &Z_Construct_UFunction_APlayerController_AddYawInput, "AddYawInput" },
+	{ &Z_Construct_UFunction_APlayerController_Camera, "Camera" },
+	{ &Z_Construct_UFunction_APlayerController_ClearAudioListenerAttenuationOverride, "ClearAudioListenerAttenuationOverride" },
+	{ &Z_Construct_UFunction_APlayerController_ClearAudioListenerOverride, "ClearAudioListenerOverride" },
+	{ &Z_Construct_UFunction_APlayerController_ClientAddTextureStreamingLoc, "ClientAddTextureStreamingLoc" },
+	{ &Z_Construct_UFunction_APlayerController_ClientCancelPendingMapChange, "ClientCancelPendingMapChange" },
+	{ &Z_Construct_UFunction_APlayerController_ClientCapBandwidth, "ClientCapBandwidth" },
+	{ &Z_Construct_UFunction_APlayerController_ClientClearCameraLensEffects, "ClientClearCameraLensEffects" },
+	{ &Z_Construct_UFunction_APlayerController_ClientCommitMapChange, "ClientCommitMapChange" },
+	{ &Z_Construct_UFunction_APlayerController_ClientEnableNetworkVoice, "ClientEnableNetworkVoice" },
+	{ &Z_Construct_UFunction_APlayerController_ClientEndOnlineSession, "ClientEndOnlineSession" },
+	{ &Z_Construct_UFunction_APlayerController_ClientFlushLevelStreaming, "ClientFlushLevelStreaming" },
+	{ &Z_Construct_UFunction_APlayerController_ClientForceGarbageCollection, "ClientForceGarbageCollection" },
+	{ &Z_Construct_UFunction_APlayerController_ClientGameEnded, "ClientGameEnded" },
+	{ &Z_Construct_UFunction_APlayerController_ClientGotoState, "ClientGotoState" },
+	{ &Z_Construct_UFunction_APlayerController_ClientIgnoreLookInput, "ClientIgnoreLookInput" },
+	{ &Z_Construct_UFunction_APlayerController_ClientIgnoreMoveInput, "ClientIgnoreMoveInput" },
+	{ &Z_Construct_UFunction_APlayerController_ClientMessage, "ClientMessage" },
+	{ &Z_Construct_UFunction_APlayerController_ClientMutePlayer, "ClientMutePlayer" },
+	{ &Z_Construct_UFunction_APlayerController_ClientPlayCameraAnim, "ClientPlayCameraAnim" },
+	{ &Z_Construct_UFunction_APlayerController_ClientPlayCameraShake, "ClientPlayCameraShake" },
+	{ &Z_Construct_UFunction_APlayerController_ClientPlayForceFeedback, "ClientPlayForceFeedback" },
+	{ &Z_Construct_UFunction_APlayerController_ClientPlaySound, "ClientPlaySound" },
+	{ &Z_Construct_UFunction_APlayerController_ClientPlaySoundAtLocation, "ClientPlaySoundAtLocation" },
+	{ &Z_Construct_UFunction_APlayerController_ClientPrepareMapChange, "ClientPrepareMapChange" },
+	{ &Z_Construct_UFunction_APlayerController_ClientPrestreamTextures, "ClientPrestreamTextures" },
+	{ &Z_Construct_UFunction_APlayerController_ClientReceiveLocalizedMessage, "ClientReceiveLocalizedMessage" },
+	{ &Z_Construct_UFunction_APlayerController_ClientRepObjRef, "ClientRepObjRef" },
+	{ &Z_Construct_UFunction_APlayerController_ClientReset, "ClientReset" },
+	{ &Z_Construct_UFunction_APlayerController_ClientRestart, "ClientRestart" },
+	{ &Z_Construct_UFunction_APlayerController_ClientRetryClientRestart, "ClientRetryClientRestart" },
+	{ &Z_Construct_UFunction_APlayerController_ClientReturnToMainMenu, "ClientReturnToMainMenu" },
+	{ &Z_Construct_UFunction_APlayerController_ClientReturnToMainMenuWithTextReason, "ClientReturnToMainMenuWithTextReason" },
+	{ &Z_Construct_UFunction_APlayerController_ClientSetBlockOnAsyncLoading, "ClientSetBlockOnAsyncLoading" },
+	{ &Z_Construct_UFunction_APlayerController_ClientSetCameraFade, "ClientSetCameraFade" },
+	{ &Z_Construct_UFunction_APlayerController_ClientSetCameraMode, "ClientSetCameraMode" },
+	{ &Z_Construct_UFunction_APlayerController_ClientSetCinematicMode, "ClientSetCinematicMode" },
+	{ &Z_Construct_UFunction_APlayerController_ClientSetForceMipLevelsToBeResident, "ClientSetForceMipLevelsToBeResident" },
+	{ &Z_Construct_UFunction_APlayerController_ClientSetHUD, "ClientSetHUD" },
+	{ &Z_Construct_UFunction_APlayerController_ClientSetSpectatorWaiting, "ClientSetSpectatorWaiting" },
+	{ &Z_Construct_UFunction_APlayerController_ClientSetViewTarget, "ClientSetViewTarget" },
+	{ &Z_Construct_UFunction_APlayerController_ClientSpawnCameraLensEffect, "ClientSpawnCameraLensEffect" },
+	{ &Z_Construct_UFunction_APlayerController_ClientStartOnlineSession, "ClientStartOnlineSession" },
+	{ &Z_Construct_UFunction_APlayerController_ClientStopCameraAnim, "ClientStopCameraAnim" },
+	{ &Z_Construct_UFunction_APlayerController_ClientStopCameraShake, "ClientStopCameraShake" },
+	{ &Z_Construct_UFunction_APlayerController_ClientStopForceFeedback, "ClientStopForceFeedback" },
+	{ &Z_Construct_UFunction_APlayerController_ClientTeamMessage, "ClientTeamMessage" },
+	{ &Z_Construct_UFunction_APlayerController_ClientTravel, "ClientTravel" },
+	{ &Z_Construct_UFunction_APlayerController_ClientTravelInternal, "ClientTravelInternal" },
+	{ &Z_Construct_UFunction_APlayerController_ClientUnmutePlayer, "ClientUnmutePlayer" },
+	{ &Z_Construct_UFunction_APlayerController_ClientUpdateLevelStreamingStatus, "ClientUpdateLevelStreamingStatus" },
+	{ &Z_Construct_UFunction_APlayerController_ClientUpdateMultipleLevelsStreamingStatus, "ClientUpdateMultipleLevelsStreamingStatus" },
+	{ &Z_Construct_UFunction_APlayerController_ClientVoiceHandshakeComplete, "ClientVoiceHandshakeComplete" },
+	{ &Z_Construct_UFunction_APlayerController_ClientWasKicked, "ClientWasKicked" },
+	{ &Z_Construct_UFunction_APlayerController_ConsoleKey, "ConsoleKey" },
+	{ &Z_Construct_UFunction_APlayerController_DeprojectMousePositionToWorld, "DeprojectMousePositionToWorld" },
+	{ &Z_Construct_UFunction_APlayerController_DeprojectScreenPositionToWorld, "DeprojectScreenPositionToWorld" },
+	{ &Z_Construct_UFunction_APlayerController_EnableCheats, "EnableCheats" },
+	{ &Z_Construct_UFunction_APlayerController_FOV, "FOV" },
+	{ &Z_Construct_UFunction_APlayerController_GetFocalLocation, "GetFocalLocation" },
+	{ &Z_Construct_UFunction_APlayerController_GetHUD, "GetHUD" },
+	{ &Z_Construct_UFunction_APlayerController_GetHitResultUnderCursor, "GetHitResultUnderCursor" },
+	{ &Z_Construct_UFunction_APlayerController_GetHitResultUnderCursorByChannel, "GetHitResultUnderCursorByChannel" },
+	{ &Z_Construct_UFunction_APlayerController_GetHitResultUnderCursorForObjects, "GetHitResultUnderCursorForObjects" },
+	{ &Z_Construct_UFunction_APlayerController_GetHitResultUnderFinger, "GetHitResultUnderFinger" },
+	{ &Z_Construct_UFunction_APlayerController_GetHitResultUnderFingerByChannel, "GetHitResultUnderFingerByChannel" },
+	{ &Z_Construct_UFunction_APlayerController_GetHitResultUnderFingerForObjects, "GetHitResultUnderFingerForObjects" },
+	{ &Z_Construct_UFunction_APlayerController_GetInputAnalogKeyState, "GetInputAnalogKeyState" },
+	{ &Z_Construct_UFunction_APlayerController_GetInputAnalogStickState, "GetInputAnalogStickState" },
+	{ &Z_Construct_UFunction_APlayerController_GetInputKeyTimeDown, "GetInputKeyTimeDown" },
+	{ &Z_Construct_UFunction_APlayerController_GetInputMotionState, "GetInputMotionState" },
+	{ &Z_Construct_UFunction_APlayerController_GetInputMouseDelta, "GetInputMouseDelta" },
+	{ &Z_Construct_UFunction_APlayerController_GetInputTouchState, "GetInputTouchState" },
+	{ &Z_Construct_UFunction_APlayerController_GetInputVectorKeyState, "GetInputVectorKeyState" },
+	{ &Z_Construct_UFunction_APlayerController_GetMousePosition, "GetMousePosition" },
+	{ &Z_Construct_UFunction_APlayerController_GetSpectatorPawn, "GetSpectatorPawn" },
+	{ &Z_Construct_UFunction_APlayerController_GetViewportSize, "GetViewportSize" },
+	{ &Z_Construct_UFunction_APlayerController_IsInputKeyDown, "IsInputKeyDown" },
+	{ &Z_Construct_UFunction_APlayerController_LocalTravel, "LocalTravel" },
+	{ &Z_Construct_UFunction_APlayerController_OnServerStartedVisualLogger, "OnServerStartedVisualLogger" },
+	{ &Z_Construct_UFunction_APlayerController_Pause, "Pause" },
+	{ &Z_Construct_UFunction_APlayerController_PlayDynamicForceFeedback, "PlayDynamicForceFeedback" },
+	{ &Z_Construct_UFunction_APlayerController_PlayHapticEffect, "PlayHapticEffect" },
+	{ &Z_Construct_UFunction_APlayerController_ProjectWorldLocationToScreen, "ProjectWorldLocationToScreen" },
+	{ &Z_Construct_UFunction_APlayerController_RestartLevel, "RestartLevel" },
+	{ &Z_Construct_UFunction_APlayerController_SendToConsole, "SendToConsole" },
+	{ &Z_Construct_UFunction_APlayerController_ServerAcknowledgePossession, "ServerAcknowledgePossession" },
+	{ &Z_Construct_UFunction_APlayerController_ServerCamera, "ServerCamera" },
+	{ &Z_Construct_UFunction_APlayerController_ServerChangeName, "ServerChangeName" },
+	{ &Z_Construct_UFunction_APlayerController_ServerCheckClientPossession, "ServerCheckClientPossession" },
+	{ &Z_Construct_UFunction_APlayerController_ServerCheckClientPossessionReliable, "ServerCheckClientPossessionReliable" },
+	{ &Z_Construct_UFunction_APlayerController_ServerMutePlayer, "ServerMutePlayer" },
+	{ &Z_Construct_UFunction_APlayerController_ServerNotifyLoadedWorld, "ServerNotifyLoadedWorld" },
+	{ &Z_Construct_UFunction_APlayerController_ServerPause, "ServerPause" },
+	{ &Z_Construct_UFunction_APlayerController_ServerRestartPlayer, "ServerRestartPlayer" },
+	{ &Z_Construct_UFunction_APlayerController_ServerSetSpectatorLocation, "ServerSetSpectatorLocation" },
+	{ &Z_Construct_UFunction_APlayerController_ServerSetSpectatorWaiting, "ServerSetSpectatorWaiting" },
+	{ &Z_Construct_UFunction_APlayerController_ServerShortTimeout, "ServerShortTimeout" },
+	{ &Z_Construct_UFunction_APlayerController_ServerToggleAILogging, "ServerToggleAILogging" },
+	{ &Z_Construct_UFunction_APlayerController_ServerUnmutePlayer, "ServerUnmutePlayer" },
+	{ &Z_Construct_UFunction_APlayerController_ServerUpdateCamera, "ServerUpdateCamera" },
+	{ &Z_Construct_UFunction_APlayerController_ServerUpdateLevelVisibility, "ServerUpdateLevelVisibility" },
+	{ &Z_Construct_UFunction_APlayerController_ServerUpdateMultipleLevelsVisibility, "ServerUpdateMultipleLevelsVisibility" },
+	{ &Z_Construct_UFunction_APlayerController_ServerVerifyViewTarget, "ServerVerifyViewTarget" },
+	{ &Z_Construct_UFunction_APlayerController_ServerViewNextPlayer, "ServerViewNextPlayer" },
+	{ &Z_Construct_UFunction_APlayerController_ServerViewPrevPlayer, "ServerViewPrevPlayer" },
+	{ &Z_Construct_UFunction_APlayerController_ServerViewSelf, "ServerViewSelf" },
+	{ &Z_Construct_UFunction_APlayerController_SetAudioListenerAttenuationOverride, "SetAudioListenerAttenuationOverride" },
+	{ &Z_Construct_UFunction_APlayerController_SetAudioListenerOverride, "SetAudioListenerOverride" },
+	{ &Z_Construct_UFunction_APlayerController_SetCinematicMode, "SetCinematicMode" },
+	{ &Z_Construct_UFunction_APlayerController_SetControllerLightColor, "SetControllerLightColor" },
+	{ &Z_Construct_UFunction_APlayerController_SetHapticsByValue, "SetHapticsByValue" },
+	{ &Z_Construct_UFunction_APlayerController_SetMouseCursorWidget, "SetMouseCursorWidget" },
+	{ &Z_Construct_UFunction_APlayerController_SetMouseLocation, "SetMouseLocation" },
+	{ &Z_Construct_UFunction_APlayerController_SetName, "SetName" },
+	{ &Z_Construct_UFunction_APlayerController_SetViewTargetWithBlend, "SetViewTargetWithBlend" },
+	{ &Z_Construct_UFunction_APlayerController_SetVirtualJoystickVisibility, "SetVirtualJoystickVisibility" },
+	{ &Z_Construct_UFunction_APlayerController_StartFire, "StartFire" },
+	{ &Z_Construct_UFunction_APlayerController_StopHapticEffect, "StopHapticEffect" },
+	{ &Z_Construct_UFunction_APlayerController_SwitchLevel, "SwitchLevel" },
+	{ &Z_Construct_UFunction_APlayerController_ToggleSpeaking, "ToggleSpeaking" },
+	{ &Z_Construct_UFunction_APlayerController_WasInputKeyJustPressed, "WasInputKeyJustPressed" },
+	{ &Z_Construct_UFunction_APlayerController_WasInputKeyJustReleased, "WasInputKeyJustReleased" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_APlayerController_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03985FF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_APlayerController_Statics::ClassParams = { &APlayerController::StaticClass, Z_Construct_UClass_APlayerController_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_APlayerController_Statics::FuncInfo, 126, Z_Construct_UClass_APlayerController_Statics::PropPointers, 51, "Game", &Z_Construct_UClass_APlayerController_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9E00 (end 0x024A9E2F)
+// Original VA: 0x00000001424A9E00 | File offset: 0x024A9400
+// Recovery: confirmed (UHT singleton of APlayerController) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_APlayerController()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_APlayerController_Statics::ClassParams);
+	}
+	return OuterClass;
+}

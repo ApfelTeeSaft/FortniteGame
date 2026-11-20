@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortResultsSummaryScreenWidget_GetTotalScoreSo
 	}
 	return ReturnFunction;
 }
+
+class UFortResultsSummaryScreenWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortResultsSummaryScreenWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortResultsSummaryScreenWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortResultsSummaryScreenWidget_GetTotalScoreSortedScoreIndices, "GetTotalScoreSortedScoreIndices" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortResultsSummaryScreenWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D0A530
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortResultsSummaryScreenWidget_Statics::ClassParams = { &UFortResultsSummaryScreenWidget::StaticClass, Z_Construct_UClass_UFortResultsSummaryScreenWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortResultsSummaryScreenWidget_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortResultsSummaryScreenWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED4A0 (end 0x028ED4CF)
+// Original VA: 0x00000001428ED4A0 | File offset: 0x028ECAA0
+// Recovery: confirmed (UHT singleton of UFortResultsSummaryScreenWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortResultsSummaryScreenWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortResultsSummaryScreenWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

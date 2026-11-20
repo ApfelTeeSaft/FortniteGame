@@ -25,3 +25,36 @@ UFunction* Z_Construct_UFunction_UFortNodeCanvas_PanToNode()
 	}
 	return ReturnFunction;
 }
+
+class UFortNodeCanvas
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortNodeCanvas_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortNodeCanvas_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortNodeCanvas_PanToNode, "PanToNode" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortNodeCanvas_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CF1E30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortNodeCanvas_Statics::ClassParams = { &UFortNodeCanvas::StaticClass, Z_Construct_UClass_UFortNodeCanvas_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortNodeCanvas_Statics::FuncInfo, 1, Z_Construct_UClass_UFortNodeCanvas_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortNodeCanvas_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortNodeCanvas_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE490 (end 0x028DE4BF)
+// Original VA: 0x00000001428DE490 | File offset: 0x028DDA90
+// Recovery: confirmed (UHT singleton of UFortNodeCanvas) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortNodeCanvas()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortNodeCanvas_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -2490,3 +2490,159 @@ UFunction* Z_Construct_UFunction_AActor_WasRecentlyRendered()
 	}
 	return ReturnFunction;
 }
+
+class AActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AActor_ActorHasTag, "ActorHasTag" },
+	{ &Z_Construct_UFunction_AActor_AddComponent, "AddComponent" },
+	{ &Z_Construct_UFunction_AActor_AddTickPrerequisiteActor, "AddTickPrerequisiteActor" },
+	{ &Z_Construct_UFunction_AActor_AddTickPrerequisiteComponent, "AddTickPrerequisiteComponent" },
+	{ &Z_Construct_UFunction_AActor_DetachRootComponentFromParent, "DetachRootComponentFromParent" },
+	{ &Z_Construct_UFunction_AActor_DisableInput, "DisableInput" },
+	{ &Z_Construct_UFunction_AActor_EnableInput, "EnableInput" },
+	{ &Z_Construct_UFunction_AActor_FlushNetDormancy, "FlushNetDormancy" },
+	{ &Z_Construct_UFunction_AActor_ForceNetUpdate, "ForceNetUpdate" },
+	{ &Z_Construct_UFunction_AActor_GetActorBounds, "GetActorBounds" },
+	{ &Z_Construct_UFunction_AActor_GetActorEnableCollision, "GetActorEnableCollision" },
+	{ &Z_Construct_UFunction_AActor_GetActorEyesViewPoint, "GetActorEyesViewPoint" },
+	{ &Z_Construct_UFunction_AActor_GetActorForwardVector, "GetActorForwardVector" },
+	{ &Z_Construct_UFunction_AActor_GetActorRelativeScale3D, "GetActorRelativeScale3D" },
+	{ &Z_Construct_UFunction_AActor_GetActorRightVector, "GetActorRightVector" },
+	{ &Z_Construct_UFunction_AActor_GetActorScale3D, "GetActorScale3D" },
+	{ &Z_Construct_UFunction_AActor_GetActorTickInterval, "GetActorTickInterval" },
+	{ &Z_Construct_UFunction_AActor_GetActorTimeDilation, "GetActorTimeDilation" },
+	{ &Z_Construct_UFunction_AActor_GetActorUpVector, "GetActorUpVector" },
+	{ &Z_Construct_UFunction_AActor_GetAllChildActors, "GetAllChildActors" },
+	{ &Z_Construct_UFunction_AActor_GetAttachParentActor, "GetAttachParentActor" },
+	{ &Z_Construct_UFunction_AActor_GetAttachParentSocketName, "GetAttachParentSocketName" },
+	{ &Z_Construct_UFunction_AActor_GetAttachedActors, "GetAttachedActors" },
+	{ &Z_Construct_UFunction_AActor_GetComponentByClass, "GetComponentByClass" },
+	{ &Z_Construct_UFunction_AActor_GetComponentsByClass, "GetComponentsByClass" },
+	{ &Z_Construct_UFunction_AActor_GetComponentsByTag, "GetComponentsByTag" },
+	{ &Z_Construct_UFunction_AActor_GetDistanceTo, "GetDistanceTo" },
+	{ &Z_Construct_UFunction_AActor_GetDotProductTo, "GetDotProductTo" },
+	{ &Z_Construct_UFunction_AActor_GetGameTimeSinceCreation, "GetGameTimeSinceCreation" },
+	{ &Z_Construct_UFunction_AActor_GetHorizontalDistanceTo, "GetHorizontalDistanceTo" },
+	{ &Z_Construct_UFunction_AActor_GetHorizontalDotProductTo, "GetHorizontalDotProductTo" },
+	{ &Z_Construct_UFunction_AActor_GetInputAxisKeyValue, "GetInputAxisKeyValue" },
+	{ &Z_Construct_UFunction_AActor_GetInputAxisValue, "GetInputAxisValue" },
+	{ &Z_Construct_UFunction_AActor_GetInputVectorAxisValue, "GetInputVectorAxisValue" },
+	{ &Z_Construct_UFunction_AActor_GetInstigator, "GetInstigator" },
+	{ &Z_Construct_UFunction_AActor_GetInstigatorController, "GetInstigatorController" },
+	{ &Z_Construct_UFunction_AActor_GetLifeSpan, "GetLifeSpan" },
+	{ &Z_Construct_UFunction_AActor_GetOverlappingActors, "GetOverlappingActors" },
+	{ &Z_Construct_UFunction_AActor_GetOverlappingComponents, "GetOverlappingComponents" },
+	{ &Z_Construct_UFunction_AActor_GetOwner, "GetOwner" },
+	{ &Z_Construct_UFunction_AActor_GetParentActor, "GetParentActor" },
+	{ &Z_Construct_UFunction_AActor_GetParentComponent, "GetParentComponent" },
+	{ &Z_Construct_UFunction_AActor_GetRemoteRole, "GetRemoteRole" },
+	{ &Z_Construct_UFunction_AActor_GetSquaredDistanceTo, "GetSquaredDistanceTo" },
+	{ &Z_Construct_UFunction_AActor_GetTickableWhenPaused, "GetTickableWhenPaused" },
+	{ &Z_Construct_UFunction_AActor_GetTransform, "GetTransform" },
+	{ &Z_Construct_UFunction_AActor_GetVelocity, "GetVelocity" },
+	{ &Z_Construct_UFunction_AActor_GetVerticalDistanceTo, "GetVerticalDistanceTo" },
+	{ &Z_Construct_UFunction_AActor_HasAuthority, "HasAuthority" },
+	{ &Z_Construct_UFunction_AActor_IsActorBeingDestroyed, "IsActorBeingDestroyed" },
+	{ &Z_Construct_UFunction_AActor_IsActorTickEnabled, "IsActorTickEnabled" },
+	{ &Z_Construct_UFunction_AActor_IsChildActor, "IsChildActor" },
+	{ &Z_Construct_UFunction_AActor_IsOverlappingActor, "IsOverlappingActor" },
+	{ &Z_Construct_UFunction_AActor_K2_AddActorLocalOffset, "K2_AddActorLocalOffset" },
+	{ &Z_Construct_UFunction_AActor_K2_AddActorLocalRotation, "K2_AddActorLocalRotation" },
+	{ &Z_Construct_UFunction_AActor_K2_AddActorLocalTransform, "K2_AddActorLocalTransform" },
+	{ &Z_Construct_UFunction_AActor_K2_AddActorWorldOffset, "K2_AddActorWorldOffset" },
+	{ &Z_Construct_UFunction_AActor_K2_AddActorWorldRotation, "K2_AddActorWorldRotation" },
+	{ &Z_Construct_UFunction_AActor_K2_AddActorWorldTransform, "K2_AddActorWorldTransform" },
+	{ &Z_Construct_UFunction_AActor_K2_AttachRootComponentTo, "K2_AttachRootComponentTo" },
+	{ &Z_Construct_UFunction_AActor_K2_AttachRootComponentToActor, "K2_AttachRootComponentToActor" },
+	{ &Z_Construct_UFunction_AActor_K2_AttachToActor, "K2_AttachToActor" },
+	{ &Z_Construct_UFunction_AActor_K2_AttachToComponent, "K2_AttachToComponent" },
+	{ &Z_Construct_UFunction_AActor_K2_DestroyActor, "K2_DestroyActor" },
+	{ &Z_Construct_UFunction_AActor_K2_DestroyComponent, "K2_DestroyComponent" },
+	{ &Z_Construct_UFunction_AActor_K2_DetachFromActor, "K2_DetachFromActor" },
+	{ &Z_Construct_UFunction_AActor_K2_GetActorLocation, "K2_GetActorLocation" },
+	{ &Z_Construct_UFunction_AActor_K2_GetActorRotation, "K2_GetActorRotation" },
+	{ &Z_Construct_UFunction_AActor_K2_GetRootComponent, "K2_GetRootComponent" },
+	{ &Z_Construct_UFunction_AActor_K2_OnBecomeViewTarget, "K2_OnBecomeViewTarget" },
+	{ &Z_Construct_UFunction_AActor_K2_OnEndViewTarget, "K2_OnEndViewTarget" },
+	{ &Z_Construct_UFunction_AActor_K2_OnReset, "K2_OnReset" },
+	{ &Z_Construct_UFunction_AActor_K2_SetActorLocation, "K2_SetActorLocation" },
+	{ &Z_Construct_UFunction_AActor_K2_SetActorLocationAndRotation, "K2_SetActorLocationAndRotation" },
+	{ &Z_Construct_UFunction_AActor_K2_SetActorRelativeLocation, "K2_SetActorRelativeLocation" },
+	{ &Z_Construct_UFunction_AActor_K2_SetActorRelativeRotation, "K2_SetActorRelativeRotation" },
+	{ &Z_Construct_UFunction_AActor_K2_SetActorRelativeTransform, "K2_SetActorRelativeTransform" },
+	{ &Z_Construct_UFunction_AActor_K2_SetActorRotation, "K2_SetActorRotation" },
+	{ &Z_Construct_UFunction_AActor_K2_SetActorTransform, "K2_SetActorTransform" },
+	{ &Z_Construct_UFunction_AActor_K2_TeleportTo, "K2_TeleportTo" },
+	{ &Z_Construct_UFunction_AActor_MakeMIDForMaterial, "MakeMIDForMaterial" },
+	{ &Z_Construct_UFunction_AActor_MakeNoise, "MakeNoise" },
+	{ &Z_Construct_UFunction_AActor_OnRep_AttachmentReplication, "OnRep_AttachmentReplication" },
+	{ &Z_Construct_UFunction_AActor_OnRep_Instigator, "OnRep_Instigator" },
+	{ &Z_Construct_UFunction_AActor_OnRep_Owner, "OnRep_Owner" },
+	{ &Z_Construct_UFunction_AActor_OnRep_ReplicateMovement, "OnRep_ReplicateMovement" },
+	{ &Z_Construct_UFunction_AActor_OnRep_ReplicatedMovement, "OnRep_ReplicatedMovement" },
+	{ &Z_Construct_UFunction_AActor_PrestreamTextures, "PrestreamTextures" },
+	{ &Z_Construct_UFunction_AActor_ReceiveActorBeginCursorOver, "ReceiveActorBeginCursorOver" },
+	{ &Z_Construct_UFunction_AActor_ReceiveActorBeginOverlap, "ReceiveActorBeginOverlap" },
+	{ &Z_Construct_UFunction_AActor_ReceiveActorEndCursorOver, "ReceiveActorEndCursorOver" },
+	{ &Z_Construct_UFunction_AActor_ReceiveActorEndOverlap, "ReceiveActorEndOverlap" },
+	{ &Z_Construct_UFunction_AActor_ReceiveActorOnClicked, "ReceiveActorOnClicked" },
+	{ &Z_Construct_UFunction_AActor_ReceiveActorOnInputTouchBegin, "ReceiveActorOnInputTouchBegin" },
+	{ &Z_Construct_UFunction_AActor_ReceiveActorOnInputTouchEnd, "ReceiveActorOnInputTouchEnd" },
+	{ &Z_Construct_UFunction_AActor_ReceiveActorOnInputTouchEnter, "ReceiveActorOnInputTouchEnter" },
+	{ &Z_Construct_UFunction_AActor_ReceiveActorOnInputTouchLeave, "ReceiveActorOnInputTouchLeave" },
+	{ &Z_Construct_UFunction_AActor_ReceiveActorOnReleased, "ReceiveActorOnReleased" },
+	{ &Z_Construct_UFunction_AActor_ReceiveAnyDamage, "ReceiveAnyDamage" },
+	{ &Z_Construct_UFunction_AActor_ReceiveBeginPlay, "ReceiveBeginPlay" },
+	{ &Z_Construct_UFunction_AActor_ReceiveDestroyed, "ReceiveDestroyed" },
+	{ &Z_Construct_UFunction_AActor_ReceiveEndPlay, "ReceiveEndPlay" },
+	{ &Z_Construct_UFunction_AActor_ReceiveHit, "ReceiveHit" },
+	{ &Z_Construct_UFunction_AActor_ReceivePointDamage, "ReceivePointDamage" },
+	{ &Z_Construct_UFunction_AActor_ReceiveRadialDamage, "ReceiveRadialDamage" },
+	{ &Z_Construct_UFunction_AActor_ReceiveTick, "ReceiveTick" },
+	{ &Z_Construct_UFunction_AActor_RemoveTickPrerequisiteActor, "RemoveTickPrerequisiteActor" },
+	{ &Z_Construct_UFunction_AActor_RemoveTickPrerequisiteComponent, "RemoveTickPrerequisiteComponent" },
+	{ &Z_Construct_UFunction_AActor_SetActorEnableCollision, "SetActorEnableCollision" },
+	{ &Z_Construct_UFunction_AActor_SetActorHiddenInGame, "SetActorHiddenInGame" },
+	{ &Z_Construct_UFunction_AActor_SetActorRelativeScale3D, "SetActorRelativeScale3D" },
+	{ &Z_Construct_UFunction_AActor_SetActorScale3D, "SetActorScale3D" },
+	{ &Z_Construct_UFunction_AActor_SetActorTickEnabled, "SetActorTickEnabled" },
+	{ &Z_Construct_UFunction_AActor_SetActorTickInterval, "SetActorTickInterval" },
+	{ &Z_Construct_UFunction_AActor_SetLifeSpan, "SetLifeSpan" },
+	{ &Z_Construct_UFunction_AActor_SetNetDormancy, "SetNetDormancy" },
+	{ &Z_Construct_UFunction_AActor_SetOwner, "SetOwner" },
+	{ &Z_Construct_UFunction_AActor_SetReplicateMovement, "SetReplicateMovement" },
+	{ &Z_Construct_UFunction_AActor_SetReplicates, "SetReplicates" },
+	{ &Z_Construct_UFunction_AActor_SetTickGroup, "SetTickGroup" },
+	{ &Z_Construct_UFunction_AActor_SetTickableWhenPaused, "SetTickableWhenPaused" },
+	{ &Z_Construct_UFunction_AActor_SnapRootComponentTo, "SnapRootComponentTo" },
+	{ &Z_Construct_UFunction_AActor_TearOff, "TearOff" },
+	{ &Z_Construct_UFunction_AActor_UserConstructionScript, "UserConstructionScript" },
+	{ &Z_Construct_UFunction_AActor_WasRecentlyRendered, "WasRecentlyRendered" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0388CA20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AActor_Statics::ClassParams = { &AActor::StaticClass, Z_Construct_UClass_AActor_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AActor_Statics::FuncInfo, 125, Z_Construct_UClass_AActor_Statics::PropPointers, 77, "Engine", &Z_Construct_UClass_AActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023BDCF0 (end 0x023BDD1F)
+// Original VA: 0x00000001423BDCF0 | File offset: 0x023BD2F0
+// Recovery: confirmed (UHT singleton of AActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

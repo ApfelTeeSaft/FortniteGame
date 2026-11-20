@@ -103,3 +103,40 @@ UFunction* Z_Construct_UFunction_UFortQuestTreeItemWidget_SetupAsQuest()
 	}
 	return ReturnFunction;
 }
+
+class UFortQuestTreeItemWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortQuestTreeItemWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortQuestTreeItemWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortQuestTreeItemWidget_ExpansionChanged, "ExpansionChanged" },
+	{ &Z_Construct_UFunction_UFortQuestTreeItemWidget_HandleQuestsUpdated, "HandleQuestsUpdated" },
+	{ &Z_Construct_UFunction_UFortQuestTreeItemWidget_OnQuestsUpdated, "OnQuestsUpdated" },
+	{ &Z_Construct_UFunction_UFortQuestTreeItemWidget_SetupAsCategory, "SetupAsCategory" },
+	{ &Z_Construct_UFunction_UFortQuestTreeItemWidget_SetupAsQuest, "SetupAsQuest" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortQuestTreeItemWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D09C20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortQuestTreeItemWidget_Statics::ClassParams = { &UFortQuestTreeItemWidget::StaticClass, Z_Construct_UClass_UFortQuestTreeItemWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortQuestTreeItemWidget_Statics::FuncInfo, 5, Z_Construct_UClass_UFortQuestTreeItemWidget_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortQuestTreeItemWidget_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortQuestTreeItemWidget_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED3E0 (end 0x028ED40F)
+// Original VA: 0x00000001428ED3E0 | File offset: 0x028EC9E0
+// Recovery: confirmed (UHT singleton of UFortQuestTreeItemWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortQuestTreeItemWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortQuestTreeItemWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

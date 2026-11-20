@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortErrorWindow_PutErrorEntries()
 	}
 	return ReturnFunction;
 }
+
+class UFortErrorWindow
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortErrorWindow_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortErrorWindow_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortErrorWindow_DismissErrors, "DismissErrors" },
+	{ &Z_Construct_UFunction_UFortErrorWindow_GetErrorEntry, "GetErrorEntry" },
+	{ &Z_Construct_UFunction_UFortErrorWindow_PutErrorEntries, "PutErrorEntries" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortErrorWindow_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C8EB60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortErrorWindow_Statics::ClassParams = { &UFortErrorWindow::StaticClass, Z_Construct_UClass_UFortErrorWindow_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortErrorWindow_Statics::FuncInfo, 3, Z_Construct_UClass_UFortErrorWindow_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortErrorWindow_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3490 (end 0x028A34BF)
+// Original VA: 0x00000001428A3490 | File offset: 0x028A2A90
+// Recovery: confirmed (UHT singleton of UFortErrorWindow) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortErrorWindow()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortErrorWindow_Statics::ClassParams);
+	}
+	return OuterClass;
+}

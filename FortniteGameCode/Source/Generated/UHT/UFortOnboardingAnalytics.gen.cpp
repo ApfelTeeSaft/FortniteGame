@@ -125,3 +125,39 @@ UFunction* Z_Construct_UFunction_UFortOnboardingAnalytics_FireAnalyticsEvent_Vin
 	}
 	return ReturnFunction;
 }
+
+class UFortOnboardingAnalytics
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortOnboardingAnalytics_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortOnboardingAnalytics_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortOnboardingAnalytics_FireAnalyticsEvent_CinematicSkipped, "FireAnalyticsEvent_CinematicSkipped" },
+	{ &Z_Construct_UFunction_UFortOnboardingAnalytics_FireAnalyticsEvent_MineCartDestroyed, "FireAnalyticsEvent_MineCartDestroyed" },
+	{ &Z_Construct_UFunction_UFortOnboardingAnalytics_FireAnalyticsEvent_TutorialCanceled, "FireAnalyticsEvent_TutorialCanceled" },
+	{ &Z_Construct_UFunction_UFortOnboardingAnalytics_FireAnalyticsEvent_TutorialCompleted, "FireAnalyticsEvent_TutorialCompleted" },
+	{ &Z_Construct_UFunction_UFortOnboardingAnalytics_FireAnalyticsEvent_TutorialStartupFailed, "FireAnalyticsEvent_TutorialStartupFailed" },
+	{ &Z_Construct_UFunction_UFortOnboardingAnalytics_FireAnalyticsEvent_VinderTipPlayed, "FireAnalyticsEvent_VinderTipPlayed" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortOnboardingAnalytics_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032C8B10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortOnboardingAnalytics_Statics::ClassParams = { &UFortOnboardingAnalytics::StaticClass, Z_Construct_UClass_UFortOnboardingAnalytics_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortOnboardingAnalytics_Statics::FuncInfo, 6, nullptr, 0, nullptr, &Z_Construct_UClass_UFortOnboardingAnalytics_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3D70 (end 0x00FA3D9F)
+// Original VA: 0x0000000140FA3D70 | File offset: 0x00FA3370
+// Recovery: confirmed (UHT singleton of UFortOnboardingAnalytics) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortOnboardingAnalytics()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortOnboardingAnalytics_Statics::ClassParams);
+	}
+	return OuterClass;
+}

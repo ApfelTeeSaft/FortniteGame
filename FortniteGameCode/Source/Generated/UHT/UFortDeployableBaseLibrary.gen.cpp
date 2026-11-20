@@ -325,3 +325,49 @@ UFunction* Z_Construct_UFunction_UFortDeployableBaseLibrary_UpdateDeployableBase
 	}
 	return ReturnFunction;
 }
+
+class UFortDeployableBaseLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortDeployableBaseLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortDeployableBaseLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_ApplyTieredModifierSet, "ApplyTieredModifierSet" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_BroadcastHordeTierComplete, "BroadcastHordeTierComplete" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_ForceClearAllDefenders, "ForceClearAllDefenders" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_ForceDeployableBaseHordePlayersToResetAndRespawn, "ForceDeployableBaseHordePlayersToResetAndRespawn" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_ForceRestartDeployableBasePlayers, "ForceRestartDeployableBasePlayers" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_GetGameDifficultyInfo, "GetGameDifficultyInfo" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_GetHordeTierStartStatus, "GetHordeTierStartStatus" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_GetPrimaryHordeMission, "GetPrimaryHordeMission" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_GetTieredModifierSet, "GetTieredModifierSet" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_GrantPlayersCompletedWaveRewards, "GrantPlayersCompletedWaveRewards" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_IsWorldItemDefValidToPersistForDeployableBasePlayerInventory, "IsWorldItemDefValidToPersistForDeployableBasePlayerInventory" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_OnPreHordeTierStart, "OnPreHordeTierStart" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_ResetDeployableBaseHordePlayerInventories, "ResetDeployableBaseHordePlayerInventories" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_SetDeployableBaseMatchJoinability, "SetDeployableBaseMatchJoinability" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_SetupDeployableBaseCombatZoneInventoriesOnPlayers, "SetupDeployableBaseCombatZoneInventoriesOnPlayers" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseLibrary_UpdateDeployableBaseTierProgressionForPlayers, "UpdateDeployableBaseTierProgressionForPlayers" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortDeployableBaseLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033001B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortDeployableBaseLibrary_Statics::ClassParams = { &UFortDeployableBaseLibrary::StaticClass, Z_Construct_UClass_UFortDeployableBaseLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortDeployableBaseLibrary_Statics::FuncInfo, 16, nullptr, 0, nullptr, &Z_Construct_UClass_UFortDeployableBaseLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD0170 (end 0x00FD019F)
+// Original VA: 0x0000000140FD0170 | File offset: 0x00FCF770
+// Recovery: confirmed (UHT singleton of UFortDeployableBaseLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortDeployableBaseLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortDeployableBaseLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UAthenaCustomizationScreenBase_GetFavoriteItemF
 	}
 	return ReturnFunction;
 }
+
+class UAthenaCustomizationScreenBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaCustomizationScreenBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaCustomizationScreenBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaCustomizationScreenBase_GetFavoriteItemForCategory, "GetFavoriteItemForCategory" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaCustomizationScreenBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C51E80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaCustomizationScreenBase_Statics::ClassParams = { &UAthenaCustomizationScreenBase::StaticClass, Z_Construct_UClass_UAthenaCustomizationScreenBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UAthenaCustomizationScreenBase_Statics::FuncInfo, 1, Z_Construct_UClass_UAthenaCustomizationScreenBase_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UAthenaCustomizationScreenBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287F320 (end 0x0287F34F)
+// Original VA: 0x000000014287F320 | File offset: 0x0287E920
+// Recovery: confirmed (UHT singleton of UAthenaCustomizationScreenBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaCustomizationScreenBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaCustomizationScreenBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

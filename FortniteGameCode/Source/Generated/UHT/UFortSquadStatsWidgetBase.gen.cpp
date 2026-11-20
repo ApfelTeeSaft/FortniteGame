@@ -82,3 +82,38 @@ UFunction* Z_Construct_UFunction_UFortSquadStatsWidgetBase_RequestStatsUpdate()
 	}
 	return ReturnFunction;
 }
+
+class UFortSquadStatsWidgetBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSquadStatsWidgetBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadStatsWidgetBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadStatsWidgetBase_GetLocalPlayerId, "GetLocalPlayerId" },
+	{ &Z_Construct_UFunction_UFortSquadStatsWidgetBase_HandleSquadSlottingPreviewStateChanged, "HandleSquadSlottingPreviewStateChanged" },
+	{ &Z_Construct_UFunction_UFortSquadStatsWidgetBase_RequestShowPreviewStats, "RequestShowPreviewStats" },
+	{ &Z_Construct_UFunction_UFortSquadStatsWidgetBase_RequestStatsUpdate, "RequestStatsUpdate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadStatsWidgetBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D23D20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadStatsWidgetBase_Statics::ClassParams = { &UFortSquadStatsWidgetBase::StaticClass, Z_Construct_UClass_UFortSquadStatsWidgetBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSquadStatsWidgetBase_Statics::FuncInfo, 4, Z_Construct_UClass_UFortSquadStatsWidgetBase_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortSquadStatsWidgetBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB7B0 (end 0x028FB7DF)
+// Original VA: 0x00000001428FB7B0 | File offset: 0x028FADB0
+// Recovery: confirmed (UHT singleton of UFortSquadStatsWidgetBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadStatsWidgetBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadStatsWidgetBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

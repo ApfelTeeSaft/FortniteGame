@@ -305,3 +305,50 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_SetCurrentGoalDiscouragement
 	}
 	return ReturnFunction;
 }
+
+class AFortAIGoalManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortAIGoalManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortAIGoalManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortAIGoalManager_AddGoal, "AddGoal" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_AddGoalActorToAssignment, "AddGoalActorToAssignment" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_AddGoalToWorldAssignment, "AddGoalToWorldAssignment" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_AddGoalsToWorldAssignment, "AddGoalsToWorldAssignment" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_AddWorldAssignment, "AddWorldAssignment" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_CreateWorldAssignment, "CreateWorldAssignment" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromActor, "MakeGoalFromActor" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_MakeGoalFromLocation, "MakeGoalFromLocation" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromActors, "MakeGoalsFromActors" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocations, "MakeGoalsFromLocations" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_MakeGoalsFromLocationsAndActor, "MakeGoalsFromLocationsAndActor" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalFromWorldAssignment, "RemoveGoalFromWorldAssignment" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_RemoveGoalsFromWorldAssignment, "RemoveGoalsFromWorldAssignment" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_RemoveWorldAssignment, "RemoveWorldAssignment" },
+	{ &Z_Construct_UFunction_AFortAIGoalManager_SetCurrentGoalDiscouragement, "SetCurrentGoalDiscouragement" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortAIGoalManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032AD390
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortAIGoalManager_Statics::ClassParams = { &AFortAIGoalManager::StaticClass, Z_Construct_UClass_AFortAIGoalManager_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_AFortAIGoalManager_Statics::FuncInfo, 15, Z_Construct_UClass_AFortAIGoalManager_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_AFortAIGoalManager_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortAIGoalManager_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91260 (end 0x00F9128F)
+// Original VA: 0x0000000140F91260 | File offset: 0x00F90860
+// Recovery: confirmed (UHT singleton of AFortAIGoalManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortAIGoalManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortAIGoalManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

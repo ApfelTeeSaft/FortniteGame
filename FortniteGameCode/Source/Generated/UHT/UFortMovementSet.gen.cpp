@@ -24,3 +24,35 @@ UFunction* Z_Construct_UFunction_UFortMovementSet_OnRep_SpeedMultiplier()
 	}
 	return ReturnFunction;
 }
+
+class UFortMovementSet
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMovementSet_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMovementSet_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMovementSet_OnRep_SpeedMultiplier, "OnRep_SpeedMultiplier" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMovementSet_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0338AAB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMovementSet_Statics::ClassParams = { &UFortMovementSet::StaticClass, Z_Construct_UClass_UFortMovementSet_Statics::DependentSingletons, 2, 0x00280080u, Z_Construct_UClass_UFortMovementSet_Statics::FuncInfo, 1, Z_Construct_UClass_UFortMovementSet_Statics::PropPointers, 9, nullptr, &Z_Construct_UClass_UFortMovementSet_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104AB40 (end 0x0104AB6F)
+// Original VA: 0x000000014104AB40 | File offset: 0x0104A140
+// Recovery: confirmed (UHT singleton of UFortMovementSet) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMovementSet()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMovementSet_Statics::ClassParams);
+	}
+	return OuterClass;
+}

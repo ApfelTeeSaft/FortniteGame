@@ -124,3 +124,40 @@ UFunction* Z_Construct_UFunction_UCameraModifier_IsDisabled()
 	}
 	return ReturnFunction;
 }
+
+class UCameraModifier
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCameraModifier_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCameraModifier_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCameraModifier_BlueprintModifyCamera, "BlueprintModifyCamera" },
+	{ &Z_Construct_UFunction_UCameraModifier_BlueprintModifyPostProcess, "BlueprintModifyPostProcess" },
+	{ &Z_Construct_UFunction_UCameraModifier_DisableModifier, "DisableModifier" },
+	{ &Z_Construct_UFunction_UCameraModifier_EnableModifier, "EnableModifier" },
+	{ &Z_Construct_UFunction_UCameraModifier_GetViewTarget, "GetViewTarget" },
+	{ &Z_Construct_UFunction_UCameraModifier_IsDisabled, "IsDisabled" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCameraModifier_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038B9E20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCameraModifier_Statics::ClassParams = { &UCameraModifier::StaticClass, Z_Construct_UClass_UCameraModifier_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UCameraModifier_Statics::FuncInfo, 6, Z_Construct_UClass_UCameraModifier_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UCameraModifier_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EAA30 (end 0x023EAA5F)
+// Original VA: 0x00000001423EAA30 | File offset: 0x023EA030
+// Recovery: confirmed (UHT singleton of UCameraModifier) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCameraModifier()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCameraModifier_Statics::ClassParams);
+	}
+	return OuterClass;
+}

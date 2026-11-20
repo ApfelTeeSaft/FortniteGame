@@ -34,6 +34,9 @@ from pe import PEImage  # noqa: E402
 
 GEN_DIR = ROOT / "FortniteGameCode" / "Source" / "Generated" / "UHT"
 MANIFEST = ROOT / "analysis" / "functions-uht-creators.json"
+CLASS_MANIFEST = ROOT / "analysis" / "functions-uht-classes.json"
+# Types the shim already forward-declares; a class of that name cannot be redeclared here.
+SHIM_TYPES = {"UObject", "UClass", "UFunction"}
 SYMBOLS = ROOT / "analysis" / "uht-creator-symbols.json"
 CREATOR_SIZE = 47
 # Relocated displacement bytes of the standard creator (RF x3, FuncParams, call).
@@ -46,6 +49,61 @@ OBJECT_FLAGS = {0x45: "RF_Public|RF_Transient|RF_MarkAsNative", 0x41: "RF_Public
 def creator_name(cls: str, fn: str) -> str:
     kind = "UDelegateFunction" if fn.endswith("__DelegateSignature") else "UFunction"
     return f"Z_Construct_{kind}_{cls}_{fn}"
+
+
+def class_constructor(cls, arr, fns, zrva, emitted_fns, img, rdata, rd, base, rfs, externs, symbols) -> str:
+    """UHT 4.20 Z_Construct_UClass_<Class> with its Statics, values decoded from FClassParams."""
+    rec = int(arr["class_params_rva"], 16)
+    (nreg, deps, ndeps, cflags, links, nfuncs, props, nprops, cfg, cppinfo, ifaces,
+     nifaces) = struct.unpack("<QQiIQi4xQi4xQQQi4x", img.read(rec, 0x58))
+    statics = f"Z_Construct_UClass_{cls}_Statics"
+    decl, defs = [], []
+    if ndeps:
+        decl.append("\tstatic UObject* (*const DependentSingletons[])();  // pending")
+        deps_expr = f"{statics}::DependentSingletons, {ndeps}"
+    else:
+        deps_expr = "nullptr, 0"
+    decl.append("\tstatic const FClassFunctionLinkInfo FuncInfo[];")
+    info = []
+    for fname, crva in sorted(fns, key=lambda x: x[0]):
+        cname = creator_name(cls, fname)
+        if fname not in emitted_fns:
+            externs.add(f"UFunction* {cname}();  // RVA 0x{crva:08X}, not emitted (FFunctionParams unresolved)")
+        info.append(f'\t{{ &{cname}, "{fname}" }},')
+    defs.append(f"const FClassFunctionLinkInfo {statics}::FuncInfo[] = {{\n" + "\n".join(info) + "\n};")
+    if nprops:
+        decl.append("\tstatic const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending")
+        props_expr = f"{statics}::PropPointers, {nprops}"
+    else:
+        props_expr = "nullptr, 0"
+    if nifaces:
+        decl.append("\tstatic const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending")
+        iface_expr = f"{statics}::InterfaceParams, {nifaces}"
+    else:
+        iface_expr = "nullptr, 0"
+    decl.append("\tstatic const FCppClassTypeInfoStatic StaticCppClassTypeInfo;")
+    abstract = img.read(cppinfo - base, 1)[0] if cppinfo else 0
+    defs.append(f"const FCppClassTypeInfoStatic {statics}::StaticCppClassTypeInfo = {{ {'true' if abstract else 'false'} }};")
+    decl.append("\tstatic const UE4CodeGen_Private::FClassParams ClassParams;")
+    cfg_expr = "nullptr"
+    if cfg:
+        m = IDENT.match(rdata, cfg - base - rd.rva)
+        cfg_expr = f'"{m.group(0)[:-1].decode()}"' if m else "nullptr"
+    defs.append(
+        f"// ClassParams: original RVA 0x{rec:08X}\n"
+        f"const UE4CodeGen_Private::FClassParams {statics}::ClassParams = {{ &{cls}::StaticClass, {deps_expr}, "
+        f"0x{cflags:08X}u, {statics}::FuncInfo, {nfuncs}, {props_expr}, {cfg_expr}, "
+        f"&{statics}::StaticCppClassTypeInfo, {iface_expr} }};")
+    end = rfs[zrva].end
+    symbols[f"?ClassParams@{statics}@@2UFClassParams@UE4CodeGen_Private@@B"] = [f"0x{rec:08X}", "link-array"]
+    return (f"class {cls}\n{{\npublic:\n\tstatic UClass* StaticClass();\n}};\n"
+            f"struct {statics}\n{{\n" + "\n".join(decl) + "\n};\n" + "\n".join(defs) + "\n"
+            f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{zrva:08X} (end 0x{end:08X})\n"
+            f"// Original VA: 0x{base + zrva:016X} | File offset: 0x{img.rva_to_off(zrva):08X}\n"
+            f"// Recovery: confirmed (UHT singleton of {cls}) | Matching: see analysis/functions-uht-classes.json\n"
+            f"UClass* Z_Construct_UClass_{cls}()\n{{\n\tstatic UClass* OuterClass = nullptr;\n\tif (!OuterClass)\n\t{{\n"
+            f"\t\tUE4CodeGen_Private::ConstructUClass(OuterClass, {statics}::ClassParams);\n\t}}\n"
+            f"\treturn OuterClass;\n}}\n")
 
 
 def main() -> int:
@@ -107,7 +165,7 @@ def main() -> int:
     GEN_DIR.mkdir(parents=True, exist_ok=True)
     for old in GEN_DIR.glob("*.gen.cpp"):
         old.unlink()
-    entries, symbols = [], {}
+    entries, class_entries, symbols = [], [], {}
     stats = Counter()
     for cls, arr, fns in classes:
         lines = [
@@ -119,7 +177,7 @@ def main() -> int:
             '#include "FortniteGameCode/UE4CodeGenRecovered.h"',
             "",
         ]
-        externs, bodies = set(), []
+        externs, bodies, emitted_fns = set(), [], set()
         for fname, crva in fns:
             cname = creator_name(cls, fname)
             statics = f"{cname}_Statics"
@@ -182,6 +240,14 @@ def main() -> int:
                 f"0x{rec:08X}", "name" if len(cands) == 1 else "name+outer"]
             entries.append({"start_rva": f"0x{crva:08X}", "end_rva": f"0x{end:08X}",
                             "name": cname, "class": cls})
+            emitted_fns.add(fname)
+        zrva = consensus.get(cls)
+        if zrva is not None and arr["class_params_rva"] and cls not in SHIM_TYPES and is_creator(zrva):
+            bodies.append(class_constructor(cls, arr, fns, zrva, emitted_fns, img, rdata, rd, base, rfs,
+                                            externs, symbols))
+            class_entries.append({"start_rva": f"0x{zrva:08X}", "end_rva": f"0x{rfs[zrva].end:08X}",
+                                  "name": f"Z_Construct_UClass_{cls}", "class": cls})
+            stats["class_constructors"] += 1
         text = "\n".join(lines) + "\n".join(sorted(externs)) + "\n\n" + "\n".join(bodies)
         (GEN_DIR / f"{cls}.gen.cpp").write_text(text, encoding="utf-8", newline="\n")
     stats["classes"] = len(classes)
@@ -201,12 +267,29 @@ def main() -> int:
         },
         "functions": entries,
     })
+    dump_compact(CLASS_MANIFEST, {
+        "schema_version": 1,
+        "generated_by": "tools/codegen/uht_creators.py",
+        "evidence": ("Z_Construct_UClass_<Class>: the consensus OuterFunc of the class's FFunctionParams records, "
+                     "with the 47-byte UHT shape. ClassParams is the FClassParams record referencing the class's "
+                     "FClassFunctionLinkInfo array. See docs/REVERSE_ENGINEERING.md."),
+        "entry_defaults": {
+            "category": "uht-class-constructor",
+            "source": "FortniteGameCode/Source/Generated/UHT/{class}.gen.cpp",
+            "object": "Source/Generated/UHT/{class}.gen.obj",
+            "symbol": "?{name}@@YAPEAVUClass@@XZ",
+            "name_confidence": "confirmed",
+            "compact": True,
+        },
+        "functions": class_entries,
+    })
     SYMBOLS.write_text(json.dumps({
         "schema_version": 2,
         "generated_by": "tools/codegen/uht_creators.py",
         "evidence_codes": {
             "name": "the only FFunctionParams record in .data whose NameUTF8 names this function",
             "name+outer": "the only FFunctionParams record naming this function whose OuterFunc is the class consensus",
+            "link-array": "the only FClassParams record whose FunctionLinkArray points at this class's FClassFunctionLinkInfo table",
         },
         "symbols": symbols,
     }, separators=(",", ":")).replace('],"', '],\n"') + "\n", encoding="utf-8")

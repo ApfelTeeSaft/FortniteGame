@@ -82,3 +82,39 @@ UFunction* Z_Construct_UFunction_ABuildingFlagSpawn_SpawnCarriedObject()
 	}
 	return ReturnFunction;
 }
+
+class ABuildingFlagSpawn
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingFlagSpawn_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingFlagSpawn_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingFlagSpawn_IsSpawnedObjectAwayFromBase, "IsSpawnedObjectAwayFromBase" },
+	{ &Z_Construct_UFunction_ABuildingFlagSpawn_OnCarriedObjectAttachedEvent, "OnCarriedObjectAttachedEvent" },
+	{ &Z_Construct_UFunction_ABuildingFlagSpawn_OnCarriedObjectDetachedEvent, "OnCarriedObjectDetachedEvent" },
+	{ &Z_Construct_UFunction_ABuildingFlagSpawn_SpawnCarriedObject, "SpawnCarriedObject" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingFlagSpawn_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03271220
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingFlagSpawn_Statics::ClassParams = { &ABuildingFlagSpawn::StaticClass, Z_Construct_UClass_ABuildingFlagSpawn_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_ABuildingFlagSpawn_Statics::FuncInfo, 4, Z_Construct_UClass_ABuildingFlagSpawn_Statics::PropPointers, 6, "Game", &Z_Construct_UClass_ABuildingFlagSpawn_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_ABuildingFlagSpawn_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66590 (end 0x00F665BF)
+// Original VA: 0x0000000140F66590 | File offset: 0x00F65B90
+// Recovery: confirmed (UHT singleton of ABuildingFlagSpawn) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingFlagSpawn()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingFlagSpawn_Statics::ClassParams);
+	}
+	return OuterClass;
+}

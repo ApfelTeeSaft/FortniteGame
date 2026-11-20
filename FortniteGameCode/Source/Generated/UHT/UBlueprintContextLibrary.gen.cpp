@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UBlueprintContextLibrary_GetContext()
 	}
 	return ReturnFunction;
 }
+
+class UBlueprintContextLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBlueprintContextLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBlueprintContextLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBlueprintContextLibrary_GetContext, "GetContext" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBlueprintContextLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E67D00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBlueprintContextLibrary_Statics::ClassParams = { &UBlueprintContextLibrary::StaticClass, Z_Construct_UClass_UBlueprintContextLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UBlueprintContextLibrary_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UBlueprintContextLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0027B6A0 (end 0x0027B6CF)
+// Original VA: 0x000000014027B6A0 | File offset: 0x0027ACA0
+// Recovery: confirmed (UHT singleton of UBlueprintContextLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBlueprintContextLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBlueprintContextLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

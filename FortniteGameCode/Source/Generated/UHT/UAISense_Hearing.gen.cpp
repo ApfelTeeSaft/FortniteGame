@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UAISense_Hearing_ReportNoiseEvent()
 	}
 	return ReturnFunction;
 }
+
+class UAISense_Hearing
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAISense_Hearing_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAISense_Hearing_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAISense_Hearing_ReportNoiseEvent, "ReportNoiseEvent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAISense_Hearing_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036F2B00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAISense_Hearing_Statics::ClassParams = { &UAISense_Hearing::StaticClass, Z_Construct_UClass_UAISense_Hearing_Statics::DependentSingletons, 2, 0x00100084u, Z_Construct_UClass_UAISense_Hearing_Statics::FuncInfo, 1, Z_Construct_UClass_UAISense_Hearing_Statics::PropPointers, 3, "Game", &Z_Construct_UClass_UAISense_Hearing_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1BEB0 (end 0x01D1BEDF)
+// Original VA: 0x0000000141D1BEB0 | File offset: 0x01D1B4B0
+// Recovery: confirmed (UHT singleton of UAISense_Hearing) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAISense_Hearing()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAISense_Hearing_Statics::ClassParams);
+	}
+	return OuterClass;
+}

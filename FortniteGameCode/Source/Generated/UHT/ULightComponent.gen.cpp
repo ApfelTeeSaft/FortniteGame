@@ -365,3 +365,52 @@ UFunction* Z_Construct_UFunction_ULightComponent_SetVolumetricScatteringIntensit
 	}
 	return ReturnFunction;
 }
+
+class ULightComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ULightComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ULightComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ULightComponent_SetAffectDynamicIndirectLighting, "SetAffectDynamicIndirectLighting" },
+	{ &Z_Construct_UFunction_ULightComponent_SetAffectTranslucentLighting, "SetAffectTranslucentLighting" },
+	{ &Z_Construct_UFunction_ULightComponent_SetBloomScale, "SetBloomScale" },
+	{ &Z_Construct_UFunction_ULightComponent_SetBloomThreshold, "SetBloomThreshold" },
+	{ &Z_Construct_UFunction_ULightComponent_SetBloomTint, "SetBloomTint" },
+	{ &Z_Construct_UFunction_ULightComponent_SetEnableLightShaftBloom, "SetEnableLightShaftBloom" },
+	{ &Z_Construct_UFunction_ULightComponent_SetForceCachedShadowsForMovablePrimitives, "SetForceCachedShadowsForMovablePrimitives" },
+	{ &Z_Construct_UFunction_ULightComponent_SetIESTexture, "SetIESTexture" },
+	{ &Z_Construct_UFunction_ULightComponent_SetIndirectLightingIntensity, "SetIndirectLightingIntensity" },
+	{ &Z_Construct_UFunction_ULightComponent_SetIntensity, "SetIntensity" },
+	{ &Z_Construct_UFunction_ULightComponent_SetLightColor, "SetLightColor" },
+	{ &Z_Construct_UFunction_ULightComponent_SetLightFunctionDisabledBrightness, "SetLightFunctionDisabledBrightness" },
+	{ &Z_Construct_UFunction_ULightComponent_SetLightFunctionFadeDistance, "SetLightFunctionFadeDistance" },
+	{ &Z_Construct_UFunction_ULightComponent_SetLightFunctionMaterial, "SetLightFunctionMaterial" },
+	{ &Z_Construct_UFunction_ULightComponent_SetLightFunctionScale, "SetLightFunctionScale" },
+	{ &Z_Construct_UFunction_ULightComponent_SetShadowBias, "SetShadowBias" },
+	{ &Z_Construct_UFunction_ULightComponent_SetTemperature, "SetTemperature" },
+	{ &Z_Construct_UFunction_ULightComponent_SetVolumetricScatteringIntensity, "SetVolumetricScatteringIntensity" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ULightComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039311F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ULightComponent_Statics::ClassParams = { &ULightComponent::StaticClass, Z_Construct_UClass_ULightComponent_Statics::DependentSingletons, 2, 0x00B00081u, Z_Construct_UClass_ULightComponent_Statics::FuncInfo, 18, Z_Construct_UClass_ULightComponent_Statics::PropPointers, 29, nullptr, &Z_Construct_UClass_ULightComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024704F0 (end 0x0247051F)
+// Original VA: 0x00000001424704F0 | File offset: 0x0246FAF0
+// Recovery: confirmed (UHT singleton of ULightComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ULightComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ULightComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

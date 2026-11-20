@@ -143,3 +143,41 @@ UFunction* Z_Construct_UFunction_UFortItemInspectCycleWidget_SetItemToRepresent(
 	}
 	return ReturnFunction;
 }
+
+class UFortItemInspectCycleWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemInspectCycleWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemInspectCycleWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemInspectCycleWidget_GetItemWithOffset_BP, "GetItemWithOffset_BP" },
+	{ &Z_Construct_UFunction_UFortItemInspectCycleWidget_OnItemCycled, "OnItemCycled" },
+	{ &Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectItemWithOffset, "SelectItemWithOffset" },
+	{ &Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectNextItem, "SelectNextItem" },
+	{ &Z_Construct_UFunction_UFortItemInspectCycleWidget_SelectPreviousItem, "SelectPreviousItem" },
+	{ &Z_Construct_UFunction_UFortItemInspectCycleWidget_SetInputEnabled, "SetInputEnabled" },
+	{ &Z_Construct_UFunction_UFortItemInspectCycleWidget_SetItemToRepresent, "SetItemToRepresent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemInspectCycleWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CCDA10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemInspectCycleWidget_Statics::ClassParams = { &UFortItemInspectCycleWidget::StaticClass, Z_Construct_UClass_UFortItemInspectCycleWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortItemInspectCycleWidget_Statics::FuncInfo, 7, Z_Construct_UClass_UFortItemInspectCycleWidget_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortItemInspectCycleWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9EE0 (end 0x028C9F0F)
+// Original VA: 0x00000001428C9EE0 | File offset: 0x028C94E0
+// Recovery: confirmed (UHT singleton of UFortItemInspectCycleWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemInspectCycleWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemInspectCycleWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

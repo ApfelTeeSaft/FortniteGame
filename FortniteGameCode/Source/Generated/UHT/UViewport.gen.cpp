@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UViewport_Spawn()
 	}
 	return ReturnFunction;
 }
+
+class UViewport
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UViewport_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UViewport_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UViewport_GetViewLocation, "GetViewLocation" },
+	{ &Z_Construct_UFunction_UViewport_GetViewRotation, "GetViewRotation" },
+	{ &Z_Construct_UFunction_UViewport_GetViewportWorld, "GetViewportWorld" },
+	{ &Z_Construct_UFunction_UViewport_SetViewLocation, "SetViewLocation" },
+	{ &Z_Construct_UFunction_UViewport_SetViewRotation, "SetViewRotation" },
+	{ &Z_Construct_UFunction_UViewport_Spawn, "Spawn" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UViewport_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036A44C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UViewport_Statics::ClassParams = { &UViewport::StaticClass, Z_Construct_UClass_UViewport_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UViewport_Statics::FuncInfo, 6, Z_Construct_UClass_UViewport_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UViewport_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB280 (end 0x01BFB2AF)
+// Original VA: 0x0000000141BFB280 | File offset: 0x01BFA880
+// Recovery: confirmed (UHT singleton of UViewport) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UViewport()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UViewport_Statics::ClassParams);
+	}
+	return OuterClass;
+}

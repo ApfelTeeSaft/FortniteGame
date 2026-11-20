@@ -245,3 +245,45 @@ UFunction* Z_Construct_UFunction_UBlueprintSetLibrary_SetSetPropertyByName()
 	}
 	return ReturnFunction;
 }
+
+class UBlueprintSetLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBlueprintSetLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBlueprintSetLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBlueprintSetLibrary_SetSetPropertyByName, "SetSetPropertyByName" },
+	{ &Z_Construct_UFunction_UBlueprintSetLibrary_Set_Add, "Set_Add" },
+	{ &Z_Construct_UFunction_UBlueprintSetLibrary_Set_AddItems, "Set_AddItems" },
+	{ &Z_Construct_UFunction_UBlueprintSetLibrary_Set_Clear, "Set_Clear" },
+	{ &Z_Construct_UFunction_UBlueprintSetLibrary_Set_Contains, "Set_Contains" },
+	{ &Z_Construct_UFunction_UBlueprintSetLibrary_Set_Difference, "Set_Difference" },
+	{ &Z_Construct_UFunction_UBlueprintSetLibrary_Set_Intersection, "Set_Intersection" },
+	{ &Z_Construct_UFunction_UBlueprintSetLibrary_Set_Length, "Set_Length" },
+	{ &Z_Construct_UFunction_UBlueprintSetLibrary_Set_Remove, "Set_Remove" },
+	{ &Z_Construct_UFunction_UBlueprintSetLibrary_Set_RemoveItems, "Set_RemoveItems" },
+	{ &Z_Construct_UFunction_UBlueprintSetLibrary_Set_ToArray, "Set_ToArray" },
+	{ &Z_Construct_UFunction_UBlueprintSetLibrary_Set_Union, "Set_Union" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBlueprintSetLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038B4210
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBlueprintSetLibrary_Statics::ClassParams = { &UBlueprintSetLibrary::StaticClass, Z_Construct_UClass_UBlueprintSetLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UBlueprintSetLibrary_Statics::FuncInfo, 12, nullptr, 0, nullptr, &Z_Construct_UClass_UBlueprintSetLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E3830 (end 0x023E385F)
+// Original VA: 0x00000001423E3830 | File offset: 0x023E2E30
+// Recovery: confirmed (UHT singleton of UBlueprintSetLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBlueprintSetLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBlueprintSetLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

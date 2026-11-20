@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortCapturePointWidget_OnCapturePointDataChang
 	}
 	return ReturnFunction;
 }
+
+class UFortCapturePointWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCapturePointWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCapturePointWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCapturePointWidget_OnCapturePointDataChanged, "OnCapturePointDataChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCapturePointWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C75C80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCapturePointWidget_Statics::ClassParams = { &UFortCapturePointWidget::StaticClass, Z_Construct_UClass_UFortCapturePointWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortCapturePointWidget_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortCapturePointWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894550 (end 0x0289457F)
+// Original VA: 0x0000000142894550 | File offset: 0x02893B50
+// Recovery: confirmed (UHT singleton of UFortCapturePointWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCapturePointWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCapturePointWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -341,3 +341,51 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeViewer_TryGetSkillTreePageStaticD
 	}
 	return ReturnFunction;
 }
+
+class UFortSkillTreeViewer
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSkillTreeViewer_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSkillTreeViewer_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_BackOutOfSubPage, "BackOutOfSubPage" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_CanBackOutOfSubPage, "CanBackOutOfSubPage" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_DrillDownToSubPage, "DrillDownToSubPage" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_GetCurrenciesNeededForPage, "GetCurrenciesNeededForPage" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_GetPageAquiredNodes, "GetPageAquiredNodes" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_GetPageLocked, "GetPageLocked" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_GetPageTotalNodes, "GetPageTotalNodes" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_GetSelectedNodeId, "GetSelectedNodeId" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_GetViewParameters, "GetViewParameters" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_HandleBackOutAction, "HandleBackOutAction" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_HandleDifferentPageShown, "HandleDifferentPageShown" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_HandleNodeSelectionChangedBP, "HandleNodeSelectionChangedBP" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_HandleViewParametersChangedBP, "HandleViewParametersChangedBP" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_NavigateTo, "NavigateTo" },
+	{ &Z_Construct_UDelegateFunction_UFortSkillTreeViewer_OnNodeSelectionChanged__DelegateSignature, "OnNodeSelectionChanged__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_ShowPage, "ShowPage" },
+	{ &Z_Construct_UFunction_UFortSkillTreeViewer_TryGetSkillTreePageStaticData, "TryGetSkillTreePageStaticData" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSkillTreeViewer_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D142C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSkillTreeViewer_Statics::ClassParams = { &UFortSkillTreeViewer::StaticClass, Z_Construct_UClass_UFortSkillTreeViewer_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortSkillTreeViewer_Statics::FuncInfo, 17, Z_Construct_UClass_UFortSkillTreeViewer_Statics::PropPointers, 9, nullptr, &Z_Construct_UClass_UFortSkillTreeViewer_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F56C0 (end 0x028F56EF)
+// Original VA: 0x00000001428F56C0 | File offset: 0x028F4CC0
+// Recovery: confirmed (UHT singleton of UFortSkillTreeViewer) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSkillTreeViewer()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSkillTreeViewer_Statics::ClassParams);
+	}
+	return OuterClass;
+}

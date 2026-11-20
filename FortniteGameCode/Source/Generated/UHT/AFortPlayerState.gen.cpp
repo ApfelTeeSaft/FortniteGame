@@ -490,3 +490,60 @@ UFunction* Z_Construct_UFunction_AFortPlayerState_UpdateScoreStatChanged()
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerState
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerState_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerState_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerState_AreUniqueIDsIdentical, "AreUniqueIDsIdentical" },
+	{ &Z_Construct_UFunction_AFortPlayerState_ClientNotifyAwardGranted, "ClientNotifyAwardGranted" },
+	{ &Z_Construct_UFunction_AFortPlayerState_GetCurrentPawn, "GetCurrentPawn" },
+	{ &Z_Construct_UFunction_AFortPlayerState_GetPlatformUniqueNetId, "GetPlatformUniqueNetId" },
+	{ &Z_Construct_UFunction_AFortPlayerState_GetPlayerOSSName, "GetPlayerOSSName" },
+	{ &Z_Construct_UFunction_AFortPlayerState_GetUniqueID, "GetUniqueID" },
+	{ &Z_Construct_UFunction_AFortPlayerState_IsConsolePlayer, "IsConsolePlayer" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_AccessoryColorSwatches, "OnRep_AccessoryColorSwatches" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_CharacterColorSwatches, "OnRep_CharacterColorSwatches" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_CharacterParts, "OnRep_CharacterParts" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_CurrentCharXP, "OnRep_CurrentCharXP" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_HeroID, "OnRep_HeroID" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_HeroType, "OnRep_HeroType" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_HomeActor, "OnRep_HomeActor" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_PartyOwner, "OnRep_PartyOwner" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_PlatformUniqueNetIdString, "OnRep_PlatformUniqueNetIdString" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_PlayerTeam, "OnRep_PlayerTeam" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_ScoreStatChanged, "OnRep_ScoreStatChanged" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_SessionOwner, "OnRep_SessionOwner" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_ShowHeroBackpack, "OnRep_ShowHeroBackpack" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_ShowHeroHeadAccessories, "OnRep_ShowHeroHeadAccessories" },
+	{ &Z_Construct_UFunction_AFortPlayerState_OnRep_bHasStartedPlaying, "OnRep_bHasStartedPlaying" },
+	{ &Z_Construct_UFunction_AFortPlayerState_ServerSetShowHeroBackpack, "ServerSetShowHeroBackpack" },
+	{ &Z_Construct_UFunction_AFortPlayerState_ServerSetShowHeroHeadAccessories, "ServerSetShowHeroHeadAccessories" },
+	{ &Z_Construct_UFunction_AFortPlayerState_UpdateScoreStatChanged, "UpdateScoreStatChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerState_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033D4350
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerState_Statics::ClassParams = { &AFortPlayerState::StaticClass, Z_Construct_UClass_AFortPlayerState_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_AFortPlayerState_Statics::FuncInfo, 25, Z_Construct_UClass_AFortPlayerState_Statics::PropPointers, 48, nullptr, &Z_Construct_UClass_AFortPlayerState_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortPlayerState_Statics::InterfaceParams, 3 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B350 (end 0x0108B37F)
+// Original VA: 0x000000014108B350 | File offset: 0x0108A950
+// Recovery: confirmed (UHT singleton of AFortPlayerState) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerState()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerState_Statics::ClassParams);
+	}
+	return OuterClass;
+}

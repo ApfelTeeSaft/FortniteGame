@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_HomebaseContextPurchaseNode_Pu
 	}
 	return ReturnFunction;
 }
+
+class UFortAsyncAction_HomebaseContextPurchaseNode
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode_Statics::FuncInfo[] = {
+	{ &Z_Construct_UDelegateFunction_UFortAsyncAction_HomebaseContextPurchaseNode_OnMCPRequestComplete__DelegateSignature, "OnMCPRequestComplete__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortAsyncAction_HomebaseContextPurchaseNode_PurchaseNode, "PurchaseNode" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0333EA90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode_Statics::ClassParams = { &UFortAsyncAction_HomebaseContextPurchaseNode::StaticClass, Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode_Statics::FuncInfo, 2, Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFAE60 (end 0x00FFAE8F)
+// Original VA: 0x0000000140FFAE60 | File offset: 0x00FFA460
+// Recovery: confirmed (UHT singleton of UFortAsyncAction_HomebaseContextPurchaseNode) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode_Statics::ClassParams);
+	}
+	return OuterClass;
+}

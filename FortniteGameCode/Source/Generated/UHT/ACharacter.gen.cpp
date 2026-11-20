@@ -876,3 +876,78 @@ UFunction* Z_Construct_UFunction_ACharacter_UnCrouch()
 	}
 	return ReturnFunction;
 }
+
+class ACharacter
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ACharacter_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ACharacter_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ACharacter_CacheInitialMeshOffset, "CacheInitialMeshOffset" },
+	{ &Z_Construct_UFunction_ACharacter_CanJump, "CanJump" },
+	{ &Z_Construct_UFunction_ACharacter_CanJumpInternal, "CanJumpInternal" },
+	{ &Z_Construct_UFunction_ACharacter_ClientAckGoodMove, "ClientAckGoodMove" },
+	{ &Z_Construct_UFunction_ACharacter_ClientAdjustPosition, "ClientAdjustPosition" },
+	{ &Z_Construct_UFunction_ACharacter_ClientAdjustRootMotionPosition, "ClientAdjustRootMotionPosition" },
+	{ &Z_Construct_UFunction_ACharacter_ClientAdjustRootMotionSourcePosition, "ClientAdjustRootMotionSourcePosition" },
+	{ &Z_Construct_UFunction_ACharacter_ClientCheatFly, "ClientCheatFly" },
+	{ &Z_Construct_UFunction_ACharacter_ClientCheatGhost, "ClientCheatGhost" },
+	{ &Z_Construct_UFunction_ACharacter_ClientCheatWalk, "ClientCheatWalk" },
+	{ &Z_Construct_UFunction_ACharacter_ClientVeryShortAdjustPosition, "ClientVeryShortAdjustPosition" },
+	{ &Z_Construct_UFunction_ACharacter_Crouch, "Crouch" },
+	{ &Z_Construct_UFunction_ACharacter_GetAnimRootMotionTranslationScale, "GetAnimRootMotionTranslationScale" },
+	{ &Z_Construct_UFunction_ACharacter_GetBaseRotationOffsetRotator, "GetBaseRotationOffsetRotator" },
+	{ &Z_Construct_UFunction_ACharacter_GetBaseTranslationOffset, "GetBaseTranslationOffset" },
+	{ &Z_Construct_UFunction_ACharacter_GetCurrentMontage, "GetCurrentMontage" },
+	{ &Z_Construct_UFunction_ACharacter_IsJumpProvidingForce, "IsJumpProvidingForce" },
+	{ &Z_Construct_UFunction_ACharacter_IsPlayingNetworkedRootMotionMontage, "IsPlayingNetworkedRootMotionMontage" },
+	{ &Z_Construct_UFunction_ACharacter_IsPlayingRootMotion, "IsPlayingRootMotion" },
+	{ &Z_Construct_UFunction_ACharacter_Jump, "Jump" },
+	{ &Z_Construct_UFunction_ACharacter_K2_OnEndCrouch, "K2_OnEndCrouch" },
+	{ &Z_Construct_UFunction_ACharacter_K2_OnMovementModeChanged, "K2_OnMovementModeChanged" },
+	{ &Z_Construct_UFunction_ACharacter_K2_OnStartCrouch, "K2_OnStartCrouch" },
+	{ &Z_Construct_UFunction_ACharacter_K2_UpdateCustomMovement, "K2_UpdateCustomMovement" },
+	{ &Z_Construct_UFunction_ACharacter_LaunchCharacter, "LaunchCharacter" },
+	{ &Z_Construct_UFunction_ACharacter_OnJumped, "OnJumped" },
+	{ &Z_Construct_UFunction_ACharacter_OnLanded, "OnLanded" },
+	{ &Z_Construct_UFunction_ACharacter_OnLaunched, "OnLaunched" },
+	{ &Z_Construct_UFunction_ACharacter_OnRep_IsCrouched, "OnRep_IsCrouched" },
+	{ &Z_Construct_UFunction_ACharacter_OnRep_ReplicatedBasedMovement, "OnRep_ReplicatedBasedMovement" },
+	{ &Z_Construct_UFunction_ACharacter_OnRep_RootMotion, "OnRep_RootMotion" },
+	{ &Z_Construct_UFunction_ACharacter_OnWalkingOffLedge, "OnWalkingOffLedge" },
+	{ &Z_Construct_UFunction_ACharacter_PlayAnimMontage, "PlayAnimMontage" },
+	{ &Z_Construct_UFunction_ACharacter_RootMotionDebugClientPrintOnScreen, "RootMotionDebugClientPrintOnScreen" },
+	{ &Z_Construct_UFunction_ACharacter_ServerMove, "ServerMove" },
+	{ &Z_Construct_UFunction_ACharacter_ServerMoveDual, "ServerMoveDual" },
+	{ &Z_Construct_UFunction_ACharacter_ServerMoveDualHybridRootMotion, "ServerMoveDualHybridRootMotion" },
+	{ &Z_Construct_UFunction_ACharacter_ServerMoveDualNoBase, "ServerMoveDualNoBase" },
+	{ &Z_Construct_UFunction_ACharacter_ServerMoveNoBase, "ServerMoveNoBase" },
+	{ &Z_Construct_UFunction_ACharacter_ServerMoveOld, "ServerMoveOld" },
+	{ &Z_Construct_UFunction_ACharacter_SetReplicateMovement, "SetReplicateMovement" },
+	{ &Z_Construct_UFunction_ACharacter_StopAnimMontage, "StopAnimMontage" },
+	{ &Z_Construct_UFunction_ACharacter_StopJumping, "StopJumping" },
+	{ &Z_Construct_UFunction_ACharacter_UnCrouch, "UnCrouch" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ACharacter_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038C1800
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ACharacter_Statics::ClassParams = { &ACharacter::StaticClass, Z_Construct_UClass_ACharacter_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ACharacter_Statics::FuncInfo, 44, Z_Construct_UClass_ACharacter_Statics::PropPointers, 34, "Game", &Z_Construct_UClass_ACharacter_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EE030 (end 0x023EE05F)
+// Original VA: 0x00000001423EE030 | File offset: 0x023ED630
+// Recovery: confirmed (UHT singleton of ACharacter) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ACharacter()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ACharacter_Statics::ClassParams);
+	}
+	return OuterClass;
+}

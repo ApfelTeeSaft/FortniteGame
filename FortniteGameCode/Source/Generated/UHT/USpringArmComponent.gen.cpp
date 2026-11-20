@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_USpringArmComponent_IsCollisionFixApplied()
 	}
 	return ReturnFunction;
 }
+
+class USpringArmComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_USpringArmComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USpringArmComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USpringArmComponent_GetTargetRotation, "GetTargetRotation" },
+	{ &Z_Construct_UFunction_USpringArmComponent_GetUnfixedCameraPosition, "GetUnfixedCameraPosition" },
+	{ &Z_Construct_UFunction_USpringArmComponent_IsCollisionFixApplied, "IsCollisionFixApplied" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USpringArmComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039BE490
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USpringArmComponent_Statics::ClassParams = { &USpringArmComponent::StaticClass, Z_Construct_UClass_USpringArmComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_USpringArmComponent_Statics::FuncInfo, 3, Z_Construct_UClass_USpringArmComponent_Statics::PropPointers, 18, nullptr, &Z_Construct_UClass_USpringArmComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD7F0 (end 0x024DD81F)
+// Original VA: 0x00000001424DD7F0 | File offset: 0x024DCDF0
+// Recovery: confirmed (UHT singleton of USpringArmComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USpringArmComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USpringArmComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

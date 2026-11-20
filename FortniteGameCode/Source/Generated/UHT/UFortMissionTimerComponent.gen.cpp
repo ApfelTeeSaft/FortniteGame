@@ -358,3 +358,52 @@ UFunction* Z_Construct_UFunction_UFortMissionTimerComponent_UnpauseMissionTimer(
 	}
 	return ReturnFunction;
 }
+
+class UFortMissionTimerComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMissionTimerComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMissionTimerComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_ClearMissionTimer, "ClearMissionTimer" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_DummyTimer, "DummyTimer" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_GetCorrectTimeDisplayData, "GetCorrectTimeDisplayData" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_GetMissionTimerTimeRemaining, "GetMissionTimerTimeRemaining" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_GetNormalizedTime, "GetNormalizedTime" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_GetTimeText, "GetTimeText" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerPaused, "IsMissionTimerPaused" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_IsMissionTimerSet, "IsMissionTimerSet" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_IsTimerVisible, "IsTimerVisible" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_OnRep_TimerData, "OnRep_TimerData" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_OnRep_TimerVisibilityOverride, "OnRep_TimerVisibilityOverride" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_PauseMissionTimer, "PauseMissionTimer" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_ResetMissionTimer, "ResetMissionTimer" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_SetMissionTimer, "SetMissionTimer" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerDisplayFormat, "SetTimerDisplayFormat" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerLabelText, "SetTimerLabelText" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_SetTimerVisibilityOverrideSetting, "SetTimerVisibilityOverrideSetting" },
+	{ &Z_Construct_UFunction_UFortMissionTimerComponent_UnpauseMissionTimer, "UnpauseMissionTimer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMissionTimerComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0338A140
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMissionTimerComponent_Statics::ClassParams = { &UFortMissionTimerComponent::StaticClass, Z_Construct_UClass_UFortMissionTimerComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UFortMissionTimerComponent_Statics::FuncInfo, 18, Z_Construct_UClass_UFortMissionTimerComponent_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UFortMissionTimerComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A9D0 (end 0x0104A9FF)
+// Original VA: 0x000000014104A9D0 | File offset: 0x01049FD0
+// Recovery: confirmed (UHT singleton of UFortMissionTimerComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMissionTimerComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMissionTimerComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

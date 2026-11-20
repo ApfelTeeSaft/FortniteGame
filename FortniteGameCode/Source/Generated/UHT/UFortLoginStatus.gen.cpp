@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortLoginStatus_UpdateLoginStatusText()
 	}
 	return ReturnFunction;
 }
+
+class UFortLoginStatus
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortLoginStatus_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortLoginStatus_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortLoginStatus_SetTitleText, "SetTitleText" },
+	{ &Z_Construct_UFunction_UFortLoginStatus_UpdateLoginStatusText, "UpdateLoginStatusText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortLoginStatus_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE53C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortLoginStatus_Statics::ClassParams = { &UFortLoginStatus::StaticClass, Z_Construct_UClass_UFortLoginStatus_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortLoginStatus_Statics::FuncInfo, 2, Z_Construct_UClass_UFortLoginStatus_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortLoginStatus_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D73B0 (end 0x028D73DF)
+// Original VA: 0x00000001428D73B0 | File offset: 0x028D69B0
+// Recovery: confirmed (UHT singleton of UFortLoginStatus) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortLoginStatus()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortLoginStatus_Statics::ClassParams);
+	}
+	return OuterClass;
+}

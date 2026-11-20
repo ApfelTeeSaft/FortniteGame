@@ -83,3 +83,37 @@ UFunction* Z_Construct_UFunction_UStereoLayerFunctionLibrary_ShowSplashScreen()
 	}
 	return ReturnFunction;
 }
+
+class UStereoLayerFunctionLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UStereoLayerFunctionLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UStereoLayerFunctionLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UStereoLayerFunctionLibrary_EnableAutoLoadingSplashScreen, "EnableAutoLoadingSplashScreen" },
+	{ &Z_Construct_UFunction_UStereoLayerFunctionLibrary_HideSplashScreen, "HideSplashScreen" },
+	{ &Z_Construct_UFunction_UStereoLayerFunctionLibrary_SetSplashScreen, "SetSplashScreen" },
+	{ &Z_Construct_UFunction_UStereoLayerFunctionLibrary_ShowSplashScreen, "ShowSplashScreen" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UStereoLayerFunctionLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039C41A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UStereoLayerFunctionLibrary_Statics::ClassParams = { &UStereoLayerFunctionLibrary::StaticClass, Z_Construct_UClass_UStereoLayerFunctionLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UStereoLayerFunctionLibrary_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_UStereoLayerFunctionLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7A00 (end 0x024E7A2F)
+// Original VA: 0x00000001424E7A00 | File offset: 0x024E7000
+// Recovery: confirmed (UHT singleton of UStereoLayerFunctionLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UStereoLayerFunctionLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UStereoLayerFunctionLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

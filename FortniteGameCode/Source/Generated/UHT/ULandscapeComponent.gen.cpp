@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_ULandscapeComponent_GetMaterialInstanceDynamic(
 	}
 	return ReturnFunction;
 }
+
+class ULandscapeComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ULandscapeComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ULandscapeComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ULandscapeComponent_GetMaterialInstanceDynamic, "GetMaterialInstanceDynamic" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ULandscapeComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03628580
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ULandscapeComponent_Statics::ClassParams = { &ULandscapeComponent::StaticClass, Z_Construct_UClass_ULandscapeComponent_Statics::DependentSingletons, 2, 0x00A80080u, Z_Construct_UClass_ULandscapeComponent_Statics::FuncInfo, 1, Z_Construct_UClass_ULandscapeComponent_Statics::PropPointers, 38, nullptr, &Z_Construct_UClass_ULandscapeComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A75B80 (end 0x01A75BAF)
+// Original VA: 0x0000000141A75B80 | File offset: 0x01A75180
+// Recovery: confirmed (UHT singleton of ULandscapeComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ULandscapeComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ULandscapeComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

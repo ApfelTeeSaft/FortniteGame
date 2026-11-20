@@ -142,3 +142,41 @@ UFunction* Z_Construct_UFunction_AKeepItemContainer_RestoreLoot()
 	}
 	return ReturnFunction;
 }
+
+class AKeepItemContainer
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AKeepItemContainer_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AKeepItemContainer_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AKeepItemContainer_GetContainerNameAndLevelKey, "GetContainerNameAndLevelKey" },
+	{ &Z_Construct_UFunction_AKeepItemContainer_GetLootTierOverride, "GetLootTierOverride" },
+	{ &Z_Construct_UFunction_AKeepItemContainer_InitializeContainer, "InitializeContainer" },
+	{ &Z_Construct_UFunction_AKeepItemContainer_OnRep_HostUpgradeLevel, "OnRep_HostUpgradeLevel" },
+	{ &Z_Construct_UFunction_AKeepItemContainer_OnRep_SearchedBy, "OnRep_SearchedBy" },
+	{ &Z_Construct_UFunction_AKeepItemContainer_ResetContainer, "ResetContainer" },
+	{ &Z_Construct_UFunction_AKeepItemContainer_RestoreLoot, "RestoreLoot" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AKeepItemContainer_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03446A50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AKeepItemContainer_Statics::ClassParams = { &AKeepItemContainer::StaticClass, Z_Construct_UClass_AKeepItemContainer_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AKeepItemContainer_Statics::FuncInfo, 7, Z_Construct_UClass_AKeepItemContainer_Statics::PropPointers, 16, "Game", &Z_Construct_UClass_AKeepItemContainer_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9C80 (end 0x010E9CAF)
+// Original VA: 0x00000001410E9C80 | File offset: 0x010E9280
+// Recovery: confirmed (UHT singleton of AKeepItemContainer) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AKeepItemContainer()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AKeepItemContainer_Statics::ClassParams);
+	}
+	return OuterClass;
+}

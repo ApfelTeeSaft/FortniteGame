@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UBuildingStructuralSupportSystem_K2_GetLogicalB
 	}
 	return ReturnFunction;
 }
+
+class UBuildingStructuralSupportSystem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBuildingStructuralSupportSystem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBuildingStructuralSupportSystem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBuildingStructuralSupportSystem_GetLogicalBuildingGroundSupportedActors, "GetLogicalBuildingGroundSupportedActors" },
+	{ &Z_Construct_UFunction_UBuildingStructuralSupportSystem_IsBuildingActorStructurallySupported, "IsBuildingActorStructurallySupported" },
+	{ &Z_Construct_UFunction_UBuildingStructuralSupportSystem_K2_GetLogicalBuildingActors, "K2_GetLogicalBuildingActors" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBuildingStructuralSupportSystem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0327FD70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBuildingStructuralSupportSystem_Statics::ClassParams = { &UBuildingStructuralSupportSystem::StaticClass, Z_Construct_UClass_UBuildingStructuralSupportSystem_Statics::DependentSingletons, 2, 0x00080080u, Z_Construct_UClass_UBuildingStructuralSupportSystem_Statics::FuncInfo, 3, Z_Construct_UClass_UBuildingStructuralSupportSystem_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UBuildingStructuralSupportSystem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71F50 (end 0x00F71F7F)
+// Original VA: 0x0000000140F71F50 | File offset: 0x00F71550
+// Recovery: confirmed (UHT singleton of UBuildingStructuralSupportSystem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBuildingStructuralSupportSystem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBuildingStructuralSupportSystem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

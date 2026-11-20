@@ -703,3 +703,70 @@ UFunction* Z_Construct_UFunction_UCharacterMovementComponent_SetWalkableFloorZ()
 	}
 	return ReturnFunction;
 }
+
+class UCharacterMovementComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCharacterMovementComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCharacterMovementComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_AddForce, "AddForce" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_AddImpulse, "AddImpulse" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_CalcVelocity, "CalcVelocity" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_CapsuleTouched, "CapsuleTouched" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_ClearAccumulatedForces, "ClearAccumulatedForces" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_DisableMovement, "DisableMovement" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_GetAnalogInputModifier, "GetAnalogInputModifier" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_GetCharacterOwner, "GetCharacterOwner" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_GetCurrentAcceleration, "GetCurrentAcceleration" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_GetImpartedMovementBaseVelocity, "GetImpartedMovementBaseVelocity" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_GetMaxAcceleration, "GetMaxAcceleration" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_GetMaxBrakingDeceleration, "GetMaxBrakingDeceleration" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_GetMaxJumpHeight, "GetMaxJumpHeight" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_GetMaxJumpHeightWithJumpTime, "GetMaxJumpHeightWithJumpTime" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_GetMinAnalogSpeed, "GetMinAnalogSpeed" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_GetMovementBase, "GetMovementBase" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_GetPerchRadiusThreshold, "GetPerchRadiusThreshold" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_GetValidPerchRadius, "GetValidPerchRadius" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_IsWalkable, "IsWalkable" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_IsWalking, "IsWalking" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_K2_ComputeFloorDist, "K2_ComputeFloorDist" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_K2_FindFloor, "K2_FindFloor" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_K2_GetModifiedMaxAcceleration, "K2_GetModifiedMaxAcceleration" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_K2_GetWalkableFloorAngle, "K2_GetWalkableFloorAngle" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_K2_GetWalkableFloorZ, "K2_GetWalkableFloorZ" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_SetAvoidanceEnabled, "SetAvoidanceEnabled" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_SetAvoidanceGroup, "SetAvoidanceGroup" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_SetAvoidanceGroupMask, "SetAvoidanceGroupMask" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_SetGroupsToAvoid, "SetGroupsToAvoid" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_SetGroupsToAvoidMask, "SetGroupsToAvoidMask" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_SetGroupsToIgnore, "SetGroupsToIgnore" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_SetGroupsToIgnoreMask, "SetGroupsToIgnoreMask" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_SetMovementMode, "SetMovementMode" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_SetWalkableFloorAngle, "SetWalkableFloorAngle" },
+	{ &Z_Construct_UFunction_UCharacterMovementComponent_SetWalkableFloorZ, "SetWalkableFloorZ" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCharacterMovementComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038C2590
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCharacterMovementComponent_Statics::ClassParams = { &UCharacterMovementComponent::StaticClass, Z_Construct_UClass_UCharacterMovementComponent_Statics::DependentSingletons, 2, 0x00B00084u, Z_Construct_UClass_UCharacterMovementComponent_Statics::FuncInfo, 35, Z_Construct_UClass_UCharacterMovementComponent_Statics::PropPointers, 150, "Engine", &Z_Construct_UClass_UCharacterMovementComponent_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UCharacterMovementComponent_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EE150 (end 0x023EE17F)
+// Original VA: 0x00000001423EE150 | File offset: 0x023ED750
+// Recovery: confirmed (UHT singleton of UCharacterMovementComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCharacterMovementComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCharacterMovementComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

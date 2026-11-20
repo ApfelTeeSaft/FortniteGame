@@ -64,3 +64,38 @@ UFunction* Z_Construct_UFunction_UFortAIGoalProvider_UpdateGoals()
 	}
 	return ReturnFunction;
 }
+
+class UFortAIGoalProvider
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAIGoalProvider_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAIGoalProvider_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAIGoalProvider_GetEncounterInfo, "GetEncounterInfo" },
+	{ &Z_Construct_UFunction_UFortAIGoalProvider_InitializeGoalProvider, "InitializeGoalProvider" },
+	{ &Z_Construct_UFunction_UFortAIGoalProvider_UpdateGoals, "UpdateGoals" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAIGoalProvider_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032AD4B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAIGoalProvider_Statics::ClassParams = { &UFortAIGoalProvider::StaticClass, Z_Construct_UClass_UFortAIGoalProvider_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortAIGoalProvider_Statics::FuncInfo, 3, Z_Construct_UClass_UFortAIGoalProvider_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortAIGoalProvider_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortAIGoalProvider_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91460 (end 0x00F9148F)
+// Original VA: 0x0000000140F91460 | File offset: 0x00F90A60
+// Recovery: confirmed (UHT singleton of UFortAIGoalProvider) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAIGoalProvider()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAIGoalProvider_Statics::ClassParams);
+	}
+	return OuterClass;
+}

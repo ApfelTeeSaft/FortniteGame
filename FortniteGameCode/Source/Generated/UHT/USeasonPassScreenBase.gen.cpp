@@ -281,3 +281,48 @@ UFunction* Z_Construct_UFunction_USeasonPassScreenBase_UpdateStoreHasStarsNotifi
 	}
 	return ReturnFunction;
 }
+
+class USeasonPassScreenBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_USeasonPassScreenBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USeasonPassScreenBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_GenerateLevelWidgets, "GenerateLevelWidgets" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_GetAllLevelInfos, "GetAllLevelInfos" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_GetLevelInfo, "GetLevelInfo" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_GetSeasonEndDate, "GetSeasonEndDate" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_GetSeasonPassLevel, "GetSeasonPassLevel" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_GetSeasonPassLevelMax, "GetSeasonPassLevelMax" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_NavigateToLevel, "NavigateToLevel" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_OnLevelsGenerated, "OnLevelsGenerated" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_OnNavigateToLevel, "OnNavigateToLevel" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_OnSeasonPassChanged, "OnSeasonPassChanged" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_OwnsSeasonPass, "OwnsSeasonPass" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_ScrollNegative, "ScrollNegative" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_ScrollPositive, "ScrollPositive" },
+	{ &Z_Construct_UFunction_USeasonPassScreenBase_UpdateStoreHasStarsNotification, "UpdateStoreHasStarsNotification" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USeasonPassScreenBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D56FA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USeasonPassScreenBase_Statics::ClassParams = { &USeasonPassScreenBase::StaticClass, Z_Construct_UClass_USeasonPassScreenBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_USeasonPassScreenBase_Statics::FuncInfo, 14, Z_Construct_UClass_USeasonPassScreenBase_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_USeasonPassScreenBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918D10 (end 0x02918D3F)
+// Original VA: 0x0000000142918D10 | File offset: 0x02918310
+// Recovery: confirmed (UHT singleton of USeasonPassScreenBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USeasonPassScreenBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USeasonPassScreenBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -495,3 +495,60 @@ UFunction* Z_Construct_UFunction_UCommonActivatablePanel_SetInputActionHandlerWi
 	}
 	return ReturnFunction;
 }
+
+class UCommonActivatablePanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonActivatablePanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonActivatablePanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_AddInputActionHandler, "AddInputActionHandler" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_AddInputActionHandlerWithProgress, "AddInputActionHandlerWithProgress" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_AddInputActionNoHandler, "AddInputActionNoHandler" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_BeginIntro, "BeginIntro" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_BeginOutro, "BeginOutro" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_EndIntro, "EndIntro" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_EndOutro, "EndOutro" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_GetInputActions, "GetInputActions" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_HasInputActionHandler, "HasInputActionHandler" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_IsActivated, "IsActivated" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_IsIntroed, "IsIntroed" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_OnActivated, "OnActivated" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_OnBeginIntro, "OnBeginIntro" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_OnBeginOutro, "OnBeginOutro" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_OnDeactivated, "OnDeactivated" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_OnInputModeChanged, "OnInputModeChanged" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_PopPanel, "PopPanel" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_RemoveAllInputActionHandlers, "RemoveAllInputActionHandlers" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_RemoveInputActionHandler, "RemoveInputActionHandler" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_SetActionHandlerState, "SetActionHandlerState" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_SetActionHandlerStateFromHandle, "SetActionHandlerStateFromHandle" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_SetActionHandlerStateFromHandleWithDisabledCommitEvent, "SetActionHandlerStateFromHandleWithDisabledCommitEvent" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_SetActionHandlerStateWithDisabledCommitEvent, "SetActionHandlerStateWithDisabledCommitEvent" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_SetInputActionHandler, "SetInputActionHandler" },
+	{ &Z_Construct_UFunction_UCommonActivatablePanel_SetInputActionHandlerWithProgress, "SetInputActionHandlerWithProgress" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonActivatablePanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E7B450
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonActivatablePanel_Statics::ClassParams = { &UCommonActivatablePanel::StaticClass, Z_Construct_UClass_UCommonActivatablePanel_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UCommonActivatablePanel_Statics::FuncInfo, 25, Z_Construct_UClass_UCommonActivatablePanel_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UCommonActivatablePanel_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UCommonActivatablePanel_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2C00 (end 0x002C2C2F)
+// Original VA: 0x00000001402C2C00 | File offset: 0x002C2200
+// Recovery: confirmed (UHT singleton of UCommonActivatablePanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonActivatablePanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonActivatablePanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

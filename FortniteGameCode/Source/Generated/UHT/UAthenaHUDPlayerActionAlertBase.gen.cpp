@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_RequestNextAler
 	}
 	return ReturnFunction;
 }
+
+class UAthenaHUDPlayerActionAlertBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_AlertPlayer, "AlertPlayer" },
+	{ &Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_RequestNextAlert, "RequestNextAlert" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C53210
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase_Statics::ClassParams = { &UAthenaHUDPlayerActionAlertBase::StaticClass, Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase_Statics::FuncInfo, 2, Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287F4D0 (end 0x0287F4FF)
+// Original VA: 0x000000014287F4D0 | File offset: 0x0287EAD0
+// Recovery: confirmed (UHT singleton of UAthenaHUDPlayerActionAlertBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

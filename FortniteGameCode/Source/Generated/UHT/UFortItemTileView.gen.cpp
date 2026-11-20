@@ -239,3 +239,46 @@ UFunction* Z_Construct_UFunction_UFortItemTileView_ShowNullItemTile()
 	}
 	return ReturnFunction;
 }
+
+class UFortItemTileView
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemTileView_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemTileView_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemTileView_CenterSelectedItemTileWidget, "CenterSelectedItemTileWidget" },
+	{ &Z_Construct_UFunction_UFortItemTileView_ContainsItem, "ContainsItem" },
+	{ &Z_Construct_UFunction_UFortItemTileView_HandleItemWidgetCreated, "HandleItemWidgetCreated" },
+	{ &Z_Construct_UFunction_UFortItemTileView_HideNullItemTile, "HideNullItemTile" },
+	{ &Z_Construct_UDelegateFunction_UFortItemTileView_OnInventoryUpdated__DelegateSignature, "OnInventoryUpdated__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortItemTileView_RefreshFilterAndSort, "RefreshFilterAndSort" },
+	{ &Z_Construct_UFunction_UFortItemTileView_RefreshSort, "RefreshSort" },
+	{ &Z_Construct_UFunction_UFortItemTileView_SetFilter, "SetFilter" },
+	{ &Z_Construct_UFunction_UFortItemTileView_SetFilterAndSorter, "SetFilterAndSorter" },
+	{ &Z_Construct_UFunction_UFortItemTileView_SetItemViewContext, "SetItemViewContext" },
+	{ &Z_Construct_UFunction_UFortItemTileView_SetSorter, "SetSorter" },
+	{ &Z_Construct_UFunction_UFortItemTileView_ShowNullItemTile, "ShowNullItemTile" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemTileView_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CD96D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemTileView_Statics::ClassParams = { &UFortItemTileView::StaticClass, Z_Construct_UClass_UFortItemTileView_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortItemTileView_Statics::FuncInfo, 12, Z_Construct_UClass_UFortItemTileView_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UFortItemTileView_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF600 (end 0x028CF62F)
+// Original VA: 0x00000001428CF600 | File offset: 0x028CEC00
+// Recovery: confirmed (UHT singleton of UFortItemTileView) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemTileView()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemTileView_Statics::ClassParams);
+	}
+	return OuterClass;
+}

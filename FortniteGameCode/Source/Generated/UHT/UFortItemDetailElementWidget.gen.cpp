@@ -138,3 +138,41 @@ UFunction* Z_Construct_UFunction_UFortItemDetailElementWidget_HandleShouldPrevie
 	}
 	return ReturnFunction;
 }
+
+class UFortItemDetailElementWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemDetailElementWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemDetailElementWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemDetailElementWidget_HandleInspectModeChanged, "HandleInspectModeChanged" },
+	{ &Z_Construct_UFunction_UFortItemDetailElementWidget_HandleItemToDetailChangedBP, "HandleItemToDetailChangedBP" },
+	{ &Z_Construct_UFunction_UFortItemDetailElementWidget_HandlePostDifferentItemToCompareWithSet, "HandlePostDifferentItemToCompareWithSet" },
+	{ &Z_Construct_UFunction_UFortItemDetailElementWidget_HandlePostDifferentItemToDetailSet, "HandlePostDifferentItemToDetailSet" },
+	{ &Z_Construct_UFunction_UFortItemDetailElementWidget_HandlePreDifferentItemToCompareWithSet, "HandlePreDifferentItemToCompareWithSet" },
+	{ &Z_Construct_UFunction_UFortItemDetailElementWidget_HandlePreDifferentItemToDetailSet, "HandlePreDifferentItemToDetailSet" },
+	{ &Z_Construct_UFunction_UFortItemDetailElementWidget_HandleShouldPreviewUpgradingItemChanged, "HandleShouldPreviewUpgradingItemChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemDetailElementWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CCCBA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemDetailElementWidget_Statics::ClassParams = { &UFortItemDetailElementWidget::StaticClass, Z_Construct_UClass_UFortItemDetailElementWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortItemDetailElementWidget_Statics::FuncInfo, 7, Z_Construct_UClass_UFortItemDetailElementWidget_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortItemDetailElementWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9D80 (end 0x028C9DAF)
+// Original VA: 0x00000001428C9D80 | File offset: 0x028C9380
+// Recovery: confirmed (UHT singleton of UFortItemDetailElementWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemDetailElementWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemDetailElementWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

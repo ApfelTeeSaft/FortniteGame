@@ -164,3 +164,42 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitTargetData_WaitTargetDataUsing
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_WaitTargetData
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_WaitTargetData_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_WaitTargetData_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_WaitTargetData_BeginSpawningActor, "BeginSpawningActor" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitTargetData_FinishSpawningActor, "FinishSpawningActor" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitTargetData_OnTargetDataCancelledCallback, "OnTargetDataCancelledCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitTargetData_OnTargetDataReadyCallback, "OnTargetDataReadyCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitTargetData_OnTargetDataReplicatedCallback, "OnTargetDataReplicatedCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitTargetData_OnTargetDataReplicatedCancelledCallback, "OnTargetDataReplicatedCancelledCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitTargetData_WaitTargetData, "WaitTargetData" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitTargetData_WaitTargetDataUsingActor, "WaitTargetDataUsingActor" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_WaitTargetData_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F33600
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_WaitTargetData_Statics::ClassParams = { &UAbilityTask_WaitTargetData::StaticClass, Z_Construct_UClass_UAbilityTask_WaitTargetData_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_UAbilityTask_WaitTargetData_Statics::FuncInfo, 8, Z_Construct_UClass_UAbilityTask_WaitTargetData_Statics::PropPointers, 3, "Game", &Z_Construct_UClass_UAbilityTask_WaitTargetData_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D850 (end 0x0054D87F)
+// Original VA: 0x000000014054D850 | File offset: 0x0054CE50
+// Recovery: confirmed (UHT singleton of UAbilityTask_WaitTargetData) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_WaitTargetData()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_WaitTargetData_Statics::ClassParams);
+	}
+	return OuterClass;
+}

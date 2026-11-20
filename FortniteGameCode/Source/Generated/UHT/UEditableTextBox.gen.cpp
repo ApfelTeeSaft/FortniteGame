@@ -184,3 +184,43 @@ UFunction* Z_Construct_UFunction_UEditableTextBox_SetText()
 	}
 	return ReturnFunction;
 }
+
+class UEditableTextBox
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UEditableTextBox_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UEditableTextBox_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UEditableTextBox_ClearError, "ClearError" },
+	{ &Z_Construct_UFunction_UEditableTextBox_GetText, "GetText" },
+	{ &Z_Construct_UFunction_UEditableTextBox_HasError, "HasError" },
+	{ &Z_Construct_UDelegateFunction_UEditableTextBox_OnEditableTextBoxChangedEvent__DelegateSignature, "OnEditableTextBoxChangedEvent__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UEditableTextBox_OnEditableTextBoxCommittedEvent__DelegateSignature, "OnEditableTextBoxCommittedEvent__DelegateSignature" },
+	{ &Z_Construct_UFunction_UEditableTextBox_SetError, "SetError" },
+	{ &Z_Construct_UFunction_UEditableTextBox_SetHintText, "SetHintText" },
+	{ &Z_Construct_UFunction_UEditableTextBox_SetIsReadOnly, "SetIsReadOnly" },
+	{ &Z_Construct_UFunction_UEditableTextBox_SetText, "SetText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UEditableTextBox_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03692CE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UEditableTextBox_Statics::ClassParams = { &UEditableTextBox::StaticClass, Z_Construct_UClass_UEditableTextBox_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UEditableTextBox_Statics::FuncInfo, 9, Z_Construct_UClass_UEditableTextBox_Statics::PropPointers, 27, nullptr, &Z_Construct_UClass_UEditableTextBox_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE62E0 (end 0x01BE630F)
+// Original VA: 0x0000000141BE62E0 | File offset: 0x01BE58E0
+// Recovery: confirmed (UHT singleton of UEditableTextBox) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UEditableTextBox()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UEditableTextBox_Statics::ClassParams);
+	}
+	return OuterClass;
+}

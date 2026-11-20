@@ -223,3 +223,46 @@ UFunction* Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_Line
 	}
 	return ReturnFunction;
 }
+
+class UProceduralMeshComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UProceduralMeshComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UProceduralMeshComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UProceduralMeshComponent_AddCollisionConvexMesh, "AddCollisionConvexMesh" },
+	{ &Z_Construct_UFunction_UProceduralMeshComponent_ClearAllMeshSections, "ClearAllMeshSections" },
+	{ &Z_Construct_UFunction_UProceduralMeshComponent_ClearCollisionConvexMeshes, "ClearCollisionConvexMeshes" },
+	{ &Z_Construct_UFunction_UProceduralMeshComponent_ClearMeshSection, "ClearMeshSection" },
+	{ &Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection, "CreateMeshSection" },
+	{ &Z_Construct_UFunction_UProceduralMeshComponent_CreateMeshSection_LinearColor, "CreateMeshSection_LinearColor" },
+	{ &Z_Construct_UFunction_UProceduralMeshComponent_GetNumSections, "GetNumSections" },
+	{ &Z_Construct_UFunction_UProceduralMeshComponent_IsMeshSectionVisible, "IsMeshSectionVisible" },
+	{ &Z_Construct_UFunction_UProceduralMeshComponent_SetMeshSectionVisible, "SetMeshSectionVisible" },
+	{ &Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection, "UpdateMeshSection" },
+	{ &Z_Construct_UFunction_UProceduralMeshComponent_UpdateMeshSection_LinearColor, "UpdateMeshSection_LinearColor" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UProceduralMeshComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02FA2B80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UProceduralMeshComponent_Statics::ClassParams = { &UProceduralMeshComponent::StaticClass, Z_Construct_UClass_UProceduralMeshComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UProceduralMeshComponent_Statics::FuncInfo, 11, Z_Construct_UClass_UProceduralMeshComponent_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UProceduralMeshComponent_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UProceduralMeshComponent_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0069BCE0 (end 0x0069BD0F)
+// Original VA: 0x000000014069BCE0 | File offset: 0x0069B2E0
+// Recovery: confirmed (UHT singleton of UProceduralMeshComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UProceduralMeshComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UProceduralMeshComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

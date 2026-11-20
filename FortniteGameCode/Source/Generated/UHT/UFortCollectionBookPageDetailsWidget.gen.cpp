@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPageDetailsWidget_OnSlotItem
 	}
 	return ReturnFunction;
 }
+
+class UFortCollectionBookPageDetailsWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCollectionBookPageDetailsWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCollectionBookPageDetailsWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCollectionBookPageDetailsWidget_HandleRewardDetailsModalWidgetDeactivated, "HandleRewardDetailsModalWidgetDeactivated" },
+	{ &Z_Construct_UFunction_UFortCollectionBookPageDetailsWidget_OnDetailsPageChanged, "OnDetailsPageChanged" },
+	{ &Z_Construct_UFunction_UFortCollectionBookPageDetailsWidget_OnPageProgressionUpdated, "OnPageProgressionUpdated" },
+	{ &Z_Construct_UFunction_UFortCollectionBookPageDetailsWidget_OnRewardDetailsButtonClicked, "OnRewardDetailsButtonClicked" },
+	{ &Z_Construct_UFunction_UFortCollectionBookPageDetailsWidget_OnSlotItemComplete, "OnSlotItemComplete" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCollectionBookPageDetailsWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C76520
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCollectionBookPageDetailsWidget_Statics::ClassParams = { &UFortCollectionBookPageDetailsWidget::StaticClass, Z_Construct_UClass_UFortCollectionBookPageDetailsWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortCollectionBookPageDetailsWidget_Statics::FuncInfo, 5, Z_Construct_UClass_UFortCollectionBookPageDetailsWidget_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortCollectionBookPageDetailsWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028946A0 (end 0x028946CF)
+// Original VA: 0x00000001428946A0 | File offset: 0x02893CA0
+// Recovery: confirmed (UHT singleton of UFortCollectionBookPageDetailsWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCollectionBookPageDetailsWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCollectionBookPageDetailsWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

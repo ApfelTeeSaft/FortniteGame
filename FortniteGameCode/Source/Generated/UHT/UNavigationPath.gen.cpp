@@ -165,3 +165,42 @@ UFunction* Z_Construct_UFunction_UNavigationPath_IsValid()
 	}
 	return ReturnFunction;
 }
+
+class UNavigationPath
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UNavigationPath_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UNavigationPath_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UNavigationPath_EnableDebugDrawing, "EnableDebugDrawing" },
+	{ &Z_Construct_UFunction_UNavigationPath_EnableRecalculationOnInvalidation, "EnableRecalculationOnInvalidation" },
+	{ &Z_Construct_UFunction_UNavigationPath_GetDebugString, "GetDebugString" },
+	{ &Z_Construct_UFunction_UNavigationPath_GetPathCost, "GetPathCost" },
+	{ &Z_Construct_UFunction_UNavigationPath_GetPathLength, "GetPathLength" },
+	{ &Z_Construct_UFunction_UNavigationPath_IsPartial, "IsPartial" },
+	{ &Z_Construct_UFunction_UNavigationPath_IsStringPulled, "IsStringPulled" },
+	{ &Z_Construct_UFunction_UNavigationPath_IsValid, "IsValid" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UNavigationPath_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03955B40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UNavigationPath_Statics::ClassParams = { &UNavigationPath::StaticClass, Z_Construct_UClass_UNavigationPath_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UNavigationPath_Statics::FuncInfo, 8, Z_Construct_UClass_UNavigationPath_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UNavigationPath_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248B8C0 (end 0x0248B8EF)
+// Original VA: 0x000000014248B8C0 | File offset: 0x0248AEC0
+// Recovery: confirmed (UHT singleton of UNavigationPath) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UNavigationPath()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UNavigationPath_Statics::ClassParams);
+	}
+	return OuterClass;
+}

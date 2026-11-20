@@ -385,3 +385,53 @@ UFunction* Z_Construct_UFunction_UFortTouchControlRegion_UpdateMoveStickLock()
 	}
 	return ReturnFunction;
 }
+
+class UFortTouchControlRegion
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTouchControlRegion_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTouchControlRegion_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_CalculateMoveStickPos, "CalculateMoveStickPos" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_IsMovePlayerRegionTouched, "IsMovePlayerRegionTouched" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_IsRotatePlayerRegionTouched, "IsRotatePlayerRegionTouched" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_MovePlayerRegionTick, "MovePlayerRegionTick" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInLockPosition, "MoveStickIsInLockPosition" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_MoveStickIsInSprintThreshold, "MoveStickIsInSprintThreshold" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchEnded, "OnMovePlayerRegionTouchEnded" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchMoved, "OnMovePlayerRegionTouchMoved" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_OnMovePlayerRegionTouchStarted, "OnMovePlayerRegionTouchStarted" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchEnded, "OnRegionTouchEnded" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchMoved, "OnRegionTouchMoved" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_OnRegionTouchStarted, "OnRegionTouchStarted" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchEnded, "OnRotatePlayerRegionTouchEnded" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchMoved, "OnRotatePlayerRegionTouchMoved" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_OnRotatePlayerRegionTouchStarted, "OnRotatePlayerRegionTouchStarted" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_SetLockOnStickPosition, "SetLockOnStickPosition" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickOrigin, "UpdateLockOnStickOrigin" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_UpdateLockOnStickPosition, "UpdateLockOnStickPosition" },
+	{ &Z_Construct_UFunction_UFortTouchControlRegion_UpdateMoveStickLock, "UpdateMoveStickLock" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTouchControlRegion_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D32230
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTouchControlRegion_Statics::ClassParams = { &UFortTouchControlRegion::StaticClass, Z_Construct_UClass_UFortTouchControlRegion_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortTouchControlRegion_Statics::FuncInfo, 19, Z_Construct_UClass_UFortTouchControlRegion_Statics::PropPointers, 31, nullptr, &Z_Construct_UClass_UFortTouchControlRegion_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904D00 (end 0x02904D2F)
+// Original VA: 0x0000000142904D00 | File offset: 0x02904300
+// Recovery: confirmed (UHT singleton of UFortTouchControlRegion) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTouchControlRegion()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTouchControlRegion_Statics::ClassParams);
+	}
+	return OuterClass;
+}

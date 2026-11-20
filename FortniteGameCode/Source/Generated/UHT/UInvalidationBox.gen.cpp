@@ -64,3 +64,37 @@ UFunction* Z_Construct_UFunction_UInvalidationBox_SetCanCache()
 	}
 	return ReturnFunction;
 }
+
+class UInvalidationBox
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UInvalidationBox_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UInvalidationBox_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UInvalidationBox_GetCanCache, "GetCanCache" },
+	{ &Z_Construct_UFunction_UInvalidationBox_InvalidateCache, "InvalidateCache" },
+	{ &Z_Construct_UFunction_UInvalidationBox_SetCanCache, "SetCanCache" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UInvalidationBox_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036973B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UInvalidationBox_Statics::ClassParams = { &UInvalidationBox::StaticClass, Z_Construct_UClass_UInvalidationBox_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UInvalidationBox_Statics::FuncInfo, 3, Z_Construct_UClass_UInvalidationBox_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UInvalidationBox_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED530 (end 0x01BED55F)
+// Original VA: 0x0000000141BED530 | File offset: 0x01BECB30
+// Recovery: confirmed (UHT singleton of UInvalidationBox) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UInvalidationBox()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UInvalidationBox_Statics::ClassParams);
+	}
+	return OuterClass;
+}

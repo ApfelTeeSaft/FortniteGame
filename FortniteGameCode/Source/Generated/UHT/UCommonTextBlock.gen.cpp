@@ -104,3 +104,39 @@ UFunction* Z_Construct_UFunction_UCommonTextBlock_SetWrapTextWidth()
 	}
 	return ReturnFunction;
 }
+
+class UCommonTextBlock
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonTextBlock_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonTextBlock_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonTextBlock_ResetScrollState, "ResetScrollState" },
+	{ &Z_Construct_UFunction_UCommonTextBlock_SetProperties, "SetProperties" },
+	{ &Z_Construct_UFunction_UCommonTextBlock_SetScrollStyle, "SetScrollStyle" },
+	{ &Z_Construct_UFunction_UCommonTextBlock_SetStyle, "SetStyle" },
+	{ &Z_Construct_UFunction_UCommonTextBlock_SetWrapTextWidth, "SetWrapTextWidth" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonTextBlock_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E83080
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonTextBlock_Statics::ClassParams = { &UCommonTextBlock::StaticClass, Z_Construct_UClass_UCommonTextBlock_Statics::DependentSingletons, 2, 0x00B00082u, Z_Construct_UClass_UCommonTextBlock_Statics::FuncInfo, 5, Z_Construct_UClass_UCommonTextBlock_Statics::PropPointers, 2, "CommonUI", &Z_Construct_UClass_UCommonTextBlock_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA5F0 (end 0x002CA61F)
+// Original VA: 0x00000001402CA5F0 | File offset: 0x002C9BF0
+// Recovery: confirmed (UHT singleton of UCommonTextBlock) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonTextBlock()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonTextBlock_Statics::ClassParams);
+	}
+	return OuterClass;
+}

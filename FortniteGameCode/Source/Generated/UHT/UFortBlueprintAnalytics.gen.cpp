@@ -245,3 +245,45 @@ UFunction* Z_Construct_UFunction_UFortBlueprintAnalytics_FireQuestAnalyticsEvent
 	}
 	return ReturnFunction;
 }
+
+class UFortBlueprintAnalytics
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortBlueprintAnalytics_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortBlueprintAnalytics_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortBlueprintAnalytics_ConstructAnalyticsAttribute, "ConstructAnalyticsAttribute" },
+	{ &Z_Construct_UFunction_UFortBlueprintAnalytics_FireAnalyticsEvent_Blueprint, "FireAnalyticsEvent_Blueprint" },
+	{ &Z_Construct_UFunction_UFortBlueprintAnalytics_FireAnalyticsEvent_BlueprintArray, "FireAnalyticsEvent_BlueprintArray" },
+	{ &Z_Construct_UFunction_UFortBlueprintAnalytics_FireEvent_BuildLimitProgressDecremented, "FireEvent_BuildLimitProgressDecremented" },
+	{ &Z_Construct_UFunction_UFortBlueprintAnalytics_FireEvent_BuildLimitProgressIncremented, "FireEvent_BuildLimitProgressIncremented" },
+	{ &Z_Construct_UFunction_UFortBlueprintAnalytics_FireEvent_MatchmakingClientEnded, "FireEvent_MatchmakingClientEnded" },
+	{ &Z_Construct_UFunction_UFortBlueprintAnalytics_FireEvent_MatchmakingClientStarted, "FireEvent_MatchmakingClientStarted" },
+	{ &Z_Construct_UFunction_UFortBlueprintAnalytics_FireEvent_MatchmakingClientStatusTextChanged, "FireEvent_MatchmakingClientStatusTextChanged" },
+	{ &Z_Construct_UFunction_UFortBlueprintAnalytics_FireMissionAnalyticsEvent_Blueprint, "FireMissionAnalyticsEvent_Blueprint" },
+	{ &Z_Construct_UFunction_UFortBlueprintAnalytics_FireMissionAnalyticsEvent_BlueprintArray, "FireMissionAnalyticsEvent_BlueprintArray" },
+	{ &Z_Construct_UFunction_UFortBlueprintAnalytics_FireQuestAnalyticsEvent_Blueprint, "FireQuestAnalyticsEvent_Blueprint" },
+	{ &Z_Construct_UFunction_UFortBlueprintAnalytics_FireQuestAnalyticsEvent_BlueprintArray, "FireQuestAnalyticsEvent_BlueprintArray" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortBlueprintAnalytics_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032C8980
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortBlueprintAnalytics_Statics::ClassParams = { &UFortBlueprintAnalytics::StaticClass, Z_Construct_UClass_UFortBlueprintAnalytics_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortBlueprintAnalytics_Statics::FuncInfo, 12, nullptr, 0, nullptr, &Z_Construct_UClass_UFortBlueprintAnalytics_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3CB0 (end 0x00FA3CDF)
+// Original VA: 0x0000000140FA3CB0 | File offset: 0x00FA32B0
+// Recovery: confirmed (UHT singleton of UFortBlueprintAnalytics) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortBlueprintAnalytics()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortBlueprintAnalytics_Statics::ClassParams);
+	}
+	return OuterClass;
+}

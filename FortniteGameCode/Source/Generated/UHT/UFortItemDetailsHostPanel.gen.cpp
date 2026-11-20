@@ -200,3 +200,44 @@ UFunction* Z_Construct_UFunction_UFortItemDetailsHostPanel_ShouldPreviewUpgradin
 	}
 	return ReturnFunction;
 }
+
+class UFortItemDetailsHostPanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemDetailsHostPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemDetailsHostPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemDetailsHostPanel_HandleDifferentItemToCompareSet, "HandleDifferentItemToCompareSet" },
+	{ &Z_Construct_UFunction_UFortItemDetailsHostPanel_HandleDifferentItemToDetailSet, "HandleDifferentItemToDetailSet" },
+	{ &Z_Construct_UFunction_UFortItemDetailsHostPanel_HandleInspectModeChanged, "HandleInspectModeChanged" },
+	{ &Z_Construct_UFunction_UFortItemDetailsHostPanel_HandleShouldPreviewUpgradingItemChangedBP, "HandleShouldPreviewUpgradingItemChangedBP" },
+	{ &Z_Construct_UFunction_UFortItemDetailsHostPanel_SetInspectMode, "SetInspectMode" },
+	{ &Z_Construct_UFunction_UFortItemDetailsHostPanel_SetItemToCompareWith, "SetItemToCompareWith" },
+	{ &Z_Construct_UFunction_UFortItemDetailsHostPanel_SetItemToDetail, "SetItemToDetail" },
+	{ &Z_Construct_UFunction_UFortItemDetailsHostPanel_SetItemViewContext, "SetItemViewContext" },
+	{ &Z_Construct_UFunction_UFortItemDetailsHostPanel_SetScrollWidget, "SetScrollWidget" },
+	{ &Z_Construct_UFunction_UFortItemDetailsHostPanel_ShouldPreviewUpgradingItem, "ShouldPreviewUpgradingItem" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemDetailsHostPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CCCD90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemDetailsHostPanel_Statics::ClassParams = { &UFortItemDetailsHostPanel::StaticClass, Z_Construct_UClass_UFortItemDetailsHostPanel_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortItemDetailsHostPanel_Statics::FuncInfo, 10, Z_Construct_UClass_UFortItemDetailsHostPanel_Statics::PropPointers, 9, nullptr, &Z_Construct_UClass_UFortItemDetailsHostPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9DE0 (end 0x028C9E0F)
+// Original VA: 0x00000001428C9DE0 | File offset: 0x028C93E0
+// Recovery: confirmed (UHT singleton of UFortItemDetailsHostPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemDetailsHostPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemDetailsHostPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

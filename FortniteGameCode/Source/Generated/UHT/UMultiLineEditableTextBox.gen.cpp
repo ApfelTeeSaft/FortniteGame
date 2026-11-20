@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UMultiLineEditableTextBox_SetText()
 	}
 	return ReturnFunction;
 }
+
+class UMultiLineEditableTextBox
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMultiLineEditableTextBox_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMultiLineEditableTextBox_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMultiLineEditableTextBox_GetText, "GetText" },
+	{ &Z_Construct_UDelegateFunction_UMultiLineEditableTextBox_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature, "OnMultiLineEditableTextBoxChangedEvent__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UMultiLineEditableTextBox_OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature, "OnMultiLineEditableTextBoxCommittedEvent__DelegateSignature" },
+	{ &Z_Construct_UFunction_UMultiLineEditableTextBox_SetError, "SetError" },
+	{ &Z_Construct_UFunction_UMultiLineEditableTextBox_SetIsReadOnly, "SetIsReadOnly" },
+	{ &Z_Construct_UFunction_UMultiLineEditableTextBox_SetText, "SetText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMultiLineEditableTextBox_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03698050
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMultiLineEditableTextBox_Statics::ClassParams = { &UMultiLineEditableTextBox::StaticClass, Z_Construct_UClass_UMultiLineEditableTextBox_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UMultiLineEditableTextBox_Statics::FuncInfo, 6, Z_Construct_UClass_UMultiLineEditableTextBox_Statics::PropPointers, 16, nullptr, &Z_Construct_UClass_UMultiLineEditableTextBox_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED720 (end 0x01BED74F)
+// Original VA: 0x0000000141BED720 | File offset: 0x01BECD20
+// Recovery: confirmed (UHT singleton of UMultiLineEditableTextBox) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMultiLineEditableTextBox()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMultiLineEditableTextBox_Statics::ClassParams);
+	}
+	return OuterClass;
+}

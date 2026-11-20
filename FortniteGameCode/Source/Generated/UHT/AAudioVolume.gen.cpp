@@ -104,3 +104,39 @@ UFunction* Z_Construct_UFunction_AAudioVolume_SetReverbSettings()
 	}
 	return ReturnFunction;
 }
+
+class AAudioVolume
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AAudioVolume_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AAudioVolume_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AAudioVolume_OnRep_bEnabled, "OnRep_bEnabled" },
+	{ &Z_Construct_UFunction_AAudioVolume_SetEnabled, "SetEnabled" },
+	{ &Z_Construct_UFunction_AAudioVolume_SetInteriorSettings, "SetInteriorSettings" },
+	{ &Z_Construct_UFunction_AAudioVolume_SetPriority, "SetPriority" },
+	{ &Z_Construct_UFunction_AAudioVolume_SetReverbSettings, "SetReverbSettings" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AAudioVolume_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038AC660
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AAudioVolume_Statics::ClassParams = { &AAudioVolume::StaticClass, Z_Construct_UClass_AAudioVolume_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AAudioVolume_Statics::FuncInfo, 5, Z_Construct_UClass_AAudioVolume_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_AAudioVolume_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAFE0 (end 0x023DB00F)
+// Original VA: 0x00000001423DAFE0 | File offset: 0x023DA5E0
+// Recovery: confirmed (UHT singleton of AAudioVolume) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AAudioVolume()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AAudioVolume_Statics::ClassParams);
+	}
+	return OuterClass;
+}

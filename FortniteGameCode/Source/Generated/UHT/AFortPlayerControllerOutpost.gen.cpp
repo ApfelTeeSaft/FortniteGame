@@ -692,3 +692,69 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerOutpost_UpgradeBuildingByD
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerControllerOutpost
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerControllerOutpost_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerControllerOutpost_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_CanUpgradeBuilding, "CanUpgradeBuilding" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_CanUpgradeBuildingFromDefinition, "CanUpgradeBuildingFromDefinition" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ClientOnBuildingLevelChanged, "ClientOnBuildingLevelChanged" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ClientOnOutpostRefundOccurred, "ClientOnOutpostRefundOccurred" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_DumpInventory, "DumpInventory" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_GetBuildingLevel, "GetBuildingLevel" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_GetBuildingLevelFromDefinition, "GetBuildingLevelFromDefinition" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_GetBuildingMaxLevel, "GetBuildingMaxLevel" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_GetBuildingMaxLevelFromDefinition, "GetBuildingMaxLevelFromDefinition" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_GetBuildingUpgradeCost, "GetBuildingUpgradeCost" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_GetBuildingUpgradeCostFromDefinition, "GetBuildingUpgradeCostFromDefinition" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_GetOutpostCoreLevel, "GetOutpostCoreLevel" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_GetPendingFabricationProgress, "GetPendingFabricationProgress" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_GetPendingItemToFabricate, "GetPendingItemToFabricate" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_IsFabricationPending, "IsFabricationPending" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_IsOutpostOwner, "IsOutpostOwner" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_OnRep_DisintegrationStartTime, "OnRep_DisintegrationStartTime" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_OnRep_PostDepositedResources, "OnRep_PostDepositedResources" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_OnRep_QuantumGooCompleted, "OnRep_QuantumGooCompleted" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_OnRep_QuantumGooIncoming, "OnRep_QuantumGooIncoming" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ServerAbortDisintegration, "ServerAbortDisintegration" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ServerActivateCraftingTable, "ServerActivateCraftingTable" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ServerDeactivateCraftingTable, "ServerDeactivateCraftingTable" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ServerDepositPOSTResource, "ServerDepositPOSTResource" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ServerDisintegrateItem, "ServerDisintegrateItem" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ServerFabricateItem, "ServerFabricateItem" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ServerLeaveOutpostAsParty, "ServerLeaveOutpostAsParty" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ServerMoveItemFromStorageVault, "ServerMoveItemFromStorageVault" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ServerMoveItemToStorageVault, "ServerMoveItemToStorageVault" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ServerNotifyPendingFabricationCompleted, "ServerNotifyPendingFabricationCompleted" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ServerUpgradeBuilding, "ServerUpgradeBuilding" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ServerUpgradePOST, "ServerUpgradePOST" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_ToggleOwnerInPIE, "ToggleOwnerInPIE" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_UpgradeBuilding, "UpgradeBuilding" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerOutpost_UpgradeBuildingByDefinition, "UpgradeBuildingByDefinition" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerControllerOutpost_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033C3DA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerControllerOutpost_Statics::ClassParams = { &AFortPlayerControllerOutpost::StaticClass, Z_Construct_UClass_AFortPlayerControllerOutpost_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortPlayerControllerOutpost_Statics::FuncInfo, 35, Z_Construct_UClass_AFortPlayerControllerOutpost_Statics::PropPointers, 12, "Game", &Z_Construct_UClass_AFortPlayerControllerOutpost_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01077790 (end 0x010777BF)
+// Original VA: 0x0000000141077790 | File offset: 0x01076D90
+// Recovery: confirmed (UHT singleton of AFortPlayerControllerOutpost) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerControllerOutpost()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerControllerOutpost_Statics::ClassParams);
+	}
+	return OuterClass;
+}

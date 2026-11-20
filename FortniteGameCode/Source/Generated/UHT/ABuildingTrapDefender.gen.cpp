@@ -203,3 +203,44 @@ UFunction* Z_Construct_UFunction_ABuildingTrapDefender_TakeWeaponAwayFromDefende
 	}
 	return ReturnFunction;
 }
+
+class ABuildingTrapDefender
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingTrapDefender_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingTrapDefender_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingTrapDefender_ClearCurrentDefender, "ClearCurrentDefender" },
+	{ &Z_Construct_UFunction_ABuildingTrapDefender_DeployDefender, "DeployDefender" },
+	{ &Z_Construct_UFunction_ABuildingTrapDefender_GetDefenderSpawnTransform, "GetDefenderSpawnTransform" },
+	{ &Z_Construct_UFunction_ABuildingTrapDefender_GetLastInteractErrorText, "GetLastInteractErrorText" },
+	{ &Z_Construct_UFunction_ABuildingTrapDefender_OnRep_DefenderItemDefinition, "OnRep_DefenderItemDefinition" },
+	{ &Z_Construct_UFunction_ABuildingTrapDefender_OnRep_DefenderPawn, "OnRep_DefenderPawn" },
+	{ &Z_Construct_UFunction_ABuildingTrapDefender_RemoveCurrentDefender, "RemoveCurrentDefender" },
+	{ &Z_Construct_UFunction_ABuildingTrapDefender_SpawnDefenderfromItem, "SpawnDefenderfromItem" },
+	{ &Z_Construct_UFunction_ABuildingTrapDefender_SupplyDefender, "SupplyDefender" },
+	{ &Z_Construct_UFunction_ABuildingTrapDefender_TakeWeaponAwayFromDefender, "TakeWeaponAwayFromDefender" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingTrapDefender_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03286F30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingTrapDefender_Statics::ClassParams = { &ABuildingTrapDefender::StaticClass, Z_Construct_UClass_ABuildingTrapDefender_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ABuildingTrapDefender_Statics::FuncInfo, 10, Z_Construct_UClass_ABuildingTrapDefender_Statics::PropPointers, 6, "Game", &Z_Construct_UClass_ABuildingTrapDefender_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78590 (end 0x00F785BF)
+// Original VA: 0x0000000140F78590 | File offset: 0x00F77B90
+// Recovery: confirmed (UHT singleton of ABuildingTrapDefender) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingTrapDefender()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingTrapDefender_Statics::ClassParams);
+	}
+	return OuterClass;
+}

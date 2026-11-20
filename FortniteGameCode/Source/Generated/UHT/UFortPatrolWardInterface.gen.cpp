@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingType()
 	}
 	return ReturnFunction;
 }
+
+class UFortPatrolWardInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortPatrolWardInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPatrolWardInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingDistance, "GetAffectingDistance" },
+	{ &Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingType, "GetAffectingType" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPatrolWardInterface_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033A2E90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPatrolWardInterface_Statics::ClassParams = { &UFortPatrolWardInterface::StaticClass, Z_Construct_UClass_UFortPatrolWardInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortPatrolWardInterface_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortPatrolWardInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105DF00 (end 0x0105DF2F)
+// Original VA: 0x000000014105DF00 | File offset: 0x0105D500
+// Recovery: confirmed (UHT singleton of UFortPatrolWardInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPatrolWardInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPatrolWardInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

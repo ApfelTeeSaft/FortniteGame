@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UUniformGridPanel_SetSlotPadding()
 	}
 	return ReturnFunction;
 }
+
+class UUniformGridPanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UUniformGridPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UUniformGridPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UUniformGridPanel_AddChildToUniformGrid, "AddChildToUniformGrid" },
+	{ &Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotHeight, "SetMinDesiredSlotHeight" },
+	{ &Z_Construct_UFunction_UUniformGridPanel_SetMinDesiredSlotWidth, "SetMinDesiredSlotWidth" },
+	{ &Z_Construct_UFunction_UUniformGridPanel_SetSlotPadding, "SetSlotPadding" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UUniformGridPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036A3190
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UUniformGridPanel_Statics::ClassParams = { &UUniformGridPanel::StaticClass, Z_Construct_UClass_UUniformGridPanel_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UUniformGridPanel_Statics::FuncInfo, 4, Z_Construct_UClass_UUniformGridPanel_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UUniformGridPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB160 (end 0x01BFB18F)
+// Original VA: 0x0000000141BFB160 | File offset: 0x01BFA760
+// Recovery: confirmed (UHT singleton of UUniformGridPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UUniformGridPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UUniformGridPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

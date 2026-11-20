@@ -103,3 +103,39 @@ UFunction* Z_Construct_UFunction_UFortOptionsTab_UpdateOptionsTab()
 	}
 	return ReturnFunction;
 }
+
+class UFortOptionsTab
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortOptionsTab_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortOptionsTab_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortOptionsTab_CenterOnTab, "CenterOnTab" },
+	{ &Z_Construct_UFunction_UFortOptionsTab_IsAthena, "IsAthena" },
+	{ &Z_Construct_UFunction_UFortOptionsTab_IsPS4Platform, "IsPS4Platform" },
+	{ &Z_Construct_UFunction_UFortOptionsTab_IsXboxPlatform, "IsXboxPlatform" },
+	{ &Z_Construct_UFunction_UFortOptionsTab_UpdateOptionsTab, "UpdateOptionsTab" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortOptionsTab_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CFD300
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortOptionsTab_Statics::ClassParams = { &UFortOptionsTab::StaticClass, Z_Construct_UClass_UFortOptionsTab_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortOptionsTab_Statics::FuncInfo, 5, Z_Construct_UClass_UFortOptionsTab_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortOptionsTab_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6AA0 (end 0x028E6ACF)
+// Original VA: 0x00000001428E6AA0 | File offset: 0x028E60A0
+// Recovery: confirmed (UHT singleton of UFortOptionsTab) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortOptionsTab()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortOptionsTab_Statics::ClassParams);
+	}
+	return OuterClass;
+}

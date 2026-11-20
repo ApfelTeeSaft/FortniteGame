@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_AFortTrackPreview_InitializeTrackPreview()
 	}
 	return ReturnFunction;
 }
+
+class AFortTrackPreview
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortTrackPreview_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortTrackPreview_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortTrackPreview_InitializeTrackPreview, "InitializeTrackPreview" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortTrackPreview_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0341C9B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortTrackPreview_Statics::ClassParams = { &AFortTrackPreview::StaticClass, Z_Construct_UClass_AFortTrackPreview_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortTrackPreview_Statics::FuncInfo, 1, Z_Construct_UClass_AFortTrackPreview_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_AFortTrackPreview_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA9D0 (end 0x010CA9FF)
+// Original VA: 0x00000001410CA9D0 | File offset: 0x010C9FD0
+// Recovery: confirmed (UHT singleton of AFortTrackPreview) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortTrackPreview()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortTrackPreview_Statics::ClassParams);
+	}
+	return OuterClass;
+}

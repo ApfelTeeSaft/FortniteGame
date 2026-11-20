@@ -63,3 +63,38 @@ UFunction* Z_Construct_UFunction_ABuildingWall_OnRep_bDoorOpen()
 	}
 	return ReturnFunction;
 }
+
+class ABuildingWall
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingWall_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingWall_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingWall_IsDoorOpen, "IsDoorOpen" },
+	{ &Z_Construct_UFunction_ABuildingWall_OnRep_bDoorCollisionDisabled, "OnRep_bDoorCollisionDisabled" },
+	{ &Z_Construct_UFunction_ABuildingWall_OnRep_bDoorOpen, "OnRep_bDoorOpen" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingWall_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03287E20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingWall_Statics::ClassParams = { &ABuildingWall::StaticClass, Z_Construct_UClass_ABuildingWall_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ABuildingWall_Statics::FuncInfo, 3, Z_Construct_UClass_ABuildingWall_Statics::PropPointers, 20, "Game", &Z_Construct_UClass_ABuildingWall_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_ABuildingWall_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78620 (end 0x00F7864F)
+// Original VA: 0x0000000140F78620 | File offset: 0x00F77C20
+// Recovery: confirmed (UHT singleton of ABuildingWall) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingWall()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingWall_Statics::ClassParams);
+	}
+	return OuterClass;
+}

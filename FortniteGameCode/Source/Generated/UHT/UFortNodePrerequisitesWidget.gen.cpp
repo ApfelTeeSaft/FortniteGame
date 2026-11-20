@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortNodePrerequisitesWidget_ProcessNodePrequis
 	}
 	return ReturnFunction;
 }
+
+class UFortNodePrerequisitesWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortNodePrerequisitesWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortNodePrerequisitesWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortNodePrerequisitesWidget_GenerateNodePrerequisite, "GenerateNodePrerequisite" },
+	{ &Z_Construct_UFunction_UFortNodePrerequisitesWidget_GenerateNodePrerequisiteConnector, "GenerateNodePrerequisiteConnector" },
+	{ &Z_Construct_UFunction_UFortNodePrerequisitesWidget_ProcessNodePrequisites, "ProcessNodePrequisites" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortNodePrerequisitesWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CF2150
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortNodePrerequisitesWidget_Statics::ClassParams = { &UFortNodePrerequisitesWidget::StaticClass, Z_Construct_UClass_UFortNodePrerequisitesWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortNodePrerequisitesWidget_Statics::FuncInfo, 3, Z_Construct_UClass_UFortNodePrerequisitesWidget_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortNodePrerequisitesWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE530 (end 0x028DE55F)
+// Original VA: 0x00000001428DE530 | File offset: 0x028DDB30
+// Recovery: confirmed (UHT singleton of UFortNodePrerequisitesWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortNodePrerequisitesWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortNodePrerequisitesWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

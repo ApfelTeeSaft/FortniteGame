@@ -104,3 +104,39 @@ UFunction* Z_Construct_UFunction_UVOIPTalker_RegisterWithPlayerState()
 	}
 	return ReturnFunction;
 }
+
+class UVOIPTalker
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UVOIPTalker_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UVOIPTalker_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UVOIPTalker_BPOnTalkingBegin, "BPOnTalkingBegin" },
+	{ &Z_Construct_UFunction_UVOIPTalker_BPOnTalkingEnd, "BPOnTalkingEnd" },
+	{ &Z_Construct_UFunction_UVOIPTalker_CreateTalkerForPlayer, "CreateTalkerForPlayer" },
+	{ &Z_Construct_UFunction_UVOIPTalker_GetVoiceLevel, "GetVoiceLevel" },
+	{ &Z_Construct_UFunction_UVOIPTalker_RegisterWithPlayerState, "RegisterWithPlayerState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UVOIPTalker_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039CF980
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UVOIPTalker_Statics::ClassParams = { &UVOIPTalker::StaticClass, Z_Construct_UClass_UVOIPTalker_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UVOIPTalker_Statics::FuncInfo, 5, Z_Construct_UClass_UVOIPTalker_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UVOIPTalker_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0BA0 (end 0x024F0BCF)
+// Original VA: 0x00000001424F0BA0 | File offset: 0x024F01A0
+// Recovery: confirmed (UHT singleton of UVOIPTalker) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UVOIPTalker()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UVOIPTalker_Statics::ClassParams);
+	}
+	return OuterClass;
+}

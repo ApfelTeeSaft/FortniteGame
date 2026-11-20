@@ -24,3 +24,34 @@ UFunction* Z_Construct_UFunction_AFortClientAnnouncement_Cinematic_OnPlayerSkipp
 	}
 	return ReturnFunction;
 }
+
+class AFortClientAnnouncement_Cinematic
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortClientAnnouncement_Cinematic_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortClientAnnouncement_Cinematic_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortClientAnnouncement_Cinematic_OnPlayerSkippedCutscene, "OnPlayerSkippedCutscene" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortClientAnnouncement_Cinematic_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032E59D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortClientAnnouncement_Cinematic_Statics::ClassParams = { &AFortClientAnnouncement_Cinematic::StaticClass, Z_Construct_UClass_AFortClientAnnouncement_Cinematic_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_AFortClientAnnouncement_Cinematic_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_AFortClientAnnouncement_Cinematic_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0080 (end 0x00FC00AF)
+// Original VA: 0x0000000140FC0080 | File offset: 0x00FBF680
+// Recovery: confirmed (UHT singleton of AFortClientAnnouncement_Cinematic) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortClientAnnouncement_Cinematic()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortClientAnnouncement_Cinematic_Statics::ClassParams);
+	}
+	return OuterClass;
+}

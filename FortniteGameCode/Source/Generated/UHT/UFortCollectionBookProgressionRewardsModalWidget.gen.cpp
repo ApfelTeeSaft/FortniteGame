@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressionRewardsModalWidge
 	}
 	return ReturnFunction;
 }
+
+class UFortCollectionBookProgressionRewardsModalWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCollectionBookProgressionRewardsModalWidget_InspectItemBP, "InspectItemBP" },
+	{ &Z_Construct_UFunction_UFortCollectionBookProgressionRewardsModalWidget_OnInputMethodChanged, "OnInputMethodChanged" },
+	{ &Z_Construct_UFunction_UFortCollectionBookProgressionRewardsModalWidget_OnLevelProgressionSet, "OnLevelProgressionSet" },
+	{ &Z_Construct_UFunction_UFortCollectionBookProgressionRewardsModalWidget_OnSelectedButtonChanged, "OnSelectedButtonChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C76C10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget_Statics::ClassParams = { &UFortCollectionBookProgressionRewardsModalWidget::StaticClass, Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget_Statics::FuncInfo, 4, Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894810 (end 0x0289483F)
+// Original VA: 0x0000000142894810 | File offset: 0x02893E10
+// Recovery: confirmed (UHT singleton of UFortCollectionBookProgressionRewardsModalWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

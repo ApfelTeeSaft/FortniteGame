@@ -85,3 +85,37 @@ UFunction* Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowNames(
 	}
 	return ReturnFunction;
 }
+
+class UDataTableFunctionLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UDataTableFunctionLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UDataTableFunctionLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UDataTableFunctionLibrary_EvaluateCurveTableRow, "EvaluateCurveTableRow" },
+	{ &Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableColumnAsString, "GetDataTableColumnAsString" },
+	{ &Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowFromName, "GetDataTableRowFromName" },
+	{ &Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowNames, "GetDataTableRowNames" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UDataTableFunctionLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038CE210
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UDataTableFunctionLibrary_Statics::ClassParams = { &UDataTableFunctionLibrary::StaticClass, Z_Construct_UClass_UDataTableFunctionLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UDataTableFunctionLibrary_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_UDataTableFunctionLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FE6C0 (end 0x023FE6EF)
+// Original VA: 0x00000001423FE6C0 | File offset: 0x023FDCC0
+// Recovery: confirmed (UHT singleton of UDataTableFunctionLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UDataTableFunctionLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UDataTableFunctionLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

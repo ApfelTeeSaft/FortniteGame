@@ -84,3 +84,38 @@ UFunction* Z_Construct_UFunction_UFortRuntimeOptions_SetEnableMainMenuSocialButt
 	}
 	return ReturnFunction;
 }
+
+class UFortRuntimeOptions
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortRuntimeOptions_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortRuntimeOptions_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortRuntimeOptions_GetEnableMainMenuSocialButton, "GetEnableMainMenuSocialButton" },
+	{ &Z_Construct_UFunction_UFortRuntimeOptions_GetRuntimeOptions, "GetRuntimeOptions" },
+	{ &Z_Construct_UDelegateFunction_UFortRuntimeOptions_OnHotfixApplied__DelegateSignature, "OnHotfixApplied__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortRuntimeOptions_SetEnableMainMenuSocialButton, "SetEnableMainMenuSocialButton" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortRuntimeOptions_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033EFD90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortRuntimeOptions_Statics::ClassParams = { &UFortRuntimeOptions::StaticClass, Z_Construct_UClass_UFortRuntimeOptions_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UFortRuntimeOptions_Statics::FuncInfo, 4, Z_Construct_UClass_UFortRuntimeOptions_Statics::PropPointers, 20, "RuntimeOptions", &Z_Construct_UClass_UFortRuntimeOptions_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109DDE0 (end 0x0109DE0F)
+// Original VA: 0x000000014109DDE0 | File offset: 0x0109D3E0
+// Recovery: confirmed (UHT singleton of UFortRuntimeOptions) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortRuntimeOptions()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortRuntimeOptions_Statics::ClassParams);
+	}
+	return OuterClass;
+}

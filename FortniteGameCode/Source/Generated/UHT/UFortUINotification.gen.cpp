@@ -122,3 +122,40 @@ UFunction* Z_Construct_UFunction_UFortUINotification_TakeAction()
 	}
 	return ReturnFunction;
 }
+
+class UFortUINotification
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortUINotification_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUINotification_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUINotification_ClearNotification, "ClearNotification" },
+	{ &Z_Construct_UFunction_UFortUINotification_CreateWidget, "CreateWidget" },
+	{ &Z_Construct_UFunction_UFortUINotification_GetImageOverride, "GetImageOverride" },
+	{ &Z_Construct_UFunction_UFortUINotification_NotificationShown, "NotificationShown" },
+	{ &Z_Construct_UFunction_UFortUINotification_ShouldShowNotification, "ShouldShowNotification" },
+	{ &Z_Construct_UFunction_UFortUINotification_TakeAction, "TakeAction" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUINotification_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x034287C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUINotification_Statics::ClassParams = { &UFortUINotification::StaticClass, Z_Construct_UClass_UFortUINotification_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_UFortUINotification_Statics::FuncInfo, 6, Z_Construct_UClass_UFortUINotification_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UFortUINotification_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4A70 (end 0x010D4A9F)
+// Original VA: 0x00000001410D4A70 | File offset: 0x010D4070
+// Recovery: confirmed (UHT singleton of UFortUINotification) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUINotification()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUINotification_Statics::ClassParams);
+	}
+	return OuterClass;
+}

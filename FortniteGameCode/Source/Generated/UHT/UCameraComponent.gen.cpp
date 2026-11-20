@@ -245,3 +245,46 @@ UFunction* Z_Construct_UFunction_UCameraComponent_SetUseFieldOfViewForLOD()
 	}
 	return ReturnFunction;
 }
+
+class UCameraComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCameraComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCameraComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCameraComponent_AddOrUpdateBlendable, "AddOrUpdateBlendable" },
+	{ &Z_Construct_UFunction_UCameraComponent_GetCameraView, "GetCameraView" },
+	{ &Z_Construct_UFunction_UCameraComponent_RemoveBlendable, "RemoveBlendable" },
+	{ &Z_Construct_UFunction_UCameraComponent_SetAspectRatio, "SetAspectRatio" },
+	{ &Z_Construct_UFunction_UCameraComponent_SetConstraintAspectRatio, "SetConstraintAspectRatio" },
+	{ &Z_Construct_UFunction_UCameraComponent_SetFieldOfView, "SetFieldOfView" },
+	{ &Z_Construct_UFunction_UCameraComponent_SetOrthoFarClipPlane, "SetOrthoFarClipPlane" },
+	{ &Z_Construct_UFunction_UCameraComponent_SetOrthoNearClipPlane, "SetOrthoNearClipPlane" },
+	{ &Z_Construct_UFunction_UCameraComponent_SetOrthoWidth, "SetOrthoWidth" },
+	{ &Z_Construct_UFunction_UCameraComponent_SetPostProcessBlendWeight, "SetPostProcessBlendWeight" },
+	{ &Z_Construct_UFunction_UCameraComponent_SetProjectionMode, "SetProjectionMode" },
+	{ &Z_Construct_UFunction_UCameraComponent_SetUseFieldOfViewForLOD, "SetUseFieldOfViewForLOD" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCameraComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038B9C60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCameraComponent_Statics::ClassParams = { &UCameraComponent::StaticClass, Z_Construct_UClass_UCameraComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UCameraComponent_Statics::FuncInfo, 12, Z_Construct_UClass_UCameraComponent_Statics::PropPointers, 13, nullptr, &Z_Construct_UClass_UCameraComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EAA00 (end 0x023EAA2F)
+// Original VA: 0x00000001423EAA00 | File offset: 0x023EA000
+// Recovery: confirmed (UHT singleton of UCameraComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCameraComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCameraComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

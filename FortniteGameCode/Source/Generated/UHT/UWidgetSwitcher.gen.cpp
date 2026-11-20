@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UWidgetSwitcher_SetActiveWidgetIndex()
 	}
 	return ReturnFunction;
 }
+
+class UWidgetSwitcher
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UWidgetSwitcher_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UWidgetSwitcher_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UWidgetSwitcher_GetActiveWidget, "GetActiveWidget" },
+	{ &Z_Construct_UFunction_UWidgetSwitcher_GetActiveWidgetIndex, "GetActiveWidgetIndex" },
+	{ &Z_Construct_UFunction_UWidgetSwitcher_GetNumWidgets, "GetNumWidgets" },
+	{ &Z_Construct_UFunction_UWidgetSwitcher_GetWidgetAtIndex, "GetWidgetAtIndex" },
+	{ &Z_Construct_UFunction_UWidgetSwitcher_SetActiveWidget, "SetActiveWidget" },
+	{ &Z_Construct_UFunction_UWidgetSwitcher_SetActiveWidgetIndex, "SetActiveWidgetIndex" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UWidgetSwitcher_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036AB530
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UWidgetSwitcher_Statics::ClassParams = { &UWidgetSwitcher::StaticClass, Z_Construct_UClass_UWidgetSwitcher_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UWidgetSwitcher_Statics::FuncInfo, 6, Z_Construct_UClass_UWidgetSwitcher_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UWidgetSwitcher_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07CB0 (end 0x01C07CDF)
+// Original VA: 0x0000000141C07CB0 | File offset: 0x01C072B0
+// Recovery: confirmed (UHT singleton of UWidgetSwitcher) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UWidgetSwitcher()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UWidgetSwitcher_Statics::ClassParams);
+	}
+	return OuterClass;
+}

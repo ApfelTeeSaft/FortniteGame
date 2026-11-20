@@ -105,3 +105,38 @@ UFunction* Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredB
 	}
 	return ReturnFunction;
 }
+
+class UFortAITetheringBoxBoundsInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAITetheringBoxBoundsInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAITetheringBoxBoundsInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsCenter, "GetTetheredBoxBoundsCenter" },
+	{ &Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsEQSGridSize, "GetTetheredBoxBoundsEQSGridSize" },
+	{ &Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsEQSSpaceBetween, "GetTetheredBoxBoundsEQSSpaceBetween" },
+	{ &Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsHeight, "GetTetheredBoxBoundsHeight" },
+	{ &Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsWidth, "GetTetheredBoxBoundsWidth" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAITetheringBoxBoundsInterface_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032B6460
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAITetheringBoxBoundsInterface_Statics::ClassParams = { &UFortAITetheringBoxBoundsInterface::StaticClass, Z_Construct_UClass_UFortAITetheringBoxBoundsInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortAITetheringBoxBoundsInterface_Statics::FuncInfo, 5, nullptr, 0, nullptr, &Z_Construct_UClass_UFortAITetheringBoxBoundsInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F99360 (end 0x00F9938F)
+// Original VA: 0x0000000140F99360 | File offset: 0x00F98960
+// Recovery: confirmed (UHT singleton of UFortAITetheringBoxBoundsInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAITetheringBoxBoundsInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAITetheringBoxBoundsInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

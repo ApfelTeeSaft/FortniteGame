@@ -104,3 +104,39 @@ UFunction* Z_Construct_UFunction_UAutomationPerfMonitorManager_StopRecordingFTes
 	}
 	return ReturnFunction;
 }
+
+class UAutomationPerfMonitorManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAutomationPerfMonitorManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAutomationPerfMonitorManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAutomationPerfMonitorManager_GetPerfMonitorInstance, "GetPerfMonitorInstance" },
+	{ &Z_Construct_UFunction_UAutomationPerfMonitorManager_GetStatAverage, "GetStatAverage" },
+	{ &Z_Construct_UFunction_UAutomationPerfMonitorManager_IsRecordingFTestPerf, "IsRecordingFTestPerf" },
+	{ &Z_Construct_UFunction_UAutomationPerfMonitorManager_StartRecordingFTestPerf, "StartRecordingFTestPerf" },
+	{ &Z_Construct_UFunction_UAutomationPerfMonitorManager_StopRecordingFTestPerf, "StopRecordingFTestPerf" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAutomationPerfMonitorManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032685C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAutomationPerfMonitorManager_Statics::ClassParams = { &UAutomationPerfMonitorManager::StaticClass, Z_Construct_UClass_UAutomationPerfMonitorManager_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UAutomationPerfMonitorManager_Statics::FuncInfo, 5, Z_Construct_UClass_UAutomationPerfMonitorManager_Statics::PropPointers, 5, "Game", &Z_Construct_UClass_UAutomationPerfMonitorManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61200 (end 0x00F6122F)
+// Original VA: 0x0000000140F61200 | File offset: 0x00F60800
+// Recovery: confirmed (UHT singleton of UAutomationPerfMonitorManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAutomationPerfMonitorManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAutomationPerfMonitorManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

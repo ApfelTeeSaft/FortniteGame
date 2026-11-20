@@ -457,3 +457,57 @@ UFunction* Z_Construct_UFunction_AKeepHeart_UpgradeAllPermaniteStructures()
 	}
 	return ReturnFunction;
 }
+
+class AKeepHeart
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AKeepHeart_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AKeepHeart_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AKeepHeart_DelayedVoteSuccess, "DelayedVoteSuccess" },
+	{ &Z_Construct_UFunction_AKeepHeart_DestroyNonPermaniteStructures, "DestroyNonPermaniteStructures" },
+	{ &Z_Construct_UFunction_AKeepHeart_GetAveragePermaniteLevel, "GetAveragePermaniteLevel" },
+	{ &Z_Construct_UFunction_AKeepHeart_GetDefenseLevel, "GetDefenseLevel" },
+	{ &Z_Construct_UFunction_AKeepHeart_GetUpgradeAllPermaniteCost, "GetUpgradeAllPermaniteCost" },
+	{ &Z_Construct_UFunction_AKeepHeart_GetWorldStreamingInProgress, "GetWorldStreamingInProgress" },
+	{ &Z_Construct_UFunction_AKeepHeart_HandleVoteComplete, "HandleVoteComplete" },
+	{ &Z_Construct_UFunction_AKeepHeart_IsDefenseActive, "IsDefenseActive" },
+	{ &Z_Construct_UFunction_AKeepHeart_IsWorldStreamedIn, "IsWorldStreamedIn" },
+	{ &Z_Construct_UFunction_AKeepHeart_IsWorldStreamingIn, "IsWorldStreamingIn" },
+	{ &Z_Construct_UFunction_AKeepHeart_NotifyEncounterEnded, "NotifyEncounterEnded" },
+	{ &Z_Construct_UFunction_AKeepHeart_NotifyEncounterStarted, "NotifyEncounterStarted" },
+	{ &Z_Construct_UFunction_AKeepHeart_OnDefenseLevelChanged, "OnDefenseLevelChanged" },
+	{ &Z_Construct_UFunction_AKeepHeart_OnVoteComplete, "OnVoteComplete" },
+	{ &Z_Construct_UFunction_AKeepHeart_OnWorldStreamedIn, "OnWorldStreamedIn" },
+	{ &Z_Construct_UFunction_AKeepHeart_ResetContainers, "ResetContainers" },
+	{ &Z_Construct_UFunction_AKeepHeart_RestoreContainers, "RestoreContainers" },
+	{ &Z_Construct_UFunction_AKeepHeart_RestoreKeepHealth, "RestoreKeepHealth" },
+	{ &Z_Construct_UFunction_AKeepHeart_SetPermaniteAvailability, "SetPermaniteAvailability" },
+	{ &Z_Construct_UFunction_AKeepHeart_StartVote, "StartVote" },
+	{ &Z_Construct_UFunction_AKeepHeart_StreamInWorld, "StreamInWorld" },
+	{ &Z_Construct_UFunction_AKeepHeart_StreamOutWorld, "StreamOutWorld" },
+	{ &Z_Construct_UFunction_AKeepHeart_UpgradeAllPermaniteStructures, "UpgradeAllPermaniteStructures" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AKeepHeart_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0343EC90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AKeepHeart_Statics::ClassParams = { &AKeepHeart::StaticClass, Z_Construct_UClass_AKeepHeart_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AKeepHeart_Statics::FuncInfo, 23, Z_Construct_UClass_AKeepHeart_Statics::PropPointers, 7, "Game", &Z_Construct_UClass_AKeepHeart_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E3080 (end 0x010E30AF)
+// Original VA: 0x00000001410E3080 | File offset: 0x010E2680
+// Recovery: confirmed (UHT singleton of AKeepHeart) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AKeepHeart()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AKeepHeart_Statics::ClassParams);
+	}
+	return OuterClass;
+}

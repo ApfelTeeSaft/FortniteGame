@@ -65,3 +65,36 @@ UFunction* Z_Construct_UFunction_UFortChallengeBundleScheduleItem_GetScheduleDef
 	}
 	return ReturnFunction;
 }
+
+class UFortChallengeBundleScheduleItem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortChallengeBundleScheduleItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortChallengeBundleScheduleItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortChallengeBundleScheduleItem_GetAchievedCount, "GetAchievedCount" },
+	{ &Z_Construct_UFunction_UFortChallengeBundleScheduleItem_GetPercentageComplete, "GetPercentageComplete" },
+	{ &Z_Construct_UFunction_UFortChallengeBundleScheduleItem_GetScheduleDefinitionBP, "GetScheduleDefinitionBP" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortChallengeBundleScheduleItem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032DB400
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortChallengeBundleScheduleItem_Statics::ClassParams = { &UFortChallengeBundleScheduleItem::StaticClass, Z_Construct_UClass_UFortChallengeBundleScheduleItem_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortChallengeBundleScheduleItem_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UFortChallengeBundleScheduleItem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB0230 (end 0x00FB025F)
+// Original VA: 0x0000000140FB0230 | File offset: 0x00FAF830
+// Recovery: confirmed (UHT singleton of UFortChallengeBundleScheduleItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortChallengeBundleScheduleItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortChallengeBundleScheduleItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

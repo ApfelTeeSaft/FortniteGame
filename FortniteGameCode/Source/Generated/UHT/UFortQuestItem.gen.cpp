@@ -485,3 +485,58 @@ UFunction* Z_Construct_UFunction_UFortQuestItem_IsVisibleToUser()
 	}
 	return ReturnFunction;
 }
+
+class UFortQuestItem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortQuestItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortQuestItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortQuestItem_CanPinQuest, "CanPinQuest" },
+	{ &Z_Construct_UFunction_UFortQuestItem_DoesQuestExpire, "DoesQuestExpire" },
+	{ &Z_Construct_UFunction_UFortQuestItem_GetAchievedCount, "GetAchievedCount" },
+	{ &Z_Construct_UFunction_UFortQuestItem_GetBroadcasterGrantWindowEnd, "GetBroadcasterGrantWindowEnd" },
+	{ &Z_Construct_UFunction_UFortQuestItem_GetMissionConfigData, "GetMissionConfigData" },
+	{ &Z_Construct_UFunction_UFortQuestItem_GetObjectiveInfo, "GetObjectiveInfo" },
+	{ &Z_Construct_UFunction_UFortQuestItem_GetPercentageComplete, "GetPercentageComplete" },
+	{ &Z_Construct_UFunction_UFortQuestItem_GetPreviewAllSelectableRewards, "GetPreviewAllSelectableRewards" },
+	{ &Z_Construct_UFunction_UFortQuestItem_GetPreviewRewards, "GetPreviewRewards" },
+	{ &Z_Construct_UFunction_UFortQuestItem_GetPreviewSelectableRewards, "GetPreviewSelectableRewards" },
+	{ &Z_Construct_UFunction_UFortQuestItem_GetQuestDefinitionBP, "GetQuestDefinitionBP" },
+	{ &Z_Construct_UFunction_UFortQuestItem_GetQuestState, "GetQuestState" },
+	{ &Z_Construct_UFunction_UFortQuestItem_GetRemainingExpirationDuration, "GetRemainingExpirationDuration" },
+	{ &Z_Construct_UFunction_UFortQuestItem_GetTwitchBroadcasterChannelId, "GetTwitchBroadcasterChannelId" },
+	{ &Z_Construct_UFunction_UFortQuestItem_HasCompletedObjective, "HasCompletedObjective" },
+	{ &Z_Construct_UFunction_UFortQuestItem_HasCompletedObjectiveWithName, "HasCompletedObjectiveWithName" },
+	{ &Z_Construct_UFunction_UFortQuestItem_HasCompletedQuest, "HasCompletedQuest" },
+	{ &Z_Construct_UFunction_UFortQuestItem_HasQuestExpired, "HasQuestExpired" },
+	{ &Z_Construct_UFunction_UFortQuestItem_HasVisibleRewards, "HasVisibleRewards" },
+	{ &Z_Construct_UFunction_UFortQuestItem_IsObjectiveInProgress, "IsObjectiveInProgress" },
+	{ &Z_Construct_UFunction_UFortQuestItem_IsObjectiveWithNameInProgress, "IsObjectiveWithNameInProgress" },
+	{ &Z_Construct_UFunction_UFortQuestItem_IsQuestInProgress, "IsQuestInProgress" },
+	{ &Z_Construct_UFunction_UFortQuestItem_IsQuestPinned, "IsQuestPinned" },
+	{ &Z_Construct_UFunction_UFortQuestItem_IsVisibleToUser, "IsVisibleToUser" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortQuestItem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033E5C80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortQuestItem_Statics::ClassParams = { &UFortQuestItem::StaticClass, Z_Construct_UClass_UFortQuestItem_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortQuestItem_Statics::FuncInfo, 24, Z_Construct_UClass_UFortQuestItem_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_UFortQuestItem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010964D0 (end 0x010964FF)
+// Original VA: 0x00000001410964D0 | File offset: 0x01095AD0
+// Recovery: confirmed (UHT singleton of UFortQuestItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortQuestItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortQuestItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

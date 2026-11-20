@@ -145,3 +145,41 @@ UFunction* Z_Construct_UFunction_UPawnMovementComponent_K2_GetInputVector()
 	}
 	return ReturnFunction;
 }
+
+class UPawnMovementComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPawnMovementComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPawnMovementComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPawnMovementComponent_AddInputVector, "AddInputVector" },
+	{ &Z_Construct_UFunction_UPawnMovementComponent_ConsumeInputVector, "ConsumeInputVector" },
+	{ &Z_Construct_UFunction_UPawnMovementComponent_GetLastInputVector, "GetLastInputVector" },
+	{ &Z_Construct_UFunction_UPawnMovementComponent_GetPawnOwner, "GetPawnOwner" },
+	{ &Z_Construct_UFunction_UPawnMovementComponent_GetPendingInputVector, "GetPendingInputVector" },
+	{ &Z_Construct_UFunction_UPawnMovementComponent_IsMoveInputIgnored, "IsMoveInputIgnored" },
+	{ &Z_Construct_UFunction_UPawnMovementComponent_K2_GetInputVector, "K2_GetInputVector" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPawnMovementComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03978560
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPawnMovementComponent_Statics::ClassParams = { &UPawnMovementComponent::StaticClass, Z_Construct_UClass_UPawnMovementComponent_Statics::DependentSingletons, 2, 0x00B00085u, Z_Construct_UClass_UPawnMovementComponent_Statics::FuncInfo, 7, Z_Construct_UClass_UPawnMovementComponent_Statics::PropPointers, 1, "Engine", &Z_Construct_UClass_UPawnMovementComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A09B0 (end 0x024A09DF)
+// Original VA: 0x00000001424A09B0 | File offset: 0x0249FFB0
+// Recovery: confirmed (UHT singleton of UPawnMovementComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPawnMovementComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPawnMovementComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

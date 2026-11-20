@@ -465,3 +465,56 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_LoadAndGetBannerLargeIconF
 	}
 	return ReturnFunction;
 }
+
+class UFortBannerUtilities
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortBannerUtilities_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortBannerUtilities_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerColor, "GetBannerColor" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryName, "GetBannerColorCategoryName" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorCategoryRowName, "GetBannerColorCategoryRowName" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorFromRowName, "GetBannerColorFromRowName" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorItemFromRowName, "GetBannerColorItemFromRowName" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColor, "GetBannerColorPrimaryColor" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorPrimaryColorFromRowName, "GetBannerColorPrimaryColorFromRowName" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryColor, "GetBannerColorSecondaryColor" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorSecondaryColorFromRowName, "GetBannerColorSecondaryColorFromRowName" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerColorsForCategory, "GetBannerColorsForCategory" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryName, "GetBannerIconCategoryName" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconCategoryRowName, "GetBannerIconCategoryRowName" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconItemFromRowName, "GetBannerIconItemFromRowName" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerIconsForCategory, "GetBannerIconsForCategory" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAsset, "GetBannerLargeIconAsset" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerLargeIconAssetFromRowName, "GetBannerLargeIconAssetFromRowName" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAsset, "GetBannerSmallIconAsset" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetBannerSmallIconAssetFromRowName, "GetBannerSmallIconAssetFromRowName" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetPrimaryColor, "GetPrimaryColor" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerColorItem, "GetRowNameForBannerColorItem" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetRowNameForBannerIconItem, "GetRowNameForBannerIconItem" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_GetSecondaryColor, "GetSecondaryColor" },
+	{ &Z_Construct_UFunction_UFortBannerUtilities_LoadAndGetBannerLargeIconFromRowName, "LoadAndGetBannerLargeIconFromRowName" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortBannerUtilities_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032C8420
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortBannerUtilities_Statics::ClassParams = { &UFortBannerUtilities::StaticClass, Z_Construct_UClass_UFortBannerUtilities_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortBannerUtilities_Statics::FuncInfo, 23, nullptr, 0, nullptr, &Z_Construct_UClass_UFortBannerUtilities_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3C50 (end 0x00FA3C7F)
+// Original VA: 0x0000000140FA3C50 | File offset: 0x00FA3250
+// Recovery: confirmed (UHT singleton of UFortBannerUtilities) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortBannerUtilities()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortBannerUtilities_Statics::ClassParams);
+	}
+	return OuterClass;
+}

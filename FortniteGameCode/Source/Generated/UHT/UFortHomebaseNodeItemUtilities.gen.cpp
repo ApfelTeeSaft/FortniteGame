@@ -225,3 +225,44 @@ UFunction* Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_TryGetHomebaseNo
 	}
 	return ReturnFunction;
 }
+
+class UFortHomebaseNodeItemUtilities
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHomebaseNodeItemUtilities_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHomebaseNodeItemUtilities_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_AreAnyHomebaseNodeItemsUnseenForSquadId, "AreAnyHomebaseNodeItemsUnseenForSquadId" },
+	{ &Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_AreAnyHomebaseNodeItemsUnseenForSquadType, "AreAnyHomebaseNodeItemsUnseenForSquadType" },
+	{ &Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_GetHomebaseNodeItem, "GetHomebaseNodeItem" },
+	{ &Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_GetHomebaseNodeItemForSquadSlot, "GetHomebaseNodeItemForSquadSlot" },
+	{ &Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_GetHomebaseNodeItemForTagContainer, "GetHomebaseNodeItemForTagContainer" },
+	{ &Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_GetHomebaseNodeItemNameForTagContainer, "GetHomebaseNodeItemNameForTagContainer" },
+	{ &Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_GetHomebaseNodeItems, "GetHomebaseNodeItems" },
+	{ &Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_GetHomebaseNodePageNames, "GetHomebaseNodePageNames" },
+	{ &Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_IsHomebaseNodeItemUnseenForTagContainer, "IsHomebaseNodeItemUnseenForTagContainer" },
+	{ &Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_IsSquadSlotUnseen, "IsSquadSlotUnseen" },
+	{ &Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_TryGetHomebaseNodeState, "TryGetHomebaseNodeState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHomebaseNodeItemUtilities_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CA72E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHomebaseNodeItemUtilities_Statics::ClassParams = { &UFortHomebaseNodeItemUtilities::StaticClass, Z_Construct_UClass_UFortHomebaseNodeItemUtilities_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortHomebaseNodeItemUtilities_Statics::FuncInfo, 11, nullptr, 0, nullptr, &Z_Construct_UClass_UFortHomebaseNodeItemUtilities_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3D80 (end 0x028B3DAF)
+// Original VA: 0x00000001428B3D80 | File offset: 0x028B3380
+// Recovery: confirmed (UHT singleton of UFortHomebaseNodeItemUtilities) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHomebaseNodeItemUtilities()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHomebaseNodeItemUtilities_Statics::ClassParams);
+	}
+	return OuterClass;
+}

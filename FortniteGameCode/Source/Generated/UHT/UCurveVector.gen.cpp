@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UCurveVector_GetVectorValue()
 	}
 	return ReturnFunction;
 }
+
+class UCurveVector
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCurveVector_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCurveVector_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCurveVector_GetVectorValue, "GetVectorValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCurveVector_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038CD980
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCurveVector_Statics::ClassParams = { &UCurveVector::StaticClass, Z_Construct_UClass_UCurveVector_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UCurveVector_Statics::FuncInfo, 1, Z_Construct_UClass_UCurveVector_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UCurveVector_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FE5C0 (end 0x023FE5EF)
+// Original VA: 0x00000001423FE5C0 | File offset: 0x023FDBC0
+// Recovery: confirmed (UHT singleton of UCurveVector) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCurveVector()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCurveVector_Statics::ClassParams);
+	}
+	return OuterClass;
+}

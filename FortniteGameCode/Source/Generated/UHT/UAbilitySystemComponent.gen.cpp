@@ -1316,3 +1316,101 @@ UFunction* Z_Construct_UFunction_UAbilitySystemComponent_TryActivateAbilityByCla
 	}
 	return ReturnFunction;
 }
+
+class UAbilitySystemComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilitySystemComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilitySystemComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UDelegateFunction_UAbilitySystemComponent_AbilityAbilityKey__DelegateSignature, "AbilityAbilityKey__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UAbilitySystemComponent_AbilityConfirmOrCancel__DelegateSignature, "AbilityConfirmOrCancel__DelegateSignature" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_BP_ApplyGameplayEffectSpecToSelf, "BP_ApplyGameplayEffectSpecToSelf" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_BP_ApplyGameplayEffectSpecToTarget, "BP_ApplyGameplayEffectSpecToTarget" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_BP_ApplyGameplayEffectToSelf, "BP_ApplyGameplayEffectToSelf" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_BP_ApplyGameplayEffectToTarget, "BP_ApplyGameplayEffectToTarget" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ClientActivateAbilityFailed, "ClientActivateAbilityFailed" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ClientActivateAbilitySucceed, "ClientActivateAbilitySucceed" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ClientActivateAbilitySucceedWithEventData, "ClientActivateAbilitySucceedWithEventData" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ClientCancelAbility, "ClientCancelAbility" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ClientEndAbility, "ClientEndAbility" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ClientPrintDebug_Response, "ClientPrintDebug_Response" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ClientSetReplicatedEvent, "ClientSetReplicatedEvent" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ClientTryActivateAbility, "ClientTryActivateAbility" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_GetActiveEffects, "GetActiveEffects" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_GetGameplayEffectCount, "GetGameplayEffectCount" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_GetGameplayEffectMagnitude, "GetGameplayEffectMagnitude" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_GetUserAbilityActivationInhibited, "GetUserAbilityActivationInhibited" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_IsGameplayCueActive, "IsGameplayCueActive" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_K2_InitStats, "K2_InitStats" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_MakeEffectContext, "MakeEffectContext" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_MakeOutgoingSpec, "MakeOutgoingSpec" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_NetMulticast_InvokeGameplayCueAdded, "NetMulticast_InvokeGameplayCueAdded" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec, "NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams, "NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_NetMulticast_InvokeGameplayCueAdded_WithParams, "NetMulticast_InvokeGameplayCueAdded_WithParams" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_NetMulticast_InvokeGameplayCueExecuted, "NetMulticast_InvokeGameplayCueExecuted" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_NetMulticast_InvokeGameplayCueExecuted_FromSpec, "NetMulticast_InvokeGameplayCueExecuted_FromSpec" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_NetMulticast_InvokeGameplayCueExecuted_WithParams, "NetMulticast_InvokeGameplayCueExecuted_WithParams" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams, "NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_NetMulticast_InvokeGameplayCuesExecuted, "NetMulticast_InvokeGameplayCuesExecuted" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_NetMulticast_InvokeGameplayCuesExecuted_WithParams, "NetMulticast_InvokeGameplayCuesExecuted_WithParams" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_OnRep_ActivateAbilities, "OnRep_ActivateAbilities" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_OnRep_ClientDebugString, "OnRep_ClientDebugString" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_OnRep_OwningActor, "OnRep_OwningActor" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_OnRep_ReplicatedAnimMontage, "OnRep_ReplicatedAnimMontage" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_OnRep_ServerDebugString, "OnRep_ServerDebugString" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_RemoveActiveEffectsWithAppliedTags, "RemoveActiveEffectsWithAppliedTags" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_RemoveActiveEffectsWithGrantedTags, "RemoveActiveEffectsWithGrantedTags" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_RemoveActiveEffectsWithSourceTags, "RemoveActiveEffectsWithSourceTags" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_RemoveActiveEffectsWithTags, "RemoveActiveEffectsWithTags" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_RemoveActiveGameplayEffect, "RemoveActiveGameplayEffect" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_RemoveActiveGameplayEffectBySourceEffect, "RemoveActiveGameplayEffectBySourceEffect" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerAbilityRPCBatch, "ServerAbilityRPCBatch" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerCancelAbility, "ServerCancelAbility" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerCurrentMontageJumpToSectionName, "ServerCurrentMontageJumpToSectionName" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerCurrentMontageSetNextSectionName, "ServerCurrentMontageSetNextSectionName" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerCurrentMontageSetPlayRate, "ServerCurrentMontageSetPlayRate" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerEndAbility, "ServerEndAbility" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerPrintDebug_Request, "ServerPrintDebug_Request" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerPrintDebug_RequestWithStrings, "ServerPrintDebug_RequestWithStrings" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerSetInputPressed, "ServerSetInputPressed" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerSetInputReleased, "ServerSetInputReleased" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerSetReplicatedEvent, "ServerSetReplicatedEvent" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerSetReplicatedEventWithPayload, "ServerSetReplicatedEventWithPayload" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerSetReplicatedTargetData, "ServerSetReplicatedTargetData" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerSetReplicatedTargetDataCancelled, "ServerSetReplicatedTargetDataCancelled" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerTryActivateAbility, "ServerTryActivateAbility" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_ServerTryActivateAbilityWithEventData, "ServerTryActivateAbilityWithEventData" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_SetActiveGameplayEffectLevel, "SetActiveGameplayEffectLevel" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_SetActiveGameplayEffectLevelUsingQuery, "SetActiveGameplayEffectLevelUsingQuery" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_SetUserAbilityActivationInhibited, "SetUserAbilityActivationInhibited" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_TargetCancel, "TargetCancel" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_TargetConfirm, "TargetConfirm" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_TryActivateAbilitiesByTag, "TryActivateAbilitiesByTag" },
+	{ &Z_Construct_UFunction_UAbilitySystemComponent_TryActivateAbilityByClass, "TryActivateAbilityByClass" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilitySystemComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F250C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilitySystemComponent_Statics::ClassParams = { &UAbilitySystemComponent::StaticClass, Z_Construct_UClass_UAbilitySystemComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UAbilitySystemComponent_Statics::FuncInfo, 66, Z_Construct_UClass_UAbilitySystemComponent_Statics::PropPointers, 26, nullptr, &Z_Construct_UClass_UAbilitySystemComponent_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UAbilitySystemComponent_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00538410 (end 0x0053843F)
+// Original VA: 0x0000000140538410 | File offset: 0x00537A10
+// Recovery: confirmed (UHT singleton of UAbilitySystemComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilitySystemComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilitySystemComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

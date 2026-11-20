@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_AFortPvPMission_EnemyBaseDestruction_GetCorners
 	}
 	return ReturnFunction;
 }
+
+class AFortPvPMission_EnemyBaseDestruction
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPvPMission_EnemyBaseDestruction_GetCornerstoneForTeam, "GetCornerstoneForTeam" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033DCB30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction_Statics::ClassParams = { &AFortPvPMission_EnemyBaseDestruction::StaticClass, Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction_Statics::DependentSingletons, 2, 0x00880280u, Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01093190 (end 0x010931BF)
+// Original VA: 0x0000000141093190 | File offset: 0x01092790
+// Recovery: confirmed (UHT singleton of AFortPvPMission_EnemyBaseDestruction) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction_Statics::ClassParams);
+	}
+	return OuterClass;
+}

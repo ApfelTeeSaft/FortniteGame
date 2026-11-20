@@ -164,3 +164,42 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_SetMediaSource()
 	}
 	return ReturnFunction;
 }
+
+class UFortMovieWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMovieWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMovieWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMovieWidget_GetMediaPlayer, "GetMediaPlayer" },
+	{ &Z_Construct_UFunction_UFortMovieWidget_GetMediaSoundComponent, "GetMediaSoundComponent" },
+	{ &Z_Construct_UFunction_UFortMovieWidget_GetMediaTexture, "GetMediaTexture" },
+	{ &Z_Construct_UFunction_UFortMovieWidget_HasPlayerForSource, "HasPlayerForSource" },
+	{ &Z_Construct_UFunction_UFortMovieWidget_MediaDimensionsUpdated, "MediaDimensionsUpdated" },
+	{ &Z_Construct_UFunction_UFortMovieWidget_RequestPlayMovie, "RequestPlayMovie" },
+	{ &Z_Construct_UFunction_UFortMovieWidget_RequestStopMovie, "RequestStopMovie" },
+	{ &Z_Construct_UFunction_UFortMovieWidget_SetMediaSource, "SetMediaSource" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMovieWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE6980
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMovieWidget_Statics::ClassParams = { &UFortMovieWidget::StaticClass, Z_Construct_UClass_UFortMovieWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortMovieWidget_Statics::FuncInfo, 8, Z_Construct_UClass_UFortMovieWidget_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortMovieWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7610 (end 0x028D763F)
+// Original VA: 0x00000001428D7610 | File offset: 0x028D6C10
+// Recovery: confirmed (UHT singleton of UFortMovieWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMovieWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMovieWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -101,3 +101,40 @@ UFunction* Z_Construct_UFunction_AFortClientAnnouncement_StopClientAnnouncement(
 	}
 	return ReturnFunction;
 }
+
+class AFortClientAnnouncement
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortClientAnnouncement_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortClientAnnouncement_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortClientAnnouncement_CancelClientAnnouncement, "CancelClientAnnouncement" },
+	{ &Z_Construct_UFunction_AFortClientAnnouncement_GetPriority, "GetPriority" },
+	{ &Z_Construct_UFunction_AFortClientAnnouncement_OnClientAnnouncementStart, "OnClientAnnouncementStart" },
+	{ &Z_Construct_UFunction_AFortClientAnnouncement_OnClientAnnouncementStop, "OnClientAnnouncementStop" },
+	{ &Z_Construct_UFunction_AFortClientAnnouncement_StopClientAnnouncement, "StopClientAnnouncement" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortClientAnnouncement_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032E51E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortClientAnnouncement_Statics::ClassParams = { &AFortClientAnnouncement::StaticClass, Z_Construct_UClass_AFortClientAnnouncement_Statics::DependentSingletons, 2, 0x00900281u, Z_Construct_UClass_AFortClientAnnouncement_Statics::FuncInfo, 5, Z_Construct_UClass_AFortClientAnnouncement_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_AFortClientAnnouncement_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortClientAnnouncement_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFFF0 (end 0x00FC001F)
+// Original VA: 0x0000000140FBFFF0 | File offset: 0x00FBF5F0
+// Recovery: confirmed (UHT singleton of AFortClientAnnouncement) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortClientAnnouncement()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortClientAnnouncement_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitOverlap_WaitForOverlap()
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_WaitOverlap
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_WaitOverlap_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_WaitOverlap_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_WaitOverlap_OnHitCallback, "OnHitCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitOverlap_WaitForOverlap, "WaitForOverlap" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_WaitOverlap_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F333D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_WaitOverlap_Statics::ClassParams = { &UAbilityTask_WaitOverlap::StaticClass, Z_Construct_UClass_UAbilityTask_WaitOverlap_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_WaitOverlap_Statics::FuncInfo, 2, Z_Construct_UClass_UAbilityTask_WaitOverlap_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_UAbilityTask_WaitOverlap_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D810 (end 0x0054D83F)
+// Original VA: 0x000000014054D810 | File offset: 0x0054CE10
+// Recovery: confirmed (UHT singleton of UAbilityTask_WaitOverlap) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_WaitOverlap()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_WaitOverlap_Statics::ClassParams);
+	}
+	return OuterClass;
+}

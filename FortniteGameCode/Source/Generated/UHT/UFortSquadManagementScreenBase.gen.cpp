@@ -454,3 +454,57 @@ UFunction* Z_Construct_UFunction_UFortSquadManagementScreenBase_TryGetStaticSqua
 	}
 	return ReturnFunction;
 }
+
+class UFortSquadManagementScreenBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSquadManagementScreenBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadManagementScreenBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_GetIdOfSquadToManageBP, "GetIdOfSquadToManageBP" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleBackInputAction, "HandleBackInputAction" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleClosePickerInputAction, "HandleClosePickerInputAction" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleCyclePickerSortInputAction, "HandleCyclePickerSortInputAction" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleDifferentSquadSetBP, "HandleDifferentSquadSetBP" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleDifferentSquadSlotSelected, "HandleDifferentSquadSlotSelected" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleInspectInputAction, "HandleInspectInputAction" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleInventoryInputAction, "HandleInventoryInputAction" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleManageInputAction, "HandleManageInputAction" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleOpenSquadSlot, "HandleOpenSquadSlot" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandlePickerSelectionChanged, "HandlePickerSelectionChanged" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandlePickerSelectionCommitted, "HandlePickerSelectionCommitted" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleSelectPickerSlotInputAction, "HandleSelectPickerSlotInputAction" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleSquadSlotPickerHidden, "HandleSquadSlotPickerHidden" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleSquadSlotPickerShown, "HandleSquadSlotPickerShown" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleSquadStateChanged, "HandleSquadStateChanged" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_HandleViewInAll, "HandleViewInAll" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_NavigateToSquadSlot, "NavigateToSquadSlot" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_SetIdOfSquadToManageBP, "SetIdOfSquadToManageBP" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_TryGetAttributeValueFromSquad, "TryGetAttributeValueFromSquad" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_TryGetSquadMainAttribute, "TryGetSquadMainAttribute" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_TryGetSquadTeamAttribute, "TryGetSquadTeamAttribute" },
+	{ &Z_Construct_UFunction_UFortSquadManagementScreenBase_TryGetStaticSquadDataBP, "TryGetStaticSquadDataBP" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadManagementScreenBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D21A60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadManagementScreenBase_Statics::ClassParams = { &UFortSquadManagementScreenBase::StaticClass, Z_Construct_UClass_UFortSquadManagementScreenBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSquadManagementScreenBase_Statics::FuncInfo, 23, Z_Construct_UClass_UFortSquadManagementScreenBase_Statics::PropPointers, 14, nullptr, &Z_Construct_UClass_UFortSquadManagementScreenBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB4D0 (end 0x028FB4FF)
+// Original VA: 0x00000001428FB4D0 | File offset: 0x028FAAD0
+// Recovery: confirmed (UHT singleton of UFortSquadManagementScreenBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadManagementScreenBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadManagementScreenBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

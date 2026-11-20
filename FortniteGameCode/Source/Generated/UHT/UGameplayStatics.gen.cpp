@@ -2084,3 +2084,137 @@ UFunction* Z_Construct_UFunction_UGameplayStatics_UnloadStreamLevel()
 	}
 	return ReturnFunction;
 }
+
+class UGameplayStatics
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UGameplayStatics_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGameplayStatics_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGameplayStatics_ActivateReverbEffect, "ActivateReverbEffect" },
+	{ &Z_Construct_UFunction_UGameplayStatics_ApplyDamage, "ApplyDamage" },
+	{ &Z_Construct_UFunction_UGameplayStatics_ApplyPointDamage, "ApplyPointDamage" },
+	{ &Z_Construct_UFunction_UGameplayStatics_ApplyRadialDamage, "ApplyRadialDamage" },
+	{ &Z_Construct_UFunction_UGameplayStatics_ApplyRadialDamageWithFalloff, "ApplyRadialDamageWithFalloff" },
+	{ &Z_Construct_UFunction_UGameplayStatics_AreAnyListenersWithinRange, "AreAnyListenersWithinRange" },
+	{ &Z_Construct_UFunction_UGameplayStatics_AreSubtitlesEnabled, "AreSubtitlesEnabled" },
+	{ &Z_Construct_UFunction_UGameplayStatics_BeginDeferredActorSpawnFromClass, "BeginDeferredActorSpawnFromClass" },
+	{ &Z_Construct_UFunction_UGameplayStatics_BeginSpawningActorFromBlueprint, "BeginSpawningActorFromBlueprint" },
+	{ &Z_Construct_UFunction_UGameplayStatics_BeginSpawningActorFromClass, "BeginSpawningActorFromClass" },
+	{ &Z_Construct_UFunction_UGameplayStatics_BlueprintSuggestProjectileVelocity, "BlueprintSuggestProjectileVelocity" },
+	{ &Z_Construct_UFunction_UGameplayStatics_Blueprint_PredictProjectilePath_Advanced, "Blueprint_PredictProjectilePath_Advanced" },
+	{ &Z_Construct_UFunction_UGameplayStatics_Blueprint_PredictProjectilePath_ByObjectType, "Blueprint_PredictProjectilePath_ByObjectType" },
+	{ &Z_Construct_UFunction_UGameplayStatics_Blueprint_PredictProjectilePath_ByTraceChannel, "Blueprint_PredictProjectilePath_ByTraceChannel" },
+	{ &Z_Construct_UFunction_UGameplayStatics_BreakHitResult, "BreakHitResult" },
+	{ &Z_Construct_UFunction_UGameplayStatics_CancelAsyncLoading, "CancelAsyncLoading" },
+	{ &Z_Construct_UFunction_UGameplayStatics_ClearSoundMixClassOverride, "ClearSoundMixClassOverride" },
+	{ &Z_Construct_UFunction_UGameplayStatics_ClearSoundMixModifiers, "ClearSoundMixModifiers" },
+	{ &Z_Construct_UFunction_UGameplayStatics_CreatePlayer, "CreatePlayer" },
+	{ &Z_Construct_UFunction_UGameplayStatics_CreateSaveGameObject, "CreateSaveGameObject" },
+	{ &Z_Construct_UFunction_UGameplayStatics_CreateSaveGameObjectFromBlueprint, "CreateSaveGameObjectFromBlueprint" },
+	{ &Z_Construct_UFunction_UGameplayStatics_CreateSound2D, "CreateSound2D" },
+	{ &Z_Construct_UFunction_UGameplayStatics_DeactivateReverbEffect, "DeactivateReverbEffect" },
+	{ &Z_Construct_UFunction_UGameplayStatics_DeleteGameInSlot, "DeleteGameInSlot" },
+	{ &Z_Construct_UFunction_UGameplayStatics_DeprojectScreenToWorld, "DeprojectScreenToWorld" },
+	{ &Z_Construct_UFunction_UGameplayStatics_DoesSaveGameExist, "DoesSaveGameExist" },
+	{ &Z_Construct_UFunction_UGameplayStatics_EnableLiveStreaming, "EnableLiveStreaming" },
+	{ &Z_Construct_UFunction_UGameplayStatics_FindCollisionUV, "FindCollisionUV" },
+	{ &Z_Construct_UFunction_UGameplayStatics_FinishSpawningActor, "FinishSpawningActor" },
+	{ &Z_Construct_UFunction_UGameplayStatics_FlushLevelStreaming, "FlushLevelStreaming" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetAccurateRealTime, "GetAccurateRealTime" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetActorArrayAverageLocation, "GetActorArrayAverageLocation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetActorArrayBounds, "GetActorArrayBounds" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetAllActorsOfClass, "GetAllActorsOfClass" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetAllActorsWithInterface, "GetAllActorsWithInterface" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetAllActorsWithTag, "GetAllActorsWithTag" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetAudioTimeSeconds, "GetAudioTimeSeconds" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetCurrentLevelName, "GetCurrentLevelName" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetCurrentReverbEffect, "GetCurrentReverbEffect" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetGameInstance, "GetGameInstance" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetGameMode, "GetGameMode" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetGameState, "GetGameState" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetGlobalTimeDilation, "GetGlobalTimeDilation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetIntOption, "GetIntOption" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetKeyValue, "GetKeyValue" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetObjectClass, "GetObjectClass" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetPlatformName, "GetPlatformName" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetPlayerCameraManager, "GetPlayerCameraManager" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetPlayerCharacter, "GetPlayerCharacter" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetPlayerController, "GetPlayerController" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetPlayerControllerID, "GetPlayerControllerID" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetPlayerPawn, "GetPlayerPawn" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetRealTimeSeconds, "GetRealTimeSeconds" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetStreamingLevel, "GetStreamingLevel" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetSurfaceType, "GetSurfaceType" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetTimeSeconds, "GetTimeSeconds" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetUnpausedTimeSeconds, "GetUnpausedTimeSeconds" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetWorldDeltaSeconds, "GetWorldDeltaSeconds" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GetWorldOriginLocation, "GetWorldOriginLocation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_GrassOverlappingSphereCount, "GrassOverlappingSphereCount" },
+	{ &Z_Construct_UFunction_UGameplayStatics_HasLaunchOption, "HasLaunchOption" },
+	{ &Z_Construct_UFunction_UGameplayStatics_HasOption, "HasOption" },
+	{ &Z_Construct_UFunction_UGameplayStatics_IsGamePaused, "IsGamePaused" },
+	{ &Z_Construct_UFunction_UGameplayStatics_LoadGameFromSlot, "LoadGameFromSlot" },
+	{ &Z_Construct_UFunction_UGameplayStatics_LoadStreamLevel, "LoadStreamLevel" },
+	{ &Z_Construct_UFunction_UGameplayStatics_MakeHitResult, "MakeHitResult" },
+	{ &Z_Construct_UFunction_UGameplayStatics_OpenLevel, "OpenLevel" },
+	{ &Z_Construct_UFunction_UGameplayStatics_ParseOption, "ParseOption" },
+	{ &Z_Construct_UFunction_UGameplayStatics_PlayDialogue2D, "PlayDialogue2D" },
+	{ &Z_Construct_UFunction_UGameplayStatics_PlayDialogueAtLocation, "PlayDialogueAtLocation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_PlaySound2D, "PlaySound2D" },
+	{ &Z_Construct_UFunction_UGameplayStatics_PlaySoundAtLocation, "PlaySoundAtLocation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_PlayWorldCameraShake, "PlayWorldCameraShake" },
+	{ &Z_Construct_UFunction_UGameplayStatics_PopSoundMixModifier, "PopSoundMixModifier" },
+	{ &Z_Construct_UFunction_UGameplayStatics_ProjectWorldToScreen, "ProjectWorldToScreen" },
+	{ &Z_Construct_UFunction_UGameplayStatics_PushSoundMixModifier, "PushSoundMixModifier" },
+	{ &Z_Construct_UFunction_UGameplayStatics_RebaseLocalOriginOntoZero, "RebaseLocalOriginOntoZero" },
+	{ &Z_Construct_UFunction_UGameplayStatics_RebaseZeroOriginOntoLocal, "RebaseZeroOriginOntoLocal" },
+	{ &Z_Construct_UFunction_UGameplayStatics_RemovePlayer, "RemovePlayer" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SaveGameToSlot, "SaveGameToSlot" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SetBaseSoundMix, "SetBaseSoundMix" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SetGamePaused, "SetGamePaused" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SetGlobalListenerFocusParameters, "SetGlobalListenerFocusParameters" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SetGlobalPitchModulation, "SetGlobalPitchModulation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SetGlobalTimeDilation, "SetGlobalTimeDilation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SetPlayerControllerID, "SetPlayerControllerID" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SetSoundMixClassOverride, "SetSoundMixClassOverride" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SetSubtitlesEnabled, "SetSubtitlesEnabled" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SetWorldOriginLocation, "SetWorldOriginLocation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnDecalAtLocation, "SpawnDecalAtLocation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnDecalAttached, "SpawnDecalAttached" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnDialogue2D, "SpawnDialogue2D" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnDialogueAtLocation, "SpawnDialogueAtLocation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnDialogueAttached, "SpawnDialogueAttached" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnEmitterAtLocation, "SpawnEmitterAtLocation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnEmitterAttached, "SpawnEmitterAttached" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnForceFeedbackAtLocation, "SpawnForceFeedbackAtLocation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnForceFeedbackAttached, "SpawnForceFeedbackAttached" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnObject, "SpawnObject" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnSound2D, "SpawnSound2D" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnSoundAtLocation, "SpawnSoundAtLocation" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SpawnSoundAttached, "SpawnSoundAttached" },
+	{ &Z_Construct_UFunction_UGameplayStatics_SuggestProjectileVelocity_CustomArc, "SuggestProjectileVelocity_CustomArc" },
+	{ &Z_Construct_UFunction_UGameplayStatics_UnloadStreamLevel, "UnloadStreamLevel" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGameplayStatics_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038F3430
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGameplayStatics_Statics::ClassParams = { &UGameplayStatics::StaticClass, Z_Construct_UClass_UGameplayStatics_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UGameplayStatics_Statics::FuncInfo, 104, nullptr, 0, nullptr, &Z_Construct_UClass_UGameplayStatics_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FF10 (end 0x0240FF3F)
+// Original VA: 0x000000014240FF10 | File offset: 0x0240F510
+// Recovery: confirmed (UHT singleton of UGameplayStatics) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGameplayStatics()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGameplayStatics_Statics::ClassParams);
+	}
+	return OuterClass;
+}

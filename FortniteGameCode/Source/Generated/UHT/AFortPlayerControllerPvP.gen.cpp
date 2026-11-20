@@ -65,3 +65,36 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerPvP_ServerAttemptSelectFOB
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerControllerPvP
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerControllerPvP_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerControllerPvP_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerControllerPvP_ClientReceiveKillNotification, "ClientReceiveKillNotification" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerPvP_ClientShowGameOverWidget, "ClientShowGameOverWidget" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerPvP_ServerAttemptSelectFOBCore, "ServerAttemptSelectFOBCore" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerControllerPvP_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033C3EA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerControllerPvP_Statics::ClassParams = { &AFortPlayerControllerPvP::StaticClass, Z_Construct_UClass_AFortPlayerControllerPvP_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortPlayerControllerPvP_Statics::FuncInfo, 3, nullptr, 0, "Game", &Z_Construct_UClass_AFortPlayerControllerPvP_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010777D0 (end 0x010777FF)
+// Original VA: 0x00000001410777D0 | File offset: 0x01076DD0
+// Recovery: confirmed (UHT singleton of AFortPlayerControllerPvP) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerControllerPvP()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerControllerPvP_Statics::ClassParams);
+	}
+	return OuterClass;
+}

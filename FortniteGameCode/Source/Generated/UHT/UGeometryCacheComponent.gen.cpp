@@ -299,3 +299,49 @@ UFunction* Z_Construct_UFunction_UGeometryCacheComponent_Stop()
 	}
 	return ReturnFunction;
 }
+
+class UGeometryCacheComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UGeometryCacheComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGeometryCacheComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_GetPlaybackSpeed, "GetPlaybackSpeed" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_GetStartTimeOffset, "GetStartTimeOffset" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_IsLooping, "IsLooping" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_IsPlaying, "IsPlaying" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_IsPlayingReversed, "IsPlayingReversed" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_Pause, "Pause" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_Play, "Play" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_PlayFromStart, "PlayFromStart" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_PlayReversed, "PlayReversed" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_PlayReversedFromEnd, "PlayReversedFromEnd" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_SetGeometryCache, "SetGeometryCache" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_SetLooping, "SetLooping" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_SetPlaybackSpeed, "SetPlaybackSpeed" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_SetStartTimeOffset, "SetStartTimeOffset" },
+	{ &Z_Construct_UFunction_UGeometryCacheComponent_Stop, "Stop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGeometryCacheComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x037148C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGeometryCacheComponent_Statics::ClassParams = { &UGeometryCacheComponent::StaticClass, Z_Construct_UClass_UGeometryCacheComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UGeometryCacheComponent_Statics::FuncInfo, 15, Z_Construct_UClass_UGeometryCacheComponent_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UGeometryCacheComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D40030 (end 0x01D4005F)
+// Original VA: 0x0000000141D40030 | File offset: 0x01D3F630
+// Recovery: confirmed (UHT singleton of UGeometryCacheComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGeometryCacheComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGeometryCacheComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

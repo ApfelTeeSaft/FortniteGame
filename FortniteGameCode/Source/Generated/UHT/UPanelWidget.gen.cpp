@@ -184,3 +184,43 @@ UFunction* Z_Construct_UFunction_UPanelWidget_RemoveChildAt()
 	}
 	return ReturnFunction;
 }
+
+class UPanelWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPanelWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPanelWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPanelWidget_AddChild, "AddChild" },
+	{ &Z_Construct_UFunction_UPanelWidget_ClearChildren, "ClearChildren" },
+	{ &Z_Construct_UFunction_UPanelWidget_GetChildAt, "GetChildAt" },
+	{ &Z_Construct_UFunction_UPanelWidget_GetChildIndex, "GetChildIndex" },
+	{ &Z_Construct_UFunction_UPanelWidget_GetChildrenCount, "GetChildrenCount" },
+	{ &Z_Construct_UFunction_UPanelWidget_HasAnyChildren, "HasAnyChildren" },
+	{ &Z_Construct_UFunction_UPanelWidget_HasChild, "HasChild" },
+	{ &Z_Construct_UFunction_UPanelWidget_RemoveChild, "RemoveChild" },
+	{ &Z_Construct_UFunction_UPanelWidget_RemoveChildAt, "RemoveChildAt" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPanelWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036985E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPanelWidget_Statics::ClassParams = { &UPanelWidget::StaticClass, Z_Construct_UClass_UPanelWidget_Statics::DependentSingletons, 2, 0x00B00081u, Z_Construct_UClass_UPanelWidget_Statics::FuncInfo, 9, Z_Construct_UClass_UPanelWidget_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UPanelWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED890 (end 0x01BED8BF)
+// Original VA: 0x0000000141BED890 | File offset: 0x01BECE90
+// Recovery: confirmed (UHT singleton of UPanelWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPanelWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPanelWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

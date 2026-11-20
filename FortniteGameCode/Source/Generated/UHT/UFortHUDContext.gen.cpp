@@ -935,3 +935,81 @@ UFunction* Z_Construct_UFunction_UFortHUDContext_UpdateTrapAttachedToBuilding()
 	}
 	return ReturnFunction;
 }
+
+class UFortHUDContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHUDContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHUDContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHUDContext_AddPointOfInterest, "AddPointOfInterest" },
+	{ &Z_Construct_UFunction_UFortHUDContext_AreHUDElementsVisible, "AreHUDElementsVisible" },
+	{ &Z_Construct_UFunction_UFortHUDContext_AreIndicatorsEnabled, "AreIndicatorsEnabled" },
+	{ &Z_Construct_UFunction_UFortHUDContext_EnterCameraMode, "EnterCameraMode" },
+	{ &Z_Construct_UFunction_UFortHUDContext_EnterCursorMode, "EnterCursorMode" },
+	{ &Z_Construct_UFunction_UFortHUDContext_ForwardOnAbilityDecisionWindowStackUpdated, "ForwardOnAbilityDecisionWindowStackUpdated" },
+	{ &Z_Construct_UFunction_UFortHUDContext_ForwardOnMissionsUpdated, "ForwardOnMissionsUpdated" },
+	{ &Z_Construct_UFunction_UFortHUDContext_ForwardOnNumSurvivorsRescuedChanged, "ForwardOnNumSurvivorsRescuedChanged" },
+	{ &Z_Construct_UFunction_UFortHUDContext_ForwardOnWeaponEquipped, "ForwardOnWeaponEquipped" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetBluGloManager, "GetBluGloManager" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetCurrentBasicMissionInfo, "GetCurrentBasicMissionInfo" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetCurrentHUDState, "GetCurrentHUDState" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetCurrentHero, "GetCurrentHero" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetEarnedBadges, "GetEarnedBadges" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetFocusedBuildingInfo, "GetFocusedBuildingInfo" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetFocusedMission, "GetFocusedMission" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetGameStateZone, "GetGameStateZone" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetIndicatorsState, "GetIndicatorsState" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetKillerVisualInfoFromDeathReport, "GetKillerVisualInfoFromDeathReport" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetMissionManager, "GetMissionManager" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetMissionOverviewObjectives, "GetMissionOverviewObjectives" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetMissionRewards, "GetMissionRewards" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetPlayerStateZone, "GetPlayerStateZone" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetPotentialBadges, "GetPotentialBadges" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetScoreDisplayFactor, "GetScoreDisplayFactor" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetTeamCornerstone, "GetTeamCornerstone" },
+	{ &Z_Construct_UFunction_UFortHUDContext_GetTimeToDelayEndOfDayZoneWidgetDisplay, "GetTimeToDelayEndOfDayZoneWidgetDisplay" },
+	{ &Z_Construct_UFunction_UFortHUDContext_HandleBuildingModeChanged, "HandleBuildingModeChanged" },
+	{ &Z_Construct_UFunction_UFortHUDContext_HandleFocusedBuildingHealthChanged, "HandleFocusedBuildingHealthChanged" },
+	{ &Z_Construct_UFunction_UFortHUDContext_HandleLocalPawnDied, "HandleLocalPawnDied" },
+	{ &Z_Construct_UFunction_UFortHUDContext_HandleLocalPawnRevived, "HandleLocalPawnRevived" },
+	{ &Z_Construct_UFunction_UFortHUDContext_HandleLocalPawnSpawned, "HandleLocalPawnSpawned" },
+	{ &Z_Construct_UFunction_UFortHUDContext_HandleLocalPlayerKillsChanged, "HandleLocalPlayerKillsChanged" },
+	{ &Z_Construct_UFunction_UFortHUDContext_HandleLocalPlayerPlaceChanged, "HandleLocalPlayerPlaceChanged" },
+	{ &Z_Construct_UFunction_UFortHUDContext_HandleLocalPlayerViewTargetChanged, "HandleLocalPlayerViewTargetChanged" },
+	{ &Z_Construct_UFunction_UFortHUDContext_IsInCursorMode, "IsInCursorMode" },
+	{ &Z_Construct_UFunction_UFortHUDContext_IsInEditMode, "IsInEditMode" },
+	{ &Z_Construct_UFunction_UFortHUDContext_IsPreparingMgmtMenu, "IsPreparingMgmtMenu" },
+	{ &Z_Construct_UFunction_UFortHUDContext_RemovePointOfInterest, "RemovePointOfInterest" },
+	{ &Z_Construct_UFunction_UFortHUDContext_RequestMgmtMenuTab, "RequestMgmtMenuTab" },
+	{ &Z_Construct_UFunction_UFortHUDContext_SetCursorModeLocked, "SetCursorModeLocked" },
+	{ &Z_Construct_UFunction_UFortHUDContext_SetHUDElementVisibility, "SetHUDElementVisibility" },
+	{ &Z_Construct_UFunction_UFortHUDContext_SetIndicatorsAllowed, "SetIndicatorsAllowed" },
+	{ &Z_Construct_UFunction_UFortHUDContext_SetIndicatorsState, "SetIndicatorsState" },
+	{ &Z_Construct_UFunction_UFortHUDContext_SetPreparingMgmtMenu, "SetPreparingMgmtMenu" },
+	{ &Z_Construct_UFunction_UFortHUDContext_ShouldOnlyShowNextPrevBuildingSlotKeybinds, "ShouldOnlyShowNextPrevBuildingSlotKeybinds" },
+	{ &Z_Construct_UFunction_UFortHUDContext_UpdateTrapAttachedToBuilding, "UpdateTrapAttachedToBuilding" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHUDContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CB22C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHUDContext_Statics::ClassParams = { &UFortHUDContext::StaticClass, Z_Construct_UClass_UFortHUDContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortHUDContext_Statics::FuncInfo, 47, Z_Construct_UClass_UFortHUDContext_Statics::PropPointers, 71, nullptr, &Z_Construct_UClass_UFortHUDContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBD60 (end 0x028BBD8F)
+// Original VA: 0x00000001428BBD60 | File offset: 0x028BB360
+// Recovery: confirmed (UHT singleton of UFortHUDContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHUDContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHUDContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

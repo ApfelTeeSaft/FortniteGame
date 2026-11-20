@@ -165,3 +165,42 @@ UFunction* Z_Construct_UFunction_UGridSlot_SetVerticalAlignment()
 	}
 	return ReturnFunction;
 }
+
+class UGridSlot
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UGridSlot_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGridSlot_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGridSlot_SetColumn, "SetColumn" },
+	{ &Z_Construct_UFunction_UGridSlot_SetColumnSpan, "SetColumnSpan" },
+	{ &Z_Construct_UFunction_UGridSlot_SetHorizontalAlignment, "SetHorizontalAlignment" },
+	{ &Z_Construct_UFunction_UGridSlot_SetLayer, "SetLayer" },
+	{ &Z_Construct_UFunction_UGridSlot_SetPadding, "SetPadding" },
+	{ &Z_Construct_UFunction_UGridSlot_SetRow, "SetRow" },
+	{ &Z_Construct_UFunction_UGridSlot_SetRowSpan, "SetRowSpan" },
+	{ &Z_Construct_UFunction_UGridSlot_SetVerticalAlignment, "SetVerticalAlignment" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGridSlot_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03696BC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGridSlot_Statics::ClassParams = { &UGridSlot::StaticClass, Z_Construct_UClass_UGridSlot_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UGridSlot_Statics::FuncInfo, 8, Z_Construct_UClass_UGridSlot_Statics::PropPointers, 9, nullptr, &Z_Construct_UClass_UGridSlot_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED3F0 (end 0x01BED41F)
+// Original VA: 0x0000000141BED3F0 | File offset: 0x01BEC9F0
+// Recovery: confirmed (UHT singleton of UGridSlot) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGridSlot()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGridSlot_Statics::ClassParams);
+	}
+	return OuterClass;
+}

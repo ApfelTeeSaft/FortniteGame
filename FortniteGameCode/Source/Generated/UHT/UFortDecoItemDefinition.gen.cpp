@@ -505,3 +505,59 @@ UFunction* Z_Construct_UFunction_UFortDecoItemDefinition_ShouldUseRelativeCamera
 	}
 	return ReturnFunction;
 }
+
+class UFortDecoItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortDecoItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortDecoItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_GetBlueprintClass, "GetBlueprintClass" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_GetGridSnapSizeOverride, "GetGridSnapSizeOverride" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_GetMaxPlacementDistance, "GetMaxPlacementDistance" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_GetPlacementPreviewClass, "GetPlacementPreviewClass" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_GetPlacementTypeOverride, "GetPlacementTypeOverride" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_GetRotationAngleIncrement, "GetRotationAngleIncrement" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_RequiresPermissionToEditWorld, "RequiresPermissionToEditWorld" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_RequiresPlayerPlaceableAttachmentActors, "RequiresPlayerPlaceableAttachmentActors" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldAllowAnyFloorPlacement, "ShouldAllowAnyFloorPlacement" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldAllowPlacementOnBuildings, "ShouldAllowPlacementOnBuildings" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldAllowPlacementOnWorldGeometry, "ShouldAllowPlacementOnWorldGeometry" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldAllowStairsWhenAttachingToFloors, "ShouldAllowStairsWhenAttachingToFloors" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldAttachWhenPlacing, "ShouldAttachWhenPlacing" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldCancelAbilityOnUnequip, "ShouldCancelAbilityOnUnequip" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldCancelToolWhenPlaced, "ShouldCancelToolWhenPlaced" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldConsumeWhenPlaced, "ShouldConsumeWhenPlaced" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldDestroySmallObjectsWhenPlaced, "ShouldDestroySmallObjectsWhenPlaced" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldDisableLocationLerpWhilePlacing, "ShouldDisableLocationLerpWhilePlacing" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldDisableRotationLerpWhilePlacing, "ShouldDisableRotationLerpWhilePlacing" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldDisableScaleLerpWhilePlacing, "ShouldDisableScaleLerpWhilePlacing" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldForceIgnoreBuildingOverlaps, "ShouldForceIgnoreBuildingOverlaps" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldForceIgnoreOverlapTest, "ShouldForceIgnoreOverlapTest" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldIgnoreCollisionWithCriticalActors, "ShouldIgnoreCollisionWithCriticalActors" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldSnapYawToHorizontalAxes, "ShouldSnapYawToHorizontalAxes" },
+	{ &Z_Construct_UFunction_UFortDecoItemDefinition_ShouldUseRelativeCameraRotation, "ShouldUseRelativeCameraRotation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortDecoItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032FF290
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortDecoItemDefinition_Statics::ClassParams = { &UFortDecoItemDefinition::StaticClass, Z_Construct_UClass_UFortDecoItemDefinition_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortDecoItemDefinition_Statics::FuncInfo, 25, Z_Construct_UClass_UFortDecoItemDefinition_Statics::PropPointers, 27, nullptr, &Z_Construct_UClass_UFortDecoItemDefinition_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD0050 (end 0x00FD007F)
+// Original VA: 0x0000000140FD0050 | File offset: 0x00FCF650
+// Recovery: confirmed (UHT singleton of UFortDecoItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortDecoItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortDecoItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

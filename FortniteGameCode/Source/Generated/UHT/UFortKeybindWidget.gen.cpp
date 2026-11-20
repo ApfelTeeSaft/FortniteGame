@@ -203,3 +203,44 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_UpdateKeybindWidget()
 	}
 	return ReturnFunction;
 }
+
+class UFortKeybindWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortKeybindWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortKeybindWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortKeybindWidget_GetBrushForKey, "GetBrushForKey" },
+	{ &Z_Construct_UFunction_UFortKeybindWidget_IsHoldKeybind, "IsHoldKeybind" },
+	{ &Z_Construct_UFunction_UFortKeybindWidget_SetBoundAction, "SetBoundAction" },
+	{ &Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybind, "SetForcedHoldKeybind" },
+	{ &Z_Construct_UFunction_UFortKeybindWidget_SetForcedHoldKeybindStatus, "SetForcedHoldKeybindStatus" },
+	{ &Z_Construct_UFunction_UFortKeybindWidget_SetShowProgressCountDown, "SetShowProgressCountDown" },
+	{ &Z_Construct_UFunction_UFortKeybindWidget_StartHoldProgress, "StartHoldProgress" },
+	{ &Z_Construct_UFunction_UFortKeybindWidget_StopHoldProgress, "StopHoldProgress" },
+	{ &Z_Construct_UFunction_UFortKeybindWidget_Update, "Update" },
+	{ &Z_Construct_UFunction_UFortKeybindWidget_UpdateKeybindWidget, "UpdateKeybindWidget" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortKeybindWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CDA8A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortKeybindWidget_Statics::ClassParams = { &UFortKeybindWidget::StaticClass, Z_Construct_UClass_UFortKeybindWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortKeybindWidget_Statics::FuncInfo, 10, Z_Construct_UClass_UFortKeybindWidget_Statics::PropPointers, 13, nullptr, &Z_Construct_UClass_UFortKeybindWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF780 (end 0x028CF7AF)
+// Original VA: 0x00000001428CF780 | File offset: 0x028CED80
+// Recovery: confirmed (UHT singleton of UFortKeybindWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortKeybindWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortKeybindWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

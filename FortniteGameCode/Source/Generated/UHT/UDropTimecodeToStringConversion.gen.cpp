@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UDropTimecodeToStringConversion_Conv_DropTimeco
 	}
 	return ReturnFunction;
 }
+
+class UDropTimecodeToStringConversion
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UDropTimecodeToStringConversion_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UDropTimecodeToStringConversion_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UDropTimecodeToStringConversion_Conv_DropTimecodeToString, "Conv_DropTimecodeToString" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UDropTimecodeToStringConversion_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02FD3C90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UDropTimecodeToStringConversion_Statics::ClassParams = { &UDropTimecodeToStringConversion::StaticClass, Z_Construct_UClass_UDropTimecodeToStringConversion_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UDropTimecodeToStringConversion_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UDropTimecodeToStringConversion_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x007E0240 (end 0x007E026F)
+// Original VA: 0x00000001407E0240 | File offset: 0x007DF840
+// Recovery: confirmed (UHT singleton of UDropTimecodeToStringConversion) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UDropTimecodeToStringConversion()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UDropTimecodeToStringConversion_Statics::ClassParams);
+	}
+	return OuterClass;
+}

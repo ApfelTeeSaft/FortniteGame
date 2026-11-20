@@ -415,3 +415,55 @@ UFunction* Z_Construct_UFunction_UFortUIStateWidget_Login_StartAutoLogin()
 	}
 	return ReturnFunction;
 }
+
+class UFortUIStateWidget_Login
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortUIStateWidget_Login_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUIStateWidget_Login_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_ActivateWidgetOnFlowStack, "ActivateWidgetOnFlowStack" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_CheckShowLoginMessage, "CheckShowLoginMessage" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_EmptyFlowStack, "EmptyFlowStack" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_GetPlatformDisplayName, "GetPlatformDisplayName" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_HandleLoginResultConfirmed, "HandleLoginResultConfirmed" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_HandlerBenchmarkFlow, "HandlerBenchmarkFlow" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_IsLoggedIn, "IsLoggedIn" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_OnErrorDialogDismissed, "OnErrorDialogDismissed" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_OnLoginSuceeded, "OnLoginSuceeded" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_OnNeedsPurchaseOrAccountLinking, "OnNeedsPurchaseOrAccountLinking" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_OnPostLoginLogoutComplete, "OnPostLoginLogoutComplete" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_OnShowLoginMessage, "OnShowLoginMessage" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_PushWidgetOntoFlowStack, "PushWidgetOntoFlowStack" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_RollbackStackToSplashScreen, "RollbackStackToSplashScreen" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_SafePopFlowStack, "SafePopFlowStack" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_ShowEulaWindow, "ShowEulaWindow" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_ShowPostLoginLogoutError, "ShowPostLoginLogoutError" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_ShowResultWindow, "ShowResultWindow" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_ShowSignInWindow, "ShowSignInWindow" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_ShowStatusWindow, "ShowStatusWindow" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_Login_StartAutoLogin, "StartAutoLogin" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUIStateWidget_Login_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D4AAA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUIStateWidget_Login_Statics::ClassParams = { &UFortUIStateWidget_Login::StaticClass, Z_Construct_UClass_UFortUIStateWidget_Login_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortUIStateWidget_Login_Statics::FuncInfo, 21, Z_Construct_UClass_UFortUIStateWidget_Login_Statics::PropPointers, 24, nullptr, &Z_Construct_UClass_UFortUIStateWidget_Login_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911FD0 (end 0x02911FFF)
+// Original VA: 0x0000000142911FD0 | File offset: 0x029115D0
+// Recovery: confirmed (UHT singleton of UFortUIStateWidget_Login) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUIStateWidget_Login()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUIStateWidget_Login_Statics::ClassParams);
+	}
+	return OuterClass;
+}

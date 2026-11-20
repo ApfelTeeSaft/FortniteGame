@@ -180,3 +180,43 @@ UFunction* Z_Construct_UFunction_AThreatCloud_OnThreatVolumeChanged()
 	}
 	return ReturnFunction;
 }
+
+class AThreatCloud
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AThreatCloud_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AThreatCloud_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AThreatCloud_GetThreatVolume, "GetThreatVolume" },
+	{ &Z_Construct_UFunction_AThreatCloud_ManualLightningFlash, "ManualLightningFlash" },
+	{ &Z_Construct_UFunction_AThreatCloud_OnBeginDeath, "OnBeginDeath" },
+	{ &Z_Construct_UFunction_AThreatCloud_OnCloudActivated, "OnCloudActivated" },
+	{ &Z_Construct_UFunction_AThreatCloud_OnCloudDeactivated, "OnCloudDeactivated" },
+	{ &Z_Construct_UFunction_AThreatCloud_OnCloudHiddenChange, "OnCloudHiddenChange" },
+	{ &Z_Construct_UFunction_AThreatCloud_OnCloudStart, "OnCloudStart" },
+	{ &Z_Construct_UFunction_AThreatCloud_OnLightningStrike, "OnLightningStrike" },
+	{ &Z_Construct_UFunction_AThreatCloud_OnThreatVolumeChanged, "OnThreatVolumeChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AThreatCloud_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03450FD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AThreatCloud_Statics::ClassParams = { &AThreatCloud::StaticClass, Z_Construct_UClass_AThreatCloud_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AThreatCloud_Statics::FuncInfo, 9, Z_Construct_UClass_AThreatCloud_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_AThreatCloud_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F1910 (end 0x010F193F)
+// Original VA: 0x00000001410F1910 | File offset: 0x010F0F10
+// Recovery: confirmed (UHT singleton of AThreatCloud) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AThreatCloud()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AThreatCloud_Statics::ClassParams);
+	}
+	return OuterClass;
+}

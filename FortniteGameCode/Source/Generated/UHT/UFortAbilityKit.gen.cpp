@@ -45,3 +45,37 @@ UFunction* Z_Construct_UFunction_UFortAbilityKit_GetDescription()
 	}
 	return ReturnFunction;
 }
+
+class UFortAbilityKit
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAbilityKit_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAbilityKit_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAbilityKit_BP_GetGadgets, "BP_GetGadgets" },
+	{ &Z_Construct_UFunction_UFortAbilityKit_GetDescription, "GetDescription" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAbilityKit_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0328F610
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAbilityKit_Statics::ClassParams = { &UFortAbilityKit::StaticClass, Z_Construct_UClass_UFortAbilityKit_Statics::DependentSingletons, 2, 0x00080080u, Z_Construct_UClass_UFortAbilityKit_Statics::FuncInfo, 2, Z_Construct_UClass_UFortAbilityKit_Statics::PropPointers, 16, nullptr, &Z_Construct_UClass_UFortAbilityKit_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortAbilityKit_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7D340 (end 0x00F7D36F)
+// Original VA: 0x0000000140F7D340 | File offset: 0x00F7C940
+// Recovery: confirmed (UHT singleton of UFortAbilityKit) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAbilityKit()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAbilityKit_Statics::ClassParams);
+	}
+	return OuterClass;
+}

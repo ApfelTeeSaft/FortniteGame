@@ -103,3 +103,39 @@ UFunction* Z_Construct_UFunction_AFortDecoTool_ServerSpawnDeco()
 	}
 	return ReturnFunction;
 }
+
+class AFortDecoTool
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortDecoTool_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortDecoTool_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortDecoTool_ClientDestroyDecoPreview, "ClientDestroyDecoPreview" },
+	{ &Z_Construct_UFunction_AFortDecoTool_OnCarriedActorDestroyed, "OnCarriedActorDestroyed" },
+	{ &Z_Construct_UFunction_AFortDecoTool_OnRep_CarriedActor, "OnRep_CarriedActor" },
+	{ &Z_Construct_UFunction_AFortDecoTool_OnRep_ItemDefinition, "OnRep_ItemDefinition" },
+	{ &Z_Construct_UFunction_AFortDecoTool_ServerSpawnDeco, "ServerSpawnDeco" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortDecoTool_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032FF8D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortDecoTool_Statics::ClassParams = { &AFortDecoTool::StaticClass, Z_Construct_UClass_AFortDecoTool_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortDecoTool_Statics::FuncInfo, 5, Z_Construct_UClass_AFortDecoTool_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_AFortDecoTool_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFFC0 (end 0x00FCFFEF)
+// Original VA: 0x0000000140FCFFC0 | File offset: 0x00FCF5C0
+// Recovery: confirmed (UHT singleton of AFortDecoTool) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortDecoTool()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortDecoTool_Statics::ClassParams);
+	}
+	return OuterClass;
+}

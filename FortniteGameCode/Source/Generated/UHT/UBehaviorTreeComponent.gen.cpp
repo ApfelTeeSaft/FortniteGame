@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UBehaviorTreeComponent_SetDynamicSubtree()
 	}
 	return ReturnFunction;
 }
+
+class UBehaviorTreeComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBehaviorTreeComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBehaviorTreeComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBehaviorTreeComponent_AddCooldownTagDuration, "AddCooldownTagDuration" },
+	{ &Z_Construct_UFunction_UBehaviorTreeComponent_GetTagCooldownEndTime, "GetTagCooldownEndTime" },
+	{ &Z_Construct_UFunction_UBehaviorTreeComponent_SetDynamicSubtree, "SetDynamicSubtree" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBehaviorTreeComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036F9A50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBehaviorTreeComponent_Statics::ClassParams = { &UBehaviorTreeComponent::StaticClass, Z_Construct_UClass_UBehaviorTreeComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UBehaviorTreeComponent_Statics::FuncInfo, 3, Z_Construct_UClass_UBehaviorTreeComponent_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UBehaviorTreeComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D23140 (end 0x01D2316F)
+// Original VA: 0x0000000141D23140 | File offset: 0x01D22740
+// Recovery: confirmed (UHT singleton of UBehaviorTreeComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBehaviorTreeComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBehaviorTreeComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -104,3 +104,39 @@ UFunction* Z_Construct_UFunction_UPlayerInput_SetMouseSensitivity()
 	}
 	return ReturnFunction;
 }
+
+class UPlayerInput
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPlayerInput_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPlayerInput_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPlayerInput_ClearSmoothing, "ClearSmoothing" },
+	{ &Z_Construct_UFunction_UPlayerInput_InvertAxis, "InvertAxis" },
+	{ &Z_Construct_UFunction_UPlayerInput_InvertAxisKey, "InvertAxisKey" },
+	{ &Z_Construct_UFunction_UPlayerInput_SetBind, "SetBind" },
+	{ &Z_Construct_UFunction_UPlayerInput_SetMouseSensitivity, "SetMouseSensitivity" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPlayerInput_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0398CF80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPlayerInput_Statics::ClassParams = { &UPlayerInput::StaticClass, Z_Construct_UClass_UPlayerInput_Statics::DependentSingletons, 2, 0x0010008Cu, Z_Construct_UClass_UPlayerInput_Statics::FuncInfo, 5, Z_Construct_UClass_UPlayerInput_Statics::PropPointers, 4, "Input", &Z_Construct_UClass_UPlayerInput_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7E40 (end 0x024B7E6F)
+// Original VA: 0x00000001424B7E40 | File offset: 0x024B7440
+// Recovery: confirmed (UHT singleton of UPlayerInput) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPlayerInput()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPlayerInput_Statics::ClassParams);
+	}
+	return OuterClass;
+}

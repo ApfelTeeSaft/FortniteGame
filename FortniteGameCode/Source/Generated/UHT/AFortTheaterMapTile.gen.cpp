@@ -554,3 +554,62 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnTileClicked()
 	}
 	return ReturnFunction;
 }
+
+class AFortTheaterMapTile
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortTheaterMapTile_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortTheaterMapTile_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_DoesTileAllowQuickplay, "DoesTileAllowQuickplay" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertCategoryName, "GetMissionAlertCategoryName" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_GetMissionAlertVisualTags, "GetMissionAlertVisualTags" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_GetZoneDifficulty, "GetZoneDifficulty" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_HasValidMissionData, "HasValidMissionData" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_IsMissionAlertTile, "IsMissionAlertTile" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_IsTileHidden, "IsTileHidden" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_IsTileLocked, "IsTileLocked" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_IsTilePlayable, "IsTilePlayable" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_IsTileQuestRecommended, "IsTileQuestRecommended" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_IsTileSelectable, "IsTileSelectable" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_IsTileValidForMarkedQuest, "IsTileValidForMarkedQuest" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnClientDeselect, "OnClientDeselect" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnClientSelect, "OnClientSelect" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnDefocus, "OnDefocus" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnDeselectWrapper, "OnDeselectWrapper" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnDisableGoToPrompt, "OnDisableGoToPrompt" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnEnableGoToPrompt, "OnEnableGoToPrompt" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnFocus, "OnFocus" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnHostDeselect, "OnHostDeselect" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnHostSelect, "OnHostSelect" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnInitializeTile, "OnInitializeTile" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnMarkedQuestChanged, "OnMarkedQuestChanged" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnMissionDataUpdated, "OnMissionDataUpdated" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverBegin, "OnMouseOverBegin" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnMouseOverEnd, "OnMouseOverEnd" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnSelectWrapper, "OnSelectWrapper" },
+	{ &Z_Construct_UFunction_AFortTheaterMapTile_OnTileClicked, "OnTileClicked" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortTheaterMapTile_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0340A480
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortTheaterMapTile_Statics::ClassParams = { &AFortTheaterMapTile::StaticClass, Z_Construct_UClass_AFortTheaterMapTile_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortTheaterMapTile_Statics::FuncInfo, 28, Z_Construct_UClass_AFortTheaterMapTile_Statics::PropPointers, 28, nullptr, &Z_Construct_UClass_AFortTheaterMapTile_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE150 (end 0x010BE17F)
+// Original VA: 0x00000001410BE150 | File offset: 0x010BD750
+// Recovery: confirmed (UHT singleton of AFortTheaterMapTile) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortTheaterMapTile()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortTheaterMapTile_Statics::ClassParams);
+	}
+	return OuterClass;
+}

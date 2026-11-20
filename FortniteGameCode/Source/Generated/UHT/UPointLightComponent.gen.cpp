@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UPointLightComponent_SetSourceRadius()
 	}
 	return ReturnFunction;
 }
+
+class UPointLightComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPointLightComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPointLightComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPointLightComponent_GetUnitsConversionFactor, "GetUnitsConversionFactor" },
+	{ &Z_Construct_UFunction_UPointLightComponent_SetAttenuationRadius, "SetAttenuationRadius" },
+	{ &Z_Construct_UFunction_UPointLightComponent_SetLightFalloffExponent, "SetLightFalloffExponent" },
+	{ &Z_Construct_UFunction_UPointLightComponent_SetSoftSourceRadius, "SetSoftSourceRadius" },
+	{ &Z_Construct_UFunction_UPointLightComponent_SetSourceLength, "SetSourceLength" },
+	{ &Z_Construct_UFunction_UPointLightComponent_SetSourceRadius, "SetSourceRadius" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPointLightComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0398D6B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPointLightComponent_Statics::ClassParams = { &UPointLightComponent::StaticClass, Z_Construct_UClass_UPointLightComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UPointLightComponent_Statics::FuncInfo, 6, Z_Construct_UClass_UPointLightComponent_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UPointLightComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7EA0 (end 0x024B7ECF)
+// Original VA: 0x00000001424B7EA0 | File offset: 0x024B74A0
+// Recovery: confirmed (UHT singleton of UPointLightComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPointLightComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPointLightComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

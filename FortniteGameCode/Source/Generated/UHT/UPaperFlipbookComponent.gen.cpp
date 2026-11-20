@@ -460,3 +460,57 @@ UFunction* Z_Construct_UFunction_UPaperFlipbookComponent_Stop()
 	}
 	return ReturnFunction;
 }
+
+class UPaperFlipbookComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPaperFlipbookComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPaperFlipbookComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_GetFlipbook, "GetFlipbook" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_GetFlipbookFramerate, "GetFlipbookFramerate" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_GetFlipbookLength, "GetFlipbookLength" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_GetFlipbookLengthInFrames, "GetFlipbookLengthInFrames" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_GetPlayRate, "GetPlayRate" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_GetPlaybackPosition, "GetPlaybackPosition" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_GetPlaybackPositionInFrames, "GetPlaybackPositionInFrames" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_IsLooping, "IsLooping" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_IsPlaying, "IsPlaying" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_IsReversing, "IsReversing" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_OnRep_SourceFlipbook, "OnRep_SourceFlipbook" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_Play, "Play" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_PlayFromStart, "PlayFromStart" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_Reverse, "Reverse" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_ReverseFromEnd, "ReverseFromEnd" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_SetFlipbook, "SetFlipbook" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_SetLooping, "SetLooping" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_SetNewTime, "SetNewTime" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_SetPlayRate, "SetPlayRate" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_SetPlaybackPosition, "SetPlaybackPosition" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_SetPlaybackPositionInFrames, "SetPlaybackPositionInFrames" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_SetSpriteColor, "SetSpriteColor" },
+	{ &Z_Construct_UFunction_UPaperFlipbookComponent_Stop, "Stop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPaperFlipbookComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F93F70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPaperFlipbookComponent_Statics::ClassParams = { &UPaperFlipbookComponent::StaticClass, Z_Construct_UClass_UPaperFlipbookComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UPaperFlipbookComponent_Statics::FuncInfo, 23, Z_Construct_UClass_UPaperFlipbookComponent_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_UPaperFlipbookComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x006676E0 (end 0x0066770F)
+// Original VA: 0x00000001406676E0 | File offset: 0x00666CE0
+// Recovery: confirmed (UHT singleton of UPaperFlipbookComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPaperFlipbookComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPaperFlipbookComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

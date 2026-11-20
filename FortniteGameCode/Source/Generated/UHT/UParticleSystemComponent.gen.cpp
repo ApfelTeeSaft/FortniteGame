@@ -604,3 +604,64 @@ UFunction* Z_Construct_UFunction_UParticleSystemComponent_SetVectorParameter()
 	}
 	return ReturnFunction;
 }
+
+class UParticleSystemComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UParticleSystemComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UParticleSystemComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UParticleSystemComponent_BeginTrails, "BeginTrails" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_CreateNamedDynamicMaterialInstance, "CreateNamedDynamicMaterialInstance" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_EndTrails, "EndTrails" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_GenerateParticleEvent, "GenerateParticleEvent" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_GetBeamEndPoint, "GetBeamEndPoint" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_GetBeamSourcePoint, "GetBeamSourcePoint" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_GetBeamSourceStrength, "GetBeamSourceStrength" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_GetBeamSourceTangent, "GetBeamSourceTangent" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_GetBeamTargetPoint, "GetBeamTargetPoint" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_GetBeamTargetStrength, "GetBeamTargetStrength" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_GetBeamTargetTangent, "GetBeamTargetTangent" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_GetNamedMaterial, "GetNamedMaterial" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_GetNumActiveParticles, "GetNumActiveParticles" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetActorParameter, "SetActorParameter" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetAutoAttachParams, "SetAutoAttachParams" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetAutoAttachmentParameters, "SetAutoAttachmentParameters" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetBeamEndPoint, "SetBeamEndPoint" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetBeamSourcePoint, "SetBeamSourcePoint" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetBeamSourceStrength, "SetBeamSourceStrength" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetBeamSourceTangent, "SetBeamSourceTangent" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetBeamTargetPoint, "SetBeamTargetPoint" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetBeamTargetStrength, "SetBeamTargetStrength" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetBeamTargetTangent, "SetBeamTargetTangent" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetColorParameter, "SetColorParameter" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetEmitterEnable, "SetEmitterEnable" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetFloatParameter, "SetFloatParameter" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetMaterialParameter, "SetMaterialParameter" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetTemplate, "SetTemplate" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetTrailSourceData, "SetTrailSourceData" },
+	{ &Z_Construct_UFunction_UParticleSystemComponent_SetVectorParameter, "SetVectorParameter" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UParticleSystemComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03977BE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UParticleSystemComponent_Statics::ClassParams = { &UParticleSystemComponent::StaticClass, Z_Construct_UClass_UParticleSystemComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UParticleSystemComponent_Statics::FuncInfo, 30, Z_Construct_UClass_UParticleSystemComponent_Statics::PropPointers, 39, nullptr, &Z_Construct_UClass_UParticleSystemComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0930 (end 0x024A095F)
+// Original VA: 0x00000001424A0930 | File offset: 0x0249FF30
+// Recovery: confirmed (UHT singleton of UParticleSystemComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UParticleSystemComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UParticleSystemComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

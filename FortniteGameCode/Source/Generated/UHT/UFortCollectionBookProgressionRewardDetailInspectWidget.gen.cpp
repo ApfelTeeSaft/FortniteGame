@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressionRewardDetailInspe
 	}
 	return ReturnFunction;
 }
+
+class UFortCollectionBookProgressionRewardDetailInspectWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCollectionBookProgressionRewardDetailInspectWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCollectionBookProgressionRewardDetailInspectWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCollectionBookProgressionRewardDetailInspectWidget_GetXPRequired, "GetXPRequired" },
+	{ &Z_Construct_UFunction_UFortCollectionBookProgressionRewardDetailInspectWidget_OnXPRequiredChanged, "OnXPRequiredChanged" },
+	{ &Z_Construct_UFunction_UFortCollectionBookProgressionRewardDetailInspectWidget_SetAssociatedLevel, "SetAssociatedLevel" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCollectionBookProgressionRewardDetailInspectWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C76AB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCollectionBookProgressionRewardDetailInspectWidget_Statics::ClassParams = { &UFortCollectionBookProgressionRewardDetailInspectWidget::StaticClass, Z_Construct_UClass_UFortCollectionBookProgressionRewardDetailInspectWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortCollectionBookProgressionRewardDetailInspectWidget_Statics::FuncInfo, 3, Z_Construct_UClass_UFortCollectionBookProgressionRewardDetailInspectWidget_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortCollectionBookProgressionRewardDetailInspectWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028947B0 (end 0x028947DF)
+// Original VA: 0x00000001428947B0 | File offset: 0x02893DB0
+// Recovery: confirmed (UHT singleton of UFortCollectionBookProgressionRewardDetailInspectWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCollectionBookProgressionRewardDetailInspectWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCollectionBookProgressionRewardDetailInspectWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

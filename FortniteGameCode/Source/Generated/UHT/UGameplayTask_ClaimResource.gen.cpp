@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UGameplayTask_ClaimResource_ClaimResources()
 	}
 	return ReturnFunction;
 }
+
+class UGameplayTask_ClaimResource
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UGameplayTask_ClaimResource_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGameplayTask_ClaimResource_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGameplayTask_ClaimResource_ClaimResource, "ClaimResource" },
+	{ &Z_Construct_UFunction_UGameplayTask_ClaimResource_ClaimResources, "ClaimResources" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGameplayTask_ClaimResource_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036C6280
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGameplayTask_ClaimResource_Statics::ClassParams = { &UGameplayTask_ClaimResource::StaticClass, Z_Construct_UClass_UGameplayTask_ClaimResource_Statics::DependentSingletons, 2, 0x00100084u, Z_Construct_UClass_UGameplayTask_ClaimResource_Statics::FuncInfo, 2, nullptr, 0, "Game", &Z_Construct_UClass_UGameplayTask_ClaimResource_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9AB90 (end 0x01C9ABBF)
+// Original VA: 0x0000000141C9AB90 | File offset: 0x01C9A190
+// Recovery: confirmed (UHT singleton of UGameplayTask_ClaimResource) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGameplayTask_ClaimResource()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGameplayTask_ClaimResource_Statics::ClassParams);
+	}
+	return OuterClass;
+}

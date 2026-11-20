@@ -204,3 +204,44 @@ UFunction* Z_Construct_UFunction_UAthenaStatsScreenBase_OnTabSelected()
 	}
 	return ReturnFunction;
 }
+
+class UAthenaStatsScreenBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaStatsScreenBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaStatsScreenBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaStatsScreenBase_FormatStatValueAsElapsedTime, "FormatStatValueAsElapsedTime" },
+	{ &Z_Construct_UFunction_UAthenaStatsScreenBase_GetLastUpdateTime, "GetLastUpdateTime" },
+	{ &Z_Construct_UFunction_UAthenaStatsScreenBase_GetSecondTierPlaceTag, "GetSecondTierPlaceTag" },
+	{ &Z_Construct_UFunction_UAthenaStatsScreenBase_GetStatGameplayTag, "GetStatGameplayTag" },
+	{ &Z_Construct_UFunction_UAthenaStatsScreenBase_GetStatValue, "GetStatValue" },
+	{ &Z_Construct_UFunction_UAthenaStatsScreenBase_GetThirdTierPlaceTag, "GetThirdTierPlaceTag" },
+	{ &Z_Construct_UFunction_UAthenaStatsScreenBase_GetWinsTag, "GetWinsTag" },
+	{ &Z_Construct_UFunction_UAthenaStatsScreenBase_OnQueryFinished, "OnQueryFinished" },
+	{ &Z_Construct_UFunction_UAthenaStatsScreenBase_OnQueryStarted, "OnQueryStarted" },
+	{ &Z_Construct_UFunction_UAthenaStatsScreenBase_OnTabSelected, "OnTabSelected" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaStatsScreenBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C5F3C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaStatsScreenBase_Statics::ClassParams = { &UAthenaStatsScreenBase::StaticClass, Z_Construct_UClass_UAthenaStatsScreenBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UAthenaStatsScreenBase_Statics::FuncInfo, 10, Z_Construct_UClass_UAthenaStatsScreenBase_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UAthenaStatsScreenBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028874F0 (end 0x0288751F)
+// Original VA: 0x00000001428874F0 | File offset: 0x02886AF0
+// Recovery: confirmed (UHT singleton of UAthenaStatsScreenBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaStatsScreenBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaStatsScreenBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

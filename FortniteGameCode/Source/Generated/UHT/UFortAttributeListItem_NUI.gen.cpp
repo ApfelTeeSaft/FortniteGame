@@ -221,3 +221,46 @@ UFunction* Z_Construct_UFunction_UFortAttributeListItem_NUI_ValueChanged()
 	}
 	return ReturnFunction;
 }
+
+class UFortAttributeListItem_NUI
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAttributeListItem_NUI_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAttributeListItem_NUI_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAttributeListItem_NUI_ClearPreview, "ClearPreview" },
+	{ &Z_Construct_UFunction_UFortAttributeListItem_NUI_DisplayAttributeChanged, "DisplayAttributeChanged" },
+	{ &Z_Construct_UFunction_UFortAttributeListItem_NUI_GetCurrentAttributeCopy, "GetCurrentAttributeCopy" },
+	{ &Z_Construct_UFunction_UFortAttributeListItem_NUI_GetDisplayAttributeCopy, "GetDisplayAttributeCopy" },
+	{ &Z_Construct_UFunction_UFortAttributeListItem_NUI_GetDisplayPreviewCopy, "GetDisplayPreviewCopy" },
+	{ &Z_Construct_UFunction_UFortAttributeListItem_NUI_HasPreviewAttribute, "HasPreviewAttribute" },
+	{ &Z_Construct_UFunction_UFortAttributeListItem_NUI_PreviewEnded, "PreviewEnded" },
+	{ &Z_Construct_UFunction_UFortAttributeListItem_NUI_PreviewStarted, "PreviewStarted" },
+	{ &Z_Construct_UFunction_UFortAttributeListItem_NUI_SetDisplayAttribute, "SetDisplayAttribute" },
+	{ &Z_Construct_UFunction_UFortAttributeListItem_NUI_SetPreviewAttribute, "SetPreviewAttribute" },
+	{ &Z_Construct_UFunction_UFortAttributeListItem_NUI_ValueChanged, "ValueChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAttributeListItem_NUI_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C6B170
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAttributeListItem_NUI_Statics::ClassParams = { &UFortAttributeListItem_NUI::StaticClass, Z_Construct_UClass_UFortAttributeListItem_NUI_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortAttributeListItem_NUI_Statics::FuncInfo, 11, Z_Construct_UClass_UFortAttributeListItem_NUI_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortAttributeListItem_NUI_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortAttributeListItem_NUI_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CBC0 (end 0x0288CBEF)
+// Original VA: 0x000000014288CBC0 | File offset: 0x0288C1C0
+// Recovery: confirmed (UHT singleton of UFortAttributeListItem_NUI) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAttributeListItem_NUI()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAttributeListItem_NUI_Statics::ClassParams);
+	}
+	return OuterClass;
+}

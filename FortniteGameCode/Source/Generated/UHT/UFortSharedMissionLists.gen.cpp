@@ -24,3 +24,35 @@ UFunction* Z_Construct_UFunction_UFortSharedMissionLists_UpdatePIEPlayers()
 	}
 	return ReturnFunction;
 }
+
+class UFortSharedMissionLists
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSharedMissionLists_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSharedMissionLists_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSharedMissionLists_UpdatePIEPlayers, "UpdatePIEPlayers" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSharedMissionLists_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033F7B10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSharedMissionLists_Statics::ClassParams = { &UFortSharedMissionLists::StaticClass, Z_Construct_UClass_UFortSharedMissionLists_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortSharedMissionLists_Statics::FuncInfo, 1, Z_Construct_UClass_UFortSharedMissionLists_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_UFortSharedMissionLists_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A59C0 (end 0x010A59EF)
+// Original VA: 0x00000001410A59C0 | File offset: 0x010A4FC0
+// Recovery: confirmed (UHT singleton of UFortSharedMissionLists) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSharedMissionLists()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSharedMissionLists_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -85,3 +85,37 @@ UFunction* Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetPowerPoints
 	}
 	return ReturnFunction;
 }
+
+class UFortMissionPowerPointsInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMissionPowerPointsInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMissionPowerPointsInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetAvailabilityWeight, "GetAvailabilityWeight" },
+	{ &Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetInitialRangeLerpValue, "GetInitialRangeLerpValue" },
+	{ &Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetMaxRangeLerpValue, "GetMaxRangeLerpValue" },
+	{ &Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetPowerPointsCost, "GetPowerPointsCost" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMissionPowerPointsInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x033899C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMissionPowerPointsInterface_Statics::ClassParams = { &UFortMissionPowerPointsInterface::StaticClass, Z_Construct_UClass_UFortMissionPowerPointsInterface_Statics::DependentSingletons, 2, 0x00104081u, Z_Construct_UClass_UFortMissionPowerPointsInterface_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_UFortMissionPowerPointsInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A990 (end 0x0104A9BF)
+// Original VA: 0x000000014104A990 | File offset: 0x01049F90
+// Recovery: confirmed (UHT singleton of UFortMissionPowerPointsInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMissionPowerPointsInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMissionPowerPointsInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

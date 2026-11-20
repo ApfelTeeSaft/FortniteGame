@@ -398,3 +398,55 @@ UFunction* Z_Construct_UFunction_AFortAIController_WakeUp()
 	}
 	return ReturnFunction;
 }
+
+class AFortAIController
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortAIController_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortAIController_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortAIController_CreateBuildingActor, "CreateBuildingActor" },
+	{ &Z_Construct_UFunction_AFortAIController_GetEncounterInfo, "GetEncounterInfo" },
+	{ &Z_Construct_UFunction_AFortAIController_GetGoalActor, "GetGoalActor" },
+	{ &Z_Construct_UFunction_AFortAIController_IgnoreProximityForDuration, "IgnoreProximityForDuration" },
+	{ &Z_Construct_UFunction_AFortAIController_IsAllowedToSleep, "IsAllowedToSleep" },
+	{ &Z_Construct_UFunction_AFortAIController_IsIgnoringProximity, "IsIgnoringProximity" },
+	{ &Z_Construct_UFunction_AFortAIController_LockBehaviorResource, "LockBehaviorResource" },
+	{ &Z_Construct_UFunction_AFortAIController_LockMovementResource, "LockMovementResource" },
+	{ &Z_Construct_UFunction_AFortAIController_OnBuildingActorGoalDestroyed, "OnBuildingActorGoalDestroyed" },
+	{ &Z_Construct_UFunction_AFortAIController_SetAlwaysGameplayRelevant, "SetAlwaysGameplayRelevant" },
+	{ &Z_Construct_UFunction_AFortAIController_SetFullPeripheralVision, "SetFullPeripheralVision" },
+	{ &Z_Construct_UFunction_AFortAIController_SetGoalActor, "SetGoalActor" },
+	{ &Z_Construct_UFunction_AFortAIController_SetIsSleeping, "SetIsSleeping" },
+	{ &Z_Construct_UFunction_AFortAIController_SetPawnAIType, "SetPawnAIType" },
+	{ &Z_Construct_UFunction_AFortAIController_SetTeam, "SetTeam" },
+	{ &Z_Construct_UFunction_AFortAIController_SetupCustomVIM, "SetupCustomVIM" },
+	{ &Z_Construct_UFunction_AFortAIController_UnlockBehaviorResource, "UnlockBehaviorResource" },
+	{ &Z_Construct_UFunction_AFortAIController_UnlockMovementResource, "UnlockMovementResource" },
+	{ &Z_Construct_UFunction_AFortAIController_UnregisterForGoalDetection, "UnregisterForGoalDetection" },
+	{ &Z_Construct_UFunction_AFortAIController_WakeUp, "WakeUp" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortAIController_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0329D4A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortAIController_Statics::ClassParams = { &AFortAIController::StaticClass, Z_Construct_UClass_AFortAIController_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortAIController_Statics::FuncInfo, 20, Z_Construct_UClass_AFortAIController_Statics::PropPointers, 10, "Game", &Z_Construct_UClass_AFortAIController_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortAIController_Statics::InterfaceParams, 3 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87C60 (end 0x00F87C8F)
+// Original VA: 0x0000000140F87C60 | File offset: 0x00F87260
+// Recovery: confirmed (UHT singleton of AFortAIController) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortAIController()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortAIController_Statics::ClassParams);
+	}
+	return OuterClass;
+}

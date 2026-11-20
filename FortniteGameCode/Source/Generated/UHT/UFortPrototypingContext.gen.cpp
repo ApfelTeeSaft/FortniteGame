@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_UFortPrototypingContext_GetPrototypingStatus()
 	}
 	return ReturnFunction;
 }
+
+class UFortPrototypingContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortPrototypingContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPrototypingContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPrototypingContext_GetPrototypingStatus, "GetPrototypingStatus" },
+	{ &Z_Construct_UDelegateFunction_UFortPrototypingContext_OnPrototypingStatusChanged__DelegateSignature, "OnPrototypingStatusChanged__DelegateSignature" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPrototypingContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033D6070
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPrototypingContext_Statics::ClassParams = { &UFortPrototypingContext::StaticClass, Z_Construct_UClass_UFortPrototypingContext_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortPrototypingContext_Statics::FuncInfo, 2, Z_Construct_UClass_UFortPrototypingContext_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortPrototypingContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B6E0 (end 0x0108B70F)
+// Original VA: 0x000000014108B6E0 | File offset: 0x0108ACE0
+// Recovery: confirmed (UHT singleton of UFortPrototypingContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPrototypingContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPrototypingContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

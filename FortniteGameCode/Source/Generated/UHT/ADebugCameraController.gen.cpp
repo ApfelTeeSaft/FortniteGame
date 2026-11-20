@@ -143,3 +143,41 @@ UFunction* Z_Construct_UFunction_ADebugCameraController_ToggleDisplay()
 	}
 	return ReturnFunction;
 }
+
+class ADebugCameraController
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ADebugCameraController_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ADebugCameraController_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ADebugCameraController_GetSelectedActor, "GetSelectedActor" },
+	{ &Z_Construct_UFunction_ADebugCameraController_ReceiveOnActivate, "ReceiveOnActivate" },
+	{ &Z_Construct_UFunction_ADebugCameraController_ReceiveOnActorSelected, "ReceiveOnActorSelected" },
+	{ &Z_Construct_UFunction_ADebugCameraController_ReceiveOnDeactivate, "ReceiveOnDeactivate" },
+	{ &Z_Construct_UFunction_ADebugCameraController_SetPawnMovementSpeedScale, "SetPawnMovementSpeedScale" },
+	{ &Z_Construct_UFunction_ADebugCameraController_ShowDebugSelectedInfo, "ShowDebugSelectedInfo" },
+	{ &Z_Construct_UFunction_ADebugCameraController_ToggleDisplay, "ToggleDisplay" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ADebugCameraController_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038CE3B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ADebugCameraController_Statics::ClassParams = { &ADebugCameraController::StaticClass, Z_Construct_UClass_ADebugCameraController_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_ADebugCameraController_Statics::FuncInfo, 7, Z_Construct_UClass_ADebugCameraController_Statics::PropPointers, 7, "Game", &Z_Construct_UClass_ADebugCameraController_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FE360 (end 0x023FE38F)
+// Original VA: 0x00000001423FE360 | File offset: 0x023FD960
+// Recovery: confirmed (UHT singleton of ADebugCameraController) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ADebugCameraController()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ADebugCameraController_Statics::ClassParams);
+	}
+	return OuterClass;
+}

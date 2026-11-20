@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortSocialListView_SetList()
 	}
 	return ReturnFunction;
 }
+
+class UFortSocialListView
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSocialListView_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSocialListView_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSocialListView_SetList, "SetList" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSocialListView_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D149A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSocialListView_Statics::ClassParams = { &UFortSocialListView::StaticClass, Z_Construct_UClass_UFortSocialListView_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortSocialListView_Statics::FuncInfo, 1, Z_Construct_UClass_UFortSocialListView_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortSocialListView_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5790 (end 0x028F57BF)
+// Original VA: 0x00000001428F5790 | File offset: 0x028F4D90
+// Recovery: confirmed (UHT singleton of UFortSocialListView) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSocialListView()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSocialListView_Statics::ClassParams);
+	}
+	return OuterClass;
+}

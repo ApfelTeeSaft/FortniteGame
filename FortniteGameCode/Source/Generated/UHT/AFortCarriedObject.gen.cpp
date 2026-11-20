@@ -64,3 +64,38 @@ UFunction* Z_Construct_UFunction_AFortCarriedObject_ReturnToSpawnPoint()
 	}
 	return ReturnFunction;
 }
+
+class AFortCarriedObject
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortCarriedObject_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortCarriedObject_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortCarriedObject_GetHoldingActor, "GetHoldingActor" },
+	{ &Z_Construct_UFunction_AFortCarriedObject_OnRep_HolderInfo, "OnRep_HolderInfo" },
+	{ &Z_Construct_UFunction_AFortCarriedObject_ReturnToSpawnPoint, "ReturnToSpawnPoint" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortCarriedObject_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032D0D90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortCarriedObject_Statics::ClassParams = { &AFortCarriedObject::StaticClass, Z_Construct_UClass_AFortCarriedObject_Statics::DependentSingletons, 2, 0x00800081u, Z_Construct_UClass_AFortCarriedObject_Statics::FuncInfo, 3, Z_Construct_UClass_AFortCarriedObject_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_AFortCarriedObject_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortCarriedObject_Statics::InterfaceParams, 3 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAD140 (end 0x00FAD16F)
+// Original VA: 0x0000000140FAD140 | File offset: 0x00FAC740
+// Recovery: confirmed (UHT singleton of AFortCarriedObject) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortCarriedObject()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortCarriedObject_Statics::ClassParams);
+	}
+	return OuterClass;
+}

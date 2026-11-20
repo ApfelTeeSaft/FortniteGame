@@ -205,3 +205,43 @@ UFunction* Z_Construct_UFunction_UPoseableMeshComponent_SetBoneTransformByName()
 	}
 	return ReturnFunction;
 }
+
+class UPoseableMeshComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPoseableMeshComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPoseableMeshComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPoseableMeshComponent_CopyPoseFromSkeletalComponent, "CopyPoseFromSkeletalComponent" },
+	{ &Z_Construct_UFunction_UPoseableMeshComponent_GetBoneLocationByName, "GetBoneLocationByName" },
+	{ &Z_Construct_UFunction_UPoseableMeshComponent_GetBoneRotationByName, "GetBoneRotationByName" },
+	{ &Z_Construct_UFunction_UPoseableMeshComponent_GetBoneScaleByName, "GetBoneScaleByName" },
+	{ &Z_Construct_UFunction_UPoseableMeshComponent_GetBoneTransformByName, "GetBoneTransformByName" },
+	{ &Z_Construct_UFunction_UPoseableMeshComponent_ResetBoneTransformByName, "ResetBoneTransformByName" },
+	{ &Z_Construct_UFunction_UPoseableMeshComponent_SetBoneLocationByName, "SetBoneLocationByName" },
+	{ &Z_Construct_UFunction_UPoseableMeshComponent_SetBoneRotationByName, "SetBoneRotationByName" },
+	{ &Z_Construct_UFunction_UPoseableMeshComponent_SetBoneScaleByName, "SetBoneScaleByName" },
+	{ &Z_Construct_UFunction_UPoseableMeshComponent_SetBoneTransformByName, "SetBoneTransformByName" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPoseableMeshComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0398DBF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPoseableMeshComponent_Statics::ClassParams = { &UPoseableMeshComponent::StaticClass, Z_Construct_UClass_UPoseableMeshComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UPoseableMeshComponent_Statics::FuncInfo, 10, nullptr, 0, "Engine", &Z_Construct_UClass_UPoseableMeshComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7F60 (end 0x024B7F8F)
+// Original VA: 0x00000001424B7F60 | File offset: 0x024B7560
+// Recovery: confirmed (UHT singleton of UPoseableMeshComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPoseableMeshComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPoseableMeshComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

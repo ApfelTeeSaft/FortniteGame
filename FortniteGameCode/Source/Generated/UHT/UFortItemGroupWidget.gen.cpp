@@ -163,3 +163,42 @@ UFunction* Z_Construct_UFunction_UFortItemGroupWidget_TryGetSquad()
 	}
 	return ReturnFunction;
 }
+
+class UFortItemGroupWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemGroupWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemGroupWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemGroupWidget_GetActiveSetBonusTags, "GetActiveSetBonusTags" },
+	{ &Z_Construct_UFunction_UFortItemGroupWidget_GetSquadId, "GetSquadId" },
+	{ &Z_Construct_UFunction_UFortItemGroupWidget_GetTotalAttributeBonuses, "GetTotalAttributeBonuses" },
+	{ &Z_Construct_UFunction_UFortItemGroupWidget_HandleDifferentSquadSet, "HandleDifferentSquadSet" },
+	{ &Z_Construct_UFunction_UFortItemGroupWidget_HandleEffectsChanged, "HandleEffectsChanged" },
+	{ &Z_Construct_UFunction_UFortItemGroupWidget_HandleItemSlotAdded, "HandleItemSlotAdded" },
+	{ &Z_Construct_UFunction_UFortItemGroupWidget_SetSquad, "SetSquad" },
+	{ &Z_Construct_UFunction_UFortItemGroupWidget_TryGetSquad, "TryGetSquad" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemGroupWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D56730
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemGroupWidget_Statics::ClassParams = { &UFortItemGroupWidget::StaticClass, Z_Construct_UClass_UFortItemGroupWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortItemGroupWidget_Statics::FuncInfo, 8, Z_Construct_UClass_UFortItemGroupWidget_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortItemGroupWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918A40 (end 0x02918A6F)
+// Original VA: 0x0000000142918A40 | File offset: 0x02918040
+// Recovery: confirmed (UHT singleton of UFortItemGroupWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemGroupWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemGroupWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

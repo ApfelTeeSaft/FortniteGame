@@ -525,3 +525,60 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroHeadAccessori
 	}
 	return ReturnFunction;
 }
+
+class UFortHomebaseUIContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHomebaseUIContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHomebaseUIContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodePageId, "GetEarlyGameNodePageId" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameNodeProgressionState, "GetEarlyGameNodeProgressionState" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTreeNodeId, "GetEarlyGameRootSkillTreeNodeId" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetEarlyGameRootSkillTreePageId, "GetEarlyGameRootSkillTreePageId" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetItemInSquadSlot, "GetItemInSquadSlot" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetItemsInSquad, "GetItemsInSquad" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroBackpack, "GetLocalPlayerHasHeroBackpack" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetLocalPlayerHasHeroHeadAccessories, "GetLocalPlayerHasHeroHeadAccessories" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeAttributeBonusesForDisplay, "GetNodeAttributeBonusesForDisplay" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeDescription, "GetNodeDescription" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetNodeTagBonusesForDisplay, "GetNodeTagBonusesForDisplay" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetNumOwnedNodesInSkillTreePage, "GetNumOwnedNodesInSkillTreePage" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetQuestNodeColour, "GetQuestNodeColour" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreeNodeId, "GetRootSkillTreeNodeId" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetRootSkillTreePageId, "GetRootSkillTreePageId" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroBackpackForLocalPlayer, "GetShowHeroBackpackForLocalPlayer" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetShowHeroHeadAccessoriesForLocalPlayer, "GetShowHeroHeadAccessoriesForLocalPlayer" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetSquadIcon, "GetSquadIcon" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetTotalNodesInSkillTreePage, "GetTotalNodesInSkillTreePage" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_GetWorkerSetBonusEffectModifiers, "GetWorkerSetBonusEffectModifiers" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_IsAnySquadSlotUnlocked, "IsAnySquadSlotUnlocked" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_IsInEarlyGame, "IsInEarlyGame" },
+	{ &Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased__DelegateSignature, "OnNodesPurchased__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnSquadSlotChanged__DelegateSignature, "OnSquadSlotChanged__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroBackpackForLocalPlayer, "SetShowHeroBackpackForLocalPlayer" },
+	{ &Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroHeadAccessoriesForLocalPlayer, "SetShowHeroHeadAccessoriesForLocalPlayer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHomebaseUIContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CA7810
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHomebaseUIContext_Statics::ClassParams = { &UFortHomebaseUIContext::StaticClass, Z_Construct_UClass_UFortHomebaseUIContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortHomebaseUIContext_Statics::FuncInfo, 26, Z_Construct_UClass_UFortHomebaseUIContext_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortHomebaseUIContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3DB0 (end 0x028B3DDF)
+// Original VA: 0x00000001428B3DB0 | File offset: 0x028B33B0
+// Recovery: confirmed (UHT singleton of UFortHomebaseUIContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHomebaseUIContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHomebaseUIContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

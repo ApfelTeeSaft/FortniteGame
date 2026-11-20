@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UFortAbilitySystemContext_RemoveDelegatesFromWi
 	}
 	return ReturnFunction;
 }
+
+class UFortAbilitySystemContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAbilitySystemContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAbilitySystemContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAbilitySystemContext_RegisterForAttributeChanged, "RegisterForAttributeChanged" },
+	{ &Z_Construct_UFunction_UFortAbilitySystemContext_RemoveDelegatesFromWidget, "RemoveDelegatesFromWidget" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAbilitySystemContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C600A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAbilitySystemContext_Statics::ClassParams = { &UFortAbilitySystemContext::StaticClass, Z_Construct_UClass_UFortAbilitySystemContext_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortAbilitySystemContext_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortAbilitySystemContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02887610 (end 0x0288763F)
+// Original VA: 0x0000000142887610 | File offset: 0x02886C10
+// Recovery: confirmed (UHT singleton of UFortAbilitySystemContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAbilitySystemContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAbilitySystemContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

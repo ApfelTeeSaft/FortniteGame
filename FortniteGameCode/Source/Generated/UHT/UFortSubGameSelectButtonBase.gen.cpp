@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortSubGameSelectButtonBase_UpdateButtonState(
 	}
 	return ReturnFunction;
 }
+
+class UFortSubGameSelectButtonBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSubGameSelectButtonBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSubGameSelectButtonBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSubGameSelectButtonBase_UpdateButtonState, "UpdateButtonState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSubGameSelectButtonBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D2EF20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSubGameSelectButtonBase_Statics::ClassParams = { &UFortSubGameSelectButtonBase::StaticClass, Z_Construct_UClass_UFortSubGameSelectButtonBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSubGameSelectButtonBase_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortSubGameSelectButtonBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904A70 (end 0x02904A9F)
+// Original VA: 0x0000000142904A70 | File offset: 0x02904070
+// Recovery: confirmed (UHT singleton of UFortSubGameSelectButtonBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSubGameSelectButtonBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSubGameSelectButtonBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

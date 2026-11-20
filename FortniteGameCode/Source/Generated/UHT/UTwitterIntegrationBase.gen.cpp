@@ -144,3 +144,40 @@ UFunction* Z_Construct_UFunction_UTwitterIntegrationBase_TwitterRequest()
 	}
 	return ReturnFunction;
 }
+
+class UTwitterIntegrationBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UTwitterIntegrationBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UTwitterIntegrationBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UTwitterIntegrationBase_AuthorizeAccounts, "AuthorizeAccounts" },
+	{ &Z_Construct_UFunction_UTwitterIntegrationBase_CanShowTweetUI, "CanShowTweetUI" },
+	{ &Z_Construct_UFunction_UTwitterIntegrationBase_GetAccountName, "GetAccountName" },
+	{ &Z_Construct_UFunction_UTwitterIntegrationBase_GetNumAccounts, "GetNumAccounts" },
+	{ &Z_Construct_UFunction_UTwitterIntegrationBase_Init, "Init" },
+	{ &Z_Construct_UFunction_UTwitterIntegrationBase_ShowTweetUI, "ShowTweetUI" },
+	{ &Z_Construct_UFunction_UTwitterIntegrationBase_TwitterRequest, "TwitterRequest" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UTwitterIntegrationBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039CBD30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UTwitterIntegrationBase_Statics::ClassParams = { &UTwitterIntegrationBase::StaticClass, Z_Construct_UClass_UTwitterIntegrationBase_Statics::DependentSingletons, 2, 0x00800088u, Z_Construct_UClass_UTwitterIntegrationBase_Statics::FuncInfo, 7, nullptr, 0, "Engine", &Z_Construct_UClass_UTwitterIntegrationBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024ECF20 (end 0x024ECF4F)
+// Original VA: 0x00000001424ECF20 | File offset: 0x024EC520
+// Recovery: confirmed (UHT singleton of UTwitterIntegrationBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UTwitterIntegrationBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UTwitterIntegrationBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

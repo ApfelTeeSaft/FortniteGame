@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UFortUIMessageManager_HandleMessageRemoved()
 	}
 	return ReturnFunction;
 }
+
+class UFortUIMessageManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortUIMessageManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUIMessageManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUIMessageManager_AddMessageItem, "AddMessageItem" },
+	{ &Z_Construct_UFunction_UFortUIMessageManager_GetNextMessageInQueue, "GetNextMessageInQueue" },
+	{ &Z_Construct_UFunction_UFortUIMessageManager_GetNumDisplayedItems, "GetNumDisplayedItems" },
+	{ &Z_Construct_UFunction_UFortUIMessageManager_HandleMessageDisplayed, "HandleMessageDisplayed" },
+	{ &Z_Construct_UFunction_UFortUIMessageManager_HandleMessageRemoved, "HandleMessageRemoved" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUIMessageManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D48E50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUIMessageManager_Statics::ClassParams = { &UFortUIMessageManager::StaticClass, Z_Construct_UClass_UFortUIMessageManager_Statics::DependentSingletons, 2, 0x00800280u, Z_Construct_UClass_UFortUIMessageManager_Statics::FuncInfo, 5, Z_Construct_UClass_UFortUIMessageManager_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortUIMessageManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911CE0 (end 0x02911D0F)
+// Original VA: 0x0000000142911CE0 | File offset: 0x029112E0
+// Recovery: confirmed (UHT singleton of UFortUIMessageManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUIMessageManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUIMessageManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

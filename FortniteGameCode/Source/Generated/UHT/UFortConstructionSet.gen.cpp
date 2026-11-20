@@ -252,3 +252,47 @@ UFunction* Z_Construct_UFunction_UFortConstructionSet_OnRep_TrapReloadSpeed()
 	}
 	return ReturnFunction;
 }
+
+class UFortConstructionSet
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortConstructionSet_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortConstructionSet_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_BuildCost, "OnRep_BuildCost" },
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_BuildSpeed, "OnRep_BuildSpeed" },
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_BuildingSkill, "OnRep_BuildingSkill" },
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_MaxBuildLevel, "OnRep_MaxBuildLevel" },
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_RepairCost, "OnRep_RepairCost" },
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_RepairSpeed, "OnRep_RepairSpeed" },
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_TrapArmSpeed, "OnRep_TrapArmSpeed" },
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_TrapBaseDamage, "OnRep_TrapBaseDamage" },
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_TrapDiceCritChance, "OnRep_TrapDiceCritChance" },
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_TrapDiceCritMultiplier, "OnRep_TrapDiceCritMultiplier" },
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_TrapHealingSource, "OnRep_TrapHealingSource" },
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_TrapMaxDurability, "OnRep_TrapMaxDurability" },
+	{ &Z_Construct_UFunction_UFortConstructionSet_OnRep_TrapReloadSpeed, "OnRep_TrapReloadSpeed" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortConstructionSet_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032F1290
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortConstructionSet_Statics::ClassParams = { &UFortConstructionSet::StaticClass, Z_Construct_UClass_UFortConstructionSet_Statics::DependentSingletons, 2, 0x00280080u, Z_Construct_UClass_UFortConstructionSet_Statics::FuncInfo, 13, Z_Construct_UClass_UFortConstructionSet_Statics::PropPointers, 13, nullptr, &Z_Construct_UClass_UFortConstructionSet_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC61B0 (end 0x00FC61DF)
+// Original VA: 0x0000000140FC61B0 | File offset: 0x00FC57B0
+// Recovery: confirmed (UHT singleton of UFortConstructionSet) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortConstructionSet()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortConstructionSet_Statics::ClassParams);
+	}
+	return OuterClass;
+}

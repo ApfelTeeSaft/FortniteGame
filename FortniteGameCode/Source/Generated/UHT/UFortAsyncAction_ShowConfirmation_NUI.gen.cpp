@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpl
 	}
 	return ReturnFunction;
 }
+
+class UFortAsyncAction_ShowConfirmation_NUI
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowConfirmationDialog_NUI, "ShowConfirmationDialog_NUI" },
+	{ &Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpleConfirmationDialog_CustomInput, "ShowSimpleConfirmationDialog_CustomInput" },
+	{ &Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpleConfirmationDialog_NUI, "ShowSimpleConfirmationDialog_NUI" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C6A500
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI_Statics::ClassParams = { &UFortAsyncAction_ShowConfirmation_NUI::StaticClass, Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI_Statics::FuncInfo, 3, Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CA70 (end 0x0288CA9F)
+// Original VA: 0x000000014288CA70 | File offset: 0x0288C070
+// Recovery: confirmed (UHT singleton of UFortAsyncAction_ShowConfirmation_NUI) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI_Statics::ClassParams);
+	}
+	return OuterClass;
+}

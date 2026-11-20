@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UWidgetAnimation_GetStartTime()
 	}
 	return ReturnFunction;
 }
+
+class UWidgetAnimation
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UWidgetAnimation_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UWidgetAnimation_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UWidgetAnimation_GetEndTime, "GetEndTime" },
+	{ &Z_Construct_UFunction_UWidgetAnimation_GetStartTime, "GetStartTime" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UWidgetAnimation_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036A8A90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UWidgetAnimation_Statics::ClassParams = { &UWidgetAnimation::StaticClass, Z_Construct_UClass_UWidgetAnimation_Statics::DependentSingletons, 2, 0x00A80084u, Z_Construct_UClass_UWidgetAnimation_Statics::FuncInfo, 2, Z_Construct_UClass_UWidgetAnimation_Statics::PropPointers, 5, "Engine", &Z_Construct_UClass_UWidgetAnimation_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00D00 (end 0x01C00D2F)
+// Original VA: 0x0000000141C00D00 | File offset: 0x01C00300
+// Recovery: confirmed (UHT singleton of UWidgetAnimation) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UWidgetAnimation()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UWidgetAnimation_Statics::ClassParams);
+	}
+	return OuterClass;
+}

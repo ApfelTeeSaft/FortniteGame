@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_AFortAthenaSMVehicle_ServerUpdateMoveParams()
 	}
 	return ReturnFunction;
 }
+
+class AFortAthenaSMVehicle
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortAthenaSMVehicle_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortAthenaSMVehicle_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortAthenaSMVehicle_OnRep_MovementParams, "OnRep_MovementParams" },
+	{ &Z_Construct_UFunction_AFortAthenaSMVehicle_ServerUpdateMoveParams, "ServerUpdateMoveParams" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortAthenaSMVehicle_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032C0BE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortAthenaSMVehicle_Statics::ClassParams = { &AFortAthenaSMVehicle::StaticClass, Z_Construct_UClass_AFortAthenaSMVehicle_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortAthenaSMVehicle_Statics::FuncInfo, 2, Z_Construct_UClass_AFortAthenaSMVehicle_Statics::PropPointers, 12, nullptr, &Z_Construct_UClass_AFortAthenaSMVehicle_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9ED90 (end 0x00F9EDBF)
+// Original VA: 0x0000000140F9ED90 | File offset: 0x00F9E390
+// Recovery: confirmed (UHT singleton of AFortAthenaSMVehicle) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortAthenaSMVehicle()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortAthenaSMVehicle_Statics::ClassParams);
+	}
+	return OuterClass;
+}

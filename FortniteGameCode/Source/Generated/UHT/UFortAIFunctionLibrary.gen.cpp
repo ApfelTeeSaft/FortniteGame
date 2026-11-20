@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEventAtLocation
 	}
 	return ReturnFunction;
 }
+
+class UFortAIFunctionLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAIFunctionLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAIFunctionLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEvent, "MakeNoiseEvent" },
+	{ &Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEventAtLocation, "MakeNoiseEventAtLocation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAIFunctionLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032ACA10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAIFunctionLibrary_Statics::ClassParams = { &UFortAIFunctionLibrary::StaticClass, Z_Construct_UClass_UFortAIFunctionLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortAIFunctionLibrary_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortAIFunctionLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91430 (end 0x00F9145F)
+// Original VA: 0x0000000140F91430 | File offset: 0x00F90A30
+// Recovery: confirmed (UHT singleton of UFortAIFunctionLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAIFunctionLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAIFunctionLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

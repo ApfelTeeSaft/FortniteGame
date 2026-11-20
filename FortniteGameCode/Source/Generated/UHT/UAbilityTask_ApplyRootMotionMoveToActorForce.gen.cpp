@@ -84,3 +84,38 @@ UFunction* Z_Construct_UFunction_UAbilityTask_ApplyRootMotionMoveToActorForce_On
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_ApplyRootMotionMoveToActorForce
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_ApplyRootMotionMoveToActorForce_ApplyRootMotionMoveToActorForce, "ApplyRootMotionMoveToActorForce" },
+	{ &Z_Construct_UFunction_UAbilityTask_ApplyRootMotionMoveToActorForce_ApplyRootMotionMoveToTargetDataActorForce, "ApplyRootMotionMoveToTargetDataActorForce" },
+	{ &Z_Construct_UFunction_UAbilityTask_ApplyRootMotionMoveToActorForce_OnRep_TargetLocation, "OnRep_TargetLocation" },
+	{ &Z_Construct_UFunction_UAbilityTask_ApplyRootMotionMoveToActorForce_OnTargetActorSwapped, "OnTargetActorSwapped" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F2AFE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce_Statics::ClassParams = { &UAbilityTask_ApplyRootMotionMoveToActorForce::StaticClass, Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce_Statics::FuncInfo, 4, Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce_Statics::PropPointers, 16, "Game", &Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546800 (end 0x0054682F)
+// Original VA: 0x0000000140546800 | File offset: 0x00545E00
+// Recovery: confirmed (UHT singleton of UAbilityTask_ApplyRootMotionMoveToActorForce) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce_Statics::ClassParams);
+	}
+	return OuterClass;
+}

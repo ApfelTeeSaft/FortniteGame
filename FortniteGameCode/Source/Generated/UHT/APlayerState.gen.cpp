@@ -160,3 +160,42 @@ UFunction* Z_Construct_UFunction_APlayerState_ReceiveOverrideWith()
 	}
 	return ReturnFunction;
 }
+
+class APlayerState
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_APlayerState_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_APlayerState_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_APlayerState_GetPlayerName, "GetPlayerName" },
+	{ &Z_Construct_UFunction_APlayerState_OnRep_PlayerId, "OnRep_PlayerId" },
+	{ &Z_Construct_UFunction_APlayerState_OnRep_PlayerName, "OnRep_PlayerName" },
+	{ &Z_Construct_UFunction_APlayerState_OnRep_Score, "OnRep_Score" },
+	{ &Z_Construct_UFunction_APlayerState_OnRep_UniqueId, "OnRep_UniqueId" },
+	{ &Z_Construct_UFunction_APlayerState_OnRep_bIsInactive, "OnRep_bIsInactive" },
+	{ &Z_Construct_UFunction_APlayerState_ReceiveCopyProperties, "ReceiveCopyProperties" },
+	{ &Z_Construct_UFunction_APlayerState_ReceiveOverrideWith, "ReceiveOverrideWith" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_APlayerState_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0398D380
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_APlayerState_Statics::ClassParams = { &APlayerState::StaticClass, Z_Construct_UClass_APlayerState_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_APlayerState_Statics::FuncInfo, 8, Z_Construct_UClass_APlayerState_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_APlayerState_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7D50 (end 0x024B7D7F)
+// Original VA: 0x00000001424B7D50 | File offset: 0x024B7350
+// Recovery: confirmed (UHT singleton of APlayerState) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_APlayerState()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_APlayerState_Statics::ClassParams);
+	}
+	return OuterClass;
+}

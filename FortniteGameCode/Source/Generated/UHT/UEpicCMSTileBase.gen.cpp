@@ -44,3 +44,37 @@ UFunction* Z_Construct_UFunction_UEpicCMSTileBase_Launch()
 	}
 	return ReturnFunction;
 }
+
+class UEpicCMSTileBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UEpicCMSTileBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UEpicCMSTileBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UEpicCMSTileBase_DynamicHandleIconLoadingStateChanged, "DynamicHandleIconLoadingStateChanged" },
+	{ &Z_Construct_UFunction_UEpicCMSTileBase_Launch, "Launch" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UEpicCMSTileBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E8CE70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UEpicCMSTileBase_Statics::ClassParams = { &UEpicCMSTileBase::StaticClass, Z_Construct_UClass_UEpicCMSTileBase_Statics::DependentSingletons, 2, 0x00B01081u, Z_Construct_UClass_UEpicCMSTileBase_Statics::FuncInfo, 2, Z_Construct_UClass_UEpicCMSTileBase_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UEpicCMSTileBase_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UEpicCMSTileBase_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3C70 (end 0x002E3C9F)
+// Original VA: 0x00000001402E3C70 | File offset: 0x002E3270
+// Recovery: confirmed (UHT singleton of UEpicCMSTileBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UEpicCMSTileBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UEpicCMSTileBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

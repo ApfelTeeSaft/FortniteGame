@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortNewAccountWarning_HandleNewAccountClicked(
 	}
 	return ReturnFunction;
 }
+
+class UFortNewAccountWarning
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortNewAccountWarning_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortNewAccountWarning_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortNewAccountWarning_HandleBackClicked, "HandleBackClicked" },
+	{ &Z_Construct_UFunction_UFortNewAccountWarning_HandleNewAccountClicked, "HandleNewAccountClicked" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortNewAccountWarning_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CF0D50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortNewAccountWarning_Statics::ClassParams = { &UFortNewAccountWarning::StaticClass, Z_Construct_UClass_UFortNewAccountWarning_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortNewAccountWarning_Statics::FuncInfo, 2, Z_Construct_UClass_UFortNewAccountWarning_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortNewAccountWarning_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE450 (end 0x028DE47F)
+// Original VA: 0x00000001428DE450 | File offset: 0x028DDA50
+// Recovery: confirmed (UHT singleton of UFortNewAccountWarning) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortNewAccountWarning()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortNewAccountWarning_Statics::ClassParams);
+	}
+	return OuterClass;
+}

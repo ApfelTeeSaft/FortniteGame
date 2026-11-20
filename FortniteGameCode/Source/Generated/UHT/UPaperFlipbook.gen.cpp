@@ -145,3 +145,41 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_IsValidKeyFrameIndex()
 	}
 	return ReturnFunction;
 }
+
+class UPaperFlipbook
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPaperFlipbook_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPaperFlipbook_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPaperFlipbook_GetKeyFrameIndexAtTime, "GetKeyFrameIndexAtTime" },
+	{ &Z_Construct_UFunction_UPaperFlipbook_GetNumFrames, "GetNumFrames" },
+	{ &Z_Construct_UFunction_UPaperFlipbook_GetNumKeyFrames, "GetNumKeyFrames" },
+	{ &Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtFrame, "GetSpriteAtFrame" },
+	{ &Z_Construct_UFunction_UPaperFlipbook_GetSpriteAtTime, "GetSpriteAtTime" },
+	{ &Z_Construct_UFunction_UPaperFlipbook_GetTotalDuration, "GetTotalDuration" },
+	{ &Z_Construct_UFunction_UPaperFlipbook_IsValidKeyFrameIndex, "IsValidKeyFrameIndex" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPaperFlipbook_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F93A90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPaperFlipbook_Statics::ClassParams = { &UPaperFlipbook::StaticClass, Z_Construct_UClass_UPaperFlipbook_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UPaperFlipbook_Statics::FuncInfo, 7, Z_Construct_UClass_UPaperFlipbook_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UPaperFlipbook_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x006676B0 (end 0x006676DF)
+// Original VA: 0x00000001406676B0 | File offset: 0x00666CB0
+// Recovery: confirmed (UHT singleton of UPaperFlipbook) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPaperFlipbook()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPaperFlipbook_Statics::ClassParams);
+	}
+	return OuterClass;
+}

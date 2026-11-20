@@ -165,3 +165,42 @@ UFunction* Z_Construct_UFunction_ULevelStreaming_SetShouldBeVisible()
 	}
 	return ReturnFunction;
 }
+
+class ULevelStreaming
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ULevelStreaming_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ULevelStreaming_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ULevelStreaming_CreateInstance, "CreateInstance" },
+	{ &Z_Construct_UFunction_ULevelStreaming_GetLevelScriptActor, "GetLevelScriptActor" },
+	{ &Z_Construct_UFunction_ULevelStreaming_GetWorldAssetPackageFName, "GetWorldAssetPackageFName" },
+	{ &Z_Construct_UFunction_ULevelStreaming_IsLevelLoaded, "IsLevelLoaded" },
+	{ &Z_Construct_UFunction_ULevelStreaming_IsLevelVisible, "IsLevelVisible" },
+	{ &Z_Construct_UFunction_ULevelStreaming_IsStreamingStatePending, "IsStreamingStatePending" },
+	{ &Z_Construct_UFunction_ULevelStreaming_SetLevelLODIndex, "SetLevelLODIndex" },
+	{ &Z_Construct_UFunction_ULevelStreaming_SetShouldBeVisible, "SetShouldBeVisible" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ULevelStreaming_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039307F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ULevelStreaming_Statics::ClassParams = { &ULevelStreaming::StaticClass, Z_Construct_UClass_ULevelStreaming_Statics::DependentSingletons, 2, 0x00901081u, Z_Construct_UClass_ULevelStreaming_Statics::FuncInfo, 8, Z_Construct_UClass_ULevelStreaming_Statics::PropPointers, 22, nullptr, &Z_Construct_UClass_ULevelStreaming_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02470430 (end 0x0247045F)
+// Original VA: 0x0000000142470430 | File offset: 0x0246FA30
+// Recovery: confirmed (UHT singleton of ULevelStreaming) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ULevelStreaming()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ULevelStreaming_Statics::ClassParams);
+	}
+	return OuterClass;
+}

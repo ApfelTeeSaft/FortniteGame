@@ -125,3 +125,39 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGamepla
 	}
 	return ReturnFunction;
 }
+
+class UFortHealthRegenInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHealthRegenInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHealthRegenInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenDelayGameplayEffect, "GetHealthRegenDelayGameplayEffect" },
+	{ &Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGameplayEffect, "GetHealthRegenGameplayEffect" },
+	{ &Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenGameplayEffectClass, "GetHealthRegenGameplayEffectClass" },
+	{ &Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenDelayGameplayEffect, "GetShieldRegenDelayGameplayEffect" },
+	{ &Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGameplayEffect, "GetShieldRegenGameplayEffect" },
+	{ &Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGameplayEffectClass, "GetShieldRegenGameplayEffectClass" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHealthRegenInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x033EEEB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHealthRegenInterface_Statics::ClassParams = { &UFortHealthRegenInterface::StaticClass, Z_Construct_UClass_UFortHealthRegenInterface_Statics::DependentSingletons, 2, 0x00084081u, Z_Construct_UClass_UFortHealthRegenInterface_Statics::FuncInfo, 6, nullptr, 0, nullptr, &Z_Construct_UClass_UFortHealthRegenInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109DB40 (end 0x0109DB6F)
+// Original VA: 0x000000014109DB40 | File offset: 0x0109D140
+// Recovery: confirmed (UHT singleton of UFortHealthRegenInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHealthRegenInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHealthRegenInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -43,3 +43,36 @@ UFunction* Z_Construct_UFunction_UFortBuildingActorSet_OnRep_RepairTime()
 	}
 	return ReturnFunction;
 }
+
+class UFortBuildingActorSet
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortBuildingActorSet_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortBuildingActorSet_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortBuildingActorSet_OnRep_BuildTime, "OnRep_BuildTime" },
+	{ &Z_Construct_UFunction_UFortBuildingActorSet_OnRep_RepairTime, "OnRep_RepairTime" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortBuildingActorSet_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032CFF40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortBuildingActorSet_Statics::ClassParams = { &UFortBuildingActorSet::StaticClass, Z_Construct_UClass_UFortBuildingActorSet_Statics::DependentSingletons, 2, 0x00200080u, Z_Construct_UClass_UFortBuildingActorSet_Statics::FuncInfo, 2, Z_Construct_UClass_UFortBuildingActorSet_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortBuildingActorSet_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAD740 (end 0x00FAD76F)
+// Original VA: 0x0000000140FAD740 | File offset: 0x00FACD40
+// Recovery: confirmed (UHT singleton of UFortBuildingActorSet) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortBuildingActorSet()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortBuildingActorSet_Statics::ClassParams);
+	}
+	return OuterClass;
+}

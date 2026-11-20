@@ -101,3 +101,39 @@ UFunction* Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoSensing()
 	}
 	return ReturnFunction;
 }
+
+class AFortUIZone
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortUIZone_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortUIZone_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortUIZone_ToggleTargetInfo, "ToggleTargetInfo" },
+	{ &Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoAI, "ToggleTargetInfoAI" },
+	{ &Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoLock, "ToggleTargetInfoLock" },
+	{ &Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoPaths, "ToggleTargetInfoPaths" },
+	{ &Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoSensing, "ToggleTargetInfoSensing" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortUIZone_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03428F70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortUIZone_Statics::ClassParams = { &AFortUIZone::StaticClass, Z_Construct_UClass_AFortUIZone_Statics::DependentSingletons, 2, 0x0088028Cu, Z_Construct_UClass_AFortUIZone_Statics::FuncInfo, 5, Z_Construct_UClass_AFortUIZone_Statics::PropPointers, 13, "Game", &Z_Construct_UClass_AFortUIZone_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4860 (end 0x010D488F)
+// Original VA: 0x00000001410D4860 | File offset: 0x010D3E60
+// Recovery: confirmed (UHT singleton of AFortUIZone) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortUIZone()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortUIZone_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -185,3 +185,43 @@ UFunction* Z_Construct_UFunction_UInputComponent_WasControllerKeyJustReleased()
 	}
 	return ReturnFunction;
 }
+
+class UInputComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UInputComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UInputComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UInputComponent_GetControllerAnalogKeyState, "GetControllerAnalogKeyState" },
+	{ &Z_Construct_UFunction_UInputComponent_GetControllerAnalogStickState, "GetControllerAnalogStickState" },
+	{ &Z_Construct_UFunction_UInputComponent_GetControllerKeyTimeDown, "GetControllerKeyTimeDown" },
+	{ &Z_Construct_UFunction_UInputComponent_GetControllerMouseDelta, "GetControllerMouseDelta" },
+	{ &Z_Construct_UFunction_UInputComponent_GetControllerVectorKeyState, "GetControllerVectorKeyState" },
+	{ &Z_Construct_UFunction_UInputComponent_GetTouchState, "GetTouchState" },
+	{ &Z_Construct_UFunction_UInputComponent_IsControllerKeyDown, "IsControllerKeyDown" },
+	{ &Z_Construct_UFunction_UInputComponent_WasControllerKeyJustPressed, "WasControllerKeyJustPressed" },
+	{ &Z_Construct_UFunction_UInputComponent_WasControllerKeyJustReleased, "WasControllerKeyJustReleased" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UInputComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038FFDE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UInputComponent_Statics::ClassParams = { &UInputComponent::StaticClass, Z_Construct_UClass_UInputComponent_Statics::DependentSingletons, 2, 0x00B00088u, Z_Construct_UClass_UInputComponent_Statics::FuncInfo, 9, Z_Construct_UClass_UInputComponent_Statics::PropPointers, 2, "Input", &Z_Construct_UClass_UInputComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427F10 (end 0x02427F3F)
+// Original VA: 0x0000000142427F10 | File offset: 0x02427510
+// Recovery: confirmed (UHT singleton of UInputComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UInputComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UInputComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

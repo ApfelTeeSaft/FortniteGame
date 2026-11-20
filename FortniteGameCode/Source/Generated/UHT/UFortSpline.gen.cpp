@@ -344,3 +344,51 @@ UFunction* Z_Construct_UFunction_UFortSpline_SetupSpline()
 	}
 	return ReturnFunction;
 }
+
+class UFortSpline
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSpline_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSpline_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSpline_AddControlPoint, "AddControlPoint" },
+	{ &Z_Construct_UFunction_UFortSpline_ClearSpline, "ClearSpline" },
+	{ &Z_Construct_UFunction_UFortSpline_DrawDebugSpline, "DrawDebugSpline" },
+	{ &Z_Construct_UFunction_UFortSpline_EnableConstantVelocity, "EnableConstantVelocity" },
+	{ &Z_Construct_UFunction_UFortSpline_GetBinormalFromTime, "GetBinormalFromTime" },
+	{ &Z_Construct_UFunction_UFortSpline_GetDuration, "GetDuration" },
+	{ &Z_Construct_UFunction_UFortSpline_GetEndPoint, "GetEndPoint" },
+	{ &Z_Construct_UFunction_UFortSpline_GetNormalFromTime, "GetNormalFromTime" },
+	{ &Z_Construct_UFunction_UFortSpline_GetPositionFromTime, "GetPositionFromTime" },
+	{ &Z_Construct_UFunction_UFortSpline_GetSplineLength, "GetSplineLength" },
+	{ &Z_Construct_UFunction_UFortSpline_GetSplineLengthAtTime, "GetSplineLengthAtTime" },
+	{ &Z_Construct_UFunction_UFortSpline_GetStartPoint, "GetStartPoint" },
+	{ &Z_Construct_UFunction_UFortSpline_GetTangentFromTime, "GetTangentFromTime" },
+	{ &Z_Construct_UFunction_UFortSpline_GetVelocityCorrectedTime, "GetVelocityCorrectedTime" },
+	{ &Z_Construct_UFunction_UFortSpline_IsValid, "IsValid" },
+	{ &Z_Construct_UFunction_UFortSpline_SetDuration, "SetDuration" },
+	{ &Z_Construct_UFunction_UFortSpline_SetupSpline, "SetupSpline" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSpline_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033F8C70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSpline_Statics::ClassParams = { &UFortSpline::StaticClass, Z_Construct_UClass_UFortSpline_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortSpline_Statics::FuncInfo, 17, Z_Construct_UClass_UFortSpline_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortSpline_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5BC0 (end 0x010A5BEF)
+// Original VA: 0x00000001410A5BC0 | File offset: 0x010A51C0
+// Recovery: confirmed (UHT singleton of UFortSpline) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSpline()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSpline_Statics::ClassParams);
+	}
+	return OuterClass;
+}

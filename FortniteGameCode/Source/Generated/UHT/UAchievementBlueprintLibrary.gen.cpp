@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchieveme
 	}
 	return ReturnFunction;
 }
+
+class UAchievementBlueprintLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAchievementBlueprintLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAchievementBlueprintLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementDescription, "GetCachedAchievementDescription" },
+	{ &Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementProgress, "GetCachedAchievementProgress" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAchievementBlueprintLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EAD0E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAchievementBlueprintLibrary_Statics::ClassParams = { &UAchievementBlueprintLibrary::StaticClass, Z_Construct_UClass_UAchievementBlueprintLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UAchievementBlueprintLibrary_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UAchievementBlueprintLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E8C0 (end 0x0032E8EF)
+// Original VA: 0x000000014032E8C0 | File offset: 0x0032DEC0
+// Recovery: confirmed (UHT singleton of UAchievementBlueprintLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAchievementBlueprintLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAchievementBlueprintLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

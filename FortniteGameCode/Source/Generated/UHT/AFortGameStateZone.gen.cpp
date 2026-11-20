@@ -1086,3 +1086,89 @@ UFunction* Z_Construct_UFunction_AFortGameStateZone_UnregisterGameplayModifier()
 	}
 	return ReturnFunction;
 }
+
+class AFortGameStateZone
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortGameStateZone_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortGameStateZone_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortGameStateZone_ApplyPlayerAbilityRestriction, "ApplyPlayerAbilityRestriction" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_BeginGameplayVote, "BeginGameplayVote" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_CanSpawnDefender, "CanSpawnDefender" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_EndGameplayVote, "EndGameplayVote" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GetActiveModifiers, "GetActiveModifiers" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GetDefenderToRemove, "GetDefenderToRemove" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GetGameDifficulty, "GetGameDifficulty" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GetGameplayVote, "GetGameplayVote" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GetGameplayVotesForChoice, "GetGameplayVotesForChoice" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GetNumAllowedDifficultyIncreases, "GetNumAllowedDifficultyIncreases" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GetNumGameplayVotes, "GetNumGameplayVotes" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GetNumSurvivorsDead, "GetNumSurvivorsDead" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GetNumSurvivorsRescued, "GetNumSurvivorsRescued" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GetNumSurvivorsSpawned, "GetNumSurvivorsSpawned" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GetTotalScore, "GetTotalScore" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GetUIMapManager, "GetUIMapManager" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GloballyBlockAbilitiesWithTags, "GloballyBlockAbilitiesWithTags" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_GloballyUnblockAbilitiesWithTags, "GloballyUnblockAbilitiesWithTags" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_HasActiveGameplayModifiers, "HasActiveGameplayModifiers" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_IsBuildingAtLayoutRequirementsAllowed, "IsBuildingAtLayoutRequirementsAllowed" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_IsBuildingWithoutLayoutRequirementsAllowed, "IsBuildingWithoutLayoutRequirementsAllowed" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_IsDefenderItemDeployed, "IsDefenderItemDeployed" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_NotifyBeginGameplayVote, "NotifyBeginGameplayVote" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_NotifyEndGameplayVote, "NotifyEndGameplayVote" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_NotifySurvivorDead, "NotifySurvivorDead" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_NotifySurvivorRescued, "NotifySurvivorRescued" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_NotifySurvivorSpawned, "NotifySurvivorSpawned" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnDefenderDeployed, "OnDefenderDeployed" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnDefenderRemoved, "OnDefenderRemoved" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_ActiveGameplayModifiers, "OnRep_ActiveGameplayModifiers" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_GameDifficulty, "OnRep_GameDifficulty" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_GameplayVotes, "OnRep_GameplayVotes" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_MissionAlertData, "OnRep_MissionAlertData" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_MissionGenerator, "OnRep_MissionGenerator" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_MissionRewards, "OnRep_MissionRewards" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_NumSurvivorsRescued, "OnRep_NumSurvivorsRescued" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_PlayerBuildingSkillLevel, "OnRep_PlayerBuildingSkillLevel" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_PlayerSharedTrapAttributes, "OnRep_PlayerSharedTrapAttributes" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_PlayerStructuresChanged, "OnRep_PlayerStructuresChanged" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_ReplicatedWorldTimeSeconds, "OnRep_ReplicatedWorldTimeSeconds" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_TheaterUniqueId, "OnRep_TheaterUniqueId" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnRep_ZoneDifficultyInfoRow, "OnRep_ZoneDifficultyInfoRow" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnWaveBasedModifiersAppliedMulticast, "OnWaveBasedModifiersAppliedMulticast" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnWaveEncounterStarted, "OnWaveEncounterStarted" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_OnWaveStart, "OnWaveStart" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_RegisterGameplayModifier, "RegisterGameplayModifier" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_RemovePlayerAbilityRestriction, "RemovePlayerAbilityRestriction" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_RunPerfMemCheatScript, "RunPerfMemCheatScript" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_ServerFireAIDirectorEvent, "ServerFireAIDirectorEvent" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_ServerFireAIDirectorEventBatch, "ServerFireAIDirectorEventBatch" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_SetBuildingAllowed, "SetBuildingAllowed" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_SetDifficultyIncreaseRewardTier, "SetDifficultyIncreaseRewardTier" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_ShouldDisablePlayerTeleportingDuringMissionResults, "ShouldDisablePlayerTeleportingDuringMissionResults" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_SubmitGameplayVote, "SubmitGameplayVote" },
+	{ &Z_Construct_UFunction_AFortGameStateZone_UnregisterGameplayModifier, "UnregisterGameplayModifier" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortGameStateZone_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03335830
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortGameStateZone_Statics::ClassParams = { &AFortGameStateZone::StaticClass, Z_Construct_UClass_AFortGameStateZone_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortGameStateZone_Statics::FuncInfo, 55, Z_Construct_UClass_AFortGameStateZone_Statics::PropPointers, 66, "Game", &Z_Construct_UClass_AFortGameStateZone_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF3500 (end 0x00FF352F)
+// Original VA: 0x0000000140FF3500 | File offset: 0x00FF2B00
+// Recovery: confirmed (UHT singleton of AFortGameStateZone) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortGameStateZone()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortGameStateZone_Statics::ClassParams);
+	}
+	return OuterClass;
+}

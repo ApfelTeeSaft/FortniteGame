@@ -103,3 +103,39 @@ UFunction* Z_Construct_UFunction_UFortExpeditionOverviewWidget_UpdateExpeditionT
 	}
 	return ReturnFunction;
 }
+
+class UFortExpeditionOverviewWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortExpeditionOverviewWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortExpeditionOverviewWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortExpeditionOverviewWidget_HandleExpeditionTabButtonCreated, "HandleExpeditionTabButtonCreated" },
+	{ &Z_Construct_UFunction_UFortExpeditionOverviewWidget_HandleExpeditionTabSelected, "HandleExpeditionTabSelected" },
+	{ &Z_Construct_UFunction_UFortExpeditionOverviewWidget_OnExpeditionOverviewRefresh, "OnExpeditionOverviewRefresh" },
+	{ &Z_Construct_UFunction_UFortExpeditionOverviewWidget_OnExpeditionTabSelected, "OnExpeditionTabSelected" },
+	{ &Z_Construct_UFunction_UFortExpeditionOverviewWidget_UpdateExpeditionTabs, "UpdateExpeditionTabs" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortExpeditionOverviewWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C8FAE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortExpeditionOverviewWidget_Statics::ClassParams = { &UFortExpeditionOverviewWidget::StaticClass, Z_Construct_UClass_UFortExpeditionOverviewWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortExpeditionOverviewWidget_Statics::FuncInfo, 5, Z_Construct_UClass_UFortExpeditionOverviewWidget_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortExpeditionOverviewWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3650 (end 0x028A367F)
+// Original VA: 0x00000001428A3650 | File offset: 0x028A2C50
+// Recovery: confirmed (UHT singleton of UFortExpeditionOverviewWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortExpeditionOverviewWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortExpeditionOverviewWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

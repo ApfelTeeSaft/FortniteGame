@@ -165,3 +165,42 @@ UFunction* Z_Construct_UFunction_UDecalComponent_SetSortOrder()
 	}
 	return ReturnFunction;
 }
+
+class UDecalComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UDecalComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UDecalComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UDecalComponent_CreateDynamicMaterialInstance, "CreateDynamicMaterialInstance" },
+	{ &Z_Construct_UFunction_UDecalComponent_GetDecalMaterial, "GetDecalMaterial" },
+	{ &Z_Construct_UFunction_UDecalComponent_GetFadeDuration, "GetFadeDuration" },
+	{ &Z_Construct_UFunction_UDecalComponent_GetFadeStartDelay, "GetFadeStartDelay" },
+	{ &Z_Construct_UFunction_UDecalComponent_SetDecalMaterial, "SetDecalMaterial" },
+	{ &Z_Construct_UFunction_UDecalComponent_SetFadeOut, "SetFadeOut" },
+	{ &Z_Construct_UFunction_UDecalComponent_SetFadeScreenSize, "SetFadeScreenSize" },
+	{ &Z_Construct_UFunction_UDecalComponent_SetSortOrder, "SetSortOrder" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UDecalComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038CEA20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UDecalComponent_Statics::ClassParams = { &UDecalComponent::StaticClass, Z_Construct_UClass_UDecalComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UDecalComponent_Statics::FuncInfo, 8, Z_Construct_UClass_UDecalComponent_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UDecalComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FE720 (end 0x023FE74F)
+// Original VA: 0x00000001423FE720 | File offset: 0x023FDD20
+// Recovery: confirmed (UHT singleton of UDecalComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UDecalComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UDecalComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

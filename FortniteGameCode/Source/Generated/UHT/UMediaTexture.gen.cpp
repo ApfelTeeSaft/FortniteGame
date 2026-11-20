@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UMediaTexture_SetMediaPlayer()
 	}
 	return ReturnFunction;
 }
+
+class UMediaTexture
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMediaTexture_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMediaTexture_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMediaTexture_GetAspectRatio, "GetAspectRatio" },
+	{ &Z_Construct_UFunction_UMediaTexture_GetHeight, "GetHeight" },
+	{ &Z_Construct_UFunction_UMediaTexture_GetMediaPlayer, "GetMediaPlayer" },
+	{ &Z_Construct_UFunction_UMediaTexture_GetWidth, "GetWidth" },
+	{ &Z_Construct_UFunction_UMediaTexture_SetMediaPlayer, "SetMediaPlayer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMediaTexture_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03B64E30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMediaTexture_Statics::ClassParams = { &UMediaTexture::StaticClass, Z_Construct_UClass_UMediaTexture_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UMediaTexture_Statics::FuncInfo, 5, Z_Construct_UClass_UMediaTexture_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UMediaTexture_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE9C0 (end 0x025DE9EF)
+// Original VA: 0x00000001425DE9C0 | File offset: 0x025DDFC0
+// Recovery: confirmed (UHT singleton of UMediaTexture) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMediaTexture()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMediaTexture_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -343,3 +343,51 @@ UFunction* Z_Construct_UFunction_UFortBaseButton_SetStyle()
 	}
 	return ReturnFunction;
 }
+
+class UFortBaseButton
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortBaseButton_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortBaseButton_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortBaseButton_ForceClick, "ForceClick" },
+	{ &Z_Construct_UFunction_UFortBaseButton_GetCurrentButtonPadding, "GetCurrentButtonPadding" },
+	{ &Z_Construct_UFunction_UFortBaseButton_GetCurrentCustomPadding, "GetCurrentCustomPadding" },
+	{ &Z_Construct_UFunction_UFortBaseButton_GetCurrentFont, "GetCurrentFont" },
+	{ &Z_Construct_UFunction_UFortBaseButton_GetCurrentStateStyle, "GetCurrentStateStyle" },
+	{ &Z_Construct_UFunction_UFortBaseButton_GetSelected, "GetSelected" },
+	{ &Z_Construct_UFunction_UFortBaseButton_GetSelectionGroupIndex, "GetSelectionGroupIndex" },
+	{ &Z_Construct_UFunction_UFortBaseButton_GetStyle, "GetStyle" },
+	{ &Z_Construct_UFunction_UFortBaseButton_OnButtonClicked, "OnButtonClicked" },
+	{ &Z_Construct_UFunction_UFortBaseButton_SetBangVisibility, "SetBangVisibility" },
+	{ &Z_Construct_UFunction_UFortBaseButton_SetBrushSize, "SetBrushSize" },
+	{ &Z_Construct_UFunction_UFortBaseButton_SetClickMethod, "SetClickMethod" },
+	{ &Z_Construct_UFunction_UFortBaseButton_SetClickable, "SetClickable" },
+	{ &Z_Construct_UFunction_UFortBaseButton_SetHovered, "SetHovered" },
+	{ &Z_Construct_UFunction_UFortBaseButton_SetSelected, "SetSelected" },
+	{ &Z_Construct_UFunction_UFortBaseButton_SetSelectionGroup, "SetSelectionGroup" },
+	{ &Z_Construct_UFunction_UFortBaseButton_SetStyle, "SetStyle" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortBaseButton_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C75910
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortBaseButton_Statics::ClassParams = { &UFortBaseButton::StaticClass, Z_Construct_UClass_UFortBaseButton_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortBaseButton_Statics::FuncInfo, 17, Z_Construct_UClass_UFortBaseButton_Statics::PropPointers, 20, nullptr, &Z_Construct_UClass_UFortBaseButton_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894430 (end 0x0289445F)
+// Original VA: 0x0000000142894430 | File offset: 0x02893A30
+// Recovery: confirmed (UHT singleton of UFortBaseButton) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortBaseButton()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortBaseButton_Statics::ClassParams);
+	}
+	return OuterClass;
+}

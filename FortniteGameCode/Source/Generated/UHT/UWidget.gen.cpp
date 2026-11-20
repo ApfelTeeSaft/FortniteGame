@@ -1060,3 +1060,87 @@ UFunction* Z_Construct_UFunction_UWidget_SetVisibility()
 	}
 	return ReturnFunction;
 }
+
+class UWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UWidget_ForceLayoutPrepass, "ForceLayoutPrepass" },
+	{ &Z_Construct_UFunction_UWidget_ForceVolatile, "ForceVolatile" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GenerateWidgetForObject__DelegateSignature, "GenerateWidgetForObject__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GenerateWidgetForString__DelegateSignature, "GenerateWidgetForString__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GetBool__DelegateSignature, "GetBool__DelegateSignature" },
+	{ &Z_Construct_UFunction_UWidget_GetCachedGeometry, "GetCachedGeometry" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GetCheckBoxState__DelegateSignature, "GetCheckBoxState__DelegateSignature" },
+	{ &Z_Construct_UFunction_UWidget_GetClipping, "GetClipping" },
+	{ &Z_Construct_UFunction_UWidget_GetDesiredSize, "GetDesiredSize" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GetFloat__DelegateSignature, "GetFloat__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GetInt32__DelegateSignature, "GetInt32__DelegateSignature" },
+	{ &Z_Construct_UFunction_UWidget_GetIsEnabled, "GetIsEnabled" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GetLinearColor__DelegateSignature, "GetLinearColor__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GetMouseCursor__DelegateSignature, "GetMouseCursor__DelegateSignature" },
+	{ &Z_Construct_UFunction_UWidget_GetOwningPlayer, "GetOwningPlayer" },
+	{ &Z_Construct_UFunction_UWidget_GetParent, "GetParent" },
+	{ &Z_Construct_UFunction_UWidget_GetRenderOpacity, "GetRenderOpacity" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GetSlateBrush__DelegateSignature, "GetSlateBrush__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GetSlateColor__DelegateSignature, "GetSlateColor__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GetSlateVisibility__DelegateSignature, "GetSlateVisibility__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GetText__DelegateSignature, "GetText__DelegateSignature" },
+	{ &Z_Construct_UFunction_UWidget_GetVisibility, "GetVisibility" },
+	{ &Z_Construct_UDelegateFunction_UWidget_GetWidget__DelegateSignature, "GetWidget__DelegateSignature" },
+	{ &Z_Construct_UFunction_UWidget_HasAnyUserFocus, "HasAnyUserFocus" },
+	{ &Z_Construct_UFunction_UWidget_HasFocusedDescendants, "HasFocusedDescendants" },
+	{ &Z_Construct_UFunction_UWidget_HasKeyboardFocus, "HasKeyboardFocus" },
+	{ &Z_Construct_UFunction_UWidget_HasMouseCapture, "HasMouseCapture" },
+	{ &Z_Construct_UFunction_UWidget_HasUserFocus, "HasUserFocus" },
+	{ &Z_Construct_UFunction_UWidget_HasUserFocusedDescendants, "HasUserFocusedDescendants" },
+	{ &Z_Construct_UFunction_UWidget_InvalidateLayoutAndVolatility, "InvalidateLayoutAndVolatility" },
+	{ &Z_Construct_UFunction_UWidget_IsHovered, "IsHovered" },
+	{ &Z_Construct_UFunction_UWidget_IsVisible, "IsVisible" },
+	{ &Z_Construct_UDelegateFunction_UWidget_OnPointerEvent__DelegateSignature, "OnPointerEvent__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UWidget_OnReply__DelegateSignature, "OnReply__DelegateSignature" },
+	{ &Z_Construct_UFunction_UWidget_RemoveFromParent, "RemoveFromParent" },
+	{ &Z_Construct_UFunction_UWidget_ResetCursor, "ResetCursor" },
+	{ &Z_Construct_UFunction_UWidget_SetAllNavigationRules, "SetAllNavigationRules" },
+	{ &Z_Construct_UFunction_UWidget_SetClipping, "SetClipping" },
+	{ &Z_Construct_UFunction_UWidget_SetCursor, "SetCursor" },
+	{ &Z_Construct_UFunction_UWidget_SetIsEnabled, "SetIsEnabled" },
+	{ &Z_Construct_UFunction_UWidget_SetKeyboardFocus, "SetKeyboardFocus" },
+	{ &Z_Construct_UFunction_UWidget_SetNavigationRule, "SetNavigationRule" },
+	{ &Z_Construct_UFunction_UWidget_SetRenderAngle, "SetRenderAngle" },
+	{ &Z_Construct_UFunction_UWidget_SetRenderOpacity, "SetRenderOpacity" },
+	{ &Z_Construct_UFunction_UWidget_SetRenderScale, "SetRenderScale" },
+	{ &Z_Construct_UFunction_UWidget_SetRenderShear, "SetRenderShear" },
+	{ &Z_Construct_UFunction_UWidget_SetRenderTransform, "SetRenderTransform" },
+	{ &Z_Construct_UFunction_UWidget_SetRenderTransformPivot, "SetRenderTransformPivot" },
+	{ &Z_Construct_UFunction_UWidget_SetRenderTranslation, "SetRenderTranslation" },
+	{ &Z_Construct_UFunction_UWidget_SetToolTip, "SetToolTip" },
+	{ &Z_Construct_UFunction_UWidget_SetToolTipText, "SetToolTipText" },
+	{ &Z_Construct_UFunction_UWidget_SetUserFocus, "SetUserFocus" },
+	{ &Z_Construct_UFunction_UWidget_SetVisibility, "SetVisibility" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036A4F00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UWidget_Statics::ClassParams = { &UWidget::StaticClass, Z_Construct_UClass_UWidget_Statics::DependentSingletons, 2, 0x00B00081u, Z_Construct_UClass_UWidget_Statics::FuncInfo, 53, Z_Construct_UClass_UWidget_Statics::PropPointers, 23, nullptr, &Z_Construct_UClass_UWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFB310 (end 0x01BFB33F)
+// Original VA: 0x0000000141BFB310 | File offset: 0x01BFA910
+// Recovery: confirmed (UHT singleton of UWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

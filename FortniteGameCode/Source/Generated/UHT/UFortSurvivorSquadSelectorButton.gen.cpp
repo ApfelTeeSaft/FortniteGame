@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadSelectorButton_TryGetSummaryS
 	}
 	return ReturnFunction;
 }
+
+class UFortSurvivorSquadSelectorButton
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSurvivorSquadSelectorButton_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSurvivorSquadSelectorButton_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSurvivorSquadSelectorButton_TryGetPersonalityMatches, "TryGetPersonalityMatches" },
+	{ &Z_Construct_UFunction_UFortSurvivorSquadSelectorButton_TryGetSquadMembers, "TryGetSquadMembers" },
+	{ &Z_Construct_UFunction_UFortSurvivorSquadSelectorButton_TryGetSummaryStats, "TryGetSummaryStats" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSurvivorSquadSelectorButton_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D2FE60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSurvivorSquadSelectorButton_Statics::ClassParams = { &UFortSurvivorSquadSelectorButton::StaticClass, Z_Construct_UClass_UFortSurvivorSquadSelectorButton_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSurvivorSquadSelectorButton_Statics::FuncInfo, 3, Z_Construct_UClass_UFortSurvivorSquadSelectorButton_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortSurvivorSquadSelectorButton_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904AD0 (end 0x02904AFF)
+// Original VA: 0x0000000142904AD0 | File offset: 0x029040D0
+// Recovery: confirmed (UHT singleton of UFortSurvivorSquadSelectorButton) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSurvivorSquadSelectorButton()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSurvivorSquadSelectorButton_Statics::ClassParams);
+	}
+	return OuterClass;
+}

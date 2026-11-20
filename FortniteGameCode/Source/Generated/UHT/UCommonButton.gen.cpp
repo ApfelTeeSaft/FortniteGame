@@ -926,3 +926,81 @@ UFunction* Z_Construct_UFunction_UCommonButton_SetTriggeredInputAction()
 	}
 	return ReturnFunction;
 }
+
+class UCommonButton
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonButton_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonButton_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonButton_ClearSelection, "ClearSelection" },
+	{ &Z_Construct_UFunction_UCommonButton_DisableButton, "DisableButton" },
+	{ &Z_Construct_UFunction_UCommonButton_DisableButtonWithReason, "DisableButtonWithReason" },
+	{ &Z_Construct_UFunction_UCommonButton_EnableButton, "EnableButton" },
+	{ &Z_Construct_UFunction_UCommonButton_GetCurrentButtonPadding, "GetCurrentButtonPadding" },
+	{ &Z_Construct_UFunction_UCommonButton_GetCurrentCustomPadding, "GetCurrentCustomPadding" },
+	{ &Z_Construct_UFunction_UCommonButton_GetCurrentTextStyle, "GetCurrentTextStyle" },
+	{ &Z_Construct_UFunction_UCommonButton_GetCurrentTextStyleClass, "GetCurrentTextStyleClass" },
+	{ &Z_Construct_UFunction_UCommonButton_GetInputAction, "GetInputAction" },
+	{ &Z_Construct_UFunction_UCommonButton_GetSelected, "GetSelected" },
+	{ &Z_Construct_UFunction_UCommonButton_GetShouldSelectUponReceivingFocus, "GetShouldSelectUponReceivingFocus" },
+	{ &Z_Construct_UFunction_UCommonButton_GetSingleMaterialStyleMID, "GetSingleMaterialStyleMID" },
+	{ &Z_Construct_UFunction_UCommonButton_GetStyle, "GetStyle" },
+	{ &Z_Construct_UFunction_UCommonButton_HandleButtonClicked, "HandleButtonClicked" },
+	{ &Z_Construct_UFunction_UCommonButton_HandleButtonDoubleClicked, "HandleButtonDoubleClicked" },
+	{ &Z_Construct_UFunction_UCommonButton_HandleButtonPressed, "HandleButtonPressed" },
+	{ &Z_Construct_UFunction_UCommonButton_HandleButtonReleased, "HandleButtonReleased" },
+	{ &Z_Construct_UFunction_UCommonButton_HandleFocusReceived, "HandleFocusReceived" },
+	{ &Z_Construct_UFunction_UCommonButton_HandleTriggeringActionCommited, "HandleTriggeringActionCommited" },
+	{ &Z_Construct_UFunction_UCommonButton_IsHovered, "IsHovered" },
+	{ &Z_Construct_UFunction_UCommonButton_IsInteractionEnabled, "IsInteractionEnabled" },
+	{ &Z_Construct_UFunction_UCommonButton_IsPressed, "IsPressed" },
+	{ &Z_Construct_UFunction_UCommonButton_NativeOnActionComplete, "NativeOnActionComplete" },
+	{ &Z_Construct_UFunction_UCommonButton_NativeOnActionProgress, "NativeOnActionProgress" },
+	{ &Z_Construct_UFunction_UCommonButton_OnActionComplete, "OnActionComplete" },
+	{ &Z_Construct_UFunction_UCommonButton_OnActionProgress, "OnActionProgress" },
+	{ &Z_Construct_UFunction_UCommonButton_OnClicked, "OnClicked" },
+	{ &Z_Construct_UFunction_UCommonButton_OnCurrentTextStyleChanged, "OnCurrentTextStyleChanged" },
+	{ &Z_Construct_UFunction_UCommonButton_OnDeselected, "OnDeselected" },
+	{ &Z_Construct_UFunction_UCommonButton_OnDisabled, "OnDisabled" },
+	{ &Z_Construct_UFunction_UCommonButton_OnDoubleClicked, "OnDoubleClicked" },
+	{ &Z_Construct_UFunction_UCommonButton_OnEnabled, "OnEnabled" },
+	{ &Z_Construct_UFunction_UCommonButton_OnHovered, "OnHovered" },
+	{ &Z_Construct_UFunction_UCommonButton_OnInputMethodChanged, "OnInputMethodChanged" },
+	{ &Z_Construct_UFunction_UCommonButton_OnSelected, "OnSelected" },
+	{ &Z_Construct_UFunction_UCommonButton_OnTriggeredInputActionChanged, "OnTriggeredInputActionChanged" },
+	{ &Z_Construct_UFunction_UCommonButton_OnUnhovered, "OnUnhovered" },
+	{ &Z_Construct_UFunction_UCommonButton_SetInputActionProgressMaterial, "SetInputActionProgressMaterial" },
+	{ &Z_Construct_UFunction_UCommonButton_SetIsInteractionEnabled, "SetIsInteractionEnabled" },
+	{ &Z_Construct_UFunction_UCommonButton_SetIsSelectable, "SetIsSelectable" },
+	{ &Z_Construct_UFunction_UCommonButton_SetIsSelected, "SetIsSelected" },
+	{ &Z_Construct_UFunction_UCommonButton_SetIsToggleable, "SetIsToggleable" },
+	{ &Z_Construct_UFunction_UCommonButton_SetMinDimensions, "SetMinDimensions" },
+	{ &Z_Construct_UFunction_UCommonButton_SetSelectedInternal, "SetSelectedInternal" },
+	{ &Z_Construct_UFunction_UCommonButton_SetShouldSelectUponReceivingFocus, "SetShouldSelectUponReceivingFocus" },
+	{ &Z_Construct_UFunction_UCommonButton_SetStyle, "SetStyle" },
+	{ &Z_Construct_UFunction_UCommonButton_SetTriggeredInputAction, "SetTriggeredInputAction" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonButton_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E7C3B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonButton_Statics::ClassParams = { &UCommonButton::StaticClass, Z_Construct_UClass_UCommonButton_Statics::DependentSingletons, 2, 0x00B01081u, Z_Construct_UClass_UCommonButton_Statics::FuncInfo, 47, Z_Construct_UClass_UCommonButton_Statics::PropPointers, 25, nullptr, &Z_Construct_UClass_UCommonButton_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2CA0 (end 0x002C2CCF)
+// Original VA: 0x00000001402C2CA0 | File offset: 0x002C22A0
+// Recovery: confirmed (UHT singleton of UCommonButton) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonButton()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonButton_Statics::ClassParams);
+	}
+	return OuterClass;
+}

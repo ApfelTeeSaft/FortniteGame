@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortIndicator_OnParentActorEndPlay()
 	}
 	return ReturnFunction;
 }
+
+class UFortIndicator
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortIndicator_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortIndicator_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortIndicator_OnParentActorEndPlay, "OnParentActorEndPlay" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortIndicator_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03349A00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortIndicator_Statics::ClassParams = { &UFortIndicator::StaticClass, Z_Construct_UClass_UFortIndicator_Statics::DependentSingletons, 2, 0x00080081u, Z_Construct_UClass_UFortIndicator_Statics::FuncInfo, 1, Z_Construct_UClass_UFortIndicator_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortIndicator_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006AC0 (end 0x01006AEF)
+// Original VA: 0x0000000141006AC0 | File offset: 0x010060C0
+// Recovery: confirmed (UHT singleton of UFortIndicator) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortIndicator()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortIndicator_Statics::ClassParams);
+	}
+	return OuterClass;
+}

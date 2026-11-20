@@ -123,3 +123,40 @@ UFunction* Z_Construct_UFunction_UCommonRotator_ShiftTextRight()
 	}
 	return ReturnFunction;
 }
+
+class UCommonRotator
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonRotator_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonRotator_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonRotator_GetSelectedIndex, "GetSelectedIndex" },
+	{ &Z_Construct_UFunction_UCommonRotator_GetSelectedText, "GetSelectedText" },
+	{ &Z_Construct_UFunction_UCommonRotator_PopulateTextLabels, "PopulateTextLabels" },
+	{ &Z_Construct_UFunction_UCommonRotator_SetSelectedItem, "SetSelectedItem" },
+	{ &Z_Construct_UFunction_UCommonRotator_ShiftTextLeft, "ShiftTextLeft" },
+	{ &Z_Construct_UFunction_UCommonRotator_ShiftTextRight, "ShiftTextRight" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonRotator_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E827F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonRotator_Statics::ClassParams = { &UCommonRotator::StaticClass, Z_Construct_UClass_UCommonRotator_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UCommonRotator_Statics::FuncInfo, 6, Z_Construct_UClass_UCommonRotator_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UCommonRotator_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA590 (end 0x002CA5BF)
+// Original VA: 0x00000001402CA590 | File offset: 0x002C9B90
+// Recovery: confirmed (UHT singleton of UCommonRotator) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonRotator()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonRotator_Statics::ClassParams);
+	}
+	return OuterClass;
+}

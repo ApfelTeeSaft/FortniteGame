@@ -264,3 +264,47 @@ UFunction* Z_Construct_UFunction_UAthenaInventoryPanelBase_RequestEquip()
 	}
 	return ReturnFunction;
 }
+
+class UAthenaInventoryPanelBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaInventoryPanelBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaInventoryPanelBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_AdvanceSelection, "AdvanceSelection" },
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_AttemptToUpdateFocus, "AttemptToUpdateFocus" },
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_FocusTileView, "FocusTileView" },
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_GetTileViewForItem, "GetTileViewForItem" },
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_HandleCursorModeChanged, "HandleCursorModeChanged" },
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_HandleCursorModeChangedBP, "HandleCursorModeChangedBP" },
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_HandleInventoryItemClicked, "HandleInventoryItemClicked" },
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_HandleInventoryItemDoubleClicked, "HandleInventoryItemDoubleClicked" },
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_HandleInventoryItemHovered, "HandleInventoryItemHovered" },
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_HandleInventoryItemSelected, "HandleInventoryItemSelected" },
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_HandleQuickBarChangedBP, "HandleQuickBarChangedBP" },
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_HandleTileViewItemSelected, "HandleTileViewItemSelected" },
+	{ &Z_Construct_UFunction_UAthenaInventoryPanelBase_RequestEquip, "RequestEquip" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaInventoryPanelBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C53740
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaInventoryPanelBase_Statics::ClassParams = { &UAthenaInventoryPanelBase::StaticClass, Z_Construct_UClass_UAthenaInventoryPanelBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UAthenaInventoryPanelBase_Statics::FuncInfo, 13, Z_Construct_UClass_UAthenaInventoryPanelBase_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UAthenaInventoryPanelBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287F5C0 (end 0x0287F5EF)
+// Original VA: 0x000000014287F5C0 | File offset: 0x0287EBC0
+// Recovery: confirmed (UHT singleton of UAthenaInventoryPanelBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaInventoryPanelBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaInventoryPanelBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

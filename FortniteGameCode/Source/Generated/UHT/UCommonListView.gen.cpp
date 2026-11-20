@@ -542,3 +542,61 @@ UFunction* Z_Construct_UFunction_UCommonListView_SetSimulateDoubleClickOnSelecte
 	}
 	return ReturnFunction;
 }
+
+class UCommonListView
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonListView_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonListView_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonListView_AddItem, "AddItem" },
+	{ &Z_Construct_UFunction_UCommonListView_CancelScrollIntoView, "CancelScrollIntoView" },
+	{ &Z_Construct_UFunction_UCommonListView_Clear, "Clear" },
+	{ &Z_Construct_UFunction_UCommonListView_ClearSelection, "ClearSelection" },
+	{ &Z_Construct_UFunction_UCommonListView_DynamicHandleItemClickedCommonButton, "DynamicHandleItemClickedCommonButton" },
+	{ &Z_Construct_UFunction_UCommonListView_DynamicHandleItemClickedUserWidget, "DynamicHandleItemClickedUserWidget" },
+	{ &Z_Construct_UFunction_UCommonListView_DynamicHandleItemDoubleClickedCommonButton, "DynamicHandleItemDoubleClickedCommonButton" },
+	{ &Z_Construct_UFunction_UCommonListView_DynamicHandleItemHoveredCommonButton, "DynamicHandleItemHoveredCommonButton" },
+	{ &Z_Construct_UFunction_UCommonListView_DynamicHandleItemUnhoveredCommonButton, "DynamicHandleItemUnhoveredCommonButton" },
+	{ &Z_Construct_UFunction_UCommonListView_GetIndexForItem, "GetIndexForItem" },
+	{ &Z_Construct_UFunction_UCommonListView_GetItemAt, "GetItemAt" },
+	{ &Z_Construct_UFunction_UCommonListView_GetNumItems, "GetNumItems" },
+	{ &Z_Construct_UFunction_UCommonListView_GetNumItemsSelected, "GetNumItemsSelected" },
+	{ &Z_Construct_UFunction_UCommonListView_GetSelectedItem, "GetSelectedItem" },
+	{ &Z_Construct_UFunction_UCommonListView_GetSelectedItems, "GetSelectedItems" },
+	{ &Z_Construct_UFunction_UCommonListView_GetSelectionModeBP, "GetSelectionModeBP" },
+	{ &Z_Construct_UFunction_UCommonListView_IsItemVisible, "IsItemVisible" },
+	{ &Z_Construct_UFunction_UCommonListView_IsRefreshPending, "IsRefreshPending" },
+	{ &Z_Construct_UFunction_UCommonListView_ScrollIntoView, "ScrollIntoView" },
+	{ &Z_Construct_UFunction_UCommonListView_SetDataProvider, "SetDataProvider" },
+	{ &Z_Construct_UFunction_UCommonListView_SetDesiredItemPadding, "SetDesiredItemPadding" },
+	{ &Z_Construct_UFunction_UCommonListView_SetItemHeight, "SetItemHeight" },
+	{ &Z_Construct_UFunction_UCommonListView_SetItemSelection, "SetItemSelection" },
+	{ &Z_Construct_UFunction_UCommonListView_SetSelectedIndex, "SetSelectedIndex" },
+	{ &Z_Construct_UFunction_UCommonListView_SetSelectedItem, "SetSelectedItem" },
+	{ &Z_Construct_UFunction_UCommonListView_SetSelectionMode, "SetSelectionMode" },
+	{ &Z_Construct_UFunction_UCommonListView_SetSimulateDoubleClickOnSelectedItemClick, "SetSimulateDoubleClickOnSelectedItemClick" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonListView_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E81E40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonListView_Statics::ClassParams = { &UCommonListView::StaticClass, Z_Construct_UClass_UCommonListView_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UCommonListView_Statics::FuncInfo, 27, Z_Construct_UClass_UCommonListView_Statics::PropPointers, 17, nullptr, &Z_Construct_UClass_UCommonListView_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA420 (end 0x002CA44F)
+// Original VA: 0x00000001402CA420 | File offset: 0x002C9A20
+// Recovery: confirmed (UHT singleton of UCommonListView) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonListView()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonListView_Statics::ClassParams);
+	}
+	return OuterClass;
+}

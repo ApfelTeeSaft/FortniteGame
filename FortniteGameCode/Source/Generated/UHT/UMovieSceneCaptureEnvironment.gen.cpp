@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UMovieSceneCaptureEnvironment_GetCaptureFrameNu
 	}
 	return ReturnFunction;
 }
+
+class UMovieSceneCaptureEnvironment
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMovieSceneCaptureEnvironment_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMovieSceneCaptureEnvironment_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMovieSceneCaptureEnvironment_GetCaptureElapsedTime, "GetCaptureElapsedTime" },
+	{ &Z_Construct_UFunction_UMovieSceneCaptureEnvironment_GetCaptureFrameNumber, "GetCaptureFrameNumber" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMovieSceneCaptureEnvironment_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0371EF60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMovieSceneCaptureEnvironment_Statics::ClassParams = { &UMovieSceneCaptureEnvironment::StaticClass, Z_Construct_UClass_UMovieSceneCaptureEnvironment_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UMovieSceneCaptureEnvironment_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UMovieSceneCaptureEnvironment_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5A3F0 (end 0x01D5A41F)
+// Original VA: 0x0000000141D5A3F0 | File offset: 0x01D599F0
+// Recovery: confirmed (UHT singleton of UMovieSceneCaptureEnvironment) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMovieSceneCaptureEnvironment()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMovieSceneCaptureEnvironment_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -161,3 +161,42 @@ UFunction* Z_Construct_UFunction_UFortPerksWidget_NUI_SetState()
 	}
 	return ReturnFunction;
 }
+
+class UFortPerksWidget_NUI
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortPerksWidget_NUI_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPerksWidget_NUI_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPerksWidget_NUI_OnGeneratePerk, "OnGeneratePerk" },
+	{ &Z_Construct_UFunction_UFortPerksWidget_NUI_OnGeneratePerkTier, "OnGeneratePerkTier" },
+	{ &Z_Construct_UFunction_UFortPerksWidget_NUI_OnHeroChanged, "OnHeroChanged" },
+	{ &Z_Construct_UFunction_UFortPerksWidget_NUI_OnStateChanged, "OnStateChanged" },
+	{ &Z_Construct_UFunction_UFortPerksWidget_NUI_ProcessPerkTiers, "ProcessPerkTiers" },
+	{ &Z_Construct_UFunction_UFortPerksWidget_NUI_ProcessPerks, "ProcessPerks" },
+	{ &Z_Construct_UFunction_UFortPerksWidget_NUI_SetHero, "SetHero" },
+	{ &Z_Construct_UFunction_UFortPerksWidget_NUI_SetState, "SetState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPerksWidget_NUI_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CFD9D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPerksWidget_NUI_Statics::ClassParams = { &UFortPerksWidget_NUI::StaticClass, Z_Construct_UClass_UFortPerksWidget_NUI_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortPerksWidget_NUI_Statics::FuncInfo, 8, Z_Construct_UClass_UFortPerksWidget_NUI_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UFortPerksWidget_NUI_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6C30 (end 0x028E6C5F)
+// Original VA: 0x00000001428E6C30 | File offset: 0x028E6230
+// Recovery: confirmed (UHT singleton of UFortPerksWidget_NUI) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPerksWidget_NUI()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPerksWidget_NUI_Statics::ClassParams);
+	}
+	return OuterClass;
+}

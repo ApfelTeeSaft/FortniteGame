@@ -262,3 +262,47 @@ UFunction* Z_Construct_UFunction_UFortGameOptions_UpdatePossibleLanguages()
 	}
 	return ReturnFunction;
 }
+
+class UFortGameOptions
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortGameOptions_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortGameOptions_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortGameOptions_ConstructHUDTagList, "ConstructHUDTagList" },
+	{ &Z_Construct_UFunction_UFortGameOptions_ConstructSettingList, "ConstructSettingList" },
+	{ &Z_Construct_UFunction_UFortGameOptions_GetControllerPlatform, "GetControllerPlatform" },
+	{ &Z_Construct_UFunction_UFortGameOptions_GetDefaultGammaSettings, "GetDefaultGammaSettings" },
+	{ &Z_Construct_UFunction_UFortGameOptions_GetGammaSettings, "GetGammaSettings" },
+	{ &Z_Construct_UFunction_UFortGameOptions_GetHUDListWidget, "GetHUDListWidget" },
+	{ &Z_Construct_UFunction_UFortGameOptions_GetHUDSettings, "GetHUDSettings" },
+	{ &Z_Construct_UFunction_UFortGameOptions_GetOptionsListWidget, "GetOptionsListWidget" },
+	{ &Z_Construct_UFunction_UFortGameOptions_Initialize, "Initialize" },
+	{ &Z_Construct_UFunction_UFortGameOptions_SetControllerPlatform, "SetControllerPlatform" },
+	{ &Z_Construct_UFunction_UFortGameOptions_UpdateGammaSettings, "UpdateGammaSettings" },
+	{ &Z_Construct_UFunction_UFortGameOptions_UpdateHUDSettings, "UpdateHUDSettings" },
+	{ &Z_Construct_UFunction_UFortGameOptions_UpdatePossibleLanguages, "UpdatePossibleLanguages" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortGameOptions_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C9BD30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortGameOptions_Statics::ClassParams = { &UFortGameOptions::StaticClass, Z_Construct_UClass_UFortGameOptions_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortGameOptions_Statics::FuncInfo, 13, Z_Construct_UClass_UFortGameOptions_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortGameOptions_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC3E0 (end 0x028AC40F)
+// Original VA: 0x00000001428AC3E0 | File offset: 0x028AB9E0
+// Recovery: confirmed (UHT singleton of UFortGameOptions) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortGameOptions()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortGameOptions_Statics::ClassParams);
+	}
+	return OuterClass;
+}

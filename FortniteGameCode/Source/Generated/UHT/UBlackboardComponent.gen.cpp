@@ -485,3 +485,58 @@ UFunction* Z_Construct_UFunction_UBlackboardComponent_SetValueAsVector()
 	}
 	return ReturnFunction;
 }
+
+class UBlackboardComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBlackboardComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBlackboardComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBlackboardComponent_ClearValue, "ClearValue" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_GetLocationFromEntry, "GetLocationFromEntry" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_GetRotationFromEntry, "GetRotationFromEntry" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_GetValueAsBool, "GetValueAsBool" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_GetValueAsClass, "GetValueAsClass" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_GetValueAsEnum, "GetValueAsEnum" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_GetValueAsFloat, "GetValueAsFloat" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_GetValueAsInt, "GetValueAsInt" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_GetValueAsName, "GetValueAsName" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_GetValueAsObject, "GetValueAsObject" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_GetValueAsRotator, "GetValueAsRotator" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_GetValueAsString, "GetValueAsString" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_GetValueAsVector, "GetValueAsVector" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_IsVectorValueSet, "IsVectorValueSet" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_SetValueAsBool, "SetValueAsBool" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_SetValueAsClass, "SetValueAsClass" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_SetValueAsEnum, "SetValueAsEnum" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_SetValueAsFloat, "SetValueAsFloat" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_SetValueAsInt, "SetValueAsInt" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_SetValueAsName, "SetValueAsName" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_SetValueAsObject, "SetValueAsObject" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_SetValueAsRotator, "SetValueAsRotator" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_SetValueAsString, "SetValueAsString" },
+	{ &Z_Construct_UFunction_UBlackboardComponent_SetValueAsVector, "SetValueAsVector" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBlackboardComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036FA270
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBlackboardComponent_Statics::ClassParams = { &UBlackboardComponent::StaticClass, Z_Construct_UClass_UBlackboardComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UBlackboardComponent_Statics::FuncInfo, 24, Z_Construct_UClass_UBlackboardComponent_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UBlackboardComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D231D0 (end 0x01D231FF)
+// Original VA: 0x0000000141D231D0 | File offset: 0x01D227D0
+// Recovery: confirmed (UHT singleton of UBlackboardComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBlackboardComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBlackboardComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

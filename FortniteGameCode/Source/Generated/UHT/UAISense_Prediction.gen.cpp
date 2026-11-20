@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UAISense_Prediction_RequestPawnPredictionEvent(
 	}
 	return ReturnFunction;
 }
+
+class UAISense_Prediction
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAISense_Prediction_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAISense_Prediction_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAISense_Prediction_RequestControllerPredictionEvent, "RequestControllerPredictionEvent" },
+	{ &Z_Construct_UFunction_UAISense_Prediction_RequestPawnPredictionEvent, "RequestPawnPredictionEvent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAISense_Prediction_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036F2D10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAISense_Prediction_Statics::ClassParams = { &UAISense_Prediction::StaticClass, Z_Construct_UClass_UAISense_Prediction_Statics::DependentSingletons, 2, 0x00100084u, Z_Construct_UClass_UAISense_Prediction_Statics::FuncInfo, 2, Z_Construct_UClass_UAISense_Prediction_Statics::PropPointers, 2, "Engine", &Z_Construct_UClass_UAISense_Prediction_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1BEF0 (end 0x01D1BF1F)
+// Original VA: 0x0000000141D1BEF0 | File offset: 0x01D1B4F0
+// Recovery: confirmed (UHT singleton of UAISense_Prediction) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAISense_Prediction()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAISense_Prediction_Statics::ClassParams);
+	}
+	return OuterClass;
+}

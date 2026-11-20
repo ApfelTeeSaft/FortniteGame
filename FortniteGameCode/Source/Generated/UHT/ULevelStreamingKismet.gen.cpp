@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_ULevelStreamingKismet_SetShouldBeLoaded()
 	}
 	return ReturnFunction;
 }
+
+class ULevelStreamingKismet
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ULevelStreamingKismet_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ULevelStreamingKismet_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ULevelStreamingKismet_LoadLevelInstance, "LoadLevelInstance" },
+	{ &Z_Construct_UFunction_ULevelStreamingKismet_LoadLevelInstanceBySoftObjectPtr, "LoadLevelInstanceBySoftObjectPtr" },
+	{ &Z_Construct_UFunction_ULevelStreamingKismet_SetShouldBeLoaded, "SetShouldBeLoaded" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ULevelStreamingKismet_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039309B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ULevelStreamingKismet_Statics::ClassParams = { &ULevelStreamingKismet::StaticClass, Z_Construct_UClass_ULevelStreamingKismet_Statics::DependentSingletons, 2, 0x00901080u, Z_Construct_UClass_ULevelStreamingKismet_Statics::FuncInfo, 3, Z_Construct_UClass_ULevelStreamingKismet_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_ULevelStreamingKismet_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02470490 (end 0x024704BF)
+// Original VA: 0x0000000142470490 | File offset: 0x0246FA90
+// Recovery: confirmed (UHT singleton of ULevelStreamingKismet) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ULevelStreamingKismet()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ULevelStreamingKismet_Statics::ClassParams);
+	}
+	return OuterClass;
+}

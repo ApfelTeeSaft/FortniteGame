@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_MoveAI_CreateMoveAITask()
 	}
 	return ReturnFunction;
 }
+
+class UFortAbilityTask_MoveAI
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAbilityTask_MoveAI_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAbilityTask_MoveAI_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAbilityTask_MoveAI_CreateMoveAITask, "CreateMoveAITask" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAbilityTask_MoveAI_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03295F50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAbilityTask_MoveAI_Statics::ClassParams = { &UFortAbilityTask_MoveAI::StaticClass, Z_Construct_UClass_UFortAbilityTask_MoveAI_Statics::DependentSingletons, 2, 0x00880084u, Z_Construct_UClass_UFortAbilityTask_MoveAI_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAbilityTask_MoveAI_Statics::PropPointers, 3, "Game", &Z_Construct_UClass_UFortAbilityTask_MoveAI_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81E60 (end 0x00F81E8F)
+// Original VA: 0x0000000140F81E60 | File offset: 0x00F81460
+// Recovery: confirmed (UHT singleton of UFortAbilityTask_MoveAI) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAbilityTask_MoveAI()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAbilityTask_MoveAI_Statics::ClassParams);
+	}
+	return OuterClass;
+}

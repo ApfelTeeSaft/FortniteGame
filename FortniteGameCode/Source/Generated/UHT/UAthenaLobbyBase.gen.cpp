@@ -220,3 +220,45 @@ UFunction* Z_Construct_UFunction_UAthenaLobbyBase_ShowHighlightSummary()
 	}
 	return ReturnFunction;
 }
+
+class UAthenaLobbyBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaLobbyBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaLobbyBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaLobbyBase_OnBeginCursorOverPlayer, "OnBeginCursorOverPlayer" },
+	{ &Z_Construct_UFunction_UAthenaLobbyBase_OnEndCursorOverPlayer, "OnEndCursorOverPlayer" },
+	{ &Z_Construct_UFunction_UAthenaLobbyBase_OnNavigationLeft, "OnNavigationLeft" },
+	{ &Z_Construct_UFunction_UAthenaLobbyBase_OnNavigationRight, "OnNavigationRight" },
+	{ &Z_Construct_UFunction_UAthenaLobbyBase_OnPlayerClicked, "OnPlayerClicked" },
+	{ &Z_Construct_UFunction_UAthenaLobbyBase_OnUpdateSocialImportButtonText, "OnUpdateSocialImportButtonText" },
+	{ &Z_Construct_UFunction_UAthenaLobbyBase_QueryForHeadlessReminder, "QueryForHeadlessReminder" },
+	{ &Z_Construct_UFunction_UAthenaLobbyBase_ShouldShowHeadlessReminder, "ShouldShowHeadlessReminder" },
+	{ &Z_Construct_UFunction_UAthenaLobbyBase_ShowAthenaStoreToast, "ShowAthenaStoreToast" },
+	{ &Z_Construct_UFunction_UAthenaLobbyBase_ShowDailyNews, "ShowDailyNews" },
+	{ &Z_Construct_UFunction_UAthenaLobbyBase_ShowHighlightSummary, "ShowHighlightSummary" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaLobbyBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C5E2A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaLobbyBase_Statics::ClassParams = { &UAthenaLobbyBase::StaticClass, Z_Construct_UClass_UAthenaLobbyBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UAthenaLobbyBase_Statics::FuncInfo, 11, Z_Construct_UClass_UAthenaLobbyBase_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UAthenaLobbyBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028871B0 (end 0x028871DF)
+// Original VA: 0x00000001428871B0 | File offset: 0x028867B0
+// Recovery: confirmed (UHT singleton of UAthenaLobbyBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaLobbyBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaLobbyBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

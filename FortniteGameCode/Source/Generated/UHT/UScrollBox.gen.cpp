@@ -203,3 +203,44 @@ UFunction* Z_Construct_UFunction_UScrollBox_SetScrollOffset()
 	}
 	return ReturnFunction;
 }
+
+class UScrollBox
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UScrollBox_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UScrollBox_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UScrollBox_GetScrollOffset, "GetScrollOffset" },
+	{ &Z_Construct_UFunction_UScrollBox_ScrollToEnd, "ScrollToEnd" },
+	{ &Z_Construct_UFunction_UScrollBox_ScrollToStart, "ScrollToStart" },
+	{ &Z_Construct_UFunction_UScrollBox_ScrollWidgetIntoView, "ScrollWidgetIntoView" },
+	{ &Z_Construct_UFunction_UScrollBox_SetAllowOverscroll, "SetAllowOverscroll" },
+	{ &Z_Construct_UFunction_UScrollBox_SetAlwaysShowScrollbar, "SetAlwaysShowScrollbar" },
+	{ &Z_Construct_UFunction_UScrollBox_SetOrientation, "SetOrientation" },
+	{ &Z_Construct_UFunction_UScrollBox_SetScrollBarVisibility, "SetScrollBarVisibility" },
+	{ &Z_Construct_UFunction_UScrollBox_SetScrollOffset, "SetScrollOffset" },
+	{ &Z_Construct_UFunction_UScrollBox_SetScrollbarThickness, "SetScrollbarThickness" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UScrollBox_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0369CF50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UScrollBox_Statics::ClassParams = { &UScrollBox::StaticClass, Z_Construct_UClass_UScrollBox_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UScrollBox_Statics::FuncInfo, 10, Z_Construct_UClass_UScrollBox_Statics::PropPointers, 17, nullptr, &Z_Construct_UClass_UScrollBox_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2FA0 (end 0x01BF2FCF)
+// Original VA: 0x0000000141BF2FA0 | File offset: 0x01BF25A0
+// Recovery: confirmed (UHT singleton of UScrollBox) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UScrollBox()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UScrollBox_Statics::ClassParams);
+	}
+	return OuterClass;
+}

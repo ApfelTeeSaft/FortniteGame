@@ -325,3 +325,49 @@ UFunction* Z_Construct_UFunction_UWidgetLayoutLibrary_SlotAsVerticalBoxSlot()
 	}
 	return ReturnFunction;
 }
+
+class UWidgetLayoutLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UWidgetLayoutLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UWidgetLayoutLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_GetMousePositionOnPlatform, "GetMousePositionOnPlatform" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_GetMousePositionOnViewport, "GetMousePositionOnViewport" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_GetMousePositionScaledByDPI, "GetMousePositionScaledByDPI" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_GetPlayerScreenWidgetGeometry, "GetPlayerScreenWidgetGeometry" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_GetViewportScale, "GetViewportScale" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_GetViewportSize, "GetViewportSize" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_GetViewportWidgetGeometry, "GetViewportWidgetGeometry" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_ProjectWorldLocationToWidgetPosition, "ProjectWorldLocationToWidgetPosition" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_RemoveAllWidgets, "RemoveAllWidgets" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_SlotAsBorderSlot, "SlotAsBorderSlot" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_SlotAsCanvasSlot, "SlotAsCanvasSlot" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_SlotAsGridSlot, "SlotAsGridSlot" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_SlotAsHorizontalBoxSlot, "SlotAsHorizontalBoxSlot" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_SlotAsOverlaySlot, "SlotAsOverlaySlot" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_SlotAsUniformGridSlot, "SlotAsUniformGridSlot" },
+	{ &Z_Construct_UFunction_UWidgetLayoutLibrary_SlotAsVerticalBoxSlot, "SlotAsVerticalBoxSlot" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UWidgetLayoutLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036AA480
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UWidgetLayoutLibrary_Statics::ClassParams = { &UWidgetLayoutLibrary::StaticClass, Z_Construct_UClass_UWidgetLayoutLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UWidgetLayoutLibrary_Statics::FuncInfo, 16, nullptr, 0, nullptr, &Z_Construct_UClass_UWidgetLayoutLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00E20 (end 0x01C00E4F)
+// Original VA: 0x0000000141C00E20 | File offset: 0x01C00420
+// Recovery: confirmed (UHT singleton of UWidgetLayoutLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UWidgetLayoutLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UWidgetLayoutLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -105,3 +105,38 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationInterface_S
 	}
 	return ReturnFunction;
 }
+
+class UFortClientAnnouncement_ConversationInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortClientAnnouncement_ConversationInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortClientAnnouncement_ConversationInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_ConversationInterface_OnConversationFinished, "OnConversationFinished" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_ConversationInterface_OnConversationStarted, "OnConversationStarted" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_ConversationInterface_OnSentenceFinished, "OnSentenceFinished" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_ConversationInterface_OnSentenceStarted, "OnSentenceStarted" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_ConversationInterface_ShouldPlaySentence, "ShouldPlaySentence" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortClientAnnouncement_ConversationInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x032E5DB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortClientAnnouncement_ConversationInterface_Statics::ClassParams = { &UFortClientAnnouncement_ConversationInterface::StaticClass, Z_Construct_UClass_UFortClientAnnouncement_ConversationInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortClientAnnouncement_ConversationInterface_Statics::FuncInfo, 5, nullptr, 0, nullptr, &Z_Construct_UClass_UFortClientAnnouncement_ConversationInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0280 (end 0x00FC02AF)
+// Original VA: 0x0000000140FC0280 | File offset: 0x00FBF880
+// Recovery: confirmed (UHT singleton of UFortClientAnnouncement_ConversationInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortClientAnnouncement_ConversationInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortClientAnnouncement_ConversationInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

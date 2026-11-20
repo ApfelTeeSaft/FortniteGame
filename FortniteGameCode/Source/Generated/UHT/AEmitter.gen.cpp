@@ -241,3 +241,46 @@ UFunction* Z_Construct_UFunction_AEmitter_ToggleActive()
 	}
 	return ReturnFunction;
 }
+
+class AEmitter
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AEmitter_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AEmitter_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AEmitter_Activate, "Activate" },
+	{ &Z_Construct_UFunction_AEmitter_Deactivate, "Deactivate" },
+	{ &Z_Construct_UFunction_AEmitter_IsActive, "IsActive" },
+	{ &Z_Construct_UFunction_AEmitter_OnParticleSystemFinished, "OnParticleSystemFinished" },
+	{ &Z_Construct_UFunction_AEmitter_OnRep_bCurrentlyActive, "OnRep_bCurrentlyActive" },
+	{ &Z_Construct_UFunction_AEmitter_SetActorParameter, "SetActorParameter" },
+	{ &Z_Construct_UFunction_AEmitter_SetColorParameter, "SetColorParameter" },
+	{ &Z_Construct_UFunction_AEmitter_SetFloatParameter, "SetFloatParameter" },
+	{ &Z_Construct_UFunction_AEmitter_SetMaterialParameter, "SetMaterialParameter" },
+	{ &Z_Construct_UFunction_AEmitter_SetTemplate, "SetTemplate" },
+	{ &Z_Construct_UFunction_AEmitter_SetVectorParameter, "SetVectorParameter" },
+	{ &Z_Construct_UFunction_AEmitter_ToggleActive, "ToggleActive" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AEmitter_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038D7C30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AEmitter_Statics::ClassParams = { &AEmitter::StaticClass, Z_Construct_UClass_AEmitter_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AEmitter_Statics::FuncInfo, 12, Z_Construct_UClass_AEmitter_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_AEmitter_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404D50 (end 0x02404D7F)
+// Original VA: 0x0000000142404D50 | File offset: 0x02404350
+// Recovery: confirmed (UHT singleton of AEmitter) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AEmitter()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AEmitter_Statics::ClassParams);
+	}
+	return OuterClass;
+}

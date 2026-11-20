@@ -842,3 +842,77 @@ UFunction* Z_Construct_UFunction_AAIHotSpot_SetEnabled()
 	}
 	return ReturnFunction;
 }
+
+class AAIHotSpot
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AAIHotSpot_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AAIHotSpot_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AAIHotSpot_AssignFromWaitingList, "AssignFromWaitingList" },
+	{ &Z_Construct_UFunction_AAIHotSpot_AssignGroupToHotspot, "AssignGroupToHotspot" },
+	{ &Z_Construct_UFunction_AAIHotSpot_AssignToHotspot, "AssignToHotspot" },
+	{ &Z_Construct_UFunction_AAIHotSpot_AssignToSlotByIndex, "AssignToSlotByIndex" },
+	{ &Z_Construct_UFunction_AAIHotSpot_CanUseSlotByIndex, "CanUseSlotByIndex" },
+	{ &Z_Construct_UFunction_AAIHotSpot_FindBestSlotIndex, "FindBestSlotIndex" },
+	{ &Z_Construct_UFunction_AAIHotSpot_FindBestSlotIndices, "FindBestSlotIndices" },
+	{ &Z_Construct_UFunction_AAIHotSpot_GetAssignedAI, "GetAssignedAI" },
+	{ &Z_Construct_UFunction_AAIHotSpot_GetAssignedAICount, "GetAssignedAICount" },
+	{ &Z_Construct_UFunction_AAIHotSpot_GetSlotByIndex, "GetSlotByIndex" },
+	{ &Z_Construct_UFunction_AAIHotSpot_GetSlotByOwner, "GetSlotByOwner" },
+	{ &Z_Construct_UFunction_AAIHotSpot_GetSlotCount, "GetSlotCount" },
+	{ &Z_Construct_UFunction_AAIHotSpot_GetSlotIndexByOwner, "GetSlotIndexByOwner" },
+	{ &Z_Construct_UFunction_AAIHotSpot_GetSlotLocationByIndex, "GetSlotLocationByIndex" },
+	{ &Z_Construct_UFunction_AAIHotSpot_GetSlotOwnerByIndex, "GetSlotOwnerByIndex" },
+	{ &Z_Construct_UFunction_AAIHotSpot_GetSlotRotationByIndex, "GetSlotRotationByIndex" },
+	{ &Z_Construct_UFunction_AAIHotSpot_GetSlotStateByIndex, "GetSlotStateByIndex" },
+	{ &Z_Construct_UFunction_AAIHotSpot_GetSlotStateByOwner, "GetSlotStateByOwner" },
+	{ &Z_Construct_UFunction_AAIHotSpot_GetSlotUserIdByIndex, "GetSlotUserIdByIndex" },
+	{ &Z_Construct_UFunction_AAIHotSpot_HasAssignedAI, "HasAssignedAI" },
+	{ &Z_Construct_UFunction_AAIHotSpot_HasEnabledSlots, "HasEnabledSlots" },
+	{ &Z_Construct_UFunction_AAIHotSpot_IsAIAllowed, "IsAIAllowed" },
+	{ &Z_Construct_UFunction_AAIHotSpot_IsEnabled, "IsEnabled" },
+	{ &Z_Construct_UFunction_AAIHotSpot_IsSlotlessAssignmentAllowed, "IsSlotlessAssignmentAllowed" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OccupySlotByIndex, "OccupySlotByIndex" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnAssignedClaimedBehavior, "OnAssignedClaimedBehavior" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnAssignedOccupiedBehavior, "OnAssignedOccupiedBehavior" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnAssignedSlotlessBehavior, "OnAssignedSlotlessBehavior" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnHotSpotDisabled, "OnHotSpotDisabled" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnHotSpotEnabled, "OnHotSpotEnabled" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnMoveToSlotFinished, "OnMoveToSlotFinished" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnRemovedBehavior, "OnRemovedBehavior" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnRemovedSlotlessBehavior, "OnRemovedSlotlessBehavior" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnSlotBlocked, "OnSlotBlocked" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnSlotClaimed, "OnSlotClaimed" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnSlotDisabled, "OnSlotDisabled" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnSlotEnabled, "OnSlotEnabled" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnSlotFreed, "OnSlotFreed" },
+	{ &Z_Construct_UFunction_AAIHotSpot_OnSlotOccupied, "OnSlotOccupied" },
+	{ &Z_Construct_UFunction_AAIHotSpot_RemoveFromHotspot, "RemoveFromHotspot" },
+	{ &Z_Construct_UFunction_AAIHotSpot_RemoveGroupFromHotspot, "RemoveGroupFromHotspot" },
+	{ &Z_Construct_UFunction_AAIHotSpot_SetEnabled, "SetEnabled" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AAIHotSpot_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0325FB20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AAIHotSpot_Statics::ClassParams = { &AAIHotSpot::StaticClass, Z_Construct_UClass_AAIHotSpot_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AAIHotSpot_Statics::FuncInfo, 42, Z_Construct_UClass_AAIHotSpot_Statics::PropPointers, 19, nullptr, &Z_Construct_UClass_AAIHotSpot_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AAIHotSpot_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59690 (end 0x00F596BF)
+// Original VA: 0x0000000140F59690 | File offset: 0x00F58C90
+// Recovery: confirmed (UHT singleton of AAIHotSpot) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AAIHotSpot()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AAIHotSpot_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -185,3 +185,43 @@ UFunction* Z_Construct_UFunction_UImage_SetOpacity()
 	}
 	return ReturnFunction;
 }
+
+class UImage
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UImage_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UImage_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UImage_GetDynamicMaterial, "GetDynamicMaterial" },
+	{ &Z_Construct_UFunction_UImage_SetBrush, "SetBrush" },
+	{ &Z_Construct_UFunction_UImage_SetBrushFromAsset, "SetBrushFromAsset" },
+	{ &Z_Construct_UFunction_UImage_SetBrushFromAtlasInterface, "SetBrushFromAtlasInterface" },
+	{ &Z_Construct_UFunction_UImage_SetBrushFromMaterial, "SetBrushFromMaterial" },
+	{ &Z_Construct_UFunction_UImage_SetBrushFromTexture, "SetBrushFromTexture" },
+	{ &Z_Construct_UFunction_UImage_SetBrushFromTextureDynamic, "SetBrushFromTextureDynamic" },
+	{ &Z_Construct_UFunction_UImage_SetColorAndOpacity, "SetColorAndOpacity" },
+	{ &Z_Construct_UFunction_UImage_SetOpacity, "SetOpacity" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UImage_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03696FC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UImage_Statics::ClassParams = { &UImage::StaticClass, Z_Construct_UClass_UImage_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UImage_Statics::FuncInfo, 9, Z_Construct_UClass_UImage_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UImage_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED490 (end 0x01BED4BF)
+// Original VA: 0x0000000141BED490 | File offset: 0x01BECA90
+// Recovery: confirmed (UHT singleton of UImage) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UImage()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UImage_Statics::ClassParams);
+	}
+	return OuterClass;
+}

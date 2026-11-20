@@ -225,3 +225,45 @@ UFunction* Z_Construct_UFunction_UFortExpeditionItem_IsExpeditionInProgress()
 	}
 	return ReturnFunction;
 }
+
+class UFortExpeditionItem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortExpeditionItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortExpeditionItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortExpeditionItem_GetBonusCriteriaBP, "GetBonusCriteriaBP" },
+	{ &Z_Construct_UFunction_UFortExpeditionItem_GetBonusCriteriaTags, "GetBonusCriteriaTags" },
+	{ &Z_Construct_UFunction_UFortExpeditionItem_GetExpeditionSquadId, "GetExpeditionSquadId" },
+	{ &Z_Construct_UFunction_UFortExpeditionItem_GetExpeditionSuccessChance, "GetExpeditionSuccessChance" },
+	{ &Z_Construct_UFunction_UFortExpeditionItem_GetMinTargetPowerLevelToBegin, "GetMinTargetPowerLevelToBegin" },
+	{ &Z_Construct_UFunction_UFortExpeditionItem_GetRemainingExpeditionDuration, "GetRemainingExpeditionDuration" },
+	{ &Z_Construct_UFunction_UFortExpeditionItem_GetRemainingExpeditionExpirationDuration, "GetRemainingExpeditionExpirationDuration" },
+	{ &Z_Construct_UFunction_UFortExpeditionItem_GetTargetPowerLevel, "GetTargetPowerLevel" },
+	{ &Z_Construct_UFunction_UFortExpeditionItem_HasExpeditionExpired, "HasExpeditionExpired" },
+	{ &Z_Construct_UFunction_UFortExpeditionItem_IsExpeditionCompleted, "IsExpeditionCompleted" },
+	{ &Z_Construct_UFunction_UFortExpeditionItem_IsExpeditionInProgress, "IsExpeditionInProgress" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortExpeditionItem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0330F730
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortExpeditionItem_Statics::ClassParams = { &UFortExpeditionItem::StaticClass, Z_Construct_UClass_UFortExpeditionItem_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortExpeditionItem_Statics::FuncInfo, 11, Z_Construct_UClass_UFortExpeditionItem_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_UFortExpeditionItem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDB670 (end 0x00FDB69F)
+// Original VA: 0x0000000140FDB670 | File offset: 0x00FDAC70
+// Recovery: confirmed (UHT singleton of UFortExpeditionItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortExpeditionItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortExpeditionItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

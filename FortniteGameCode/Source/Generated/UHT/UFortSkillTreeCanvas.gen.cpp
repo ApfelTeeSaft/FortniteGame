@@ -64,3 +64,38 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeCanvas_HandleNodeButtonClicked()
 	}
 	return ReturnFunction;
 }
+
+class UFortSkillTreeCanvas
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSkillTreeCanvas_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSkillTreeCanvas_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelectionChanged, "HandleButtonGroupSelectionChanged" },
+	{ &Z_Construct_UFunction_UFortSkillTreeCanvas_HandleButtonGroupSelectionCleared, "HandleButtonGroupSelectionCleared" },
+	{ &Z_Construct_UFunction_UFortSkillTreeCanvas_HandleNodeButtonClicked, "HandleNodeButtonClicked" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSkillTreeCanvas_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D132A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSkillTreeCanvas_Statics::ClassParams = { &UFortSkillTreeCanvas::StaticClass, Z_Construct_UClass_UFortSkillTreeCanvas_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortSkillTreeCanvas_Statics::FuncInfo, 3, Z_Construct_UClass_UFortSkillTreeCanvas_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortSkillTreeCanvas_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortSkillTreeCanvas_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5490 (end 0x028F54BF)
+// Original VA: 0x00000001428F5490 | File offset: 0x028F4A90
+// Recovery: confirmed (UHT singleton of UFortSkillTreeCanvas) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSkillTreeCanvas()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSkillTreeCanvas_Statics::ClassParams);
+	}
+	return OuterClass;
+}

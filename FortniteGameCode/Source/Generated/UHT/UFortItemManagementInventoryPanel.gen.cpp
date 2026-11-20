@@ -573,3 +573,63 @@ UFunction* Z_Construct_UFunction_UFortItemManagementInventoryPanel_UpdateSchemat
 	}
 	return ReturnFunction;
 }
+
+class UFortItemManagementInventoryPanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemManagementInventoryPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemManagementInventoryPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_AddItemStackToMulch, "AddItemStackToMulch" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_AdvanceSelection, "AdvanceSelection" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_CycleSortType, "CycleSortType" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_GetQualifiedFilterDisplayName, "GetQualifiedFilterDisplayName" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_GetSupportedSortTypesForCurrentInventory, "GetSupportedSortTypesForCurrentInventory" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_GetUpgradeItemDefinitionsForCurrentInventory, "GetUpgradeItemDefinitionsForCurrentInventory" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleCraftItemStarted, "HandleCraftItemStarted" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleCursorModeChanged, "HandleCursorModeChanged" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleCursorModeChangedBP, "HandleCursorModeChangedBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleDifferentFilterSetBP, "HandleDifferentFilterSetBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleDifferentFrontendInventoryFilterSetBP, "HandleDifferentFrontendInventoryFilterSetBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleDifferentItemManagementModeSetBP, "HandleDifferentItemManagementModeSetBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleDifferentSortTypeSetBP, "HandleDifferentSortTypeSetBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleFilterTabButtonCreated, "HandleFilterTabButtonCreated" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleFilterTabSelected, "HandleFilterTabSelected" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleInventoryItemClicked, "HandleInventoryItemClicked" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleInventoryItemDoubleClicked, "HandleInventoryItemDoubleClicked" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleInventoryItemHoverChanged, "HandleInventoryItemHoverChanged" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleInventoryItemSelected, "HandleInventoryItemSelected" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleInventoryUpdatedEvent, "HandleInventoryUpdatedEvent" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleItemWidgetCreated, "HandleItemWidgetCreated" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleQuickBarChangedBP, "HandleQuickBarChangedBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_HandleSetOfItemsToMulchChangedBP, "HandleSetOfItemsToMulchChangedBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_IsSwitchPanelAvailable, "IsSwitchPanelAvailable" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_RefreshCraftingSort, "RefreshCraftingSort" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_SetFilter, "SetFilter" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_SetSortType, "SetSortType" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_SwitchPanelFocus, "SwitchPanelFocus" },
+	{ &Z_Construct_UFunction_UFortItemManagementInventoryPanel_UpdateSchematicTiles, "UpdateSchematicTiles" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemManagementInventoryPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CCE050
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemManagementInventoryPanel_Statics::ClassParams = { &UFortItemManagementInventoryPanel::StaticClass, Z_Construct_UClass_UFortItemManagementInventoryPanel_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortItemManagementInventoryPanel_Statics::FuncInfo, 29, Z_Construct_UClass_UFortItemManagementInventoryPanel_Statics::PropPointers, 18, nullptr, &Z_Construct_UClass_UFortItemManagementInventoryPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9F60 (end 0x028C9F8F)
+// Original VA: 0x00000001428C9F60 | File offset: 0x028C9560
+// Recovery: confirmed (UHT singleton of UFortItemManagementInventoryPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemManagementInventoryPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemManagementInventoryPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

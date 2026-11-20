@@ -1265,3 +1265,96 @@ UFunction* Z_Construct_UFunction_UKismetStringLibrary_TrimTrailing()
 	}
 	return ReturnFunction;
 }
+
+class UKismetStringLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UKismetStringLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UKismetStringLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UKismetStringLibrary_BuildString_Bool, "BuildString_Bool" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_BuildString_Color, "BuildString_Color" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_BuildString_Float, "BuildString_Float" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_BuildString_Int, "BuildString_Int" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_BuildString_IntVector, "BuildString_IntVector" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_BuildString_Name, "BuildString_Name" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_BuildString_Object, "BuildString_Object" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_BuildString_Rotator, "BuildString_Rotator" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_BuildString_Vector, "BuildString_Vector" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_BuildString_Vector2d, "BuildString_Vector2d" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Concat_StrStr, "Concat_StrStr" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Contains, "Contains" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_BoolToString, "Conv_BoolToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_ByteToString, "Conv_ByteToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_ColorToString, "Conv_ColorToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_FloatToString, "Conv_FloatToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_IntToString, "Conv_IntToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_IntVectorToString, "Conv_IntVectorToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_NameToString, "Conv_NameToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_ObjectToString, "Conv_ObjectToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_RotatorToString, "Conv_RotatorToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_StringToColor, "Conv_StringToColor" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_StringToFloat, "Conv_StringToFloat" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_StringToInt, "Conv_StringToInt" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_StringToName, "Conv_StringToName" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_StringToRotator, "Conv_StringToRotator" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_StringToVector, "Conv_StringToVector" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_StringToVector2D, "Conv_StringToVector2D" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_TransformToString, "Conv_TransformToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_Vector2dToString, "Conv_Vector2dToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Conv_VectorToString, "Conv_VectorToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_CullArray, "CullArray" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_EndsWith, "EndsWith" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_EqualEqual_StrStr, "EqualEqual_StrStr" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_EqualEqual_StriStri, "EqualEqual_StriStri" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_FindSubstring, "FindSubstring" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_GetCharacterArrayFromString, "GetCharacterArrayFromString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_GetCharacterAsNumber, "GetCharacterAsNumber" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_GetSubstring, "GetSubstring" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_IsNumeric, "IsNumeric" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_JoinStringArray, "JoinStringArray" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Left, "Left" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_LeftChop, "LeftChop" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_LeftPad, "LeftPad" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Len, "Len" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_MatchesWildcard, "MatchesWildcard" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Mid, "Mid" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_NotEqual_StrStr, "NotEqual_StrStr" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_NotEqual_StriStri, "NotEqual_StriStri" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_ParseIntoArray, "ParseIntoArray" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Replace, "Replace" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_ReplaceInline, "ReplaceInline" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Reverse, "Reverse" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Right, "Right" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_RightChop, "RightChop" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_RightPad, "RightPad" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Split, "Split" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_StartsWith, "StartsWith" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_TimeSecondsToString, "TimeSecondsToString" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_ToLower, "ToLower" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_ToUpper, "ToUpper" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_Trim, "Trim" },
+	{ &Z_Construct_UFunction_UKismetStringLibrary_TrimTrailing, "TrimTrailing" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UKismetStringLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03926EA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UKismetStringLibrary_Statics::ClassParams = { &UKismetStringLibrary::StaticClass, Z_Construct_UClass_UKismetStringLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UKismetStringLibrary_Statics::FuncInfo, 63, nullptr, 0, nullptr, &Z_Construct_UClass_UKismetStringLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02452CB0 (end 0x02452CDF)
+// Original VA: 0x0000000142452CB0 | File offset: 0x024522B0
+// Recovery: confirmed (UHT singleton of UKismetStringLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UKismetStringLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UKismetStringLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UPhysicalAnimationComponent_SetStrengthMultiply
 	}
 	return ReturnFunction;
 }
+
+class UPhysicalAnimationComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPhysicalAnimationComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPhysicalAnimationComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPhysicalAnimationComponent_ApplyPhysicalAnimationProfileBelow, "ApplyPhysicalAnimationProfileBelow" },
+	{ &Z_Construct_UFunction_UPhysicalAnimationComponent_ApplyPhysicalAnimationSettings, "ApplyPhysicalAnimationSettings" },
+	{ &Z_Construct_UFunction_UPhysicalAnimationComponent_ApplyPhysicalAnimationSettingsBelow, "ApplyPhysicalAnimationSettingsBelow" },
+	{ &Z_Construct_UFunction_UPhysicalAnimationComponent_GetBodyTargetTransform, "GetBodyTargetTransform" },
+	{ &Z_Construct_UFunction_UPhysicalAnimationComponent_SetSkeletalMeshComponent, "SetSkeletalMeshComponent" },
+	{ &Z_Construct_UFunction_UPhysicalAnimationComponent_SetStrengthMultiplyer, "SetStrengthMultiplyer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPhysicalAnimationComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03978C00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPhysicalAnimationComponent_Statics::ClassParams = { &UPhysicalAnimationComponent::StaticClass, Z_Construct_UClass_UPhysicalAnimationComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UPhysicalAnimationComponent_Statics::FuncInfo, 6, Z_Construct_UClass_UPhysicalAnimationComponent_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UPhysicalAnimationComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0A50 (end 0x024A0A7F)
+// Original VA: 0x00000001424A0A50 | File offset: 0x024A0050
+// Recovery: confirmed (UHT singleton of UPhysicalAnimationComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPhysicalAnimationComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPhysicalAnimationComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -303,3 +303,49 @@ UFunction* Z_Construct_UFunction_UFortItemPickerBase_TryCommitSelectedItem()
 	}
 	return ReturnFunction;
 }
+
+class UFortItemPickerBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemPickerBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemPickerBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemPickerBase_CanItemBeComitted, "CanItemBeComitted" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_CenterSelectedItemTileWidget, "CenterSelectedItemTileWidget" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_ClearSelection, "ClearSelection" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_GetIndexForItem, "GetIndexForItem" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_GetSelectedItem, "GetSelectedItem" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_HandlePickerItemClicked, "HandlePickerItemClicked" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_HandlePickerItemDoubleClicked, "HandlePickerItemDoubleClicked" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_HandlePickerItemHovered, "HandlePickerItemHovered" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_HandlePickerItemSelected, "HandlePickerItemSelected" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_HandlePickerTileCreated, "HandlePickerTileCreated" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_HandlePickerTileDestroyed, "HandlePickerTileDestroyed" },
+	{ &Z_Construct_UDelegateFunction_UFortItemPickerBase_OnItemSelectionEvent__DelegateSignature, "OnItemSelectionEvent__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_SetSelectedIndex, "SetSelectedIndex" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_SetSelectedItem, "SetSelectedItem" },
+	{ &Z_Construct_UFunction_UFortItemPickerBase_TryCommitSelectedItem, "TryCommitSelectedItem" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemPickerBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CD8780
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemPickerBase_Statics::ClassParams = { &UFortItemPickerBase::StaticClass, Z_Construct_UClass_UFortItemPickerBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortItemPickerBase_Statics::FuncInfo, 15, Z_Construct_UClass_UFortItemPickerBase_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortItemPickerBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF4C0 (end 0x028CF4EF)
+// Original VA: 0x00000001428CF4C0 | File offset: 0x028CEAC0
+// Recovery: confirmed (UHT singleton of UFortItemPickerBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemPickerBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemPickerBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

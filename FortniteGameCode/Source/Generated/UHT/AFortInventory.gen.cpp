@@ -24,3 +24,36 @@ UFunction* Z_Construct_UFunction_AFortInventory_HandleInventoryLocalUpdate()
 	}
 	return ReturnFunction;
 }
+
+class AFortInventory
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortInventory_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortInventory_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortInventory_HandleInventoryLocalUpdate, "HandleInventoryLocalUpdate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortInventory_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0334A9D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortInventory_Statics::ClassParams = { &AFortInventory::StaticClass, Z_Construct_UClass_AFortInventory_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_AFortInventory_Statics::FuncInfo, 1, Z_Construct_UClass_AFortInventory_Statics::PropPointers, 13, nullptr, &Z_Construct_UClass_AFortInventory_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortInventory_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006850 (end 0x0100687F)
+// Original VA: 0x0000000141006850 | File offset: 0x01005E50
+// Recovery: confirmed (UHT singleton of AFortInventory) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortInventory()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortInventory_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -63,3 +63,37 @@ UFunction* Z_Construct_UFunction_AFortBotStructureBuilder_RunDeconstructor()
 	}
 	return ReturnFunction;
 }
+
+class AFortBotStructureBuilder
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortBotStructureBuilder_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortBotStructureBuilder_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortBotStructureBuilder_BuildAll, "BuildAll" },
+	{ &Z_Construct_UFunction_AFortBotStructureBuilder_OnBuildingDied, "OnBuildingDied" },
+	{ &Z_Construct_UFunction_AFortBotStructureBuilder_RunDeconstructor, "RunDeconstructor" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortBotStructureBuilder_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032CEEA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortBotStructureBuilder_Statics::ClassParams = { &AFortBotStructureBuilder::StaticClass, Z_Construct_UClass_AFortBotStructureBuilder_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortBotStructureBuilder_Statics::FuncInfo, 3, Z_Construct_UClass_AFortBotStructureBuilder_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_AFortBotStructureBuilder_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAD0D0 (end 0x00FAD0FF)
+// Original VA: 0x0000000140FAD0D0 | File offset: 0x00FAC6D0
+// Recovery: confirmed (UHT singleton of AFortBotStructureBuilder) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortBotStructureBuilder()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortBotStructureBuilder_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -162,3 +162,42 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_UpdateSignInButton()
 	}
 	return ReturnFunction;
 }
+
+class UFortSignInWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSignInWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSignInWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSignInWidget_HandleBackSelected, "HandleBackSelected" },
+	{ &Z_Construct_UFunction_UFortSignInWidget_HandleForgotPassword, "HandleForgotPassword" },
+	{ &Z_Construct_UFunction_UFortSignInWidget_HandleSignInRequest, "HandleSignInRequest" },
+	{ &Z_Construct_UFunction_UFortSignInWidget_HandleTextCommitted, "HandleTextCommitted" },
+	{ &Z_Construct_UFunction_UFortSignInWidget_OnVirtualKeyboardHidden, "OnVirtualKeyboardHidden" },
+	{ &Z_Construct_UFunction_UFortSignInWidget_OnVirtualKeyboardShown, "OnVirtualKeyboardShown" },
+	{ &Z_Construct_UFunction_UFortSignInWidget_StartSignIn, "StartSignIn" },
+	{ &Z_Construct_UFunction_UFortSignInWidget_UpdateSignInButton, "UpdateSignInButton" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSignInWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D130A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSignInWidget_Statics::ClassParams = { &UFortSignInWidget::StaticClass, Z_Construct_UClass_UFortSignInWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSignInWidget_Statics::FuncInfo, 8, Z_Construct_UClass_UFortSignInWidget_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UFortSignInWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5430 (end 0x028F545F)
+// Original VA: 0x00000001428F5430 | File offset: 0x028F4A30
+// Recovery: confirmed (UHT singleton of UFortSignInWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSignInWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSignInWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

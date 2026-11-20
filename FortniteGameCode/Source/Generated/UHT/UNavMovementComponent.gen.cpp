@@ -143,3 +143,41 @@ UFunction* Z_Construct_UFunction_UNavMovementComponent_StopMovementKeepPathing()
 	}
 	return ReturnFunction;
 }
+
+class UNavMovementComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UNavMovementComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UNavMovementComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UNavMovementComponent_IsCrouching, "IsCrouching" },
+	{ &Z_Construct_UFunction_UNavMovementComponent_IsFalling, "IsFalling" },
+	{ &Z_Construct_UFunction_UNavMovementComponent_IsFlying, "IsFlying" },
+	{ &Z_Construct_UFunction_UNavMovementComponent_IsMovingOnGround, "IsMovingOnGround" },
+	{ &Z_Construct_UFunction_UNavMovementComponent_IsSwimming, "IsSwimming" },
+	{ &Z_Construct_UFunction_UNavMovementComponent_StopActiveMovement, "StopActiveMovement" },
+	{ &Z_Construct_UFunction_UNavMovementComponent_StopMovementKeepPathing, "StopMovementKeepPathing" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UNavMovementComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0395BCC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UNavMovementComponent_Statics::ClassParams = { &UNavMovementComponent::StaticClass, Z_Construct_UClass_UNavMovementComponent_Statics::DependentSingletons, 2, 0x00B00085u, Z_Construct_UClass_UNavMovementComponent_Statics::FuncInfo, 7, Z_Construct_UClass_UNavMovementComponent_Statics::PropPointers, 6, "Engine", &Z_Construct_UClass_UNavMovementComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248FA00 (end 0x0248FA2F)
+// Original VA: 0x000000014248FA00 | File offset: 0x0248F000
+// Recovery: confirmed (UHT singleton of UNavMovementComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UNavMovementComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UNavMovementComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortTeamActorInterface_GetTeam()
 	}
 	return ReturnFunction;
 }
+
+class UFortTeamActorInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTeamActorInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTeamActorInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTeamActorInterface_GetTeam, "GetTeam" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTeamActorInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x03400240
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTeamActorInterface_Statics::ClassParams = { &UFortTeamActorInterface::StaticClass, Z_Construct_UClass_UFortTeamActorInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortTeamActorInterface_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortTeamActorInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B3B60 (end 0x010B3B8F)
+// Original VA: 0x00000001410B3B60 | File offset: 0x010B3160
+// Recovery: confirmed (UHT singleton of UFortTeamActorInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTeamActorInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTeamActorInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

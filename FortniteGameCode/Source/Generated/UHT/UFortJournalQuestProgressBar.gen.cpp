@@ -44,3 +44,37 @@ UFunction* Z_Construct_UFunction_UFortJournalQuestProgressBar_HandleNewQuestObje
 	}
 	return ReturnFunction;
 }
+
+class UFortJournalQuestProgressBar
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortJournalQuestProgressBar_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortJournalQuestProgressBar_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortJournalQuestProgressBar_GetProgressDetails, "GetProgressDetails" },
+	{ &Z_Construct_UFunction_UFortJournalQuestProgressBar_HandleNewQuestObjectiveBP, "HandleNewQuestObjectiveBP" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortJournalQuestProgressBar_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CDA5F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortJournalQuestProgressBar_Statics::ClassParams = { &UFortJournalQuestProgressBar::StaticClass, Z_Construct_UClass_UFortJournalQuestProgressBar_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortJournalQuestProgressBar_Statics::FuncInfo, 2, Z_Construct_UClass_UFortJournalQuestProgressBar_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortJournalQuestProgressBar_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortJournalQuestProgressBar_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF750 (end 0x028CF77F)
+// Original VA: 0x00000001428CF750 | File offset: 0x028CED50
+// Recovery: confirmed (UHT singleton of UFortJournalQuestProgressBar) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortJournalQuestProgressBar()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortJournalQuestProgressBar_Statics::ClassParams);
+	}
+	return OuterClass;
+}

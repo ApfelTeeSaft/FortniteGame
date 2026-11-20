@@ -63,3 +63,37 @@ UFunction* Z_Construct_UFunction_UGameViewportClient_SSSwapControllers()
 	}
 	return ReturnFunction;
 }
+
+class UGameViewportClient
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UGameViewportClient_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGameViewportClient_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGameViewportClient_SSSwapControllers, "SSSwapControllers" },
+	{ &Z_Construct_UFunction_UGameViewportClient_SetConsoleTarget, "SetConsoleTarget" },
+	{ &Z_Construct_UFunction_UGameViewportClient_ShowTitleSafeArea, "ShowTitleSafeArea" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGameViewportClient_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038F8D80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGameViewportClient_Statics::ClassParams = { &UGameViewportClient::StaticClass, Z_Construct_UClass_UGameViewportClient_Statics::DependentSingletons, 2, 0x00100088u, Z_Construct_UClass_UGameViewportClient_Statics::FuncInfo, 3, Z_Construct_UClass_UGameViewportClient_Statics::PropPointers, 5, "Engine", &Z_Construct_UClass_UGameViewportClient_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241F100 (end 0x0241F12F)
+// Original VA: 0x000000014241F100 | File offset: 0x0241E700
+// Recovery: confirmed (UHT singleton of UGameViewportClient) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGameViewportClient()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGameViewportClient_Statics::ClassParams);
+	}
+	return OuterClass;
+}

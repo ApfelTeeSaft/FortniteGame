@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerManor_ServerOnUnlockPortal
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerControllerManor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerControllerManor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerControllerManor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerControllerManor_ClientOpenManorPortalUnlockMenu, "ClientOpenManorPortalUnlockMenu" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerManor_ServerOnUnlockPortalComplete, "ServerOnUnlockPortalComplete" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerControllerManor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033C3360
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerControllerManor_Statics::ClassParams = { &AFortPlayerControllerManor::StaticClass, Z_Construct_UClass_AFortPlayerControllerManor_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortPlayerControllerManor_Statics::FuncInfo, 2, nullptr, 0, "Game", &Z_Construct_UClass_AFortPlayerControllerManor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01077760 (end 0x0107778F)
+// Original VA: 0x0000000141077760 | File offset: 0x01076D60
+// Recovery: confirmed (UHT singleton of AFortPlayerControllerManor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerControllerManor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerControllerManor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

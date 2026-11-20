@@ -145,3 +145,41 @@ UFunction* Z_Construct_UFunction_UBackgroundBlur_SetVerticalAlignment()
 	}
 	return ReturnFunction;
 }
+
+class UBackgroundBlur
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBackgroundBlur_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBackgroundBlur_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBackgroundBlur_SetApplyAlphaToBlur, "SetApplyAlphaToBlur" },
+	{ &Z_Construct_UFunction_UBackgroundBlur_SetBlurRadius, "SetBlurRadius" },
+	{ &Z_Construct_UFunction_UBackgroundBlur_SetBlurStrength, "SetBlurStrength" },
+	{ &Z_Construct_UFunction_UBackgroundBlur_SetHorizontalAlignment, "SetHorizontalAlignment" },
+	{ &Z_Construct_UFunction_UBackgroundBlur_SetLowQualityFallbackBrush, "SetLowQualityFallbackBrush" },
+	{ &Z_Construct_UFunction_UBackgroundBlur_SetPadding, "SetPadding" },
+	{ &Z_Construct_UFunction_UBackgroundBlur_SetVerticalAlignment, "SetVerticalAlignment" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBackgroundBlur_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03690D50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBackgroundBlur_Statics::ClassParams = { &UBackgroundBlur::StaticClass, Z_Construct_UClass_UBackgroundBlur_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UBackgroundBlur_Statics::FuncInfo, 7, Z_Construct_UClass_UBackgroundBlur_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UBackgroundBlur_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5F20 (end 0x01BE5F4F)
+// Original VA: 0x0000000141BE5F20 | File offset: 0x01BE5520
+// Recovery: confirmed (UHT singleton of UBackgroundBlur) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBackgroundBlur()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBackgroundBlur_Statics::ClassParams);
+	}
+	return OuterClass;
+}

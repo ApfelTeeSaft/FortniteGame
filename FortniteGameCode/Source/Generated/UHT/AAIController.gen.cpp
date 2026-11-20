@@ -444,3 +444,57 @@ UFunction* Z_Construct_UFunction_AAIController_UseBlackboard()
 	}
 	return ReturnFunction;
 }
+
+class AAIController
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AAIController_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AAIController_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AAIController_ClaimTaskResource, "ClaimTaskResource" },
+	{ &Z_Construct_UFunction_AAIController_GetAIPerceptionComponent, "GetAIPerceptionComponent" },
+	{ &Z_Construct_UFunction_AAIController_GetFocalPoint, "GetFocalPoint" },
+	{ &Z_Construct_UFunction_AAIController_GetFocalPointOnActor, "GetFocalPointOnActor" },
+	{ &Z_Construct_UFunction_AAIController_GetFocusActor, "GetFocusActor" },
+	{ &Z_Construct_UFunction_AAIController_GetImmediateMoveDestination, "GetImmediateMoveDestination" },
+	{ &Z_Construct_UFunction_AAIController_GetMoveStatus, "GetMoveStatus" },
+	{ &Z_Construct_UFunction_AAIController_GetPathFollowingComponent, "GetPathFollowingComponent" },
+	{ &Z_Construct_UFunction_AAIController_HasPartialPath, "HasPartialPath" },
+	{ &Z_Construct_UFunction_AAIController_K2_ClearFocus, "K2_ClearFocus" },
+	{ &Z_Construct_UFunction_AAIController_K2_SetFocalPoint, "K2_SetFocalPoint" },
+	{ &Z_Construct_UFunction_AAIController_K2_SetFocus, "K2_SetFocus" },
+	{ &Z_Construct_UFunction_AAIController_MoveToActor, "MoveToActor" },
+	{ &Z_Construct_UFunction_AAIController_MoveToLocation, "MoveToLocation" },
+	{ &Z_Construct_UFunction_AAIController_OnGameplayTaskResourcesClaimed, "OnGameplayTaskResourcesClaimed" },
+	{ &Z_Construct_UFunction_AAIController_OnPossess, "OnPossess" },
+	{ &Z_Construct_UFunction_AAIController_OnUnpossess, "OnUnpossess" },
+	{ &Z_Construct_UFunction_AAIController_OnUsingBlackBoard, "OnUsingBlackBoard" },
+	{ &Z_Construct_UFunction_AAIController_RunBehaviorTree, "RunBehaviorTree" },
+	{ &Z_Construct_UFunction_AAIController_SetMoveBlockDetection, "SetMoveBlockDetection" },
+	{ &Z_Construct_UFunction_AAIController_UnclaimTaskResource, "UnclaimTaskResource" },
+	{ &Z_Construct_UFunction_AAIController_UseBlackboard, "UseBlackboard" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AAIController_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036F0FC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AAIController_Statics::ClassParams = { &AAIController::StaticClass, Z_Construct_UClass_AAIController_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_AAIController_Statics::FuncInfo, 22, Z_Construct_UClass_AAIController_Statics::PropPointers, 14, nullptr, &Z_Construct_UClass_AAIController_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AAIController_Statics::InterfaceParams, 4 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1BA70 (end 0x01D1BA9F)
+// Original VA: 0x0000000141D1BA70 | File offset: 0x01D1B070
+// Recovery: confirmed (UHT singleton of AAIController) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AAIController()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AAIController_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortInitializeFromObjectInterface_InitFromObje
 	}
 	return ReturnFunction;
 }
+
+class UFortInitializeFromObjectInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortInitializeFromObjectInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortInitializeFromObjectInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortInitializeFromObjectInterface_InitFromObject, "InitFromObject" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortInitializeFromObjectInterface_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0334A2C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortInitializeFromObjectInterface_Statics::ClassParams = { &UFortInitializeFromObjectInterface::StaticClass, Z_Construct_UClass_UFortInitializeFromObjectInterface_Statics::DependentSingletons, 2, 0x00104081u, Z_Construct_UClass_UFortInitializeFromObjectInterface_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortInitializeFromObjectInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006C10 (end 0x01006C3F)
+// Original VA: 0x0000000141006C10 | File offset: 0x01006210
+// Recovery: confirmed (UHT singleton of UFortInitializeFromObjectInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortInitializeFromObjectInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortInitializeFromObjectInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

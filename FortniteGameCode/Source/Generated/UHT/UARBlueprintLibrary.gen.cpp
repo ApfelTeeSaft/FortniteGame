@@ -204,3 +204,43 @@ UFunction* Z_Construct_UFunction_UARBlueprintLibrary_StopAR()
 	}
 	return ReturnFunction;
 }
+
+class UARBlueprintLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UARBlueprintLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UARBlueprintLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UARBlueprintLibrary_DebugDrawTrackedGeometry, "DebugDrawTrackedGeometry" },
+	{ &Z_Construct_UFunction_UARBlueprintLibrary_GetAllGeometries, "GetAllGeometries" },
+	{ &Z_Construct_UFunction_UARBlueprintLibrary_GetLocalToTrackingTransform, "GetLocalToTrackingTransform" },
+	{ &Z_Construct_UFunction_UARBlueprintLibrary_GetLocalToWorldTransform, "GetLocalToWorldTransform" },
+	{ &Z_Construct_UFunction_UARBlueprintLibrary_GetTrackedGeometry, "GetTrackedGeometry" },
+	{ &Z_Construct_UFunction_UARBlueprintLibrary_GetTrackingQuality, "GetTrackingQuality" },
+	{ &Z_Construct_UFunction_UARBlueprintLibrary_IsARActive, "IsARActive" },
+	{ &Z_Construct_UFunction_UARBlueprintLibrary_LineTraceTrackedObjects, "LineTraceTrackedObjects" },
+	{ &Z_Construct_UFunction_UARBlueprintLibrary_StartAR, "StartAR" },
+	{ &Z_Construct_UFunction_UARBlueprintLibrary_StopAR, "StopAR" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UARBlueprintLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D5B1C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UARBlueprintLibrary_Statics::ClassParams = { &UARBlueprintLibrary::StaticClass, Z_Construct_UClass_UARBlueprintLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UARBlueprintLibrary_Statics::FuncInfo, 10, nullptr, 0, nullptr, &Z_Construct_UClass_UARBlueprintLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02921790 (end 0x029217BF)
+// Original VA: 0x0000000142921790 | File offset: 0x02920D90
+// Recovery: confirmed (UHT singleton of UARBlueprintLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UARBlueprintLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UARBlueprintLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

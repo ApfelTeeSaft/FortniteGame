@@ -85,3 +85,37 @@ UFunction* Z_Construct_UFunction_UFortMcpProfileMetadata_UpdateOutpostCore()
 	}
 	return ReturnFunction;
 }
+
+class UFortMcpProfileMetadata
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMcpProfileMetadata_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMcpProfileMetadata_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMcpProfileMetadata_CreateDeployableBaseItem, "CreateDeployableBaseItem" },
+	{ &Z_Construct_UFunction_UFortMcpProfileMetadata_CreateOrUpgradeOutpostItem, "CreateOrUpgradeOutpostItem" },
+	{ &Z_Construct_UFunction_UFortMcpProfileMetadata_UpdateDeployableBaseTierProgression, "UpdateDeployableBaseTierProgression" },
+	{ &Z_Construct_UFunction_UFortMcpProfileMetadata_UpdateOutpostCore, "UpdateOutpostCore" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMcpProfileMetadata_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03371260
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMcpProfileMetadata_Statics::ClassParams = { &UFortMcpProfileMetadata::StaticClass, Z_Construct_UClass_UFortMcpProfileMetadata_Statics::DependentSingletons, 2, 0x00100084u, Z_Construct_UClass_UFortMcpProfileMetadata_Statics::FuncInfo, 4, nullptr, 0, "Engine", &Z_Construct_UClass_UFortMcpProfileMetadata_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01030B10 (end 0x01030B3F)
+// Original VA: 0x0000000141030B10 | File offset: 0x01030110
+// Recovery: confirmed (UHT singleton of UFortMcpProfileMetadata) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMcpProfileMetadata()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMcpProfileMetadata_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_AWorldMapPin_SetTheaterId()
 	}
 	return ReturnFunction;
 }
+
+class AWorldMapPin
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AWorldMapPin_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AWorldMapPin_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AWorldMapPin_OnTheaterIdSet, "OnTheaterIdSet" },
+	{ &Z_Construct_UFunction_AWorldMapPin_SetTheaterId, "SetTheaterId" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AWorldMapPin_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03451B50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AWorldMapPin_Statics::ClassParams = { &AWorldMapPin::StaticClass, Z_Construct_UClass_AWorldMapPin_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AWorldMapPin_Statics::FuncInfo, 2, Z_Construct_UClass_AWorldMapPin_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_AWorldMapPin_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F19D0 (end 0x010F19FF)
+// Original VA: 0x00000001410F19D0 | File offset: 0x010F0FD0
+// Recovery: confirmed (UHT singleton of AWorldMapPin) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AWorldMapPin()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AWorldMapPin_Statics::ClassParams);
+	}
+	return OuterClass;
+}

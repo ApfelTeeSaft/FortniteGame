@@ -102,3 +102,39 @@ UFunction* Z_Construct_UFunction_AFortPickupEffect_OnTossed()
 	}
 	return ReturnFunction;
 }
+
+class AFortPickupEffect
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPickupEffect_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPickupEffect_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPickupEffect_ApplyCosmeticOverridesToMaterial, "ApplyCosmeticOverridesToMaterial" },
+	{ &Z_Construct_UFunction_AFortPickupEffect_OnAboutToEnterBackpack, "OnAboutToEnterBackpack" },
+	{ &Z_Construct_UFunction_AFortPickupEffect_OnAttached, "OnAttached" },
+	{ &Z_Construct_UFunction_AFortPickupEffect_OnPickedUp, "OnPickedUp" },
+	{ &Z_Construct_UFunction_AFortPickupEffect_OnTossed, "OnTossed" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPickupEffect_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033AD7D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPickupEffect_Statics::ClassParams = { &AFortPickupEffect::StaticClass, Z_Construct_UClass_AFortPickupEffect_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortPickupEffect_Statics::FuncInfo, 5, Z_Construct_UClass_AFortPickupEffect_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_AFortPickupEffect_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010657D0 (end 0x010657FF)
+// Original VA: 0x00000001410657D0 | File offset: 0x01064DD0
+// Recovery: confirmed (UHT singleton of AFortPickupEffect) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPickupEffect()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPickupEffect_Statics::ClassParams);
+	}
+	return OuterClass;
+}

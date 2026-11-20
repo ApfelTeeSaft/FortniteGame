@@ -161,3 +161,42 @@ UFunction* Z_Construct_UFunction_UFortAlterationsWidget_NUI_SetState()
 	}
 	return ReturnFunction;
 }
+
+class UFortAlterationsWidget_NUI
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAlterationsWidget_NUI_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAlterationsWidget_NUI_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAlterationsWidget_NUI_OnGenerateAlteration, "OnGenerateAlteration" },
+	{ &Z_Construct_UFunction_UFortAlterationsWidget_NUI_OnItemChanged, "OnItemChanged" },
+	{ &Z_Construct_UFunction_UFortAlterationsWidget_NUI_OnItemToCompareWithChanged, "OnItemToCompareWithChanged" },
+	{ &Z_Construct_UFunction_UFortAlterationsWidget_NUI_OnStateChanged, "OnStateChanged" },
+	{ &Z_Construct_UFunction_UFortAlterationsWidget_NUI_ProcessAlterations, "ProcessAlterations" },
+	{ &Z_Construct_UFunction_UFortAlterationsWidget_NUI_SetItem, "SetItem" },
+	{ &Z_Construct_UFunction_UFortAlterationsWidget_NUI_SetItemToCompareWith, "SetItemToCompareWith" },
+	{ &Z_Construct_UFunction_UFortAlterationsWidget_NUI_SetState, "SetState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAlterationsWidget_NUI_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C69BF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAlterationsWidget_NUI_Statics::ClassParams = { &UFortAlterationsWidget_NUI::StaticClass, Z_Construct_UClass_UFortAlterationsWidget_NUI_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortAlterationsWidget_NUI_Statics::FuncInfo, 8, Z_Construct_UClass_UFortAlterationsWidget_NUI_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortAlterationsWidget_NUI_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C8F0 (end 0x0288C91F)
+// Original VA: 0x000000014288C8F0 | File offset: 0x0288BEF0
+// Recovery: confirmed (UHT singleton of UFortAlterationsWidget_NUI) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAlterationsWidget_NUI()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAlterationsWidget_NUI_Statics::ClassParams);
+	}
+	return OuterClass;
+}

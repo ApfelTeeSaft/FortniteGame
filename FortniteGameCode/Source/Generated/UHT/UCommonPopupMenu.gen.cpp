@@ -122,3 +122,40 @@ UFunction* Z_Construct_UFunction_UCommonPopupMenu_SetOwningMenuAnchor()
 	}
 	return ReturnFunction;
 }
+
+class UCommonPopupMenu
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonPopupMenu_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonPopupMenu_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonPopupMenu_HandlePostDifferentContextProviderSet, "HandlePostDifferentContextProviderSet" },
+	{ &Z_Construct_UFunction_UCommonPopupMenu_HandlePreDifferentContextProviderSet, "HandlePreDifferentContextProviderSet" },
+	{ &Z_Construct_UFunction_UCommonPopupMenu_OnIsOpenChanged, "OnIsOpenChanged" },
+	{ &Z_Construct_UFunction_UCommonPopupMenu_RequestClose, "RequestClose" },
+	{ &Z_Construct_UFunction_UCommonPopupMenu_SetContextProvider, "SetContextProvider" },
+	{ &Z_Construct_UFunction_UCommonPopupMenu_SetOwningMenuAnchor, "SetOwningMenuAnchor" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonPopupMenu_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E82670
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonPopupMenu_Statics::ClassParams = { &UCommonPopupMenu::StaticClass, Z_Construct_UClass_UCommonPopupMenu_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UCommonPopupMenu_Statics::FuncInfo, 6, Z_Construct_UClass_UCommonPopupMenu_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UCommonPopupMenu_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA560 (end 0x002CA58F)
+// Original VA: 0x00000001402CA560 | File offset: 0x002C9B60
+// Recovery: confirmed (UHT singleton of UCommonPopupMenu) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonPopupMenu()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonPopupMenu_Statics::ClassParams);
+	}
+	return OuterClass;
+}

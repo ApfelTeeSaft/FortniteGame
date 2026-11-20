@@ -104,3 +104,39 @@ UFunction* Z_Construct_UFunction_UFortTierIndicator_SetPreviewState()
 	}
 	return ReturnFunction;
 }
+
+class UFortTierIndicator
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTierIndicator_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTierIndicator_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTierIndicator_ClearPreviewState, "ClearPreviewState" },
+	{ &Z_Construct_UFunction_UFortTierIndicator_SetBrushSize, "SetBrushSize" },
+	{ &Z_Construct_UFunction_UFortTierIndicator_SetInterPipPadding, "SetInterPipPadding" },
+	{ &Z_Construct_UFunction_UFortTierIndicator_SetItemToRepresent, "SetItemToRepresent" },
+	{ &Z_Construct_UFunction_UFortTierIndicator_SetPreviewState, "SetPreviewState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTierIndicator_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D319C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTierIndicator_Statics::ClassParams = { &UFortTierIndicator::StaticClass, Z_Construct_UClass_UFortTierIndicator_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortTierIndicator_Statics::FuncInfo, 5, Z_Construct_UClass_UFortTierIndicator_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortTierIndicator_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904C70 (end 0x02904C9F)
+// Original VA: 0x0000000142904C70 | File offset: 0x02904270
+// Recovery: confirmed (UHT singleton of UFortTierIndicator) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTierIndicator()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTierIndicator_Statics::ClassParams);
+	}
+	return OuterClass;
+}

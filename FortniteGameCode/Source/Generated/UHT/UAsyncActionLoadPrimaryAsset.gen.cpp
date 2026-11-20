@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UAsyncActionLoadPrimaryAsset_AsyncLoadPrimaryAs
 	}
 	return ReturnFunction;
 }
+
+class UAsyncActionLoadPrimaryAsset
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAsyncActionLoadPrimaryAsset_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAsyncActionLoadPrimaryAsset_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAsyncActionLoadPrimaryAsset_AsyncLoadPrimaryAsset, "AsyncLoadPrimaryAsset" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAsyncActionLoadPrimaryAsset_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038AAD40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAsyncActionLoadPrimaryAsset_Statics::ClassParams = { &UAsyncActionLoadPrimaryAsset::StaticClass, Z_Construct_UClass_UAsyncActionLoadPrimaryAsset_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UAsyncActionLoadPrimaryAsset_Statics::FuncInfo, 1, Z_Construct_UClass_UAsyncActionLoadPrimaryAsset_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UAsyncActionLoadPrimaryAsset_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DB130 (end 0x023DB15F)
+// Original VA: 0x00000001423DB130 | File offset: 0x023DA730
+// Recovery: confirmed (UHT singleton of UAsyncActionLoadPrimaryAsset) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAsyncActionLoadPrimaryAsset()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAsyncActionLoadPrimaryAsset_Statics::ClassParams);
+	}
+	return OuterClass;
+}

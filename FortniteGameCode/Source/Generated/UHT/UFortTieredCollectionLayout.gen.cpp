@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortTieredCollectionLayout_ShouldUseTierAsRand
 	}
 	return ReturnFunction;
 }
+
+class UFortTieredCollectionLayout
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTieredCollectionLayout_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTieredCollectionLayout_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTieredCollectionLayout_GetCollectionLayoutDisplayName, "GetCollectionLayoutDisplayName" },
+	{ &Z_Construct_UFunction_UFortTieredCollectionLayout_GetMissionPointsForTier, "GetMissionPointsForTier" },
+	{ &Z_Construct_UFunction_UFortTieredCollectionLayout_ShouldUseTierAsRandomSeed, "ShouldUseTierAsRandomSeed" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTieredCollectionLayout_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0340C090
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTieredCollectionLayout_Statics::ClassParams = { &UFortTieredCollectionLayout::StaticClass, Z_Construct_UClass_UFortTieredCollectionLayout_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortTieredCollectionLayout_Statics::FuncInfo, 3, Z_Construct_UClass_UFortTieredCollectionLayout_Statics::PropPointers, 13, nullptr, &Z_Construct_UClass_UFortTieredCollectionLayout_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE260 (end 0x010BE28F)
+// Original VA: 0x00000001410BE260 | File offset: 0x010BD860
+// Recovery: confirmed (UHT singleton of UFortTieredCollectionLayout) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTieredCollectionLayout()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTieredCollectionLayout_Statics::ClassParams);
+	}
+	return OuterClass;
+}

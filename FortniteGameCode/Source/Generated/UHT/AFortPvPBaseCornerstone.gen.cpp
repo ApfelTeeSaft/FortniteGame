@@ -64,3 +64,37 @@ UFunction* Z_Construct_UFunction_AFortPvPBaseCornerstone_SetInvincibility()
 	}
 	return ReturnFunction;
 }
+
+class AFortPvPBaseCornerstone
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPvPBaseCornerstone_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPvPBaseCornerstone_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPvPBaseCornerstone_OnInvincibilityChanged, "OnInvincibilityChanged" },
+	{ &Z_Construct_UFunction_AFortPvPBaseCornerstone_OnRep_bInvincible, "OnRep_bInvincible" },
+	{ &Z_Construct_UFunction_AFortPvPBaseCornerstone_SetInvincibility, "SetInvincibility" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPvPBaseCornerstone_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033D6430
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPvPBaseCornerstone_Statics::ClassParams = { &AFortPvPBaseCornerstone::StaticClass, Z_Construct_UClass_AFortPvPBaseCornerstone_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortPvPBaseCornerstone_Statics::FuncInfo, 3, Z_Construct_UClass_AFortPvPBaseCornerstone_Statics::PropPointers, 3, "Game", &Z_Construct_UClass_AFortPvPBaseCornerstone_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B5E0 (end 0x0108B60F)
+// Original VA: 0x000000014108B5E0 | File offset: 0x0108ABE0
+// Recovery: confirmed (UHT singleton of AFortPvPBaseCornerstone) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPvPBaseCornerstone()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPvPBaseCornerstone_Statics::ClassParams);
+	}
+	return OuterClass;
+}

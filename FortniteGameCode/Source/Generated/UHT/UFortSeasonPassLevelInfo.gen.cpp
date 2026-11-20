@@ -185,3 +185,43 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidUnlocked()
 	}
 	return ReturnFunction;
 }
+
+class UFortSeasonPassLevelInfo
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSeasonPassLevelInfo_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSeasonPassLevelInfo_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevel, "GetLevel" },
+	{ &Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevelProgress, "GetLevelProgress" },
+	{ &Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetNumRewardItems, "GetNumRewardItems" },
+	{ &Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetRewardItems, "GetRewardItems" },
+	{ &Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetSeasonPassMaxLevel, "GetSeasonPassMaxLevel" },
+	{ &Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeClaimed, "IsFreeClaimed" },
+	{ &Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsFreeUnlocked, "IsFreeUnlocked" },
+	{ &Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidClaimed, "IsPaidClaimed" },
+	{ &Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidUnlocked, "IsPaidUnlocked" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSeasonPassLevelInfo_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D569E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSeasonPassLevelInfo_Statics::ClassParams = { &UFortSeasonPassLevelInfo::StaticClass, Z_Construct_UClass_UFortSeasonPassLevelInfo_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortSeasonPassLevelInfo_Statics::FuncInfo, 9, Z_Construct_UClass_UFortSeasonPassLevelInfo_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortSeasonPassLevelInfo_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918AA0 (end 0x02918ACF)
+// Original VA: 0x0000000142918AA0 | File offset: 0x029180A0
+// Recovery: confirmed (UHT singleton of UFortSeasonPassLevelInfo) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSeasonPassLevelInfo()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSeasonPassLevelInfo_Statics::ClassParams);
+	}
+	return OuterClass;
+}

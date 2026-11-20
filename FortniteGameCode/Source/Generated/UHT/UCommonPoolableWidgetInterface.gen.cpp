@@ -43,3 +43,35 @@ UFunction* Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnReleaseToPool(
 	}
 	return ReturnFunction;
 }
+
+class UCommonPoolableWidgetInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonPoolableWidgetInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonPoolableWidgetInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnAcquireFromPool, "OnAcquireFromPool" },
+	{ &Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnReleaseToPool, "OnReleaseToPool" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonPoolableWidgetInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x02E824A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonPoolableWidgetInterface_Statics::ClassParams = { &UCommonPoolableWidgetInterface::StaticClass, Z_Construct_UClass_UCommonPoolableWidgetInterface_Statics::DependentSingletons, 2, 0x00104081u, Z_Construct_UClass_UCommonPoolableWidgetInterface_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UCommonPoolableWidgetInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA520 (end 0x002CA54F)
+// Original VA: 0x00000001402CA520 | File offset: 0x002C9B20
+// Recovery: confirmed (UHT singleton of UCommonPoolableWidgetInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonPoolableWidgetInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonPoolableWidgetInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

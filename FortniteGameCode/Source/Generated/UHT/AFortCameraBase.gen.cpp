@@ -101,3 +101,39 @@ UFunction* Z_Construct_UFunction_AFortCameraBase_OnDragEnd()
 	}
 	return ReturnFunction;
 }
+
+class AFortCameraBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortCameraBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortCameraBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortCameraBase_Exhibit, "Exhibit" },
+	{ &Z_Construct_UFunction_AFortCameraBase_OnActivated, "OnActivated" },
+	{ &Z_Construct_UFunction_AFortCameraBase_OnDeactivated, "OnDeactivated" },
+	{ &Z_Construct_UFunction_AFortCameraBase_OnDragBegin, "OnDragBegin" },
+	{ &Z_Construct_UFunction_AFortCameraBase_OnDragEnd, "OnDragEnd" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortCameraBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032D0550
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortCameraBase_Statics::ClassParams = { &AFortCameraBase::StaticClass, Z_Construct_UClass_AFortCameraBase_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortCameraBase_Statics::FuncInfo, 5, Z_Construct_UClass_AFortCameraBase_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_AFortCameraBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAD110 (end 0x00FAD13F)
+// Original VA: 0x0000000140FAD110 | File offset: 0x00FAC710
+// Recovery: confirmed (UHT singleton of AFortCameraBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortCameraBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortCameraBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

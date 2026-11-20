@@ -181,3 +181,43 @@ UFunction* Z_Construct_UFunction_AGameStateBase_OnRep_SpectatorClass()
 	}
 	return ReturnFunction;
 }
+
+class AGameStateBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AGameStateBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AGameStateBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AGameStateBase_GetPlayerRespawnDelay, "GetPlayerRespawnDelay" },
+	{ &Z_Construct_UFunction_AGameStateBase_GetPlayerStartTime, "GetPlayerStartTime" },
+	{ &Z_Construct_UFunction_AGameStateBase_GetServerWorldTimeSeconds, "GetServerWorldTimeSeconds" },
+	{ &Z_Construct_UFunction_AGameStateBase_HasBegunPlay, "HasBegunPlay" },
+	{ &Z_Construct_UFunction_AGameStateBase_HasMatchStarted, "HasMatchStarted" },
+	{ &Z_Construct_UFunction_AGameStateBase_OnRep_GameModeClass, "OnRep_GameModeClass" },
+	{ &Z_Construct_UFunction_AGameStateBase_OnRep_ReplicatedHasBegunPlay, "OnRep_ReplicatedHasBegunPlay" },
+	{ &Z_Construct_UFunction_AGameStateBase_OnRep_ReplicatedWorldTimeSeconds, "OnRep_ReplicatedWorldTimeSeconds" },
+	{ &Z_Construct_UFunction_AGameStateBase_OnRep_SpectatorClass, "OnRep_SpectatorClass" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AGameStateBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038F80B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AGameStateBase_Statics::ClassParams = { &AGameStateBase::StaticClass, Z_Construct_UClass_AGameStateBase_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_AGameStateBase_Statics::FuncInfo, 9, Z_Construct_UClass_AGameStateBase_Statics::PropPointers, 9, "Game", &Z_Construct_UClass_AGameStateBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241F040 (end 0x0241F06F)
+// Original VA: 0x000000014241F040 | File offset: 0x0241E640
+// Recovery: confirmed (UHT singleton of AGameStateBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AGameStateBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AGameStateBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

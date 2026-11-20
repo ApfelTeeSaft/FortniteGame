@@ -313,3 +313,50 @@ UFunction* Z_Construct_UFunction_AFortGameState_OnRep_WorldManager()
 	}
 	return ReturnFunction;
 }
+
+class AFortGameState
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortGameState_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortGameState_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortGameState_Client_InitiateEndOfDayRecap, "Client_InitiateEndOfDayRecap" },
+	{ &Z_Construct_UFunction_AFortGameState_DemoEndOfDayRecap, "DemoEndOfDayRecap" },
+	{ &Z_Construct_UFunction_AFortGameState_GetGameplayState, "GetGameplayState" },
+	{ &Z_Construct_UFunction_AFortGameState_GetTimeOfDayManager, "GetTimeOfDayManager" },
+	{ &Z_Construct_UFunction_AFortGameState_GetWorldDaysElapsed, "GetWorldDaysElapsed" },
+	{ &Z_Construct_UFunction_AFortGameState_OnRep_AnnouncementManager, "OnRep_AnnouncementManager" },
+	{ &Z_Construct_UFunction_AFortGameState_OnRep_CurrentWUID, "OnRep_CurrentWUID" },
+	{ &Z_Construct_UFunction_AFortGameState_OnRep_FeedbackManager, "OnRep_FeedbackManager" },
+	{ &Z_Construct_UFunction_AFortGameState_OnRep_GameSessionID, "OnRep_GameSessionID" },
+	{ &Z_Construct_UFunction_AFortGameState_OnRep_GameplayState, "OnRep_GameplayState" },
+	{ &Z_Construct_UFunction_AFortGameState_OnRep_MissionManager, "OnRep_MissionManager" },
+	{ &Z_Construct_UFunction_AFortGameState_OnRep_MusicManagerSubclass, "OnRep_MusicManagerSubclass" },
+	{ &Z_Construct_UFunction_AFortGameState_OnRep_Teams, "OnRep_Teams" },
+	{ &Z_Construct_UFunction_AFortGameState_OnRep_TimeOfDayManager, "OnRep_TimeOfDayManager" },
+	{ &Z_Construct_UFunction_AFortGameState_OnRep_WorldDaysElapsed, "OnRep_WorldDaysElapsed" },
+	{ &Z_Construct_UFunction_AFortGameState_OnRep_WorldManager, "OnRep_WorldManager" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortGameState_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0332DF40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortGameState_Statics::ClassParams = { &AFortGameState::StaticClass, Z_Construct_UClass_AFortGameState_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_AFortGameState_Statics::FuncInfo, 16, Z_Construct_UClass_AFortGameState_Statics::PropPointers, 40, nullptr, &Z_Construct_UClass_AFortGameState_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE630 (end 0x00FEE65F)
+// Original VA: 0x0000000140FEE630 | File offset: 0x00FEDC30
+// Recovery: confirmed (UHT singleton of AFortGameState) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortGameState()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortGameState_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -123,3 +123,40 @@ UFunction* Z_Construct_UFunction_UFortTrackMovementComponent_OnRep_ReplicatedTra
 	}
 	return ReturnFunction;
 }
+
+class UFortTrackMovementComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTrackMovementComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTrackMovementComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTrackMovementComponent_FlipDirection, "FlipDirection" },
+	{ &Z_Construct_UFunction_UFortTrackMovementComponent_GetDistanceAlongSpline, "GetDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_UFortTrackMovementComponent_GetSpline, "GetSpline" },
+	{ &Z_Construct_UFunction_UFortTrackMovementComponent_GetTrack, "GetTrack" },
+	{ &Z_Construct_UFunction_UFortTrackMovementComponent_IsReverseDirection, "IsReverseDirection" },
+	{ &Z_Construct_UFunction_UFortTrackMovementComponent_OnRep_ReplicatedTrackMovement, "OnRep_ReplicatedTrackMovement" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTrackMovementComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0341C900
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTrackMovementComponent_Statics::ClassParams = { &UFortTrackMovementComponent::StaticClass, Z_Construct_UClass_UFortTrackMovementComponent_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortTrackMovementComponent_Statics::FuncInfo, 6, Z_Construct_UClass_UFortTrackMovementComponent_Statics::PropPointers, 12, nullptr, &Z_Construct_UClass_UFortTrackMovementComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CAD30 (end 0x010CAD5F)
+// Original VA: 0x00000001410CAD30 | File offset: 0x010CA330
+// Recovery: confirmed (UHT singleton of UFortTrackMovementComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTrackMovementComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTrackMovementComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

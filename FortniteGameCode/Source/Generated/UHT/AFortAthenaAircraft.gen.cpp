@@ -102,3 +102,39 @@ UFunction* Z_Construct_UFunction_AFortAthenaAircraft_PlayEffectsForPlayerJumped(
 	}
 	return ReturnFunction;
 }
+
+class AFortAthenaAircraft
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortAthenaAircraft_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortAthenaAircraft_Statics::FuncInfo[] = {
+	{ &Z_Construct_UDelegateFunction_AFortAthenaAircraft_FortAthenaAircraftDelegate__DelegateSignature, "FortAthenaAircraftDelegate__DelegateSignature" },
+	{ &Z_Construct_UFunction_AFortAthenaAircraft_GetDropEndTime, "GetDropEndTime" },
+	{ &Z_Construct_UFunction_AFortAthenaAircraft_GetDropStartTime, "GetDropStartTime" },
+	{ &Z_Construct_UFunction_AFortAthenaAircraft_OnRep_JumpFlashCount, "OnRep_JumpFlashCount" },
+	{ &Z_Construct_UFunction_AFortAthenaAircraft_PlayEffectsForPlayerJumped, "PlayEffectsForPlayerJumped" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortAthenaAircraft_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032C0560
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortAthenaAircraft_Statics::ClassParams = { &AFortAthenaAircraft::StaticClass, Z_Construct_UClass_AFortAthenaAircraft_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortAthenaAircraft_Statics::FuncInfo, 5, Z_Construct_UClass_AFortAthenaAircraft_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_AFortAthenaAircraft_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9ECF0 (end 0x00F9ED1F)
+// Original VA: 0x0000000140F9ECF0 | File offset: 0x00F9E2F0
+// Recovery: confirmed (UHT singleton of AFortAthenaAircraft) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortAthenaAircraft()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortAthenaAircraft_Statics::ClassParams);
+	}
+	return OuterClass;
+}

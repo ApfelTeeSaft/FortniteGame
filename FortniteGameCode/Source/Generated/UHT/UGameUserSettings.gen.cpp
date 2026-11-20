@@ -1296,3 +1296,99 @@ UFunction* Z_Construct_UFunction_UGameUserSettings_ValidateSettings()
 	}
 	return ReturnFunction;
 }
+
+class UGameUserSettings
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UGameUserSettings_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGameUserSettings_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGameUserSettings_ApplyHardwareBenchmarkResults, "ApplyHardwareBenchmarkResults" },
+	{ &Z_Construct_UFunction_UGameUserSettings_ApplyNonResolutionSettings, "ApplyNonResolutionSettings" },
+	{ &Z_Construct_UFunction_UGameUserSettings_ApplyResolutionSettings, "ApplyResolutionSettings" },
+	{ &Z_Construct_UFunction_UGameUserSettings_ApplySettings, "ApplySettings" },
+	{ &Z_Construct_UFunction_UGameUserSettings_ConfirmVideoMode, "ConfirmVideoMode" },
+	{ &Z_Construct_UFunction_UGameUserSettings_EnableHDRDisplayOutput, "EnableHDRDisplayOutput" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetAntiAliasingQuality, "GetAntiAliasingQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetAudioQualityLevel, "GetAudioQualityLevel" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetCurrentHDRDisplayNits, "GetCurrentHDRDisplayNits" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetDefaultResolution, "GetDefaultResolution" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetDefaultResolutionScale, "GetDefaultResolutionScale" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetDefaultWindowMode, "GetDefaultWindowMode" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetDefaultWindowPosition, "GetDefaultWindowPosition" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetDesktopResolution, "GetDesktopResolution" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetFoliageQuality, "GetFoliageQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetFrameRateLimit, "GetFrameRateLimit" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetFullscreenMode, "GetFullscreenMode" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetGameUserSettings, "GetGameUserSettings" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetLastConfirmedFullscreenMode, "GetLastConfirmedFullscreenMode" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetLastConfirmedScreenResolution, "GetLastConfirmedScreenResolution" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetOverallScalabilityLevel, "GetOverallScalabilityLevel" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetPostProcessingQuality, "GetPostProcessingQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetPreferredFullscreenMode, "GetPreferredFullscreenMode" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetRecommendedResolutionScale, "GetRecommendedResolutionScale" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetResolutionScaleInformation, "GetResolutionScaleInformation" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetResolutionScaleInformationEx, "GetResolutionScaleInformationEx" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetScreenResolution, "GetScreenResolution" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetShadowQuality, "GetShadowQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetTextureQuality, "GetTextureQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetViewDistanceQuality, "GetViewDistanceQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_GetVisualEffectQuality, "GetVisualEffectQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_IsDirty, "IsDirty" },
+	{ &Z_Construct_UFunction_UGameUserSettings_IsDynamicResolutionDirty, "IsDynamicResolutionDirty" },
+	{ &Z_Construct_UFunction_UGameUserSettings_IsDynamicResolutionEnabled, "IsDynamicResolutionEnabled" },
+	{ &Z_Construct_UFunction_UGameUserSettings_IsFullscreenModeDirty, "IsFullscreenModeDirty" },
+	{ &Z_Construct_UFunction_UGameUserSettings_IsHDREnabled, "IsHDREnabled" },
+	{ &Z_Construct_UFunction_UGameUserSettings_IsScreenResolutionDirty, "IsScreenResolutionDirty" },
+	{ &Z_Construct_UFunction_UGameUserSettings_IsVSyncDirty, "IsVSyncDirty" },
+	{ &Z_Construct_UFunction_UGameUserSettings_IsVSyncEnabled, "IsVSyncEnabled" },
+	{ &Z_Construct_UFunction_UGameUserSettings_LoadSettings, "LoadSettings" },
+	{ &Z_Construct_UFunction_UGameUserSettings_ResetToCurrentSettings, "ResetToCurrentSettings" },
+	{ &Z_Construct_UFunction_UGameUserSettings_RevertVideoMode, "RevertVideoMode" },
+	{ &Z_Construct_UFunction_UGameUserSettings_RunHardwareBenchmark, "RunHardwareBenchmark" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SaveSettings, "SaveSettings" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetAntiAliasingQuality, "SetAntiAliasingQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetAudioQualityLevel, "SetAudioQualityLevel" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetBenchmarkFallbackValues, "SetBenchmarkFallbackValues" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetDynamicResolutionEnabled, "SetDynamicResolutionEnabled" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetFoliageQuality, "SetFoliageQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetFrameRateLimit, "SetFrameRateLimit" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetFullscreenMode, "SetFullscreenMode" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetOverallScalabilityLevel, "SetOverallScalabilityLevel" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetPostProcessingQuality, "SetPostProcessingQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetResolutionScaleNormalized, "SetResolutionScaleNormalized" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetResolutionScaleValue, "SetResolutionScaleValue" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetResolutionScaleValueEx, "SetResolutionScaleValueEx" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetScreenResolution, "SetScreenResolution" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetShadowQuality, "SetShadowQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetTextureQuality, "SetTextureQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetToDefaults, "SetToDefaults" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetVSyncEnabled, "SetVSyncEnabled" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetViewDistanceQuality, "SetViewDistanceQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SetVisualEffectQuality, "SetVisualEffectQuality" },
+	{ &Z_Construct_UFunction_UGameUserSettings_SupportsHDRDisplayOutput, "SupportsHDRDisplayOutput" },
+	{ &Z_Construct_UFunction_UGameUserSettings_ValidateSettings, "ValidateSettings" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGameUserSettings_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038F8C80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGameUserSettings_Statics::ClassParams = { &UGameUserSettings::StaticClass, Z_Construct_UClass_UGameUserSettings_Statics::DependentSingletons, 2, 0x40900084u, Z_Construct_UClass_UGameUserSettings_Statics::FuncInfo, 65, Z_Construct_UClass_UGameUserSettings_Statics::PropPointers, 31, "GameUserSettings", &Z_Construct_UClass_UGameUserSettings_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241F0D0 (end 0x0241F0FF)
+// Original VA: 0x000000014241F0D0 | File offset: 0x0241E6D0
+// Recovery: confirmed (UHT singleton of UGameUserSettings) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGameUserSettings()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGameUserSettings_Statics::ClassParams);
+	}
+	return OuterClass;
+}

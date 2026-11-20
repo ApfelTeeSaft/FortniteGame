@@ -84,3 +84,39 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeCanvasNode_TryGetStaticSkillTreeN
 	}
 	return ReturnFunction;
 }
+
+class UFortSkillTreeCanvasNode
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSkillTreeCanvasNode_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSkillTreeCanvasNode_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSkillTreeCanvasNode_HandleSkillTreeNodeStateChanged, "HandleSkillTreeNodeStateChanged" },
+	{ &Z_Construct_UFunction_UFortSkillTreeCanvasNode_TryGetNodeDisplayData, "TryGetNodeDisplayData" },
+	{ &Z_Construct_UFunction_UFortSkillTreeCanvasNode_TryGetSkillTreeNodeState, "TryGetSkillTreeNodeState" },
+	{ &Z_Construct_UFunction_UFortSkillTreeCanvasNode_TryGetStaticSkillTreeNodeData, "TryGetStaticSkillTreeNodeData" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSkillTreeCanvasNode_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D13450
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSkillTreeCanvasNode_Statics::ClassParams = { &UFortSkillTreeCanvasNode::StaticClass, Z_Construct_UClass_UFortSkillTreeCanvasNode_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSkillTreeCanvasNode_Statics::FuncInfo, 4, Z_Construct_UClass_UFortSkillTreeCanvasNode_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortSkillTreeCanvasNode_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortSkillTreeCanvasNode_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5520 (end 0x028F554F)
+// Original VA: 0x00000001428F5520 | File offset: 0x028F4B20
+// Recovery: confirmed (UHT singleton of UFortSkillTreeCanvasNode) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSkillTreeCanvasNode()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSkillTreeCanvasNode_Statics::ClassParams);
+	}
+	return OuterClass;
+}

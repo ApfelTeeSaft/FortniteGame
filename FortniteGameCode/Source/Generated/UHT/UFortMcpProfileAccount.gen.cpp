@@ -965,3 +965,82 @@ UFunction* Z_Construct_UFunction_UFortMcpProfileAccount_UpgradeItemRarity()
 	}
 	return ReturnFunction;
 }
+
+class UFortMcpProfileAccount
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMcpProfileAccount_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMcpProfileAccount_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_AbandonExpedition, "AbandonExpedition" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_ActivateConsumable, "ActivateConsumable" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_ApplyAlteration, "ApplyAlteration" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_AssignWorkerToSquad, "AssignWorkerToSquad" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_AssignWorkerToSquadBatch, "AssignWorkerToSquadBatch" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_ClaimCollectedResources, "ClaimCollectedResources" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_ClaimCollectionBookRewards, "ClaimCollectionBookRewards" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_ClaimDifficultyIncreaseRewards, "ClaimDifficultyIncreaseRewards" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_ClaimImportFriendsReward, "ClaimImportFriendsReward" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_ClaimLoginReward, "ClaimLoginReward" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_ClaimMissionAlertRewards, "ClaimMissionAlertRewards" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_CollectExpedition, "CollectExpedition" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_ConsumeItems, "ConsumeItems" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_ConvertItem, "ConvertItem" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_EarnScore, "EarnScore" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_EndPrimaryMission, "EndPrimaryMission" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_EquipCharCosmetic, "EquipCharCosmetic" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_IncrementNamedCounterStat, "IncrementNamedCounterStat" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_IssueFriendCode, "IssueFriendCode" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_ModifyMission, "ModifyMission" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_OpenCardPack, "OpenCardPack" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_OpenCardPackBatch, "OpenCardPackBatch" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_PurchaseHomebaseNode, "PurchaseHomebaseNode" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_RecycleItem, "RecycleItem" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_RecycleItemBatch, "RecycleItemBatch" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_RefreshExpeditions, "RefreshExpeditions" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_RemoveGiftBox, "RemoveGiftBox" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_SetDefaultHeroSquad, "SetDefaultHeroSquad" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_SetGameplayStats, "SetGameplayStats" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_SetHeroModeLoadout, "SetHeroModeLoadout" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_SetHomebaseBanner, "SetHomebaseBanner" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_SetHomebaseMeta, "SetHomebaseMeta" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_SetHomebaseName, "SetHomebaseName" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_SetItemFavoriteStatus, "SetItemFavoriteStatus" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_SetModeLoadout, "SetModeLoadout" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_SetMtxPlatform, "SetMtxPlatform" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_SkipTutorial, "SkipTutorial" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_SlotItemInCollectionBook, "SlotItemInCollectionBook" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_StartExpedition, "StartExpedition" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_StartPrimaryMission, "StartPrimaryMission" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_TransmogItem, "TransmogItem" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_TwitchUpdateBroadcasterRegistration, "TwitchUpdateBroadcasterRegistration" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_UnassignAllSquads, "UnassignAllSquads" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_UnloadWarehouse, "UnloadWarehouse" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_UnslotAllWorkers, "UnslotAllWorkers" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_UpdateBuildingLevelAndRating, "UpdateBuildingLevelAndRating" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_UpgradeItem, "UpgradeItem" },
+	{ &Z_Construct_UFunction_UFortMcpProfileAccount_UpgradeItemRarity, "UpgradeItemRarity" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMcpProfileAccount_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0336F550
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMcpProfileAccount_Statics::ClassParams = { &UFortMcpProfileAccount::StaticClass, Z_Construct_UClass_UFortMcpProfileAccount_Statics::DependentSingletons, 2, 0x00100084u, Z_Construct_UClass_UFortMcpProfileAccount_Statics::FuncInfo, 48, Z_Construct_UClass_UFortMcpProfileAccount_Statics::PropPointers, 1, "Engine", &Z_Construct_UClass_UFortMcpProfileAccount_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01030A70 (end 0x01030A9F)
+// Original VA: 0x0000000141030A70 | File offset: 0x01030070
+// Recovery: confirmed (UHT singleton of UFortMcpProfileAccount) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMcpProfileAccount()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMcpProfileAccount_Statics::ClassParams);
+	}
+	return OuterClass;
+}

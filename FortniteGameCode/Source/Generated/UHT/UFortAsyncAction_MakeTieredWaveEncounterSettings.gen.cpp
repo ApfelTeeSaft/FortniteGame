@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_MakeTieredWaveEncounterSetting
 	}
 	return ReturnFunction;
 }
+
+class UFortAsyncAction_MakeTieredWaveEncounterSettings
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAsyncAction_MakeTieredWaveEncounterSettings_CreateAsyncAction_MakeTieredWaveEncounterSettings, "CreateAsyncAction_MakeTieredWaveEncounterSettings" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032BF8F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings_Statics::ClassParams = { &UFortAsyncAction_MakeTieredWaveEncounterSettings::StaticClass, Z_Construct_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9F190 (end 0x00F9F1BF)
+// Original VA: 0x0000000140F9F190 | File offset: 0x00F9E790
+// Recovery: confirmed (UHT singleton of UFortAsyncAction_MakeTieredWaveEncounterSettings) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings_Statics::ClassParams);
+	}
+	return OuterClass;
+}

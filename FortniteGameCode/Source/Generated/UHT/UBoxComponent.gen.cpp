@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UBoxComponent_SetBoxExtent()
 	}
 	return ReturnFunction;
 }
+
+class UBoxComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBoxComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBoxComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBoxComponent_GetScaledBoxExtent, "GetScaledBoxExtent" },
+	{ &Z_Construct_UFunction_UBoxComponent_GetUnscaledBoxExtent, "GetUnscaledBoxExtent" },
+	{ &Z_Construct_UFunction_UBoxComponent_SetBoxExtent, "SetBoxExtent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBoxComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038B89B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBoxComponent_Statics::ClassParams = { &UBoxComponent::StaticClass, Z_Construct_UClass_UBoxComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UBoxComponent_Statics::FuncInfo, 3, Z_Construct_UClass_UBoxComponent_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UBoxComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA850 (end 0x023EA87F)
+// Original VA: 0x00000001423EA850 | File offset: 0x023E9E50
+// Recovery: confirmed (UHT singleton of UBoxComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBoxComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBoxComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -84,3 +84,38 @@ UFunction* Z_Construct_UFunction_UPlatformEventsComponent_SupportsConvertibleLap
 	}
 	return ReturnFunction;
 }
+
+class UPlatformEventsComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPlatformEventsComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPlatformEventsComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPlatformEventsComponent_IsInLaptopMode, "IsInLaptopMode" },
+	{ &Z_Construct_UFunction_UPlatformEventsComponent_IsInTabletMode, "IsInTabletMode" },
+	{ &Z_Construct_UDelegateFunction_UPlatformEventsComponent_PlatformEventDelegate__DelegateSignature, "PlatformEventDelegate__DelegateSignature" },
+	{ &Z_Construct_UFunction_UPlatformEventsComponent_SupportsConvertibleLaptops, "SupportsConvertibleLaptops" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPlatformEventsComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03983520
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPlatformEventsComponent_Statics::ClassParams = { &UPlatformEventsComponent::StaticClass, Z_Construct_UClass_UPlatformEventsComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UPlatformEventsComponent_Statics::FuncInfo, 4, Z_Construct_UClass_UPlatformEventsComponent_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UPlatformEventsComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9FC0 (end 0x024A9FEF)
+// Original VA: 0x00000001424A9FC0 | File offset: 0x024A95C0
+// Recovery: confirmed (UHT singleton of UPlatformEventsComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPlatformEventsComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPlatformEventsComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

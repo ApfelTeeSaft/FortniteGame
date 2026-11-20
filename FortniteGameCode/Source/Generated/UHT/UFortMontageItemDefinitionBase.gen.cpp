@@ -64,3 +64,37 @@ UFunction* Z_Construct_UFunction_UFortMontageItemDefinitionBase_PreviewInPIE()
 	}
 	return ReturnFunction;
 }
+
+class UFortMontageItemDefinitionBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMontageItemDefinitionBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMontageItemDefinitionBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMontageItemDefinitionBase_GetAnimation, "GetAnimation" },
+	{ &Z_Construct_UFunction_UFortMontageItemDefinitionBase_GetAnimationHardReference, "GetAnimationHardReference" },
+	{ &Z_Construct_UFunction_UFortMontageItemDefinitionBase_PreviewInPIE, "PreviewInPIE" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMontageItemDefinitionBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0338A4F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMontageItemDefinitionBase_Statics::ClassParams = { &UFortMontageItemDefinitionBase::StaticClass, Z_Construct_UClass_UFortMontageItemDefinitionBase_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UFortMontageItemDefinitionBase_Statics::FuncInfo, 3, Z_Construct_UClass_UFortMontageItemDefinitionBase_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortMontageItemDefinitionBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104AAA0 (end 0x0104AACF)
+// Original VA: 0x000000014104AAA0 | File offset: 0x0104A0A0
+// Recovery: confirmed (UHT singleton of UFortMontageItemDefinitionBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMontageItemDefinitionBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMontageItemDefinitionBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

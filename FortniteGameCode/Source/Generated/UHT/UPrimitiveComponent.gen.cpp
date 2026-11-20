@@ -2102,3 +2102,140 @@ UFunction* Z_Construct_UFunction_UPrimitiveComponent_WakeRigidBody()
 	}
 	return ReturnFunction;
 }
+
+class UPrimitiveComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPrimitiveComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPrimitiveComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddAngularImpulse, "AddAngularImpulse" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddAngularImpulseInDegrees, "AddAngularImpulseInDegrees" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddAngularImpulseInRadians, "AddAngularImpulseInRadians" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddForce, "AddForce" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddForceAtLocation, "AddForceAtLocation" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddForceAtLocationLocal, "AddForceAtLocationLocal" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddImpulse, "AddImpulse" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddImpulseAtLocation, "AddImpulseAtLocation" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddRadialForce, "AddRadialForce" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddRadialImpulse, "AddRadialImpulse" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddTorque, "AddTorque" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddTorqueInDegrees, "AddTorqueInDegrees" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_AddTorqueInRadians, "AddTorqueInRadians" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_CanCharacterStepUp, "CanCharacterStepUp" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_ClearMoveIgnoreActors, "ClearMoveIgnoreActors" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_ClearMoveIgnoreComponents, "ClearMoveIgnoreComponents" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_CopyArrayOfMoveIgnoreActors, "CopyArrayOfMoveIgnoreActors" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_CopyArrayOfMoveIgnoreComponents, "CopyArrayOfMoveIgnoreComponents" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_CreateAndSetMaterialInstanceDynamic, "CreateAndSetMaterialInstanceDynamic" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_CreateAndSetMaterialInstanceDynamicFromMaterial, "CreateAndSetMaterialInstanceDynamicFromMaterial" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_CreateDynamicMaterialInstance, "CreateDynamicMaterialInstance" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetAngularDamping, "GetAngularDamping" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetCenterOfMass, "GetCenterOfMass" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetClosestPointOnCollision, "GetClosestPointOnCollision" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetCollisionEnabled, "GetCollisionEnabled" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetCollisionObjectType, "GetCollisionObjectType" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetCollisionProfileName, "GetCollisionProfileName" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetCollisionResponseToChannel, "GetCollisionResponseToChannel" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetGenerateOverlapEvents, "GetGenerateOverlapEvents" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetInertiaTensor, "GetInertiaTensor" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetLinearDamping, "GetLinearDamping" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetMass, "GetMass" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetMassScale, "GetMassScale" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetMaterial, "GetMaterial" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetMaterialFromCollisionFaceIndex, "GetMaterialFromCollisionFaceIndex" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetNumMaterials, "GetNumMaterials" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetOverlappingActors, "GetOverlappingActors" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetOverlappingComponents, "GetOverlappingComponents" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetPhysicsAngularVelocity, "GetPhysicsAngularVelocity" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetPhysicsAngularVelocityInDegrees, "GetPhysicsAngularVelocityInDegrees" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetPhysicsAngularVelocityInRadians, "GetPhysicsAngularVelocityInRadians" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetPhysicsLinearVelocity, "GetPhysicsLinearVelocity" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetPhysicsLinearVelocityAtPoint, "GetPhysicsLinearVelocityAtPoint" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_GetWalkableSlopeOverride, "GetWalkableSlopeOverride" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_IgnoreActorWhenMoving, "IgnoreActorWhenMoving" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_IgnoreComponentWhenMoving, "IgnoreComponentWhenMoving" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_IsAnyRigidBodyAwake, "IsAnyRigidBodyAwake" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_IsGravityEnabled, "IsGravityEnabled" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_IsOverlappingActor, "IsOverlappingActor" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_IsOverlappingComponent, "IsOverlappingComponent" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_K2_IsCollisionEnabled, "K2_IsCollisionEnabled" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_K2_IsPhysicsCollisionEnabled, "K2_IsPhysicsCollisionEnabled" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_K2_IsQueryCollisionEnabled, "K2_IsQueryCollisionEnabled" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_K2_LineTraceComponent, "K2_LineTraceComponent" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_PutRigidBodyToSleep, "PutRigidBodyToSleep" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_ScaleByMomentOfInertia, "ScaleByMomentOfInertia" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetAllMassScale, "SetAllMassScale" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetAllPhysicsAngularVelocity, "SetAllPhysicsAngularVelocity" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetAllPhysicsAngularVelocityInDegrees, "SetAllPhysicsAngularVelocityInDegrees" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetAllPhysicsAngularVelocityInRadians, "SetAllPhysicsAngularVelocityInRadians" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetAllPhysicsLinearVelocity, "SetAllPhysicsLinearVelocity" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetAllUseCCD, "SetAllUseCCD" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetAngularDamping, "SetAngularDamping" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetBoundsScale, "SetBoundsScale" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetCastShadow, "SetCastShadow" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetCenterOfMass, "SetCenterOfMass" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetCollisionEnabled, "SetCollisionEnabled" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetCollisionObjectType, "SetCollisionObjectType" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetCollisionProfileName, "SetCollisionProfileName" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetCollisionResponseToAllChannels, "SetCollisionResponseToAllChannels" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetCollisionResponseToChannel, "SetCollisionResponseToChannel" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetConstraintMode, "SetConstraintMode" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetCullDistance, "SetCullDistance" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetCustomDepthStencilValue, "SetCustomDepthStencilValue" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetCustomDepthStencilWriteMask, "SetCustomDepthStencilWriteMask" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetEnableGravity, "SetEnableGravity" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetGenerateOverlapEvents, "SetGenerateOverlapEvents" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetLinearDamping, "SetLinearDamping" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetLockedAxis, "SetLockedAxis" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetMassOverrideInKg, "SetMassOverrideInKg" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetMassScale, "SetMassScale" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetMaterial, "SetMaterial" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetMaterialByName, "SetMaterialByName" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetNotifyRigidBodyCollision, "SetNotifyRigidBodyCollision" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetOnlyOwnerSee, "SetOnlyOwnerSee" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetOwnerNoSee, "SetOwnerNoSee" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetPhysMaterialOverride, "SetPhysMaterialOverride" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetPhysicsAngularVelocity, "SetPhysicsAngularVelocity" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetPhysicsAngularVelocityInDegrees, "SetPhysicsAngularVelocityInDegrees" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetPhysicsAngularVelocityInRadians, "SetPhysicsAngularVelocityInRadians" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetPhysicsLinearVelocity, "SetPhysicsLinearVelocity" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetPhysicsMaxAngularVelocity, "SetPhysicsMaxAngularVelocity" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetPhysicsMaxAngularVelocityInDegrees, "SetPhysicsMaxAngularVelocityInDegrees" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetPhysicsMaxAngularVelocityInRadians, "SetPhysicsMaxAngularVelocityInRadians" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetReceivesDecals, "SetReceivesDecals" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetRenderCustomDepth, "SetRenderCustomDepth" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetRenderInMainPass, "SetRenderInMainPass" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetRenderInMono, "SetRenderInMono" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetSimulatePhysics, "SetSimulatePhysics" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetSingleSampleShadowFromStationaryLights, "SetSingleSampleShadowFromStationaryLights" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetTranslucentSortPriority, "SetTranslucentSortPriority" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetUseCCD, "SetUseCCD" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_SetWalkableSlopeOverride, "SetWalkableSlopeOverride" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_WakeAllRigidBodies, "WakeAllRigidBodies" },
+	{ &Z_Construct_UFunction_UPrimitiveComponent_WakeRigidBody, "WakeRigidBody" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPrimitiveComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03990540
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPrimitiveComponent_Statics::ClassParams = { &UPrimitiveComponent::StaticClass, Z_Construct_UClass_UPrimitiveComponent_Statics::DependentSingletons, 2, 0x00B00081u, Z_Construct_UClass_UPrimitiveComponent_Statics::FuncInfo, 105, Z_Construct_UClass_UPrimitiveComponent_Statics::PropPointers, 85, nullptr, &Z_Construct_UClass_UPrimitiveComponent_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UPrimitiveComponent_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B8060 (end 0x024B808F)
+// Original VA: 0x00000001424B8060 | File offset: 0x024B7660
+// Recovery: confirmed (UHT singleton of UPrimitiveComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPrimitiveComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPrimitiveComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

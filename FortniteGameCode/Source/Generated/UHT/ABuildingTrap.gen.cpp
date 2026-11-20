@@ -615,3 +615,66 @@ UFunction* Z_Construct_UFunction_ABuildingTrap_TriggerIfAppropriate()
 	}
 	return ReturnFunction;
 }
+
+class ABuildingTrap
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingTrap_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingTrap_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingTrap_AddDamageComponent, "AddDamageComponent" },
+	{ &Z_Construct_UFunction_ABuildingTrap_AddTriggerComponent, "AddTriggerComponent" },
+	{ &Z_Construct_UFunction_ABuildingTrap_AttemptRetrigger, "AttemptRetrigger" },
+	{ &Z_Construct_UFunction_ABuildingTrap_BP_ShouldTrigger, "BP_ShouldTrigger" },
+	{ &Z_Construct_UFunction_ABuildingTrap_FinishTrigger, "FinishTrigger" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetAlterations, "GetAlterations" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetArmTime, "GetArmTime" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetBuildingAttachedTo, "GetBuildingAttachedTo" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetCenter, "GetCenter" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetDamageDelay, "GetDamageDelay" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetDurabilityPercent, "GetDurabilityPercent" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetFireDelay, "GetFireDelay" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetFireLocationAndRotation, "GetFireLocationAndRotation" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetMaxDurability, "GetMaxDurability" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetReloadTime, "GetReloadTime" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetTouchingDamageTargets, "GetTouchingDamageTargets" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetTrapLevel, "GetTrapLevel" },
+	{ &Z_Construct_UFunction_ABuildingTrap_GetTrapRating, "GetTrapRating" },
+	{ &Z_Construct_UFunction_ABuildingTrap_HasDurability, "HasDurability" },
+	{ &Z_Construct_UFunction_ABuildingTrap_OnDestroy, "OnDestroy" },
+	{ &Z_Construct_UFunction_ABuildingTrap_OnFinishedBuilding, "OnFinishedBuilding" },
+	{ &Z_Construct_UFunction_ABuildingTrap_OnInitAlteration, "OnInitAlteration" },
+	{ &Z_Construct_UFunction_ABuildingTrap_OnInitCosmeticAlterations, "OnInitCosmeticAlterations" },
+	{ &Z_Construct_UFunction_ABuildingTrap_OnOutOfDurability, "OnOutOfDurability" },
+	{ &Z_Construct_UFunction_ABuildingTrap_OnPlaced, "OnPlaced" },
+	{ &Z_Construct_UFunction_ABuildingTrap_OnReloadBegin, "OnReloadBegin" },
+	{ &Z_Construct_UFunction_ABuildingTrap_OnReloadEnd, "OnReloadEnd" },
+	{ &Z_Construct_UFunction_ABuildingTrap_OnRep_AttachedTo, "OnRep_AttachedTo" },
+	{ &Z_Construct_UFunction_ABuildingTrap_OnRep_ReplicatedAppliedAlterations, "OnRep_ReplicatedAppliedAlterations" },
+	{ &Z_Construct_UFunction_ABuildingTrap_OnTriggerTouch, "OnTriggerTouch" },
+	{ &Z_Construct_UFunction_ABuildingTrap_TriggerIfAppropriate, "TriggerIfAppropriate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingTrap_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03280800
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingTrap_Statics::ClassParams = { &ABuildingTrap::StaticClass, Z_Construct_UClass_ABuildingTrap_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ABuildingTrap_Statics::FuncInfo, 31, Z_Construct_UClass_ABuildingTrap_Statics::PropPointers, 23, "Game", &Z_Construct_UClass_ABuildingTrap_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_ABuildingTrap_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71F10 (end 0x00F71F3F)
+// Original VA: 0x0000000140F71F10 | File offset: 0x00F71510
+// Recovery: confirmed (UHT singleton of ABuildingTrap) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingTrap()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingTrap_Statics::ClassParams);
+	}
+	return OuterClass;
+}

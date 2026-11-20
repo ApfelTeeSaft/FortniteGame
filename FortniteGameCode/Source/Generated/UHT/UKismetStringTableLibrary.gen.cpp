@@ -165,3 +165,41 @@ UFunction* Z_Construct_UFunction_UKismetStringTableLibrary_IsRegisteredTableId()
 	}
 	return ReturnFunction;
 }
+
+class UKismetStringTableLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UKismetStringTableLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UKismetStringTableLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UKismetStringTableLibrary_GetKeysFromStringTable, "GetKeysFromStringTable" },
+	{ &Z_Construct_UFunction_UKismetStringTableLibrary_GetMetaDataIdsFromStringTableEntry, "GetMetaDataIdsFromStringTableEntry" },
+	{ &Z_Construct_UFunction_UKismetStringTableLibrary_GetRegisteredStringTables, "GetRegisteredStringTables" },
+	{ &Z_Construct_UFunction_UKismetStringTableLibrary_GetTableEntryMetaData, "GetTableEntryMetaData" },
+	{ &Z_Construct_UFunction_UKismetStringTableLibrary_GetTableEntrySourceString, "GetTableEntrySourceString" },
+	{ &Z_Construct_UFunction_UKismetStringTableLibrary_GetTableNamespace, "GetTableNamespace" },
+	{ &Z_Construct_UFunction_UKismetStringTableLibrary_IsRegisteredTableEntry, "IsRegisteredTableEntry" },
+	{ &Z_Construct_UFunction_UKismetStringTableLibrary_IsRegisteredTableId, "IsRegisteredTableId" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UKismetStringTableLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039270E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UKismetStringTableLibrary_Statics::ClassParams = { &UKismetStringTableLibrary::StaticClass, Z_Construct_UClass_UKismetStringTableLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UKismetStringTableLibrary_Statics::FuncInfo, 8, nullptr, 0, nullptr, &Z_Construct_UClass_UKismetStringTableLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02452CE0 (end 0x02452D0F)
+// Original VA: 0x0000000142452CE0 | File offset: 0x024522E0
+// Recovery: confirmed (UHT singleton of UKismetStringTableLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UKismetStringTableLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UKismetStringTableLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

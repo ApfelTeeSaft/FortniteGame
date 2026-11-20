@@ -242,3 +242,47 @@ UFunction* Z_Construct_UFunction_ADeployableBasePlot_OnRep_OccupantNetID()
 	}
 	return ReturnFunction;
 }
+
+class ADeployableBasePlot
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ADeployableBasePlot_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ADeployableBasePlot_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ADeployableBasePlot_GetNumOfItemsInPlot, "GetNumOfItemsInPlot" },
+	{ &Z_Construct_UFunction_ADeployableBasePlot_GetOccupantNetID, "GetOccupantNetID" },
+	{ &Z_Construct_UFunction_ADeployableBasePlot_GetPlayerStart, "GetPlayerStart" },
+	{ &Z_Construct_UFunction_ADeployableBasePlot_HandleBuildingStateTransition, "HandleBuildingStateTransition" },
+	{ &Z_Construct_UFunction_ADeployableBasePlot_IsBuildingActorWithinBuildableSpace, "IsBuildingActorWithinBuildableSpace" },
+	{ &Z_Construct_UFunction_ADeployableBasePlot_IsOccupant, "IsOccupant" },
+	{ &Z_Construct_UFunction_ADeployableBasePlot_IsOccupied, "IsOccupied" },
+	{ &Z_Construct_UFunction_ADeployableBasePlot_OnBuildingStateTransition, "OnBuildingStateTransition" },
+	{ &Z_Construct_UFunction_ADeployableBasePlot_OnCurrentBuildingStateSet, "OnCurrentBuildingStateSet" },
+	{ &Z_Construct_UFunction_ADeployableBasePlot_OnRep_BuildableSpaceExpansionVector, "OnRep_BuildableSpaceExpansionVector" },
+	{ &Z_Construct_UFunction_ADeployableBasePlot_OnRep_CurrentBuildingState, "OnRep_CurrentBuildingState" },
+	{ &Z_Construct_UFunction_ADeployableBasePlot_OnRep_OccupantNetID, "OnRep_OccupantNetID" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ADeployableBasePlot_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0328ED10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ADeployableBasePlot_Statics::ClassParams = { &ADeployableBasePlot::StaticClass, Z_Construct_UClass_ADeployableBasePlot_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ADeployableBasePlot_Statics::FuncInfo, 12, Z_Construct_UClass_ADeployableBasePlot_Statics::PropPointers, 36, "Game", &Z_Construct_UClass_ADeployableBasePlot_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_ADeployableBasePlot_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7D220 (end 0x00F7D24F)
+// Original VA: 0x0000000140F7D220 | File offset: 0x00F7C820
+// Recovery: confirmed (UHT singleton of ADeployableBasePlot) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ADeployableBasePlot()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ADeployableBasePlot_Statics::ClassParams);
+	}
+	return OuterClass;
+}

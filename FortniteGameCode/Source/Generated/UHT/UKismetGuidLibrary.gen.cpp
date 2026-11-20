@@ -145,3 +145,40 @@ UFunction* Z_Construct_UFunction_UKismetGuidLibrary_Parse_StringToGuid()
 	}
 	return ReturnFunction;
 }
+
+class UKismetGuidLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UKismetGuidLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UKismetGuidLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UKismetGuidLibrary_Conv_GuidToString, "Conv_GuidToString" },
+	{ &Z_Construct_UFunction_UKismetGuidLibrary_EqualEqual_GuidGuid, "EqualEqual_GuidGuid" },
+	{ &Z_Construct_UFunction_UKismetGuidLibrary_Invalidate_Guid, "Invalidate_Guid" },
+	{ &Z_Construct_UFunction_UKismetGuidLibrary_IsValid_Guid, "IsValid_Guid" },
+	{ &Z_Construct_UFunction_UKismetGuidLibrary_NewGuid, "NewGuid" },
+	{ &Z_Construct_UFunction_UKismetGuidLibrary_NotEqual_GuidGuid, "NotEqual_GuidGuid" },
+	{ &Z_Construct_UFunction_UKismetGuidLibrary_Parse_StringToGuid, "Parse_StringToGuid" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UKismetGuidLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03914A20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UKismetGuidLibrary_Statics::ClassParams = { &UKismetGuidLibrary::StaticClass, Z_Construct_UClass_UKismetGuidLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UKismetGuidLibrary_Statics::FuncInfo, 7, nullptr, 0, nullptr, &Z_Construct_UClass_UKismetGuidLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02431A00 (end 0x02431A2F)
+// Original VA: 0x0000000142431A00 | File offset: 0x02431000
+// Recovery: confirmed (UHT singleton of UKismetGuidLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UKismetGuidLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UKismetGuidLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -197,3 +197,44 @@ UFunction* Z_Construct_UFunction_ABuildingRift_OnStartedEncounterSpawn()
 	}
 	return ReturnFunction;
 }
+
+class ABuildingRift
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingRift_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingRift_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingRift_BroadcastRiftSpawningAI, "BroadcastRiftSpawningAI" },
+	{ &Z_Construct_UFunction_ABuildingRift_OnActivated, "OnActivated" },
+	{ &Z_Construct_UFunction_ABuildingRift_OnDeactivated, "OnDeactivated" },
+	{ &Z_Construct_UFunction_ABuildingRift_OnFinishedEncounterSpawn, "OnFinishedEncounterSpawn" },
+	{ &Z_Construct_UFunction_ABuildingRift_OnPlaced, "OnPlaced" },
+	{ &Z_Construct_UFunction_ABuildingRift_OnRemoved, "OnRemoved" },
+	{ &Z_Construct_UFunction_ABuildingRift_OnRep_RiftIsActive, "OnRep_RiftIsActive" },
+	{ &Z_Construct_UFunction_ABuildingRift_OnRep_RiftIsVisible, "OnRep_RiftIsVisible" },
+	{ &Z_Construct_UFunction_ABuildingRift_OnSpawnAI, "OnSpawnAI" },
+	{ &Z_Construct_UFunction_ABuildingRift_OnStartedEncounterSpawn, "OnStartedEncounterSpawn" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingRift_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03278E50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingRift_Statics::ClassParams = { &ABuildingRift::StaticClass, Z_Construct_UClass_ABuildingRift_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_ABuildingRift_Statics::FuncInfo, 10, Z_Construct_UClass_ABuildingRift_Statics::PropPointers, 14, "Game", &Z_Construct_UClass_ABuildingRift_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6C5D0 (end 0x00F6C5FF)
+// Original VA: 0x0000000140F6C5D0 | File offset: 0x00F6BBD0
+// Recovery: confirmed (UHT singleton of ABuildingRift) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingRift()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingRift_Statics::ClassParams);
+	}
+	return OuterClass;
+}

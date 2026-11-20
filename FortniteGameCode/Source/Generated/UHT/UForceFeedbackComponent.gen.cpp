@@ -124,3 +124,40 @@ UFunction* Z_Construct_UFunction_UForceFeedbackComponent_Stop()
 	}
 	return ReturnFunction;
 }
+
+class UForceFeedbackComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UForceFeedbackComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UForceFeedbackComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UForceFeedbackComponent_AdjustAttenuation, "AdjustAttenuation" },
+	{ &Z_Construct_UFunction_UForceFeedbackComponent_BP_GetAttenuationSettingsToApply, "BP_GetAttenuationSettingsToApply" },
+	{ &Z_Construct_UFunction_UForceFeedbackComponent_Play, "Play" },
+	{ &Z_Construct_UFunction_UForceFeedbackComponent_SetForceFeedbackEffect, "SetForceFeedbackEffect" },
+	{ &Z_Construct_UFunction_UForceFeedbackComponent_SetIntensityMultiplier, "SetIntensityMultiplier" },
+	{ &Z_Construct_UFunction_UForceFeedbackComponent_Stop, "Stop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UForceFeedbackComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038F0710
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UForceFeedbackComponent_Statics::ClassParams = { &UForceFeedbackComponent::StaticClass, Z_Construct_UClass_UForceFeedbackComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UForceFeedbackComponent_Statics::FuncInfo, 6, Z_Construct_UClass_UForceFeedbackComponent_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UForceFeedbackComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FE50 (end 0x0240FE7F)
+// Original VA: 0x000000014240FE50 | File offset: 0x0240F450
+// Recovery: confirmed (UHT singleton of UForceFeedbackComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UForceFeedbackComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UForceFeedbackComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

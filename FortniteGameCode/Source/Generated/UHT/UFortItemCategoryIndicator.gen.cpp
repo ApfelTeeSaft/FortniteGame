@@ -84,3 +84,38 @@ UFunction* Z_Construct_UFunction_UFortItemCategoryIndicator_SetOrdinalOfCategory
 	}
 	return ReturnFunction;
 }
+
+class UFortItemCategoryIndicator
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemCategoryIndicator_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemCategoryIndicator_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemCategoryIndicator_ClearLabelColorOverride, "ClearLabelColorOverride" },
+	{ &Z_Construct_UFunction_UFortItemCategoryIndicator_SetItemToRepresent, "SetItemToRepresent" },
+	{ &Z_Construct_UFunction_UFortItemCategoryIndicator_SetLabelColorOverride, "SetLabelColorOverride" },
+	{ &Z_Construct_UFunction_UFortItemCategoryIndicator_SetOrdinalOfCategoryToRepresent, "SetOrdinalOfCategoryToRepresent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemCategoryIndicator_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CCB170
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemCategoryIndicator_Statics::ClassParams = { &UFortItemCategoryIndicator::StaticClass, Z_Construct_UClass_UFortItemCategoryIndicator_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortItemCategoryIndicator_Statics::FuncInfo, 4, Z_Construct_UClass_UFortItemCategoryIndicator_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortItemCategoryIndicator_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9C90 (end 0x028C9CBF)
+// Original VA: 0x00000001428C9C90 | File offset: 0x028C9290
+// Recovery: confirmed (UHT singleton of UFortItemCategoryIndicator) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemCategoryIndicator()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemCategoryIndicator_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -145,3 +145,40 @@ UFunction* Z_Construct_UFunction_UAudioMixerBlueprintLibrary_SetBypassSourceEffe
 	}
 	return ReturnFunction;
 }
+
+class UAudioMixerBlueprintLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAudioMixerBlueprintLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAudioMixerBlueprintLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAudioMixerBlueprintLibrary_AddMasterSubmixEffect, "AddMasterSubmixEffect" },
+	{ &Z_Construct_UFunction_UAudioMixerBlueprintLibrary_AddSourceEffectToPresetChain, "AddSourceEffectToPresetChain" },
+	{ &Z_Construct_UFunction_UAudioMixerBlueprintLibrary_ClearMasterSubmixEffects, "ClearMasterSubmixEffects" },
+	{ &Z_Construct_UFunction_UAudioMixerBlueprintLibrary_GetNumberOfEntriesInSourceEffectChain, "GetNumberOfEntriesInSourceEffectChain" },
+	{ &Z_Construct_UFunction_UAudioMixerBlueprintLibrary_RemoveMasterSubmixEffect, "RemoveMasterSubmixEffect" },
+	{ &Z_Construct_UFunction_UAudioMixerBlueprintLibrary_RemoveSourceEffectFromPresetChain, "RemoveSourceEffectFromPresetChain" },
+	{ &Z_Construct_UFunction_UAudioMixerBlueprintLibrary_SetBypassSourceEffectChainEntry, "SetBypassSourceEffectChainEntry" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAudioMixerBlueprintLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03B47D20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAudioMixerBlueprintLibrary_Statics::ClassParams = { &UAudioMixerBlueprintLibrary::StaticClass, Z_Construct_UClass_UAudioMixerBlueprintLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UAudioMixerBlueprintLibrary_Statics::FuncInfo, 7, nullptr, 0, nullptr, &Z_Construct_UClass_UAudioMixerBlueprintLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0255A140 (end 0x0255A16F)
+// Original VA: 0x000000014255A140 | File offset: 0x02559740
+// Recovery: confirmed (UHT singleton of UAudioMixerBlueprintLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAudioMixerBlueprintLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAudioMixerBlueprintLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

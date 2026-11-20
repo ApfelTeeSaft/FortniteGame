@@ -222,3 +222,45 @@ UFunction* Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_StartExpedition
 	}
 	return ReturnFunction;
 }
+
+class UFortExpeditionBuildSquadWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortExpeditionBuildSquadWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortExpeditionBuildSquadWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_ClearTemporaryExpeditionSquadState, "ClearTemporaryExpeditionSquadState" },
+	{ &Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_HandleDifferentSquadSlotSelected, "HandleDifferentSquadSlotSelected" },
+	{ &Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_HandleStartExpeditionCompleted, "HandleStartExpeditionCompleted" },
+	{ &Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_IsExpeditionValidToStart, "IsExpeditionValidToStart" },
+	{ &Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_IsSquadSlotLocked, "IsSquadSlotLocked" },
+	{ &Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_OnRefreshBuildSquadWidget, "OnRefreshBuildSquadWidget" },
+	{ &Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_OnRequestClosePicker, "OnRequestClosePicker" },
+	{ &Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_OnStartExpeditionCompleted, "OnStartExpeditionCompleted" },
+	{ &Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_SetCurrentSquadId, "SetCurrentSquadId" },
+	{ &Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_SetData, "SetData" },
+	{ &Z_Construct_UFunction_UFortExpeditionBuildSquadWidget_StartExpedition, "StartExpedition" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortExpeditionBuildSquadWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C8F3C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortExpeditionBuildSquadWidget_Statics::ClassParams = { &UFortExpeditionBuildSquadWidget::StaticClass, Z_Construct_UClass_UFortExpeditionBuildSquadWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortExpeditionBuildSquadWidget_Statics::FuncInfo, 11, Z_Construct_UClass_UFortExpeditionBuildSquadWidget_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UFortExpeditionBuildSquadWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3530 (end 0x028A355F)
+// Original VA: 0x00000001428A3530 | File offset: 0x028A2B30
+// Recovery: confirmed (UHT singleton of UFortExpeditionBuildSquadWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortExpeditionBuildSquadWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortExpeditionBuildSquadWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

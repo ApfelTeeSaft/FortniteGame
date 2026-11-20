@@ -123,3 +123,40 @@ UFunction* Z_Construct_UFunction_UEpicCMSTileCarousel_SetCurrentPageByIndex()
 	}
 	return ReturnFunction;
 }
+
+class UEpicCMSTileCarousel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UEpicCMSTileCarousel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UEpicCMSTileCarousel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UEpicCMSTileCarousel_GetCurrentPageIndex, "GetCurrentPageIndex" },
+	{ &Z_Construct_UFunction_UEpicCMSTileCarousel_HandleTilePageAdded, "HandleTilePageAdded" },
+	{ &Z_Construct_UFunction_UEpicCMSTileCarousel_NavigationVisibilityChanged, "NavigationVisibilityChanged" },
+	{ &Z_Construct_UFunction_UEpicCMSTileCarousel_NextPage, "NextPage" },
+	{ &Z_Construct_UFunction_UEpicCMSTileCarousel_PreviousPage, "PreviousPage" },
+	{ &Z_Construct_UFunction_UEpicCMSTileCarousel_SetCurrentPageByIndex, "SetCurrentPageByIndex" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UEpicCMSTileCarousel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E8CFF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UEpicCMSTileCarousel_Statics::ClassParams = { &UEpicCMSTileCarousel::StaticClass, Z_Construct_UClass_UEpicCMSTileCarousel_Statics::DependentSingletons, 2, 0x00B01081u, Z_Construct_UClass_UEpicCMSTileCarousel_Statics::FuncInfo, 6, Z_Construct_UClass_UEpicCMSTileCarousel_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UEpicCMSTileCarousel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3CA0 (end 0x002E3CCF)
+// Original VA: 0x00000001402E3CA0 | File offset: 0x002E32A0
+// Recovery: confirmed (UHT singleton of UEpicCMSTileCarousel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UEpicCMSTileCarousel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UEpicCMSTileCarousel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

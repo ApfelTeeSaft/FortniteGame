@@ -1205,3 +1205,95 @@ UFunction* Z_Construct_UFunction_UFortItem_TryGetCategory()
 	}
 	return ReturnFunction;
 }
+
+class UFortItem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItem_CanBeDropped, "CanBeDropped" },
+	{ &Z_Construct_UFunction_UFortItem_CanBeUnslotted, "CanBeUnslotted" },
+	{ &Z_Construct_UFunction_UFortItem_CanBeUpgraded, "CanBeUpgraded" },
+	{ &Z_Construct_UFunction_UFortItem_CanEvolve, "CanEvolve" },
+	{ &Z_Construct_UFunction_UFortItem_CanUpgradeItemRarity, "CanUpgradeItemRarity" },
+	{ &Z_Construct_UFunction_UFortItem_DoesMatchSearchString, "DoesMatchSearchString" },
+	{ &Z_Construct_UFunction_UFortItem_GetActiveAlterations, "GetActiveAlterations" },
+	{ &Z_Construct_UFunction_UFortItem_GetAlterationSlots, "GetAlterationSlots" },
+	{ &Z_Construct_UFunction_UFortItem_GetCoolDownTimeRemaining, "GetCoolDownTimeRemaining" },
+	{ &Z_Construct_UFunction_UFortItem_GetDescription, "GetDescription" },
+	{ &Z_Construct_UFunction_UFortItem_GetDisplayName, "GetDisplayName" },
+	{ &Z_Construct_UFunction_UFortItem_GetDisplayNameWithoutPrefix, "GetDisplayNameWithoutPrefix" },
+	{ &Z_Construct_UFunction_UFortItem_GetDurability, "GetDurability" },
+	{ &Z_Construct_UFunction_UFortItem_GetEvolveRestrictionReasonText, "GetEvolveRestrictionReasonText" },
+	{ &Z_Construct_UFunction_UFortItem_GetFilterCategory, "GetFilterCategory" },
+	{ &Z_Construct_UFunction_UFortItem_GetItemDefinitionBP, "GetItemDefinitionBP" },
+	{ &Z_Construct_UFunction_UFortItem_GetItemGuid, "GetItemGuid" },
+	{ &Z_Construct_UFunction_UFortItem_GetLargePreviewImage, "GetLargePreviewImage" },
+	{ &Z_Construct_UFunction_UFortItem_GetLevel, "GetLevel" },
+	{ &Z_Construct_UFunction_UFortItem_GetLevelRelativeCostForRarityUpgrade, "GetLevelRelativeCostForRarityUpgrade" },
+	{ &Z_Construct_UFunction_UFortItem_GetLoadedAmmo, "GetLoadedAmmo" },
+	{ &Z_Construct_UFunction_UFortItem_GetMaxLevel, "GetMaxLevel" },
+	{ &Z_Construct_UFunction_UFortItem_GetMaxTier, "GetMaxTier" },
+	{ &Z_Construct_UFunction_UFortItem_GetNormalizedDurability, "GetNormalizedDurability" },
+	{ &Z_Construct_UFunction_UFortItem_GetNumInStack, "GetNumInStack" },
+	{ &Z_Construct_UFunction_UFortItem_GetOwningController, "GetOwningController" },
+	{ &Z_Construct_UFunction_UFortItem_GetPreviewAssets, "GetPreviewAssets" },
+	{ &Z_Construct_UFunction_UFortItem_GetPrimaryCategory, "GetPrimaryCategory" },
+	{ &Z_Construct_UFunction_UFortItem_GetRarity, "GetRarity" },
+	{ &Z_Construct_UFunction_UFortItem_GetRarityColor, "GetRarityColor" },
+	{ &Z_Construct_UFunction_UFortItem_GetRaritySecondaryColor, "GetRaritySecondaryColor" },
+	{ &Z_Construct_UFunction_UFortItem_GetRating, "GetRating" },
+	{ &Z_Construct_UFunction_UFortItem_GetRecycleValue, "GetRecycleValue" },
+	{ &Z_Construct_UFunction_UFortItem_GetRemainingAmmo, "GetRemainingAmmo" },
+	{ &Z_Construct_UFunction_UFortItem_GetSchematicCraftingResultBP, "GetSchematicCraftingResultBP" },
+	{ &Z_Construct_UFunction_UFortItem_GetSchematicCraftingResultOrCraftedWeaponBP, "GetSchematicCraftingResultOrCraftedWeaponBP" },
+	{ &Z_Construct_UFunction_UFortItem_GetSchematicResultType, "GetSchematicResultType" },
+	{ &Z_Construct_UFunction_UFortItem_GetSearchTags, "GetSearchTags" },
+	{ &Z_Construct_UFunction_UFortItem_GetSecondaryCategory, "GetSecondaryCategory" },
+	{ &Z_Construct_UFunction_UFortItem_GetSmallPreviewImage, "GetSmallPreviewImage" },
+	{ &Z_Construct_UFunction_UFortItem_GetTertiaryCategory, "GetTertiaryCategory" },
+	{ &Z_Construct_UFunction_UFortItem_GetTier, "GetTier" },
+	{ &Z_Construct_UFunction_UFortItem_GetType, "GetType" },
+	{ &Z_Construct_UFunction_UFortItem_GetUpgradeCost, "GetUpgradeCost" },
+	{ &Z_Construct_UFunction_UFortItem_GetUpgradeResourceItemDefinition, "GetUpgradeResourceItemDefinition" },
+	{ &Z_Construct_UFunction_UFortItem_GetUpgradeRestrictionReasonText, "GetUpgradeRestrictionReasonText" },
+	{ &Z_Construct_UFunction_UFortItem_HasDurability, "HasDurability" },
+	{ &Z_Construct_UFunction_UFortItem_HasEvolutions, "HasEvolutions" },
+	{ &Z_Construct_UFunction_UFortItem_HasRarityUpgrade, "HasRarityUpgrade" },
+	{ &Z_Construct_UFunction_UFortItem_IsActivatable, "IsActivatable" },
+	{ &Z_Construct_UFunction_UFortItem_IsEquipable, "IsEquipable" },
+	{ &Z_Construct_UFunction_UFortItem_IsEquipped, "IsEquipped" },
+	{ &Z_Construct_UFunction_UFortItem_IsInStorageVault, "IsInStorageVault" },
+	{ &Z_Construct_UFunction_UFortItem_IsInventoryOverflowItem, "IsInventoryOverflowItem" },
+	{ &Z_Construct_UFunction_UFortItem_IsSchematic, "IsSchematic" },
+	{ &Z_Construct_UFunction_UFortItem_IsSchematicOrCraftedWeapon, "IsSchematicOrCraftedWeapon" },
+	{ &Z_Construct_UFunction_UFortItem_IsSlotted, "IsSlotted" },
+	{ &Z_Construct_UFunction_UFortItem_IsTemporaryItem, "IsTemporaryItem" },
+	{ &Z_Construct_UFunction_UFortItem_SetOwningControllerForTemporaryItem, "SetOwningControllerForTemporaryItem" },
+	{ &Z_Construct_UFunction_UFortItem_TryGetCategory, "TryGetCategory" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0334B7C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItem_Statics::ClassParams = { &UFortItem::StaticClass, Z_Construct_UClass_UFortItem_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_UFortItem_Statics::FuncInfo, 60, Z_Construct_UClass_UFortItem_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortItem_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortItem_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006D90 (end 0x01006DBF)
+// Original VA: 0x0000000141006D90 | File offset: 0x01006390
+// Recovery: confirmed (UHT singleton of UFortItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

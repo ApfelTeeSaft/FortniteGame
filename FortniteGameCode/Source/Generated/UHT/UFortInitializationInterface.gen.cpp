@@ -63,3 +63,36 @@ UFunction* Z_Construct_UFunction_UFortInitializationInterface_WorldReady()
 	}
 	return ReturnFunction;
 }
+
+class UFortInitializationInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortInitializationInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortInitializationInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortInitializationInterface_MatchStarted, "MatchStarted" },
+	{ &Z_Construct_UFunction_UFortInitializationInterface_NeedsWorldReady, "NeedsWorldReady" },
+	{ &Z_Construct_UFunction_UFortInitializationInterface_WorldReady, "WorldReady" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortInitializationInterface_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0334A230
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortInitializationInterface_Statics::ClassParams = { &UFortInitializationInterface::StaticClass, Z_Construct_UClass_UFortInitializationInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortInitializationInterface_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UFortInitializationInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006BD0 (end 0x01006BFF)
+// Original VA: 0x0000000141006BD0 | File offset: 0x010061D0
+// Recovery: confirmed (UHT singleton of UFortInitializationInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortInitializationInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortInitializationInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

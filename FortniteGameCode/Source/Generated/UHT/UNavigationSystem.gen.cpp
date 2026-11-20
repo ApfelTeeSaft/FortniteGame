@@ -444,3 +444,56 @@ UFunction* Z_Construct_UFunction_UNavigationSystem_UnregisterNavigationInvoker()
 	}
 	return ReturnFunction;
 }
+
+class UNavigationSystem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UNavigationSystem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UNavigationSystem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UNavigationSystem_FindPathToActorSynchronously, "FindPathToActorSynchronously" },
+	{ &Z_Construct_UFunction_UNavigationSystem_FindPathToLocationSynchronously, "FindPathToLocationSynchronously" },
+	{ &Z_Construct_UFunction_UNavigationSystem_GetNavigationSystem, "GetNavigationSystem" },
+	{ &Z_Construct_UFunction_UNavigationSystem_GetPathCost, "GetPathCost" },
+	{ &Z_Construct_UFunction_UNavigationSystem_GetPathLength, "GetPathLength" },
+	{ &Z_Construct_UFunction_UNavigationSystem_GetRandomPointInNavigableRadius, "GetRandomPointInNavigableRadius" },
+	{ &Z_Construct_UFunction_UNavigationSystem_GetRandomReachablePointInRadius, "GetRandomReachablePointInRadius" },
+	{ &Z_Construct_UFunction_UNavigationSystem_IsNavigationBeingBuilt, "IsNavigationBeingBuilt" },
+	{ &Z_Construct_UFunction_UNavigationSystem_IsNavigationBeingBuiltOrLocked, "IsNavigationBeingBuiltOrLocked" },
+	{ &Z_Construct_UFunction_UNavigationSystem_K2_GetRandomPointInNavigableRadius, "K2_GetRandomPointInNavigableRadius" },
+	{ &Z_Construct_UFunction_UNavigationSystem_K2_GetRandomReachablePointInRadius, "K2_GetRandomReachablePointInRadius" },
+	{ &Z_Construct_UFunction_UNavigationSystem_K2_ProjectPointToNavigation, "K2_ProjectPointToNavigation" },
+	{ &Z_Construct_UFunction_UNavigationSystem_NavigationRaycast, "NavigationRaycast" },
+	{ &Z_Construct_UFunction_UNavigationSystem_OnNavigationBoundsUpdated, "OnNavigationBoundsUpdated" },
+	{ &Z_Construct_UFunction_UNavigationSystem_ProjectPointToNavigation, "ProjectPointToNavigation" },
+	{ &Z_Construct_UFunction_UNavigationSystem_RegisterNavigationInvoker, "RegisterNavigationInvoker" },
+	{ &Z_Construct_UFunction_UNavigationSystem_ResetMaxSimultaneousTileGenerationJobsCount, "ResetMaxSimultaneousTileGenerationJobsCount" },
+	{ &Z_Construct_UFunction_UNavigationSystem_SetGeometryGatheringMode, "SetGeometryGatheringMode" },
+	{ &Z_Construct_UFunction_UNavigationSystem_SetMaxSimultaneousTileGenerationJobsCount, "SetMaxSimultaneousTileGenerationJobsCount" },
+	{ &Z_Construct_UFunction_UNavigationSystem_SimpleMoveToActor, "SimpleMoveToActor" },
+	{ &Z_Construct_UFunction_UNavigationSystem_SimpleMoveToLocation, "SimpleMoveToLocation" },
+	{ &Z_Construct_UFunction_UNavigationSystem_UnregisterNavigationInvoker, "UnregisterNavigationInvoker" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UNavigationSystem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0395A6C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UNavigationSystem_Statics::ClassParams = { &UNavigationSystem::StaticClass, Z_Construct_UClass_UNavigationSystem_Statics::DependentSingletons, 2, 0x00900086u, Z_Construct_UClass_UNavigationSystem_Statics::FuncInfo, 22, Z_Construct_UClass_UNavigationSystem_Statics::PropPointers, 23, "Engine", &Z_Construct_UClass_UNavigationSystem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248FB80 (end 0x0248FBAF)
+// Original VA: 0x000000014248FB80 | File offset: 0x0248F180
+// Recovery: confirmed (UHT singleton of UNavigationSystem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UNavigationSystem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UNavigationSystem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -405,3 +405,54 @@ UFunction* Z_Construct_UFunction_UExponentialHeightFogComponent_SetVolumetricFog
 	}
 	return ReturnFunction;
 }
+
+class UExponentialHeightFogComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UExponentialHeightFogComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UExponentialHeightFogComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetDirectionalInscatteringColor, "SetDirectionalInscatteringColor" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetDirectionalInscatteringExponent, "SetDirectionalInscatteringExponent" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetDirectionalInscatteringStartDistance, "SetDirectionalInscatteringStartDistance" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetFogCutoffDistance, "SetFogCutoffDistance" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetFogDensity, "SetFogDensity" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetFogHeightFalloff, "SetFogHeightFalloff" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetFogInscatteringColor, "SetFogInscatteringColor" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetFogMaxOpacity, "SetFogMaxOpacity" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetFullyDirectionalInscatteringColorDistance, "SetFullyDirectionalInscatteringColorDistance" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetInscatteringColorCubemap, "SetInscatteringColorCubemap" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetInscatteringColorCubemapAngle, "SetInscatteringColorCubemapAngle" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetInscatteringTextureTint, "SetInscatteringTextureTint" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetNonDirectionalInscatteringColorDistance, "SetNonDirectionalInscatteringColorDistance" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetStartDistance, "SetStartDistance" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetVolumetricFog, "SetVolumetricFog" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetVolumetricFogAlbedo, "SetVolumetricFogAlbedo" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetVolumetricFogDistance, "SetVolumetricFogDistance" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetVolumetricFogEmissive, "SetVolumetricFogEmissive" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetVolumetricFogExtinctionScale, "SetVolumetricFogExtinctionScale" },
+	{ &Z_Construct_UFunction_UExponentialHeightFogComponent_SetVolumetricFogScatteringDistribution, "SetVolumetricFogScatteringDistribution" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UExponentialHeightFogComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038EFA10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UExponentialHeightFogComponent_Statics::ClassParams = { &UExponentialHeightFogComponent::StaticClass, Z_Construct_UClass_UExponentialHeightFogComponent_Statics::DependentSingletons, 2, 0x00B03080u, Z_Construct_UClass_UExponentialHeightFogComponent_Statics::FuncInfo, 20, Z_Construct_UClass_UExponentialHeightFogComponent_Statics::PropPointers, 22, nullptr, &Z_Construct_UClass_UExponentialHeightFogComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FD00 (end 0x0240FD2F)
+// Original VA: 0x000000014240FD00 | File offset: 0x0240F300
+// Recovery: confirmed (UHT singleton of UExponentialHeightFogComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UExponentialHeightFogComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UExponentialHeightFogComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

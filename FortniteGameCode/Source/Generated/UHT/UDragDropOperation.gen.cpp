@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UDragDropOperation_Drop()
 	}
 	return ReturnFunction;
 }
+
+class UDragDropOperation
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UDragDropOperation_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UDragDropOperation_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UDragDropOperation_DragCancelled, "DragCancelled" },
+	{ &Z_Construct_UFunction_UDragDropOperation_Dragged, "Dragged" },
+	{ &Z_Construct_UFunction_UDragDropOperation_Drop, "Drop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UDragDropOperation_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036925B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UDragDropOperation_Statics::ClassParams = { &UDragDropOperation::StaticClass, Z_Construct_UClass_UDragDropOperation_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UDragDropOperation_Statics::FuncInfo, 3, Z_Construct_UClass_UDragDropOperation_Statics::PropPointers, 9, nullptr, &Z_Construct_UClass_UDragDropOperation_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6270 (end 0x01BE629F)
+// Original VA: 0x0000000141BE6270 | File offset: 0x01BE5870
+// Recovery: confirmed (UHT singleton of UDragDropOperation) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UDragDropOperation()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UDragDropOperation_Statics::ClassParams);
+	}
+	return OuterClass;
+}

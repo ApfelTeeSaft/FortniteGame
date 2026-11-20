@@ -145,3 +145,41 @@ UFunction* Z_Construct_UFunction_UMeshComponent_SetVectorParameterValueOnMateria
 	}
 	return ReturnFunction;
 }
+
+class UMeshComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMeshComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMeshComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMeshComponent_GetMaterialIndex, "GetMaterialIndex" },
+	{ &Z_Construct_UFunction_UMeshComponent_GetMaterialSlotNames, "GetMaterialSlotNames" },
+	{ &Z_Construct_UFunction_UMeshComponent_GetMaterials, "GetMaterials" },
+	{ &Z_Construct_UFunction_UMeshComponent_IsMaterialSlotNameValid, "IsMaterialSlotNameValid" },
+	{ &Z_Construct_UFunction_UMeshComponent_PrestreamTextures, "PrestreamTextures" },
+	{ &Z_Construct_UFunction_UMeshComponent_SetScalarParameterValueOnMaterials, "SetScalarParameterValueOnMaterials" },
+	{ &Z_Construct_UFunction_UMeshComponent_SetVectorParameterValueOnMaterials, "SetVectorParameterValueOnMaterials" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMeshComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0394F170
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMeshComponent_Statics::ClassParams = { &UMeshComponent::StaticClass, Z_Construct_UClass_UMeshComponent_Statics::DependentSingletons, 2, 0x00B00081u, Z_Construct_UClass_UMeshComponent_Statics::FuncInfo, 7, Z_Construct_UClass_UMeshComponent_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UMeshComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486AE0 (end 0x02486B0F)
+// Original VA: 0x0000000142486AE0 | File offset: 0x024860E0
+// Recovery: confirmed (UHT singleton of UMeshComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMeshComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMeshComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

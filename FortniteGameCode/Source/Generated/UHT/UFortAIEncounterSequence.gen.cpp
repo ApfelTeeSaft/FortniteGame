@@ -204,3 +204,44 @@ UFunction* Z_Construct_UFunction_UFortAIEncounterSequence_StopCurrentEncounter()
 	}
 	return ReturnFunction;
 }
+
+class UFortAIEncounterSequence
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAIEncounterSequence_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAIEncounterSequence_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAIEncounterSequence_EncounterBelongsToSequence, "EncounterBelongsToSequence" },
+	{ &Z_Construct_UFunction_UFortAIEncounterSequence_GetCurrentEncounter, "GetCurrentEncounter" },
+	{ &Z_Construct_UFunction_UFortAIEncounterSequence_GetEncounterIndexInSequence, "GetEncounterIndexInSequence" },
+	{ &Z_Construct_UFunction_UFortAIEncounterSequence_GetNumEncountersInSequence, "GetNumEncountersInSequence" },
+	{ &Z_Construct_UFunction_UFortAIEncounterSequence_HasEncounter, "HasEncounter" },
+	{ &Z_Construct_UFunction_UFortAIEncounterSequence_IsOnFinalIndexInSequence, "IsOnFinalIndexInSequence" },
+	{ &Z_Construct_UFunction_UFortAIEncounterSequence_Next, "Next" },
+	{ &Z_Construct_UFunction_UFortAIEncounterSequence_Previous, "Previous" },
+	{ &Z_Construct_UFunction_UFortAIEncounterSequence_StartCurrentEncounter, "StartCurrentEncounter" },
+	{ &Z_Construct_UFunction_UFortAIEncounterSequence_StopCurrentEncounter, "StopCurrentEncounter" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAIEncounterSequence_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032A6750
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAIEncounterSequence_Statics::ClassParams = { &UFortAIEncounterSequence::StaticClass, Z_Construct_UClass_UFortAIEncounterSequence_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortAIEncounterSequence_Statics::FuncInfo, 10, Z_Construct_UClass_UFortAIEncounterSequence_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortAIEncounterSequence_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C580 (end 0x00F8C5AF)
+// Original VA: 0x0000000140F8C580 | File offset: 0x00F8BB80
+// Recovery: confirmed (UHT singleton of UFortAIEncounterSequence) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAIEncounterSequence()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAIEncounterSequence_Statics::ClassParams);
+	}
+	return OuterClass;
+}

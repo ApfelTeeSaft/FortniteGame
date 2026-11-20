@@ -62,3 +62,37 @@ UFunction* Z_Construct_UFunction_AFortGameModeZone_ReplicateHealthAndShield()
 	}
 	return ReturnFunction;
 }
+
+class AFortGameModeZone
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortGameModeZone_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortGameModeZone_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortGameModeZone_OnEveningReached, "OnEveningReached" },
+	{ &Z_Construct_UFunction_AFortGameModeZone_OnMorningReached, "OnMorningReached" },
+	{ &Z_Construct_UFunction_AFortGameModeZone_ReplicateHealthAndShield, "ReplicateHealthAndShield" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortGameModeZone_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0331F430
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortGameModeZone_Statics::ClassParams = { &AFortGameModeZone::StaticClass, Z_Construct_UClass_AFortGameModeZone_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_AFortGameModeZone_Statics::FuncInfo, 3, Z_Construct_UClass_AFortGameModeZone_Statics::PropPointers, 34, "Game", &Z_Construct_UClass_AFortGameModeZone_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE45F0 (end 0x00FE461F)
+// Original VA: 0x0000000140FE45F0 | File offset: 0x00FE3BF0
+// Recovery: confirmed (UHT singleton of AFortGameModeZone) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortGameModeZone()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortGameModeZone_Statics::ClassParams);
+	}
+	return OuterClass;
+}

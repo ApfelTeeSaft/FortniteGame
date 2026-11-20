@@ -195,3 +195,44 @@ UFunction* Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_LobbyTimeRema
 	}
 	return ReturnFunction;
 }
+
+class AFortLobbyBeaconPlayerState
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortLobbyBeaconPlayerState_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortLobbyBeaconPlayerState_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_CharXP, "OnRep_CharXP" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_CharacterGender, "OnRep_CharacterGender" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_ConsoleOSSName, "OnRep_ConsoleOSSName" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_ConsoleUniqueNetId, "OnRep_ConsoleUniqueNetId" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_Gadgets, "OnRep_Gadgets" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_HeroId, "OnRep_HeroId" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_HeroSquadId, "OnRep_HeroSquadId" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_HeroType, "OnRep_HeroType" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_HomeBaseVersion, "OnRep_HomeBaseVersion" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconPlayerState_OnRep_LobbyTimeRemaining, "OnRep_LobbyTimeRemaining" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortLobbyBeaconPlayerState_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0335EEC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortLobbyBeaconPlayerState_Statics::ClassParams = { &AFortLobbyBeaconPlayerState::StaticClass, Z_Construct_UClass_AFortLobbyBeaconPlayerState_Statics::DependentSingletons, 2, 0x00900289u, Z_Construct_UClass_AFortLobbyBeaconPlayerState_Statics::FuncInfo, 10, Z_Construct_UClass_AFortLobbyBeaconPlayerState_Statics::PropPointers, 13, "Game", &Z_Construct_UClass_AFortLobbyBeaconPlayerState_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101E3D0 (end 0x0101E3FF)
+// Original VA: 0x000000014101E3D0 | File offset: 0x0101D9D0
+// Recovery: confirmed (UHT singleton of AFortLobbyBeaconPlayerState) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortLobbyBeaconPlayerState()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortLobbyBeaconPlayerState_Statics::ClassParams);
+	}
+	return OuterClass;
+}

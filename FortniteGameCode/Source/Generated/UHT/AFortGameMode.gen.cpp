@@ -43,3 +43,36 @@ UFunction* Z_Construct_UFunction_AFortGameMode_OnEndOfDay()
 	}
 	return ReturnFunction;
 }
+
+class AFortGameMode
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortGameMode_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortGameMode_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortGameMode_DumpReservations, "DumpReservations" },
+	{ &Z_Construct_UFunction_AFortGameMode_OnEndOfDay, "OnEndOfDay" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortGameMode_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0331E860
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortGameMode_Statics::ClassParams = { &AFortGameMode::StaticClass, Z_Construct_UClass_AFortGameMode_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_AFortGameMode_Statics::FuncInfo, 2, Z_Construct_UClass_AFortGameMode_Statics::PropPointers, 37, "Game", &Z_Construct_UClass_AFortGameMode_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4410 (end 0x00FE443F)
+// Original VA: 0x0000000140FE4410 | File offset: 0x00FE3A10
+// Recovery: confirmed (UHT singleton of AFortGameMode) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortGameMode()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortGameMode_Statics::ClassParams);
+	}
+	return OuterClass;
+}

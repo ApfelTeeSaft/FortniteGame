@@ -385,3 +385,52 @@ UFunction* Z_Construct_UFunction_UKismetArrayLibrary_SetArrayPropertyByName()
 	}
 	return ReturnFunction;
 }
+
+class UKismetArrayLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UKismetArrayLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UKismetArrayLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Add, "Array_Add" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_AddUnique, "Array_AddUnique" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Append, "Array_Append" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Clear, "Array_Clear" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Contains, "Array_Contains" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Find, "Array_Find" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Get, "Array_Get" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Insert, "Array_Insert" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_IsValidIndex, "Array_IsValidIndex" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_LastIndex, "Array_LastIndex" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Length, "Array_Length" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Remove, "Array_Remove" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_RemoveItem, "Array_RemoveItem" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Resize, "Array_Resize" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Set, "Array_Set" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Shuffle, "Array_Shuffle" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_Array_Swap, "Array_Swap" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_FilterArray, "FilterArray" },
+	{ &Z_Construct_UFunction_UKismetArrayLibrary_SetArrayPropertyByName, "SetArrayPropertyByName" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UKismetArrayLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03914840
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UKismetArrayLibrary_Statics::ClassParams = { &UKismetArrayLibrary::StaticClass, Z_Construct_UClass_UKismetArrayLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UKismetArrayLibrary_Statics::FuncInfo, 19, nullptr, 0, nullptr, &Z_Construct_UClass_UKismetArrayLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024319D0 (end 0x024319FF)
+// Original VA: 0x00000001424319D0 | File offset: 0x02430FD0
+// Recovery: confirmed (UHT singleton of UKismetArrayLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UKismetArrayLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UKismetArrayLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

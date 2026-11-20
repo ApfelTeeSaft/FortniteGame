@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UMcpProfile_UnlockProfileForWrite()
 	}
 	return ReturnFunction;
 }
+
+class UMcpProfile
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMcpProfile_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMcpProfile_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMcpProfile_DeleteAllProfiles, "DeleteAllProfiles" },
+	{ &Z_Construct_UFunction_UMcpProfile_DeleteProfile, "DeleteProfile" },
+	{ &Z_Construct_UFunction_UMcpProfile_LockProfileForWrite, "LockProfileForWrite" },
+	{ &Z_Construct_UFunction_UMcpProfile_QueryProfile, "QueryProfile" },
+	{ &Z_Construct_UFunction_UMcpProfile_UnlockProfileForWrite, "UnlockProfileForWrite" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMcpProfile_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02FC71C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMcpProfile_Statics::ClassParams = { &UMcpProfile::StaticClass, Z_Construct_UClass_UMcpProfile_Statics::DependentSingletons, 2, 0x00100084u, Z_Construct_UClass_UMcpProfile_Statics::FuncInfo, 5, Z_Construct_UClass_UMcpProfile_Statics::PropPointers, 14, "Engine", &Z_Construct_UClass_UMcpProfile_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x007AF850 (end 0x007AF87F)
+// Original VA: 0x00000001407AF850 | File offset: 0x007AEE50
+// Recovery: confirmed (UHT singleton of UMcpProfile) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMcpProfile()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMcpProfile_Statics::ClassParams);
+	}
+	return OuterClass;
+}

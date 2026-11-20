@@ -84,3 +84,37 @@ UFunction* Z_Construct_UFunction_AFortAbilityTestObserver_WasAbilityTagActivated
 	}
 	return ReturnFunction;
 }
+
+class AFortAbilityTestObserver
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortAbilityTestObserver_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortAbilityTestObserver_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortAbilityTestObserver_StartObserving, "StartObserving" },
+	{ &Z_Construct_UFunction_AFortAbilityTestObserver_StopObserving, "StopObserving" },
+	{ &Z_Construct_UFunction_AFortAbilityTestObserver_WasAbilityActivated, "WasAbilityActivated" },
+	{ &Z_Construct_UFunction_AFortAbilityTestObserver_WasAbilityTagActivated, "WasAbilityTagActivated" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortAbilityTestObserver_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032968D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortAbilityTestObserver_Statics::ClassParams = { &AFortAbilityTestObserver::StaticClass, Z_Construct_UClass_AFortAbilityTestObserver_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortAbilityTestObserver_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_AFortAbilityTestObserver_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81D20 (end 0x00F81D4F)
+// Original VA: 0x0000000140F81D20 | File offset: 0x00F81320
+// Recovery: confirmed (UHT singleton of AFortAbilityTestObserver) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortAbilityTestObserver()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortAbilityTestObserver_Statics::ClassParams);
+	}
+	return OuterClass;
+}

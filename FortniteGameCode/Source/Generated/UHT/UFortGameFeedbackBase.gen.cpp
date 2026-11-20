@@ -121,3 +121,40 @@ UFunction* Z_Construct_UFunction_UFortGameFeedbackBase_SubmitFeedback()
 	}
 	return ReturnFunction;
 }
+
+class UFortGameFeedbackBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortGameFeedbackBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortGameFeedbackBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortGameFeedbackBase_AddButtonWithFeedbackType, "AddButtonWithFeedbackType" },
+	{ &Z_Construct_UFunction_UFortGameFeedbackBase_CancelFeedback, "CancelFeedback" },
+	{ &Z_Construct_UFunction_UFortGameFeedbackBase_InitiateDebugInfoForFeedback, "InitiateDebugInfoForFeedback" },
+	{ &Z_Construct_UFunction_UFortGameFeedbackBase_OnInitiateDebugInfoForFeedbackComplete, "OnInitiateDebugInfoForFeedbackComplete" },
+	{ &Z_Construct_UFunction_UFortGameFeedbackBase_OnSelectionButtonChanged, "OnSelectionButtonChanged" },
+	{ &Z_Construct_UFunction_UFortGameFeedbackBase_SubmitFeedback, "SubmitFeedback" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortGameFeedbackBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C9B640
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortGameFeedbackBase_Statics::ClassParams = { &UFortGameFeedbackBase::StaticClass, Z_Construct_UClass_UFortGameFeedbackBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortGameFeedbackBase_Statics::FuncInfo, 6, Z_Construct_UClass_UFortGameFeedbackBase_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortGameFeedbackBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC3B0 (end 0x028AC3DF)
+// Original VA: 0x00000001428AC3B0 | File offset: 0x028AB9B0
+// Recovery: confirmed (UHT singleton of UFortGameFeedbackBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortGameFeedbackBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortGameFeedbackBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

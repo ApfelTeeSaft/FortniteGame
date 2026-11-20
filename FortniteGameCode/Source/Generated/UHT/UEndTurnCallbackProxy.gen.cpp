@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UEndTurnCallbackProxy_EndTurn()
 	}
 	return ReturnFunction;
 }
+
+class UEndTurnCallbackProxy
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UEndTurnCallbackProxy_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UEndTurnCallbackProxy_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UEndTurnCallbackProxy_EndTurn, "EndTurn" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UEndTurnCallbackProxy_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EAD6C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UEndTurnCallbackProxy_Statics::ClassParams = { &UEndTurnCallbackProxy::StaticClass, Z_Construct_UClass_UEndTurnCallbackProxy_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UEndTurnCallbackProxy_Statics::FuncInfo, 1, Z_Construct_UClass_UEndTurnCallbackProxy_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UEndTurnCallbackProxy_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032EA40 (end 0x0032EA6F)
+// Original VA: 0x000000014032EA40 | File offset: 0x0032E040
+// Recovery: confirmed (UHT singleton of UEndTurnCallbackProxy) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UEndTurnCallbackProxy()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UEndTurnCallbackProxy_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -184,3 +184,43 @@ UFunction* Z_Construct_UFunction_UFortTabListWidgetBase_SetTabHiddenState()
 	}
 	return ReturnFunction;
 }
+
+class UFortTabListWidgetBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTabListWidgetBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTabListWidgetBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTabListWidgetBase_GetPreregisteredTabInfo, "GetPreregisteredTabInfo" },
+	{ &Z_Construct_UFunction_UFortTabListWidgetBase_IsFirstTabActive, "IsFirstTabActive" },
+	{ &Z_Construct_UFunction_UFortTabListWidgetBase_IsLastTabActive, "IsLastTabActive" },
+	{ &Z_Construct_UDelegateFunction_UFortTabListWidgetBase_OnTabContentCreated__DelegateSignature, "OnTabContentCreated__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortTabListWidgetBase_RegisterAllPreregisteredTabInfos, "RegisterAllPreregisteredTabInfos" },
+	{ &Z_Construct_UFunction_UFortTabListWidgetBase_RegisterFortTab, "RegisterFortTab" },
+	{ &Z_Construct_UFunction_UFortTabListWidgetBase_SetNextTabInputActionData, "SetNextTabInputActionData" },
+	{ &Z_Construct_UFunction_UFortTabListWidgetBase_SetPreviousTabInputActionData, "SetPreviousTabInputActionData" },
+	{ &Z_Construct_UFunction_UFortTabListWidgetBase_SetTabHiddenState, "SetTabHiddenState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTabListWidgetBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D316B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTabListWidgetBase_Statics::ClassParams = { &UFortTabListWidgetBase::StaticClass, Z_Construct_UClass_UFortTabListWidgetBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortTabListWidgetBase_Statics::FuncInfo, 9, Z_Construct_UClass_UFortTabListWidgetBase_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortTabListWidgetBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904BE0 (end 0x02904C0F)
+// Original VA: 0x0000000142904BE0 | File offset: 0x029041E0
+// Recovery: confirmed (UHT singleton of UFortTabListWidgetBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTabListWidgetBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTabListWidgetBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

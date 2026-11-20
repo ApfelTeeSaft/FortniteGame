@@ -144,3 +144,42 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartAnimInstance_PreDestruction
 	}
 	return ReturnFunction;
 }
+
+class UCustomCharacterPartAnimInstance
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCustomCharacterPartAnimInstance_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCustomCharacterPartAnimInstance_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetAssociatedPlayerPawn, "GetAssociatedPlayerPawn" },
+	{ &Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetCharacterPartType, "GetCharacterPartType" },
+	{ &Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetOwnerSkeletalMeshComponent, "GetOwnerSkeletalMeshComponent" },
+	{ &Z_Construct_UFunction_UCustomCharacterPartAnimInstance_GetPartSkeletalMeshComponent, "GetPartSkeletalMeshComponent" },
+	{ &Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnDayPhaseChanged, "OnDayPhaseChanged" },
+	{ &Z_Construct_UFunction_UCustomCharacterPartAnimInstance_OnPlayMontageFromGameplayTagQuery, "OnPlayMontageFromGameplayTagQuery" },
+	{ &Z_Construct_UFunction_UCustomCharacterPartAnimInstance_PreDestruction, "PreDestruction" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCustomCharacterPartAnimInstance_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03288DF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCustomCharacterPartAnimInstance_Statics::ClassParams = { &UCustomCharacterPartAnimInstance::StaticClass, Z_Construct_UClass_UCustomCharacterPartAnimInstance_Statics::DependentSingletons, 2, 0x00800088u, Z_Construct_UClass_UCustomCharacterPartAnimInstance_Statics::FuncInfo, 7, Z_Construct_UClass_UCustomCharacterPartAnimInstance_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UCustomCharacterPartAnimInstance_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UCustomCharacterPartAnimInstance_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F788F0 (end 0x00F7891F)
+// Original VA: 0x0000000140F788F0 | File offset: 0x00F77EF0
+// Recovery: confirmed (UHT singleton of UCustomCharacterPartAnimInstance) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCustomCharacterPartAnimInstance()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCustomCharacterPartAnimInstance_Statics::ClassParams);
+	}
+	return OuterClass;
+}

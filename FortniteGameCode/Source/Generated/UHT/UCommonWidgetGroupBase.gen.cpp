@@ -64,3 +64,36 @@ UFunction* Z_Construct_UFunction_UCommonWidgetGroupBase_RemoveWidget()
 	}
 	return ReturnFunction;
 }
+
+class UCommonWidgetGroupBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonWidgetGroupBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonWidgetGroupBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonWidgetGroupBase_AddWidget, "AddWidget" },
+	{ &Z_Construct_UFunction_UCommonWidgetGroupBase_RemoveAll, "RemoveAll" },
+	{ &Z_Construct_UFunction_UCommonWidgetGroupBase_RemoveWidget, "RemoveWidget" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonWidgetGroupBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E86610
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonWidgetGroupBase_Statics::ClassParams = { &UCommonWidgetGroupBase::StaticClass, Z_Construct_UClass_UCommonWidgetGroupBase_Statics::DependentSingletons, 2, 0x00100081u, Z_Construct_UClass_UCommonWidgetGroupBase_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UCommonWidgetGroupBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0580 (end 0x002D05AF)
+// Original VA: 0x00000001402D0580 | File offset: 0x002CFB80
+// Recovery: confirmed (UHT singleton of UCommonWidgetGroupBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonWidgetGroupBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonWidgetGroupBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

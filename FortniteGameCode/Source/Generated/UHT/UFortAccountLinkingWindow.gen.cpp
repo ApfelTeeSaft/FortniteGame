@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortAccountLinkingWindow_IsPurchaseFree()
 	}
 	return ReturnFunction;
 }
+
+class UFortAccountLinkingWindow
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAccountLinkingWindow_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAccountLinkingWindow_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAccountLinkingWindow_IsPurchaseFree, "IsPurchaseFree" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAccountLinkingWindow_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C60160
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAccountLinkingWindow_Statics::ClassParams = { &UFortAccountLinkingWindow::StaticClass, Z_Construct_UClass_UFortAccountLinkingWindow_Statics::DependentSingletons, 2, 0x00A01084u, Z_Construct_UClass_UFortAccountLinkingWindow_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAccountLinkingWindow_Statics::PropPointers, 3, "Game", &Z_Construct_UClass_UFortAccountLinkingWindow_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02887640 (end 0x0288766F)
+// Original VA: 0x0000000142887640 | File offset: 0x02886C40
+// Recovery: confirmed (UHT singleton of UFortAccountLinkingWindow) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAccountLinkingWindow()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAccountLinkingWindow_Statics::ClassParams);
+	}
+	return OuterClass;
+}

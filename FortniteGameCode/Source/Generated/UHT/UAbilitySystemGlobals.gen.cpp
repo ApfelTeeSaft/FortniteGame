@@ -43,3 +43,36 @@ UFunction* Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystem
 	}
 	return ReturnFunction;
 }
+
+class UAbilitySystemGlobals
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilitySystemGlobals_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilitySystemGlobals_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystemCooldowns, "ToggleIgnoreAbilitySystemCooldowns" },
+	{ &Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystemCosts, "ToggleIgnoreAbilitySystemCosts" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilitySystemGlobals_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F2A610
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilitySystemGlobals_Statics::ClassParams = { &UAbilitySystemGlobals::StaticClass, Z_Construct_UClass_UAbilitySystemGlobals_Statics::DependentSingletons, 2, 0x00100084u, Z_Construct_UClass_UAbilitySystemGlobals_Statics::FuncInfo, 2, Z_Construct_UClass_UAbilitySystemGlobals_Statics::PropPointers, 35, "Game", &Z_Construct_UClass_UAbilitySystemGlobals_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005466A0 (end 0x005466CF)
+// Original VA: 0x00000001405466A0 | File offset: 0x00545CA0
+// Recovery: confirmed (UHT singleton of UAbilitySystemGlobals) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilitySystemGlobals()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilitySystemGlobals_Statics::ClassParams);
+	}
+	return OuterClass;
+}

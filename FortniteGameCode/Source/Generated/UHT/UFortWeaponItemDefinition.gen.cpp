@@ -545,3 +545,61 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_TargetingPreventsRelo
 	}
 	return ReturnFunction;
 }
+
+class UFortWeaponItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortWeaponItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortWeaponItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetAnalyticTags, "GetAnalyticTags" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseAlteration, "GetBaseAlteration" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetBaseCosmeticAlteration, "GetBaseCosmeticAlteration" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetDegradedPercentage, "GetDegradedPercentage" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTier, "GetDisplayTier" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetDisplayTierAsText, "GetDisplayTierAsText" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetEquippedAbilities, "GetEquippedAbilities" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyDuration, "GetHitNotifyDuration" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyImage, "GetHitNotifyImage" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetHitNotifyOpacityCurve, "GetHitNotifyOpacityCurve" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetLowAmmoPercentage, "GetLowAmmoPercentage" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetMuzzleBlockedImage, "GetMuzzleBlockedImage" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetPrimaryFireAbility, "GetPrimaryFireAbility" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetReloadAbility, "GetReloadAbility" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImage, "GetReticleCenterImage" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterImageOffset, "GetReticleCenterImageOffset" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCenterPerfectAimImage, "GetReticleCenterPerfectAimImage" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleCornerAngles, "GetReticleCornerAngles" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetReticleImage, "GetReticleImage" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetSecondaryFireAbility, "GetSecondaryFireAbility" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetShortDisplayName, "GetShortDisplayName" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetTriggerType, "GetTriggerType" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponActorClass, "GetWeaponActorClass" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponMeshOverride, "GetWeaponMeshOverride" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_GetWeaponStatHandle, "GetWeaponStatHandle" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_ShouldAllowTargetingDuringReload, "ShouldAllowTargetingDuringReload" },
+	{ &Z_Construct_UFunction_UFortWeaponItemDefinition_TargetingPreventsReload, "TargetingPreventsReload" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortWeaponItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0342FEB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortWeaponItemDefinition_Statics::ClassParams = { &UFortWeaponItemDefinition::StaticClass, Z_Construct_UClass_UFortWeaponItemDefinition_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_UFortWeaponItemDefinition_Statics::FuncInfo, 27, Z_Construct_UClass_UFortWeaponItemDefinition_Statics::PropPointers, 32, nullptr, &Z_Construct_UClass_UFortWeaponItemDefinition_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8B70 (end 0x010D8B9F)
+// Original VA: 0x00000001410D8B70 | File offset: 0x010D8170
+// Recovery: confirmed (UHT singleton of UFortWeaponItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortWeaponItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortWeaponItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

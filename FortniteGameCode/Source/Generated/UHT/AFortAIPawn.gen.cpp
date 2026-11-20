@@ -1305,3 +1305,101 @@ UFunction* Z_Construct_UFunction_AFortAIPawn_TurnOnSleepingOptimizations()
 	}
 	return ReturnFunction;
 }
+
+class AFortAIPawn
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortAIPawn_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortAIPawn_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortAIPawn_AddFortAbilitySet, "AddFortAbilitySet" },
+	{ &Z_Construct_UFunction_AFortAIPawn_AddUnreachablePickup, "AddUnreachablePickup" },
+	{ &Z_Construct_UFunction_AFortAIPawn_CanHitTargetWithAbility, "CanHitTargetWithAbility" },
+	{ &Z_Construct_UFunction_AFortAIPawn_ClearAIFocalPoint, "ClearAIFocalPoint" },
+	{ &Z_Construct_UFunction_AFortAIPawn_FinishedEncounterSpawn, "FinishedEncounterSpawn" },
+	{ &Z_Construct_UFunction_AFortAIPawn_ForceKillNoDBNO, "ForceKillNoDBNO" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GetCharacterGender, "GetCharacterGender" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GetCurrentAimTarget, "GetCurrentAimTarget" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GetDefenderItemInstanceId, "GetDefenderItemInstanceId" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GetDifficultyLevel, "GetDifficultyLevel" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GetGroundSpeedForUrgency, "GetGroundSpeedForUrgency" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GetImpactPhysicalSurfaceSound, "GetImpactPhysicalSurfaceSound" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GetMovementStyle, "GetMovementStyle" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GetMovementUrgency, "GetMovementUrgency" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GetScoreValue, "GetScoreValue" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GetSpawnLocation, "GetSpawnLocation" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GetSpawnPointValue, "GetSpawnPointValue" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GetSpawnRotation, "GetSpawnRotation" },
+	{ &Z_Construct_UFunction_AFortAIPawn_GrabPickup, "GrabPickup" },
+	{ &Z_Construct_UFunction_AFortAIPawn_HasTether, "HasTether" },
+	{ &Z_Construct_UFunction_AFortAIPawn_IsDefender, "IsDefender" },
+	{ &Z_Construct_UFunction_AFortAIPawn_IsInCombat, "IsInCombat" },
+	{ &Z_Construct_UFunction_AFortAIPawn_IsInsideTetherBounds, "IsInsideTetherBounds" },
+	{ &Z_Construct_UFunction_AFortAIPawn_K2_FindExistingItemForDefinition, "K2_FindExistingItemForDefinition" },
+	{ &Z_Construct_UFunction_AFortAIPawn_K2_GetDefenderItem, "K2_GetDefenderItem" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnAppearanceOverridden, "OnAppearanceOverridden" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnBeginSleepEffects, "OnBeginSleepEffects" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnCheatUpdateSpecialEventGE, "OnCheatUpdateSpecialEventGE" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnDefenderTrapSet, "OnDefenderTrapSet" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnEncounterSpawnEnableMeleeAttacking, "OnEncounterSpawnEnableMeleeAttacking" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnEncounterSpawnEnableRangedAttacking, "OnEncounterSpawnEnableRangedAttacking" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnEndSleepEffects, "OnEndSleepEffects" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnFinishedEncounterSpawn, "OnFinishedEncounterSpawn" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnOutsideOfTetherBeyondMaxTimeAllowed, "OnOutsideOfTetherBeyondMaxTimeAllowed" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnRep_AppearanceOverrideEntryIndex, "OnRep_AppearanceOverrideEntryIndex" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnRep_CurrentAIRotationRate, "OnRep_CurrentAIRotationRate" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnRep_CurrentFortAILODLevel, "OnRep_CurrentFortAILODLevel" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnRep_CurrentWeapon, "OnRep_CurrentWeapon" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnRep_EnableBlockingCollisionWithOtherAI, "OnRep_EnableBlockingCollisionWithOtherAI" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnRep_Inventory, "OnRep_Inventory" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnRep_MinimapViewableDistance, "OnRep_MinimapViewableDistance" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnRep_bIsSleeping, "OnRep_bIsSleeping" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnSleepingAIsFloorBuildingActorDied, "OnSleepingAIsFloorBuildingActorDied" },
+	{ &Z_Construct_UFunction_AFortAIPawn_OnStartedEncounterSpawn, "OnStartedEncounterSpawn" },
+	{ &Z_Construct_UFunction_AFortAIPawn_ResetAIRotationRateToDefault, "ResetAIRotationRateToDefault" },
+	{ &Z_Construct_UFunction_AFortAIPawn_ReviveFromDBNO, "ReviveFromDBNO" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetAIFocalPoint, "SetAIFocalPoint" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetAIRotationRate, "SetAIRotationRate" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetAIType, "SetAIType" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetBlockCollisionWithOtherAI, "SetBlockCollisionWithOtherAI" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetCanInteract, "SetCanInteract" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetCanSleep, "SetCanSleep" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetCollisionProfileName, "SetCollisionProfileName" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetCurrentAimTarget, "SetCurrentAimTarget" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetDefenderTrap, "SetDefenderTrap" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetEncounterInfo, "SetEncounterInfo" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetEyeColor, "SetEyeColor" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetIsCharging, "SetIsCharging" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetMinimapViewableDistance, "SetMinimapViewableDistance" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetMinimumAILOD, "SetMinimumAILOD" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetMovementUrgency, "SetMovementUrgency" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetShouldStartSleeping, "SetShouldStartSleeping" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetSkinColor, "SetSkinColor" },
+	{ &Z_Construct_UFunction_AFortAIPawn_SetWeaponCollisionComponent, "SetWeaponCollisionComponent" },
+	{ &Z_Construct_UFunction_AFortAIPawn_TriggerNoWeaponSpeech, "TriggerNoWeaponSpeech" },
+	{ &Z_Construct_UFunction_AFortAIPawn_TurnOnSleepingOptimizations, "TurnOnSleepingOptimizations" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortAIPawn_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032AF6D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortAIPawn_Statics::ClassParams = { &AFortAIPawn::StaticClass, Z_Construct_UClass_AFortAIPawn_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_AFortAIPawn_Statics::FuncInfo, 66, Z_Construct_UClass_AFortAIPawn_Statics::PropPointers, 151, "Game", &Z_Construct_UClass_AFortAIPawn_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortAIPawn_Statics::InterfaceParams, 5 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91390 (end 0x00F913BF)
+// Original VA: 0x0000000140F91390 | File offset: 0x00F90990
+// Recovery: confirmed (UHT singleton of AFortAIPawn) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortAIPawn()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortAIPawn_Statics::ClassParams);
+	}
+	return OuterClass;
+}

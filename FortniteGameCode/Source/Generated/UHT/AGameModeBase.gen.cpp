@@ -562,3 +562,62 @@ UFunction* Z_Construct_UFunction_AGameModeBase_StartPlay()
 	}
 	return ReturnFunction;
 }
+
+class AGameModeBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AGameModeBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AGameModeBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AGameModeBase_CanSpectate, "CanSpectate" },
+	{ &Z_Construct_UFunction_AGameModeBase_ChangeName, "ChangeName" },
+	{ &Z_Construct_UFunction_AGameModeBase_ChoosePlayerStart, "ChoosePlayerStart" },
+	{ &Z_Construct_UFunction_AGameModeBase_FindPlayerStart, "FindPlayerStart" },
+	{ &Z_Construct_UFunction_AGameModeBase_GetDefaultPawnClassForController, "GetDefaultPawnClassForController" },
+	{ &Z_Construct_UFunction_AGameModeBase_GetNumPlayers, "GetNumPlayers" },
+	{ &Z_Construct_UFunction_AGameModeBase_GetNumSpectators, "GetNumSpectators" },
+	{ &Z_Construct_UFunction_AGameModeBase_HandleStartingNewPlayer, "HandleStartingNewPlayer" },
+	{ &Z_Construct_UFunction_AGameModeBase_HasMatchStarted, "HasMatchStarted" },
+	{ &Z_Construct_UFunction_AGameModeBase_InitStartSpot, "InitStartSpot" },
+	{ &Z_Construct_UFunction_AGameModeBase_InitializeHUDForPlayer, "InitializeHUDForPlayer" },
+	{ &Z_Construct_UFunction_AGameModeBase_K2_FindPlayerStart, "K2_FindPlayerStart" },
+	{ &Z_Construct_UFunction_AGameModeBase_K2_OnChangeName, "K2_OnChangeName" },
+	{ &Z_Construct_UFunction_AGameModeBase_K2_OnLogout, "K2_OnLogout" },
+	{ &Z_Construct_UFunction_AGameModeBase_K2_OnRestartPlayer, "K2_OnRestartPlayer" },
+	{ &Z_Construct_UFunction_AGameModeBase_K2_OnSwapPlayerControllers, "K2_OnSwapPlayerControllers" },
+	{ &Z_Construct_UFunction_AGameModeBase_K2_PostLogin, "K2_PostLogin" },
+	{ &Z_Construct_UFunction_AGameModeBase_MustSpectate, "MustSpectate" },
+	{ &Z_Construct_UFunction_AGameModeBase_PlayerCanRestart, "PlayerCanRestart" },
+	{ &Z_Construct_UFunction_AGameModeBase_ResetLevel, "ResetLevel" },
+	{ &Z_Construct_UFunction_AGameModeBase_RestartPlayer, "RestartPlayer" },
+	{ &Z_Construct_UFunction_AGameModeBase_RestartPlayerAtPlayerStart, "RestartPlayerAtPlayerStart" },
+	{ &Z_Construct_UFunction_AGameModeBase_RestartPlayerAtTransform, "RestartPlayerAtTransform" },
+	{ &Z_Construct_UFunction_AGameModeBase_ReturnToMainMenuHost, "ReturnToMainMenuHost" },
+	{ &Z_Construct_UFunction_AGameModeBase_ShouldReset, "ShouldReset" },
+	{ &Z_Construct_UFunction_AGameModeBase_SpawnDefaultPawnAtTransform, "SpawnDefaultPawnAtTransform" },
+	{ &Z_Construct_UFunction_AGameModeBase_SpawnDefaultPawnFor, "SpawnDefaultPawnFor" },
+	{ &Z_Construct_UFunction_AGameModeBase_StartPlay, "StartPlay" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AGameModeBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038F13F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AGameModeBase_Statics::ClassParams = { &AGameModeBase::StaticClass, Z_Construct_UClass_AGameModeBase_Statics::DependentSingletons, 2, 0x00900288u, Z_Construct_UClass_AGameModeBase_Statics::FuncInfo, 28, Z_Construct_UClass_AGameModeBase_Statics::PropPointers, 17, "Game", &Z_Construct_UClass_AGameModeBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FCA0 (end 0x0240FCCF)
+// Original VA: 0x000000014240FCA0 | File offset: 0x0240F2A0
+// Recovery: confirmed (UHT singleton of AGameModeBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AGameModeBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AGameModeBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

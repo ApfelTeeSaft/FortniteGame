@@ -65,3 +65,38 @@ UFunction* Z_Construct_UFunction_AFortTeamInfo_OnSpottedActorDied()
 	}
 	return ReturnFunction;
 }
+
+class AFortTeamInfo
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortTeamInfo_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortTeamInfo_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortTeamInfo_GetTeamExperience, "GetTeamExperience" },
+	{ &Z_Construct_UFunction_AFortTeamInfo_GetTeamLevel, "GetTeamLevel" },
+	{ &Z_Construct_UFunction_AFortTeamInfo_OnSpottedActorDied, "OnSpottedActorDied" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortTeamInfo_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03400670
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortTeamInfo_Statics::ClassParams = { &AFortTeamInfo::StaticClass, Z_Construct_UClass_AFortTeamInfo_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortTeamInfo_Statics::FuncInfo, 3, Z_Construct_UClass_AFortTeamInfo_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_AFortTeamInfo_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortTeamInfo_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B38B0 (end 0x010B38DF)
+// Original VA: 0x00000001410B38B0 | File offset: 0x010B2EB0
+// Recovery: confirmed (UHT singleton of AFortTeamInfo) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortTeamInfo()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortTeamInfo_Statics::ClassParams);
+	}
+	return OuterClass;
+}

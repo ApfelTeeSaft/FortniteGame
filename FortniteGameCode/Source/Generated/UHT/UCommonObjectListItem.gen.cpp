@@ -64,3 +64,36 @@ UFunction* Z_Construct_UFunction_UCommonObjectListItem_SetData()
 	}
 	return ReturnFunction;
 }
+
+class UCommonObjectListItem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonObjectListItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonObjectListItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonObjectListItem_GetData, "GetData" },
+	{ &Z_Construct_UFunction_UCommonObjectListItem_Reset, "Reset" },
+	{ &Z_Construct_UFunction_UCommonObjectListItem_SetData, "SetData" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonObjectListItem_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x02E823F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonObjectListItem_Statics::ClassParams = { &UCommonObjectListItem::StaticClass, Z_Construct_UClass_UCommonObjectListItem_Statics::DependentSingletons, 2, 0x00104081u, Z_Construct_UClass_UCommonObjectListItem_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UCommonObjectListItem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA4E0 (end 0x002CA50F)
+// Original VA: 0x00000001402CA4E0 | File offset: 0x002C9AE0
+// Recovery: confirmed (UHT singleton of UCommonObjectListItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonObjectListItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonObjectListItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

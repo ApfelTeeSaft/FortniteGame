@@ -84,3 +84,38 @@ UFunction* Z_Construct_UFunction_UFortSquadTypeLandingPageBase_HandlePendingNavi
 	}
 	return ReturnFunction;
 }
+
+class UFortSquadTypeLandingPageBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSquadTypeLandingPageBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadTypeLandingPageBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadTypeLandingPageBase_CreateAndAddSquadButton, "CreateAndAddSquadButton" },
+	{ &Z_Construct_UFunction_UFortSquadTypeLandingPageBase_HandleBackInputAction, "HandleBackInputAction" },
+	{ &Z_Construct_UFunction_UFortSquadTypeLandingPageBase_HandleManageInputAction, "HandleManageInputAction" },
+	{ &Z_Construct_UFunction_UFortSquadTypeLandingPageBase_HandlePendingNavigationOp, "HandlePendingNavigationOp" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadTypeLandingPageBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D24470
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadTypeLandingPageBase_Statics::ClassParams = { &UFortSquadTypeLandingPageBase::StaticClass, Z_Construct_UClass_UFortSquadTypeLandingPageBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSquadTypeLandingPageBase_Statics::FuncInfo, 4, Z_Construct_UClass_UFortSquadTypeLandingPageBase_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortSquadTypeLandingPageBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB7F0 (end 0x028FB81F)
+// Original VA: 0x00000001428FB7F0 | File offset: 0x028FADF0
+// Recovery: confirmed (UHT singleton of UFortSquadTypeLandingPageBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadTypeLandingPageBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadTypeLandingPageBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

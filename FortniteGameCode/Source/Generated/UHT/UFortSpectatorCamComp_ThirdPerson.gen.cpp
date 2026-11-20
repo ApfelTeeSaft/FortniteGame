@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortSpectatorCamComp_ThirdPerson_SetLazyAutoFo
 	}
 	return ReturnFunction;
 }
+
+class UFortSpectatorCamComp_ThirdPerson
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSpectatorCamComp_ThirdPerson_SetAutoFollow, "SetAutoFollow" },
+	{ &Z_Construct_UFunction_UFortSpectatorCamComp_ThirdPerson_SetLazyAutoFollow, "SetLazyAutoFollow" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033F84D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson_Statics::ClassParams = { &UFortSpectatorCamComp_ThirdPerson::StaticClass, Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson_Statics::DependentSingletons, 2, 0x00B00084u, Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson_Statics::FuncInfo, 2, Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5B60 (end 0x010A5B8F)
+// Original VA: 0x00000001410A5B60 | File offset: 0x010A5160
+// Recovery: confirmed (UHT singleton of UFortSpectatorCamComp_ThirdPerson) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -1181,3 +1181,93 @@ UFunction* Z_Construct_UFunction_UAnimInstance_UnlockAIResources()
 	}
 	return ReturnFunction;
 }
+
+class UAnimInstance
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAnimInstance_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAnimInstance_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAnimInstance_BlueprintBeginPlay, "BlueprintBeginPlay" },
+	{ &Z_Construct_UFunction_UAnimInstance_BlueprintInitializeAnimation, "BlueprintInitializeAnimation" },
+	{ &Z_Construct_UFunction_UAnimInstance_BlueprintPostEvaluateAnimation, "BlueprintPostEvaluateAnimation" },
+	{ &Z_Construct_UFunction_UAnimInstance_BlueprintUpdateAnimation, "BlueprintUpdateAnimation" },
+	{ &Z_Construct_UFunction_UAnimInstance_CalculateDirection, "CalculateDirection" },
+	{ &Z_Construct_UFunction_UAnimInstance_ClearMorphTargets, "ClearMorphTargets" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetCurrentActiveMontage, "GetCurrentActiveMontage" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetCurrentStateName, "GetCurrentStateName" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetCurveValue, "GetCurveValue" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetInstanceAssetPlayerLength, "GetInstanceAssetPlayerLength" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetInstanceAssetPlayerTime, "GetInstanceAssetPlayerTime" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetInstanceAssetPlayerTimeFraction, "GetInstanceAssetPlayerTimeFraction" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetInstanceAssetPlayerTimeFromEnd, "GetInstanceAssetPlayerTimeFromEnd" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetInstanceAssetPlayerTimeFromEndFraction, "GetInstanceAssetPlayerTimeFromEndFraction" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetInstanceCurrentStateElapsedTime, "GetInstanceCurrentStateElapsedTime" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetInstanceMachineWeight, "GetInstanceMachineWeight" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetInstanceStateWeight, "GetInstanceStateWeight" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetInstanceTransitionCrossfadeDuration, "GetInstanceTransitionCrossfadeDuration" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetInstanceTransitionTimeElapsed, "GetInstanceTransitionTimeElapsed" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetInstanceTransitionTimeElapsedFraction, "GetInstanceTransitionTimeElapsedFraction" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetOwningActor, "GetOwningActor" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetOwningComponent, "GetOwningComponent" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetRelevantAnimLength, "GetRelevantAnimLength" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetRelevantAnimTime, "GetRelevantAnimTime" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetRelevantAnimTimeFraction, "GetRelevantAnimTimeFraction" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetRelevantAnimTimeRemaining, "GetRelevantAnimTimeRemaining" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetRelevantAnimTimeRemainingFraction, "GetRelevantAnimTimeRemainingFraction" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetSyncGroupPosition, "GetSyncGroupPosition" },
+	{ &Z_Construct_UFunction_UAnimInstance_GetTimeToClosestMarker, "GetTimeToClosestMarker" },
+	{ &Z_Construct_UFunction_UAnimInstance_HasMarkerBeenHitThisFrame, "HasMarkerBeenHitThisFrame" },
+	{ &Z_Construct_UFunction_UAnimInstance_IsAnyMontagePlaying, "IsAnyMontagePlaying" },
+	{ &Z_Construct_UFunction_UAnimInstance_IsPlayingSlotAnimation, "IsPlayingSlotAnimation" },
+	{ &Z_Construct_UFunction_UAnimInstance_IsSyncGroupBetweenMarkers, "IsSyncGroupBetweenMarkers" },
+	{ &Z_Construct_UFunction_UAnimInstance_LockAIResources, "LockAIResources" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_GetBlendTime, "Montage_GetBlendTime" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_GetCurrentSection, "Montage_GetCurrentSection" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_GetIsStopped, "Montage_GetIsStopped" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_GetPlayRate, "Montage_GetPlayRate" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_GetPosition, "Montage_GetPosition" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_IsActive, "Montage_IsActive" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_IsPlaying, "Montage_IsPlaying" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_JumpToSection, "Montage_JumpToSection" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_JumpToSectionsEnd, "Montage_JumpToSectionsEnd" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_Pause, "Montage_Pause" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_Play, "Montage_Play" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_Resume, "Montage_Resume" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_SetNextSection, "Montage_SetNextSection" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_SetPlayRate, "Montage_SetPlayRate" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_SetPosition, "Montage_SetPosition" },
+	{ &Z_Construct_UFunction_UAnimInstance_Montage_Stop, "Montage_Stop" },
+	{ &Z_Construct_UFunction_UAnimInstance_PlaySlotAnimation, "PlaySlotAnimation" },
+	{ &Z_Construct_UFunction_UAnimInstance_PlaySlotAnimationAsDynamicMontage, "PlaySlotAnimationAsDynamicMontage" },
+	{ &Z_Construct_UFunction_UAnimInstance_SavePoseSnapshot, "SavePoseSnapshot" },
+	{ &Z_Construct_UFunction_UAnimInstance_SetMorphTarget, "SetMorphTarget" },
+	{ &Z_Construct_UFunction_UAnimInstance_SetRootMotionMode, "SetRootMotionMode" },
+	{ &Z_Construct_UFunction_UAnimInstance_SnapshotPose, "SnapshotPose" },
+	{ &Z_Construct_UFunction_UAnimInstance_StopSlotAnimation, "StopSlotAnimation" },
+	{ &Z_Construct_UFunction_UAnimInstance_TryGetPawnOwner, "TryGetPawnOwner" },
+	{ &Z_Construct_UFunction_UAnimInstance_UnlockAIResources, "UnlockAIResources" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAnimInstance_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0389A6E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAnimInstance_Statics::ClassParams = { &UAnimInstance::StaticClass, Z_Construct_UClass_UAnimInstance_Statics::DependentSingletons, 2, 0x00900088u, Z_Construct_UClass_UAnimInstance_Statics::FuncInfo, 59, Z_Construct_UClass_UAnimInstance_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_UAnimInstance_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CE4E0 (end 0x023CE50F)
+// Original VA: 0x00000001423CE4E0 | File offset: 0x023CDAE0
+// Recovery: confirmed (UHT singleton of UAnimInstance) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAnimInstance()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAnimInstance_Statics::ClassParams);
+	}
+	return OuterClass;
+}

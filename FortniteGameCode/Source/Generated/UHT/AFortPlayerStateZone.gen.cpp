@@ -63,3 +63,37 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateZone_OnRep_NumRejoins()
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerStateZone
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerStateZone_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerStateZone_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerStateZone_GetNumOfAccumulatedItem, "GetNumOfAccumulatedItem" },
+	{ &Z_Construct_UFunction_AFortPlayerStateZone_OnRep_AccumulatedItems, "OnRep_AccumulatedItems" },
+	{ &Z_Construct_UFunction_AFortPlayerStateZone_OnRep_NumRejoins, "OnRep_NumRejoins" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerStateZone_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033D51E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerStateZone_Statics::ClassParams = { &AFortPlayerStateZone::StaticClass, Z_Construct_UClass_AFortPlayerStateZone_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_AFortPlayerStateZone_Statics::FuncInfo, 3, Z_Construct_UClass_AFortPlayerStateZone_Statics::PropPointers, 13, nullptr, &Z_Construct_UClass_AFortPlayerStateZone_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B4D0 (end 0x0108B4FF)
+// Original VA: 0x000000014108B4D0 | File offset: 0x0108AAD0
+// Recovery: confirmed (UHT singleton of AFortPlayerStateZone) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerStateZone()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerStateZone_Statics::ClassParams);
+	}
+	return OuterClass;
+}

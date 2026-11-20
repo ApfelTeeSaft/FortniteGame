@@ -123,3 +123,40 @@ UFunction* Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelDeactivated()
 	}
 	return ReturnFunction;
 }
+
+class UFortActionHandlerPanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortActionHandlerPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortActionHandlerPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortActionHandlerPanel_ActivateActionHandler, "ActivateActionHandler" },
+	{ &Z_Construct_UFunction_UFortActionHandlerPanel_DeactivateActionHandler, "DeactivateActionHandler" },
+	{ &Z_Construct_UFunction_UFortActionHandlerPanel_OnHandleAction, "OnHandleAction" },
+	{ &Z_Construct_UFunction_UFortActionHandlerPanel_RemoveOnPanelDeactivated, "RemoveOnPanelDeactivated" },
+	{ &Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelActivated, "SetOnPanelActivated" },
+	{ &Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelDeactivated, "SetOnPanelDeactivated" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortActionHandlerPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C60980
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortActionHandlerPanel_Statics::ClassParams = { &UFortActionHandlerPanel::StaticClass, Z_Construct_UClass_UFortActionHandlerPanel_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortActionHandlerPanel_Statics::FuncInfo, 6, Z_Construct_UClass_UFortActionHandlerPanel_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortActionHandlerPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02887700 (end 0x0288772F)
+// Original VA: 0x0000000142887700 | File offset: 0x02886D00
+// Recovery: confirmed (UHT singleton of UFortActionHandlerPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortActionHandlerPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortActionHandlerPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

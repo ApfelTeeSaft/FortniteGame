@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UFortWorldItemDefinition_GetMaxDurability()
 	}
 	return ReturnFunction;
 }
+
+class UFortWorldItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortWorldItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortWorldItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortWorldItemDefinition_CanBeDisassembled, "CanBeDisassembled" },
+	{ &Z_Construct_UFunction_UFortWorldItemDefinition_GetAmmoWorldItemDefinition_BP, "GetAmmoWorldItemDefinition_BP" },
+	{ &Z_Construct_UFunction_UFortWorldItemDefinition_GetDPSAtLevel, "GetDPSAtLevel" },
+	{ &Z_Construct_UFunction_UFortWorldItemDefinition_GetFabricationValue, "GetFabricationValue" },
+	{ &Z_Construct_UFunction_UFortWorldItemDefinition_GetMaxDurability, "GetMaxDurability" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortWorldItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03437180
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortWorldItemDefinition_Statics::ClassParams = { &UFortWorldItemDefinition::StaticClass, Z_Construct_UClass_UFortWorldItemDefinition_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_UFortWorldItemDefinition_Statics::FuncInfo, 5, Z_Construct_UClass_UFortWorldItemDefinition_Statics::PropPointers, 31, nullptr, &Z_Construct_UClass_UFortWorldItemDefinition_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC9E0 (end 0x010DCA0F)
+// Original VA: 0x00000001410DC9E0 | File offset: 0x010DBFE0
+// Recovery: confirmed (UHT singleton of UFortWorldItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortWorldItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortWorldItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

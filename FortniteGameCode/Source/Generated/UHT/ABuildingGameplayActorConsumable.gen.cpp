@@ -124,3 +124,40 @@ UFunction* Z_Construct_UFunction_ABuildingGameplayActorConsumable_PrepareOnConsu
 	}
 	return ReturnFunction;
 }
+
+class ABuildingGameplayActorConsumable
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingGameplayActorConsumable_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingGameplayActorConsumable_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingGameplayActorConsumable_GetDeathFXTransform, "GetDeathFXTransform" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActorConsumable_GetOnConsumeGameplayEffect, "GetOnConsumeGameplayEffect" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActorConsumable_GetOnConsumeMontage, "GetOnConsumeMontage" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActorConsumable_MakeOnConsumeGameplayEffectSpec, "MakeOnConsumeGameplayEffectSpec" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActorConsumable_OnLocalBeginUse, "OnLocalBeginUse" },
+	{ &Z_Construct_UFunction_ABuildingGameplayActorConsumable_PrepareOnConsumeGameplayEffectSpec, "PrepareOnConsumeGameplayEffectSpec" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingGameplayActorConsumable_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03277C80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingGameplayActorConsumable_Statics::ClassParams = { &ABuildingGameplayActorConsumable::StaticClass, Z_Construct_UClass_ABuildingGameplayActorConsumable_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ABuildingGameplayActorConsumable_Statics::FuncInfo, 6, Z_Construct_UClass_ABuildingGameplayActorConsumable_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_ABuildingGameplayActorConsumable_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6C300 (end 0x00F6C32F)
+// Original VA: 0x0000000140F6C300 | File offset: 0x00F6B900
+// Recovery: confirmed (UHT singleton of ABuildingGameplayActorConsumable) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingGameplayActorConsumable()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingGameplayActorConsumable_Statics::ClassParams);
+	}
+	return OuterClass;
+}

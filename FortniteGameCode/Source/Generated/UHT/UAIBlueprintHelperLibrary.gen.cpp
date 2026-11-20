@@ -225,3 +225,44 @@ UFunction* Z_Construct_UFunction_UAIBlueprintHelperLibrary_UnlockAIResourcesWith
 	}
 	return ReturnFunction;
 }
+
+class UAIBlueprintHelperLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAIBlueprintHelperLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAIBlueprintHelperLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAIBlueprintHelperLibrary_CreateMoveToProxyObject, "CreateMoveToProxyObject" },
+	{ &Z_Construct_UFunction_UAIBlueprintHelperLibrary_GetAIController, "GetAIController" },
+	{ &Z_Construct_UFunction_UAIBlueprintHelperLibrary_GetBlackboard, "GetBlackboard" },
+	{ &Z_Construct_UFunction_UAIBlueprintHelperLibrary_GetCurrentPath, "GetCurrentPath" },
+	{ &Z_Construct_UFunction_UAIBlueprintHelperLibrary_IsValidAIDirection, "IsValidAIDirection" },
+	{ &Z_Construct_UFunction_UAIBlueprintHelperLibrary_IsValidAILocation, "IsValidAILocation" },
+	{ &Z_Construct_UFunction_UAIBlueprintHelperLibrary_IsValidAIRotation, "IsValidAIRotation" },
+	{ &Z_Construct_UFunction_UAIBlueprintHelperLibrary_LockAIResourcesWithAnimation, "LockAIResourcesWithAnimation" },
+	{ &Z_Construct_UFunction_UAIBlueprintHelperLibrary_SendAIMessage, "SendAIMessage" },
+	{ &Z_Construct_UFunction_UAIBlueprintHelperLibrary_SpawnAIFromClass, "SpawnAIFromClass" },
+	{ &Z_Construct_UFunction_UAIBlueprintHelperLibrary_UnlockAIResourcesWithAnimation, "UnlockAIResourcesWithAnimation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAIBlueprintHelperLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036F0AA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAIBlueprintHelperLibrary_Statics::ClassParams = { &UAIBlueprintHelperLibrary::StaticClass, Z_Construct_UClass_UAIBlueprintHelperLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UAIBlueprintHelperLibrary_Statics::FuncInfo, 11, nullptr, 0, nullptr, &Z_Construct_UClass_UAIBlueprintHelperLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1BAE0 (end 0x01D1BB0F)
+// Original VA: 0x0000000141D1BAE0 | File offset: 0x01D1B0E0
+// Recovery: confirmed (UHT singleton of UAIBlueprintHelperLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAIBlueprintHelperLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAIBlueprintHelperLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

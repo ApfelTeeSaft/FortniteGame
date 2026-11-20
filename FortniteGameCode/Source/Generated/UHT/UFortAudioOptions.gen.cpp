@@ -485,3 +485,57 @@ UFunction* Z_Construct_UFunction_UFortAudioOptions_SoundFXVolumeChanged()
 	}
 	return ReturnFunction;
 }
+
+class UFortAudioOptions
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAudioOptions_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAudioOptions_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAudioOptions_ChatVolumeChanged, "ChatVolumeChanged" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_DialogVolumeChanged, "DialogVolumeChanged" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_GetAvailableVoiceChatInputDevices, "GetAvailableVoiceChatInputDevices" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_GetChatVolumeValue, "GetChatVolumeValue" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_GetDialogVolumeValue, "GetDialogVolumeValue" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_GetMusicVolumeValue, "GetMusicVolumeValue" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_GetQuality, "GetQuality" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_GetSoundFXVolumeValue, "GetSoundFXVolumeValue" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_GetSubtitlesEnabled, "GetSubtitlesEnabled" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_GetVoiceChat3DEnabled, "GetVoiceChat3DEnabled" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatEnabled, "GetVoiceChatEnabled" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatInputDevice, "GetVoiceChatInputDevice" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_GetVoiceChatPTTEnabled, "GetVoiceChatPTTEnabled" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_IsUsingCustomVoiceChatInputDevice, "IsUsingCustomVoiceChatInputDevice" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_MusicVolumeChanged, "MusicVolumeChanged" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_SetQuality, "SetQuality" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_SetSubtitlesEnabled, "SetSubtitlesEnabled" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_SetVoiceChat3DEnabled, "SetVoiceChat3DEnabled" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatEnabled, "SetVoiceChatEnabled" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatInputDevice, "SetVoiceChatInputDevice" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_SetVoiceChatPTTEnabled, "SetVoiceChatPTTEnabled" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_ShowChatVolume, "ShowChatVolume" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_ShowQuality, "ShowQuality" },
+	{ &Z_Construct_UFunction_UFortAudioOptions_SoundFXVolumeChanged, "SoundFXVolumeChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAudioOptions_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C6B9F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAudioOptions_Statics::ClassParams = { &UFortAudioOptions::StaticClass, Z_Construct_UClass_UFortAudioOptions_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortAudioOptions_Statics::FuncInfo, 24, nullptr, 0, nullptr, &Z_Construct_UClass_UFortAudioOptions_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CC30 (end 0x0288CC5F)
+// Original VA: 0x000000014288CC30 | File offset: 0x0288C230
+// Recovery: confirmed (UHT singleton of UFortAudioOptions) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAudioOptions()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAudioOptions_Statics::ClassParams);
+	}
+	return OuterClass;
+}

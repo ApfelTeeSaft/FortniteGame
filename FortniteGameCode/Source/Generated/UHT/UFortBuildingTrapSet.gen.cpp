@@ -24,3 +24,35 @@ UFunction* Z_Construct_UFunction_UFortBuildingTrapSet_OnRep_Durability()
 	}
 	return ReturnFunction;
 }
+
+class UFortBuildingTrapSet
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortBuildingTrapSet_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortBuildingTrapSet_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortBuildingTrapSet_OnRep_Durability, "OnRep_Durability" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortBuildingTrapSet_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032D0240
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortBuildingTrapSet_Statics::ClassParams = { &UFortBuildingTrapSet::StaticClass, Z_Construct_UClass_UFortBuildingTrapSet_Statics::DependentSingletons, 2, 0x00280080u, Z_Construct_UClass_UFortBuildingTrapSet_Statics::FuncInfo, 1, Z_Construct_UClass_UFortBuildingTrapSet_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortBuildingTrapSet_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAD7E0 (end 0x00FAD80F)
+// Original VA: 0x0000000140FAD7E0 | File offset: 0x00FACDE0
+// Recovery: confirmed (UHT singleton of UFortBuildingTrapSet) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortBuildingTrapSet()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortBuildingTrapSet_Statics::ClassParams);
+	}
+	return OuterClass;
+}

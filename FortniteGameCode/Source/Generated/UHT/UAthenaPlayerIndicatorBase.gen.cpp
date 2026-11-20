@@ -104,3 +104,39 @@ UFunction* Z_Construct_UFunction_UAthenaPlayerIndicatorBase_TalkingStateChanged(
 	}
 	return ReturnFunction;
 }
+
+class UAthenaPlayerIndicatorBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaPlayerIndicatorBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaPlayerIndicatorBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaPlayerIndicatorBase_BeingRevivedStateChanged, "BeingRevivedStateChanged" },
+	{ &Z_Construct_UFunction_UAthenaPlayerIndicatorBase_DBNOStateChanged, "DBNOStateChanged" },
+	{ &Z_Construct_UFunction_UAthenaPlayerIndicatorBase_PlayerNameChanged, "PlayerNameChanged" },
+	{ &Z_Construct_UFunction_UAthenaPlayerIndicatorBase_RefreshCurrentPawn, "RefreshCurrentPawn" },
+	{ &Z_Construct_UFunction_UAthenaPlayerIndicatorBase_TalkingStateChanged, "TalkingStateChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaPlayerIndicatorBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C5EC40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaPlayerIndicatorBase_Statics::ClassParams = { &UAthenaPlayerIndicatorBase::StaticClass, Z_Construct_UClass_UAthenaPlayerIndicatorBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UAthenaPlayerIndicatorBase_Statics::FuncInfo, 5, Z_Construct_UClass_UAthenaPlayerIndicatorBase_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UAthenaPlayerIndicatorBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02887310 (end 0x0288733F)
+// Original VA: 0x0000000142887310 | File offset: 0x02886910
+// Recovery: confirmed (UHT singleton of UAthenaPlayerIndicatorBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaPlayerIndicatorBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaPlayerIndicatorBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -655,3 +655,67 @@ UFunction* Z_Construct_UFunction_AFortObjectiveBase_UnpauseObjectiveTimer()
 	}
 	return ReturnFunction;
 }
+
+class AFortObjectiveBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortObjectiveBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortObjectiveBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortObjectiveBase_AttemptMissionSave, "AttemptMissionSave" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_BlueprintGetNumProgressBars, "BlueprintGetNumProgressBars" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_BlueprintGetObjectiveDisplayText, "BlueprintGetObjectiveDisplayText" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_BlueprintGetProgressBarColor, "BlueprintGetProgressBarColor" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_BlueprintGetProgressBarPercentage, "BlueprintGetProgressBarPercentage" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_BlueprintGetProgressBarText, "BlueprintGetProgressBarText" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_BlueprintOnActivated, "BlueprintOnActivated" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_BlueprintOnObjectiveEnd, "BlueprintOnObjectiveEnd" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_BlueprintOnStartPlaying, "BlueprintOnStartPlaying" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_BlueprintPostObjectiveLoad, "BlueprintPostObjectiveLoad" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_ClearObjectiveTimer, "ClearObjectiveTimer" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_EnableTick, "EnableTick" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_GetMission, "GetMission" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_GetMissionGuid, "GetMissionGuid" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_GetObjectiveDisplayString, "GetObjectiveDisplayString" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_GetObjectiveTimerTimeRemaining, "GetObjectiveTimerTimeRemaining" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_GetRewardItemsByTag, "GetRewardItemsByTag" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_GetTimerComponent, "GetTimerComponent" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_GrantRewardsByTag, "GrantRewardsByTag" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_IsObjectiveTimerPaused, "IsObjectiveTimerPaused" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_IsRelevantToASpecificTeam, "IsRelevantToASpecificTeam" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_IsRelevantToTeam, "IsRelevantToTeam" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_OnGenericObjectiveEvent, "OnGenericObjectiveEvent" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_OnRep_ObjectiveStatus, "OnRep_ObjectiveStatus" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_OnRep_ObjectiveVisibilityOverride, "OnRep_ObjectiveVisibilityOverride" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_OnRep_bIsObjectiveVisible, "OnRep_bIsObjectiveVisible" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_PauseObjectiveTimer, "PauseObjectiveTimer" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_SetObjectiveTimer, "SetObjectiveTimer" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_SetUIVisibilityOverride, "SetUIVisibilityOverride" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_SetUiVisibility, "SetUiVisibility" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_StartPlayingObjective, "StartPlayingObjective" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_StopObjective, "StopObjective" },
+	{ &Z_Construct_UFunction_AFortObjectiveBase_UnpauseObjectiveTimer, "UnpauseObjectiveTimer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortObjectiveBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03392D10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortObjectiveBase_Statics::ClassParams = { &AFortObjectiveBase::StaticClass, Z_Construct_UClass_AFortObjectiveBase_Statics::DependentSingletons, 2, 0x00880280u, Z_Construct_UClass_AFortObjectiveBase_Statics::FuncInfo, 33, Z_Construct_UClass_AFortObjectiveBase_Statics::PropPointers, 22, nullptr, &Z_Construct_UClass_AFortObjectiveBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01050BB0 (end 0x01050BDF)
+// Original VA: 0x0000000141050BB0 | File offset: 0x010501B0
+// Recovery: confirmed (UHT singleton of AFortObjectiveBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortObjectiveBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortObjectiveBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

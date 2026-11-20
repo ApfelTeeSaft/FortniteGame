@@ -204,3 +204,44 @@ UFunction* Z_Construct_UFunction_UMotionControllerComponent_SetTrackingSource()
 	}
 	return ReturnFunction;
 }
+
+class UMotionControllerComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMotionControllerComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMotionControllerComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMotionControllerComponent_GetParameterValue, "GetParameterValue" },
+	{ &Z_Construct_UFunction_UMotionControllerComponent_GetTrackingSource, "GetTrackingSource" },
+	{ &Z_Construct_UFunction_UMotionControllerComponent_IsTracked, "IsTracked" },
+	{ &Z_Construct_UFunction_UMotionControllerComponent_OnMotionControllerUpdated, "OnMotionControllerUpdated" },
+	{ &Z_Construct_UFunction_UMotionControllerComponent_SetAssociatedPlayerIndex, "SetAssociatedPlayerIndex" },
+	{ &Z_Construct_UFunction_UMotionControllerComponent_SetCustomDisplayMesh, "SetCustomDisplayMesh" },
+	{ &Z_Construct_UFunction_UMotionControllerComponent_SetDisplayModelSource, "SetDisplayModelSource" },
+	{ &Z_Construct_UFunction_UMotionControllerComponent_SetShowDeviceModel, "SetShowDeviceModel" },
+	{ &Z_Construct_UFunction_UMotionControllerComponent_SetTrackingMotionSource, "SetTrackingMotionSource" },
+	{ &Z_Construct_UFunction_UMotionControllerComponent_SetTrackingSource, "SetTrackingSource" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMotionControllerComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x035E5840
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMotionControllerComponent_Statics::ClassParams = { &UMotionControllerComponent::StaticClass, Z_Construct_UClass_UMotionControllerComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UMotionControllerComponent_Statics::FuncInfo, 10, Z_Construct_UClass_UMotionControllerComponent_Statics::PropPointers, 13, nullptr, &Z_Construct_UClass_UMotionControllerComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0199D350 (end 0x0199D37F)
+// Original VA: 0x000000014199D350 | File offset: 0x0199C950
+// Recovery: confirmed (UHT singleton of UMotionControllerComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMotionControllerComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMotionControllerComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

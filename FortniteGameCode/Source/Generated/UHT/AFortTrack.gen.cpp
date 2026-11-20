@@ -242,3 +242,46 @@ UFunction* Z_Construct_UFunction_AFortTrack_OnSwitchStateChanged()
 	}
 	return ReturnFunction;
 }
+
+class AFortTrack
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortTrack_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortTrack_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortTrack_GetOutgoingNeighborFromSpline, "GetOutgoingNeighborFromSpline" },
+	{ &Z_Construct_UFunction_AFortTrack_GetPathDistanceToTrack, "GetPathDistanceToTrack" },
+	{ &Z_Construct_UFunction_AFortTrack_GetSplineFromIncomingNeighbor, "GetSplineFromIncomingNeighbor" },
+	{ &Z_Construct_UFunction_AFortTrack_GetSplineFromPositionAndOrientation, "GetSplineFromPositionAndOrientation" },
+	{ &Z_Construct_UFunction_AFortTrack_InitializeTrack, "InitializeTrack" },
+	{ &Z_Construct_UFunction_AFortTrack_IsConnectedToTrack, "IsConnectedToTrack" },
+	{ &Z_Construct_UFunction_AFortTrack_IsConnectedToTrackList, "IsConnectedToTrackList" },
+	{ &Z_Construct_UFunction_AFortTrack_OnConfigurationChanged, "OnConfigurationChanged" },
+	{ &Z_Construct_UFunction_AFortTrack_OnRep_ConfigurationIdx, "OnRep_ConfigurationIdx" },
+	{ &Z_Construct_UFunction_AFortTrack_OnRep_NeighborsByDirection, "OnRep_NeighborsByDirection" },
+	{ &Z_Construct_UFunction_AFortTrack_OnRep_SwitchState, "OnRep_SwitchState" },
+	{ &Z_Construct_UFunction_AFortTrack_OnSwitchStateChanged, "OnSwitchStateChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortTrack_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0341C480
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortTrack_Statics::ClassParams = { &AFortTrack::StaticClass, Z_Construct_UClass_AFortTrack_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortTrack_Statics::FuncInfo, 12, Z_Construct_UClass_AFortTrack_Statics::PropPointers, 21, nullptr, &Z_Construct_UClass_AFortTrack_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA9A0 (end 0x010CA9CF)
+// Original VA: 0x00000001410CA9A0 | File offset: 0x010C9FA0
+// Recovery: confirmed (UHT singleton of AFortTrack) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortTrack()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortTrack_Statics::ClassParams);
+	}
+	return OuterClass;
+}

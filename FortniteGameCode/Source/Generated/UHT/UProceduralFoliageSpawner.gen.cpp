@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UProceduralFoliageSpawner_Simulate()
 	}
 	return ReturnFunction;
 }
+
+class UProceduralFoliageSpawner
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UProceduralFoliageSpawner_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UProceduralFoliageSpawner_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UProceduralFoliageSpawner_Simulate, "Simulate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UProceduralFoliageSpawner_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03612160
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UProceduralFoliageSpawner_Statics::ClassParams = { &UProceduralFoliageSpawner::StaticClass, Z_Construct_UClass_UProceduralFoliageSpawner_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UProceduralFoliageSpawner_Statics::FuncInfo, 1, Z_Construct_UClass_UProceduralFoliageSpawner_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UProceduralFoliageSpawner_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A48B80 (end 0x01A48BAF)
+// Original VA: 0x0000000141A48B80 | File offset: 0x01A48180
+// Recovery: confirmed (UHT singleton of UProceduralFoliageSpawner) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UProceduralFoliageSpawner()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UProceduralFoliageSpawner_Statics::ClassParams);
+	}
+	return OuterClass;
+}

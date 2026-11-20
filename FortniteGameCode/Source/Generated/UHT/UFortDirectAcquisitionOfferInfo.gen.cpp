@@ -805,3 +805,74 @@ UFunction* Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_OfferHasDenyReq
 	}
 	return ReturnFunction;
 }
+
+class UFortDirectAcquisitionOfferInfo
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortDirectAcquisitionOfferInfo_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortDirectAcquisitionOfferInfo_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_CreatePreviewItem, "CreatePreviewItem" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetBackground, "GetBackground" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetBannerOverrideTag, "GetBannerOverrideTag" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetBaseQuantity, "GetBaseQuantity" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetBonusQuantity, "GetBonusQuantity" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetCategoryText, "GetCategoryText" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetCurrencyItemDefinition, "GetCurrencyItemDefinition" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetDescription, "GetDescription" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetDetailsAttributes, "GetDetailsAttributes" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetDetailsImage, "GetDetailsImage" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetFirstGrantItemDefinition, "GetFirstGrantItemDefinition" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetFirstGrantQuantity, "GetFirstGrantQuantity" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetFortStoreOfferCategory, "GetFortStoreOfferCategory" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetFortStoreOfferType, "GetFortStoreOfferType" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetGradient, "GetGradient" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetItemOfferCount, "GetItemOfferCount" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetItemQuantity, "GetItemQuantity" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetItemTypeText, "GetItemTypeText" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetMetaAsBool, "GetMetaAsBool" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetName, "GetName" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetNormalPrice, "GetNormalPrice" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetOfferId, "GetOfferId" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetPriceItem, "GetPriceItem" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetQuantityRemaining, "GetQuantityRemaining" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetSalePrice, "GetSalePrice" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetSaleText, "GetSaleText" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetSaleType, "GetSaleType" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetShortDescription, "GetShortDescription" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetSortPriority, "GetSortPriority" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetStorefrontName, "GetStorefrontName" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetTileImage, "GetTileImage" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_GetTotalQuantity, "GetTotalQuantity" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_HasDisplayAsset, "HasDisplayAsset" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_HasRequirement, "HasRequirement" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_IsExclusive, "IsExclusive" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_IsLockedByRequirement, "IsLockedByRequirement" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_IsPriceInMTX, "IsPriceInMTX" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_IsPriceInRealMoney, "IsPriceInRealMoney" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_IsUnique, "IsUnique" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_OfferHasDenyRequirements, "OfferHasDenyRequirements" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortDirectAcquisitionOfferInfo_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C84E90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortDirectAcquisitionOfferInfo_Statics::ClassParams = { &UFortDirectAcquisitionOfferInfo::StaticClass, Z_Construct_UClass_UFortDirectAcquisitionOfferInfo_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortDirectAcquisitionOfferInfo_Statics::FuncInfo, 40, Z_Construct_UClass_UFortDirectAcquisitionOfferInfo_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortDirectAcquisitionOfferInfo_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B640 (end 0x0289B66F)
+// Original VA: 0x000000014289B640 | File offset: 0x0289AC40
+// Recovery: confirmed (UHT singleton of UFortDirectAcquisitionOfferInfo) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortDirectAcquisitionOfferInfo()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortDirectAcquisitionOfferInfo_Statics::ClassParams);
+	}
+	return OuterClass;
+}

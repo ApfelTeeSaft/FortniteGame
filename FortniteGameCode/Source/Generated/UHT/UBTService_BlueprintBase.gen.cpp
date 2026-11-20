@@ -185,3 +185,43 @@ UFunction* Z_Construct_UFunction_UBTService_BlueprintBase_ReceiveTickAI()
 	}
 	return ReturnFunction;
 }
+
+class UBTService_BlueprintBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBTService_BlueprintBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBTService_BlueprintBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBTService_BlueprintBase_IsServiceActive, "IsServiceActive" },
+	{ &Z_Construct_UFunction_UBTService_BlueprintBase_ReceiveActivation, "ReceiveActivation" },
+	{ &Z_Construct_UFunction_UBTService_BlueprintBase_ReceiveActivationAI, "ReceiveActivationAI" },
+	{ &Z_Construct_UFunction_UBTService_BlueprintBase_ReceiveDeactivation, "ReceiveDeactivation" },
+	{ &Z_Construct_UFunction_UBTService_BlueprintBase_ReceiveDeactivationAI, "ReceiveDeactivationAI" },
+	{ &Z_Construct_UFunction_UBTService_BlueprintBase_ReceiveSearchStart, "ReceiveSearchStart" },
+	{ &Z_Construct_UFunction_UBTService_BlueprintBase_ReceiveSearchStartAI, "ReceiveSearchStartAI" },
+	{ &Z_Construct_UFunction_UBTService_BlueprintBase_ReceiveTick, "ReceiveTick" },
+	{ &Z_Construct_UFunction_UBTService_BlueprintBase_ReceiveTickAI, "ReceiveTickAI" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBTService_BlueprintBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03700CF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBTService_BlueprintBase_Statics::ClassParams = { &UBTService_BlueprintBase::StaticClass, Z_Construct_UClass_UBTService_BlueprintBase_Statics::DependentSingletons, 2, 0x00100081u, Z_Construct_UClass_UBTService_BlueprintBase_Statics::FuncInfo, 9, Z_Construct_UClass_UBTService_BlueprintBase_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UBTService_BlueprintBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D28CA0 (end 0x01D28CCF)
+// Original VA: 0x0000000141D28CA0 | File offset: 0x01D282A0
+// Recovery: confirmed (UHT singleton of UBTService_BlueprintBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBTService_BlueprintBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBTService_BlueprintBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -223,3 +223,46 @@ UFunction* Z_Construct_UFunction_AFortPlayerMannequin_UpdateMorphTargets()
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerMannequin
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerMannequin_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerMannequin_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerMannequin_CyclePartBP, "CyclePartBP" },
+	{ &Z_Construct_UFunction_AFortPlayerMannequin_GetAllPartSkeletalMeshComponents, "GetAllPartSkeletalMeshComponents" },
+	{ &Z_Construct_UFunction_AFortPlayerMannequin_GetGender, "GetGender" },
+	{ &Z_Construct_UFunction_AFortPlayerMannequin_GetPartSkeletalMeshComponent, "GetPartSkeletalMeshComponent" },
+	{ &Z_Construct_UFunction_AFortPlayerMannequin_RemovePart, "RemovePart" },
+	{ &Z_Construct_UFunction_AFortPlayerMannequin_SetHeroType, "SetHeroType" },
+	{ &Z_Construct_UFunction_AFortPlayerMannequin_SetPart, "SetPart" },
+	{ &Z_Construct_UFunction_AFortPlayerMannequin_SetSkeletalMesh, "SetSkeletalMesh" },
+	{ &Z_Construct_UFunction_AFortPlayerMannequin_SetWeaponSkeletalMesh, "SetWeaponSkeletalMesh" },
+	{ &Z_Construct_UFunction_AFortPlayerMannequin_ToggleGenderBP, "ToggleGenderBP" },
+	{ &Z_Construct_UFunction_AFortPlayerMannequin_UpdateMorphTargets, "UpdateMorphTargets" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerMannequin_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033CBB30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerMannequin_Statics::ClassParams = { &AFortPlayerMannequin::StaticClass, Z_Construct_UClass_AFortPlayerMannequin_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_AFortPlayerMannequin_Statics::FuncInfo, 11, Z_Construct_UClass_AFortPlayerMannequin_Statics::PropPointers, 16, nullptr, &Z_Construct_UClass_AFortPlayerMannequin_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortPlayerMannequin_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FDA0 (end 0x0107FDCF)
+// Original VA: 0x000000014107FDA0 | File offset: 0x0107F3A0
+// Recovery: confirmed (UHT singleton of AFortPlayerMannequin) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerMannequin()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerMannequin_Statics::ClassParams);
+	}
+	return OuterClass;
+}

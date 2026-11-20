@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_AFortAbilityDecoTool_GetSpawnParameters()
 	}
 	return ReturnFunction;
 }
+
+class AFortAbilityDecoTool
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortAbilityDecoTool_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortAbilityDecoTool_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortAbilityDecoTool_AbilitySpawnDeco, "AbilitySpawnDeco" },
+	{ &Z_Construct_UFunction_AFortAbilityDecoTool_GetPlacementAbilityHandle, "GetPlacementAbilityHandle" },
+	{ &Z_Construct_UFunction_AFortAbilityDecoTool_GetPlacementAbilityInstance, "GetPlacementAbilityInstance" },
+	{ &Z_Construct_UFunction_AFortAbilityDecoTool_GetSpawnParameters, "GetSpawnParameters" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortAbilityDecoTool_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0328F370
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortAbilityDecoTool_Statics::ClassParams = { &AFortAbilityDecoTool::StaticClass, Z_Construct_UClass_AFortAbilityDecoTool_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_AFortAbilityDecoTool_Statics::FuncInfo, 4, Z_Construct_UClass_AFortAbilityDecoTool_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_AFortAbilityDecoTool_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7D280 (end 0x00F7D2AF)
+// Original VA: 0x0000000140F7D280 | File offset: 0x00F7C880
+// Recovery: confirmed (UHT singleton of AFortAbilityDecoTool) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortAbilityDecoTool()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortAbilityDecoTool_Statics::ClassParams);
+	}
+	return OuterClass;
+}

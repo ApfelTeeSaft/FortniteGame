@@ -123,3 +123,40 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateOutpost_SetCanEditOutpost()
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerStateOutpost
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerStateOutpost_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerStateOutpost_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerStateOutpost_CanEditOutpost, "CanEditOutpost" },
+	{ &Z_Construct_UFunction_AFortPlayerStateOutpost_IsOutpostOwner, "IsOutpostOwner" },
+	{ &Z_Construct_UFunction_AFortPlayerStateOutpost_OnRep_CanEditOutpost, "OnRep_CanEditOutpost" },
+	{ &Z_Construct_UFunction_AFortPlayerStateOutpost_OnRep_CraftingTableItemsRemaing, "OnRep_CraftingTableItemsRemaing" },
+	{ &Z_Construct_UFunction_AFortPlayerStateOutpost_ServerSetCanEditOutpost, "ServerSetCanEditOutpost" },
+	{ &Z_Construct_UFunction_AFortPlayerStateOutpost_SetCanEditOutpost, "SetCanEditOutpost" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerStateOutpost_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033D4FE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerStateOutpost_Statics::ClassParams = { &AFortPlayerStateOutpost::StaticClass, Z_Construct_UClass_AFortPlayerStateOutpost_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_AFortPlayerStateOutpost_Statics::FuncInfo, 6, Z_Construct_UClass_AFortPlayerStateOutpost_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_AFortPlayerStateOutpost_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B470 (end 0x0108B49F)
+// Original VA: 0x000000014108B470 | File offset: 0x0108AA70
+// Recovery: confirmed (UHT singleton of AFortPlayerStateOutpost) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerStateOutpost()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerStateOutpost_Statics::ClassParams);
+	}
+	return OuterClass;
+}

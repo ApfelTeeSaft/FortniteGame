@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UFortSocialItem_IsLFG()
 	}
 	return ReturnFunction;
 }
+
+class UFortSocialItem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSocialItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSocialItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSocialItem_GetDisplayName, "GetDisplayName" },
+	{ &Z_Construct_UFunction_UFortSocialItem_GetLFGTime, "GetLFGTime" },
+	{ &Z_Construct_UFunction_UFortSocialItem_GetLocation, "GetLocation" },
+	{ &Z_Construct_UFunction_UFortSocialItem_GetPresenceStatus, "GetPresenceStatus" },
+	{ &Z_Construct_UFunction_UFortSocialItem_GetUniquePlayerId, "GetUniquePlayerId" },
+	{ &Z_Construct_UFunction_UFortSocialItem_IsLFG, "IsLFG" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSocialItem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033F80C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSocialItem_Statics::ClassParams = { &UFortSocialItem::StaticClass, Z_Construct_UClass_UFortSocialItem_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortSocialItem_Statics::FuncInfo, 6, Z_Construct_UClass_UFortSocialItem_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UFortSocialItem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5A90 (end 0x010A5ABF)
+// Original VA: 0x00000001410A5A90 | File offset: 0x010A5090
+// Recovery: confirmed (UHT singleton of UFortSocialItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSocialItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSocialItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

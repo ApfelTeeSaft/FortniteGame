@@ -145,3 +145,41 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_SetSafeZoneRadiusAndCent
 	}
 	return ReturnFunction;
 }
+
+class AFortSafeZoneIndicator
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortSafeZoneIndicator_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortSafeZoneIndicator_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortSafeZoneIndicator_GetClockTickingAudioCurveValues, "GetClockTickingAudioCurveValues" },
+	{ &Z_Construct_UFunction_AFortSafeZoneIndicator_GetMovementAudioCurveValues, "GetMovementAudioCurveValues" },
+	{ &Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneCenter, "GetSafeZoneCenter" },
+	{ &Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneRadius, "GetSafeZoneRadius" },
+	{ &Z_Construct_UFunction_AFortSafeZoneIndicator_GetSafeZoneShrinkSpeed, "GetSafeZoneShrinkSpeed" },
+	{ &Z_Construct_UFunction_AFortSafeZoneIndicator_OnSafeZoneStateChange, "OnSafeZoneStateChange" },
+	{ &Z_Construct_UFunction_AFortSafeZoneIndicator_SetSafeZoneRadiusAndCenter, "SetSafeZoneRadiusAndCenter" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortSafeZoneIndicator_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033F02C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortSafeZoneIndicator_Statics::ClassParams = { &AFortSafeZoneIndicator::StaticClass, Z_Construct_UClass_AFortSafeZoneIndicator_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_AFortSafeZoneIndicator_Statics::FuncInfo, 7, Z_Construct_UClass_AFortSafeZoneIndicator_Statics::PropPointers, 22, nullptr, &Z_Construct_UClass_AFortSafeZoneIndicator_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109DB10 (end 0x0109DB3F)
+// Original VA: 0x000000014109DB10 | File offset: 0x0109D110
+// Recovery: confirmed (UHT singleton of AFortSafeZoneIndicator) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortSafeZoneIndicator()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortSafeZoneIndicator_Statics::ClassParams);
+	}
+	return OuterClass;
+}

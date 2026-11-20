@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UVoipListenerSynthComponent_IsIdling()
 	}
 	return ReturnFunction;
 }
+
+class UVoipListenerSynthComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UVoipListenerSynthComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UVoipListenerSynthComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UVoipListenerSynthComponent_IsIdling, "IsIdling" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UVoipListenerSynthComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EAF4C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UVoipListenerSynthComponent_Statics::ClassParams = { &UVoipListenerSynthComponent::StaticClass, Z_Construct_UClass_UVoipListenerSynthComponent_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UVoipListenerSynthComponent_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UVoipListenerSynthComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032EE20 (end 0x0032EE4F)
+// Original VA: 0x000000014032EE20 | File offset: 0x0032E420
+// Recovery: confirmed (UHT singleton of UVoipListenerSynthComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UVoipListenerSynthComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UVoipListenerSynthComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

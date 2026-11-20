@@ -719,3 +719,70 @@ UFunction* Z_Construct_UFunction_UFortStoreContext_StoreHasStarsForSale()
 	}
 	return ReturnFunction;
 }
+
+class UFortStoreContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortStoreContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortStoreContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortStoreContext_CardAddedToSummaryComplete, "CardAddedToSummaryComplete" },
+	{ &Z_Construct_UFunction_UFortStoreContext_CardBackRevealComplete, "CardBackRevealComplete" },
+	{ &Z_Construct_UFunction_UFortStoreContext_CardEntryComplete, "CardEntryComplete" },
+	{ &Z_Construct_UFunction_UFortStoreContext_CardExitComplete, "CardExitComplete" },
+	{ &Z_Construct_UFunction_UFortStoreContext_CardFlipComplete, "CardFlipComplete" },
+	{ &Z_Construct_UFunction_UFortStoreContext_CardFrontRevealComplete, "CardFrontRevealComplete" },
+	{ &Z_Construct_UFunction_UFortStoreContext_CardPackDestroyComplete, "CardPackDestroyComplete" },
+	{ &Z_Construct_UFunction_UFortStoreContext_CardPackOpeningComplete, "CardPackOpeningComplete" },
+	{ &Z_Construct_UFunction_UFortStoreContext_ChoiceResultComplete, "ChoiceResultComplete" },
+	{ &Z_Construct_UFunction_UFortStoreContext_DismissError, "DismissError" },
+	{ &Z_Construct_UFunction_UFortStoreContext_EnterCardPackStore, "EnterCardPackStore" },
+	{ &Z_Construct_UFunction_UFortStoreContext_EnterCurrencyStore, "EnterCurrencyStore" },
+	{ &Z_Construct_UFunction_UFortStoreContext_EnterRealMoneyStore, "EnterRealMoneyStore" },
+	{ &Z_Construct_UFunction_UFortStoreContext_ErrorOccurred, "ErrorOccurred" },
+	{ &Z_Construct_UFunction_UFortStoreContext_ExitCardPackStore, "ExitCardPackStore" },
+	{ &Z_Construct_UFunction_UFortStoreContext_ExitCurrencyStore, "ExitCurrencyStore" },
+	{ &Z_Construct_UFunction_UFortStoreContext_ExitRealMoneyStore, "ExitRealMoneyStore" },
+	{ &Z_Construct_UFunction_UFortStoreContext_ExitSummary, "ExitSummary" },
+	{ &Z_Construct_UFunction_UFortStoreContext_ExitWebPayment, "ExitWebPayment" },
+	{ &Z_Construct_UFunction_UFortStoreContext_FireInteractionAnalyticsEvent, "FireInteractionAnalyticsEvent" },
+	{ &Z_Construct_UFunction_UFortStoreContext_FreshenCache, "FreshenCache" },
+	{ &Z_Construct_UFunction_UFortStoreContext_GetAccountItems, "GetAccountItems" },
+	{ &Z_Construct_UFunction_UFortStoreContext_GetCard, "GetCard" },
+	{ &Z_Construct_UFunction_UFortStoreContext_GetNumUnopenedCardPacksRemaining, "GetNumUnopenedCardPacksRemaining" },
+	{ &Z_Construct_UFunction_UFortStoreContext_GetPreviousState, "GetPreviousState" },
+	{ &Z_Construct_UFunction_UFortStoreContext_GetRarityColor, "GetRarityColor" },
+	{ &Z_Construct_UFunction_UFortStoreContext_GetStoreState, "GetStoreState" },
+	{ &Z_Construct_UFunction_UFortStoreContext_GetTimeUntilDailyLimitReset, "GetTimeUntilDailyLimitReset" },
+	{ &Z_Construct_UFunction_UFortStoreContext_GetTimeUntilMarketplaceRefresh, "GetTimeUntilMarketplaceRefresh" },
+	{ &Z_Construct_UFunction_UFortStoreContext_IsWaitingForMcp, "IsWaitingForMcp" },
+	{ &Z_Construct_UFunction_UFortStoreContext_MakeChoice, "MakeChoice" },
+	{ &Z_Construct_UFunction_UFortStoreContext_MakePurchase, "MakePurchase" },
+	{ &Z_Construct_UFunction_UFortStoreContext_OpenWebPayment, "OpenWebPayment" },
+	{ &Z_Construct_UFunction_UFortStoreContext_RealMoneyPurchaseFinished, "RealMoneyPurchaseFinished" },
+	{ &Z_Construct_UFunction_UFortStoreContext_RealMoneyPurchaseStart, "RealMoneyPurchaseStart" },
+	{ &Z_Construct_UFunction_UFortStoreContext_StoreHasStarsForSale, "StoreHasStarsForSale" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortStoreContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D25640
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortStoreContext_Statics::ClassParams = { &UFortStoreContext::StaticClass, Z_Construct_UClass_UFortStoreContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortStoreContext_Statics::FuncInfo, 36, Z_Construct_UClass_UFortStoreContext_Statics::PropPointers, 13, nullptr, &Z_Construct_UClass_UFortStoreContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB850 (end 0x028FB87F)
+// Original VA: 0x00000001428FB850 | File offset: 0x028FAE50
+// Recovery: confirmed (UHT singleton of UFortStoreContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortStoreContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortStoreContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

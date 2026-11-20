@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortActivatablePanel_RestoreScrollWidget()
 	}
 	return ReturnFunction;
 }
+
+class UFortActivatablePanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortActivatablePanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortActivatablePanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortActivatablePanel_RestoreCenterWidget, "RestoreCenterWidget" },
+	{ &Z_Construct_UFunction_UFortActivatablePanel_RestoreScrollWidget, "RestoreScrollWidget" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortActivatablePanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C60AE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortActivatablePanel_Statics::ClassParams = { &UFortActivatablePanel::StaticClass, Z_Construct_UClass_UFortActivatablePanel_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortActivatablePanel_Statics::FuncInfo, 2, Z_Construct_UClass_UFortActivatablePanel_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortActivatablePanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02887740 (end 0x0288776F)
+// Original VA: 0x0000000142887740 | File offset: 0x02886D40
+// Recovery: confirmed (UHT singleton of UFortActivatablePanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortActivatablePanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortActivatablePanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -85,3 +85,37 @@ UFunction* Z_Construct_UFunction_UEnvQueryContext_BlueprintBase_ProvideSingleLoc
 	}
 	return ReturnFunction;
 }
+
+class UEnvQueryContext_BlueprintBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UEnvQueryContext_BlueprintBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UEnvQueryContext_BlueprintBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UEnvQueryContext_BlueprintBase_ProvideActorsSet, "ProvideActorsSet" },
+	{ &Z_Construct_UFunction_UEnvQueryContext_BlueprintBase_ProvideLocationsSet, "ProvideLocationsSet" },
+	{ &Z_Construct_UFunction_UEnvQueryContext_BlueprintBase_ProvideSingleActor, "ProvideSingleActor" },
+	{ &Z_Construct_UFunction_UEnvQueryContext_BlueprintBase_ProvideSingleLocation, "ProvideSingleLocation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UEnvQueryContext_BlueprintBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03707540
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UEnvQueryContext_BlueprintBase_Statics::ClassParams = { &UEnvQueryContext_BlueprintBase::StaticClass, Z_Construct_UClass_UEnvQueryContext_BlueprintBase_Statics::DependentSingletons, 2, 0x00081081u, Z_Construct_UClass_UEnvQueryContext_BlueprintBase_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_UEnvQueryContext_BlueprintBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2F5E0 (end 0x01D2F60F)
+// Original VA: 0x0000000141D2F5E0 | File offset: 0x01D2EBE0
+// Recovery: confirmed (UHT singleton of UEnvQueryContext_BlueprintBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UEnvQueryContext_BlueprintBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UEnvQueryContext_BlueprintBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

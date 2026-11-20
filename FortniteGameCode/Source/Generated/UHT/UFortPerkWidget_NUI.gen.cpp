@@ -284,3 +284,49 @@ UFunction* Z_Construct_UFunction_UFortPerkWidget_NUI_SetTooltipContext()
 	}
 	return ReturnFunction;
 }
+
+class UFortPerkWidget_NUI
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortPerkWidget_NUI_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPerkWidget_NUI_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_GetCombinedTooltipDescription, "GetCombinedTooltipDescription" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_GetIcon, "GetIcon" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_GetPerkTier, "GetPerkTier" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_GetRequiredLevel, "GetRequiredLevel" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_GetSupportBonusType, "GetSupportBonusType" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_GetTooltipDescription, "GetTooltipDescription" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_GetTooltipTitle, "GetTooltipTitle" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_HasAbility, "HasAbility" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_IsPerkEmpty, "IsPerkEmpty" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_IsPerkHighlighted, "IsPerkHighlighted" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_IsPerkUnlocked, "IsPerkUnlocked" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_IsTierPerk, "IsTierPerk" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_OnPerkUpdated, "OnPerkUpdated" },
+	{ &Z_Construct_UFunction_UFortPerkWidget_NUI_SetTooltipContext, "SetTooltipContext" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPerkWidget_NUI_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CFE050
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPerkWidget_NUI_Statics::ClassParams = { &UFortPerkWidget_NUI::StaticClass, Z_Construct_UClass_UFortPerkWidget_NUI_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortPerkWidget_NUI_Statics::FuncInfo, 14, Z_Construct_UClass_UFortPerkWidget_NUI_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortPerkWidget_NUI_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortPerkWidget_NUI_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6BD0 (end 0x028E6BFF)
+// Original VA: 0x00000001428E6BD0 | File offset: 0x028E61D0
+// Recovery: confirmed (UHT singleton of UFortPerkWidget_NUI) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPerkWidget_NUI()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPerkWidget_NUI_Statics::ClassParams);
+	}
+	return OuterClass;
+}

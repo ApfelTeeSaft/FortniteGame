@@ -577,3 +577,64 @@ UFunction* Z_Construct_UFunction_AFortTimeOfDayManager_ToggleSkipNight()
 	}
 	return ReturnFunction;
 }
+
+class AFortTimeOfDayManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortTimeOfDayManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortTimeOfDayManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_BreakExponentialHeightFogValues, "BreakExponentialHeightFogValues" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_FFToTimeOfDay, "FFToTimeOfDay" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_GetPreviousDayPhase, "GetPreviousDayPhase" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_GetStormStrength, "GetStormStrength" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_GetThreatClouds, "GetThreatClouds" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_GetTimeOfDayManagerFromContext, "GetTimeOfDayManagerFromContext" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_MakeExponentialHeightFogValues, "MakeExponentialHeightFogValues" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_OnDayPhaseChange, "OnDayPhaseChange" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_HeightFogEnabled, "OnRep_HeightFogEnabled" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_TimeOfDay, "OnRep_TimeOfDay" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_OnRep_TimeOfDayInit, "OnRep_TimeOfDayInit" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_OnStormEnd, "OnStormEnd" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_OnStormStart, "OnStormStart" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_OnUpdateDirectionalLightForTimeOfDay, "OnUpdateDirectionalLightForTimeOfDay" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetDayPhase, "SetDayPhase" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetDirectionalLightColorMultiplier, "SetDirectionalLightColorMultiplier" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetFogDirectionalInscatteringMultiplier, "SetFogDirectionalInscatteringMultiplier" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetSpecificTimeOfDayInEditor, "SetSpecificTimeOfDayInEditor" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetStormStrength, "SetStormStrength" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDay, "SetTimeOfDay" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayAbsoluteSpeed, "SetTimeOfDayAbsoluteSpeed" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayFloat, "SetTimeOfDayFloat" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayInHours, "SetTimeOfDayInHours" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDayManagerVisibility, "SetTimeOfDayManagerVisibility" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeed, "SetTimeOfDaySpeed" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetTimeOfDaySpeedFloat, "SetTimeOfDaySpeedFloat" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_SetUseSpecificTimeOfDayEditing, "SetUseSpecificTimeOfDayEditing" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_ToggleDebugForceStormEffects, "ToggleDebugForceStormEffects" },
+	{ &Z_Construct_UFunction_AFortTimeOfDayManager_ToggleSkipNight, "ToggleSkipNight" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortTimeOfDayManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0340D2D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortTimeOfDayManager_Statics::ClassParams = { &AFortTimeOfDayManager::StaticClass, Z_Construct_UClass_AFortTimeOfDayManager_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortTimeOfDayManager_Statics::FuncInfo, 29, Z_Construct_UClass_AFortTimeOfDayManager_Statics::PropPointers, 65, nullptr, &Z_Construct_UClass_AFortTimeOfDayManager_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortTimeOfDayManager_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE220 (end 0x010BE24F)
+// Original VA: 0x00000001410BE220 | File offset: 0x010BD820
+// Recovery: confirmed (UHT singleton of AFortTimeOfDayManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortTimeOfDayManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortTimeOfDayManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

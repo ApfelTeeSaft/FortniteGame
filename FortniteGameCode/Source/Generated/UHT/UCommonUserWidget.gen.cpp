@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UCommonUserWidget_SetConsumePointerInput()
 	}
 	return ReturnFunction;
 }
+
+class UCommonUserWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonUserWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonUserWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonUserWidget_SetConsumePointerInput, "SetConsumePointerInput" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonUserWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E86280
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonUserWidget_Statics::ClassParams = { &UCommonUserWidget::StaticClass, Z_Construct_UClass_UCommonUserWidget_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UCommonUserWidget_Statics::FuncInfo, 1, Z_Construct_UClass_UCommonUserWidget_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UCommonUserWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D04E0 (end 0x002D050F)
+// Original VA: 0x00000001402D04E0 | File offset: 0x002CFAE0
+// Recovery: confirmed (UHT singleton of UCommonUserWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonUserWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonUserWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -204,3 +204,44 @@ UFunction* Z_Construct_UFunction_UInstancedStaticMeshComponent_UpdateInstanceTra
 	}
 	return ReturnFunction;
 }
+
+class UInstancedStaticMeshComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UInstancedStaticMeshComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UInstancedStaticMeshComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UInstancedStaticMeshComponent_AddInstance, "AddInstance" },
+	{ &Z_Construct_UFunction_UInstancedStaticMeshComponent_AddInstanceWorldSpace, "AddInstanceWorldSpace" },
+	{ &Z_Construct_UFunction_UInstancedStaticMeshComponent_ClearInstances, "ClearInstances" },
+	{ &Z_Construct_UFunction_UInstancedStaticMeshComponent_GetInstanceCount, "GetInstanceCount" },
+	{ &Z_Construct_UFunction_UInstancedStaticMeshComponent_GetInstanceTransform, "GetInstanceTransform" },
+	{ &Z_Construct_UFunction_UInstancedStaticMeshComponent_GetInstancesOverlappingBox, "GetInstancesOverlappingBox" },
+	{ &Z_Construct_UFunction_UInstancedStaticMeshComponent_GetInstancesOverlappingSphere, "GetInstancesOverlappingSphere" },
+	{ &Z_Construct_UFunction_UInstancedStaticMeshComponent_RemoveInstance, "RemoveInstance" },
+	{ &Z_Construct_UFunction_UInstancedStaticMeshComponent_SetCullDistances, "SetCullDistances" },
+	{ &Z_Construct_UFunction_UInstancedStaticMeshComponent_UpdateInstanceTransform, "UpdateInstanceTransform" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UInstancedStaticMeshComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03900D00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UInstancedStaticMeshComponent_Statics::ClassParams = { &UInstancedStaticMeshComponent::StaticClass, Z_Construct_UClass_UInstancedStaticMeshComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UInstancedStaticMeshComponent_Statics::FuncInfo, 10, Z_Construct_UClass_UInstancedStaticMeshComponent_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_UInstancedStaticMeshComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02428030 (end 0x0242805F)
+// Original VA: 0x0000000142428030 | File offset: 0x02427630
+// Recovery: confirmed (UHT singleton of UInstancedStaticMeshComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UInstancedStaticMeshComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UInstancedStaticMeshComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

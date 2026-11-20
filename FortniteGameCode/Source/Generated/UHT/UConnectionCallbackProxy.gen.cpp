@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UConnectionCallbackProxy_ConnectToService()
 	}
 	return ReturnFunction;
 }
+
+class UConnectionCallbackProxy
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UConnectionCallbackProxy_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UConnectionCallbackProxy_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UConnectionCallbackProxy_ConnectToService, "ConnectToService" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UConnectionCallbackProxy_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EAD380
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UConnectionCallbackProxy_Statics::ClassParams = { &UConnectionCallbackProxy::StaticClass, Z_Construct_UClass_UConnectionCallbackProxy_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UConnectionCallbackProxy_Statics::FuncInfo, 1, Z_Construct_UClass_UConnectionCallbackProxy_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UConnectionCallbackProxy_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E960 (end 0x0032E98F)
+// Original VA: 0x000000014032E960 | File offset: 0x0032DF60
+// Recovery: confirmed (UHT singleton of UConnectionCallbackProxy) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UConnectionCallbackProxy()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UConnectionCallbackProxy_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -1181,3 +1181,94 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerAthena_VoiceChatChannelJoi
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerControllerAthena
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerControllerAthena_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerControllerAthena_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_CanFollowTeammate, "CanFollowTeammate" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_CanQueueForSoloMatchmaking, "CanQueueForSoloMatchmaking" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_CancelSoloMatchmaking, "CancelSoloMatchmaking" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ClientBotStartDogpile, "ClientBotStartDogpile" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ClientBotStopDogpile, "ClientBotStopDogpile" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ClientNotifyTeamWon, "ClientNotifyTeamWon" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ClientNotifyWon, "ClientNotifyWon" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ClientReceiveSquadQuickChatMessage, "ClientReceiveSquadQuickChatMessage" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ClientSendEndBattleRoyaleMatchForPlayer, "ClientSendEndBattleRoyaleMatchForPlayer" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ClientSendMatchStatsForPlayer, "ClientSendMatchStatsForPlayer" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ClientSendTeamStatsForPlayer, "ClientSendTeamStatsForPlayer" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ClientUnreliableSendMessage, "ClientUnreliableSendMessage" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ClientVoiceChat3DChannelJoin, "ClientVoiceChat3DChannelJoin" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ClientVoiceChatChannelJoin, "ClientVoiceChatChannelJoin" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ClientVoiceChatLogin, "ClientVoiceChatLogin" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_FollowNextTeammate, "FollowNextTeammate" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_FollowPreviousTeammate, "FollowPreviousTeammate" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_FullscreenMapCursorHorizontal, "FullscreenMapCursorHorizontal" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_FullscreenMapCursorHorizontal_Gamepad, "FullscreenMapCursorHorizontal_Gamepad" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_FullscreenMapCursorPlace, "FullscreenMapCursorPlace" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_FullscreenMapCursorRemove, "FullscreenMapCursorRemove" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_FullscreenMapCursorVertical, "FullscreenMapCursorVertical" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_FullscreenMapCursorVertical_Gamepad, "FullscreenMapCursorVertical_Gamepad" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_GetFPSForHUD, "GetFPSForHUD" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_GetMatchReport, "GetMatchReport" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_GetRevertPlayerListenerChangeFlag, "GetRevertPlayerListenerChangeFlag" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_GetSpectatingPlayerName, "GetSpectatingPlayerName" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_GetSquadKills, "GetSquadKills" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_HighlightNumberReturned, "HighlightNumberReturned" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_IsInAircraft, "IsInAircraft" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_IsLocalPlayerFriendsWithSquadMember, "IsLocalPlayerFriendsWithSquadMember" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_IsSoloMatchmaking, "IsSoloMatchmaking" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_IsSquadDead, "IsSquadDead" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_IsTeamDead, "IsTeamDead" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_MultiKillExpired, "MultiKillExpired" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_MutePlayer, "MutePlayer" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_OnRep_ViewTargetDBNO, "OnRep_ViewTargetDBNO" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_OnRep_ViewTargetHealth, "OnRep_ViewTargetHealth" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_OnRep_ViewTargetShield, "OnRep_ViewTargetShield" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_PlayWinEffects, "PlayWinEffects" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_QueueForSoloMatchmaking, "QueueForSoloMatchmaking" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ServerAttemptAircraftJump, "ServerAttemptAircraftJump" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ServerAttemptExitVehicle, "ServerAttemptExitVehicle" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ServerDBNOReviveInterrupted, "ServerDBNOReviveInterrupted" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ServerDBNOReviveStarted, "ServerDBNOReviveStarted" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ServerFollowTeammate, "ServerFollowTeammate" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ServerGenerateMockMatchReport, "ServerGenerateMockMatchReport" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ServerPlaceMapCursor, "ServerPlaceMapCursor" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ServerPlaySquadQuickChatMessage, "ServerPlaySquadQuickChatMessage" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ServerRemoveMapCursor, "ServerRemoveMapCursor" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ServerSendSquadFriend, "ServerSendSquadFriend" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ServerVoiceChatReconnected, "ServerVoiceChatReconnected" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ServerVoiceChatRejoinChannel, "ServerVoiceChatRejoinChannel" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_ShowHighlightSummary, "ShowHighlightSummary" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_SpawnVehicle, "SpawnVehicle" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_SpectateOnDeath, "SpectateOnDeath" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_StopRecordingHighlights, "StopRecordingHighlights" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_UnMutePlayer, "UnMutePlayer" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_UpdateRichPresenceTimer, "UpdateRichPresenceTimer" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerAthena_VoiceChatChannelJoinFailed, "VoiceChatChannelJoinFailed" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerControllerAthena_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033C2860
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerControllerAthena_Statics::ClassParams = { &AFortPlayerControllerAthena::StaticClass, Z_Construct_UClass_AFortPlayerControllerAthena_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortPlayerControllerAthena_Statics::FuncInfo, 60, Z_Construct_UClass_AFortPlayerControllerAthena_Statics::PropPointers, 62, "Game", &Z_Construct_UClass_AFortPlayerControllerAthena_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01077630 (end 0x0107765F)
+// Original VA: 0x0000000141077630 | File offset: 0x01076C30
+// Recovery: confirmed (UHT singleton of AFortPlayerControllerAthena) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerControllerAthena()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerControllerAthena_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -85,3 +85,39 @@ UFunction* Z_Construct_UFunction_UPathFollowingComponent_OnNavDataRegistered()
 	}
 	return ReturnFunction;
 }
+
+class UPathFollowingComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPathFollowingComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPathFollowingComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPathFollowingComponent_GetPathActionType, "GetPathActionType" },
+	{ &Z_Construct_UFunction_UPathFollowingComponent_GetPathDestination, "GetPathDestination" },
+	{ &Z_Construct_UFunction_UPathFollowingComponent_OnActorBump, "OnActorBump" },
+	{ &Z_Construct_UFunction_UPathFollowingComponent_OnNavDataRegistered, "OnNavDataRegistered" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPathFollowingComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0370CC00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPathFollowingComponent_Statics::ClassParams = { &UPathFollowingComponent::StaticClass, Z_Construct_UClass_UPathFollowingComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UPathFollowingComponent_Statics::FuncInfo, 4, Z_Construct_UClass_UPathFollowingComponent_Statics::PropPointers, 2, "Engine", &Z_Construct_UClass_UPathFollowingComponent_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UPathFollowingComponent_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31D40 (end 0x01D31D6F)
+// Original VA: 0x0000000141D31D40 | File offset: 0x01D31340
+// Recovery: confirmed (UHT singleton of UPathFollowingComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPathFollowingComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPathFollowingComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -102,3 +102,39 @@ UFunction* Z_Construct_UFunction_AFortLightningActor_OnLightingInitialized()
 	}
 	return ReturnFunction;
 }
+
+class AFortLightningActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortLightningActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortLightningActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortLightningActor_CleanupLightning, "CleanupLightning" },
+	{ &Z_Construct_UFunction_AFortLightningActor_GenerateBoltLocations, "GenerateBoltLocations" },
+	{ &Z_Construct_UFunction_AFortLightningActor_InitializeLightning, "InitializeLightning" },
+	{ &Z_Construct_UFunction_AFortLightningActor_OnLightingCleanup, "OnLightingCleanup" },
+	{ &Z_Construct_UFunction_AFortLightningActor_OnLightingInitialized, "OnLightingInitialized" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortLightningActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0335E110
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortLightningActor_Statics::ClassParams = { &AFortLightningActor::StaticClass, Z_Construct_UClass_AFortLightningActor_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortLightningActor_Statics::FuncInfo, 5, Z_Construct_UClass_AFortLightningActor_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_AFortLightningActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101E1F0 (end 0x0101E21F)
+// Original VA: 0x000000014101E1F0 | File offset: 0x0101D7F0
+// Recovery: confirmed (UHT singleton of AFortLightningActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortLightningActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortLightningActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

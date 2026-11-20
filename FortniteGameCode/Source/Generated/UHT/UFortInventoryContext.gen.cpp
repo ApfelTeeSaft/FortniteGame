@@ -1723,3 +1723,120 @@ UFunction* Z_Construct_UFunction_UFortInventoryContext_UnlockSchematic()
 	}
 	return ReturnFunction;
 }
+
+class UFortInventoryContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortInventoryContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortInventoryContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortInventoryContext_ActivateItem, "ActivateItem" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_AreAnyItemsAnimate, "AreAnyItemsAnimate" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_AreAnyItemsUnseenForInventoryFilter, "AreAnyItemsUnseenForInventoryFilter" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_AreRecipeRequirementsMet, "AreRecipeRequirementsMet" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_CanCraftSchematic, "CanCraftSchematic" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_CanDisassembleItem, "CanDisassembleItem" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_CanEvolve, "CanEvolve" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_CanPinSchematic, "CanPinSchematic" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_CanRecycle, "CanRecycle" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_CanUpgradeItemRarity, "CanUpgradeItemRarity" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_CraftAndSlotSchematic, "CraftAndSlotSchematic" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_CraftSchematic, "CraftSchematic" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_DestroyWorldItem, "DestroyWorldItem" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_DoesItemMatchFilter, "DoesItemMatchFilter" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_DropItem, "DropItem" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_DropItemOnQuickBar, "DropItemOnQuickBar" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_EnumerateRecyclingWarningsForItems, "EnumerateRecyclingWarningsForItems" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_EquipItem, "EquipItem" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetAccountItemsByFilterType, "GetAccountItemsByFilterType" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetAccountItemsByType, "GetAccountItemsByType" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetBackpackItemCounts, "GetBackpackItemCounts" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetBackpackOverflowFromAddingItem, "GetBackpackOverflowFromAddingItem" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetConversionRecipesFromItemDefintion, "GetConversionRecipesFromItemDefintion" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetCountOfHeroItems, "GetCountOfHeroItems" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetCountOfVaultLimitedItems, "GetCountOfVaultLimitedItems" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetCurrentAmmoItemDefinition, "GetCurrentAmmoItemDefinition" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetCurrentResourceCount, "GetCurrentResourceCount" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetCurrentResourceItemDefinition, "GetCurrentResourceItemDefinition" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetDeployableBaseItemCounts, "GetDeployableBaseItemCounts" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetDeployableBaseOverflowFromAddingItem, "GetDeployableBaseOverflowFromAddingItem" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetDisassembleRestrictionReasonText, "GetDisassembleRestrictionReasonText" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetEquippedWeapon, "GetEquippedWeapon" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetEvolveRestrictionReasonText, "GetEvolveRestrictionReasonText" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetGameplayTagByIndex, "GetGameplayTagByIndex" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetHeroAbilityPerks, "GetHeroAbilityPerks" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetHeroResourceItemDefinition, "GetHeroResourceItemDefinition" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetHomebaseUnlockedTransmogKeys, "GetHomebaseUnlockedTransmogKeys" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetItemInstancesByDefinition, "GetItemInstancesByDefinition" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetItemLevelRecyclingWarningThreshold, "GetItemLevelRecyclingWarningThreshold" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetItemRarityRecyclingWarningThreshold, "GetItemRarityRecyclingWarningThreshold" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetItemTierRecyclingWarningThreshold, "GetItemTierRecyclingWarningThreshold" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetNumInInventory, "GetNumInInventory" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetPersonnelResourceItemDefinition, "GetPersonnelResourceItemDefinition" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetPinnedSchematicList, "GetPinnedSchematicList" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetQuickBarSlottedItem, "GetQuickBarSlottedItem" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetQuickbarFocus, "GetQuickbarFocus" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetRecycleRestrictionReasonText, "GetRecycleRestrictionReasonText" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetRecyclingCatalystDisplayName, "GetRecyclingCatalystDisplayName" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetRecyclingWarningText, "GetRecyclingWarningText" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetResourceCount, "GetResourceCount" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetResourceIcon, "GetResourceIcon" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetResourceItemDefinition, "GetResourceItemDefinition" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetSchematicResourceItemDefinition, "GetSchematicResourceItemDefinition" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetStorageCapacity, "GetStorageCapacity" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetStorageNumItems, "GetStorageNumItems" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetStorageOverflowFromAddingItem, "GetStorageOverflowFromAddingItem" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetSupportBonusPerks, "GetSupportBonusPerks" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetTierText, "GetTierText" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetTotalItemQuantityByDefinition, "GetTotalItemQuantityByDefinition" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetTransformKeys, "GetTransformKeys" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetTransmogSacrificeDataFromItemDefintion, "GetTransmogSacrificeDataFromItemDefintion" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetTrapAttachTypeName, "GetTrapAttachTypeName" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetUpgradeItemRarityRecipeFromItemDefintion, "GetUpgradeItemRarityRecipeFromItemDefintion" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetUserFriendlyTags, "GetUserFriendlyTags" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetVaultItemLimit, "GetVaultItemLimit" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetVaultItemLimitStatus, "GetVaultItemLimitStatus" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetVoucherResourceItemDefinition, "GetVoucherResourceItemDefinition" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetWorldItemList, "GetWorldItemList" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_GetWorldItemListForDeployableBaseThePlayerIsIn, "GetWorldItemListForDeployableBaseThePlayerIsIn" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_HasEvolutions, "HasEvolutions" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_HasGameplayTagContainer, "HasGameplayTagContainer" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_HasGameplayTagContainerExact, "HasGameplayTagContainerExact" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_HasTrapReadyForBuilding, "HasTrapReadyForBuilding" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_HasUnavailableItemsInStorage, "HasUnavailableItemsInStorage" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_IsPickAxeEquipped, "IsPickAxeEquipped" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_IsRecyclable, "IsRecyclable" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_IsSchematicPinned, "IsSchematicPinned" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_IsSlotHidden, "IsSlotHidden" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_IsTrapAvailableForBuilding, "IsTrapAvailableForBuilding" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_LockAllSchematics, "LockAllSchematics" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_MakeItemQuantityPair, "MakeItemQuantityPair" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_RemoveItemFromQuickBar, "RemoveItemFromQuickBar" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_SetSchematicPinned, "SetSchematicPinned" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_SortAccountItemArrayForTransmog, "SortAccountItemArrayForTransmog" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_UnlockAllSchematics, "UnlockAllSchematics" },
+	{ &Z_Construct_UFunction_UFortInventoryContext_UnlockSchematic, "UnlockSchematic" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortInventoryContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CBFB30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortInventoryContext_Statics::ClassParams = { &UFortInventoryContext::StaticClass, Z_Construct_UClass_UFortInventoryContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortInventoryContext_Statics::FuncInfo, 86, Z_Construct_UClass_UFortInventoryContext_Statics::PropPointers, 19, nullptr, &Z_Construct_UClass_UFortInventoryContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C1930 (end 0x028C195F)
+// Original VA: 0x00000001428C1930 | File offset: 0x028C0F30
+// Recovery: confirmed (UHT singleton of UFortInventoryContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortInventoryContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortInventoryContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -64,3 +64,37 @@ UFunction* Z_Construct_UFunction_UUACNetComponent_SendPacketToServer()
 	}
 	return ReturnFunction;
 }
+
+class UUACNetComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UUACNetComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UUACNetComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UUACNetComponent_SendClientHello, "SendClientHello" },
+	{ &Z_Construct_UFunction_UUACNetComponent_SendPacketToClient, "SendPacketToClient" },
+	{ &Z_Construct_UFunction_UUACNetComponent_SendPacketToServer, "SendPacketToServer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UUACNetComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F9F950
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UUACNetComponent_Statics::ClassParams = { &UUACNetComponent::StaticClass, Z_Construct_UClass_UUACNetComponent_Statics::DependentSingletons, 2, 0x00B00088u, Z_Construct_UClass_UUACNetComponent_Statics::FuncInfo, 3, Z_Construct_UClass_UUACNetComponent_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UUACNetComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0068ECC0 (end 0x0068ECEF)
+// Original VA: 0x000000014068ECC0 | File offset: 0x0068E2C0
+// Recovery: confirmed (UHT singleton of UUACNetComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UUACNetComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UUACNetComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

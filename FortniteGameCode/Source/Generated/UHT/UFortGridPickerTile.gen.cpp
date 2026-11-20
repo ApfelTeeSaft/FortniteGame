@@ -103,3 +103,39 @@ UFunction* Z_Construct_UFunction_UFortGridPickerTile_SetData()
 	}
 	return ReturnFunction;
 }
+
+class UFortGridPickerTile
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortGridPickerTile_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortGridPickerTile_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortGridPickerTile_ForwardClicked, "ForwardClicked" },
+	{ &Z_Construct_UFunction_UFortGridPickerTile_OnClicked, "OnClicked" },
+	{ &Z_Construct_UFunction_UFortGridPickerTile_OnMouseEnter, "OnMouseEnter" },
+	{ &Z_Construct_UFunction_UFortGridPickerTile_OnMouseLeave, "OnMouseLeave" },
+	{ &Z_Construct_UFunction_UFortGridPickerTile_SetData, "SetData" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortGridPickerTile_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CA4400
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortGridPickerTile_Statics::ClassParams = { &UFortGridPickerTile::StaticClass, Z_Construct_UClass_UFortGridPickerTile_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortGridPickerTile_Statics::FuncInfo, 5, Z_Construct_UClass_UFortGridPickerTile_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortGridPickerTile_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3BC0 (end 0x028B3BEF)
+// Original VA: 0x00000001428B3BC0 | File offset: 0x028B31C0
+// Recovery: confirmed (UHT singleton of UFortGridPickerTile) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortGridPickerTile()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortGridPickerTile_Statics::ClassParams);
+	}
+	return OuterClass;
+}

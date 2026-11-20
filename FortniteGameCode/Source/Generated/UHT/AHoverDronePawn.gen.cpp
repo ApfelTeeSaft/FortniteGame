@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_AHoverDronePawn_IsMaintainingConstantAltitude()
 	}
 	return ReturnFunction;
 }
+
+class AHoverDronePawn
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AHoverDronePawn_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AHoverDronePawn_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AHoverDronePawn_GetAltitude, "GetAltitude" },
+	{ &Z_Construct_UFunction_AHoverDronePawn_IsMaintainingConstantAltitude, "IsMaintainingConstantAltitude" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AHoverDronePawn_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0343E880
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AHoverDronePawn_Statics::ClassParams = { &AHoverDronePawn::StaticClass, Z_Construct_UClass_AHoverDronePawn_Statics::DependentSingletons, 2, 0x00800280u, Z_Construct_UClass_AHoverDronePawn_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_AHoverDronePawn_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E3050 (end 0x010E307F)
+// Original VA: 0x00000001410E3050 | File offset: 0x010E2650
+// Recovery: confirmed (UHT singleton of AHoverDronePawn) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AHoverDronePawn()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AHoverDronePawn_Statics::ClassParams);
+	}
+	return OuterClass;
+}

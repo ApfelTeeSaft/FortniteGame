@@ -185,3 +185,43 @@ UFunction* Z_Construct_UFunction_UAthenaPlayerInfoBase_TalkingStateChanged()
 	}
 	return ReturnFunction;
 }
+
+class UAthenaPlayerInfoBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaPlayerInfoBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaPlayerInfoBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaPlayerInfoBase_BeingRevivedStateChanged, "BeingRevivedStateChanged" },
+	{ &Z_Construct_UFunction_UAthenaPlayerInfoBase_DBNOStateChanged, "DBNOStateChanged" },
+	{ &Z_Construct_UFunction_UAthenaPlayerInfoBase_DeadStateChanged, "DeadStateChanged" },
+	{ &Z_Construct_UFunction_UAthenaPlayerInfoBase_DisconnectedStateChanged, "DisconnectedStateChanged" },
+	{ &Z_Construct_UFunction_UAthenaPlayerInfoBase_HitPointsChanged, "HitPointsChanged" },
+	{ &Z_Construct_UFunction_UAthenaPlayerInfoBase_MutedStateChanged, "MutedStateChanged" },
+	{ &Z_Construct_UFunction_UAthenaPlayerInfoBase_PlayerNameChanged, "PlayerNameChanged" },
+	{ &Z_Construct_UFunction_UAthenaPlayerInfoBase_SetPlayerState, "SetPlayerState" },
+	{ &Z_Construct_UFunction_UAthenaPlayerInfoBase_TalkingStateChanged, "TalkingStateChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaPlayerInfoBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C5EDC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaPlayerInfoBase_Statics::ClassParams = { &UAthenaPlayerInfoBase::StaticClass, Z_Construct_UClass_UAthenaPlayerInfoBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UAthenaPlayerInfoBase_Statics::FuncInfo, 9, Z_Construct_UClass_UAthenaPlayerInfoBase_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UAthenaPlayerInfoBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02887340 (end 0x0288736F)
+// Original VA: 0x0000000142887340 | File offset: 0x02886940
+// Recovery: confirmed (UHT singleton of UAthenaPlayerInfoBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaPlayerInfoBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaPlayerInfoBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

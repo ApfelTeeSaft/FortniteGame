@@ -162,3 +162,42 @@ UFunction* Z_Construct_UFunction_AFortKeepDefenseManager_StopEvent()
 	}
 	return ReturnFunction;
 }
+
+class AFortKeepDefenseManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortKeepDefenseManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortKeepDefenseManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortKeepDefenseManager_GetNumberAliveEnemies, "GetNumberAliveEnemies" },
+	{ &Z_Construct_UFunction_AFortKeepDefenseManager_GetWaveDescription, "GetWaveDescription" },
+	{ &Z_Construct_UFunction_AFortKeepDefenseManager_GoToNextWave, "GoToNextWave" },
+	{ &Z_Construct_UFunction_AFortKeepDefenseManager_SkipWarmup, "SkipWarmup" },
+	{ &Z_Construct_UFunction_AFortKeepDefenseManager_StartAIEncounter, "StartAIEncounter" },
+	{ &Z_Construct_UFunction_AFortKeepDefenseManager_StartEvent, "StartEvent" },
+	{ &Z_Construct_UFunction_AFortKeepDefenseManager_StartEventFromList, "StartEventFromList" },
+	{ &Z_Construct_UFunction_AFortKeepDefenseManager_StopEvent, "StopEvent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortKeepDefenseManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03355180
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortKeepDefenseManager_Statics::ClassParams = { &AFortKeepDefenseManager::StaticClass, Z_Construct_UClass_AFortKeepDefenseManager_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortKeepDefenseManager_Statics::FuncInfo, 8, Z_Construct_UClass_AFortKeepDefenseManager_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_AFortKeepDefenseManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BFF0 (end 0x0100C01F)
+// Original VA: 0x000000014100BFF0 | File offset: 0x0100B5F0
+// Recovery: confirmed (UHT singleton of AFortKeepDefenseManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortKeepDefenseManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortKeepDefenseManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

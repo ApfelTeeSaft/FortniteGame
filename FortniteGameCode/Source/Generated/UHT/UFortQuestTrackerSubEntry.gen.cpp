@@ -100,3 +100,40 @@ UFunction* Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnSetup()
 	}
 	return ReturnFunction;
 }
+
+class UFortQuestTrackerSubEntry
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortQuestTrackerSubEntry_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortQuestTrackerSubEntry_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortQuestTrackerSubEntry_HandleQuestsUpdated, "HandleQuestsUpdated" },
+	{ &Z_Construct_UFunction_UFortQuestTrackerSubEntry_NotifyCompletionAnimationFinished, "NotifyCompletionAnimationFinished" },
+	{ &Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnPlayObjectiveCompletedAnimation, "OnPlayObjectiveCompletedAnimation" },
+	{ &Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnQuestsUpdated, "OnQuestsUpdated" },
+	{ &Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnSetup, "OnSetup" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortQuestTrackerSubEntry_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D09B20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortQuestTrackerSubEntry_Statics::ClassParams = { &UFortQuestTrackerSubEntry::StaticClass, Z_Construct_UClass_UFortQuestTrackerSubEntry_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortQuestTrackerSubEntry_Statics::FuncInfo, 5, Z_Construct_UClass_UFortQuestTrackerSubEntry_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortQuestTrackerSubEntry_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortQuestTrackerSubEntry_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED3B0 (end 0x028ED3DF)
+// Original VA: 0x00000001428ED3B0 | File offset: 0x028EC9B0
+// Recovery: confirmed (UHT singleton of UFortQuestTrackerSubEntry) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortQuestTrackerSubEntry()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortQuestTrackerSubEntry_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -1341,3 +1341,103 @@ UFunction* Z_Construct_UFunction_AFortWeapon_UseWeaponDurability()
 	}
 	return ReturnFunction;
 }
+
+class AFortWeapon
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortWeapon_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortWeapon_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortWeapon_ClientGivenTo, "ClientGivenTo" },
+	{ &Z_Construct_UFunction_AFortWeapon_ClientReportShotFlags, "ClientReportShotFlags" },
+	{ &Z_Construct_UFunction_AFortWeapon_DetermineReticleColor, "DetermineReticleColor" },
+	{ &Z_Construct_UFunction_AFortWeapon_GameplayCue_Impact, "GameplayCue_Impact" },
+	{ &Z_Construct_UFunction_AFortWeapon_GameplayCue_Weapons_Activation, "GameplayCue_Weapons_Activation" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetAlterations, "GetAlterations" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetBulletsPerClip, "GetBulletsPerClip" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetChargePercent, "GetChargePercent" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetCoreAnimation, "GetCoreAnimation" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetCurrentMaxChargePercent, "GetCurrentMaxChargePercent" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetDamageStartLocation, "GetDamageStartLocation" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetLocalMagazineAmmoCount, "GetLocalMagazineAmmoCount" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetLocalRemainingAmmo, "GetLocalRemainingAmmo" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetMagazineAmmoCount, "GetMagazineAmmoCount" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetMeleeAttackPlayRate, "GetMeleeAttackPlayRate" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetMuzzleLocation, "GetMuzzleLocation" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetMuzzleSocketTransform, "GetMuzzleSocketTransform" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetRange, "GetRange" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetReloadProgress, "GetReloadProgress" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetReloadTime, "GetReloadTime" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetRemainingAmmo, "GetRemainingAmmo" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetReticleColor, "GetReticleColor" },
+	{ &Z_Construct_UFunction_AFortWeapon_GetSupportsAutoFireAtReticleTargetMode, "GetSupportsAutoFireAtReticleTargetMode" },
+	{ &Z_Construct_UFunction_AFortWeapon_IsAutoFireReticleTargetInRange, "IsAutoFireReticleTargetInRange" },
+	{ &Z_Construct_UFunction_AFortWeapon_IsProjectileWeapon, "IsProjectileWeapon" },
+	{ &Z_Construct_UFunction_AFortWeapon_IsReloading, "IsReloading" },
+	{ &Z_Construct_UFunction_AFortWeapon_K2_OnProgressiveCosmeticWatchedStatChanged, "K2_OnProgressiveCosmeticWatchedStatChanged" },
+	{ &Z_Construct_UFunction_AFortWeapon_K2_OnUnEquip, "K2_OnUnEquip" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnAmmoCountChanged, "OnAmmoCountChanged" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnChargeDown, "OnChargeDown" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnChargeUp, "OnChargeUp" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnEndCharge, "OnEndCharge" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnEquippedWeaponDestory, "OnEquippedWeaponDestory" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnInitAlteration, "OnInitAlteration" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnInitCosmeticAlterations, "OnInitCosmeticAlterations" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnOutOfAmmoFire, "OnOutOfAmmoFire" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnPawnMontageBlendingOut, "OnPawnMontageBlendingOut" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnPawnMontageStarted, "OnPawnMontageStarted" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnPlayImpactFX, "OnPlayImpactFX" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnPlayReloadFX, "OnPlayReloadFX" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnPlayWeaponFireFX, "OnPlayWeaponFireFX" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnReachedMaxCharge, "OnReachedMaxCharge" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnReachedMinCharge, "OnReachedMinCharge" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnRep_AmmoCount, "OnRep_AmmoCount" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnRep_ChargeStatusPack, "OnRep_ChargeStatusPack" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnRep_CosmeticStatValue, "OnRep_CosmeticStatValue" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnRep_EquippedWeaponDestroyWrapper, "OnRep_EquippedWeaponDestroyWrapper" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnRep_ReplicatedAppliedAlterations, "OnRep_ReplicatedAppliedAlterations" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnRep_ReplicatedWeaponData, "OnRep_ReplicatedWeaponData" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnSetTargeting, "OnSetTargeting" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnStartCharge, "OnStartCharge" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnStopWeaponFireFX, "OnStopWeaponFireFX" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnWeaponAttached, "OnWeaponAttached" },
+	{ &Z_Construct_UFunction_AFortWeapon_OnWeaponVisibilityChanged, "OnWeaponVisibilityChanged" },
+	{ &Z_Construct_UFunction_AFortWeapon_PlayForceFeedback, "PlayForceFeedback" },
+	{ &Z_Construct_UFunction_AFortWeapon_PlayNativeImpactFX, "PlayNativeImpactFX" },
+	{ &Z_Construct_UFunction_AFortWeapon_PlayReloadFX, "PlayReloadFX" },
+	{ &Z_Construct_UFunction_AFortWeapon_PlayWeaponFireFX, "PlayWeaponFireFX" },
+	{ &Z_Construct_UFunction_AFortWeapon_Reload, "Reload" },
+	{ &Z_Construct_UFunction_AFortWeapon_ResetTempWeaponMaterialOverride, "ResetTempWeaponMaterialOverride" },
+	{ &Z_Construct_UFunction_AFortWeapon_ServerReleaseWeaponPrimaryAbility, "ServerReleaseWeaponPrimaryAbility" },
+	{ &Z_Construct_UFunction_AFortWeapon_ServerResetShotReport, "ServerResetShotReport" },
+	{ &Z_Construct_UFunction_AFortWeapon_ServerSetChargeState, "ServerSetChargeState" },
+	{ &Z_Construct_UFunction_AFortWeapon_SetShouldDrawNativeReticle, "SetShouldDrawNativeReticle" },
+	{ &Z_Construct_UFunction_AFortWeapon_SetWeaponVisibility, "SetWeaponVisibility" },
+	{ &Z_Construct_UFunction_AFortWeapon_StopForceFeedback, "StopForceFeedback" },
+	{ &Z_Construct_UFunction_AFortWeapon_StopWeaponFireFX, "StopWeaponFireFX" },
+	{ &Z_Construct_UFunction_AFortWeapon_UseWeaponDurability, "UseWeaponDurability" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortWeapon_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0342B2D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortWeapon_Statics::ClassParams = { &AFortWeapon::StaticClass, Z_Construct_UClass_AFortWeapon_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortWeapon_Statics::FuncInfo, 68, Z_Construct_UClass_AFortWeapon_Statics::PropPointers, 101, nullptr, &Z_Construct_UClass_AFortWeapon_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortWeapon_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4980 (end 0x010D49AF)
+// Original VA: 0x00000001410D4980 | File offset: 0x010D3F80
+// Recovery: confirmed (UHT singleton of AFortWeapon) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortWeapon()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortWeapon_Statics::ClassParams);
+	}
+	return OuterClass;
+}

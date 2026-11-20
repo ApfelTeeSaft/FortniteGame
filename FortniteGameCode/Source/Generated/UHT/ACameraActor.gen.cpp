@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_ACameraActor_GetAutoActivatePlayerIndex()
 	}
 	return ReturnFunction;
 }
+
+class ACameraActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ACameraActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ACameraActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ACameraActor_GetAutoActivatePlayerIndex, "GetAutoActivatePlayerIndex" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ACameraActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038B9740
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ACameraActor_Statics::ClassParams = { &ACameraActor::StaticClass, Z_Construct_UClass_ACameraActor_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ACameraActor_Statics::FuncInfo, 1, Z_Construct_UClass_ACameraActor_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_ACameraActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA720 (end 0x023EA74F)
+// Original VA: 0x00000001423EA720 | File offset: 0x023E9D20
+// Recovery: confirmed (UHT singleton of ACameraActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ACameraActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ACameraActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

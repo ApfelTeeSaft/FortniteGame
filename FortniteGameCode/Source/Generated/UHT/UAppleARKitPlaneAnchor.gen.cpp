@@ -65,3 +65,36 @@ UFunction* Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetTransformToCenter()
 	}
 	return ReturnFunction;
 }
+
+class UAppleARKitPlaneAnchor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAppleARKitPlaneAnchor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAppleARKitPlaneAnchor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetCenter, "GetCenter" },
+	{ &Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetExtent, "GetExtent" },
+	{ &Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetTransformToCenter, "GetTransformToCenter" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAppleARKitPlaneAnchor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02FE3400
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAppleARKitPlaneAnchor_Statics::ClassParams = { &UAppleARKitPlaneAnchor::StaticClass, Z_Construct_UClass_UAppleARKitPlaneAnchor_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UAppleARKitPlaneAnchor_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UAppleARKitPlaneAnchor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00806430 (end 0x0080645F)
+// Original VA: 0x0000000140806430 | File offset: 0x00805A30
+// Recovery: confirmed (UHT singleton of UAppleARKitPlaneAnchor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAppleARKitPlaneAnchor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAppleARKitPlaneAnchor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

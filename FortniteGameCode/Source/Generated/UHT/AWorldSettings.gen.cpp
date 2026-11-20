@@ -24,3 +24,36 @@ UFunction* Z_Construct_UFunction_AWorldSettings_OnRep_WorldGravityZ()
 	}
 	return ReturnFunction;
 }
+
+class AWorldSettings
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AWorldSettings_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AWorldSettings_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AWorldSettings_OnRep_WorldGravityZ, "OnRep_WorldGravityZ" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AWorldSettings_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039D0CE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AWorldSettings_Statics::ClassParams = { &AWorldSettings::StaticClass, Z_Construct_UClass_AWorldSettings_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AWorldSettings_Statics::FuncInfo, 1, Z_Construct_UClass_AWorldSettings_Statics::PropPointers, 48, "game", &Z_Construct_UClass_AWorldSettings_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AWorldSettings_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0B10 (end 0x024F0B3F)
+// Original VA: 0x00000001424F0B10 | File offset: 0x024F0110
+// Recovery: confirmed (UHT singleton of AWorldSettings) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AWorldSettings()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AWorldSettings_Statics::ClassParams);
+	}
+	return OuterClass;
+}

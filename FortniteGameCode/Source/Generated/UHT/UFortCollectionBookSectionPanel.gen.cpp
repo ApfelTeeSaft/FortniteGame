@@ -325,3 +325,50 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlottedItemOp
 	}
 	return ReturnFunction;
 }
+
+class UFortCollectionBookSectionPanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCollectionBookSectionPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCollectionBookSectionPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnBackActionExecuted, "OnBackActionExecuted" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInputMethodChanged, "OnInputMethodChanged" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnInspectActionExecuted, "OnInspectActionExecuted" },
+	{ &Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemAction__DelegateSignature, "OnItemAction__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemInspectAction__DelegateSignature, "OnItemInspectAction__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnLogAllowedItemsActionExecuted, "OnLogAllowedItemsActionExecuted" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnOpenPickerActionExecuted, "OnOpenPickerActionExecuted" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSectionChanged, "OnSectionChanged" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonCommitted, "OnSlotButtonCommitted" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotButtonSelected, "OnSlotButtonSelected" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemActionExecuted, "OnSlotItemActionExecuted" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemComplete, "OnSlotItemComplete" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotItemConfirmationCompleted, "OnSlotItemConfirmationCompleted" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerItemHovered, "OnSlotPickerItemHovered" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlotPickerItemSelected, "OnSlotPickerItemSelected" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlottedItemOperationComplete, "OnSlottedItemOperationComplete" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCollectionBookSectionPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C817E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCollectionBookSectionPanel_Statics::ClassParams = { &UFortCollectionBookSectionPanel::StaticClass, Z_Construct_UClass_UFortCollectionBookSectionPanel_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortCollectionBookSectionPanel_Statics::FuncInfo, 16, Z_Construct_UClass_UFortCollectionBookSectionPanel_Statics::PropPointers, 27, nullptr, &Z_Construct_UClass_UFortCollectionBookSectionPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B220 (end 0x0289B24F)
+// Original VA: 0x000000014289B220 | File offset: 0x0289A820
+// Recovery: confirmed (UHT singleton of UFortCollectionBookSectionPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCollectionBookSectionPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCollectionBookSectionPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

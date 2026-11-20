@@ -444,3 +444,56 @@ UFunction* Z_Construct_UFunction_UHomeBaseContext_TryGetHomebaseSquadData()
 	}
 	return ReturnFunction;
 }
+
+class UHomeBaseContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UHomeBaseContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UHomeBaseContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UHomeBaseContext_BroadcastSquadSlotMarkedAsSeen, "BroadcastSquadSlotMarkedAsSeen" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_ClearFrontEndOnlyExpeditionSquad, "ClearFrontEndOnlyExpeditionSquad" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetActiveCombatSquadId, "GetActiveCombatSquadId" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetActiveDefenderSquadId, "GetActiveDefenderSquadId" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetAllResourceCollectorRewardEstimates, "GetAllResourceCollectorRewardEstimates" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetItemsInSquad, "GetItemsInSquad" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetLocalPlayerHomebaseRating, "GetLocalPlayerHomebaseRating" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetLocalTeamHomebaseRating, "GetLocalTeamHomebaseRating" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetNodePageIdForHomebaseNode, "GetNodePageIdForHomebaseNode" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetNumAccountLimitedItems, "GetNumAccountLimitedItems" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetResourceCollectorRateInfo, "GetResourceCollectorRateInfo" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetResourceCollectorRewardsEstimate, "GetResourceCollectorRewardsEstimate" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetResourceCollectorRewardsEstimates, "GetResourceCollectorRewardsEstimates" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetSquadSlotOfItem, "GetSquadSlotOfItem" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetStaticSetBonusData, "GetStaticSetBonusData" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetTeamHomebaseRating, "GetTeamHomebaseRating" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetTotalHomebaseRating, "GetTotalHomebaseRating" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetTotalSkillPointsEarned, "GetTotalSkillPointsEarned" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_GetUnlockingHomebaseNodeIdForSquadSlot, "GetUnlockingHomebaseNodeIdForSquadSlot" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_TryGetHomebaseNodeData, "TryGetHomebaseNodeData" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_TryGetHomebaseNodePageData, "TryGetHomebaseNodePageData" },
+	{ &Z_Construct_UFunction_UHomeBaseContext_TryGetHomebaseSquadData, "TryGetHomebaseSquadData" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UHomeBaseContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0333EFC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UHomeBaseContext_Statics::ClassParams = { &UHomeBaseContext::StaticClass, Z_Construct_UClass_UHomeBaseContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UHomeBaseContext_Statics::FuncInfo, 22, Z_Construct_UClass_UHomeBaseContext_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UHomeBaseContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFB160 (end 0x00FFB18F)
+// Original VA: 0x0000000140FFB160 | File offset: 0x00FFA760
+// Recovery: confirmed (UHT singleton of UHomeBaseContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UHomeBaseContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UHomeBaseContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

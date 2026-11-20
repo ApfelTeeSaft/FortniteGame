@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UFortWeaponRangedItemDefinition_ShouldUsePerfec
 	}
 	return ReturnFunction;
 }
+
+class UFortWeaponRangedItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortWeaponRangedItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortWeaponRangedItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortWeaponRangedItemDefinition_GetBulletShellFXTemplate, "GetBulletShellFXTemplate" },
+	{ &Z_Construct_UFunction_UFortWeaponRangedItemDefinition_GetProjectileTemplate, "GetProjectileTemplate" },
+	{ &Z_Construct_UFunction_UFortWeaponRangedItemDefinition_ShouldSpawnBulletShellFX, "ShouldSpawnBulletShellFX" },
+	{ &Z_Construct_UFunction_UFortWeaponRangedItemDefinition_ShouldTraceThroughPawns, "ShouldTraceThroughPawns" },
+	{ &Z_Construct_UFunction_UFortWeaponRangedItemDefinition_ShouldUseNativeWeaponTrace, "ShouldUseNativeWeaponTrace" },
+	{ &Z_Construct_UFunction_UFortWeaponRangedItemDefinition_ShouldUsePerfectAimWhenTargetingMinSpread, "ShouldUsePerfectAimWhenTargetingMinSpread" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortWeaponRangedItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03430C10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortWeaponRangedItemDefinition_Statics::ClassParams = { &UFortWeaponRangedItemDefinition::StaticClass, Z_Construct_UClass_UFortWeaponRangedItemDefinition_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UFortWeaponRangedItemDefinition_Statics::FuncInfo, 6, Z_Construct_UClass_UFortWeaponRangedItemDefinition_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortWeaponRangedItemDefinition_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8C40 (end 0x010D8C6F)
+// Original VA: 0x00000001410D8C40 | File offset: 0x010D8240
+// Recovery: confirmed (UHT singleton of UFortWeaponRangedItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortWeaponRangedItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortWeaponRangedItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -1333,3 +1333,102 @@ UFunction* Z_Construct_UFunction_AFortMission_StopMissionAIEncounter()
 	}
 	return ReturnFunction;
 }
+
+class AFortMission
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortMission_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortMission_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortMission_AddCompletionTag, "AddCompletionTag" },
+	{ &Z_Construct_UFunction_AFortMission_AddCompletionTags, "AddCompletionTags" },
+	{ &Z_Construct_UFunction_AFortMission_AddGoalToAssignment, "AddGoalToAssignment" },
+	{ &Z_Construct_UFunction_AFortMission_AddGoalToEncounterAssignment, "AddGoalToEncounterAssignment" },
+	{ &Z_Construct_UFunction_AFortMission_AddGoalsToAssignment, "AddGoalsToAssignment" },
+	{ &Z_Construct_UFunction_AFortMission_AddGoalsToEncounterAssignment, "AddGoalsToEncounterAssignment" },
+	{ &Z_Construct_UFunction_AFortMission_AddParticipantAccount, "AddParticipantAccount" },
+	{ &Z_Construct_UFunction_AFortMission_AttemptMissionSave, "AttemptMissionSave" },
+	{ &Z_Construct_UFunction_AFortMission_BlueprintCanPlayerParticipate, "BlueprintCanPlayerParticipate" },
+	{ &Z_Construct_UFunction_AFortMission_BlueprintCustomHandleMissionEvent, "BlueprintCustomHandleMissionEvent" },
+	{ &Z_Construct_UFunction_AFortMission_BlueprintOnActivated, "BlueprintOnActivated" },
+	{ &Z_Construct_UFunction_AFortMission_BlueprintOnMissionEnd, "BlueprintOnMissionEnd" },
+	{ &Z_Construct_UFunction_AFortMission_BlueprintOnStartPlaying, "BlueprintOnStartPlaying" },
+	{ &Z_Construct_UFunction_AFortMission_BlueprintPostMissionLoad, "BlueprintPostMissionLoad" },
+	{ &Z_Construct_UFunction_AFortMission_ChooseRandomReward, "ChooseRandomReward" },
+	{ &Z_Construct_UFunction_AFortMission_CreateEncounterAssignment, "CreateEncounterAssignment" },
+	{ &Z_Construct_UFunction_AFortMission_CreateEncounterSequence, "CreateEncounterSequence" },
+	{ &Z_Construct_UFunction_AFortMission_FindGoalLocationsForEncounterAssignment, "FindGoalLocationsForEncounterAssignment" },
+	{ &Z_Construct_UFunction_AFortMission_FocusThisMission, "FocusThisMission" },
+	{ &Z_Construct_UFunction_AFortMission_GetActorsSpawnedMatchingQuery, "GetActorsSpawnedMatchingQuery" },
+	{ &Z_Construct_UFunction_AFortMission_GetAdditionalMissionCompletionMissionPoints, "GetAdditionalMissionCompletionMissionPoints" },
+	{ &Z_Construct_UFunction_AFortMission_GetAdditionalMissionSuccessBadges, "GetAdditionalMissionSuccessBadges" },
+	{ &Z_Construct_UFunction_AFortMission_GetAllObjectives, "GetAllObjectives" },
+	{ &Z_Construct_UFunction_AFortMission_GetBuildingDamageLootTier, "GetBuildingDamageLootTier" },
+	{ &Z_Construct_UFunction_AFortMission_GetConfigData, "GetConfigData" },
+	{ &Z_Construct_UFunction_AFortMission_GetCurrentBluGloRewards, "GetCurrentBluGloRewards" },
+	{ &Z_Construct_UFunction_AFortMission_GetCurrentFocusDisplayText, "GetCurrentFocusDisplayText" },
+	{ &Z_Construct_UFunction_AFortMission_GetCurrentFocusPercentage, "GetCurrentFocusPercentage" },
+	{ &Z_Construct_UFunction_AFortMission_GetDaysRemainingBeforeOverPar, "GetDaysRemainingBeforeOverPar" },
+	{ &Z_Construct_UFunction_AFortMission_GetExpectedCompletionTime, "GetExpectedCompletionTime" },
+	{ &Z_Construct_UFunction_AFortMission_GetMissionGuid, "GetMissionGuid" },
+	{ &Z_Construct_UFunction_AFortMission_GetMissionName, "GetMissionName" },
+	{ &Z_Construct_UFunction_AFortMission_GetObjectiveByHandle, "GetObjectiveByHandle" },
+	{ &Z_Construct_UFunction_AFortMission_GetObjectiveHandlesWithTag, "GetObjectiveHandlesWithTag" },
+	{ &Z_Construct_UFunction_AFortMission_GetObjectiveStatusByHandle, "GetObjectiveStatusByHandle" },
+	{ &Z_Construct_UFunction_AFortMission_GetParticipatingMissionControllers, "GetParticipatingMissionControllers" },
+	{ &Z_Construct_UFunction_AFortMission_GetPawnDamageLootTier, "GetPawnDamageLootTier" },
+	{ &Z_Construct_UFunction_AFortMission_GetRewardItemsByTag, "GetRewardItemsByTag" },
+	{ &Z_Construct_UFunction_AFortMission_GetSpawnLocationActorsMatchingQuery, "GetSpawnLocationActorsMatchingQuery" },
+	{ &Z_Construct_UFunction_AFortMission_GetSpawnLocationsMatchingQuery, "GetSpawnLocationsMatchingQuery" },
+	{ &Z_Construct_UFunction_AFortMission_GrantRewardsByTag, "GrantRewardsByTag" },
+	{ &Z_Construct_UFunction_AFortMission_HasMissionPar, "HasMissionPar" },
+	{ &Z_Construct_UFunction_AFortMission_InitializeActorsForMission, "InitializeActorsForMission" },
+	{ &Z_Construct_UFunction_AFortMission_InitializeActorsForMissionMatchingItemIdentifyingQuery, "InitializeActorsForMissionMatchingItemIdentifyingQuery" },
+	{ &Z_Construct_UFunction_AFortMission_IsPlayerParticipating, "IsPlayerParticipating" },
+	{ &Z_Construct_UFunction_AFortMission_OnRep_ActiveObjectives, "OnRep_ActiveObjectives" },
+	{ &Z_Construct_UFunction_AFortMission_OnRep_CurrentFocusDisplayData, "OnRep_CurrentFocusDisplayData" },
+	{ &Z_Construct_UFunction_AFortMission_OnRep_MissionInfo, "OnRep_MissionInfo" },
+	{ &Z_Construct_UFunction_AFortMission_OnRep_MissionStatus, "OnRep_MissionStatus" },
+	{ &Z_Construct_UFunction_AFortMission_OnRep_PotentialBadgesArray, "OnRep_PotentialBadgesArray" },
+	{ &Z_Construct_UFunction_AFortMission_OnRep_QuestOwnerAccount, "OnRep_QuestOwnerAccount" },
+	{ &Z_Construct_UFunction_AFortMission_OnRep_UIIndex, "OnRep_UIIndex" },
+	{ &Z_Construct_UFunction_AFortMission_OnRep_bIsMissionVisible, "OnRep_bIsMissionVisible" },
+	{ &Z_Construct_UFunction_AFortMission_OnWaveCompleted, "OnWaveCompleted" },
+	{ &Z_Construct_UFunction_AFortMission_ProvideAllPotentialBadges, "ProvideAllPotentialBadges" },
+	{ &Z_Construct_UFunction_AFortMission_RecordResourceActorSpawn, "RecordResourceActorSpawn" },
+	{ &Z_Construct_UFunction_AFortMission_RemoveGoalFromEncounterAssignment, "RemoveGoalFromEncounterAssignment" },
+	{ &Z_Construct_UFunction_AFortMission_RemoveGoalsFromEncounterAssignment, "RemoveGoalsFromEncounterAssignment" },
+	{ &Z_Construct_UFunction_AFortMission_RemoveParticipantAccount, "RemoveParticipantAccount" },
+	{ &Z_Construct_UFunction_AFortMission_SendBotLogicMessage, "SendBotLogicMessage" },
+	{ &Z_Construct_UFunction_AFortMission_SetToSilentDestroy, "SetToSilentDestroy" },
+	{ &Z_Construct_UFunction_AFortMission_SetUiVisibility, "SetUiVisibility" },
+	{ &Z_Construct_UFunction_AFortMission_SpawnAtPlacementActorsAsArray, "SpawnAtPlacementActorsAsArray" },
+	{ &Z_Construct_UFunction_AFortMission_StartMissionAIEncounter, "StartMissionAIEncounter" },
+	{ &Z_Construct_UFunction_AFortMission_StartMissionAIEncounterFromGeneratedProfile, "StartMissionAIEncounterFromGeneratedProfile" },
+	{ &Z_Construct_UFunction_AFortMission_StopEncounterSequence, "StopEncounterSequence" },
+	{ &Z_Construct_UFunction_AFortMission_StopMissionAIEncounter, "StopMissionAIEncounter" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortMission_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0337B6F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortMission_Statics::ClassParams = { &AFortMission::StaticClass, Z_Construct_UClass_AFortMission_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_AFortMission_Statics::FuncInfo, 67, Z_Construct_UClass_AFortMission_Statics::PropPointers, 41, nullptr, &Z_Construct_UClass_AFortMission_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortMission_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01038520 (end 0x0103854F)
+// Original VA: 0x0000000141038520 | File offset: 0x01037B20
+// Recovery: confirmed (UHT singleton of AFortMission) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortMission()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortMission_Statics::ClassParams);
+	}
+	return OuterClass;
+}

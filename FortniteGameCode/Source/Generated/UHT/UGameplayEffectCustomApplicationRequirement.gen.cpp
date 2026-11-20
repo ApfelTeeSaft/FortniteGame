@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UGameplayEffectCustomApplicationRequirement_Can
 	}
 	return ReturnFunction;
 }
+
+class UGameplayEffectCustomApplicationRequirement
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UGameplayEffectCustomApplicationRequirement_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGameplayEffectCustomApplicationRequirement_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGameplayEffectCustomApplicationRequirement_CanApplyGameplayEffect, "CanApplyGameplayEffect" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGameplayEffectCustomApplicationRequirement_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F46CD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGameplayEffectCustomApplicationRequirement_Statics::ClassParams = { &UGameplayEffectCustomApplicationRequirement::StaticClass, Z_Construct_UClass_UGameplayEffectCustomApplicationRequirement_Statics::DependentSingletons, 2, 0x00100081u, Z_Construct_UClass_UGameplayEffectCustomApplicationRequirement_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UGameplayEffectCustomApplicationRequirement_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005645C0 (end 0x005645EF)
+// Original VA: 0x00000001405645C0 | File offset: 0x00563BC0
+// Recovery: confirmed (UHT singleton of UGameplayEffectCustomApplicationRequirement) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGameplayEffectCustomApplicationRequirement()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGameplayEffectCustomApplicationRequirement_Statics::ClassParams);
+	}
+	return OuterClass;
+}

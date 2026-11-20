@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortAlterationFunctionLibrary_GetAlterationImp
 	}
 	return ReturnFunction;
 }
+
+class UFortAlterationFunctionLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAlterationFunctionLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAlterationFunctionLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAlterationFunctionLibrary_GetAlterationImpactPhysicalSurfaceEffects, "GetAlterationImpactPhysicalSurfaceEffects" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAlterationFunctionLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032B6F90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAlterationFunctionLibrary_Statics::ClassParams = { &UFortAlterationFunctionLibrary::StaticClass, Z_Construct_UClass_UFortAlterationFunctionLibrary_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortAlterationFunctionLibrary_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortAlterationFunctionLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F993F0 (end 0x00F9941F)
+// Original VA: 0x0000000140F993F0 | File offset: 0x00F989F0
+// Recovery: confirmed (UHT singleton of UFortAlterationFunctionLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAlterationFunctionLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAlterationFunctionLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

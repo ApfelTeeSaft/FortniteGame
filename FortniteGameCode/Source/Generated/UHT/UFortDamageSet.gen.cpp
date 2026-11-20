@@ -271,3 +271,48 @@ UFunction* Z_Construct_UFunction_UFortDamageSet_OnRep_ZoneCritMultiplier()
 	}
 	return ReturnFunction;
 }
+
+class UFortDamageSet
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortDamageSet_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortDamageSet_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_DiceCritChance, "OnRep_DiceCritChance" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_DiceCritMultiplier, "OnRep_DiceCritMultiplier" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_HealthDamageScale, "OnRep_HealthDamageScale" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_KnockbackMagnitude, "OnRep_KnockbackMagnitude" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_KnockbackZAngle, "OnRep_KnockbackZAngle" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_OutgoingAbilityDamage, "OnRep_OutgoingAbilityDamage" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_OutgoingBaseAbilityDamageMultiplier, "OnRep_OutgoingBaseAbilityDamageMultiplier" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_OutgoingBaseDamage, "OnRep_OutgoingBaseDamage" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_OutgoingBaseEnvironmentalDamage, "OnRep_OutgoingBaseEnvironmentalDamage" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_OutgoingBaseImpactDamage, "OnRep_OutgoingBaseImpactDamage" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_ShieldDamageScale, "OnRep_ShieldDamageScale" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_StunTime, "OnRep_StunTime" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_WeaponSkill, "OnRep_WeaponSkill" },
+	{ &Z_Construct_UFunction_UFortDamageSet_OnRep_ZoneCritMultiplier, "OnRep_ZoneCritMultiplier" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortDamageSet_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032F97B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortDamageSet_Statics::ClassParams = { &UFortDamageSet::StaticClass, Z_Construct_UClass_UFortDamageSet_Statics::DependentSingletons, 2, 0x00280080u, Z_Construct_UClass_UFortDamageSet_Statics::FuncInfo, 14, Z_Construct_UClass_UFortDamageSet_Statics::PropPointers, 16, nullptr, &Z_Construct_UClass_UFortDamageSet_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCBB80 (end 0x00FCBBAF)
+// Original VA: 0x0000000140FCBB80 | File offset: 0x00FCB180
+// Recovery: confirmed (UHT singleton of UFortDamageSet) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortDamageSet()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortDamageSet_Statics::ClassParams);
+	}
+	return OuterClass;
+}

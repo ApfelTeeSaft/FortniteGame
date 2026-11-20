@@ -145,3 +145,41 @@ UFunction* Z_Construct_UFunction_UEditableText_SetText()
 	}
 	return ReturnFunction;
 }
+
+class UEditableText
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UEditableText_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UEditableText_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UEditableText_GetText, "GetText" },
+	{ &Z_Construct_UDelegateFunction_UEditableText_OnEditableTextChangedEvent__DelegateSignature, "OnEditableTextChangedEvent__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UEditableText_OnEditableTextCommittedEvent__DelegateSignature, "OnEditableTextCommittedEvent__DelegateSignature" },
+	{ &Z_Construct_UFunction_UEditableText_SetHintText, "SetHintText" },
+	{ &Z_Construct_UFunction_UEditableText_SetIsPassword, "SetIsPassword" },
+	{ &Z_Construct_UFunction_UEditableText_SetIsReadOnly, "SetIsReadOnly" },
+	{ &Z_Construct_UFunction_UEditableText_SetText, "SetText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UEditableText_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03692A50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UEditableText_Statics::ClassParams = { &UEditableText::StaticClass, Z_Construct_UClass_UEditableText_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UEditableText_Statics::FuncInfo, 7, Z_Construct_UClass_UEditableText_Statics::PropPointers, 27, nullptr, &Z_Construct_UClass_UEditableText_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE62B0 (end 0x01BE62DF)
+// Original VA: 0x0000000141BE62B0 | File offset: 0x01BE58B0
+// Recovery: confirmed (UHT singleton of UEditableText) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UEditableText()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UEditableText_Statics::ClassParams);
+	}
+	return OuterClass;
+}

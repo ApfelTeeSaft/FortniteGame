@@ -1285,3 +1285,98 @@ UFunction* Z_Construct_UFunction_UFortOptionsMenuSetting_TouchTargetingMultiplie
 	}
 	return ReturnFunction;
 }
+
+class UFortOptionsMenuSetting
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortOptionsMenuSetting_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortOptionsMenuSetting_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_AutoEquipChanged, "AutoEquipChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_ConsoleUnlockedFPSChanged, "ConsoleUnlockedFPSChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_FirstPersonCameraChanged, "FirstPersonCameraChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GamepadLookSensitivityXChanged, "GamepadLookSensitivityXChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GamepadLookSensitivityYChanged, "GamepadLookSensitivityYChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GamepadScopedMultiplierValueChanged, "GamepadScopedMultiplierValueChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GamepadTargetingMultiplierValueChanged, "GamepadTargetingMultiplierValueChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetAimAssistState, "GetAimAssistState" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetAutoEquipState, "GetAutoEquipState" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetConsoleUnlockedFPSState, "GetConsoleUnlockedFPSState" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetCurrentLanguage, "GetCurrentLanguage" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetCurrentRegion, "GetCurrentRegion" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetFirstPersonCameraState, "GetFirstPersonCameraState" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetFocusOnFirstBuildingPieceWhenQuickbarSwappedState, "GetFocusOnFirstBuildingPieceWhenQuickbarSwappedState" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetFocusOnFirstBuildingPieceWhenQuickbarSwappedStateAthena, "GetFocusOnFirstBuildingPieceWhenQuickbarSwappedStateAthena" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetForceFeedbackState, "GetForceFeedbackState" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetGamepadAutoRunState, "GetGamepadAutoRunState" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetGamepadLookSensitivityValue, "GetGamepadLookSensitivityValue" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetGamepadScopedMultiplierValue, "GetGamepadScopedMultiplierValue" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetGamepadTargetingMultiplierValue, "GetGamepadTargetingMultiplierValue" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetHUDScale, "GetHUDScale" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetLookInversionState, "GetLookInversionState" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetMouseSensitivityValue, "GetMouseSensitivityValue" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetPeripheralLightingEnabled, "GetPeripheralLightingEnabled" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetPossibleLanguages, "GetPossibleLanguages" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetRegionDisplayNames, "GetRegionDisplayNames" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetSafeZoneValue, "GetSafeZoneValue" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetScopedMultiplierValue, "GetScopedMultiplierValue" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetSettingDisplayNames, "GetSettingDisplayNames" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetSettingValue, "GetSettingValue" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetShowHeroBackpack, "GetShowHeroBackpack" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetShowHeroHeadAccessories, "GetShowHeroHeadAccessories" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetShowViewerCountEnabled, "GetShowViewerCountEnabled" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetSprintCancelsReloadState, "GetSprintCancelsReloadState" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetSprintToggleState, "GetSprintToggleState" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetTapInteractState, "GetTapInteractState" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetTargetingMultiplierValue, "GetTargetingMultiplierValue" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetTargetingToggleState, "GetTargetingToggleState" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetTouchDragScopedSensitivityValue, "GetTouchDragScopedSensitivityValue" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetTouchLookSensitivityValue, "GetTouchLookSensitivityValue" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_GetTouchTargetingMultiplierValue, "GetTouchTargetingMultiplierValue" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_LanguageChanged, "LanguageChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_LookInversionChanged, "LookInversionChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_MouseSensitivityChanged, "MouseSensitivityChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_OnAimAssistChanged, "OnAimAssistChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_OnFocusOnFirstBuildingPieceWhenQuickbarSwappedChanged, "OnFocusOnFirstBuildingPieceWhenQuickbarSwappedChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_OnFocusOnFirstBuildingPieceWhenQuickbarSwappedChangedAthena, "OnFocusOnFirstBuildingPieceWhenQuickbarSwappedChangedAthena" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_OnForceFeedbackChanged, "OnForceFeedbackChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_OnGamepadAutoRunChanged, "OnGamepadAutoRunChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_OnHUDScaleChanged, "OnHUDScaleChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_PeripheralLightingChanged, "PeripheralLightingChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_RegionChanged, "RegionChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_SafeZoneChanged, "SafeZoneChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_ScopedMultiplierValueChanged, "ScopedMultiplierValueChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_SettingChanged, "SettingChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_ShowViewerCountChanged, "ShowViewerCountChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_SprintCancelsReloadChanged, "SprintCancelsReloadChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_SprintToggleChanged, "SprintToggleChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_TapInteractChanged, "TapInteractChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_TargetingMultiplierValueChanged, "TargetingMultiplierValueChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_TargetingToggleChanged, "TargetingToggleChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_TouchDragScopedSensitivityValueChanged, "TouchDragScopedSensitivityValueChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_TouchLookSensitivityChanged, "TouchLookSensitivityChanged" },
+	{ &Z_Construct_UFunction_UFortOptionsMenuSetting_TouchTargetingMultiplierValueChanged, "TouchTargetingMultiplierValueChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortOptionsMenuSetting_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CF3740
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortOptionsMenuSetting_Statics::ClassParams = { &UFortOptionsMenuSetting::StaticClass, Z_Construct_UClass_UFortOptionsMenuSetting_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortOptionsMenuSetting_Statics::FuncInfo, 64, Z_Construct_UClass_UFortOptionsMenuSetting_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortOptionsMenuSetting_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE5F0 (end 0x028DE61F)
+// Original VA: 0x00000001428DE5F0 | File offset: 0x028DDBF0
+// Recovery: confirmed (UHT singleton of UFortOptionsMenuSetting) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortOptionsMenuSetting()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortOptionsMenuSetting_Statics::ClassParams);
+	}
+	return OuterClass;
+}

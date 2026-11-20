@@ -796,3 +796,75 @@ UFunction* Z_Construct_UFunction_UFortUIManagerWidget_NUI_UpdateStateWidgetConte
 	}
 	return ReturnFunction;
 }
+
+class UFortUIManagerWidget_NUI
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortUIManagerWidget_NUI_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUIManagerWidget_NUI_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_CloseConfirmationWindow, "CloseConfirmationWindow" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_CloseErrorWindow, "CloseErrorWindow" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_CreateNotification, "CreateNotification" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_CreateUIStateTrigger, "CreateUIStateTrigger" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_DecrementShouldBlockSubtitlePortrait, "DecrementShouldBlockSubtitlePortrait" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_DisplayErrorDialog, "DisplayErrorDialog" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_DisplayStateContent, "DisplayStateContent" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_GetCachedWidget, "GetCachedWidget" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_GetCurrentUIStateWidget, "GetCurrentUIStateWidget" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_GetNavigationManager, "GetNavigationManager" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_GetUIManagerWidget, "GetUIManagerWidget" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_GetUINavigationManager, "GetUINavigationManager" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_GetUINotificationQueue, "GetUINotificationQueue" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_IncrementShouldBlockSubtitlePortrait, "IncrementShouldBlockSubtitlePortrait" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_IsShowingModalsConfirmationsErrors, "IsShowingModalsConfirmationsErrors" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_IsStateContentDisplayed, "IsStateContentDisplayed" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_KillConfirmationDialog, "KillConfirmationDialog" },
+	{ &Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnBeginSpokenDialog__DelegateSignature, "OnBeginSpokenDialog__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_OnEndLatentWaitForConfirmationDialog, "OnEndLatentWaitForConfirmationDialog" },
+	{ &Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnEndSpokenDialog__DelegateSignature, "OnEndSpokenDialog__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortUIManagerWidget_NUI_OnShouldBlockSubtitlePortraitChanged__DelegateSignature, "OnShouldBlockSubtitlePortraitChanged__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_OnShowConfirmation, "OnShowConfirmation" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_OnShowConfirmation_NUI, "OnShowConfirmation_NUI" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_OnStateEnded, "OnStateEnded" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_OnStateStarted, "OnStateStarted" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_PopActivatablePanelInModalLayer, "PopActivatablePanelInModalLayer" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_PopAllContentWidgets, "PopAllContentWidgets" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_PopContentWidget, "PopContentWidget" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_PushContentWidget, "PushContentWidget" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_PushContentWidgetAdvanced, "PushContentWidgetAdvanced" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_QueueActivatablePanelIntoModalLayer, "QueueActivatablePanelIntoModalLayer" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_RegisterStateTrigger, "RegisterStateTrigger" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_ReleaseNotification, "ReleaseNotification" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_SetFrontEndVisibility, "SetFrontEndVisibility" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_SetStateContentDisplayed, "SetStateContentDisplayed" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_ShouldBlockSubtitlePortrait, "ShouldBlockSubtitlePortrait" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_ShowErrorDialog, "ShowErrorDialog" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_UnregisterStateTrigger, "UnregisterStateTrigger" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI_UpdateStateWidgetContent, "UpdateStateWidgetContent" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_NUI__BPGetCurrentUIState, "_BPGetCurrentUIState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUIManagerWidget_NUI_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D3E340
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUIManagerWidget_NUI_Statics::ClassParams = { &UFortUIManagerWidget_NUI::StaticClass, Z_Construct_UClass_UFortUIManagerWidget_NUI_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortUIManagerWidget_NUI_Statics::FuncInfo, 40, Z_Construct_UClass_UFortUIManagerWidget_NUI_Statics::PropPointers, 19, nullptr, &Z_Construct_UClass_UFortUIManagerWidget_NUI_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortUIManagerWidget_NUI_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AA30 (end 0x0290AA5F)
+// Original VA: 0x000000014290AA30 | File offset: 0x0290A030
+// Recovery: confirmed (UHT singleton of UFortUIManagerWidget_NUI) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUIManagerWidget_NUI()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUIManagerWidget_NUI_Statics::ClassParams);
+	}
+	return OuterClass;
+}

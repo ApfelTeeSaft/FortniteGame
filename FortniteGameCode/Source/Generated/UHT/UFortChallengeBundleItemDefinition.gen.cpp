@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetQuests()
 	}
 	return ReturnFunction;
 }
+
+class UFortChallengeBundleItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortChallengeBundleItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortChallengeBundleItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetEventName, "GetEventName" },
+	{ &Z_Construct_UFunction_UFortChallengeBundleItemDefinition_GetQuests, "GetQuests" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortChallengeBundleItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032DABB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortChallengeBundleItemDefinition_Statics::ClassParams = { &UFortChallengeBundleItemDefinition::StaticClass, Z_Construct_UClass_UFortChallengeBundleItemDefinition_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortChallengeBundleItemDefinition_Statics::FuncInfo, 2, Z_Construct_UClass_UFortChallengeBundleItemDefinition_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortChallengeBundleItemDefinition_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB01D0 (end 0x00FB01FF)
+// Original VA: 0x0000000140FB01D0 | File offset: 0x00FAF7D0
+// Recovery: confirmed (UHT singleton of UFortChallengeBundleItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortChallengeBundleItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortChallengeBundleItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

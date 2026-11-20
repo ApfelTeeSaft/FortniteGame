@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonCommitt
 	}
 	return ReturnFunction;
 }
+
+class UFortCollectionBookSlotView
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCollectionBookSlotView_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCollectionBookSlotView_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCollectionBookSlotView_OnSelectedSlotButtonChanged, "OnSelectedSlotButtonChanged" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonClicked, "OnSlotButtonClicked" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSlotView_OnSlotButtonCommitted, "OnSlotButtonCommitted" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCollectionBookSlotView_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C81B90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCollectionBookSlotView_Statics::ClassParams = { &UFortCollectionBookSlotView::StaticClass, Z_Construct_UClass_UFortCollectionBookSlotView_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortCollectionBookSlotView_Statics::FuncInfo, 3, Z_Construct_UClass_UFortCollectionBookSlotView_Statics::PropPointers, 9, nullptr, &Z_Construct_UClass_UFortCollectionBookSlotView_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B2E0 (end 0x0289B30F)
+// Original VA: 0x000000014289B2E0 | File offset: 0x0289A8E0
+// Recovery: confirmed (UHT singleton of UFortCollectionBookSlotView) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCollectionBookSlotView()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCollectionBookSlotView_Statics::ClassParams);
+	}
+	return OuterClass;
+}

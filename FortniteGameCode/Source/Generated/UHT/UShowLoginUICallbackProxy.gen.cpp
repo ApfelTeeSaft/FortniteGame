@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UShowLoginUICallbackProxy_ShowExternalLoginUI()
 	}
 	return ReturnFunction;
 }
+
+class UShowLoginUICallbackProxy
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UShowLoginUICallbackProxy_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UShowLoginUICallbackProxy_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UShowLoginUICallbackProxy_ShowExternalLoginUI, "ShowExternalLoginUI" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UShowLoginUICallbackProxy_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EAF150
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UShowLoginUICallbackProxy_Statics::ClassParams = { &UShowLoginUICallbackProxy::StaticClass, Z_Construct_UClass_UShowLoginUICallbackProxy_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UShowLoginUICallbackProxy_Statics::FuncInfo, 1, Z_Construct_UClass_UShowLoginUICallbackProxy_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UShowLoginUICallbackProxy_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032EDC0 (end 0x0032EDEF)
+// Original VA: 0x000000014032EDC0 | File offset: 0x0032E3C0
+// Recovery: confirmed (UHT singleton of UShowLoginUICallbackProxy) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UShowLoginUICallbackProxy()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UShowLoginUICallbackProxy_Statics::ClassParams);
+	}
+	return OuterClass;
+}

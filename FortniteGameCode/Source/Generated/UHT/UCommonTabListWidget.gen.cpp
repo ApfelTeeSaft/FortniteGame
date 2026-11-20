@@ -502,3 +502,59 @@ UFunction* Z_Construct_UFunction_UCommonTabListWidget_SetTabVisibility()
 	}
 	return ReturnFunction;
 }
+
+class UCommonTabListWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonTabListWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonTabListWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonTabListWidget_DisableTabWithReason, "DisableTabWithReason" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_GetActiveTab, "GetActiveTab" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_GetLinkedSwitcher, "GetLinkedSwitcher" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_GetSelectedTabId, "GetSelectedTabId" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_GetTabButtonByID, "GetTabButtonByID" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_GetTabCount, "GetTabCount" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_GetTabIdAtIndex, "GetTabIdAtIndex" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_HandleNextTabInputAction, "HandleNextTabInputAction" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_HandlePostLinkedSwitcherChanged_BP, "HandlePostLinkedSwitcherChanged_BP" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_HandlePreLinkedSwitcherChanged_BP, "HandlePreLinkedSwitcherChanged_BP" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_HandlePreviousTabInputAction, "HandlePreviousTabInputAction" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_HandleTabButtonSelected, "HandleTabButtonSelected" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_HandleTabCreated, "HandleTabCreated" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_HandleTabRemoved, "HandleTabRemoved" },
+	{ &Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonCreated__DelegateSignature, "OnTabButtonCreated__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonRemoved__DelegateSignature, "OnTabButtonRemoved__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabSelected__DelegateSignature, "OnTabSelected__DelegateSignature" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_RegisterTab, "RegisterTab" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_RemoveAllTabs, "RemoveAllTabs" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_RemoveTab, "RemoveTab" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_SelectTabByID, "SelectTabByID" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_SetLinkedSwitcher, "SetLinkedSwitcher" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_SetListeningForInput, "SetListeningForInput" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_SetTabEnabled, "SetTabEnabled" },
+	{ &Z_Construct_UFunction_UCommonTabListWidget_SetTabVisibility, "SetTabVisibility" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonTabListWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E82CE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonTabListWidget_Statics::ClassParams = { &UCommonTabListWidget::StaticClass, Z_Construct_UClass_UCommonTabListWidget_Statics::DependentSingletons, 2, 0x00B01081u, Z_Construct_UClass_UCommonTabListWidget_Statics::FuncInfo, 25, Z_Construct_UClass_UCommonTabListWidget_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_UCommonTabListWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA5C0 (end 0x002CA5EF)
+// Original VA: 0x00000001402CA5C0 | File offset: 0x002C9BC0
+// Recovery: confirmed (UHT singleton of UCommonTabListWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonTabListWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonTabListWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

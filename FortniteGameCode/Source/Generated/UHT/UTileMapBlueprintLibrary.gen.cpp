@@ -85,3 +85,37 @@ UFunction* Z_Construct_UFunction_UTileMapBlueprintLibrary_MakeTile()
 	}
 	return ReturnFunction;
 }
+
+class UTileMapBlueprintLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UTileMapBlueprintLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UTileMapBlueprintLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UTileMapBlueprintLibrary_BreakTile, "BreakTile" },
+	{ &Z_Construct_UFunction_UTileMapBlueprintLibrary_GetTileTransform, "GetTileTransform" },
+	{ &Z_Construct_UFunction_UTileMapBlueprintLibrary_GetTileUserData, "GetTileUserData" },
+	{ &Z_Construct_UFunction_UTileMapBlueprintLibrary_MakeTile, "MakeTile" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UTileMapBlueprintLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F96120
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UTileMapBlueprintLibrary_Statics::ClassParams = { &UTileMapBlueprintLibrary::StaticClass, Z_Construct_UClass_UTileMapBlueprintLibrary_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UTileMapBlueprintLibrary_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_UTileMapBlueprintLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x006679A0 (end 0x006679CF)
+// Original VA: 0x00000001406679A0 | File offset: 0x00666FA0
+// Recovery: confirmed (UHT singleton of UTileMapBlueprintLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UTileMapBlueprintLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UTileMapBlueprintLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

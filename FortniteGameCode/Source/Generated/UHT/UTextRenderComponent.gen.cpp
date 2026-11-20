@@ -285,3 +285,48 @@ UFunction* Z_Construct_UFunction_UTextRenderComponent_SetYScale()
 	}
 	return ReturnFunction;
 }
+
+class UTextRenderComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UTextRenderComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UTextRenderComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UTextRenderComponent_GetTextLocalSize, "GetTextLocalSize" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_GetTextWorldSize, "GetTextWorldSize" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_K2_SetText, "K2_SetText" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_SetFont, "SetFont" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_SetHorizSpacingAdjust, "SetHorizSpacingAdjust" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_SetHorizontalAlignment, "SetHorizontalAlignment" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_SetText, "SetText" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_SetTextMaterial, "SetTextMaterial" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_SetTextRenderColor, "SetTextRenderColor" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_SetVertSpacingAdjust, "SetVertSpacingAdjust" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_SetVerticalAlignment, "SetVerticalAlignment" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_SetWorldSize, "SetWorldSize" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_SetXScale, "SetXScale" },
+	{ &Z_Construct_UFunction_UTextRenderComponent_SetYScale, "SetYScale" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UTextRenderComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039C4C20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UTextRenderComponent_Statics::ClassParams = { &UTextRenderComponent::StaticClass, Z_Construct_UClass_UTextRenderComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UTextRenderComponent_Statics::FuncInfo, 14, Z_Construct_UClass_UTextRenderComponent_Statics::PropPointers, 13, nullptr, &Z_Construct_UClass_UTextRenderComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7B00 (end 0x024E7B2F)
+// Original VA: 0x00000001424E7B00 | File offset: 0x024E7100
+// Recovery: confirmed (UHT singleton of UTextRenderComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UTextRenderComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UTextRenderComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UMultiLineEditableText_SetText()
 	}
 	return ReturnFunction;
 }
+
+class UMultiLineEditableText
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMultiLineEditableText_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMultiLineEditableText_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMultiLineEditableText_GetText, "GetText" },
+	{ &Z_Construct_UDelegateFunction_UMultiLineEditableText_OnMultiLineEditableTextChangedEvent__DelegateSignature, "OnMultiLineEditableTextChangedEvent__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UMultiLineEditableText_OnMultiLineEditableTextCommittedEvent__DelegateSignature, "OnMultiLineEditableTextCommittedEvent__DelegateSignature" },
+	{ &Z_Construct_UFunction_UMultiLineEditableText_SetIsReadOnly, "SetIsReadOnly" },
+	{ &Z_Construct_UFunction_UMultiLineEditableText_SetText, "SetText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMultiLineEditableText_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03697E80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMultiLineEditableText_Statics::ClassParams = { &UMultiLineEditableText::StaticClass, Z_Construct_UClass_UMultiLineEditableText_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UMultiLineEditableText_Statics::FuncInfo, 5, Z_Construct_UClass_UMultiLineEditableText_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_UMultiLineEditableText_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED6F0 (end 0x01BED71F)
+// Original VA: 0x0000000141BED6F0 | File offset: 0x01BECCF0
+// Recovery: confirmed (UHT singleton of UMultiLineEditableText) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMultiLineEditableText()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMultiLineEditableText_Statics::ClassParams);
+	}
+	return OuterClass;
+}

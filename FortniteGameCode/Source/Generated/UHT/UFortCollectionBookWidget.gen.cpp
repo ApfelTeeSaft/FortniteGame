@@ -104,3 +104,39 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookWidget_OnPreviewXPChangeRequ
 	}
 	return ReturnFunction;
 }
+
+class UFortCollectionBookWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCollectionBookWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCollectionBookWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCollectionBookWidget_OnCollectionBookPageClicked, "OnCollectionBookPageClicked" },
+	{ &Z_Construct_UFunction_UFortCollectionBookWidget_OnCollectionBookPageSelected, "OnCollectionBookPageSelected" },
+	{ &Z_Construct_UFunction_UFortCollectionBookWidget_OnCollectionBookSectionClicked, "OnCollectionBookSectionClicked" },
+	{ &Z_Construct_UFunction_UFortCollectionBookWidget_OnCollectionBookSectionCloseRequest, "OnCollectionBookSectionCloseRequest" },
+	{ &Z_Construct_UFunction_UFortCollectionBookWidget_OnPreviewXPChangeRequest, "OnPreviewXPChangeRequest" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCollectionBookWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C81F10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCollectionBookWidget_Statics::ClassParams = { &UFortCollectionBookWidget::StaticClass, Z_Construct_UClass_UFortCollectionBookWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortCollectionBookWidget_Statics::FuncInfo, 5, Z_Construct_UClass_UFortCollectionBookWidget_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortCollectionBookWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B340 (end 0x0289B36F)
+// Original VA: 0x000000014289B340 | File offset: 0x0289A940
+// Recovery: confirmed (UHT singleton of UFortCollectionBookWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCollectionBookWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCollectionBookWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -222,3 +222,46 @@ UFunction* Z_Construct_UFunction_AFortProjectileBase_SetGravityScale()
 	}
 	return ReturnFunction;
 }
+
+class AFortProjectileBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortProjectileBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortProjectileBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortProjectileBase_GetGravityScale, "GetGravityScale" },
+	{ &Z_Construct_UFunction_AFortProjectileBase_GetOwnerPlayerController, "GetOwnerPlayerController" },
+	{ &Z_Construct_UFunction_AFortProjectileBase_OnBounce, "OnBounce" },
+	{ &Z_Construct_UFunction_AFortProjectileBase_OnBounceCallback, "OnBounceCallback" },
+	{ &Z_Construct_UFunction_AFortProjectileBase_OnRep_GravityScale, "OnRep_GravityScale" },
+	{ &Z_Construct_UFunction_AFortProjectileBase_OnRep_ReplicatedMaxSpeed, "OnRep_ReplicatedMaxSpeed" },
+	{ &Z_Construct_UFunction_AFortProjectileBase_OnShot, "OnShot" },
+	{ &Z_Construct_UFunction_AFortProjectileBase_OnStop, "OnStop" },
+	{ &Z_Construct_UFunction_AFortProjectileBase_OnStopCallback, "OnStopCallback" },
+	{ &Z_Construct_UFunction_AFortProjectileBase_OnStoppedOnServer, "OnStoppedOnServer" },
+	{ &Z_Construct_UFunction_AFortProjectileBase_SetGravityScale, "SetGravityScale" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortProjectileBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033D5F00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortProjectileBase_Statics::ClassParams = { &AFortProjectileBase::StaticClass, Z_Construct_UClass_AFortProjectileBase_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortProjectileBase_Statics::FuncInfo, 11, Z_Construct_UClass_AFortProjectileBase_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_AFortProjectileBase_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortProjectileBase_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B540 (end 0x0108B56F)
+// Original VA: 0x000000014108B540 | File offset: 0x0108AB40
+// Recovery: confirmed (UHT singleton of AFortProjectileBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortProjectileBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortProjectileBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

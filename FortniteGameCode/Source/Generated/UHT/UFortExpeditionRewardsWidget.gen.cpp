@@ -64,3 +64,37 @@ UFunction* Z_Construct_UFunction_UFortExpeditionRewardsWidget_RefreshRewardsUI()
 	}
 	return ReturnFunction;
 }
+
+class UFortExpeditionRewardsWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortExpeditionRewardsWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortExpeditionRewardsWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortExpeditionRewardsWidget_HandleCollectionExpeditionCompleted, "HandleCollectionExpeditionCompleted" },
+	{ &Z_Construct_UFunction_UFortExpeditionRewardsWidget_ProcessNextReward, "ProcessNextReward" },
+	{ &Z_Construct_UFunction_UFortExpeditionRewardsWidget_RefreshRewardsUI, "RefreshRewardsUI" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortExpeditionRewardsWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C8FD70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortExpeditionRewardsWidget_Statics::ClassParams = { &UFortExpeditionRewardsWidget::StaticClass, Z_Construct_UClass_UFortExpeditionRewardsWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortExpeditionRewardsWidget_Statics::FuncInfo, 3, Z_Construct_UClass_UFortExpeditionRewardsWidget_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortExpeditionRewardsWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A36E0 (end 0x028A370F)
+// Original VA: 0x00000001428A36E0 | File offset: 0x028A2CE0
+// Recovery: confirmed (UHT singleton of UFortExpeditionRewardsWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortExpeditionRewardsWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortExpeditionRewardsWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

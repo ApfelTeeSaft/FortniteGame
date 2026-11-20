@@ -985,3 +985,82 @@ UFunction* Z_Construct_UFunction_UFortMissionLibrary_UnregisterForMissionEvents(
 	}
 	return ReturnFunction;
 }
+
+class UFortMissionLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMissionLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMissionLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMissionLibrary_AddCompletionTagToMission, "AddCompletionTagToMission" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_AddCompletionTagsToMission, "AddCompletionTagsToMission" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_AdjustWaveBasedGameDifficulty, "AdjustWaveBasedGameDifficulty" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_CreateDynamicBuildingDeconstructor, "CreateDynamicBuildingDeconstructor" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_CreateMissionEvent, "CreateMissionEvent" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_ExecuteMissionEvent, "ExecuteMissionEvent" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_ExecuteMissionEventEx, "ExecuteMissionEventEx" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_FindActorsWithTags, "FindActorsWithTags" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_FindOriginatingPlacementActor, "FindOriginatingPlacementActor" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GetAllLoadedMissions, "GetAllLoadedMissions" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GetBluGloManager, "GetBluGloManager" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GetMissionActorsInEncounterDirection, "GetMissionActorsInEncounterDirection" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GetMissionActorsInVectorDirection, "GetMissionActorsInVectorDirection" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GetMissionFromGuid, "GetMissionFromGuid" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GetMissionHUDTextLineHeightEstimate, "GetMissionHUDTextLineHeightEstimate" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GetTieredWaveBaseNumKillPoints, "GetTieredWaveBaseNumKillPoints" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GetTieredWaveBaseNumKills, "GetTieredWaveBaseNumKills" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GetTieredWaveBaseWaveLength, "GetTieredWaveBaseWaveLength" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GetTieredWaveSet, "GetTieredWaveSet" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GiveMissionRewardsToPlayer, "GiveMissionRewardsToPlayer" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GiveMissionRewardsToPlayerAsPickups, "GiveMissionRewardsToPlayerAsPickups" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_GiveMissionSchematicItemDirectlyToPlayer, "GiveMissionSchematicItemDirectlyToPlayer" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_HasTags, "HasTags" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_IsUsingNewMissionGeneration, "IsUsingNewMissionGeneration" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_LoadMission, "LoadMission" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_NumBluGloFromPlayerPawn, "NumBluGloFromPlayerPawn" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_NumBluGloFromPlayerState, "NumBluGloFromPlayerState" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_PingMinimap, "PingMinimap" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_PollActorsInVolume, "PollActorsInVolume" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_RegisterForMissionEvents, "RegisterForMissionEvents" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_RegisterMissionInfoUIActor, "RegisterMissionInfoUIActor" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_RespawnOutlanderFragments, "RespawnOutlanderFragments" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_SetOnlinePresenceDoNotDisturb, "SetOnlinePresenceDoNotDisturb" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_SetWorldSavingEnabled, "SetWorldSavingEnabled" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_ShouldUseAlternateAIDirectorBalance, "ShouldUseAlternateAIDirectorBalance" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_SpawnAndCollectPlayerPickups, "SpawnAndCollectPlayerPickups" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_SpawnAtPlacementActorsHelper, "SpawnAtPlacementActorsHelper" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_SpawnBuildingActorAtTransform, "SpawnBuildingActorAtTransform" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_SpawnMissionItemPickup, "SpawnMissionItemPickup" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_SpawnMissionItemPickupInWorld, "SpawnMissionItemPickupInWorld" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_SpawnPlacementMissionActor, "SpawnPlacementMissionActor" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_StartAIEncounter, "StartAIEncounter" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_StartAIEncounterWithEnvironmentQuery, "StartAIEncounterWithEnvironmentQuery" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_StartPlayingMission, "StartPlayingMission" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_StopAIEncounter, "StopAIEncounter" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_StopAIEncounterAgainstActor, "StopAIEncounterAgainstActor" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_TeleportPawnNearLocation, "TeleportPawnNearLocation" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_TeleportPlayerPawn, "TeleportPlayerPawn" },
+	{ &Z_Construct_UFunction_UFortMissionLibrary_UnregisterForMissionEvents, "UnregisterForMissionEvents" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMissionLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033838C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMissionLibrary_Statics::ClassParams = { &UFortMissionLibrary::StaticClass, Z_Construct_UClass_UFortMissionLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortMissionLibrary_Statics::FuncInfo, 49, nullptr, 0, nullptr, &Z_Construct_UClass_UFortMissionLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010415B0 (end 0x010415DF)
+// Original VA: 0x00000001410415B0 | File offset: 0x01040BB0
+// Recovery: confirmed (UHT singleton of UFortMissionLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMissionLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMissionLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

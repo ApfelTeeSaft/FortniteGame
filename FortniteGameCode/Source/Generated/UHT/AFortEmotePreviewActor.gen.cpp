@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_AFortEmotePreviewActor_PreviewEmote()
 	}
 	return ReturnFunction;
 }
+
+class AFortEmotePreviewActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortEmotePreviewActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortEmotePreviewActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortEmotePreviewActor_GetAthenaSlottedCharacter, "GetAthenaSlottedCharacter" },
+	{ &Z_Construct_UFunction_AFortEmotePreviewActor_PreviewEmote, "PreviewEmote" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortEmotePreviewActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03309A40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortEmotePreviewActor_Statics::ClassParams = { &AFortEmotePreviewActor::StaticClass, Z_Construct_UClass_AFortEmotePreviewActor_Statics::DependentSingletons, 2, 0x00880081u, Z_Construct_UClass_AFortEmotePreviewActor_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_AFortEmotePreviewActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6EE0 (end 0x00FD6F0F)
+// Original VA: 0x0000000140FD6EE0 | File offset: 0x00FD64E0
+// Recovery: confirmed (UHT singleton of AFortEmotePreviewActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortEmotePreviewActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortEmotePreviewActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -501,3 +501,60 @@ UFunction* Z_Construct_UFunction_UActorComponent_ToggleActive()
 	}
 	return ReturnFunction;
 }
+
+class UActorComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UActorComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UActorComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UActorComponent_Activate, "Activate" },
+	{ &Z_Construct_UFunction_UActorComponent_AddTickPrerequisiteActor, "AddTickPrerequisiteActor" },
+	{ &Z_Construct_UFunction_UActorComponent_AddTickPrerequisiteComponent, "AddTickPrerequisiteComponent" },
+	{ &Z_Construct_UFunction_UActorComponent_ComponentHasTag, "ComponentHasTag" },
+	{ &Z_Construct_UFunction_UActorComponent_Deactivate, "Deactivate" },
+	{ &Z_Construct_UFunction_UActorComponent_GetComponentTickInterval, "GetComponentTickInterval" },
+	{ &Z_Construct_UFunction_UActorComponent_GetOwner, "GetOwner" },
+	{ &Z_Construct_UFunction_UActorComponent_IsActive, "IsActive" },
+	{ &Z_Construct_UFunction_UActorComponent_IsBeingDestroyed, "IsBeingDestroyed" },
+	{ &Z_Construct_UFunction_UActorComponent_IsComponentTickEnabled, "IsComponentTickEnabled" },
+	{ &Z_Construct_UFunction_UActorComponent_K2_DestroyComponent, "K2_DestroyComponent" },
+	{ &Z_Construct_UFunction_UActorComponent_OnRep_IsActive, "OnRep_IsActive" },
+	{ &Z_Construct_UFunction_UActorComponent_ReceiveBeginPlay, "ReceiveBeginPlay" },
+	{ &Z_Construct_UFunction_UActorComponent_ReceiveEndPlay, "ReceiveEndPlay" },
+	{ &Z_Construct_UFunction_UActorComponent_ReceiveTick, "ReceiveTick" },
+	{ &Z_Construct_UFunction_UActorComponent_RemoveTickPrerequisiteActor, "RemoveTickPrerequisiteActor" },
+	{ &Z_Construct_UFunction_UActorComponent_RemoveTickPrerequisiteComponent, "RemoveTickPrerequisiteComponent" },
+	{ &Z_Construct_UFunction_UActorComponent_SetActive, "SetActive" },
+	{ &Z_Construct_UFunction_UActorComponent_SetAutoActivate, "SetAutoActivate" },
+	{ &Z_Construct_UFunction_UActorComponent_SetComponentTickEnabled, "SetComponentTickEnabled" },
+	{ &Z_Construct_UFunction_UActorComponent_SetComponentTickInterval, "SetComponentTickInterval" },
+	{ &Z_Construct_UFunction_UActorComponent_SetIsReplicated, "SetIsReplicated" },
+	{ &Z_Construct_UFunction_UActorComponent_SetTickGroup, "SetTickGroup" },
+	{ &Z_Construct_UFunction_UActorComponent_SetTickableWhenPaused, "SetTickableWhenPaused" },
+	{ &Z_Construct_UFunction_UActorComponent_ToggleActive, "ToggleActive" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UActorComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03891790
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UActorComponent_Statics::ClassParams = { &UActorComponent::StaticClass, Z_Construct_UClass_UActorComponent_Statics::DependentSingletons, 2, 0x00B00081u, Z_Construct_UClass_UActorComponent_Statics::FuncInfo, 25, Z_Construct_UClass_UActorComponent_Statics::PropPointers, 18, nullptr, &Z_Construct_UClass_UActorComponent_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UActorComponent_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C85B0 (end 0x023C85DF)
+// Original VA: 0x00000001423C85B0 | File offset: 0x023C7BB0
+// Recovery: confirmed (UHT singleton of UActorComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UActorComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UActorComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortInventorySortFunctionLibrary_GetCriterionD
 	}
 	return ReturnFunction;
 }
+
+class UFortInventorySortFunctionLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortInventorySortFunctionLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortInventorySortFunctionLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortInventorySortFunctionLibrary_GetCriterionDisplayNameOfSortType, "GetCriterionDisplayNameOfSortType" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortInventorySortFunctionLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x034213D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortInventorySortFunctionLibrary_Statics::ClassParams = { &UFortInventorySortFunctionLibrary::StaticClass, Z_Construct_UClass_UFortInventorySortFunctionLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortInventorySortFunctionLibrary_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortInventorySortFunctionLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CAA90 (end 0x010CAABF)
+// Original VA: 0x00000001410CAA90 | File offset: 0x010CA090
+// Recovery: confirmed (UHT singleton of UFortInventorySortFunctionLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortInventorySortFunctionLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortInventorySortFunctionLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

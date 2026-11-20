@@ -105,3 +105,38 @@ UFunction* Z_Construct_UFunction_UFortCarriedObjectHolderInterface_OnCarriedObje
 	}
 	return ReturnFunction;
 }
+
+class UFortCarriedObjectHolderInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCarriedObjectHolderInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCarriedObjectHolderInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCarriedObjectHolderInterface_CanHoldObject, "CanHoldObject" },
+	{ &Z_Construct_UFunction_UFortCarriedObjectHolderInterface_GetAttachmentComponent, "GetAttachmentComponent" },
+	{ &Z_Construct_UFunction_UFortCarriedObjectHolderInterface_GetCarriedObjectAttachmentInfo, "GetCarriedObjectAttachmentInfo" },
+	{ &Z_Construct_UFunction_UFortCarriedObjectHolderInterface_OnCarriedObjectAttach, "OnCarriedObjectAttach" },
+	{ &Z_Construct_UFunction_UFortCarriedObjectHolderInterface_OnCarriedObjectDetach, "OnCarriedObjectDetach" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCarriedObjectHolderInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x032DA700
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCarriedObjectHolderInterface_Statics::ClassParams = { &UFortCarriedObjectHolderInterface::StaticClass, Z_Construct_UClass_UFortCarriedObjectHolderInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortCarriedObjectHolderInterface_Statics::FuncInfo, 5, nullptr, 0, nullptr, &Z_Construct_UClass_UFortCarriedObjectHolderInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB0140 (end 0x00FB016F)
+// Original VA: 0x0000000140FB0140 | File offset: 0x00FAF740
+// Recovery: confirmed (UHT singleton of UFortCarriedObjectHolderInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCarriedObjectHolderInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCarriedObjectHolderInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

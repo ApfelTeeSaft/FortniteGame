@@ -222,3 +222,45 @@ UFunction* Z_Construct_UFunction_UFortTwitchLogin_OnShowLoginError()
 	}
 	return ReturnFunction;
 }
+
+class UFortTwitchLogin
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTwitchLogin_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTwitchLogin_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTwitchLogin_CancelLoginFlow, "CancelLoginFlow" },
+	{ &Z_Construct_UFunction_UFortTwitchLogin_GetAccountName, "GetAccountName" },
+	{ &Z_Construct_UFunction_UFortTwitchLogin_GetLinkedTwitchAccountName, "GetLinkedTwitchAccountName" },
+	{ &Z_Construct_UFunction_UFortTwitchLogin_IsLoggedIn, "IsLoggedIn" },
+	{ &Z_Construct_UFunction_UFortTwitchLogin_Login, "Login" },
+	{ &Z_Construct_UFunction_UFortTwitchLogin_Logout, "Logout" },
+	{ &Z_Construct_UFunction_UFortTwitchLogin_OnLinkedTwitchAccountChanged, "OnLinkedTwitchAccountChanged" },
+	{ &Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalCreated, "OnLoginFlowModalCreated" },
+	{ &Z_Construct_UFunction_UFortTwitchLogin_OnLoginFlowModalDismissed, "OnLoginFlowModalDismissed" },
+	{ &Z_Construct_UFunction_UFortTwitchLogin_OnLoginStatusChanged, "OnLoginStatusChanged" },
+	{ &Z_Construct_UFunction_UFortTwitchLogin_OnShowLoginError, "OnShowLoginError" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTwitchLogin_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D3C8B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTwitchLogin_Statics::ClassParams = { &UFortTwitchLogin::StaticClass, Z_Construct_UClass_UFortTwitchLogin_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortTwitchLogin_Statics::FuncInfo, 11, Z_Construct_UClass_UFortTwitchLogin_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortTwitchLogin_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A910 (end 0x0290A93F)
+// Original VA: 0x000000014290A910 | File offset: 0x02909F10
+// Recovery: confirmed (UHT singleton of UFortTwitchLogin) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTwitchLogin()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTwitchLogin_Statics::ClassParams);
+	}
+	return OuterClass;
+}

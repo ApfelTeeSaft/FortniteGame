@@ -63,3 +63,37 @@ UFunction* Z_Construct_UFunction_UFortUIMessagesPageBase_OnNotificationCleared()
 	}
 	return ReturnFunction;
 }
+
+class UFortUIMessagesPageBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortUIMessagesPageBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUIMessagesPageBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUIMessagesPageBase_FillMessagesList, "FillMessagesList" },
+	{ &Z_Construct_UFunction_UFortUIMessagesPageBase_OnMessageAvailable, "OnMessageAvailable" },
+	{ &Z_Construct_UFunction_UFortUIMessagesPageBase_OnNotificationCleared, "OnNotificationCleared" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUIMessagesPageBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D48F50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUIMessagesPageBase_Statics::ClassParams = { &UFortUIMessagesPageBase::StaticClass, Z_Construct_UClass_UFortUIMessagesPageBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortUIMessagesPageBase_Statics::FuncInfo, 3, Z_Construct_UClass_UFortUIMessagesPageBase_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortUIMessagesPageBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911D20 (end 0x02911D4F)
+// Original VA: 0x0000000142911D20 | File offset: 0x02911320
+// Recovery: confirmed (UHT singleton of UFortUIMessagesPageBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUIMessagesPageBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUIMessagesPageBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

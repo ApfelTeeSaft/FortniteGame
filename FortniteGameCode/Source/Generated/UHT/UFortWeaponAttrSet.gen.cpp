@@ -157,3 +157,42 @@ UFunction* Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponVerticalRecoil()
 	}
 	return ReturnFunction;
 }
+
+class UFortWeaponAttrSet
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortWeaponAttrSet_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortWeaponAttrSet_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_AccumulatedWeaponChanceToNotConsumeAmmo, "OnRep_AccumulatedWeaponChanceToNotConsumeAmmo" },
+	{ &Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_CharacterItemDurabilityDecayModifier, "OnRep_CharacterItemDurabilityDecayModifier" },
+	{ &Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponAmmoClipSize, "OnRep_WeaponAmmoClipSize" },
+	{ &Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponChanceToNotConsumeAmmo, "OnRep_WeaponChanceToNotConsumeAmmo" },
+	{ &Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponHorizontalRecoil, "OnRep_WeaponHorizontalRecoil" },
+	{ &Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponRateOfFire, "OnRep_WeaponRateOfFire" },
+	{ &Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponReloadSpeed, "OnRep_WeaponReloadSpeed" },
+	{ &Z_Construct_UFunction_UFortWeaponAttrSet_OnRep_WeaponVerticalRecoil, "OnRep_WeaponVerticalRecoil" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortWeaponAttrSet_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0342F3D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortWeaponAttrSet_Statics::ClassParams = { &UFortWeaponAttrSet::StaticClass, Z_Construct_UClass_UFortWeaponAttrSet_Statics::DependentSingletons, 2, 0x00280080u, Z_Construct_UClass_UFortWeaponAttrSet_Statics::FuncInfo, 8, Z_Construct_UClass_UFortWeaponAttrSet_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortWeaponAttrSet_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8B40 (end 0x010D8B6F)
+// Original VA: 0x00000001410D8B40 | File offset: 0x010D8140
+// Recovery: confirmed (UHT singleton of UFortWeaponAttrSet) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortWeaponAttrSet()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortWeaponAttrSet_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -284,3 +284,48 @@ UFunction* Z_Construct_UFunction_UAtmosphericFogComponent_StartPrecompute()
 	}
 	return ReturnFunction;
 }
+
+class UAtmosphericFogComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAtmosphericFogComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAtmosphericFogComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_DisableGroundScattering, "DisableGroundScattering" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_DisableSunDisk, "DisableSunDisk" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_SetAltitudeScale, "SetAltitudeScale" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_SetDefaultBrightness, "SetDefaultBrightness" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_SetDefaultLightColor, "SetDefaultLightColor" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_SetDensityMultiplier, "SetDensityMultiplier" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_SetDensityOffset, "SetDensityOffset" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_SetDistanceOffset, "SetDistanceOffset" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_SetDistanceScale, "SetDistanceScale" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_SetFogMultiplier, "SetFogMultiplier" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_SetPrecomputeParams, "SetPrecomputeParams" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_SetStartDistance, "SetStartDistance" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_SetSunMultiplier, "SetSunMultiplier" },
+	{ &Z_Construct_UFunction_UAtmosphericFogComponent_StartPrecompute, "StartPrecompute" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAtmosphericFogComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038AB5D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAtmosphericFogComponent_Statics::ClassParams = { &UAtmosphericFogComponent::StaticClass, Z_Construct_UClass_UAtmosphericFogComponent_Statics::DependentSingletons, 2, 0x00A83080u, Z_Construct_UClass_UAtmosphericFogComponent_Statics::FuncInfo, 14, Z_Construct_UClass_UAtmosphericFogComponent_Statics::PropPointers, 17, nullptr, &Z_Construct_UClass_UAtmosphericFogComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DB240 (end 0x023DB26F)
+// Original VA: 0x00000001423DB240 | File offset: 0x023DA840
+// Recovery: confirmed (UHT singleton of UAtmosphericFogComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAtmosphericFogComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAtmosphericFogComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

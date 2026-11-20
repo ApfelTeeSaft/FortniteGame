@@ -103,3 +103,39 @@ UFunction* Z_Construct_UFunction_AFortLobbyBeaconClientRM_UpdateNewlyJoinedPlaye
 	}
 	return ReturnFunction;
 }
+
+class AFortLobbyBeaconClientRM
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortLobbyBeaconClientRM_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortLobbyBeaconClientRM_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClientRM_ClientBroadcastLobbyPlayerPadTop, "ClientBroadcastLobbyPlayerPadTop" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClientRM_ServerUpdateNewlyJoinedPlayerInternal, "ServerUpdateNewlyJoinedPlayerInternal" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClientRM_ServerUpdateReadyStatus, "ServerUpdateReadyStatus" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClientRM_SetLocalReadyStatus, "SetLocalReadyStatus" },
+	{ &Z_Construct_UFunction_AFortLobbyBeaconClientRM_UpdateNewlyJoinedPlayer, "UpdateNewlyJoinedPlayer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortLobbyBeaconClientRM_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0335EA50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortLobbyBeaconClientRM_Statics::ClassParams = { &AFortLobbyBeaconClientRM::StaticClass, Z_Construct_UClass_AFortLobbyBeaconClientRM_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_AFortLobbyBeaconClientRM_Statics::FuncInfo, 5, Z_Construct_UClass_AFortLobbyBeaconClientRM_Statics::PropPointers, 2, "Engine", &Z_Construct_UClass_AFortLobbyBeaconClientRM_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101E2B0 (end 0x0101E2DF)
+// Original VA: 0x000000014101E2B0 | File offset: 0x0101D8B0
+// Recovery: confirmed (UHT singleton of AFortLobbyBeaconClientRM) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortLobbyBeaconClientRM()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortLobbyBeaconClientRM_Statics::ClassParams);
+	}
+	return OuterClass;
+}

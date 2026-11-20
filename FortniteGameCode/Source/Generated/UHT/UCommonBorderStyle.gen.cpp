@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UCommonBorderStyle_GetBackgroundBrush()
 	}
 	return ReturnFunction;
 }
+
+class UCommonBorderStyle
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonBorderStyle_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonBorderStyle_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonBorderStyle_GetBackgroundBrush, "GetBackgroundBrush" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonBorderStyle_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E7B510
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonBorderStyle_Statics::ClassParams = { &UCommonBorderStyle::StaticClass, Z_Construct_UClass_UCommonBorderStyle_Statics::DependentSingletons, 2, 0x00100081u, Z_Construct_UClass_UCommonBorderStyle_Statics::FuncInfo, 1, Z_Construct_UClass_UCommonBorderStyle_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UCommonBorderStyle_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2C60 (end 0x002C2C8F)
+// Original VA: 0x00000001402C2C60 | File offset: 0x002C2260
+// Recovery: confirmed (UHT singleton of UCommonBorderStyle) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonBorderStyle()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonBorderStyle_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_ABuildingTrapCeiling_Falling_TrapActivated()
 	}
 	return ReturnFunction;
 }
+
+class ABuildingTrapCeiling_Falling
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingTrapCeiling_Falling_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingTrapCeiling_Falling_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingTrapCeiling_Falling_TrapActivated, "TrapActivated" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingTrapCeiling_Falling_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03286CC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingTrapCeiling_Falling_Statics::ClassParams = { &ABuildingTrapCeiling_Falling::StaticClass, Z_Construct_UClass_ABuildingTrapCeiling_Falling_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ABuildingTrapCeiling_Falling_Statics::FuncInfo, 1, Z_Construct_UClass_ABuildingTrapCeiling_Falling_Statics::PropPointers, 3, "Game", &Z_Construct_UClass_ABuildingTrapCeiling_Falling_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78560 (end 0x00F7858F)
+// Original VA: 0x0000000140F78560 | File offset: 0x00F77B60
+// Recovery: confirmed (UHT singleton of ABuildingTrapCeiling_Falling) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingTrapCeiling_Falling()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingTrapCeiling_Falling_Statics::ClassParams);
+	}
+	return OuterClass;
+}

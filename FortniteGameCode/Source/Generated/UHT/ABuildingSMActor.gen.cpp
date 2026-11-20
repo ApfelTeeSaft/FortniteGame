@@ -1027,3 +1027,87 @@ UFunction* Z_Construct_UFunction_ABuildingSMActor_WillRegisterWithStructuralGrid
 	}
 	return ReturnFunction;
 }
+
+class ABuildingSMActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingSMActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingSMActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingSMActor_AttachBuildingActorToMe, "AttachBuildingActorToMe" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_BlueprintOnStructurallyStable, "BlueprintOnStructurallyStable" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_BlueprintOnStructurallyUnstable, "BlueprintOnStructurallyUnstable" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_DetachBuildingActorFromMe, "DetachBuildingActorFromMe" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_EditorOnlyRemoveInstanceMaterialScalarParameter, "EditorOnlyRemoveInstanceMaterialScalarParameter" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_EditorOnlyRemoveInstanceMaterialTextureParameter, "EditorOnlyRemoveInstanceMaterialTextureParameter" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_EditorOnlyRemoveInstanceMaterialVectorParameter, "EditorOnlyRemoveInstanceMaterialVectorParameter" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_EditorOnlySetInstanceMaterialScalarParameter, "EditorOnlySetInstanceMaterialScalarParameter" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_EditorOnlySetInstanceMaterialTextureParameter, "EditorOnlySetInstanceMaterialTextureParameter" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_EditorOnlySetInstanceMaterialVectorParameter, "EditorOnlySetInstanceMaterialVectorParameter" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_ForceIntoStructuralGridDuringRuntime, "ForceIntoStructuralGridDuringRuntime" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_GameplayCue_Abilities_Activation_Generic_BannerWallBuff1, "GameplayCue_Abilities_Activation_Generic_BannerWallBuff1" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_GameplayCue_Abilities_Activation_Generic_BannerWallBuff2, "GameplayCue_Abilities_Activation_Generic_BannerWallBuff2" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_GetAnimatingMID, "GetAnimatingMID" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_GetAttachedBuildingActors, "GetAttachedBuildingActors" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_GetBuildingMeshComponent, "GetBuildingMeshComponent" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_GetIntenseWindMaterialsForPreview, "GetIntenseWindMaterialsForPreview" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_GetLogicalBuildingIndex, "GetLogicalBuildingIndex" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_GetReplacementDestructionReason, "GetReplacementDestructionReason" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_GetWindPannerSpeedCurveForPreview, "GetWindPannerSpeedCurveForPreview" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_GetWindSpeedCurveForPreview, "GetWindSpeedCurveForPreview" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_HasDestructionLoot, "HasDestructionLoot" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_IsStructurallySupported, "IsStructurallySupported" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_IsSupportedByWorld, "IsSupportedByWorld" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_MarkConnectedBuildingsForStructuralIntegrityCheck, "MarkConnectedBuildingsForStructuralIntegrityCheck" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_MulticastPlayFullHealthEffects, "MulticastPlayFullHealthEffects" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_MulticastRequestBuildingAnimation, "MulticastRequestBuildingAnimation" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnAttachToBuilding, "OnAttachToBuilding" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnBounceAnimationUpdate, "OnBounceAnimationUpdate" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnDetachFromBuilding, "OnDetachFromBuilding" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnDynamicShrinkAndDestroyEffectFinished, "OnDynamicShrinkAndDestroyEffectFinished" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnLODOverrideEffectFinished, "OnLODOverrideEffectFinished" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnRep_BuildingReplacementType, "OnRep_BuildingReplacementType" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnRep_EditingPlayer, "OnRep_EditingPlayer" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnRep_MetaData, "OnRep_MetaData" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnRep_RelevantBASE, "OnRep_RelevantBASE" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnRep_ReplicatedDrawScale3D, "OnRep_ReplicatedDrawScale3D" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnRep_ReplicatedMIC, "OnRep_ReplicatedMIC" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnRep_ResourceType, "OnRep_ResourceType" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnRep_WeakSpotPositions, "OnRep_WeakSpotPositions" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnRep_bCollisionBlockedByPawns, "OnRep_bCollisionBlockedByPawns" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnRep_bUnderConstruction, "OnRep_bUnderConstruction" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnRep_bUnderRepair, "OnRep_bUnderRepair" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_OnRepairStarted, "OnRepairStarted" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_ReadTextureData, "ReadTextureData" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_RepairBuilding, "RepairBuilding" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_SetMirrored, "SetMirrored" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_SetTextureData, "SetTextureData" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_UpdateDynamicShrinkAndDestroyEffect, "UpdateDynamicShrinkAndDestroyEffect" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_UpdateLODOverrideEffect, "UpdateLODOverrideEffect" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_UpdateRepairMaterialAnim, "UpdateRepairMaterialAnim" },
+	{ &Z_Construct_UFunction_ABuildingSMActor_WillRegisterWithStructuralGrid, "WillRegisterWithStructuralGrid" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingSMActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0327FA80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingSMActor_Statics::ClassParams = { &ABuildingSMActor::StaticClass, Z_Construct_UClass_ABuildingSMActor_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_ABuildingSMActor_Statics::FuncInfo, 52, Z_Construct_UClass_ABuildingSMActor_Statics::PropPointers, 143, "Game", &Z_Construct_UClass_ABuildingSMActor_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_ABuildingSMActor_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71E80 (end 0x00F71EAF)
+// Original VA: 0x0000000140F71E80 | File offset: 0x00F71480
+// Recovery: confirmed (UHT singleton of ABuildingSMActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingSMActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingSMActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

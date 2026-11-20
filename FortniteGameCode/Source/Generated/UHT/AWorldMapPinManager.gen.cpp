@@ -25,3 +25,36 @@ UFunction* Z_Construct_UFunction_AWorldMapPinManager_CreateWorldMapPin()
 	}
 	return ReturnFunction;
 }
+
+class AWorldMapPinManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AWorldMapPinManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AWorldMapPinManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AWorldMapPinManager_CreateWorldMapPin, "CreateWorldMapPin" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AWorldMapPinManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03451C10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AWorldMapPinManager_Statics::ClassParams = { &AWorldMapPinManager::StaticClass, Z_Construct_UClass_AWorldMapPinManager_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AWorldMapPinManager_Statics::FuncInfo, 1, Z_Construct_UClass_AWorldMapPinManager_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_AWorldMapPinManager_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AWorldMapPinManager_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F1A00 (end 0x010F1A2F)
+// Original VA: 0x00000001410F1A00 | File offset: 0x010F1000
+// Recovery: confirmed (UHT singleton of AWorldMapPinManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AWorldMapPinManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AWorldMapPinManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

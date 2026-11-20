@@ -445,3 +445,57 @@ UFunction* Z_Construct_UFunction_UFortItemDefinition_ShouldShowPreviewOnCurrentH
 	}
 	return ReturnFunction;
 }
+
+class UFortItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemDefinition_CreateTemporaryInstanceFromExistingItemBP, "CreateTemporaryInstanceFromExistingItemBP" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_CreateTemporaryItemInstanceBP, "CreateTemporaryItemInstanceBP" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_CustomizePreviewMesh, "CustomizePreviewMesh" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_CustomizePreviewPrefab, "CustomizePreviewPrefab" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetDescription, "GetDescription" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetDisplayName, "GetDisplayName" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetDisplayStats, "GetDisplayStats" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetLargePreviewImage, "GetLargePreviewImage" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetPersistentName, "GetPersistentName" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetPreviewAssets, "GetPreviewAssets" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetPreviewMeshOffset, "GetPreviewMeshOffset" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetPreviewPrefabAsset, "GetPreviewPrefabAsset" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetPreviewSkeletalMeshAsset, "GetPreviewSkeletalMeshAsset" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetPreviewStaticMeshAsset, "GetPreviewStaticMeshAsset" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetRarity, "GetRarity" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetShortDescription, "GetShortDescription" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetSingleLineDescription, "GetSingleLineDescription" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetSmallPreviewImage, "GetSmallPreviewImage" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetSmallPreviewImageBrush, "GetSmallPreviewImageBrush" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_GetTooltip, "GetTooltip" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_IsInventorySizeLimited, "IsInventorySizeLimited" },
+	{ &Z_Construct_UFunction_UFortItemDefinition_ShouldShowPreviewOnCurrentHero, "ShouldShowPreviewOnCurrentHero" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03354180
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemDefinition_Statics::ClassParams = { &UFortItemDefinition::StaticClass, Z_Construct_UClass_UFortItemDefinition_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_UFortItemDefinition_Statics::FuncInfo, 22, Z_Construct_UClass_UFortItemDefinition_Statics::PropPointers, 38, nullptr, &Z_Construct_UClass_UFortItemDefinition_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortItemDefinition_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100C050 (end 0x0100C07F)
+// Original VA: 0x000000014100C050 | File offset: 0x0100B650
+// Recovery: confirmed (UHT singleton of UFortItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

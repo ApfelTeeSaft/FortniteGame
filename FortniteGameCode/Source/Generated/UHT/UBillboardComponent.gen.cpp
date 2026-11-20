@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UBillboardComponent_SetUV()
 	}
 	return ReturnFunction;
 }
+
+class UBillboardComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBillboardComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBillboardComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBillboardComponent_SetSprite, "SetSprite" },
+	{ &Z_Construct_UFunction_UBillboardComponent_SetSpriteAndUV, "SetSpriteAndUV" },
+	{ &Z_Construct_UFunction_UBillboardComponent_SetUV, "SetUV" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBillboardComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038B16B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBillboardComponent_Statics::ClassParams = { &UBillboardComponent::StaticClass, Z_Construct_UClass_UBillboardComponent_Statics::DependentSingletons, 2, 0x00B03080u, Z_Construct_UClass_UBillboardComponent_Statics::FuncInfo, 3, Z_Construct_UClass_UBillboardComponent_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UBillboardComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E35A0 (end 0x023E35CF)
+// Original VA: 0x00000001423E35A0 | File offset: 0x023E2BA0
+// Recovery: confirmed (UHT singleton of UBillboardComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBillboardComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBillboardComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -284,3 +284,48 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetupMiniMapComponent()
 	}
 	return ReturnFunction;
 }
+
+class UFortMiniMapComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMiniMapComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMiniMapComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_OnRep_MiniMapData, "OnRep_MiniMapData" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIcon, "OverrideLocalMiniMapIcon" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_OverrideLocalMiniMapIndicatorIsVisible, "OverrideLocalMiniMapIndicatorIsVisible" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIcon, "SetMiniMapIcon" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColor, "SetMiniMapIconColor" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconColorPulsesPerSecond, "SetMiniMapIconColorPulsesPerSecond" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconPulseColor, "SetMiniMapIconPulseColor" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconScale, "SetMiniMapIconScale" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIconSizePulsesPerSecond, "SetMiniMapIconSizePulsesPerSecond" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisible, "SetMiniMapIndicatorIsVisible" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapIndicatorIsVisibleOnMiniMap, "SetMiniMapIndicatorIsVisibleOnMiniMap" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapLocationOffset, "SetMiniMapLocationOffset" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_SetMiniMapViewableDistance, "SetMiniMapViewableDistance" },
+	{ &Z_Construct_UFunction_UFortMiniMapComponent_SetupMiniMapComponent, "SetupMiniMapComponent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMiniMapComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0337A240
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMiniMapComponent_Statics::ClassParams = { &UFortMiniMapComponent::StaticClass, Z_Construct_UClass_UFortMiniMapComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UFortMiniMapComponent_Statics::FuncInfo, 14, Z_Construct_UClass_UFortMiniMapComponent_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortMiniMapComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01038780 (end 0x010387AF)
+// Original VA: 0x0000000141038780 | File offset: 0x01037D80
+// Recovery: confirmed (UHT singleton of UFortMiniMapComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMiniMapComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMiniMapComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

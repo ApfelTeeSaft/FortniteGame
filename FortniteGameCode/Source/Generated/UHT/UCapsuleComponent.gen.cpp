@@ -285,3 +285,48 @@ UFunction* Z_Construct_UFunction_UCapsuleComponent_SetCapsuleSize()
 	}
 	return ReturnFunction;
 }
+
+class UCapsuleComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCapsuleComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCapsuleComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCapsuleComponent_GetScaledCapsuleHalfHeight, "GetScaledCapsuleHalfHeight" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_GetScaledCapsuleHalfHeight_WithoutHemisphere, "GetScaledCapsuleHalfHeight_WithoutHemisphere" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_GetScaledCapsuleRadius, "GetScaledCapsuleRadius" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_GetScaledCapsuleSize, "GetScaledCapsuleSize" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_GetScaledCapsuleSize_WithoutHemisphere, "GetScaledCapsuleSize_WithoutHemisphere" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_GetShapeScale, "GetShapeScale" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_GetUnscaledCapsuleHalfHeight, "GetUnscaledCapsuleHalfHeight" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_GetUnscaledCapsuleHalfHeight_WithoutHemisphere, "GetUnscaledCapsuleHalfHeight_WithoutHemisphere" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_GetUnscaledCapsuleRadius, "GetUnscaledCapsuleRadius" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_GetUnscaledCapsuleSize, "GetUnscaledCapsuleSize" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_GetUnscaledCapsuleSize_WithoutHemisphere, "GetUnscaledCapsuleSize_WithoutHemisphere" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_SetCapsuleHalfHeight, "SetCapsuleHalfHeight" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_SetCapsuleRadius, "SetCapsuleRadius" },
+	{ &Z_Construct_UFunction_UCapsuleComponent_SetCapsuleSize, "SetCapsuleSize" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCapsuleComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038C0720
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCapsuleComponent_Statics::ClassParams = { &UCapsuleComponent::StaticClass, Z_Construct_UClass_UCapsuleComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UCapsuleComponent_Statics::FuncInfo, 14, Z_Construct_UClass_UCapsuleComponent_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UCapsuleComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EE0E0 (end 0x023EE10F)
+// Original VA: 0x00000001423EE0E0 | File offset: 0x023ED6E0
+// Recovery: confirmed (UHT singleton of UCapsuleComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCapsuleComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCapsuleComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

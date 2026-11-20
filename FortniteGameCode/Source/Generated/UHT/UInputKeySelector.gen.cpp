@@ -204,3 +204,44 @@ UFunction* Z_Construct_UFunction_UInputKeySelector_SetTextBlockVisibility()
 	}
 	return ReturnFunction;
 }
+
+class UInputKeySelector
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UInputKeySelector_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UInputKeySelector_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UInputKeySelector_GetIsSelectingKey, "GetIsSelectingKey" },
+	{ &Z_Construct_UDelegateFunction_UInputKeySelector_OnIsSelectingKeyChanged__DelegateSignature, "OnIsSelectingKeyChanged__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UInputKeySelector_OnKeySelected__DelegateSignature, "OnKeySelected__DelegateSignature" },
+	{ &Z_Construct_UFunction_UInputKeySelector_SetAllowGamepadKeys, "SetAllowGamepadKeys" },
+	{ &Z_Construct_UFunction_UInputKeySelector_SetAllowModifierKeys, "SetAllowModifierKeys" },
+	{ &Z_Construct_UFunction_UInputKeySelector_SetEscapeKeys, "SetEscapeKeys" },
+	{ &Z_Construct_UFunction_UInputKeySelector_SetKeySelectionText, "SetKeySelectionText" },
+	{ &Z_Construct_UFunction_UInputKeySelector_SetNoKeySpecifiedText, "SetNoKeySpecifiedText" },
+	{ &Z_Construct_UFunction_UInputKeySelector_SetSelectedKey, "SetSelectedKey" },
+	{ &Z_Construct_UFunction_UInputKeySelector_SetTextBlockVisibility, "SetTextBlockVisibility" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UInputKeySelector_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03697220
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UInputKeySelector_Statics::ClassParams = { &UInputKeySelector::StaticClass, Z_Construct_UClass_UInputKeySelector_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UInputKeySelector_Statics::FuncInfo, 10, Z_Construct_UClass_UInputKeySelector_Statics::PropPointers, 14, nullptr, &Z_Construct_UClass_UInputKeySelector_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED4D0 (end 0x01BED4FF)
+// Original VA: 0x0000000141BED4D0 | File offset: 0x01BECAD0
+// Recovery: confirmed (UHT singleton of UInputKeySelector) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UInputKeySelector()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UInputKeySelector_Statics::ClassParams);
+	}
+	return OuterClass;
+}

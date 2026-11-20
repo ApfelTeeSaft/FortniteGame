@@ -160,3 +160,42 @@ UFunction* Z_Construct_UFunction_AMatineeActor_Stop()
 	}
 	return ReturnFunction;
 }
+
+class AMatineeActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AMatineeActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AMatineeActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AMatineeActor_ChangePlaybackDirection, "ChangePlaybackDirection" },
+	{ &Z_Construct_UFunction_AMatineeActor_EnableGroupByName, "EnableGroupByName" },
+	{ &Z_Construct_UFunction_AMatineeActor_Pause, "Pause" },
+	{ &Z_Construct_UFunction_AMatineeActor_Play, "Play" },
+	{ &Z_Construct_UFunction_AMatineeActor_Reverse, "Reverse" },
+	{ &Z_Construct_UFunction_AMatineeActor_SetLoopingState, "SetLoopingState" },
+	{ &Z_Construct_UFunction_AMatineeActor_SetPosition, "SetPosition" },
+	{ &Z_Construct_UFunction_AMatineeActor_Stop, "Stop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AMatineeActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0394ECE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AMatineeActor_Statics::ClassParams = { &AMatineeActor::StaticClass, Z_Construct_UClass_AMatineeActor_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AMatineeActor_Statics::FuncInfo, 8, Z_Construct_UClass_AMatineeActor_Statics::PropPointers, 35, nullptr, &Z_Construct_UClass_AMatineeActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486630 (end 0x0248665F)
+// Original VA: 0x0000000142486630 | File offset: 0x02485C30
+// Recovery: confirmed (UHT singleton of AMatineeActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AMatineeActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AMatineeActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

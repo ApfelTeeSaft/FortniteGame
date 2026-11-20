@@ -64,3 +64,38 @@ UFunction* Z_Construct_UFunction_UFortQuestTrackerEntry_OnSetup()
 	}
 	return ReturnFunction;
 }
+
+class UFortQuestTrackerEntry
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortQuestTrackerEntry_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortQuestTrackerEntry_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortQuestTrackerEntry_HandleHUDObjectiveCompletion, "HandleHUDObjectiveCompletion" },
+	{ &Z_Construct_UFunction_UFortQuestTrackerEntry_HandleObjectiveEntryCreated, "HandleObjectiveEntryCreated" },
+	{ &Z_Construct_UFunction_UFortQuestTrackerEntry_OnSetup, "OnSetup" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortQuestTrackerEntry_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D09860
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortQuestTrackerEntry_Statics::ClassParams = { &UFortQuestTrackerEntry::StaticClass, Z_Construct_UClass_UFortQuestTrackerEntry_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortQuestTrackerEntry_Statics::FuncInfo, 3, Z_Construct_UClass_UFortQuestTrackerEntry_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortQuestTrackerEntry_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortQuestTrackerEntry_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED350 (end 0x028ED37F)
+// Original VA: 0x00000001428ED350 | File offset: 0x028EC950
+// Recovery: confirmed (UHT singleton of UFortQuestTrackerEntry) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortQuestTrackerEntry()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortQuestTrackerEntry_Statics::ClassParams);
+	}
+	return OuterClass;
+}

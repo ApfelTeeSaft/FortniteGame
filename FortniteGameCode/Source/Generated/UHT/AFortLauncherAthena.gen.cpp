@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_AFortLauncherAthena_TriggerLaunchEffects()
 	}
 	return ReturnFunction;
 }
+
+class AFortLauncherAthena
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortLauncherAthena_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortLauncherAthena_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortLauncherAthena_OnRepLaunchServerInfo, "OnRepLaunchServerInfo" },
+	{ &Z_Construct_UFunction_AFortLauncherAthena_TriggerLaunchEffects, "TriggerLaunchEffects" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortLauncherAthena_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0335DAE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortLauncherAthena_Statics::ClassParams = { &AFortLauncherAthena::StaticClass, Z_Construct_UClass_AFortLauncherAthena_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortLauncherAthena_Statics::FuncInfo, 2, Z_Construct_UClass_AFortLauncherAthena_Statics::PropPointers, 4, "Game", &Z_Construct_UClass_AFortLauncherAthena_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101E190 (end 0x0101E1BF)
+// Original VA: 0x000000014101E190 | File offset: 0x0101D790
+// Recovery: confirmed (UHT singleton of AFortLauncherAthena) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortLauncherAthena()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortLauncherAthena_Statics::ClassParams);
+	}
+	return OuterClass;
+}

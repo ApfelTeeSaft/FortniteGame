@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_UAbilityTask_NetworkSyncPoint_WaitNetSync()
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_NetworkSyncPoint
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_NetworkSyncPoint_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_NetworkSyncPoint_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_NetworkSyncPoint_OnSignalCallback, "OnSignalCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_NetworkSyncPoint_WaitNetSync, "WaitNetSync" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_NetworkSyncPoint_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F2B4E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_NetworkSyncPoint_Statics::ClassParams = { &UAbilityTask_NetworkSyncPoint::StaticClass, Z_Construct_UClass_UAbilityTask_NetworkSyncPoint_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_NetworkSyncPoint_Statics::FuncInfo, 2, Z_Construct_UClass_UAbilityTask_NetworkSyncPoint_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_UAbilityTask_NetworkSyncPoint_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546900 (end 0x0054692F)
+// Original VA: 0x0000000140546900 | File offset: 0x00545F00
+// Recovery: confirmed (UHT singleton of UAbilityTask_NetworkSyncPoint) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_NetworkSyncPoint()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_NetworkSyncPoint_Statics::ClassParams);
+	}
+	return OuterClass;
+}

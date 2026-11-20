@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UAbilityTask_Repeat_RepeatAction()
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_Repeat
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_Repeat_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_Repeat_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_Repeat_RepeatAction, "RepeatAction" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_Repeat_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F2B730
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_Repeat_Statics::ClassParams = { &UAbilityTask_Repeat::StaticClass, Z_Construct_UClass_UAbilityTask_Repeat_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_Repeat_Statics::FuncInfo, 1, Z_Construct_UClass_UAbilityTask_Repeat_Statics::PropPointers, 2, "Game", &Z_Construct_UClass_UAbilityTask_Repeat_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546970 (end 0x0054699F)
+// Original VA: 0x0000000140546970 | File offset: 0x00545F70
+// Recovery: confirmed (UHT singleton of UAbilityTask_Repeat) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_Repeat()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_Repeat_Statics::ClassParams);
+	}
+	return OuterClass;
+}

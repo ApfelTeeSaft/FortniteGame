@@ -443,3 +443,56 @@ UFunction* Z_Construct_UFunction_UMovementComponent_StopMovementImmediately()
 	}
 	return ReturnFunction;
 }
+
+class UMovementComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMovementComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMovementComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMovementComponent_ConstrainDirectionToPlane, "ConstrainDirectionToPlane" },
+	{ &Z_Construct_UFunction_UMovementComponent_ConstrainLocationToPlane, "ConstrainLocationToPlane" },
+	{ &Z_Construct_UFunction_UMovementComponent_ConstrainNormalToPlane, "ConstrainNormalToPlane" },
+	{ &Z_Construct_UFunction_UMovementComponent_GetGravityZ, "GetGravityZ" },
+	{ &Z_Construct_UFunction_UMovementComponent_GetMaxSpeed, "GetMaxSpeed" },
+	{ &Z_Construct_UFunction_UMovementComponent_GetPhysicsVolume, "GetPhysicsVolume" },
+	{ &Z_Construct_UFunction_UMovementComponent_GetPlaneConstraintAxisSetting, "GetPlaneConstraintAxisSetting" },
+	{ &Z_Construct_UFunction_UMovementComponent_GetPlaneConstraintNormal, "GetPlaneConstraintNormal" },
+	{ &Z_Construct_UFunction_UMovementComponent_GetPlaneConstraintOrigin, "GetPlaneConstraintOrigin" },
+	{ &Z_Construct_UFunction_UMovementComponent_IsExceedingMaxSpeed, "IsExceedingMaxSpeed" },
+	{ &Z_Construct_UFunction_UMovementComponent_K2_GetMaxSpeedModifier, "K2_GetMaxSpeedModifier" },
+	{ &Z_Construct_UFunction_UMovementComponent_K2_GetModifiedMaxSpeed, "K2_GetModifiedMaxSpeed" },
+	{ &Z_Construct_UFunction_UMovementComponent_K2_MoveUpdatedComponent, "K2_MoveUpdatedComponent" },
+	{ &Z_Construct_UFunction_UMovementComponent_PhysicsVolumeChanged, "PhysicsVolumeChanged" },
+	{ &Z_Construct_UFunction_UMovementComponent_SetPlaneConstraintAxisSetting, "SetPlaneConstraintAxisSetting" },
+	{ &Z_Construct_UFunction_UMovementComponent_SetPlaneConstraintEnabled, "SetPlaneConstraintEnabled" },
+	{ &Z_Construct_UFunction_UMovementComponent_SetPlaneConstraintFromVectors, "SetPlaneConstraintFromVectors" },
+	{ &Z_Construct_UFunction_UMovementComponent_SetPlaneConstraintNormal, "SetPlaneConstraintNormal" },
+	{ &Z_Construct_UFunction_UMovementComponent_SetPlaneConstraintOrigin, "SetPlaneConstraintOrigin" },
+	{ &Z_Construct_UFunction_UMovementComponent_SetUpdatedComponent, "SetUpdatedComponent" },
+	{ &Z_Construct_UFunction_UMovementComponent_SnapUpdatedComponentToPlane, "SnapUpdatedComponentToPlane" },
+	{ &Z_Construct_UFunction_UMovementComponent_StopMovementImmediately, "StopMovementImmediately" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMovementComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03954870
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMovementComponent_Statics::ClassParams = { &UMovementComponent::StaticClass, Z_Construct_UClass_UMovementComponent_Statics::DependentSingletons, 2, 0x00B00081u, Z_Construct_UClass_UMovementComponent_Statics::FuncInfo, 22, Z_Construct_UClass_UMovementComponent_Statics::PropPointers, 13, nullptr, &Z_Construct_UClass_UMovementComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248B5F0 (end 0x0248B61F)
+// Original VA: 0x000000014248B5F0 | File offset: 0x0248ABF0
+// Recovery: confirmed (UHT singleton of UMovementComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMovementComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMovementComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

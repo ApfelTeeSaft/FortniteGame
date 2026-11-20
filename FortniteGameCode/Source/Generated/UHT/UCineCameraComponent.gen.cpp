@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UCineCameraComponent_SetLensPresetByName()
 	}
 	return ReturnFunction;
 }
+
+class UCineCameraComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCineCameraComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCineCameraComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCineCameraComponent_GetFilmbackPresetName, "GetFilmbackPresetName" },
+	{ &Z_Construct_UFunction_UCineCameraComponent_GetHorizontalFieldOfView, "GetHorizontalFieldOfView" },
+	{ &Z_Construct_UFunction_UCineCameraComponent_GetLensPresetName, "GetLensPresetName" },
+	{ &Z_Construct_UFunction_UCineCameraComponent_GetVerticalFieldOfView, "GetVerticalFieldOfView" },
+	{ &Z_Construct_UFunction_UCineCameraComponent_SetFilmbackPresetByName, "SetFilmbackPresetByName" },
+	{ &Z_Construct_UFunction_UCineCameraComponent_SetLensPresetByName, "SetLensPresetByName" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCineCameraComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036AEEA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCineCameraComponent_Statics::ClassParams = { &UCineCameraComponent::StaticClass, Z_Construct_UClass_UCineCameraComponent_Statics::DependentSingletons, 2, 0x00B00084u, Z_Construct_UClass_UCineCameraComponent_Statics::FuncInfo, 6, Z_Construct_UClass_UCineCameraComponent_Statics::PropPointers, 14, "Engine", &Z_Construct_UClass_UCineCameraComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0B060 (end 0x01C0B08F)
+// Original VA: 0x0000000141C0B060 | File offset: 0x01C0A660
+// Recovery: confirmed (UHT singleton of UCineCameraComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCineCameraComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCineCameraComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

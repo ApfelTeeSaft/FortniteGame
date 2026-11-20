@@ -400,3 +400,54 @@ UFunction* Z_Construct_UFunction_UFortItemGroupSlotWidget_TryGetSquadSlot()
 	}
 	return ReturnFunction;
 }
+
+class UFortItemGroupSlotWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemGroupSlotWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemGroupSlotWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_CancelSlottingPreview, "CancelSlottingPreview" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_CreatePickerWidget, "CreatePickerWidget" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_GetSquadId, "GetSquadId" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_HandleAttributeBonusValueChanged, "HandleAttributeBonusValueChanged" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_HandleItemPickerSelectionCommitted, "HandleItemPickerSelectionCommitted" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_HandleItemPickerSelectionCommittedInternal, "HandleItemPickerSelectionCommittedInternal" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_HandleItemSet, "HandleItemSet" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_HandleLockedStateChanged, "HandleLockedStateChanged" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_HandlePreviewStateChanged, "HandlePreviewStateChanged" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_HandleTraitStateChanged, "HandleTraitStateChanged" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_InitializeSlot, "InitializeSlot" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_IsItemCompatible, "IsItemCompatible" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_IsManagerSlot, "IsManagerSlot" },
+	{ &Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnAttributeBonusValueChanged__DelegateSignature, "OnAttributeBonusValueChanged__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnItemSet__DelegateSignature, "OnItemSet__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnItemSlotLockedStateChanged__DelegateSignature, "OnItemSlotLockedStateChanged__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_SetItem, "SetItem" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_SetSlottingPreviewItem, "SetSlottingPreviewItem" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_TryGetSquad, "TryGetSquad" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotWidget_TryGetSquadSlot, "TryGetSquadSlot" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemGroupSlotWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D56130
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemGroupSlotWidget_Statics::ClassParams = { &UFortItemGroupSlotWidget::StaticClass, Z_Construct_UClass_UFortItemGroupSlotWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortItemGroupSlotWidget_Statics::FuncInfo, 20, Z_Construct_UClass_UFortItemGroupSlotWidget_Statics::PropPointers, 16, nullptr, &Z_Construct_UClass_UFortItemGroupSlotWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918A00 (end 0x02918A2F)
+// Original VA: 0x0000000142918A00 | File offset: 0x02918000
+// Recovery: confirmed (UHT singleton of UFortItemGroupSlotWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemGroupSlotWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemGroupSlotWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

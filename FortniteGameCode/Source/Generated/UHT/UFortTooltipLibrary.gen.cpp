@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortTooltipLibrary_FormatAttributeBuffs()
 	}
 	return ReturnFunction;
 }
+
+class UFortTooltipLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTooltipLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTooltipLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTooltipLibrary_FormatAttributeBuffs, "FormatAttributeBuffs" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTooltipLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0341B520
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTooltipLibrary_Statics::ClassParams = { &UFortTooltipLibrary::StaticClass, Z_Construct_UClass_UFortTooltipLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortTooltipLibrary_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortTooltipLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CACA0 (end 0x010CACCF)
+// Original VA: 0x00000001410CACA0 | File offset: 0x010CA2A0
+// Recovery: confirmed (UHT singleton of UFortTooltipLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTooltipLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTooltipLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

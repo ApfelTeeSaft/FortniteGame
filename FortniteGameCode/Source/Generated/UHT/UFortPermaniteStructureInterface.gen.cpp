@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortPermaniteStructureInterface_OnBoundariesCh
 	}
 	return ReturnFunction;
 }
+
+class UFortPermaniteStructureInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortPermaniteStructureInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPermaniteStructureInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPermaniteStructureInterface_OnBoundariesChanged, "OnBoundariesChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPermaniteStructureInterface_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033AB4E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPermaniteStructureInterface_Statics::ClassParams = { &UFortPermaniteStructureInterface::StaticClass, Z_Construct_UClass_UFortPermaniteStructureInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortPermaniteStructureInterface_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortPermaniteStructureInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010658F0 (end 0x0106591F)
+// Original VA: 0x00000001410658F0 | File offset: 0x01064EF0
+// Recovery: confirmed (UHT singleton of UFortPermaniteStructureInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPermaniteStructureInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPermaniteStructureInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -123,3 +123,40 @@ UFunction* Z_Construct_UFunction_UFortMainTabsScreenBase_HandleRefreshSkillTreeN
 	}
 	return ReturnFunction;
 }
+
+class UFortMainTabsScreenBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMainTabsScreenBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMainTabsScreenBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMainTabsScreenBase_ConstructTabs, "ConstructTabs" },
+	{ &Z_Construct_UFunction_UFortMainTabsScreenBase_HandleFeatureNavigateRequest, "HandleFeatureNavigateRequest" },
+	{ &Z_Construct_UFunction_UFortMainTabsScreenBase_HandleFeatureStateChanged, "HandleFeatureStateChanged" },
+	{ &Z_Construct_UFunction_UFortMainTabsScreenBase_HandleMainTabCreated, "HandleMainTabCreated" },
+	{ &Z_Construct_UFunction_UFortMainTabsScreenBase_HandleMainTabSelected, "HandleMainTabSelected" },
+	{ &Z_Construct_UFunction_UFortMainTabsScreenBase_HandleRefreshSkillTreeNodePage, "HandleRefreshSkillTreeNodePage" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMainTabsScreenBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE5550
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMainTabsScreenBase_Statics::ClassParams = { &UFortMainTabsScreenBase::StaticClass, Z_Construct_UClass_UFortMainTabsScreenBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortMainTabsScreenBase_Statics::FuncInfo, 6, Z_Construct_UClass_UFortMainTabsScreenBase_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortMainTabsScreenBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D73F0 (end 0x028D741F)
+// Original VA: 0x00000001428D73F0 | File offset: 0x028D69F0
+// Recovery: confirmed (UHT singleton of UFortMainTabsScreenBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMainTabsScreenBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMainTabsScreenBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -81,3 +81,39 @@ UFunction* Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedPhysAsset()
 	}
 	return ReturnFunction;
 }
+
+class ASkeletalMeshActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ASkeletalMeshActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ASkeletalMeshActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMaterial0, "OnRep_ReplicatedMaterial0" },
+	{ &Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMaterial1, "OnRep_ReplicatedMaterial1" },
+	{ &Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMesh, "OnRep_ReplicatedMesh" },
+	{ &Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedPhysAsset, "OnRep_ReplicatedPhysAsset" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ASkeletalMeshActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039A71D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ASkeletalMeshActor_Statics::ClassParams = { &ASkeletalMeshActor::StaticClass, Z_Construct_UClass_ASkeletalMeshActor_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ASkeletalMeshActor_Statics::FuncInfo, 4, Z_Construct_UClass_ASkeletalMeshActor_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_ASkeletalMeshActor_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_ASkeletalMeshActor_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC9B0 (end 0x024CC9DF)
+// Original VA: 0x00000001424CC9B0 | File offset: 0x024CBFB0
+// Recovery: confirmed (UHT singleton of ASkeletalMeshActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ASkeletalMeshActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ASkeletalMeshActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

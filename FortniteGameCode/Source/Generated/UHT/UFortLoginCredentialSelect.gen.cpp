@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UFortLoginCredentialSelect_HandleXBClicked()
 	}
 	return ReturnFunction;
 }
+
+class UFortLoginCredentialSelect
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortLoginCredentialSelect_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortLoginCredentialSelect_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortLoginCredentialSelect_HandleBackSelected, "HandleBackSelected" },
+	{ &Z_Construct_UFunction_UFortLoginCredentialSelect_HandleEpicClicked, "HandleEpicClicked" },
+	{ &Z_Construct_UFunction_UFortLoginCredentialSelect_HandleFacebookClicked, "HandleFacebookClicked" },
+	{ &Z_Construct_UFunction_UFortLoginCredentialSelect_HandleGoogleClicked, "HandleGoogleClicked" },
+	{ &Z_Construct_UFunction_UFortLoginCredentialSelect_HandlePSClicked, "HandlePSClicked" },
+	{ &Z_Construct_UFunction_UFortLoginCredentialSelect_HandleXBClicked, "HandleXBClicked" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortLoginCredentialSelect_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE4940
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortLoginCredentialSelect_Statics::ClassParams = { &UFortLoginCredentialSelect::StaticClass, Z_Construct_UClass_UFortLoginCredentialSelect_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortLoginCredentialSelect_Statics::FuncInfo, 6, Z_Construct_UClass_UFortLoginCredentialSelect_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortLoginCredentialSelect_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7330 (end 0x028D735F)
+// Original VA: 0x00000001428D7330 | File offset: 0x028D6930
+// Recovery: confirmed (UHT singleton of UFortLoginCredentialSelect) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortLoginCredentialSelect()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortLoginCredentialSelect_Statics::ClassParams);
+	}
+	return OuterClass;
+}

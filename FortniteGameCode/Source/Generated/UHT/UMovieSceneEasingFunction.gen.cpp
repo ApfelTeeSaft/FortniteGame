@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UMovieSceneEasingFunction_OnEvaluate()
 	}
 	return ReturnFunction;
 }
+
+class UMovieSceneEasingFunction
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMovieSceneEasingFunction_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMovieSceneEasingFunction_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMovieSceneEasingFunction_OnEvaluate, "OnEvaluate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMovieSceneEasingFunction_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0363BB20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMovieSceneEasingFunction_Statics::ClassParams = { &UMovieSceneEasingFunction::StaticClass, Z_Construct_UClass_UMovieSceneEasingFunction_Statics::DependentSingletons, 2, 0x00104081u, Z_Construct_UClass_UMovieSceneEasingFunction_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UMovieSceneEasingFunction_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC5390 (end 0x01AC53BF)
+// Original VA: 0x0000000141AC5390 | File offset: 0x01AC4990
+// Recovery: confirmed (UHT singleton of UMovieSceneEasingFunction) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMovieSceneEasingFunction()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMovieSceneEasingFunction_Statics::ClassParams);
+	}
+	return OuterClass;
+}

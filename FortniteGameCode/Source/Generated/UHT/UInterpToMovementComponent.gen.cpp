@@ -164,3 +164,42 @@ UFunction* Z_Construct_UFunction_UInterpToMovementComponent_StopSimulating()
 	}
 	return ReturnFunction;
 }
+
+class UInterpToMovementComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UInterpToMovementComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UInterpToMovementComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UInterpToMovementComponent_FinaliseControlPoints, "FinaliseControlPoints" },
+	{ &Z_Construct_UDelegateFunction_UInterpToMovementComponent_OnInterpToResetDelegate__DelegateSignature, "OnInterpToResetDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UInterpToMovementComponent_OnInterpToReverseDelegate__DelegateSignature, "OnInterpToReverseDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UInterpToMovementComponent_OnInterpToStopDelegate__DelegateSignature, "OnInterpToStopDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UInterpToMovementComponent_OnInterpToWaitBeginDelegate__DelegateSignature, "OnInterpToWaitBeginDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UInterpToMovementComponent_OnInterpToWaitEndDelegate__DelegateSignature, "OnInterpToWaitEndDelegate__DelegateSignature" },
+	{ &Z_Construct_UFunction_UInterpToMovementComponent_RestartMovement, "RestartMovement" },
+	{ &Z_Construct_UFunction_UInterpToMovementComponent_StopSimulating, "StopSimulating" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UInterpToMovementComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03906A80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UInterpToMovementComponent_Statics::ClassParams = { &UInterpToMovementComponent::StaticClass, Z_Construct_UClass_UInterpToMovementComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UInterpToMovementComponent_Statics::FuncInfo, 8, Z_Construct_UClass_UInterpToMovementComponent_Statics::PropPointers, 14, nullptr, &Z_Construct_UClass_UInterpToMovementComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242F550 (end 0x0242F57F)
+// Original VA: 0x000000014242F550 | File offset: 0x0242EB50
+// Recovery: confirmed (UHT singleton of UInterpToMovementComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UInterpToMovementComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UInterpToMovementComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

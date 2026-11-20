@@ -84,3 +84,37 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerGameplay_SetHUDElementVisi
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerControllerGameplay
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerControllerGameplay_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerControllerGameplay_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerControllerGameplay_AreHUDElementsVisible, "AreHUDElementsVisible" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerGameplay_RefreshHUDElementVisibilitiesToSettings, "RefreshHUDElementVisibilitiesToSettings" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerGameplay_ResetHUDElementVisibilityToSettings, "ResetHUDElementVisibilityToSettings" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerGameplay_SetHUDElementVisibility, "SetHUDElementVisibility" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerControllerGameplay_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033C30A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerControllerGameplay_Statics::ClassParams = { &AFortPlayerControllerGameplay::StaticClass, Z_Construct_UClass_AFortPlayerControllerGameplay_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortPlayerControllerGameplay_Statics::FuncInfo, 4, nullptr, 0, "Game", &Z_Construct_UClass_AFortPlayerControllerGameplay_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01077700 (end 0x0107772F)
+// Original VA: 0x0000000141077700 | File offset: 0x01076D00
+// Recovery: confirmed (UHT singleton of AFortPlayerControllerGameplay) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerControllerGameplay()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerControllerGameplay_Statics::ClassParams);
+	}
+	return OuterClass;
+}

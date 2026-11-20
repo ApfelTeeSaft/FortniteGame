@@ -445,3 +445,56 @@ UFunction* Z_Construct_UFunction_UFortQuestItemDefinition_ShouldAutoLaunch()
 	}
 	return ReturnFunction;
 }
+
+class UFortQuestItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortQuestItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortQuestItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_AllowsTileMatching, "AllowsTileMatching" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_ExpandsStormShield, "ExpandsStormShield" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetCategory, "GetCategory" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetClaimConversation, "GetClaimConversation" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetCompletionText, "GetCompletionText" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetHiddenRewards_BP, "GetHiddenRewards_BP" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetIntroConversation, "GetIntroConversation" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetObjectives_BP, "GetObjectives_BP" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetPrerequisiteObjective, "GetPrerequisiteObjective" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetPrerequisiteQuest, "GetPrerequisiteQuest" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetQuestType, "GetQuestType" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetRewardDescription, "GetRewardDescription" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetRewardHeaderText, "GetRewardHeaderText" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetRewardInfo_BP, "GetRewardInfo_BP" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetRewardType, "GetRewardType" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetRewards_BP, "GetRewards_BP" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetSelectRewardsConversation, "GetSelectRewardsConversation" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetSelectableRewards_BP, "GetSelectableRewards_BP" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_GetWeight, "GetWeight" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_IsDeprecated, "IsDeprecated" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_IsHidden, "IsHidden" },
+	{ &Z_Construct_UFunction_UFortQuestItemDefinition_ShouldAutoLaunch, "ShouldAutoLaunch" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortQuestItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033E6700
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortQuestItemDefinition_Statics::ClassParams = { &UFortQuestItemDefinition::StaticClass, Z_Construct_UClass_UFortQuestItemDefinition_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UFortQuestItemDefinition_Statics::FuncInfo, 22, Z_Construct_UClass_UFortQuestItemDefinition_Statics::PropPointers, 39, nullptr, &Z_Construct_UClass_UFortQuestItemDefinition_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01096500 (end 0x0109652F)
+// Original VA: 0x0000000141096500 | File offset: 0x01095B00
+// Recovery: confirmed (UHT singleton of UFortQuestItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortQuestItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortQuestItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

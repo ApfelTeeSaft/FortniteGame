@@ -24,3 +24,34 @@ UFunction* Z_Construct_UFunction_UFortQuestScreen_ProcessPendingSeenQuestItems()
 	}
 	return ReturnFunction;
 }
+
+class UFortQuestScreen
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortQuestScreen_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortQuestScreen_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortQuestScreen_ProcessPendingSeenQuestItems, "ProcessPendingSeenQuestItems" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortQuestScreen_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D567C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortQuestScreen_Statics::ClassParams = { &UFortQuestScreen::StaticClass, Z_Construct_UClass_UFortQuestScreen_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortQuestScreen_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortQuestScreen_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918A70 (end 0x02918A9F)
+// Original VA: 0x0000000142918A70 | File offset: 0x02918070
+// Recovery: confirmed (UHT singleton of UFortQuestScreen) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortQuestScreen()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortQuestScreen_Statics::ClassParams);
+	}
+	return OuterClass;
+}

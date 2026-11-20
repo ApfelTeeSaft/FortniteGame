@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortLegacySlateBridgeWidget_UpdateSlateWidget(
 	}
 	return ReturnFunction;
 }
+
+class UFortLegacySlateBridgeWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortLegacySlateBridgeWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortLegacySlateBridgeWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortLegacySlateBridgeWidget_SetOnCloseHandler, "SetOnCloseHandler" },
+	{ &Z_Construct_UFunction_UFortLegacySlateBridgeWidget_UpdateSlateWidget, "UpdateSlateWidget" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortLegacySlateBridgeWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE3C30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortLegacySlateBridgeWidget_Statics::ClassParams = { &UFortLegacySlateBridgeWidget::StaticClass, Z_Construct_UClass_UFortLegacySlateBridgeWidget_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortLegacySlateBridgeWidget_Statics::FuncInfo, 2, Z_Construct_UClass_UFortLegacySlateBridgeWidget_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortLegacySlateBridgeWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7210 (end 0x028D723F)
+// Original VA: 0x00000001428D7210 | File offset: 0x028D6810
+// Recovery: confirmed (UHT singleton of UFortLegacySlateBridgeWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortLegacySlateBridgeWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortLegacySlateBridgeWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

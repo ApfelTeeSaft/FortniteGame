@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UBlueprintGameplayStatsLibrary_NotEqual_Gamepla
 	}
 	return ReturnFunction;
 }
+
+class UBlueprintGameplayStatsLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBlueprintGameplayStatsLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBlueprintGameplayStatsLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBlueprintGameplayStatsLibrary_EqualEqual_GameplayStatTagGameplayStatTag, "EqualEqual_GameplayStatTagGameplayStatTag" },
+	{ &Z_Construct_UFunction_UBlueprintGameplayStatsLibrary_NotEqual_GameplayStatTagGameplayStatTag, "NotEqual_GameplayStatTagGameplayStatTag" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBlueprintGameplayStatsLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02FBF670
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBlueprintGameplayStatsLibrary_Statics::ClassParams = { &UBlueprintGameplayStatsLibrary::StaticClass, Z_Construct_UClass_UBlueprintGameplayStatsLibrary_Statics::DependentSingletons, 2, 0x00080080u, Z_Construct_UClass_UBlueprintGameplayStatsLibrary_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UBlueprintGameplayStatsLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x007927B0 (end 0x007927DF)
+// Original VA: 0x00000001407927B0 | File offset: 0x00791DB0
+// Recovery: confirmed (UHT singleton of UBlueprintGameplayStatsLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBlueprintGameplayStatsLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBlueprintGameplayStatsLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

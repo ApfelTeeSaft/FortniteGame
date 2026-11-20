@@ -144,3 +144,40 @@ UFunction* Z_Construct_UFunction_UBlueprintPlatformLibrary_ScheduleLocalNotifica
 	}
 	return ReturnFunction;
 }
+
+class UBlueprintPlatformLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBlueprintPlatformLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBlueprintPlatformLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBlueprintPlatformLibrary_CancelLocalNotification, "CancelLocalNotification" },
+	{ &Z_Construct_UFunction_UBlueprintPlatformLibrary_ClearAllLocalNotifications, "ClearAllLocalNotifications" },
+	{ &Z_Construct_UFunction_UBlueprintPlatformLibrary_GetLaunchNotification, "GetLaunchNotification" },
+	{ &Z_Construct_UFunction_UBlueprintPlatformLibrary_ScheduleLocalNotificationAtTime, "ScheduleLocalNotificationAtTime" },
+	{ &Z_Construct_UFunction_UBlueprintPlatformLibrary_ScheduleLocalNotificationBadgeAtTime, "ScheduleLocalNotificationBadgeAtTime" },
+	{ &Z_Construct_UFunction_UBlueprintPlatformLibrary_ScheduleLocalNotificationBadgeFromNow, "ScheduleLocalNotificationBadgeFromNow" },
+	{ &Z_Construct_UFunction_UBlueprintPlatformLibrary_ScheduleLocalNotificationFromNow, "ScheduleLocalNotificationFromNow" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBlueprintPlatformLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038B3E80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBlueprintPlatformLibrary_Statics::ClassParams = { &UBlueprintPlatformLibrary::StaticClass, Z_Construct_UClass_UBlueprintPlatformLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UBlueprintPlatformLibrary_Statics::FuncInfo, 7, nullptr, 0, nullptr, &Z_Construct_UClass_UBlueprintPlatformLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E3800 (end 0x023E382F)
+// Original VA: 0x00000001423E3800 | File offset: 0x023E2E00
+// Recovery: confirmed (UHT singleton of UBlueprintPlatformLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBlueprintPlatformLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBlueprintPlatformLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

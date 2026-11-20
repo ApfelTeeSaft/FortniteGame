@@ -163,3 +163,42 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetSkillTreeN
 	}
 	return ReturnFunction;
 }
+
+class UFortSkillTreeNodeDetailsPanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HandleDifferentSkillTreeNodeToRepresentSetBP, "HandleDifferentSkillTreeNodeToRepresentSetBP" },
+	{ &Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HandleSkillTreeNodeStateChanged, "HandleSkillTreeNodeStateChanged" },
+	{ &Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HasSkillTreeNodeToRepresent, "HasSkillTreeNodeToRepresent" },
+	{ &Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_SetSkillTreeNodeToRepresent, "SetSkillTreeNodeToRepresent" },
+	{ &Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDisplayData, "TryGetNodeDisplayData" },
+	{ &Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeDisplayDataFromID, "TryGetNodeDisplayDataFromID" },
+	{ &Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetNodeSquadAttributeData, "TryGetNodeSquadAttributeData" },
+	{ &Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetSkillTreeNodeState, "TryGetSkillTreeNodeState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D13C20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel_Statics::ClassParams = { &UFortSkillTreeNodeDetailsPanel::StaticClass, Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel_Statics::FuncInfo, 8, Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F55D0 (end 0x028F55FF)
+// Original VA: 0x00000001428F55D0 | File offset: 0x028F4BD0
+// Recovery: confirmed (UHT singleton of UFortSkillTreeNodeDetailsPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -265,3 +265,46 @@ UFunction* Z_Construct_UFunction_UKismetNodeHelperLibrary_MarkBit()
 	}
 	return ReturnFunction;
 }
+
+class UKismetNodeHelperLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UKismetNodeHelperLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UKismetNodeHelperLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_BitIsMarked, "BitIsMarked" },
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_ClearAllBits, "ClearAllBits" },
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_ClearBit, "ClearBit" },
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_GetEnumeratorName, "GetEnumeratorName" },
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_GetEnumeratorUserFriendlyName, "GetEnumeratorUserFriendlyName" },
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_GetEnumeratorValueFromIndex, "GetEnumeratorValueFromIndex" },
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_GetFirstUnmarkedBit, "GetFirstUnmarkedBit" },
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_GetRandomUnmarkedBit, "GetRandomUnmarkedBit" },
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_GetUnmarkedBit, "GetUnmarkedBit" },
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_GetValidValue, "GetValidValue" },
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_HasMarkedBit, "HasMarkedBit" },
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_HasUnmarkedBit, "HasUnmarkedBit" },
+	{ &Z_Construct_UFunction_UKismetNodeHelperLibrary_MarkBit, "MarkBit" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UKismetNodeHelperLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03925C00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UKismetNodeHelperLibrary_Statics::ClassParams = { &UKismetNodeHelperLibrary::StaticClass, Z_Construct_UClass_UKismetNodeHelperLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UKismetNodeHelperLibrary_Statics::FuncInfo, 13, nullptr, 0, nullptr, &Z_Construct_UClass_UKismetNodeHelperLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02452C50 (end 0x02452C7F)
+// Original VA: 0x0000000142452C50 | File offset: 0x02452250
+// Recovery: confirmed (UHT singleton of UKismetNodeHelperLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UKismetNodeHelperLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UKismetNodeHelperLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

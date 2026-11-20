@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCo
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_WaitAbilityCommit
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_WaitAbilityCommit_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_WaitAbilityCommit_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_OnAbilityCommit, "OnAbilityCommit" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCommit, "WaitForAbilityCommit" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitAbilityCommit_WaitForAbilityCommit_Query, "WaitForAbilityCommit_Query" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_WaitAbilityCommit_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F2BD80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_WaitAbilityCommit_Statics::ClassParams = { &UAbilityTask_WaitAbilityCommit::StaticClass, Z_Construct_UClass_UAbilityTask_WaitAbilityCommit_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_WaitAbilityCommit_Statics::FuncInfo, 3, Z_Construct_UClass_UAbilityTask_WaitAbilityCommit_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_UAbilityTask_WaitAbilityCommit_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546A80 (end 0x00546AAF)
+// Original VA: 0x0000000140546A80 | File offset: 0x00546080
+// Recovery: confirmed (UHT singleton of UAbilityTask_WaitAbilityCommit) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_WaitAbilityCommit()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_WaitAbilityCommit_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UPawnActionsComponent_K2_PushAction()
 	}
 	return ReturnFunction;
 }
+
+class UPawnActionsComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPawnActionsComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPawnActionsComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPawnActionsComponent_K2_AbortAction, "K2_AbortAction" },
+	{ &Z_Construct_UFunction_UPawnActionsComponent_K2_ForceAbortAction, "K2_ForceAbortAction" },
+	{ &Z_Construct_UFunction_UPawnActionsComponent_K2_PerformAction, "K2_PerformAction" },
+	{ &Z_Construct_UFunction_UPawnActionsComponent_K2_PushAction, "K2_PushAction" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPawnActionsComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0370D3C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPawnActionsComponent_Statics::ClassParams = { &UPawnActionsComponent::StaticClass, Z_Construct_UClass_UPawnActionsComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UPawnActionsComponent_Statics::FuncInfo, 4, Z_Construct_UClass_UPawnActionsComponent_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UPawnActionsComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31EA0 (end 0x01D31ECF)
+// Original VA: 0x0000000141D31EA0 | File offset: 0x01D314A0
+// Recovery: confirmed (UHT singleton of UPawnActionsComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPawnActionsComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPawnActionsComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

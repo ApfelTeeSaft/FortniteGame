@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortAthenaHoverCarMovementComponent_ServerUpda
 	}
 	return ReturnFunction;
 }
+
+class UFortAthenaHoverCarMovementComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAthenaHoverCarMovementComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAthenaHoverCarMovementComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAthenaHoverCarMovementComponent_ServerUpdateAthenaState, "ServerUpdateAthenaState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAthenaHoverCarMovementComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032C70D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAthenaHoverCarMovementComponent_Statics::ClassParams = { &UFortAthenaHoverCarMovementComponent::StaticClass, Z_Construct_UClass_UFortAthenaHoverCarMovementComponent_Statics::DependentSingletons, 2, 0x00A00084u, Z_Construct_UClass_UFortAthenaHoverCarMovementComponent_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAthenaHoverCarMovementComponent_Statics::PropPointers, 1, "Engine", &Z_Construct_UClass_UFortAthenaHoverCarMovementComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3960 (end 0x00FA398F)
+// Original VA: 0x0000000140FA3960 | File offset: 0x00FA2F60
+// Recovery: confirmed (UHT singleton of UFortAthenaHoverCarMovementComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAthenaHoverCarMovementComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAthenaHoverCarMovementComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

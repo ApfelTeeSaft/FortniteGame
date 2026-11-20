@@ -1109,3 +1109,91 @@ UFunction* Z_Construct_UFunction_UCheatManager_Walk()
 	}
 	return ReturnFunction;
 }
+
+class UCheatManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCheatManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCheatManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCheatManager_BugIt, "BugIt" },
+	{ &Z_Construct_UFunction_UCheatManager_BugItGo, "BugItGo" },
+	{ &Z_Construct_UFunction_UCheatManager_BugItStringCreator, "BugItStringCreator" },
+	{ &Z_Construct_UFunction_UCheatManager_ChangeSize, "ChangeSize" },
+	{ &Z_Construct_UFunction_UCheatManager_CheatScript, "CheatScript" },
+	{ &Z_Construct_UFunction_UCheatManager_DamageTarget, "DamageTarget" },
+	{ &Z_Construct_UFunction_UCheatManager_DebugCapsuleSweep, "DebugCapsuleSweep" },
+	{ &Z_Construct_UFunction_UCheatManager_DebugCapsuleSweepCapture, "DebugCapsuleSweepCapture" },
+	{ &Z_Construct_UFunction_UCheatManager_DebugCapsuleSweepChannel, "DebugCapsuleSweepChannel" },
+	{ &Z_Construct_UFunction_UCheatManager_DebugCapsuleSweepClear, "DebugCapsuleSweepClear" },
+	{ &Z_Construct_UFunction_UCheatManager_DebugCapsuleSweepComplex, "DebugCapsuleSweepComplex" },
+	{ &Z_Construct_UFunction_UCheatManager_DebugCapsuleSweepPawn, "DebugCapsuleSweepPawn" },
+	{ &Z_Construct_UFunction_UCheatManager_DebugCapsuleSweepSize, "DebugCapsuleSweepSize" },
+	{ &Z_Construct_UFunction_UCheatManager_DestroyAll, "DestroyAll" },
+	{ &Z_Construct_UFunction_UCheatManager_DestroyAllPawnsExceptTarget, "DestroyAllPawnsExceptTarget" },
+	{ &Z_Construct_UFunction_UCheatManager_DestroyPawns, "DestroyPawns" },
+	{ &Z_Construct_UFunction_UCheatManager_DestroyServerStatReplicator, "DestroyServerStatReplicator" },
+	{ &Z_Construct_UFunction_UCheatManager_DestroyTarget, "DestroyTarget" },
+	{ &Z_Construct_UFunction_UCheatManager_DisableDebugCamera, "DisableDebugCamera" },
+	{ &Z_Construct_UFunction_UCheatManager_DumpChatState, "DumpChatState" },
+	{ &Z_Construct_UFunction_UCheatManager_DumpOnlineSessionState, "DumpOnlineSessionState" },
+	{ &Z_Construct_UFunction_UCheatManager_DumpPartyState, "DumpPartyState" },
+	{ &Z_Construct_UFunction_UCheatManager_DumpVoiceMutingState, "DumpVoiceMutingState" },
+	{ &Z_Construct_UFunction_UCheatManager_EnableDebugCamera, "EnableDebugCamera" },
+	{ &Z_Construct_UFunction_UCheatManager_FlushLog, "FlushLog" },
+	{ &Z_Construct_UFunction_UCheatManager_Fly, "Fly" },
+	{ &Z_Construct_UFunction_UCheatManager_FreezeFrame, "FreezeFrame" },
+	{ &Z_Construct_UFunction_UCheatManager_Ghost, "Ghost" },
+	{ &Z_Construct_UFunction_UCheatManager_God, "God" },
+	{ &Z_Construct_UFunction_UCheatManager_InvertMouse, "InvertMouse" },
+	{ &Z_Construct_UFunction_UCheatManager_LogLoc, "LogLoc" },
+	{ &Z_Construct_UFunction_UCheatManager_OnlyLoadLevel, "OnlyLoadLevel" },
+	{ &Z_Construct_UFunction_UCheatManager_PlayersOnly, "PlayersOnly" },
+	{ &Z_Construct_UFunction_UCheatManager_RebuildNavigation, "RebuildNavigation" },
+	{ &Z_Construct_UFunction_UCheatManager_ReceiveEndPlay, "ReceiveEndPlay" },
+	{ &Z_Construct_UFunction_UCheatManager_ReceiveInitCheatManager, "ReceiveInitCheatManager" },
+	{ &Z_Construct_UFunction_UCheatManager_ServerToggleAILogging, "ServerToggleAILogging" },
+	{ &Z_Construct_UFunction_UCheatManager_SetMouseSensitivityToDefault, "SetMouseSensitivityToDefault" },
+	{ &Z_Construct_UFunction_UCheatManager_SetNavDrawDistance, "SetNavDrawDistance" },
+	{ &Z_Construct_UFunction_UCheatManager_SetWorldOrigin, "SetWorldOrigin" },
+	{ &Z_Construct_UFunction_UCheatManager_Slomo, "Slomo" },
+	{ &Z_Construct_UFunction_UCheatManager_SpawnServerStatReplicator, "SpawnServerStatReplicator" },
+	{ &Z_Construct_UFunction_UCheatManager_StreamLevelIn, "StreamLevelIn" },
+	{ &Z_Construct_UFunction_UCheatManager_StreamLevelOut, "StreamLevelOut" },
+	{ &Z_Construct_UFunction_UCheatManager_Summon, "Summon" },
+	{ &Z_Construct_UFunction_UCheatManager_Teleport, "Teleport" },
+	{ &Z_Construct_UFunction_UCheatManager_TestCollisionDistance, "TestCollisionDistance" },
+	{ &Z_Construct_UFunction_UCheatManager_ToggleAILogging, "ToggleAILogging" },
+	{ &Z_Construct_UFunction_UCheatManager_ToggleDebugCamera, "ToggleDebugCamera" },
+	{ &Z_Construct_UFunction_UCheatManager_ToggleServerStatReplicatorClientOverwrite, "ToggleServerStatReplicatorClientOverwrite" },
+	{ &Z_Construct_UFunction_UCheatManager_ToggleServerStatReplicatorUpdateStatNet, "ToggleServerStatReplicatorUpdateStatNet" },
+	{ &Z_Construct_UFunction_UCheatManager_UpdateSafeArea, "UpdateSafeArea" },
+	{ &Z_Construct_UFunction_UCheatManager_ViewActor, "ViewActor" },
+	{ &Z_Construct_UFunction_UCheatManager_ViewClass, "ViewClass" },
+	{ &Z_Construct_UFunction_UCheatManager_ViewPlayer, "ViewPlayer" },
+	{ &Z_Construct_UFunction_UCheatManager_ViewSelf, "ViewSelf" },
+	{ &Z_Construct_UFunction_UCheatManager_Walk, "Walk" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCheatManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038C6CA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCheatManager_Statics::ClassParams = { &UCheatManager::StaticClass, Z_Construct_UClass_UCheatManager_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UCheatManager_Statics::FuncInfo, 57, Z_Construct_UClass_UCheatManager_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UCheatManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F77C0 (end 0x023F77EF)
+// Original VA: 0x00000001423F77C0 | File offset: 0x023F6DC0
+// Recovery: confirmed (UHT singleton of UCheatManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCheatManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCheatManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

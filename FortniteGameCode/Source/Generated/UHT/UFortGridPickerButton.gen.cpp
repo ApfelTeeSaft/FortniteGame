@@ -84,3 +84,38 @@ UFunction* Z_Construct_UFunction_UFortGridPickerButton_SetIsOpen()
 	}
 	return ReturnFunction;
 }
+
+class UFortGridPickerButton
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortGridPickerButton_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortGridPickerButton_Statics::FuncInfo[] = {
+	{ &Z_Construct_UDelegateFunction_UFortGridPickerButton_CreateGridWidget__DelegateSignature, "CreateGridWidget__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortGridPickerButton_OnButtonClicked, "OnButtonClicked" },
+	{ &Z_Construct_UDelegateFunction_UFortGridPickerButton_OnIsGridPickerOpenChanged__DelegateSignature, "OnIsGridPickerOpenChanged__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortGridPickerButton_SetIsOpen, "SetIsOpen" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortGridPickerButton_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C9DCC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortGridPickerButton_Statics::ClassParams = { &UFortGridPickerButton::StaticClass, Z_Construct_UClass_UFortGridPickerButton_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortGridPickerButton_Statics::FuncInfo, 4, Z_Construct_UClass_UFortGridPickerButton_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortGridPickerButton_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC440 (end 0x028AC46F)
+// Original VA: 0x00000001428AC440 | File offset: 0x028ABA40
+// Recovery: confirmed (UHT singleton of UFortGridPickerButton) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortGridPickerButton()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortGridPickerButton_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -1875,3 +1875,128 @@ UFunction* Z_Construct_UFunction_UFortPartyContext_UnmutePartyMember()
 	}
 	return ReturnFunction;
 }
+
+class UFortPartyContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortPartyContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPartyContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPartyContext_AcceptFriendRequest, "AcceptFriendRequest" },
+	{ &Z_Construct_UFunction_UFortPartyContext_AttemptRefreshFriendsList, "AttemptRefreshFriendsList" },
+	{ &Z_Construct_UFunction_UFortPartyContext_CanBeInvited, "CanBeInvited" },
+	{ &Z_Construct_UFunction_UFortPartyContext_CanBeInvitedNetID, "CanBeInvitedNetID" },
+	{ &Z_Construct_UFunction_UFortPartyContext_CanBeJoined, "CanBeJoined" },
+	{ &Z_Construct_UFunction_UFortPartyContext_CanDisplayFriendsActionNotifications, "CanDisplayFriendsActionNotifications" },
+	{ &Z_Construct_UFunction_UFortPartyContext_CanShowExternalProfile, "CanShowExternalProfile" },
+	{ &Z_Construct_UFunction_UFortPartyContext_CancelFriendRequest, "CancelFriendRequest" },
+	{ &Z_Construct_UFunction_UFortPartyContext_ClearPendingInvites, "ClearPendingInvites" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetActiveFriendsList, "GetActiveFriendsList" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetConsoleFriendRichPresenceText, "GetConsoleFriendRichPresenceText" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetCurrentPartyMaxSize, "GetCurrentPartyMaxSize" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetFriendRequestStatusForPlayer, "GetFriendRequestStatusForPlayer" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetLocalPartyMemberLocation, "GetLocalPartyMemberLocation" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetLocalPartyPlaylist, "GetLocalPartyPlaylist" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetLocalPartyProgression, "GetLocalPartyProgression" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetLocalPartyTeamFill, "GetLocalPartyTeamFill" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetLocalPlayerDisplayName, "GetLocalPlayerDisplayName" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetLocalPlayerTeam, "GetLocalPlayerTeam" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetLocalPlayerTeamMemberInfo, "GetLocalPlayerTeamMemberInfo" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetLocalTeamTeamMemberInfo, "GetLocalTeamTeamMemberInfo" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetMaxTeamSizeForSelectedTheater, "GetMaxTeamSizeForSelectedTheater" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetNumPlayersInLocalParty, "GetNumPlayersInLocalParty" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetPartyInvites, "GetPartyInvites" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetPartyMemberDisplayState, "GetPartyMemberDisplayState" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetPartyPrivacySetting, "GetPartyPrivacySetting" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetPartySuggestion, "GetPartySuggestion" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetPartySuggestions, "GetPartySuggestions" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetSocialItemCategories, "GetSocialItemCategories" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetSocialItemList, "GetSocialItemList" },
+	{ &Z_Construct_UFunction_UFortPartyContext_GetTeamInfo, "GetTeamInfo" },
+	{ &Z_Construct_UFunction_UFortPartyContext_HandlePendingInvites, "HandlePendingInvites" },
+	{ &Z_Construct_UFunction_UFortPartyContext_HasPendingFriendRequest, "HasPendingFriendRequest" },
+	{ &Z_Construct_UFunction_UFortPartyContext_HasPendingPartyInvitation, "HasPendingPartyInvitation" },
+	{ &Z_Construct_UFunction_UFortPartyContext_IsAthenaPartyMemberReady, "IsAthenaPartyMemberReady" },
+	{ &Z_Construct_UFunction_UFortPartyContext_IsEntirePartyInFrontEnd, "IsEntirePartyInFrontEnd" },
+	{ &Z_Construct_UFunction_UFortPartyContext_IsInLocalPlayersParty, "IsInLocalPlayersParty" },
+	{ &Z_Construct_UFunction_UFortPartyContext_IsLFG, "IsLFG" },
+	{ &Z_Construct_UFunction_UFortPartyContext_IsLocalPlayerInParty, "IsLocalPlayerInParty" },
+	{ &Z_Construct_UFunction_UFortPartyContext_IsLocalPlayerInPersistentParty, "IsLocalPlayerInPersistentParty" },
+	{ &Z_Construct_UFunction_UFortPartyContext_IsLocalPlayerPartyLeader, "IsLocalPlayerPartyLeader" },
+	{ &Z_Construct_UFunction_UFortPartyContext_IsPartyMemberMuted, "IsPartyMemberMuted" },
+	{ &Z_Construct_UFunction_UFortPartyContext_IsPlayerBlocked, "IsPlayerBlocked" },
+	{ &Z_Construct_UFunction_UFortPartyContext_IsPlayerInOurParty, "IsPlayerInOurParty" },
+	{ &Z_Construct_UFunction_UFortPartyContext_IsTeamMemberFriend, "IsTeamMemberFriend" },
+	{ &Z_Construct_UFunction_UFortPartyContext_IsValidNetID, "IsValidNetID" },
+	{ &Z_Construct_UFunction_UFortPartyContext_JoinParty, "JoinParty" },
+	{ &Z_Construct_UFunction_UFortPartyContext_KickPartyMember, "KickPartyMember" },
+	{ &Z_Construct_UFunction_UFortPartyContext_LeaveParty, "LeaveParty" },
+	{ &Z_Construct_UFunction_UFortPartyContext_MutePartyMember, "MutePartyMember" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnAthenaReadyStateChanged__DelegateSignature, "OnAthenaReadyStateChanged__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnClientPartyStateChanged__DelegateSignature, "OnClientPartyStateChanged__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnClientPlaylistChanged__DelegateSignature, "OnClientPlaylistChanged__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnClientSquadFillChanged__DelegateSignature, "OnClientSquadFillChanged__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnFriendPresenceUpdated__DelegateSignature, "OnFriendPresenceUpdated__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnFriendsChangedDelegate__DelegateSignature, "OnFriendsChangedDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnFriendsCountChangedDelegate__DelegateSignature, "OnFriendsCountChangedDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnLFGChanged__DelegateSignature, "OnLFGChanged__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnLeaderFriendsOnlyChanged__DelegateSignature, "OnLeaderFriendsOnlyChanged__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnLeaderInvitesOnlyChanged__DelegateSignature, "OnLeaderInvitesOnlyChanged__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnPartyDataChanged__DelegateSignature, "OnPartyDataChanged__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnPartyInvitesCountUpdatedDelegate__DelegateSignature, "OnPartyInvitesCountUpdatedDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnPartyInvitesUpdatedDelegate__DelegateSignature, "OnPartyInvitesUpdatedDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnPartyJoinedDelegate__DelegateSignature, "OnPartyJoinedDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnPartyLeftDelegate__DelegateSignature, "OnPartyLeftDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnPartySuggestionAdded__DelegateSignature, "OnPartySuggestionAdded__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnPartySuggestionChanged__DelegateSignature, "OnPartySuggestionChanged__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnPartySuggestionRemoved__DelegateSignature, "OnPartySuggestionRemoved__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnPartyTransitionCompleteDelegate__DelegateSignature, "OnPartyTransitionCompleteDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnPartyTransitionStartedDelegate__DelegateSignature, "OnPartyTransitionStartedDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnPartyTypeChanged__DelegateSignature, "OnPartyTypeChanged__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnPlayerStateChangedDelegate__DelegateSignature, "OnPlayerStateChangedDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnRejectInviteComplete__DelegateSignature, "OnRejectInviteComplete__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnSendInviteCompleteDelegate__DelegateSignature, "OnSendInviteCompleteDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortPartyContext_OnSocialListChangedDelegate__DelegateSignature, "OnSocialListChangedDelegate__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortPartyContext_PromotePartyMemberToLeader, "PromotePartyMemberToLeader" },
+	{ &Z_Construct_UFunction_UFortPartyContext_RejectFriendRequest, "RejectFriendRequest" },
+	{ &Z_Construct_UFunction_UFortPartyContext_RejectPartyInvite, "RejectPartyInvite" },
+	{ &Z_Construct_UFunction_UFortPartyContext_SendFriendRequest, "SendFriendRequest" },
+	{ &Z_Construct_UFunction_UFortPartyContext_SendPartyInvite, "SendPartyInvite" },
+	{ &Z_Construct_UFunction_UFortPartyContext_SendPartyInviteNetID, "SendPartyInviteNetID" },
+	{ &Z_Construct_UFunction_UFortPartyContext_SetChatWhisperTarget, "SetChatWhisperTarget" },
+	{ &Z_Construct_UFunction_UFortPartyContext_SetFriendInvitesEnabled, "SetFriendInvitesEnabled" },
+	{ &Z_Construct_UFunction_UFortPartyContext_SetLFG, "SetLFG" },
+	{ &Z_Construct_UFunction_UFortPartyContext_SetLocalPartyMemberLocation, "SetLocalPartyMemberLocation" },
+	{ &Z_Construct_UFunction_UFortPartyContext_SetPartyInvitesEnabled, "SetPartyInvitesEnabled" },
+	{ &Z_Construct_UFunction_UFortPartyContext_SetPartyPrivacySetting, "SetPartyPrivacySetting" },
+	{ &Z_Construct_UFunction_UFortPartyContext_SetPartyProgression, "SetPartyProgression" },
+	{ &Z_Construct_UFunction_UFortPartyContext_ShouldPartyInvitesBeEnabled, "ShouldPartyInvitesBeEnabled" },
+	{ &Z_Construct_UFunction_UFortPartyContext_ShouldShowHeroPortraits, "ShouldShowHeroPortraits" },
+	{ &Z_Construct_UFunction_UFortPartyContext_ShowExternalFriendsUI, "ShowExternalFriendsUI" },
+	{ &Z_Construct_UFunction_UFortPartyContext_ShowExternalProfile, "ShowExternalProfile" },
+	{ &Z_Construct_UFunction_UFortPartyContext_ShowLocalPlayerExternalProfile, "ShowLocalPlayerExternalProfile" },
+	{ &Z_Construct_UFunction_UFortPartyContext_UnmutePartyMember, "UnmutePartyMember" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPartyContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0339D1A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPartyContext_Statics::ClassParams = { &UFortPartyContext::StaticClass, Z_Construct_UClass_UFortPartyContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortPartyContext_Statics::FuncInfo, 94, Z_Construct_UClass_UFortPartyContext_Statics::PropPointers, 44, nullptr, &Z_Construct_UClass_UFortPartyContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01056150 (end 0x0105617F)
+// Original VA: 0x0000000141056150 | File offset: 0x01055750
+// Recovery: confirmed (UHT singleton of UFortPartyContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPartyContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPartyContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

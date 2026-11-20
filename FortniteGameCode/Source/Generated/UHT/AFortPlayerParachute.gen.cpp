@@ -83,3 +83,38 @@ UFunction* Z_Construct_UFunction_AFortPlayerParachute_OnRep_PlayerPawn()
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerParachute
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerParachute_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerParachute_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerParachute_GetFortPlayerPawn, "GetFortPlayerPawn" },
+	{ &Z_Construct_UFunction_AFortPlayerParachute_GetParachuteRootMesh, "GetParachuteRootMesh" },
+	{ &Z_Construct_UFunction_AFortPlayerParachute_OnRep_ParachuteItemDef, "OnRep_ParachuteItemDef" },
+	{ &Z_Construct_UFunction_AFortPlayerParachute_OnRep_PlayerPawn, "OnRep_PlayerPawn" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerParachute_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033CBC60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerParachute_Statics::ClassParams = { &AFortPlayerParachute::StaticClass, Z_Construct_UClass_AFortPlayerParachute_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortPlayerParachute_Statics::FuncInfo, 4, Z_Construct_UClass_AFortPlayerParachute_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_AFortPlayerParachute_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FDD0 (end 0x0107FDFF)
+// Original VA: 0x000000014107FDD0 | File offset: 0x0107F3D0
+// Recovery: confirmed (UHT singleton of AFortPlayerParachute) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerParachute()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerParachute_Statics::ClassParams);
+	}
+	return OuterClass;
+}

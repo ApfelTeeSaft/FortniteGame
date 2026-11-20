@@ -261,3 +261,47 @@ UFunction* Z_Construct_UFunction_UFortTutorialContext_UpdateTutorialAnnouncement
 	}
 	return ReturnFunction;
 }
+
+class UFortTutorialContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTutorialContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTutorialContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTutorialContext_ClearTutorialCallouts, "ClearTutorialCallouts" },
+	{ &Z_Construct_UFunction_UFortTutorialContext_ContinueTutorial, "ContinueTutorial" },
+	{ &Z_Construct_UFunction_UFortTutorialContext_DisableTutorialCallout, "DisableTutorialCallout" },
+	{ &Z_Construct_UFunction_UFortTutorialContext_EnableTutorialCallout, "EnableTutorialCallout" },
+	{ &Z_Construct_UFunction_UFortTutorialContext_GetHiddenTutorialCallouts, "GetHiddenTutorialCallouts" },
+	{ &Z_Construct_UFunction_UFortTutorialContext_GetTutorialCallouts, "GetTutorialCallouts" },
+	{ &Z_Construct_UFunction_UFortTutorialContext_HideTutorialCallout, "HideTutorialCallout" },
+	{ &Z_Construct_UFunction_UFortTutorialContext_OnNewAnnouncementStartedOnClient, "OnNewAnnouncementStartedOnClient" },
+	{ &Z_Construct_UFunction_UFortTutorialContext_ShouldPromptToSkipTutorial, "ShouldPromptToSkipTutorial" },
+	{ &Z_Construct_UFunction_UFortTutorialContext_SkipTutorial, "SkipTutorial" },
+	{ &Z_Construct_UFunction_UFortTutorialContext_UnhideAllTutorialCallouts, "UnhideAllTutorialCallouts" },
+	{ &Z_Construct_UFunction_UFortTutorialContext_UnhideTutorialCallout, "UnhideTutorialCallout" },
+	{ &Z_Construct_UFunction_UFortTutorialContext_UpdateTutorialAnnouncement, "UpdateTutorialAnnouncement" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTutorialContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D3C6A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTutorialContext_Statics::ClassParams = { &UFortTutorialContext::StaticClass, Z_Construct_UClass_UFortTutorialContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortTutorialContext_Statics::FuncInfo, 13, Z_Construct_UClass_UFortTutorialContext_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortTutorialContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A8E0 (end 0x0290A90F)
+// Original VA: 0x000000014290A8E0 | File offset: 0x02909EE0
+// Recovery: confirmed (UHT singleton of UFortTutorialContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTutorialContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTutorialContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -200,3 +200,44 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotSelectorButton_ViewInAll()
 	}
 	return ReturnFunction;
 }
+
+class UFortSquadSlotSelectorButton
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSquadSlotSelectorButton_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadSlotSelectorButton_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadSlotSelectorButton_GetIdOfSquadSlotToManageBP, "GetIdOfSquadSlotToManageBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotSelectorButton_GetInPreviewMode, "GetInPreviewMode" },
+	{ &Z_Construct_UFunction_UFortSquadSlotSelectorButton_GetPopupMenu, "GetPopupMenu" },
+	{ &Z_Construct_UFunction_UFortSquadSlotSelectorButton_HandlePostDifferentSquadSlotSetBP, "HandlePostDifferentSquadSlotSetBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotSelectorButton_HandlePreDifferentSquadSlotSetBP, "HandlePreDifferentSquadSlotSetBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotSelectorButton_IsSquadSlotLockedBP, "IsSquadSlotLockedBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotSelectorButton_OpenSquadSlot, "OpenSquadSlot" },
+	{ &Z_Construct_UFunction_UFortSquadSlotSelectorButton_SetIdOfSquadSlotToManageBP, "SetIdOfSquadSlotToManageBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotSelectorButton_SquadSlotWidgetUpdated, "SquadSlotWidgetUpdated" },
+	{ &Z_Construct_UFunction_UFortSquadSlotSelectorButton_ViewInAll, "ViewInAll" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadSlotSelectorButton_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D236A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadSlotSelectorButton_Statics::ClassParams = { &UFortSquadSlotSelectorButton::StaticClass, Z_Construct_UClass_UFortSquadSlotSelectorButton_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSquadSlotSelectorButton_Statics::FuncInfo, 10, Z_Construct_UClass_UFortSquadSlotSelectorButton_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortSquadSlotSelectorButton_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB630 (end 0x028FB65F)
+// Original VA: 0x00000001428FB630 | File offset: 0x028FAC30
+// Recovery: confirmed (UHT singleton of UFortSquadSlotSelectorButton) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadSlotSelectorButton()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadSlotSelectorButton_Statics::ClassParams);
+	}
+	return OuterClass;
+}

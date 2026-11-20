@@ -433,3 +433,56 @@ UFunction* Z_Construct_UFunction_UFortRewardNotificationWidget_SetPrimaryActionT
 	}
 	return ReturnFunction;
 }
+
+class UFortRewardNotificationWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortRewardNotificationWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortRewardNotificationWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_AddCollectionBookData, "AddCollectionBookData" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_AddDifficultyIncreaseRewardData, "AddDifficultyIncreaseRewardData" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_AddEpicQuestData, "AddEpicQuestData" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_AddExpeditionData, "AddExpeditionData" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_AddMissionAlertData, "AddMissionAlertData" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_AddMissionData, "AddMissionData" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_AddQuestData, "AddQuestData" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_InspectItem, "InspectItem" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_IsPrimaryActionEnabled, "IsPrimaryActionEnabled" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_IsPrimaryActionHidden, "IsPrimaryActionHidden" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_OnNavigationDown, "OnNavigationDown" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_OnNavigationLeft, "OnNavigationLeft" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_OnNavigationRight, "OnNavigationRight" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_OnNavigationUp, "OnNavigationUp" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_OnPrimaryActionDisabled, "OnPrimaryActionDisabled" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_OnPrimaryActionEnabled, "OnPrimaryActionEnabled" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_OnPrimaryActionHidden, "OnPrimaryActionHidden" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_OnPrimaryActionTextChanged, "OnPrimaryActionTextChanged" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_ResetAllRewardData, "ResetAllRewardData" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_SetPrimaryActionEnabled, "SetPrimaryActionEnabled" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_SetPrimaryActionHidden, "SetPrimaryActionHidden" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationWidget_SetPrimaryActionText, "SetPrimaryActionText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortRewardNotificationWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D0B980
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortRewardNotificationWidget_Statics::ClassParams = { &UFortRewardNotificationWidget::StaticClass, Z_Construct_UClass_UFortRewardNotificationWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortRewardNotificationWidget_Statics::FuncInfo, 22, Z_Construct_UClass_UFortRewardNotificationWidget_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortRewardNotificationWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED7E0 (end 0x028ED80F)
+// Original VA: 0x00000001428ED7E0 | File offset: 0x028ECDE0
+// Recovery: confirmed (UHT singleton of UFortRewardNotificationWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortRewardNotificationWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortRewardNotificationWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

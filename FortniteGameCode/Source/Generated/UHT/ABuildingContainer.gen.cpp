@@ -215,3 +215,45 @@ UFunction* Z_Construct_UFunction_ABuildingContainer_RaiseTreasure()
 	}
 	return ReturnFunction;
 }
+
+class ABuildingContainer
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingContainer_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingContainer_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingContainer_BounceContainer, "BounceContainer" },
+	{ &Z_Construct_UFunction_ABuildingContainer_GetLootTier, "GetLootTier" },
+	{ &Z_Construct_UFunction_ABuildingContainer_OnBeginSearch, "OnBeginSearch" },
+	{ &Z_Construct_UFunction_ABuildingContainer_OnLoot, "OnLoot" },
+	{ &Z_Construct_UFunction_ABuildingContainer_OnLootRepeat, "OnLootRepeat" },
+	{ &Z_Construct_UFunction_ABuildingContainer_OnLootReset, "OnLootReset" },
+	{ &Z_Construct_UFunction_ABuildingContainer_OnRaiseTreasure, "OnRaiseTreasure" },
+	{ &Z_Construct_UFunction_ABuildingContainer_OnRep_bAlreadySearched, "OnRep_bAlreadySearched" },
+	{ &Z_Construct_UFunction_ABuildingContainer_OnSearchInterrupted, "OnSearchInterrupted" },
+	{ &Z_Construct_UFunction_ABuildingContainer_OnSetSearched, "OnSetSearched" },
+	{ &Z_Construct_UFunction_ABuildingContainer_RaiseTreasure, "RaiseTreasure" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingContainer_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032700C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingContainer_Statics::ClassParams = { &ABuildingContainer::StaticClass, Z_Construct_UClass_ABuildingContainer_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ABuildingContainer_Statics::FuncInfo, 11, Z_Construct_UClass_ABuildingContainer_Statics::PropPointers, 38, "Game", &Z_Construct_UClass_ABuildingContainer_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F664D0 (end 0x00F664FF)
+// Original VA: 0x0000000140F664D0 | File offset: 0x00F65AD0
+// Recovery: confirmed (UHT singleton of ABuildingContainer) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingContainer()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingContainer_Statics::ClassParams);
+	}
+	return OuterClass;
+}

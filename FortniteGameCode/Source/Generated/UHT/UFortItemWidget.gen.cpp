@@ -583,3 +583,63 @@ UFunction* Z_Construct_UFunction_UFortItemWidget_SetOnGetItemToCompareDelegate()
 	}
 	return ReturnFunction;
 }
+
+class UFortItemWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemWidget_BPOnActivatableChanged, "BPOnActivatableChanged" },
+	{ &Z_Construct_UFunction_UFortItemWidget_BPOnCooldownSecondsChanged, "BPOnCooldownSecondsChanged" },
+	{ &Z_Construct_UFunction_UFortItemWidget_BPOnItemChanged, "BPOnItemChanged" },
+	{ &Z_Construct_UFunction_UFortItemWidget_BPOnItemSet, "BPOnItemSet" },
+	{ &Z_Construct_UFunction_UFortItemWidget_GetDescription, "GetDescription" },
+	{ &Z_Construct_UFunction_UFortItemWidget_GetDisplayName, "GetDisplayName" },
+	{ &Z_Construct_UFunction_UFortItemWidget_GetDurability, "GetDurability" },
+	{ &Z_Construct_UFunction_UFortItemWidget_GetIconTexture, "GetIconTexture" },
+	{ &Z_Construct_UFunction_UFortItemWidget_GetItem, "GetItem" },
+	{ &Z_Construct_UFunction_UFortItemWidget_GetItemToCompare, "GetItemToCompare" },
+	{ &Z_Construct_UFunction_UFortItemWidget_GetLevel, "GetLevel" },
+	{ &Z_Construct_UFunction_UFortItemWidget_GetRarity, "GetRarity" },
+	{ &Z_Construct_UFunction_UFortItemWidget_GetStackCount, "GetStackCount" },
+	{ &Z_Construct_UFunction_UFortItemWidget_GetType, "GetType" },
+	{ &Z_Construct_UFunction_UFortItemWidget_HasDurability, "HasDurability" },
+	{ &Z_Construct_UFunction_UFortItemWidget_HasLevel, "HasLevel" },
+	{ &Z_Construct_UFunction_UFortItemWidget_HasSecondaryCategory, "HasSecondaryCategory" },
+	{ &Z_Construct_UFunction_UFortItemWidget_HasTertiaryCategory, "HasTertiaryCategory" },
+	{ &Z_Construct_UFunction_UFortItemWidget_IsEquipped, "IsEquipped" },
+	{ &Z_Construct_UFunction_UFortItemWidget_IsInventoryOverflowItem, "IsInventoryOverflowItem" },
+	{ &Z_Construct_UFunction_UFortItemWidget_IsItemValid, "IsItemValid" },
+	{ &Z_Construct_UFunction_UFortItemWidget_IsSchematic, "IsSchematic" },
+	{ &Z_Construct_UFunction_UFortItemWidget_IsSlotted, "IsSlotted" },
+	{ &Z_Construct_UFunction_UFortItemWidget_OnFortItemDestroyed, "OnFortItemDestroyed" },
+	{ &Z_Construct_UFunction_UFortItemWidget_OnFortItemUpdated, "OnFortItemUpdated" },
+	{ &Z_Construct_UDelegateFunction_UFortItemWidget_OnGetItemToCompare__DelegateSignature, "OnGetItemToCompare__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortItemWidget_SetCooldownMaterial, "SetCooldownMaterial" },
+	{ &Z_Construct_UFunction_UFortItemWidget_SetItem, "SetItem" },
+	{ &Z_Construct_UFunction_UFortItemWidget_SetOnGetItemToCompareDelegate, "SetOnGetItemToCompareDelegate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CD9E40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemWidget_Statics::ClassParams = { &UFortItemWidget::StaticClass, Z_Construct_UClass_UFortItemWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortItemWidget_Statics::FuncInfo, 29, Z_Construct_UClass_UFortItemWidget_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UFortItemWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF6C0 (end 0x028CF6EF)
+// Original VA: 0x00000001428CF6C0 | File offset: 0x028CECC0
+// Recovery: confirmed (UHT singleton of UFortItemWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

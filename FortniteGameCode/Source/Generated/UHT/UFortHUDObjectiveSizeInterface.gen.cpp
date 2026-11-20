@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortHUDObjectiveSizeInterface_GetHeightEstimat
 	}
 	return ReturnFunction;
 }
+
+class UFortHUDObjectiveSizeInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHUDObjectiveSizeInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHUDObjectiveSizeInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHUDObjectiveSizeInterface_GetHeightEstimate, "GetHeightEstimate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHUDObjectiveSizeInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x03CB24B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHUDObjectiveSizeInterface_Statics::ClassParams = { &UFortHUDObjectiveSizeInterface::StaticClass, Z_Construct_UClass_UFortHUDObjectiveSizeInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortHUDObjectiveSizeInterface_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortHUDObjectiveSizeInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBDF0 (end 0x028BBE1F)
+// Original VA: 0x00000001428BBDF0 | File offset: 0x028BB3F0
+// Recovery: confirmed (UHT singleton of UFortHUDObjectiveSizeInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHUDObjectiveSizeInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHUDObjectiveSizeInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

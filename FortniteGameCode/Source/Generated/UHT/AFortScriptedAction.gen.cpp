@@ -105,3 +105,40 @@ UFunction* Z_Construct_UFunction_AFortScriptedAction_GetParams()
 	}
 	return ReturnFunction;
 }
+
+class AFortScriptedAction
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortScriptedAction_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortScriptedAction_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortScriptedAction_CanExecute, "CanExecute" },
+	{ &Z_Construct_UFunction_AFortScriptedAction_CancelAction, "CancelAction" },
+	{ &Z_Construct_UFunction_AFortScriptedAction_CompleteAction, "CompleteAction" },
+	{ &Z_Construct_UFunction_AFortScriptedAction_Execute, "Execute" },
+	{ &Z_Construct_UFunction_AFortScriptedAction_GetParams, "GetParams" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortScriptedAction_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033F6430
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortScriptedAction_Statics::ClassParams = { &AFortScriptedAction::StaticClass, Z_Construct_UClass_AFortScriptedAction_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortScriptedAction_Statics::FuncInfo, 5, Z_Construct_UClass_AFortScriptedAction_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_AFortScriptedAction_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortScriptedAction_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5800 (end 0x010A582F)
+// Original VA: 0x00000001410A5800 | File offset: 0x010A4E00
+// Recovery: confirmed (UHT singleton of AFortScriptedAction) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortScriptedAction()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortScriptedAction_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -62,3 +62,38 @@ UFunction* Z_Construct_UFunction_UFortMissionTrackerSubEntry_OnObjectiveSet()
 	}
 	return ReturnFunction;
 }
+
+class UFortMissionTrackerSubEntry
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMissionTrackerSubEntry_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMissionTrackerSubEntry_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMissionTrackerSubEntry_NotifyVisibilityChanged, "NotifyVisibilityChanged" },
+	{ &Z_Construct_UFunction_UFortMissionTrackerSubEntry_OnHiddenByHeightConstraintChanged, "OnHiddenByHeightConstraintChanged" },
+	{ &Z_Construct_UFunction_UFortMissionTrackerSubEntry_OnObjectiveSet, "OnObjectiveSet" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMissionTrackerSubEntry_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE6070
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMissionTrackerSubEntry_Statics::ClassParams = { &UFortMissionTrackerSubEntry::StaticClass, Z_Construct_UClass_UFortMissionTrackerSubEntry_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortMissionTrackerSubEntry_Statics::FuncInfo, 3, Z_Construct_UClass_UFortMissionTrackerSubEntry_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortMissionTrackerSubEntry_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortMissionTrackerSubEntry_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7580 (end 0x028D75AF)
+// Original VA: 0x00000001428D7580 | File offset: 0x028D6B80
+// Recovery: confirmed (UHT singleton of UFortMissionTrackerSubEntry) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMissionTrackerSubEntry()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMissionTrackerSubEntry_Statics::ClassParams);
+	}
+	return OuterClass;
+}

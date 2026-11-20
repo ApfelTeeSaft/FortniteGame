@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UAsyncActionChangePrimaryAssetBundles_AsyncChan
 	}
 	return ReturnFunction;
 }
+
+class UAsyncActionChangePrimaryAssetBundles
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForMatchingPrimaryAssets, "AsyncChangeBundleStateForMatchingPrimaryAssets" },
+	{ &Z_Construct_UFunction_UAsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForPrimaryAssetList, "AsyncChangeBundleStateForPrimaryAssetList" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038AB0A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles_Statics::ClassParams = { &UAsyncActionChangePrimaryAssetBundles::StaticClass, Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles_Statics::FuncInfo, 2, Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DB100 (end 0x023DB12F)
+// Original VA: 0x00000001423DB100 | File offset: 0x023DA700
+// Recovery: confirmed (UHT singleton of UAsyncActionChangePrimaryAssetBundles) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles_Statics::ClassParams);
+	}
+	return OuterClass;
+}

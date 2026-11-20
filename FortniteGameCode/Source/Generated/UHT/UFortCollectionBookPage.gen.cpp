@@ -45,3 +45,37 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPage_GetSectionState()
 	}
 	return ReturnFunction;
 }
+
+class UFortCollectionBookPage
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCollectionBookPage_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCollectionBookPage_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCollectionBookPage_GetPageState, "GetPageState" },
+	{ &Z_Construct_UFunction_UFortCollectionBookPage_GetSectionState, "GetSectionState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCollectionBookPage_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032EEBE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCollectionBookPage_Statics::ClassParams = { &UFortCollectionBookPage::StaticClass, Z_Construct_UClass_UFortCollectionBookPage_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortCollectionBookPage_Statics::FuncInfo, 2, Z_Construct_UClass_UFortCollectionBookPage_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UFortCollectionBookPage_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortCollectionBookPage_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC6100 (end 0x00FC612F)
+// Original VA: 0x0000000140FC6100 | File offset: 0x00FC5700
+// Recovery: confirmed (UHT singleton of UFortCollectionBookPage) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCollectionBookPage()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCollectionBookPage_Statics::ClassParams);
+	}
+	return OuterClass;
+}

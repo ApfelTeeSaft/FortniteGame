@@ -224,3 +224,45 @@ UFunction* Z_Construct_UFunction_UWidgetComponent_SetWidget()
 	}
 	return ReturnFunction;
 }
+
+class UWidgetComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UWidgetComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UWidgetComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UWidgetComponent_GetDrawSize, "GetDrawSize" },
+	{ &Z_Construct_UFunction_UWidgetComponent_GetMaterialInstance, "GetMaterialInstance" },
+	{ &Z_Construct_UFunction_UWidgetComponent_GetOwnerPlayer, "GetOwnerPlayer" },
+	{ &Z_Construct_UFunction_UWidgetComponent_GetRenderTarget, "GetRenderTarget" },
+	{ &Z_Construct_UFunction_UWidgetComponent_GetUserWidgetObject, "GetUserWidgetObject" },
+	{ &Z_Construct_UFunction_UWidgetComponent_RequestRedraw, "RequestRedraw" },
+	{ &Z_Construct_UFunction_UWidgetComponent_SetBackgroundColor, "SetBackgroundColor" },
+	{ &Z_Construct_UFunction_UWidgetComponent_SetDrawSize, "SetDrawSize" },
+	{ &Z_Construct_UFunction_UWidgetComponent_SetOwnerPlayer, "SetOwnerPlayer" },
+	{ &Z_Construct_UFunction_UWidgetComponent_SetTintColorAndOpacity, "SetTintColorAndOpacity" },
+	{ &Z_Construct_UFunction_UWidgetComponent_SetWidget, "SetWidget" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UWidgetComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036A9D30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UWidgetComponent_Statics::ClassParams = { &UWidgetComponent::StaticClass, Z_Construct_UClass_UWidgetComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_UWidgetComponent_Statics::FuncInfo, 11, Z_Construct_UClass_UWidgetComponent_Statics::PropPointers, 39, nullptr, &Z_Construct_UClass_UWidgetComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00DC0 (end 0x01C00DEF)
+// Original VA: 0x0000000141C00DC0 | File offset: 0x01C003C0
+// Recovery: confirmed (UHT singleton of UWidgetComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UWidgetComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UWidgetComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

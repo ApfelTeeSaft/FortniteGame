@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_ADefaultPawn_TurnAtRate()
 	}
 	return ReturnFunction;
 }
+
+class ADefaultPawn
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ADefaultPawn_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ADefaultPawn_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ADefaultPawn_LookUpAtRate, "LookUpAtRate" },
+	{ &Z_Construct_UFunction_ADefaultPawn_MoveForward, "MoveForward" },
+	{ &Z_Construct_UFunction_ADefaultPawn_MoveRight, "MoveRight" },
+	{ &Z_Construct_UFunction_ADefaultPawn_MoveUp_World, "MoveUp_World" },
+	{ &Z_Construct_UFunction_ADefaultPawn_TurnAtRate, "TurnAtRate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ADefaultPawn_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038CEBA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ADefaultPawn_Statics::ClassParams = { &ADefaultPawn::StaticClass, Z_Construct_UClass_ADefaultPawn_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ADefaultPawn_Statics::FuncInfo, 5, Z_Construct_UClass_ADefaultPawn_Statics::PropPointers, 6, "Game", &Z_Construct_UClass_ADefaultPawn_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FE400 (end 0x023FE42F)
+// Original VA: 0x00000001423FE400 | File offset: 0x023FDA00
+// Recovery: confirmed (UHT singleton of ADefaultPawn) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ADefaultPawn()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ADefaultPawn_Statics::ClassParams);
+	}
+	return OuterClass;
+}

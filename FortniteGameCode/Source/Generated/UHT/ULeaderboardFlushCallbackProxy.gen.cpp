@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_ULeaderboardFlushCallbackProxy_CreateProxyObjec
 	}
 	return ReturnFunction;
 }
+
+class ULeaderboardFlushCallbackProxy
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ULeaderboardFlushCallbackProxy_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ULeaderboardFlushCallbackProxy_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ULeaderboardFlushCallbackProxy_CreateProxyObjectForFlush, "CreateProxyObjectForFlush" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ULeaderboardFlushCallbackProxy_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EAE040
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ULeaderboardFlushCallbackProxy_Statics::ClassParams = { &ULeaderboardFlushCallbackProxy::StaticClass, Z_Construct_UClass_ULeaderboardFlushCallbackProxy_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_ULeaderboardFlushCallbackProxy_Statics::FuncInfo, 1, Z_Construct_UClass_ULeaderboardFlushCallbackProxy_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_ULeaderboardFlushCallbackProxy_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032EC20 (end 0x0032EC4F)
+// Original VA: 0x000000014032EC20 | File offset: 0x0032E220
+// Recovery: confirmed (UHT singleton of ULeaderboardFlushCallbackProxy) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ULeaderboardFlushCallbackProxy()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ULeaderboardFlushCallbackProxy_Statics::ClassParams);
+	}
+	return OuterClass;
+}

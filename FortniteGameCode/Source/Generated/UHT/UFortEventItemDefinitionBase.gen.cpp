@@ -24,3 +24,35 @@ UFunction* Z_Construct_UFunction_UFortEventItemDefinitionBase_CreateCalendarPayl
 	}
 	return ReturnFunction;
 }
+
+class UFortEventItemDefinitionBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortEventItemDefinitionBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortEventItemDefinitionBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortEventItemDefinitionBase_CreateCalendarPayload, "CreateCalendarPayload" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortEventItemDefinitionBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0330EE10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortEventItemDefinitionBase_Statics::ClassParams = { &UFortEventItemDefinitionBase::StaticClass, Z_Construct_UClass_UFortEventItemDefinitionBase_Statics::DependentSingletons, 2, 0x00880081u, Z_Construct_UClass_UFortEventItemDefinitionBase_Statics::FuncInfo, 1, Z_Construct_UClass_UFortEventItemDefinitionBase_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortEventItemDefinitionBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDB5E0 (end 0x00FDB60F)
+// Original VA: 0x0000000140FDB5E0 | File offset: 0x00FDABE0
+// Recovery: confirmed (UHT singleton of UFortEventItemDefinitionBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortEventItemDefinitionBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortEventItemDefinitionBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

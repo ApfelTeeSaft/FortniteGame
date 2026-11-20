@@ -925,3 +925,80 @@ UFunction* Z_Construct_UFunction_UFortHeroManagementContext_SetHeroName()
 	}
 	return ReturnFunction;
 }
+
+class UFortHeroManagementContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHeroManagementContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHeroManagementContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_CanAffordAbility, "CanAffordAbility" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_CanAffordAbilityFromID, "CanAffordAbilityFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_CanAffordNextAbility, "CanAffordNextAbility" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_CanAffordNextAbilityFromID, "CanAffordNextAbilityFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_CanModifyTraitDepth, "CanModifyTraitDepth" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_CanModifyTraitDepthFromID, "CanModifyTraitDepthFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_CanRedeemAllAbilities, "CanRedeemAllAbilities" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_CheckHeroNameValidity, "CheckHeroNameValidity" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_FocusOnHero, "FocusOnHero" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GenerateRandomHeroName, "GenerateRandomHeroName" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetAbilityCost, "GetAbilityCost" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetAbilityCostFromID, "GetAbilityCostFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetAbilitySystemComponent, "GetAbilitySystemComponent" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetAllHeroIDs, "GetAllHeroIDs" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetAttributeValue, "GetAttributeValue" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetAttributeValueFromID, "GetAttributeValueFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetAttributeValuesArray, "GetAttributeValuesArray" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetAttributeValuesArrayFromID, "GetAttributeValuesArrayFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetCoreAbilities, "GetCoreAbilities" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetCurrentHeroID, "GetCurrentHeroID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetDisplayStats, "GetDisplayStats" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetHeroData, "GetHeroData" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetHeroDataFromID, "GetHeroDataFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetMaxNameLength, "GetMaxNameLength" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetNextAbilityCost, "GetNextAbilityCost" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetNextAbilityCostFromID, "GetNextAbilityCostFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetNumHeroTraits, "GetNumHeroTraits" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetNumUnspentAbilityPoints, "GetNumUnspentAbilityPoints" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetNumUnspentAbilityPointsFromID, "GetNumUnspentAbilityPointsFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetTraitDepth, "GetTraitDepth" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_GetTraitDepthFromID, "GetTraitDepthFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_IsCreateHeroEnabled, "IsCreateHeroEnabled" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_IsShowingStatsScreen, "IsShowingStatsScreen" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_IsSkillTreeUnlocked, "IsSkillTreeUnlocked" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_MarkHeroAsSeen, "MarkHeroAsSeen" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_PurchaseNextAbility, "PurchaseNextAbility" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_PurchaseNextAbilityFromID, "PurchaseNextAbilityFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_RedeemAllAbilities, "RedeemAllAbilities" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_RedeemAllAbilitiesFromID, "RedeemAllAbilitiesFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_RedeemPrevAbility, "RedeemPrevAbility" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_RedeemPrevAbilityFromID, "RedeemPrevAbilityFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_RequestCreateHero, "RequestCreateHero" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_RequestSetTraitDepth, "RequestSetTraitDepth" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_RequestSetTraitDepthFromID, "RequestSetTraitDepthFromID" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_SetCurrentHero, "SetCurrentHero" },
+	{ &Z_Construct_UFunction_UFortHeroManagementContext_SetHeroName, "SetHeroName" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHeroManagementContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CA5C80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHeroManagementContext_Statics::ClassParams = { &UFortHeroManagementContext::StaticClass, Z_Construct_UClass_UFortHeroManagementContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortHeroManagementContext_Statics::FuncInfo, 46, Z_Construct_UClass_UFortHeroManagementContext_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_UFortHeroManagementContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3C90 (end 0x028B3CBF)
+// Original VA: 0x00000001428B3C90 | File offset: 0x028B3290
+// Recovery: confirmed (UHT singleton of UFortHeroManagementContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHeroManagementContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHeroManagementContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

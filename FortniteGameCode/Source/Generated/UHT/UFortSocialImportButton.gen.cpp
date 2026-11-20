@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortSocialImportButton_OnCaptionGenerated()
 	}
 	return ReturnFunction;
 }
+
+class UFortSocialImportButton
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSocialImportButton_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSocialImportButton_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSocialImportButton_DynamicHandleClicked, "DynamicHandleClicked" },
+	{ &Z_Construct_UFunction_UFortSocialImportButton_OnCaptionGenerated, "OnCaptionGenerated" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSocialImportButton_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D14390
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSocialImportButton_Statics::ClassParams = { &UFortSocialImportButton::StaticClass, Z_Construct_UClass_UFortSocialImportButton_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortSocialImportButton_Statics::FuncInfo, 2, Z_Construct_UClass_UFortSocialImportButton_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortSocialImportButton_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F56F0 (end 0x028F571F)
+// Original VA: 0x00000001428F56F0 | File offset: 0x028F4CF0
+// Recovery: confirmed (UHT singleton of UFortSocialImportButton) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSocialImportButton()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSocialImportButton_Statics::ClassParams);
+	}
+	return OuterClass;
+}

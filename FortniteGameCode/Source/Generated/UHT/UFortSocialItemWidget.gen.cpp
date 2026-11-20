@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortSocialItemWidget_SetSocialItem()
 	}
 	return ReturnFunction;
 }
+
+class UFortSocialItemWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSocialItemWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSocialItemWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSocialItemWidget_SetSocialItem, "SetSocialItem" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSocialItemWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D14640
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSocialItemWidget_Statics::ClassParams = { &UFortSocialItemWidget::StaticClass, Z_Construct_UClass_UFortSocialItemWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortSocialItemWidget_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortSocialItemWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5760 (end 0x028F578F)
+// Original VA: 0x00000001428F5760 | File offset: 0x028F4D60
+// Recovery: confirmed (UHT singleton of UFortSocialItemWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSocialItemWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSocialItemWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

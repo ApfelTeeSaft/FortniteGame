@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UGridPanel_SetRowFill()
 	}
 	return ReturnFunction;
 }
+
+class UGridPanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UGridPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGridPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGridPanel_AddChildToGrid, "AddChildToGrid" },
+	{ &Z_Construct_UFunction_UGridPanel_SetColumnFill, "SetColumnFill" },
+	{ &Z_Construct_UFunction_UGridPanel_SetRowFill, "SetRowFill" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGridPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036969C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGridPanel_Statics::ClassParams = { &UGridPanel::StaticClass, Z_Construct_UClass_UGridPanel_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UGridPanel_Statics::FuncInfo, 3, Z_Construct_UClass_UGridPanel_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UGridPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED3C0 (end 0x01BED3EF)
+// Original VA: 0x0000000141BED3C0 | File offset: 0x01BEC9C0
+// Recovery: confirmed (UHT singleton of UGridPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGridPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGridPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

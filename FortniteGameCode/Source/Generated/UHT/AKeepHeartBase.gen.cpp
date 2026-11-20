@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_SetAllowLooting()
 	}
 	return ReturnFunction;
 }
+
+class AKeepHeartBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AKeepHeartBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AKeepHeartBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AKeepHeartBase_IsKeepLoaded, "IsKeepLoaded" },
+	{ &Z_Construct_UFunction_AKeepHeartBase_IsKeepOwner, "IsKeepOwner" },
+	{ &Z_Construct_UFunction_AKeepHeartBase_LoadUserKeep, "LoadUserKeep" },
+	{ &Z_Construct_UFunction_AKeepHeartBase_ResetUserKeep, "ResetUserKeep" },
+	{ &Z_Construct_UFunction_AKeepHeartBase_SaveUserKeep, "SaveUserKeep" },
+	{ &Z_Construct_UFunction_AKeepHeartBase_SetAllowLooting, "SetAllowLooting" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AKeepHeartBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0343EE30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AKeepHeartBase_Statics::ClassParams = { &AKeepHeartBase::StaticClass, Z_Construct_UClass_AKeepHeartBase_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_AKeepHeartBase_Statics::FuncInfo, 6, Z_Construct_UClass_AKeepHeartBase_Statics::PropPointers, 2, "Game", &Z_Construct_UClass_AKeepHeartBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E30B0 (end 0x010E30DF)
+// Original VA: 0x00000001410E30B0 | File offset: 0x010E26B0
+// Recovery: confirmed (UHT singleton of AKeepHeartBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AKeepHeartBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AKeepHeartBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

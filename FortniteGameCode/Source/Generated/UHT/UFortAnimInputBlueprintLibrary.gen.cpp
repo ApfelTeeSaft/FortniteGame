@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortAnimInputBlueprintLibrary_UpdateFortAnimIn
 	}
 	return ReturnFunction;
 }
+
+class UFortAnimInputBlueprintLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAnimInputBlueprintLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAnimInputBlueprintLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAnimInputBlueprintLibrary_UpdateFortAnimInput_SpeedWarping, "UpdateFortAnimInput_SpeedWarping" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAnimInputBlueprintLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032B7AB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAnimInputBlueprintLibrary_Statics::ClassParams = { &UFortAnimInputBlueprintLibrary::StaticClass, Z_Construct_UClass_UFortAnimInputBlueprintLibrary_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortAnimInputBlueprintLibrary_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortAnimInputBlueprintLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F994F0 (end 0x00F9951F)
+// Original VA: 0x0000000140F994F0 | File offset: 0x00F98AF0
+// Recovery: confirmed (UHT singleton of UFortAnimInputBlueprintLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAnimInputBlueprintLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAnimInputBlueprintLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

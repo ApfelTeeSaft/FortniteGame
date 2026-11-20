@@ -145,3 +145,40 @@ UFunction* Z_Construct_UFunction_UFortUIDataConfigurationContext_UseSpecificPina
 	}
 	return ReturnFunction;
 }
+
+class UFortUIDataConfigurationContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortUIDataConfigurationContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUIDataConfigurationContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUIDataConfigurationContext_ArePartyFeaturesEnabled, "ArePartyFeaturesEnabled" },
+	{ &Z_Construct_UFunction_UFortUIDataConfigurationContext_AreSocialFeaturesEnabled, "AreSocialFeaturesEnabled" },
+	{ &Z_Construct_UFunction_UFortUIDataConfigurationContext_GetFrontEndFFSettings, "GetFrontEndFFSettings" },
+	{ &Z_Construct_UFunction_UFortUIDataConfigurationContext_IsChatEnabled, "IsChatEnabled" },
+	{ &Z_Construct_UFunction_UFortUIDataConfigurationContext_IsLimitedToES2Features, "IsLimitedToES2Features" },
+	{ &Z_Construct_UFunction_UFortUIDataConfigurationContext_IsQuestVOEnabled, "IsQuestVOEnabled" },
+	{ &Z_Construct_UFunction_UFortUIDataConfigurationContext_UseSpecificPinataWeapon, "UseSpecificPinataWeapon" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUIDataConfigurationContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D3D810
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUIDataConfigurationContext_Statics::ClassParams = { &UFortUIDataConfigurationContext::StaticClass, Z_Construct_UClass_UFortUIDataConfigurationContext_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortUIDataConfigurationContext_Statics::FuncInfo, 7, nullptr, 0, nullptr, &Z_Construct_UClass_UFortUIDataConfigurationContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A9D0 (end 0x0290A9FF)
+// Original VA: 0x000000014290A9D0 | File offset: 0x02909FD0
+// Recovery: confirmed (UHT singleton of UFortUIDataConfigurationContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUIDataConfigurationContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUIDataConfigurationContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

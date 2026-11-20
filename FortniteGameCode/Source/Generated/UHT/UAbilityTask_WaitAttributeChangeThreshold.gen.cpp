@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitAttributeChangeThreshold_WaitF
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_WaitAttributeChangeThreshold
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_WaitAttributeChangeThreshold_WaitForAttributeChangeThreshold, "WaitForAttributeChangeThreshold" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F32340
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold_Statics::ClassParams = { &UAbilityTask_WaitAttributeChangeThreshold::StaticClass, Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold_Statics::FuncInfo, 1, Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold_Statics::PropPointers, 2, "Game", &Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D470 (end 0x0054D49F)
+// Original VA: 0x000000014054D470 | File offset: 0x0054CA70
+// Recovery: confirmed (UHT singleton of UAbilityTask_WaitAttributeChangeThreshold) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold_Statics::ClassParams);
+	}
+	return OuterClass;
+}

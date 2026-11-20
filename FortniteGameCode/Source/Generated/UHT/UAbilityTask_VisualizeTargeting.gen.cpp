@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UAbilityTask_VisualizeTargeting_VisualizeTarget
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_VisualizeTargeting
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_VisualizeTargeting_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_VisualizeTargeting_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_VisualizeTargeting_BeginSpawningActor, "BeginSpawningActor" },
+	{ &Z_Construct_UFunction_UAbilityTask_VisualizeTargeting_FinishSpawningActor, "FinishSpawningActor" },
+	{ &Z_Construct_UFunction_UAbilityTask_VisualizeTargeting_VisualizeTargeting, "VisualizeTargeting" },
+	{ &Z_Construct_UFunction_UAbilityTask_VisualizeTargeting_VisualizeTargetingUsingActor, "VisualizeTargetingUsingActor" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_VisualizeTargeting_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F2BAC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_VisualizeTargeting_Statics::ClassParams = { &UAbilityTask_VisualizeTargeting::StaticClass, Z_Construct_UClass_UAbilityTask_VisualizeTargeting_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_VisualizeTargeting_Statics::FuncInfo, 4, Z_Construct_UClass_UAbilityTask_VisualizeTargeting_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_UAbilityTask_VisualizeTargeting_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546A20 (end 0x00546A4F)
+// Original VA: 0x0000000140546A20 | File offset: 0x00546020
+// Recovery: confirmed (UHT singleton of UAbilityTask_VisualizeTargeting) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_VisualizeTargeting()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_VisualizeTargeting_Statics::ClassParams);
+	}
+	return OuterClass;
+}

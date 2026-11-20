@@ -81,3 +81,38 @@ UFunction* Z_Construct_UFunction_UFortHealthSet_OnRep_Shield()
 	}
 	return ReturnFunction;
 }
+
+class UFortHealthSet
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHealthSet_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHealthSet_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHealthSet_OnRep_CurrentShield, "OnRep_CurrentShield" },
+	{ &Z_Construct_UFunction_UFortHealthSet_OnRep_Health, "OnRep_Health" },
+	{ &Z_Construct_UFunction_UFortHealthSet_OnRep_MaxHealth, "OnRep_MaxHealth" },
+	{ &Z_Construct_UFunction_UFortHealthSet_OnRep_Shield, "OnRep_Shield" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHealthSet_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0333D6A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHealthSet_Statics::ClassParams = { &UFortHealthSet::StaticClass, Z_Construct_UClass_UFortHealthSet_Statics::DependentSingletons, 2, 0x00280080u, Z_Construct_UClass_UFortHealthSet_Statics::FuncInfo, 4, Z_Construct_UClass_UFortHealthSet_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_UFortHealthSet_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFAF20 (end 0x00FFAF4F)
+// Original VA: 0x0000000140FFAF20 | File offset: 0x00FFA520
+// Recovery: confirmed (UHT singleton of UFortHealthSet) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHealthSet()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHealthSet_Statics::ClassParams);
+	}
+	return OuterClass;
+}

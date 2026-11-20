@@ -121,3 +121,40 @@ UFunction* Z_Construct_UFunction_ABuildingFoundation_OnRep_LevelToStream()
 	}
 	return ReturnFunction;
 }
+
+class ABuildingFoundation
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingFoundation_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingFoundation_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingFoundation_EditorOnlyAddAdditionalWorld, "EditorOnlyAddAdditionalWorld" },
+	{ &Z_Construct_UFunction_ABuildingFoundation_EditorOnlyClearAdditionalWorlds, "EditorOnlyClearAdditionalWorlds" },
+	{ &Z_Construct_UFunction_ABuildingFoundation_EditorOnlyRemoveAdditionalWorld, "EditorOnlyRemoveAdditionalWorld" },
+	{ &Z_Construct_UFunction_ABuildingFoundation_OnLevelShown, "OnLevelShown" },
+	{ &Z_Construct_UFunction_ABuildingFoundation_OnLevelStreamedIn, "OnLevelStreamedIn" },
+	{ &Z_Construct_UFunction_ABuildingFoundation_OnRep_LevelToStream, "OnRep_LevelToStream" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingFoundation_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03277370
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingFoundation_Statics::ClassParams = { &ABuildingFoundation::StaticClass, Z_Construct_UClass_ABuildingFoundation_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_ABuildingFoundation_Statics::FuncInfo, 6, Z_Construct_UClass_ABuildingFoundation_Statics::PropPointers, 34, "Game", &Z_Construct_UClass_ABuildingFoundation_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6C2A0 (end 0x00F6C2CF)
+// Original VA: 0x0000000140F6C2A0 | File offset: 0x00F6B8A0
+// Recovery: confirmed (UHT singleton of ABuildingFoundation) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingFoundation()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingFoundation_Statics::ClassParams);
+	}
+	return OuterClass;
+}

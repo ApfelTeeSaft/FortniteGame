@@ -124,3 +124,41 @@ UFunction* Z_Construct_UFunction_UFortRewardInfoButton_SetShowDescriptionBP()
 	}
 	return ReturnFunction;
 }
+
+class UFortRewardInfoButton
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortRewardInfoButton_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortRewardInfoButton_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortRewardInfoButton_GetItemInstance, "GetItemInstance" },
+	{ &Z_Construct_UFunction_UFortRewardInfoButton_GetQuantity, "GetQuantity" },
+	{ &Z_Construct_UFunction_UFortRewardInfoButton_HandleDifferentItemOrQuantitySetBP, "HandleDifferentItemOrQuantitySetBP" },
+	{ &Z_Construct_UFunction_UFortRewardInfoButton_SetItemInstanceQuantityPair, "SetItemInstanceQuantityPair" },
+	{ &Z_Construct_UFunction_UFortRewardInfoButton_SetShowDescription, "SetShowDescription" },
+	{ &Z_Construct_UFunction_UFortRewardInfoButton_SetShowDescriptionBP, "SetShowDescriptionBP" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortRewardInfoButton_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D0AFA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortRewardInfoButton_Statics::ClassParams = { &UFortRewardInfoButton::StaticClass, Z_Construct_UClass_UFortRewardInfoButton_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortRewardInfoButton_Statics::FuncInfo, 6, Z_Construct_UClass_UFortRewardInfoButton_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortRewardInfoButton_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortRewardInfoButton_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED680 (end 0x028ED6AF)
+// Original VA: 0x00000001428ED680 | File offset: 0x028ECC80
+// Recovery: confirmed (UHT singleton of UFortRewardInfoButton) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortRewardInfoButton()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortRewardInfoButton_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -141,3 +141,40 @@ UFunction* Z_Construct_UFunction_UMeshReconstructorBase_StopReconstruction()
 	}
 	return ReturnFunction;
 }
+
+class UMeshReconstructorBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMeshReconstructorBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMeshReconstructorBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMeshReconstructorBase_ConnectMRMesh, "ConnectMRMesh" },
+	{ &Z_Construct_UFunction_UMeshReconstructorBase_DisconnectMRMesh, "DisconnectMRMesh" },
+	{ &Z_Construct_UFunction_UMeshReconstructorBase_IsReconstructionPaused, "IsReconstructionPaused" },
+	{ &Z_Construct_UFunction_UMeshReconstructorBase_IsReconstructionStarted, "IsReconstructionStarted" },
+	{ &Z_Construct_UFunction_UMeshReconstructorBase_PauseReconstruction, "PauseReconstruction" },
+	{ &Z_Construct_UFunction_UMeshReconstructorBase_StartReconstruction, "StartReconstruction" },
+	{ &Z_Construct_UFunction_UMeshReconstructorBase_StopReconstruction, "StopReconstruction" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMeshReconstructorBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03720D40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMeshReconstructorBase_Statics::ClassParams = { &UMeshReconstructorBase::StaticClass, Z_Construct_UClass_UMeshReconstructorBase_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UMeshReconstructorBase_Statics::FuncInfo, 7, nullptr, 0, nullptr, &Z_Construct_UClass_UMeshReconstructorBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5EDE0 (end 0x01D5EE0F)
+// Original VA: 0x0000000141D5EDE0 | File offset: 0x01D5E3E0
+// Recovery: confirmed (UHT singleton of UMeshReconstructorBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMeshReconstructorBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMeshReconstructorBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

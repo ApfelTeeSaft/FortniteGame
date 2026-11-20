@@ -144,3 +144,41 @@ UFunction* Z_Construct_UFunction_APartyBeaconClient_ServerUpdateReservationReque
 	}
 	return ReturnFunction;
 }
+
+class APartyBeaconClient
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_APartyBeaconClient_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_APartyBeaconClient_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_APartyBeaconClient_ClientCancelReservationResponse, "ClientCancelReservationResponse" },
+	{ &Z_Construct_UFunction_APartyBeaconClient_ClientReservationResponse, "ClientReservationResponse" },
+	{ &Z_Construct_UFunction_APartyBeaconClient_ClientSendReservationFull, "ClientSendReservationFull" },
+	{ &Z_Construct_UFunction_APartyBeaconClient_ClientSendReservationUpdates, "ClientSendReservationUpdates" },
+	{ &Z_Construct_UFunction_APartyBeaconClient_ServerCancelReservationRequest, "ServerCancelReservationRequest" },
+	{ &Z_Construct_UFunction_APartyBeaconClient_ServerReservationRequest, "ServerReservationRequest" },
+	{ &Z_Construct_UFunction_APartyBeaconClient_ServerUpdateReservationRequest, "ServerUpdateReservationRequest" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_APartyBeaconClient_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EAEB10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_APartyBeaconClient_Statics::ClassParams = { &APartyBeaconClient::StaticClass, Z_Construct_UClass_APartyBeaconClient_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_APartyBeaconClient_Statics::FuncInfo, 7, Z_Construct_UClass_APartyBeaconClient_Statics::PropPointers, 6, "Engine", &Z_Construct_UClass_APartyBeaconClient_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E800 (end 0x0032E82F)
+// Original VA: 0x000000014032E800 | File offset: 0x0032DE00
+// Recovery: confirmed (UHT singleton of APartyBeaconClient) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_APartyBeaconClient()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_APartyBeaconClient_Statics::ClassParams);
+	}
+	return OuterClass;
+}

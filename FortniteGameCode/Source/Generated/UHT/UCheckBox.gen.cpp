@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UCheckBox_SetIsChecked()
 	}
 	return ReturnFunction;
 }
+
+class UCheckBox
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCheckBox_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCheckBox_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCheckBox_GetCheckedState, "GetCheckedState" },
+	{ &Z_Construct_UFunction_UCheckBox_IsChecked, "IsChecked" },
+	{ &Z_Construct_UFunction_UCheckBox_IsPressed, "IsPressed" },
+	{ &Z_Construct_UFunction_UCheckBox_SetCheckedState, "SetCheckedState" },
+	{ &Z_Construct_UFunction_UCheckBox_SetIsChecked, "SetIsChecked" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCheckBox_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03691D20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCheckBox_Statics::ClassParams = { &UCheckBox::StaticClass, Z_Construct_UClass_UCheckBox_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UCheckBox_Statics::FuncInfo, 5, Z_Construct_UClass_UCheckBox_Statics::PropPointers, 19, nullptr, &Z_Construct_UClass_UCheckBox_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6110 (end 0x01BE613F)
+// Original VA: 0x0000000141BE6110 | File offset: 0x01BE5710
+// Recovery: confirmed (UHT singleton of UCheckBox) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCheckBox()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCheckBox_Statics::ClassParams);
+	}
+	return OuterClass;
+}

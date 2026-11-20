@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortSeasonalEventManager_IsEventFlagActive()
 	}
 	return ReturnFunction;
 }
+
+class UFortSeasonalEventManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSeasonalEventManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSeasonalEventManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSeasonalEventManager_IsEventFlagActive, "IsEventFlagActive" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSeasonalEventManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033F7650
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSeasonalEventManager_Statics::ClassParams = { &UFortSeasonalEventManager::StaticClass, Z_Construct_UClass_UFortSeasonalEventManager_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortSeasonalEventManager_Statics::FuncInfo, 1, Z_Construct_UClass_UFortSeasonalEventManager_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortSeasonalEventManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5950 (end 0x010A597F)
+// Original VA: 0x00000001410A5950 | File offset: 0x010A4F50
+// Recovery: confirmed (UHT singleton of UFortSeasonalEventManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSeasonalEventManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSeasonalEventManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

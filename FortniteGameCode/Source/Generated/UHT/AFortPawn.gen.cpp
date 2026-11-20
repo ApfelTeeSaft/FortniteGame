@@ -2143,3 +2143,143 @@ UFunction* Z_Construct_UFunction_AFortPawn_TriggerFeedbackEvent()
 	}
 	return ReturnFunction;
 }
+
+class AFortPawn
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPawn_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPawn_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPawn_AlignRotationToHitDirection, "AlignRotationToHitDirection" },
+	{ &Z_Construct_UFunction_AFortPawn_AnimMontage_LocalJumpToSectionName, "AnimMontage_LocalJumpToSectionName" },
+	{ &Z_Construct_UFunction_AFortPawn_AnimMontage_LocalSetNextSectionName, "AnimMontage_LocalSetNextSectionName" },
+	{ &Z_Construct_UFunction_AFortPawn_ApplyKnockback, "ApplyKnockback" },
+	{ &Z_Construct_UFunction_AFortPawn_AttachAssetToSocket, "AttachAssetToSocket" },
+	{ &Z_Construct_UFunction_AFortPawn_ClearJumpFlashCount, "ClearJumpFlashCount" },
+	{ &Z_Construct_UFunction_AFortPawn_DetachAssetFromSocket, "DetachAssetFromSocket" },
+	{ &Z_Construct_UFunction_AFortPawn_DoFatalDamage, "DoFatalDamage" },
+	{ &Z_Construct_UFunction_AFortPawn_EquipWeaponDefinition, "EquipWeaponDefinition" },
+	{ &Z_Construct_UFunction_AFortPawn_FollowingTheLeaderEmoteStopped, "FollowingTheLeaderEmoteStopped" },
+	{ &Z_Construct_UFunction_AFortPawn_ForceKill, "ForceKill" },
+	{ &Z_Construct_UFunction_AFortPawn_GameplayCue, "GameplayCue" },
+	{ &Z_Construct_UFunction_AFortPawn_GameplayCue_Damage, "GameplayCue_Damage" },
+	{ &Z_Construct_UFunction_AFortPawn_GameplayCue_InstantDeath, "GameplayCue_InstantDeath" },
+	{ &Z_Construct_UFunction_AFortPawn_GetAssetSkeletalMeshComponentAttachment, "GetAssetSkeletalMeshComponentAttachment" },
+	{ &Z_Construct_UFunction_AFortPawn_GetControlRecoveryBehavior, "GetControlRecoveryBehavior" },
+	{ &Z_Construct_UFunction_AFortPawn_GetControlResistance, "GetControlResistance" },
+	{ &Z_Construct_UFunction_AFortPawn_GetCurrentMontageSectionTimeLeft, "GetCurrentMontageSectionTimeLeft" },
+	{ &Z_Construct_UFunction_AFortPawn_GetCurrentSentenceSpeechText, "GetCurrentSentenceSpeechText" },
+	{ &Z_Construct_UFunction_AFortPawn_GetDamageZone, "GetDamageZone" },
+	{ &Z_Construct_UFunction_AFortPawn_GetDefaultTargetingOrigin, "GetDefaultTargetingOrigin" },
+	{ &Z_Construct_UFunction_AFortPawn_GetDefaultTargetingRotation, "GetDefaultTargetingRotation" },
+	{ &Z_Construct_UFunction_AFortPawn_GetEncounterInfo, "GetEncounterInfo" },
+	{ &Z_Construct_UFunction_AFortPawn_GetHealth, "GetHealth" },
+	{ &Z_Construct_UFunction_AFortPawn_GetHealthPercent, "GetHealthPercent" },
+	{ &Z_Construct_UFunction_AFortPawn_GetKnockbackMultiplier, "GetKnockbackMultiplier" },
+	{ &Z_Construct_UFunction_AFortPawn_GetKnockbackThreshold, "GetKnockbackThreshold" },
+	{ &Z_Construct_UFunction_AFortPawn_GetLocalViewingPlayerController, "GetLocalViewingPlayerController" },
+	{ &Z_Construct_UFunction_AFortPawn_GetMaxControlResistance, "GetMaxControlResistance" },
+	{ &Z_Construct_UFunction_AFortPawn_GetMaxHealth, "GetMaxHealth" },
+	{ &Z_Construct_UFunction_AFortPawn_GetMaxShield, "GetMaxShield" },
+	{ &Z_Construct_UFunction_AFortPawn_GetMeleeComboCounter, "GetMeleeComboCounter" },
+	{ &Z_Construct_UFunction_AFortPawn_GetMeleeReticleStrikeAngle, "GetMeleeReticleStrikeAngle" },
+	{ &Z_Construct_UFunction_AFortPawn_GetMovementPredictionPosition, "GetMovementPredictionPosition" },
+	{ &Z_Construct_UFunction_AFortPawn_GetMyMovementBaseActor, "GetMyMovementBaseActor" },
+	{ &Z_Construct_UFunction_AFortPawn_GetPawnMID, "GetPawnMID" },
+	{ &Z_Construct_UFunction_AFortPawn_GetShield, "GetShield" },
+	{ &Z_Construct_UFunction_AFortPawn_GetShieldOrHealthPercent, "GetShieldOrHealthPercent" },
+	{ &Z_Construct_UFunction_AFortPawn_GetSphericalHitDirection, "GetSphericalHitDirection" },
+	{ &Z_Construct_UFunction_AFortPawn_GetTargetingTransform, "GetTargetingTransform" },
+	{ &Z_Construct_UFunction_AFortPawn_HandleIsDying, "HandleIsDying" },
+	{ &Z_Construct_UFunction_AFortPawn_HandleIsHiddenForDeath, "HandleIsHiddenForDeath" },
+	{ &Z_Construct_UFunction_AFortPawn_HasCurrentMontage, "HasCurrentMontage" },
+	{ &Z_Construct_UFunction_AFortPawn_HideBodyOnDeath, "HideBodyOnDeath" },
+	{ &Z_Construct_UFunction_AFortPawn_InitializeDeathHitSocket, "InitializeDeathHitSocket" },
+	{ &Z_Construct_UFunction_AFortPawn_IsActionInputIgnored, "IsActionInputIgnored" },
+	{ &Z_Construct_UFunction_AFortPawn_IsAllowChainStun, "IsAllowChainStun" },
+	{ &Z_Construct_UFunction_AFortPawn_IsDBNO, "IsDBNO" },
+	{ &Z_Construct_UFunction_AFortPawn_IsDead, "IsDead" },
+	{ &Z_Construct_UFunction_AFortPawn_IsFrontalHit, "IsFrontalHit" },
+	{ &Z_Construct_UFunction_AFortPawn_IsStaggered, "IsStaggered" },
+	{ &Z_Construct_UFunction_AFortPawn_IsWeaponHolstered, "IsWeaponHolstered" },
+	{ &Z_Construct_UFunction_AFortPawn_LaunchCharacterJump, "LaunchCharacterJump" },
+	{ &Z_Construct_UFunction_AFortPawn_OnAllMontageInstancesEnded, "OnAllMontageInstancesEnded" },
+	{ &Z_Construct_UFunction_AFortPawn_OnBaseChanged, "OnBaseChanged" },
+	{ &Z_Construct_UFunction_AFortPawn_OnBumpPushedPawn, "OnBumpPushedPawn" },
+	{ &Z_Construct_UFunction_AFortPawn_OnClearSentence, "OnClearSentence" },
+	{ &Z_Construct_UFunction_AFortPawn_OnDamagePlayEffects, "OnDamagePlayEffects" },
+	{ &Z_Construct_UFunction_AFortPawn_OnDamageServer, "OnDamageServer" },
+	{ &Z_Construct_UFunction_AFortPawn_OnDamageZoneStatusChanged, "OnDamageZoneStatusChanged" },
+	{ &Z_Construct_UFunction_AFortPawn_OnDeathPlayEffects, "OnDeathPlayEffects" },
+	{ &Z_Construct_UFunction_AFortPawn_OnDeathServer, "OnDeathServer" },
+	{ &Z_Construct_UFunction_AFortPawn_OnDisplaySentence, "OnDisplaySentence" },
+	{ &Z_Construct_UFunction_AFortPawn_OnMontageEnded, "OnMontageEnded" },
+	{ &Z_Construct_UFunction_AFortPawn_OnMontageStarted, "OnMontageStarted" },
+	{ &Z_Construct_UFunction_AFortPawn_OnOutOfControlResistanceServer, "OnOutOfControlResistanceServer" },
+	{ &Z_Construct_UFunction_AFortPawn_OnRep_CurrentWeapon, "OnRep_CurrentWeapon" },
+	{ &Z_Construct_UFunction_AFortPawn_OnRep_DamageZoneActiveBitMask, "OnRep_DamageZoneActiveBitMask" },
+	{ &Z_Construct_UFunction_AFortPawn_OnRep_IsDBNO, "OnRep_IsDBNO" },
+	{ &Z_Construct_UFunction_AFortPawn_OnRep_IsKnockedBack, "OnRep_IsKnockedBack" },
+	{ &Z_Construct_UFunction_AFortPawn_OnRep_JumpFlashCount, "OnRep_JumpFlashCount" },
+	{ &Z_Construct_UFunction_AFortPawn_OnRep_PawnUniqueID, "OnRep_PawnUniqueID" },
+	{ &Z_Construct_UFunction_AFortPawn_OnRep_PushMomentum, "OnRep_PushMomentum" },
+	{ &Z_Construct_UFunction_AFortPawn_OnRep_Sentence, "OnRep_Sentence" },
+	{ &Z_Construct_UFunction_AFortPawn_OnRep_TeleportCounter, "OnRep_TeleportCounter" },
+	{ &Z_Construct_UFunction_AFortPawn_OnRep_VocalChords, "OnRep_VocalChords" },
+	{ &Z_Construct_UFunction_AFortPawn_OnRep_bWeaponHolstered, "OnRep_bWeaponHolstered" },
+	{ &Z_Construct_UFunction_AFortPawn_OnStunned, "OnStunned" },
+	{ &Z_Construct_UFunction_AFortPawn_OnTeleported, "OnTeleported" },
+	{ &Z_Construct_UFunction_AFortPawn_OnWeaponEquipped, "OnWeaponEquipped" },
+	{ &Z_Construct_UFunction_AFortPawn_PawnStartFire, "PawnStartFire" },
+	{ &Z_Construct_UFunction_AFortPawn_PawnStopFire, "PawnStopFire" },
+	{ &Z_Construct_UFunction_AFortPawn_PawnUniqueIDSet, "PawnUniqueIDSet" },
+	{ &Z_Construct_UFunction_AFortPawn_PickUpActor, "PickUpActor" },
+	{ &Z_Construct_UFunction_AFortPawn_PlayFootStepSound, "PlayFootStepSound" },
+	{ &Z_Construct_UFunction_AFortPawn_PlayLocalAnimMontage, "PlayLocalAnimMontage" },
+	{ &Z_Construct_UFunction_AFortPawn_PlaySound, "PlaySound" },
+	{ &Z_Construct_UFunction_AFortPawn_PrototypeCharacterMovement, "PrototypeCharacterMovement" },
+	{ &Z_Construct_UFunction_AFortPawn_RemoveCallout, "RemoveCallout" },
+	{ &Z_Construct_UFunction_AFortPawn_ResetFallingHeight, "ResetFallingHeight" },
+	{ &Z_Construct_UFunction_AFortPawn_ServerInternalEquipWeapon, "ServerInternalEquipWeapon" },
+	{ &Z_Construct_UFunction_AFortPawn_ServerTeleportNearLocation, "ServerTeleportNearLocation" },
+	{ &Z_Construct_UFunction_AFortPawn_SetCallout, "SetCallout" },
+	{ &Z_Construct_UFunction_AFortPawn_SetControlRecoveryBehavior, "SetControlRecoveryBehavior" },
+	{ &Z_Construct_UFunction_AFortPawn_SetFNameBasedOnHitDirection, "SetFNameBasedOnHitDirection" },
+	{ &Z_Construct_UFunction_AFortPawn_SetHealth, "SetHealth" },
+	{ &Z_Construct_UFunction_AFortPawn_SetHolsterWeapon, "SetHolsterWeapon" },
+	{ &Z_Construct_UFunction_AFortPawn_SetIsKnockedBack, "SetIsKnockedBack" },
+	{ &Z_Construct_UFunction_AFortPawn_SetMaxHealth, "SetMaxHealth" },
+	{ &Z_Construct_UFunction_AFortPawn_SetPawnAndControlRotation, "SetPawnAndControlRotation" },
+	{ &Z_Construct_UFunction_AFortPawn_SetPawnVisibility, "SetPawnVisibility" },
+	{ &Z_Construct_UFunction_AFortPawn_SetSpawnSpot, "SetSpawnSpot" },
+	{ &Z_Construct_UFunction_AFortPawn_SpawnCameraLensEffect, "SpawnCameraLensEffect" },
+	{ &Z_Construct_UFunction_AFortPawn_SpawnCameraLensEffectDirectional, "SpawnCameraLensEffectDirectional" },
+	{ &Z_Construct_UFunction_AFortPawn_SpawnSoundLensEffectDirectional, "SpawnSoundLensEffectDirectional" },
+	{ &Z_Construct_UFunction_AFortPawn_StartPushMomentum, "StartPushMomentum" },
+	{ &Z_Construct_UFunction_AFortPawn_StopPushMomentum, "StopPushMomentum" },
+	{ &Z_Construct_UFunction_AFortPawn_TriggerFeedbackEvent, "TriggerFeedbackEvent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPawn_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033A4EF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPawn_Statics::ClassParams = { &AFortPawn::StaticClass, Z_Construct_UClass_AFortPawn_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_AFortPawn_Statics::FuncInfo, 108, Z_Construct_UClass_AFortPawn_Statics::PropPointers, 123, "Game", &Z_Construct_UClass_AFortPawn_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortPawn_Statics::InterfaceParams, 14 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105DDF0 (end 0x0105DE1F)
+// Original VA: 0x000000014105DDF0 | File offset: 0x0105D3F0
+// Recovery: confirmed (UHT singleton of AFortPawn) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPawn()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPawn_Statics::ClassParams);
+	}
+	return OuterClass;
+}

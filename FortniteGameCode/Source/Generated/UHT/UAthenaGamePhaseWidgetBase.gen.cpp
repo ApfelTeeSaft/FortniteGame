@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UAthenaGamePhaseWidgetBase_OnGamePhaseStepChang
 	}
 	return ReturnFunction;
 }
+
+class UAthenaGamePhaseWidgetBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaGamePhaseWidgetBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaGamePhaseWidgetBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaGamePhaseWidgetBase_HandleGamePhaseStepChanged, "HandleGamePhaseStepChanged" },
+	{ &Z_Construct_UFunction_UAthenaGamePhaseWidgetBase_OnGamePhaseStepChanged, "OnGamePhaseStepChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaGamePhaseWidgetBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C52340
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaGamePhaseWidgetBase_Statics::ClassParams = { &UAthenaGamePhaseWidgetBase::StaticClass, Z_Construct_UClass_UAthenaGamePhaseWidgetBase_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UAthenaGamePhaseWidgetBase_Statics::FuncInfo, 2, Z_Construct_UClass_UAthenaGamePhaseWidgetBase_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UAthenaGamePhaseWidgetBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287F3E0 (end 0x0287F40F)
+// Original VA: 0x000000014287F3E0 | File offset: 0x0287E9E0
+// Recovery: confirmed (UHT singleton of UAthenaGamePhaseWidgetBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaGamePhaseWidgetBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaGamePhaseWidgetBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

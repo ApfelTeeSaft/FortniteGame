@@ -1438,3 +1438,106 @@ UFunction* Z_Construct_UFunction_UFortMcpContext_UpgradeItemRarity()
 	}
 	return ReturnFunction;
 }
+
+class UFortMcpContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMcpContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMcpContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMcpContext_AbandonExpedition, "AbandonExpedition" },
+	{ &Z_Construct_UFunction_UFortMcpContext_ApplyAlteration, "ApplyAlteration" },
+	{ &Z_Construct_UFunction_UFortMcpContext_AreMissionRewardsAvailable, "AreMissionRewardsAvailable" },
+	{ &Z_Construct_UFunction_UFortMcpContext_CanPurchaseOffer, "CanPurchaseOffer" },
+	{ &Z_Construct_UFunction_UFortMcpContext_CancelEpicPurchasingDisplay, "CancelEpicPurchasingDisplay" },
+	{ &Z_Construct_UFunction_UFortMcpContext_CancelLoginFlowDisplay, "CancelLoginFlowDisplay" },
+	{ &Z_Construct_UFunction_UFortMcpContext_ClaimAllResourceCollectors, "ClaimAllResourceCollectors" },
+	{ &Z_Construct_UFunction_UFortMcpContext_ClaimResourceCollectors, "ClaimResourceCollectors" },
+	{ &Z_Construct_UFunction_UFortMcpContext_CollectExpedition, "CollectExpedition" },
+	{ &Z_Construct_UFunction_UFortMcpContext_ConvertItem, "ConvertItem" },
+	{ &Z_Construct_UFunction_UFortMcpContext_DisplayEmptyStoreDialog, "DisplayEmptyStoreDialog" },
+	{ &Z_Construct_UFunction_UFortMcpContext_DoesPlatformSupportFriendCodes, "DoesPlatformSupportFriendCodes" },
+	{ &Z_Construct_UFunction_UFortMcpContext_DownloadEULA, "DownloadEULA" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetAccountItemWithDefinition, "GetAccountItemWithDefinition" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetAllAlterations, "GetAllAlterations" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetAllHeroes, "GetAllHeroes" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetAllResourceCollectors, "GetAllResourceCollectors" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetAppName, "GetAppName" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetAthenaProfile, "GetAthenaProfile" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetBattlePassInfoForPlayer, "GetBattlePassInfoForPlayer" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetCurrentlyViewedAccountInfo, "GetCurrentlyViewedAccountInfo" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetDefaultHero, "GetDefaultHero" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetEULAText, "GetEULAText" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetFriendCodeDescription, "GetFriendCodeDescription" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetFriendCodeDisplayName, "GetFriendCodeDisplayName" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetGroupXpBonusPercent, "GetGroupXpBonusPercent" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetHeroXpBalance, "GetHeroXpBalance" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetHomeBaseInfo, "GetHomeBaseInfo" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetHomeBaseInfoForPlayer, "GetHomeBaseInfoForPlayer" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetLoadoutForPlayer, "GetLoadoutForPlayer" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetLocalAccountInfo, "GetLocalAccountInfo" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetLoginStatusText, "GetLoginStatusText" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetMcpProfile, "GetMcpProfile" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetNumFriendCodesToIssue, "GetNumFriendCodesToIssue" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetPersonalXpBonusPercent, "GetPersonalXpBonusPercent" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetPersonnelXpBalance, "GetPersonnelXpBalance" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetPlayersXPPercentContributionToLocalPlayer, "GetPlayersXPPercentContributionToLocalPlayer" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetRestXpBalance, "GetRestXpBalance" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetRestXpBonusPercent, "GetRestXpBonusPercent" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetSchematicXpBalance, "GetSchematicXpBalance" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetTencentIdString, "GetTencentIdString" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetUpgradeXPBalance, "GetUpgradeXPBalance" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GetXpBoostBalance, "GetXpBoostBalance" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GrantPendingDifficultyIncreaseRewards, "GrantPendingDifficultyIncreaseRewards" },
+	{ &Z_Construct_UFunction_UFortMcpContext_GrantPendingMissionAlertRewards, "GrantPendingMissionAlertRewards" },
+	{ &Z_Construct_UFunction_UFortMcpContext_HasEULADownloaded, "HasEULADownloaded" },
+	{ &Z_Construct_UFunction_UFortMcpContext_HasPendingDifficultyIncreaseRewards, "HasPendingDifficultyIncreaseRewards" },
+	{ &Z_Construct_UFunction_UFortMcpContext_HasPendingMissionAlertRewards, "HasPendingMissionAlertRewards" },
+	{ &Z_Construct_UFunction_UFortMcpContext_IsAllowedConversionIndex, "IsAllowedConversionIndex" },
+	{ &Z_Construct_UFunction_UFortMcpContext_IsDailyRewardAvailable, "IsDailyRewardAvailable" },
+	{ &Z_Construct_UFunction_UFortMcpContext_IsLocalPlayersUniqueID, "IsLocalPlayersUniqueID" },
+	{ &Z_Construct_UFunction_UFortMcpContext_IsOwned, "IsOwned" },
+	{ &Z_Construct_UFunction_UFortMcpContext_IssueFriendCode, "IssueFriendCode" },
+	{ &Z_Construct_UFunction_UFortMcpContext_ListMtxPackages, "ListMtxPackages" },
+	{ &Z_Construct_UFunction_UFortMcpContext_MarkItemSeen, "MarkItemSeen" },
+	{ &Z_Construct_UDelegateFunction_UFortMcpContext_OnDownloadEULAComplete__DelegateSignature, "OnDownloadEULAComplete__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortMcpContext_OnIssueFriendCodeComplete__DelegateSignature, "OnIssueFriendCodeComplete__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortMcpContext_OnQueryUnredeemedFriendCodesComplete__DelegateSignature, "OnQueryUnredeemedFriendCodesComplete__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortMcpContext_OnSendFriendCodePlatformMessageComplete__DelegateSignature, "OnSendFriendCodePlatformMessageComplete__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortMcpContext_OpenMissionRewards, "OpenMissionRewards" },
+	{ &Z_Construct_UFunction_UFortMcpContext_PurchaseOffer, "PurchaseOffer" },
+	{ &Z_Construct_UFunction_UFortMcpContext_PurchaseRealMoneyCatalogEntry, "PurchaseRealMoneyCatalogEntry" },
+	{ &Z_Construct_UFunction_UFortMcpContext_QueryUnredeemedFriendCodes, "QueryUnredeemedFriendCodes" },
+	{ &Z_Construct_UFunction_UFortMcpContext_RecycleItem, "RecycleItem" },
+	{ &Z_Construct_UFunction_UFortMcpContext_RecycleItemBatch, "RecycleItemBatch" },
+	{ &Z_Construct_UFunction_UFortMcpContext_RegisterForEpicPurchasingDisplay, "RegisterForEpicPurchasingDisplay" },
+	{ &Z_Construct_UFunction_UFortMcpContext_RegisterForLoginFlow, "RegisterForLoginFlow" },
+	{ &Z_Construct_UFunction_UFortMcpContext_SendFriendCodePlatformMessage, "SendFriendCodePlatformMessage" },
+	{ &Z_Construct_UFunction_UFortMcpContext_SetItemFavoriteStatus, "SetItemFavoriteStatus" },
+	{ &Z_Construct_UFunction_UFortMcpContext_StartExpedition, "StartExpedition" },
+	{ &Z_Construct_UFunction_UFortMcpContext_TransmogItem, "TransmogItem" },
+	{ &Z_Construct_UFunction_UFortMcpContext_UpgradeItemRarity, "UpgradeItemRarity" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMcpContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033696A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMcpContext_Statics::ClassParams = { &UFortMcpContext::StaticClass, Z_Construct_UClass_UFortMcpContext_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UFortMcpContext_Statics::FuncInfo, 72, Z_Construct_UClass_UFortMcpContext_Statics::PropPointers, 36, "Game", &Z_Construct_UClass_UFortMcpContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023C20 (end 0x01023C4F)
+// Original VA: 0x0000000141023C20 | File offset: 0x01023220
+// Recovery: confirmed (UHT singleton of UFortMcpContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMcpContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMcpContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

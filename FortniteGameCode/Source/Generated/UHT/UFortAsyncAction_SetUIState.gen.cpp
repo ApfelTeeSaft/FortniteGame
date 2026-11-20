@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_SetUIState_SetUIState()
 	}
 	return ReturnFunction;
 }
+
+class UFortAsyncAction_SetUIState
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAsyncAction_SetUIState_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAsyncAction_SetUIState_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAsyncAction_SetUIState_SetUIState, "SetUIState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAsyncAction_SetUIState_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C6A0F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAsyncAction_SetUIState_Statics::ClassParams = { &UFortAsyncAction_SetUIState::StaticClass, Z_Construct_UClass_UFortAsyncAction_SetUIState_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortAsyncAction_SetUIState_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAsyncAction_SetUIState_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortAsyncAction_SetUIState_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C9C0 (end 0x0288C9EF)
+// Original VA: 0x000000014288C9C0 | File offset: 0x0288BFC0
+// Recovery: confirmed (UHT singleton of UFortAsyncAction_SetUIState) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAsyncAction_SetUIState()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAsyncAction_SetUIState_Statics::ClassParams);
+	}
+	return OuterClass;
+}

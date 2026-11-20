@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UAppleARKitBlueprintLibrary_HitTestAtScreenPosi
 	}
 	return ReturnFunction;
 }
+
+class UAppleARKitBlueprintLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAppleARKitBlueprintLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAppleARKitBlueprintLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAppleARKitBlueprintLibrary_GetCurrentFrame, "GetCurrentFrame" },
+	{ &Z_Construct_UFunction_UAppleARKitBlueprintLibrary_HitTestAtScreenPosition_TrackingSpace, "HitTestAtScreenPosition_TrackingSpace" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAppleARKitBlueprintLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02FE2BD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAppleARKitBlueprintLibrary_Statics::ClassParams = { &UAppleARKitBlueprintLibrary::StaticClass, Z_Construct_UClass_UAppleARKitBlueprintLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UAppleARKitBlueprintLibrary_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UAppleARKitBlueprintLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00806400 (end 0x0080642F)
+// Original VA: 0x0000000140806400 | File offset: 0x00805A00
+// Recovery: confirmed (UHT singleton of UAppleARKitBlueprintLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAppleARKitBlueprintLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAppleARKitBlueprintLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

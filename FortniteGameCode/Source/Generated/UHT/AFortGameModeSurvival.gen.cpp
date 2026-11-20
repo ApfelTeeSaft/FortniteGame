@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_AFortGameModeSurvival_FireEvent_SurvivalVoteRep
 	}
 	return ReturnFunction;
 }
+
+class AFortGameModeSurvival
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortGameModeSurvival_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortGameModeSurvival_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortGameModeSurvival_FireEvent_SurvivalPeriodicReport, "FireEvent_SurvivalPeriodicReport" },
+	{ &Z_Construct_UFunction_AFortGameModeSurvival_FireEvent_SurvivalVoteReport, "FireEvent_SurvivalVoteReport" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortGameModeSurvival_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0331F220
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortGameModeSurvival_Statics::ClassParams = { &AFortGameModeSurvival::StaticClass, Z_Construct_UClass_AFortGameModeSurvival_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_AFortGameModeSurvival_Statics::FuncInfo, 2, nullptr, 0, "Game", &Z_Construct_UClass_AFortGameModeSurvival_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE45C0 (end 0x00FE45EF)
+// Original VA: 0x0000000140FE45C0 | File offset: 0x00FE3BC0
+// Recovery: confirmed (UHT singleton of AFortGameModeSurvival) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortGameModeSurvival()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortGameModeSurvival_Statics::ClassParams);
+	}
+	return OuterClass;
+}

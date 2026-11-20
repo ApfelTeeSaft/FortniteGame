@@ -225,3 +225,44 @@ UFunction* Z_Construct_UFunction_UAssetRegistry_RunAssetsThroughFilter()
 	}
 	return ReturnFunction;
 }
+
+class UAssetRegistry
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAssetRegistry_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAssetRegistry_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAssetRegistry_GetAllAssets, "GetAllAssets" },
+	{ &Z_Construct_UFunction_UAssetRegistry_GetAllCachedPaths, "GetAllCachedPaths" },
+	{ &Z_Construct_UFunction_UAssetRegistry_GetAssetByObjectPath, "GetAssetByObjectPath" },
+	{ &Z_Construct_UFunction_UAssetRegistry_GetAssets, "GetAssets" },
+	{ &Z_Construct_UFunction_UAssetRegistry_GetAssetsByClass, "GetAssetsByClass" },
+	{ &Z_Construct_UFunction_UAssetRegistry_GetAssetsByPackageName, "GetAssetsByPackageName" },
+	{ &Z_Construct_UFunction_UAssetRegistry_GetAssetsByPath, "GetAssetsByPath" },
+	{ &Z_Construct_UFunction_UAssetRegistry_GetSubPaths, "GetSubPaths" },
+	{ &Z_Construct_UFunction_UAssetRegistry_HasAssets, "HasAssets" },
+	{ &Z_Construct_UFunction_UAssetRegistry_IsLoadingAssets, "IsLoadingAssets" },
+	{ &Z_Construct_UFunction_UAssetRegistry_RunAssetsThroughFilter, "RunAssetsThroughFilter" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAssetRegistry_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x036B8B70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAssetRegistry_Statics::ClassParams = { &UAssetRegistry::StaticClass, Z_Construct_UClass_UAssetRegistry_Statics::DependentSingletons, 2, 0x00084081u, Z_Construct_UClass_UAssetRegistry_Statics::FuncInfo, 11, nullptr, 0, nullptr, &Z_Construct_UClass_UAssetRegistry_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C7FFD0 (end 0x01C7FFFF)
+// Original VA: 0x0000000141C7FFD0 | File offset: 0x01C7F5D0
+// Recovery: confirmed (UHT singleton of UAssetRegistry) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAssetRegistry()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAssetRegistry_Statics::ClassParams);
+	}
+	return OuterClass;
+}

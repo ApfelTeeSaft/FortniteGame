@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortAISystem_IsInCone2D()
 	}
 	return ReturnFunction;
 }
+
+class UFortAISystem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAISystem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAISystem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAISystem_IsInCone2D, "IsInCone2D" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAISystem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032B5F00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAISystem_Statics::ClassParams = { &UFortAISystem::StaticClass, Z_Construct_UClass_UFortAISystem_Statics::DependentSingletons, 2, 0x00900086u, Z_Construct_UClass_UFortAISystem_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAISystem_Statics::PropPointers, 6, "Engine", &Z_Construct_UClass_UFortAISystem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F991E0 (end 0x00F9920F)
+// Original VA: 0x0000000140F991E0 | File offset: 0x00F987E0
+// Recovery: confirmed (UHT singleton of UFortAISystem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAISystem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAISystem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

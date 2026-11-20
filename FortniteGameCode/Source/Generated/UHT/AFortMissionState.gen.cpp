@@ -140,3 +140,42 @@ UFunction* Z_Construct_UFunction_AFortMissionState_UpdateUI()
 	}
 	return ReturnFunction;
 }
+
+class AFortMissionState
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortMissionState_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortMissionState_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortMissionState_OnAllPlayersLoadedIn, "OnAllPlayersLoadedIn" },
+	{ &Z_Construct_UFunction_AFortMissionState_OnAllPlayersLoadedInWrapper, "OnAllPlayersLoadedInWrapper" },
+	{ &Z_Construct_UFunction_AFortMissionState_OnMatchStarted, "OnMatchStarted" },
+	{ &Z_Construct_UFunction_AFortMissionState_OnWorldReady, "OnWorldReady" },
+	{ &Z_Construct_UFunction_AFortMissionState_SendMissionUIEvent, "SendMissionUIEvent" },
+	{ &Z_Construct_UFunction_AFortMissionState_SetTimerForOnAllPlayersLoadedIn, "SetTimerForOnAllPlayersLoadedIn" },
+	{ &Z_Construct_UFunction_AFortMissionState_UpdateUI, "UpdateUI" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortMissionState_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03389B40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortMissionState_Statics::ClassParams = { &AFortMissionState::StaticClass, Z_Construct_UClass_AFortMissionState_Statics::DependentSingletons, 2, 0x00880081u, Z_Construct_UClass_AFortMissionState_Statics::FuncInfo, 7, Z_Construct_UClass_AFortMissionState_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_AFortMissionState_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortMissionState_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A800 (end 0x0104A82F)
+// Original VA: 0x000000014104A800 | File offset: 0x01049E00
+// Recovery: confirmed (UHT singleton of AFortMissionState) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortMissionState()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortMissionState_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -164,3 +164,42 @@ UFunction* Z_Construct_UFunction_UAIPerceptionComponent_SetSenseEnabled()
 	}
 	return ReturnFunction;
 }
+
+class UAIPerceptionComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAIPerceptionComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAIPerceptionComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAIPerceptionComponent_GetActorsPerception, "GetActorsPerception" },
+	{ &Z_Construct_UFunction_UAIPerceptionComponent_GetCurrentlyPerceivedActors, "GetCurrentlyPerceivedActors" },
+	{ &Z_Construct_UFunction_UAIPerceptionComponent_GetKnownPerceivedActors, "GetKnownPerceivedActors" },
+	{ &Z_Construct_UFunction_UAIPerceptionComponent_GetPerceivedActors, "GetPerceivedActors" },
+	{ &Z_Construct_UFunction_UAIPerceptionComponent_GetPerceivedHostileActors, "GetPerceivedHostileActors" },
+	{ &Z_Construct_UFunction_UAIPerceptionComponent_OnOwnerEndPlay, "OnOwnerEndPlay" },
+	{ &Z_Construct_UFunction_UAIPerceptionComponent_RequestStimuliListenerUpdate, "RequestStimuliListenerUpdate" },
+	{ &Z_Construct_UFunction_UAIPerceptionComponent_SetSenseEnabled, "SetSenseEnabled" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAIPerceptionComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036F1C70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAIPerceptionComponent_Statics::ClassParams = { &UAIPerceptionComponent::StaticClass, Z_Construct_UClass_UAIPerceptionComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UAIPerceptionComponent_Statics::FuncInfo, 8, Z_Construct_UClass_UAIPerceptionComponent_Statics::PropPointers, 6, "Game", &Z_Construct_UClass_UAIPerceptionComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1BBD0 (end 0x01D1BBFF)
+// Original VA: 0x0000000141D1BBD0 | File offset: 0x01D1B1D0
+// Recovery: confirmed (UHT singleton of UAIPerceptionComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAIPerceptionComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAIPerceptionComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

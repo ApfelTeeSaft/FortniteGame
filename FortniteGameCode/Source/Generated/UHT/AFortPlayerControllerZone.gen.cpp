@@ -240,3 +240,46 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerZone_ServerTriggerSetupTel
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerControllerZone
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerControllerZone_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerControllerZone_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnDied, "ClientOnPawnDied" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnRevived, "ClientOnPawnRevived" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnPawnSpawned, "ClientOnPawnSpawned" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerZone_ClientOnZoneEndScoreReports, "ClientOnZoneEndScoreReports" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerZone_ClientSendPartyJoinInfoToPlayer, "ClientSendPartyJoinInfoToPlayer" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerZone_PopDeathInputComponent, "PopDeathInputComponent" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerZone_PushDeathInputComponent, "PushDeathInputComponent" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendLoadoutConfig, "ServerSendLoadoutConfig" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerZone_ServerSendPartyJoinInfoToPlayer, "ServerSendPartyJoinInfoToPlayer" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerZone_ServerSetShouldDisablePlayerTeleportingDuringMissionResults, "ServerSetShouldDisablePlayerTeleportingDuringMissionResults" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerZone_ServerSubmitGameplayVote, "ServerSubmitGameplayVote" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerZone_ServerTriggerSetupTeleportCameraEvent, "ServerTriggerSetupTeleportCameraEvent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerControllerZone_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033CB250
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerControllerZone_Statics::ClassParams = { &AFortPlayerControllerZone::StaticClass, Z_Construct_UClass_AFortPlayerControllerZone_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortPlayerControllerZone_Statics::FuncInfo, 12, Z_Construct_UClass_AFortPlayerControllerZone_Statics::PropPointers, 8, "Game", &Z_Construct_UClass_AFortPlayerControllerZone_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FD70 (end 0x0107FD9F)
+// Original VA: 0x000000014107FD70 | File offset: 0x0107F370
+// Recovery: confirmed (UHT singleton of AFortPlayerControllerZone) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerControllerZone()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerControllerZone_Statics::ClassParams);
+	}
+	return OuterClass;
+}

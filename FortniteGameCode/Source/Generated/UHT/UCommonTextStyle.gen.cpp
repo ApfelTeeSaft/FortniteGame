@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UCommonTextStyle_GetShadowOffset()
 	}
 	return ReturnFunction;
 }
+
+class UCommonTextStyle
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonTextStyle_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonTextStyle_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonTextStyle_GetColor, "GetColor" },
+	{ &Z_Construct_UFunction_UCommonTextStyle_GetFont, "GetFont" },
+	{ &Z_Construct_UFunction_UCommonTextStyle_GetLineHeightPercentage, "GetLineHeightPercentage" },
+	{ &Z_Construct_UFunction_UCommonTextStyle_GetMargin, "GetMargin" },
+	{ &Z_Construct_UFunction_UCommonTextStyle_GetShadowColor, "GetShadowColor" },
+	{ &Z_Construct_UFunction_UCommonTextStyle_GetShadowOffset, "GetShadowOffset" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonTextStyle_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E82E80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonTextStyle_Statics::ClassParams = { &UCommonTextStyle::StaticClass, Z_Construct_UClass_UCommonTextStyle_Statics::DependentSingletons, 2, 0x00100081u, Z_Construct_UClass_UCommonTextStyle_Statics::FuncInfo, 6, Z_Construct_UClass_UCommonTextStyle_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UCommonTextStyle_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA650 (end 0x002CA67F)
+// Original VA: 0x00000001402CA650 | File offset: 0x002C9C50
+// Recovery: confirmed (UHT singleton of UCommonTextStyle) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonTextStyle()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonTextStyle_Statics::ClassParams);
+	}
+	return OuterClass;
+}

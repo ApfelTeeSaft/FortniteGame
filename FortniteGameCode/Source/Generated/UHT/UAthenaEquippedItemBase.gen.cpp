@@ -282,3 +282,48 @@ UFunction* Z_Construct_UFunction_UAthenaEquippedItemBase_WeaponTypeChanged()
 	}
 	return ReturnFunction;
 }
+
+class UAthenaEquippedItemBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaEquippedItemBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaEquippedItemBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_AmmoChanged, "AmmoChanged" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_AmmoTypeChanged, "AmmoTypeChanged" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_HasAmmoChanged, "HasAmmoChanged" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_OnBuildingMaterialChanged, "OnBuildingMaterialChanged" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_OnLocalAmmoChanged, "OnLocalAmmoChanged" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_OnPawnChanged, "OnPawnChanged" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_OnWeaponChanged, "OnWeaponChanged" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_OnWorldItemsChanged, "OnWorldItemsChanged" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_ResourceCountChanged, "ResourceCountChanged" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_ResourceTypeChanged, "ResourceTypeChanged" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_SetViewModel, "SetViewModel" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_UtilityItemCountChanged, "UtilityItemCountChanged" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_UtilityItemTypeChanged, "UtilityItemTypeChanged" },
+	{ &Z_Construct_UFunction_UAthenaEquippedItemBase_WeaponTypeChanged, "WeaponTypeChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaEquippedItemBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C52200
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaEquippedItemBase_Statics::ClassParams = { &UAthenaEquippedItemBase::StaticClass, Z_Construct_UClass_UAthenaEquippedItemBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UAthenaEquippedItemBase_Statics::FuncInfo, 14, Z_Construct_UClass_UAthenaEquippedItemBase_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UAthenaEquippedItemBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287F380 (end 0x0287F3AF)
+// Original VA: 0x000000014287F380 | File offset: 0x0287E980
+// Recovery: confirmed (UHT singleton of UAthenaEquippedItemBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaEquippedItemBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaEquippedItemBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

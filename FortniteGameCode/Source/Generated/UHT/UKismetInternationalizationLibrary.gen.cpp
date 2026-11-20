@@ -205,3 +205,43 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLo
 	}
 	return ReturnFunction;
 }
+
+class UKismetInternationalizationLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UKismetInternationalizationLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UKismetInternationalizationLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UKismetInternationalizationLibrary_ClearCurrentAssetGroupCulture, "ClearCurrentAssetGroupCulture" },
+	{ &Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentAssetGroupCulture, "GetCurrentAssetGroupCulture" },
+	{ &Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentCulture, "GetCurrentCulture" },
+	{ &Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLanguage, "GetCurrentLanguage" },
+	{ &Z_Construct_UFunction_UKismetInternationalizationLibrary_GetCurrentLocale, "GetCurrentLocale" },
+	{ &Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentAssetGroupCulture, "SetCurrentAssetGroupCulture" },
+	{ &Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentCulture, "SetCurrentCulture" },
+	{ &Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLanguage, "SetCurrentLanguage" },
+	{ &Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLanguageAndLocale, "SetCurrentLanguageAndLocale" },
+	{ &Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLocale, "SetCurrentLocale" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UKismetInternationalizationLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039154E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UKismetInternationalizationLibrary_Statics::ClassParams = { &UKismetInternationalizationLibrary::StaticClass, Z_Construct_UClass_UKismetInternationalizationLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UKismetInternationalizationLibrary_Statics::FuncInfo, 10, nullptr, 0, nullptr, &Z_Construct_UClass_UKismetInternationalizationLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02431A60 (end 0x02431A8F)
+// Original VA: 0x0000000142431A60 | File offset: 0x02431060
+// Recovery: confirmed (UHT singleton of UKismetInternationalizationLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UKismetInternationalizationLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UKismetInternationalizationLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

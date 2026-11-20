@@ -183,3 +183,43 @@ UFunction* Z_Construct_UFunction_UFortListView_SetItemSelected()
 	}
 	return ReturnFunction;
 }
+
+class UFortListView
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortListView_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortListView_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortListView_AddItem, "AddItem" },
+	{ &Z_Construct_UFunction_UFortListView_Clear, "Clear" },
+	{ &Z_Construct_UFunction_UFortListView_ClearSelection, "ClearSelection" },
+	{ &Z_Construct_UFunction_UFortListView_GetIndexForItem, "GetIndexForItem" },
+	{ &Z_Construct_UFunction_UFortListView_GetItemAt, "GetItemAt" },
+	{ &Z_Construct_UFunction_UFortListView_RemoveItemAt, "RemoveItemAt" },
+	{ &Z_Construct_UFunction_UFortListView_SetDataProvider, "SetDataProvider" },
+	{ &Z_Construct_UFunction_UFortListView_SetIndexSelected, "SetIndexSelected" },
+	{ &Z_Construct_UFunction_UFortListView_SetItemSelected, "SetItemSelected" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortListView_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE41A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortListView_Statics::ClassParams = { &UFortListView::StaticClass, Z_Construct_UClass_UFortListView_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortListView_Statics::FuncInfo, 9, Z_Construct_UClass_UFortListView_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UFortListView_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D72A0 (end 0x028D72CF)
+// Original VA: 0x00000001428D72A0 | File offset: 0x028D68A0
+// Recovery: confirmed (UHT singleton of UFortListView) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortListView()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortListView_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -999,3 +999,85 @@ UFunction* Z_Construct_UFunction_UGameplayAbility_SetShouldBlockOtherAbilities()
 	}
 	return ReturnFunction;
 }
+
+class UGameplayAbility
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UGameplayAbility_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGameplayAbility_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGameplayAbility_BP_ApplyGameplayEffectToOwner, "BP_ApplyGameplayEffectToOwner" },
+	{ &Z_Construct_UFunction_UGameplayAbility_BP_ApplyGameplayEffectToTarget, "BP_ApplyGameplayEffectToTarget" },
+	{ &Z_Construct_UFunction_UGameplayAbility_BP_RemoveGameplayEffectFromOwnerWithAssetTags, "BP_RemoveGameplayEffectFromOwnerWithAssetTags" },
+	{ &Z_Construct_UFunction_UGameplayAbility_BP_RemoveGameplayEffectFromOwnerWithGrantedTags, "BP_RemoveGameplayEffectFromOwnerWithGrantedTags" },
+	{ &Z_Construct_UFunction_UGameplayAbility_BP_RemoveGameplayEffectFromOwnerWithHandle, "BP_RemoveGameplayEffectFromOwnerWithHandle" },
+	{ &Z_Construct_UFunction_UGameplayAbility_CancelTaskByInstanceName, "CancelTaskByInstanceName" },
+	{ &Z_Construct_UFunction_UGameplayAbility_ConfirmTaskByInstanceName, "ConfirmTaskByInstanceName" },
+	{ &Z_Construct_UFunction_UGameplayAbility_EndAbilityState, "EndAbilityState" },
+	{ &Z_Construct_UFunction_UGameplayAbility_EndTaskByInstanceName, "EndTaskByInstanceName" },
+	{ &Z_Construct_UFunction_UGameplayAbility_GetAbilityLevel, "GetAbilityLevel" },
+	{ &Z_Construct_UFunction_UGameplayAbility_GetActorInfo, "GetActorInfo" },
+	{ &Z_Construct_UFunction_UGameplayAbility_GetAvatarActorFromActorInfo, "GetAvatarActorFromActorInfo" },
+	{ &Z_Construct_UFunction_UGameplayAbility_GetContextFromOwner, "GetContextFromOwner" },
+	{ &Z_Construct_UFunction_UGameplayAbility_GetCooldownTimeRemaining, "GetCooldownTimeRemaining" },
+	{ &Z_Construct_UFunction_UGameplayAbility_GetCurrentMontage, "GetCurrentMontage" },
+	{ &Z_Construct_UFunction_UGameplayAbility_GetCurrentSourceObject, "GetCurrentSourceObject" },
+	{ &Z_Construct_UFunction_UGameplayAbility_GetGrantedByEffectContext, "GetGrantedByEffectContext" },
+	{ &Z_Construct_UFunction_UGameplayAbility_GetOwningActorFromActorInfo, "GetOwningActorFromActorInfo" },
+	{ &Z_Construct_UFunction_UGameplayAbility_GetOwningComponentFromActorInfo, "GetOwningComponentFromActorInfo" },
+	{ &Z_Construct_UFunction_UGameplayAbility_InvalidateClientPredictionKey, "InvalidateClientPredictionKey" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_ActivateAbility, "K2_ActivateAbility" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_ActivateAbilityFromEvent, "K2_ActivateAbilityFromEvent" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_AddGameplayCue, "K2_AddGameplayCue" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_AddGameplayCueWithParams, "K2_AddGameplayCueWithParams" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_ApplyGameplayEffectSpecToOwner, "K2_ApplyGameplayEffectSpecToOwner" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_ApplyGameplayEffectSpecToTarget, "K2_ApplyGameplayEffectSpecToTarget" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_CanActivateAbility, "K2_CanActivateAbility" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_CancelAbility, "K2_CancelAbility" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_CheckAbilityCooldown, "K2_CheckAbilityCooldown" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_CheckAbilityCost, "K2_CheckAbilityCost" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_CommitAbility, "K2_CommitAbility" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_CommitAbilityCooldown, "K2_CommitAbilityCooldown" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_CommitAbilityCost, "K2_CommitAbilityCost" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_CommitExecute, "K2_CommitExecute" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_EndAbility, "K2_EndAbility" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_ExecuteGameplayCue, "K2_ExecuteGameplayCue" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_ExecuteGameplayCueWithParams, "K2_ExecuteGameplayCueWithParams" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_OnEndAbility, "K2_OnEndAbility" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_RemoveGameplayCue, "K2_RemoveGameplayCue" },
+	{ &Z_Construct_UFunction_UGameplayAbility_K2_ShouldAbilityRespondToEvent, "K2_ShouldAbilityRespondToEvent" },
+	{ &Z_Construct_UFunction_UGameplayAbility_MakeOutgoingGameplayEffectSpec, "MakeOutgoingGameplayEffectSpec" },
+	{ &Z_Construct_UFunction_UGameplayAbility_MakeTargetLocationInfoFromOwnerActor, "MakeTargetLocationInfoFromOwnerActor" },
+	{ &Z_Construct_UFunction_UGameplayAbility_MakeTargetLocationInfoFromOwnerSkeletalMeshComponent, "MakeTargetLocationInfoFromOwnerSkeletalMeshComponent" },
+	{ &Z_Construct_UFunction_UGameplayAbility_MontageJumpToSection, "MontageJumpToSection" },
+	{ &Z_Construct_UFunction_UGameplayAbility_MontageSetNextSectionName, "MontageSetNextSectionName" },
+	{ &Z_Construct_UFunction_UGameplayAbility_MontageStop, "MontageStop" },
+	{ &Z_Construct_UFunction_UGameplayAbility_RemoveGrantedByEffect, "RemoveGrantedByEffect" },
+	{ &Z_Construct_UFunction_UGameplayAbility_SendGameplayEvent, "SendGameplayEvent" },
+	{ &Z_Construct_UFunction_UGameplayAbility_SetCanBeCanceled, "SetCanBeCanceled" },
+	{ &Z_Construct_UFunction_UGameplayAbility_SetShouldBlockOtherAbilities, "SetShouldBlockOtherAbilities" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGameplayAbility_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F34710
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGameplayAbility_Statics::ClassParams = { &UGameplayAbility::StaticClass, Z_Construct_UClass_UGameplayAbility_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UGameplayAbility_Statics::FuncInfo, 50, Z_Construct_UClass_UGameplayAbility_Statics::PropPointers, 30, nullptr, &Z_Construct_UClass_UGameplayAbility_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UGameplayAbility_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D8F0 (end 0x0054D91F)
+// Original VA: 0x000000014054D8F0 | File offset: 0x0054CEF0
+// Recovery: confirmed (UHT singleton of UGameplayAbility) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGameplayAbility()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGameplayAbility_Statics::ClassParams);
+	}
+	return OuterClass;
+}

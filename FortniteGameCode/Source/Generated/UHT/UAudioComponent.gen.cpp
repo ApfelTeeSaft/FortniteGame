@@ -404,3 +404,54 @@ UFunction* Z_Construct_UFunction_UAudioComponent_Stop()
 	}
 	return ReturnFunction;
 }
+
+class UAudioComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAudioComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAudioComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAudioComponent_AdjustAttenuation, "AdjustAttenuation" },
+	{ &Z_Construct_UFunction_UAudioComponent_AdjustVolume, "AdjustVolume" },
+	{ &Z_Construct_UFunction_UAudioComponent_BP_GetAttenuationSettingsToApply, "BP_GetAttenuationSettingsToApply" },
+	{ &Z_Construct_UFunction_UAudioComponent_FadeIn, "FadeIn" },
+	{ &Z_Construct_UFunction_UAudioComponent_FadeOut, "FadeOut" },
+	{ &Z_Construct_UFunction_UAudioComponent_IsPlaying, "IsPlaying" },
+	{ &Z_Construct_UFunction_UAudioComponent_Play, "Play" },
+	{ &Z_Construct_UFunction_UAudioComponent_SetBoolParameter, "SetBoolParameter" },
+	{ &Z_Construct_UFunction_UAudioComponent_SetFloatParameter, "SetFloatParameter" },
+	{ &Z_Construct_UFunction_UAudioComponent_SetIntParameter, "SetIntParameter" },
+	{ &Z_Construct_UFunction_UAudioComponent_SetLowPassFilterEnabled, "SetLowPassFilterEnabled" },
+	{ &Z_Construct_UFunction_UAudioComponent_SetLowPassFilterFrequency, "SetLowPassFilterFrequency" },
+	{ &Z_Construct_UFunction_UAudioComponent_SetPaused, "SetPaused" },
+	{ &Z_Construct_UFunction_UAudioComponent_SetPitchMultiplier, "SetPitchMultiplier" },
+	{ &Z_Construct_UFunction_UAudioComponent_SetSound, "SetSound" },
+	{ &Z_Construct_UFunction_UAudioComponent_SetSubmixSend, "SetSubmixSend" },
+	{ &Z_Construct_UFunction_UAudioComponent_SetUISound, "SetUISound" },
+	{ &Z_Construct_UFunction_UAudioComponent_SetVolumeMultiplier, "SetVolumeMultiplier" },
+	{ &Z_Construct_UFunction_UAudioComponent_SetWaveParameter, "SetWaveParameter" },
+	{ &Z_Construct_UFunction_UAudioComponent_Stop, "Stop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAudioComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038ABEA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAudioComponent_Statics::ClassParams = { &UAudioComponent::StaticClass, Z_Construct_UClass_UAudioComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UAudioComponent_Statics::FuncInfo, 20, Z_Construct_UClass_UAudioComponent_Statics::PropPointers, 45, nullptr, &Z_Construct_UClass_UAudioComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DB270 (end 0x023DB29F)
+// Original VA: 0x00000001423DB270 | File offset: 0x023DA870
+// Recovery: confirmed (UHT singleton of UAudioComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAudioComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAudioComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

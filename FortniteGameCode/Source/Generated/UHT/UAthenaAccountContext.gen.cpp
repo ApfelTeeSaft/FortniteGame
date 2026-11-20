@@ -85,3 +85,37 @@ UFunction* Z_Construct_UFunction_UAthenaAccountContext_SimulateBattleBookPurchas
 	}
 	return ReturnFunction;
 }
+
+class UAthenaAccountContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaAccountContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaAccountContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaAccountContext_GetBattleBookPurchaseLimit, "GetBattleBookPurchaseLimit" },
+	{ &Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonDefinition, "GetCurrentSeasonDefinition" },
+	{ &Z_Construct_UFunction_UAthenaAccountContext_GetCurrentSeasonName, "GetCurrentSeasonName" },
+	{ &Z_Construct_UFunction_UAthenaAccountContext_SimulateBattleBookPurchase, "SimulateBattleBookPurchase" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaAccountContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C519B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaAccountContext_Statics::ClassParams = { &UAthenaAccountContext::StaticClass, Z_Construct_UClass_UAthenaAccountContext_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UAthenaAccountContext_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_UAthenaAccountContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287F200 (end 0x0287F22F)
+// Original VA: 0x000000014287F200 | File offset: 0x0287E800
+// Recovery: confirmed (UHT singleton of UAthenaAccountContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaAccountContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaAccountContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

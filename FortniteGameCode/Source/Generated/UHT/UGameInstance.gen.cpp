@@ -123,3 +123,40 @@ UFunction* Z_Construct_UFunction_UGameInstance_ReceiveShutdown()
 	}
 	return ReturnFunction;
 }
+
+class UGameInstance
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UGameInstance_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGameInstance_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGameInstance_DebugCreatePlayer, "DebugCreatePlayer" },
+	{ &Z_Construct_UFunction_UGameInstance_DebugRemovePlayer, "DebugRemovePlayer" },
+	{ &Z_Construct_UFunction_UGameInstance_HandleNetworkError, "HandleNetworkError" },
+	{ &Z_Construct_UFunction_UGameInstance_HandleTravelError, "HandleTravelError" },
+	{ &Z_Construct_UFunction_UGameInstance_ReceiveInit, "ReceiveInit" },
+	{ &Z_Construct_UFunction_UGameInstance_ReceiveShutdown, "ReceiveShutdown" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGameInstance_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038F0BB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGameInstance_Statics::ClassParams = { &UGameInstance::StaticClass, Z_Construct_UClass_UGameInstance_Statics::DependentSingletons, 2, 0x00100088u, Z_Construct_UClass_UGameInstance_Statics::FuncInfo, 6, Z_Construct_UClass_UGameInstance_Statics::PropPointers, 3, "Game", &Z_Construct_UClass_UGameInstance_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FEE0 (end 0x0240FF0F)
+// Original VA: 0x000000014240FEE0 | File offset: 0x0240F4E0
+// Recovery: confirmed (UHT singleton of UGameInstance) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGameInstance()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGameInstance_Statics::ClassParams);
+	}
+	return OuterClass;
+}

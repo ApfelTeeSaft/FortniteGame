@@ -299,3 +299,50 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_StormsExist()
 	}
 	return ReturnFunction;
 }
+
+class AFortThreatVisualsManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortThreatVisualsManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortThreatVisualsManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_BeginThreatVisualsPrecursor, "BeginThreatVisualsPrecursor" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_GetCloudsAreHidden, "GetCloudsAreHidden" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatCloud, "GetThreatCloud" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_GetThreatClouds, "GetThreatClouds" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_OnBeginThreatVisualsPrecursor, "OnBeginThreatVisualsPrecursor" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_GoalActorLocations, "OnRep_GoalActorLocations" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_HideClouds, "OnRep_HideClouds" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_StormWinds, "OnRep_StormWinds" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_OnRep_ThreatLocations, "OnRep_ThreatLocations" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_OnThreatCloudsChanged, "OnThreatCloudsChanged" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_OnWorldReady, "OnWorldReady" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_ResetMinimumCloudAltitude, "ResetMinimumCloudAltitude" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_SetCloudsAreHidden, "SetCloudsAreHidden" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_SetMinimumCloudAltitude, "SetMinimumCloudAltitude" },
+	{ &Z_Construct_UFunction_AFortThreatVisualsManager_StormsExist, "StormsExist" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortThreatVisualsManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0340B6B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortThreatVisualsManager_Statics::ClassParams = { &AFortThreatVisualsManager::StaticClass, Z_Construct_UClass_AFortThreatVisualsManager_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortThreatVisualsManager_Statics::FuncInfo, 15, Z_Construct_UClass_AFortThreatVisualsManager_Statics::PropPointers, 23, nullptr, &Z_Construct_UClass_AFortThreatVisualsManager_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortThreatVisualsManager_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE1F0 (end 0x010BE21F)
+// Original VA: 0x00000001410BE1F0 | File offset: 0x010BD7F0
+// Recovery: confirmed (UHT singleton of AFortThreatVisualsManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortThreatVisualsManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortThreatVisualsManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

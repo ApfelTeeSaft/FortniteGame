@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowAdvancedLatentConfirmation
 	}
 	return ReturnFunction;
 }
+
+class UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI_ShowAdvancedLatentActionConfirmation, "ShowAdvancedLatentActionConfirmation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C6A210
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI_Statics::ClassParams = { &UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI::StaticClass, Z_Construct_UClass_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CA00 (end 0x0288CA2F)
+// Original VA: 0x000000014288CA00 | File offset: 0x0288C000
+// Recovery: confirmed (UHT singleton of UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI_Statics::ClassParams);
+	}
+	return OuterClass;
+}

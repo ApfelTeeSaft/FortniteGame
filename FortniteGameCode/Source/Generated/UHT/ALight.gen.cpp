@@ -263,3 +263,47 @@ UFunction* Z_Construct_UFunction_ALight_ToggleEnabled()
 	}
 	return ReturnFunction;
 }
+
+class ALight
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ALight_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ALight_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ALight_GetBrightness, "GetBrightness" },
+	{ &Z_Construct_UFunction_ALight_GetLightColor, "GetLightColor" },
+	{ &Z_Construct_UFunction_ALight_IsEnabled, "IsEnabled" },
+	{ &Z_Construct_UFunction_ALight_OnRep_bEnabled, "OnRep_bEnabled" },
+	{ &Z_Construct_UFunction_ALight_SetAffectTranslucentLighting, "SetAffectTranslucentLighting" },
+	{ &Z_Construct_UFunction_ALight_SetBrightness, "SetBrightness" },
+	{ &Z_Construct_UFunction_ALight_SetCastShadows, "SetCastShadows" },
+	{ &Z_Construct_UFunction_ALight_SetEnabled, "SetEnabled" },
+	{ &Z_Construct_UFunction_ALight_SetLightColor, "SetLightColor" },
+	{ &Z_Construct_UFunction_ALight_SetLightFunctionFadeDistance, "SetLightFunctionFadeDistance" },
+	{ &Z_Construct_UFunction_ALight_SetLightFunctionMaterial, "SetLightFunctionMaterial" },
+	{ &Z_Construct_UFunction_ALight_SetLightFunctionScale, "SetLightFunctionScale" },
+	{ &Z_Construct_UFunction_ALight_ToggleEnabled, "ToggleEnabled" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ALight_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03930DB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ALight_Statics::ClassParams = { &ALight::StaticClass, Z_Construct_UClass_ALight_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_ALight_Statics::FuncInfo, 13, Z_Construct_UClass_ALight_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_ALight_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02470300 (end 0x0247032F)
+// Original VA: 0x0000000142470300 | File offset: 0x0246F900
+// Recovery: confirmed (UHT singleton of ALight) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ALight()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ALight_Statics::ClassParams);
+	}
+	return OuterClass;
+}

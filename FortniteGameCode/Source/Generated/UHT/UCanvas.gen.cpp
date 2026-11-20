@@ -265,3 +265,47 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_TextSize()
 	}
 	return ReturnFunction;
 }
+
+class UCanvas
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCanvas_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCanvas_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCanvas_K2_Deproject, "K2_Deproject" },
+	{ &Z_Construct_UFunction_UCanvas_K2_DrawBorder, "K2_DrawBorder" },
+	{ &Z_Construct_UFunction_UCanvas_K2_DrawBox, "K2_DrawBox" },
+	{ &Z_Construct_UFunction_UCanvas_K2_DrawLine, "K2_DrawLine" },
+	{ &Z_Construct_UFunction_UCanvas_K2_DrawMaterial, "K2_DrawMaterial" },
+	{ &Z_Construct_UFunction_UCanvas_K2_DrawMaterialTriangle, "K2_DrawMaterialTriangle" },
+	{ &Z_Construct_UFunction_UCanvas_K2_DrawPolygon, "K2_DrawPolygon" },
+	{ &Z_Construct_UFunction_UCanvas_K2_DrawText, "K2_DrawText" },
+	{ &Z_Construct_UFunction_UCanvas_K2_DrawTexture, "K2_DrawTexture" },
+	{ &Z_Construct_UFunction_UCanvas_K2_DrawTriangle, "K2_DrawTriangle" },
+	{ &Z_Construct_UFunction_UCanvas_K2_Project, "K2_Project" },
+	{ &Z_Construct_UFunction_UCanvas_K2_StrLen, "K2_StrLen" },
+	{ &Z_Construct_UFunction_UCanvas_K2_TextSize, "K2_TextSize" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCanvas_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038C0060
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCanvas_Statics::ClassParams = { &UCanvas::StaticClass, Z_Construct_UClass_UCanvas_Statics::DependentSingletons, 2, 0x00100088u, Z_Construct_UClass_UCanvas_Statics::FuncInfo, 13, Z_Construct_UClass_UCanvas_Statics::PropPointers, 14, nullptr, &Z_Construct_UClass_UCanvas_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EE070 (end 0x023EE09F)
+// Original VA: 0x00000001423EE070 | File offset: 0x023ED670
+// Recovery: confirmed (UHT singleton of UCanvas) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCanvas()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCanvas_Statics::ClassParams);
+	}
+	return OuterClass;
+}

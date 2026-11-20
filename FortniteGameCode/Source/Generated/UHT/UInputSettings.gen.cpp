@@ -223,3 +223,45 @@ UFunction* Z_Construct_UFunction_UInputSettings_SaveKeyMappings()
 	}
 	return ReturnFunction;
 }
+
+class UInputSettings
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UInputSettings_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UInputSettings_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UInputSettings_AddActionMapping, "AddActionMapping" },
+	{ &Z_Construct_UFunction_UInputSettings_AddAxisMapping, "AddAxisMapping" },
+	{ &Z_Construct_UFunction_UInputSettings_ForceRebuildKeymaps, "ForceRebuildKeymaps" },
+	{ &Z_Construct_UFunction_UInputSettings_GetActionMappingByName, "GetActionMappingByName" },
+	{ &Z_Construct_UFunction_UInputSettings_GetActionNames, "GetActionNames" },
+	{ &Z_Construct_UFunction_UInputSettings_GetAxisMappingByName, "GetAxisMappingByName" },
+	{ &Z_Construct_UFunction_UInputSettings_GetAxisNames, "GetAxisNames" },
+	{ &Z_Construct_UFunction_UInputSettings_GetInputSettings, "GetInputSettings" },
+	{ &Z_Construct_UFunction_UInputSettings_RemoveActionMapping, "RemoveActionMapping" },
+	{ &Z_Construct_UFunction_UInputSettings_RemoveAxisMapping, "RemoveAxisMapping" },
+	{ &Z_Construct_UFunction_UInputSettings_SaveKeyMappings, "SaveKeyMappings" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UInputSettings_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039006D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UInputSettings_Statics::ClassParams = { &UInputSettings::StaticClass, Z_Construct_UClass_UInputSettings_Statics::DependentSingletons, 2, 0x00100086u, Z_Construct_UClass_UInputSettings_Statics::FuncInfo, 11, Z_Construct_UClass_UInputSettings_Statics::PropPointers, 26, "Input", &Z_Construct_UClass_UInputSettings_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427FA0 (end 0x02427FCF)
+// Original VA: 0x0000000142427FA0 | File offset: 0x024275A0
+// Recovery: confirmed (UHT singleton of UInputSettings) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UInputSettings()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UInputSettings_Statics::ClassParams);
+	}
+	return OuterClass;
+}

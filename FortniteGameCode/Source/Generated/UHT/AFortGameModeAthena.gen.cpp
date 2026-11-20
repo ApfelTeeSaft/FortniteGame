@@ -159,3 +159,42 @@ UFunction* Z_Construct_UFunction_AFortGameModeAthena_TrySupplyDrop()
 	}
 	return ReturnFunction;
 }
+
+class AFortGameModeAthena
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortGameModeAthena_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortGameModeAthena_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortGameModeAthena_OnAircraftEnteredDropZone, "OnAircraftEnteredDropZone" },
+	{ &Z_Construct_UFunction_AFortGameModeAthena_OnAircraftExitedDropZone, "OnAircraftExitedDropZone" },
+	{ &Z_Construct_UFunction_AFortGameModeAthena_OnAircraftFlightEnded, "OnAircraftFlightEnded" },
+	{ &Z_Construct_UFunction_AFortGameModeAthena_OnEndGameKickPlayers, "OnEndGameKickPlayers" },
+	{ &Z_Construct_UFunction_AFortGameModeAthena_OnInitializePlaylist, "OnInitializePlaylist" },
+	{ &Z_Construct_UFunction_AFortGameModeAthena_OverridePlayerMovementSpeed, "OverridePlayerMovementSpeed" },
+	{ &Z_Construct_UFunction_AFortGameModeAthena_SafeZoneInsideChecks, "SafeZoneInsideChecks" },
+	{ &Z_Construct_UFunction_AFortGameModeAthena_TrySupplyDrop, "TrySupplyDrop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortGameModeAthena_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0331EDC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortGameModeAthena_Statics::ClassParams = { &AFortGameModeAthena::StaticClass, Z_Construct_UClass_AFortGameModeAthena_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_AFortGameModeAthena_Statics::FuncInfo, 8, Z_Construct_UClass_AFortGameModeAthena_Statics::PropPointers, 81, "Game", &Z_Construct_UClass_AFortGameModeAthena_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4440 (end 0x00FE446F)
+// Original VA: 0x0000000140FE4440 | File offset: 0x00FE3A40
+// Recovery: confirmed (UHT singleton of AFortGameModeAthena) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortGameModeAthena()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortGameModeAthena_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UAbilityTask_ApplyRootMotionMoveToForce_ApplyRo
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_ApplyRootMotionMoveToForce
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_ApplyRootMotionMoveToForce_ApplyRootMotionMoveToForce, "ApplyRootMotionMoveToForce" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F2B130
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce_Statics::ClassParams = { &UAbilityTask_ApplyRootMotionMoveToForce::StaticClass, Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce_Statics::FuncInfo, 1, Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce_Statics::PropPointers, 9, "Game", &Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546830 (end 0x0054685F)
+// Original VA: 0x0000000140546830 | File offset: 0x00545E30
+// Recovery: confirmed (UHT singleton of UAbilityTask_ApplyRootMotionMoveToForce) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce_Statics::ClassParams);
+	}
+	return OuterClass;
+}

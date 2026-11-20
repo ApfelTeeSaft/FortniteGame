@@ -43,3 +43,35 @@ UFunction* Z_Construct_UFunction_ATestBeaconClient_ServerPong()
 	}
 	return ReturnFunction;
 }
+
+class ATestBeaconClient
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ATestBeaconClient_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ATestBeaconClient_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ATestBeaconClient_ClientPing, "ClientPing" },
+	{ &Z_Construct_UFunction_ATestBeaconClient_ServerPong, "ServerPong" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ATestBeaconClient_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EAF230
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ATestBeaconClient_Statics::ClassParams = { &ATestBeaconClient::StaticClass, Z_Construct_UClass_ATestBeaconClient_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_ATestBeaconClient_Statics::FuncInfo, 2, nullptr, 0, "Engine", &Z_Construct_UClass_ATestBeaconClient_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E860 (end 0x0032E88F)
+// Original VA: 0x000000014032E860 | File offset: 0x0032DE60
+// Recovery: confirmed (UHT singleton of ATestBeaconClient) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ATestBeaconClient()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ATestBeaconClient_Statics::ClassParams);
+	}
+	return OuterClass;
+}

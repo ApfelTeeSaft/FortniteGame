@@ -442,3 +442,58 @@ UFunction* Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_Tech_Team()
 	}
 	return ReturnFunction;
 }
+
+class UFortPlayerAttrSet
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortPlayerAttrSet_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPlayerAttrSet_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_CraftItemLevelBonusMax, "OnRep_CraftItemLevelBonusMax" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_CraftItemLevelBonusMin, "OnRep_CraftItemLevelBonusMin" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_CraftingTimeMultiplier, "OnRep_CraftingTimeMultiplier" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_DoubleCraftChance, "OnRep_DoubleCraftChance" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_DoubleItemLootChance, "OnRep_DoubleItemLootChance" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_DoubleLootRollChance, "OnRep_DoubleLootRollChance" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_ExtraLives, "OnRep_ExtraLives" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_Fortitude_Team, "OnRep_Fortitude_Team" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_HarvestingTool, "OnRep_HarvestingTool" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_ItemMaxStack, "OnRep_ItemMaxStack" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_ItemRegenCooldown, "OnRep_ItemRegenCooldown" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_ItemRegenMaxStack, "OnRep_ItemRegenMaxStack" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_MaxStamina, "OnRep_MaxStamina" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_Offense_Team, "OnRep_Offense_Team" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_Resistance_Team, "OnRep_Resistance_Team" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_ResourceHarvesting, "OnRep_ResourceHarvesting" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_ResurrectTeammateDuration, "OnRep_ResurrectTeammateDuration" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_SprintCost, "OnRep_SprintCost" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_Stamina, "OnRep_Stamina" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_StaminaCost, "OnRep_StaminaCost" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_StaminaRegenDelay, "OnRep_StaminaRegenDelay" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_StaminaRegenRate, "OnRep_StaminaRegenRate" },
+	{ &Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_Tech_Team, "OnRep_Tech_Team" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPlayerAttrSet_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033B8C00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPlayerAttrSet_Statics::ClassParams = { &UFortPlayerAttrSet::StaticClass, Z_Construct_UClass_UFortPlayerAttrSet_Statics::DependentSingletons, 2, 0x00280080u, Z_Construct_UClass_UFortPlayerAttrSet_Statics::FuncInfo, 23, Z_Construct_UClass_UFortPlayerAttrSet_Statics::PropPointers, 24, nullptr, &Z_Construct_UClass_UFortPlayerAttrSet_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortPlayerAttrSet_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106AD50 (end 0x0106AD7F)
+// Original VA: 0x000000014106AD50 | File offset: 0x0106A350
+// Recovery: confirmed (UHT singleton of UFortPlayerAttrSet) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPlayerAttrSet()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPlayerAttrSet_Statics::ClassParams);
+	}
+	return OuterClass;
+}

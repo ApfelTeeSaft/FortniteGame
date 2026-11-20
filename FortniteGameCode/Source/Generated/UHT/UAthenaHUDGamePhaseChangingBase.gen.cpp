@@ -65,3 +65,36 @@ UFunction* Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_UpdateMessaging
 	}
 	return ReturnFunction;
 }
+
+class UAthenaHUDGamePhaseChangingBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_GamePhaseStepChanged, "GamePhaseStepChanged" },
+	{ &Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_HandleGamePhaseStepChanged, "HandleGamePhaseStepChanged" },
+	{ &Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_UpdateMessaging, "UpdateMessaging" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C530A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase_Statics::ClassParams = { &UAthenaHUDGamePhaseChangingBase::StaticClass, Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287F470 (end 0x0287F49F)
+// Original VA: 0x000000014287F470 | File offset: 0x0287EA70
+// Recovery: confirmed (UHT singleton of UAthenaHUDGamePhaseChangingBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UMediaSource_Validate()
 	}
 	return ReturnFunction;
 }
+
+class UMediaSource
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMediaSource_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMediaSource_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMediaSource_GetUrl, "GetUrl" },
+	{ &Z_Construct_UFunction_UMediaSource_Validate, "Validate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMediaSource_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03B64CC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMediaSource_Statics::ClassParams = { &UMediaSource::StaticClass, Z_Construct_UClass_UMediaSource_Statics::DependentSingletons, 2, 0x00100081u, Z_Construct_UClass_UMediaSource_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UMediaSource_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE990 (end 0x025DE9BF)
+// Original VA: 0x00000001425DE990 | File offset: 0x025DDF90
+// Recovery: confirmed (UHT singleton of UMediaSource) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMediaSource()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMediaSource_Statics::ClassParams);
+	}
+	return OuterClass;
+}

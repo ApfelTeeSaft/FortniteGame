@@ -64,3 +64,37 @@ UFunction* Z_Construct_UFunction_UFortAccountItem_MarkItemAsSeenBP()
 	}
 	return ReturnFunction;
 }
+
+class UFortAccountItem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAccountItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAccountItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAccountItem_HasBeenSeenLocally, "HasBeenSeenLocally" },
+	{ &Z_Construct_UFunction_UFortAccountItem_IsFavorite, "IsFavorite" },
+	{ &Z_Construct_UFunction_UFortAccountItem_MarkItemAsSeenBP, "MarkItemAsSeenBP" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAccountItem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03297660
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAccountItem_Statics::ClassParams = { &UFortAccountItem::StaticClass, Z_Construct_UClass_UFortAccountItem_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortAccountItem_Statics::FuncInfo, 3, Z_Construct_UClass_UFortAccountItem_Statics::PropPointers, 12, nullptr, &Z_Construct_UClass_UFortAccountItem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F82080 (end 0x00F820AF)
+// Original VA: 0x0000000140F82080 | File offset: 0x00F81680
+// Recovery: confirmed (UHT singleton of UFortAccountItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAccountItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAccountItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

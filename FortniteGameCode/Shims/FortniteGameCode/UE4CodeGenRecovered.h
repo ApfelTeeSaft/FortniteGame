@@ -32,9 +32,39 @@ enum EFunctionFlags : uint32
 	FUNC_None = 0x00000000,
 };
 
+struct FClassFunctionLinkInfo
+{
+	UFunction* (*CreateFuncPtr)();
+	const char* FuncNameUTF8;
+};
+
+struct FCppClassTypeInfoStatic
+{
+	bool bIsAbstract;
+};
+
 namespace UE4CodeGen_Private
 {
 	struct FPropertyParamsBase;
+	struct FImplementedInterfaceParams;
+
+	struct FClassParams
+	{
+		UClass* (*ClassNoRegisterFunc)();
+		UObject* (*const *DependencySingletonFuncArray)();
+		int32 NumDependencySingletons;
+		uint32 ClassFlags;
+		const FClassFunctionLinkInfo* FunctionLinkArray;
+		int32 NumFunctions;
+		const FPropertyParamsBase* const* PropertyArray;
+		int32 NumProperties;
+		const char* ClassConfigNameUTF8;
+		const FCppClassTypeInfoStatic* CppClassInfo;
+		const FImplementedInterfaceParams* ImplementedInterfaceArray;
+		int32 NumImplementedInterfaces;
+	};
+
+	void ConstructUClass(UClass*& OutClass, const FClassParams& Params);
 
 	struct FFunctionParams
 	{

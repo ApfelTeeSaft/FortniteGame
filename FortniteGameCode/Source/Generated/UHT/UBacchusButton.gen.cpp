@@ -64,3 +64,37 @@ UFunction* Z_Construct_UFunction_UBacchusButton_SetButtonSprite()
 	}
 	return ReturnFunction;
 }
+
+class UBacchusButton
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBacchusButton_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBacchusButton_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBacchusButton_OnClicked, "OnClicked" },
+	{ &Z_Construct_UFunction_UBacchusButton_OnHUDStateUpdate, "OnHUDStateUpdate" },
+	{ &Z_Construct_UFunction_UBacchusButton_SetButtonSprite, "SetButtonSprite" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBacchusButton_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C5F550
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBacchusButton_Statics::ClassParams = { &UBacchusButton::StaticClass, Z_Construct_UClass_UBacchusButton_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UBacchusButton_Statics::FuncInfo, 3, Z_Construct_UClass_UBacchusButton_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_UBacchusButton_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02887520 (end 0x0288754F)
+// Original VA: 0x0000000142887520 | File offset: 0x02886B20
+// Recovery: confirmed (UHT singleton of UBacchusButton) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBacchusButton()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBacchusButton_Statics::ClassParams);
+	}
+	return OuterClass;
+}

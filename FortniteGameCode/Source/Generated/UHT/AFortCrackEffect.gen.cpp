@@ -140,3 +140,42 @@ UFunction* Z_Construct_UFunction_AFortCrackEffect_OnStartDirectionEffect()
 	}
 	return ReturnFunction;
 }
+
+class AFortCrackEffect
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortCrackEffect_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortCrackEffect_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortCrackEffect_HasStartingPosition, "HasStartingPosition" },
+	{ &Z_Construct_UFunction_AFortCrackEffect_OnBounceAnimationUpdate, "OnBounceAnimationUpdate" },
+	{ &Z_Construct_UFunction_AFortCrackEffect_OnFadeOut, "OnFadeOut" },
+	{ &Z_Construct_UFunction_AFortCrackEffect_OnHitCrack, "OnHitCrack" },
+	{ &Z_Construct_UFunction_AFortCrackEffect_OnRep_HitNormal, "OnRep_HitNormal" },
+	{ &Z_Construct_UFunction_AFortCrackEffect_OnRep_PhysicalSurfaceType, "OnRep_PhysicalSurfaceType" },
+	{ &Z_Construct_UFunction_AFortCrackEffect_OnStartDirectionEffect, "OnStartDirectionEffect" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortCrackEffect_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032F8410
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortCrackEffect_Statics::ClassParams = { &AFortCrackEffect::StaticClass, Z_Construct_UClass_AFortCrackEffect_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortCrackEffect_Statics::FuncInfo, 7, Z_Construct_UClass_AFortCrackEffect_Statics::PropPointers, 14, nullptr, &Z_Construct_UClass_AFortCrackEffect_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortCrackEffect_Statics::InterfaceParams, 4 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB7A0 (end 0x00FCB7CF)
+// Original VA: 0x0000000140FCB7A0 | File offset: 0x00FCADA0
+// Recovery: confirmed (UHT singleton of AFortCrackEffect) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortCrackEffect()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortCrackEffect_Statics::ClassParams);
+	}
+	return OuterClass;
+}

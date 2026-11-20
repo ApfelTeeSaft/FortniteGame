@@ -265,3 +265,46 @@ UFunction* Z_Construct_UFunction_UAssetRegistryHelpers_ToSoftObjectPath()
 	}
 	return ReturnFunction;
 }
+
+class UAssetRegistryHelpers
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAssetRegistryHelpers_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAssetRegistryHelpers_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_CreateAssetData, "CreateAssetData" },
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_GetAsset, "GetAsset" },
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_GetAssetRegistry, "GetAssetRegistry" },
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_GetClass, "GetClass" },
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_GetExportTextName, "GetExportTextName" },
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_GetFullName, "GetFullName" },
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_GetTagValue, "GetTagValue" },
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_IsAssetLoaded, "IsAssetLoaded" },
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_IsRedirector, "IsRedirector" },
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_IsUAsset, "IsUAsset" },
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_IsValid, "IsValid" },
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_SetFilterTagsAndValues, "SetFilterTagsAndValues" },
+	{ &Z_Construct_UFunction_UAssetRegistryHelpers_ToSoftObjectPath, "ToSoftObjectPath" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAssetRegistryHelpers_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036B8850
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAssetRegistryHelpers_Statics::ClassParams = { &UAssetRegistryHelpers::StaticClass, Z_Construct_UClass_UAssetRegistryHelpers_Statics::DependentSingletons, 2, 0x00000088u, Z_Construct_UClass_UAssetRegistryHelpers_Statics::FuncInfo, 13, nullptr, 0, nullptr, &Z_Construct_UClass_UAssetRegistryHelpers_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C80000 (end 0x01C8002F)
+// Original VA: 0x0000000141C80000 | File offset: 0x01C7F600
+// Recovery: confirmed (UHT singleton of UAssetRegistryHelpers) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAssetRegistryHelpers()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAssetRegistryHelpers_Statics::ClassParams);
+	}
+	return OuterClass;
+}

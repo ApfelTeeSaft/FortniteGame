@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortFOBCoreDecoItemDefinition_GetMaximumHealth
 	}
 	return ReturnFunction;
 }
+
+class UFortFOBCoreDecoItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortFOBCoreDecoItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortFOBCoreDecoItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortFOBCoreDecoItemDefinition_GetMaximumHealth, "GetMaximumHealth" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortFOBCoreDecoItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03310950
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortFOBCoreDecoItemDefinition_Statics::ClassParams = { &UFortFOBCoreDecoItemDefinition::StaticClass, Z_Construct_UClass_UFortFOBCoreDecoItemDefinition_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortFOBCoreDecoItemDefinition_Statics::FuncInfo, 1, Z_Construct_UClass_UFortFOBCoreDecoItemDefinition_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortFOBCoreDecoItemDefinition_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDB710 (end 0x00FDB73F)
+// Original VA: 0x0000000140FDB710 | File offset: 0x00FDAD10
+// Recovery: confirmed (UHT singleton of UFortFOBCoreDecoItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortFOBCoreDecoItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortFOBCoreDecoItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

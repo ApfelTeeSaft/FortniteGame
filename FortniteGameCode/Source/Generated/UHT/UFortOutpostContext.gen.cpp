@@ -363,3 +363,52 @@ UFunction* Z_Construct_UFunction_UFortOutpostContext_UpgradePOST()
 	}
 	return ReturnFunction;
 }
+
+class UFortOutpostContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortOutpostContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortOutpostContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortOutpostContext_CanUpgradeBuilding, "CanUpgradeBuilding" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_CanUpgradeBuildingFromDefinition, "CanUpgradeBuildingFromDefinition" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_CanUpgradePOST, "CanUpgradePOST" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_DepositPOSTResource, "DepositPOSTResource" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_GetBuildingLevel, "GetBuildingLevel" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_GetBuildingLevelFromDefinition, "GetBuildingLevelFromDefinition" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_GetBuildingMaxLevel, "GetBuildingMaxLevel" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_GetBuildingMaxLevelFromDefinition, "GetBuildingMaxLevelFromDefinition" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_GetBuildingUpgradeCost, "GetBuildingUpgradeCost" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_GetBuildingUpgradeCostFromDefinition, "GetBuildingUpgradeCostFromDefinition" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_GetHarvestingToolForLevel, "GetHarvestingToolForLevel" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_GetNextPOSTLevelRequirements, "GetNextPOSTLevelRequirements" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_GetOutpostCoreLevel, "GetOutpostCoreLevel" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_GetPOSTBuildingHealthMod, "GetPOSTBuildingHealthMod" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_LeaveOutpostAsParty, "LeaveOutpostAsParty" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_UpgradeBuilding, "UpgradeBuilding" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_UpgradeBuildingByDefinition, "UpgradeBuildingByDefinition" },
+	{ &Z_Construct_UFunction_UFortOutpostContext_UpgradePOST, "UpgradePOST" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortOutpostContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03394830
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortOutpostContext_Statics::ClassParams = { &UFortOutpostContext::StaticClass, Z_Construct_UClass_UFortOutpostContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortOutpostContext_Statics::FuncInfo, 18, Z_Construct_UClass_UFortOutpostContext_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortOutpostContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01050E20 (end 0x01050E4F)
+// Original VA: 0x0000000141050E20 | File offset: 0x01050420
+// Recovery: confirmed (UHT singleton of UFortOutpostContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortOutpostContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortOutpostContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

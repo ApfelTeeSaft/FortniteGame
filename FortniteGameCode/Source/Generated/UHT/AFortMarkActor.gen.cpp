@@ -24,3 +24,35 @@ UFunction* Z_Construct_UFunction_AFortMarkActor_OnRep_AttachedToActor()
 	}
 	return ReturnFunction;
 }
+
+class AFortMarkActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortMarkActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortMarkActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortMarkActor_OnRep_AttachedToActor, "OnRep_AttachedToActor" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortMarkActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0335FD10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortMarkActor_Statics::ClassParams = { &AFortMarkActor::StaticClass, Z_Construct_UClass_AFortMarkActor_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_AFortMarkActor_Statics::FuncInfo, 1, Z_Construct_UClass_AFortMarkActor_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_AFortMarkActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101E580 (end 0x0101E5AF)
+// Original VA: 0x000000014101E580 | File offset: 0x0101DB80
+// Recovery: confirmed (UHT singleton of AFortMarkActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortMarkActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortMarkActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

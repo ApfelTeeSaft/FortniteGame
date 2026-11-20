@@ -241,3 +241,46 @@ UFunction* Z_Construct_UFunction_AGameMode_StartMatch()
 	}
 	return ReturnFunction;
 }
+
+class AGameMode
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AGameMode_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AGameMode_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AGameMode_AbortMatch, "AbortMatch" },
+	{ &Z_Construct_UFunction_AGameMode_EndMatch, "EndMatch" },
+	{ &Z_Construct_UFunction_AGameMode_GetMatchState, "GetMatchState" },
+	{ &Z_Construct_UFunction_AGameMode_HasMatchEnded, "HasMatchEnded" },
+	{ &Z_Construct_UFunction_AGameMode_IsMatchInProgress, "IsMatchInProgress" },
+	{ &Z_Construct_UFunction_AGameMode_K2_OnSetMatchState, "K2_OnSetMatchState" },
+	{ &Z_Construct_UFunction_AGameMode_ReadyToEndMatch, "ReadyToEndMatch" },
+	{ &Z_Construct_UFunction_AGameMode_ReadyToStartMatch, "ReadyToStartMatch" },
+	{ &Z_Construct_UFunction_AGameMode_RestartGame, "RestartGame" },
+	{ &Z_Construct_UFunction_AGameMode_Say, "Say" },
+	{ &Z_Construct_UFunction_AGameMode_SetBandwidthLimit, "SetBandwidthLimit" },
+	{ &Z_Construct_UFunction_AGameMode_StartMatch, "StartMatch" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AGameMode_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038F0E40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AGameMode_Statics::ClassParams = { &AGameMode::StaticClass, Z_Construct_UClass_AGameMode_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_AGameMode_Statics::FuncInfo, 12, Z_Construct_UClass_AGameMode_Statics::PropPointers, 13, "Game", &Z_Construct_UClass_AGameMode_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FC70 (end 0x0240FC9F)
+// Original VA: 0x000000014240FC70 | File offset: 0x0240F270
+// Recovery: confirmed (UHT singleton of AGameMode) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AGameMode()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AGameMode_Statics::ClassParams);
+	}
+	return OuterClass;
+}

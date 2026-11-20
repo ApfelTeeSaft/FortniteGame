@@ -619,3 +619,66 @@ UFunction* Z_Construct_UFunction_UFortPlayerTrackerBase_UpdateBasedOnId()
 	}
 	return ReturnFunction;
 }
+
+class UFortPlayerTrackerBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortPlayerTrackerBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPlayerTrackerBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetBaseFortitude, "GetBaseFortitude" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetBaseOffense, "GetBaseOffense" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetBaseResistance, "GetBaseResistance" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetBaseTech, "GetBaseTech" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetBuffedFortitude, "GetBuffedFortitude" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetBuffedOffense, "GetBuffedOffense" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetBuffedResistance, "GetBuffedResistance" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetBuffedTech, "GetBuffedTech" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetHomebaseRating, "GetHomebaseRating" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetModifiedHomebaseRating, "GetModifiedHomebaseRating" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetTeamFortitude, "GetTeamFortitude" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetTeamOffense, "GetTeamOffense" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetTeamResistance, "GetTeamResistance" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_GetTeamTech, "GetTeamTech" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_HandleOnLocalPlayerInfoUpdated, "HandleOnLocalPlayerInfoUpdated" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_HandleOnPlayerIdUpdated, "HandleOnPlayerIdUpdated" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_HandlePartyLeft, "HandlePartyLeft" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_HandleTeamMemberAdded, "HandleTeamMemberAdded" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_HandleTeamMemberRemoved, "HandleTeamMemberRemoved" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_HandleTeamMemberStateChanged, "HandleTeamMemberStateChanged" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_HandleTeamMemberStateChangedId, "HandleTeamMemberStateChangedId" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_HasModifiedStats, "HasModifiedStats" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_OnPlayerAttributesChanged, "OnPlayerAttributesChanged" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_OnPlayerInfoChanged, "OnPlayerInfoChanged" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_ReRegisterAttributeChangedDelegates, "ReRegisterAttributeChangedDelegates" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_RegisterAttributeChangedDelegates, "RegisterAttributeChangedDelegates" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_ResetPartyEvents, "ResetPartyEvents" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_SetTeamMember, "SetTeamMember" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_SetUniqueId, "SetUniqueId" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_SetUniqueIdInternal, "SetUniqueIdInternal" },
+	{ &Z_Construct_UFunction_UFortPlayerTrackerBase_UpdateBasedOnId, "UpdateBasedOnId" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPlayerTrackerBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CFFE30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPlayerTrackerBase_Statics::ClassParams = { &UFortPlayerTrackerBase::StaticClass, Z_Construct_UClass_UFortPlayerTrackerBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortPlayerTrackerBase_Statics::FuncInfo, 31, Z_Construct_UClass_UFortPlayerTrackerBase_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortPlayerTrackerBase_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortPlayerTrackerBase_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6D90 (end 0x028E6DBF)
+// Original VA: 0x00000001428E6D90 | File offset: 0x028E6390
+// Recovery: confirmed (UHT singleton of UFortPlayerTrackerBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPlayerTrackerBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPlayerTrackerBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

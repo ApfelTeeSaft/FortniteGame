@@ -1244,3 +1244,96 @@ UFunction* Z_Construct_UFunction_UMediaPlayer_SupportsSeeking()
 	}
 	return ReturnFunction;
 }
+
+class UMediaPlayer
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMediaPlayer_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMediaPlayer_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMediaPlayer_CanPause, "CanPause" },
+	{ &Z_Construct_UFunction_UMediaPlayer_CanPlaySource, "CanPlaySource" },
+	{ &Z_Construct_UFunction_UMediaPlayer_CanPlayUrl, "CanPlayUrl" },
+	{ &Z_Construct_UFunction_UMediaPlayer_Close, "Close" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetAudioTrackChannels, "GetAudioTrackChannels" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetAudioTrackSampleRate, "GetAudioTrackSampleRate" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetAudioTrackType, "GetAudioTrackType" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetDesiredPlayerName, "GetDesiredPlayerName" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetDuration, "GetDuration" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetHorizontalFieldOfView, "GetHorizontalFieldOfView" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetMediaName, "GetMediaName" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetNumTrackFormats, "GetNumTrackFormats" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetNumTracks, "GetNumTracks" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetPlayerName, "GetPlayerName" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetPlaylist, "GetPlaylist" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetPlaylistIndex, "GetPlaylistIndex" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetRate, "GetRate" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetSelectedTrack, "GetSelectedTrack" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetSupportedRates, "GetSupportedRates" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetTime, "GetTime" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetTrackDisplayName, "GetTrackDisplayName" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetTrackFormat, "GetTrackFormat" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetTrackLanguage, "GetTrackLanguage" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetUrl, "GetUrl" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetVerticalFieldOfView, "GetVerticalFieldOfView" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetVideoTrackAspectRatio, "GetVideoTrackAspectRatio" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetVideoTrackDimensions, "GetVideoTrackDimensions" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetVideoTrackFrameRate, "GetVideoTrackFrameRate" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetVideoTrackFrameRates, "GetVideoTrackFrameRates" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetVideoTrackType, "GetVideoTrackType" },
+	{ &Z_Construct_UFunction_UMediaPlayer_GetViewRotation, "GetViewRotation" },
+	{ &Z_Construct_UFunction_UMediaPlayer_HasError, "HasError" },
+	{ &Z_Construct_UFunction_UMediaPlayer_IsBuffering, "IsBuffering" },
+	{ &Z_Construct_UFunction_UMediaPlayer_IsConnecting, "IsConnecting" },
+	{ &Z_Construct_UFunction_UMediaPlayer_IsLooping, "IsLooping" },
+	{ &Z_Construct_UFunction_UMediaPlayer_IsPaused, "IsPaused" },
+	{ &Z_Construct_UFunction_UMediaPlayer_IsPlaying, "IsPlaying" },
+	{ &Z_Construct_UFunction_UMediaPlayer_IsPreparing, "IsPreparing" },
+	{ &Z_Construct_UFunction_UMediaPlayer_IsReady, "IsReady" },
+	{ &Z_Construct_UFunction_UMediaPlayer_Next, "Next" },
+	{ &Z_Construct_UFunction_UMediaPlayer_OpenFile, "OpenFile" },
+	{ &Z_Construct_UFunction_UMediaPlayer_OpenPlaylist, "OpenPlaylist" },
+	{ &Z_Construct_UFunction_UMediaPlayer_OpenPlaylistIndex, "OpenPlaylistIndex" },
+	{ &Z_Construct_UFunction_UMediaPlayer_OpenSource, "OpenSource" },
+	{ &Z_Construct_UFunction_UMediaPlayer_OpenUrl, "OpenUrl" },
+	{ &Z_Construct_UFunction_UMediaPlayer_Pause, "Pause" },
+	{ &Z_Construct_UFunction_UMediaPlayer_Play, "Play" },
+	{ &Z_Construct_UFunction_UMediaPlayer_Previous, "Previous" },
+	{ &Z_Construct_UFunction_UMediaPlayer_Reopen, "Reopen" },
+	{ &Z_Construct_UFunction_UMediaPlayer_Rewind, "Rewind" },
+	{ &Z_Construct_UFunction_UMediaPlayer_Seek, "Seek" },
+	{ &Z_Construct_UFunction_UMediaPlayer_SelectTrack, "SelectTrack" },
+	{ &Z_Construct_UFunction_UMediaPlayer_SetDesiredPlayerName, "SetDesiredPlayerName" },
+	{ &Z_Construct_UFunction_UMediaPlayer_SetLooping, "SetLooping" },
+	{ &Z_Construct_UFunction_UMediaPlayer_SetRate, "SetRate" },
+	{ &Z_Construct_UFunction_UMediaPlayer_SetTrackFormat, "SetTrackFormat" },
+	{ &Z_Construct_UFunction_UMediaPlayer_SetVideoTrackFrameRate, "SetVideoTrackFrameRate" },
+	{ &Z_Construct_UFunction_UMediaPlayer_SetViewField, "SetViewField" },
+	{ &Z_Construct_UFunction_UMediaPlayer_SetViewRotation, "SetViewRotation" },
+	{ &Z_Construct_UFunction_UMediaPlayer_SupportsRate, "SupportsRate" },
+	{ &Z_Construct_UFunction_UMediaPlayer_SupportsScrubbing, "SupportsScrubbing" },
+	{ &Z_Construct_UFunction_UMediaPlayer_SupportsSeeking, "SupportsSeeking" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMediaPlayer_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03B64850
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMediaPlayer_Statics::ClassParams = { &UMediaPlayer::StaticClass, Z_Construct_UClass_UMediaPlayer_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UMediaPlayer_Statics::FuncInfo, 62, Z_Construct_UClass_UMediaPlayer_Statics::PropPointers, 21, nullptr, &Z_Construct_UClass_UMediaPlayer_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE900 (end 0x025DE92F)
+// Original VA: 0x00000001425DE900 | File offset: 0x025DDF00
+// Recovery: confirmed (UHT singleton of UMediaPlayer) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMediaPlayer()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMediaPlayer_Statics::ClassParams);
+	}
+	return OuterClass;
+}

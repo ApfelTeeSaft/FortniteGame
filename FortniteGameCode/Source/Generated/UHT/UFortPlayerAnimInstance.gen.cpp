@@ -125,3 +125,41 @@ UFunction* Z_Construct_UFunction_UFortPlayerAnimInstance_OnPlayMontageFromGamepl
 	}
 	return ReturnFunction;
 }
+
+class UFortPlayerAnimInstance
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortPlayerAnimInstance_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPlayerAnimInstance_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPlayerAnimInstance_AnimNotify_PlayFireFX, "AnimNotify_PlayFireFX" },
+	{ &Z_Construct_UFunction_UFortPlayerAnimInstance_AnimNotify_PlaySecondaryFireFX, "AnimNotify_PlaySecondaryFireFX" },
+	{ &Z_Construct_UFunction_UFortPlayerAnimInstance_AnimNotify_StopFireFX, "AnimNotify_StopFireFX" },
+	{ &Z_Construct_UFunction_UFortPlayerAnimInstance_GetCardinalDirectionFromAngle, "GetCardinalDirectionFromAngle" },
+	{ &Z_Construct_UFunction_UFortPlayerAnimInstance_GetRelativeAngle, "GetRelativeAngle" },
+	{ &Z_Construct_UFunction_UFortPlayerAnimInstance_OnPlayMontageFromGameplayTagQuery, "OnPlayMontageFromGameplayTagQuery" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPlayerAnimInstance_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033AE270
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPlayerAnimInstance_Statics::ClassParams = { &UFortPlayerAnimInstance::StaticClass, Z_Construct_UClass_UFortPlayerAnimInstance_Statics::DependentSingletons, 2, 0x00800088u, Z_Construct_UClass_UFortPlayerAnimInstance_Statics::FuncInfo, 6, Z_Construct_UClass_UFortPlayerAnimInstance_Statics::PropPointers, 196, nullptr, &Z_Construct_UClass_UFortPlayerAnimInstance_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortPlayerAnimInstance_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010659C0 (end 0x010659EF)
+// Original VA: 0x00000001410659C0 | File offset: 0x01064FC0
+// Recovery: confirmed (UHT singleton of UFortPlayerAnimInstance) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPlayerAnimInstance()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPlayerAnimInstance_Statics::ClassParams);
+	}
+	return OuterClass;
+}

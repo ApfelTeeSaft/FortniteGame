@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_OnPreviewCosm
 	}
 	return ReturnFunction;
 }
+
+class AFortBodyPartOverridePreviewActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortBodyPartOverridePreviewActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortBodyPartOverridePreviewActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_ApplyMyCosmeticItemToHero, "ApplyMyCosmeticItemToHero" },
+	{ &Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_OnPreviewCosmeticItem, "OnPreviewCosmeticItem" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortBodyPartOverridePreviewActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032CE950
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortBodyPartOverridePreviewActor_Statics::ClassParams = { &AFortBodyPartOverridePreviewActor::StaticClass, Z_Construct_UClass_AFortBodyPartOverridePreviewActor_Statics::DependentSingletons, 2, 0x00880081u, Z_Construct_UClass_AFortBodyPartOverridePreviewActor_Statics::FuncInfo, 2, Z_Construct_UClass_AFortBodyPartOverridePreviewActor_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_AFortBodyPartOverridePreviewActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAD020 (end 0x00FAD04F)
+// Original VA: 0x0000000140FAD020 | File offset: 0x00FAC620
+// Recovery: confirmed (UHT singleton of AFortBodyPartOverridePreviewActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortBodyPartOverridePreviewActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortBodyPartOverridePreviewActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

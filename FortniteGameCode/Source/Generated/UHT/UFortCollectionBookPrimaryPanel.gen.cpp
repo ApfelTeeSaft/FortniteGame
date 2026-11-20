@@ -145,3 +145,41 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnSummonInfoPan
 	}
 	return ReturnFunction;
 }
+
+class UFortCollectionBookPrimaryPanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCollectionBookPrimaryPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCollectionBookPrimaryPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_HandleSectionTileClicked, "HandleSectionTileClicked" },
+	{ &Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnBackActionExecuted, "OnBackActionExecuted" },
+	{ &Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookPageClicked, "OnCollectionBookPageClicked" },
+	{ &Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookPageSelected, "OnCollectionBookPageSelected" },
+	{ &Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnCollectionBookSectionClicked, "OnCollectionBookSectionClicked" },
+	{ &Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnInputMethodChanged, "OnInputMethodChanged" },
+	{ &Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnSummonInfoPanelExecuted, "OnSummonInfoPanelExecuted" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCollectionBookPrimaryPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C769C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCollectionBookPrimaryPanel_Statics::ClassParams = { &UFortCollectionBookPrimaryPanel::StaticClass, Z_Construct_UClass_UFortCollectionBookPrimaryPanel_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortCollectionBookPrimaryPanel_Statics::FuncInfo, 7, Z_Construct_UClass_UFortCollectionBookPrimaryPanel_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UFortCollectionBookPrimaryPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894740 (end 0x0289476F)
+// Original VA: 0x0000000142894740 | File offset: 0x02893D40
+// Recovery: confirmed (UHT singleton of UFortCollectionBookPrimaryPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCollectionBookPrimaryPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCollectionBookPrimaryPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

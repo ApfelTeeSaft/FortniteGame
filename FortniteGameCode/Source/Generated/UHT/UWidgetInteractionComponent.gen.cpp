@@ -285,3 +285,48 @@ UFunction* Z_Construct_UFunction_UWidgetInteractionComponent_SetCustomHitResult(
 	}
 	return ReturnFunction;
 }
+
+class UWidgetInteractionComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UWidgetInteractionComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UWidgetInteractionComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_Get2DHitLocation, "Get2DHitLocation" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_GetHoveredWidgetComponent, "GetHoveredWidgetComponent" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_GetLastHitResult, "GetLastHitResult" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_IsOverFocusableWidget, "IsOverFocusableWidget" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_IsOverHitTestVisibleWidget, "IsOverHitTestVisibleWidget" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_IsOverInteractableWidget, "IsOverInteractableWidget" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_PressAndReleaseKey, "PressAndReleaseKey" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_PressKey, "PressKey" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_PressPointerKey, "PressPointerKey" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_ReleaseKey, "ReleaseKey" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_ReleasePointerKey, "ReleasePointerKey" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_ScrollWheel, "ScrollWheel" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_SendKeyChar, "SendKeyChar" },
+	{ &Z_Construct_UFunction_UWidgetInteractionComponent_SetCustomHitResult, "SetCustomHitResult" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UWidgetInteractionComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036AA0F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UWidgetInteractionComponent_Statics::ClassParams = { &UWidgetInteractionComponent::StaticClass, Z_Construct_UClass_UWidgetInteractionComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UWidgetInteractionComponent_Statics::FuncInfo, 14, Z_Construct_UClass_UWidgetInteractionComponent_Statics::PropPointers, 18, nullptr, &Z_Construct_UClass_UWidgetInteractionComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00DF0 (end 0x01C00E1F)
+// Original VA: 0x0000000141C00DF0 | File offset: 0x01C003F0
+// Recovery: confirmed (UHT singleton of UWidgetInteractionComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UWidgetInteractionComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UWidgetInteractionComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

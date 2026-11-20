@@ -83,3 +83,37 @@ UFunction* Z_Construct_UFunction_UFortDailyRewards_TryGetDailyRewardsData()
 	}
 	return ReturnFunction;
 }
+
+class UFortDailyRewards
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortDailyRewards_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortDailyRewards_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortDailyRewards_ClaimResultReceived, "ClaimResultReceived" },
+	{ &Z_Construct_UFunction_UFortDailyRewards_FinishedClaiming, "FinishedClaiming" },
+	{ &Z_Construct_UFunction_UFortDailyRewards_SetupDailyRewards, "SetupDailyRewards" },
+	{ &Z_Construct_UFunction_UFortDailyRewards_TryGetDailyRewardsData, "TryGetDailyRewardsData" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortDailyRewards_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C82830
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortDailyRewards_Statics::ClassParams = { &UFortDailyRewards::StaticClass, Z_Construct_UClass_UFortDailyRewards_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortDailyRewards_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_UFortDailyRewards_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B400 (end 0x0289B42F)
+// Original VA: 0x000000014289B400 | File offset: 0x0289AA00
+// Recovery: confirmed (UHT singleton of UFortDailyRewards) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortDailyRewards()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortDailyRewards_Statics::ClassParams);
+	}
+	return OuterClass;
+}

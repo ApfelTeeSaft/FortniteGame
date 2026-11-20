@@ -184,3 +184,43 @@ UFunction* Z_Construct_UFunction_UFortJournalQuestDetails_SetCurrentQuest()
 	}
 	return ReturnFunction;
 }
+
+class UFortJournalQuestDetails
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortJournalQuestDetails_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortJournalQuestDetails_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortJournalQuestDetails_CanGotoQuest, "CanGotoQuest" },
+	{ &Z_Construct_UFunction_UFortJournalQuestDetails_CanPartyLeaderPlayQuest, "CanPartyLeaderPlayQuest" },
+	{ &Z_Construct_UFunction_UFortJournalQuestDetails_CanPlayQuest, "CanPlayQuest" },
+	{ &Z_Construct_UFunction_UFortJournalQuestDetails_GetActiveMissionTileType, "GetActiveMissionTileType" },
+	{ &Z_Construct_UFunction_UFortJournalQuestDetails_GetFutureObjectives, "GetFutureObjectives" },
+	{ &Z_Construct_UFunction_UFortJournalQuestDetails_GetRewards, "GetRewards" },
+	{ &Z_Construct_UFunction_UFortJournalQuestDetails_GetVisibleObjectives, "GetVisibleObjectives" },
+	{ &Z_Construct_UFunction_UFortJournalQuestDetails_HandleCurrentQuestChangedBP, "HandleCurrentQuestChangedBP" },
+	{ &Z_Construct_UFunction_UFortJournalQuestDetails_SetCurrentQuest, "SetCurrentQuest" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortJournalQuestDetails_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CDA520
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortJournalQuestDetails_Statics::ClassParams = { &UFortJournalQuestDetails::StaticClass, Z_Construct_UClass_UFortJournalQuestDetails_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortJournalQuestDetails_Statics::FuncInfo, 9, Z_Construct_UClass_UFortJournalQuestDetails_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortJournalQuestDetails_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF720 (end 0x028CF74F)
+// Original VA: 0x00000001428CF720 | File offset: 0x028CED20
+// Recovery: confirmed (UHT singleton of UFortJournalQuestDetails) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortJournalQuestDetails()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortJournalQuestDetails_Statics::ClassParams);
+	}
+	return OuterClass;
+}

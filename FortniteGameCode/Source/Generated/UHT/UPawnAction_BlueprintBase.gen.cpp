@@ -105,3 +105,38 @@ UFunction* Z_Construct_UFunction_UPawnAction_BlueprintBase_ActionTick()
 	}
 	return ReturnFunction;
 }
+
+class UPawnAction_BlueprintBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPawnAction_BlueprintBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPawnAction_BlueprintBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPawnAction_BlueprintBase_ActionFinished, "ActionFinished" },
+	{ &Z_Construct_UFunction_UPawnAction_BlueprintBase_ActionPause, "ActionPause" },
+	{ &Z_Construct_UFunction_UPawnAction_BlueprintBase_ActionResume, "ActionResume" },
+	{ &Z_Construct_UFunction_UPawnAction_BlueprintBase_ActionStart, "ActionStart" },
+	{ &Z_Construct_UFunction_UPawnAction_BlueprintBase_ActionTick, "ActionTick" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPawnAction_BlueprintBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0370CE80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPawnAction_BlueprintBase_Statics::ClassParams = { &UPawnAction_BlueprintBase::StaticClass, Z_Construct_UClass_UPawnAction_BlueprintBase_Statics::DependentSingletons, 2, 0x00901081u, Z_Construct_UClass_UPawnAction_BlueprintBase_Statics::FuncInfo, 5, nullptr, 0, nullptr, &Z_Construct_UClass_UPawnAction_BlueprintBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31DA0 (end 0x01D31DCF)
+// Original VA: 0x0000000141D31DA0 | File offset: 0x01D313A0
+// Recovery: confirmed (UHT singleton of UPawnAction_BlueprintBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPawnAction_BlueprintBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPawnAction_BlueprintBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -583,3 +583,62 @@ UFunction* Z_Construct_UFunction_UAnalyticsBlueprintLibrary_StartSessionWithAttr
 	}
 	return ReturnFunction;
 }
+
+class UAnalyticsBlueprintLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAnalyticsBlueprintLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAnalyticsBlueprintLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_EndSession, "EndSession" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_FlushEvents, "FlushEvents" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_GetSessionId, "GetSessionId" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_GetUserId, "GetUserId" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_MakeEventAttribute, "MakeEventAttribute" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordCurrencyGiven, "RecordCurrencyGiven" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordCurrencyGivenWithAttributes, "RecordCurrencyGivenWithAttributes" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordCurrencyPurchase, "RecordCurrencyPurchase" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordError, "RecordError" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordErrorWithAttributes, "RecordErrorWithAttributes" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordEvent, "RecordEvent" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordEventWithAttribute, "RecordEventWithAttribute" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordEventWithAttributes, "RecordEventWithAttributes" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordItemPurchase, "RecordItemPurchase" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordProgress, "RecordProgress" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordProgressWithAttributes, "RecordProgressWithAttributes" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordProgressWithFullHierarchyAndAttributes, "RecordProgressWithFullHierarchyAndAttributes" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordSimpleCurrencyPurchase, "RecordSimpleCurrencyPurchase" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordSimpleCurrencyPurchaseWithAttributes, "RecordSimpleCurrencyPurchaseWithAttributes" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordSimpleItemPurchase, "RecordSimpleItemPurchase" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_RecordSimpleItemPurchaseWithAttributes, "RecordSimpleItemPurchaseWithAttributes" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_SetAge, "SetAge" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_SetBuildInfo, "SetBuildInfo" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_SetGender, "SetGender" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_SetLocation, "SetLocation" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_SetSessionId, "SetSessionId" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_SetUserId, "SetUserId" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_StartSession, "StartSession" },
+	{ &Z_Construct_UFunction_UAnalyticsBlueprintLibrary_StartSessionWithAttributes, "StartSessionWithAttributes" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAnalyticsBlueprintLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03B89DB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAnalyticsBlueprintLibrary_Statics::ClassParams = { &UAnalyticsBlueprintLibrary::StaticClass, Z_Construct_UClass_UAnalyticsBlueprintLibrary_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UAnalyticsBlueprintLibrary_Statics::FuncInfo, 29, nullptr, 0, nullptr, &Z_Construct_UClass_UAnalyticsBlueprintLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x026817B0 (end 0x026817DF)
+// Original VA: 0x00000001426817B0 | File offset: 0x02680DB0
+// Recovery: confirmed (UHT singleton of UAnalyticsBlueprintLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAnalyticsBlueprintLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAnalyticsBlueprintLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

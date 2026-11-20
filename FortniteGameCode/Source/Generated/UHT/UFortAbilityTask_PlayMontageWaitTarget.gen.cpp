@@ -123,3 +123,40 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_PlayMontageWaitTarget_PlayMont
 	}
 	return ReturnFunction;
 }
+
+class UFortAbilityTask_PlayMontageWaitTarget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAbilityTask_PlayMontageWaitTarget_EnableScalingWithRateOfFire, "EnableScalingWithRateOfFire" },
+	{ &Z_Construct_UFunction_UFortAbilityTask_PlayMontageWaitTarget_OnTargetDataCancelledCallback, "OnTargetDataCancelledCallback" },
+	{ &Z_Construct_UFunction_UFortAbilityTask_PlayMontageWaitTarget_OnTargetDataReadyCallback, "OnTargetDataReadyCallback" },
+	{ &Z_Construct_UFunction_UFortAbilityTask_PlayMontageWaitTarget_PlayMontageInfoAndWaitForTrigger, "PlayMontageInfoAndWaitForTrigger" },
+	{ &Z_Construct_UFunction_UFortAbilityTask_PlayMontageWaitTarget_PlayMontageWaitTarget, "PlayMontageWaitTarget" },
+	{ &Z_Construct_UFunction_UFortAbilityTask_PlayMontageWaitTarget_PlayMontageWithCharPartsWait, "PlayMontageWithCharPartsWait" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03296190
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget_Statics::ClassParams = { &UFortAbilityTask_PlayMontageWaitTarget::StaticClass, Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget_Statics::DependentSingletons, 2, 0x00880284u, Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget_Statics::FuncInfo, 6, Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget_Statics::PropPointers, 4, "Game", &Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81EA0 (end 0x00F81ECF)
+// Original VA: 0x0000000140F81EA0 | File offset: 0x00F814A0
+// Recovery: confirmed (UHT singleton of UFortAbilityTask_PlayMontageWaitTarget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

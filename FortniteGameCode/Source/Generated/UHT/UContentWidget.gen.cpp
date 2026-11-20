@@ -65,3 +65,36 @@ UFunction* Z_Construct_UFunction_UContentWidget_SetContent()
 	}
 	return ReturnFunction;
 }
+
+class UContentWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UContentWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UContentWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UContentWidget_GetContent, "GetContent" },
+	{ &Z_Construct_UFunction_UContentWidget_GetContentSlot, "GetContentSlot" },
+	{ &Z_Construct_UFunction_UContentWidget_SetContent, "SetContent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UContentWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036923D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UContentWidget_Statics::ClassParams = { &UContentWidget::StaticClass, Z_Construct_UClass_UContentWidget_Statics::DependentSingletons, 2, 0x00B00081u, Z_Construct_UClass_UContentWidget_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UContentWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6230 (end 0x01BE625F)
+// Original VA: 0x0000000141BE6230 | File offset: 0x01BE5830
+// Recovery: confirmed (UHT singleton of UContentWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UContentWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UContentWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -223,3 +223,45 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerDeployableBase_ServerMoveI
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerControllerDeployableBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerControllerDeployableBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerControllerDeployableBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerControllerDeployableBase_ClientOnHordeTierComplete, "ClientOnHordeTierComplete" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerDeployableBase_ClientOnHordeTierInitialized, "ClientOnHordeTierInitialized" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerDeployableBase_ClientOnHordeWaveComplete, "ClientOnHordeWaveComplete" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerDeployableBase_MoveAllItemsFromDeployableBase, "MoveAllItemsFromDeployableBase" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerDeployableBase_MoveAllItemsToDeployableBase, "MoveAllItemsToDeployableBase" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerDeployableBase_MoveItemFromDeployableBase, "MoveItemFromDeployableBase" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerDeployableBase_MoveItemToDeployableBase, "MoveItemToDeployableBase" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerDeployableBase_ServerMoveAllItemsFromDeployableBase, "ServerMoveAllItemsFromDeployableBase" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerDeployableBase_ServerMoveAllItemsToDeployableBase, "ServerMoveAllItemsToDeployableBase" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerDeployableBase_ServerMoveItemFromDeployableBase, "ServerMoveItemFromDeployableBase" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerDeployableBase_ServerMoveItemToDeployableBase, "ServerMoveItemToDeployableBase" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerControllerDeployableBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033C2C60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerControllerDeployableBase_Statics::ClassParams = { &AFortPlayerControllerDeployableBase::StaticClass, Z_Construct_UClass_AFortPlayerControllerDeployableBase_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortPlayerControllerDeployableBase_Statics::FuncInfo, 11, Z_Construct_UClass_AFortPlayerControllerDeployableBase_Statics::PropPointers, 2, "Game", &Z_Construct_UClass_AFortPlayerControllerDeployableBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01077670 (end 0x0107769F)
+// Original VA: 0x0000000141077670 | File offset: 0x01076C70
+// Recovery: confirmed (UHT singleton of AFortPlayerControllerDeployableBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerControllerDeployableBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerControllerDeployableBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

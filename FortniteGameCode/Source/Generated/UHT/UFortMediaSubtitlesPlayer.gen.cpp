@@ -83,3 +83,38 @@ UFunction* Z_Construct_UFunction_UFortMediaSubtitlesPlayer_Stop()
 	}
 	return ReturnFunction;
 }
+
+class UFortMediaSubtitlesPlayer
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMediaSubtitlesPlayer_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMediaSubtitlesPlayer_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMediaSubtitlesPlayer_BindToMediaPlayer, "BindToMediaPlayer" },
+	{ &Z_Construct_UFunction_UFortMediaSubtitlesPlayer_Play, "Play" },
+	{ &Z_Construct_UFunction_UFortMediaSubtitlesPlayer_SetSubtitles, "SetSubtitles" },
+	{ &Z_Construct_UFunction_UFortMediaSubtitlesPlayer_Stop, "Stop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMediaSubtitlesPlayer_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02FBB600
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMediaSubtitlesPlayer_Statics::ClassParams = { &UFortMediaSubtitlesPlayer::StaticClass, Z_Construct_UClass_UFortMediaSubtitlesPlayer_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortMediaSubtitlesPlayer_Statics::FuncInfo, 4, Z_Construct_UClass_UFortMediaSubtitlesPlayer_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortMediaSubtitlesPlayer_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00781710 (end 0x0078173F)
+// Original VA: 0x0000000140781710 | File offset: 0x00780D10
+// Recovery: confirmed (UHT singleton of UFortMediaSubtitlesPlayer) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMediaSubtitlesPlayer()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMediaSubtitlesPlayer_Statics::ClassParams);
+	}
+	return OuterClass;
+}

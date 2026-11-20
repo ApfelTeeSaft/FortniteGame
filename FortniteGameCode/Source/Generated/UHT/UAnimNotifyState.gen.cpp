@@ -85,3 +85,37 @@ UFunction* Z_Construct_UFunction_UAnimNotifyState_Received_NotifyTick()
 	}
 	return ReturnFunction;
 }
+
+class UAnimNotifyState
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAnimNotifyState_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAnimNotifyState_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAnimNotifyState_GetNotifyName, "GetNotifyName" },
+	{ &Z_Construct_UFunction_UAnimNotifyState_Received_NotifyBegin, "Received_NotifyBegin" },
+	{ &Z_Construct_UFunction_UAnimNotifyState_Received_NotifyEnd, "Received_NotifyEnd" },
+	{ &Z_Construct_UFunction_UAnimNotifyState_Received_NotifyTick, "Received_NotifyTick" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAnimNotifyState_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038A1C40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAnimNotifyState_Statics::ClassParams = { &UAnimNotifyState::StaticClass, Z_Construct_UClass_UAnimNotifyState_Statics::DependentSingletons, 2, 0x00113081u, Z_Construct_UClass_UAnimNotifyState_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_UAnimNotifyState_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D63F0 (end 0x023D641F)
+// Original VA: 0x00000001423D63F0 | File offset: 0x023D59F0
+// Recovery: confirmed (UHT singleton of UAnimNotifyState) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAnimNotifyState()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAnimNotifyState_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -205,3 +205,44 @@ UFunction* Z_Construct_UFunction_ALandscapeProxy_SetLandscapeMaterialVectorParam
 	}
 	return ReturnFunction;
 }
+
+class ALandscapeProxy
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ALandscapeProxy_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ALandscapeProxy_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ALandscapeProxy_ChangeComponentScreenSizeToUseSubSections, "ChangeComponentScreenSizeToUseSubSections" },
+	{ &Z_Construct_UFunction_ALandscapeProxy_ChangeLODDistanceFactor, "ChangeLODDistanceFactor" },
+	{ &Z_Construct_UFunction_ALandscapeProxy_ChangeTessellationComponentScreenSize, "ChangeTessellationComponentScreenSize" },
+	{ &Z_Construct_UFunction_ALandscapeProxy_ChangeTessellationComponentScreenSizeFalloff, "ChangeTessellationComponentScreenSizeFalloff" },
+	{ &Z_Construct_UFunction_ALandscapeProxy_ChangeUseTessellationComponentScreenSizeFalloff, "ChangeUseTessellationComponentScreenSizeFalloff" },
+	{ &Z_Construct_UFunction_ALandscapeProxy_EditorApplySpline, "EditorApplySpline" },
+	{ &Z_Construct_UFunction_ALandscapeProxy_EditorSetLandscapeMaterial, "EditorSetLandscapeMaterial" },
+	{ &Z_Construct_UFunction_ALandscapeProxy_SetLandscapeMaterialScalarParameterValue, "SetLandscapeMaterialScalarParameterValue" },
+	{ &Z_Construct_UFunction_ALandscapeProxy_SetLandscapeMaterialTextureParameterValue, "SetLandscapeMaterialTextureParameterValue" },
+	{ &Z_Construct_UFunction_ALandscapeProxy_SetLandscapeMaterialVectorParameterValue, "SetLandscapeMaterialVectorParameterValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ALandscapeProxy_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03629590
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ALandscapeProxy_Statics::ClassParams = { &ALandscapeProxy::StaticClass, Z_Construct_UClass_ALandscapeProxy_Statics::DependentSingletons, 2, 0x00880081u, Z_Construct_UClass_ALandscapeProxy_Statics::FuncInfo, 10, Z_Construct_UClass_ALandscapeProxy_Statics::PropPointers, 52, nullptr, &Z_Construct_UClass_ALandscapeProxy_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A75AC0 (end 0x01A75AEF)
+// Original VA: 0x0000000141A75AC0 | File offset: 0x01A750C0
+// Recovery: confirmed (UHT singleton of ALandscapeProxy) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ALandscapeProxy()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ALandscapeProxy_Statics::ClassParams);
+	}
+	return OuterClass;
+}

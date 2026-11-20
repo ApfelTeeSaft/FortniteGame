@@ -204,3 +204,44 @@ UFunction* Z_Construct_UFunction_AFortDeployableBaseManager_SetKeepDeployableBas
 	}
 	return ReturnFunction;
 }
+
+class AFortDeployableBaseManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortDeployableBaseManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortDeployableBaseManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortDeployableBaseManager_BroadcastHordeWaveStinger, "BroadcastHordeWaveStinger" },
+	{ &Z_Construct_UFunction_AFortDeployableBaseManager_GetAllDeployableBasePlots, "GetAllDeployableBasePlots" },
+	{ &Z_Construct_UFunction_AFortDeployableBaseManager_GetAvailableTiers, "GetAvailableTiers" },
+	{ &Z_Construct_UFunction_AFortDeployableBaseManager_GetCurrent, "GetCurrent" },
+	{ &Z_Construct_UFunction_AFortDeployableBaseManager_GetDeployableBasePlotFromLocation, "GetDeployableBasePlotFromLocation" },
+	{ &Z_Construct_UFunction_AFortDeployableBaseManager_GetDeployableBaseUseType, "GetDeployableBaseUseType" },
+	{ &Z_Construct_UFunction_AFortDeployableBaseManager_GetHighestDefeatedTierForPlayerAndLayout, "GetHighestDefeatedTierForPlayerAndLayout" },
+	{ &Z_Construct_UFunction_AFortDeployableBaseManager_GetTierOutputForSelectedTier, "GetTierOutputForSelectedTier" },
+	{ &Z_Construct_UFunction_AFortDeployableBaseManager_ReloadAllPlots, "ReloadAllPlots" },
+	{ &Z_Construct_UFunction_AFortDeployableBaseManager_SetKeepDeployableBasesOnLogout, "SetKeepDeployableBasesOnLogout" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortDeployableBaseManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03300F00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortDeployableBaseManager_Statics::ClassParams = { &AFortDeployableBaseManager::StaticClass, Z_Construct_UClass_AFortDeployableBaseManager_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortDeployableBaseManager_Statics::FuncInfo, 10, Z_Construct_UClass_AFortDeployableBaseManager_Statics::PropPointers, 29, "Game", &Z_Construct_UClass_AFortDeployableBaseManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD0020 (end 0x00FD004F)
+// Original VA: 0x0000000140FD0020 | File offset: 0x00FCF620
+// Recovery: confirmed (UHT singleton of AFortDeployableBaseManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortDeployableBaseManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortDeployableBaseManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

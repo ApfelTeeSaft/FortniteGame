@@ -105,3 +105,38 @@ UFunction* Z_Construct_UFunction_UKismetMaterialLibrary_SetVectorParameterValue(
 	}
 	return ReturnFunction;
 }
+
+class UKismetMaterialLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UKismetMaterialLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UKismetMaterialLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UKismetMaterialLibrary_CreateDynamicMaterialInstance, "CreateDynamicMaterialInstance" },
+	{ &Z_Construct_UFunction_UKismetMaterialLibrary_GetScalarParameterValue, "GetScalarParameterValue" },
+	{ &Z_Construct_UFunction_UKismetMaterialLibrary_GetVectorParameterValue, "GetVectorParameterValue" },
+	{ &Z_Construct_UFunction_UKismetMaterialLibrary_SetScalarParameterValue, "SetScalarParameterValue" },
+	{ &Z_Construct_UFunction_UKismetMaterialLibrary_SetVectorParameterValue, "SetVectorParameterValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UKismetMaterialLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039156A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UKismetMaterialLibrary_Statics::ClassParams = { &UKismetMaterialLibrary::StaticClass, Z_Construct_UClass_UKismetMaterialLibrary_Statics::DependentSingletons, 2, 0x00080080u, Z_Construct_UClass_UKismetMaterialLibrary_Statics::FuncInfo, 5, nullptr, 0, nullptr, &Z_Construct_UClass_UKismetMaterialLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02431A90 (end 0x02431ABF)
+// Original VA: 0x0000000142431A90 | File offset: 0x02431090
+// Recovery: confirmed (UHT singleton of UKismetMaterialLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UKismetMaterialLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UKismetMaterialLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

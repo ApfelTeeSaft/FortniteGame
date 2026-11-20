@@ -322,3 +322,50 @@ UFunction* Z_Construct_UFunction_UFortItemGroupSlotPicker_SignalSelectionCommitt
 	}
 	return ReturnFunction;
 }
+
+class UFortItemGroupSlotPicker
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemGroupSlotPicker_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemGroupSlotPicker_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_BeginUpgradePreview, "BeginUpgradePreview" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_CreateSlottedItemDetailsWidget, "CreateSlottedItemDetailsWidget" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_DetectCandidateSynergiesAndMatches, "DetectCandidateSynergiesAndMatches" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_EndUpgradePreview, "EndUpgradePreview" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_GetCandidateFitnessValueForSlot, "GetCandidateFitnessValueForSlot" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_GetCandidateItemSlottingRestrictions, "GetCandidateItemSlottingRestrictions" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_GetCompatibleCandidateItems, "GetCompatibleCandidateItems" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_GetCurrentlySlottedItem, "GetCurrentlySlottedItem" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_GetItemSlottingRestrictionReasonText, "GetItemSlottingRestrictionReasonText" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_GetSlotIndexInGroup, "GetSlotIndexInGroup" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_GetSquadId, "GetSquadId" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_HandleItemSet, "HandleItemSet" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_HandleItemSetInternal, "HandleItemSetInternal" },
+	{ &Z_Construct_UDelegateFunction_UFortItemGroupSlotPicker_OnItemPickerSelectionChanged__DelegateSignature, "OnItemPickerSelectionChanged__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_SetSelection, "SetSelection" },
+	{ &Z_Construct_UFunction_UFortItemGroupSlotPicker_SignalSelectionCommitted, "SignalSelectionCommitted" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemGroupSlotPicker_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D55D80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemGroupSlotPicker_Statics::ClassParams = { &UFortItemGroupSlotPicker::StaticClass, Z_Construct_UClass_UFortItemGroupSlotPicker_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortItemGroupSlotPicker_Statics::FuncInfo, 16, Z_Construct_UClass_UFortItemGroupSlotPicker_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortItemGroupSlotPicker_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029189C0 (end 0x029189EF)
+// Original VA: 0x00000001429189C0 | File offset: 0x02917FC0
+// Recovery: confirmed (UHT singleton of UFortItemGroupSlotPicker) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemGroupSlotPicker()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemGroupSlotPicker_Statics::ClassParams);
+	}
+	return OuterClass;
+}

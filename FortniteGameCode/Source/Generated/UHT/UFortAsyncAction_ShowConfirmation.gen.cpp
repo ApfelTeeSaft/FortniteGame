@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_ShowConfirmat
 	}
 	return ReturnFunction;
 }
+
+class UFortAsyncAction_ShowConfirmation
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_ShowConfirmationDialog, "ShowConfirmationDialog" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C6A310
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_Statics::ClassParams = { &UFortAsyncAction_ShowConfirmation::StaticClass, Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CA40 (end 0x0288CA6F)
+// Original VA: 0x000000014288CA40 | File offset: 0x0288C040
+// Recovery: confirmed (UHT singleton of UFortAsyncAction_ShowConfirmation) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAsyncAction_ShowConfirmation()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_Statics::ClassParams);
+	}
+	return OuterClass;
+}

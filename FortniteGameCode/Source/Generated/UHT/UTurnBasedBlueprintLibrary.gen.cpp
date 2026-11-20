@@ -85,3 +85,37 @@ UFunction* Z_Construct_UFunction_UTurnBasedBlueprintLibrary_RegisterTurnBasedMat
 	}
 	return ReturnFunction;
 }
+
+class UTurnBasedBlueprintLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UTurnBasedBlueprintLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UTurnBasedBlueprintLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetIsMyTurn, "GetIsMyTurn" },
+	{ &Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetMyPlayerIndex, "GetMyPlayerIndex" },
+	{ &Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetPlayerDisplayName, "GetPlayerDisplayName" },
+	{ &Z_Construct_UFunction_UTurnBasedBlueprintLibrary_RegisterTurnBasedMatchInterfaceObject, "RegisterTurnBasedMatchInterfaceObject" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UTurnBasedBlueprintLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02EAF420
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UTurnBasedBlueprintLibrary_Statics::ClassParams = { &UTurnBasedBlueprintLibrary::StaticClass, Z_Construct_UClass_UTurnBasedBlueprintLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UTurnBasedBlueprintLibrary_Statics::FuncInfo, 4, nullptr, 0, nullptr, &Z_Construct_UClass_UTurnBasedBlueprintLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032EDF0 (end 0x0032EE1F)
+// Original VA: 0x000000014032EDF0 | File offset: 0x0032E3F0
+// Recovery: confirmed (UHT singleton of UTurnBasedBlueprintLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UTurnBasedBlueprintLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UTurnBasedBlueprintLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

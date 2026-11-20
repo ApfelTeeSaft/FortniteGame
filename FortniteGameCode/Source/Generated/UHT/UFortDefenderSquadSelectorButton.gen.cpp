@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetTheaterU
 	}
 	return ReturnFunction;
 }
+
+class UFortDefenderSquadSelectorButton
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortDefenderSquadSelectorButton_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortDefenderSquadSelectorButton_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetPowerLevel, "TryGetPowerLevel" },
+	{ &Z_Construct_UFunction_UFortDefenderSquadSelectorButton_TryGetTheaterUniqueId, "TryGetTheaterUniqueId" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortDefenderSquadSelectorButton_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C84750
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortDefenderSquadSelectorButton_Statics::ClassParams = { &UFortDefenderSquadSelectorButton::StaticClass, Z_Construct_UClass_UFortDefenderSquadSelectorButton_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortDefenderSquadSelectorButton_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortDefenderSquadSelectorButton_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B5E0 (end 0x0289B60F)
+// Original VA: 0x000000014289B5E0 | File offset: 0x0289ABE0
+// Recovery: confirmed (UHT singleton of UFortDefenderSquadSelectorButton) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortDefenderSquadSelectorButton()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortDefenderSquadSelectorButton_Statics::ClassParams);
+	}
+	return OuterClass;
+}

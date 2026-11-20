@@ -223,3 +223,46 @@ UFunction* Z_Construct_UFunction_UFortUIStateWidget_NUI_SetFrontEndVisibility()
 	}
 	return ReturnFunction;
 }
+
+class UFortUIStateWidget_NUI
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortUIStateWidget_NUI_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUIStateWidget_NUI_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUIStateWidget_NUI_OnEnterState, "OnEnterState" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_NUI_OnExitState, "OnExitState" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_NUI_OnFrontEndVisibilityUpdated, "OnFrontEndVisibilityUpdated" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_NUI_PopAllContentWidgets, "PopAllContentWidgets" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_NUI_PopContentWidget, "PopContentWidget" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_NUI_PopContentWidgetInternal, "PopContentWidgetInternal" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_NUI_PushContentWidget, "PushContentWidget" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_NUI_PushContentWidgetAdvanced, "PushContentWidgetAdvanced" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_NUI_PushContentWidgetInternal, "PushContentWidgetInternal" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_NUI_RequestOpenSocialMenu, "RequestOpenSocialMenu" },
+	{ &Z_Construct_UFunction_UFortUIStateWidget_NUI_SetFrontEndVisibility, "SetFrontEndVisibility" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUIStateWidget_NUI_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D4AE20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUIStateWidget_NUI_Statics::ClassParams = { &UFortUIStateWidget_NUI::StaticClass, Z_Construct_UClass_UFortUIStateWidget_NUI_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortUIStateWidget_NUI_Statics::FuncInfo, 11, Z_Construct_UClass_UFortUIStateWidget_NUI_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortUIStateWidget_NUI_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortUIStateWidget_NUI_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02912000 (end 0x0291202F)
+// Original VA: 0x0000000142912000 | File offset: 0x02911600
+// Recovery: confirmed (UHT singleton of UFortUIStateWidget_NUI) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUIStateWidget_NUI()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUIStateWidget_NUI_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -123,3 +123,40 @@ UFunction* Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarWidgetVisib
 	}
 	return ReturnFunction;
 }
+
+class UFortHealthBarComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHealthBarComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHealthBarComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHealthBarComponent_GetHealthBarDisplayText, "GetHealthBarDisplayText" },
+	{ &Z_Construct_UFunction_UFortHealthBarComponent_OnRep_DisplayText, "OnRep_DisplayText" },
+	{ &Z_Construct_UFunction_UFortHealthBarComponent_OnRep_IsVisible, "OnRep_IsVisible" },
+	{ &Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarDisplayText, "SetHealthBarDisplayText" },
+	{ &Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarVisibility, "SetHealthBarVisibility" },
+	{ &Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarWidgetVisibility, "SetHealthBarWidgetVisibility" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHealthBarComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0333D4B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHealthBarComponent_Statics::ClassParams = { &UFortHealthBarComponent::StaticClass, Z_Construct_UClass_UFortHealthBarComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UFortHealthBarComponent_Statics::FuncInfo, 6, Z_Construct_UClass_UFortHealthBarComponent_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortHealthBarComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFAEC0 (end 0x00FFAEEF)
+// Original VA: 0x0000000140FFAEC0 | File offset: 0x00FFA4C0
+// Recovery: confirmed (UHT singleton of UFortHealthBarComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHealthBarComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHealthBarComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

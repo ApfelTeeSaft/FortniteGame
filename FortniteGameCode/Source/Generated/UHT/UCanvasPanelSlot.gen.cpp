@@ -365,3 +365,52 @@ UFunction* Z_Construct_UFunction_UCanvasPanelSlot_SetZOrder()
 	}
 	return ReturnFunction;
 }
+
+class UCanvasPanelSlot
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCanvasPanelSlot_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCanvasPanelSlot_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_GetAlignment, "GetAlignment" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_GetAnchors, "GetAnchors" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_GetAutoSize, "GetAutoSize" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_GetLayout, "GetLayout" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_GetOffsets, "GetOffsets" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_GetPosition, "GetPosition" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_GetSize, "GetSize" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_GetZOrder, "GetZOrder" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_SetAlignment, "SetAlignment" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_SetAnchors, "SetAnchors" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_SetAutoSize, "SetAutoSize" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_SetLayout, "SetLayout" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_SetMaximum, "SetMaximum" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_SetMinimum, "SetMinimum" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_SetOffsets, "SetOffsets" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_SetPosition, "SetPosition" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_SetSize, "SetSize" },
+	{ &Z_Construct_UFunction_UCanvasPanelSlot_SetZOrder, "SetZOrder" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCanvasPanelSlot_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03691B30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCanvasPanelSlot_Statics::ClassParams = { &UCanvasPanelSlot::StaticClass, Z_Construct_UClass_UCanvasPanelSlot_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UCanvasPanelSlot_Statics::FuncInfo, 18, Z_Construct_UClass_UCanvasPanelSlot_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UCanvasPanelSlot_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE60E0 (end 0x01BE610F)
+// Original VA: 0x0000000141BE60E0 | File offset: 0x01BE56E0
+// Recovery: confirmed (UHT singleton of UCanvasPanelSlot) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCanvasPanelSlot()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCanvasPanelSlot_Statics::ClassParams);
+	}
+	return OuterClass;
+}

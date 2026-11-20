@@ -185,3 +185,43 @@ UFunction* Z_Construct_UFunction_UFortMcpProfileQuest_UpdateQuests()
 	}
 	return ReturnFunction;
 }
+
+class UFortMcpProfileQuest
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMcpProfileQuest_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMcpProfileQuest_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMcpProfileQuest_ClaimQuestReward, "ClaimQuestReward" },
+	{ &Z_Construct_UFunction_UFortMcpProfileQuest_ClientQuestLogin, "ClientQuestLogin" },
+	{ &Z_Construct_UFunction_UFortMcpProfileQuest_FortRerollDailyQuest, "FortRerollDailyQuest" },
+	{ &Z_Construct_UFunction_UFortMcpProfileQuest_MarkItemSeen, "MarkItemSeen" },
+	{ &Z_Construct_UFunction_UFortMcpProfileQuest_MarkNewQuestNotificationSent, "MarkNewQuestNotificationSent" },
+	{ &Z_Construct_UFunction_UFortMcpProfileQuest_ServerQuestLogin, "ServerQuestLogin" },
+	{ &Z_Construct_UFunction_UFortMcpProfileQuest_SetPinnedQuests, "SetPinnedQuests" },
+	{ &Z_Construct_UFunction_UFortMcpProfileQuest_UpdateQuestClientObjectives, "UpdateQuestClientObjectives" },
+	{ &Z_Construct_UFunction_UFortMcpProfileQuest_UpdateQuests, "UpdateQuests" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMcpProfileQuest_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03378310
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMcpProfileQuest_Statics::ClassParams = { &UFortMcpProfileQuest::StaticClass, Z_Construct_UClass_UFortMcpProfileQuest_Statics::DependentSingletons, 2, 0x00100084u, Z_Construct_UClass_UFortMcpProfileQuest_Statics::FuncInfo, 9, Z_Construct_UClass_UFortMcpProfileQuest_Statics::PropPointers, 1, "Engine", &Z_Construct_UClass_UFortMcpProfileQuest_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01038560 (end 0x0103858F)
+// Original VA: 0x0000000141038560 | File offset: 0x01037B60
+// Recovery: confirmed (UHT singleton of UFortMcpProfileQuest) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMcpProfileQuest()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMcpProfileQuest_Statics::ClassParams);
+	}
+	return OuterClass;
+}

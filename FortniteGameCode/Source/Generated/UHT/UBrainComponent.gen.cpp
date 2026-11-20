@@ -84,3 +84,39 @@ UFunction* Z_Construct_UFunction_UBrainComponent_StopLogic()
 	}
 	return ReturnFunction;
 }
+
+class UBrainComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBrainComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBrainComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBrainComponent_IsPaused, "IsPaused" },
+	{ &Z_Construct_UFunction_UBrainComponent_IsRunning, "IsRunning" },
+	{ &Z_Construct_UFunction_UBrainComponent_RestartLogic, "RestartLogic" },
+	{ &Z_Construct_UFunction_UBrainComponent_StopLogic, "StopLogic" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBrainComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036FABE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBrainComponent_Statics::ClassParams = { &UBrainComponent::StaticClass, Z_Construct_UClass_UBrainComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UBrainComponent_Statics::FuncInfo, 4, Z_Construct_UClass_UBrainComponent_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UBrainComponent_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UBrainComponent_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D23480 (end 0x01D234AF)
+// Original VA: 0x0000000141D23480 | File offset: 0x01D22A80
+// Recovery: confirmed (UHT singleton of UBrainComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBrainComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBrainComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

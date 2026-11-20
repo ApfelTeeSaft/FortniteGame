@@ -24,3 +24,35 @@ UFunction* Z_Construct_UFunction_AFortWeap_WannaGun_OnRep_LastHitActorClass()
 	}
 	return ReturnFunction;
 }
+
+class AFortWeap_WannaGun
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortWeap_WannaGun_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortWeap_WannaGun_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortWeap_WannaGun_OnRep_LastHitActorClass, "OnRep_LastHitActorClass" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortWeap_WannaGun_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0342A5B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortWeap_WannaGun_Statics::ClassParams = { &AFortWeap_WannaGun::StaticClass, Z_Construct_UClass_AFortWeap_WannaGun_Statics::DependentSingletons, 2, 0x00800084u, Z_Construct_UClass_AFortWeap_WannaGun_Statics::FuncInfo, 1, Z_Construct_UClass_AFortWeap_WannaGun_Statics::PropPointers, 4, "Game", &Z_Construct_UClass_AFortWeap_WannaGun_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4950 (end 0x010D497F)
+// Original VA: 0x00000001410D4950 | File offset: 0x010D3F50
+// Recovery: confirmed (UHT singleton of AFortWeap_WannaGun) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortWeap_WannaGun()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortWeap_WannaGun_Statics::ClassParams);
+	}
+	return OuterClass;
+}

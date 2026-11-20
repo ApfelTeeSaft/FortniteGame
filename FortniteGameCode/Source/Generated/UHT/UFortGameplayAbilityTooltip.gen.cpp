@@ -205,3 +205,44 @@ UFunction* Z_Construct_UFunction_UFortGameplayAbilityTooltip_InitializeAbilityIn
 	}
 	return ReturnFunction;
 }
+
+class UFortGameplayAbilityTooltip
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortGameplayAbilityTooltip_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortGameplayAbilityTooltip_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortGameplayAbilityTooltip_GetApplicationTag, "GetApplicationTag" },
+	{ &Z_Construct_UFunction_UFortGameplayAbilityTooltip_GetNumericValue, "GetNumericValue" },
+	{ &Z_Construct_UFunction_UFortGameplayAbilityTooltip_GetTextForToken, "GetTextForToken" },
+	{ &Z_Construct_UFunction_UFortGameplayAbilityTooltip_GetTextForTokenFromAbilityInstance, "GetTextForTokenFromAbilityInstance" },
+	{ &Z_Construct_UFunction_UFortGameplayAbilityTooltip_GetTextForTokenFromAbilityInstanceInternal, "GetTextForTokenFromAbilityInstanceInternal" },
+	{ &Z_Construct_UFunction_UFortGameplayAbilityTooltip_GetTextForTokenFromAbilitySpec, "GetTextForTokenFromAbilitySpec" },
+	{ &Z_Construct_UFunction_UFortGameplayAbilityTooltip_GetTextForTokenFromAbilitySpecInternal, "GetTextForTokenFromAbilitySpecInternal" },
+	{ &Z_Construct_UFunction_UFortGameplayAbilityTooltip_GetTokenizedDescriptionText, "GetTokenizedDescriptionText" },
+	{ &Z_Construct_UFunction_UFortGameplayAbilityTooltip_InitializeAbilityInstance, "InitializeAbilityInstance" },
+	{ &Z_Construct_UFunction_UFortGameplayAbilityTooltip_InitializeAbilityInstanceInternal, "InitializeAbilityInstanceInternal" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortGameplayAbilityTooltip_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03326520
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortGameplayAbilityTooltip_Statics::ClassParams = { &UFortGameplayAbilityTooltip::StaticClass, Z_Construct_UClass_UFortGameplayAbilityTooltip_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortGameplayAbilityTooltip_Statics::FuncInfo, 10, Z_Construct_UClass_UFortGameplayAbilityTooltip_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortGameplayAbilityTooltip_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7B20 (end 0x00FE7B4F)
+// Original VA: 0x0000000140FE7B20 | File offset: 0x00FE7120
+// Recovery: confirmed (UHT singleton of UFortGameplayAbilityTooltip) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortGameplayAbilityTooltip()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortGameplayAbilityTooltip_Statics::ClassParams);
+	}
+	return OuterClass;
+}

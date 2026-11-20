@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UFortAthenaTabsScreenBase_HandleFeatureStateCha
 	}
 	return ReturnFunction;
 }
+
+class UFortAthenaTabsScreenBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAthenaTabsScreenBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAthenaTabsScreenBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAthenaTabsScreenBase_CanShowPrototypeTab, "CanShowPrototypeTab" },
+	{ &Z_Construct_UFunction_UFortAthenaTabsScreenBase_CanShowSeasonShopTab, "CanShowSeasonShopTab" },
+	{ &Z_Construct_UFunction_UFortAthenaTabsScreenBase_HandleFeatureNavigateRequest, "HandleFeatureNavigateRequest" },
+	{ &Z_Construct_UFunction_UFortAthenaTabsScreenBase_HandleFeatureStateChanged, "HandleFeatureStateChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAthenaTabsScreenBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C6AB10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAthenaTabsScreenBase_Statics::ClassParams = { &UFortAthenaTabsScreenBase::StaticClass, Z_Construct_UClass_UFortAthenaTabsScreenBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortAthenaTabsScreenBase_Statics::FuncInfo, 4, Z_Construct_UClass_UFortAthenaTabsScreenBase_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortAthenaTabsScreenBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CB30 (end 0x0288CB5F)
+// Original VA: 0x000000014288CB30 | File offset: 0x0288C130
+// Recovery: confirmed (UHT singleton of UFortAthenaTabsScreenBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAthenaTabsScreenBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAthenaTabsScreenBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

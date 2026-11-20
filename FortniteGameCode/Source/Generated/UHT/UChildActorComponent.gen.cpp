@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UChildActorComponent_SetChildActorClass()
 	}
 	return ReturnFunction;
 }
+
+class UChildActorComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UChildActorComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UChildActorComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UChildActorComponent_SetChildActorClass, "SetChildActorClass" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UChildActorComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038C6DD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UChildActorComponent_Statics::ClassParams = { &UChildActorComponent::StaticClass, Z_Construct_UClass_UChildActorComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UChildActorComponent_Statics::FuncInfo, 1, Z_Construct_UClass_UChildActorComponent_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UChildActorComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7830 (end 0x023F785F)
+// Original VA: 0x00000001423F7830 | File offset: 0x023F6E30
+// Recovery: confirmed (UHT singleton of UChildActorComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UChildActorComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UChildActorComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

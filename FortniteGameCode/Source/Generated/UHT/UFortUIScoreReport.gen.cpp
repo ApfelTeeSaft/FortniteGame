@@ -305,3 +305,49 @@ UFunction* Z_Construct_UFunction_UFortUIScoreReport_IsLocalPlayer()
 	}
 	return ReturnFunction;
 }
+
+class UFortUIScoreReport
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortUIScoreReport_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUIScoreReport_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetBadgeScore, "GetBadgeScore" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetCurrentPlayerPawn, "GetCurrentPlayerPawn" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetDifficultBonusMultiplier, "GetDifficultBonusMultiplier" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetDifficultBonusScore, "GetDifficultBonusScore" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetLevelProgress, "GetLevelProgress" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetPlayerCount, "GetPlayerCount" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetPlayerIDFromScoreReportIndex, "GetPlayerIDFromScoreReportIndex" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetPlayerName, "GetPlayerName" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetPlayerScore, "GetPlayerScore" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetScoreReportIndex, "GetScoreReportIndex" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetScoreReportIndicesByPlayerID, "GetScoreReportIndicesByPlayerID" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetTeamScore, "GetTeamScore" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetXpInfo, "GetXpInfo" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_GetXpToCompleteLevel, "GetXpToCompleteLevel" },
+	{ &Z_Construct_UFunction_UFortUIScoreReport_IsLocalPlayer, "IsLocalPlayer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUIScoreReport_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D4A250
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUIScoreReport_Statics::ClassParams = { &UFortUIScoreReport::StaticClass, Z_Construct_UClass_UFortUIScoreReport_Statics::DependentSingletons, 2, 0x00000280u, Z_Construct_UClass_UFortUIScoreReport_Statics::FuncInfo, 15, Z_Construct_UClass_UFortUIScoreReport_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortUIScoreReport_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911E00 (end 0x02911E2F)
+// Original VA: 0x0000000142911E00 | File offset: 0x02911400
+// Recovery: confirmed (UHT singleton of UFortUIScoreReport) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUIScoreReport()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUIScoreReport_Statics::ClassParams);
+	}
+	return OuterClass;
+}

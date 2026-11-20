@@ -222,3 +222,46 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetPreviewData()
 	}
 	return ReturnFunction;
 }
+
+class UFortItemQuantityListEntryBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemQuantityListEntryBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemQuantityListEntryBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemQuantityListEntryBase_ClearPreviewData, "ClearPreviewData" },
+	{ &Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemDefinition, "GetItemDefinition" },
+	{ &Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetItemInstance, "GetItemInstance" },
+	{ &Z_Construct_UFunction_UFortItemQuantityListEntryBase_GetPreviewData, "GetPreviewData" },
+	{ &Z_Construct_UFunction_UFortItemQuantityListEntryBase_HandleDifferentItemOrQuantitySetBP, "HandleDifferentItemOrQuantitySetBP" },
+	{ &Z_Construct_UFunction_UFortItemQuantityListEntryBase_IsBeingPreviewed, "IsBeingPreviewed" },
+	{ &Z_Construct_UFunction_UFortItemQuantityListEntryBase_PreviewEnded, "PreviewEnded" },
+	{ &Z_Construct_UFunction_UFortItemQuantityListEntryBase_PreviewStarted, "PreviewStarted" },
+	{ &Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemDefinitionAndQuantity, "SetItemDefinitionAndQuantity" },
+	{ &Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetItemInstanceAndQuantity, "SetItemInstanceAndQuantity" },
+	{ &Z_Construct_UFunction_UFortItemQuantityListEntryBase_SetPreviewData, "SetPreviewData" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemQuantityListEntryBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CD8B20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemQuantityListEntryBase_Statics::ClassParams = { &UFortItemQuantityListEntryBase::StaticClass, Z_Construct_UClass_UFortItemQuantityListEntryBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortItemQuantityListEntryBase_Statics::FuncInfo, 11, Z_Construct_UClass_UFortItemQuantityListEntryBase_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortItemQuantityListEntryBase_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortItemQuantityListEntryBase_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF560 (end 0x028CF58F)
+// Original VA: 0x00000001428CF560 | File offset: 0x028CEB60
+// Recovery: confirmed (UHT singleton of UFortItemQuantityListEntryBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemQuantityListEntryBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemQuantityListEntryBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

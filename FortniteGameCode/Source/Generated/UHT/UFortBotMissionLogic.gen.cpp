@@ -259,3 +259,47 @@ UFunction* Z_Construct_UFunction_UFortBotMissionLogic_SpawnStructureBuilder()
 	}
 	return ReturnFunction;
 }
+
+class UFortBotMissionLogic
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortBotMissionLogic_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortBotMissionLogic_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_ClearAllLocated, "ClearAllLocated" },
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_MarkAllLocated, "MarkAllLocated" },
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_MarkSingleLocator, "MarkSingleLocator" },
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_OnAssignedBehavior, "OnAssignedBehavior" },
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_OnCanStartOtherMission, "OnCanStartOtherMission" },
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_OnInteractWithMissionGoal, "OnInteractWithMissionGoal" },
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_OnMissionActivated, "OnMissionActivated" },
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_OnMissionFinished, "OnMissionFinished" },
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_OnMissionStarted, "OnMissionStarted" },
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_ResetBehavior, "ResetBehavior" },
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_SetCurrentBehavior, "SetCurrentBehavior" },
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_SetGoalsInvulnerable, "SetGoalsInvulnerable" },
+	{ &Z_Construct_UFunction_UFortBotMissionLogic_SpawnStructureBuilder, "SpawnStructureBuilder" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortBotMissionLogic_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032CEC50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortBotMissionLogic_Statics::ClassParams = { &UFortBotMissionLogic::StaticClass, Z_Construct_UClass_UFortBotMissionLogic_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortBotMissionLogic_Statics::FuncInfo, 13, Z_Construct_UClass_UFortBotMissionLogic_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UFortBotMissionLogic_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAD6E0 (end 0x00FAD70F)
+// Original VA: 0x0000000140FAD6E0 | File offset: 0x00FACCE0
+// Recovery: confirmed (UHT singleton of UFortBotMissionLogic) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortBotMissionLogic()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortBotMissionLogic_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -364,3 +364,52 @@ UFunction* Z_Construct_UFunction_UAIHotSpotSlot_SetSlotState()
 	}
 	return ReturnFunction;
 }
+
+class UAIHotSpotSlot
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAIHotSpotSlot_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAIHotSpotSlot_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_ClearSlot, "ClearSlot" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_GetHotSpot, "GetHotSpot" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_GetSlotBounds, "GetSlotBounds" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_GetSlotHeight, "GetSlotHeight" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_GetSlotIndex, "GetSlotIndex" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_GetSlotLocation, "GetSlotLocation" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_GetSlotOwner, "GetSlotOwner" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_GetSlotRadius, "GetSlotRadius" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_GetSlotRotation, "GetSlotRotation" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_GetSlotState, "GetSlotState" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_GetSlotUserId, "GetSlotUserId" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_HasUserId, "HasUserId" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_IsAIAllowed, "IsAIAllowed" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_IsEnabled, "IsEnabled" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_OnStateChanged, "OnStateChanged" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_SetSlotEnabled, "SetSlotEnabled" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_SetSlotOwnerAndState, "SetSlotOwnerAndState" },
+	{ &Z_Construct_UFunction_UAIHotSpotSlot_SetSlotState, "SetSlotState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAIHotSpotSlot_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03260200
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAIHotSpotSlot_Statics::ClassParams = { &UAIHotSpotSlot::StaticClass, Z_Construct_UClass_UAIHotSpotSlot_Statics::DependentSingletons, 2, 0x00101080u, Z_Construct_UClass_UAIHotSpotSlot_Statics::FuncInfo, 18, Z_Construct_UClass_UAIHotSpotSlot_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_UAIHotSpotSlot_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59750 (end 0x00F5977F)
+// Original VA: 0x0000000140F59750 | File offset: 0x00F58D50
+// Recovery: confirmed (UHT singleton of UAIHotSpotSlot) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAIHotSpotSlot()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAIHotSpotSlot_Statics::ClassParams);
+	}
+	return OuterClass;
+}

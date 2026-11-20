@@ -164,3 +164,43 @@ UFunction* Z_Construct_UFunction_ALevelSequenceActor_SetSequence()
 	}
 	return ReturnFunction;
 }
+
+class ALevelSequenceActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ALevelSequenceActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ALevelSequenceActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ALevelSequenceActor_AddBinding, "AddBinding" },
+	{ &Z_Construct_UFunction_ALevelSequenceActor_GetSequence, "GetSequence" },
+	{ &Z_Construct_UFunction_ALevelSequenceActor_RemoveBinding, "RemoveBinding" },
+	{ &Z_Construct_UFunction_ALevelSequenceActor_ResetBinding, "ResetBinding" },
+	{ &Z_Construct_UFunction_ALevelSequenceActor_ResetBindings, "ResetBindings" },
+	{ &Z_Construct_UFunction_ALevelSequenceActor_SetBinding, "SetBinding" },
+	{ &Z_Construct_UFunction_ALevelSequenceActor_SetEventReceivers, "SetEventReceivers" },
+	{ &Z_Construct_UFunction_ALevelSequenceActor_SetSequence, "SetSequence" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ALevelSequenceActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03719EF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ALevelSequenceActor_Statics::ClassParams = { &ALevelSequenceActor::StaticClass, Z_Construct_UClass_ALevelSequenceActor_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ALevelSequenceActor_Statics::FuncInfo, 8, Z_Construct_UClass_ALevelSequenceActor_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_ALevelSequenceActor_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_ALevelSequenceActor_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4ED40 (end 0x01D4ED6F)
+// Original VA: 0x0000000141D4ED40 | File offset: 0x01D4E340
+// Recovery: confirmed (UHT singleton of ALevelSequenceActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ALevelSequenceActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ALevelSequenceActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

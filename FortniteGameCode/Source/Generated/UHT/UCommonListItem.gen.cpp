@@ -183,3 +183,42 @@ UFunction* Z_Construct_UFunction_UCommonListItem_ToggleExpansion()
 	}
 	return ReturnFunction;
 }
+
+class UCommonListItem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonListItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonListItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonListItem_DoesItemHaveChildren, "DoesItemHaveChildren" },
+	{ &Z_Construct_UFunction_UCommonListItem_GetIndentLevel, "GetIndentLevel" },
+	{ &Z_Construct_UFunction_UCommonListItem_IsItemExpanded, "IsItemExpanded" },
+	{ &Z_Construct_UFunction_UCommonListItem_Private_OnExpanderArrowShiftClicked, "Private_OnExpanderArrowShiftClicked" },
+	{ &Z_Construct_UFunction_UCommonListItem_RegisterOnClicked, "RegisterOnClicked" },
+	{ &Z_Construct_UFunction_UCommonListItem_SetExpanded, "SetExpanded" },
+	{ &Z_Construct_UFunction_UCommonListItem_SetIndexInList, "SetIndexInList" },
+	{ &Z_Construct_UFunction_UCommonListItem_SetSelected, "SetSelected" },
+	{ &Z_Construct_UFunction_UCommonListItem_ToggleExpansion, "ToggleExpansion" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonListItem_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x02E81810
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonListItem_Statics::ClassParams = { &UCommonListItem::StaticClass, Z_Construct_UClass_UCommonListItem_Statics::DependentSingletons, 2, 0x00104081u, Z_Construct_UClass_UCommonListItem_Statics::FuncInfo, 9, nullptr, 0, nullptr, &Z_Construct_UClass_UCommonListItem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA3F0 (end 0x002CA41F)
+// Original VA: 0x00000001402CA3F0 | File offset: 0x002C99F0
+// Recovery: confirmed (UHT singleton of UCommonListItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonListItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonListItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

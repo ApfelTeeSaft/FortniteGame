@@ -65,3 +65,36 @@ UFunction* Z_Construct_UFunction_UCommonDateTimeTextBlock_SetTimespanValue()
 	}
 	return ReturnFunction;
 }
+
+class UCommonDateTimeTextBlock
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonDateTimeTextBlock_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonDateTimeTextBlock_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonDateTimeTextBlock_GetDateTime, "GetDateTime" },
+	{ &Z_Construct_UFunction_UCommonDateTimeTextBlock_SetDateTimeValue, "SetDateTimeValue" },
+	{ &Z_Construct_UFunction_UCommonDateTimeTextBlock_SetTimespanValue, "SetTimespanValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonDateTimeTextBlock_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E7C830
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonDateTimeTextBlock_Statics::ClassParams = { &UCommonDateTimeTextBlock::StaticClass, Z_Construct_UClass_UCommonDateTimeTextBlock_Statics::DependentSingletons, 2, 0x00B00082u, Z_Construct_UClass_UCommonDateTimeTextBlock_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UCommonDateTimeTextBlock_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2DA0 (end 0x002C2DCF)
+// Original VA: 0x00000001402C2DA0 | File offset: 0x002C23A0
+// Recovery: confirmed (UHT singleton of UCommonDateTimeTextBlock) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonDateTimeTextBlock()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonDateTimeTextBlock_Statics::ClassParams);
+	}
+	return OuterClass;
+}

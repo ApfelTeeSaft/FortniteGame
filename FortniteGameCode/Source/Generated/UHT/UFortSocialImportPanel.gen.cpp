@@ -220,3 +220,45 @@ UFunction* Z_Construct_UFunction_UFortSocialImportPanel_ShowPanel()
 	}
 	return ReturnFunction;
 }
+
+class UFortSocialImportPanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSocialImportPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSocialImportPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSocialImportPanel_DynamicHandleCancelClicked, "DynamicHandleCancelClicked" },
+	{ &Z_Construct_UFunction_UFortSocialImportPanel_DynamicHandleClaimClicked, "DynamicHandleClaimClicked" },
+	{ &Z_Construct_UFunction_UFortSocialImportPanel_DynamicHandleErrorCloseClicked, "DynamicHandleErrorCloseClicked" },
+	{ &Z_Construct_UFunction_UFortSocialImportPanel_DynamicHandleErrorRetryClicked, "DynamicHandleErrorRetryClicked" },
+	{ &Z_Construct_UFunction_UFortSocialImportPanel_DynamicHandleImportClicked, "DynamicHandleImportClicked" },
+	{ &Z_Construct_UFunction_UFortSocialImportPanel_OnClaimViewRequested, "OnClaimViewRequested" },
+	{ &Z_Construct_UFunction_UFortSocialImportPanel_OnImportViewRequested, "OnImportViewRequested" },
+	{ &Z_Construct_UFunction_UFortSocialImportPanel_OnLauncherImportOpened, "OnLauncherImportOpened" },
+	{ &Z_Construct_UFunction_UFortSocialImportPanel_OnPanelTypeSet, "OnPanelTypeSet" },
+	{ &Z_Construct_UFunction_UFortSocialImportPanel_OnWaitingViewRequested, "OnWaitingViewRequested" },
+	{ &Z_Construct_UFunction_UFortSocialImportPanel_ShowPanel, "ShowPanel" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSocialImportPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D145B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSocialImportPanel_Statics::ClassParams = { &UFortSocialImportPanel::StaticClass, Z_Construct_UClass_UFortSocialImportPanel_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortSocialImportPanel_Statics::FuncInfo, 11, Z_Construct_UClass_UFortSocialImportPanel_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortSocialImportPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5720 (end 0x028F574F)
+// Original VA: 0x00000001428F5720 | File offset: 0x028F4D20
+// Recovery: confirmed (UHT singleton of UFortSocialImportPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSocialImportPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSocialImportPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

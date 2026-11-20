@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UScaleBox_SetUserSpecifiedScale()
 	}
 	return ReturnFunction;
 }
+
+class UScaleBox
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UScaleBox_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UScaleBox_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UScaleBox_SetIgnoreInheritedScale, "SetIgnoreInheritedScale" },
+	{ &Z_Construct_UFunction_UScaleBox_SetStretch, "SetStretch" },
+	{ &Z_Construct_UFunction_UScaleBox_SetStretchDirection, "SetStretchDirection" },
+	{ &Z_Construct_UFunction_UScaleBox_SetUserSpecifiedScale, "SetUserSpecifiedScale" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UScaleBox_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0369CAE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UScaleBox_Statics::ClassParams = { &UScaleBox::StaticClass, Z_Construct_UClass_UScaleBox_Statics::DependentSingletons, 2, 0x00B00084u, Z_Construct_UClass_UScaleBox_Statics::FuncInfo, 4, Z_Construct_UClass_UScaleBox_Statics::PropPointers, 5, "Engine", &Z_Construct_UClass_UScaleBox_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2F10 (end 0x01BF2F3F)
+// Original VA: 0x0000000141BF2F10 | File offset: 0x01BF2510
+// Recovery: confirmed (UHT singleton of UScaleBox) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UScaleBox()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UScaleBox_Statics::ClassParams);
+	}
+	return OuterClass;
+}

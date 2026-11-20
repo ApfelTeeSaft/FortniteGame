@@ -285,3 +285,48 @@ UFunction* Z_Construct_UFunction_UFortMtxOfferDetailsBase_UpdateMtxOffer()
 	}
 	return ReturnFunction;
 }
+
+class UFortMtxOfferDetailsBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMtxOfferDetailsBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMtxOfferDetailsBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetBackground, "GetBackground" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetBaseQuantity, "GetBaseQuantity" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetBonusQuantity, "GetBonusQuantity" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetDescription, "GetDescription" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetDetailsAttributes, "GetDetailsAttributes" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetDetailsImage, "GetDetailsImage" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetGradient, "GetGradient" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetName, "GetName" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetNormalPrice, "GetNormalPrice" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetOfferId, "GetOfferId" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetSalePrice, "GetSalePrice" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetStoreOfferType, "GetStoreOfferType" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetTileImage, "GetTileImage" },
+	{ &Z_Construct_UFunction_UFortMtxOfferDetailsBase_UpdateMtxOffer, "UpdateMtxOffer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMtxOfferDetailsBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE6E30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMtxOfferDetailsBase_Statics::ClassParams = { &UFortMtxOfferDetailsBase::StaticClass, Z_Construct_UClass_UFortMtxOfferDetailsBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortMtxOfferDetailsBase_Statics::FuncInfo, 14, Z_Construct_UClass_UFortMtxOfferDetailsBase_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortMtxOfferDetailsBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7680 (end 0x028D76AF)
+// Original VA: 0x00000001428D7680 | File offset: 0x028D6C80
+// Recovery: confirmed (UHT singleton of UFortMtxOfferDetailsBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMtxOfferDetailsBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMtxOfferDetailsBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

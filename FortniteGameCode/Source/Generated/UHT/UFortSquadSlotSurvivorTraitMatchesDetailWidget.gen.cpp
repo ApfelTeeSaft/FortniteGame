@@ -24,3 +24,35 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotSurvivorTraitMatchesDetailWidget_
 	}
 	return ReturnFunction;
 }
+
+class UFortSquadSlotSurvivorTraitMatchesDetailWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadSlotSurvivorTraitMatchesDetailWidget_HandleTraitValuesUpdatedBP, "HandleTraitValuesUpdatedBP" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D23490
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget_Statics::ClassParams = { &UFortSquadSlotSurvivorTraitMatchesDetailWidget::StaticClass, Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget_Statics::FuncInfo, 1, Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB6A0 (end 0x028FB6CF)
+// Original VA: 0x00000001428FB6A0 | File offset: 0x028FACA0
+// Recovery: confirmed (UHT singleton of UFortSquadSlotSurvivorTraitMatchesDetailWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

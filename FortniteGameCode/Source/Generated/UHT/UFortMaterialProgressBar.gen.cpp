@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UFortMaterialProgressBar_SetStyle()
 	}
 	return ReturnFunction;
 }
+
+class UFortMaterialProgressBar
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMaterialProgressBar_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMaterialProgressBar_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMaterialProgressBar_SetBackgroundColor, "SetBackgroundColor" },
+	{ &Z_Construct_UFunction_UFortMaterialProgressBar_SetProgressBarSectionColor, "SetProgressBarSectionColor" },
+	{ &Z_Construct_UFunction_UFortMaterialProgressBar_SetProgressBarSectionPercent, "SetProgressBarSectionPercent" },
+	{ &Z_Construct_UFunction_UFortMaterialProgressBar_SetStyle, "SetStyle" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMaterialProgressBar_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE5A50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMaterialProgressBar_Statics::ClassParams = { &UFortMaterialProgressBar::StaticClass, Z_Construct_UClass_UFortMaterialProgressBar_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortMaterialProgressBar_Statics::FuncInfo, 4, Z_Construct_UClass_UFortMaterialProgressBar_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortMaterialProgressBar_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7420 (end 0x028D744F)
+// Original VA: 0x00000001428D7420 | File offset: 0x028D6A20
+// Recovery: confirmed (UHT singleton of UFortMaterialProgressBar) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMaterialProgressBar()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMaterialProgressBar_Statics::ClassParams);
+	}
+	return OuterClass;
+}

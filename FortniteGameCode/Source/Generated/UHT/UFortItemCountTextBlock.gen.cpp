@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UFortItemCountTextBlock_SetOverrideValue()
 	}
 	return ReturnFunction;
 }
+
+class UFortItemCountTextBlock
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemCountTextBlock_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemCountTextBlock_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemCountTextBlock_HandleItemCountChanged, "HandleItemCountChanged" },
+	{ &Z_Construct_UFunction_UFortItemCountTextBlock_InterpolateOverrideToValue, "InterpolateOverrideToValue" },
+	{ &Z_Construct_UFunction_UFortItemCountTextBlock_SetCountStyle, "SetCountStyle" },
+	{ &Z_Construct_UFunction_UFortItemCountTextBlock_SetItemDefinition, "SetItemDefinition" },
+	{ &Z_Construct_UFunction_UFortItemCountTextBlock_SetOverrideValue, "SetOverrideValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemCountTextBlock_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CCB5F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemCountTextBlock_Statics::ClassParams = { &UFortItemCountTextBlock::StaticClass, Z_Construct_UClass_UFortItemCountTextBlock_Statics::DependentSingletons, 2, 0x00A00082u, Z_Construct_UClass_UFortItemCountTextBlock_Statics::FuncInfo, 5, Z_Construct_UClass_UFortItemCountTextBlock_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortItemCountTextBlock_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9D50 (end 0x028C9D7F)
+// Original VA: 0x00000001428C9D50 | File offset: 0x028C9350
+// Recovery: confirmed (UHT singleton of UFortItemCountTextBlock) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemCountTextBlock()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemCountTextBlock_Statics::ClassParams);
+	}
+	return OuterClass;
+}

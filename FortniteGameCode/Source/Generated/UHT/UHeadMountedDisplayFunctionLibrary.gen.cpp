@@ -605,3 +605,63 @@ UFunction* Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_SetWorldToMe
 	}
 	return ReturnFunction;
 }
+
+class UHeadMountedDisplayFunctionLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_AddDeviceVisualizationComponent, "AddDeviceVisualizationComponent" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_EnableHMD, "EnableHMD" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_EnableLowPersistenceMode, "EnableLowPersistenceMode" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_EnumerateTrackedDevices, "EnumerateTrackedDevices" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetDevicePose, "GetDevicePose" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetDeviceWorldPose, "GetDeviceWorldPose" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetHMDDeviceName, "GetHMDDeviceName" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetHMDWornState, "GetHMDWornState" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetNumOfTrackingSensors, "GetNumOfTrackingSensors" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetOrientationAndPosition, "GetOrientationAndPosition" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetPixelDensity, "GetPixelDensity" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetPositionalTrackingCameraParameters, "GetPositionalTrackingCameraParameters" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetScreenPercentage, "GetScreenPercentage" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetTrackingOrigin, "GetTrackingOrigin" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetTrackingSensorParameters, "GetTrackingSensorParameters" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetTrackingToWorldTransform, "GetTrackingToWorldTransform" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetVRFocusState, "GetVRFocusState" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_GetWorldToMetersScale, "GetWorldToMetersScale" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_HasValidTrackingPosition, "HasValidTrackingPosition" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_IsHeadMountedDisplayConnected, "IsHeadMountedDisplayConnected" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_IsHeadMountedDisplayEnabled, "IsHeadMountedDisplayEnabled" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_IsInLowPersistenceMode, "IsInLowPersistenceMode" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_IsSpectatorScreenModeControllable, "IsSpectatorScreenModeControllable" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_ResetOrientationAndPosition, "ResetOrientationAndPosition" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_SetClippingPlanes, "SetClippingPlanes" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_SetSpectatorScreenMode, "SetSpectatorScreenMode" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_SetSpectatorScreenModeTexturePlusEyeLayout, "SetSpectatorScreenModeTexturePlusEyeLayout" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_SetSpectatorScreenTexture, "SetSpectatorScreenTexture" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_SetTrackingOrigin, "SetTrackingOrigin" },
+	{ &Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_SetWorldToMetersScale, "SetWorldToMetersScale" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x035E5310
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary_Statics::ClassParams = { &UHeadMountedDisplayFunctionLibrary::StaticClass, Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary_Statics::FuncInfo, 30, nullptr, 0, nullptr, &Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0199D320 (end 0x0199D34F)
+// Original VA: 0x000000014199D320 | File offset: 0x0199C920
+// Recovery: confirmed (UHT singleton of UHeadMountedDisplayFunctionLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

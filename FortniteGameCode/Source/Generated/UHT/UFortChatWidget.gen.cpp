@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_UFortChatWidget_SetControllerActionBrush()
 	}
 	return ReturnFunction;
 }
+
+class UFortChatWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortChatWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortChatWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortChatWidget_FocusChatEntry, "FocusChatEntry" },
+	{ &Z_Construct_UFunction_UFortChatWidget_SetControllerActionBrush, "SetControllerActionBrush" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortChatWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C75E80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortChatWidget_Statics::ClassParams = { &UFortChatWidget::StaticClass, Z_Construct_UClass_UFortChatWidget_Statics::DependentSingletons, 2, 0x00A00080u, Z_Construct_UClass_UFortChatWidget_Statics::FuncInfo, 2, Z_Construct_UClass_UFortChatWidget_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UFortChatWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028945B0 (end 0x028945DF)
+// Original VA: 0x00000001428945B0 | File offset: 0x02893BB0
+// Recovery: confirmed (UHT singleton of UFortChatWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortChatWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortChatWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

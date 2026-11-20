@@ -85,3 +85,39 @@ UFunction* Z_Construct_UFunction_UFortHeroType_GetSubType()
 	}
 	return ReturnFunction;
 }
+
+class UFortHeroType
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHeroType_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHeroType_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHeroType_GetFemaleOverrideFeedback, "GetFemaleOverrideFeedback" },
+	{ &Z_Construct_UFunction_UFortHeroType_GetFrontendAnimClass, "GetFrontendAnimClass" },
+	{ &Z_Construct_UFunction_UFortHeroType_GetMaleOverrideFeedback, "GetMaleOverrideFeedback" },
+	{ &Z_Construct_UFunction_UFortHeroType_GetSubType, "GetSubType" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHeroType_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0333E1E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHeroType_Statics::ClassParams = { &UFortHeroType::StaticClass, Z_Construct_UClass_UFortHeroType_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortHeroType_Statics::FuncInfo, 4, Z_Construct_UClass_UFortHeroType_Statics::PropPointers, 16, nullptr, &Z_Construct_UClass_UFortHeroType_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortHeroType_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFAFF0 (end 0x00FFB01F)
+// Original VA: 0x0000000140FFAFF0 | File offset: 0x00FFA5F0
+// Recovery: confirmed (UHT singleton of UFortHeroType) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHeroType()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHeroType_Statics::ClassParams);
+	}
+	return OuterClass;
+}

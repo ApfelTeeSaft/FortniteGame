@@ -64,3 +64,37 @@ UFunction* Z_Construct_UFunction_AFortTracerBase_OnInit()
 	}
 	return ReturnFunction;
 }
+
+class AFortTracerBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortTracerBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortTracerBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortTracerBase_Init, "Init" },
+	{ &Z_Construct_UFunction_AFortTracerBase_OnDead, "OnDead" },
+	{ &Z_Construct_UFunction_AFortTracerBase_OnInit, "OnInit" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortTracerBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0341BAC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortTracerBase_Statics::ClassParams = { &AFortTracerBase::StaticClass, Z_Construct_UClass_AFortTracerBase_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortTracerBase_Statics::FuncInfo, 3, Z_Construct_UClass_AFortTracerBase_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_AFortTracerBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA970 (end 0x010CA99F)
+// Original VA: 0x00000001410CA970 | File offset: 0x010C9F70
+// Recovery: confirmed (UHT singleton of AFortTracerBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortTracerBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortTracerBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

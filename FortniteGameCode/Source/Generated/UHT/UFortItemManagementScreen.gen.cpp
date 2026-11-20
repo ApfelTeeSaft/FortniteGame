@@ -679,3 +679,68 @@ UFunction* Z_Construct_UFunction_UFortItemManagementScreen_TransferItem()
 	}
 	return ReturnFunction;
 }
+
+class UFortItemManagementScreen
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemManagementScreen_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemManagementScreen_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_CanItemBeMulched, "CanItemBeMulched" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_CanRequestPopupMenuForSelectedItem, "CanRequestPopupMenuForSelectedItem" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_CancelInventoryPanelTileViewRefresh, "CancelInventoryPanelTileViewRefresh" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_ConsumeItem, "ConsumeItem" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_CraftItem, "CraftItem" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_CycleSortType, "CycleSortType" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_DropItem, "DropItem" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_EnterComparisonMode, "EnterComparisonMode" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_EnterDetailsMode, "EnterDetailsMode" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_EnterMulchMode, "EnterMulchMode" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_EquipItem, "EquipItem" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_GetItemToCompareDetailsWith, "GetItemToCompareDetailsWith" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_GetItemToDetail, "GetItemToDetail" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_GetItemsToMulchBP, "GetItemsToMulchBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_GetNumItemsToMulch, "GetNumItemsToMulch" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_HandleConsumeItemBP, "HandleConsumeItemBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_HandleCraftItemBP, "HandleCraftItemBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_HandleDifferentItemManagementModeSetBP, "HandleDifferentItemManagementModeSetBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_HandleDropItemBP, "HandleDropItemBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_HandleEquipItemBP, "HandleEquipItemBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_HandleInspectItemBP, "HandleInspectItemBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_HandleItemToCompareWithChanged, "HandleItemToCompareWithChanged" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_HandleItemToDetailChanged, "HandleItemToDetailChanged" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_HandleMulchQuantitySelection, "HandleMulchQuantitySelection" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_HandleTransferItemBP, "HandleTransferItemBP" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_HasItemBeenSeen, "HasItemBeenSeen" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_InspectItem, "InspectItem" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_IsScreenWIFE, "IsScreenWIFE" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_NotifyPanelActivated, "NotifyPanelActivated" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_NotifyPanelDeactivated, "NotifyPanelDeactivated" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_RequestPopupMenuForSelectedItem, "RequestPopupMenuForSelectedItem" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_SetConsumeItemRequestInProgress, "SetConsumeItemRequestInProgress" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_SetFrontendInventoryFilter, "SetFrontendInventoryFilter" },
+	{ &Z_Construct_UFunction_UFortItemManagementScreen_TransferItem, "TransferItem" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemManagementScreen_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CD8470
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemManagementScreen_Statics::ClassParams = { &UFortItemManagementScreen::StaticClass, Z_Construct_UClass_UFortItemManagementScreen_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortItemManagementScreen_Statics::FuncInfo, 34, Z_Construct_UClass_UFortItemManagementScreen_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UFortItemManagementScreen_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF490 (end 0x028CF4BF)
+// Original VA: 0x00000001428CF490 | File offset: 0x028CEA90
+// Recovery: confirmed (UHT singleton of UFortItemManagementScreen) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemManagementScreen()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemManagementScreen_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortExpeditionListViewWidget_SetExpeditionList
 	}
 	return ReturnFunction;
 }
+
+class UFortExpeditionListViewWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortExpeditionListViewWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortExpeditionListViewWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortExpeditionListViewWidget_GetExpeditionListSortName, "GetExpeditionListSortName" },
+	{ &Z_Construct_UFunction_UFortExpeditionListViewWidget_HandleListItemSelected, "HandleListItemSelected" },
+	{ &Z_Construct_UFunction_UFortExpeditionListViewWidget_SetExpeditionListSortType, "SetExpeditionListSortType" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortExpeditionListViewWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C8F7F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortExpeditionListViewWidget_Statics::ClassParams = { &UFortExpeditionListViewWidget::StaticClass, Z_Construct_UClass_UFortExpeditionListViewWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortExpeditionListViewWidget_Statics::FuncInfo, 3, Z_Construct_UClass_UFortExpeditionListViewWidget_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortExpeditionListViewWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A35F0 (end 0x028A361F)
+// Original VA: 0x00000001428A35F0 | File offset: 0x028A2BF0
+// Recovery: confirmed (UHT singleton of UFortExpeditionListViewWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortExpeditionListViewWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortExpeditionListViewWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

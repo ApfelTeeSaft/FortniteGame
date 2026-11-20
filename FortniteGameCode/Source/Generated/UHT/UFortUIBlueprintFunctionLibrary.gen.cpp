@@ -145,3 +145,40 @@ UFunction* Z_Construct_UFunction_UFortUIBlueprintFunctionLibrary_GetMetaStringOn
 	}
 	return ReturnFunction;
 }
+
+class UFortUIBlueprintFunctionLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortUIBlueprintFunctionLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUIBlueprintFunctionLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUIBlueprintFunctionLibrary_GetItemDefinitionSmallPreviewImageBrush, "GetItemDefinitionSmallPreviewImageBrush" },
+	{ &Z_Construct_UFunction_UFortUIBlueprintFunctionLibrary_GetItemDefinitionSmallPreviewImageMultiSizeBrush, "GetItemDefinitionSmallPreviewImageMultiSizeBrush" },
+	{ &Z_Construct_UFunction_UFortUIBlueprintFunctionLibrary_GetItemSmallPreviewImageBrush, "GetItemSmallPreviewImageBrush" },
+	{ &Z_Construct_UFunction_UFortUIBlueprintFunctionLibrary_GetItemSmallPreviewImageMultiSizeBrush, "GetItemSmallPreviewImageMultiSizeBrush" },
+	{ &Z_Construct_UFunction_UFortUIBlueprintFunctionLibrary_GetMetaBoolOnOffer, "GetMetaBoolOnOffer" },
+	{ &Z_Construct_UFunction_UFortUIBlueprintFunctionLibrary_GetMetaIntOnOffer, "GetMetaIntOnOffer" },
+	{ &Z_Construct_UFunction_UFortUIBlueprintFunctionLibrary_GetMetaStringOnOffer, "GetMetaStringOnOffer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUIBlueprintFunctionLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D3CD90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUIBlueprintFunctionLibrary_Statics::ClassParams = { &UFortUIBlueprintFunctionLibrary::StaticClass, Z_Construct_UClass_UFortUIBlueprintFunctionLibrary_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortUIBlueprintFunctionLibrary_Statics::FuncInfo, 7, nullptr, 0, nullptr, &Z_Construct_UClass_UFortUIBlueprintFunctionLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A970 (end 0x0290A99F)
+// Original VA: 0x000000014290A970 | File offset: 0x02909F70
+// Recovery: confirmed (UHT singleton of UFortUIBlueprintFunctionLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUIBlueprintFunctionLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUIBlueprintFunctionLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

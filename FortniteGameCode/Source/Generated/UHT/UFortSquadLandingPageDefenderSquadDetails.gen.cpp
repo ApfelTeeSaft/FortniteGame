@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortSquadLandingPageDefenderSquadDetails_SetDe
 	}
 	return ReturnFunction;
 }
+
+class UFortSquadLandingPageDefenderSquadDetails
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSquadLandingPageDefenderSquadDetails_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadLandingPageDefenderSquadDetails_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadLandingPageDefenderSquadDetails_HandleAddDefenderSquadMemberBP, "HandleAddDefenderSquadMemberBP" },
+	{ &Z_Construct_UFunction_UFortSquadLandingPageDefenderSquadDetails_HandleDefenderSquadInfoSetBP, "HandleDefenderSquadInfoSetBP" },
+	{ &Z_Construct_UFunction_UFortSquadLandingPageDefenderSquadDetails_SetDefenderSquadInfo, "SetDefenderSquadInfo" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadLandingPageDefenderSquadDetails_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D15C50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadLandingPageDefenderSquadDetails_Statics::ClassParams = { &UFortSquadLandingPageDefenderSquadDetails::StaticClass, Z_Construct_UClass_UFortSquadLandingPageDefenderSquadDetails_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSquadLandingPageDefenderSquadDetails_Statics::FuncInfo, 3, Z_Construct_UClass_UFortSquadLandingPageDefenderSquadDetails_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortSquadLandingPageDefenderSquadDetails_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F58C0 (end 0x028F58EF)
+// Original VA: 0x00000001428F58C0 | File offset: 0x028F4EC0
+// Recovery: confirmed (UHT singleton of UFortSquadLandingPageDefenderSquadDetails) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadLandingPageDefenderSquadDetails()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadLandingPageDefenderSquadDetails_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -285,3 +285,47 @@ UFunction* Z_Construct_UFunction_UFortExpeditionUtilities_TotalUnseenExpeditions
 	}
 	return ReturnFunction;
 }
+
+class UFortExpeditionUtilities
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortExpeditionUtilities_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortExpeditionUtilities_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_AreAnyExpeditionsComplete, "AreAnyExpeditionsComplete" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_AreExpeditionsUnlocked, "AreExpeditionsUnlocked" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_CalculateExpeditionPercentageChanceForSuccess, "CalculateExpeditionPercentageChanceForSuccess" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_CalculateGlobalAndItemRatingModValuesBP, "CalculateGlobalAndItemRatingModValuesBP" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_CalculateTotalPower, "CalculateTotalPower" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_GetAllExpeditionSquadIds, "GetAllExpeditionSquadIds" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_GetExpeditionSquadPower, "GetExpeditionSquadPower" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_GetExpeditionSquadsThatMatchRequirements, "GetExpeditionSquadsThatMatchRequirements" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_GetMatchedCriteriaTags, "GetMatchedCriteriaTags" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_GetTotalExpeditionVehiclesAvailable, "GetTotalExpeditionVehiclesAvailable" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_GetVehicleTagFromSquadId, "GetVehicleTagFromSquadId" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_GetVehicleTagRequiredForExpedition, "GetVehicleTagRequiredForExpedition" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_IsSquadOnExpedition, "IsSquadOnExpedition" },
+	{ &Z_Construct_UFunction_UFortExpeditionUtilities_TotalUnseenExpeditionsForTab, "TotalUnseenExpeditionsForTab" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortExpeditionUtilities_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C903C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortExpeditionUtilities_Statics::ClassParams = { &UFortExpeditionUtilities::StaticClass, Z_Construct_UClass_UFortExpeditionUtilities_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortExpeditionUtilities_Statics::FuncInfo, 14, nullptr, 0, nullptr, &Z_Construct_UClass_UFortExpeditionUtilities_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3740 (end 0x028A376F)
+// Original VA: 0x00000001428A3740 | File offset: 0x028A2D40
+// Recovery: confirmed (UHT singleton of UFortExpeditionUtilities) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortExpeditionUtilities()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortExpeditionUtilities_Statics::ClassParams);
+	}
+	return OuterClass;
+}

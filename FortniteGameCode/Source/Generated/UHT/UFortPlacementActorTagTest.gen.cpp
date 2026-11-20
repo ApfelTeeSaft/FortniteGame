@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortPlacementActorTagTest_ShouldApplyTagsToPla
 	}
 	return ReturnFunction;
 }
+
+class UFortPlacementActorTagTest
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortPlacementActorTagTest_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPlacementActorTagTest_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPlacementActorTagTest_LineTraceByChannel, "LineTraceByChannel" },
+	{ &Z_Construct_UFunction_UFortPlacementActorTagTest_ShouldApplyTagsToPlacementActor, "ShouldApplyTagsToPlacementActor" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPlacementActorTagTest_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033ADA60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPlacementActorTagTest_Statics::ClassParams = { &UFortPlacementActorTagTest::StaticClass, Z_Construct_UClass_UFortPlacementActorTagTest_Statics::DependentSingletons, 2, 0x00080280u, Z_Construct_UClass_UFortPlacementActorTagTest_Statics::FuncInfo, 2, Z_Construct_UClass_UFortPlacementActorTagTest_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortPlacementActorTagTest_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01065990 (end 0x010659BF)
+// Original VA: 0x0000000141065990 | File offset: 0x01064F90
+// Recovery: confirmed (UHT singleton of UFortPlacementActorTagTest) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPlacementActorTagTest()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPlacementActorTagTest_Statics::ClassParams);
+	}
+	return OuterClass;
+}

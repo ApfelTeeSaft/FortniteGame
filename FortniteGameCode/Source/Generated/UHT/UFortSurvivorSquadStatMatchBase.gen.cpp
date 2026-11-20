@@ -25,3 +25,36 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchBase_OnStatMatchUpda
 	}
 	return ReturnFunction;
 }
+
+class UFortSurvivorSquadStatMatchBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSurvivorSquadStatMatchBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSurvivorSquadStatMatchBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSurvivorSquadStatMatchBase_OnStatMatchUpdated, "OnStatMatchUpdated" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSurvivorSquadStatMatchBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D300A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSurvivorSquadStatMatchBase_Statics::ClassParams = { &UFortSurvivorSquadStatMatchBase::StaticClass, Z_Construct_UClass_UFortSurvivorSquadStatMatchBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSurvivorSquadStatMatchBase_Statics::FuncInfo, 1, Z_Construct_UClass_UFortSurvivorSquadStatMatchBase_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortSurvivorSquadStatMatchBase_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortSurvivorSquadStatMatchBase_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904B00 (end 0x02904B2F)
+// Original VA: 0x0000000142904B00 | File offset: 0x02904100
+// Recovery: confirmed (UHT singleton of UFortSurvivorSquadStatMatchBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSurvivorSquadStatMatchBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSurvivorSquadStatMatchBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -82,3 +82,38 @@ UFunction* Z_Construct_UFunction_AFortProjectileAthena_ServerNotifyPawnHit()
 	}
 	return ReturnFunction;
 }
+
+class AFortProjectileAthena
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortProjectileAthena_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortProjectileAthena_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortProjectileAthena_KillAfterNoPawnHit, "KillAfterNoPawnHit" },
+	{ &Z_Construct_UFunction_AFortProjectileAthena_OnRep_FireStart, "OnRep_FireStart" },
+	{ &Z_Construct_UFunction_AFortProjectileAthena_OnRep_PawnHitResult, "OnRep_PawnHitResult" },
+	{ &Z_Construct_UFunction_AFortProjectileAthena_ServerNotifyPawnHit, "ServerNotifyPawnHit" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortProjectileAthena_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033D5C80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortProjectileAthena_Statics::ClassParams = { &AFortProjectileAthena::StaticClass, Z_Construct_UClass_AFortProjectileAthena_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortProjectileAthena_Statics::FuncInfo, 4, Z_Construct_UClass_AFortProjectileAthena_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_AFortProjectileAthena_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B510 (end 0x0108B53F)
+// Original VA: 0x000000014108B510 | File offset: 0x0108AB10
+// Recovery: confirmed (UHT singleton of AFortProjectileAthena) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortProjectileAthena()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortProjectileAthena_Statics::ClassParams);
+	}
+	return OuterClass;
+}

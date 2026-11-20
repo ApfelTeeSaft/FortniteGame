@@ -124,3 +124,40 @@ UFunction* Z_Construct_UFunction_UFortAbilitySystemComponent_SetLandingMontageRe
 	}
 	return ReturnFunction;
 }
+
+class UFortAbilitySystemComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAbilitySystemComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAbilitySystemComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAbilitySystemComponent_CanActivateAbilityWithMatchingTag, "CanActivateAbilityWithMatchingTag" },
+	{ &Z_Construct_UFunction_UFortAbilitySystemComponent_FindAttributeInformation, "FindAttributeInformation" },
+	{ &Z_Construct_UFunction_UFortAbilitySystemComponent_GetAttributeMagnitude, "GetAttributeMagnitude" },
+	{ &Z_Construct_UFunction_UFortAbilitySystemComponent_HasActiveAbilityWithAnyMatchingTag, "HasActiveAbilityWithAnyMatchingTag" },
+	{ &Z_Construct_UFunction_UFortAbilitySystemComponent_NetMulticast_RefreshActiveGameplayEffectCueEvents, "NetMulticast_RefreshActiveGameplayEffectCueEvents" },
+	{ &Z_Construct_UFunction_UFortAbilitySystemComponent_SetLandingMontageReplication, "SetLandingMontageReplication" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAbilitySystemComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0328FE10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAbilitySystemComponent_Statics::ClassParams = { &UFortAbilitySystemComponent::StaticClass, Z_Construct_UClass_UFortAbilitySystemComponent_Statics::DependentSingletons, 2, 0x00A81080u, Z_Construct_UClass_UFortAbilitySystemComponent_Statics::FuncInfo, 6, Z_Construct_UClass_UFortAbilitySystemComponent_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortAbilitySystemComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7D410 (end 0x00F7D43F)
+// Original VA: 0x0000000140F7D410 | File offset: 0x00F7CA10
+// Recovery: confirmed (UHT singleton of UFortAbilitySystemComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAbilitySystemComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAbilitySystemComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

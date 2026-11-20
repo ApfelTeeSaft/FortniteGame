@@ -221,3 +221,45 @@ UFunction* Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetPlayButtonState
 	}
 	return ReturnFunction;
 }
+
+class UFortAthenaMatchmakingWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAthenaMatchmakingWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAthenaMatchmakingWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAthenaMatchmakingWidget_GetActivePlaylists, "GetActivePlaylists" },
+	{ &Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnAvailablePlaylistsUpdated, "OnAvailablePlaylistsUpdated" },
+	{ &Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnCancelButtonPressed, "OnCancelButtonPressed" },
+	{ &Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnChangeTeamFillChanged, "OnChangeTeamFillChanged" },
+	{ &Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonPressed, "OnPlayButtonPressed" },
+	{ &Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlayButtonUpdated, "OnPlayButtonUpdated" },
+	{ &Z_Construct_UFunction_UFortAthenaMatchmakingWidget_OnPlaylistRotatorChanged, "OnPlaylistRotatorChanged" },
+	{ &Z_Construct_UFunction_UFortAthenaMatchmakingWidget_RefreshBang, "RefreshBang" },
+	{ &Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCancelButtonState, "SetCancelButtonState" },
+	{ &Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetCurrentPlaylist, "SetCurrentPlaylist" },
+	{ &Z_Construct_UFunction_UFortAthenaMatchmakingWidget_SetPlayButtonState, "SetPlayButtonState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAthenaMatchmakingWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C6A8D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAthenaMatchmakingWidget_Statics::ClassParams = { &UFortAthenaMatchmakingWidget::StaticClass, Z_Construct_UClass_UFortAthenaMatchmakingWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortAthenaMatchmakingWidget_Statics::FuncInfo, 11, Z_Construct_UClass_UFortAthenaMatchmakingWidget_Statics::PropPointers, 24, nullptr, &Z_Construct_UClass_UFortAthenaMatchmakingWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288CAD0 (end 0x0288CAFF)
+// Original VA: 0x000000014288CAD0 | File offset: 0x0288C0D0
+// Recovery: confirmed (UHT singleton of UFortAthenaMatchmakingWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAthenaMatchmakingWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAthenaMatchmakingWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

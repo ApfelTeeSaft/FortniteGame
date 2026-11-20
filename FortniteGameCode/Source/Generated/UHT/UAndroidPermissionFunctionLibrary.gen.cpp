@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_CheckPermissi
 	}
 	return ReturnFunction;
 }
+
+class UAndroidPermissionFunctionLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAndroidPermissionFunctionLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAndroidPermissionFunctionLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_AcquirePermissions, "AcquirePermissions" },
+	{ &Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_CheckPermission, "CheckPermission" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAndroidPermissionFunctionLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02FE1290
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAndroidPermissionFunctionLibrary_Statics::ClassParams = { &UAndroidPermissionFunctionLibrary::StaticClass, Z_Construct_UClass_UAndroidPermissionFunctionLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UAndroidPermissionFunctionLibrary_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UAndroidPermissionFunctionLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00803F00 (end 0x00803F2F)
+// Original VA: 0x0000000140803F00 | File offset: 0x00803500
+// Recovery: confirmed (UHT singleton of UAndroidPermissionFunctionLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAndroidPermissionFunctionLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAndroidPermissionFunctionLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

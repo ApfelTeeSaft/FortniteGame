@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UWrapBoxSlot_SetVerticalAlignment()
 	}
 	return ReturnFunction;
 }
+
+class UWrapBoxSlot
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UWrapBoxSlot_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UWrapBoxSlot_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UWrapBoxSlot_SetFillEmptySpace, "SetFillEmptySpace" },
+	{ &Z_Construct_UFunction_UWrapBoxSlot_SetFillSpanWhenLessThan, "SetFillSpanWhenLessThan" },
+	{ &Z_Construct_UFunction_UWrapBoxSlot_SetHorizontalAlignment, "SetHorizontalAlignment" },
+	{ &Z_Construct_UFunction_UWrapBoxSlot_SetPadding, "SetPadding" },
+	{ &Z_Construct_UFunction_UWrapBoxSlot_SetVerticalAlignment, "SetVerticalAlignment" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UWrapBoxSlot_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036ABC40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UWrapBoxSlot_Statics::ClassParams = { &UWrapBoxSlot::StaticClass, Z_Construct_UClass_UWrapBoxSlot_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UWrapBoxSlot_Statics::FuncInfo, 5, Z_Construct_UClass_UWrapBoxSlot_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UWrapBoxSlot_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07DE0 (end 0x01C07E0F)
+// Original VA: 0x0000000141C07DE0 | File offset: 0x01C073E0
+// Recovery: confirmed (UHT singleton of UWrapBoxSlot) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UWrapBoxSlot()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UWrapBoxSlot_Statics::ClassParams);
+	}
+	return OuterClass;
+}

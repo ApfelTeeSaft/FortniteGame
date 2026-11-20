@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UPaperSpriteComponent_SetSpriteColor()
 	}
 	return ReturnFunction;
 }
+
+class UPaperSpriteComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPaperSpriteComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPaperSpriteComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPaperSpriteComponent_GetSprite, "GetSprite" },
+	{ &Z_Construct_UFunction_UPaperSpriteComponent_SetSprite, "SetSprite" },
+	{ &Z_Construct_UFunction_UPaperSpriteComponent_SetSpriteColor, "SetSpriteColor" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPaperSpriteComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F94A70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPaperSpriteComponent_Statics::ClassParams = { &UPaperSpriteComponent::StaticClass, Z_Construct_UClass_UPaperSpriteComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UPaperSpriteComponent_Statics::FuncInfo, 3, Z_Construct_UClass_UPaperSpriteComponent_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UPaperSpriteComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00667800 (end 0x0066782F)
+// Original VA: 0x0000000140667800 | File offset: 0x00666E00
+// Recovery: confirmed (UHT singleton of UPaperSpriteComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPaperSpriteComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPaperSpriteComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

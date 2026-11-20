@@ -383,3 +383,53 @@ UFunction* Z_Construct_UFunction_UPaperTileMapComponent_SetTileMapColor()
 	}
 	return ReturnFunction;
 }
+
+class UPaperTileMapComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPaperTileMapComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPaperTileMapComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_AddNewLayer, "AddNewLayer" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_CreateNewTileMap, "CreateNewTileMap" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_GetLayerColor, "GetLayerColor" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_GetMapSize, "GetMapSize" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_GetTile, "GetTile" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_GetTileCenterPosition, "GetTileCenterPosition" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_GetTileCornerPosition, "GetTileCornerPosition" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_GetTileMapColor, "GetTileMapColor" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_GetTilePolygon, "GetTilePolygon" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_MakeTileMapEditable, "MakeTileMapEditable" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_OwnsTileMap, "OwnsTileMap" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_RebuildCollision, "RebuildCollision" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_ResizeMap, "ResizeMap" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_SetDefaultCollisionThickness, "SetDefaultCollisionThickness" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_SetLayerCollision, "SetLayerCollision" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_SetLayerColor, "SetLayerColor" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_SetTile, "SetTile" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_SetTileMap, "SetTileMap" },
+	{ &Z_Construct_UFunction_UPaperTileMapComponent_SetTileMapColor, "SetTileMapColor" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPaperTileMapComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F95730
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPaperTileMapComponent_Statics::ClassParams = { &UPaperTileMapComponent::StaticClass, Z_Construct_UClass_UPaperTileMapComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UPaperTileMapComponent_Statics::FuncInfo, 19, Z_Construct_UClass_UPaperTileMapComponent_Statics::PropPointers, 12, nullptr, &Z_Construct_UClass_UPaperTileMapComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00667940 (end 0x0066796F)
+// Original VA: 0x0000000140667940 | File offset: 0x00666F40
+// Recovery: confirmed (UHT singleton of UPaperTileMapComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPaperTileMapComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPaperTileMapComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

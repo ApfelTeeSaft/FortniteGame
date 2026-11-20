@@ -185,3 +185,42 @@ UFunction* Z_Construct_UFunction_UCrashlyticsBlueprintLibrary_SetUserName()
 	}
 	return ReturnFunction;
 }
+
+class UCrashlyticsBlueprintLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCrashlyticsBlueprintLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCrashlyticsBlueprintLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCrashlyticsBlueprintLibrary_LogException, "LogException" },
+	{ &Z_Construct_UFunction_UCrashlyticsBlueprintLibrary_LogMessage, "LogMessage" },
+	{ &Z_Construct_UFunction_UCrashlyticsBlueprintLibrary_SetBooleanKey, "SetBooleanKey" },
+	{ &Z_Construct_UFunction_UCrashlyticsBlueprintLibrary_SetFloatKey, "SetFloatKey" },
+	{ &Z_Construct_UFunction_UCrashlyticsBlueprintLibrary_SetIntegerKey, "SetIntegerKey" },
+	{ &Z_Construct_UFunction_UCrashlyticsBlueprintLibrary_SetStringKey, "SetStringKey" },
+	{ &Z_Construct_UFunction_UCrashlyticsBlueprintLibrary_SetUserEmail, "SetUserEmail" },
+	{ &Z_Construct_UFunction_UCrashlyticsBlueprintLibrary_SetUserIdentifier, "SetUserIdentifier" },
+	{ &Z_Construct_UFunction_UCrashlyticsBlueprintLibrary_SetUserName, "SetUserName" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCrashlyticsBlueprintLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E87080
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCrashlyticsBlueprintLibrary_Statics::ClassParams = { &UCrashlyticsBlueprintLibrary::StaticClass, Z_Construct_UClass_UCrashlyticsBlueprintLibrary_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UCrashlyticsBlueprintLibrary_Statics::FuncInfo, 9, nullptr, 0, nullptr, &Z_Construct_UClass_UCrashlyticsBlueprintLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D1DD0 (end 0x002D1DFF)
+// Original VA: 0x00000001402D1DD0 | File offset: 0x002D13D0
+// Recovery: confirmed (UHT singleton of UCrashlyticsBlueprintLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCrashlyticsBlueprintLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCrashlyticsBlueprintLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

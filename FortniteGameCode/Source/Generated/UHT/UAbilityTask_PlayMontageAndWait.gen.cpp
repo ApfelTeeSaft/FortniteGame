@@ -84,3 +84,38 @@ UFunction* Z_Construct_UFunction_UAbilityTask_PlayMontageAndWait_OnMontageInterr
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_PlayMontageAndWait
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_PlayMontageAndWait_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_PlayMontageAndWait_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_PlayMontageAndWait_CreatePlayMontageAndWaitProxy, "CreatePlayMontageAndWaitProxy" },
+	{ &Z_Construct_UFunction_UAbilityTask_PlayMontageAndWait_OnMontageBlendingOut, "OnMontageBlendingOut" },
+	{ &Z_Construct_UFunction_UAbilityTask_PlayMontageAndWait_OnMontageEnded, "OnMontageEnded" },
+	{ &Z_Construct_UFunction_UAbilityTask_PlayMontageAndWait_OnMontageInterrupted, "OnMontageInterrupted" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_PlayMontageAndWait_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F2B660
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_PlayMontageAndWait_Statics::ClassParams = { &UAbilityTask_PlayMontageAndWait::StaticClass, Z_Construct_UClass_UAbilityTask_PlayMontageAndWait_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_PlayMontageAndWait_Statics::FuncInfo, 4, Z_Construct_UClass_UAbilityTask_PlayMontageAndWait_Statics::PropPointers, 4, "Game", &Z_Construct_UClass_UAbilityTask_PlayMontageAndWait_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546930 (end 0x0054695F)
+// Original VA: 0x0000000140546930 | File offset: 0x00545F30
+// Recovery: confirmed (UHT singleton of UAbilityTask_PlayMontageAndWait) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_PlayMontageAndWait()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_PlayMontageAndWait_Statics::ClassParams);
+	}
+	return OuterClass;
+}

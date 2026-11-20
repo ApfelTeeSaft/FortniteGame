@@ -101,3 +101,39 @@ UFunction* Z_Construct_UFunction_UFortDialogNotificationHandler_Timeout()
 	}
 	return ReturnFunction;
 }
+
+class UFortDialogNotificationHandler
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortDialogNotificationHandler_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortDialogNotificationHandler_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortDialogNotificationHandler_Accept, "Accept" },
+	{ &Z_Construct_UFunction_UFortDialogNotificationHandler_Decline, "Decline" },
+	{ &Z_Construct_UDelegateFunction_UFortDialogNotificationHandler_OnActionComplete__DelegateSignature, "OnActionComplete__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortDialogNotificationHandler_SetDialogDescription, "SetDialogDescription" },
+	{ &Z_Construct_UFunction_UFortDialogNotificationHandler_Timeout, "Timeout" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortDialogNotificationHandler_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033079D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortDialogNotificationHandler_Statics::ClassParams = { &UFortDialogNotificationHandler::StaticClass, Z_Construct_UClass_UFortDialogNotificationHandler_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortDialogNotificationHandler_Statics::FuncInfo, 5, Z_Construct_UClass_UFortDialogNotificationHandler_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortDialogNotificationHandler_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6FE0 (end 0x00FD700F)
+// Original VA: 0x0000000140FD6FE0 | File offset: 0x00FD65E0
+// Recovery: confirmed (UHT singleton of UFortDialogNotificationHandler) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortDialogNotificationHandler()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortDialogNotificationHandler_Statics::ClassParams);
+	}
+	return OuterClass;
+}

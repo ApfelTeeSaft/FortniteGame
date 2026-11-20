@@ -24,3 +24,36 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapViewer_HandleMarkedQuestsChanged
 	}
 	return ReturnFunction;
 }
+
+class AFortTheaterMapViewer
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortTheaterMapViewer_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortTheaterMapViewer_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortTheaterMapViewer_HandleMarkedQuestsChanged, "HandleMarkedQuestsChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortTheaterMapViewer_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0340AC70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortTheaterMapViewer_Statics::ClassParams = { &AFortTheaterMapViewer::StaticClass, Z_Construct_UClass_AFortTheaterMapViewer_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortTheaterMapViewer_Statics::FuncInfo, 1, Z_Construct_UClass_AFortTheaterMapViewer_Statics::PropPointers, 17, nullptr, &Z_Construct_UClass_AFortTheaterMapViewer_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortTheaterMapViewer_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE180 (end 0x010BE1AF)
+// Original VA: 0x00000001410BE180 | File offset: 0x010BD780
+// Recovery: confirmed (UHT singleton of AFortTheaterMapViewer) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortTheaterMapViewer()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortTheaterMapViewer_Statics::ClassParams);
+	}
+	return OuterClass;
+}

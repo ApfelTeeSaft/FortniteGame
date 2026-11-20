@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_OnApplyG
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_WaitGameplayEffectApplied
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_OnApplyGameplayEffectCallback, "OnApplyGameplayEffectCallback" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F327A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Statics::ClassParams = { &UAbilityTask_WaitGameplayEffectApplied::StaticClass, Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Statics::FuncInfo, 1, Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D570 (end 0x0054D59F)
+// Original VA: 0x000000014054D570 | File offset: 0x0054CB70
+// Recovery: confirmed (UHT singleton of UAbilityTask_WaitGameplayEffectApplied) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Statics::ClassParams);
+	}
+	return OuterClass;
+}

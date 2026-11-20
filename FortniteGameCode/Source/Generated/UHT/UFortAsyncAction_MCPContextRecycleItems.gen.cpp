@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_MCPContextRecycleItems_Recycle
 	}
 	return ReturnFunction;
 }
+
+class UFortAsyncAction_MCPContextRecycleItems
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems_Statics::FuncInfo[] = {
+	{ &Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextRecycleItems_OnMCPRequestComplete__DelegateSignature, "OnMCPRequestComplete__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortAsyncAction_MCPContextRecycleItems_RecycleItems, "RecycleItems" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033687E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems_Statics::ClassParams = { &UFortAsyncAction_MCPContextRecycleItems::StaticClass, Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems_Statics::FuncInfo, 2, Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023A30 (end 0x01023A5F)
+// Original VA: 0x0000000141023A30 | File offset: 0x01023030
+// Recovery: confirmed (UHT singleton of UFortAsyncAction_MCPContextRecycleItems) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems_Statics::ClassParams);
+	}
+	return OuterClass;
+}

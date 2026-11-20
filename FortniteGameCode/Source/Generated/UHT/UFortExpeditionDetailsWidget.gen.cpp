@@ -103,3 +103,39 @@ UFunction* Z_Construct_UFunction_UFortExpeditionDetailsWidget_SetData()
 	}
 	return ReturnFunction;
 }
+
+class UFortExpeditionDetailsWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortExpeditionDetailsWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortExpeditionDetailsWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortExpeditionDetailsWidget_AbandonExpedition, "AbandonExpedition" },
+	{ &Z_Construct_UFunction_UFortExpeditionDetailsWidget_HandleAbandonExpeditionCompleted, "HandleAbandonExpeditionCompleted" },
+	{ &Z_Construct_UFunction_UFortExpeditionDetailsWidget_OnAbandonExpeditionCompleted, "OnAbandonExpeditionCompleted" },
+	{ &Z_Construct_UFunction_UFortExpeditionDetailsWidget_SetCurrentSquadId, "SetCurrentSquadId" },
+	{ &Z_Construct_UFunction_UFortExpeditionDetailsWidget_SetData, "SetData" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortExpeditionDetailsWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C8F520
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortExpeditionDetailsWidget_Statics::ClassParams = { &UFortExpeditionDetailsWidget::StaticClass, Z_Construct_UClass_UFortExpeditionDetailsWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortExpeditionDetailsWidget_Statics::FuncInfo, 5, Z_Construct_UClass_UFortExpeditionDetailsWidget_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortExpeditionDetailsWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3560 (end 0x028A358F)
+// Original VA: 0x00000001428A3560 | File offset: 0x028A2B60
+// Recovery: confirmed (UHT singleton of UFortExpeditionDetailsWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortExpeditionDetailsWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortExpeditionDetailsWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

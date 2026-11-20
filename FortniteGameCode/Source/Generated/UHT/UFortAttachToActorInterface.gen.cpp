@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortAttachToActorInterface_GetActorAttachedTo(
 	}
 	return ReturnFunction;
 }
+
+class UFortAttachToActorInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAttachToActorInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAttachToActorInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAttachToActorInterface_GetActorAttachedTo, "GetActorAttachedTo" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAttachToActorInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x032C71E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAttachToActorInterface_Statics::ClassParams = { &UFortAttachToActorInterface::StaticClass, Z_Construct_UClass_UFortAttachToActorInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortAttachToActorInterface_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortAttachToActorInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA39D0 (end 0x00FA39FF)
+// Original VA: 0x0000000140FA39D0 | File offset: 0x00FA2FD0
+// Recovery: confirmed (UHT singleton of UFortAttachToActorInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAttachToActorInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAttachToActorInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

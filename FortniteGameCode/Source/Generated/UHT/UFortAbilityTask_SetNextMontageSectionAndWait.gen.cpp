@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_SetNextMontageSectionAndWait_S
 	}
 	return ReturnFunction;
 }
+
+class UFortAbilityTask_SetNextMontageSectionAndWait
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAbilityTask_SetNextMontageSectionAndWait_OnMontageBlendingOut, "OnMontageBlendingOut" },
+	{ &Z_Construct_UFunction_UFortAbilityTask_SetNextMontageSectionAndWait_SetNextMontageSectionAndWait, "SetNextMontageSectionAndWait" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03296280
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait_Statics::ClassParams = { &UFortAbilityTask_SetNextMontageSectionAndWait::StaticClass, Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait_Statics::DependentSingletons, 2, 0x00880084u, Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait_Statics::FuncInfo, 2, Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait_Statics::PropPointers, 2, "Game", &Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81EE0 (end 0x00F81F0F)
+// Original VA: 0x0000000140F81EE0 | File offset: 0x00F814E0
+// Recovery: confirmed (UHT singleton of UFortAbilityTask_SetNextMontageSectionAndWait) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait_Statics::ClassParams);
+	}
+	return OuterClass;
+}

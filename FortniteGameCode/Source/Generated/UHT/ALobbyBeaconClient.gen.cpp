@@ -261,3 +261,47 @@ UFunction* Z_Construct_UFunction_ALobbyBeaconClient_ServerSetPartyOwner()
 	}
 	return ReturnFunction;
 }
+
+class ALobbyBeaconClient
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ALobbyBeaconClient_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ALobbyBeaconClient_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ClientAckJoiningServer, "ClientAckJoiningServer" },
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ClientJoinGame, "ClientJoinGame" },
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ClientLoginComplete, "ClientLoginComplete" },
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ClientPlayerJoined, "ClientPlayerJoined" },
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ClientPlayerLeft, "ClientPlayerLeft" },
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ClientSetInviteFlags, "ClientSetInviteFlags" },
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ClientWasKicked, "ClientWasKicked" },
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ServerCheat, "ServerCheat" },
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ServerDisconnectFromLobby, "ServerDisconnectFromLobby" },
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ServerKickPlayer, "ServerKickPlayer" },
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ServerLoginPlayer, "ServerLoginPlayer" },
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ServerNotifyJoiningServer, "ServerNotifyJoiningServer" },
+	{ &Z_Construct_UFunction_ALobbyBeaconClient_ServerSetPartyOwner, "ServerSetPartyOwner" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ALobbyBeaconClient_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F671A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ALobbyBeaconClient_Statics::ClassParams = { &ALobbyBeaconClient::StaticClass, Z_Construct_UClass_ALobbyBeaconClient_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_ALobbyBeaconClient_Statics::FuncInfo, 13, Z_Construct_UClass_ALobbyBeaconClient_Statics::PropPointers, 4, "Engine", &Z_Construct_UClass_ALobbyBeaconClient_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005C21C0 (end 0x005C21EF)
+// Original VA: 0x00000001405C21C0 | File offset: 0x005C17C0
+// Recovery: confirmed (UHT singleton of ALobbyBeaconClient) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ALobbyBeaconClient()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ALobbyBeaconClient_Statics::ClassParams);
+	}
+	return OuterClass;
+}

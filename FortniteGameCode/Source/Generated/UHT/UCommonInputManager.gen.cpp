@@ -223,3 +223,45 @@ UFunction* Z_Construct_UFunction_UCommonInputManager_SuspendStartingOperationPro
 	}
 	return ReturnFunction;
 }
+
+class UCommonInputManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonInputManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonInputManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonInputManager_GetAvailableInputActions, "GetAvailableInputActions" },
+	{ &Z_Construct_UFunction_UCommonInputManager_GetGlobalInputHandlerPriorityFilter, "GetGlobalInputHandlerPriorityFilter" },
+	{ &Z_Construct_UFunction_UCommonInputManager_IsInputSuspended, "IsInputSuspended" },
+	{ &Z_Construct_UFunction_UCommonInputManager_IsPanelOnStack, "IsPanelOnStack" },
+	{ &Z_Construct_UFunction_UCommonInputManager_PopActivatablePanel, "PopActivatablePanel" },
+	{ &Z_Construct_UFunction_UCommonInputManager_PushActivatablePanel, "PushActivatablePanel" },
+	{ &Z_Construct_UFunction_UCommonInputManager_ResumeStartingOperationProcessing, "ResumeStartingOperationProcessing" },
+	{ &Z_Construct_UFunction_UCommonInputManager_SetGlobalInputHandlerPriorityFilter, "SetGlobalInputHandlerPriorityFilter" },
+	{ &Z_Construct_UFunction_UCommonInputManager_StartListeningForExistingHeldAction, "StartListeningForExistingHeldAction" },
+	{ &Z_Construct_UFunction_UCommonInputManager_StopListeningForExistingHeldAction, "StopListeningForExistingHeldAction" },
+	{ &Z_Construct_UFunction_UCommonInputManager_SuspendStartingOperationProcessing, "SuspendStartingOperationProcessing" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonInputManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E7CEE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonInputManager_Statics::ClassParams = { &UCommonInputManager::StaticClass, Z_Construct_UClass_UCommonInputManager_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UCommonInputManager_Statics::FuncInfo, 11, Z_Construct_UClass_UCommonInputManager_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UCommonInputManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2E40 (end 0x002C2E6F)
+// Original VA: 0x00000001402C2E40 | File offset: 0x002C2440
+// Recovery: confirmed (UHT singleton of UCommonInputManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonInputManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonInputManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

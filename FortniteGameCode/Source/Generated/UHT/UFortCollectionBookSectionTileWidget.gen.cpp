@@ -45,3 +45,37 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionTileWidget_OnSectionS
 	}
 	return ReturnFunction;
 }
+
+class UFortCollectionBookSectionTileWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCollectionBookSectionTileWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCollectionBookSectionTileWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionTileWidget_OnItemSlotted, "OnItemSlotted" },
+	{ &Z_Construct_UFunction_UFortCollectionBookSectionTileWidget_OnSectionSlotUpdate, "OnSectionSlotUpdate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCollectionBookSectionTileWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C81930
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCollectionBookSectionTileWidget_Statics::ClassParams = { &UFortCollectionBookSectionTileWidget::StaticClass, Z_Construct_UClass_UFortCollectionBookSectionTileWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortCollectionBookSectionTileWidget_Statics::FuncInfo, 2, Z_Construct_UClass_UFortCollectionBookSectionTileWidget_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_UFortCollectionBookSectionTileWidget_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortCollectionBookSectionTileWidget_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B250 (end 0x0289B27F)
+// Original VA: 0x000000014289B250 | File offset: 0x0289A850
+// Recovery: confirmed (UHT singleton of UFortCollectionBookSectionTileWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCollectionBookSectionTileWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCollectionBookSectionTileWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

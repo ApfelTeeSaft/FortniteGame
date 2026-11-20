@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortInfluenceMap_K2_GetInfluenceSourcePosition
 	}
 	return ReturnFunction;
 }
+
+class UFortInfluenceMap
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortInfluenceMap_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortInfluenceMap_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortInfluenceMap_K2_AddInfluenceSource, "K2_AddInfluenceSource" },
+	{ &Z_Construct_UFunction_UFortInfluenceMap_K2_GetInfluenceSourcePositions, "K2_GetInfluenceSourcePositions" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortInfluenceMap_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03349BF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortInfluenceMap_Statics::ClassParams = { &UFortInfluenceMap::StaticClass, Z_Construct_UClass_UFortInfluenceMap_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UFortInfluenceMap_Statics::FuncInfo, 2, Z_Construct_UClass_UFortInfluenceMap_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortInfluenceMap_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006B60 (end 0x01006B8F)
+// Original VA: 0x0000000141006B60 | File offset: 0x01006160
+// Recovery: confirmed (UHT singleton of UFortInfluenceMap) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortInfluenceMap()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortInfluenceMap_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -83,3 +83,38 @@ UFunction* Z_Construct_UFunction_UAIPerceptionStimuliSourceComponent_UnregisterF
 	}
 	return ReturnFunction;
 }
+
+class UAIPerceptionStimuliSourceComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAIPerceptionStimuliSourceComponent_RegisterForSense, "RegisterForSense" },
+	{ &Z_Construct_UFunction_UAIPerceptionStimuliSourceComponent_RegisterWithPerceptionSystem, "RegisterWithPerceptionSystem" },
+	{ &Z_Construct_UFunction_UAIPerceptionStimuliSourceComponent_UnregisterFromPerceptionSystem, "UnregisterFromPerceptionSystem" },
+	{ &Z_Construct_UFunction_UAIPerceptionStimuliSourceComponent_UnregisterFromSense, "UnregisterFromSense" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036F1E00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_Statics::ClassParams = { &UAIPerceptionStimuliSourceComponent::StaticClass, Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_Statics::DependentSingletons, 2, 0x00B00084u, Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_Statics::FuncInfo, 4, Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_Statics::PropPointers, 3, "Game", &Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1BC40 (end 0x01D1BC6F)
+// Original VA: 0x0000000141D1BC40 | File offset: 0x01D1B240
+// Recovery: confirmed (UHT singleton of UAIPerceptionStimuliSourceComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAIPerceptionStimuliSourceComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAIPerceptionStimuliSourceComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

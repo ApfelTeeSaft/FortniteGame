@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortAnnouncementWidget_UpdateWidgetData()
 	}
 	return ReturnFunction;
 }
+
+class UFortAnnouncementWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAnnouncementWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAnnouncementWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAnnouncementWidget_AnnouncementStopped, "AnnouncementStopped" },
+	{ &Z_Construct_UFunction_UFortAnnouncementWidget_BindUpdateEvents, "BindUpdateEvents" },
+	{ &Z_Construct_UFunction_UFortAnnouncementWidget_UpdateWidgetData, "UpdateWidgetData" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAnnouncementWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C69F00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAnnouncementWidget_Statics::ClassParams = { &UFortAnnouncementWidget::StaticClass, Z_Construct_UClass_UFortAnnouncementWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortAnnouncementWidget_Statics::FuncInfo, 3, Z_Construct_UClass_UFortAnnouncementWidget_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortAnnouncementWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C920 (end 0x0288C94F)
+// Original VA: 0x000000014288C920 | File offset: 0x0288BF20
+// Recovery: confirmed (UHT singleton of UFortAnnouncementWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAnnouncementWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAnnouncementWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

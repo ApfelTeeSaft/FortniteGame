@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UAthenaGliderItemDefinition_GetParachutePrefabC
 	}
 	return ReturnFunction;
 }
+
+class UAthenaGliderItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaGliderItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaGliderItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaGliderItemDefinition_GetParachutePrefabClass, "GetParachutePrefabClass" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaGliderItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032611B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaGliderItemDefinition_Statics::ClassParams = { &UAthenaGliderItemDefinition::StaticClass, Z_Construct_UClass_UAthenaGliderItemDefinition_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UAthenaGliderItemDefinition_Statics::FuncInfo, 1, Z_Construct_UClass_UAthenaGliderItemDefinition_Statics::PropPointers, 9, nullptr, &Z_Construct_UClass_UAthenaGliderItemDefinition_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59A80 (end 0x00F59AAF)
+// Original VA: 0x0000000140F59A80 | File offset: 0x00F59080
+// Recovery: confirmed (UHT singleton of UAthenaGliderItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaGliderItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaGliderItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -281,3 +281,48 @@ UFunction* Z_Construct_UFunction_AFortGameStatePvP_SetMatchLevel()
 	}
 	return ReturnFunction;
 }
+
+class AFortGameStatePvP
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortGameStatePvP_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortGameStatePvP_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortGameStatePvP_GetAverageHomebaseRating, "GetAverageHomebaseRating" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_GetFOBFinalizationTimeRemaining, "GetFOBFinalizationTimeRemaining" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_GetItemCollector, "GetItemCollector" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_GetMatchLevel, "GetMatchLevel" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_GetRoundTimeAccumulated, "GetRoundTimeAccumulated" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_GetStartMatchDelayTimer, "GetStartMatchDelayTimer" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_GetTotalHomebaseRating, "GetTotalHomebaseRating" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_IsExperimentalCraftingFeatureActive, "IsExperimentalCraftingFeatureActive" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_OnRep_ItemCollector, "OnRep_ItemCollector" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_OnRep_MatchLevel, "OnRep_MatchLevel" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_OnRep_RoundTimeRemaining, "OnRep_RoundTimeRemaining" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_OnRep_StalemateTimeRemaining, "OnRep_StalemateTimeRemaining" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_SetGameDifficultyRow, "SetGameDifficultyRow" },
+	{ &Z_Construct_UFunction_AFortGameStatePvP_SetMatchLevel, "SetMatchLevel" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortGameStatePvP_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0332ED20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortGameStatePvP_Statics::ClassParams = { &AFortGameStatePvP::StaticClass, Z_Construct_UClass_AFortGameStatePvP_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortGameStatePvP_Statics::FuncInfo, 14, Z_Construct_UClass_AFortGameStatePvP_Statics::PropPointers, 22, "Game", &Z_Construct_UClass_AFortGameStatePvP_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE7B0 (end 0x00FEE7DF)
+// Original VA: 0x0000000140FEE7B0 | File offset: 0x00FEDDB0
+// Recovery: confirmed (UHT singleton of AFortGameStatePvP) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortGameStatePvP()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortGameStatePvP_Statics::ClassParams);
+	}
+	return OuterClass;
+}

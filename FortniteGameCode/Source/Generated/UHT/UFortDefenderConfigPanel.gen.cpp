@@ -225,3 +225,45 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_UnsummonDefender()
 	}
 	return ReturnFunction;
 }
+
+class UFortDefenderConfigPanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortDefenderConfigPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortDefenderConfigPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromDefender, "GetAmmoCountFromDefender" },
+	{ &Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromPlayer, "GetAmmoCountFromPlayer" },
+	{ &Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmo, "GetCompatibleAmmo" },
+	{ &Z_Construct_UFunction_UFortDefenderConfigPanel_GetCompatibleAmmoDef, "GetCompatibleAmmoDef" },
+	{ &Z_Construct_UFunction_UFortDefenderConfigPanel_GetDefenderPawnWeaponItem, "GetDefenderPawnWeaponItem" },
+	{ &Z_Construct_UFunction_UFortDefenderConfigPanel_GetSourceSchematic, "GetSourceSchematic" },
+	{ &Z_Construct_UFunction_UFortDefenderConfigPanel_HasAnyDefenders, "HasAnyDefenders" },
+	{ &Z_Construct_UFunction_UFortDefenderConfigPanel_HasWeaponForSelectedDefender, "HasWeaponForSelectedDefender" },
+	{ &Z_Construct_UFunction_UFortDefenderConfigPanel_IsWeaponSelectionValid, "IsWeaponSelectionValid" },
+	{ &Z_Construct_UFunction_UFortDefenderConfigPanel_SpawnDefender, "SpawnDefender" },
+	{ &Z_Construct_UFunction_UFortDefenderConfigPanel_UnsummonDefender, "UnsummonDefender" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortDefenderConfigPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C82D40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortDefenderConfigPanel_Statics::ClassParams = { &UFortDefenderConfigPanel::StaticClass, Z_Construct_UClass_UFortDefenderConfigPanel_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortDefenderConfigPanel_Statics::FuncInfo, 11, Z_Construct_UClass_UFortDefenderConfigPanel_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortDefenderConfigPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B490 (end 0x0289B4BF)
+// Original VA: 0x000000014289B490 | File offset: 0x0289AA90
+// Recovery: confirmed (UHT singleton of UFortDefenderConfigPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortDefenderConfigPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortDefenderConfigPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

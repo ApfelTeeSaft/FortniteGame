@@ -43,3 +43,36 @@ UFunction* Z_Construct_UFunction_AGameState_OnRep_MatchState()
 	}
 	return ReturnFunction;
 }
+
+class AGameState
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AGameState_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AGameState_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AGameState_OnRep_ElapsedTime, "OnRep_ElapsedTime" },
+	{ &Z_Construct_UFunction_AGameState_OnRep_MatchState, "OnRep_MatchState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AGameState_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038F7E90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AGameState_Statics::ClassParams = { &AGameState::StaticClass, Z_Construct_UClass_AGameState_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_AGameState_Statics::FuncInfo, 2, Z_Construct_UClass_AGameState_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_AGameState_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241F010 (end 0x0241F03F)
+// Original VA: 0x000000014241F010 | File offset: 0x0241E610
+// Recovery: confirmed (UHT singleton of AGameState) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AGameState()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AGameState_Statics::ClassParams);
+	}
+	return OuterClass;
+}

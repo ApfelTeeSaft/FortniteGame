@@ -284,3 +284,48 @@ UFunction* Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetRotation()
 	}
 	return ReturnFunction;
 }
+
+class UPhysicsHandleComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPhysicsHandleComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPhysicsHandleComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_GetGrabbedComponent, "GetGrabbedComponent" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_GetTargetLocationAndRotation, "GetTargetLocationAndRotation" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponent, "GrabComponent" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocation, "GrabComponentAtLocation" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_GrabComponentAtLocationWithRotation, "GrabComponentAtLocationWithRotation" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_ReleaseComponent, "ReleaseComponent" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularDamping, "SetAngularDamping" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_SetAngularStiffness, "SetAngularStiffness" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_SetInterpolationSpeed, "SetInterpolationSpeed" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearDamping, "SetLinearDamping" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_SetLinearStiffness, "SetLinearStiffness" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocation, "SetTargetLocation" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetLocationAndRotation, "SetTargetLocationAndRotation" },
+	{ &Z_Construct_UFunction_UPhysicsHandleComponent_SetTargetRotation, "SetTargetRotation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPhysicsHandleComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03982A60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPhysicsHandleComponent_Statics::ClassParams = { &UPhysicsHandleComponent::StaticClass, Z_Construct_UClass_UPhysicsHandleComponent_Statics::DependentSingletons, 2, 0x00A82080u, Z_Construct_UClass_UPhysicsHandleComponent_Statics::FuncInfo, 14, Z_Construct_UClass_UPhysicsHandleComponent_Statics::PropPointers, 9, nullptr, &Z_Construct_UClass_UPhysicsHandleComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9E60 (end 0x024A9E8F)
+// Original VA: 0x00000001424A9E60 | File offset: 0x024A9460
+// Recovery: confirmed (UHT singleton of UPhysicsHandleComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPhysicsHandleComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPhysicsHandleComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

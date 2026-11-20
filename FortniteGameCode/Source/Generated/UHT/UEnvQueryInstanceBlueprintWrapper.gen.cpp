@@ -105,3 +105,40 @@ UFunction* Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_SetNamedParam
 	}
 	return ReturnFunction;
 }
+
+class UEnvQueryInstanceBlueprintWrapper
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper_Statics::FuncInfo[] = {
+	{ &Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQueryDoneSignature__DelegateSignature, "EQSQueryDoneSignature__DelegateSignature" },
+	{ &Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetItemScore, "GetItemScore" },
+	{ &Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsActors, "GetResultsAsActors" },
+	{ &Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_GetResultsAsLocations, "GetResultsAsLocations" },
+	{ &Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_SetNamedParam, "SetNamedParam" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03707F80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper_Statics::ClassParams = { &UEnvQueryInstanceBlueprintWrapper::StaticClass, Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper_Statics::FuncInfo, 5, Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2F8B0 (end 0x01D2F8DF)
+// Original VA: 0x0000000141D2F8B0 | File offset: 0x01D2EEB0
+// Recovery: confirmed (UHT singleton of UEnvQueryInstanceBlueprintWrapper) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper_Statics::ClassParams);
+	}
+	return OuterClass;
+}

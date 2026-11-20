@@ -400,3 +400,54 @@ UFunction* Z_Construct_UFunction_ABuildingFOBConfigActor_ReloadFOB()
 	}
 	return ReturnFunction;
 }
+
+class ABuildingFOBConfigActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingFOBConfigActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingFOBConfigActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_AttemptSelectFOBCore, "AttemptSelectFOBCore" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_CanPerformIOOperation, "CanPerformIOOperation" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_CanReloadFOB, "CanReloadFOB" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_CanSaveFOB, "CanSaveFOB" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_GetAllCoreChoices, "GetAllCoreChoices" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_GetFOBMode, "GetFOBMode" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_GetSelectedFOBCoreItemDefinition, "GetSelectedFOBCoreItemDefinition" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_IsBuildingActorWithinFOB, "IsBuildingActorWithinFOB" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_IsFinalized, "IsFinalized" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_IsInitialized, "IsInitialized" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_IsPlayerControllerFOBOwner, "IsPlayerControllerFOBOwner" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_OnCoreInitialized, "OnCoreInitialized" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_OnFOBModeSet, "OnFOBModeSet" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_OnFinalizationFXMulticast, "OnFinalizationFXMulticast" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_OnFinalizationPlayFX, "OnFinalizationPlayFX" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_OnFinalized, "OnFinalized" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_OnIOOperationCompleteMulticast, "OnIOOperationCompleteMulticast" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_OnRep_FOBMode, "OnRep_FOBMode" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_OnRep_bFinalized, "OnRep_bFinalized" },
+	{ &Z_Construct_UFunction_ABuildingFOBConfigActor_ReloadFOB, "ReloadFOB" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingFOBConfigActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03271AD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingFOBConfigActor_Statics::ClassParams = { &ABuildingFOBConfigActor::StaticClass, Z_Construct_UClass_ABuildingFOBConfigActor_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ABuildingFOBConfigActor_Statics::FuncInfo, 20, Z_Construct_UClass_ABuildingFOBConfigActor_Statics::PropPointers, 27, "Game", &Z_Construct_UClass_ABuildingFOBConfigActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66560 (end 0x00F6658F)
+// Original VA: 0x0000000140F66560 | File offset: 0x00F65B60
+// Recovery: confirmed (UHT singleton of ABuildingFOBConfigActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingFOBConfigActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingFOBConfigActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

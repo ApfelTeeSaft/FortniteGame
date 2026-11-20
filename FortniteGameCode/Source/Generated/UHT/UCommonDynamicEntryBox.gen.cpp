@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UCommonDynamicEntryBox_SetEntrySpacing()
 	}
 	return ReturnFunction;
 }
+
+class UCommonDynamicEntryBox
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonDynamicEntryBox_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonDynamicEntryBox_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonDynamicEntryBox_GetAllEntries, "GetAllEntries" },
+	{ &Z_Construct_UFunction_UCommonDynamicEntryBox_GetNumEntries, "GetNumEntries" },
+	{ &Z_Construct_UFunction_UCommonDynamicEntryBox_RemoveEntry, "RemoveEntry" },
+	{ &Z_Construct_UFunction_UCommonDynamicEntryBox_Reset, "Reset" },
+	{ &Z_Construct_UFunction_UCommonDynamicEntryBox_SetEntrySpacing, "SetEntrySpacing" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonDynamicEntryBox_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E7CA20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonDynamicEntryBox_Statics::ClassParams = { &UCommonDynamicEntryBox::StaticClass, Z_Construct_UClass_UCommonDynamicEntryBox_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UCommonDynamicEntryBox_Statics::FuncInfo, 5, Z_Construct_UClass_UCommonDynamicEntryBox_Statics::PropPointers, 12, nullptr, &Z_Construct_UClass_UCommonDynamicEntryBox_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2DD0 (end 0x002C2DFF)
+// Original VA: 0x00000001402C2DD0 | File offset: 0x002C23D0
+// Recovery: confirmed (UHT singleton of UCommonDynamicEntryBox) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonDynamicEntryBox()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonDynamicEntryBox_Statics::ClassParams);
+	}
+	return OuterClass;
+}

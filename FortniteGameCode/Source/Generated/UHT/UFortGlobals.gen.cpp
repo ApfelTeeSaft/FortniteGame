@@ -725,3 +725,70 @@ UFunction* Z_Construct_UFunction_UFortGlobals_ShouldStreamOutTextureDataWhenPlay
 	}
 	return ReturnFunction;
 }
+
+class UFortGlobals
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortGlobals_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortGlobals_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortGlobals_AreFriendCodesEnabled, "AreFriendCodesEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_GetAccountLinkingUIConfig, "GetAccountLinkingUIConfig" },
+	{ &Z_Construct_UFunction_UFortGlobals_GetAccountLinkingUIURL, "GetAccountLinkingUIURL" },
+	{ &Z_Construct_UFunction_UFortGlobals_GetMaxTheaterListRefreshDelay, "GetMaxTheaterListRefreshDelay" },
+	{ &Z_Construct_UFunction_UFortGlobals_GetMinTheaterListRefreshDelay, "GetMinTheaterListRefreshDelay" },
+	{ &Z_Construct_UFunction_UFortGlobals_Is50v50CalenderEventEnabled, "Is50v50CalenderEventEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_Is50v50ForceEnabled, "Is50v50ForceEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsAccountLinkingEnabled, "IsAccountLinkingEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsAccountLinkingUIURLButtonEnabled, "IsAccountLinkingUIURLButtonEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsBROnly, "IsBROnly" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsDisplayingTwitchViewerNamesAllowed, "IsDisplayingTwitchViewerNamesAllowed" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsEvent1ForceEnabled, "IsEvent1ForceEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsEvent2ForceEnabled, "IsEvent2ForceEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsEvent3ForceEnabled, "IsEvent3ForceEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsEvent4ForceEnabled, "IsEvent4ForceEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsEvent5ForceEnabled, "IsEvent5ForceEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsEvent6ForceEnabled, "IsEvent6ForceEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsEvent7ForceEnabled, "IsEvent7ForceEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsEvent8ForceEnabled, "IsEvent8ForceEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsEvent_X_ForceEnabled, "IsEvent_X_ForceEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsFrontendCraftingEnabled, "IsFrontendCraftingEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsFrontendStorageEnabled, "IsFrontendStorageEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsNewRewardFlowEnabled, "IsNewRewardFlowEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsPlatoonCalenderEventEnabled, "IsPlatoonCalenderEventEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsPlatoonForceEnabled, "IsPlatoonForceEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsShootingTest3Enabled, "IsShootingTest3Enabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsTencentBuild, "IsTencentBuild" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsTwitchEnabled, "IsTwitchEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_IsWIFEEnabled, "IsWIFEEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_Is_X_CalendarForceEnabled, "Is_X_CalendarForceEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobals_ShouldDisableParticleEffectsDuringMissionResults, "ShouldDisableParticleEffectsDuringMissionResults" },
+	{ &Z_Construct_UFunction_UFortGlobals_ShouldDisablePlayerTeleportDuringMissionResults, "ShouldDisablePlayerTeleportDuringMissionResults" },
+	{ &Z_Construct_UFunction_UFortGlobals_ShouldFlushGPUWhenPlayerIsTeleportedAtEndOfZone, "ShouldFlushGPUWhenPlayerIsTeleportedAtEndOfZone" },
+	{ &Z_Construct_UFunction_UFortGlobals_ShouldShowMissionResultsMovies, "ShouldShowMissionResultsMovies" },
+	{ &Z_Construct_UFunction_UFortGlobals_ShouldShowSkillTreeMovies, "ShouldShowSkillTreeMovies" },
+	{ &Z_Construct_UFunction_UFortGlobals_ShouldStreamOutTextureDataWhenPlayerIsTeleportedAtEndOfZone, "ShouldStreamOutTextureDataWhenPlayerIsTeleportedAtEndOfZone" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortGlobals_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03337200
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortGlobals_Statics::ClassParams = { &UFortGlobals::StaticClass, Z_Construct_UClass_UFortGlobals_Statics::DependentSingletons, 2, 0x00100084u, Z_Construct_UClass_UFortGlobals_Statics::FuncInfo, 36, Z_Construct_UClass_UFortGlobals_Statics::PropPointers, 83, "Game", &Z_Construct_UClass_UFortGlobals_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF36A0 (end 0x00FF36CF)
+// Original VA: 0x0000000140FF36A0 | File offset: 0x00FF2CA0
+// Recovery: confirmed (UHT singleton of UFortGlobals) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortGlobals()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortGlobals_Statics::ClassParams);
+	}
+	return OuterClass;
+}

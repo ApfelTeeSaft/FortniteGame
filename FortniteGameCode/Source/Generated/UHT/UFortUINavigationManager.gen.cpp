@@ -443,3 +443,56 @@ UFunction* Z_Construct_UFunction_UFortUINavigationManager_TryGetPendingNavigatio
 	}
 	return ReturnFunction;
 }
+
+class UFortUINavigationManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortUINavigationManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUINavigationManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUINavigationManager_AttemptMatchmakeForQuest, "AttemptMatchmakeForQuest" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_AttemptPlayQuest, "AttemptPlayQuest" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_CanNavigateToQuestObjective, "CanNavigateToQuestObjective" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_CenterWidget, "CenterWidget" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_CompletePendingNavigationOp, "CompletePendingNavigationOp" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_HasPendingNavigationOp, "HasPendingNavigationOp" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_NavigateToCollectionBook, "NavigateToCollectionBook" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_NavigateToExpeditions, "NavigateToExpeditions" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_NavigateToFeature, "NavigateToFeature" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_NavigateToItem, "NavigateToItem" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_NavigateToItemManagementScreen, "NavigateToItemManagementScreen" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_NavigateToNodePage, "NavigateToNodePage" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_NavigateToNodePageByGameplayTagContainer, "NavigateToNodePageByGameplayTagContainer" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_NavigateToQuestObjective, "NavigateToQuestObjective" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_NavigateToSquadSlot, "NavigateToSquadSlot" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_PushItemInspectionScreen, "PushItemInspectionScreen" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_PushItemManagementScreen, "PushItemManagementScreen" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_PushSkillTreeNode, "PushSkillTreeNode" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_PushSkillTreePage, "PushSkillTreePage" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_PushSquadManagementScreen, "PushSquadManagementScreen" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_SetScrollWidget, "SetScrollWidget" },
+	{ &Z_Construct_UFunction_UFortUINavigationManager_TryGetPendingNavigationOp, "TryGetPendingNavigationOp" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUINavigationManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D49C00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUINavigationManager_Statics::ClassParams = { &UFortUINavigationManager::StaticClass, Z_Construct_UClass_UFortUINavigationManager_Statics::DependentSingletons, 2, 0x00880280u, Z_Construct_UClass_UFortUINavigationManager_Statics::FuncInfo, 22, Z_Construct_UClass_UFortUINavigationManager_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_UFortUINavigationManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911D50 (end 0x02911D7F)
+// Original VA: 0x0000000142911D50 | File offset: 0x02911350
+// Recovery: confirmed (UHT singleton of UFortUINavigationManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUINavigationManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUINavigationManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

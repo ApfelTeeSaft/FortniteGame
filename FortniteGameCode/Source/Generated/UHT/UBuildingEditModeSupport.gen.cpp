@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_UBuildingEditModeSupport_OnSuccessfulMatchInter
 	}
 	return ReturnFunction;
 }
+
+class UBuildingEditModeSupport
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBuildingEditModeSupport_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBuildingEditModeSupport_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBuildingEditModeSupport_OnSuccessfulMatchInteractComplete, "OnSuccessfulMatchInteractComplete" },
+	{ &Z_Construct_UFunction_UBuildingEditModeSupport_OnSuccessfulMatchInteractParamUpdate, "OnSuccessfulMatchInteractParamUpdate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBuildingEditModeSupport_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03270DD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBuildingEditModeSupport_Statics::ClassParams = { &UBuildingEditModeSupport::StaticClass, Z_Construct_UClass_UBuildingEditModeSupport_Statics::DependentSingletons, 2, 0x00800081u, Z_Construct_UClass_UBuildingEditModeSupport_Statics::FuncInfo, 2, Z_Construct_UClass_UBuildingEditModeSupport_Statics::PropPointers, 24, nullptr, &Z_Construct_UClass_UBuildingEditModeSupport_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66860 (end 0x00F6688F)
+// Original VA: 0x0000000140F66860 | File offset: 0x00F65E60
+// Recovery: confirmed (UHT singleton of UBuildingEditModeSupport) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBuildingEditModeSupport()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBuildingEditModeSupport_Statics::ClassParams);
+	}
+	return OuterClass;
+}

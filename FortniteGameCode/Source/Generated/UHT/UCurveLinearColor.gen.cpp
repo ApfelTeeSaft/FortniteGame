@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UCurveLinearColor_GetLinearColorValue()
 	}
 	return ReturnFunction;
 }
+
+class UCurveLinearColor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCurveLinearColor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCurveLinearColor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCurveLinearColor_GetLinearColorValue, "GetLinearColorValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCurveLinearColor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038CD630
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCurveLinearColor_Statics::ClassParams = { &UCurveLinearColor::StaticClass, Z_Construct_UClass_UCurveLinearColor_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UCurveLinearColor_Statics::FuncInfo, 1, Z_Construct_UClass_UCurveLinearColor_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UCurveLinearColor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FE530 (end 0x023FE55F)
+// Original VA: 0x00000001423FE530 | File offset: 0x023FDB30
+// Recovery: confirmed (UHT singleton of UCurveLinearColor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCurveLinearColor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCurveLinearColor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

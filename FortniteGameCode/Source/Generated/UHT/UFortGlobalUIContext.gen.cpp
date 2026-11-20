@@ -2173,3 +2173,143 @@ UFunction* Z_Construct_UFunction_UFortGlobalUIContext_UnregisterToReceiveNotific
 	}
 	return ReturnFunction;
 }
+
+class UFortGlobalUIContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortGlobalUIContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortGlobalUIContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_AllowLogout, "AllowLogout" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_AllowQuit, "AllowQuit" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_AutoSelectSubGame, "AutoSelectSubGame" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_BindToFeatureStateAndInitialize, "BindToFeatureStateAndInitialize" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_CanMatchmake, "CanMatchmake" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_CanPlay, "CanPlay" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_CheckFlag, "CheckFlag" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ClearForceSetFeatureState, "ClearForceSetFeatureState" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ClearLastGameSummaryInfo, "ClearLastGameSummaryInfo" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ClearLastMissionReports, "ClearLastMissionReports" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ClearRatingWidgetInfo, "ClearRatingWidgetInfo" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ClearSelectionGroup, "ClearSelectionGroup" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_CloseExternalNotificationWindowIfOpen, "CloseExternalNotificationWindowIfOpen" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ContentInstallationProgress, "ContentInstallationProgress" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_CopyToClipboard, "CopyToClipboard" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_DisplayStateContent, "DisplayStateContent" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ForceSetFeatureState, "ForceSetFeatureState" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetAccountGameplayRestrictionText, "GetAccountGameplayRestrictionText" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetAllPlayerInputPresetNames, "GetAllPlayerInputPresetNames" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetAllPlayerInputPresetNamesForSubGame, "GetAllPlayerInputPresetNamesForSubGame" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetAthenaCodeOfConductURL, "GetAthenaCodeOfConductURL" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetBackendName, "GetBackendName" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetCollectionBookManager, "GetCollectionBookManager" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetConningDifficultyXpModifier, "GetConningDifficultyXpModifier" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetConningXpModifierMessage, "GetConningXpModifierMessage" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetCurrentInputPresetName, "GetCurrentInputPresetName" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetFeatureState, "GetFeatureState" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetFeatureStateReasonText, "GetFeatureStateReasonText" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetFeedbackTitle, "GetFeedbackTitle" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetInputDetailsForAction, "GetInputDetailsForAction" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetInputPriority, "GetInputPriority" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetKeyForAction, "GetKeyForAction" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetKeyTextForAction, "GetKeyTextForAction" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetLastGameSummaryInfo, "GetLastGameSummaryInfo" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetLastMissionInfo, "GetLastMissionInfo" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetLastMissionRewardReport, "GetLastMissionRewardReport" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetMessageManager, "GetMessageManager" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetNextNotification, "GetNextNotification" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetPlatformDisplayName, "GetPlatformDisplayName" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetQuestManager, "GetQuestManager" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetScoreReport, "GetScoreReport" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetSeasonalEventManager, "GetSeasonalEventManager" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetSessionId, "GetSessionId" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetStringNameOfEventPlaylist, "GetStringNameOfEventPlaylist" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetSubGame, "GetSubGame" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_GetWatermark, "GetWatermark" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_HasAccesstoMultipleSubGames, "HasAccesstoMultipleSubGames" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_HasCompletedOnboardingObjective, "HasCompletedOnboardingObjective" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_HideBang, "HideBang" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_InputActionHoldStarted, "InputActionHoldStarted" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_InputActionHoldStopped, "InputActionHoldStopped" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsAllContentInstalled, "IsAllContentInstalled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsBattleRoyaleMatchmakingEnabled, "IsBattleRoyaleMatchmakingEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsBluGloEnabled, "IsBluGloEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsDesktopPlatform, "IsDesktopPlatform" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsDuoQueueEnabled, "IsDuoQueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsEvent1QueueEnabled, "IsEvent1QueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsEvent2QueueEnabled, "IsEvent2QueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsEvent3QueueEnabled, "IsEvent3QueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsEvent4QueueEnabled, "IsEvent4QueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsEvent5QueueEnabled, "IsEvent5QueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsEvent6QueueEnabled, "IsEvent6QueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsEvent7QueueEnabled, "IsEvent7QueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsEvent8QueueEnabled, "IsEvent8QueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsFiftyFiftyQueueEnabled, "IsFiftyFiftyQueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsGamepadAttached, "IsGamepadAttached" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsHUDVisible, "IsHUDVisible" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsInOutpostZone, "IsInOutpostZone" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsInZone, "IsInZone" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsMobileApp, "IsMobileApp" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsPendingLogout, "IsPendingLogout" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsPlatoonQueueEnabled, "IsPlatoonQueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsPlaylistQueueEnabled, "IsPlaylistQueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsSquadQueueEnabled, "IsSquadQueueEnabled" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsUIVisible, "IsUIVisible" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_IsUsingGamepad, "IsUsingGamepad" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_Logout, "Logout" },
+	{ &Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnLoadingScreenVisibilityChangedDelegate__DelegateSignature, "OnLoadingScreenVisibilityChangedDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnLocalPlayerControllerConnectionChangedDelegate__DelegateSignature, "OnLocalPlayerControllerConnectionChangedDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnQueryFortBackendVersionDelegate__DelegateSignature, "OnQueryFortBackendVersionDelegate__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ProcessConfirmationResult, "ProcessConfirmationResult" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ProcessNotificationResult, "ProcessNotificationResult" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_QueryGameBackendVersion, "QueryGameBackendVersion" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_QuitGame, "QuitGame" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_RegisterScriptedAction, "RegisterScriptedAction" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_RegisterScriptedActions, "RegisterScriptedActions" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_RegisterToReceiveNotifications, "RegisterToReceiveNotifications" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_RemoveNotification, "RemoveNotification" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ReturnToSubGameSelect, "ReturnToSubGameSelect" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_SendExperienceRatingAnalytic, "SendExperienceRatingAnalytic" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_SendLeaveZoneAnalytic, "SendLeaveZoneAnalytic" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_SendUINavigationAnalytic, "SendUINavigationAnalytic" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_SetBangFromCount, "SetBangFromCount" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_SetCurrentInputPresetName, "SetCurrentInputPresetName" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_SetInputMode, "SetInputMode" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_SetRatingWidgetFeedbackTitle, "SetRatingWidgetFeedbackTitle" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_SetSubGame, "SetSubGame" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ShouldCloseMenuOnEscape, "ShouldCloseMenuOnEscape" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ShouldShowRateWidget, "ShouldShowRateWidget" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ShowAthenaMatchReadyExternalNotificationWindow, "ShowAthenaMatchReadyExternalNotificationWindow" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ShowBang, "ShowBang" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ShowConsoleAccountPicker, "ShowConsoleAccountPicker" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_ShowWebURL, "ShowWebURL" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_TriggerCompletedQuestStickies, "TriggerCompletedQuestStickies" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_TriggerNewQuestStickies, "TriggerNewQuestStickies" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_TriggerUIFeedbackEvent, "TriggerUIFeedbackEvent" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_UnbindToFeatureState, "UnbindToFeatureState" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_UnregisterScriptedAction, "UnregisterScriptedAction" },
+	{ &Z_Construct_UFunction_UFortGlobalUIContext_UnregisterToReceiveNotifications, "UnregisterToReceiveNotifications" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortGlobalUIContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C9DBB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortGlobalUIContext_Statics::ClassParams = { &UFortGlobalUIContext::StaticClass, Z_Construct_UClass_UFortGlobalUIContext_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_UFortGlobalUIContext_Statics::FuncInfo, 109, Z_Construct_UClass_UFortGlobalUIContext_Statics::PropPointers, 27, nullptr, &Z_Construct_UClass_UFortGlobalUIContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AC410 (end 0x028AC43F)
+// Original VA: 0x00000001428AC410 | File offset: 0x028ABA10
+// Recovery: confirmed (UHT singleton of UFortGlobalUIContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortGlobalUIContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortGlobalUIContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

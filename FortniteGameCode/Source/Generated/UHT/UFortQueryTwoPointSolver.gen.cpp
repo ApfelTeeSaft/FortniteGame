@@ -144,3 +144,41 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_Start()
 	}
 	return ReturnFunction;
 }
+
+class UFortQueryTwoPointSolver
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortQueryTwoPointSolver_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortQueryTwoPointSolver_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamA, "AddNamedFloatParamA" },
+	{ &Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamB, "AddNamedFloatParamB" },
+	{ &Z_Construct_UFunction_UFortQueryTwoPointSolver_GetRandomRotationOffset, "GetRandomRotationOffset" },
+	{ &Z_Construct_UFunction_UFortQueryTwoPointSolver_OnCustomRotationMode, "OnCustomRotationMode" },
+	{ &Z_Construct_UFunction_UFortQueryTwoPointSolver_SetCustomRotationA, "SetCustomRotationA" },
+	{ &Z_Construct_UFunction_UFortQueryTwoPointSolver_SkipToNextPointA, "SkipToNextPointA" },
+	{ &Z_Construct_UFunction_UFortQueryTwoPointSolver_Start, "Start" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortQueryTwoPointSolver_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033E5140
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortQueryTwoPointSolver_Statics::ClassParams = { &UFortQueryTwoPointSolver::StaticClass, Z_Construct_UClass_UFortQueryTwoPointSolver_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortQueryTwoPointSolver_Statics::FuncInfo, 7, Z_Construct_UClass_UFortQueryTwoPointSolver_Statics::PropPointers, 16, nullptr, &Z_Construct_UClass_UFortQueryTwoPointSolver_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01096470 (end 0x0109649F)
+// Original VA: 0x0000000141096470 | File offset: 0x01095A70
+// Recovery: confirmed (UHT singleton of UFortQueryTwoPointSolver) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortQueryTwoPointSolver()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortQueryTwoPointSolver_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -278,3 +278,48 @@ UFunction* Z_Construct_UFunction_USizeBox_SetWidthOverride()
 	}
 	return ReturnFunction;
 }
+
+class USizeBox
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_USizeBox_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USizeBox_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USizeBox_ClearHeightOverride, "ClearHeightOverride" },
+	{ &Z_Construct_UFunction_USizeBox_ClearMaxAspectRatio, "ClearMaxAspectRatio" },
+	{ &Z_Construct_UFunction_USizeBox_ClearMaxDesiredHeight, "ClearMaxDesiredHeight" },
+	{ &Z_Construct_UFunction_USizeBox_ClearMaxDesiredWidth, "ClearMaxDesiredWidth" },
+	{ &Z_Construct_UFunction_USizeBox_ClearMinDesiredHeight, "ClearMinDesiredHeight" },
+	{ &Z_Construct_UFunction_USizeBox_ClearMinDesiredWidth, "ClearMinDesiredWidth" },
+	{ &Z_Construct_UFunction_USizeBox_ClearWidthOverride, "ClearWidthOverride" },
+	{ &Z_Construct_UFunction_USizeBox_SetHeightOverride, "SetHeightOverride" },
+	{ &Z_Construct_UFunction_USizeBox_SetMaxAspectRatio, "SetMaxAspectRatio" },
+	{ &Z_Construct_UFunction_USizeBox_SetMaxDesiredHeight, "SetMaxDesiredHeight" },
+	{ &Z_Construct_UFunction_USizeBox_SetMaxDesiredWidth, "SetMaxDesiredWidth" },
+	{ &Z_Construct_UFunction_USizeBox_SetMinDesiredHeight, "SetMinDesiredHeight" },
+	{ &Z_Construct_UFunction_USizeBox_SetMinDesiredWidth, "SetMinDesiredWidth" },
+	{ &Z_Construct_UFunction_USizeBox_SetWidthOverride, "SetWidthOverride" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USizeBox_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0369D310
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USizeBox_Statics::ClassParams = { &USizeBox::StaticClass, Z_Construct_UClass_USizeBox_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_USizeBox_Statics::FuncInfo, 14, Z_Construct_UClass_USizeBox_Statics::PropPointers, 14, nullptr, &Z_Construct_UClass_USizeBox_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3010 (end 0x01BF303F)
+// Original VA: 0x0000000141BF3010 | File offset: 0x01BF2610
+// Recovery: confirmed (UHT singleton of USizeBox) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USizeBox()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USizeBox_Statics::ClassParams);
+	}
+	return OuterClass;
+}

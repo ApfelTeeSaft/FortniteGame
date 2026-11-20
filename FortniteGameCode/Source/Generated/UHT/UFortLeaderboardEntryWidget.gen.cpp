@@ -24,3 +24,36 @@ UFunction* Z_Construct_UFunction_UFortLeaderboardEntryWidget_OnLeaderboardEntryD
 	}
 	return ReturnFunction;
 }
+
+class UFortLeaderboardEntryWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortLeaderboardEntryWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortLeaderboardEntryWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortLeaderboardEntryWidget_OnLeaderboardEntryDataSet, "OnLeaderboardEntryDataSet" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortLeaderboardEntryWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE3AF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortLeaderboardEntryWidget_Statics::ClassParams = { &UFortLeaderboardEntryWidget::StaticClass, Z_Construct_UClass_UFortLeaderboardEntryWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortLeaderboardEntryWidget_Statics::FuncInfo, 1, Z_Construct_UClass_UFortLeaderboardEntryWidget_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortLeaderboardEntryWidget_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortLeaderboardEntryWidget_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D71E0 (end 0x028D720F)
+// Original VA: 0x00000001428D71E0 | File offset: 0x028D67E0
+// Recovery: confirmed (UHT singleton of UFortLeaderboardEntryWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortLeaderboardEntryWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortLeaderboardEntryWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

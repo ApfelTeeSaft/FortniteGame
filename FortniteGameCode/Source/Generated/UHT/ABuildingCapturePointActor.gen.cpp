@@ -221,3 +221,45 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_SetActivatedState()
 	}
 	return ReturnFunction;
 }
+
+class ABuildingCapturePointActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingCapturePointActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingCapturePointActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingCapturePointActor_GetCaptureState, "GetCaptureState" },
+	{ &Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointActiveStateChange, "OnCapturePointActiveStateChange" },
+	{ &Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointLockStateChange, "OnCapturePointLockStateChange" },
+	{ &Z_Construct_UFunction_ABuildingCapturePointActor_OnCapturePointStateChange, "OnCapturePointStateChange" },
+	{ &Z_Construct_UFunction_ABuildingCapturePointActor_OnEnterCapturePoint, "OnEnterCapturePoint" },
+	{ &Z_Construct_UFunction_ABuildingCapturePointActor_OnLeaveCapturePoint, "OnLeaveCapturePoint" },
+	{ &Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_CaptureState, "OnRep_CaptureState" },
+	{ &Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_ReplicatedCapturePercentage, "OnRep_ReplicatedCapturePercentage" },
+	{ &Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_bActivated, "OnRep_bActivated" },
+	{ &Z_Construct_UFunction_ABuildingCapturePointActor_OnRep_bLocked, "OnRep_bLocked" },
+	{ &Z_Construct_UFunction_ABuildingCapturePointActor_SetActivatedState, "SetActivatedState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingCapturePointActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0326F930
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingCapturePointActor_Statics::ClassParams = { &ABuildingCapturePointActor::StaticClass, Z_Construct_UClass_ABuildingCapturePointActor_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ABuildingCapturePointActor_Statics::FuncInfo, 11, Z_Construct_UClass_ABuildingCapturePointActor_Statics::PropPointers, 24, nullptr, &Z_Construct_UClass_ABuildingCapturePointActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66440 (end 0x00F6646F)
+// Original VA: 0x0000000140F66440 | File offset: 0x00F65A40
+// Recovery: confirmed (UHT singleton of ABuildingCapturePointActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingCapturePointActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingCapturePointActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

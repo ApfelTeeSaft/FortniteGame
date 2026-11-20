@@ -43,3 +43,36 @@ UFunction* Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetSunOrMoon
 	}
 	return ReturnFunction;
 }
+
+class ATimeOfDayController_BlueprintBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ATimeOfDayController_BlueprintBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ATimeOfDayController_BlueprintBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetPostProcessSettings, "SetPostProcessSettings" },
+	{ &Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetSunOrMoonScale, "SetSunOrMoonScale" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ATimeOfDayController_BlueprintBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03268450
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ATimeOfDayController_BlueprintBase_Statics::ClassParams = { &ATimeOfDayController_BlueprintBase::StaticClass, Z_Construct_UClass_ATimeOfDayController_BlueprintBase_Statics::DependentSingletons, 2, 0x00800081u, Z_Construct_UClass_ATimeOfDayController_BlueprintBase_Statics::FuncInfo, 2, Z_Construct_UClass_ATimeOfDayController_BlueprintBase_Statics::PropPointers, 59, nullptr, &Z_Construct_UClass_ATimeOfDayController_BlueprintBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61060 (end 0x00F6108F)
+// Original VA: 0x0000000140F61060 | File offset: 0x00F60660
+// Recovery: confirmed (UHT singleton of ATimeOfDayController_BlueprintBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ATimeOfDayController_BlueprintBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ATimeOfDayController_BlueprintBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

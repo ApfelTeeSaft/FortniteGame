@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_TriggerNotification_TriggerNot
 	}
 	return ReturnFunction;
 }
+
+class UFortAsyncAction_TriggerNotification
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAsyncAction_TriggerNotification_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAsyncAction_TriggerNotification_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAsyncAction_TriggerNotification_TriggerNotification, "TriggerNotification" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAsyncAction_TriggerNotification_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032BFD90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAsyncAction_TriggerNotification_Statics::ClassParams = { &UFortAsyncAction_TriggerNotification::StaticClass, Z_Construct_UClass_UFortAsyncAction_TriggerNotification_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortAsyncAction_TriggerNotification_Statics::FuncInfo, 1, Z_Construct_UClass_UFortAsyncAction_TriggerNotification_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortAsyncAction_TriggerNotification_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9F2A0 (end 0x00F9F2CF)
+// Original VA: 0x0000000140F9F2A0 | File offset: 0x00F9E8A0
+// Recovery: confirmed (UHT singleton of UFortAsyncAction_TriggerNotification) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAsyncAction_TriggerNotification()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAsyncAction_TriggerNotification_Statics::ClassParams);
+	}
+	return OuterClass;
+}

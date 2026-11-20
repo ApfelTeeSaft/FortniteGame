@@ -200,3 +200,45 @@ UFunction* Z_Construct_UFunction_AFortPickup_TossPickup()
 	}
 	return ReturnFunction;
 }
+
+class AFortPickup
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPickup_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPickup_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPickup_GetDisplayName, "GetDisplayName" },
+	{ &Z_Construct_UFunction_AFortPickup_GetInteractErrorText, "GetInteractErrorText" },
+	{ &Z_Construct_UFunction_AFortPickup_GetInteractText, "GetInteractText" },
+	{ &Z_Construct_UFunction_AFortPickup_OnRep_PickupLocationData, "OnRep_PickupLocationData" },
+	{ &Z_Construct_UFunction_AFortPickup_OnRep_PickupOwnerData, "OnRep_PickupOwnerData" },
+	{ &Z_Construct_UFunction_AFortPickup_OnRep_PrimaryPickupItemEntry, "OnRep_PrimaryPickupItemEntry" },
+	{ &Z_Construct_UFunction_AFortPickup_OnRep_TossedFromContainer, "OnRep_TossedFromContainer" },
+	{ &Z_Construct_UFunction_AFortPickup_OnRep_bPickedUp, "OnRep_bPickedUp" },
+	{ &Z_Construct_UFunction_AFortPickup_PickedUp, "PickedUp" },
+	{ &Z_Construct_UFunction_AFortPickup_TossPickup, "TossPickup" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPickup_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033ACEB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPickup_Statics::ClassParams = { &AFortPickup::StaticClass, Z_Construct_UClass_AFortPickup_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortPickup_Statics::FuncInfo, 10, Z_Construct_UClass_AFortPickup_Statics::PropPointers, 21, nullptr, &Z_Construct_UClass_AFortPickup_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortPickup_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01065740 (end 0x0106576F)
+// Original VA: 0x0000000141065740 | File offset: 0x01064D40
+// Recovery: confirmed (UHT singleton of AFortPickup) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPickup()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPickup_Statics::ClassParams);
+	}
+	return OuterClass;
+}

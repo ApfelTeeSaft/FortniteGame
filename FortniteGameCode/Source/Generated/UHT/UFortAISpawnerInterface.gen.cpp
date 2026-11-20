@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UFortAISpawnerInterface_OnReceiveSpawnGroup()
 	}
 	return ReturnFunction;
 }
+
+class UFortAISpawnerInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAISpawnerInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAISpawnerInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAISpawnerInterface_IsReadyToReceiveNewSpawnGroup, "IsReadyToReceiveNewSpawnGroup" },
+	{ &Z_Construct_UFunction_UFortAISpawnerInterface_OnReceiveSpawnGroup, "OnReceiveSpawnGroup" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAISpawnerInterface_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032B58D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAISpawnerInterface_Statics::ClassParams = { &UFortAISpawnerInterface::StaticClass, Z_Construct_UClass_UFortAISpawnerInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortAISpawnerInterface_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortAISpawnerInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F991B0 (end 0x00F991DF)
+// Original VA: 0x0000000140F991B0 | File offset: 0x00F987B0
+// Recovery: confirmed (UHT singleton of UFortAISpawnerInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAISpawnerInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAISpawnerInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

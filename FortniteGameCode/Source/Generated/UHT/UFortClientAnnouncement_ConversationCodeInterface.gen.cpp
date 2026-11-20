@@ -144,3 +144,40 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterfa
 	}
 	return ReturnFunction;
 }
+
+class UFortClientAnnouncement_ConversationCodeInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingConversation, "IsPlayingConversation" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingSentence, "IsPlayingSentence" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_IsPlayingSentenceIndex, "IsPlayingSentenceIndex" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversation, "PlayConversation" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversationFromSentence, "PlayConversationFromSentence" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_PlayConversationFromSentenceIndex, "PlayConversationFromSentenceIndex" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_ConversationCodeInterface_StopConversation, "StopConversation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x032E5C80
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface_Statics::ClassParams = { &UFortClientAnnouncement_ConversationCodeInterface::StaticClass, Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface_Statics::FuncInfo, 7, nullptr, 0, nullptr, &Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0250 (end 0x00FC027F)
+// Original VA: 0x0000000140FC0250 | File offset: 0x00FBF850
+// Recovery: confirmed (UHT singleton of UFortClientAnnouncement_ConversationCodeInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -664,3 +664,66 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_WindowModeChanged()
 	}
 	return ReturnFunction;
 }
+
+class UFortVideoOptions
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortVideoOptions_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortVideoOptions_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortVideoOptions_AntiAliasingQualityChanged, "AntiAliasingQualityChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_EffectsQualityChanged, "EffectsQualityChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_FrameRateLimitChanged, "FrameRateLimitChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetAntiAliasingQuality, "GetAntiAliasingQuality" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetCurrentDisplayResolution, "GetCurrentDisplayResolution" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetCurrentFPS, "GetCurrentFPS" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetCurrentWindowMode, "GetCurrentWindowMode" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetEffectsQuality, "GetEffectsQuality" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetMotionBlur, "GetMotionBlur" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetOverallQualityLevel, "GetOverallQualityLevel" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetPossibleDisplayResolutions, "GetPossibleDisplayResolutions" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetPossibleFPS, "GetPossibleFPS" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetPossibleWindowModes, "GetPossibleWindowModes" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetPostProcessQuality, "GetPostProcessQuality" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetShadowQuality, "GetShadowQuality" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetShowFPS, "GetShowFPS" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetShowGrass, "GetShowGrass" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetTextureQuality, "GetTextureQuality" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetUseVsync, "GetUseVsync" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_GetViewDistanceQuality, "GetViewDistanceQuality" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_InitializeValues, "InitializeValues" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_IsWindowedFullscreen, "IsWindowedFullscreen" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_MotionBlurChanged, "MotionBlurChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_OnQualitySelectorChanged, "OnQualitySelectorChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_PostProcessQualityChanged, "PostProcessQualityChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_ResolutionChanged, "ResolutionChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_ShadowQualityChanged, "ShadowQualityChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_ShowFPSChanged, "ShowFPSChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_ShowGrassChanged, "ShowGrassChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_TextureQualityChanged, "TextureQualityChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_UseVsyncChanged, "UseVsyncChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_ViewDistanceQualityChanged, "ViewDistanceQualityChanged" },
+	{ &Z_Construct_UFunction_UFortVideoOptions_WindowModeChanged, "WindowModeChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortVideoOptions_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D54FB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortVideoOptions_Statics::ClassParams = { &UFortVideoOptions::StaticClass, Z_Construct_UClass_UFortVideoOptions_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortVideoOptions_Statics::FuncInfo, 33, nullptr, 0, nullptr, &Z_Construct_UClass_UFortVideoOptions_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918B90 (end 0x02918BBF)
+// Original VA: 0x0000000142918B90 | File offset: 0x02918190
+// Recovery: confirmed (UHT singleton of UFortVideoOptions) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortVideoOptions()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortVideoOptions_Statics::ClassParams);
+	}
+	return OuterClass;
+}

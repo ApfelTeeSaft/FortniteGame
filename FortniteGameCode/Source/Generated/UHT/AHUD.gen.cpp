@@ -581,3 +581,63 @@ UFunction* Z_Construct_UFunction_AHUD_ShowHUD()
 	}
 	return ReturnFunction;
 }
+
+class AHUD
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AHUD_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AHUD_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AHUD_AddDebugText, "AddDebugText" },
+	{ &Z_Construct_UFunction_AHUD_AddHitBox, "AddHitBox" },
+	{ &Z_Construct_UFunction_AHUD_Deproject, "Deproject" },
+	{ &Z_Construct_UFunction_AHUD_DrawLine, "DrawLine" },
+	{ &Z_Construct_UFunction_AHUD_DrawMaterial, "DrawMaterial" },
+	{ &Z_Construct_UFunction_AHUD_DrawMaterialSimple, "DrawMaterialSimple" },
+	{ &Z_Construct_UFunction_AHUD_DrawMaterialTriangle, "DrawMaterialTriangle" },
+	{ &Z_Construct_UFunction_AHUD_DrawRect, "DrawRect" },
+	{ &Z_Construct_UFunction_AHUD_DrawText, "DrawText" },
+	{ &Z_Construct_UFunction_AHUD_DrawTexture, "DrawTexture" },
+	{ &Z_Construct_UFunction_AHUD_DrawTextureSimple, "DrawTextureSimple" },
+	{ &Z_Construct_UFunction_AHUD_GetActorsInSelectionRectangle, "GetActorsInSelectionRectangle" },
+	{ &Z_Construct_UFunction_AHUD_GetOwningPawn, "GetOwningPawn" },
+	{ &Z_Construct_UFunction_AHUD_GetOwningPlayerController, "GetOwningPlayerController" },
+	{ &Z_Construct_UFunction_AHUD_GetTextSize, "GetTextSize" },
+	{ &Z_Construct_UFunction_AHUD_NextDebugTarget, "NextDebugTarget" },
+	{ &Z_Construct_UFunction_AHUD_PreviousDebugTarget, "PreviousDebugTarget" },
+	{ &Z_Construct_UFunction_AHUD_Project, "Project" },
+	{ &Z_Construct_UFunction_AHUD_ReceiveDrawHUD, "ReceiveDrawHUD" },
+	{ &Z_Construct_UFunction_AHUD_ReceiveHitBoxBeginCursorOver, "ReceiveHitBoxBeginCursorOver" },
+	{ &Z_Construct_UFunction_AHUD_ReceiveHitBoxClick, "ReceiveHitBoxClick" },
+	{ &Z_Construct_UFunction_AHUD_ReceiveHitBoxEndCursorOver, "ReceiveHitBoxEndCursorOver" },
+	{ &Z_Construct_UFunction_AHUD_ReceiveHitBoxRelease, "ReceiveHitBoxRelease" },
+	{ &Z_Construct_UFunction_AHUD_RemoveAllDebugStrings, "RemoveAllDebugStrings" },
+	{ &Z_Construct_UFunction_AHUD_RemoveDebugText, "RemoveDebugText" },
+	{ &Z_Construct_UFunction_AHUD_ShowDebug, "ShowDebug" },
+	{ &Z_Construct_UFunction_AHUD_ShowDebugForReticleTargetToggle, "ShowDebugForReticleTargetToggle" },
+	{ &Z_Construct_UFunction_AHUD_ShowDebugToggleSubCategory, "ShowDebugToggleSubCategory" },
+	{ &Z_Construct_UFunction_AHUD_ShowHUD, "ShowHUD" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AHUD_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038F9CA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AHUD_Statics::ClassParams = { &AHUD::StaticClass, Z_Construct_UClass_AHUD_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_AHUD_Statics::FuncInfo, 29, Z_Construct_UClass_AHUD_Statics::PropPointers, 20, "Game", &Z_Construct_UClass_AHUD_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241F0A0 (end 0x0241F0CF)
+// Original VA: 0x000000014241F0A0 | File offset: 0x0241E6A0
+// Recovery: confirmed (UHT singleton of AHUD) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AHUD()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AHUD_Statics::ClassParams);
+	}
+	return OuterClass;
+}

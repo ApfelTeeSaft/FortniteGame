@@ -445,3 +445,57 @@ UFunction* Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetUseAutoGear
 	}
 	return ReturnFunction;
 }
+
+class UWheeledVehicleMovementComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UWheeledVehicleMovementComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UWheeledVehicleMovementComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_GetCurrentGear, "GetCurrentGear" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_GetEngineMaxRotationSpeed, "GetEngineMaxRotationSpeed" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_GetEngineRotationSpeed, "GetEngineRotationSpeed" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_GetForwardSpeed, "GetForwardSpeed" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_GetTargetGear, "GetTargetGear" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_GetUseAutoGears, "GetUseAutoGears" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_ServerUpdateState, "ServerUpdateState" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetAvoidanceEnabled, "SetAvoidanceEnabled" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetAvoidanceGroup, "SetAvoidanceGroup" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetAvoidanceGroupMask, "SetAvoidanceGroupMask" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetBrakeInput, "SetBrakeInput" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetGearDown, "SetGearDown" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetGearUp, "SetGearUp" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetGroupsToAvoid, "SetGroupsToAvoid" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetGroupsToAvoidMask, "SetGroupsToAvoidMask" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetGroupsToIgnore, "SetGroupsToIgnore" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetGroupsToIgnoreMask, "SetGroupsToIgnoreMask" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetHandbrakeInput, "SetHandbrakeInput" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetSteeringInput, "SetSteeringInput" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetTargetGear, "SetTargetGear" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetThrottleInput, "SetThrottleInput" },
+	{ &Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetUseAutoGears, "SetUseAutoGears" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UWheeledVehicleMovementComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F9DC40
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UWheeledVehicleMovementComponent_Statics::ClassParams = { &UWheeledVehicleMovementComponent::StaticClass, Z_Construct_UClass_UWheeledVehicleMovementComponent_Statics::DependentSingletons, 2, 0x00B00085u, Z_Construct_UClass_UWheeledVehicleMovementComponent_Statics::FuncInfo, 22, Z_Construct_UClass_UWheeledVehicleMovementComponent_Statics::PropPointers, 54, "Engine", &Z_Construct_UClass_UWheeledVehicleMovementComponent_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UWheeledVehicleMovementComponent_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067BEC0 (end 0x0067BEEF)
+// Original VA: 0x000000014067BEC0 | File offset: 0x0067B4C0
+// Recovery: confirmed (UHT singleton of UWheeledVehicleMovementComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UWheeledVehicleMovementComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UWheeledVehicleMovementComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -244,3 +244,45 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_WaitF
 	}
 	return ReturnFunction;
 }
+
+class UFortClientAnnouncement_TutorialInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_HideTutorialWidget, "HideTutorialWidget" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_SetButtonEnabled, "SetButtonEnabled" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_SetDetailText, "SetDetailText" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_SetHAlign, "SetHAlign" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_SetLightboxDisableInputOnly, "SetLightboxDisableInputOnly" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_SetLightboxEnabled, "SetLightboxEnabled" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_SetNameText, "SetNameText" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_SetPadding, "SetPadding" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_SetSystemText, "SetSystemText" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_SetTitleText, "SetTitleText" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_SetVAlign, "SetVAlign" },
+	{ &Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_WaitForContinue, "WaitForContinue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface_Statics::StaticCppClassTypeInfo = { true };
+// ClassParams: original RVA 0x032E62F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface_Statics::ClassParams = { &UFortClientAnnouncement_TutorialInterface::StaticClass, Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface_Statics::DependentSingletons, 2, 0x00004081u, Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface_Statics::FuncInfo, 12, nullptr, 0, nullptr, &Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC02B0 (end 0x00FC02DF)
+// Original VA: 0x0000000140FC02B0 | File offset: 0x00FBF8B0
+// Recovery: confirmed (UHT singleton of UFortClientAnnouncement_TutorialInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

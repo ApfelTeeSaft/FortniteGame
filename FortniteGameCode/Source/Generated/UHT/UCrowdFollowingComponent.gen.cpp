@@ -25,3 +25,36 @@ UFunction* Z_Construct_UFunction_UCrowdFollowingComponent_SuspendCrowdSteering()
 	}
 	return ReturnFunction;
 }
+
+class UCrowdFollowingComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCrowdFollowingComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCrowdFollowingComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCrowdFollowingComponent_SuspendCrowdSteering, "SuspendCrowdSteering" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCrowdFollowingComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03701AE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCrowdFollowingComponent_Statics::ClassParams = { &UCrowdFollowingComponent::StaticClass, Z_Construct_UClass_UCrowdFollowingComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UCrowdFollowingComponent_Statics::FuncInfo, 1, Z_Construct_UClass_UCrowdFollowingComponent_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UCrowdFollowingComponent_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UCrowdFollowingComponent_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D290D0 (end 0x01D290FF)
+// Original VA: 0x0000000141D290D0 | File offset: 0x01D286D0
+// Recovery: confirmed (UHT singleton of UCrowdFollowingComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCrowdFollowingComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCrowdFollowingComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

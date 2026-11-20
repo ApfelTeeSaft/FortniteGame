@@ -362,3 +362,52 @@ UFunction* Z_Construct_UFunction_UFortBaseCanvasNode_SelectNode()
 	}
 	return ReturnFunction;
 }
+
+class UFortBaseCanvasNode
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortBaseCanvasNode_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortBaseCanvasNode_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_DoesDrillDownToCurrentNodePage, "DoesDrillDownToCurrentNodePage" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_DrillDownToNodePage, "DrillDownToNodePage" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_GetCosts, "GetCosts" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_GetNodeDataCopy, "GetNodeDataCopy" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_GetNodeID, "GetNodeID" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_GetNodeStyleDataCopy, "GetNodeStyleDataCopy" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_GetPreviewMediaSource, "GetPreviewMediaSource" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_GetPurchasePercent, "GetPurchasePercent" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_GetPurchaseRestrictionReasonText, "GetPurchaseRestrictionReasonText" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_HandleNodeStateChanged, "HandleNodeStateChanged" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_HandleNodeStateChangedInternal, "HandleNodeStateChangedInternal" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_IsLocked, "IsLocked" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_IsOwned, "IsOwned" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_IsPurchaseable, "IsPurchaseable" },
+	{ &Z_Construct_UDelegateFunction_UFortBaseCanvasNode_OnNodeStateChanged__DelegateSignature, "OnNodeStateChanged__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_Purchase, "Purchase" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_SelectNode, "SelectNode" },
+	{ &Z_Construct_UFunction_UFortBaseCanvasNode_SelectedChanged, "SelectedChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortBaseCanvasNode_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CF1D60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortBaseCanvasNode_Statics::ClassParams = { &UFortBaseCanvasNode::StaticClass, Z_Construct_UClass_UFortBaseCanvasNode_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortBaseCanvasNode_Statics::FuncInfo, 18, Z_Construct_UClass_UFortBaseCanvasNode_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortBaseCanvasNode_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE350 (end 0x028DE37F)
+// Original VA: 0x00000001428DE350 | File offset: 0x028DD950
+// Recovery: confirmed (UHT singleton of UFortBaseCanvasNode) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortBaseCanvasNode()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortBaseCanvasNode_Statics::ClassParams);
+	}
+	return OuterClass;
+}

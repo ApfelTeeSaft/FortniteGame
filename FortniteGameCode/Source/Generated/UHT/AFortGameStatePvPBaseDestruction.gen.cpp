@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetTeamLevelFo
 	}
 	return ReturnFunction;
 }
+
+class AFortGameStatePvPBaseDestruction
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortGameStatePvPBaseDestruction_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortGameStatePvPBaseDestruction_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetExperienceRequiredForTeamLevel, "GetExperienceRequiredForTeamLevel" },
+	{ &Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamExperience, "GetMaxTeamExperience" },
+	{ &Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetMaxTeamLevel, "GetMaxTeamLevel" },
+	{ &Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetTeamLevelForExperienceAmount, "GetTeamLevelForExperienceAmount" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortGameStatePvPBaseDestruction_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0332EE70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortGameStatePvPBaseDestruction_Statics::ClassParams = { &AFortGameStatePvPBaseDestruction::StaticClass, Z_Construct_UClass_AFortGameStatePvPBaseDestruction_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortGameStatePvPBaseDestruction_Statics::FuncInfo, 4, Z_Construct_UClass_AFortGameStatePvPBaseDestruction_Statics::PropPointers, 5, "Game", &Z_Construct_UClass_AFortGameStatePvPBaseDestruction_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE7E0 (end 0x00FEE80F)
+// Original VA: 0x0000000140FEE7E0 | File offset: 0x00FEDDE0
+// Recovery: confirmed (UHT singleton of AFortGameStatePvPBaseDestruction) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortGameStatePvPBaseDestruction()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortGameStatePvPBaseDestruction_Statics::ClassParams);
+	}
+	return OuterClass;
+}

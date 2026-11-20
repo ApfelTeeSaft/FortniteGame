@@ -145,3 +145,41 @@ UFunction* Z_Construct_UFunction_USlider_SetValue()
 	}
 	return ReturnFunction;
 }
+
+class USlider
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_USlider_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USlider_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USlider_GetValue, "GetValue" },
+	{ &Z_Construct_UFunction_USlider_SetIndentHandle, "SetIndentHandle" },
+	{ &Z_Construct_UFunction_USlider_SetLocked, "SetLocked" },
+	{ &Z_Construct_UFunction_USlider_SetSliderBarColor, "SetSliderBarColor" },
+	{ &Z_Construct_UFunction_USlider_SetSliderHandleColor, "SetSliderHandleColor" },
+	{ &Z_Construct_UFunction_USlider_SetStepSize, "SetStepSize" },
+	{ &Z_Construct_UFunction_USlider_SetValue, "SetValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USlider_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0369DDA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USlider_Statics::ClassParams = { &USlider::StaticClass, Z_Construct_UClass_USlider_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_USlider_Statics::FuncInfo, 7, Z_Construct_UClass_USlider_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_USlider_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3100 (end 0x01BF312F)
+// Original VA: 0x0000000141BF3100 | File offset: 0x01BF2700
+// Recovery: confirmed (UHT singleton of USlider) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USlider()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USlider_Statics::ClassParams);
+	}
+	return OuterClass;
+}

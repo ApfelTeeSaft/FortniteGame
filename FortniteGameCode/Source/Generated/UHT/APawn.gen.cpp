@@ -541,3 +541,62 @@ UFunction* Z_Construct_UFunction_APawn_SpawnDefaultController()
 	}
 	return ReturnFunction;
 }
+
+class APawn
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_APawn_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_APawn_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_APawn_AddControllerPitchInput, "AddControllerPitchInput" },
+	{ &Z_Construct_UFunction_APawn_AddControllerRollInput, "AddControllerRollInput" },
+	{ &Z_Construct_UFunction_APawn_AddControllerYawInput, "AddControllerYawInput" },
+	{ &Z_Construct_UFunction_APawn_AddMovementInput, "AddMovementInput" },
+	{ &Z_Construct_UFunction_APawn_ConsumeMovementInputVector, "ConsumeMovementInputVector" },
+	{ &Z_Construct_UFunction_APawn_DetachFromControllerPendingDestroy, "DetachFromControllerPendingDestroy" },
+	{ &Z_Construct_UFunction_APawn_GetBaseAimRotation, "GetBaseAimRotation" },
+	{ &Z_Construct_UFunction_APawn_GetControlRotation, "GetControlRotation" },
+	{ &Z_Construct_UFunction_APawn_GetController, "GetController" },
+	{ &Z_Construct_UFunction_APawn_GetLastMovementInputVector, "GetLastMovementInputVector" },
+	{ &Z_Construct_UFunction_APawn_GetMovementBaseActor, "GetMovementBaseActor" },
+	{ &Z_Construct_UFunction_APawn_GetMovementComponent, "GetMovementComponent" },
+	{ &Z_Construct_UFunction_APawn_GetNavAgentLocation, "GetNavAgentLocation" },
+	{ &Z_Construct_UFunction_APawn_GetPendingMovementInputVector, "GetPendingMovementInputVector" },
+	{ &Z_Construct_UFunction_APawn_IsControlled, "IsControlled" },
+	{ &Z_Construct_UFunction_APawn_IsLocallyControlled, "IsLocallyControlled" },
+	{ &Z_Construct_UFunction_APawn_IsMoveInputIgnored, "IsMoveInputIgnored" },
+	{ &Z_Construct_UFunction_APawn_IsPlayerControlled, "IsPlayerControlled" },
+	{ &Z_Construct_UFunction_APawn_K2_GetMovementInputVector, "K2_GetMovementInputVector" },
+	{ &Z_Construct_UFunction_APawn_LaunchPawn, "LaunchPawn" },
+	{ &Z_Construct_UFunction_APawn_OnRep_Controller, "OnRep_Controller" },
+	{ &Z_Construct_UFunction_APawn_OnRep_PlayerState, "OnRep_PlayerState" },
+	{ &Z_Construct_UFunction_APawn_PawnMakeNoise, "PawnMakeNoise" },
+	{ &Z_Construct_UFunction_APawn_ReceivePossessed, "ReceivePossessed" },
+	{ &Z_Construct_UFunction_APawn_ReceiveUnpossessed, "ReceiveUnpossessed" },
+	{ &Z_Construct_UFunction_APawn_SetCanAffectNavigationGeneration, "SetCanAffectNavigationGeneration" },
+	{ &Z_Construct_UFunction_APawn_SpawnDefaultController, "SpawnDefaultController" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_APawn_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039783C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_APawn_Statics::ClassParams = { &APawn::StaticClass, Z_Construct_UClass_APawn_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_APawn_Statics::FuncInfo, 27, Z_Construct_UClass_APawn_Statics::PropPointers, 15, "Game", &Z_Construct_UClass_APawn_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_APawn_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A08A0 (end 0x024A08CF)
+// Original VA: 0x00000001424A08A0 | File offset: 0x0249FEA0
+// Recovery: confirmed (UHT singleton of APawn) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_APawn()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_APawn_Statics::ClassParams);
+	}
+	return OuterClass;
+}

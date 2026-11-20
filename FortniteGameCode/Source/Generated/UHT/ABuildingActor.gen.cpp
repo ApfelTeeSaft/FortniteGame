@@ -993,3 +993,85 @@ UFunction* Z_Construct_UFunction_ABuildingActor_UseDefaultHealthBar()
 	}
 	return ReturnFunction;
 }
+
+class ABuildingActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingActor_AddEditorOnlyInstanceGameplayTags, "AddEditorOnlyInstanceGameplayTags" },
+	{ &Z_Construct_UFunction_ABuildingActor_BlueprintCanInteract, "BlueprintCanInteract" },
+	{ &Z_Construct_UFunction_ABuildingActor_BlueprintGetFailedInteractionString, "BlueprintGetFailedInteractionString" },
+	{ &Z_Construct_UFunction_ABuildingActor_BlueprintGetInteractionString, "BlueprintGetInteractionString" },
+	{ &Z_Construct_UFunction_ABuildingActor_BlueprintOnBeginInteract, "BlueprintOnBeginInteract" },
+	{ &Z_Construct_UFunction_ABuildingActor_BlueprintOnInteract, "BlueprintOnInteract" },
+	{ &Z_Construct_UFunction_ABuildingActor_BlueprintOnLocalInteract, "BlueprintOnLocalInteract" },
+	{ &Z_Construct_UFunction_ABuildingActor_CustomStateChanged, "CustomStateChanged" },
+	{ &Z_Construct_UFunction_ABuildingActor_ForceBuildingHealth, "ForceBuildingHealth" },
+	{ &Z_Construct_UFunction_ABuildingActor_GameplayCue_Damage, "GameplayCue_Damage" },
+	{ &Z_Construct_UFunction_ABuildingActor_GameplayCue_Healing, "GameplayCue_Healing" },
+	{ &Z_Construct_UFunction_ABuildingActor_GameplayCue_InstantDeath, "GameplayCue_InstantDeath" },
+	{ &Z_Construct_UFunction_ABuildingActor_GetCentroid, "GetCentroid" },
+	{ &Z_Construct_UFunction_ABuildingActor_GetCurrentBuildingLevel, "GetCurrentBuildingLevel" },
+	{ &Z_Construct_UFunction_ABuildingActor_GetCustomState, "GetCustomState" },
+	{ &Z_Construct_UFunction_ABuildingActor_GetEditorTestTags, "GetEditorTestTags" },
+	{ &Z_Construct_UFunction_ABuildingActor_GetHealth, "GetHealth" },
+	{ &Z_Construct_UFunction_ABuildingActor_GetHealthPercent, "GetHealthPercent" },
+	{ &Z_Construct_UFunction_ABuildingActor_GetMaxHealth, "GetMaxHealth" },
+	{ &Z_Construct_UFunction_ABuildingActor_GetMissingHealth, "GetMissingHealth" },
+	{ &Z_Construct_UFunction_ABuildingActor_GetOwningController, "GetOwningController" },
+	{ &Z_Construct_UFunction_ABuildingActor_GetOwningPlayerState, "GetOwningPlayerState" },
+	{ &Z_Construct_UFunction_ABuildingActor_HandleDestroyed, "HandleDestroyed" },
+	{ &Z_Construct_UFunction_ABuildingActor_HasHealthLeft, "HasHealthLeft" },
+	{ &Z_Construct_UFunction_ABuildingActor_InitializeKismetSpawnedBuildingActor, "InitializeKismetSpawnedBuildingActor" },
+	{ &Z_Construct_UFunction_ABuildingActor_IsAcceptablePositionForPlacement, "IsAcceptablePositionForPlacement" },
+	{ &Z_Construct_UFunction_ABuildingActor_IsDamaged, "IsDamaged" },
+	{ &Z_Construct_UFunction_ABuildingActor_IsPlayerBuilt, "IsPlayerBuilt" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnBuildingActorInitialized, "OnBuildingActorInitialized" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnDamagePlayEffects, "OnDamagePlayEffects" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnDamageServer, "OnDamageServer" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnDayPhaseChanged, "OnDayPhaseChanged" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnDeathPlayEffects, "OnDeathPlayEffects" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnDeathServer, "OnDeathServer" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnMatchStarted, "OnMatchStarted" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnRep_AbilitySystemComponent, "OnRep_AbilitySystemComponent" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnRep_BuildingAttributeSet, "OnRep_BuildingAttributeSet" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnRep_CurrentBuildingLevel, "OnRep_CurrentBuildingLevel" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnRep_CustomState, "OnRep_CustomState" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnRep_bForceReplayRollback, "OnRep_bForceReplayRollback" },
+	{ &Z_Construct_UFunction_ABuildingActor_OnWorldReady, "OnWorldReady" },
+	{ &Z_Construct_UFunction_ABuildingActor_PlacedByPlacementTool, "PlacedByPlacementTool" },
+	{ &Z_Construct_UFunction_ABuildingActor_RemoveEditorOnlyInstanceGameplayTags, "RemoveEditorOnlyInstanceGameplayTags" },
+	{ &Z_Construct_UFunction_ABuildingActor_SetCanExportNavigationObstacle, "SetCanExportNavigationObstacle" },
+	{ &Z_Construct_UFunction_ABuildingActor_SetCustomState, "SetCustomState" },
+	{ &Z_Construct_UFunction_ABuildingActor_SetNavigationModifier, "SetNavigationModifier" },
+	{ &Z_Construct_UFunction_ABuildingActor_SetQuestHighlight, "SetQuestHighlight" },
+	{ &Z_Construct_UFunction_ABuildingActor_ShouldDie, "ShouldDie" },
+	{ &Z_Construct_UFunction_ABuildingActor_SilentDie, "SilentDie" },
+	{ &Z_Construct_UFunction_ABuildingActor_UseDefaultHealthBar, "UseDefaultHealthBar" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03269BE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingActor_Statics::ClassParams = { &ABuildingActor::StaticClass, Z_Construct_UClass_ABuildingActor_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_ABuildingActor_Statics::FuncInfo, 50, Z_Construct_UClass_ABuildingActor_Statics::PropPointers, 101, "Game", &Z_Construct_UClass_ABuildingActor_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_ABuildingActor_Statics::InterfaceParams, 12 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F61030 (end 0x00F6105F)
+// Original VA: 0x0000000140F61030 | File offset: 0x00F60630
+// Recovery: confirmed (UHT singleton of ABuildingActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

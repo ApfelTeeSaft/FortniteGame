@@ -65,3 +65,36 @@ UFunction* Z_Construct_UFunction_UMediaBlueprintFunctionLibrary_EnumerateWebcamC
 	}
 	return ReturnFunction;
 }
+
+class UMediaBlueprintFunctionLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMediaBlueprintFunctionLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMediaBlueprintFunctionLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMediaBlueprintFunctionLibrary_EnumerateAudioCaptureDevices, "EnumerateAudioCaptureDevices" },
+	{ &Z_Construct_UFunction_UMediaBlueprintFunctionLibrary_EnumerateVideoCaptureDevices, "EnumerateVideoCaptureDevices" },
+	{ &Z_Construct_UFunction_UMediaBlueprintFunctionLibrary_EnumerateWebcamCaptureDevices, "EnumerateWebcamCaptureDevices" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMediaBlueprintFunctionLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03B63B10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMediaBlueprintFunctionLibrary_Statics::ClassParams = { &UMediaBlueprintFunctionLibrary::StaticClass, Z_Construct_UClass_UMediaBlueprintFunctionLibrary_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UMediaBlueprintFunctionLibrary_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UMediaBlueprintFunctionLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE8D0 (end 0x025DE8FF)
+// Original VA: 0x00000001425DE8D0 | File offset: 0x025DDED0
+// Recovery: confirmed (UHT singleton of UMediaBlueprintFunctionLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMediaBlueprintFunctionLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMediaBlueprintFunctionLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

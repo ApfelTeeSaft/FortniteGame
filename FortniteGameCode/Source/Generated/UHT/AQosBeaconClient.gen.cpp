@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_AQosBeaconClient_ServerQosRequest()
 	}
 	return ReturnFunction;
 }
+
+class AQosBeaconClient
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AQosBeaconClient_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AQosBeaconClient_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AQosBeaconClient_ClientQosResponse, "ClientQosResponse" },
+	{ &Z_Construct_UFunction_AQosBeaconClient_ServerQosRequest, "ServerQosRequest" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AQosBeaconClient_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F5AD00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AQosBeaconClient_Statics::ClassParams = { &AQosBeaconClient::StaticClass, Z_Construct_UClass_AQosBeaconClient_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_AQosBeaconClient_Statics::FuncInfo, 2, nullptr, 0, "Engine", &Z_Construct_UClass_AQosBeaconClient_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005A20C0 (end 0x005A20EF)
+// Original VA: 0x00000001405A20C0 | File offset: 0x005A16C0
+// Recovery: confirmed (UHT singleton of AQosBeaconClient) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AQosBeaconClient()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AQosBeaconClient_Statics::ClassParams);
+	}
+	return OuterClass;
+}

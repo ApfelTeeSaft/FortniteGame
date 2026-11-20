@@ -1604,3 +1604,114 @@ UFunction* Z_Construct_UFunction_USplineComponent_UpdateSpline()
 	}
 	return ReturnFunction;
 }
+
+class USplineComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_USplineComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USplineComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USplineComponent_AddPoint, "AddPoint" },
+	{ &Z_Construct_UFunction_USplineComponent_AddPoints, "AddPoints" },
+	{ &Z_Construct_UFunction_USplineComponent_AddSplineLocalPoint, "AddSplineLocalPoint" },
+	{ &Z_Construct_UFunction_USplineComponent_AddSplinePoint, "AddSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_AddSplinePointAtIndex, "AddSplinePointAtIndex" },
+	{ &Z_Construct_UFunction_USplineComponent_AddSplineWorldPoint, "AddSplineWorldPoint" },
+	{ &Z_Construct_UFunction_USplineComponent_ClearSplinePoints, "ClearSplinePoints" },
+	{ &Z_Construct_UFunction_USplineComponent_FindDirectionClosestToWorldLocation, "FindDirectionClosestToWorldLocation" },
+	{ &Z_Construct_UFunction_USplineComponent_FindInputKeyClosestToWorldLocation, "FindInputKeyClosestToWorldLocation" },
+	{ &Z_Construct_UFunction_USplineComponent_FindLocationClosestToWorldLocation, "FindLocationClosestToWorldLocation" },
+	{ &Z_Construct_UFunction_USplineComponent_FindRightVectorClosestToWorldLocation, "FindRightVectorClosestToWorldLocation" },
+	{ &Z_Construct_UFunction_USplineComponent_FindRollClosestToWorldLocation, "FindRollClosestToWorldLocation" },
+	{ &Z_Construct_UFunction_USplineComponent_FindRotationClosestToWorldLocation, "FindRotationClosestToWorldLocation" },
+	{ &Z_Construct_UFunction_USplineComponent_FindScaleClosestToWorldLocation, "FindScaleClosestToWorldLocation" },
+	{ &Z_Construct_UFunction_USplineComponent_FindTangentClosestToWorldLocation, "FindTangentClosestToWorldLocation" },
+	{ &Z_Construct_UFunction_USplineComponent_FindTransformClosestToWorldLocation, "FindTransformClosestToWorldLocation" },
+	{ &Z_Construct_UFunction_USplineComponent_FindUpVectorClosestToWorldLocation, "FindUpVectorClosestToWorldLocation" },
+	{ &Z_Construct_UFunction_USplineComponent_GetArriveTangentAtSplinePoint, "GetArriveTangentAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetDefaultUpVector, "GetDefaultUpVector" },
+	{ &Z_Construct_UFunction_USplineComponent_GetDirectionAtDistanceAlongSpline, "GetDirectionAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetDirectionAtSplinePoint, "GetDirectionAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetDirectionAtTime, "GetDirectionAtTime" },
+	{ &Z_Construct_UFunction_USplineComponent_GetDistanceAlongSplineAtSplinePoint, "GetDistanceAlongSplineAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetInputKeyAtDistanceAlongSpline, "GetInputKeyAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetLeaveTangentAtSplinePoint, "GetLeaveTangentAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetLocalLocationAndTangentAtSplinePoint, "GetLocalLocationAndTangentAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetLocationAndTangentAtSplinePoint, "GetLocationAndTangentAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetLocationAtDistanceAlongSpline, "GetLocationAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetLocationAtSplinePoint, "GetLocationAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetLocationAtTime, "GetLocationAtTime" },
+	{ &Z_Construct_UFunction_USplineComponent_GetNumberOfSplinePoints, "GetNumberOfSplinePoints" },
+	{ &Z_Construct_UFunction_USplineComponent_GetRightVectorAtDistanceAlongSpline, "GetRightVectorAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetRightVectorAtSplinePoint, "GetRightVectorAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetRightVectorAtTime, "GetRightVectorAtTime" },
+	{ &Z_Construct_UFunction_USplineComponent_GetRollAtDistanceAlongSpline, "GetRollAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetRollAtSplinePoint, "GetRollAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetRollAtTime, "GetRollAtTime" },
+	{ &Z_Construct_UFunction_USplineComponent_GetRotationAtDistanceAlongSpline, "GetRotationAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetRotationAtSplinePoint, "GetRotationAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetRotationAtTime, "GetRotationAtTime" },
+	{ &Z_Construct_UFunction_USplineComponent_GetScaleAtDistanceAlongSpline, "GetScaleAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetScaleAtSplinePoint, "GetScaleAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetScaleAtTime, "GetScaleAtTime" },
+	{ &Z_Construct_UFunction_USplineComponent_GetSplineLength, "GetSplineLength" },
+	{ &Z_Construct_UFunction_USplineComponent_GetSplinePointType, "GetSplinePointType" },
+	{ &Z_Construct_UFunction_USplineComponent_GetTangentAtDistanceAlongSpline, "GetTangentAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetTangentAtSplinePoint, "GetTangentAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetTangentAtTime, "GetTangentAtTime" },
+	{ &Z_Construct_UFunction_USplineComponent_GetTransformAtDistanceAlongSpline, "GetTransformAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetTransformAtSplinePoint, "GetTransformAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetTransformAtTime, "GetTransformAtTime" },
+	{ &Z_Construct_UFunction_USplineComponent_GetUpVectorAtDistanceAlongSpline, "GetUpVectorAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetUpVectorAtSplinePoint, "GetUpVectorAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetUpVectorAtTime, "GetUpVectorAtTime" },
+	{ &Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtDistanceAlongSpline, "GetWorldDirectionAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetWorldDirectionAtTime, "GetWorldDirectionAtTime" },
+	{ &Z_Construct_UFunction_USplineComponent_GetWorldLocationAtDistanceAlongSpline, "GetWorldLocationAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetWorldLocationAtSplinePoint, "GetWorldLocationAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_GetWorldLocationAtTime, "GetWorldLocationAtTime" },
+	{ &Z_Construct_UFunction_USplineComponent_GetWorldRotationAtDistanceAlongSpline, "GetWorldRotationAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_GetWorldRotationAtTime, "GetWorldRotationAtTime" },
+	{ &Z_Construct_UFunction_USplineComponent_GetWorldTangentAtDistanceAlongSpline, "GetWorldTangentAtDistanceAlongSpline" },
+	{ &Z_Construct_UFunction_USplineComponent_IsClosedLoop, "IsClosedLoop" },
+	{ &Z_Construct_UFunction_USplineComponent_RemoveSplinePoint, "RemoveSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_SetClosedLoop, "SetClosedLoop" },
+	{ &Z_Construct_UFunction_USplineComponent_SetClosedLoopAtPosition, "SetClosedLoopAtPosition" },
+	{ &Z_Construct_UFunction_USplineComponent_SetDefaultUpVector, "SetDefaultUpVector" },
+	{ &Z_Construct_UFunction_USplineComponent_SetDrawDebug, "SetDrawDebug" },
+	{ &Z_Construct_UFunction_USplineComponent_SetLocationAtSplinePoint, "SetLocationAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_SetSelectedSplineSegmentColor, "SetSelectedSplineSegmentColor" },
+	{ &Z_Construct_UFunction_USplineComponent_SetSplineLocalPoints, "SetSplineLocalPoints" },
+	{ &Z_Construct_UFunction_USplineComponent_SetSplinePointType, "SetSplinePointType" },
+	{ &Z_Construct_UFunction_USplineComponent_SetSplinePoints, "SetSplinePoints" },
+	{ &Z_Construct_UFunction_USplineComponent_SetSplineWorldPoints, "SetSplineWorldPoints" },
+	{ &Z_Construct_UFunction_USplineComponent_SetTangentAtSplinePoint, "SetTangentAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_SetTangentsAtSplinePoint, "SetTangentsAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_SetUnselectedSplineSegmentColor, "SetUnselectedSplineSegmentColor" },
+	{ &Z_Construct_UFunction_USplineComponent_SetUpVectorAtSplinePoint, "SetUpVectorAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_SetWorldLocationAtSplinePoint, "SetWorldLocationAtSplinePoint" },
+	{ &Z_Construct_UFunction_USplineComponent_UpdateSpline, "UpdateSpline" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USplineComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039BD930
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USplineComponent_Statics::ClassParams = { &USplineComponent::StaticClass, Z_Construct_UClass_USplineComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_USplineComponent_Statics::FuncInfo, 80, Z_Construct_UClass_USplineComponent_Statics::PropPointers, 17, nullptr, &Z_Construct_UClass_USplineComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD760 (end 0x024DD78F)
+// Original VA: 0x00000001424DD760 | File offset: 0x024DCD60
+// Recovery: confirmed (UHT singleton of USplineComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USplineComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USplineComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

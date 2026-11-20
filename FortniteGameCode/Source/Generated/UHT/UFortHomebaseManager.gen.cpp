@@ -325,3 +325,50 @@ UFunction* Z_Construct_UFunction_UFortHomebaseManager_IsSquadSlotUnlocked()
 	}
 	return ReturnFunction;
 }
+
+class UFortHomebaseManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHomebaseManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHomebaseManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHomebaseManager_AreNodeCostsMet, "AreNodeCostsMet" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_AreNodePrereqsMet, "AreNodePrereqsMet" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_AreNodeQuestReqsMet, "AreNodeQuestReqsMet" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_GetHomebaseName, "GetHomebaseName" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_GetNodeInstanceIdByNodeId, "GetNodeInstanceIdByNodeId" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_GetNumAccountInventoryBonusTokens, "GetNumAccountInventoryBonusTokens" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_GetNumAccountLimitedItems, "GetNumAccountLimitedItems" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_GetNumOwnedNodesInPage, "GetNumOwnedNodesInPage" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_GetNumWorldInventoryBonusTokens, "GetNumWorldInventoryBonusTokens" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_GetOwnedNodes, "GetOwnedNodes" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_GetPrereqNodeTypeName, "GetPrereqNodeTypeName" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_GetSquadCopyById, "GetSquadCopyById" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_GetSquadPopulation, "GetSquadPopulation" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_GetWorkerInSquadSlot, "GetWorkerInSquadSlot" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_IsNodeOwned, "IsNodeOwned" },
+	{ &Z_Construct_UFunction_UFortHomebaseManager_IsSquadSlotUnlocked, "IsSquadSlotUnlocked" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHomebaseManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03340820
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHomebaseManager_Statics::ClassParams = { &UFortHomebaseManager::StaticClass, Z_Construct_UClass_UFortHomebaseManager_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortHomebaseManager_Statics::FuncInfo, 16, Z_Construct_UClass_UFortHomebaseManager_Statics::PropPointers, 19, nullptr, &Z_Construct_UClass_UFortHomebaseManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFB130 (end 0x00FFB15F)
+// Original VA: 0x0000000140FFB130 | File offset: 0x00FFA730
+// Recovery: confirmed (UHT singleton of UFortHomebaseManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHomebaseManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHomebaseManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

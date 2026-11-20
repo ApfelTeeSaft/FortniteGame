@@ -242,3 +242,46 @@ UFunction* Z_Construct_UFunction_UFortHeroSupportPerkWidget_SetSupportTypeToRepr
 	}
 	return ReturnFunction;
 }
+
+class UFortHeroSupportPerkWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHeroSupportPerkWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHeroSupportPerkWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkWidget_IsHeroInSupportSlot, "IsHeroInSupportSlot" },
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkWidget_IsPerkActive, "IsPerkActive" },
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkWidget_IsPerkEmpty, "IsPerkEmpty" },
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkWidget_IsPerkHighlighted, "IsPerkHighlighted" },
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkWidget_IsPerkInCorrectSlot, "IsPerkInCorrectSlot" },
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkWidget_IsPerkUnlocked, "IsPerkUnlocked" },
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkWidget_OnHeroUpdated, "OnHeroUpdated" },
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkWidget_OnStateChanged, "OnStateChanged" },
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkWidget_OnSupportTypeUpdated, "OnSupportTypeUpdated" },
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkWidget_SetHeroToRepresent, "SetHeroToRepresent" },
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkWidget_SetState, "SetState" },
+	{ &Z_Construct_UFunction_UFortHeroSupportPerkWidget_SetSupportTypeToRepresent, "SetSupportTypeToRepresent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHeroSupportPerkWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CA6FE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHeroSupportPerkWidget_Statics::ClassParams = { &UFortHeroSupportPerkWidget::StaticClass, Z_Construct_UClass_UFortHeroSupportPerkWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortHeroSupportPerkWidget_Statics::FuncInfo, 12, Z_Construct_UClass_UFortHeroSupportPerkWidget_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortHeroSupportPerkWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3D50 (end 0x028B3D7F)
+// Original VA: 0x00000001428B3D50 | File offset: 0x028B3350
+// Recovery: confirmed (UHT singleton of UFortHeroSupportPerkWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHeroSupportPerkWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHeroSupportPerkWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

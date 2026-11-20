@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UVehicleAnimInstance_GetVehicle()
 	}
 	return ReturnFunction;
 }
+
+class UVehicleAnimInstance
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UVehicleAnimInstance_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UVehicleAnimInstance_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UVehicleAnimInstance_GetVehicle, "GetVehicle" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UVehicleAnimInstance_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F9D000
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UVehicleAnimInstance_Statics::ClassParams = { &UVehicleAnimInstance::StaticClass, Z_Construct_UClass_UVehicleAnimInstance_Statics::DependentSingletons, 2, 0x00900088u, Z_Construct_UClass_UVehicleAnimInstance_Statics::FuncInfo, 1, Z_Construct_UClass_UVehicleAnimInstance_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UVehicleAnimInstance_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067BE20 (end 0x0067BE4F)
+// Original VA: 0x000000014067BE20 | File offset: 0x0067B420
+// Recovery: confirmed (UHT singleton of UVehicleAnimInstance) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UVehicleAnimInstance()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UVehicleAnimInstance_Statics::ClassParams);
+	}
+	return OuterClass;
+}

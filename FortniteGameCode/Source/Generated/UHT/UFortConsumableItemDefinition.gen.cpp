@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UFortConsumableItemDefinition_GetUseAnimation()
 	}
 	return ReturnFunction;
 }
+
+class UFortConsumableItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortConsumableItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortConsumableItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortConsumableItemDefinition_ConsumeItem, "ConsumeItem" },
+	{ &Z_Construct_UFunction_UFortConsumableItemDefinition_GetAnimPlayRate, "GetAnimPlayRate" },
+	{ &Z_Construct_UFunction_UFortConsumableItemDefinition_GetHealthRestored, "GetHealthRestored" },
+	{ &Z_Construct_UFunction_UFortConsumableItemDefinition_GetUseAnimation, "GetUseAnimation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortConsumableItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032F7510
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortConsumableItemDefinition_Statics::ClassParams = { &UFortConsumableItemDefinition::StaticClass, Z_Construct_UClass_UFortConsumableItemDefinition_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_UFortConsumableItemDefinition_Statics::FuncInfo, 4, Z_Construct_UClass_UFortConsumableItemDefinition_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortConsumableItemDefinition_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB8D0 (end 0x00FCB8FF)
+// Original VA: 0x0000000140FCB8D0 | File offset: 0x00FCAED0
+// Recovery: confirmed (UHT singleton of UFortConsumableItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortConsumableItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortConsumableItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

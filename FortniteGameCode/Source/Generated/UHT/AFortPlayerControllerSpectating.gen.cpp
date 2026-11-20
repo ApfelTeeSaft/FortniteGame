@@ -63,3 +63,37 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPrevPlaye
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerControllerSpectating
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerControllerSpectating_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerControllerSpectating_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowNextPlayer, "FollowNextPlayer" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPlayer, "FollowPlayer" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPrevPlayer, "FollowPrevPlayer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerControllerSpectating_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033C41A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerControllerSpectating_Statics::ClassParams = { &AFortPlayerControllerSpectating::StaticClass, Z_Construct_UClass_AFortPlayerControllerSpectating_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortPlayerControllerSpectating_Statics::FuncInfo, 3, Z_Construct_UClass_AFortPlayerControllerSpectating_Statics::PropPointers, 9, "Game", &Z_Construct_UClass_AFortPlayerControllerSpectating_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01077830 (end 0x0107785F)
+// Original VA: 0x0000000141077830 | File offset: 0x01076E30
+// Recovery: confirmed (UHT singleton of AFortPlayerControllerSpectating) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerControllerSpectating()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerControllerSpectating_Statics::ClassParams);
+	}
+	return OuterClass;
+}

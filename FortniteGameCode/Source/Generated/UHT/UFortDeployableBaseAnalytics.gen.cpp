@@ -145,3 +145,40 @@ UFunction* Z_Construct_UFunction_UFortDeployableBaseAnalytics_FireAnalyticsEvent
 	}
 	return ReturnFunction;
 }
+
+class UFortDeployableBaseAnalytics
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortDeployableBaseAnalytics_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortDeployableBaseAnalytics_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortDeployableBaseAnalytics_FireAnalyticsEvent_CombatZone_ConsoleOpened, "FireAnalyticsEvent_CombatZone_ConsoleOpened" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseAnalytics_FireAnalyticsEvent_CombatZone_TierCompleted, "FireAnalyticsEvent_CombatZone_TierCompleted" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseAnalytics_FireAnalyticsEvent_CombatZone_TierFailed, "FireAnalyticsEvent_CombatZone_TierFailed" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseAnalytics_FireAnalyticsEvent_CombatZone_TierStarted, "FireAnalyticsEvent_CombatZone_TierStarted" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseAnalytics_FireAnalyticsEvent_CombatZone_WaveFailed, "FireAnalyticsEvent_CombatZone_WaveFailed" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseAnalytics_FireAnalyticsEvent_CombatZone_WaveStarted, "FireAnalyticsEvent_CombatZone_WaveStarted" },
+	{ &Z_Construct_UFunction_UFortDeployableBaseAnalytics_FireAnalyticsEvent_Neighborhood_ConsoleOpened, "FireAnalyticsEvent_Neighborhood_ConsoleOpened" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortDeployableBaseAnalytics_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032C9080
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortDeployableBaseAnalytics_Statics::ClassParams = { &UFortDeployableBaseAnalytics::StaticClass, Z_Construct_UClass_UFortDeployableBaseAnalytics_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortDeployableBaseAnalytics_Statics::FuncInfo, 7, nullptr, 0, nullptr, &Z_Construct_UClass_UFortDeployableBaseAnalytics_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3D10 (end 0x00FA3D3F)
+// Original VA: 0x0000000140FA3D10 | File offset: 0x00FA3310
+// Recovery: confirmed (UHT singleton of UFortDeployableBaseAnalytics) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortDeployableBaseAnalytics()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortDeployableBaseAnalytics_Statics::ClassParams);
+	}
+	return OuterClass;
+}

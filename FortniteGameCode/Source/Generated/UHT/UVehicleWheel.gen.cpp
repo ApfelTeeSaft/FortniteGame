@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UVehicleWheel_IsInAir()
 	}
 	return ReturnFunction;
 }
+
+class UVehicleWheel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UVehicleWheel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UVehicleWheel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UVehicleWheel_GetRotationAngle, "GetRotationAngle" },
+	{ &Z_Construct_UFunction_UVehicleWheel_GetSteerAngle, "GetSteerAngle" },
+	{ &Z_Construct_UFunction_UVehicleWheel_GetSuspensionOffset, "GetSuspensionOffset" },
+	{ &Z_Construct_UFunction_UVehicleWheel_IsInAir, "IsInAir" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UVehicleWheel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F9D260
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UVehicleWheel_Statics::ClassParams = { &UVehicleWheel::StaticClass, Z_Construct_UClass_UVehicleWheel_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UVehicleWheel_Statics::FuncInfo, 4, Z_Construct_UClass_UVehicleWheel_Statics::PropPointers, 34, nullptr, &Z_Construct_UClass_UVehicleWheel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067BE50 (end 0x0067BE7F)
+// Original VA: 0x000000014067BE50 | File offset: 0x0067B450
+// Recovery: confirmed (UHT singleton of UVehicleWheel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UVehicleWheel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UVehicleWheel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

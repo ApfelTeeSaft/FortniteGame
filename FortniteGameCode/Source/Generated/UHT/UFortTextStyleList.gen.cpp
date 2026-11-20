@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortTextStyleList_GetTextStyles()
 	}
 	return ReturnFunction;
 }
+
+class UFortTextStyleList
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTextStyleList_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTextStyleList_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTextStyleList_GetTextStyles, "GetTextStyles" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTextStyleList_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D31760
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTextStyleList_Statics::ClassParams = { &UFortTextStyleList::StaticClass, Z_Construct_UClass_UFortTextStyleList_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortTextStyleList_Statics::FuncInfo, 1, Z_Construct_UClass_UFortTextStyleList_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortTextStyleList_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904C10 (end 0x02904C3F)
+// Original VA: 0x0000000142904C10 | File offset: 0x02904210
+// Recovery: confirmed (UHT singleton of UFortTextStyleList) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTextStyleList()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTextStyleList_Statics::ClassParams);
+	}
+	return OuterClass;
+}

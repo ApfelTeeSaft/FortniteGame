@@ -64,3 +64,36 @@ UFunction* Z_Construct_UFunction_UFortSquadLandingPageDefenderSummary_HandleClea
 	}
 	return ReturnFunction;
 }
+
+class UFortSquadLandingPageDefenderSummary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSquadLandingPageDefenderSummary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadLandingPageDefenderSummary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadLandingPageDefenderSummary_HandleAddDefenderSquadDetailsBP, "HandleAddDefenderSquadDetailsBP" },
+	{ &Z_Construct_UFunction_UFortSquadLandingPageDefenderSummary_HandleAddLockedDefenderSquadDetailsBP, "HandleAddLockedDefenderSquadDetailsBP" },
+	{ &Z_Construct_UFunction_UFortSquadLandingPageDefenderSummary_HandleClearDefenderSquadDetailsBP, "HandleClearDefenderSquadDetailsBP" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadLandingPageDefenderSummary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D16310
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadLandingPageDefenderSummary_Statics::ClassParams = { &UFortSquadLandingPageDefenderSummary::StaticClass, Z_Construct_UClass_UFortSquadLandingPageDefenderSummary_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSquadLandingPageDefenderSummary_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UFortSquadLandingPageDefenderSummary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5920 (end 0x028F594F)
+// Original VA: 0x00000001428F5920 | File offset: 0x028F4F20
+// Recovery: confirmed (UHT singleton of UFortSquadLandingPageDefenderSummary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadLandingPageDefenderSummary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadLandingPageDefenderSummary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

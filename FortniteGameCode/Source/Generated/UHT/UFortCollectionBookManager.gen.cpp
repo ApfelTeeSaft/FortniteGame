@@ -185,3 +185,43 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookManager_SlotItem()
 	}
 	return ReturnFunction;
 }
+
+class UFortCollectionBookManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCollectionBookManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCollectionBookManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCollectionBookManager_CalculateBookXp, "CalculateBookXp" },
+	{ &Z_Construct_UFunction_UFortCollectionBookManager_CalculatePageXp, "CalculatePageXp" },
+	{ &Z_Construct_UFunction_UFortCollectionBookManager_CanSlotItem, "CanSlotItem" },
+	{ &Z_Construct_UFunction_UFortCollectionBookManager_ClaimReward, "ClaimReward" },
+	{ &Z_Construct_UFunction_UFortCollectionBookManager_GetBookTotalXPToNextLevel, "GetBookTotalXPToNextLevel" },
+	{ &Z_Construct_UFunction_UFortCollectionBookManager_GetBookXPPercentToNextLevel, "GetBookXPPercentToNextLevel" },
+	{ &Z_Construct_UFunction_UFortCollectionBookManager_GetItemInSlot, "GetItemInSlot" },
+	{ &Z_Construct_UFunction_UFortCollectionBookManager_PopulateCollectionBookRewards, "PopulateCollectionBookRewards" },
+	{ &Z_Construct_UFunction_UFortCollectionBookManager_SlotItem, "SlotItem" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCollectionBookManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032EEAC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCollectionBookManager_Statics::ClassParams = { &UFortCollectionBookManager::StaticClass, Z_Construct_UClass_UFortCollectionBookManager_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortCollectionBookManager_Statics::FuncInfo, 9, Z_Construct_UClass_UFortCollectionBookManager_Statics::PropPointers, 12, nullptr, &Z_Construct_UClass_UFortCollectionBookManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC60D0 (end 0x00FC60FF)
+// Original VA: 0x0000000140FC60D0 | File offset: 0x00FC56D0
+// Recovery: confirmed (UHT singleton of UFortCollectionBookManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCollectionBookManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCollectionBookManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UFortAbilitySystemUI_GetStaticGameplayEffectDes
 	}
 	return ReturnFunction;
 }
+
+class UFortAbilitySystemUI
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAbilitySystemUI_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAbilitySystemUI_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAbilitySystemUI_GetDefaultObjectOfGameplayEffectType, "GetDefaultObjectOfGameplayEffectType" },
+	{ &Z_Construct_UFunction_UFortAbilitySystemUI_GetStaticGameplayEffectDescription, "GetStaticGameplayEffectDescription" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAbilitySystemUI_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032907E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAbilitySystemUI_Statics::ClassParams = { &UFortAbilitySystemUI::StaticClass, Z_Construct_UClass_UFortAbilitySystemUI_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortAbilitySystemUI_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortAbilitySystemUI_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7D580 (end 0x00F7D5AF)
+// Original VA: 0x0000000140F7D580 | File offset: 0x00F7CB80
+// Recovery: confirmed (UHT singleton of UFortAbilitySystemUI) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAbilitySystemUI()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAbilitySystemUI_Statics::ClassParams);
+	}
+	return OuterClass;
+}

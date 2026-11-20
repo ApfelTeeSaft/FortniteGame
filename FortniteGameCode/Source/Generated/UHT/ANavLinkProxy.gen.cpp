@@ -105,3 +105,40 @@ UFunction* Z_Construct_UFunction_ANavLinkProxy_SetSmartLinkEnabled()
 	}
 	return ReturnFunction;
 }
+
+class ANavLinkProxy
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ANavLinkProxy_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ANavLinkProxy_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ANavLinkProxy_HasMovingAgents, "HasMovingAgents" },
+	{ &Z_Construct_UFunction_ANavLinkProxy_IsSmartLinkEnabled, "IsSmartLinkEnabled" },
+	{ &Z_Construct_UFunction_ANavLinkProxy_ReceiveSmartLinkReached, "ReceiveSmartLinkReached" },
+	{ &Z_Construct_UFunction_ANavLinkProxy_ResumePathFollowing, "ResumePathFollowing" },
+	{ &Z_Construct_UFunction_ANavLinkProxy_SetSmartLinkEnabled, "SetSmartLinkEnabled" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ANavLinkProxy_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0395B7D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ANavLinkProxy_Statics::ClassParams = { &ANavLinkProxy::StaticClass, Z_Construct_UClass_ANavLinkProxy_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ANavLinkProxy_Statics::FuncInfo, 5, Z_Construct_UClass_ANavLinkProxy_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_ANavLinkProxy_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_ANavLinkProxy_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F770 (end 0x0248F79F)
+// Original VA: 0x000000014248F770 | File offset: 0x0248ED70
+// Recovery: confirmed (UHT singleton of ANavLinkProxy) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ANavLinkProxy()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ANavLinkProxy_Statics::ClassParams);
+	}
+	return OuterClass;
+}

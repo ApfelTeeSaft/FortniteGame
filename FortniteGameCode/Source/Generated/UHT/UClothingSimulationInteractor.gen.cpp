@@ -43,3 +43,35 @@ UFunction* Z_Construct_UFunction_UClothingSimulationInteractor_PhysicsAssetUpdat
 	}
 	return ReturnFunction;
 }
+
+class UClothingSimulationInteractor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UClothingSimulationInteractor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UClothingSimulationInteractor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UClothingSimulationInteractor_ClothConfigUpdated, "ClothConfigUpdated" },
+	{ &Z_Construct_UFunction_UClothingSimulationInteractor_PhysicsAssetUpdated, "PhysicsAssetUpdated" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UClothingSimulationInteractor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03711880
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UClothingSimulationInteractor_Statics::ClassParams = { &UClothingSimulationInteractor::StaticClass, Z_Construct_UClass_UClothingSimulationInteractor_Statics::DependentSingletons, 2, 0x00100081u, Z_Construct_UClass_UClothingSimulationInteractor_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UClothingSimulationInteractor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3BA90 (end 0x01D3BABF)
+// Original VA: 0x0000000141D3BA90 | File offset: 0x01D3B090
+// Recovery: confirmed (UHT singleton of UClothingSimulationInteractor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UClothingSimulationInteractor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UClothingSimulationInteractor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

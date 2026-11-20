@@ -205,3 +205,44 @@ UFunction* Z_Construct_UFunction_UFortGridWidgetBase_SetTileWidth()
 	}
 	return ReturnFunction;
 }
+
+class UFortGridWidgetBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortGridWidgetBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortGridWidgetBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortGridWidgetBase_GetTileForObject, "GetTileForObject" },
+	{ &Z_Construct_UFunction_UFortGridWidgetBase_GetTiles, "GetTiles" },
+	{ &Z_Construct_UFunction_UFortGridWidgetBase_SetClearWidgetType, "SetClearWidgetType" },
+	{ &Z_Construct_UFunction_UFortGridWidgetBase_SetDataProvider, "SetDataProvider" },
+	{ &Z_Construct_UFunction_UFortGridWidgetBase_SetPeekOverflowTilePercentage, "SetPeekOverflowTilePercentage" },
+	{ &Z_Construct_UFunction_UFortGridWidgetBase_SetTileHeight, "SetTileHeight" },
+	{ &Z_Construct_UFunction_UFortGridWidgetBase_SetTilePadding, "SetTilePadding" },
+	{ &Z_Construct_UFunction_UFortGridWidgetBase_SetTileWidth, "SetTileWidth" },
+	{ &Z_Construct_UFunction_UFortGridWidgetBase_SetTilesAcross, "SetTilesAcross" },
+	{ &Z_Construct_UFunction_UFortGridWidgetBase_SetTilesDown, "SetTilesDown" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortGridWidgetBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CA4B90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortGridWidgetBase_Statics::ClassParams = { &UFortGridWidgetBase::StaticClass, Z_Construct_UClass_UFortGridWidgetBase_Statics::DependentSingletons, 2, 0x00A00081u, Z_Construct_UClass_UFortGridWidgetBase_Statics::FuncInfo, 10, Z_Construct_UClass_UFortGridWidgetBase_Statics::PropPointers, 21, nullptr, &Z_Construct_UClass_UFortGridWidgetBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3C20 (end 0x028B3C4F)
+// Original VA: 0x00000001428B3C20 | File offset: 0x028B3220
+// Recovery: confirmed (UHT singleton of UFortGridWidgetBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortGridWidgetBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortGridWidgetBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

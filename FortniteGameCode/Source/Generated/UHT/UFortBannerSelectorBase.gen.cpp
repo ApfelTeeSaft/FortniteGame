@@ -161,3 +161,42 @@ UFunction* Z_Construct_UFunction_UFortBannerSelectorBase_UpdateErrorText()
 	}
 	return ReturnFunction;
 }
+
+class UFortBannerSelectorBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortBannerSelectorBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortBannerSelectorBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortBannerSelectorBase_CompleteHomebaseBannerSelection, "CompleteHomebaseBannerSelection" },
+	{ &Z_Construct_UFunction_UFortBannerSelectorBase_CompleteHomebaseName, "CompleteHomebaseName" },
+	{ &Z_Construct_UFunction_UFortBannerSelectorBase_HandleBannerNameChanged, "HandleBannerNameChanged" },
+	{ &Z_Construct_UFunction_UFortBannerSelectorBase_HasIllegalChars, "HasIllegalChars" },
+	{ &Z_Construct_UFunction_UFortBannerSelectorBase_IsPlayerNameValid, "IsPlayerNameValid" },
+	{ &Z_Construct_UFunction_UFortBannerSelectorBase_OnHomebaseNameCommitFailed, "OnHomebaseNameCommitFailed" },
+	{ &Z_Construct_UFunction_UFortBannerSelectorBase_OnHomebaseNameCommitSucceeded, "OnHomebaseNameCommitSucceeded" },
+	{ &Z_Construct_UFunction_UFortBannerSelectorBase_UpdateErrorText, "UpdateErrorText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortBannerSelectorBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C74FB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortBannerSelectorBase_Statics::ClassParams = { &UFortBannerSelectorBase::StaticClass, Z_Construct_UClass_UFortBannerSelectorBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortBannerSelectorBase_Statics::FuncInfo, 8, Z_Construct_UClass_UFortBannerSelectorBase_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortBannerSelectorBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894400 (end 0x0289442F)
+// Original VA: 0x0000000142894400 | File offset: 0x02893A00
+// Recovery: confirmed (UHT singleton of UFortBannerSelectorBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortBannerSelectorBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortBannerSelectorBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

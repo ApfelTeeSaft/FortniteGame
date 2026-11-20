@@ -203,3 +203,44 @@ UFunction* Z_Construct_UFunction_AFortQuickBars_ServerSwapItemsInternal()
 	}
 	return ReturnFunction;
 }
+
+class AFortQuickBars
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortQuickBars_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortQuickBars_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortQuickBars_DisableSlot, "DisableSlot" },
+	{ &Z_Construct_UFunction_AFortQuickBars_Empty, "Empty" },
+	{ &Z_Construct_UFunction_AFortQuickBars_EmptySlot, "EmptySlot" },
+	{ &Z_Construct_UFunction_AFortQuickBars_EnableSlot, "EnableSlot" },
+	{ &Z_Construct_UFunction_AFortQuickBars_OnRep_PrimaryQuickBar, "OnRep_PrimaryQuickBar" },
+	{ &Z_Construct_UFunction_AFortQuickBars_OnRep_SecondaryQuickBar, "OnRep_SecondaryQuickBar" },
+	{ &Z_Construct_UFunction_AFortQuickBars_ServerActivateSlotInternal, "ServerActivateSlotInternal" },
+	{ &Z_Construct_UFunction_AFortQuickBars_ServerAddItemInternal, "ServerAddItemInternal" },
+	{ &Z_Construct_UFunction_AFortQuickBars_ServerRemoveItemInternal, "ServerRemoveItemInternal" },
+	{ &Z_Construct_UFunction_AFortQuickBars_ServerSwapItemsInternal, "ServerSwapItemsInternal" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortQuickBars_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033EE770
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortQuickBars_Statics::ClassParams = { &AFortQuickBars::StaticClass, Z_Construct_UClass_AFortQuickBars_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortQuickBars_Statics::FuncInfo, 10, Z_Construct_UClass_AFortQuickBars_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_AFortQuickBars_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109DA50 (end 0x0109DA7F)
+// Original VA: 0x000000014109DA50 | File offset: 0x0109D050
+// Recovery: confirmed (UHT singleton of AFortQuickBars) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortQuickBars()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortQuickBars_Statics::ClassParams);
+	}
+	return OuterClass;
+}

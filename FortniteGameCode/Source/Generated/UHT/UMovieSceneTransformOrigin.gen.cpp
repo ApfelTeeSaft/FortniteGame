@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UMovieSceneTransformOrigin_BP_GetTransformOrigi
 	}
 	return ReturnFunction;
 }
+
+class UMovieSceneTransformOrigin
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMovieSceneTransformOrigin_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMovieSceneTransformOrigin_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMovieSceneTransformOrigin_BP_GetTransformOrigin, "BP_GetTransformOrigin" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMovieSceneTransformOrigin_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0366A9E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMovieSceneTransformOrigin_Statics::ClassParams = { &UMovieSceneTransformOrigin::StaticClass, Z_Construct_UClass_UMovieSceneTransformOrigin_Statics::DependentSingletons, 2, 0x00104081u, Z_Construct_UClass_UMovieSceneTransformOrigin_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UMovieSceneTransformOrigin_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B528F0 (end 0x01B5291F)
+// Original VA: 0x0000000141B528F0 | File offset: 0x01B51EF0
+// Recovery: confirmed (UHT singleton of UMovieSceneTransformOrigin) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMovieSceneTransformOrigin()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMovieSceneTransformOrigin_Statics::ClassParams);
+	}
+	return OuterClass;
+}

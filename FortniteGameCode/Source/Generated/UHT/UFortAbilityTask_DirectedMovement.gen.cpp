@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_DirectedMovement_DirectedMovem
 	}
 	return ReturnFunction;
 }
+
+class UFortAbilityTask_DirectedMovement
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAbilityTask_DirectedMovement_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAbilityTask_DirectedMovement_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAbilityTask_DirectedMovement_DirectedMovement, "DirectedMovement" },
+	{ &Z_Construct_UFunction_UFortAbilityTask_DirectedMovement_DirectedMovementToActor, "DirectedMovementToActor" },
+	{ &Z_Construct_UFunction_UFortAbilityTask_DirectedMovement_DirectedMovementToComponent, "DirectedMovementToComponent" },
+	{ &Z_Construct_UFunction_UFortAbilityTask_DirectedMovement_DirectedMovementToLocation, "DirectedMovementToLocation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAbilityTask_DirectedMovement_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03295E20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAbilityTask_DirectedMovement_Statics::ClassParams = { &UFortAbilityTask_DirectedMovement::StaticClass, Z_Construct_UClass_UFortAbilityTask_DirectedMovement_Statics::DependentSingletons, 2, 0x00880084u, Z_Construct_UClass_UFortAbilityTask_DirectedMovement_Statics::FuncInfo, 4, Z_Construct_UClass_UFortAbilityTask_DirectedMovement_Statics::PropPointers, 10, "Game", &Z_Construct_UClass_UFortAbilityTask_DirectedMovement_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81E30 (end 0x00F81E5F)
+// Original VA: 0x0000000140F81E30 | File offset: 0x00F81430
+// Recovery: confirmed (UHT singleton of UFortAbilityTask_DirectedMovement) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAbilityTask_DirectedMovement()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAbilityTask_DirectedMovement_Statics::ClassParams);
+	}
+	return OuterClass;
+}

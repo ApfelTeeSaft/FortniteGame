@@ -265,3 +265,46 @@ UFunction* Z_Construct_UFunction_UFortOutpostFunctionLibrary_TransferItemToStora
 	}
 	return ReturnFunction;
 }
+
+class UFortOutpostFunctionLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortOutpostFunctionLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortOutpostFunctionLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_ActivateCraftingTable, "ActivateCraftingTable" },
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_DeactivateCraftingTable, "DeactivateCraftingTable" },
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_DeployOutpostBuildingTagOnPlacementTag, "DeployOutpostBuildingTagOnPlacementTag" },
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_GetOutpostBuildingItemDefinition, "GetOutpostBuildingItemDefinition" },
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_GetOutpostBuildingTagFromPlacementTag, "GetOutpostBuildingTagFromPlacementTag" },
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_GetOutpostOwner, "GetOutpostOwner" },
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_GetOutpostQuestMissionConfigData, "GetOutpostQuestMissionConfigData" },
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_GetPlacementTagFromOutpostBuildingTag, "GetPlacementTagFromOutpostBuildingTag" },
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_SetCriticalMissionJoinability, "SetCriticalMissionJoinability" },
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_SetOutpostDefenseActive, "SetOutpostDefenseActive" },
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_SetOutpostGameDifficultyRow, "SetOutpostGameDifficultyRow" },
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_TransferItemFromStorage, "TransferItemFromStorage" },
+	{ &Z_Construct_UFunction_UFortOutpostFunctionLibrary_TransferItemToStorage, "TransferItemToStorage" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortOutpostFunctionLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0339AC10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortOutpostFunctionLibrary_Statics::ClassParams = { &UFortOutpostFunctionLibrary::StaticClass, Z_Construct_UClass_UFortOutpostFunctionLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortOutpostFunctionLibrary_Statics::FuncInfo, 13, nullptr, 0, nullptr, &Z_Construct_UClass_UFortOutpostFunctionLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01056030 (end 0x0105605F)
+// Original VA: 0x0000000141056030 | File offset: 0x01055630
+// Recovery: confirmed (UHT singleton of UFortOutpostFunctionLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortOutpostFunctionLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortOutpostFunctionLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UCameraAnimInst_Stop()
 	}
 	return ReturnFunction;
 }
+
+class UCameraAnimInst
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCameraAnimInst_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCameraAnimInst_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCameraAnimInst_SetDuration, "SetDuration" },
+	{ &Z_Construct_UFunction_UCameraAnimInst_SetScale, "SetScale" },
+	{ &Z_Construct_UFunction_UCameraAnimInst_Stop, "Stop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCameraAnimInst_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038B9920
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCameraAnimInst_Statics::ClassParams = { &UCameraAnimInst::StaticClass, Z_Construct_UClass_UCameraAnimInst_Statics::DependentSingletons, 2, 0x00900288u, Z_Construct_UClass_UCameraAnimInst_Statics::FuncInfo, 3, Z_Construct_UClass_UCameraAnimInst_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UCameraAnimInst_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA9C0 (end 0x023EA9EF)
+// Original VA: 0x00000001423EA9C0 | File offset: 0x023E9FC0
+// Recovery: confirmed (UHT singleton of UCameraAnimInst) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCameraAnimInst()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCameraAnimInst_Statics::ClassParams);
+	}
+	return OuterClass;
+}

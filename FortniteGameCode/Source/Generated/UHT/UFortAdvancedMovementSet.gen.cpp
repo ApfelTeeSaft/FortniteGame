@@ -138,3 +138,41 @@ UFunction* Z_Construct_UFunction_UFortAdvancedMovementSet_OnRep_MinAnalogWalkSpe
 	}
 	return ReturnFunction;
 }
+
+class UFortAdvancedMovementSet
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAdvancedMovementSet_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAdvancedMovementSet_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAdvancedMovementSet_OnRep_BrakingDecelerationFalling, "OnRep_BrakingDecelerationFalling" },
+	{ &Z_Construct_UFunction_UFortAdvancedMovementSet_OnRep_BrakingDecelerationWalking, "OnRep_BrakingDecelerationWalking" },
+	{ &Z_Construct_UFunction_UFortAdvancedMovementSet_OnRep_BrakingFrictionFactor, "OnRep_BrakingFrictionFactor" },
+	{ &Z_Construct_UFunction_UFortAdvancedMovementSet_OnRep_GroundFriction, "OnRep_GroundFriction" },
+	{ &Z_Construct_UFunction_UFortAdvancedMovementSet_OnRep_JumpZVelocity, "OnRep_JumpZVelocity" },
+	{ &Z_Construct_UFunction_UFortAdvancedMovementSet_OnRep_MaxAcceleration, "OnRep_MaxAcceleration" },
+	{ &Z_Construct_UFunction_UFortAdvancedMovementSet_OnRep_MinAnalogWalkSpeed, "OnRep_MinAnalogWalkSpeed" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAdvancedMovementSet_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03297DE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAdvancedMovementSet_Statics::ClassParams = { &UFortAdvancedMovementSet::StaticClass, Z_Construct_UClass_UFortAdvancedMovementSet_Statics::DependentSingletons, 2, 0x00280080u, Z_Construct_UClass_UFortAdvancedMovementSet_Statics::FuncInfo, 7, Z_Construct_UClass_UFortAdvancedMovementSet_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UFortAdvancedMovementSet_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F821C0 (end 0x00F821EF)
+// Original VA: 0x0000000140F821C0 | File offset: 0x00F817C0
+// Recovery: confirmed (UHT singleton of UFortAdvancedMovementSet) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAdvancedMovementSet()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAdvancedMovementSet_Statics::ClassParams);
+	}
+	return OuterClass;
+}

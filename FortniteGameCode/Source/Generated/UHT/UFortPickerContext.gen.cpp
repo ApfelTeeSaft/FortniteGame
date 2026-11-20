@@ -203,3 +203,44 @@ UFunction* Z_Construct_UFunction_UFortPickerContext_UseLeftThumbstick()
 	}
 	return ReturnFunction;
 }
+
+class UFortPickerContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortPickerContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPickerContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPickerContext_DoesRadialCloseOnRelease, "DoesRadialCloseOnRelease" },
+	{ &Z_Construct_UFunction_UFortPickerContext_GetListPickerOption, "GetListPickerOption" },
+	{ &Z_Construct_UFunction_UFortPickerContext_GetNumPickerOptions, "GetNumPickerOptions" },
+	{ &Z_Construct_UFunction_UFortPickerContext_GetRadialPickerOptionImageAndLabel, "GetRadialPickerOptionImageAndLabel" },
+	{ &Z_Construct_UFunction_UFortPickerContext_GetRadialPickerOptionItem, "GetRadialPickerOptionItem" },
+	{ &Z_Construct_UFunction_UFortPickerContext_PickerCanceled, "PickerCanceled" },
+	{ &Z_Construct_UFunction_UFortPickerContext_PickerOptionAccepted, "PickerOptionAccepted" },
+	{ &Z_Construct_UFunction_UFortPickerContext_RestoreInputAxes, "RestoreInputAxes" },
+	{ &Z_Construct_UFunction_UFortPickerContext_SetFortPickerData, "SetFortPickerData" },
+	{ &Z_Construct_UFunction_UFortPickerContext_UseLeftThumbstick, "UseLeftThumbstick" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPickerContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CFE650
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPickerContext_Statics::ClassParams = { &UFortPickerContext::StaticClass, Z_Construct_UClass_UFortPickerContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortPickerContext_Statics::FuncInfo, 10, Z_Construct_UClass_UFortPickerContext_Statics::PropPointers, 16, nullptr, &Z_Construct_UClass_UFortPickerContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6C60 (end 0x028E6C8F)
+// Original VA: 0x00000001428E6C60 | File offset: 0x028E6260
+// Recovery: confirmed (UHT singleton of UFortPickerContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPickerContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPickerContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

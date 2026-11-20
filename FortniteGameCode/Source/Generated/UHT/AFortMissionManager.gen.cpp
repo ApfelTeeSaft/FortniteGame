@@ -141,3 +141,41 @@ UFunction* Z_Construct_UFunction_AFortMissionManager_ShouldShowSecondaryMissionH
 	}
 	return ReturnFunction;
 }
+
+class AFortMissionManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortMissionManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortMissionManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortMissionManager_GetSpawnLocationActorsMatchingEntryItemQuery, "GetSpawnLocationActorsMatchingEntryItemQuery" },
+	{ &Z_Construct_UFunction_AFortMissionManager_GetSpawnLocationActorsThatHaveAddedTagsMatchingQuery, "GetSpawnLocationActorsThatHaveAddedTagsMatchingQuery" },
+	{ &Z_Construct_UFunction_AFortMissionManager_OnRep_CurrentUIFocusedMission, "OnRep_CurrentUIFocusedMission" },
+	{ &Z_Construct_UFunction_AFortMissionManager_OnRep_EarnedBadgesArray, "OnRep_EarnedBadgesArray" },
+	{ &Z_Construct_UFunction_AFortMissionManager_OnRep_MissionUIActors, "OnRep_MissionUIActors" },
+	{ &Z_Construct_UFunction_AFortMissionManager_OnRep_Missions, "OnRep_Missions" },
+	{ &Z_Construct_UFunction_AFortMissionManager_ShouldShowSecondaryMissionHeaders, "ShouldShowSecondaryMissionHeaders" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortMissionManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03389770
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortMissionManager_Statics::ClassParams = { &AFortMissionManager::StaticClass, Z_Construct_UClass_AFortMissionManager_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortMissionManager_Statics::FuncInfo, 7, Z_Construct_UClass_AFortMissionManager_Statics::PropPointers, 15, "Game", &Z_Construct_UClass_AFortMissionManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A7D0 (end 0x0104A7FF)
+// Original VA: 0x000000014104A7D0 | File offset: 0x01049DD0
+// Recovery: confirmed (UHT singleton of AFortMissionManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortMissionManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortMissionManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

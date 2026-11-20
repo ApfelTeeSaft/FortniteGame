@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UThrobber_SetNumberOfPieces()
 	}
 	return ReturnFunction;
 }
+
+class UThrobber
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UThrobber_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UThrobber_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UThrobber_SetAnimateHorizontally, "SetAnimateHorizontally" },
+	{ &Z_Construct_UFunction_UThrobber_SetAnimateOpacity, "SetAnimateOpacity" },
+	{ &Z_Construct_UFunction_UThrobber_SetAnimateVertically, "SetAnimateVertically" },
+	{ &Z_Construct_UFunction_UThrobber_SetNumberOfPieces, "SetNumberOfPieces" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UThrobber_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0369E940
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UThrobber_Statics::ClassParams = { &UThrobber::StaticClass, Z_Construct_UClass_UThrobber_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UThrobber_Statics::FuncInfo, 4, Z_Construct_UClass_UThrobber_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UThrobber_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3260 (end 0x01BF328F)
+// Original VA: 0x0000000141BF3260 | File offset: 0x01BF2860
+// Recovery: confirmed (UHT singleton of UThrobber) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UThrobber()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UThrobber_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -24,3 +24,35 @@ UFunction* Z_Construct_UFunction_AFortWeap_EditingTool_OnRep_EditActor()
 	}
 	return ReturnFunction;
 }
+
+class AFortWeap_EditingTool
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortWeap_EditingTool_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortWeap_EditingTool_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortWeap_EditingTool_OnRep_EditActor, "OnRep_EditActor" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortWeap_EditingTool_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0342A500
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortWeap_EditingTool_Statics::ClassParams = { &AFortWeap_EditingTool::StaticClass, Z_Construct_UClass_AFortWeap_EditingTool_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortWeap_EditingTool_Statics::FuncInfo, 1, Z_Construct_UClass_AFortWeap_EditingTool_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_AFortWeap_EditingTool_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4920 (end 0x010D494F)
+// Original VA: 0x00000001410D4920 | File offset: 0x010D3F20
+// Recovery: confirmed (UHT singleton of AFortWeap_EditingTool) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortWeap_EditingTool()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortWeap_EditingTool_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_ULinearTimecodeComponent_SetDropTimecodeFrameNu
 	}
 	return ReturnFunction;
 }
+
+class ULinearTimecodeComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ULinearTimecodeComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ULinearTimecodeComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ULinearTimecodeComponent_GetDropFrameNumber, "GetDropFrameNumber" },
+	{ &Z_Construct_UFunction_ULinearTimecodeComponent_GetDropTimeCodeFrameNumber, "GetDropTimeCodeFrameNumber" },
+	{ &Z_Construct_UFunction_ULinearTimecodeComponent_SetDropTimecodeFrameNumber, "SetDropTimecodeFrameNumber" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ULinearTimecodeComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02FD3BF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ULinearTimecodeComponent_Statics::ClassParams = { &ULinearTimecodeComponent::StaticClass, Z_Construct_UClass_ULinearTimecodeComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_ULinearTimecodeComponent_Statics::FuncInfo, 3, Z_Construct_UClass_ULinearTimecodeComponent_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_ULinearTimecodeComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x007E0270 (end 0x007E029F)
+// Original VA: 0x00000001407E0270 | File offset: 0x007DF870
+// Recovery: confirmed (UHT singleton of ULinearTimecodeComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ULinearTimecodeComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ULinearTimecodeComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

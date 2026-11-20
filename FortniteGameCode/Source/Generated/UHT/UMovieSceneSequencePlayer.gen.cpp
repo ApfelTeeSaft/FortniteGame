@@ -457,3 +457,57 @@ UFunction* Z_Construct_UFunction_UMovieSceneSequencePlayer_Stop()
 	}
 	return ReturnFunction;
 }
+
+class UMovieSceneSequencePlayer
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMovieSceneSequencePlayer_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMovieSceneSequencePlayer_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_ChangePlaybackDirection, "ChangePlaybackDirection" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_GetBoundObjects, "GetBoundObjects" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_GetDisableCameraCuts, "GetDisableCameraCuts" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_GetLength, "GetLength" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_GetPlayRate, "GetPlayRate" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_GetPlaybackEnd, "GetPlaybackEnd" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_GetPlaybackPosition, "GetPlaybackPosition" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_GetPlaybackStart, "GetPlaybackStart" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_GoToEndAndStop, "GoToEndAndStop" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_IsPaused, "IsPaused" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_IsPlaying, "IsPlaying" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_JumpToPosition, "JumpToPosition" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_Pause, "Pause" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_Play, "Play" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_PlayLooping, "PlayLooping" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_PlayReverse, "PlayReverse" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_Scrub, "Scrub" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_SetDisableCameraCuts, "SetDisableCameraCuts" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_SetPlayRate, "SetPlayRate" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_SetPlaybackPosition, "SetPlaybackPosition" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_SetPlaybackRange, "SetPlaybackRange" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_StartPlayingNextTick, "StartPlayingNextTick" },
+	{ &Z_Construct_UFunction_UMovieSceneSequencePlayer_Stop, "Stop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMovieSceneSequencePlayer_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0363F5A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMovieSceneSequencePlayer_Statics::ClassParams = { &UMovieSceneSequencePlayer::StaticClass, Z_Construct_UClass_UMovieSceneSequencePlayer_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_UMovieSceneSequencePlayer_Statics::FuncInfo, 23, Z_Construct_UClass_UMovieSceneSequencePlayer_Statics::PropPointers, 14, nullptr, &Z_Construct_UClass_UMovieSceneSequencePlayer_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC5510 (end 0x01AC553F)
+// Original VA: 0x0000000141AC5510 | File offset: 0x01AC4B10
+// Recovery: confirmed (UHT singleton of UMovieSceneSequencePlayer) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMovieSceneSequencePlayer()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMovieSceneSequencePlayer_Statics::ClassParams);
+	}
+	return OuterClass;
+}

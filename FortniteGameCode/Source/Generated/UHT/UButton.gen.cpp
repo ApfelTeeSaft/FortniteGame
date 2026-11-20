@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UButton_SetTouchMethod()
 	}
 	return ReturnFunction;
 }
+
+class UButton
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UButton_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UButton_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UButton_IsPressed, "IsPressed" },
+	{ &Z_Construct_UFunction_UButton_SetBackgroundColor, "SetBackgroundColor" },
+	{ &Z_Construct_UFunction_UButton_SetClickMethod, "SetClickMethod" },
+	{ &Z_Construct_UFunction_UButton_SetColorAndOpacity, "SetColorAndOpacity" },
+	{ &Z_Construct_UFunction_UButton_SetStyle, "SetStyle" },
+	{ &Z_Construct_UFunction_UButton_SetTouchMethod, "SetTouchMethod" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UButton_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03691510
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UButton_Statics::ClassParams = { &UButton::StaticClass, Z_Construct_UClass_UButton_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UButton_Statics::FuncInfo, 6, Z_Construct_UClass_UButton_Statics::PropPointers, 12, nullptr, &Z_Construct_UClass_UButton_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6050 (end 0x01BE607F)
+// Original VA: 0x0000000141BE6050 | File offset: 0x01BE5650
+// Recovery: confirmed (UHT singleton of UButton) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UButton()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UButton_Statics::ClassParams);
+	}
+	return OuterClass;
+}

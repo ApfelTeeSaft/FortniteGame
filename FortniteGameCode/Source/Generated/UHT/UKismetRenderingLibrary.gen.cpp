@@ -245,3 +245,45 @@ UFunction* Z_Construct_UFunction_UKismetRenderingLibrary_RenderTargetCreateStati
 	}
 	return ReturnFunction;
 }
+
+class UKismetRenderingLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UKismetRenderingLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UKismetRenderingLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UKismetRenderingLibrary_BeginDrawCanvasToRenderTarget, "BeginDrawCanvasToRenderTarget" },
+	{ &Z_Construct_UFunction_UKismetRenderingLibrary_BreakSkinWeightInfo, "BreakSkinWeightInfo" },
+	{ &Z_Construct_UFunction_UKismetRenderingLibrary_ClearRenderTarget2D, "ClearRenderTarget2D" },
+	{ &Z_Construct_UFunction_UKismetRenderingLibrary_ConvertRenderTargetToTexture2DEditorOnly, "ConvertRenderTargetToTexture2DEditorOnly" },
+	{ &Z_Construct_UFunction_UKismetRenderingLibrary_CreateRenderTarget2D, "CreateRenderTarget2D" },
+	{ &Z_Construct_UFunction_UKismetRenderingLibrary_DrawMaterialToRenderTarget, "DrawMaterialToRenderTarget" },
+	{ &Z_Construct_UFunction_UKismetRenderingLibrary_EndDrawCanvasToRenderTarget, "EndDrawCanvasToRenderTarget" },
+	{ &Z_Construct_UFunction_UKismetRenderingLibrary_ExportRenderTarget, "ExportRenderTarget" },
+	{ &Z_Construct_UFunction_UKismetRenderingLibrary_ExportTexture2D, "ExportTexture2D" },
+	{ &Z_Construct_UFunction_UKismetRenderingLibrary_MakeSkinWeightInfo, "MakeSkinWeightInfo" },
+	{ &Z_Construct_UFunction_UKismetRenderingLibrary_ReleaseRenderTarget2D, "ReleaseRenderTarget2D" },
+	{ &Z_Construct_UFunction_UKismetRenderingLibrary_RenderTargetCreateStaticTexture2DEditorOnly, "RenderTargetCreateStaticTexture2DEditorOnly" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UKismetRenderingLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03925FC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UKismetRenderingLibrary_Statics::ClassParams = { &UKismetRenderingLibrary::StaticClass, Z_Construct_UClass_UKismetRenderingLibrary_Statics::DependentSingletons, 2, 0x00080080u, Z_Construct_UClass_UKismetRenderingLibrary_Statics::FuncInfo, 12, nullptr, 0, nullptr, &Z_Construct_UClass_UKismetRenderingLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02452C80 (end 0x02452CAF)
+// Original VA: 0x0000000142452C80 | File offset: 0x02452280
+// Recovery: confirmed (UHT singleton of UKismetRenderingLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UKismetRenderingLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UKismetRenderingLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

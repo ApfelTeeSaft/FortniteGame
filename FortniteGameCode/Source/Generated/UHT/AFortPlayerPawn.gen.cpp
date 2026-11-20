@@ -1088,3 +1088,90 @@ UFunction* Z_Construct_UFunction_AFortPlayerPawn_UpdateAimbotDetectionStatus()
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerPawn
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerPawn_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerPawn_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerPawn_AddAttachment, "AddAttachment" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_AnimTrailsDisable, "AnimTrailsDisable" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_AnimTrailsNotify, "AnimTrailsNotify" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_AnimTrailsSetup, "AnimTrailsSetup" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_CanPredictJumpApex, "CanPredictJumpApex" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ClientNotifyAbilityFailed, "ClientNotifyAbilityFailed" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_GetCharacterBodyType, "GetCharacterBodyType" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_GetCharacterGender, "GetCharacterGender" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_GetExtraLives, "GetExtraLives" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_GetGender, "GetGender" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_GetHomeActor, "GetHomeActor" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_GetMaxStamina, "GetMaxStamina" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_GetPawnLOD, "GetPawnLOD" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_GetSkeletalMeshForPartType, "GetSkeletalMeshForPartType" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_GetStamina, "GetStamina" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_GetStasisMode, "GetStasisMode" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_HandleInStasis, "HandleInStasis" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_InternalServerSetTargeting, "InternalServerSetTargeting" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_IsSprinting, "IsSprinting" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_IsUsingHoverboard, "IsUsingHoverboard" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ListCharacterParts, "ListCharacterParts" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_OnCharacterPartsReinitialized, "OnCharacterPartsReinitialized" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_OnRep_AccelerationPack, "OnRep_AccelerationPack" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_OnRep_AnimTrailDisableFlashCount, "OnRep_AnimTrailDisableFlashCount" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_OnRep_AttachmentMesh, "OnRep_AttachmentMesh" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_OnRep_CharPartAnimMontageInfo, "OnRep_CharPartAnimMontageInfo" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_OnRep_IsDBNO, "OnRep_IsDBNO" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_OnRep_IsTargeting, "OnRep_IsTargeting" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_RandomizeCharacter, "RandomizeCharacter" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_RemoveAttachment, "RemoveAttachment" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ReviveFromDBNO, "ReviveFromDBNO" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerChooseGender, "ServerChooseGender" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerChoosePart, "ServerChoosePart" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerCycleAccessoryColorSwatch, "ServerCycleAccessoryColorSwatch" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerCycleColorSwatch, "ServerCycleColorSwatch" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerCyclePart, "ServerCyclePart" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerHandlePickup, "ServerHandlePickup" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerPlayUnableToPerformActionMontage, "ServerPlayUnableToPerformActionMontage" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerRespawnFromDBNO, "ServerRespawnFromDBNO" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerReviveFromDBNO, "ServerReviveFromDBNO" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerRootMotionInterruptNotifyStopMontage, "ServerRootMotionInterruptNotifyStopMontage" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerSendAimbotDetectionStatus, "ServerSendAimbotDetectionStatus" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerSetAimbotDetection, "ServerSetAimbotDetection" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerSetAttachment, "ServerSetAttachment" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerToggleBodyType, "ServerToggleBodyType" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ServerToggleGender, "ServerToggleGender" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_SetFirstPersonCamera, "SetFirstPersonCamera" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_SetHomeActor, "SetHomeActor" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_SetStasisMode, "SetStasisMode" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_SwitchToNextPart, "SwitchToNextPart" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_SwitchToPreviousPart, "SwitchToPreviousPart" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_TimeFromJumpApex, "TimeFromJumpApex" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ToggleBodyType, "ToggleBodyType" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_ToggleGender, "ToggleGender" },
+	{ &Z_Construct_UFunction_AFortPlayerPawn_UpdateAimbotDetectionStatus, "UpdateAimbotDetectionStatus" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerPawn_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033CCA20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerPawn_Statics::ClassParams = { &AFortPlayerPawn::StaticClass, Z_Construct_UClass_AFortPlayerPawn_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_AFortPlayerPawn_Statics::FuncInfo, 55, Z_Construct_UClass_AFortPlayerPawn_Statics::PropPointers, 70, "Game", &Z_Construct_UClass_AFortPlayerPawn_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortPlayerPawn_Statics::InterfaceParams, 3 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FE00 (end 0x0107FE2F)
+// Original VA: 0x000000014107FE00 | File offset: 0x0107F400
+// Recovery: confirmed (UHT singleton of AFortPlayerPawn) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerPawn()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerPawn_Statics::ClassParams);
+	}
+	return OuterClass;
+}

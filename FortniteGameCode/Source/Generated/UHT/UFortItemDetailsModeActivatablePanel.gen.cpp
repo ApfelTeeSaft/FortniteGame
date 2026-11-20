@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortItemDetailsModeActivatablePanel_HandleOnAc
 	}
 	return ReturnFunction;
 }
+
+class UFortItemDetailsModeActivatablePanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemDetailsModeActivatablePanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemDetailsModeActivatablePanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemDetailsModeActivatablePanel_HandleOnActiveWidgetChanged, "HandleOnActiveWidgetChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemDetailsModeActivatablePanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CCC520
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemDetailsModeActivatablePanel_Statics::ClassParams = { &UFortItemDetailsModeActivatablePanel::StaticClass, Z_Construct_UClass_UFortItemDetailsModeActivatablePanel_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortItemDetailsModeActivatablePanel_Statics::FuncInfo, 1, Z_Construct_UClass_UFortItemDetailsModeActivatablePanel_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortItemDetailsModeActivatablePanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9E20 (end 0x028C9E4F)
+// Original VA: 0x00000001428C9E20 | File offset: 0x028C9420
+// Recovery: confirmed (UHT singleton of UFortItemDetailsModeActivatablePanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemDetailsModeActivatablePanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemDetailsModeActivatablePanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

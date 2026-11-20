@@ -539,3 +539,61 @@ UFunction* Z_Construct_UFunction_APlayerCameraManager_StopCameraShake()
 	}
 	return ReturnFunction;
 }
+
+class APlayerCameraManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_APlayerCameraManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_APlayerCameraManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_APlayerCameraManager_AddCameraLensEffect, "AddCameraLensEffect" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_AddNewCameraModifier, "AddNewCameraModifier" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_BlueprintUpdateCamera, "BlueprintUpdateCamera" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_ClearCameraLensEffects, "ClearCameraLensEffects" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_FindCameraModifierByClass, "FindCameraModifierByClass" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_GetCameraLocation, "GetCameraLocation" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_GetCameraRotation, "GetCameraRotation" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_GetFOVAngle, "GetFOVAngle" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_GetOwningPlayerController, "GetOwningPlayerController" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_OnPhotographyMultiPartCaptureEnd, "OnPhotographyMultiPartCaptureEnd" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_OnPhotographyMultiPartCaptureStart, "OnPhotographyMultiPartCaptureStart" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_OnPhotographySessionEnd, "OnPhotographySessionEnd" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_OnPhotographySessionStart, "OnPhotographySessionStart" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_PhotographyCameraModify, "PhotographyCameraModify" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_PlayCameraAnim, "PlayCameraAnim" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_PlayCameraShake, "PlayCameraShake" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_RemoveCameraLensEffect, "RemoveCameraLensEffect" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_RemoveCameraModifier, "RemoveCameraModifier" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_SetManualCameraFade, "SetManualCameraFade" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_StartCameraFade, "StartCameraFade" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_StopAllCameraAnims, "StopAllCameraAnims" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_StopAllCameraShakes, "StopAllCameraShakes" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_StopAllInstancesOfCameraAnim, "StopAllInstancesOfCameraAnim" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_StopAllInstancesOfCameraShake, "StopAllInstancesOfCameraShake" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_StopCameraAnimInst, "StopCameraAnimInst" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_StopCameraFade, "StopCameraFade" },
+	{ &Z_Construct_UFunction_APlayerCameraManager_StopCameraShake, "StopCameraShake" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_APlayerCameraManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03984610
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_APlayerCameraManager_Statics::ClassParams = { &APlayerCameraManager::StaticClass, Z_Construct_UClass_APlayerCameraManager_Statics::DependentSingletons, 2, 0x00900288u, Z_Construct_UClass_APlayerCameraManager_Statics::FuncInfo, 27, Z_Construct_UClass_APlayerCameraManager_Statics::PropPointers, 39, nullptr, &Z_Construct_UClass_APlayerCameraManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9DC0 (end 0x024A9DEF)
+// Original VA: 0x00000001424A9DC0 | File offset: 0x024A93C0
+// Recovery: confirmed (UHT singleton of APlayerCameraManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_APlayerCameraManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_APlayerCameraManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

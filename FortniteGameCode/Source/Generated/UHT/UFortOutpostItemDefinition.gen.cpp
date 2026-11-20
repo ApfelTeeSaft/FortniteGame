@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortOutpostItemDefinition_GetLongDescription()
 	}
 	return ReturnFunction;
 }
+
+class UFortOutpostItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortOutpostItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortOutpostItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortOutpostItemDefinition_GetLongDescription, "GetLongDescription" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortOutpostItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0339B580
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortOutpostItemDefinition_Statics::ClassParams = { &UFortOutpostItemDefinition::StaticClass, Z_Construct_UClass_UFortOutpostItemDefinition_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortOutpostItemDefinition_Statics::FuncInfo, 1, Z_Construct_UClass_UFortOutpostItemDefinition_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortOutpostItemDefinition_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01056090 (end 0x010560BF)
+// Original VA: 0x0000000141056090 | File offset: 0x01055690
+// Recovery: confirmed (UHT singleton of UFortOutpostItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortOutpostItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortOutpostItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

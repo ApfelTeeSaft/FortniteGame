@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UPurchaseFlowJSBridge_RequestClose()
 	}
 	return ReturnFunction;
 }
+
+class UPurchaseFlowJSBridge
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPurchaseFlowJSBridge_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPurchaseFlowJSBridge_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPurchaseFlowJSBridge_Receipt, "Receipt" },
+	{ &Z_Construct_UFunction_UPurchaseFlowJSBridge_RequestClose, "RequestClose" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPurchaseFlowJSBridge_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02FA4900
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPurchaseFlowJSBridge_Statics::ClassParams = { &UPurchaseFlowJSBridge::StaticClass, Z_Construct_UClass_UPurchaseFlowJSBridge_Statics::DependentSingletons, 2, 0x00000080u, Z_Construct_UClass_UPurchaseFlowJSBridge_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UPurchaseFlowJSBridge_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x006A8060 (end 0x006A808F)
+// Original VA: 0x00000001406A8060 | File offset: 0x006A7660
+// Recovery: confirmed (UHT singleton of UPurchaseFlowJSBridge) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPurchaseFlowJSBridge()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPurchaseFlowJSBridge_Statics::ClassParams);
+	}
+	return OuterClass;
+}

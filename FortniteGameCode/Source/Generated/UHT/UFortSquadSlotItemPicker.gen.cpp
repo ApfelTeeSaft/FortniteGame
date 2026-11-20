@@ -104,3 +104,39 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemPicker_SetSortTypes()
 	}
 	return ReturnFunction;
 }
+
+class UFortSquadSlotItemPicker
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSquadSlotItemPicker_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadSlotItemPicker_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadSlotItemPicker_CycleSortType, "CycleSortType" },
+	{ &Z_Construct_UDelegateFunction_UFortSquadSlotItemPicker_FortSquadSlotSortChanged__DelegateSignature, "FortSquadSlotSortChanged__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortSquadSlotItemPicker_GetIdOfSquadSlotToManageBP, "GetIdOfSquadSlotToManageBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotItemPicker_SetIdOfSquadSlotToManageBP, "SetIdOfSquadSlotToManageBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotItemPicker_SetSortTypes, "SetSortTypes" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadSlotItemPicker_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D22940
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadSlotItemPicker_Statics::ClassParams = { &UFortSquadSlotItemPicker::StaticClass, Z_Construct_UClass_UFortSquadSlotItemPicker_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSquadSlotItemPicker_Statics::FuncInfo, 5, Z_Construct_UClass_UFortSquadSlotItemPicker_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortSquadSlotItemPicker_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB5D0 (end 0x028FB5FF)
+// Original VA: 0x00000001428FB5D0 | File offset: 0x028FABD0
+// Recovery: confirmed (UHT singleton of UFortSquadSlotItemPicker) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadSlotItemPicker()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadSlotItemPicker_Statics::ClassParams);
+	}
+	return OuterClass;
+}

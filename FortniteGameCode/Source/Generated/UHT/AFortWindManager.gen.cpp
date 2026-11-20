@@ -464,3 +464,58 @@ UFunction* Z_Construct_UFunction_AFortWindManager_SetWindImpulseCylinderMagnitud
 	}
 	return ReturnFunction;
 }
+
+class AFortWindManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortWindManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortWindManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortWindManager_AddWindImpulse, "AddWindImpulse" },
+	{ &Z_Construct_UFunction_AFortWindManager_AddWindImpulseCylinder, "AddWindImpulseCylinder" },
+	{ &Z_Construct_UFunction_AFortWindManager_AddWindParticleSystemComponent, "AddWindParticleSystemComponent" },
+	{ &Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinder, "BreakWindImpulseCylinder" },
+	{ &Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderAdvanced, "BreakWindImpulseCylinderAdvanced" },
+	{ &Z_Construct_UFunction_AFortWindManager_BreakWindImpulseCylinderDelta, "BreakWindImpulseCylinderDelta" },
+	{ &Z_Construct_UFunction_AFortWindManager_BreakWindImpulseRadius, "BreakWindImpulseRadius" },
+	{ &Z_Construct_UFunction_AFortWindManager_GetCurrentWindImpulseCylinderDelta, "GetCurrentWindImpulseCylinderDelta" },
+	{ &Z_Construct_UFunction_AFortWindManager_GetGlobalWindIntensityAndDirection, "GetGlobalWindIntensityAndDirection" },
+	{ &Z_Construct_UFunction_AFortWindManager_GetWindManager, "GetWindManager" },
+	{ &Z_Construct_UFunction_AFortWindManager_HasWindImpulse, "HasWindImpulse" },
+	{ &Z_Construct_UFunction_AFortWindManager_MakeWindImpulseCylinder, "MakeWindImpulseCylinder" },
+	{ &Z_Construct_UFunction_AFortWindManager_MakeWindImpulseRadius, "MakeWindImpulseRadius" },
+	{ &Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameActive, "OnWindAudioBecameActive" },
+	{ &Z_Construct_UFunction_AFortWindManager_OnWindAudioBecameInactive, "OnWindAudioBecameInactive" },
+	{ &Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderCreation, "OnWindImpulseCylinderCreation" },
+	{ &Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeath, "OnWindImpulseCylinderDeath" },
+	{ &Z_Construct_UFunction_AFortWindManager_OnWindImpulseCylinderDeltaComplete, "OnWindImpulseCylinderDeltaComplete" },
+	{ &Z_Construct_UFunction_AFortWindManager_OnWorldReady, "OnWorldReady" },
+	{ &Z_Construct_UFunction_AFortWindManager_RemoveWindImpulse, "RemoveWindImpulse" },
+	{ &Z_Construct_UFunction_AFortWindManager_RemoveWindParticleSystemComponent, "RemoveWindParticleSystemComponent" },
+	{ &Z_Construct_UFunction_AFortWindManager_SetWindImpulse, "SetWindImpulse" },
+	{ &Z_Construct_UFunction_AFortWindManager_SetWindImpulseCylinderMagnitude, "SetWindImpulseCylinderMagnitude" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortWindManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03436290
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortWindManager_Statics::ClassParams = { &AFortWindManager::StaticClass, Z_Construct_UClass_AFortWindManager_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortWindManager_Statics::FuncInfo, 23, Z_Construct_UClass_AFortWindManager_Statics::PropPointers, 38, nullptr, &Z_Construct_UClass_AFortWindManager_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortWindManager_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC880 (end 0x010DC8AF)
+// Original VA: 0x00000001410DC880 | File offset: 0x010DBE80
+// Recovery: confirmed (UHT singleton of AFortWindManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortWindManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortWindManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

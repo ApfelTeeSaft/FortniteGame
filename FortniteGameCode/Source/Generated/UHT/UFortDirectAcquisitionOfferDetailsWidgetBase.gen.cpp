@@ -180,3 +180,43 @@ UFunction* Z_Construct_UFunction_UFortDirectAcquisitionOfferDetailsWidgetBase_Se
 	}
 	return ReturnFunction;
 }
+
+class UFortDirectAcquisitionOfferDetailsWidgetBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortDirectAcquisitionOfferDetailsWidgetBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortDirectAcquisitionOfferDetailsWidgetBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferDetailsWidgetBase_AutoEquip, "AutoEquip" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferDetailsWidgetBase_GetOfferInfo, "GetOfferInfo" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferDetailsWidgetBase_HandleCurrentlyViewedAccountInfoChanged, "HandleCurrentlyViewedAccountInfoChanged" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferDetailsWidgetBase_OnOfferSet, "OnOfferSet" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferDetailsWidgetBase_OnUpdateStatus, "OnUpdateStatus" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferDetailsWidgetBase_PurchaseAmountLeft, "PurchaseAmountLeft" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferDetailsWidgetBase_PurchaseAmountRight, "PurchaseAmountRight" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferDetailsWidgetBase_SetPagedItems, "SetPagedItems" },
+	{ &Z_Construct_UFunction_UFortDirectAcquisitionOfferDetailsWidgetBase_SetupOffer, "SetupOffer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortDirectAcquisitionOfferDetailsWidgetBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C851B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortDirectAcquisitionOfferDetailsWidgetBase_Statics::ClassParams = { &UFortDirectAcquisitionOfferDetailsWidgetBase::StaticClass, Z_Construct_UClass_UFortDirectAcquisitionOfferDetailsWidgetBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortDirectAcquisitionOfferDetailsWidgetBase_Statics::FuncInfo, 9, Z_Construct_UClass_UFortDirectAcquisitionOfferDetailsWidgetBase_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UFortDirectAcquisitionOfferDetailsWidgetBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B610 (end 0x0289B63F)
+// Original VA: 0x000000014289B610 | File offset: 0x0289AC10
+// Recovery: confirmed (UHT singleton of UFortDirectAcquisitionOfferDetailsWidgetBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortDirectAcquisitionOfferDetailsWidgetBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortDirectAcquisitionOfferDetailsWidgetBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

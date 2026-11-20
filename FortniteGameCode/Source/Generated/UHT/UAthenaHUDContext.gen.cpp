@@ -915,3 +915,80 @@ UFunction* Z_Construct_UFunction_UAthenaHUDContext_UseOrRleoadFromHUDStop()
 	}
 	return ReturnFunction;
 }
+
+class UAthenaHUDContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaHUDContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaHUDContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaHUDContext_BeginUseFromHUD, "BeginUseFromHUD" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_CanCurrentWeaponAutoFireFromReticle, "CanCurrentWeaponAutoFireFromReticle" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_CancelSwap, "CancelSwap" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_EnableAutoRunFromHUD, "EnableAutoRunFromHUD" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_EndUseFromHUD, "EndUseFromHUD" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_ExecuteActionNameFromHUD, "ExecuteActionNameFromHUD" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_FireFromHUDStart, "FireFromHUDStart" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_FireFromHUDStop, "FireFromHUDStop" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_GetBatteryLevel, "GetBatteryLevel" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_GetLocalTime, "GetLocalTime" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_GetSelectedInventoryItem, "GetSelectedInventoryItem" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_GetTouchAimSensitivity, "GetTouchAimSensitivity" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_GetTouchBaseSensitivity, "GetTouchBaseSensitivity" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_GetTouchScopeSensitivity, "GetTouchScopeSensitivity" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_HandleGamePhaseChange, "HandleGamePhaseChange" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_HandleLocalPlayerBeginSkydiving, "HandleLocalPlayerBeginSkydiving" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_HandleLocalPlayerDBNOStateChanged, "HandleLocalPlayerDBNOStateChanged" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_HandleUIGameplayCue, "HandleUIGameplayCue" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_HasLockOnTarget, "HasLockOnTarget" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_HasWifi, "HasWifi" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_IsAutoFireFromReticleModeEnabled, "IsAutoFireFromReticleModeEnabled" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_IsCrouching, "IsCrouching" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_IsCurrentWeaponFiring, "IsCurrentWeaponFiring" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_IsInBuildMode, "IsInBuildMode" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_IsInSelectWidgetToMoveMode, "IsInSelectWidgetToMoveMode" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_IsMovingSelectedWidget, "IsMovingSelectedWidget" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_IsShowViewerCountEnabled, "IsShowViewerCountEnabled" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_IsSwapping, "IsSwapping" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_IsTargeting, "IsTargeting" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_IsUsingAutoFire, "IsUsingAutoFire" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_IsUsingScope, "IsUsingScope" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_OnClientSettingUpdatedShowViewers, "OnClientSettingUpdatedShowViewers" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_SelectWidgetToMove, "SelectWidgetToMove" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_SetAutoFireFromReticleMode, "SetAutoFireFromReticleMode" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_SetLockOnStickCoords, "SetLockOnStickCoords" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_SetSelectWidgetToMoveMode, "SetSelectWidgetToMoveMode" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_SetSelectedInventoryItem, "SetSelectedInventoryItem" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_SetTargetingToggleable, "SetTargetingToggleable" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_StartOrFinishSwap, "StartOrFinishSwap" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_StopTargettingFromHUD, "StopTargettingFromHUD" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_TakeItemSelectionInputFromHUD, "TakeItemSelectionInputFromHUD" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_TakeLookInputFromHUD, "TakeLookInputFromHUD" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_TakeMovementInputFromHUD, "TakeMovementInputFromHUD" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_UpdateSelectedWidgetMoveOffsetVector, "UpdateSelectedWidgetMoveOffsetVector" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_UseOrRleoadFromHUDStart, "UseOrRleoadFromHUDStart" },
+	{ &Z_Construct_UFunction_UAthenaHUDContext_UseOrRleoadFromHUDStop, "UseOrRleoadFromHUDStop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaHUDContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C52FB0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaHUDContext_Statics::ClassParams = { &UAthenaHUDContext::StaticClass, Z_Construct_UClass_UAthenaHUDContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UAthenaHUDContext_Statics::FuncInfo, 46, Z_Construct_UClass_UAthenaHUDContext_Statics::PropPointers, 21, nullptr, &Z_Construct_UClass_UAthenaHUDContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287F440 (end 0x0287F46F)
+// Original VA: 0x000000014287F440 | File offset: 0x0287EA40
+// Recovery: confirmed (UHT singleton of UAthenaHUDContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaHUDContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaHUDContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

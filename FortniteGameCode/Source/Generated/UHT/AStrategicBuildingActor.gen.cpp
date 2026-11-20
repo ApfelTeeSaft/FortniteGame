@@ -359,3 +359,52 @@ UFunction* Z_Construct_UFunction_AStrategicBuildingActor_SetupVisibilityComponen
 	}
 	return ReturnFunction;
 }
+
+class AStrategicBuildingActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AStrategicBuildingActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AStrategicBuildingActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_ApplyProximityPulseEffects, "ApplyProximityPulseEffects" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_AttemptIncrementLevelUnlockProgress, "AttemptIncrementLevelUnlockProgress" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_GetCurrentLevelUnlockProgress, "GetCurrentLevelUnlockProgress" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_GetDeathEffectsLocation, "GetDeathEffectsLocation" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_GetDeathEffectsRotation, "GetDeathEffectsRotation" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_GetDeathEffectsScale, "GetDeathEffectsScale" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_GetMaxLevelUnlockProgress, "GetMaxLevelUnlockProgress" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_GiveItemFromStrategicBuildingToPlayer, "GiveItemFromStrategicBuildingToPlayer" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_IsActive, "IsActive" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_OnActiveStatusChanged, "OnActiveStatusChanged" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_OnConstructionEndedPlayEffects, "OnConstructionEndedPlayEffects" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_OnConstructionStartedPlayEffects, "OnConstructionStartedPlayEffects" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_OnConstructionTickPlayEffects, "OnConstructionTickPlayEffects" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_OnRep_ConstructionProgress, "OnRep_ConstructionProgress" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_OnRep_bIsActive, "OnRep_bIsActive" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_ProcessDeferredTouchActors, "ProcessDeferredTouchActors" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_SetupIndicators, "SetupIndicators" },
+	{ &Z_Construct_UFunction_AStrategicBuildingActor_SetupVisibilityComponent, "SetupVisibilityComponent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AStrategicBuildingActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03450DE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AStrategicBuildingActor_Statics::ClassParams = { &AStrategicBuildingActor::StaticClass, Z_Construct_UClass_AStrategicBuildingActor_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_AStrategicBuildingActor_Statics::FuncInfo, 18, Z_Construct_UClass_AStrategicBuildingActor_Statics::PropPointers, 29, nullptr, &Z_Construct_UClass_AStrategicBuildingActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F18E0 (end 0x010F190F)
+// Original VA: 0x00000001410F18E0 | File offset: 0x010F0EE0
+// Recovery: confirmed (UHT singleton of AStrategicBuildingActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AStrategicBuildingActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AStrategicBuildingActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

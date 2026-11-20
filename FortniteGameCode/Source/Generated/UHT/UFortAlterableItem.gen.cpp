@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortAlterableItem_GetRating()
 	}
 	return ReturnFunction;
 }
+
+class UFortAlterableItem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAlterableItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAlterableItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAlterableItem_GetNumberOfSlotsForAlterationType, "GetNumberOfSlotsForAlterationType" },
+	{ &Z_Construct_UFunction_UFortAlterableItem_GetRating, "GetRating" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAlterableItem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032B6A60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAlterableItem_Statics::ClassParams = { &UFortAlterableItem::StaticClass, Z_Construct_UClass_UFortAlterableItem_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortAlterableItem_Statics::FuncInfo, 2, Z_Construct_UClass_UFortAlterableItem_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UFortAlterableItem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F99390 (end 0x00F993BF)
+// Original VA: 0x0000000140F99390 | File offset: 0x00F98990
+// Recovery: confirmed (UHT singleton of UFortAlterableItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAlterableItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAlterableItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

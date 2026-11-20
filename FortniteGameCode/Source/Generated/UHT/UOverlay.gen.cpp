@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UOverlay_AddChildToOverlay()
 	}
 	return ReturnFunction;
 }
+
+class UOverlay
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UOverlay_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UOverlay_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UOverlay_AddChildToOverlay, "AddChildToOverlay" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UOverlay_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03698240
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UOverlay_Statics::ClassParams = { &UOverlay::StaticClass, Z_Construct_UClass_UOverlay_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UOverlay_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UOverlay_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED800 (end 0x01BED82F)
+// Original VA: 0x0000000141BED800 | File offset: 0x01BECE00
+// Recovery: confirmed (UHT singleton of UOverlay) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UOverlay()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UOverlay_Statics::ClassParams);
+	}
+	return OuterClass;
+}

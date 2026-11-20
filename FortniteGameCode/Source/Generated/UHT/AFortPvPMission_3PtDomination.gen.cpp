@@ -24,3 +24,35 @@ UFunction* Z_Construct_UFunction_AFortPvPMission_3PtDomination_CapturePointSette
 	}
 	return ReturnFunction;
 }
+
+class AFortPvPMission_3PtDomination
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPvPMission_3PtDomination_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPvPMission_3PtDomination_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPvPMission_3PtDomination_CapturePointSetterHackTimer, "CapturePointSetterHackTimer" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPvPMission_3PtDomination_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033DCA00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPvPMission_3PtDomination_Statics::ClassParams = { &AFortPvPMission_3PtDomination::StaticClass, Z_Construct_UClass_AFortPvPMission_3PtDomination_Statics::DependentSingletons, 2, 0x00880280u, Z_Construct_UClass_AFortPvPMission_3PtDomination_Statics::FuncInfo, 1, Z_Construct_UClass_AFortPvPMission_3PtDomination_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_AFortPvPMission_3PtDomination_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01093130 (end 0x0109315F)
+// Original VA: 0x0000000141093130 | File offset: 0x01092730
+// Recovery: confirmed (UHT singleton of AFortPvPMission_3PtDomination) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPvPMission_3PtDomination()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPvPMission_3PtDomination_Statics::ClassParams);
+	}
+	return OuterClass;
+}

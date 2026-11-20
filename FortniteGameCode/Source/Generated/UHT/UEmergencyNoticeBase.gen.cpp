@@ -44,3 +44,35 @@ UFunction* Z_Construct_UFunction_UEmergencyNoticeBase_ShowNotice()
 	}
 	return ReturnFunction;
 }
+
+class UEmergencyNoticeBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UEmergencyNoticeBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UEmergencyNoticeBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UEmergencyNoticeBase_HideNotice, "HideNotice" },
+	{ &Z_Construct_UFunction_UEmergencyNoticeBase_ShowNotice, "ShowNotice" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UEmergencyNoticeBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C5FD60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UEmergencyNoticeBase_Statics::ClassParams = { &UEmergencyNoticeBase::StaticClass, Z_Construct_UClass_UEmergencyNoticeBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UEmergencyNoticeBase_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UEmergencyNoticeBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028875E0 (end 0x0288760F)
+// Original VA: 0x00000001428875E0 | File offset: 0x02886BE0
+// Recovery: confirmed (UHT singleton of UEmergencyNoticeBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UEmergencyNoticeBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UEmergencyNoticeBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

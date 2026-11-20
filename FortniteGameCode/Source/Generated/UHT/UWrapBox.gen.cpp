@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UWrapBox_SetInnerSlotPadding()
 	}
 	return ReturnFunction;
 }
+
+class UWrapBox
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UWrapBox_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UWrapBox_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UWrapBox_AddChildWrapBox, "AddChildWrapBox" },
+	{ &Z_Construct_UFunction_UWrapBox_SetInnerSlotPadding, "SetInnerSlotPadding" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UWrapBox_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036ABAD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UWrapBox_Statics::ClassParams = { &UWrapBox::StaticClass, Z_Construct_UClass_UWrapBox_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UWrapBox_Statics::FuncInfo, 2, Z_Construct_UClass_UWrapBox_Statics::PropPointers, 3, nullptr, &Z_Construct_UClass_UWrapBox_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07DB0 (end 0x01C07DDF)
+// Original VA: 0x0000000141C07DB0 | File offset: 0x01C073B0
+// Recovery: confirmed (UHT singleton of UWrapBox) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UWrapBox()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UWrapBox_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -459,3 +459,57 @@ UFunction* Z_Construct_UFunction_UTimelineComponent_Stop()
 	}
 	return ReturnFunction;
 }
+
+class UTimelineComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UTimelineComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UTimelineComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UTimelineComponent_GetIgnoreTimeDilation, "GetIgnoreTimeDilation" },
+	{ &Z_Construct_UFunction_UTimelineComponent_GetPlayRate, "GetPlayRate" },
+	{ &Z_Construct_UFunction_UTimelineComponent_GetPlaybackPosition, "GetPlaybackPosition" },
+	{ &Z_Construct_UFunction_UTimelineComponent_GetTimelineLength, "GetTimelineLength" },
+	{ &Z_Construct_UFunction_UTimelineComponent_IsLooping, "IsLooping" },
+	{ &Z_Construct_UFunction_UTimelineComponent_IsPlaying, "IsPlaying" },
+	{ &Z_Construct_UFunction_UTimelineComponent_IsReversing, "IsReversing" },
+	{ &Z_Construct_UFunction_UTimelineComponent_OnRep_Timeline, "OnRep_Timeline" },
+	{ &Z_Construct_UFunction_UTimelineComponent_Play, "Play" },
+	{ &Z_Construct_UFunction_UTimelineComponent_PlayFromStart, "PlayFromStart" },
+	{ &Z_Construct_UFunction_UTimelineComponent_Reverse, "Reverse" },
+	{ &Z_Construct_UFunction_UTimelineComponent_ReverseFromEnd, "ReverseFromEnd" },
+	{ &Z_Construct_UFunction_UTimelineComponent_SetFloatCurve, "SetFloatCurve" },
+	{ &Z_Construct_UFunction_UTimelineComponent_SetIgnoreTimeDilation, "SetIgnoreTimeDilation" },
+	{ &Z_Construct_UFunction_UTimelineComponent_SetLinearColorCurve, "SetLinearColorCurve" },
+	{ &Z_Construct_UFunction_UTimelineComponent_SetLooping, "SetLooping" },
+	{ &Z_Construct_UFunction_UTimelineComponent_SetNewTime, "SetNewTime" },
+	{ &Z_Construct_UFunction_UTimelineComponent_SetPlayRate, "SetPlayRate" },
+	{ &Z_Construct_UFunction_UTimelineComponent_SetPlaybackPosition, "SetPlaybackPosition" },
+	{ &Z_Construct_UFunction_UTimelineComponent_SetTimelineLength, "SetTimelineLength" },
+	{ &Z_Construct_UFunction_UTimelineComponent_SetTimelineLengthMode, "SetTimelineLengthMode" },
+	{ &Z_Construct_UFunction_UTimelineComponent_SetVectorCurve, "SetVectorCurve" },
+	{ &Z_Construct_UFunction_UTimelineComponent_Stop, "Stop" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UTimelineComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039CAEE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UTimelineComponent_Statics::ClassParams = { &UTimelineComponent::StaticClass, Z_Construct_UClass_UTimelineComponent_Statics::DependentSingletons, 2, 0x00A80080u, Z_Construct_UClass_UTimelineComponent_Statics::FuncInfo, 23, Z_Construct_UClass_UTimelineComponent_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UTimelineComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024ECE40 (end 0x024ECE6F)
+// Original VA: 0x00000001424ECE40 | File offset: 0x024EC440
+// Recovery: confirmed (UHT singleton of UTimelineComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UTimelineComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UTimelineComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

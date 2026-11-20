@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortBorderStyleList_GetBorderStyles()
 	}
 	return ReturnFunction;
 }
+
+class UFortBorderStyleList
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortBorderStyleList_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortBorderStyleList_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortBorderStyleList_GetBorderStyles, "GetBorderStyles" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortBorderStyleList_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C75A60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortBorderStyleList_Statics::ClassParams = { &UFortBorderStyleList::StaticClass, Z_Construct_UClass_UFortBorderStyleList_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortBorderStyleList_Statics::FuncInfo, 1, Z_Construct_UClass_UFortBorderStyleList_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortBorderStyleList_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894490 (end 0x028944BF)
+// Original VA: 0x0000000142894490 | File offset: 0x02893A90
+// Recovery: confirmed (UHT singleton of UFortBorderStyleList) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortBorderStyleList()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortBorderStyleList_Statics::ClassParams);
+	}
+	return OuterClass;
+}

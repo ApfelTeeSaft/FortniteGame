@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UAthenaIndicatorLayerBase_SquadIndicatorsChange
 	}
 	return ReturnFunction;
 }
+
+class UAthenaIndicatorLayerBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaIndicatorLayerBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaIndicatorLayerBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaIndicatorLayerBase_GetPlayerViewModel, "GetPlayerViewModel" },
+	{ &Z_Construct_UFunction_UAthenaIndicatorLayerBase_GetSquadMembers, "GetSquadMembers" },
+	{ &Z_Construct_UFunction_UAthenaIndicatorLayerBase_SetDataSource, "SetDataSource" },
+	{ &Z_Construct_UFunction_UAthenaIndicatorLayerBase_SquadIndicatorsChanged, "SquadIndicatorsChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaIndicatorLayerBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C533A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaIndicatorLayerBase_Statics::ClassParams = { &UAthenaIndicatorLayerBase::StaticClass, Z_Construct_UClass_UAthenaIndicatorLayerBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UAthenaIndicatorLayerBase_Statics::FuncInfo, 4, Z_Construct_UClass_UAthenaIndicatorLayerBase_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UAthenaIndicatorLayerBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287F530 (end 0x0287F55F)
+// Original VA: 0x000000014287F530 | File offset: 0x0287EB30
+// Recovery: confirmed (UHT singleton of UAthenaIndicatorLayerBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaIndicatorLayerBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaIndicatorLayerBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

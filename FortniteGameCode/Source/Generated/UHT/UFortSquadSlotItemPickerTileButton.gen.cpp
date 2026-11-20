@@ -64,3 +64,36 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleSlotti
 	}
 	return ReturnFunction;
 }
+
+class UFortSquadSlotItemPickerTileButton
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSquadSlotItemPickerTileButton_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadSlotItemPickerTileButton_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_GetSlottingRestrictionReasons, "GetSlottingRestrictionReasons" },
+	{ &Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleItemSlottedToDifferentSquad, "HandleItemSlottedToDifferentSquad" },
+	{ &Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleSlottingRestrictionReasonsChanged, "HandleSlottingRestrictionReasonsChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadSlotItemPickerTileButton_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D22A10
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadSlotItemPickerTileButton_Statics::ClassParams = { &UFortSquadSlotItemPickerTileButton::StaticClass, Z_Construct_UClass_UFortSquadSlotItemPickerTileButton_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSquadSlotItemPickerTileButton_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UFortSquadSlotItemPickerTileButton_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB600 (end 0x028FB62F)
+// Original VA: 0x00000001428FB600 | File offset: 0x028FAC00
+// Recovery: confirmed (UHT singleton of UFortSquadSlotItemPickerTileButton) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadSlotItemPickerTileButton()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadSlotItemPickerTileButton_Statics::ClassParams);
+	}
+	return OuterClass;
+}

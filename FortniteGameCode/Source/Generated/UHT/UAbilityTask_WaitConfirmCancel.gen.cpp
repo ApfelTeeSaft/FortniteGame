@@ -101,3 +101,39 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitConfirmCancel_WaitConfirmCance
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_WaitConfirmCancel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_WaitConfirmCancel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_WaitConfirmCancel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_WaitConfirmCancel_OnCancelCallback, "OnCancelCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitConfirmCancel_OnConfirmCallback, "OnConfirmCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitConfirmCancel_OnLocalCancelCallback, "OnLocalCancelCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitConfirmCancel_OnLocalConfirmCallback, "OnLocalConfirmCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitConfirmCancel_WaitConfirmCancel, "WaitConfirmCancel" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_WaitConfirmCancel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F32640
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_WaitConfirmCancel_Statics::ClassParams = { &UAbilityTask_WaitConfirmCancel::StaticClass, Z_Construct_UClass_UAbilityTask_WaitConfirmCancel_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_WaitConfirmCancel_Statics::FuncInfo, 5, Z_Construct_UClass_UAbilityTask_WaitConfirmCancel_Statics::PropPointers, 2, "Game", &Z_Construct_UClass_UAbilityTask_WaitConfirmCancel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D500 (end 0x0054D52F)
+// Original VA: 0x000000014054D500 | File offset: 0x0054CB00
+// Recovery: confirmed (UHT singleton of UAbilityTask_WaitConfirmCancel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_WaitConfirmCancel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_WaitConfirmCancel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

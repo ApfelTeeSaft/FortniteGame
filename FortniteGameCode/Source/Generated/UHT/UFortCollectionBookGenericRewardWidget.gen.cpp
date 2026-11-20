@@ -144,3 +144,41 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookGenericRewardWidget_SetRewar
 	}
 	return ReturnFunction;
 }
+
+class UFortCollectionBookGenericRewardWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortCollectionBookGenericRewardWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortCollectionBookGenericRewardWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortCollectionBookGenericRewardWidget_ClearRewards, "ClearRewards" },
+	{ &Z_Construct_UFunction_UFortCollectionBookGenericRewardWidget_GetRewardStatus, "GetRewardStatus" },
+	{ &Z_Construct_UFunction_UFortCollectionBookGenericRewardWidget_HasRewards, "HasRewards" },
+	{ &Z_Construct_UFunction_UFortCollectionBookGenericRewardWidget_OnRewardStatusChanged, "OnRewardStatusChanged" },
+	{ &Z_Construct_UFunction_UFortCollectionBookGenericRewardWidget_SetCurrentItemToDisplay, "SetCurrentItemToDisplay" },
+	{ &Z_Construct_UFunction_UFortCollectionBookGenericRewardWidget_SetRewardStatus, "SetRewardStatus" },
+	{ &Z_Construct_UFunction_UFortCollectionBookGenericRewardWidget_SetRewards, "SetRewards" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortCollectionBookGenericRewardWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C76170
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortCollectionBookGenericRewardWidget_Statics::ClassParams = { &UFortCollectionBookGenericRewardWidget::StaticClass, Z_Construct_UClass_UFortCollectionBookGenericRewardWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortCollectionBookGenericRewardWidget_Statics::FuncInfo, 7, Z_Construct_UClass_UFortCollectionBookGenericRewardWidget_Statics::PropPointers, 8, nullptr, &Z_Construct_UClass_UFortCollectionBookGenericRewardWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894610 (end 0x0289463F)
+// Original VA: 0x0000000142894610 | File offset: 0x02893C10
+// Recovery: confirmed (UHT singleton of UFortCollectionBookGenericRewardWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortCollectionBookGenericRewardWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortCollectionBookGenericRewardWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

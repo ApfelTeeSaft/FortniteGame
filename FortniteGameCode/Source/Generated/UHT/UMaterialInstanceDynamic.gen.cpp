@@ -205,3 +205,43 @@ UFunction* Z_Construct_UFunction_UMaterialInstanceDynamic_SetVectorParameterValu
 	}
 	return ReturnFunction;
 }
+
+class UMaterialInstanceDynamic
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMaterialInstanceDynamic_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMaterialInstanceDynamic_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMaterialInstanceDynamic_CopyInterpParameters, "CopyInterpParameters" },
+	{ &Z_Construct_UFunction_UMaterialInstanceDynamic_CopyParameterOverrides, "CopyParameterOverrides" },
+	{ &Z_Construct_UFunction_UMaterialInstanceDynamic_K2_CopyMaterialInstanceParameters, "K2_CopyMaterialInstanceParameters" },
+	{ &Z_Construct_UFunction_UMaterialInstanceDynamic_K2_GetScalarParameterValue, "K2_GetScalarParameterValue" },
+	{ &Z_Construct_UFunction_UMaterialInstanceDynamic_K2_GetTextureParameterValue, "K2_GetTextureParameterValue" },
+	{ &Z_Construct_UFunction_UMaterialInstanceDynamic_K2_GetVectorParameterValue, "K2_GetVectorParameterValue" },
+	{ &Z_Construct_UFunction_UMaterialInstanceDynamic_K2_InterpolateMaterialInstanceParams, "K2_InterpolateMaterialInstanceParams" },
+	{ &Z_Construct_UFunction_UMaterialInstanceDynamic_SetScalarParameterValue, "SetScalarParameterValue" },
+	{ &Z_Construct_UFunction_UMaterialInstanceDynamic_SetTextureParameterValue, "SetTextureParameterValue" },
+	{ &Z_Construct_UFunction_UMaterialInstanceDynamic_SetVectorParameterValue, "SetVectorParameterValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMaterialInstanceDynamic_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0394D840
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMaterialInstanceDynamic_Statics::ClassParams = { &UMaterialInstanceDynamic::StaticClass, Z_Construct_UClass_UMaterialInstanceDynamic_Statics::DependentSingletons, 2, 0x00902080u, Z_Construct_UClass_UMaterialInstanceDynamic_Statics::FuncInfo, 10, nullptr, 0, nullptr, &Z_Construct_UClass_UMaterialInstanceDynamic_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486960 (end 0x0248698F)
+// Original VA: 0x0000000142486960 | File offset: 0x02485F60
+// Recovery: confirmed (UHT singleton of UMaterialInstanceDynamic) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMaterialInstanceDynamic()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMaterialInstanceDynamic_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -124,3 +124,40 @@ UFunction* Z_Construct_UFunction_UAthenaPlayerMatchReport_GetXpRewards()
 	}
 	return ReturnFunction;
 }
+
+class UAthenaPlayerMatchReport
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaPlayerMatchReport_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaPlayerMatchReport_Statics::FuncInfo[] = {
+	{ &Z_Construct_UDelegateFunction_UAthenaPlayerMatchReport_DataAvailableEvent__DelegateSignature, "DataAvailableEvent__DelegateSignature" },
+	{ &Z_Construct_UFunction_UAthenaPlayerMatchReport_GetLootRewards, "GetLootRewards" },
+	{ &Z_Construct_UFunction_UAthenaPlayerMatchReport_GetTotalBookXpEarned, "GetTotalBookXpEarned" },
+	{ &Z_Construct_UFunction_UAthenaPlayerMatchReport_GetTotalScoreEarned, "GetTotalScoreEarned" },
+	{ &Z_Construct_UFunction_UAthenaPlayerMatchReport_GetTotalSeasonalXpEarned, "GetTotalSeasonalXpEarned" },
+	{ &Z_Construct_UFunction_UAthenaPlayerMatchReport_GetXpRewards, "GetXpRewards" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaPlayerMatchReport_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03261A50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaPlayerMatchReport_Statics::ClassParams = { &UAthenaPlayerMatchReport::StaticClass, Z_Construct_UClass_UAthenaPlayerMatchReport_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UAthenaPlayerMatchReport_Statics::FuncInfo, 6, Z_Construct_UClass_UAthenaPlayerMatchReport_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UAthenaPlayerMatchReport_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59B60 (end 0x00F59B8F)
+// Original VA: 0x0000000140F59B60 | File offset: 0x00F59160
+// Recovery: confirmed (UHT singleton of UAthenaPlayerMatchReport) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaPlayerMatchReport()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaPlayerMatchReport_Statics::ClassParams);
+	}
+	return OuterClass;
+}

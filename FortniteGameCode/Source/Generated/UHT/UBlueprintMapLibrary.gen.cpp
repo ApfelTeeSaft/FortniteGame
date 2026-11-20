@@ -185,3 +185,42 @@ UFunction* Z_Construct_UFunction_UBlueprintMapLibrary_SetMapPropertyByName()
 	}
 	return ReturnFunction;
 }
+
+class UBlueprintMapLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UBlueprintMapLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UBlueprintMapLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UBlueprintMapLibrary_Map_Add, "Map_Add" },
+	{ &Z_Construct_UFunction_UBlueprintMapLibrary_Map_Clear, "Map_Clear" },
+	{ &Z_Construct_UFunction_UBlueprintMapLibrary_Map_Contains, "Map_Contains" },
+	{ &Z_Construct_UFunction_UBlueprintMapLibrary_Map_Find, "Map_Find" },
+	{ &Z_Construct_UFunction_UBlueprintMapLibrary_Map_Keys, "Map_Keys" },
+	{ &Z_Construct_UFunction_UBlueprintMapLibrary_Map_Length, "Map_Length" },
+	{ &Z_Construct_UFunction_UBlueprintMapLibrary_Map_Remove, "Map_Remove" },
+	{ &Z_Construct_UFunction_UBlueprintMapLibrary_Map_Values, "Map_Values" },
+	{ &Z_Construct_UFunction_UBlueprintMapLibrary_SetMapPropertyByName, "SetMapPropertyByName" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UBlueprintMapLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038B3790
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UBlueprintMapLibrary_Statics::ClassParams = { &UBlueprintMapLibrary::StaticClass, Z_Construct_UClass_UBlueprintMapLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UBlueprintMapLibrary_Statics::FuncInfo, 9, nullptr, 0, nullptr, &Z_Construct_UClass_UBlueprintMapLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E37D0 (end 0x023E37FF)
+// Original VA: 0x00000001423E37D0 | File offset: 0x023E2DD0
+// Recovery: confirmed (UHT singleton of UBlueprintMapLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UBlueprintMapLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UBlueprintMapLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

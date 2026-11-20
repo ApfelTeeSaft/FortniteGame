@@ -432,3 +432,56 @@ UFunction* Z_Construct_UFunction_UFortRewardNotificationSubWidget_TransitionOutB
 	}
 	return ReturnFunction;
 }
+
+class UFortRewardNotificationSubWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortRewardNotificationSubWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortRewardNotificationSubWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_AddInputActionHandler, "AddInputActionHandler" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_Init, "Init" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_InspectItem, "InspectItem" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_IsPrimaryActionEnabled, "IsPrimaryActionEnabled" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_IsPrimaryActionHidden, "IsPrimaryActionHidden" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_OnActivated, "OnActivated" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_OnDeactivated, "OnDeactivated" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_OnNavigationDown, "OnNavigationDown" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_OnNavigationLeft, "OnNavigationLeft" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_OnNavigationRight, "OnNavigationRight" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_OnNavigationUp, "OnNavigationUp" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_OnPrimaryAction, "OnPrimaryAction" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_RemoveAllInputActionHandlers, "RemoveAllInputActionHandlers" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_RemoveInputActionHandler, "RemoveInputActionHandler" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_SetInputActionHandlerState, "SetInputActionHandlerState" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_SetPrimaryActionEnabled, "SetPrimaryActionEnabled" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_SetPrimaryActionHidden, "SetPrimaryActionHidden" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_SetPrimaryActionText, "SetPrimaryActionText" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_TransitionIn, "TransitionIn" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_TransitionInBegin, "TransitionInBegin" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_TransitionOut, "TransitionOut" },
+	{ &Z_Construct_UFunction_UFortRewardNotificationSubWidget_TransitionOutBegin, "TransitionOutBegin" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortRewardNotificationSubWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D0B660
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortRewardNotificationSubWidget_Statics::ClassParams = { &UFortRewardNotificationSubWidget::StaticClass, Z_Construct_UClass_UFortRewardNotificationSubWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortRewardNotificationSubWidget_Statics::FuncInfo, 22, Z_Construct_UClass_UFortRewardNotificationSubWidget_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortRewardNotificationSubWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED7B0 (end 0x028ED7DF)
+// Original VA: 0x00000001428ED7B0 | File offset: 0x028ECDB0
+// Recovery: confirmed (UHT singleton of UFortRewardNotificationSubWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortRewardNotificationSubWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortRewardNotificationSubWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

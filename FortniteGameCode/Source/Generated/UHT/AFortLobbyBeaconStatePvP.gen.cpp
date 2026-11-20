@@ -24,3 +24,35 @@ UFunction* Z_Construct_UFunction_AFortLobbyBeaconStatePvP_OnRep_PvPLobbyTimeRema
 	}
 	return ReturnFunction;
 }
+
+class AFortLobbyBeaconStatePvP
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortLobbyBeaconStatePvP_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortLobbyBeaconStatePvP_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortLobbyBeaconStatePvP_OnRep_PvPLobbyTimeRemaining, "OnRep_PvPLobbyTimeRemaining" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortLobbyBeaconStatePvP_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0335F2D0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortLobbyBeaconStatePvP_Statics::ClassParams = { &AFortLobbyBeaconStatePvP::StaticClass, Z_Construct_UClass_AFortLobbyBeaconStatePvP_Statics::DependentSingletons, 2, 0x0090028Cu, Z_Construct_UClass_AFortLobbyBeaconStatePvP_Statics::FuncInfo, 1, Z_Construct_UClass_AFortLobbyBeaconStatePvP_Statics::PropPointers, 2, "Game", &Z_Construct_UClass_AFortLobbyBeaconStatePvP_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101E520 (end 0x0101E54F)
+// Original VA: 0x000000014101E520 | File offset: 0x0101DB20
+// Recovery: confirmed (UHT singleton of AFortLobbyBeaconStatePvP) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortLobbyBeaconStatePvP()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortLobbyBeaconStatePvP_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -185,3 +185,44 @@ UFunction* Z_Construct_UFunction_USkeletalMesh_SetLODSettings()
 	}
 	return ReturnFunction;
 }
+
+class USkeletalMesh
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_USkeletalMesh_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USkeletalMesh_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USkeletalMesh_FindSocket, "FindSocket" },
+	{ &Z_Construct_UFunction_USkeletalMesh_FindSocketAndIndex, "FindSocketAndIndex" },
+	{ &Z_Construct_UFunction_USkeletalMesh_GetBounds, "GetBounds" },
+	{ &Z_Construct_UFunction_USkeletalMesh_GetImportedBounds, "GetImportedBounds" },
+	{ &Z_Construct_UFunction_USkeletalMesh_GetNodeMappingContainer, "GetNodeMappingContainer" },
+	{ &Z_Construct_UFunction_USkeletalMesh_GetSocketByIndex, "GetSocketByIndex" },
+	{ &Z_Construct_UFunction_USkeletalMesh_IsSectionUsingCloth, "IsSectionUsingCloth" },
+	{ &Z_Construct_UFunction_USkeletalMesh_NumSockets, "NumSockets" },
+	{ &Z_Construct_UFunction_USkeletalMesh_SetLODSettings, "SetLODSettings" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USkeletalMesh_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039A7090
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USkeletalMesh_Statics::ClassParams = { &USkeletalMesh::StaticClass, Z_Construct_UClass_USkeletalMesh_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_USkeletalMesh_Statics::FuncInfo, 9, Z_Construct_UClass_USkeletalMesh_Statics::PropPointers, 35, nullptr, &Z_Construct_UClass_USkeletalMesh_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_USkeletalMesh_Statics::InterfaceParams, 2 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC9E0 (end 0x024CCA0F)
+// Original VA: 0x00000001424CC9E0 | File offset: 0x024CBFE0
+// Recovery: confirmed (UHT singleton of USkeletalMesh) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USkeletalMesh()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USkeletalMesh_Statics::ClassParams);
+	}
+	return OuterClass;
+}

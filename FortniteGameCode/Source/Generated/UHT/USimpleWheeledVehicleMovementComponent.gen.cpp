@@ -65,3 +65,36 @@ UFunction* Z_Construct_UFunction_USimpleWheeledVehicleMovementComponent_SetSteer
 	}
 	return ReturnFunction;
 }
+
+class USimpleWheeledVehicleMovementComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_USimpleWheeledVehicleMovementComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USimpleWheeledVehicleMovementComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USimpleWheeledVehicleMovementComponent_SetBrakeTorque, "SetBrakeTorque" },
+	{ &Z_Construct_UFunction_USimpleWheeledVehicleMovementComponent_SetDriveTorque, "SetDriveTorque" },
+	{ &Z_Construct_UFunction_USimpleWheeledVehicleMovementComponent_SetSteerAngle, "SetSteerAngle" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USimpleWheeledVehicleMovementComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F9CCA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USimpleWheeledVehicleMovementComponent_Statics::ClassParams = { &USimpleWheeledVehicleMovementComponent::StaticClass, Z_Construct_UClass_USimpleWheeledVehicleMovementComponent_Statics::DependentSingletons, 2, 0x00B00084u, Z_Construct_UClass_USimpleWheeledVehicleMovementComponent_Statics::FuncInfo, 3, nullptr, 0, "Engine", &Z_Construct_UClass_USimpleWheeledVehicleMovementComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067BDB0 (end 0x0067BDDF)
+// Original VA: 0x000000014067BDB0 | File offset: 0x0067B3B0
+// Recovery: confirmed (UHT singleton of USimpleWheeledVehicleMovementComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USimpleWheeledVehicleMovementComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USimpleWheeledVehicleMovementComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

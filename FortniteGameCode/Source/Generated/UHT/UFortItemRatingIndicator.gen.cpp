@@ -84,3 +84,38 @@ UFunction* Z_Construct_UFunction_UFortItemRatingIndicator_SetItemViewContext()
 	}
 	return ReturnFunction;
 }
+
+class UFortItemRatingIndicator
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemRatingIndicator_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemRatingIndicator_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemRatingIndicator_HandleViewModelChanged, "HandleViewModelChanged" },
+	{ &Z_Construct_UFunction_UFortItemRatingIndicator_SetItemToCompareWith, "SetItemToCompareWith" },
+	{ &Z_Construct_UFunction_UFortItemRatingIndicator_SetItemToRepresent, "SetItemToRepresent" },
+	{ &Z_Construct_UFunction_UFortItemRatingIndicator_SetItemViewContext, "SetItemViewContext" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemRatingIndicator_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CD9290
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemRatingIndicator_Statics::ClassParams = { &UFortItemRatingIndicator::StaticClass, Z_Construct_UClass_UFortItemRatingIndicator_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortItemRatingIndicator_Statics::FuncInfo, 4, Z_Construct_UClass_UFortItemRatingIndicator_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UFortItemRatingIndicator_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF5A0 (end 0x028CF5CF)
+// Original VA: 0x00000001428CF5A0 | File offset: 0x028CEBA0
+// Recovery: confirmed (UHT singleton of UFortItemRatingIndicator) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemRatingIndicator()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemRatingIndicator_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -480,3 +480,59 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_WorldInventorySizeBonus(
 	}
 	return ReturnFunction;
 }
+
+class UFortHomebaseSet
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortHomebaseSet_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortHomebaseSet_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_InventorySizeBonus, "OnRep_InventorySizeBonus" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_AmmoStash_Level, "OnRep_Keep_AmmoStash_Level" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Armory_Level, "OnRep_Keep_Armory_Level" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Level, "OnRep_Keep_Level" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Medical_Level, "OnRep_Keep_Medical_Level" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_PermaniteCap, "OnRep_Keep_PermaniteCap" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Storage_Level, "OnRep_Keep_Storage_Level" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_StructureCap, "OnRep_Keep_StructureCap" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_Keep_Workshop_Level, "OnRep_Keep_Workshop_Level" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_Manor_Level, "OnRep_Manor_Level" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_Manor_StructureCap, "OnRep_Manor_StructureCap" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Alterations, "OnRep_MaxLevelBonus_Alterations" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Global, "OnRep_MaxLevelBonus_Global" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Personnel, "OnRep_MaxLevelBonus_Personnel" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics, "OnRep_MaxLevelBonus_Schematics" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Melee, "OnRep_MaxLevelBonus_Schematics_Melee" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Ranged, "OnRep_MaxLevelBonus_Schematics_Ranged" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_MaxLevelBonus_Schematics_Traps, "OnRep_MaxLevelBonus_Schematics_Traps" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_ResearchPointMaxBonus, "OnRep_ResearchPointMaxBonus" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_StorageInventorySizeBonus, "OnRep_StorageInventorySizeBonus" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_SupplyDrop_Level, "OnRep_SupplyDrop_Level" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_SupplyDrop_Magnitude, "OnRep_SupplyDrop_Magnitude" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_WorldInventorySizeBonus, "OnRep_WorldInventorySizeBonus" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_max_capacity_collector_Token_collectionresource_nodegatetoken01, "OnRep_max_capacity_collector_Token_collectionresource_nodegatetoken01" },
+	{ &Z_Construct_UFunction_UFortHomebaseSet_OnRep_rate_per_second_collector_Token_collectionresource_nodegatetoken01, "OnRep_rate_per_second_collector_Token_collectionresource_nodegatetoken01" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortHomebaseSet_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03348B90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortHomebaseSet_Statics::ClassParams = { &UFortHomebaseSet::StaticClass, Z_Construct_UClass_UFortHomebaseSet_Statics::DependentSingletons, 2, 0x00280080u, Z_Construct_UClass_UFortHomebaseSet_Statics::FuncInfo, 25, Z_Construct_UClass_UFortHomebaseSet_Statics::PropPointers, 31, nullptr, &Z_Construct_UClass_UFortHomebaseSet_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010069D0 (end 0x010069FF)
+// Original VA: 0x00000001410069D0 | File offset: 0x01005FD0
+// Recovery: confirmed (UHT singleton of UFortHomebaseSet) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortHomebaseSet()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortHomebaseSet_Statics::ClassParams);
+	}
+	return OuterClass;
+}

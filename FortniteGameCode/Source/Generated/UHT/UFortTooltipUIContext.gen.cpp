@@ -185,3 +185,42 @@ UFunction* Z_Construct_UFunction_UFortTooltipUIContext_GetUpgradeStats()
 	}
 	return ReturnFunction;
 }
+
+class UFortTooltipUIContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTooltipUIContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTooltipUIContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTooltipUIContext_GetCombinedDescription, "GetCombinedDescription" },
+	{ &Z_Construct_UFunction_UFortTooltipUIContext_GetComparisonStats, "GetComparisonStats" },
+	{ &Z_Construct_UFunction_UFortTooltipUIContext_GetDescription, "GetDescription" },
+	{ &Z_Construct_UFunction_UFortTooltipUIContext_GetDisplayNameAndMultiBrushForTag, "GetDisplayNameAndMultiBrushForTag" },
+	{ &Z_Construct_UFunction_UFortTooltipUIContext_GetTooltipAttributes, "GetTooltipAttributes" },
+	{ &Z_Construct_UFunction_UFortTooltipUIContext_GetTooltipStat, "GetTooltipStat" },
+	{ &Z_Construct_UFunction_UFortTooltipUIContext_GetTooltipStats, "GetTooltipStats" },
+	{ &Z_Construct_UFunction_UFortTooltipUIContext_GetUIDataForTag, "GetUIDataForTag" },
+	{ &Z_Construct_UFunction_UFortTooltipUIContext_GetUpgradeStats, "GetUpgradeStats" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTooltipUIContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D31C90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTooltipUIContext_Statics::ClassParams = { &UFortTooltipUIContext::StaticClass, Z_Construct_UClass_UFortTooltipUIContext_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortTooltipUIContext_Statics::FuncInfo, 9, nullptr, 0, nullptr, &Z_Construct_UClass_UFortTooltipUIContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904CA0 (end 0x02904CCF)
+// Original VA: 0x0000000142904CA0 | File offset: 0x029042A0
+// Recovery: confirmed (UHT singleton of UFortTooltipUIContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTooltipUIContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTooltipUIContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

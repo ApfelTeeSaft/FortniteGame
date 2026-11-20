@@ -85,3 +85,38 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_SpawnPr
 	}
 	return ReturnFunction;
 }
+
+class UFortAbilityTask_SpawnProjectileAndWait
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_BeginSpawningActor, "BeginSpawningActor" },
+	{ &Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_FinishSpawningActor, "FinishSpawningActor" },
+	{ &Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_OnProjectileDestroyed, "OnProjectileDestroyed" },
+	{ &Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_SpawnProjectileAndWait, "SpawnProjectileAndWait" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032965E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait_Statics::ClassParams = { &UFortAbilityTask_SpawnProjectileAndWait::StaticClass, Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait_Statics::DependentSingletons, 2, 0x00880084u, Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait_Statics::FuncInfo, 4, Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait_Statics::PropPointers, 16, "Game", &Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81F10 (end 0x00F81F3F)
+// Original VA: 0x0000000140F81F10 | File offset: 0x00F81510
+// Recovery: confirmed (UHT singleton of UFortAbilityTask_SpawnProjectileAndWait) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait_Statics::ClassParams);
+	}
+	return OuterClass;
+}

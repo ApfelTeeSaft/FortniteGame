@@ -238,3 +238,46 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateAthena_ServerSetInAircraft()
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerStateAthena
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerStateAthena_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerStateAthena_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerStateAthena_ClientReportDBNO, "ClientReportDBNO" },
+	{ &Z_Construct_UFunction_AFortPlayerStateAthena_ClientReportKill, "ClientReportKill" },
+	{ &Z_Construct_UFunction_AFortPlayerStateAthena_GetSpectatorCount, "GetSpectatorCount" },
+	{ &Z_Construct_UFunction_AFortPlayerStateAthena_IsDisconnected, "IsDisconnected" },
+	{ &Z_Construct_UFunction_AFortPlayerStateAthena_OnRep_DeathInfo, "OnRep_DeathInfo" },
+	{ &Z_Construct_UFunction_AFortPlayerStateAthena_OnRep_Downs, "OnRep_Downs" },
+	{ &Z_Construct_UFunction_AFortPlayerStateAthena_OnRep_Kills, "OnRep_Kills" },
+	{ &Z_Construct_UFunction_AFortPlayerStateAthena_OnRep_MapIndicatorPos, "OnRep_MapIndicatorPos" },
+	{ &Z_Construct_UFunction_AFortPlayerStateAthena_OnRep_Place, "OnRep_Place" },
+	{ &Z_Construct_UFunction_AFortPlayerStateAthena_OnRep_SpectatingTarget, "OnRep_SpectatingTarget" },
+	{ &Z_Construct_UFunction_AFortPlayerStateAthena_OnRep_SquadId, "OnRep_SquadId" },
+	{ &Z_Construct_UFunction_AFortPlayerStateAthena_ServerSetInAircraft, "ServerSetInAircraft" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerStateAthena_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033D4C50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerStateAthena_Statics::ClassParams = { &AFortPlayerStateAthena::StaticClass, Z_Construct_UClass_AFortPlayerStateAthena_Statics::DependentSingletons, 2, 0x00900280u, Z_Construct_UClass_AFortPlayerStateAthena_Statics::FuncInfo, 12, Z_Construct_UClass_AFortPlayerStateAthena_Statics::PropPointers, 24, nullptr, &Z_Construct_UClass_AFortPlayerStateAthena_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B380 (end 0x0108B3AF)
+// Original VA: 0x000000014108B380 | File offset: 0x0108A980
+// Recovery: confirmed (UHT singleton of AFortPlayerStateAthena) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerStateAthena()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerStateAthena_Statics::ClassParams);
+	}
+	return OuterClass;
+}

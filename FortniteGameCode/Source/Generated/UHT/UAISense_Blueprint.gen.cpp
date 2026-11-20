@@ -145,3 +145,41 @@ UFunction* Z_Construct_UFunction_UAISense_Blueprint_OnUpdate()
 	}
 	return ReturnFunction;
 }
+
+class UAISense_Blueprint
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAISense_Blueprint_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAISense_Blueprint_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAISense_Blueprint_GetAllListenerActors, "GetAllListenerActors" },
+	{ &Z_Construct_UFunction_UAISense_Blueprint_GetAllListenerComponents, "GetAllListenerComponents" },
+	{ &Z_Construct_UFunction_UAISense_Blueprint_K2_OnNewPawn, "K2_OnNewPawn" },
+	{ &Z_Construct_UFunction_UAISense_Blueprint_OnListenerRegistered, "OnListenerRegistered" },
+	{ &Z_Construct_UFunction_UAISense_Blueprint_OnListenerUnregistered, "OnListenerUnregistered" },
+	{ &Z_Construct_UFunction_UAISense_Blueprint_OnListenerUpdated, "OnListenerUpdated" },
+	{ &Z_Construct_UFunction_UAISense_Blueprint_OnUpdate, "OnUpdate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAISense_Blueprint_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036F26E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAISense_Blueprint_Statics::ClassParams = { &UAISense_Blueprint::StaticClass, Z_Construct_UClass_UAISense_Blueprint_Statics::DependentSingletons, 2, 0x00900085u, Z_Construct_UClass_UAISense_Blueprint_Statics::FuncInfo, 7, Z_Construct_UClass_UAISense_Blueprint_Statics::PropPointers, 5, "Engine", &Z_Construct_UClass_UAISense_Blueprint_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1BE50 (end 0x01D1BE7F)
+// Original VA: 0x0000000141D1BE50 | File offset: 0x01D1B450
+// Recovery: confirmed (UHT singleton of UAISense_Blueprint) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAISense_Blueprint()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAISense_Blueprint_Statics::ClassParams);
+	}
+	return OuterClass;
+}

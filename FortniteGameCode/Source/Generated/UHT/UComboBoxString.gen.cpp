@@ -241,3 +241,46 @@ UFunction* Z_Construct_UFunction_UComboBoxString_SetSelectedOption()
 	}
 	return ReturnFunction;
 }
+
+class UComboBoxString
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UComboBoxString_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UComboBoxString_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UComboBoxString_AddOption, "AddOption" },
+	{ &Z_Construct_UFunction_UComboBoxString_ClearOptions, "ClearOptions" },
+	{ &Z_Construct_UFunction_UComboBoxString_ClearSelection, "ClearSelection" },
+	{ &Z_Construct_UFunction_UComboBoxString_FindOptionIndex, "FindOptionIndex" },
+	{ &Z_Construct_UFunction_UComboBoxString_GetOptionAtIndex, "GetOptionAtIndex" },
+	{ &Z_Construct_UFunction_UComboBoxString_GetOptionCount, "GetOptionCount" },
+	{ &Z_Construct_UFunction_UComboBoxString_GetSelectedOption, "GetSelectedOption" },
+	{ &Z_Construct_UDelegateFunction_UComboBoxString_OnOpeningEvent__DelegateSignature, "OnOpeningEvent__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UComboBoxString_OnSelectionChangedEvent__DelegateSignature, "OnSelectionChangedEvent__DelegateSignature" },
+	{ &Z_Construct_UFunction_UComboBoxString_RefreshOptions, "RefreshOptions" },
+	{ &Z_Construct_UFunction_UComboBoxString_RemoveOption, "RemoveOption" },
+	{ &Z_Construct_UFunction_UComboBoxString_SetSelectedOption, "SetSelectedOption" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UComboBoxString_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036922E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UComboBoxString_Statics::ClassParams = { &UComboBoxString::StaticClass, Z_Construct_UClass_UComboBoxString_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UComboBoxString_Statics::FuncInfo, 12, Z_Construct_UClass_UComboBoxString_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_UComboBoxString_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE6200 (end 0x01BE622F)
+// Original VA: 0x0000000141BE6200 | File offset: 0x01BE5800
+// Recovery: confirmed (UHT singleton of UComboBoxString) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UComboBoxString()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UComboBoxString_Statics::ClassParams);
+	}
+	return OuterClass;
+}

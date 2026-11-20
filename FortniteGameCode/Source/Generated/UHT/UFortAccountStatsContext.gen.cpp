@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortAccountStatsContext_CanShowAccountStats()
 	}
 	return ReturnFunction;
 }
+
+class UFortAccountStatsContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortAccountStatsContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortAccountStatsContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortAccountStatsContext_CanShowAccountStats, "CanShowAccountStats" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortAccountStatsContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C60640
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortAccountStatsContext_Statics::ClassParams = { &UFortAccountStatsContext::StaticClass, Z_Construct_UClass_UFortAccountStatsContext_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortAccountStatsContext_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortAccountStatsContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028876A0 (end 0x028876CF)
+// Original VA: 0x00000001428876A0 | File offset: 0x02886CA0
+// Recovery: confirmed (UHT singleton of UFortAccountStatsContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortAccountStatsContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortAccountStatsContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

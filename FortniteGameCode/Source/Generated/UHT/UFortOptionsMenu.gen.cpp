@@ -315,3 +315,49 @@ UFunction* Z_Construct_UFunction_UFortOptionsMenu_ShowVideoOptions()
 	}
 	return ReturnFunction;
 }
+
+class UFortOptionsMenu
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortOptionsMenu_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortOptionsMenu_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortOptionsMenu_ClearCachedEula, "ClearCachedEula" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_HandleBenchmarkComplete, "HandleBenchmarkComplete" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_HandleSettingsErrorMessageClosed, "HandleSettingsErrorMessageClosed" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_HandleSettingsSaveComplete, "HandleSettingsSaveComplete" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_NeedsLanguageChangeConfirmation, "NeedsLanguageChangeConfirmation" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_NeedsVideoChangeConfirmation, "NeedsVideoChangeConfirmation" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_OnApply, "OnApply" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_OnReset, "OnReset" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_OnResetToDefaults, "OnResetToDefaults" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_OnVideoAccept, "OnVideoAccept" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_ResetClientHUDSettings, "ResetClientHUDSettings" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_ResetGameOptionsSettings, "ResetGameOptionsSettings" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_ShowAccountOptions, "ShowAccountOptions" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_ShowControllerOptions, "ShowControllerOptions" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_ShowInputOptions, "ShowInputOptions" },
+	{ &Z_Construct_UFunction_UFortOptionsMenu_ShowVideoOptions, "ShowVideoOptions" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortOptionsMenu_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CF29C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortOptionsMenu_Statics::ClassParams = { &UFortOptionsMenu::StaticClass, Z_Construct_UClass_UFortOptionsMenu_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortOptionsMenu_Statics::FuncInfo, 16, nullptr, 0, nullptr, &Z_Construct_UClass_UFortOptionsMenu_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE590 (end 0x028DE5BF)
+// Original VA: 0x00000001428DE590 | File offset: 0x028DDB90
+// Recovery: confirmed (UHT singleton of UFortOptionsMenu) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortOptionsMenu()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortOptionsMenu_Statics::ClassParams);
+	}
+	return OuterClass;
+}

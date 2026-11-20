@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_ABuildingFOBCoreSpawnPad_GetCoreSpawnTransform(
 	}
 	return ReturnFunction;
 }
+
+class ABuildingFOBCoreSpawnPad
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingFOBCoreSpawnPad_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingFOBCoreSpawnPad_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingFOBCoreSpawnPad_GetCoreSpawnTransform, "GetCoreSpawnTransform" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingFOBCoreSpawnPad_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03276F90
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingFOBCoreSpawnPad_Statics::ClassParams = { &ABuildingFOBCoreSpawnPad::StaticClass, Z_Construct_UClass_ABuildingFOBCoreSpawnPad_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_ABuildingFOBCoreSpawnPad_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_ABuildingFOBCoreSpawnPad_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6C1D0 (end 0x00F6C1FF)
+// Original VA: 0x0000000140F6C1D0 | File offset: 0x00F6B7D0
+// Recovery: confirmed (UHT singleton of ABuildingFOBCoreSpawnPad) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingFOBCoreSpawnPad()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingFOBCoreSpawnPad_Statics::ClassParams);
+	}
+	return OuterClass;
+}

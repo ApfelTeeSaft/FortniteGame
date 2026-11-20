@@ -1453,3 +1453,108 @@ UFunction* Z_Construct_UFunction_USkeletalMeshComponent_UnbindClothFromMasterPos
 	}
 	return ReturnFunction;
 }
+
+class USkeletalMeshComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_USkeletalMeshComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USkeletalMeshComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_AccumulateAllBodiesBelowPhysicsBlendWeight, "AccumulateAllBodiesBelowPhysicsBlendWeight" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_AddForceToAllBodiesBelow, "AddForceToAllBodiesBelow" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_AddImpulseToAllBodiesBelow, "AddImpulseToAllBodiesBelow" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_AllowAnimCurveEvaluation, "AllowAnimCurveEvaluation" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_BindClothToMasterPoseComponent, "BindClothToMasterPoseComponent" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_BreakConstraint, "BreakConstraint" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_ClearMorphTargets, "ClearMorphTargets" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_FindConstraintBoneName, "FindConstraintBoneName" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_ForceClothNextUpdateTeleport, "ForceClothNextUpdateTeleport" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_ForceClothNextUpdateTeleportAndReset, "ForceClothNextUpdateTeleportAndReset" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetAllowedAnimCurveEvaluate, "GetAllowedAnimCurveEvaluate" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetAnimInstance, "GetAnimInstance" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetAnimationMode, "GetAnimationMode" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetBoneMass, "GetBoneMass" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetClothMaxDistanceScale, "GetClothMaxDistanceScale" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetClothingSimulationInteractor, "GetClothingSimulationInteractor" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetCurrentJointAngles, "GetCurrentJointAngles" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetDisableAnimCurves, "GetDisableAnimCurves" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetDisablePostProcessBlueprint, "GetDisablePostProcessBlueprint" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetMorphTarget, "GetMorphTarget" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetPlayRate, "GetPlayRate" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetPosition, "GetPosition" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetPostProcessInstance, "GetPostProcessInstance" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetSkeletalCenterOfMass, "GetSkeletalCenterOfMass" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetTeleportDistanceThreshold, "GetTeleportDistanceThreshold" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_GetTeleportRotationThreshold, "GetTeleportRotationThreshold" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_IsBodyGravityEnabled, "IsBodyGravityEnabled" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_IsClothingSimulationSuspended, "IsClothingSimulationSuspended" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_IsPlaying, "IsPlaying" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_K2_GetClosestPointOnPhysicsAsset, "K2_GetClosestPointOnPhysicsAsset" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_OverrideAnimationData, "OverrideAnimationData" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_Play, "Play" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_PlayAnimation, "PlayAnimation" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_ResetAllBodiesSimulatePhysics, "ResetAllBodiesSimulatePhysics" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_ResetAllowedAnimCurveEvaluation, "ResetAllowedAnimCurveEvaluation" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_ResetAnimInstanceDynamics, "ResetAnimInstanceDynamics" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_ResetClothTeleportMode, "ResetClothTeleportMode" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_ResumeClothingSimulation, "ResumeClothingSimulation" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAllBodiesBelowPhysicsBlendWeight, "SetAllBodiesBelowPhysicsBlendWeight" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAllBodiesBelowSimulatePhysics, "SetAllBodiesBelowSimulatePhysics" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAllBodiesPhysicsBlendWeight, "SetAllBodiesPhysicsBlendWeight" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAllBodiesSimulatePhysics, "SetAllBodiesSimulatePhysics" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAllMotorsAngularDriveParams, "SetAllMotorsAngularDriveParams" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAllMotorsAngularPositionDrive, "SetAllMotorsAngularPositionDrive" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAllMotorsAngularVelocityDrive, "SetAllMotorsAngularVelocityDrive" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAllowAnimCurveEvaluation, "SetAllowAnimCurveEvaluation" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAllowedAnimCurvesEvaluation, "SetAllowedAnimCurvesEvaluation" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAngularLimits, "SetAngularLimits" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAnimInstanceClass, "SetAnimInstanceClass" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAnimation, "SetAnimation" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetAnimationMode, "SetAnimationMode" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetBodyNotifyRigidBodyCollision, "SetBodyNotifyRigidBodyCollision" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetClothMaxDistanceScale, "SetClothMaxDistanceScale" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetConstraintProfile, "SetConstraintProfile" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetConstraintProfileForAll, "SetConstraintProfileForAll" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetDisableAnimCurves, "SetDisableAnimCurves" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetDisablePostProcessBlueprint, "SetDisablePostProcessBlueprint" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetEnableBodyGravity, "SetEnableBodyGravity" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetEnableGravityOnAllBodiesBelow, "SetEnableGravityOnAllBodiesBelow" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetEnablePhysicsBlending, "SetEnablePhysicsBlending" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetMorphTarget, "SetMorphTarget" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetNotifyRigidBodyCollisionBelow, "SetNotifyRigidBodyCollisionBelow" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetPhysicsBlendWeight, "SetPhysicsBlendWeight" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetPlayRate, "SetPlayRate" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetPosition, "SetPosition" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetTeleportDistanceThreshold, "SetTeleportDistanceThreshold" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetTeleportRotationThreshold, "SetTeleportRotationThreshold" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SetUpdateAnimationInEditor, "SetUpdateAnimationInEditor" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SnapshotPose, "SnapshotPose" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_Stop, "Stop" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_SuspendClothingSimulation, "SuspendClothingSimulation" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_ToggleDisablePostProcessBlueprint, "ToggleDisablePostProcessBlueprint" },
+	{ &Z_Construct_UFunction_USkeletalMeshComponent_UnbindClothFromMasterPoseComponent, "UnbindClothFromMasterPoseComponent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USkeletalMeshComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039A83A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USkeletalMeshComponent_Statics::ClassParams = { &USkeletalMeshComponent::StaticClass, Z_Construct_UClass_USkeletalMeshComponent_Statics::DependentSingletons, 2, 0x00B01080u, Z_Construct_UClass_USkeletalMeshComponent_Statics::FuncInfo, 73, Z_Construct_UClass_USkeletalMeshComponent_Statics::PropPointers, 58, "Engine", &Z_Construct_UClass_USkeletalMeshComponent_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_USkeletalMeshComponent_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CCA10 (end 0x024CCA3F)
+// Original VA: 0x00000001424CCA10 | File offset: 0x024CC010
+// Recovery: confirmed (UHT singleton of USkeletalMeshComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USkeletalMeshComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USkeletalMeshComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -262,3 +262,47 @@ UFunction* Z_Construct_UFunction_ABuildingPropAtlas_StopRingSpinning()
 	}
 	return ReturnFunction;
 }
+
+class ABuildingPropAtlas
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingPropAtlas_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingPropAtlas_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_GetDefenseAnimSpeed, "GetDefenseAnimSpeed" },
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_GetDefenseProgress, "GetDefenseProgress" },
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_InitializeAudio, "InitializeAudio" },
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_InitializeRings, "InitializeRings" },
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_OnRingSpinningLoop, "OnRingSpinningLoop" },
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_PlayRingDamage, "PlayRingDamage" },
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_PlayRingSpinning, "PlayRingSpinning" },
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_PlayRingsIdleLoop, "PlayRingsIdleLoop" },
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_PlayRingsReset, "PlayRingsReset" },
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_RestoreRingsHierarchy, "RestoreRingsHierarchy" },
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_SetupAnimationSpeed, "SetupAnimationSpeed" },
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_SetupAnimationTransition, "SetupAnimationTransition" },
+	{ &Z_Construct_UFunction_ABuildingPropAtlas_StopRingSpinning, "StopRingSpinning" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingPropAtlas_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03278A30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingPropAtlas_Statics::ClassParams = { &ABuildingPropAtlas::StaticClass, Z_Construct_UClass_ABuildingPropAtlas_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ABuildingPropAtlas_Statics::FuncInfo, 13, Z_Construct_UClass_ABuildingPropAtlas_Statics::PropPointers, 5, "Game", &Z_Construct_UClass_ABuildingPropAtlas_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6C540 (end 0x00F6C56F)
+// Original VA: 0x0000000140F6C540 | File offset: 0x00F6BB40
+// Recovery: confirmed (UHT singleton of ABuildingPropAtlas) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingPropAtlas()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingPropAtlas_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortGameData_GetXpPerAccountLevel()
 	}
 	return ReturnFunction;
 }
+
+class UFortGameData
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortGameData_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortGameData_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortGameData_GetPersonalXpBoost, "GetPersonalXpBoost" },
+	{ &Z_Construct_UFunction_UFortGameData_GetTeamXpBoost, "GetTeamXpBoost" },
+	{ &Z_Construct_UFunction_UFortGameData_GetXpPerAccountLevel, "GetXpPerAccountLevel" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortGameData_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03318E50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortGameData_Statics::ClassParams = { &UFortGameData::StaticClass, Z_Construct_UClass_UFortGameData_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortGameData_Statics::FuncInfo, 3, Z_Construct_UClass_UFortGameData_Statics::PropPointers, 248, nullptr, &Z_Construct_UClass_UFortGameData_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1480 (end 0x00FE14AF)
+// Original VA: 0x0000000140FE1480 | File offset: 0x00FE0A80
+// Recovery: confirmed (UHT singleton of UFortGameData) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortGameData()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortGameData_Statics::ClassParams);
+	}
+	return OuterClass;
+}

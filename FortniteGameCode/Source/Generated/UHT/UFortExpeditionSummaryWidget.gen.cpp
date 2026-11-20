@@ -62,3 +62,37 @@ UFunction* Z_Construct_UFunction_UFortExpeditionSummaryWidget_UnbindInventoryDel
 	}
 	return ReturnFunction;
 }
+
+class UFortExpeditionSummaryWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortExpeditionSummaryWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortExpeditionSummaryWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortExpeditionSummaryWidget_BindInventoryDelegates, "BindInventoryDelegates" },
+	{ &Z_Construct_UFunction_UFortExpeditionSummaryWidget_OnRefreshSummaryWidget, "OnRefreshSummaryWidget" },
+	{ &Z_Construct_UFunction_UFortExpeditionSummaryWidget_UnbindInventoryDelegates, "UnbindInventoryDelegates" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortExpeditionSummaryWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C8FEA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortExpeditionSummaryWidget_Statics::ClassParams = { &UFortExpeditionSummaryWidget::StaticClass, Z_Construct_UClass_UFortExpeditionSummaryWidget_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortExpeditionSummaryWidget_Statics::FuncInfo, 3, Z_Construct_UClass_UFortExpeditionSummaryWidget_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UFortExpeditionSummaryWidget_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3710 (end 0x028A373F)
+// Original VA: 0x00000001428A3710 | File offset: 0x028A2D10
+// Recovery: confirmed (UHT singleton of UFortExpeditionSummaryWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortExpeditionSummaryWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortExpeditionSummaryWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

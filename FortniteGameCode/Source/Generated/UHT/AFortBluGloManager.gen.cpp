@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_AFortBluGloManager_GetBluGloItemDefinition()
 	}
 	return ReturnFunction;
 }
+
+class AFortBluGloManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortBluGloManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortBluGloManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortBluGloManager_GetBluGloItemDefinition, "GetBluGloItemDefinition" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortBluGloManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032C92F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortBluGloManager_Statics::ClassParams = { &AFortBluGloManager::StaticClass, Z_Construct_UClass_AFortBluGloManager_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortBluGloManager_Statics::FuncInfo, 1, Z_Construct_UClass_AFortBluGloManager_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_AFortBluGloManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3930 (end 0x00FA395F)
+// Original VA: 0x0000000140FA3930 | File offset: 0x00FA2F30
+// Recovery: confirmed (UHT singleton of AFortBluGloManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortBluGloManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortBluGloManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -84,3 +84,39 @@ UFunction* Z_Construct_UFunction_AFortInGameMapManager_PaintOnFog()
 	}
 	return ReturnFunction;
 }
+
+class AFortInGameMapManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortInGameMapManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortInGameMapManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortInGameMapManager_BroadcastExplorationEvents, "BroadcastExplorationEvents" },
+	{ &Z_Construct_UFunction_AFortInGameMapManager_GetCurrent, "GetCurrent" },
+	{ &Z_Construct_UFunction_AFortInGameMapManager_OnRep_MapData, "OnRep_MapData" },
+	{ &Z_Construct_UFunction_AFortInGameMapManager_PaintOnFog, "PaintOnFog" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortInGameMapManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0334A070
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortInGameMapManager_Statics::ClassParams = { &AFortInGameMapManager::StaticClass, Z_Construct_UClass_AFortInGameMapManager_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AFortInGameMapManager_Statics::FuncInfo, 4, Z_Construct_UClass_AFortInGameMapManager_Statics::PropPointers, 28, nullptr, &Z_Construct_UClass_AFortInGameMapManager_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AFortInGameMapManager_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010067C0 (end 0x010067EF)
+// Original VA: 0x00000001410067C0 | File offset: 0x01005DC0
+// Recovery: confirmed (UHT singleton of AFortInGameMapManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortInGameMapManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortInGameMapManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

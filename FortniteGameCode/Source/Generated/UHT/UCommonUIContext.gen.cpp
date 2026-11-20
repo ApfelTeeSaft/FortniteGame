@@ -185,3 +185,43 @@ UFunction* Z_Construct_UFunction_UCommonUIContext_SetGamepadInputType()
 	}
 	return ReturnFunction;
 }
+
+class UCommonUIContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonUIContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonUIContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonUIContext_GetCurrentInputType, "GetCurrentInputType" },
+	{ &Z_Construct_UFunction_UCommonUIContext_GetInputActionButtonIcon, "GetInputActionButtonIcon" },
+	{ &Z_Construct_UFunction_UCommonUIContext_GetInputManager, "GetInputManager" },
+	{ &Z_Construct_UDelegateFunction_UCommonUIContext_InputMethodChangedDelegate__DelegateSignature, "InputMethodChangedDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UCommonUIContext_InputSuspensionChanged__DelegateSignature, "InputSuspensionChanged__DelegateSignature" },
+	{ &Z_Construct_UFunction_UCommonUIContext_IsUsingGamepad, "IsUsingGamepad" },
+	{ &Z_Construct_UFunction_UCommonUIContext_IsUsingPointerInput, "IsUsingPointerInput" },
+	{ &Z_Construct_UFunction_UCommonUIContext_IsUsingTouch, "IsUsingTouch" },
+	{ &Z_Construct_UFunction_UCommonUIContext_SetGamepadInputType, "SetGamepadInputType" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonUIContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E859A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonUIContext_Statics::ClassParams = { &UCommonUIContext::StaticClass, Z_Construct_UClass_UCommonUIContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UCommonUIContext_Statics::FuncInfo, 9, Z_Construct_UClass_UCommonUIContext_Statics::PropPointers, 7, nullptr, &Z_Construct_UClass_UCommonUIContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0450 (end 0x002D047F)
+// Original VA: 0x00000001402D0450 | File offset: 0x002CFA50
+// Recovery: confirmed (UHT singleton of UCommonUIContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonUIContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonUIContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

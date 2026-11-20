@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UFortNavSystem_OnNavDataRegistered()
 	}
 	return ReturnFunction;
 }
+
+class UFortNavSystem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortNavSystem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortNavSystem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortNavSystem_IsNavmeshInRadiusInitialized, "IsNavmeshInRadiusInitialized" },
+	{ &Z_Construct_UFunction_UFortNavSystem_OnNavDataRegistered, "OnNavDataRegistered" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortNavSystem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03391BD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortNavSystem_Statics::ClassParams = { &UFortNavSystem::StaticClass, Z_Construct_UClass_UFortNavSystem_Statics::DependentSingletons, 2, 0x00900086u, Z_Construct_UClass_UFortNavSystem_Statics::FuncInfo, 2, Z_Construct_UClass_UFortNavSystem_Statics::PropPointers, 23, "Engine", &Z_Construct_UClass_UFortNavSystem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01050C70 (end 0x01050C9F)
+// Original VA: 0x0000000141050C70 | File offset: 0x01050270
+// Recovery: confirmed (UHT singleton of UFortNavSystem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortNavSystem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortNavSystem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

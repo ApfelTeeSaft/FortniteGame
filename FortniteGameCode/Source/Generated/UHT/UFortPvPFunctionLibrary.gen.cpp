@@ -205,3 +205,43 @@ UFunction* Z_Construct_UFunction_UFortPvPFunctionLibrary_SetMatchLevel()
 	}
 	return ReturnFunction;
 }
+
+class UFortPvPFunctionLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortPvPFunctionLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortPvPFunctionLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortPvPFunctionLibrary_DestroyAllFortPickupsWithItem, "DestroyAllFortPickupsWithItem" },
+	{ &Z_Construct_UFunction_UFortPvPFunctionLibrary_FirePvPVictoryMissionEvent, "FirePvPVictoryMissionEvent" },
+	{ &Z_Construct_UFunction_UFortPvPFunctionLibrary_GetBaseBuildingCost, "GetBaseBuildingCost" },
+	{ &Z_Construct_UFunction_UFortPvPFunctionLibrary_GetBaseDestructionTeamInfo, "GetBaseDestructionTeamInfo" },
+	{ &Z_Construct_UFunction_UFortPvPFunctionLibrary_GetDifficultyRowNamesFromPvPRating, "GetDifficultyRowNamesFromPvPRating" },
+	{ &Z_Construct_UFunction_UFortPvPFunctionLibrary_GetMatchLevel, "GetMatchLevel" },
+	{ &Z_Construct_UFunction_UFortPvPFunctionLibrary_GetRoundTimeAccumulated, "GetRoundTimeAccumulated" },
+	{ &Z_Construct_UFunction_UFortPvPFunctionLibrary_GetTeamCornerstone, "GetTeamCornerstone" },
+	{ &Z_Construct_UFunction_UFortPvPFunctionLibrary_GetTeamStrategicBuildingActor, "GetTeamStrategicBuildingActor" },
+	{ &Z_Construct_UFunction_UFortPvPFunctionLibrary_SetMatchLevel, "SetMatchLevel" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortPvPFunctionLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033D66C0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortPvPFunctionLibrary_Statics::ClassParams = { &UFortPvPFunctionLibrary::StaticClass, Z_Construct_UClass_UFortPvPFunctionLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortPvPFunctionLibrary_Statics::FuncInfo, 10, nullptr, 0, nullptr, &Z_Construct_UClass_UFortPvPFunctionLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B740 (end 0x0108B76F)
+// Original VA: 0x000000014108B740 | File offset: 0x0108AD40
+// Recovery: confirmed (UHT singleton of UFortPvPFunctionLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortPvPFunctionLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortPvPFunctionLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

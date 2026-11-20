@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitConfirm_WaitConfirm()
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_WaitConfirm
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_WaitConfirm_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_WaitConfirm_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_WaitConfirm_OnConfirmCallback, "OnConfirmCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitConfirm_WaitConfirm, "WaitConfirm" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_WaitConfirm_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F32500
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_WaitConfirm_Statics::ClassParams = { &UAbilityTask_WaitConfirm::StaticClass, Z_Construct_UClass_UAbilityTask_WaitConfirm_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_WaitConfirm_Statics::FuncInfo, 2, Z_Construct_UClass_UAbilityTask_WaitConfirm_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_UAbilityTask_WaitConfirm_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D4D0 (end 0x0054D4FF)
+// Original VA: 0x000000014054D4D0 | File offset: 0x0054CAD0
+// Recovery: confirmed (UHT singleton of UAbilityTask_WaitConfirm) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_WaitConfirm()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_WaitConfirm_Statics::ClassParams);
+	}
+	return OuterClass;
+}

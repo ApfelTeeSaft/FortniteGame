@@ -643,3 +643,66 @@ UFunction* Z_Construct_UFunction_UFortQuestManager_SetQuestPinned()
 	}
 	return ReturnFunction;
 }
+
+class UFortQuestManager
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortQuestManager_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortQuestManager_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortQuestManager_ClaimNextCompletedQuestReward, "ClaimNextCompletedQuestReward" },
+	{ &Z_Construct_UFunction_UFortQuestManager_ClaimQuestReward, "ClaimQuestReward" },
+	{ &Z_Construct_UFunction_UFortQuestManager_ClaimSelectedQuestReward, "ClaimSelectedQuestReward" },
+	{ &Z_Construct_UFunction_UFortQuestManager_ForceTriggerQuestsUpdated, "ForceTriggerQuestsUpdated" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GetBroadcasterQuestWithOpenWindow, "GetBroadcasterQuestWithOpenWindow" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GetCompletedQuests, "GetCompletedQuests" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GetCurrentQuests, "GetCurrentQuests" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GetCurrentQuestsCategories, "GetCurrentQuestsCategories" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GetMainQuest, "GetMainQuest" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GetNextUnseenQuest, "GetNextUnseenQuest" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GetPinnedQuests, "GetPinnedQuests" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GetQuestCategory, "GetQuestCategory" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GetQuestWithDefinition, "GetQuestWithDefinition" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GetRemainingDailyQuestRerolls, "GetRemainingDailyQuestRerolls" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GetSourceAndContextTags, "GetSourceAndContextTags" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GetUnseenQuestCount, "GetUnseenQuestCount" },
+	{ &Z_Construct_UFunction_UFortQuestManager_GrantFirstDailyQuest, "GrantFirstDailyQuest" },
+	{ &Z_Construct_UFunction_UFortQuestManager_HasCompletedObjective, "HasCompletedObjective" },
+	{ &Z_Construct_UFunction_UFortQuestManager_HasCompletedObjectiveWithName, "HasCompletedObjectiveWithName" },
+	{ &Z_Construct_UFunction_UFortQuestManager_HasCompletedQuest, "HasCompletedQuest" },
+	{ &Z_Construct_UFunction_UFortQuestManager_HasQuestBeenSeenLocally, "HasQuestBeenSeenLocally" },
+	{ &Z_Construct_UFunction_UFortQuestManager_HasUnsavedPrimaryMissionProgress, "HasUnsavedPrimaryMissionProgress" },
+	{ &Z_Construct_UFunction_UFortQuestManager_HasUnseenQuests, "HasUnseenQuests" },
+	{ &Z_Construct_UFunction_UFortQuestManager_IsMainQuest, "IsMainQuest" },
+	{ &Z_Construct_UFunction_UFortQuestManager_IsObjectiveInProgress, "IsObjectiveInProgress" },
+	{ &Z_Construct_UFunction_UFortQuestManager_IsObjectiveWithNameInProgress, "IsObjectiveWithNameInProgress" },
+	{ &Z_Construct_UFunction_UFortQuestManager_IsQuestInProgress, "IsQuestInProgress" },
+	{ &Z_Construct_UFunction_UFortQuestManager_MarkQuestSeen, "MarkQuestSeen" },
+	{ &Z_Construct_UFunction_UFortQuestManager_MarkQuestsSeen, "MarkQuestsSeen" },
+	{ &Z_Construct_UFunction_UFortQuestManager_RerollDailyQuest, "RerollDailyQuest" },
+	{ &Z_Construct_UFunction_UFortQuestManager_SendCustomStatEvent, "SendCustomStatEvent" },
+	{ &Z_Construct_UFunction_UFortQuestManager_SetQuestPinned, "SetQuestPinned" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortQuestManager_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033E74E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortQuestManager_Statics::ClassParams = { &UFortQuestManager::StaticClass, Z_Construct_UClass_UFortQuestManager_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortQuestManager_Statics::FuncInfo, 32, Z_Construct_UClass_UFortQuestManager_Statics::PropPointers, 17, nullptr, &Z_Construct_UClass_UFortQuestManager_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01096560 (end 0x0109658F)
+// Original VA: 0x0000000141096560 | File offset: 0x01095B60
+// Recovery: confirmed (UHT singleton of UFortQuestManager) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortQuestManager()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortQuestManager_Statics::ClassParams);
+	}
+	return OuterClass;
+}

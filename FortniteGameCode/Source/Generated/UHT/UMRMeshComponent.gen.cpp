@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UMRMeshComponent_GetReconstructor()
 	}
 	return ReturnFunction;
 }
+
+class UMRMeshComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMRMeshComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMRMeshComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMRMeshComponent_ConnectReconstructor, "ConnectReconstructor" },
+	{ &Z_Construct_UFunction_UMRMeshComponent_GetReconstructor, "GetReconstructor" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMRMeshComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03720E50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMRMeshComponent_Statics::ClassParams = { &UMRMeshComponent::StaticClass, Z_Construct_UClass_UMRMeshComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UMRMeshComponent_Statics::FuncInfo, 2, Z_Construct_UClass_UMRMeshComponent_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UMRMeshComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5EDA0 (end 0x01D5EDCF)
+// Original VA: 0x0000000141D5EDA0 | File offset: 0x01D5E3A0
+// Recovery: confirmed (UHT singleton of UMRMeshComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMRMeshComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMRMeshComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

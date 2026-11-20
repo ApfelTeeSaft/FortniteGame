@@ -159,3 +159,42 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerKeep_StreamOutStuff()
 	}
 	return ReturnFunction;
 }
+
+class AFortPlayerControllerKeep
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortPlayerControllerKeep_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortPlayerControllerKeep_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortPlayerControllerKeep_ClientSetPermaniteAvailability, "ClientSetPermaniteAvailability" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerKeep_ClientUnloadFoundations, "ClientUnloadFoundations" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerKeep_DumpItemData, "DumpItemData" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerKeep_ResetContainers, "ResetContainers" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerKeep_RestoreContainers, "RestoreContainers" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerKeep_SetPermaniteAvailability, "SetPermaniteAvailability" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerKeep_StreamInStuff, "StreamInStuff" },
+	{ &Z_Construct_UFunction_AFortPlayerControllerKeep_StreamOutStuff, "StreamOutStuff" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortPlayerControllerKeep_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033C3240
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortPlayerControllerKeep_Statics::ClassParams = { &AFortPlayerControllerKeep::StaticClass, Z_Construct_UClass_AFortPlayerControllerKeep_Statics::DependentSingletons, 2, 0x00900284u, Z_Construct_UClass_AFortPlayerControllerKeep_Statics::FuncInfo, 8, Z_Construct_UClass_AFortPlayerControllerKeep_Statics::PropPointers, 2, "Game", &Z_Construct_UClass_AFortPlayerControllerKeep_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01077730 (end 0x0107775F)
+// Original VA: 0x0000000141077730 | File offset: 0x01076D30
+// Recovery: confirmed (UHT singleton of AFortPlayerControllerKeep) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortPlayerControllerKeep()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortPlayerControllerKeep_Statics::ClassParams);
+	}
+	return OuterClass;
+}

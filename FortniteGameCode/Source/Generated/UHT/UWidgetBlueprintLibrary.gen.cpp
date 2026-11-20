@@ -1041,3 +1041,85 @@ UFunction* Z_Construct_UFunction_UWidgetBlueprintLibrary_UnlockMouse()
 	}
 	return ReturnFunction;
 }
+
+class UWidgetBlueprintLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UWidgetBlueprintLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UWidgetBlueprintLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_CancelDragDrop, "CancelDragDrop" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_CaptureJoystick, "CaptureJoystick" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_CaptureMouse, "CaptureMouse" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_ClearUserFocus, "ClearUserFocus" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_Create, "Create" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_CreateDragDropOperation, "CreateDragDropOperation" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_DetectDrag, "DetectDrag" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_DetectDragIfPressed, "DetectDragIfPressed" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_DismissAllMenus, "DismissAllMenus" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_DrawBox, "DrawBox" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_DrawLine, "DrawLine" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_DrawLines, "DrawLines" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_DrawText, "DrawText" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_DrawTextFormatted, "DrawTextFormatted" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_EndDragDrop, "EndDragDrop" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetAllWidgetsOfClass, "GetAllWidgetsOfClass" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetAllWidgetsWithInterface, "GetAllWidgetsWithInterface" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetBrushResource, "GetBrushResource" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetBrushResourceAsMaterial, "GetBrushResourceAsMaterial" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetBrushResourceAsTexture2D, "GetBrushResourceAsTexture2D" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetDragDroppingContent, "GetDragDroppingContent" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetDynamicMaterial, "GetDynamicMaterial" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetInputEventFromCharacterEvent, "GetInputEventFromCharacterEvent" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetInputEventFromKeyEvent, "GetInputEventFromKeyEvent" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetInputEventFromNavigationEvent, "GetInputEventFromNavigationEvent" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetInputEventFromPointerEvent, "GetInputEventFromPointerEvent" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetKeyEventFromAnalogInputEvent, "GetKeyEventFromAnalogInputEvent" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_GetSafeZonePadding, "GetSafeZonePadding" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_Handled, "Handled" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_IsDragDropping, "IsDragDropping" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_LockMouse, "LockMouse" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_MakeBrushFromAsset, "MakeBrushFromAsset" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_MakeBrushFromMaterial, "MakeBrushFromMaterial" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_MakeBrushFromTexture, "MakeBrushFromTexture" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_NoResourceBrush, "NoResourceBrush" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_ReleaseJoystickCapture, "ReleaseJoystickCapture" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_ReleaseMouseCapture, "ReleaseMouseCapture" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_RestorePreviousWindowTitleBarState, "RestorePreviousWindowTitleBarState" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_SetBrushResourceToMaterial, "SetBrushResourceToMaterial" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_SetBrushResourceToTexture, "SetBrushResourceToTexture" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_SetFocusToGameViewport, "SetFocusToGameViewport" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_SetHardwareCursor, "SetHardwareCursor" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_SetInputMode_GameAndUI, "SetInputMode_GameAndUI" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_SetInputMode_GameAndUIEx, "SetInputMode_GameAndUIEx" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_SetInputMode_GameOnly, "SetInputMode_GameOnly" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_SetInputMode_UIOnly, "SetInputMode_UIOnly" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_SetInputMode_UIOnlyEx, "SetInputMode_UIOnlyEx" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_SetMousePosition, "SetMousePosition" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_SetUserFocus, "SetUserFocus" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_SetWindowTitleBarState, "SetWindowTitleBarState" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_Unhandled, "Unhandled" },
+	{ &Z_Construct_UFunction_UWidgetBlueprintLibrary_UnlockMouse, "UnlockMouse" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UWidgetBlueprintLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036A9940
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UWidgetBlueprintLibrary_Statics::ClassParams = { &UWidgetBlueprintLibrary::StaticClass, Z_Construct_UClass_UWidgetBlueprintLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UWidgetBlueprintLibrary_Statics::FuncInfo, 52, nullptr, 0, nullptr, &Z_Construct_UClass_UWidgetBlueprintLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00D90 (end 0x01C00DBF)
+// Original VA: 0x0000000141C00D90 | File offset: 0x01C00390
+// Recovery: confirmed (UHT singleton of UWidgetBlueprintLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UWidgetBlueprintLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UWidgetBlueprintLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

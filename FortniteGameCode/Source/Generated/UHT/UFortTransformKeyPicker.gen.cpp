@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortTransformKeyPicker_RebuildTransformKeys()
 	}
 	return ReturnFunction;
 }
+
+class UFortTransformKeyPicker
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortTransformKeyPicker_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortTransformKeyPicker_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortTransformKeyPicker_RebuildTransformKeys, "RebuildTransformKeys" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortTransformKeyPicker_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D32550
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortTransformKeyPicker_Statics::ClassParams = { &UFortTransformKeyPicker::StaticClass, Z_Construct_UClass_UFortTransformKeyPicker_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortTransformKeyPicker_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortTransformKeyPicker_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904DC0 (end 0x02904DEF)
+// Original VA: 0x0000000142904DC0 | File offset: 0x029043C0
+// Recovery: confirmed (UHT singleton of UFortTransformKeyPicker) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortTransformKeyPicker()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortTransformKeyPicker_Statics::ClassParams);
+	}
+	return OuterClass;
+}

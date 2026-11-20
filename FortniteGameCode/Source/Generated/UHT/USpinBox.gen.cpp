@@ -360,3 +360,52 @@ UFunction* Z_Construct_UFunction_USpinBox_SetValue()
 	}
 	return ReturnFunction;
 }
+
+class USpinBox
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_USpinBox_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_USpinBox_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_USpinBox_ClearMaxSliderValue, "ClearMaxSliderValue" },
+	{ &Z_Construct_UFunction_USpinBox_ClearMaxValue, "ClearMaxValue" },
+	{ &Z_Construct_UFunction_USpinBox_ClearMinSliderValue, "ClearMinSliderValue" },
+	{ &Z_Construct_UFunction_USpinBox_ClearMinValue, "ClearMinValue" },
+	{ &Z_Construct_UFunction_USpinBox_GetMaxSliderValue, "GetMaxSliderValue" },
+	{ &Z_Construct_UFunction_USpinBox_GetMaxValue, "GetMaxValue" },
+	{ &Z_Construct_UFunction_USpinBox_GetMinSliderValue, "GetMinSliderValue" },
+	{ &Z_Construct_UFunction_USpinBox_GetMinValue, "GetMinValue" },
+	{ &Z_Construct_UFunction_USpinBox_GetValue, "GetValue" },
+	{ &Z_Construct_UDelegateFunction_USpinBox_OnSpinBoxBeginSliderMovement__DelegateSignature, "OnSpinBoxBeginSliderMovement__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_USpinBox_OnSpinBoxValueChangedEvent__DelegateSignature, "OnSpinBoxValueChangedEvent__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_USpinBox_OnSpinBoxValueCommittedEvent__DelegateSignature, "OnSpinBoxValueCommittedEvent__DelegateSignature" },
+	{ &Z_Construct_UFunction_USpinBox_SetForegroundColor, "SetForegroundColor" },
+	{ &Z_Construct_UFunction_USpinBox_SetMaxSliderValue, "SetMaxSliderValue" },
+	{ &Z_Construct_UFunction_USpinBox_SetMaxValue, "SetMaxValue" },
+	{ &Z_Construct_UFunction_USpinBox_SetMinSliderValue, "SetMinSliderValue" },
+	{ &Z_Construct_UFunction_USpinBox_SetMinValue, "SetMinValue" },
+	{ &Z_Construct_UFunction_USpinBox_SetValue, "SetValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_USpinBox_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0369E200
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_USpinBox_Statics::ClassParams = { &USpinBox::StaticClass, Z_Construct_UClass_USpinBox_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_USpinBox_Statics::FuncInfo, 18, Z_Construct_UClass_USpinBox_Statics::PropPointers, 24, nullptr, &Z_Construct_UClass_USpinBox_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF3160 (end 0x01BF318F)
+// Original VA: 0x0000000141BF3160 | File offset: 0x01BF2760
+// Recovery: confirmed (UHT singleton of USpinBox) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_USpinBox()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_USpinBox_Statics::ClassParams);
+	}
+	return OuterClass;
+}

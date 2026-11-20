@@ -144,3 +144,41 @@ UFunction* Z_Construct_UFunction_AGameplayCueNotify_Actor_WhileActive()
 	}
 	return ReturnFunction;
 }
+
+class AGameplayCueNotify_Actor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AGameplayCueNotify_Actor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AGameplayCueNotify_Actor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AGameplayCueNotify_Actor_K2_EndGameplayCue, "K2_EndGameplayCue" },
+	{ &Z_Construct_UFunction_AGameplayCueNotify_Actor_K2_HandleGameplayCue, "K2_HandleGameplayCue" },
+	{ &Z_Construct_UFunction_AGameplayCueNotify_Actor_OnActive, "OnActive" },
+	{ &Z_Construct_UFunction_AGameplayCueNotify_Actor_OnExecute, "OnExecute" },
+	{ &Z_Construct_UFunction_AGameplayCueNotify_Actor_OnOwnerDestroyed, "OnOwnerDestroyed" },
+	{ &Z_Construct_UFunction_AGameplayCueNotify_Actor_OnRemove, "OnRemove" },
+	{ &Z_Construct_UFunction_AGameplayCueNotify_Actor_WhileActive, "WhileActive" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AGameplayCueNotify_Actor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F3DE50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AGameplayCueNotify_Actor_Statics::ClassParams = { &AGameplayCueNotify_Actor::StaticClass, Z_Construct_UClass_AGameplayCueNotify_Actor_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_AGameplayCueNotify_Actor_Statics::FuncInfo, 7, Z_Construct_UClass_AGameplayCueNotify_Actor_Statics::PropPointers, 14, nullptr, &Z_Construct_UClass_AGameplayCueNotify_Actor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055BEC0 (end 0x0055BEEF)
+// Original VA: 0x000000014055BEC0 | File offset: 0x0055B4C0
+// Recovery: confirmed (UHT singleton of AGameplayCueNotify_Actor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AGameplayCueNotify_Actor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AGameplayCueNotify_Actor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

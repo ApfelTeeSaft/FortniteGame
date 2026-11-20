@@ -64,3 +64,36 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemPopupMenu_HandleItemChan
 	}
 	return ReturnFunction;
 }
+
+class UFortItemManagementItemPopupMenu
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemManagementItemPopupMenu_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemManagementItemPopupMenu_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemManagementItemPopupMenu_GetHostButton, "GetHostButton" },
+	{ &Z_Construct_UFunction_UFortItemManagementItemPopupMenu_HandleCompareAction, "HandleCompareAction" },
+	{ &Z_Construct_UFunction_UFortItemManagementItemPopupMenu_HandleItemChanged, "HandleItemChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemManagementItemPopupMenu_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CCE5F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemManagementItemPopupMenu_Statics::ClassParams = { &UFortItemManagementItemPopupMenu::StaticClass, Z_Construct_UClass_UFortItemManagementItemPopupMenu_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortItemManagementItemPopupMenu_Statics::FuncInfo, 3, nullptr, 0, nullptr, &Z_Construct_UClass_UFortItemManagementItemPopupMenu_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9FD0 (end 0x028C9FFF)
+// Original VA: 0x00000001428C9FD0 | File offset: 0x028C95D0
+// Recovery: confirmed (UHT singleton of UFortItemManagementItemPopupMenu) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemManagementItemPopupMenu()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemManagementItemPopupMenu_Statics::ClassParams);
+	}
+	return OuterClass;
+}

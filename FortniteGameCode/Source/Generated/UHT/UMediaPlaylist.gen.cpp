@@ -245,3 +245,46 @@ UFunction* Z_Construct_UFunction_UMediaPlaylist_Replace()
 	}
 	return ReturnFunction;
 }
+
+class UMediaPlaylist
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMediaPlaylist_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMediaPlaylist_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMediaPlaylist_Add, "Add" },
+	{ &Z_Construct_UFunction_UMediaPlaylist_AddFile, "AddFile" },
+	{ &Z_Construct_UFunction_UMediaPlaylist_AddUrl, "AddUrl" },
+	{ &Z_Construct_UFunction_UMediaPlaylist_Get, "Get" },
+	{ &Z_Construct_UFunction_UMediaPlaylist_GetNext, "GetNext" },
+	{ &Z_Construct_UFunction_UMediaPlaylist_GetPrevious, "GetPrevious" },
+	{ &Z_Construct_UFunction_UMediaPlaylist_GetRandom, "GetRandom" },
+	{ &Z_Construct_UFunction_UMediaPlaylist_Insert, "Insert" },
+	{ &Z_Construct_UFunction_UMediaPlaylist_Num, "Num" },
+	{ &Z_Construct_UFunction_UMediaPlaylist_Remove, "Remove" },
+	{ &Z_Construct_UFunction_UMediaPlaylist_RemoveAt, "RemoveAt" },
+	{ &Z_Construct_UFunction_UMediaPlaylist_Replace, "Replace" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMediaPlaylist_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03B64B20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMediaPlaylist_Statics::ClassParams = { &UMediaPlaylist::StaticClass, Z_Construct_UClass_UMediaPlaylist_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UMediaPlaylist_Statics::FuncInfo, 12, Z_Construct_UClass_UMediaPlaylist_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UMediaPlaylist_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE930 (end 0x025DE95F)
+// Original VA: 0x00000001425DE930 | File offset: 0x025DDF30
+// Recovery: confirmed (UHT singleton of UMediaPlaylist) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMediaPlaylist()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMediaPlaylist_Statics::ClassParams);
+	}
+	return OuterClass;
+}

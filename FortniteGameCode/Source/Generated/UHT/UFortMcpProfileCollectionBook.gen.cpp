@@ -65,3 +65,36 @@ UFunction* Z_Construct_UFunction_UFortMcpProfileCollectionBook_UpgradeSlottedIte
 	}
 	return ReturnFunction;
 }
+
+class UFortMcpProfileCollectionBook
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMcpProfileCollectionBook_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMcpProfileCollectionBook_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMcpProfileCollectionBook_ClaimCollectionBookPageRewards, "ClaimCollectionBookPageRewards" },
+	{ &Z_Construct_UFunction_UFortMcpProfileCollectionBook_ConvertSlottedItem, "ConvertSlottedItem" },
+	{ &Z_Construct_UFunction_UFortMcpProfileCollectionBook_UpgradeSlottedItem, "UpgradeSlottedItem" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMcpProfileCollectionBook_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03371150
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMcpProfileCollectionBook_Statics::ClassParams = { &UFortMcpProfileCollectionBook::StaticClass, Z_Construct_UClass_UFortMcpProfileCollectionBook_Statics::DependentSingletons, 2, 0x00100084u, Z_Construct_UClass_UFortMcpProfileCollectionBook_Statics::FuncInfo, 3, nullptr, 0, "Engine", &Z_Construct_UClass_UFortMcpProfileCollectionBook_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01030AE0 (end 0x01030B0F)
+// Original VA: 0x0000000141030AE0 | File offset: 0x010300E0
+// Recovery: confirmed (UHT singleton of UFortMcpProfileCollectionBook) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMcpProfileCollectionBook()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMcpProfileCollectionBook_Statics::ClassParams);
+	}
+	return OuterClass;
+}

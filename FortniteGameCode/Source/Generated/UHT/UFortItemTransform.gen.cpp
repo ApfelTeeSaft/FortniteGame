@@ -43,3 +43,35 @@ UFunction* Z_Construct_UFunction_UFortItemTransform_ProcessPendingSeenTransformK
 	}
 	return ReturnFunction;
 }
+
+class UFortItemTransform
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemTransform_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemTransform_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemTransform_OnRequestCloseItemPicker, "OnRequestCloseItemPicker" },
+	{ &Z_Construct_UFunction_UFortItemTransform_ProcessPendingSeenTransformKeys, "ProcessPendingSeenTransformKeys" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemTransform_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CD9770
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemTransform_Statics::ClassParams = { &UFortItemTransform::StaticClass, Z_Construct_UClass_UFortItemTransform_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortItemTransform_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UFortItemTransform_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF630 (end 0x028CF65F)
+// Original VA: 0x00000001428CF630 | File offset: 0x028CEC30
+// Recovery: confirmed (UHT singleton of UFortItemTransform) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemTransform()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemTransform_Statics::ClassParams);
+	}
+	return OuterClass;
+}

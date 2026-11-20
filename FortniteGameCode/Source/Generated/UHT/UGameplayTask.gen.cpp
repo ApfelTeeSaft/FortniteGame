@@ -62,3 +62,38 @@ UFunction* Z_Construct_UFunction_UGameplayTask_ReadyForActivation()
 	}
 	return ReturnFunction;
 }
+
+class UGameplayTask
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UGameplayTask_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UGameplayTask_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UGameplayTask_EndTask, "EndTask" },
+	{ &Z_Construct_UDelegateFunction_UGameplayTask_GenericGameplayTaskDelegate__DelegateSignature, "GenericGameplayTaskDelegate__DelegateSignature" },
+	{ &Z_Construct_UFunction_UGameplayTask_ReadyForActivation, "ReadyForActivation" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UGameplayTask_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x036C6170
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UGameplayTask_Statics::ClassParams = { &UGameplayTask::StaticClass, Z_Construct_UClass_UGameplayTask_Statics::DependentSingletons, 2, 0x00100085u, Z_Construct_UClass_UGameplayTask_Statics::FuncInfo, 3, Z_Construct_UClass_UGameplayTask_Statics::PropPointers, 4, "Game", &Z_Construct_UClass_UGameplayTask_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UGameplayTask_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9AAE0 (end 0x01C9AB0F)
+// Original VA: 0x0000000141C9AAE0 | File offset: 0x01C9A0E0
+// Recovery: confirmed (UHT singleton of UGameplayTask) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UGameplayTask()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UGameplayTask_Statics::ClassParams);
+	}
+	return OuterClass;
+}

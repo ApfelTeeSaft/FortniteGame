@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_AFortWeatherAugment_GetWeatherTags()
 	}
 	return ReturnFunction;
 }
+
+class AFortWeatherAugment
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortWeatherAugment_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortWeatherAugment_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortWeatherAugment_GetWeatherTags, "GetWeatherTags" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortWeatherAugment_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03435310
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortWeatherAugment_Statics::ClassParams = { &AFortWeatherAugment::StaticClass, Z_Construct_UClass_AFortWeatherAugment_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortWeatherAugment_Statics::FuncInfo, 1, Z_Construct_UClass_AFortWeatherAugment_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_AFortWeatherAugment_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC850 (end 0x010DC87F)
+// Original VA: 0x00000001410DC850 | File offset: 0x010DBE50
+// Recovery: confirmed (UHT singleton of AFortWeatherAugment) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortWeatherAugment()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortWeatherAugment_Statics::ClassParams);
+	}
+	return OuterClass;
+}

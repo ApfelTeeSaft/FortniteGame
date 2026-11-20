@@ -165,3 +165,42 @@ UFunction* Z_Construct_UFunction_UFortConversionControlItemDefinition_GetTierFro
 	}
 	return ReturnFunction;
 }
+
+class UFortConversionControlItemDefinition
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortConversionControlItemDefinition_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortConversionControlItemDefinition_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortConversionControlItemDefinition_GetFirstConversionTier, "GetFirstConversionTier" },
+	{ &Z_Construct_UFunction_UFortConversionControlItemDefinition_GetMaxConversionTier, "GetMaxConversionTier" },
+	{ &Z_Construct_UFunction_UFortConversionControlItemDefinition_GetPointsForTier, "GetPointsForTier" },
+	{ &Z_Construct_UFunction_UFortConversionControlItemDefinition_GetRequiredCatalysts, "GetRequiredCatalysts" },
+	{ &Z_Construct_UFunction_UFortConversionControlItemDefinition_GetRequiredItemDefinition, "GetRequiredItemDefinition" },
+	{ &Z_Construct_UFunction_UFortConversionControlItemDefinition_GetRequiredItemQuantity, "GetRequiredItemQuantity" },
+	{ &Z_Construct_UFunction_UFortConversionControlItemDefinition_GetRewardName, "GetRewardName" },
+	{ &Z_Construct_UFunction_UFortConversionControlItemDefinition_GetTierFromSacrificePoints, "GetTierFromSacrificePoints" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortConversionControlItemDefinition_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032F8100
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortConversionControlItemDefinition_Statics::ClassParams = { &UFortConversionControlItemDefinition::StaticClass, Z_Construct_UClass_UFortConversionControlItemDefinition_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortConversionControlItemDefinition_Statics::FuncInfo, 8, Z_Construct_UClass_UFortConversionControlItemDefinition_Statics::PropPointers, 4, nullptr, &Z_Construct_UClass_UFortConversionControlItemDefinition_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB9F0 (end 0x00FCBA1F)
+// Original VA: 0x0000000140FCB9F0 | File offset: 0x00FCAFF0
+// Recovery: confirmed (UHT singleton of UFortConversionControlItemDefinition) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortConversionControlItemDefinition()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortConversionControlItemDefinition_Statics::ClassParams);
+	}
+	return OuterClass;
+}

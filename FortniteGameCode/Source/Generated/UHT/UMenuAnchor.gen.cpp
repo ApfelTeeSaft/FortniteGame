@@ -144,3 +144,41 @@ UFunction* Z_Construct_UFunction_UMenuAnchor_ToggleOpen()
 	}
 	return ReturnFunction;
 }
+
+class UMenuAnchor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UMenuAnchor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UMenuAnchor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UMenuAnchor_Close, "Close" },
+	{ &Z_Construct_UFunction_UMenuAnchor_GetMenuPosition, "GetMenuPosition" },
+	{ &Z_Construct_UFunction_UMenuAnchor_HasOpenSubMenus, "HasOpenSubMenus" },
+	{ &Z_Construct_UFunction_UMenuAnchor_IsOpen, "IsOpen" },
+	{ &Z_Construct_UFunction_UMenuAnchor_Open, "Open" },
+	{ &Z_Construct_UFunction_UMenuAnchor_ShouldOpenDueToClick, "ShouldOpenDueToClick" },
+	{ &Z_Construct_UFunction_UMenuAnchor_ToggleOpen, "ToggleOpen" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UMenuAnchor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03697610
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UMenuAnchor_Statics::ClassParams = { &UMenuAnchor::StaticClass, Z_Construct_UClass_UMenuAnchor_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UMenuAnchor_Statics::FuncInfo, 7, Z_Construct_UClass_UMenuAnchor_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UMenuAnchor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED590 (end 0x01BED5BF)
+// Original VA: 0x0000000141BED590 | File offset: 0x01BECB90
+// Recovery: confirmed (UHT singleton of UMenuAnchor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UMenuAnchor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UMenuAnchor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

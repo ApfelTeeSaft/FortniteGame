@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UColorBinding_GetSlateValue()
 	}
 	return ReturnFunction;
 }
+
+class UColorBinding
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UColorBinding_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UColorBinding_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UColorBinding_GetLinearValue, "GetLinearValue" },
+	{ &Z_Construct_UFunction_UColorBinding_GetSlateValue, "GetSlateValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UColorBinding_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03691FA0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UColorBinding_Statics::ClassParams = { &UColorBinding::StaticClass, Z_Construct_UClass_UColorBinding_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UColorBinding_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UColorBinding_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE61A0 (end 0x01BE61CF)
+// Original VA: 0x0000000141BE61A0 | File offset: 0x01BE57A0
+// Recovery: confirmed (UHT singleton of UColorBinding) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UColorBinding()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UColorBinding_Statics::ClassParams);
+	}
+	return OuterClass;
+}

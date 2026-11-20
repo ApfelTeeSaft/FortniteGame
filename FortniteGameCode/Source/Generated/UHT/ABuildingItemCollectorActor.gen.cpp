@@ -241,3 +241,46 @@ UFunction* Z_Construct_UFunction_ABuildingItemCollectorActor_UpdateTeamDepositVa
 	}
 	return ReturnFunction;
 }
+
+class ABuildingItemCollectorActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingItemCollectorActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingItemCollectorActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingItemCollectorActor_GetNumberOfTeamCaptures, "GetNumberOfTeamCaptures" },
+	{ &Z_Construct_UFunction_ABuildingItemCollectorActor_GetTeamDepositAmount, "GetTeamDepositAmount" },
+	{ &Z_Construct_UFunction_ABuildingItemCollectorActor_GetTeamDepositGoal, "GetTeamDepositGoal" },
+	{ &Z_Construct_UFunction_ABuildingItemCollectorActor_GetTeamReachedGoalCount, "GetTeamReachedGoalCount" },
+	{ &Z_Construct_UFunction_ABuildingItemCollectorActor_OnItemCollectorStateChanged, "OnItemCollectorStateChanged" },
+	{ &Z_Construct_UFunction_ABuildingItemCollectorActor_OnRep_ControllingTeam, "OnRep_ControllingTeam" },
+	{ &Z_Construct_UFunction_ABuildingItemCollectorActor_OnRep_ItemCollectorState, "OnRep_ItemCollectorState" },
+	{ &Z_Construct_UFunction_ABuildingItemCollectorActor_OnRep_TeamDepositAmounts, "OnRep_TeamDepositAmounts" },
+	{ &Z_Construct_UFunction_ABuildingItemCollectorActor_OnRep_TeamDepositGoals, "OnRep_TeamDepositGoals" },
+	{ &Z_Construct_UFunction_ABuildingItemCollectorActor_OnTeamReachedDepositGoal, "OnTeamReachedDepositGoal" },
+	{ &Z_Construct_UFunction_ABuildingItemCollectorActor_SetItemCollectorState, "SetItemCollectorState" },
+	{ &Z_Construct_UFunction_ABuildingItemCollectorActor_UpdateTeamDepositValues, "UpdateTeamDepositValues" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingItemCollectorActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032781A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingItemCollectorActor_Statics::ClassParams = { &ABuildingItemCollectorActor::StaticClass, Z_Construct_UClass_ABuildingItemCollectorActor_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_ABuildingItemCollectorActor_Statics::FuncInfo, 12, Z_Construct_UClass_ABuildingItemCollectorActor_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_ABuildingItemCollectorActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6C350 (end 0x00F6C37F)
+// Original VA: 0x0000000140F6C350 | File offset: 0x00F6B950
+// Recovery: confirmed (UHT singleton of ABuildingItemCollectorActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingItemCollectorActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingItemCollectorActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

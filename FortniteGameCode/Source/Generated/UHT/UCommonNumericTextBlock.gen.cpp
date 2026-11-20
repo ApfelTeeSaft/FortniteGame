@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UCommonNumericTextBlock_SetCurrentValue()
 	}
 	return ReturnFunction;
 }
+
+class UCommonNumericTextBlock
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonNumericTextBlock_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonNumericTextBlock_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonNumericTextBlock_GetTargetValue, "GetTargetValue" },
+	{ &Z_Construct_UFunction_UCommonNumericTextBlock_InterpolateToValue, "InterpolateToValue" },
+	{ &Z_Construct_UFunction_UCommonNumericTextBlock_IsInterpolatingNumericValue, "IsInterpolatingNumericValue" },
+	{ &Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolationEnded__DelegateSignature, "OnInterpolationEnded__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnOutro__DelegateSignature, "OnOutro__DelegateSignature" },
+	{ &Z_Construct_UFunction_UCommonNumericTextBlock_SetCurrentValue, "SetCurrentValue" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonNumericTextBlock_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E82300
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonNumericTextBlock_Statics::ClassParams = { &UCommonNumericTextBlock::StaticClass, Z_Construct_UClass_UCommonNumericTextBlock_Statics::DependentSingletons, 2, 0x00B00082u, Z_Construct_UClass_UCommonNumericTextBlock_Statics::FuncInfo, 6, Z_Construct_UClass_UCommonNumericTextBlock_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_UCommonNumericTextBlock_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA4B0 (end 0x002CA4DF)
+// Original VA: 0x00000001402CA4B0 | File offset: 0x002C9AB0
+// Recovery: confirmed (UHT singleton of UCommonNumericTextBlock) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonNumericTextBlock()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonNumericTextBlock_Statics::ClassParams);
+	}
+	return OuterClass;
+}

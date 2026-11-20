@@ -163,3 +163,42 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidgetIndex_Adva
 	}
 	return ReturnFunction;
 }
+
+class UCommonWidgetSwitcher
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonWidgetSwitcher_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonWidgetSwitcher_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateNextWidget, "ActivateNextWidget" },
+	{ &Z_Construct_UFunction_UCommonWidgetSwitcher_ActivatePreviousWidget, "ActivatePreviousWidget" },
+	{ &Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateWidget, "ActivateWidget" },
+	{ &Z_Construct_UFunction_UCommonWidgetSwitcher_DeactivateWidget, "DeactivateWidget" },
+	{ &Z_Construct_UFunction_UCommonWidgetSwitcher_HandleActiveWidgetDeactivated, "HandleActiveWidgetDeactivated" },
+	{ &Z_Construct_UFunction_UCommonWidgetSwitcher_HasWidgets, "HasWidgets" },
+	{ &Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidgetIndex_Advanced, "SetActiveWidgetIndex_Advanced" },
+	{ &Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidget_Advanced, "SetActiveWidget_Advanced" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonWidgetSwitcher_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E869E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonWidgetSwitcher_Statics::ClassParams = { &UCommonWidgetSwitcher::StaticClass, Z_Construct_UClass_UCommonWidgetSwitcher_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UCommonWidgetSwitcher_Statics::FuncInfo, 8, Z_Construct_UClass_UCommonWidgetSwitcher_Statics::PropPointers, 9, nullptr, &Z_Construct_UClass_UCommonWidgetSwitcher_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D05E0 (end 0x002D060F)
+// Original VA: 0x00000001402D05E0 | File offset: 0x002CFBE0
+// Recovery: confirmed (UHT singleton of UCommonWidgetSwitcher) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonWidgetSwitcher()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonWidgetSwitcher_Statics::ClassParams);
+	}
+	return OuterClass;
+}

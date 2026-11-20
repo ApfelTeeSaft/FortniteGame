@@ -260,3 +260,47 @@ UFunction* Z_Construct_UFunction_ABuildingFOBCoreActor_OnVulnerableStatusChanged
 	}
 	return ReturnFunction;
 }
+
+class ABuildingFOBCoreActor
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_ABuildingFOBCoreActor_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_ABuildingFOBCoreActor_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_GetFOBBoundsBoxOverlappedActors, "GetFOBBoundsBoxOverlappedActors" },
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_GetFOBBoundsCenterAndExtents, "GetFOBBoundsCenterAndExtents" },
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_GetSimpleDeathFXTransform, "GetSimpleDeathFXTransform" },
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_IsActive, "IsActive" },
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_IsActorWithinFOBBounds, "IsActorWithinFOBBounds" },
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_MarkTargetable, "MarkTargetable" },
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_MarkVulnerable, "MarkVulnerable" },
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_OnActiveStatusChanged, "OnActiveStatusChanged" },
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_OnRep_bActive, "OnRep_bActive" },
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_OnRep_bTargetable, "OnRep_bTargetable" },
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_OnRep_bVulnerable, "OnRep_bVulnerable" },
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_OnTargetableStatusChanged, "OnTargetableStatusChanged" },
+	{ &Z_Construct_UFunction_ABuildingFOBCoreActor_OnVulnerableStatusChanged, "OnVulnerableStatusChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_ABuildingFOBCoreActor_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03276EF0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_ABuildingFOBCoreActor_Statics::ClassParams = { &ABuildingFOBCoreActor::StaticClass, Z_Construct_UClass_ABuildingFOBCoreActor_Statics::DependentSingletons, 2, 0x00900081u, Z_Construct_UClass_ABuildingFOBCoreActor_Statics::FuncInfo, 13, Z_Construct_UClass_ABuildingFOBCoreActor_Statics::PropPointers, 20, nullptr, &Z_Construct_UClass_ABuildingFOBCoreActor_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6C1A0 (end 0x00F6C1CF)
+// Original VA: 0x0000000140F6C1A0 | File offset: 0x00F6B7A0
+// Recovery: confirmed (UHT singleton of ABuildingFOBCoreActor) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_ABuildingFOBCoreActor()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_ABuildingFOBCoreActor_Statics::ClassParams);
+	}
+	return OuterClass;
+}

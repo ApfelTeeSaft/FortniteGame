@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_Self_Wai
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_WaitGameplayEffectApplied_Self
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_Self_WaitGameplayEffectAppliedToSelf, "WaitGameplayEffectAppliedToSelf" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_Self_WaitGameplayEffectAppliedToSelf_Query, "WaitGameplayEffectAppliedToSelf_Query" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F328F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self_Statics::ClassParams = { &UAbilityTask_WaitGameplayEffectApplied_Self::StaticClass, Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self_Statics::FuncInfo, 2, Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D5A0 (end 0x0054D5CF)
+// Original VA: 0x000000014054D5A0 | File offset: 0x0054CBA0
+// Recovery: confirmed (UHT singleton of UAbilityTask_WaitGameplayEffectApplied_Self) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self_Statics::ClassParams);
+	}
+	return OuterClass;
+}

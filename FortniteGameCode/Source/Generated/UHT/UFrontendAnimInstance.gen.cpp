@@ -82,3 +82,39 @@ UFunction* Z_Construct_UFunction_UFrontendAnimInstance_PlaySelected()
 	}
 	return ReturnFunction;
 }
+
+class UFrontendAnimInstance
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFrontendAnimInstance_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFrontendAnimInstance_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFrontendAnimInstance_OnPlayMontageFromGameplayTagQuery, "OnPlayMontageFromGameplayTagQuery" },
+	{ &Z_Construct_UFunction_UFrontendAnimInstance_PlayIntro, "PlayIntro" },
+	{ &Z_Construct_UFunction_UFrontendAnimInstance_PlayOutro, "PlayOutro" },
+	{ &Z_Construct_UFunction_UFrontendAnimInstance_PlaySelected, "PlaySelected" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFrontendAnimInstance_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x0343DE30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFrontendAnimInstance_Statics::ClassParams = { &UFrontendAnimInstance::StaticClass, Z_Construct_UClass_UFrontendAnimInstance_Statics::DependentSingletons, 2, 0x00900088u, Z_Construct_UClass_UFrontendAnimInstance_Statics::FuncInfo, 4, Z_Construct_UClass_UFrontendAnimInstance_Statics::PropPointers, 11, nullptr, &Z_Construct_UClass_UFrontendAnimInstance_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFrontendAnimInstance_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E32F0 (end 0x010E331F)
+// Original VA: 0x00000001410E32F0 | File offset: 0x010E28F0
+// Recovery: confirmed (UHT singleton of UFrontendAnimInstance) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFrontendAnimInstance()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFrontendAnimInstance_Statics::ClassParams);
+	}
+	return OuterClass;
+}

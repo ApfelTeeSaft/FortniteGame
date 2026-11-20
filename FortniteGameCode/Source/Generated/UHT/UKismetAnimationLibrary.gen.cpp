@@ -45,3 +45,35 @@ UFunction* Z_Construct_UFunction_UKismetAnimationLibrary_K2_TwoBoneIK()
 	}
 	return ReturnFunction;
 }
+
+class UKismetAnimationLibrary
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UKismetAnimationLibrary_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UKismetAnimationLibrary_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UKismetAnimationLibrary_K2_LookAt, "K2_LookAt" },
+	{ &Z_Construct_UFunction_UKismetAnimationLibrary_K2_TwoBoneIK, "K2_TwoBoneIK" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UKismetAnimationLibrary_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03654820
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UKismetAnimationLibrary_Statics::ClassParams = { &UKismetAnimationLibrary::StaticClass, Z_Construct_UClass_UKismetAnimationLibrary_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UKismetAnimationLibrary_Statics::FuncInfo, 2, nullptr, 0, nullptr, &Z_Construct_UClass_UKismetAnimationLibrary_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0E380 (end 0x01B0E3AF)
+// Original VA: 0x0000000141B0E380 | File offset: 0x01B0D980
+// Recovery: confirmed (UHT singleton of UKismetAnimationLibrary) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UKismetAnimationLibrary()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UKismetAnimationLibrary_Statics::ClassParams);
+	}
+	return OuterClass;
+}

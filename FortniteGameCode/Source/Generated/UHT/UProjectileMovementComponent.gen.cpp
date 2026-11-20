@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UProjectileMovementComponent_StopSimulating()
 	}
 	return ReturnFunction;
 }
+
+class UProjectileMovementComponent
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UProjectileMovementComponent_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UProjectileMovementComponent_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UProjectileMovementComponent_LimitVelocity, "LimitVelocity" },
+	{ &Z_Construct_UDelegateFunction_UProjectileMovementComponent_OnProjectileBounceDelegate__DelegateSignature, "OnProjectileBounceDelegate__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UProjectileMovementComponent_OnProjectileStopDelegate__DelegateSignature, "OnProjectileStopDelegate__DelegateSignature" },
+	{ &Z_Construct_UFunction_UProjectileMovementComponent_SetVelocityInLocalSpace, "SetVelocityInLocalSpace" },
+	{ &Z_Construct_UFunction_UProjectileMovementComponent_StopSimulating, "StopSimulating" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UProjectileMovementComponent_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x039952B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UProjectileMovementComponent_Statics::ClassParams = { &UProjectileMovementComponent::StaticClass, Z_Construct_UClass_UProjectileMovementComponent_Statics::DependentSingletons, 2, 0x00B00080u, Z_Construct_UClass_UProjectileMovementComponent_Statics::FuncInfo, 5, Z_Construct_UClass_UProjectileMovementComponent_Statics::PropPointers, 22, nullptr, &Z_Construct_UClass_UProjectileMovementComponent_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C2C10 (end 0x024C2C3F)
+// Original VA: 0x00000001424C2C10 | File offset: 0x024C2210
+// Recovery: confirmed (UHT singleton of UProjectileMovementComponent) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UProjectileMovementComponent()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UProjectileMovementComponent_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -284,3 +284,48 @@ UFunction* Z_Construct_UFunction_UCommonButtonGroup_SetSelectionRequired()
 	}
 	return ReturnFunction;
 }
+
+class UCommonButtonGroup
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonButtonGroup_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonButtonGroup_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonButtonGroup_DeselectAll, "DeselectAll" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_FindButtonIndex, "FindButtonIndex" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_GetButtonAtIndex, "GetButtonAtIndex" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_GetSelectedButtonIndex, "GetSelectedButtonIndex" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_HasAnyButtons, "HasAnyButtons" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_OnButtonHovered, "OnButtonHovered" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_OnButtonUnhovered, "OnButtonUnhovered" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_OnHandleButtonClicked, "OnHandleButtonClicked" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_OnHandleButtonDoubleClicked, "OnHandleButtonDoubleClicked" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_OnSelectionStateChanged, "OnSelectionStateChanged" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_SelectButtonAtIndex, "SelectButtonAtIndex" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_SelectNextButton, "SelectNextButton" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_SelectPreviousButton, "SelectPreviousButton" },
+	{ &Z_Construct_UFunction_UCommonButtonGroup_SetSelectionRequired, "SetSelectionRequired" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonButtonGroup_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E7C6B0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonButtonGroup_Statics::ClassParams = { &UCommonButtonGroup::StaticClass, Z_Construct_UClass_UCommonButtonGroup_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UCommonButtonGroup_Statics::FuncInfo, 14, Z_Construct_UClass_UCommonButtonGroup_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UCommonButtonGroup_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2CD0 (end 0x002C2CFF)
+// Original VA: 0x00000001402C2CD0 | File offset: 0x002C22D0
+// Recovery: confirmed (UHT singleton of UCommonButtonGroup) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonButtonGroup()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonButtonGroup_Statics::ClassParams);
+	}
+	return OuterClass;
+}

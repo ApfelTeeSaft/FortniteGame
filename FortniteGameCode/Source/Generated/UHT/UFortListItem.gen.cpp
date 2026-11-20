@@ -183,3 +183,42 @@ UFunction* Z_Construct_UFunction_UFortListItem_ToggleExpansion()
 	}
 	return ReturnFunction;
 }
+
+class UFortListItem
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortListItem_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortListItem_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortListItem_DoesItemHaveChildren, "DoesItemHaveChildren" },
+	{ &Z_Construct_UFunction_UFortListItem_GetIndentLevel, "GetIndentLevel" },
+	{ &Z_Construct_UFunction_UFortListItem_GetSelectionMode, "GetSelectionMode" },
+	{ &Z_Construct_UFunction_UFortListItem_IsItemExpanded, "IsItemExpanded" },
+	{ &Z_Construct_UFunction_UFortListItem_Private_OnExpanderArrowShiftClicked, "Private_OnExpanderArrowShiftClicked" },
+	{ &Z_Construct_UFunction_UFortListItem_SetData, "SetData" },
+	{ &Z_Construct_UFunction_UFortListItem_SetIndexInList, "SetIndexInList" },
+	{ &Z_Construct_UFunction_UFortListItem_SetSelected, "SetSelected" },
+	{ &Z_Construct_UFunction_UFortListItem_ToggleExpansion, "ToggleExpansion" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortListItem_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE3F50
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortListItem_Statics::ClassParams = { &UFortListItem::StaticClass, Z_Construct_UClass_UFortListItem_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortListItem_Statics::FuncInfo, 9, nullptr, 0, nullptr, &Z_Construct_UClass_UFortListItem_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7270 (end 0x028D729F)
+// Original VA: 0x00000001428D7270 | File offset: 0x028D6870
+// Recovery: confirmed (UHT singleton of UFortListItem) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortListItem()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortListItem_Statics::ClassParams);
+	}
+	return OuterClass;
+}

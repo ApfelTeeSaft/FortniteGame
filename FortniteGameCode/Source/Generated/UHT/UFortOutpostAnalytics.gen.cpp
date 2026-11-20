@@ -185,3 +185,42 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 	}
 	return ReturnFunction;
 }
+
+class UFortOutpostAnalytics
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortOutpostAnalytics_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortOutpostAnalytics_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveCompleted, "FireAnalyticsEvent_OutpostAttackWaveCompleted" },
+	{ &Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveStarted, "FireAnalyticsEvent_OutpostAttackWaveStarted" },
+	{ &Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostBuildingActivated, "FireAnalyticsEvent_OutpostBuildingActivated" },
+	{ &Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostBuildingDefended, "FireAnalyticsEvent_OutpostBuildingDefended" },
+	{ &Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostDefenseEnd, "FireAnalyticsEvent_OutpostDefenseEnd" },
+	{ &Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostDefenseStart, "FireAnalyticsEvent_OutpostDefenseStart" },
+	{ &Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostLeaveOutpost, "FireAnalyticsEvent_OutpostLeaveOutpost" },
+	{ &Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostLoaded, "FireAnalyticsEvent_OutpostLoaded" },
+	{ &Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostSupplyDropPickedUp, "FireAnalyticsEvent_OutpostSupplyDropPickedUp" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortOutpostAnalytics_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032C8DD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortOutpostAnalytics_Statics::ClassParams = { &UFortOutpostAnalytics::StaticClass, Z_Construct_UClass_UFortOutpostAnalytics_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortOutpostAnalytics_Statics::FuncInfo, 9, nullptr, 0, nullptr, &Z_Construct_UClass_UFortOutpostAnalytics_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3DA0 (end 0x00FA3DCF)
+// Original VA: 0x0000000140FA3DA0 | File offset: 0x00FA33A0
+// Recovery: confirmed (UHT singleton of UFortOutpostAnalytics) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortOutpostAnalytics()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortOutpostAnalytics_Statics::ClassParams);
+	}
+	return OuterClass;
+}

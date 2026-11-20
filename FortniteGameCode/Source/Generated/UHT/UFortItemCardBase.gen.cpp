@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortItemCardBase_PortBrushSize()
 	}
 	return ReturnFunction;
 }
+
+class UFortItemCardBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortItemCardBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortItemCardBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortItemCardBase_PortBrushSize, "PortBrushSize" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortItemCardBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CBFF00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortItemCardBase_Statics::ClassParams = { &UFortItemCardBase::StaticClass, Z_Construct_UClass_UFortItemCardBase_Statics::DependentSingletons, 2, 0x00A00081u, Z_Construct_UClass_UFortItemCardBase_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortItemCardBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C1990 (end 0x028C19BF)
+// Original VA: 0x00000001428C1990 | File offset: 0x028C0F90
+// Recovery: confirmed (UHT singleton of UFortItemCardBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortItemCardBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortItemCardBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

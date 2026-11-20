@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActivePar
 	}
 	return ReturnFunction;
 }
+
+class AFortGameplayCueNotify_Looping
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortGameplayCueNotify_Looping_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortGameplayCueNotify_Looping_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetSpawnTransform, "GetSpawnTransform" },
+	{ &Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetTargetComponent, "GetTargetComponent" },
+	{ &Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStartParticleSystemSpawned, "OnStartParticleSystemSpawned" },
+	{ &Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnStopParticleSystemSpawned, "OnStopParticleSystemSpawned" },
+	{ &Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActiveParticleSystemActivate, "OnWhileActiveParticleSystemActivate" },
+	{ &Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActiveParticleSystemDeactivate, "OnWhileActiveParticleSystemDeactivate" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortGameplayCueNotify_Looping_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03326790
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortGameplayCueNotify_Looping_Statics::ClassParams = { &AFortGameplayCueNotify_Looping::StaticClass, Z_Construct_UClass_AFortGameplayCueNotify_Looping_Statics::DependentSingletons, 2, 0x00800080u, Z_Construct_UClass_AFortGameplayCueNotify_Looping_Statics::FuncInfo, 6, Z_Construct_UClass_AFortGameplayCueNotify_Looping_Statics::PropPointers, 15, nullptr, &Z_Construct_UClass_AFortGameplayCueNotify_Looping_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7A90 (end 0x00FE7ABF)
+// Original VA: 0x0000000140FE7A90 | File offset: 0x00FE7090
+// Recovery: confirmed (UHT singleton of AFortGameplayCueNotify_Looping) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortGameplayCueNotify_Looping()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortGameplayCueNotify_Looping_Statics::ClassParams);
+	}
+	return OuterClass;
+}

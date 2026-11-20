@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UPlatformInterfaceWebResponse_GetNumHeaders()
 	}
 	return ReturnFunction;
 }
+
+class UPlatformInterfaceWebResponse
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UPlatformInterfaceWebResponse_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UPlatformInterfaceWebResponse_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UPlatformInterfaceWebResponse_GetHeader, "GetHeader" },
+	{ &Z_Construct_UFunction_UPlatformInterfaceWebResponse_GetHeaderValue, "GetHeaderValue" },
+	{ &Z_Construct_UFunction_UPlatformInterfaceWebResponse_GetNumHeaders, "GetNumHeaders" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UPlatformInterfaceWebResponse_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03983AD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UPlatformInterfaceWebResponse_Statics::ClassParams = { &UPlatformInterfaceWebResponse::StaticClass, Z_Construct_UClass_UPlatformInterfaceWebResponse_Statics::DependentSingletons, 2, 0x00080088u, Z_Construct_UClass_UPlatformInterfaceWebResponse_Statics::FuncInfo, 3, Z_Construct_UClass_UPlatformInterfaceWebResponse_Statics::PropPointers, 6, nullptr, &Z_Construct_UClass_UPlatformInterfaceWebResponse_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AA020 (end 0x024AA04F)
+// Original VA: 0x00000001424AA020 | File offset: 0x024A9620
+// Recovery: confirmed (UHT singleton of UPlatformInterfaceWebResponse) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UPlatformInterfaceWebResponse()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UPlatformInterfaceWebResponse_Statics::ClassParams);
+	}
+	return OuterClass;
+}

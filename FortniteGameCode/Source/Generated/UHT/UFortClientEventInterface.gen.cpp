@@ -25,3 +25,34 @@ UFunction* Z_Construct_UFunction_UFortClientEventInterface_BlueprintCustomHandle
 	}
 	return ReturnFunction;
 }
+
+class UFortClientEventInterface
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortClientEventInterface_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortClientEventInterface_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortClientEventInterface_BlueprintCustomHandleClientEvent, "BlueprintCustomHandleClientEvent" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortClientEventInterface_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032E6ED0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortClientEventInterface_Statics::ClassParams = { &UFortClientEventInterface::StaticClass, Z_Construct_UClass_UFortClientEventInterface_Statics::DependentSingletons, 2, 0x00104081u, Z_Construct_UClass_UFortClientEventInterface_Statics::FuncInfo, 1, nullptr, 0, nullptr, &Z_Construct_UClass_UFortClientEventInterface_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC0430 (end 0x00FC045F)
+// Original VA: 0x0000000140FC0430 | File offset: 0x00FBFA30
+// Recovery: confirmed (UHT singleton of UFortClientEventInterface) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortClientEventInterface()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortClientEventInterface_Statics::ClassParams);
+	}
+	return OuterClass;
+}

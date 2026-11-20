@@ -123,3 +123,41 @@ UFunction* Z_Construct_UFunction_UFortQuestTrackerList_HandleSizeEstimateChanged
 	}
 	return ReturnFunction;
 }
+
+class UFortQuestTrackerList
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortQuestTrackerList_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortQuestTrackerList_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortQuestTrackerList_GetQuestsToDisplay, "GetQuestsToDisplay" },
+	{ &Z_Construct_UFunction_UFortQuestTrackerList_HandleHUDFinalObjectiveHidden, "HandleHUDFinalObjectiveHidden" },
+	{ &Z_Construct_UFunction_UFortQuestTrackerList_HandlePinnedQuestsChanged, "HandlePinnedQuestsChanged" },
+	{ &Z_Construct_UFunction_UFortQuestTrackerList_HandleQuestEntryCreated, "HandleQuestEntryCreated" },
+	{ &Z_Construct_UFunction_UFortQuestTrackerList_HandleQuestsUpdated, "HandleQuestsUpdated" },
+	{ &Z_Construct_UFunction_UFortQuestTrackerList_HandleSizeEstimateChanged, "HandleSizeEstimateChanged" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortQuestTrackerList_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D099F0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortQuestTrackerList_Statics::ClassParams = { &UFortQuestTrackerList::StaticClass, Z_Construct_UClass_UFortQuestTrackerList_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortQuestTrackerList_Statics::FuncInfo, 6, Z_Construct_UClass_UFortQuestTrackerList_Statics::PropPointers, 5, nullptr, &Z_Construct_UClass_UFortQuestTrackerList_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortQuestTrackerList_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED380 (end 0x028ED3AF)
+// Original VA: 0x00000001428ED380 | File offset: 0x028EC980
+// Recovery: confirmed (UHT singleton of UFortQuestTrackerList) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortQuestTrackerList()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortQuestTrackerList_Statics::ClassParams);
+	}
+	return OuterClass;
+}

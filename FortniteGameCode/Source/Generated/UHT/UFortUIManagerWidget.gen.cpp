@@ -463,3 +463,58 @@ UFunction* Z_Construct_UFunction_UFortUIManagerWidget_UpdateStateWidgetContent()
 	}
 	return ReturnFunction;
 }
+
+class UFortUIManagerWidget
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortUIManagerWidget_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortUIManagerWidget_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_CreateNotification, "CreateNotification" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_CreateUIStateTrigger, "CreateUIStateTrigger" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_DisplayErrorDialog, "DisplayErrorDialog" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_DisplayStateContent, "DisplayStateContent" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_GetCurrentUIStateWidget, "GetCurrentUIStateWidget" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_GetNavigationManager, "GetNavigationManager" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_GetUIManagerWidget, "GetUIManagerWidget" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_IsStateContentDisplayed, "IsStateContentDisplayed" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_KillConfirmationDialog, "KillConfirmationDialog" },
+	{ &Z_Construct_UDelegateFunction_UFortUIManagerWidget_OnBeginSpokenDialog__DelegateSignature, "OnBeginSpokenDialog__DelegateSignature" },
+	{ &Z_Construct_UDelegateFunction_UFortUIManagerWidget_OnEndSpokenDialog__DelegateSignature, "OnEndSpokenDialog__DelegateSignature" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_OnShowConfirmation, "OnShowConfirmation" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_OnShowConfirmation_NUI, "OnShowConfirmation_NUI" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_OnStateStarted, "OnStateStarted" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_QueueActionPanelIntoModalLayer, "QueueActionPanelIntoModalLayer" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_QueueActivatablePanelIntoModalLayer, "QueueActivatablePanelIntoModalLayer" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_RegisterStateTrigger, "RegisterStateTrigger" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_ReleaseNotification, "ReleaseNotification" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_SetStateContentDisplayed, "SetStateContentDisplayed" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_ShowErrorDialog, "ShowErrorDialog" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_UnregisterStateTrigger, "UnregisterStateTrigger" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget_UpdateStateWidgetContent, "UpdateStateWidgetContent" },
+	{ &Z_Construct_UFunction_UFortUIManagerWidget__BPGetCurrentUIState, "_BPGetCurrentUIState" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortUIManagerWidget_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D3DC70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortUIManagerWidget_Statics::ClassParams = { &UFortUIManagerWidget::StaticClass, Z_Construct_UClass_UFortUIManagerWidget_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortUIManagerWidget_Statics::FuncInfo, 23, Z_Construct_UClass_UFortUIManagerWidget_Statics::PropPointers, 17, nullptr, &Z_Construct_UClass_UFortUIManagerWidget_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_UFortUIManagerWidget_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290AA00 (end 0x0290AA2F)
+// Original VA: 0x000000014290AA00 | File offset: 0x0290A000
+// Recovery: confirmed (UHT singleton of UFortUIManagerWidget) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortUIManagerWidget()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortUIManagerWidget_Statics::ClassParams);
+	}
+	return OuterClass;
+}

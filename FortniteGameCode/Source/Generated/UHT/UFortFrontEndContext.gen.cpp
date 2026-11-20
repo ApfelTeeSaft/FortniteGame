@@ -1614,3 +1614,115 @@ UFunction* Z_Construct_UFunction_UFortFrontEndContext_ViewVaultItemFromDefinitio
 	}
 	return ReturnFunction;
 }
+
+class UFortFrontEndContext
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortFrontEndContext_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortFrontEndContext_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortFrontEndContext_AreProfilesAvailableToWIFE, "AreProfilesAvailableToWIFE" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_BindToFeatureStateAndInitialize, "BindToFeatureStateAndInitialize" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_BroadcastMainTabSelected, "BroadcastMainTabSelected" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_CanCompleteQuestInActiveTileMission, "CanCompleteQuestInActiveTileMission" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_CanCompleteQuestInFocusedOrActiveTileMission, "CanCompleteQuestInFocusedOrActiveTileMission" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_CanFindTileForQuest, "CanFindTileForQuest" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_CanShowLockerSlotType, "CanShowLockerSlotType" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_ClearSelectedTheater, "ClearSelectedTheater" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_ForceSetFeatureState, "ForceSetFeatureState" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetAccountLevelUpRewards, "GetAccountLevelUpRewards" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetActiveTile, "GetActiveTile" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetActiveTileMissionDetails, "GetActiveTileMissionDetails" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetAllTheaterData, "GetAllTheaterData" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetAttributeDescription, "GetAttributeDescription" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetAttributeDisplayName, "GetAttributeDisplayName" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetAttributeIcon, "GetAttributeIcon" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetAvailableAthenaPlaylists, "GetAvailableAthenaPlaylists" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetAvailableDifficulties, "GetAvailableDifficulties" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetCurrentTheaterName, "GetCurrentTheaterName" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetDefenderSquadIDByTheaterID, "GetDefenderSquadIDByTheaterID" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetDesiredPlayButtonCamera, "GetDesiredPlayButtonCamera" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetFabricatorDisintegrationSecondsRemaining, "GetFabricatorDisintegrationSecondsRemaining" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetFabricatorIncomingGooAmount, "GetFabricatorIncomingGooAmount" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetFabricatorStoredGooAmount, "GetFabricatorStoredGooAmount" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetFeatureState, "GetFeatureState" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetFeatureStateReasonText, "GetFeatureStateReasonText" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetFocusedOrActiveTile, "GetFocusedOrActiveTile" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetFocusedOrActiveTileMissionDetails, "GetFocusedOrActiveTileMissionDetails" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetFocusedTile, "GetFocusedTile" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetFrontEndCamera, "GetFrontEndCamera" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetHarvestingToolForLevel, "GetHarvestingToolForLevel" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetHeroPlayerPawnByIndex, "GetHeroPlayerPawnByIndex" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetHeroPlayerPawnForCurrentDisplayedItem, "GetHeroPlayerPawnForCurrentDisplayedItem" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetItemFromItemQuantityPair, "GetItemFromItemQuantityPair" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetLobbyBackgroundLevelName, "GetLobbyBackgroundLevelName" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetMCPRegion, "GetMCPRegion" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetMaxAvailableDifficulty, "GetMaxAvailableDifficulty" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetMeshForCurrentDisplayedItem, "GetMeshForCurrentDisplayedItem" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetOutpostCoreLevelByItemDefinition, "GetOutpostCoreLevelByItemDefinition" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetOutpostCoreLevelByTheaterId, "GetOutpostCoreLevelByTheaterId" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetOutpostStructureMaxLevel, "GetOutpostStructureMaxLevel" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetOutpostStructureUpgradeCost, "GetOutpostStructureUpgradeCost" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetRecommendedDifficultyIndexesInAvailableDifficulties, "GetRecommendedDifficultyIndexesInAvailableDifficulties" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetRecommendedTeamDifficulties, "GetRecommendedTeamDifficulties" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetRequirementText, "GetRequirementText" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetReturnToFrontendBehavior, "GetReturnToFrontendBehavior" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetSelectableGadgets, "GetSelectableGadgets" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetSelectedTheaterData, "GetSelectedTheaterData" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetSelectedTheaterId, "GetSelectedTheaterId" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetTheaterData, "GetTheaterData" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetTheaterName, "GetTheaterName" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetTheaterRegionCount, "GetTheaterRegionCount" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetTheaterType, "GetTheaterType" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetTileMissionDetails, "GetTileMissionDetails" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_GetUITestingClass, "GetUITestingClass" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_HideAthenaStoreNewItemBang, "HideAthenaStoreNewItemBang" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_IsActiveTileMissionValid, "IsActiveTileMissionValid" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_PlayEvolutionEffect, "PlayEvolutionEffect" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_PlayLevelUpEffect, "PlayLevelUpEffect" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_PushContentWidget_Adv, "PushContentWidget_Adv" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_RunBenchmarkAndApplyBestSettings, "RunBenchmarkAndApplyBestSettings" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SelectDefaultTheater, "SelectDefaultTheater" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SelectDefaultTheaterTile, "SelectDefaultTheaterTile" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SelectGadgetForSlot, "SelectGadgetForSlot" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SelectTileForQuest, "SelectTileForQuest" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SendFrontendEnteredEvent, "SendFrontendEnteredEvent" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SendPlayQuestAnalytic, "SendPlayQuestAnalytic" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SetFrontEndCamera, "SetFrontEndCamera" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SetFrontEndVisibility, "SetFrontEndVisibility" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SetHeroChoice, "SetHeroChoice" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SetPersonalHeroChoice, "SetPersonalHeroChoice" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SetSeenLoginMessage, "SetSeenLoginMessage" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SetSelectedTheater, "SetSelectedTheater" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_ShouldRunInitialBenchmark, "ShouldRunInitialBenchmark" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_ShouldShowLoginMessage, "ShouldShowLoginMessage" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_ShowAthenaStoreNewItemBang, "ShowAthenaStoreNewItemBang" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_SkipInitialBenchmark, "SkipInitialBenchmark" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_TryGetAttributeInfo, "TryGetAttributeInfo" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_UpdateNewAccountItemBangCounts, "UpdateNewAccountItemBangCounts" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_ViewVaultItem, "ViewVaultItem" },
+	{ &Z_Construct_UFunction_UFortFrontEndContext_ViewVaultItemFromDefinition, "ViewVaultItemFromDefinition" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortFrontEndContext_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C92140
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortFrontEndContext_Statics::ClassParams = { &UFortFrontEndContext::StaticClass, Z_Construct_UClass_UFortFrontEndContext_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortFrontEndContext_Statics::FuncInfo, 81, Z_Construct_UClass_UFortFrontEndContext_Statics::PropPointers, 29, nullptr, &Z_Construct_UClass_UFortFrontEndContext_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A37D0 (end 0x028A37FF)
+// Original VA: 0x00000001428A37D0 | File offset: 0x028A2DD0
+// Recovery: confirmed (UHT singleton of UFortFrontEndContext) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortFrontEndContext()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortFrontEndContext_Statics::ClassParams);
+	}
+	return OuterClass;
+}

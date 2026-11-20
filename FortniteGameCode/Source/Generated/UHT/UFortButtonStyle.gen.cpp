@@ -125,3 +125,40 @@ UFunction* Z_Construct_UFunction_UFortButtonStyle_GetMarginBySizeFromMultiSizeMa
 	}
 	return ReturnFunction;
 }
+
+class UFortButtonStyle
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortButtonStyle_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortButtonStyle_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortButtonStyle_GetBrushBySizeFromMultiSizeBrush, "GetBrushBySizeFromMultiSizeBrush" },
+	{ &Z_Construct_UFunction_UFortButtonStyle_GetButtonPaddingBySize, "GetButtonPaddingBySize" },
+	{ &Z_Construct_UFunction_UFortButtonStyle_GetCustomPaddingBySize, "GetCustomPaddingBySize" },
+	{ &Z_Construct_UFunction_UFortButtonStyle_GetFontBySize, "GetFontBySize" },
+	{ &Z_Construct_UFunction_UFortButtonStyle_GetFontBySizeFromMultiSizeFont, "GetFontBySizeFromMultiSizeFont" },
+	{ &Z_Construct_UFunction_UFortButtonStyle_GetMarginBySizeFromMultiSizeMargin, "GetMarginBySizeFromMultiSizeMargin" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortButtonStyle_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C75550
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortButtonStyle_Statics::ClassParams = { &UFortButtonStyle::StaticClass, Z_Construct_UClass_UFortButtonStyle_Statics::DependentSingletons, 2, 0x00000081u, Z_Construct_UClass_UFortButtonStyle_Statics::FuncInfo, 6, Z_Construct_UClass_UFortButtonStyle_Statics::PropPointers, 12, nullptr, &Z_Construct_UClass_UFortButtonStyle_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028944F0 (end 0x0289451F)
+// Original VA: 0x00000001428944F0 | File offset: 0x02893AF0
+// Recovery: confirmed (UHT singleton of UFortButtonStyle) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortButtonStyle()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortButtonStyle_Statics::ClassParams);
+	}
+	return OuterClass;
+}

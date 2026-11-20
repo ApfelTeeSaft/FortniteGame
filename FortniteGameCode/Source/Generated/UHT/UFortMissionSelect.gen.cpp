@@ -25,3 +25,35 @@ UFunction* Z_Construct_UFunction_UFortMissionSelect_NavigateMissionTiles()
 	}
 	return ReturnFunction;
 }
+
+class UFortMissionSelect
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortMissionSelect_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortMissionSelect_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortMissionSelect_NavigateMissionTiles, "NavigateMissionTiles" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortMissionSelect_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03CE5C00
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortMissionSelect_Statics::ClassParams = { &UFortMissionSelect::StaticClass, Z_Construct_UClass_UFortMissionSelect_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UFortMissionSelect_Statics::FuncInfo, 1, Z_Construct_UClass_UFortMissionSelect_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UFortMissionSelect_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D74C0 (end 0x028D74EF)
+// Original VA: 0x00000001428D74C0 | File offset: 0x028D6AC0
+// Recovery: confirmed (UHT singleton of UFortMissionSelect) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortMissionSelect()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortMissionSelect_Statics::ClassParams);
+	}
+	return OuterClass;
+}

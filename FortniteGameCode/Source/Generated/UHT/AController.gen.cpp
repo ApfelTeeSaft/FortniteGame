@@ -518,3 +518,61 @@ UFunction* Z_Construct_UFunction_AController_UnPossess()
 	}
 	return ReturnFunction;
 }
+
+class AController
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AController_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AController_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AController_CastToPlayerController, "CastToPlayerController" },
+	{ &Z_Construct_UFunction_AController_ClientSetLocation, "ClientSetLocation" },
+	{ &Z_Construct_UFunction_AController_ClientSetRotation, "ClientSetRotation" },
+	{ &Z_Construct_UFunction_AController_GetControlRotation, "GetControlRotation" },
+	{ &Z_Construct_UFunction_AController_GetDesiredRotation, "GetDesiredRotation" },
+	{ &Z_Construct_UFunction_AController_GetViewTarget, "GetViewTarget" },
+	{ &Z_Construct_UFunction_AController_IsLocalController, "IsLocalController" },
+	{ &Z_Construct_UFunction_AController_IsLocalPlayerController, "IsLocalPlayerController" },
+	{ &Z_Construct_UFunction_AController_IsLookInputIgnored, "IsLookInputIgnored" },
+	{ &Z_Construct_UFunction_AController_IsMoveInputIgnored, "IsMoveInputIgnored" },
+	{ &Z_Construct_UFunction_AController_IsPlayerController, "IsPlayerController" },
+	{ &Z_Construct_UFunction_AController_K2_GetPawn, "K2_GetPawn" },
+	{ &Z_Construct_UFunction_AController_LineOfSightTo, "LineOfSightTo" },
+	{ &Z_Construct_UFunction_AController_OnRep_Pawn, "OnRep_Pawn" },
+	{ &Z_Construct_UFunction_AController_OnRep_PlayerState, "OnRep_PlayerState" },
+	{ &Z_Construct_UFunction_AController_Possess, "Possess" },
+	{ &Z_Construct_UFunction_AController_ReceiveInstigatedAnyDamage, "ReceiveInstigatedAnyDamage" },
+	{ &Z_Construct_UFunction_AController_ResetIgnoreInputFlags, "ResetIgnoreInputFlags" },
+	{ &Z_Construct_UFunction_AController_ResetIgnoreLookInput, "ResetIgnoreLookInput" },
+	{ &Z_Construct_UFunction_AController_ResetIgnoreMoveInput, "ResetIgnoreMoveInput" },
+	{ &Z_Construct_UFunction_AController_SetControlRotation, "SetControlRotation" },
+	{ &Z_Construct_UFunction_AController_SetIgnoreLookInput, "SetIgnoreLookInput" },
+	{ &Z_Construct_UFunction_AController_SetIgnoreMoveInput, "SetIgnoreMoveInput" },
+	{ &Z_Construct_UFunction_AController_SetInitialLocationAndRotation, "SetInitialLocationAndRotation" },
+	{ &Z_Construct_UFunction_AController_StopMovement, "StopMovement" },
+	{ &Z_Construct_UFunction_AController_UnPossess, "UnPossess" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AController_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x038C8B30
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AController_Statics::ClassParams = { &AController::StaticClass, Z_Construct_UClass_AController_Statics::DependentSingletons, 2, 0x00900281u, Z_Construct_UClass_AController_Statics::FuncInfo, 26, Z_Construct_UClass_AController_Statics::PropPointers, 9, nullptr, &Z_Construct_UClass_AController_Statics::StaticCppClassTypeInfo, Z_Construct_UClass_AController_Statics::InterfaceParams, 1 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7780 (end 0x023F77AF)
+// Original VA: 0x00000001423F7780 | File offset: 0x023F6D80
+// Recovery: confirmed (UHT singleton of AController) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AController()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AController_Statics::ClassParams);
+	}
+	return OuterClass;
+}

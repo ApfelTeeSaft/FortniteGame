@@ -258,3 +258,46 @@ UFunction* Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_ServerReleaseT
 	}
 	return ReturnFunction;
 }
+
+class AFortCustomizableAbilityDecoTool
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_AFortCustomizableAbilityDecoTool_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_AFortCustomizableAbilityDecoTool_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_BPOnEquip, "BPOnEquip" },
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_BPOnSetDecoObjectPreview, "BPOnSetDecoObjectPreview" },
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_BPOnUnEquip, "BPOnUnEquip" },
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_BPPressSecondaryFire, "BPPressSecondaryFire" },
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_BPPressTrigger, "BPPressTrigger" },
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_BPReleaseSecondaryFire, "BPReleaseSecondaryFire" },
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_BPReleaseTrigger, "BPReleaseTrigger" },
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_BPServerPressSecondaryFire, "BPServerPressSecondaryFire" },
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_BPServerReleaseSecondaryFire, "BPServerReleaseSecondaryFire" },
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_ServerPressSecondaryFire, "ServerPressSecondaryFire" },
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_ServerPressTrigger, "ServerPressTrigger" },
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_ServerReleaseSecondaryFire, "ServerReleaseSecondaryFire" },
+	{ &Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_ServerReleaseTrigger, "ServerReleaseTrigger" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_AFortCustomizableAbilityDecoTool_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x032F8890
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_AFortCustomizableAbilityDecoTool_Statics::ClassParams = { &AFortCustomizableAbilityDecoTool::StaticClass, Z_Construct_UClass_AFortCustomizableAbilityDecoTool_Statics::DependentSingletons, 2, 0x00880080u, Z_Construct_UClass_AFortCustomizableAbilityDecoTool_Statics::FuncInfo, 13, nullptr, 0, nullptr, &Z_Construct_UClass_AFortCustomizableAbilityDecoTool_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB7E0 (end 0x00FCB80F)
+// Original VA: 0x0000000140FCB7E0 | File offset: 0x00FCADE0
+// Recovery: confirmed (UHT singleton of AFortCustomizableAbilityDecoTool) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_AFortCustomizableAbilityDecoTool()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_AFortCustomizableAbilityDecoTool_Statics::ClassParams);
+	}
+	return OuterClass;
+}

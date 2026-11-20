@@ -44,3 +44,36 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitInputRelease_WaitInputRelease(
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_WaitInputRelease
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_WaitInputRelease_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_WaitInputRelease_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_WaitInputRelease_OnReleaseCallback, "OnReleaseCallback" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitInputRelease_WaitInputRelease, "WaitInputRelease" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_WaitInputRelease_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F331E0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_WaitInputRelease_Statics::ClassParams = { &UAbilityTask_WaitInputRelease::StaticClass, Z_Construct_UClass_UAbilityTask_WaitInputRelease_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_WaitInputRelease_Statics::FuncInfo, 2, Z_Construct_UClass_UAbilityTask_WaitInputRelease_Statics::PropPointers, 1, "Game", &Z_Construct_UClass_UAbilityTask_WaitInputRelease_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D7A0 (end 0x0054D7CF)
+// Original VA: 0x000000014054D7A0 | File offset: 0x0054CDA0
+// Recovery: confirmed (UHT singleton of UAbilityTask_WaitInputRelease) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_WaitInputRelease()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_WaitInputRelease_Statics::ClassParams);
+	}
+	return OuterClass;
+}

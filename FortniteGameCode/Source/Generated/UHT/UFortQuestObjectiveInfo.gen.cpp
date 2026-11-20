@@ -124,3 +124,40 @@ UFunction* Z_Construct_UFunction_UFortQuestObjectiveInfo_IsVisibleToUser()
 	}
 	return ReturnFunction;
 }
+
+class UFortQuestObjectiveInfo
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortQuestObjectiveInfo_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortQuestObjectiveInfo_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortQuestObjectiveInfo_DisplayDynamicQuestUpdate, "DisplayDynamicQuestUpdate" },
+	{ &Z_Construct_UFunction_UFortQuestObjectiveInfo_GetOwningQuest, "GetOwningQuest" },
+	{ &Z_Construct_UFunction_UFortQuestObjectiveInfo_HasCompleted, "HasCompleted" },
+	{ &Z_Construct_UFunction_UFortQuestObjectiveInfo_IsActive, "IsActive" },
+	{ &Z_Construct_UFunction_UFortQuestObjectiveInfo_IsInProgress, "IsInProgress" },
+	{ &Z_Construct_UFunction_UFortQuestObjectiveInfo_IsVisibleToUser, "IsVisibleToUser" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortQuestObjectiveInfo_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x033ED4A0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortQuestObjectiveInfo_Statics::ClassParams = { &UFortQuestObjectiveInfo::StaticClass, Z_Construct_UClass_UFortQuestObjectiveInfo_Statics::DependentSingletons, 2, 0x00100080u, Z_Construct_UClass_UFortQuestObjectiveInfo_Statics::FuncInfo, 6, Z_Construct_UClass_UFortQuestObjectiveInfo_Statics::PropPointers, 14, nullptr, &Z_Construct_UClass_UFortQuestObjectiveInfo_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109DB70 (end 0x0109DB9F)
+// Original VA: 0x000000014109DB70 | File offset: 0x0109D170
+// Recovery: confirmed (UHT singleton of UFortQuestObjectiveInfo) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortQuestObjectiveInfo()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortQuestObjectiveInfo_Statics::ClassParams);
+	}
+	return OuterClass;
+}

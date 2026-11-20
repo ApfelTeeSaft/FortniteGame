@@ -183,3 +183,43 @@ UFunction* Z_Construct_UFunction_UAthenaLeaderboardScreenBase_OnUpdateTabButtonT
 	}
 	return ReturnFunction;
 }
+
+class UAthenaLeaderboardScreenBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaLeaderboardScreenBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaLeaderboardScreenBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaLeaderboardScreenBase_CanShowFriendsOnlyLeaderboard, "CanShowFriendsOnlyLeaderboard" },
+	{ &Z_Construct_UFunction_UAthenaLeaderboardScreenBase_OnActiveLeaderboardTabChanged, "OnActiveLeaderboardTabChanged" },
+	{ &Z_Construct_UFunction_UAthenaLeaderboardScreenBase_OnFriendsFilterChanged, "OnFriendsFilterChanged" },
+	{ &Z_Construct_UFunction_UAthenaLeaderboardScreenBase_OnMatchTypeChanged, "OnMatchTypeChanged" },
+	{ &Z_Construct_UFunction_UAthenaLeaderboardScreenBase_OnQueryFinished, "OnQueryFinished" },
+	{ &Z_Construct_UFunction_UAthenaLeaderboardScreenBase_OnQueryStarted, "OnQueryStarted" },
+	{ &Z_Construct_UFunction_UAthenaLeaderboardScreenBase_OnUpdateLeaderboardListUI, "OnUpdateLeaderboardListUI" },
+	{ &Z_Construct_UFunction_UAthenaLeaderboardScreenBase_OnUpdateListHeader, "OnUpdateListHeader" },
+	{ &Z_Construct_UFunction_UAthenaLeaderboardScreenBase_OnUpdateTabButtonText, "OnUpdateTabButtonText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaLeaderboardScreenBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C53BE0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaLeaderboardScreenBase_Statics::ClassParams = { &UAthenaLeaderboardScreenBase::StaticClass, Z_Construct_UClass_UAthenaLeaderboardScreenBase_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UAthenaLeaderboardScreenBase_Statics::FuncInfo, 9, Z_Construct_UClass_UAthenaLeaderboardScreenBase_Statics::PropPointers, 16, nullptr, &Z_Construct_UClass_UAthenaLeaderboardScreenBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287F5F0 (end 0x0287F61F)
+// Original VA: 0x000000014287F5F0 | File offset: 0x0287EBF0
+// Recovery: confirmed (UHT singleton of UAthenaLeaderboardScreenBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaLeaderboardScreenBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaLeaderboardScreenBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}

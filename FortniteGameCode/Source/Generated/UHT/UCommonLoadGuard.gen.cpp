@@ -105,3 +105,39 @@ UFunction* Z_Construct_UFunction_UCommonLoadGuard_SetLoadingText()
 	}
 	return ReturnFunction;
 }
+
+class UCommonLoadGuard
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UCommonLoadGuard_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UCommonLoadGuard_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UCommonLoadGuard_BP_GuardAndLoadAsset, "BP_GuardAndLoadAsset" },
+	{ &Z_Construct_UFunction_UCommonLoadGuard_IsLoading, "IsLoading" },
+	{ &Z_Construct_UDelegateFunction_UCommonLoadGuard_OnAssetLoaded__DelegateSignature, "OnAssetLoaded__DelegateSignature" },
+	{ &Z_Construct_UFunction_UCommonLoadGuard_SetIsLoading, "SetIsLoading" },
+	{ &Z_Construct_UFunction_UCommonLoadGuard_SetLoadingText, "SetLoadingText" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UCommonLoadGuard_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02E81FC0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UCommonLoadGuard_Statics::ClassParams = { &UCommonLoadGuard::StaticClass, Z_Construct_UClass_UCommonLoadGuard_Statics::DependentSingletons, 2, 0x00B00086u, Z_Construct_UClass_UCommonLoadGuard_Statics::FuncInfo, 5, Z_Construct_UClass_UCommonLoadGuard_Statics::PropPointers, 7, "CommonUI", &Z_Construct_UClass_UCommonLoadGuard_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA480 (end 0x002CA4AF)
+// Original VA: 0x00000001402CA480 | File offset: 0x002C9A80
+// Recovery: confirmed (UHT singleton of UCommonLoadGuard) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UCommonLoadGuard()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UCommonLoadGuard_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -201,3 +201,44 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotDetailsPanel_TryGetItemToPreviewI
 	}
 	return ReturnFunction;
 }
+
+class UFortSquadSlotDetailsPanel
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortSquadSlotDetailsPanel_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortSquadSlotDetailsPanel_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortSquadSlotDetailsPanel_GetIdOfSquadSlotToManageBP, "GetIdOfSquadSlotToManageBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotDetailsPanel_GetItemInSquadSlotBP, "GetItemInSquadSlotBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotDetailsPanel_GetSlottingRestrictionReasons, "GetSlottingRestrictionReasons" },
+	{ &Z_Construct_UFunction_UFortSquadSlotDetailsPanel_HandleDifferentSquadSlotSetBP, "HandleDifferentSquadSlotSetBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotDetailsPanel_HandleSquadSlotRestrictionFactorsChangedBP, "HandleSquadSlotRestrictionFactorsChangedBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotDetailsPanel_HandleSquadSlotStateChangedBP, "HandleSquadSlotStateChangedBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotDetailsPanel_IsSquadSlotLockedBP, "IsSquadSlotLockedBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotDetailsPanel_SetIdOfSquadSlotToManageBP, "SetIdOfSquadSlotToManageBP" },
+	{ &Z_Construct_UFunction_UFortSquadSlotDetailsPanel_SetScrollWidget, "SetScrollWidget" },
+	{ &Z_Construct_UFunction_UFortSquadSlotDetailsPanel_TryGetItemToPreviewInSlot, "TryGetItemToPreviewInSlot" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortSquadSlotDetailsPanel_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03D21C60
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortSquadSlotDetailsPanel_Statics::ClassParams = { &UFortSquadSlotDetailsPanel::StaticClass, Z_Construct_UClass_UFortSquadSlotDetailsPanel_Statics::DependentSingletons, 2, 0x00A01081u, Z_Construct_UClass_UFortSquadSlotDetailsPanel_Statics::FuncInfo, 10, Z_Construct_UClass_UFortSquadSlotDetailsPanel_Statics::PropPointers, 2, nullptr, &Z_Construct_UClass_UFortSquadSlotDetailsPanel_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB530 (end 0x028FB55F)
+// Original VA: 0x00000001428FB530 | File offset: 0x028FAB30
+// Recovery: confirmed (UHT singleton of UFortSquadSlotDetailsPanel) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortSquadSlotDetailsPanel()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortSquadSlotDetailsPanel_Statics::ClassParams);
+	}
+	return OuterClass;
+}

@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectStackChange_Wait
 	}
 	return ReturnFunction;
 }
+
+class UAbilityTask_WaitGameplayEffectStackChange
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAbilityTask_WaitGameplayEffectStackChange_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAbilityTask_WaitGameplayEffectStackChange_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectStackChange_OnGameplayEffectStackChange, "OnGameplayEffectStackChange" },
+	{ &Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectStackChange_WaitForGameplayEffectStackChange, "WaitForGameplayEffectStackChange" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAbilityTask_WaitGameplayEffectStackChange_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x02F32D20
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAbilityTask_WaitGameplayEffectStackChange_Statics::ClassParams = { &UAbilityTask_WaitGameplayEffectStackChange::StaticClass, Z_Construct_UClass_UAbilityTask_WaitGameplayEffectStackChange_Statics::DependentSingletons, 2, 0x00900084u, Z_Construct_UClass_UAbilityTask_WaitGameplayEffectStackChange_Statics::FuncInfo, 2, Z_Construct_UClass_UAbilityTask_WaitGameplayEffectStackChange_Statics::PropPointers, 2, "Game", &Z_Construct_UClass_UAbilityTask_WaitGameplayEffectStackChange_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D670 (end 0x0054D69F)
+// Original VA: 0x000000014054D670 | File offset: 0x0054CC70
+// Recovery: confirmed (UHT singleton of UAbilityTask_WaitGameplayEffectStackChange) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayEffectStackChange()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAbilityTask_WaitGameplayEffectStackChange_Statics::ClassParams);
+	}
+	return OuterClass;
+}

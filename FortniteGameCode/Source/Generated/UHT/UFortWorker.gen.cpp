@@ -65,3 +65,37 @@ UFunction* Z_Construct_UFunction_UFortWorker_GetWorkerTypeBP()
 	}
 	return ReturnFunction;
 }
+
+class UFortWorker
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UFortWorker_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UFortWorker_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UFortWorker_GetSecondaryCategory, "GetSecondaryCategory" },
+	{ &Z_Construct_UFunction_UFortWorker_GetTertiaryCategory, "GetTertiaryCategory" },
+	{ &Z_Construct_UFunction_UFortWorker_GetWorkerTypeBP, "GetWorkerTypeBP" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UFortWorker_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03436BD0
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UFortWorker_Statics::ClassParams = { &UFortWorker::StaticClass, Z_Construct_UClass_UFortWorker_Statics::DependentSingletons, 2, 0x00900080u, Z_Construct_UClass_UFortWorker_Statics::FuncInfo, 3, Z_Construct_UClass_UFortWorker_Statics::PropPointers, 10, nullptr, &Z_Construct_UClass_UFortWorker_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC910 (end 0x010DC93F)
+// Original VA: 0x00000001410DC910 | File offset: 0x010DBF10
+// Recovery: confirmed (UHT singleton of UFortWorker) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UFortWorker()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UFortWorker_Statics::ClassParams);
+	}
+	return OuterClass;
+}

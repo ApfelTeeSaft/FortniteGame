@@ -45,3 +45,36 @@ UFunction* Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetCha
 	}
 	return ReturnFunction;
 }
+
+class UAthenaChallengeBundleScheduleScreenBase
+{
+public:
+	static UClass* StaticClass();
+};
+struct Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase_Statics
+{
+	static UObject* (*const DependentSingletons[])();  // pending
+	static const FClassFunctionLinkInfo FuncInfo[];
+	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // pending
+	static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
+	static const UE4CodeGen_Private::FClassParams ClassParams;
+};
+const FClassFunctionLinkInfo Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase_Statics::FuncInfo[] = {
+	{ &Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleItems, "GetChallengeBundleItems" },
+	{ &Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleSchedules, "GetChallengeBundleSchedules" },
+};
+const FCppClassTypeInfoStatic Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase_Statics::StaticCppClassTypeInfo = { false };
+// ClassParams: original RVA 0x03C51B70
+const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase_Statics::ClassParams = { &UAthenaChallengeBundleScheduleScreenBase::StaticClass, Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase_Statics::DependentSingletons, 2, 0x00A01080u, Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase_Statics::FuncInfo, 2, Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase_Statics::PropPointers, 1, nullptr, &Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase_Statics::StaticCppClassTypeInfo, nullptr, 0 };
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287F260 (end 0x0287F28F)
+// Original VA: 0x000000014287F260 | File offset: 0x0287E860
+// Recovery: confirmed (UHT singleton of UAthenaChallengeBundleScheduleScreenBase) | Matching: see analysis/functions-uht-classes.json
+UClass* Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase()
+{
+	static UClass* OuterClass = nullptr;
+	if (!OuterClass)
+	{
+		UE4CodeGen_Private::ConstructUClass(OuterClass, Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase_Statics::ClassParams);
+	}
+	return OuterClass;
+}
