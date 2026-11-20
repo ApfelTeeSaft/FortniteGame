@@ -48,7 +48,21 @@ def test_unwind() -> None:
     # Wrong allocation size must be reported as a mismatch.
     img3 = FakeImage({0x1000: bytes.fromhex("4055 4883ec28 488bea"), 0x2000: ui})
     assert verify_prologue(img3, 0x1000, info)[0] == "mismatch"
+    # mov [rsp+8],rbx; push rdi; sub rsp,0x20 -- small decimal displacement in capstone output
+    code4 = bytes.fromhex("48895c2408 57 4883ec20")
+    ui4 = bytes([0x01, 0x0A, 0x04, 0x00, 0x0A, 0x34, 0x06, 0x00, 0x0A, 0x32, 0x06, 0x70])
+    img4 = FakeImage({0x1000: code4, 0x2000: ui4})
+    assert verify_prologue(img4, 0x1000, parse_unwind(img4, 0x2000))[0] == "verified"
     print("unwind: ok")
+
+
+def test_literals() -> None:
+    from symbols_auto import _string_literal
+    wide = "d3ddebug".encode("utf-16le") + b"\0\0" + b"\0" * 6
+    assert _string_literal(wide) == "d3ddebug".encode("utf-16le") + b"\0\0"
+    assert _string_literal(b"abc\0\0\0\0\0") == b"abc\0"
+    assert _string_literal(bytes.fromhex("78ae0a776ff2ba4d")) is None  # GUID bytes are not a literal
+    print("literals: ok")
 
 
 def run(*args: str) -> None:
@@ -61,6 +75,7 @@ def run(*args: str) -> None:
 
 def main() -> int:
     test_unwind()
+    test_literals()
     if not DEFAULT_REFERENCE.exists():
         print("reference EXE not present: skipping manifest verification")
         return 0

@@ -86,8 +86,10 @@ def parse_unwind(img, rva: int) -> UnwindInfo:
     return ui
 
 
-_SAVE_RE = re.compile(r"qword ptr \[(?:rsp|rax|r11|rbp)(?: [+-] 0x[0-9a-f]+)?\], (\w+)$")
-_XMM_RE = re.compile(r"xmmword ptr \[(?:rsp|rax|r11|rbp)(?: [+-] 0x[0-9a-f]+)?\], (xmm\d+)$")
+# capstone prints displacements below 10 in decimal ("[rsp + 8]") and larger ones in hex.
+_DISP = r"(?: [+-] (?:0x[0-9a-f]+|\d+))?"
+_SAVE_RE = re.compile(r"qword ptr \[(?:rsp|rax|r11|rbp)" + _DISP + r"\], (\w+)$")
+_XMM_RE = re.compile(r"xmmword ptr \[(?:rsp|rax|r11|rbp)" + _DISP + r"\], (xmm\d+)$")
 
 
 def _imm(text: str) -> int | None:

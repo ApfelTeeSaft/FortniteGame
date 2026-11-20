@@ -36,8 +36,8 @@ def validate(m: dict) -> list[str]:
             errors.append(f"{rva or e['name']}: invalid match state {e.get('match')!r}")
         if e.get("match") == "exact":
             d = e.get("byte_diff") or {}
-            if not rva or e.get("reference_state") != "plaintext":
-                errors.append(f"{rva}: exact requires a located plaintext reference range")
+            if not rva or e.get("reference_state") not in ("plaintext", "decrypted"):
+                errors.append(f"{rva}: exact requires a located plaintext or validated decrypted reference range")
             if d.get("differing_bytes") != 0 or d.get("unresolved_relocations"):
                 errors.append(f"{rva}: exact requires zero differing bytes and no unresolved relocations")
             if d.get("reference_size") != d.get("candidate_size"):
@@ -61,6 +61,8 @@ def summarize(m: dict) -> dict:
         "exact_bytes": sum(int(e["end_rva"], 16) - int(e["start_rva"], 16) for e in exact),
         "states": {s: states.get(s, 0) for s in STATES},
         "exact_by_category": dict(sorted(Counter(e["category"] for e in exact).items())),
+        "exact_vs_disk": sum(1 for e in exact if e["reference_state"] == "plaintext"),
+        "exact_vs_decrypted": sum(1 for e in exact if e["reference_state"] == "decrypted"),
         "structure_only": len(structural),
         "unlocated": sum(1 for e in m["functions"] if not e.get("start_rva")),
         "manifest_digest": hashlib.sha256(
@@ -102,10 +104,10 @@ def render(s: dict) -> str:
     if fill > 0:
         lines.append(f'<rect x="{bar_x}" y="{bar_y}" width="{fill:.3f}" height="{bar_h}" rx="{min(7, fill / 2):.3f}" fill="#3fb950"/>')
     lines += [
-        f'<text x="32" y="146" {font} font-size="13" fill="#c9d1d9">exact {st["exact"]} · relocation-equivalent {st["relocation-equivalent"]} · partial {st["partial"]} · unmatched {st["unmatched"]} · body encrypted, structure matched {s["structure_only"]} · not located {s["unlocated"]}</text>',
-        f'<text x="32" y="166" {font} font-size="13" fill="#c9d1d9">exact by category: {esc(cat)} ({s["exact_bytes"]} bytes)</text>',
-        f'<text x="32" y="192" {font} font-size="11.5" fill="#8b949e">Denominator: primary .pdata functions in the main .text. Their bodies are encrypted on disk, which blocks</text>',
-        f'<text x="32" y="207" {font} font-size="11.5" fill="#8b949e">byte matching for nearly all of them. Exact = raw bytes identical over the original range, no relocation masking.</text>',
+        f'<text x="32" y="146" {font} font-size="13" fill="#c9d1d9">exact {st["exact"]} · relocation-equivalent {st["relocation-equivalent"]} · partial {st["partial"]} · unmatched {st["unmatched"]} · unknown {st["unknown"]} · not located {s["unlocated"]}</text>',
+        f'<text x="32" y="166" {font} font-size="13" fill="#c9d1d9">exact by category: {esc(cat)} ({s["exact_bytes"]} bytes) · vs on-disk bytes {s["exact_vs_disk"]}, vs decrypted image {s["exact_vs_decrypted"]}</text>',
+        f'<text x="32" y="192" {font} font-size="11.5" fill="#8b949e">Denominator: primary .pdata functions in the main .text. Bodies encrypted on disk are compared with a validated</text>',
+        f'<text x="32" y="207" {font} font-size="11.5" fill="#8b949e">decrypted image of the same build. Exact = identical bytes; relocations resolved only from independent evidence.</text>',
         f'<text x="{W - 32}" y="40" text-anchor="end" {font} font-size="11" fill="#6e7681">manifest {s["manifest_digest"]} · ref {s["reference"]}</text>',
         "</svg>",
     ]

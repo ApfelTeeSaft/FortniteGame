@@ -36,6 +36,19 @@ documented example is D3D11RHI.
 `tools/matching/msvc.py` runs the same compiler with the same switches on a single
 file, for quick experiments.
 
+## Decrypted reference (local, optional but needed for most matches)
+
+Function bodies in the shipping EXE are encrypted on disk. Supply a decrypted image of the
+same build: a PE-file dump, a raw module-region dump or a full-memory `.dmp`. Then run
+
+```
+python tools/matching/ingest_dump.py --dump <path>
+```
+
+It validates the image against the original's plaintext data and writes the normalized
+image to `local-output/reference-dump/` (ignored). Only hashes and statistics go to
+`analysis/decrypted-reference.json`. Never commit the dump or the normalized image.
+
 ## Verify
 
 ```

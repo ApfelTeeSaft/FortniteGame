@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "generated_by": "tools/matching/ingest_dump.py",
+  "reference_sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102",
+  "dump": {
+    "file_name": "FortniteClient-Win64-Shipping_dump.exe",
+    "sha256": "c81fe58ac5012381c9cf269c3652def75fc84a840c8e781c444dec90a2f97370",
+    "size": 85318656,
+    "format": "pe-file-dump",
+    "notes": []
+  },
+  "normalization": {
+    "preferred_base": "0x0000000140000000",
+    "load_delta": "0x00007FF4D0C70000",
+    "delta_votes": 200000,
+    "delta_sampled_sites": 200000,
+    "dir64_sites_total": 788029,
+    "dir64_sites_adjusted": 788029
+  },
+  "normalized_image": {
+    "size": 85340672,
+    "sha256": "538b1fa6df3b36a523b5bda99c7884fb54fccebd3ea8b911cc8f28e9716d7bcb",
+    "main_text_sha256": "e4d7ea89878222035bac7e1f352806a4edcb46e62a91eeff8cd7ee9f6eacb47a",
+    "bytes_missing": 22016
+  },
+  "validation": {
+    "rule": "byte identity over linker-produced plaintext extents after un-rebasing DIR64 sites",
+    "extents": {
+      ".rdata (IAT end .. export directory end)": {
+        "start_rva": "0x02E29A28",
+        "end_rva": "0x0416E128",
+        "bytes": 20203264,
+        "differing": 0,
+        "missing": 0
+      },
+      ".pdata (exception directory)": {
+        "start_rva": "0x04918000",
+        "end_rva": "0x04BFD984",
+        "bytes": 3037572,
+        "differing": 0,
+        "missing": 0
+      },
+      ".rsrc (resource directory)": {
+        "start_rva": "0x04C08000",
+        "end_rva": "0x04C4FD40",
+        "bytes": 294208,
+        "differing": 0,
+        "missing": 0
+      }
+    },
+    "difference_accounting": {
+      ".rdata": {
+        "bytes": 20234240,
+        "differing": 26264,
+        "missing": 0,
+        "differing_by_region": {
+          "runtime-bound IAT": 4790,
+          "inside validation extent": 0,
+          "outside extents (section slack)": 21474
+        }
+      },
+      ".pdata": {
+        "bytes": 3037696,
+        "differing": 107,
+        "missing": 0,
+        "differing_by_region": {
+          "runtime-bound IAT": 0,
+          "inside validation extent": 0,
+          "outside extents (section slack)": 107
+        }
+      },
+      ".gfids": {
+        "bytes": 512,
+        "differing": 417,
+        "missing": 0,
+        "differing_by_region": {
+          "runtime-bound IAT": 0,
+          "inside validation extent": 0,
+          "outside extents (section slack)": 417
+        }
+      },
+      "_RDATA": {
+        "bytes": 32768,
+        "differing": 199,
+        "missing": 0,
+        "differing_by_region": {
+          "runtime-bound IAT": 0,
+          "inside validation extent": 0,
+          "outside extents (section slack)": 199
+        }
+      },
+      ".rsrc": {
+        "bytes": 294400,
+        "differing": 174,
+        "missing": 0,
+        "differing_by_region": {
+          "runtime-bound IAT": 0,
+          "inside validation extent": 0,
+          "outside extents (section slack)": 174
+        }
+      }
+    },
+    "plaintext_funclets_identical": true,
+    "accepted": true
+  },
+  "coverage": {
+    "primary_functions": 157719,
+    "file_verdicts": {
+      "mismatch": 29114,
+      "no-codes": 87,
+      "undecodable": 128515,
+      "verified": 3
+    },
+    "decrypted_verdicts": {
+      "mismatch": 49,
+      "no-codes": 87,
+      "undecodable": 144,
+      "verified": 157439
+    },
+    "decrypted_prologue_verified_ratio": 0.998776,
+    "transitions": {
+      "mismatch->mismatch": 15,
+      "mismatch->undecodable": 13,
+      "mismatch->verified": 29086,
+      "no-codes->no-codes": 87,
+      "undecodable->mismatch": 34,
+      "undecodable->undecodable": 131,
+      "undecodable->verified": 128350,
+      "verified->verified": 3
+    }
+  }
+}
