@@ -34,6 +34,8 @@ def validate(m: dict) -> list[str]:
             seen.add(rva)
         if e.get("match") not in STATES:
             errors.append(f"{rva or e['name']}: invalid match state {e.get('match')!r}")
+        if e.get("start_rva") and "in_denominator" not in e:
+            errors.append(f"{rva}: in_denominator missing; run tools/matching/compare.py")
         if e.get("match") == "exact":
             d = e.get("byte_diff") or {}
             if not rva or e.get("reference_state") not in ("plaintext", "decrypted"):
@@ -49,8 +51,10 @@ def validate(m: dict) -> list[str]:
 
 def summarize(m: dict) -> dict:
     located = [e for e in m["functions"] if e.get("start_rva")]
-    states = Counter(e["match"] for e in located)
-    exact = [e for e in located if e["match"] == "exact"]
+    counted = [e for e in located if e.get("in_denominator")]
+    states = Counter(e["match"] for e in counted)
+    exact = [e for e in counted if e["match"] == "exact"]
+    outside = [e for e in located if not e.get("in_denominator")]
     structural = [e for e in located if e["match"] == "unknown" and e.get("structure")
                   and e["structure"].get("pdata_size_matches")
                   and e["structure"].get("unwind_codes_identical")
@@ -64,7 +68,12 @@ def summarize(m: dict) -> dict:
         "exact_vs_disk": sum(1 for e in exact if e["reference_state"] == "plaintext"),
         "exact_vs_decrypted": sum(1 for e in exact if e["reference_state"] == "decrypted"),
         "structure_only": len(structural),
-        "unlocated": sum(1 for e in m["functions"] if not e.get("start_rva")),
+        "unlocated": sum(1 for e in m["functions"] if not e.get("start_rva")
+                         and e.get("reference_presence") != "not present in reference"),
+        "not_present": sum(1 for e in m["functions"]
+                           if e.get("reference_presence") == "not present in reference"),
+        "outside_denominator": len(outside),
+        "outside_denominator_exact": sum(1 for e in outside if e["match"] == "exact"),
         "manifest_digest": hashlib.sha256(
             json.dumps(m, sort_keys=True, separators=(",", ":")).encode()).hexdigest()[:12],
         "reference": m["reference"]["sha256"][:12],
@@ -104,10 +113,10 @@ def render(s: dict) -> str:
     if fill > 0:
         lines.append(f'<rect x="{bar_x}" y="{bar_y}" width="{fill:.3f}" height="{bar_h}" rx="{min(7, fill / 2):.3f}" fill="#3fb950"/>')
     lines += [
-        f'<text x="32" y="146" {font} font-size="13" fill="#c9d1d9">exact {st["exact"]} · relocation-equivalent {st["relocation-equivalent"]} · partial {st["partial"]} · unmatched {st["unmatched"]} · unknown {st["unknown"]} · not located {s["unlocated"]}</text>',
+        f'<text x="32" y="146" {font} font-size="13" fill="#c9d1d9">exact {st["exact"]} · relocation-equivalent {st["relocation-equivalent"]} · partial {st["partial"]} · unmatched {st["unmatched"]} · unknown {st["unknown"]} · not located {s["unlocated"]} · absent from image {s["not_present"]}</text>',
         f'<text x="32" y="166" {font} font-size="13" fill="#c9d1d9">exact by category: {esc(cat)} ({s["exact_bytes"]} bytes) · vs on-disk bytes {s["exact_vs_disk"]}, vs decrypted image {s["exact_vs_decrypted"]}</text>',
-        f'<text x="32" y="192" {font} font-size="11.5" fill="#8b949e">Denominator: primary .pdata functions in the main .text. Bodies encrypted on disk are compared with a validated</text>',
-        f'<text x="32" y="207" {font} font-size="11.5" fill="#8b949e">decrypted image of the same build. Exact = identical bytes; relocations resolved only from independent evidence.</text>',
+        f'<text x="32" y="192" {font} font-size="11.5" fill="#8b949e">Denominator: primary .pdata functions in the main .text ({s["outside_denominator"]} recovered leaf functions outside it, {s["outside_denominator_exact"]} exact).</text>',
+        f'<text x="32" y="207" {font} font-size="11.5" fill="#8b949e">Encrypted bodies are compared with a validated decrypted image. Exact = identical bytes; relocations from independent evidence.</text>',
         f'<text x="{W - 32}" y="40" text-anchor="end" {font} font-size="11" fill="#6e7681">manifest {s["manifest_digest"]} · ref {s["reference"]}</text>',
         "</svg>",
     ]

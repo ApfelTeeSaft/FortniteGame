@@ -44,8 +44,8 @@ OBJ_ROOT = REPO_ROOT / "FortniteGameCode" / "Build" / "ClientShipping" / "obj"
 DECRYPTED_REPORT = REPO_ROOT / "analysis" / "decrypted-reference.json"
 DECRYPTED_IMAGE = REPO_ROOT / "local-output" / "reference-dump" / "FortniteClient-Win64-Shipping.decrypted.image"
 DECRYPTED_PRESENT = DECRYPTED_IMAGE.with_suffix(".present")
-COMPUTED = ("reference_state", "match", "original_sha256", "decrypted_sha256", "candidate_sha256",
-            "byte_diff", "structure", "compiler")
+COMPUTED = ("in_denominator", "reference_state", "match", "original_sha256", "decrypted_sha256",
+            "candidate_sha256", "byte_diff", "structure", "compiler")
 DECRYPTED_STATES = ("decrypted", "decrypted-unverified")
 
 
@@ -84,22 +84,94 @@ class Resolver:
         self.functions: dict[str, tuple[int, str]] = {}
         self.data_cache: dict[tuple[str, str], list[tuple[int, str]]] = {}
         self.data_notes: dict[tuple[str, str], str] = {}
+        self._cand: dict[int, bytes] = {}
         lo = symbols_auto._iat_rdata_extent(img)[1]
         exp_rva, exp_size = img.directory(0)
         self.hay_rva, self.hay = lo, img.read(lo, exp_rva + exp_size - lo)
 
-    def resolve(self, obj: CoffObject, objpath: str, symbol: str) -> list[tuple[int, str]]:
-        """All independently evidenced reference addresses of `symbol` (usually one)."""
+        # Leave-one-out observations: symbol key -> {manifest entry index: {observed RVAs}}.
+        self.observations: dict = {}
+        self.entry_names: dict[int, str] = {}
+
+    @staticmethod
+    def key(obj: CoffObject, objpath: str, symbol: str):
+        """Internal-linkage symbols are only meaningful inside their own object file."""
+        s = obj.symbol(symbol)
+        return (objpath, symbol) if s is not None and s.storage == 3 else symbol
+
+    def _observed(self, key, exclude: int | None) -> tuple[set[int], list[str]]:
+        vals, who = set(), []
+        for idx, targets in self.observations.get(key, {}).items():
+            if idx != exclude:
+                vals |= targets
+                who.append(self.entry_names.get(idx, str(idx)))
+        return vals, sorted(who)
+
+    def resolve(self, obj: CoffObject, objpath: str, symbol: str,
+                exclude: int | None = None) -> list[tuple[int, str]]:
+        """All independently evidenced reference addresses of `symbol` (usually one).
+
+        `exclude` is the manifest entry under test. Observations made in that entry are
+        never used to resolve its own fields.
+        """
         if symbol in self.functions:
             return [self.functions[symbol]]
         if symbol in self.known:
             return self.known[symbol]
-        key = (objpath, symbol)
-        if key not in self.data_cache:
+        dkey = (objpath, symbol)
+        if dkey not in self.data_cache:
             rva, why = symbols_auto.resolve_data_symbol(obj, symbol, self.hay, self.hay_rva)
-            self.data_cache[key] = [(rva, f"data symbol: {why}")] if rva is not None else []
-            self.data_notes[key] = why
-        return self.data_cache[key]
+            self.data_cache[dkey] = [(rva, f"data symbol: {why}")] if rva is not None else []
+            self.data_notes[dkey] = why
+        if self.data_cache[dkey]:
+            return self.data_cache[dkey]
+        # Same symbol observed at one address by other relocation-equivalent-or-better functions.
+        vals, who = self._observed(self.key(obj, objpath, symbol), exclude)
+        if len(vals) == 1:
+            return [(next(iter(vals)), "corroborated: same symbol at this address in " + ", ".join(who))]
+        if len(vals) > 1:
+            return []
+        # Section-relative: neighbours in the same non-COMDAT data section observed elsewhere.
+        sym = obj.symbol(symbol)
+        if sym is None or sym.section <= 0:
+            return []
+        sec = obj.sections[sym.section - 1]
+        if sec.chars & 0x20 or sec.chars & 0x1000:  # code, or COMDAT (placed independently)
+            return []
+        preds: dict[int, list[str]] = {}
+        for other in obj.symbols:
+            if (other is None or other.section != sym.section or other.name == symbol
+                    or other.storage not in (2, 3)):
+                continue
+            ovals, owho = self._observed(self.key(obj, objpath, other.name), exclude)
+            if len(ovals) == 1:
+                pred = next(iter(ovals)) + sym.value - other.value
+                preds.setdefault(pred, []).append(f"{other.name} (seen in {', '.join(owho)})")
+        if len(preds) == 1:
+            pred, basis = next(iter(preds.items()))
+            return [(pred, "section-relative to " + "; ".join(basis[:3]))]
+        return []
+
+    def observe(self, idx: int, obj: CoffObject, objpath: str, relocs, ref: bytes, start: int,
+                image_base: int) -> None:
+        """Record where each relocation of entry `idx` points in the reference."""
+        for r in relocs:
+            size = REL_FIELD_SIZE.get(r.kind)
+            if not size or r.offset + size > len(ref):
+                continue
+            # The compiled field holds the addend; the reference field holds the linked value.
+            addend = int.from_bytes(self._cand[idx][r.offset:r.offset + size], "little", signed=size == 4)
+            val = int.from_bytes(ref[r.offset:r.offset + size], "little", signed=size == 4)
+            if r.kind == "ADDR64":
+                target = val - image_base - addend
+            elif r.kind == "ADDR32NB":
+                target = val - addend
+            elif r.kind.startswith("REL32"):
+                extra = 0 if r.kind == "REL32" else int(r.kind[-1])
+                target = val + start + r.offset + 4 + extra - addend
+            else:
+                continue
+            self.observations.setdefault(self.key(obj, objpath, r.symbol), {}).setdefault(idx, set()).add(target)
 
 
 def reference_state(img: PEImage, rf, ref: bytes, cand: bytes) -> str:
@@ -135,7 +207,7 @@ def _field_value(kind: str, target: int, addend: int, start: int, offset: int, i
 
 
 def resolve_fields(cand: bytes, relocs, start: int, image_base: int, resolver: Resolver,
-                   obj: CoffObject, objpath: str, ref: bytes | None = None):
+                   obj: CoffObject, objpath: str, ref: bytes | None = None, exclude: int | None = None):
     """Apply resolvable relocations as the linker would at the original placement.
 
     When a symbol has several independently evidenced addresses (an import with both an
@@ -147,7 +219,7 @@ def resolve_fields(cand: bytes, relocs, start: int, image_base: int, resolver: R
     unresolved, resolved = [], []
     for r in relocs:
         size = REL_FIELD_SIZE.get(r.kind)
-        targets = resolver.resolve(obj, objpath, r.symbol) if size else []
+        targets = resolver.resolve(obj, objpath, r.symbol, exclude) if size else []
         if not targets:
             unresolved.append((r.offset, size or 4, r.symbol, r.kind))
             continue
@@ -267,7 +339,7 @@ def compare_structure(img: PEImage, rf, obj: CoffObject, symbol: str, start: int
     return out
 
 
-def evaluate(entry: dict, img: PEImage, dimg, rfmap: dict, resolver: Resolver,
+def evaluate(idx: int, entry: dict, img: PEImage, dimg, rfmap: dict, resolver: Resolver,
              funclet_rvas: dict) -> dict:
     res: dict = {}
     if not entry.get("object") or not entry.get("symbol"):
@@ -299,7 +371,7 @@ def evaluate(entry: dict, img: PEImage, dimg, rfmap: dict, resolver: Resolver,
         cand_raw, relocs = obj.function_bytes(symbol)
         ref = ref_dec if ref_dec is not None else ref_file
         cand, unresolved, resolved = resolve_fields(cand_raw, relocs, start, img.image_base,
-                                                    resolver, obj, objpath, ref)
+                                                    resolver, obj, objpath, ref, idx)
         if ref_dec is not None:
             state = decrypted_state(dimg, rf, ref_file, ref_dec, cand)
         else:
@@ -313,6 +385,8 @@ def evaluate(entry: dict, img: PEImage, dimg, rfmap: dict, resolver: Resolver,
             res["byte_diff"] = diff if state not in ("encrypted", "unknown") else {
                 "reference_size": len(ref), "candidate_size": len(cand),
                 "note": "reference body is encrypted on disk and no decrypted image is available"}
+            if status in ("exact", "relocation-equivalent"):
+                res["_observe"] = (obj, objpath, relocs, cand_raw, ref, start)
             st = compare_structure(img, rf, obj, symbol, start, funclet_rvas)
             if st is not None:
                 st["pdata_size_matches"] = len(cand) == end - start
@@ -346,8 +420,9 @@ def main() -> int:
     rfs = img.runtime_functions()
     rfmap = {rf.begin: rf for rf in rfs}
     text = img.sections[0]
-    primary = sum(1 for rf in rfs if text.contains_rva(rf.begin)
-                  and not parse_unwind(img, rf.unwind).flags & UNW_FLAG_CHAININFO)
+    primary_set = {rf.begin for rf in rfs if text.contains_rva(rf.begin)
+                   and not parse_unwind(img, rf.unwind).flags & UNW_FLAG_CHAININFO}
+    primary = len(primary_set)
     funclet_rvas = {}
     for e in manifest["functions"]:
         if e.get("start_rva") and e.get("symbol"):
@@ -365,11 +440,29 @@ def main() -> int:
                 resolver.functions[e["symbol"]] = (int(e["start_rva"], 16),
                                                    f"recorded exact match of manifest entry {e['start_rva']}")
 
-    # Evaluate to a fixpoint: an exact function's symbol may resolve its callers' relocations.
+    # Evaluate to a fixpoint. An exact function's symbol may resolve its callers' relocations,
+    # and relocation-equivalent-or-better functions contribute observations that resolve
+    # *other* entries' fields (leave-one-out). Observations are gathered between passes only.
+    for i, e in enumerate(manifest["functions"]):
+        resolver.entry_names[i] = e["name"]
     for _ in range(32):
-        results = {i: evaluate(e, img, dimg, rfmap, resolver, funclet_rvas)
+        results = {i: evaluate(i, e, img, dimg, rfmap, resolver, funclet_rvas)
                    for i, e in enumerate(manifest["functions"]) if i not in skip}
-        added = False
+        for i, res in results.items():
+            e = manifest["functions"][i]
+            res["in_denominator"] = bool(e.get("start_rva")) and int(e["start_rva"], 16) in primary_set
+        before = repr(sorted((repr(k), sorted((i, sorted(v)) for i, v in d.items()))
+                             for k, d in resolver.observations.items()))
+        resolver.observations = {}
+        for i, res in results.items():
+            ob = res.pop("_observe", None)
+            if ob is not None:
+                obj, objpath, relocs, cand_raw, ref, start = ob
+                resolver._cand[i] = cand_raw
+                resolver.observe(i, obj, objpath, relocs, ref, start, img.image_base)
+        after = repr(sorted((repr(k), sorted((i, sorted(v)) for i, v in d.items()))
+                            for k, d in resolver.observations.items()))
+        added = before != after
         for i, res in results.items():
             e = manifest["functions"][i]
             if res.get("match") == "exact" and e.get("start_rva"):

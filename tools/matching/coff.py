@@ -89,6 +89,16 @@ class CoffObject:
                                     IMAGE_REL_AMD64.get(rtype, hex(rtype))))
             self.sections.append(CoffSection(s + 1, name, data, chars, relocs))
 
+    def symbol(self, name: str) -> CoffSymbol | None:
+        """The defining record of `name` if there is one, else its first (undefined) record."""
+        found = None
+        for s in self.symbols:
+            if s is not None and s.name == name:
+                if s.section > 0:
+                    return s
+                found = found or s
+        return found
+
     def functions(self):
         """Yield (symbol, section) for every function symbol defined in a code section."""
         for sym in self.symbols:

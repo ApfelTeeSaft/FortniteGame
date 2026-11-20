@@ -73,9 +73,21 @@ def run(*args: str) -> None:
         raise SystemExit(f"FAILED: {' '.join(args)}")
 
 
+def test_leave_one_out() -> None:
+    from compare import Resolver
+    r = Resolver.__new__(Resolver)
+    r.observations = {"?F@@YAXXZ": {1: {0x1000}}, "?G@@YAXXZ": {1: {0x2000}, 2: {0x3000}}}
+    r.entry_names = {1: "A", 2: "B"}
+    assert r._observed("?F@@YAXXZ", exclude=1) == (set(), [])          # never self-corroborated
+    assert r._observed("?F@@YAXXZ", exclude=2) == ({0x1000}, ["A"])
+    assert r._observed("?G@@YAXXZ", exclude=None)[0] == {0x2000, 0x3000}  # conflict is visible
+    print("leave-one-out: ok")
+
+
 def main() -> int:
     test_unwind()
     test_literals()
+    test_leave_one_out()
     if not DEFAULT_REFERENCE.exists():
         print("reference EXE not present: skipping manifest verification")
         return 0
