@@ -1,0 +1,453 @@
+{
+  "schema_version": 1,
+  "generated_by": "tools/matching/fingerprint.py",
+  "reference": {
+    "path": "FortniteGame/2.5/2.5/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping.exe",
+    "sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102",
+    "size": 82298304,
+    "machine": "0x8664",
+    "timestamp": 1518632722,
+    "timestamp_utc": "2018-02-14T18:25:22+00:00",
+    "characteristics": "0x0022",
+    "linker_version": "14.00",
+    "os_version": "6.0",
+    "subsystem": 2,
+    "dll_characteristics": "0x8160",
+    "image_base": "0x0000000140000000",
+    "entry_rva": "0x02D996CC",
+    "size_of_image": "0x05163200",
+    "checksum": "0x04E8552E",
+    "section_alignment": "0x1000",
+    "file_alignment": "0x200"
+  },
+  "sections": [
+    {
+      "index": 0,
+      "name": ".text",
+      "rva": "0x00001000",
+      "virtual_size": "0x02E26C00",
+      "raw_offset": "0x00000600",
+      "raw_size": "0x02E26C00",
+      "characteristics": "0x60000020",
+      "entropy": 7.988,
+      "sha256": "29acd0c3d08d021eac03458a16bcd022b2467db96fbe38ad51fcc23f93b1b997"
+    },
+    {
+      "index": 1,
+      "name": ".rdata",
+      "rva": "0x02E28000",
+      "virtual_size": "0x0134C000",
+      "raw_offset": "0x02E27200",
+      "raw_size": "0x0134C000",
+      "characteristics": "0x40000040",
+      "entropy": 5.365,
+      "sha256": "b9c40d9d745cf0c7f1e93cf1965d7431a53eef6a477608ae0ababe86f4b42c1d"
+    },
+    {
+      "index": 2,
+      "name": ".data",
+      "rva": "0x04174000",
+      "virtual_size": "0x007A3160",
+      "raw_offset": "0x04173200",
+      "raw_size": "0x004C0400",
+      "characteristics": "0xC0000040",
+      "entropy": 2.663,
+      "sha256": "67562660136978194470a4483ca0e4415a8da9a3fcaf1429c893d0538d4e8676"
+    },
+    {
+      "index": 3,
+      "name": ".pdata",
+      "rva": "0x04918000",
+      "virtual_size": "0x002E5A00",
+      "raw_offset": "0x04633600",
+      "raw_size": "0x002E5A00",
+      "characteristics": "0x40000040",
+      "entropy": 7.108,
+      "sha256": "20f10ef300599ca3c330724766226a8a6742bf84aa88c92da974b0fe98cb75d0"
+    },
+    {
+      "index": 4,
+      "name": ".tls",
+      "rva": "0x04BFE000",
+      "virtual_size": "0x00000200",
+      "raw_offset": "0x04919000",
+      "raw_size": "0x00000200",
+      "characteristics": "0xC0000040",
+      "entropy": 7.334,
+      "sha256": "962ebaa5a53738bc21c24d85a829d86cbc802f27832afe248346b52fbc340953"
+    },
+    {
+      "index": 5,
+      "name": ".gfids",
+      "rva": "0x04BFF000",
+      "virtual_size": "0x00000200",
+      "raw_offset": "0x04919200",
+      "raw_size": "0x00000200",
+      "characteristics": "0x40000040",
+      "entropy": 7.126,
+      "sha256": "0d76dfdb47eebc6e04993ed40d8ed5c04fa98e7d6916520d79d35f9b3925449a"
+    },
+    {
+      "index": 6,
+      "name": "_RDATA",
+      "rva": "0x04C00000",
+      "virtual_size": "0x00008000",
+      "raw_offset": "0x04919400",
+      "raw_size": "0x00008000",
+      "characteristics": "0x40000040",
+      "entropy": 7.407,
+      "sha256": "2dd71e107bed2720b2c7fc202e2720ba9b76af2f09984a8949b0c80c1512912c"
+    },
+    {
+      "index": 7,
+      "name": ".rsrc",
+      "rva": "0x04C08000",
+      "virtual_size": "0x00047E00",
+      "raw_offset": "0x04921400",
+      "raw_size": "0x00047E00",
+      "characteristics": "0x40000040",
+      "entropy": 7.003,
+      "sha256": "5f729b5a6e202d58922a443781b2c69803ecfa6454b8f896864c51ec310f35e4"
+    },
+    {
+      "index": 8,
+      "name": ".reloc",
+      "rva": "0x04C50000",
+      "virtual_size": "0x00184200",
+      "raw_offset": "0x04969200",
+      "raw_size": "0x00184200",
+      "characteristics": "0x40000040",
+      "entropy": 5.469,
+      "sha256": "95afc9041898d7bb718760b4c9a1159334c3e212269d8e0daef69046695beb57"
+    },
+    {
+      "index": 9,
+      "name": ".idata",
+      "rva": "0x04DD5000",
+      "virtual_size": "0x00007800",
+      "raw_offset": "0x04AED400",
+      "raw_size": "0x00007800",
+      "characteristics": "0xC0000040",
+      "entropy": 4.824,
+      "sha256": "9ce91fbf64f324ad9ac2260bb492e7baddd4415f3f1641fb7150049be790981b"
+    },
+    {
+      "index": 10,
+      "name": ".text",
+      "rva": "0x04DDD000",
+      "virtual_size": "0x00386200",
+      "raw_offset": "0x04AF4C00",
+      "raw_size": "0x00386200",
+      "characteristics": "0x60000020",
+      "entropy": 7.384,
+      "sha256": "a446aceacf4bcddf67811b860c32030d29979ce15aa9654757e189f124dcd6c9"
+    }
+  ],
+  "directories": {
+    "EXPORT": {
+      "rva": "0x0416D410",
+      "size": "0xD18"
+    },
+    "IMPORT": {
+      "rva": "0x04DD5000",
+      "size": "0x398"
+    },
+    "RESOURCE": {
+      "rva": "0x04C08000",
+      "size": "0x47D40"
+    },
+    "EXCEPTION": {
+      "rva": "0x04918000",
+      "size": "0x2E5984"
+    },
+    "SECURITY": {
+      "rva": "0x04E7AE00",
+      "size": "0x17C0"
+    },
+    "BASERELOC": {
+      "rva": "0x04FDA5E0",
+      "size": "0x188B54"
+    },
+    "DEBUG": {
+      "rva": "0x03EF0090",
+      "size": "0x54"
+    },
+    "TLS": {
+      "rva": "0x03EF00E8",
+      "size": "0x28"
+    },
+    "IAT": {
+      "rva": "0x04DDAD94",
+      "size": "0x1A38"
+    },
+    "DELAY_IMPORT": {
+      "rva": "0x04167D1C",
+      "size": "0x260"
+    }
+  },
+  "authenticode": {
+    "present": true,
+    "file_offset": "0x04E7AE00",
+    "size": "0x17C0",
+    "note": "WIN_CERTIFICATE appended after the last section. A rebuilt image cannot reproduce Epic's signature."
+  },
+  "rich_header": [
+    {
+      "prodid": 207,
+      "build": 65501,
+      "count": 2,
+      "tool": "VS2013 Implib (12.00)"
+    },
+    {
+      "prodid": 199,
+      "build": 41118,
+      "count": 9,
+      "tool": "VS2012 tool (11.00)"
+    },
+    {
+      "prodid": 259,
+      "build": 24123,
+      "count": 7,
+      "tool": "Masm 14.00"
+    },
+    {
+      "prodid": 260,
+      "build": 24123,
+      "count": 14,
+      "tool": "Utc1900_C (C compiler 19.00)"
+    },
+    {
+      "prodid": 257,
+      "build": 24123,
+      "count": 4,
+      "tool": "Implib 14.00"
+    },
+    {
+      "prodid": 147,
+      "build": 30729,
+      "count": 26,
+      "tool": "VS2008 Implib/Utc (9.00.30729)"
+    },
+    {
+      "prodid": 206,
+      "build": 61030,
+      "count": 133,
+      "tool": "VS2013 Utc C (12.00)"
+    },
+    {
+      "prodid": 257,
+      "build": 24610,
+      "count": 4,
+      "tool": "Implib 14.00"
+    },
+    {
+      "prodid": 132,
+      "build": 30729,
+      "count": 1,
+      "tool": "VS2008 Utc C (9.00.30729)"
+    },
+    {
+      "prodid": 131,
+      "build": 30729,
+      "count": 1,
+      "tool": "VS2008 Masm (9.00.30729)"
+    },
+    {
+      "prodid": 173,
+      "build": 30319,
+      "count": 4,
+      "tool": "VS2010 (10.00.30319)"
+    },
+    {
+      "prodid": 156,
+      "build": 21202,
+      "count": 2,
+      "tool": "VS2010 Utc/Implib (10.00)"
+    },
+    {
+      "prodid": 123,
+      "build": 50727,
+      "count": 2,
+      "tool": "VS2005 Linker/Utc (8.00.50727)"
+    },
+    {
+      "prodid": 239,
+      "build": 40116,
+      "count": 2,
+      "tool": "VS2013 tool"
+    },
+    {
+      "prodid": 260,
+      "build": 22816,
+      "count": 24,
+      "tool": "Utc1900_C (C compiler 19.00)"
+    },
+    {
+      "prodid": 156,
+      "build": 30319,
+      "count": 6,
+      "tool": "VS2010 Utc/Implib (10.00)"
+    },
+    {
+      "prodid": 261,
+      "build": 22609,
+      "count": 264,
+      "tool": "Utc1900_CPP (C++ compiler 19.00)"
+    },
+    {
+      "prodid": 260,
+      "build": 22609,
+      "count": 61,
+      "tool": "Utc1900_C (C compiler 19.00)"
+    },
+    {
+      "prodid": 224,
+      "build": 31101,
+      "count": 1,
+      "tool": "VS2013 tool (12.00.31101)"
+    },
+    {
+      "prodid": 261,
+      "build": 23026,
+      "count": 62,
+      "tool": "Utc1900_CPP (C++ compiler 19.00)"
+    },
+    {
+      "prodid": 260,
+      "build": 23918,
+      "count": 71,
+      "tool": "Utc1900_C (C compiler 19.00)"
+    },
+    {
+      "prodid": 261,
+      "build": 23506,
+      "count": 37,
+      "tool": "Utc1900_CPP (C++ compiler 19.00)"
+    },
+    {
+      "prodid": 225,
+      "build": 31101,
+      "count": 2,
+      "tool": "VS2013 tool (12.00.31101)"
+    },
+    {
+      "prodid": 0,
+      "build": 0,
+      "count": 26,
+      "tool": "Unmarked objects (imports)"
+    },
+    {
+      "prodid": 260,
+      "build": 23026,
+      "count": 428,
+      "tool": "Utc1900_C (C compiler 19.00)"
+    },
+    {
+      "prodid": 206,
+      "build": 65501,
+      "count": 10,
+      "tool": "VS2013 Utc C (12.00)"
+    },
+    {
+      "prodid": 208,
+      "build": 65501,
+      "count": 2,
+      "tool": "VS2013 Masm (12.00)"
+    },
+    {
+      "prodid": 203,
+      "build": 65501,
+      "count": 47,
+      "tool": "VS2013 Utc C++ (12.00)"
+    },
+    {
+      "prodid": 1,
+      "build": 0,
+      "count": 1352,
+      "tool": "Import0 (imported functions)"
+    },
+    {
+      "prodid": 261,
+      "build": 24123,
+      "count": 30,
+      "tool": "Utc1900_CPP (C++ compiler 19.00)"
+    },
+    {
+      "prodid": 260,
+      "build": 24215,
+      "count": 118,
+      "tool": "Utc1900_C (C compiler 19.00)"
+    },
+    {
+      "prodid": 261,
+      "build": 24215,
+      "count": 697,
+      "tool": "Utc1900_CPP (C++ compiler 19.00)"
+    },
+    {
+      "prodid": 256,
+      "build": 24215,
+      "count": 1,
+      "tool": "Export 14.00"
+    },
+    {
+      "prodid": 255,
+      "build": 24210,
+      "count": 1,
+      "tool": "Cvtres 14.00"
+    },
+    {
+      "prodid": 258,
+      "build": 24215,
+      "count": 1,
+      "tool": "Linker 14.00"
+    }
+  ],
+  "debug_directory": [
+    {
+      "type": 2,
+      "size": 58,
+      "format": "RSDS",
+      "guid": "b76752bd7f196144af2b11e73aaf0709",
+      "age": 1,
+      "pdb": "FortniteClient-Win64-Shipping.pdb"
+    },
+    {
+      "type": 12,
+      "size": 20
+    },
+    {
+      "type": 13,
+      "size": 1096
+    }
+  ],
+  "build_strings": {
+    "branch": [
+      "++Fortnite+Release-2.5",
+      "++Fortnite+Release-2.5-CL-3889387"
+    ],
+    "version_resource": [
+      "4.20.0-3889387+++Fortnite+Release-2.5"
+    ]
+  },
+  "code_protection": {
+    "main_text": {
+      "pages": 11815,
+      "pages_entropy_below_7": 77
+    },
+    "summary": "Function bodies in the main .text are individually encrypted on disk. The 0xCC padding between them stays plaintext, and pdata/xdata/rdata are plaintext. See analysis/plaintext-survey.json and docs/REVERSE_ENGINEERING.md.",
+    "entry_point": "mainCRTStartup-shaped stub: its first call targets the second, non-standard .text section (no .pdata)."
+  },
+  "toolchain": {
+    "reference_compiler": "MSVC 19.00.24215.1 (VS2015 Update 3): Rich prodid 261/260 build 24215, linker 258 build 24215",
+    "local_matching_compiler": "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64/cl.exe 19.00.24215.1",
+    "solution_ide": "Visual Studio 2019 16.11 (D:/VS2019), platform toolset v140",
+    "ltcg": "not used: no Utc1900 LTCG/CVTCIL product ids in the Rich header",
+    "windows_sdk_for_matching": "10.0.10586.0 (pinned; original SDK version not yet established)"
+  },
+  "engine": {
+    "reference_version_resource": "4.20.0-3889387+++Fortnite+Release-2.5",
+    "local_engine_tree": "Engine/Build/Build.version: 4.20.0, BranchName ++UE4+Release-4.20, Changelist 0",
+    "note": "The reference is an internal 4.20 development fork at CL 3889387 (linked 2018-02-14). Known code differences from public 4.20.0 are listed in docs/ENGINE_DIFFERENCES.md."
+  }
+}

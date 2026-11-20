@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "reference_sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102",
+  "method": "Each .pdata RUNTIME_FUNCTION in the main .text is decoded; its UNWIND_INFO prologue codes are compared with a linear capstone decode of the on-disk bytes (push register, stack allocation size, frame register, nonvolatile and XMM saves).",
+  "runtime_functions_total": 253131,
+  "chained_unwind_entries_in_main_text": 95412,
+  "verdicts": {
+    "mismatch": 47568,
+    "no-codes": 41160,
+    "undecodable": 164392,
+    "verified": 11
+  },
+  "prologue_verified_plaintext": [
+    {
+      "start_rva": "0x0004f33f",
+      "end_rva": "0x0004f574",
+      "size": 565,
+      "unwind_rva": "0x0414ec98",
+      "entropy": 6.033,
+      "sha256": "37dce18a24491a5faa6133a616eb3c00a5173f71b5797433ee8d888d5f6f6c76",
+      "evidence": "6 unwind codes agree with on-disk prologue"
+    },
+    {
+      "start_rva": "0x02d19353",
+      "end_rva": "0x02d1995a",
+      "size": 1543,
+      "unwind_rva": "0x04151cb0",
+      "entropy": 5.892,
+      "sha256": "99f32f660033d6b9db2af7e1fb00669f79f432b37303c9c7171db72a5dd9c7e7",
+      "evidence": "2 unwind codes agree with on-disk prologue"
+    },
+    {
+      "start_rva": "0x02d67f80",
+      "end_rva": "0x02d68010",
+      "size": 144,
+      "unwind_rva": "0x041567e8",
+      "entropy": 5.383,
+      "sha256": "a67598512be2edca0283f8b2c0ee4b80145731a9f0c57712b142dbe65ffc6ec3",
+      "evidence": "1 unwind codes agree with on-disk prologue"
+    },
+    {
+      "start_rva": "0x02d70185",
+      "end_rva": "0x02d70257",
+      "size": 210,
+      "unwind_rva": "0x04156510",
+      "entropy": 4.974,
+      "sha256": "649900e77ed6c790d2428930ba716de64cc75c8fbc907e5896ef4f0cf8405977",
+      "evidence": "1 unwind codes agree with on-disk prologue"
+    },
+    {
+      "start_rva": "0x02d705a4",
+      "end_rva": "0x02d70713",
+      "size": 367,
+      "unwind_rva": "0x04156614",
+      "entropy": 5.059,
+      "sha256": "a1ee239959a28c244e98dfe8d14420c190b1b1c6f85d7a11147d407f432913e2",
+      "evidence": "1 unwind codes agree with on-disk prologue"
+    },
+    {
+      "start_rva": "0x02d70ae5",
+      "end_rva": "0x02d70baf",
+      "size": 202,
+      "unwind_rva": "0x0415671c",
+      "entropy": 5.137,
+      "sha256": "bbb026d193c6bedc73f9884207ea46d2513180a506afdb00bcddaf43dea2a4f5",
+      "evidence": "1 unwind codes agree with on-disk prologue"
+    },
+    {
+      "start_rva": "0x02d711b5",
+      "end_rva": "0x02d71279",
+      "size": 196,
+      "unwind_rva": "0x04156780",
+      "entropy": 5.211,
+      "sha256": "7c851c0dec6b44977b259e00801c3d8b109bfb61530b86f549ab219b65e9ce6a",
+      "evidence": "1 unwind codes agree with on-disk prologue"
+    },
+    {
+      "start_rva": "0x02d71405",
+      "end_rva": "0x02d714cf",
+      "size": 202,
+      "unwind_rva": "0x04156584",
+      "entropy": 5.137,
+      "sha256": "e70abcf799e1c015af25198984815d6e9dd8f5e5b0cea109bbcd18061c90a57c",
+      "evidence": "1 unwind codes agree with on-disk prologue"
+    },
+    {
+      "start_rva": "0x02d996cc",
+      "end_rva": "0x02d996de",
+      "size": 18,
+      "unwind_rva": "0x0409b118",
+      "entropy": 4.17,
+      "sha256": "9f30229e41c94fdc2607cf265690467bf8245e8f3a2653b9261fff17a4fe6703",
+      "evidence": "1 unwind codes agree with on-disk prologue"
+    },
+    {
+      "start_rva": "0x02dae750",
+      "end_rva": "0x02dae77a",
+      "size": 42,
+      "unwind_rva": "0x03fc0c98",
+      "entropy": 4.556,
+      "sha256": "6f0d5cb9af142cc472884c129246917dbb2d7287e3cbe3b18e8eb30bdf70932b",
+      "evidence": "2 unwind codes agree with on-disk prologue"
+    },
+    {
+      "start_rva": "0x02dae780",
+      "end_rva": "0x02dae7aa",
+      "size": 42,
+      "unwind_rva": "0x041311e8",
+      "entropy": 4.556,
+      "sha256": "de533b234b4d5ebf1d969d2008ddd1770ca08471b7c9b0a11403f53cdbc76152",
+      "evidence": "2 unwind codes agree with on-disk prologue"
+    }
+  ]
+}
