@@ -76,9 +76,13 @@ same import, and the manifest records which.
     reference. Internal-linkage symbols (literals, statics) count only within the same
     object file. Observations made in the function under test are never used for its own
     fields, and conflicting observations resolve nothing;
-  - **section-relative (leave-one-out):** a symbol in a non-COMDAT data section, predicted
-    from a neighbour in that section that another function observed, using the
-    object-file offset difference. Every prediction must agree.
+  - **section-relative (leave-one-out):** a data symbol is predicted from neighbours that
+    *other* functions observed. Neighbours are taken from the object's data layout, i.e.
+    same-named sections, COMDATs included, in object order with their alignment, as the
+    linker places one object's contributions. The prediction supported by the most
+    neighbours is used if it strictly outnumbers every alternative. A prediction that then
+    fails to reproduce the reference bytes is reported as an unresolved field, not as a
+    byte difference.
 
   Nothing is masked. Every resolved field records its evidence in `analysis/functions.json`,
   and a wrong prediction simply fails the byte comparison. The repository owner approved
@@ -161,6 +165,40 @@ loads `TEXT("<Class>") + 1`, i.e. a wide string + 2. This attributes 696 of 956 
 class, registrar or `GetPrivateStaticClass` is shared between attributions. In total
 16,734 denominator functions (10.6 %) now carry reflection-derived names. Names from these
 tables count as `confirmed`; class attribution as `high-confidence inferred`.
+
+## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)
+
+11,097 of the 11,127 `Z_Construct_UFunction_*` / `Z_Construct_UDelegateFunction_*` creators
+have the same 47-byte body. UHT 4.20 emits it for
+`static UFunction* ReturnFunction; if (!ReturnFunction) ConstructUFunction(ReturnFunction, Statics::FuncParams); return ReturnFunction;`.
+The generator writes one UHT-shaped translation unit per class
+(`FortniteGameCode/Source/Generated/UHT/<Class>.gen.cpp`, 1,238 classes). Each
+`FFunctionParams` value is decoded from the binary's own record.
+
+Each creator has five relocation fields, all resolved without reading the creator's code:
+
+| Field | Evidence |
+| --- | --- |
+| `Statics::FuncParams` | content: the only `FFunctionParams` record in `.data` whose `NameUTF8` names the function. For 2,034 shared names, the only one also matching the class's consensus `OuterFunc`. Where the name was unique (9,063 creators), the record agreed with each creator's `lea` in every case |
+| `ConstructUFunction` | corroborated by the other creators |
+| `ReturnFunction` (3 fields) | section-relative to sibling creators' observed slots. Each static local gets its own COMDAT `.bss` section, which the linker places in object order |
+
+Ordering was established from the reference. A class's delegate signatures come first,
+in header order (their creators' code addresses preserve it). Its functions follow,
+sorted by name, which is also the `FClassFunctionLinkInfo` order. Some classes have
+unreconstructed statics between the two blocks, which the majority rule tolerates.
+
+Results:
+
+| Count | State |
+| --- | --- |
+| 10,342 | exact against the decrypted image |
+| 309 | relocation-equivalent: 208 classes have a single creator, so no sibling can predict its `ReturnFunction`; the rest sit across layout gaps |
+| 446 | not emitted: no unique `FFunctionParams` record |
+
+Open data questions, which don't affect creator code:
+- The reference keeps `FuncParams` in `.data`, while public 4.20 (`constexpr` `ENUM_CLASS_FLAGS`) puts it in `.rdata`.
+- `PropPointers` arrays are declared but not yet reconstructed (property-parameter recovery).
 
 ## Naming confidence
 

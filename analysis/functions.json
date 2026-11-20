@@ -510,7 +510,7 @@
       "match": "relocation-equivalent",
       "original_sha256": "255bf2cd42421977dc0979f62777284c270358543fc1fe4c2d8da3c30d6be432",
       "decrypted_sha256": "048044ec1c5b8555d090b7342289bd31e6fb16c6c2e1637f25c81451271478a0",
-      "candidate_sha256": "72d819bf1eb054ff0b484b85e3785a34285a45b1d1df12311aee259763d53ad5",
+      "candidate_sha256": "82afe8b0eb1129625775c9e2bd9da837d402f112a4491a8a90ed69e402043d86",
       "byte_diff": {
         "reference_size": 108,
         "candidate_size": 108,
@@ -521,7 +521,7 @@
             "offset": "0x00000006",
             "symbol": "?bIsInitialized@FCommandLine@@0_NA",
             "rva": "0x04680E39",
-            "evidence": "corroborated: same symbol at this address in FCommandLine::GetForLogging, FCommandLine::GetOriginalForLogging, FCommandLine::IsInitialized"
+            "evidence": "corroborated: same symbol at this address in FCommandLine::GetForLogging, FCommandLine::GetOriginalForLogging and 1 more"
           },
           {
             "offset": "0x00000010",
@@ -540,6 +540,12 @@
             "symbol": "?AssertFailed@FDebug@@SAXPEBD0HPEB_WZZ",
             "rva": "0x0118AE40",
             "evidence": "corroborated: same symbol at this address in FCommandLine::GetForLogging, FCommandLine::GetOriginalForLogging"
+          },
+          {
+            "offset": "0x00000063",
+            "symbol": "?CmdLine@FCommandLine@@0PA_WA",
+            "rva": "0x04680E60",
+            "evidence": "section-relative to ?LoggingCmdLine@FCommandLine@@0PA_WA (seen in FCommandLine::GetForLogging) and 1 more neighbours (1 dissenting)"
           }
         ],
         "unresolved_relocations": [
@@ -572,15 +578,9 @@
             "size": 4,
             "symbol": "$SG2953",
             "kind": "REL32"
-          },
-          {
-            "offset": "0x00000063",
-            "size": 4,
-            "symbol": "?CmdLine@FCommandLine@@0PA_WA",
-            "kind": "REL32"
           }
         ],
-        "bytes_differing_only_in_unresolved_fields": 24
+        "bytes_differing_only_in_unresolved_fields": 20
       },
       "compiler": "prodid 261 build 24215",
       "in_denominator": true
@@ -600,7 +600,7 @@
       "match": "relocation-equivalent",
       "original_sha256": "1c3f12ef823d29dbc2b7f41fc66ad05f5e51a8b84c580ed095f081814fd5b82f",
       "decrypted_sha256": "ada36de5bd138d1af520db0e326837456a5cc4ed2453ca9d996c9b62f506d91d",
-      "candidate_sha256": "b65e7a00ba98bdd2e895fd1bdc2e61535325882719767ad260ecc43b8030d7d8",
+      "candidate_sha256": "d1eb535ab0dd193dbf36c2506ee7ae8bf73ba0d1e9af92a2a0a0b41675159fa7",
       "byte_diff": {
         "reference_size": 108,
         "candidate_size": 108,
@@ -611,7 +611,7 @@
             "offset": "0x00000006",
             "symbol": "?bIsInitialized@FCommandLine@@0_NA",
             "rva": "0x04680E39",
-            "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetOriginalForLogging, FCommandLine::IsInitialized"
+            "evidence": "corroborated: same symbol at this address in FCommandLine::GetOriginalForLogging, FCommandLine::IsInitialized and 1 more"
           },
           {
             "offset": "0x00000010",
@@ -630,6 +630,12 @@
             "symbol": "?AssertFailed@FDebug@@SAXPEBD0HPEB_WZZ",
             "rva": "0x0118AE40",
             "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetOriginalForLogging"
+          },
+          {
+            "offset": "0x00000063",
+            "symbol": "?LoggingCmdLine@FCommandLine@@0PA_WA",
+            "rva": "0x04690E60",
+            "evidence": "section-relative to ?CmdLine@FCommandLine@@0PA_WA (seen in FCommandLine::Get) and 1 more neighbours (1 dissenting)"
           }
         ],
         "unresolved_relocations": [
@@ -662,15 +668,9 @@
             "size": 4,
             "symbol": "$SG2962",
             "kind": "REL32"
-          },
-          {
-            "offset": "0x00000063",
-            "size": 4,
-            "symbol": "?LoggingCmdLine@FCommandLine@@0PA_WA",
-            "kind": "REL32"
           }
         ],
-        "bytes_differing_only_in_unresolved_fields": 24
+        "bytes_differing_only_in_unresolved_fields": 20
       },
       "compiler": "prodid 261 build 24215",
       "in_denominator": true
@@ -690,7 +690,7 @@
       "match": "relocation-equivalent",
       "original_sha256": "e015388a0242fcba18018db48aa4c5ec29aca23611a2d29f01bc30e6ad5da088",
       "decrypted_sha256": "378ab8230f04750a40a7591d4b1fa617b6029dc8502799c5b46821fc5e820779",
-      "candidate_sha256": "e6bba8b7aa282f5a81b66c0c2101506d428dd71864c51f61c2624fe230111283",
+      "candidate_sha256": "8447ae764f7a076d9f263207200aae13b116aaf3489b109112d85190066e646a",
       "byte_diff": {
         "reference_size": 108,
         "candidate_size": 108,
@@ -701,7 +701,7 @@
             "offset": "0x00000006",
             "symbol": "?bIsInitialized@FCommandLine@@0_NA",
             "rva": "0x04680E39",
-            "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetForLogging, FCommandLine::IsInitialized"
+            "evidence": "corroborated: same symbol at this address in FCommandLine::GetForLogging, FCommandLine::IsInitialized and 1 more"
           },
           {
             "offset": "0x00000010",
@@ -720,6 +720,12 @@
             "symbol": "?AssertFailed@FDebug@@SAXPEBD0HPEB_WZZ",
             "rva": "0x0118AE40",
             "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetForLogging"
+          },
+          {
+            "offset": "0x00000063",
+            "symbol": "?LoggingOriginalCmdLine@FCommandLine@@0PA_WA",
+            "rva": "0x04698E60",
+            "evidence": "section-relative to ?CmdLine@FCommandLine@@0PA_WA (seen in FCommandLine::Get) and 1 more neighbours (1 dissenting)"
           }
         ],
         "unresolved_relocations": [
@@ -752,15 +758,9 @@
             "size": 4,
             "symbol": "$SG2980",
             "kind": "REL32"
-          },
-          {
-            "offset": "0x00000063",
-            "size": 4,
-            "symbol": "?LoggingOriginalCmdLine@FCommandLine@@0PA_WA",
-            "kind": "REL32"
           }
         ],
-        "bytes_differing_only_in_unresolved_fields": 24
+        "bytes_differing_only_in_unresolved_fields": 20
       },
       "compiler": "prodid 261 build 24215",
       "in_denominator": true
@@ -791,7 +791,7 @@
             "offset": "0x00000003",
             "symbol": "?bIsInitialized@FCommandLine@@0_NA",
             "rva": "0x04680E39",
-            "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetForLogging, FCommandLine::GetOriginalForLogging"
+            "evidence": "corroborated: same symbol at this address in FCommandLine::GetForLogging, FCommandLine::GetOriginalForLogging and 1 more"
           }
         ],
         "unresolved_relocations": [],

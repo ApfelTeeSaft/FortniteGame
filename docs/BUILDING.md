@@ -49,6 +49,18 @@ It validates the image against the original's plaintext data and writes the norm
 image to `local-output/reference-dump/` (ignored). Only hashes and statistics go to
 `analysis/decrypted-reference.json`. Never commit the dump or the normalized image.
 
+## Generated code
+
+`FortniteGameCode/Source/Generated/UHT/*.gen.cpp` and `analysis/functions-uht-creators.json` are
+produced from the reference's reflection data. Both need the decrypted image:
+
+```
+python tools/analysis/reflection.py      # analysis/reflection-natives.json
+python tools/codegen/uht_creators.py     # generated sources, manifest, FuncParams evidence
+```
+
+The generated sources are committed, so a checkout builds without the decrypted image.
+
 ## Verify
 
 ```
