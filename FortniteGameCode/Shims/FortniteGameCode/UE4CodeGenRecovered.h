@@ -8,10 +8,17 @@ typedef unsigned int uint32;
 typedef unsigned short uint16;
 typedef int int32;
 typedef size_t SIZE_T;
+typedef wchar_t TCHAR;
+#ifndef TEXT
+#define TEXT(x) L##x
+#endif
 
-class UObject;
+// Complete only so that UPackage* converts to UObject* as in engine code; no layout is implied.
+class UObject {};
 class UClass;
 class UFunction;
+class UScriptStruct;
+class UPackage : public UObject {};
 
 enum EObjectFlags
 {
@@ -97,4 +104,28 @@ namespace UE4CodeGen_Private
 	};
 
 	void ConstructUFunction(UFunction*& OutFunction, const FFunctionParams& Params);
+
+	struct FStructParams
+	{
+		UObject* (*OuterFunc)();
+		UScriptStruct* (*SuperFunc)();
+		void* (*StructOpsFunc)(); // really returns UScriptStruct::ICppStructOps*
+		const char* NameUTF8;
+		EObjectFlags ObjectFlags;
+		uint32 StructFlags; // EStructFlags
+		SIZE_T SizeOf;
+		SIZE_T AlignOf;
+		const FPropertyParamsBase* const* PropertyArray;
+		int32 NumProperties;
+	};
+
+	void ConstructUScriptStruct(UScriptStruct*& OutStruct, const FStructParams& Params);
 }
+
+// CoreUObject/Public/UObject/Class.h (EStructFlags) and UObjectBase.h (GetStaticStruct).
+enum EStructFlags
+{
+	STRUCT_NoFlags = 0x00000000,
+};
+
+UScriptStruct* GetStaticStruct(UScriptStruct* (*InRegister)(), UObject* StructOuter, const TCHAR* StructName, SIZE_T Size, uint32 Crc);

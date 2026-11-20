@@ -44,7 +44,7 @@ MANIFEST = REPO_ROOT / "analysis" / "functions.json"
 EXTRA_MANIFESTS = "functions-*.json"
 SYMBOLS = REPO_ROOT / "analysis" / "symbols.json"
 # Generated symbol evidence: {symbol: {rva, evidence}} files written by analysis/codegen tools.
-GENERATED_SYMBOLS = ("uht-creator-symbols.json",)
+GENERATED_SYMBOLS = ("uht-creator-symbols.json", "uht-struct-symbols.json")
 SOLUTION = REPO_ROOT / "FortniteGameCode" / "FortniteGameCode.sln"
 OBJ_ROOT = REPO_ROOT / "FortniteGameCode" / "Build" / "ClientShipping" / "obj"
 DECRYPTED_REPORT = REPO_ROOT / "analysis" / "decrypted-reference.json"

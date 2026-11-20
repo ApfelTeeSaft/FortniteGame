@@ -62,6 +62,12 @@ def test_literals() -> None:
     assert _string_literal(wide) == "d3ddebug".encode("utf-16le") + b"\0\0"
     assert _string_literal(b"abc\0\0\0\0\0") == b"abc\0"
     assert _string_literal(bytes.fromhex("78ae0a776ff2ba4d")) is None  # GUID bytes are not a literal
+    from symbols_auto import literal_hits
+    w = "Entry".encode("utf-16le") + b"\0\0"
+    hay = b"idx\0" + w + b"\0\0" + w + "Big".encode("utf-16le") + w
+    # After a narrow string, after wide NULs, and as a suffix of a wide string: all three count.
+    assert literal_hits(w, hay, 0x1000) == [0x1004, 0x1012, 0x1024], literal_hits(w, hay, 0x1000)
+    assert literal_hits(b"dx\0", b"\0idx\0\0dx\0", 0) == [6]  # a narrow suffix is not a start
     print("literals: ok")
 
 

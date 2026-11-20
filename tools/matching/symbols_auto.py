@@ -162,13 +162,30 @@ def _string_literal(window: bytes) -> bytes | None:
     return None
 
 
+def literal_hits(lit: bytes, haystack: bytes, hay_rva: int, limit: int = 3) -> list[int]:
+    """RVAs (up to `limit`) where the NUL-terminated literal `lit` may start in `haystack`.
+
+    A candidate is aligned to the literal's character width and preceded by a zero byte. A
+    narrow match inside a longer narrow string is thereby excluded. A wide literal directly
+    after a narrow string ("idx\0" then L"...") is indistinguishable from a wide suffix, so
+    both count. Over-counting can only turn a unique result into an ambiguous one.
+    """
+    width = 2 if lit[1:2] == b"\0" else 1
+    hits: list[int] = []
+    p = haystack.find(lit)
+    while p >= 0 and len(hits) < limit:
+        if (hay_rva + p) % width == 0 and p >= 1 and haystack[p - 1] == 0:
+            hits.append(hay_rva + p)
+        p = haystack.find(lit, p + 1)
+    return hits
+
+
 def resolve_data_symbol(obj: CoffObject, symname: str, haystack: bytes,
                         hay_rva: int) -> tuple[int | None, str]:
     """Find a data symbol's bytes in `haystack` (plaintext reference data starting at hay_rva).
 
-    String literals ($SG..., ??_C@...) are searched as their exact NUL-terminated content. A
-    match must start on a string boundary, i.e. be preceded by a NUL of the same width, so
-    that a suffix of a longer string cannot count. Other data symbols are searched as their
+    String literals ($SG..., ??_C@...) are searched as their exact NUL-terminated content
+    (see literal_hits). Other data symbols are searched as their
     bytes up to the next symbol in their section, at the section alignment. In every case the
     occurrence must be unique, and data containing relocations is not searched.
     """
@@ -189,12 +206,7 @@ def resolve_data_symbol(obj: CoffObject, symname: str, haystack: bytes,
         lit = _string_literal(window)
         if lit is None:
             return None, "string literal not recognised"
-        width = 2 if lit[1:2] == b"\0" else 1
-        p = haystack.find(lit)
-        while p >= 0 and len(hits) < 3:
-            if (hay_rva + p) % width == 0 and p >= width and haystack[p - width:p] == b"\0" * width:
-                hits.append(hay_rva + p)
-            p = haystack.find(lit, p + 1)
+        hits = literal_hits(lit, haystack, hay_rva)
         what = f"{len(lit)}-byte string literal"
     else:
         if len(window) < 8:

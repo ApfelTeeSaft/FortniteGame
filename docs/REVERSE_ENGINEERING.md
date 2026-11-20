@@ -68,8 +68,11 @@ same import, and the manifest records which.
   - `analysis/symbols.json`;
   - import tables;
   - a unique import thunk;
-  - a unique data match: a NUL-terminated literal on a string boundary, or a data block at
-    its alignment;
+  - a unique data match: a NUL-terminated literal, or a data block at its alignment. A
+    literal occurrence counts if it is aligned to its character width and preceded by a zero
+    byte. A wide literal directly after a narrow string ("idx\0" then L"...") cannot be told
+    apart from a wide suffix, so both count; over-counting only turns a unique result into
+    an ambiguous one;
   - an already-exact function, iterated to a fixpoint;
   - **corroboration (leave-one-out):** the same symbol observed at one address in a
     *different* manifest function whose size and every non-relocation byte equal the
@@ -198,8 +201,18 @@ Results:
 
 ### Class constructors
 
-The same 47-byte shape also covers `Z_Construct_UClass_<Class>` (`ConstructUClass`), struct,
-enum and package constructors: 18,381 functions in all. For the 1,034 classes whose
+The same 47-byte shape also covers class, struct, enum and package constructors: 18,381
+functions in all. The callee and the layout of the parameter record each one loads tell
+them apart:
+
+| Callee | Record | Singletons |
+| --- | --- | --- |
+| `ConstructUFunction` `0x0138CF20` | `FFunctionParams` (`.data`) | 11,742 |
+| `ConstructUClass` `0x0138C5D0` | `FClassParams` (`.rdata`) | 3,283 |
+| `ConstructUScriptStruct` `0x0138FA20` | `FStructParams` (`.data`) | 2,176 |
+| `ConstructUEnum` `0x0138C910` | `FEnumParams` (`.data`) | 1,094 |
+| `ConstructUPackage` `0x0138D3B0` | `FPackageParams` (`.rdata`) | 86 |
+ For the 1,034 classes whose
 `FFunctionParams` records agree on one `OuterFunc`, the generator also emits the class
 constructor, with:
 - `FuncInfo[]` rebuilt from the function table;
@@ -231,9 +244,60 @@ The thunk (`jmp GetPrivateStaticClass`, 5 bytes, no `.pdata` entry, named by `FC
 emitted because the class constructor takes `&Class::StaticClass`. 533 thunks are exact. They
 are reported outside the denominator, so they don't count toward the headline figure.
 
-Open data questions, which don't affect creator code:
-- The reference keeps `FuncParams` in `.data`, while public 4.20 (`constexpr` `ENUM_CLASS_FLAGS`) puts it in `.rdata`.
-- `PropPointers` arrays are declared but not yet reconstructed (property-parameter recovery).
+### Struct constructors and `StaticStruct` (`tools/codegen/uht_structs.py`)
+
+A USTRUCT's UHT 4.20 output, in order:
+1. `F<S>::StaticStruct()`: static `Singleton`, then `GetStaticStruct(Z_Construct_UScriptStruct_F<S>, <package singleton>(), TEXT("<S>"), sizeof, Get_..._CRC())`.
+2. Two registration objects with dynamic initializers: `FCompiledInDeferStruct` and `FScriptStruct_<Pkg>_StaticRegisterNatives<S>`.
+3. The `_Statics` (`NewStructOps`, property parameters, `ReturnStructParams`).
+4. `Z_Construct_UScriptStruct_F<S>()`: static `ReturnStruct`.
+5. `Get_..._CRC()`.
+
+In the reference, `StaticStruct` takes one of two forms:
+- 1,523 compile to an 82-byte function split into three `.pdata` fragments: a primary entry
+  and two chained ones. MSVC shrink-wraps the `rbx` save into the slow path.
+- 587 inline the package singleton. This happens when the struct's `.gen.cpp` follows
+  `<Module>.init.gen.cpp` in the module's unity file.
+
+The plain form is the attribution chain. Its LEA of a 47-byte singleton identifies that
+singleton as the struct's constructor, and its wide literal gives the name. The generator
+writes one translation unit per plain struct:
+
+| Field | Evidence |
+| --- | --- |
+| `ReturnStructParams` | the only `FStructParams` record in `.data` with this `NameUTF8` and package `OuterFunc` |
+| `ConstructUScriptStruct`, `GetStaticStruct` | corroborated across constructors / `StaticStruct`s |
+| `ReturnStruct` / `Singleton` | section-relative to each other (leave-one-out) |
+| package singleton | the 47-byte singleton whose `FPackageParams` name the package |
+| `Get_..._CRC` | the only 16-byte-aligned `mov eax, imm32; ret` with that constant |
+| `Z_Construct_UScriptStruct_F<S>` (in `StaticStruct`) | the exact constructor |
+
+**Statics layout.** MSVC puts each function-local static in its own COMDAT `.bss` section,
+but every zero-initialized namespace-scope object of a translation unit shares one plain
+`.bss` section. That section is created at the first such object. In the original unity
+file an earlier object created it, so each struct's `Singleton` and `ReturnStruct` are
+adjacent: 1,514 of 1,523 have `ReturnStruct == Singleton + 8`.
+
+A per-struct translation unit that emitted the registration objects would put that section
+between the two (offsets 0/8/9/16). The registration objects are therefore not emitted yet,
+and this is stated in each generated file. The other 9 structs have further statics between
+the two slots, so the prediction fails and they stay relocation-equivalent.
+
+**Results.** 1,514 constructors are exact. Every `StaticStruct` is relocation-equivalent,
+because the reference holds three identical copies of each `TEXT("<S>")` literal. There is
+no `/GF`, so each use (`StaticStruct` and the two registration initializers) gets its own
+`$SG` string, and each copy has exactly one user.
+
+**Fork note.** The registration initializers live in the grouped dynamic-initializer
+code. They call `UObjectCompiledInDeferStruct(..., FName(TEXT("<S>")), ...)`, as the local
+4.20 source declares, and `UScriptStruct::DeferCppStructOps(FName, new TCppStructOps<F<S>>)`.
+
+**Data placement.** `FFunctionParams` and `FStructParams` sit in `.data` and `FClassParams` in
+`.rdata`, in the reference and in this repository's own v140 build alike. This is compiler
+behaviour, not an engine difference.
+
+Open data question, which doesn't affect the matched code: `PropPointers` arrays are declared
+but not yet reconstructed (property-parameter recovery).
 
 ## Naming confidence
 
