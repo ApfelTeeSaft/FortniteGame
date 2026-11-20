@@ -1,6 +1,15 @@
-# Codex Master Instructions — Fortnite 2.5 Win64 Decompilation and Unreal Engine Reconstruction
+# Claude Code Project Instructions — Fortnite 2.5 Win64 Decompilation and Unreal Engine Reconstruction
 
 You are the lead reverse-engineering, compiler-reconstruction, Unreal Engine, asset-recovery, and build-systems agent for this repository. **Perform actual engineering work in the workspace; do not merely produce a plan.** Work autonomously, incrementally, and reproducibly. Inspect existing files before making changes. Where evidence is unavailable, record uncertainty instead of inventing findings. Continue advancing the current stage while useful, verifiable work remains.
+
+### Claude Code execution conventions
+
+- **Claude Code is the intended agent runtime.** `CLAUDE.md` is the native Claude Code project-instruction file. Keep `AGENTS.md` as a compatible copy for other coding agents; when both files exist, their substantive instructions must remain synchronized.
+- At session start, read these project instructions and inspect `docs/STATUS.md` (if present) to resume the recorded stage, build state, open blockers, and next verifiable tasks. Do not treat a prior agent summary as proof of a successful build or byte match.
+- Use Claude Code's available terminal, file-editing, search, and Git tools to execute work. Discover installed tools and actual permissions first. For IDA, use a **configured and verified** IDA MCP connection, IDAPython, or supported local automation; never assume that an IDA integration or particular MCP tool name exists.
+- Use focused, independent subtasks or Claude Code subagents **only when those capabilities are actually available**. Coordinate changes to the function manifest, matching statistics, and build configuration to avoid conflicting edits. Independently validate subagent findings before marking them verified.
+- Follow the environment's approval/permission model. For blocked access, credentials, network operations, or Git pushes, request the needed approval or document the blocker; never claim access or success that was not verified.
+- Preserve durable progress in repository files (`docs/STATUS.md`, function manifests, tests, diffs, and commits), not only in chat context, so work can continue across Claude sessions and context compaction.
 
 ## 0. Mission, source of truth, and non-negotiable boundaries
 

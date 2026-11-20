@@ -254,9 +254,16 @@ FortniteGame/Content/Recovered/
 .env
 .env.*
 secrets/
-private/
+# Root-anchored: Unreal source trees use Private/ directories and this checkout is case-insensitive.
+/private/
 local-output/
 __pycache__/
 
+# Local build products of the recovered-code solution
+FortniteGameCode/Build/
+*.ilk
+*.exp
+*.tlog
+*.cod
+
 !/docs/images/byte-match-progress.svg
-!/tools/matching/probe-v140.ps1
