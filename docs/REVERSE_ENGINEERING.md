@@ -86,10 +86,14 @@ same import, and the manifest records which.
   - **section-relative (leave-one-out):** a data symbol is predicted from neighbours that
     *other* functions observed. Neighbours are taken from the object's data layout, i.e.
     same-named sections, COMDATs included, in object order with their alignment, as the
-    linker places one object's contributions. The prediction supported by the most
-    neighbours is used if it strictly outnumbers every alternative. A prediction that then
-    fails to reproduce the reference bytes is reported as an unresolved field, not as a
-    byte difference.
+    linker places one object's contributions. Local first: on each side, the run of
+    observed neighbours nearest the symbol that agree with each other gives a prediction.
+    The prediction is used if the two sides agree, or if only one side has observed
+    neighbours. A layout gap elsewhere in a large unit therefore cannot outvote the
+    symbol's immediate neighbours. If the two sides disagree (a gap next to the symbol),
+    the prediction supported by the most neighbours is used, provided it strictly
+    outnumbers every alternative. A prediction that then fails to reproduce the reference
+    bytes is reported as an unresolved field, not as a byte difference.
 
   Nothing is masked. Every resolved field records its evidence in `analysis/functions.json`,
   and a wrong prediction simply fails the byte comparison. The repository owner approved
@@ -391,6 +395,38 @@ neighbours. The split doesn't change code generation.
 
 Enumerator values are emitted as the integers stored in the reference. The C++ enum
 declarations, including their underlying types, are not recovered.
+
+## Module layout model (`tools/analysis/unity_order.py`)
+
+UBT compiles a module's generated code as unity files (`Module.<Name>.gen.N.cpp`) that
+include the `.gen.cpp` files one after another. The `.bss` slots of every UHT singleton
+follow that order. Rebuilding it lets every item be compiled next to its true neighbours.
+
+**Source of the order.** MSVC records a translation unit's dynamic initializers in
+`.CRT$XCU` in definition order, and the linker concatenates the units' arrays. The
+reference's table (28,355 entries at `0x02E29A40`) therefore lists every UHT registration
+object in source order:
+
+| Item | Initializers |
+| --- | --- |
+| class | the leaf `TClassCompiledInDefer` initializer (CRC, `TEXT("C")`, `sizeof`), then the 58-byte `FCompiledInDefer` one (`Z_Construct_UClass_C`, `C::StaticClass`) |
+| struct | `FCompiledInDeferStruct` (66 bytes), then `StaticRegisterNatives` (92 bytes) |
+| enum | `FCompiledInDeferEnum` (66 bytes) |
+
+Units are delimited as follows:
+- Each unity file opens with the leaf initializer of a header constant (`movaps` from
+  `0x02E624F0`; 299 occurrences).
+- Because a unity file never spans two modules, a package change also starts a unit. Some
+  small plugin modules' units lack that header.
+
+The table yields 161 units holding all 3,333 classes, 2,110 structs (all but the 66
+noexport ones) and 1,094 enums. No `.bss` address is read.
+
+**Check (diagnostic, not evidence).** The model expands each item into predicted COMDAT
+`.bss` slots: enum `ReturnEnum`; struct `Singleton`, `ReturnStruct`; class creators,
+`OuterClass`, `PrivateStaticClass`. Of 22,976 consecutive predicted pairs with known
+reference addresses, 22,296 (97 %) are adjacent. The 680 gaps sit at unit boundaries and
+at items not yet modelled, such as package-scope delegates.
 
 ## Naming confidence
 

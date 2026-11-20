@@ -510,7 +510,7 @@
       "match": "relocation-equivalent",
       "original_sha256": "255bf2cd42421977dc0979f62777284c270358543fc1fe4c2d8da3c30d6be432",
       "decrypted_sha256": "048044ec1c5b8555d090b7342289bd31e6fb16c6c2e1637f25c81451271478a0",
-      "candidate_sha256": "82afe8b0eb1129625775c9e2bd9da837d402f112a4491a8a90ed69e402043d86",
+      "candidate_sha256": "336ddac1bd4cfdb5c6bf00eec7c31d0dda2ff0c6efd449de080713141987ab34",
       "byte_diff": {
         "reference_size": 108,
         "candidate_size": 108,
@@ -534,6 +534,12 @@
             "symbol": "?Logf_InternalImpl@FMsg@@SAXPEBDHAEBVFName@@W4Type@ELogVerbosity@@PEB_WZZ",
             "rva": "0x01177BF0",
             "evidence": "corroborated: same symbol at this address in FCommandLine::GetForLogging, FCommandLine::GetOriginalForLogging"
+          },
+          {
+            "offset": "0x00000057",
+            "symbol": "$SG2953",
+            "rva": "0x03475532",
+            "evidence": "section-relative (local) to $SG2962 (seen in FCommandLine::GetForLogging)"
           },
           {
             "offset": "0x0000005C",
@@ -572,15 +578,9 @@
             "size": 4,
             "symbol": "$SG2952",
             "kind": "REL32"
-          },
-          {
-            "offset": "0x00000057",
-            "size": 4,
-            "symbol": "$SG2953",
-            "kind": "REL32"
           }
         ],
-        "bytes_differing_only_in_unresolved_fields": 20
+        "bytes_differing_only_in_unresolved_fields": 16
       },
       "compiler": "prodid 261 build 24215",
       "in_denominator": true
@@ -635,7 +635,7 @@
             "offset": "0x00000063",
             "symbol": "?LoggingCmdLine@FCommandLine@@0PA_WA",
             "rva": "0x04690E60",
-            "evidence": "section-relative to ?CmdLine@FCommandLine@@0PA_WA (seen in FCommandLine::Get) and 1 more neighbours (1 dissenting)"
+            "evidence": "section-relative (local) to ?CmdLine@FCommandLine@@0PA_WA (seen in FCommandLine::Get) and 1 more neighbours"
           }
         ],
         "unresolved_relocations": [
@@ -725,7 +725,7 @@
             "offset": "0x00000063",
             "symbol": "?LoggingOriginalCmdLine@FCommandLine@@0PA_WA",
             "rva": "0x04698E60",
-            "evidence": "section-relative to ?CmdLine@FCommandLine@@0PA_WA (seen in FCommandLine::Get) and 1 more neighbours (1 dissenting)"
+            "evidence": "section-relative (local) to ?LoggingCmdLine@FCommandLine@@0PA_WA (seen in FCommandLine::GetForLogging) and 1 more neighbours"
           }
         ],
         "unresolved_relocations": [

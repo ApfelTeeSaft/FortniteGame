@@ -56,6 +56,7 @@ produced from the reference's reflection data. Both need the decrypted image:
 
 ```
 python tools/analysis/reflection.py      # analysis/reflection-natives.json
+python tools/analysis/unity_order.py     # analysis/unity-order.json (unity source order)
 python tools/codegen/uht_creators.py     # generated sources, manifest, FuncParams evidence
 python tools/codegen/uht_structs.py      # USTRUCT registration code, manifests, evidence
 python tools/codegen/uht_enums.py        # UENUM registration code, manifests, evidence

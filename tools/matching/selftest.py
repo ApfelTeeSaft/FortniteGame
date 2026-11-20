@@ -101,7 +101,7 @@ def test_literal_elimination() -> None:
     obj = NS(symbols=[sym], sections=[NS(name=".rdata", data=lit, chars=0x40000040, relocs=[])],
              symbol=lambda name: sym if name == "$SG1" else None, data_layout=lambda: {})
     r = Resolver.__new__(Resolver)
-    r.functions, r.known, r.data_cache, r.data_notes = {}, {}, {}, {}
+    r.functions, r.known, r.data_cache, r.data_notes, r._literal_copies = {}, {}, {}, {}, {}
     r.hay_rva, r.hay = 0x1000, b"\0\0" + lit + b"\0\0" + lit + b"\0\0" + lit
     copies = [0x1002, 0x1010, 0x101E]
     r.entry_names, r.observations = {1: "A", 2: "B", 3: "T"}, {}
@@ -114,8 +114,21 @@ def test_literal_elimination() -> None:
     print("literal elimination: ok")
 
 
+def test_local_prediction() -> None:
+    from compare import local_prediction
+    # Layout [a=0][b=8][s=16][c=24][d=32]; a layout gap in the reference between b and s.
+    n = [(0, 0x1010, "a"), (8, 0x1010, "b"), (24, 0x2010, "c"), (32, 0x2010, "d")]
+    assert local_prediction(16, n) is None                                # sides disagree
+    assert local_prediction(16, n[2:]) == (0x2010, ["c", "d"])            # one side only
+    agree = [(0, 0x3010, "a"), (24, 0x3010, "c"), (40, 0x9999, "far")]
+    assert local_prediction(16, agree) == (0x3010, ["a", "c"])            # far block cannot outvote
+    assert local_prediction(16, []) is None
+    print("local section-relative: ok")
+
+
 def main() -> int:
     test_unwind()
+    test_local_prediction()
     test_literals()
     test_leave_one_out()
     test_literal_elimination()

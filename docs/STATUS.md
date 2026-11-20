@@ -9,30 +9,24 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **18,892 / 157,719** primary `.pdata` functions (11.98 %, 1,003,265 bytes):
+| Exact functions | **18,990 / 157,719** primary `.pdata` functions (12.04 %, 1,008,539 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 18,885 generated UHT functions:
-  - classes: 10,553 UFunction creators, 1,031 `Z_Construct_UClass_*`, 696 `StaticRegisterNatives*`;
-  - USTRUCTs: 1,514 `Z_Construct_UScriptStruct_*`, 1,423 `StaticStruct`, 1,294 `NewStructOps`
+- 18,983 generated UHT functions:
+  - classes: 10,556 UFunction creators, 1,034 `Z_Construct_UClass_*`, 696 `StaticRegisterNatives*`;
+  - USTRUCTs: 1,514 `Z_Construct_UScriptStruct_*`, 1,426 `StaticStruct`, 1,294 `NewStructOps`
     and 1,427 `StaticRegisterNatives` initializers;
-  - UENUMs: 695 `Z_Construct_UEnum_*` and 252 `<Enum>_StaticEnum`.
+  - UENUMs: 726 `Z_Construct_UEnum_*`, 301 `<Enum>_StaticEnum` and 9 `FCompiledInDeferEnum` initializers.
 
 Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 533 `StaticClass` thunks and `FCommandLine::IsInitialized` |
-| Relocation-equivalent | 3,627 in the denominator:
-- three `FCommandLine` getters (per-occurrence literal copies);
-- 98 creators, 3 class constructors, 9 struct constructors and 9 `StaticStruct`s (layout gaps);
-- 91 `StaticStruct`s and 96 struct-ops initializers whose name literal has a copy with no
-  reconstructed user;
-- all 1,523 `FCompiledInDeferStruct` and 824 `FCompiledInDeferEnum` initializers, whose
-  `L"/Script/<Package>"` literal has more copies than elimination enumerates;
-- 399 enum constructors with no `ReturnEnum` neighbour (run of one, or a run broken in the
-  reference);
-- 572 `StaticEnum`s: 538 with `Singleton` unpredicted, 312 whose constructor is
-  not exact, and 96 whose name literal has an extra copy. These overlap.
+| Relocation-equivalent | 3,529 in the denominator, mostly:
+- statics with no modelled neighbour (layout gaps, or single-item runs);
+- name literals with an extra copy whose user is not yet reconstructed;
+- package-name literals with too many copies for elimination.
 
-Outside the denominator: 501 `StaticClass` thunks. `FCommandLine::GetOriginal` is absent
-from the image (presumably `/OPT:REF`) |
+The per-manifest counts are in `analysis/functions-uht-*.json`. Outside the denominator: 501
+`StaticClass` thunks. `FCommandLine::GetOriginal` is absent from the image (presumably
+`/OPT:REF`) |
 | Named functions | 16,734 denominator functions (10.6 %) named from UHT reflection tables: 4,215 exec thunks, 11,127 `Z_Construct_UFunction_*` creators, and registrar/`GetPrivateStaticClass` pairs for 696 attributed classes. See `analysis/reflection-natives.json` |
 | Whole-file identity | Not achievable as things stand: encrypted bodies on disk, a protector section and rewritten import references, a patched entry stub, and an Authenticode signature |
 | IDA | IDA Professional 9.4 `idat.exe` headless export verified on a test binary. The reference has not been analysed in IDA yet |
@@ -78,10 +72,19 @@ from the image (presumably `/OPT:REF`) |
    - The 587 structs whose `StaticStruct` inlines the package singleton (their `.gen.cpp`
      follows `<Module>.init.gen.cpp` in the unity file) and the 66 without `StaticStruct`
      (noexport).
-   - Enums: 399 constructors and 572 `StaticEnum`s remain, plus 270 `StaticEnum`s that inline
-     the package singleton. A model of the module's unity translation unit would supply the
-     missing neighbours: the order of file-static functions and the headers' COMDAT `.bss`
-     sequence.
+   - Module layout model, in progress. `tools/analysis/unity_order.py` recovers the source
+     order of all 6,537 UHT items in 161 translation units from `.CRT$XCU`
+     (`analysis/unity-order.json`). Next steps, in order:
+     1. generate one class-declaration header with the recovered hierarchy (supers resolve for
+        3,309 of 3,309 decoded `GetPrivateStaticClass` bodies);
+     2. emit `IMPLEMENT_CLASS` (`GetPrivateStaticClass`) for every class, plus constructors for
+        function-less classes;
+     3. assemble per-unit unity files that `#include` per-item fragments in that order, and
+        point manifest objects at them.
+
+     This gives the remaining enum, struct and class statics their true neighbours. The 587
+     inlined-package `StaticStruct`s and 270 `StaticEnum`s also need the package constructor
+     at its `init.gen.cpp` position.
    - The remaining class constructors, 3,326 `GetPrivateStaticClass` bodies and the 4,215
      exec thunks.
 4. Run the IDA export on the decrypted image for call graphs and cross-references.

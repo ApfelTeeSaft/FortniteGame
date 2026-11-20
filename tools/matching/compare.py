@@ -98,6 +98,7 @@ class Resolver:
         # and the same indexed by address: RVA -> {symbol key: {manifest entry indices}}.
         self.observations: dict = {}
         self.by_addr: dict = {}
+        self._literal_copies: dict[bytes, list[int]] = {}
         self.entry_names: dict[int, str] = {}
 
     @staticmethod
@@ -148,7 +149,10 @@ class Resolver:
         # relocation-equivalent-or-better functions, the remaining copy is this symbol's.
         lit = symbols_auto.literal_content(obj, symbol)
         if lit is not None:
-            hits = symbols_auto.literal_hits(lit, self.hay, self.hay_rva, limit=ELIMINATION_LIMIT)
+            hits = self._literal_copies.get(lit)
+            if hits is None:   # depends only on the content, so it is computed once
+                hits = self._literal_copies[lit] = symbols_auto.literal_hits(
+                    lit, self.hay, self.hay_rva, limit=ELIMINATION_LIMIT)
             if 1 < len(hits) < ELIMINATION_LIMIT:
                 free, users = [], []
                 for h in hits:
@@ -163,10 +167,14 @@ class Resolver:
                     return [(free[0], f"literal elimination: {len(hits)} copies, the others used by "
                                       + ", ".join(users[:2]) + (f" and {len(users) - 2} more" if len(users) > 2 else ""))]
         # Section-relative: neighbours in the object's data layout (same section name, sections
-        # in object order), observed by other functions. The prediction supported by the most
-        # neighbours is used if it strictly outnumbers every alternative; gaps in the layout
-        # model (statics not reconstructed) then cost only the neighbours across the gap. The
-        # byte comparison decides, and a failed prediction is reported as unresolved.
+        # in object order), observed by other functions. Local first: the nearest observed
+        # neighbour on each side, extended outward while neighbours agree, gives that side's
+        # prediction. If the two sides agree, or only one side has observed neighbours, that
+        # prediction is used; a gap in the layout model elsewhere in a large unit then cannot
+        # outvote the immediate neighbours. If the sides disagree (a gap next to the symbol),
+        # the prediction supported by the most neighbours is used if it strictly outnumbers
+        # every alternative. The byte comparison decides, and a failed prediction is reported
+        # as unresolved.
         sym = obj.symbol(symbol)
         if sym is None or sym.section <= 0:
             return []
@@ -177,12 +185,20 @@ class Resolver:
         if mine is None:
             return []
         preds: dict[int, list[str]] = {}
+        neighbours: list[tuple[int, int, str]] = []
         for name, off, _ in group:
             if name == symbol:
                 continue
             ovals, owho = self._observed(self.key(obj, objpath, name), exclude)
             if len(ovals) == 1:
-                preds.setdefault(next(iter(ovals)) + mine - off, []).append(f"{name} (seen in {owho})")
+                pred = next(iter(ovals)) + mine - off
+                preds.setdefault(pred, []).append(f"{name} (seen in {owho})")
+                neighbours.append((off, pred, f"{name} (seen in {owho})"))
+        local = local_prediction(mine, neighbours)
+        if local is not None:
+            pred, basis = local
+            extra = f" and {len(basis) - 1} more neighbours" if len(basis) > 1 else ""
+            return [(pred, "section-relative (local) to " + basis[0] + extra)]
         ranked = sorted(preds.items(), key=lambda kv: -len(kv[1]))
         if ranked and (len(ranked) == 1 or len(ranked[0][1]) > len(ranked[1][1])):
             pred, basis = ranked[0]
@@ -214,6 +230,32 @@ class Resolver:
             key = self.key(obj, objpath, r.symbol)
             self.observations.setdefault(key, {}).setdefault(target, set()).add(idx)
             self.by_addr.setdefault(target, {}).setdefault(key, set()).add(idx)
+
+
+def local_prediction(mine: int, neighbours: list[tuple[int, int, str]]) -> tuple[int, list[str]] | None:
+    """Prediction from the agreeing runs of observed neighbours adjacent to offset `mine`.
+
+    `neighbours` holds (layout offset, predicted address of the symbol, description). Each side's
+    run starts at the nearest neighbour and continues while predictions agree. Returns None when
+    there is no neighbour or when the two sides disagree.
+    """
+    def run(side):
+        if not side:
+            return None, []
+        p, basis = side[0][1], []
+        for _, q, desc in side:
+            if q != p:
+                break
+            basis.append(desc)
+        return p, basis
+
+    lp, lb = run(sorted((n for n in neighbours if n[0] < mine), key=lambda n: -n[0]))
+    rp, rb = run(sorted((n for n in neighbours if n[0] > mine), key=lambda n: n[0]))
+    if lp is None and rp is None:
+        return None
+    if lp is None or rp is None:
+        return (lp, lb) if rp is None else (rp, rb)
+    return (lp, lb + rb) if lp == rp else None
 
 
 def reference_state(img: PEImage, rf, ref: bytes, cand: bytes) -> str:
@@ -553,9 +595,13 @@ def main() -> int:
                               for k, d in resolver.observations.items() for v, ents in d.items()))
 
     results: dict = {}
-    for _ in range(32):
+    import time
+    for npass in range(1, 33):
+        t0 = time.perf_counter()
         results = {i: evaluate(i, e, img, dimg, rfmap, resolver, funclet_rvas)
                    for i, e in enumerate(entries) if i not in skip}
+        print(f"pass {npass}: {sum(r.get('match') == 'exact' for r in results.values())} exact, "
+              f"{time.perf_counter() - t0:.1f}s", file=sys.stderr)
         for i, res in results.items():
             e = entries[i]
             res["in_denominator"] = bool(e.get("start_rva")) and int(e["start_rva"], 16) in primary_set
