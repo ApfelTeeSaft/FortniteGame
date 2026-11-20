@@ -11,6 +11,7 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
 | Exact functions | **7 / 157,719** primary `.pdata` functions (0.0044 %, 918 bytes). Two match on-disk plaintext (SEH filter funclets). Five match the decrypted image: `SafeCreateDXGIFactory` ×2, `SafeTestD3D11CreateDevice`, `D3D11RHI_ShouldCreateWithD3DDebug`, `FParse::Param`. Every relocation is resolved from independent or leave-one-out corroborated evidence. Also exact, outside the denominator: `FCommandLine::IsInitialized` (leaf, no `.pdata`) |
 | Relocation-equivalent | `FCommandLine::Get`, `GetForLogging` and `GetOriginalForLogging`: every non-relocation byte is identical; only their per-occurrence literal copies are unresolved. `FCommandLine::GetOriginal` is absent from the image (presumably `/OPT:REF`) |
+| Named functions | 16,734 denominator functions (10.6 %) named from UHT reflection tables: 4,215 exec thunks, 11,127 `Z_Construct_UFunction_*` creators, and registrar/`GetPrivateStaticClass` pairs for 696 attributed classes. See `analysis/reflection-natives.json` |
 | Whole-file identity | Not achievable as things stand: encrypted bodies on disk, a protector section and rewritten import references, a patched entry stub, and an Authenticode signature |
 | IDA | IDA Professional 9.4 `idat.exe` headless export verified on a test binary. The reference has not been analysed in IDA yet |
 
@@ -32,9 +33,12 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 2. Resolve per-occurrence literal copies (no `/GF`, and holes are packed with literals from
    earlier in the TU). Either reconstruct the literal sequence of the surrounding Core unity
    TU, or accept the getters as relocation-equivalent.
-3. Recover reflection data from plaintext `.rdata`/`.data` (UClass/UFunction registration
-   and native function tables) to name `.pdata` ranges at scale, then batch-match small
-   leaf-like functions.
+3. Batch-match UHT-generated code. The 11,127 `Z_Construct_UFunction_*` creators share one
+   code shape: a static `ReturnFunction`, a `const FFunctionParams` and a
+   `ConstructUFunction` call. `ConstructUFunction` corroborates across them. The per-function
+   `FuncParams`/`ReturnFunction` fields need data-block matching, i.e. reconstructing each
+   class's generated `.rdata` from its reflection data (property/function params).
+   Attribute the remaining 260 native arrays, whose registrar has no unique `LEA` reference.
 4. Run the IDA export on the decrypted image for call graphs and cross-references.
 
 ## Reproduce

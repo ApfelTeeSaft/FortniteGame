@@ -81,7 +81,8 @@ same import, and the manifest records which.
     object-file offset difference. Every prediction must agree.
 
   Nothing is masked. Every resolved field records its evidence in `analysis/functions.json`,
-  and a wrong prediction simply fails the byte comparison.
+  and a wrong prediction simply fails the byte comparison. The repository owner approved
+  counting corroborated fields toward `exact` on 2026-11-20.
 * `relocation-equivalent`: identical except for unresolved relocation fields. Not exact.
 * `partial` / `unmatched`: some or no bytes agree.
 * `unknown`: the reference body is encrypted and no decrypted image is available.
@@ -138,6 +139,28 @@ Before the dump arrived, structural matches had already pinned down two differen
 public 4.20.0 (see [ENGINE_DIFFERENCES.md](ENGINE_DIFFERENCES.md)). They also showed
 that `D3D11RHI_ShouldCreateWithD3DDebug` is inlined across files, i.e. a unity build.
 Byte comparison against the decrypted bodies confirmed both differences.
+
+## Reflection registration data (`tools/analysis/reflection.py`)
+
+UHT-generated tables in plaintext `.rdata` name functions directly. The output is
+`analysis/reflection-natives.json`, with names and RVAs only.
+
+| Table | Layout | Found |
+| --- | --- | --- |
+| `FNameNativePtrPair[]` (per class, in `StaticRegisterNatives<Class>`) | {name, exec thunk} | 956 arrays, 4,460 entries, 4,215 distinct exec thunks (some ICF-folded) |
+| `FClassFunctionLinkInfo[]` (per class, in `FClassParams`) | {`Z_Construct_UFunction_*`, name} | 1,249 arrays, 11,130 entries |
+
+The two layouts interleave the same pointer kinds, so a run read at the wrong 8-byte
+alignment looks like the other table with one entry fewer. Each run takes the reading with
+the longer run.
+
+Class attribution follows unique RIP-relative `LEA` references in the decrypted code: the
+native array is loaded by exactly one function (`StaticRegisterNatives<Class>`). That
+function's address is loaded by exactly one function (`GetPrivateStaticClass`), which also
+loads `TEXT("<Class>") + 1`, i.e. a wide string + 2. This attributes 696 of 956 arrays. No
+class, registrar or `GetPrivateStaticClass` is shared between attributions. In total
+16,734 denominator functions (10.6 %) now carry reflection-derived names. Names from these
+tables count as `confirmed`; class attribution as `high-confidence inferred`.
 
 ## Naming confidence
 
