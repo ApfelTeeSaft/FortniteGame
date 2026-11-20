@@ -27,7 +27,7 @@ static bool IsDelayLoadException(PEXCEPTION_POINTERS ExceptionPointers)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x016138D0 (end 0x016138EA)
 // Original VA: 0x00000001416138D0 | File offset: 0x01612ED0
-// Recovery: high-confidence inferred (UE4 name) | Matching: unknown, body encrypted on disk
+// Recovery: high-confidence inferred (UE4 name) | Matching: exact (vs decrypted image; all relocations independently resolved)
 // Evidence: unwind ALLOC_SMALL 0x38; one C scope [+0x04,+0x15) -> filter 0x02DAE780.
 //   A 17-byte guarded range fits only the single factory call. Public 4.20.0 also parses
 //   -quad_buffer_stereo here; that code cannot fit, so the CL 3889387 fork predates it.
@@ -44,7 +44,7 @@ static void SafeCreateDXGIFactory(IDXGIFactory1** DXGIFactory1)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x016138F0 (end 0x01613A2E)
 // Original VA: 0x00000001416138F0 | File offset: 0x01612EF0
-// Recovery: high-confidence inferred (UE4 name) | Matching: unknown, body encrypted on disk
+// Recovery: high-confidence inferred (UE4 name) | Matching: relocation-equivalent (vs decrypted image; 3 literals ambiguous, FCommandLine::Get/FParse::Param not yet matched)
 // Evidence: unwind saves rbx/rsi, pushes rdi/r14/r15, ALLOC_SMALL 0x70; one C scope
 //   [+0xBD,+0x126) -> filter funclet 0x02DAE750 (frame slots +0x68/+0x50). This
 //   reconstruction reproduces the 0x13E size, every unwind code, the handler kind and the

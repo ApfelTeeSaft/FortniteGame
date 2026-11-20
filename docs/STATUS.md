@@ -1,48 +1,47 @@
 # Status
 
-Stage 1 (exact-match client decompilation): **in progress, blocked for bulk matching** by on-disk code encryption.
-Stages 2–4 have not started.
+Stage 1 (exact-match client decompilation): **in progress**. A validated decrypted image of
+the reference build now supplies plaintext function bodies. Stages 2–4 have not started.
 
 | Item | State (verified 2026-11-20) |
 | --- | --- |
 | Reference | `FortniteClient-Win64-Shipping.exe`, 82,298,304 bytes, SHA-256 `9731a6b5…eb449102`, linked 2018-02-14, `++Fortnite+Release-2.5-CL-3889387`, version resource `4.20.0-3889387` |
+| Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **2 / 157,719** primary `.pdata` functions (0.0013 %), both SEH filter funclets (84 bytes). Raw-byte identical, no relocations, no masking |
-| Structure-only evidence | 3 parents whose compiled size, every unwind code and C scope offsets equal the reference records. Their bodies are encrypted, so the match state stays `unknown` |
-| Code protection | 157,716 of 157,719 primary functions fail the prologue-vs-unwind check. Leaf code outside `.pdata` is encrypted too. See [REVERSE_ENGINEERING.md](REVERSE_ENGINEERING.md#code-protection) |
-| Whole-file identity | Not achievable as things stand: encrypted bodies, a protector section, a patched entry stub and an Authenticode signature (`0x17C0` bytes) |
-| IDA | IDA Professional 9.4 `idat.exe` headless export verified on a test binary. The reference has not been analysed in IDA this cycle (encrypted bodies) |
+| Exact functions | **4 / 157,719** primary `.pdata` functions (0.0025 %, 136 bytes). Two match on-disk plaintext (SEH filter funclets). Two match the decrypted image (`SafeCreateDXGIFactory` in D3D11RHI and its D3D12-shaped twin), with every relocation resolved from independent evidence |
+| Relocation-equivalent | `SafeTestD3D11CreateDevice` and `D3D11RHI_ShouldCreateWithD3DDebug`: every non-relocation byte is identical. Three wide literals occur 3+ times in `.rdata`, and `FCommandLine::Get`/`FParse::Param` are not matched yet |
+| Whole-file identity | Not achievable as things stand: encrypted bodies on disk, a protector section and rewritten import references, a patched entry stub, and an Authenticode signature |
+| IDA | IDA Professional 9.4 `idat.exe` headless export verified on a test binary. The reference has not been analysed in IDA yet |
 
-## Blocker: no plaintext code to match against
+## Protector effects that matching must account for
 
-Each function body in the main `.text` is encrypted separately; the `0xCC` padding,
-`.pdata`, `.xdata` and `.rdata` are plaintext. The entry stub calls into a second
-`.text` section that has no `.pdata`, which is presumably the runtime decryptor.
-Byte matching needs a decrypted image of this exact build. Producing one means
-running the client or defeating its protection, which is the owner's decision.
-The project has not done either. Until a decrypted reference is supplied, exact
-matching is limited to the few plaintext units.
+* Function bodies are encrypted on disk; the dump supplies them.
+* The protector built its own import table in `.idata`. In the decrypted image 25,348
+  `call [rip+X]` sites and all 761 import thunks reference that table. Only 62 call sites
+  still reference the original linker IAT at the start of `.rdata`. `__imp_X` therefore
+  resolves to either named slot of the same import; the manifest records which one matched.
+* The section slack after the export, exception and resource directories, the `_RDATA` tail
+  and all of `.gfids` hold protector code, not original data.
 
 ## Next verifiable tasks
 
-1. **Needs owner decision:** obtain a decrypted image of build CL 3889387. Then add it as a
-   second, separately fingerprinted reference (never committed). Teach `compare.py` to use
-   it for bodies and the original file for metadata.
-2. Use plaintext metadata to locate more functions: compiled size plus unwind record plus
-   scope/GS data. This works where a reconstruction yields a unique signature among the
-   157,719 records. Record these as structural evidence, never as `exact`.
-3. Recover reflection data from plaintext `.rdata`/`.data`: UClass/UFunction registration
-   tables and native function pointers. That maps names onto `.pdata` ranges ahead of body
-   matching.
-4. Identify the three most-used exception handlers: 10,095 records use RVA `0x02D98C70`,
-   1,415 use `0x02D9AE16` and 465 use `0x02D993EC`. Fix their CRT identities from evidence
-   and add them to `analysis/symbols.json` with that evidence.
+1. Recover `FCommandLine::Get` (`0x01193BC0`, 0x6C bytes) and `FParse::Param` (`0x011BFED0`,
+   0x178 bytes) from Core. Matching them resolves the callee fields of two pending functions
+   through the fixpoint. `Get` needs the shipping expansion of `UE_CLOG(..., Fatal, ...)`.
+2. Resolve per-TU string literal copies. With `/Ox` there is no string pooling, so identical
+   literals repeat per translation unit. This needs a faithful unity layout or more of
+   each TU's literals.
+3. Recover reflection data from plaintext `.rdata`/`.data` (UClass/UFunction registration
+   and native function tables) to name `.pdata` ranges at scale, then batch-match small
+   leaf-like functions.
+4. Run the IDA export on the decrypted image for call graphs and cross-references.
 
 ## Reproduce
 
 ```
-python tools/matching/fingerprint.py      # analysis/build-fingerprint.json
-python tools/matching/survey.py           # analysis/plaintext-survey.json
-python tools/matching/selftest.py         # build, compare --check, progress --verify
+python tools/matching/fingerprint.py                    # analysis/build-fingerprint.json
+python tools/matching/survey.py                         # analysis/plaintext-survey.json
+python tools/matching/ingest_dump.py --dump <dump>      # local decrypted image + analysis/decrypted-reference.json
+python tools/matching/selftest.py                       # build, compare --check, progress --verify
 ```

@@ -29,6 +29,7 @@
         "candidate_size": 42,
         "differing_bytes": 0,
         "first_difference": null,
+        "resolved_relocations": [],
         "unresolved_relocations": [],
         "bytes_differing_only_in_unresolved_fields": 0
       },
@@ -64,6 +65,7 @@
         "candidate_size": 42,
         "differing_bytes": 0,
         "first_difference": null,
+        "resolved_relocations": [],
         "unresolved_relocations": [],
         "bytes_differing_only_in_unresolved_fields": 0
       },
@@ -84,14 +86,31 @@
       "symbol": "?SafeCreateDXGIFactory@@YAXPEAPEAUIDXGIFactory1@@@Z",
       "name_confidence": "high-confidence inferred",
       "evidence": "Parent of filter 0x02DAE780. It sits next to 0x016138F0, which has the SafeTestD3D11CreateDevice shape. The 17-byte guarded range excludes the public 4.20.0 -quad_buffer_stereo code.",
-      "reference_state": "encrypted",
-      "match": "unknown",
+      "reference_state": "decrypted",
+      "match": "exact",
       "original_sha256": "82e721c09deda992b1d15de1d4715236e844b87c54baf8ff481099435390ca5c",
-      "candidate_sha256": "655beb00be48fbd3d5e1c2b61182c26d1264441ee791e0eae8541d3cb0852b4c",
+      "candidate_sha256": "bebd6014501d0d37ba82e2e8345026aa7b9deff7544dccb9963dc98d5c9106f7",
       "byte_diff": {
         "reference_size": 26,
         "candidate_size": 26,
-        "note": "reference body is encrypted on disk; bytes not comparable"
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "symbol": "_GUID_770aae78_f26f_4dba_a829_253c83d1b387",
+            "rva": "0x03546B08",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000000F",
+            "symbol": "CreateDXGIFactory1",
+            "rva": "0x02CEC1FA",
+            "evidence": "import thunk jmp [0x04DDC724] (CreateDXGIFactory1)"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
       },
       "structure": {
         "pdata_size_matches": true,
@@ -132,7 +151,8 @@
           ]
         }
       },
-      "compiler": "prodid 261 build 24215"
+      "compiler": "prodid 261 build 24215",
+      "decrypted_sha256": "bebd6014501d0d37ba82e2e8345026aa7b9deff7544dccb9963dc98d5c9106f7"
     },
     {
       "start_rva": "0x016138F0",
@@ -145,14 +165,80 @@
       "symbol": "?SafeTestD3D11CreateDevice@@YA_NPEAUIDXGIAdapter@@W4D3D_FEATURE_LEVEL@@PEAW42@@Z",
       "name_confidence": "high-confidence inferred",
       "evidence": "Size, all unwind codes, handler kind and scope offsets reproduce only with the inlined debug-device helper and a two-level request list. Public 4.20.0 has three levels, which adds a /GS cookie under the global /GS switch.",
-      "reference_state": "encrypted",
-      "match": "unknown",
+      "reference_state": "decrypted",
+      "match": "relocation-equivalent",
       "original_sha256": "c636bbac9a3ea01fe0060b523f5977a83eee2f6646a75c29db20dc4e61d9fac4",
-      "candidate_sha256": "d13b5f81e5700a4cf7556a4d500bbd42428880bcda2d5dd21e61c3b952cf2539",
+      "candidate_sha256": "17c9ebe532aad78881d9fdbd526e7b020e4a61adc36d78e2098ab6212eadd749",
       "byte_diff": {
         "reference_size": 318,
         "candidate_size": 318,
-        "note": "reference body is encrypted on disk; bytes not comparable"
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000102",
+            "symbol": "D3D11CreateDevice",
+            "rva": "0x02CEC212",
+            "evidence": "import thunk jmp [0x04DDC66C] (D3D11CreateDevice)"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x0000002B",
+            "size": 4,
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000035",
+            "size": 4,
+            "symbol": "$SG98002",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000003A",
+            "size": 4,
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000043",
+            "size": 4,
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000004D",
+            "size": 4,
+            "symbol": "$SG98003",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000052",
+            "size": 4,
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000005B",
+            "size": 4,
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000065",
+            "size": 4,
+            "symbol": "$SG98004",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000006A",
+            "size": 4,
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 36
       },
       "structure": {
         "pdata_size_matches": true,
@@ -193,7 +279,8 @@
           ]
         }
       },
-      "compiler": "prodid 261 build 24215"
+      "compiler": "prodid 261 build 24215",
+      "decrypted_sha256": "48847585b788607295d091b3d95696c4224c19ff0c8654bc60591f6e5b957da3"
     },
     {
       "start_rva": "0x0165FEB0",
@@ -205,15 +292,32 @@
       "object": "Source/Runtime/D3D12RHI/Private/Windows/WindowsD3D12Device.obj",
       "symbol": "?SafeCreateDXGIFactory@@YAXPEAPEAUIDXGIFactory4@@@Z",
       "name_confidence": "low-confidence inferred",
-      "evidence": "Unwind and scope layout are identical to 0x016138D0 and its filter folds into 0x02DAE780. Nothing yet ties it to D3D12RHI specifically.",
-      "reference_state": "encrypted",
-      "match": "unknown",
+      "evidence": "Byte-identical to its decrypted body, so the reconstruction is right. The D3D12RHI attribution still rests only on its IDXGIFactory4 GUID and CreateDXGIFactory import. Unwind/scope layout is identical to 0x016138D0 and its filter folds into 0x02DAE780.",
+      "reference_state": "decrypted",
+      "match": "exact",
       "original_sha256": "4e93e8a975332cf3408c9278d47f20a86144d4269ca6605315191223ace8e63c",
-      "candidate_sha256": "655beb00be48fbd3d5e1c2b61182c26d1264441ee791e0eae8541d3cb0852b4c",
+      "candidate_sha256": "4b7e4b0fad6e6ffd94287a4e0b5cbe34003de9b077a215928f38f6fd0bc73ae3",
       "byte_diff": {
         "reference_size": 26,
         "candidate_size": 26,
-        "note": "reference body is encrypted on disk; bytes not comparable"
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x0000000A",
+            "symbol": "_GUID_1bc6ea02_ef36_464f_bf0c_21ca39e5168a",
+            "rva": "0x03553318",
+            "evidence": "data symbol: unique 16-byte data block"
+          },
+          {
+            "offset": "0x0000000F",
+            "symbol": "CreateDXGIFactory",
+            "rva": "0x02CEC200",
+            "evidence": "import thunk jmp [0x04DDC71C] (CreateDXGIFactory)"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
       },
       "structure": {
         "pdata_size_matches": true,
@@ -254,11 +358,12 @@
           ]
         }
       },
-      "compiler": "prodid 261 build 24215"
+      "compiler": "prodid 261 build 24215",
+      "decrypted_sha256": "4b7e4b0fad6e6ffd94287a4e0b5cbe34003de9b077a215928f38f6fd0bc73ae3"
     },
     {
-      "start_rva": null,
-      "end_rva": null,
+      "start_rva": "0x015FEDD0",
+      "end_rva": "0x015FEE28",
       "name": "D3D11RHI_ShouldCreateWithD3DDebug",
       "category": "source-function",
       "module": "D3D11RHI",
@@ -266,11 +371,77 @@
       "object": "Source/Runtime/Windows/D3D11RHI/Module.D3D11RHI.obj",
       "symbol": "?D3D11RHI_ShouldCreateWithD3DDebug@@YA_NXZ",
       "name_confidence": "high-confidence inferred",
-      "evidence": "Needed inline for 0x016138F0 to reproduce its structure. The standalone copy is unlocated: 636 reference functions share its 0x58-byte size and generic unwind record.",
-      "reference_state": "not-located",
-      "match": "unknown",
+      "evidence": "Inlined into 0x016138F0, which needs it to reproduce its structure. Located in the decrypted image as one of two 0x58-byte functions identical in every non-relocation byte; the only one whose string fields reference d3ddebug/d3debug/dxdebug, the same literal copies the inlined use references.",
+      "reference_state": "decrypted",
+      "match": "relocation-equivalent",
       "candidate_sha256": "f9e2634184d7668ce4a2498db66da969599290535bde4d362022f606f964d621",
-      "compiler": "prodid 261 build 24215"
+      "compiler": "prodid 261 build 24215",
+      "original_sha256": "6471509a20d087b24e4b285c926df80a41c5ddd21c99b398d90a051686f3c637",
+      "decrypted_sha256": "776c822d039ff7760d1ec2ba7ae9fe6852a5bda82e77c47685624982226ebd7f",
+      "byte_diff": {
+        "reference_size": 88,
+        "candidate_size": 88,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000005",
+            "size": 4,
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000000F",
+            "size": 4,
+            "symbol": "$SG98002",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000014",
+            "size": 4,
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000001D",
+            "size": 4,
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000027",
+            "size": 4,
+            "symbol": "$SG98003",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000002C",
+            "size": 4,
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000035",
+            "size": 4,
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000003F",
+            "size": 4,
+            "symbol": "$SG98004",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000044",
+            "size": 4,
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 36
+      }
     }
   ]
 }

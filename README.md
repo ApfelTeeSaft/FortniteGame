@@ -7,10 +7,10 @@ target, UE4.20 integration, and recovery of the Unreal project.
 
 ![Fortnite 2.5 — Exact Function Matches](docs/images/byte-match-progress.svg)
 
-*Text alternative: 2 of 157,719 identified functions (primary `.pdata` entries) match
-the original bytes exactly. Both are SEH filter funclets. Function bodies in the
-original executable are encrypted on disk, which currently blocks byte matching for
-nearly all other functions.*
+*Text alternative: 4 of 157,719 identified functions (primary `.pdata` entries) match the
+original bytes exactly. Function bodies in the shipping executable are encrypted on disk, so
+bodies are compared with a locally validated decrypted image of the same build. Relocations
+count only when resolved from independent evidence.*
 
 **Stage:** 1 of 4 (exact-match client decompilation). See [docs/STATUS.md](docs/STATUS.md).
 For building and verification see [docs/BUILDING.md](docs/BUILDING.md); method and

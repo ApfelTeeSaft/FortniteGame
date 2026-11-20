@@ -32,15 +32,54 @@ Further observations:
 * Even exception-handler thunks are encrypted, so handler identities must come from usage
   patterns, not bytes.
 
+## Decrypted reference (`tools/matching/ingest_dump.py`)
+
+The owner supplied a PE-file dump of the running module, which stays local and is never
+committed. Ingestion maps it through its own section table and handles the load base: the
+delta is the value agreed by all 200,000 sampled DIR64 sites in plaintext sections, and it
+is subtracted at all 788,029 sites. The dump is accepted only if it is byte-identical to the
+original over the linker-produced extents: `.rdata` from the end of the original IAT to the
+end of the export directory, plus the exception and resource directories. Every other
+differing byte is accounted for:
+
+| Region | Differing bytes | Explanation |
+| --- | --- | --- |
+| original IAT at `.rdata` start | 4,790 | runtime-bound import addresses |
+| `.rdata` after the export directory | 21,474 | protector code (former import directory and names) |
+| `.pdata` after the exception directory, `.rsrc` after the resource directory, `_RDATA` tail, `.gfids` | 897 | protector code in section slack |
+
+After ingestion, 157,439 of 157,632 primary functions with unwind codes have prologues that
+agree with their records (99.88 %). On disk only 3 do.
+
+The decrypted image is the protector's runtime view, which differs from the linker output in
+one systematic way: import references. The protector built a new import table in `.idata`
+and pointed 25,348 `call [rip+X]` sites and every import thunk at it. 62 call sites still use
+the original IAT. `symbols_auto.py` names both tables independently. The `.idata` slots are
+named by their plaintext descriptors. Original IAT slots are named through the runtime
+address they share with exactly one protector slot. A field may match either slot of the
+same import, and the manifest records which.
+
 ## Matching rules (`tools/matching/compare.py`)
 
-* `exact`: the reference range is plaintext, sizes are equal, and every byte is identical.
-  Relocation fields count only if resolved through `analysis/symbols.json`, whose entries
-  need independent evidence. Nothing is masked.
+* `exact`: sizes are equal and every byte is identical to the reference: on-disk bytes where
+  plaintext, otherwise the validated decrypted image (`reference_state: decrypted`). A
+  relocation field counts only if its symbol resolves from evidence independent of the bytes
+  being compared:
+  - `analysis/symbols.json`;
+  - import tables;
+  - a unique import thunk;
+  - a unique data match: a NUL-terminated literal on a string boundary, or a data block at
+    its alignment;
+  - an already-exact function, iterated to a fixpoint.
+
+  Nothing is masked.
 * `relocation-equivalent`: identical except for unresolved relocation fields. Not exact.
 * `partial` / `unmatched`: some or no bytes agree.
-* `unknown`: the reference body is encrypted (or the range is not located).
+* `unknown`: the reference body is encrypted and no decrypted image is available.
   Structural evidence is recorded alongside but never upgrades the state.
+
+`compare.py --check` on a machine without the local decrypted image skips the entries that
+were verified against it and reports how many it skipped.
 
 Structural evidence compares plaintext metadata with the compiled object: the `.pdata`
 size, the `UNWIND_INFO` header and codes, and C scope-table entries. Scope entries are
@@ -62,15 +101,17 @@ plaintext funclets:
 
 | RVA | Function | Result |
 | --- | --- | --- |
-| `0x02DAE750` | filter of `SafeTestD3D11CreateDevice` | exact, 42/42 bytes |
-| `0x02DAE780` | filter of `SafeCreateDXGIFactory` (ICF-folded, two parents) | exact, 42/42 bytes. The D3D12 source compiles to the same bytes |
-| `0x016138D0` | `SafeCreateDXGIFactory` (D3D11) | unknown (encrypted); size, unwind and scope identical |
-| `0x016138F0` | `SafeTestD3D11CreateDevice` | unknown (encrypted); size 0x13E, all 6 unwind codes, handler kind and scope `[+0xBD,+0x126)` identical |
-| `0x0165FEB0` | second `SafeCreateDXGIFactory`-shaped parent | unknown (encrypted); owner unconfirmed |
+| `0x02DAE750` | filter of `SafeTestD3D11CreateDevice` | exact vs on-disk bytes, 42/42 |
+| `0x02DAE780` | filter of `SafeCreateDXGIFactory` (ICF-folded, two parents) | exact vs on-disk bytes, 42/42. The D3D12 source compiles to the same bytes |
+| `0x016138D0` | `SafeCreateDXGIFactory` (D3D11) | exact vs decrypted image, 26/26. GUID resolved by unique content, `CreateDXGIFactory1` by its import thunk |
+| `0x0165FEB0` | `SafeCreateDXGIFactory` (D3D12-shaped twin) | exact vs decrypted image, 26/26 (IDXGIFactory4 GUID, `CreateDXGIFactory` thunk) |
+| `0x016138F0` | `SafeTestD3D11CreateDevice` | relocation-equivalent: 318 bytes, all non-relocation bytes identical. Literals ambiguous, Core callees not yet matched |
+| `0x015FEDD0` | `D3D11RHI_ShouldCreateWithD3DDebug` | relocation-equivalent. Located as the only same-shape function whose literal fields reference `d3ddebug`/`d3debug`/`dxdebug` |
 
-The structural matches pinned down two differences from public 4.20.0 (see
-[ENGINE_DIFFERENCES.md](ENGINE_DIFFERENCES.md)). They also showed that
-`D3D11RHI_ShouldCreateWithD3DDebug` is inlined across files, i.e. a unity build.
+Before the dump arrived, structural matches had already pinned down two differences from
+public 4.20.0 (see [ENGINE_DIFFERENCES.md](ENGINE_DIFFERENCES.md)). They also showed
+that `D3D11RHI_ShouldCreateWithD3DDebug` is inlined across files, i.e. a unity build.
+Byte comparison against the decrypted bodies confirmed both differences.
 
 ## Naming confidence
 

@@ -23,11 +23,12 @@ static bool IsDelayLoadException(PEXCEPTION_POINTERS ExceptionPointers)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0165FEB0 (end 0x0165FECA)
 // Original VA: 0x000000014165FEB0 | File offset: 0x0165F4B0
-// Recovery: low-confidence inferred (owner not confirmed) | Matching: unknown, body encrypted on disk
+// Recovery: low-confidence inferred (owner not confirmed) | Matching: exact (vs decrypted image; all relocations independently resolved)
 // Evidence: unwind and scope layout are identical to SafeCreateDXGIFactory at 0x016138D0, and
 //   its filter was ICF-folded into 0x02DAE780. Public 4.20.0 also sets
 //   bIsQuadBufferStereoEnabled here, which would not fit in the 17-byte guarded range.
-//   The D3D12 assignment is unconfirmed; nothing ties this parent to D3D12RHI yet.
+//   The exact match shows the body creates IDXGIFactory4 through CreateDXGIFactory, as the
+//   D3D12RHI version does. The module attribution itself is still inferred.
 static void SafeCreateDXGIFactory(IDXGIFactory4** DXGIFactory)
 {
 	__try
