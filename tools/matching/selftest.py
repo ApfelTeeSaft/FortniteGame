@@ -92,10 +92,33 @@ def test_leave_one_out() -> None:
     print("leave-one-out: ok")
 
 
+def test_literal_elimination() -> None:
+    """A literal with N copies resolves only when the other N-1 are used by other functions."""
+    from types import SimpleNamespace as NS
+    from compare import Resolver
+    lit = "Entry".encode("utf-16le") + b"\0\0"
+    sym = NS(name="$SG1", section=1, value=0, storage=3)
+    obj = NS(symbols=[sym], sections=[NS(name=".rdata", data=lit, chars=0x40000040, relocs=[])],
+             symbol=lambda name: sym if name == "$SG1" else None, data_layout=lambda: {})
+    r = Resolver.__new__(Resolver)
+    r.functions, r.known, r.data_cache, r.data_notes = {}, {}, {}, {}
+    r.hay_rva, r.hay = 0x1000, b"\0\0" + lit + b"\0\0" + lit + b"\0\0" + lit
+    copies = [0x1002, 0x1010, 0x101E]
+    r.entry_names, r.observations = {1: "A", 2: "B", 3: "T"}, {}
+    r.by_addr = {copies[0]: {"$SGx": {1}}}
+    assert r.resolve(obj, "o", "$SG1", exclude=3) == []                  # two copies still free
+    r.by_addr[copies[2]] = {"??_C@lit": {2}}
+    got = r.resolve(obj, "o", "$SG1", exclude=3)
+    assert [g[0] for g in got] == [copies[1]] and "elimination" in got[0][1], got
+    assert r.resolve(obj, "o", "$SG1", exclude=2) == []                  # B's own copy is not evidence for B
+    print("literal elimination: ok")
+
+
 def main() -> int:
     test_unwind()
     test_literals()
     test_leave_one_out()
+    test_literal_elimination()
     if not DEFAULT_REFERENCE.exists():
         print("reference EXE not present: skipping manifest verification")
         return 0

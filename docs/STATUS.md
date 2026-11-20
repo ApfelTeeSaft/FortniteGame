@@ -9,21 +9,25 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **13,801 / 157,719** primary `.pdata` functions (8.75 %, 640,188 bytes):
+| Exact functions | **17,945 / 157,719** primary `.pdata` functions (11.38 %, 956,740 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 13,794 generated UHT functions: 10,553 UFunction creators, 1,031 `Z_Construct_UClass_*`,
-  696 `StaticRegisterNatives*` and 1,514 `Z_Construct_UScriptStruct_*`.
+- 17,938 generated UHT functions:
+  - classes: 10,553 UFunction creators, 1,031 `Z_Construct_UClass_*`, 696 `StaticRegisterNatives*`;
+  - USTRUCTs: 1,514 `Z_Construct_UScriptStruct_*`, 1,423 `StaticStruct`, 1,294 `NewStructOps`
+    and 1,427 `StaticRegisterNatives` initializers.
 
 Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 533 `StaticClass` thunks and `FCommandLine::IsInitialized` |
-| Relocation-equivalent | 1,636:
+| Relocation-equivalent | 1,832 in the denominator:
 - three `FCommandLine` getters (per-occurrence literal copies);
-- 98 generated creators, 3 class constructors and 9 struct constructors (layout gaps);
-- all 1,523 generated `StaticStruct` functions, whose `TEXT("<Struct>")` literal exists in
-  three identical copies;
-- outside the denominator, 501 `StaticClass` thunks.
+- 98 creators, 3 class constructors, 9 struct constructors and 9 `StaticStruct`s (layout gaps);
+- 91 `StaticStruct`s and 96 struct-ops initializers whose name literal has a copy with no
+  reconstructed user;
+- all 1,523 `FCompiledInDeferStruct` initializers, whose `L"/Script/<Package>"` literal has
+  more copies than elimination enumerates.
 
-`FCommandLine::GetOriginal` is absent from the image (presumably `/OPT:REF`) |
+Outside the denominator: 501 `StaticClass` thunks. `FCommandLine::GetOriginal` is absent
+from the image (presumably `/OPT:REF`) |
 | Named functions | 16,734 denominator functions (10.6 %) named from UHT reflection tables: 4,215 exec thunks, 11,127 `Z_Construct_UFunction_*` creators, and registrar/`GetPrivateStaticClass` pairs for 696 attributed classes. See `analysis/reflection-natives.json` |
 | Whole-file identity | Not achievable as things stand: encrypted bodies on disk, a protector section and rewritten import references, a patched entry stub, and an Authenticode signature |
 | IDA | IDA Professional 9.4 `idat.exe` headless export verified on a test binary. The reference has not been analysed in IDA yet |
@@ -54,18 +58,21 @@ Every relocation is resolved from independent or leave-one-out evidence. Also ex
    - 1,094 enum constructors (`ConstructUEnum` `0x0138C910`);
    - 86 package constructors (`ConstructUPackage` `0x0138D3B0`).
 
-   An earlier version of this file swapped the class and struct counts. Done: 10,553
-   creators, 1,031 class constructors and 1,514 struct constructors. Next:
-   - Make `StaticStruct` exact. Reconstruct each struct's two registration initializers
-     (`FCompiledInDeferStruct`, which calls `UObjectCompiledInDeferStruct`, and
-     `StaticRegisterNatives`, which calls `DeferCppStructOps(FName, new TCppStructOps<F>)`)
-     plus `NewStructOps`. Each name-literal copy then has an observed user, and
-     `StaticStruct`'s copy follows by elimination.
-   - Handle the 587 structs whose `StaticStruct` inlines the package singleton (their
-     `.gen.cpp` follows `<Module>.init.gen.cpp` in the unity file) and the 66 without
-     `StaticStruct` (noexport).
-   - Enum constructors with the same model (`StaticEnum`), the remaining class
-     constructors and 3,326 `GetPrivateStaticClass` bodies, and the 4,215 exec thunks.
+   An earlier version of this file swapped the class and struct counts.
+
+   Done:
+   - 10,553 creators and 1,031 class constructors;
+   - for 1,523 USTRUCTs, the constructor, `StaticStruct`, `NewStructOps` and both
+     registration initializers. See the per-category counts above.
+
+   Next:
+   - The 587 structs whose `StaticStruct` inlines the package singleton (their `.gen.cpp`
+     follows `<Module>.init.gen.cpp` in the unity file) and the 66 without `StaticStruct`
+     (noexport).
+   - Enums with the same model: `StaticEnum`, `FCompiledInDeferEnum` and the 1,094
+     constructors.
+   - The remaining class constructors, 3,326 `GetPrivateStaticClass` bodies and the 4,215
+     exec thunks.
 4. Run the IDA export on the decrypted image for call graphs and cross-references.
 
 ## Reproduce

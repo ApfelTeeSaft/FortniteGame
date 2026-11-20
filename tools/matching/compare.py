@@ -44,6 +44,8 @@ MANIFEST = REPO_ROOT / "analysis" / "functions.json"
 EXTRA_MANIFESTS = "functions-*.json"
 SYMBOLS = REPO_ROOT / "analysis" / "symbols.json"
 # Generated symbol evidence: {symbol: {rva, evidence}} files written by analysis/codegen tools.
+# Literal elimination needs every copy enumerated; content with this many copies is skipped.
+ELIMINATION_LIMIT = 64
 GENERATED_SYMBOLS = ("uht-creator-symbols.json", "uht-struct-symbols.json")
 SOLUTION = REPO_ROOT / "FortniteGameCode" / "FortniteGameCode.sln"
 OBJ_ROOT = REPO_ROOT / "FortniteGameCode" / "Build" / "ClientShipping" / "obj"
@@ -89,12 +91,13 @@ class Resolver:
         self.functions: dict[str, tuple[int, str]] = {}
         self.data_cache: dict[tuple[str, str], list[tuple[int, str]]] = {}
         self.data_notes: dict[tuple[str, str], str] = {}
-        self._cand: dict[int, bytes] = {}
         lo = symbols_auto._iat_rdata_extent(img)[1]
         exp_rva, exp_size = img.directory(0)
         self.hay_rva, self.hay = lo, img.read(lo, exp_rva + exp_size - lo)
-        # Leave-one-out observations: symbol key -> {observed RVA: {manifest entry indices}}.
+        # Leave-one-out observations: symbol key -> {observed RVA: {manifest entry indices}},
+        # and the same indexed by address: RVA -> {symbol key: {manifest entry indices}}.
         self.observations: dict = {}
+        self.by_addr: dict = {}
         self.entry_names: dict[int, str] = {}
 
     @staticmethod
@@ -134,11 +137,31 @@ class Resolver:
         if self.data_cache[dkey]:
             return self.data_cache[dkey]
         # Same symbol observed at one address by other relocation-equivalent-or-better functions.
-        vals, who = self._observed(self.key(obj, objpath, symbol), exclude)
+        mykey = self.key(obj, objpath, symbol)
+        vals, who = self._observed(mykey, exclude)
         if len(vals) == 1:
             return [(next(iter(vals)), "corroborated: same symbol at this address in " + who)]
         if len(vals) > 1:
             return []
+        # Literal elimination (leave-one-out). Without /GF each use of a literal has its own
+        # copy. If every copy but one is the observed target of a *different* symbol in other
+        # relocation-equivalent-or-better functions, the remaining copy is this symbol's.
+        lit = symbols_auto.literal_content(obj, symbol)
+        if lit is not None:
+            hits = symbols_auto.literal_hits(lit, self.hay, self.hay_rva, limit=ELIMINATION_LIMIT)
+            if 1 < len(hits) < ELIMINATION_LIMIT:
+                free, users = [], []
+                for h in hits:
+                    others = [k for k, ents in self.by_addr.get(h, {}).items()
+                              if k != mykey and ents - {exclude}]
+                    if others:
+                        users.extend(self.entry_names.get(i, str(i)) for k in others
+                                     for i in sorted(self.by_addr[h][k] - {exclude})[:1])
+                    else:
+                        free.append(h)
+                if len(free) == 1:
+                    return [(free[0], f"literal elimination: {len(hits)} copies, the others used by "
+                                      + ", ".join(users[:2]) + (f" and {len(users) - 2} more" if len(users) > 2 else ""))]
         # Section-relative: neighbours in the object's data layout (same section name, sections
         # in object order), observed by other functions. The prediction supported by the most
         # neighbours is used if it strictly outnumbers every alternative; gaps in the layout
@@ -169,15 +192,15 @@ class Resolver:
             return [(pred, "section-relative to " + basis[0] + extra + note)]
         return []
 
-    def observe(self, idx: int, obj: CoffObject, objpath: str, relocs, ref: bytes, start: int,
-                image_base: int) -> None:
+    def observe(self, idx: int, obj: CoffObject, objpath: str, relocs, cand_raw: bytes, ref: bytes,
+                start: int, image_base: int) -> None:
         """Record where each relocation of entry `idx` points in the reference."""
         for r in relocs:
             size = REL_FIELD_SIZE.get(r.kind)
             if not size or r.offset + size > len(ref):
                 continue
             # The compiled field holds the addend; the reference field holds the linked value.
-            addend = int.from_bytes(self._cand[idx][r.offset:r.offset + size], "little", signed=size == 4)
+            addend = int.from_bytes(cand_raw[r.offset:r.offset + size], "little", signed=size == 4)
             val = int.from_bytes(ref[r.offset:r.offset + size], "little", signed=size == 4)
             if r.kind == "ADDR64":
                 target = val - image_base - addend
@@ -188,7 +211,9 @@ class Resolver:
                 target = val + start + r.offset + 4 + extra - addend
             else:
                 continue
-            self.observations.setdefault(self.key(obj, objpath, r.symbol), {}).setdefault(target, set()).add(idx)
+            key = self.key(obj, objpath, r.symbol)
+            self.observations.setdefault(key, {}).setdefault(target, set()).add(idx)
+            self.by_addr.setdefault(target, {}).setdefault(key, set()).add(idx)
 
 
 def reference_state(img: PEImage, rf, ref: bytes, cand: bytes) -> str:
@@ -428,6 +453,8 @@ def evaluate(idx: int, entry: dict, img: PEImage, dimg, rfmap: dict, resolver: R
             state = "plaintext" if ref_file == cand else file_state
         diff = byte_diff(ref, cand, unresolved, resolved)
         status = classify(state, diff)
+        if status in ("exact", "relocation-equivalent"):
+            res.setdefault("_observe", []).append((obj, objpath, relocs, cand_raw, ref, start))
         if (objpath, symbol) == sources[0]:
             if not compact:
                 res["compiler"] = comp_id(obj)
@@ -439,8 +466,6 @@ def evaluate(idx: int, entry: dict, img: PEImage, dimg, rfmap: dict, resolver: R
                                     "note": "reference body is encrypted on disk and no decrypted image is available"}
             else:
                 res["byte_diff"] = compact_diff(diff) if compact else diff
-            if status in ("exact", "relocation-equivalent"):
-                res["_observe"] = (obj, objpath, relocs, cand_raw, ref, start)
             if not compact:
                 st = compare_structure(img, rf, obj, symbol, start, funclet_rvas)
                 if st is not None:
@@ -536,12 +561,10 @@ def main() -> int:
             res["in_denominator"] = bool(e.get("start_rva")) and int(e["start_rva"], 16) in primary_set
         before = snapshot()
         resolver.observations = {}
+        resolver.by_addr = {}
         for i, res in results.items():
-            ob = res.pop("_observe", None)
-            if ob is not None:
-                obj, objpath, relocs, cand_raw, ref, start = ob
-                resolver._cand[i] = cand_raw
-                resolver.observe(i, obj, objpath, relocs, ref, start, img.image_base)
+            for obj, objpath, relocs, cand_raw, ref, start in res.pop("_observe", []):
+                resolver.observe(i, obj, objpath, relocs, cand_raw, ref, start, img.image_base)
         added = before != snapshot()
         for i, res in results.items():
             e = entries[i]

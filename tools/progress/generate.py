@@ -111,7 +111,9 @@ def render(s: dict) -> str:
     labels = {"seh-filter-funclet": "SEH filters", "source-function": "hand-written",
               "uht-ufunction-creator": "UFunction creators", "uht-class-constructor": "UClass constructors",
               "uht-static-register-natives": "native registrars", "uht-struct-constructor": "UStruct constructors",
-              "uht-staticstruct": "StaticStruct"}
+              "uht-staticstruct": "StaticStruct", "uht-struct-ops": "NewStructOps",
+              "uht-struct-registernatives": "struct ops registrars",
+              "uht-struct-compiledindefer": "struct deferred registrars"}
     items = [f"{labels.get(k, k.replace('-', ' '))} {v:,}" for k, v in s["exact_by_category"].items()] or ["none"]
     cat_lines = wrap("exact by category:", items, 96)
     W = 760

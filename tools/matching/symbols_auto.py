@@ -180,6 +180,19 @@ def literal_hits(lit: bytes, haystack: bytes, hay_rva: int, limit: int = 3) -> l
     return hits
 
 
+def literal_content(obj: CoffObject, symname: str) -> bytes | None:
+    """The NUL-terminated content of string-literal symbol `symname` ($SG..., ??_C@...)."""
+    if not symname.startswith(("$SG", "??_C@")):
+        return None
+    sym = next((s for s in obj.symbols if s is not None and s.name == symname and s.section > 0), None)
+    if sym is None:
+        return None
+    sec = obj.sections[sym.section - 1]
+    offs = sorted({s.value for s in obj.symbols
+                   if s is not None and s.section == sym.section and s.storage in (2, 3)} | {len(sec.data)})
+    return _string_literal(sec.data[sym.value:offs[offs.index(sym.value) + 1]])
+
+
 def resolve_data_symbol(obj: CoffObject, symname: str, haystack: bytes,
                         hay_rva: int) -> tuple[int | None, str]:
     """Find a data symbol's bytes in `haystack` (plaintext reference data starting at hay_rva).

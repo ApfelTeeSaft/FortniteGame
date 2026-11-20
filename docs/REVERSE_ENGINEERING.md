@@ -73,6 +73,10 @@ same import, and the manifest records which.
     byte. A wide literal directly after a narrow string ("idx\0" then L"...") cannot be told
     apart from a wide suffix, so both count; over-counting only turns a unique result into
     an ambiguous one;
+  - **literal elimination (leave-one-out):** without `/GF` each use of a literal has its own
+    copy. All copies of the content are enumerated (fewer than 64). If every copy but one is
+    the observed target of a *different* symbol, in *other* relocation-equivalent-or-better
+    functions, the remaining copy is this symbol's;
   - an already-exact function, iterated to a fixpoint;
   - **corroboration (leave-one-out):** the same symbol observed at one address in a
     *different* manifest function whose size and every non-relocation byte equal the
@@ -253,6 +257,9 @@ A USTRUCT's UHT 4.20 output, in order:
 4. `Z_Construct_UScriptStruct_F<S>()`: static `ReturnStruct`.
 5. `Get_..._CRC()`.
 
+The two registration objects are emitted at the end of each generated file instead (see
+**Statics layout** below).
+
 In the reference, `StaticStruct` takes one of two forms:
 - 1,523 compile to an 82-byte function split into three `.pdata` fragments: a primary entry
   and two chained ones. MSVC shrink-wraps the `rbx` save into the slow path.
@@ -271,6 +278,22 @@ writes one translation unit per plain struct:
 | package singleton | the 47-byte singleton whose `FPackageParams` name the package |
 | `Get_..._CRC` | the only 16-byte-aligned `mov eax, imm32; ret` with that constant |
 | `Z_Construct_UScriptStruct_F<S>` (in `StaticStruct`) | the exact constructor |
+| `TEXT("<S>")` (three copies) | literal elimination: one copy each for `StaticStruct` and the two registration initializers |
+| `TCppStructOps<F<S>>` vtable | corroborated between `NewStructOps` and the `StaticRegisterNatives` initializer |
+| `operator new`, `FName::FName`, `DeferCppStructOps`, `UObjectCompiledInDeferStruct` | corroborated |
+
+Locating the other functions:
+- `NewStructOps` is the record's `StructOpsFunc` (53 bytes). `/OPT:ICF` folded identical
+  bodies, so 1,294 functions serve 1,523 structs, and a shared body lists the other structs as
+  folded sources.
+- The two registration initializers sit in the grouped dynamic-initializer code. The
+  `FCompiledInDeferStruct` one is the only function of its 66-byte shape that loads the
+  struct's `StaticStruct`. The `StaticRegisterNatives` one is the only function of its
+  92-byte shape whose `FName` literal is the struct name, with `sizeof`/`alignof` equal to the
+  record's.
+
+`ICppStructOps` is shimmed with the engine layout and constructor only. Construction code
+does not depend on the vtable's contents, and only its address is resolved.
 
 **Statics layout.** MSVC puts each function-local static in its own COMDAT `.bss` section,
 but every zero-initialized namespace-scope object of a translation unit shares one plain
@@ -278,15 +301,27 @@ but every zero-initialized namespace-scope object of a translation unit shares o
 file an earlier object created it, so each struct's `Singleton` and `ReturnStruct` are
 adjacent: 1,514 of 1,523 have `ReturnStruct == Singleton + 8`.
 
-A per-struct translation unit that emitted the registration objects would put that section
-between the two (offsets 0/8/9/16). The registration objects are therefore not emitted yet,
-and this is stated in each generated file. The other 9 structs have further statics between
-the two slots, so the prediction fails and they stay relocation-equivalent.
+A per-struct translation unit with the registration objects in UHT position would put that
+section between the two (offsets 0/8/9/16). The generator therefore emits them at the end
+of the file, which leaves code generation unchanged: none of these functions inlines
+another. The other 9 structs have further statics between the two slots, so the prediction
+fails and they stay relocation-equivalent.
 
-**Results.** 1,514 constructors are exact. Every `StaticStruct` is relocation-equivalent,
-because the reference holds three identical copies of each `TEXT("<S>")` literal. There is
-no `/GF`, so each use (`StaticStruct` and the two registration initializers) gets its own
-`$SG` string, and each copy has exactly one user.
+**Results.** Exact:
+- 1,514 constructors;
+- 1,423 `StaticStruct`s;
+- all 1,294 `NewStructOps`;
+- 1,427 `StaticRegisterNatives` initializers.
+
+The `FCompiledInDeferStruct` initializers stay relocation-equivalent. Their
+`L"/Script/<Package>"` literal has one copy per registered type of the package, too many to
+enumerate.
+
+The remaining `StaticStruct`s and struct-ops initializers stay relocation-equivalent for two
+reasons:
+- 9 have layout gaps;
+- 91 have a name literal with an extra copy whose user is not yet reconstructed. Elimination
+  then declines, as it must.
 
 **Fork note.** The registration initializers live in the grouped dynamic-initializer
 code. They call `UObjectCompiledInDeferStruct(..., FName(TEXT("<S>")), ...)`, as the local
