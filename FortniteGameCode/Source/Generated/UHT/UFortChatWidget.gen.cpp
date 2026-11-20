@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortChatWidget();  // RVA 0x028945B0 (consensus OuterFunc)
 
+class UFortChatWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortChatWidget_FocusChatEntry_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_UFortChatWidget_SetControllerActionBrush()
 	return ReturnFunction;
 }
 
-class UFortChatWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortChatWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortTargetSelectionInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortTargetSelectionInterface();
+	static void execGetTargetingTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2E00 (end 0x010B2E22)
+// Original VA: 0x00000001410B2E00 | File offset: 0x010B2400
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03400148) | Matching: see analysis/functions-uht-natives.json
+void UFortTargetSelectionInterface::StaticRegisterNativesUFortTargetSelectionInterface()
+{
+	UClass* Class = UFortTargetSelectionInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTargetingTransform", &UFortTargetSelectionInterface::execGetTargetingTransform },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortTargetSelectionInterface_GetTargetingTransform: FFunctionParams record not identified; creator not emitted.

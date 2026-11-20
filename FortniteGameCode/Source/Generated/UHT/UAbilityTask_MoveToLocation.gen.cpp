@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UAbilityTask_MoveToLocation
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_MoveToLocation();
+	static void execMoveToLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546460 (end 0x00546482)
+// Original VA: 0x0000000140546460 | File offset: 0x00545A60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F2B328) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_MoveToLocation::StaticRegisterNativesUAbilityTask_MoveToLocation()
+{
+	UClass* Class = UAbilityTask_MoveToLocation::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "MoveToLocation", &UAbilityTask_MoveToLocation::execMoveToLocation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UAbilityTask_MoveToLocation_MoveToLocation: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,47 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortDefenderConfigPanel();  // RVA 0x0289B490 (consensus OuterFunc)
 
+class UFortDefenderConfigPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortDefenderConfigPanel();
+	static void execGetAmmoCountFromDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAmmoCountFromPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCompatibleAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCompatibleAmmoDef(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefenderPawnWeaponItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSourceSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAnyDefenders(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasWeaponForSelectedDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsWeaponSelectionValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnsummonDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AF10 (end 0x0289AF32)
+// Original VA: 0x000000014289AF10 | File offset: 0x0289A510
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C82B20) | Matching: see analysis/functions-uht-natives.json
+void UFortDefenderConfigPanel::StaticRegisterNativesUFortDefenderConfigPanel()
+{
+	UClass* Class = UFortDefenderConfigPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAmmoCountFromDefender", &UFortDefenderConfigPanel::execGetAmmoCountFromDefender },
+		{ "GetAmmoCountFromPlayer", &UFortDefenderConfigPanel::execGetAmmoCountFromPlayer },
+		{ "GetCompatibleAmmo", &UFortDefenderConfigPanel::execGetCompatibleAmmo },
+		{ "GetCompatibleAmmoDef", &UFortDefenderConfigPanel::execGetCompatibleAmmoDef },
+		{ "GetDefenderPawnWeaponItem", &UFortDefenderConfigPanel::execGetDefenderPawnWeaponItem },
+		{ "GetSourceSchematic", &UFortDefenderConfigPanel::execGetSourceSchematic },
+		{ "HasAnyDefenders", &UFortDefenderConfigPanel::execHasAnyDefenders },
+		{ "HasWeaponForSelectedDefender", &UFortDefenderConfigPanel::execHasWeaponForSelectedDefender },
+		{ "IsWeaponSelectionValid", &UFortDefenderConfigPanel::execIsWeaponSelectionValid },
+		{ "SpawnDefender", &UFortDefenderConfigPanel::execSpawnDefender },
+		{ "UnsummonDefender", &UFortDefenderConfigPanel::execUnsummonDefender },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDefenderConfigPanel_GetAmmoCountFromDefender_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -226,11 +267,6 @@ UFunction* Z_Construct_UFunction_UFortDefenderConfigPanel_UnsummonDefender()
 	return ReturnFunction;
 }
 
-class UFortDefenderConfigPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortDefenderConfigPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

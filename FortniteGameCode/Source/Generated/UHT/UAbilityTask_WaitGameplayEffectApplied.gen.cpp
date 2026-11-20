@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied();  // RVA 0x0054D570 (consensus OuterFunc)
 
+class UAbilityTask_WaitGameplayEffectApplied
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitGameplayEffectApplied();
+	static void execOnApplyGameplayEffectCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CE10 (end 0x0054CE32)
+// Original VA: 0x000000014054CE10 | File offset: 0x0054C410
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F32748) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitGameplayEffectApplied::StaticRegisterNativesUAbilityTask_WaitGameplayEffectApplied()
+{
+	UClass* Class = UAbilityTask_WaitGameplayEffectApplied::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnApplyGameplayEffectCallback", &UAbilityTask_WaitGameplayEffectApplied::execOnApplyGameplayEffectCallback },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_OnApplyGameplayEffectCallback_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_OnApplyG
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitGameplayEffectApplied
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

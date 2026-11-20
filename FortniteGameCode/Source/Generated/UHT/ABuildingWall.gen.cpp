@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingWall();  // RVA 0x00F78620 (consensus OuterFunc)
 
+class ABuildingWall
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ABuildingWall_IsDoorOpen_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -64,11 +71,6 @@ UFunction* Z_Construct_UFunction_ABuildingWall_OnRep_bDoorOpen()
 	return ReturnFunction;
 }
 
-class ABuildingWall
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingWall_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

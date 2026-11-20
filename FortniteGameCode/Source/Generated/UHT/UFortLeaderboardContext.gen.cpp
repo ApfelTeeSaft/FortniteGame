@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortLeaderboardContext();  // RVA 0x028D71B0 (consensus OuterFunc)
 
+class UFortLeaderboardContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortLeaderboardContext();
+	static void execCanShowGlobalLeaderboards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanShowLeaderboards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanShowStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6C60 (end 0x028D6C82)
+// Original VA: 0x00000001428D6C60 | File offset: 0x028D6260
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE39B8) | Matching: see analysis/functions-uht-natives.json
+void UFortLeaderboardContext::StaticRegisterNativesUFortLeaderboardContext()
+{
+	UClass* Class = UFortLeaderboardContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanShowGlobalLeaderboards", &UFortLeaderboardContext::execCanShowGlobalLeaderboards },
+		{ "CanShowLeaderboards", &UFortLeaderboardContext::execCanShowLeaderboards },
+		{ "CanShowStats", &UFortLeaderboardContext::execCanShowStats },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortLeaderboardContext_CanShowGlobalLeaderboards_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortLeaderboardContext_CanShowStats()
 	return ReturnFunction;
 }
 
-class UFortLeaderboardContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortLeaderboardContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

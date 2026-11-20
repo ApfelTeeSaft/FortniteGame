@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCurveSourceInterface();  // RVA 0x023FE560 (consensus OuterFunc)
 
+class UCurveSourceInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCurveSourceInterface();
+	static void execGetBindingName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurves(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurveValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDC40 (end 0x023FDC62)
+// Original VA: 0x00000001423FDC40 | File offset: 0x023FD240
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038CD698) | Matching: see analysis/functions-uht-natives.json
+void UCurveSourceInterface::StaticRegisterNativesUCurveSourceInterface()
+{
+	UClass* Class = UCurveSourceInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBindingName", &UCurveSourceInterface::execGetBindingName },
+		{ "GetCurves", &UCurveSourceInterface::execGetCurves },
+		{ "GetCurveValue", &UCurveSourceInterface::execGetCurveValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCurveSourceInterface_GetBindingName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UCurveSourceInterface_GetCurveValue()
 	return ReturnFunction;
 }
 
-class UCurveSourceInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCurveSourceInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

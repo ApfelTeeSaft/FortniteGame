@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortBangWrapper
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortBangWrapper();
+	static void execSetBangVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C740 (end 0x0288C762)
+// Original VA: 0x000000014288C740 | File offset: 0x0288BD40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C6BA48) | Matching: see analysis/functions-uht-natives.json
+void UFortBangWrapper::StaticRegisterNativesUFortBangWrapper()
+{
+	UClass* Class = UFortBangWrapper::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetBangVisibility", &UFortBangWrapper::execSetBangVisibility },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortBangWrapper_SetBangVisibility: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAttachToActorInterface();  // RVA 0x00FA39D0 (consensus OuterFunc)
 
+class UFortAttachToActorInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAttachToActorInterface();
+	static void execGetActorAttachedTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA33E0 (end 0x00FA3402)
+// Original VA: 0x0000000140FA33E0 | File offset: 0x00FA29E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C7198) | Matching: see analysis/functions-uht-natives.json
+void UFortAttachToActorInterface::StaticRegisterNativesUFortAttachToActorInterface()
+{
+	UClass* Class = UFortAttachToActorInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetActorAttachedTo", &UFortAttachToActorInterface::execGetActorAttachedTo },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAttachToActorInterface_GetActorAttachedTo_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAttachToActorInterface_GetActorAttachedTo(
 	return ReturnFunction;
 }
 
-class UFortAttachToActorInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAttachToActorInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

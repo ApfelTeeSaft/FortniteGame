@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AWorldMapPinManager();  // RVA 0x010F1A00 (consensus OuterFunc)
 
+class AWorldMapPinManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AWorldMapPinManager_CreateWorldMapPin_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +33,6 @@ UFunction* Z_Construct_UFunction_AWorldMapPinManager_CreateWorldMapPin()
 	return ReturnFunction;
 }
 
-class AWorldMapPinManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AWorldMapPinManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

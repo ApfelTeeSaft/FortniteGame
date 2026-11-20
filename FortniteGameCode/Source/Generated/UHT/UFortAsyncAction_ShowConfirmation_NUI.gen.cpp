@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI();  // RVA 0x0288CA70 (consensus OuterFunc)
 
+class UFortAsyncAction_ShowConfirmation_NUI
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_ShowConfirmation_NUI();
+	static void execShowConfirmationDialog_NUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowSimpleConfirmationDialog_CustomInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowSimpleConfirmationDialog_NUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C590 (end 0x0288C5B2)
+// Original VA: 0x000000014288C590 | File offset: 0x0288BB90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C6A380) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_ShowConfirmation_NUI::StaticRegisterNativesUFortAsyncAction_ShowConfirmation_NUI()
+{
+	UClass* Class = UFortAsyncAction_ShowConfirmation_NUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ShowConfirmationDialog_NUI", &UFortAsyncAction_ShowConfirmation_NUI::execShowConfirmationDialog_NUI },
+		{ "ShowSimpleConfirmationDialog_CustomInput", &UFortAsyncAction_ShowConfirmation_NUI::execShowSimpleConfirmationDialog_CustomInput },
+		{ "ShowSimpleConfirmationDialog_NUI", &UFortAsyncAction_ShowConfirmation_NUI::execShowSimpleConfirmationDialog_NUI },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowConfirmationDialog_NUI_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_NUI_ShowSimpl
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_ShowConfirmation_NUI
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

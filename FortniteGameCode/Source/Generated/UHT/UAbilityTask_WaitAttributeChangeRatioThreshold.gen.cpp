@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitAttributeChangeRatioThreshold();  // RVA 0x0054D440 (consensus OuterFunc)
 
+class UAbilityTask_WaitAttributeChangeRatioThreshold
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitAttributeChangeRatioThreshold();
+	static void execWaitForAttributeChangeRatioThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CCF0 (end 0x0054CD12)
+// Original VA: 0x000000014054CCF0 | File offset: 0x0054C2F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F321B8) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitAttributeChangeRatioThreshold::StaticRegisterNativesUAbilityTask_WaitAttributeChangeRatioThreshold()
+{
+	UClass* Class = UAbilityTask_WaitAttributeChangeRatioThreshold::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "WaitForAttributeChangeRatioThreshold", &UAbilityTask_WaitAttributeChangeRatioThreshold::execWaitForAttributeChangeRatioThreshold },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitAttributeChangeRatioThreshold_WaitForAttributeChangeRatioThreshold_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitAttributeChangeRatioThreshold_
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitAttributeChangeRatioThreshold
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitAttributeChangeRatioThreshold_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

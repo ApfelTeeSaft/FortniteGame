@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortWeatherAugment();  // RVA 0x010DC850 (consensus OuterFunc)
 
+class AFortWeatherAugment
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortWeatherAugment();
+	static void execGetWeatherTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC130 (end 0x010DC152)
+// Original VA: 0x00000001410DC130 | File offset: 0x010DB730
+// Recovery: confirmed (registers FNameNativePtrPair array 0x034352C8) | Matching: see analysis/functions-uht-natives.json
+void AFortWeatherAugment::StaticRegisterNativesAFortWeatherAugment()
+{
+	UClass* Class = AFortWeatherAugment::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetWeatherTags", &AFortWeatherAugment::execGetWeatherTags },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortWeatherAugment_GetWeatherTags_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_AFortWeatherAugment_GetWeatherTags()
 	return ReturnFunction;
 }
 
-class AFortWeatherAugment
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortWeatherAugment_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

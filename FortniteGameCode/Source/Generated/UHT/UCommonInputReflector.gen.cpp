@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonInputReflector();  // RVA 0x002CA380 (consensus OuterFunc)
 
+class UCommonInputReflector
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCommonInputReflector_ClearButtons_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_UCommonInputReflector_OnButtonAdded()
 	return ReturnFunction;
 }
 
-class UCommonInputReflector
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonInputReflector_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortBluGloManager();  // RVA 0x00FA3930 (consensus OuterFunc)
 
+class AFortBluGloManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortBluGloManager();
+	static void execGetBluGloItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3380 (end 0x00FA33A2)
+// Original VA: 0x0000000140FA3380 | File offset: 0x00FA2980
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C9298) | Matching: see analysis/functions-uht-natives.json
+void AFortBluGloManager::StaticRegisterNativesAFortBluGloManager()
+{
+	UClass* Class = AFortBluGloManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBluGloItemDefinition", &AFortBluGloManager::execGetBluGloItemDefinition },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortBluGloManager_GetBluGloItemDefinition_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_AFortBluGloManager_GetBluGloItemDefinition()
 	return ReturnFunction;
 }
 
-class AFortBluGloManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortBluGloManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

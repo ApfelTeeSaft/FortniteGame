@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPlacementActorTagTest();  // RVA 0x01065990 (consensus OuterFunc)
 
+class UFortPlacementActorTagTest
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortPlacementActorTagTest();
+	static void execLineTraceByChannel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldApplyTagsToPlacementActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01064FC0 (end 0x01064FE2)
+// Original VA: 0x0000000141064FC0 | File offset: 0x010645C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033AD988) | Matching: see analysis/functions-uht-natives.json
+void UFortPlacementActorTagTest::StaticRegisterNativesUFortPlacementActorTagTest()
+{
+	UClass* Class = UFortPlacementActorTagTest::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "LineTraceByChannel", &UFortPlacementActorTagTest::execLineTraceByChannel },
+		{ "ShouldApplyTagsToPlacementActor", &UFortPlacementActorTagTest::execShouldApplyTagsToPlacementActor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPlacementActorTagTest_LineTraceByChannel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortPlacementActorTagTest_ShouldApplyTagsToPla
 	return ReturnFunction;
 }
 
-class UFortPlacementActorTagTest
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPlacementActorTagTest_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

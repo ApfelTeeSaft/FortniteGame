@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortWeaponItemDefinition();  // RVA 0x010D8B70 (consensus OuterFunc)
 
+class UFortWeaponItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortWeaponItemDefinition_GetAnalyticTags_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -546,11 +553,6 @@ UFunction* Z_Construct_UFunction_UFortWeaponItemDefinition_TargetingPreventsRelo
 	return ReturnFunction;
 }
 
-class UFortWeaponItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortWeaponItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

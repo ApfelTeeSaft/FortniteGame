@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionSummaryWidget();  // RVA 0x028A3710 (consensus OuterFunc)
 
+class UFortExpeditionSummaryWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortExpeditionSummaryWidget_BindInventoryDelegates_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -63,11 +70,6 @@ UFunction* Z_Construct_UFunction_UFortExpeditionSummaryWidget_UnbindInventoryDel
 	return ReturnFunction;
 }
 
-class UFortExpeditionSummaryWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortExpeditionSummaryWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

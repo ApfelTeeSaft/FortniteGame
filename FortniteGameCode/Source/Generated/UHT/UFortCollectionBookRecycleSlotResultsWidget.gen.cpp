@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookRecycleSlotResultsWidget();  // RVA 0x0289B150 (consensus OuterFunc)
 
+class UFortCollectionBookRecycleSlotResultsWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCollectionBookRecycleSlotResultsWidget();
+	static void execSetCurrentItemToRecycle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289ACD0 (end 0x0289ACF2)
+// Original VA: 0x000000014289ACD0 | File offset: 0x0289A2D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C810A0) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookRecycleSlotResultsWidget::StaticRegisterNativesUFortCollectionBookRecycleSlotResultsWidget()
+{
+	UClass* Class = UFortCollectionBookRecycleSlotResultsWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetCurrentItemToRecycle", &UFortCollectionBookRecycleSlotResultsWidget::execSetCurrentItemToRecycle },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCollectionBookRecycleSlotResultsWidget_SetCurrentItemToRecycle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookRecycleSlotResultsWidget_Set
 	return ReturnFunction;
 }
 
-class UFortCollectionBookRecycleSlotResultsWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCollectionBookRecycleSlotResultsWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

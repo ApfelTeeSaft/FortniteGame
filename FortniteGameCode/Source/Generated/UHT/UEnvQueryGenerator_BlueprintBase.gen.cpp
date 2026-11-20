@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase();  // RVA 0x01D2F700 (consensus OuterFunc)
 
+class UEnvQueryGenerator_BlueprintBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUEnvQueryGenerator_BlueprintBase();
+	static void execAddGeneratedActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddGeneratedVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuerier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2F060 (end 0x01D2F082)
+// Original VA: 0x0000000141D2F060 | File offset: 0x01D2E660
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03707808) | Matching: see analysis/functions-uht-natives.json
+void UEnvQueryGenerator_BlueprintBase::StaticRegisterNativesUEnvQueryGenerator_BlueprintBase()
+{
+	UClass* Class = UEnvQueryGenerator_BlueprintBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddGeneratedActor", &UEnvQueryGenerator_BlueprintBase::execAddGeneratedActor },
+		{ "AddGeneratedVector", &UEnvQueryGenerator_BlueprintBase::execAddGeneratedVector },
+		{ "GetQuerier", &UEnvQueryGenerator_BlueprintBase::execGetQuerier },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UEnvQueryGenerator_BlueprintBase_AddGeneratedActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +111,6 @@ UFunction* Z_Construct_UFunction_UEnvQueryGenerator_BlueprintBase_GetQuerier()
 	return ReturnFunction;
 }
 
-class UEnvQueryGenerator_BlueprintBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

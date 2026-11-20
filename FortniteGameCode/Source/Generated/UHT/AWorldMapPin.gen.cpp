@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AWorldMapPin();  // RVA 0x010F19D0 (consensus OuterFunc)
 
+class AWorldMapPin
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAWorldMapPin();
+	static void execSetTheaterId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F12B0 (end 0x010F12D2)
+// Original VA: 0x00000001410F12B0 | File offset: 0x010F08B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03451AE8) | Matching: see analysis/functions-uht-natives.json
+void AWorldMapPin::StaticRegisterNativesAWorldMapPin()
+{
+	UClass* Class = AWorldMapPin::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetTheaterId", &AWorldMapPin::execSetTheaterId },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AWorldMapPin_OnTheaterIdSet_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +66,6 @@ UFunction* Z_Construct_UFunction_AWorldMapPin_SetTheaterId()
 	return ReturnFunction;
 }
 
-class AWorldMapPin
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AWorldMapPin_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

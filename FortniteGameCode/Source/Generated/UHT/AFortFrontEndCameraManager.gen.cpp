@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortFrontEndCameraManager();  // RVA 0x00FDB5B0 (consensus OuterFunc)
 
+class AFortFrontEndCameraManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortFrontEndCameraManager();
+	static void execGetCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCameraActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDAA90 (end 0x00FDAAB2)
+// Original VA: 0x0000000140FDAA90 | File offset: 0x00FDA090
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03311650) | Matching: see analysis/functions-uht-natives.json
+void AFortFrontEndCameraManager::StaticRegisterNativesAFortFrontEndCameraManager()
+{
+	UClass* Class = AFortFrontEndCameraManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCamera", &AFortFrontEndCameraManager::execGetCamera },
+		{ "GetCameraActor", &AFortFrontEndCameraManager::execGetCameraActor },
+		{ "SetCamera", &AFortFrontEndCameraManager::execSetCamera },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortFrontEndCameraManager_GetCamera_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_AFortFrontEndCameraManager_SetCamera()
 	return ReturnFunction;
 }
 
-class AFortFrontEndCameraManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortFrontEndCameraManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

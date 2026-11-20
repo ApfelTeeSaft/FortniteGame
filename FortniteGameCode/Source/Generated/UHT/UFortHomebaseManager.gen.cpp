@@ -6,6 +6,57 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHomebaseManager();  // RVA 0x00FFB130 (consensus OuterFunc)
 
+class UFortHomebaseManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortHomebaseManager();
+	static void execAreNodeCostsMet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreNodePrereqsMet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreNodeQuestReqsMet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHomebaseName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNodeInstanceIdByNodeId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumAccountInventoryBonusTokens(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumAccountLimitedItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumOwnedNodesInPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumWorldInventoryBonusTokens(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwnedNodes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrereqNodeTypeName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSquadCopyById(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSquadPopulation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorkerInSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsNodeOwned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSquadSlotUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA4D0 (end 0x00FFA4F2)
+// Original VA: 0x0000000140FFA4D0 | File offset: 0x00FF9AD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033403E0) | Matching: see analysis/functions-uht-natives.json
+void UFortHomebaseManager::StaticRegisterNativesUFortHomebaseManager()
+{
+	UClass* Class = UFortHomebaseManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AreNodeCostsMet", &UFortHomebaseManager::execAreNodeCostsMet },
+		{ "AreNodePrereqsMet", &UFortHomebaseManager::execAreNodePrereqsMet },
+		{ "AreNodeQuestReqsMet", &UFortHomebaseManager::execAreNodeQuestReqsMet },
+		{ "GetHomebaseName", &UFortHomebaseManager::execGetHomebaseName },
+		{ "GetNodeInstanceIdByNodeId", &UFortHomebaseManager::execGetNodeInstanceIdByNodeId },
+		{ "GetNumAccountInventoryBonusTokens", &UFortHomebaseManager::execGetNumAccountInventoryBonusTokens },
+		{ "GetNumAccountLimitedItems", &UFortHomebaseManager::execGetNumAccountLimitedItems },
+		{ "GetNumOwnedNodesInPage", &UFortHomebaseManager::execGetNumOwnedNodesInPage },
+		{ "GetNumWorldInventoryBonusTokens", &UFortHomebaseManager::execGetNumWorldInventoryBonusTokens },
+		{ "GetOwnedNodes", &UFortHomebaseManager::execGetOwnedNodes },
+		{ "GetPrereqNodeTypeName", &UFortHomebaseManager::execGetPrereqNodeTypeName },
+		{ "GetSquadCopyById", &UFortHomebaseManager::execGetSquadCopyById },
+		{ "GetSquadPopulation", &UFortHomebaseManager::execGetSquadPopulation },
+		{ "GetWorkerInSquadSlot", &UFortHomebaseManager::execGetWorkerInSquadSlot },
+		{ "IsNodeOwned", &UFortHomebaseManager::execIsNodeOwned },
+		{ "IsSquadSlotUnlocked", &UFortHomebaseManager::execIsSquadSlotUnlocked },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHomebaseManager_AreNodeCostsMet_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -326,11 +377,6 @@ UFunction* Z_Construct_UFunction_UFortHomebaseManager_IsSquadSlotUnlocked()
 	return ReturnFunction;
 }
 
-class UFortHomebaseManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHomebaseManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

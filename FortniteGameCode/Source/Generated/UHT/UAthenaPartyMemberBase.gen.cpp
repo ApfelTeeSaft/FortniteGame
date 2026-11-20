@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaPartyMemberBase();  // RVA 0x02887280 (consensus OuterFunc)
 
+class UAthenaPartyMemberBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAthenaPartyMemberBase_MutedStateChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -124,11 +131,6 @@ UFunction* Z_Construct_UFunction_UAthenaPartyMemberBase_ToggleMute()
 	return ReturnFunction;
 }
 
-class UAthenaPartyMemberBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaPartyMemberBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

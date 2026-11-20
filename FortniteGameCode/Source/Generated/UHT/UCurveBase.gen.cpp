@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCurveBase();  // RVA 0x023FE4C0 (consensus OuterFunc)
 
+class UCurveBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCurveBase();
+	static void execGetTimeRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValueRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDBB0 (end 0x023FDBD2)
+// Original VA: 0x00000001423FDBB0 | File offset: 0x023FD1B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038CD1A8) | Matching: see analysis/functions-uht-natives.json
+void UCurveBase::StaticRegisterNativesUCurveBase()
+{
+	UClass* Class = UCurveBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTimeRange", &UCurveBase::execGetTimeRange },
+		{ "GetValueRange", &UCurveBase::execGetValueRange },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCurveBase_GetTimeRange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UCurveBase_GetValueRange()
 	return ReturnFunction;
 }
 
-class UCurveBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCurveBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

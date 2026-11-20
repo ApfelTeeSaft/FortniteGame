@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USeasonPassPageWidget();  // RVA 0x02918CE0 (consensus OuterFunc)
 
+class USeasonPassPageWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSeasonPassPageWidget();
+	static void execGetCurrentSeasonNumber(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOwnsSeasonPass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918920 (end 0x02918942)
+// Original VA: 0x0000000142918920 | File offset: 0x02917F20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D56C58) | Matching: see analysis/functions-uht-natives.json
+void USeasonPassPageWidget::StaticRegisterNativesUSeasonPassPageWidget()
+{
+	UClass* Class = USeasonPassPageWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCurrentSeasonNumber", &USeasonPassPageWidget::execGetCurrentSeasonNumber },
+		{ "OwnsSeasonPass", &USeasonPassPageWidget::execOwnsSeasonPass },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USeasonPassPageWidget_ContainsLevel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -123,11 +146,6 @@ UFunction* Z_Construct_UFunction_USeasonPassPageWidget_OwnsSeasonPass()
 	return ReturnFunction;
 }
 
-class USeasonPassPageWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USeasonPassPageWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

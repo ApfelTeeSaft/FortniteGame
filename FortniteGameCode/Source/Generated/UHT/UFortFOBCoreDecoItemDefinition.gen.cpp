@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortFOBCoreDecoItemDefinition();  // RVA 0x00FDB710 (consensus OuterFunc)
 
+class UFortFOBCoreDecoItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortFOBCoreDecoItemDefinition();
+	static void execGetMaximumHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDAB50 (end 0x00FDAB72)
+// Original VA: 0x0000000140FDAB50 | File offset: 0x00FDA150
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033108F8) | Matching: see analysis/functions-uht-natives.json
+void UFortFOBCoreDecoItemDefinition::StaticRegisterNativesUFortFOBCoreDecoItemDefinition()
+{
+	UClass* Class = UFortFOBCoreDecoItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetMaximumHealth", &UFortFOBCoreDecoItemDefinition::execGetMaximumHealth },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortFOBCoreDecoItemDefinition_GetMaximumHealth_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortFOBCoreDecoItemDefinition_GetMaximumHealth
 	return ReturnFunction;
 }
 
-class UFortFOBCoreDecoItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortFOBCoreDecoItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

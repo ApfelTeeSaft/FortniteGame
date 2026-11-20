@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles();  // RVA 0x023DB100 (consensus OuterFunc)
 
+class UAsyncActionChangePrimaryAssetBundles
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAsyncActionChangePrimaryAssetBundles();
+	static void execAsyncChangeBundleStateForMatchingPrimaryAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAsyncChangeBundleStateForPrimaryAssetList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA500 (end 0x023DA522)
+// Original VA: 0x00000001423DA500 | File offset: 0x023D9B00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038AAFD8) | Matching: see analysis/functions-uht-natives.json
+void UAsyncActionChangePrimaryAssetBundles::StaticRegisterNativesUAsyncActionChangePrimaryAssetBundles()
+{
+	UClass* Class = UAsyncActionChangePrimaryAssetBundles::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AsyncChangeBundleStateForMatchingPrimaryAssets", &UAsyncActionChangePrimaryAssetBundles::execAsyncChangeBundleStateForMatchingPrimaryAssets },
+		{ "AsyncChangeBundleStateForPrimaryAssetList", &UAsyncActionChangePrimaryAssetBundles::execAsyncChangeBundleStateForPrimaryAssetList },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAsyncActionChangePrimaryAssetBundles_AsyncChangeBundleStateForMatchingPrimaryAssets_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UAsyncActionChangePrimaryAssetBundles_AsyncChan
 	return ReturnFunction;
 }
 
-class UAsyncActionChangePrimaryAssetBundles
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAsyncActionChangePrimaryAssetBundles_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

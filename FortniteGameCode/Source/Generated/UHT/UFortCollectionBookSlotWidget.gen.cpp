@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookSlotWidget();  // RVA 0x0289B310 (consensus OuterFunc)
 
+class UFortCollectionBookSlotWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UFortCollectionBookSlotWidget_FortCollectionBookSlottedItemUpdatedDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -163,11 +170,6 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSlotWidget_OnSlottedItemOper
 	return ReturnFunction;
 }
 
-class UFortCollectionBookSlotWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCollectionBookSlotWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

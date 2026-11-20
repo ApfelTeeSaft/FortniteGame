@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortRewardConversationWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortRewardConversationWidget();
+	static void execGetDataFromSentence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECEF0 (end 0x028ECF12)
+// Original VA: 0x00000001428ECEF0 | File offset: 0x028EC4F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D0AAF8) | Matching: see analysis/functions-uht-natives.json
+void UFortRewardConversationWidget::StaticRegisterNativesUFortRewardConversationWidget()
+{
+	UClass* Class = UFortRewardConversationWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDataFromSentence", &UFortRewardConversationWidget::execGetDataFromSentence },
+		{ "IsValidConversation", &UFortRewardConversationWidget::execIsValidConversation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortRewardConversationWidget_GetDataFromSentence: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortRewardConversationWidget_IsValidConversation: FFunctionParams record not identified; creator not emitted.

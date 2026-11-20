@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USphereComponent();  // RVA 0x024DC3A0 (consensus OuterFunc)
 
+class USphereComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_USphereComponent_GetScaledSphereRadius_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +93,6 @@ UFunction* Z_Construct_UFunction_USphereComponent_SetSphereRadius()
 	return ReturnFunction;
 }
 
-class USphereComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USphereComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

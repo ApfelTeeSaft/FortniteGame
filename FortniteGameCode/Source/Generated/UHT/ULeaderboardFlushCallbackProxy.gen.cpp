@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ULeaderboardFlushCallbackProxy();  // RVA 0x0032EC20 (consensus OuterFunc)
 
+class ULeaderboardFlushCallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesULeaderboardFlushCallbackProxy();
+	static void execCreateProxyObjectForFlush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E3D0 (end 0x0032E3F2)
+// Original VA: 0x000000014032E3D0 | File offset: 0x0032D9D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EADFE0) | Matching: see analysis/functions-uht-natives.json
+void ULeaderboardFlushCallbackProxy::StaticRegisterNativesULeaderboardFlushCallbackProxy()
+{
+	UClass* Class = ULeaderboardFlushCallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateProxyObjectForFlush", &ULeaderboardFlushCallbackProxy::execCreateProxyObjectForFlush },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ULeaderboardFlushCallbackProxy_CreateProxyObjectForFlush_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_ULeaderboardFlushCallbackProxy_CreateProxyObjec
 	return ReturnFunction;
 }
 
-class ULeaderboardFlushCallbackProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ULeaderboardFlushCallbackProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

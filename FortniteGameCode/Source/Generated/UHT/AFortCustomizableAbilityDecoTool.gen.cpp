@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortCustomizableAbilityDecoTool();  // RVA 0x00FCB7E0 (consensus OuterFunc)
 
+class AFortCustomizableAbilityDecoTool
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_BPOnEquip_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -259,11 +266,6 @@ UFunction* Z_Construct_UFunction_AFortCustomizableAbilityDecoTool_ServerReleaseT
 	return ReturnFunction;
 }
 
-class AFortCustomizableAbilityDecoTool
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortCustomizableAbilityDecoTool_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

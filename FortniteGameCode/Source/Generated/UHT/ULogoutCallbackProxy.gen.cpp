@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class ULogoutCallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesULogoutCallbackProxy();
+	static void execLogout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E430 (end 0x0032E452)
+// Original VA: 0x000000014032E430 | File offset: 0x0032DA30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAE160) | Matching: see analysis/functions-uht-natives.json
+void ULogoutCallbackProxy::StaticRegisterNativesULogoutCallbackProxy()
+{
+	UClass* Class = ULogoutCallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Logout", &ULogoutCallbackProxy::execLogout },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_ULogoutCallbackProxy_Logout: FFunctionParams record not identified; creator not emitted.

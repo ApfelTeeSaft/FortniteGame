@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBehaviorTreeComponent();  // RVA 0x01D23140 (consensus OuterFunc)
 
+class UBehaviorTreeComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBehaviorTreeComponent();
+	static void execAddCooldownTagDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTagCooldownEndTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDynamicSubtree(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D229B0 (end 0x01D229D2)
+// Original VA: 0x0000000141D229B0 | File offset: 0x01D21FB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F9988) | Matching: see analysis/functions-uht-natives.json
+void UBehaviorTreeComponent::StaticRegisterNativesUBehaviorTreeComponent()
+{
+	UClass* Class = UBehaviorTreeComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddCooldownTagDuration", &UBehaviorTreeComponent::execAddCooldownTagDuration },
+		{ "GetTagCooldownEndTime", &UBehaviorTreeComponent::execGetTagCooldownEndTime },
+		{ "SetDynamicSubtree", &UBehaviorTreeComponent::execSetDynamicSubtree },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBehaviorTreeComponent_AddCooldownTagDuration_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UBehaviorTreeComponent_SetDynamicSubtree()
 	return ReturnFunction;
 }
 
-class UBehaviorTreeComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBehaviorTreeComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

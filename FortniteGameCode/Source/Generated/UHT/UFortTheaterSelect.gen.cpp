@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTheaterSelect();  // RVA 0x02904C40 (consensus OuterFunc)
 
+class UFortTheaterSelect
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortTheaterSelect();
+	static void execGetSurvivalCMSText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTheaterRecommendedRatingRange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029044C0 (end 0x029044E2)
+// Original VA: 0x00000001429044C0 | File offset: 0x02903AC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D317B8) | Matching: see analysis/functions-uht-natives.json
+void UFortTheaterSelect::StaticRegisterNativesUFortTheaterSelect()
+{
+	UClass* Class = UFortTheaterSelect::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetSurvivalCMSText", &UFortTheaterSelect::execGetSurvivalCMSText },
+		{ "GetTheaterRecommendedRatingRange", &UFortTheaterSelect::execGetTheaterRecommendedRatingRange },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTheaterSelect_GetSurvivalCMSText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -84,11 +107,6 @@ UFunction* Z_Construct_UFunction_UFortTheaterSelect_OnNavigationRight()
 	return ReturnFunction;
 }
 
-class UFortTheaterSelect
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTheaterSelect_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

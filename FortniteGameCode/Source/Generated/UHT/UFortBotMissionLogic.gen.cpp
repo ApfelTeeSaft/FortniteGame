@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortBotMissionLogic();  // RVA 0x00FAD6E0 (consensus OuterFunc)
 
+class UFortBotMissionLogic
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortBotMissionLogic_ClearAllLocated_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -260,11 +267,6 @@ UFunction* Z_Construct_UFunction_UFortBotMissionLogic_SpawnStructureBuilder()
 	return ReturnFunction;
 }
 
-class UFortBotMissionLogic
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortBotMissionLogic_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

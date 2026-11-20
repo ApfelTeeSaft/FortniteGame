@@ -6,6 +6,51 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UKismetNodeHelperLibrary();  // RVA 0x02452C50 (consensus OuterFunc)
 
+class UKismetNodeHelperLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUKismetNodeHelperLibrary();
+	static void execBitIsMarked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearAllBits(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEnumeratorName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEnumeratorUserFriendlyName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEnumeratorValueFromIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFirstUnmarkedBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRandomUnmarkedBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUnmarkedBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValidValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasMarkedBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasUnmarkedBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkBit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02452AA0 (end 0x02452AC2)
+// Original VA: 0x0000000142452AA0 | File offset: 0x024520A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03925900) | Matching: see analysis/functions-uht-natives.json
+void UKismetNodeHelperLibrary::StaticRegisterNativesUKismetNodeHelperLibrary()
+{
+	UClass* Class = UKismetNodeHelperLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BitIsMarked", &UKismetNodeHelperLibrary::execBitIsMarked },
+		{ "ClearAllBits", &UKismetNodeHelperLibrary::execClearAllBits },
+		{ "ClearBit", &UKismetNodeHelperLibrary::execClearBit },
+		{ "GetEnumeratorName", &UKismetNodeHelperLibrary::execGetEnumeratorName },
+		{ "GetEnumeratorUserFriendlyName", &UKismetNodeHelperLibrary::execGetEnumeratorUserFriendlyName },
+		{ "GetEnumeratorValueFromIndex", &UKismetNodeHelperLibrary::execGetEnumeratorValueFromIndex },
+		{ "GetFirstUnmarkedBit", &UKismetNodeHelperLibrary::execGetFirstUnmarkedBit },
+		{ "GetRandomUnmarkedBit", &UKismetNodeHelperLibrary::execGetRandomUnmarkedBit },
+		{ "GetUnmarkedBit", &UKismetNodeHelperLibrary::execGetUnmarkedBit },
+		{ "GetValidValue", &UKismetNodeHelperLibrary::execGetValidValue },
+		{ "HasMarkedBit", &UKismetNodeHelperLibrary::execHasMarkedBit },
+		{ "HasUnmarkedBit", &UKismetNodeHelperLibrary::execHasUnmarkedBit },
+		{ "MarkBit", &UKismetNodeHelperLibrary::execMarkBit },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UKismetNodeHelperLibrary_BitIsMarked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -266,11 +311,6 @@ UFunction* Z_Construct_UFunction_UKismetNodeHelperLibrary_MarkBit()
 	return ReturnFunction;
 }
 
-class UKismetNodeHelperLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UKismetNodeHelperLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPlayerAttrSet();  // RVA 0x0106AD50 (consensus OuterFunc)
 
+class UFortPlayerAttrSet
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_CraftingTimeMultiplier_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -443,11 +450,6 @@ UFunction* Z_Construct_UFunction_UFortPlayerAttrSet_OnRep_Tech_Team()
 	return ReturnFunction;
 }
 
-class UFortPlayerAttrSet
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPlayerAttrSet_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

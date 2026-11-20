@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAIGoalProvider();  // RVA 0x00F91460 (consensus OuterFunc)
 
+class UFortAIGoalProvider
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortAIGoalProvider_GetEncounterInfo_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -65,11 +72,6 @@ UFunction* Z_Construct_UFunction_UFortAIGoalProvider_UpdateGoals()
 	return ReturnFunction;
 }
 
-class UFortAIGoalProvider
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAIGoalProvider_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

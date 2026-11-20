@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UClothingSimulationInteractorNv();  // RVA 0x02524930 (consensus OuterFunc)
 
+class UClothingSimulationInteractorNv
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UClothingSimulationInteractorNv_DisableGravityOverride_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -85,11 +92,6 @@ UFunction* Z_Construct_UFunction_UClothingSimulationInteractorNv_SetAnimDriveSpr
 	return ReturnFunction;
 }
 
-class UClothingSimulationInteractorNv
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UClothingSimulationInteractorNv_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

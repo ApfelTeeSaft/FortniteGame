@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemManagementScreen();  // RVA 0x028CF490 (consensus OuterFunc)
 
+class UFortItemManagementScreen
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortItemManagementScreen_CancelInventoryPanelTileViewRefresh_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -680,11 +687,6 @@ UFunction* Z_Construct_UFunction_UFortItemManagementScreen_TransferItem()
 	return ReturnFunction;
 }
 
-class UFortItemManagementScreen
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemManagementScreen_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

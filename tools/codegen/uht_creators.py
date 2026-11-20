@@ -35,6 +35,11 @@ from pe import PEImage  # noqa: E402
 GEN_DIR = ROOT / "FortniteGameCode" / "Source" / "Generated" / "UHT"
 MANIFEST = ROOT / "analysis" / "functions-uht-creators.json"
 CLASS_MANIFEST = ROOT / "analysis" / "functions-uht-classes.json"
+NATIVES_MANIFEST = ROOT / "analysis" / "functions-uht-natives.json"
+THUNK_MANIFEST = ROOT / "analysis" / "functions-uht-staticclass.json"
+# StaticRegisterNatives<Class>: call GetPrivateStaticClass; mov r8d, N; lea rdx, Funcs; mov rcx, rax; jmp.
+SRN_TEMPLATE = bytes.fromhex("4883ec28e80000000041b800000000488d1500000000488bc84883c428e900000000")
+SRN_MASK = set(range(5, 9)) | set(range(11, 15)) | set(range(18, 22)) | set(range(30, 34))
 # Types the shim already forward-declares; a class of that name cannot be redeclared here.
 SHIM_TYPES = {"UObject", "UClass", "UFunction"}
 SYMBOLS = ROOT / "analysis" / "uht-creator-symbols.json"
@@ -96,8 +101,7 @@ def class_constructor(cls, arr, fns, zrva, emitted_fns, img, rdata, rd, base, rf
         f"&{statics}::StaticCppClassTypeInfo, {iface_expr} }};")
     end = rfs[zrva].end
     symbols[f"?ClassParams@{statics}@@2UFClassParams@UE4CodeGen_Private@@B"] = [f"0x{rec:08X}", "link-array"]
-    return (f"class {cls}\n{{\npublic:\n\tstatic UClass* StaticClass();\n}};\n"
-            f"struct {statics}\n{{\n" + "\n".join(decl) + "\n};\n" + "\n".join(defs) + "\n"
+    return (f"struct {statics}\n{{\n" + "\n".join(decl) + "\n};\n" + "\n".join(defs) + "\n"
             f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{zrva:08X} (end 0x{end:08X})\n"
             f"// Original VA: 0x{base + zrva:016X} | File offset: 0x{img.rva_to_off(zrva):08X}\n"
             f"// Recovery: confirmed (UHT singleton of {cls}) | Matching: see analysis/functions-uht-classes.json\n"
@@ -165,7 +169,16 @@ def main() -> int:
     GEN_DIR.mkdir(parents=True, exist_ok=True)
     for old in GEN_DIR.glob("*.gen.cpp"):
         old.unlink()
-    entries, class_entries, symbols = [], [], {}
+    entries, class_entries, native_entries, thunk_entries, symbols = [], [], [], [], {}
+    natives_by_class = {c["class"]: c for c in refl["native_classes"]
+                        if c["class"] and c["static_register_natives_rva"]}
+
+    def is_srn(rva: int) -> bool:
+        rf = rfs.get(rva)
+        if rf is None or rf.end - rf.begin != len(SRN_TEMPLATE):
+            return False
+        b = dimg.read(rva, len(SRN_TEMPLATE))
+        return all(b[i] == SRN_TEMPLATE[i] for i in range(len(b)) if i not in SRN_MASK)
     stats = Counter()
     for cls, arr, fns in classes:
         lines = [
@@ -178,6 +191,36 @@ def main() -> int:
             "",
         ]
         externs, bodies, emitted_fns = set(), [], set()
+        nat = natives_by_class.get(cls)
+        if nat is not None and not is_srn(int(nat["static_register_natives_rva"], 16)):
+            nat = None
+        if cls not in SHIM_TYPES:
+            members = ["\tstatic UClass* GetPrivateStaticClass();", "public:",
+                       "\tinline static UClass* StaticClass() { return GetPrivateStaticClass(); }"]
+            if nat is not None:
+                members.append(f"\tstatic void StaticRegisterNatives{cls}();")
+                members += [f"\tstatic void exec{f['name']}(UObject* Context, FFrame& Stack, void* const Z_Param__Result);"
+                            for f in nat["functions"]]
+            bodies.append(f"class {cls}\n{{\n" + "\n".join(members) + "\n};\n")
+        if nat is not None and cls not in SHIM_TYPES:
+            srn = int(nat["static_register_natives_rva"], 16)
+            arr_rva = int(nat["array_rva"], 16)
+            pairs = "\n".join(f'\t\t{{ "{f["name"]}", &{cls}::exec{f["name"]} }},' for f in nat["functions"])
+            bodies.append(
+                f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{srn:08X} (end 0x{rfs[srn].end:08X})\n"
+                f"// Original VA: 0x{base + srn:016X} | File offset: 0x{img.rva_to_off(srn):08X}\n"
+                f"// Recovery: confirmed (registers FNameNativePtrPair array 0x{arr_rva:08X}) | Matching: see analysis/functions-uht-natives.json\n"
+                f"void {cls}::StaticRegisterNatives{cls}()\n{{\n\tUClass* Class = {cls}::StaticClass();\n"
+                f"\tstatic const FNameNativePtrPair Funcs[] = {{\n{pairs}\n\t}};\n"
+                f"\tFNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));\n}}\n")
+            symbols[f"?Funcs@?1??StaticRegisterNatives{cls}@{cls}@@SAXXZ@4QBUFNameNativePtrPair@@B"] = [
+                f"0x{arr_rva:08X}", "native-array"]
+            if nat.get("get_private_static_class_rva"):
+                symbols[f"?GetPrivateStaticClass@{cls}@@CAPEAVUClass@@XZ"] = [
+                    nat["get_private_static_class_rva"], "gpsc-chain"]
+            native_entries.append({"start_rva": f"0x{srn:08X}", "end_rva": f"0x{rfs[srn].end:08X}",
+                                   "name": f"StaticRegisterNatives{cls}", "class": cls})
+            stats["static_register_natives"] += 1
         for fname, crva in fns:
             cname = creator_name(cls, fname)
             statics = f"{cname}_Statics"
@@ -247,6 +290,10 @@ def main() -> int:
                                             externs, symbols))
             class_entries.append({"start_rva": f"0x{zrva:08X}", "end_rva": f"0x{rfs[zrva].end:08X}",
                                   "name": f"Z_Construct_UClass_{cls}", "class": cls})
+            sc = arr["static_class_rva"]
+            if sc:
+                thunk_entries.append({"start_rva": sc, "end_rva": f"0x{int(sc, 16) + 5:08X}",
+                                      "name": f"{cls}::StaticClass", "class": cls})
             stats["class_constructors"] += 1
         text = "\n".join(lines) + "\n".join(sorted(externs)) + "\n\n" + "\n".join(bodies)
         (GEN_DIR / f"{cls}.gen.cpp").write_text(text, encoding="utf-8", newline="\n")
@@ -283,6 +330,24 @@ def main() -> int:
         },
         "functions": class_entries,
     })
+    common = {"schema_version": 1, "generated_by": "tools/codegen/uht_creators.py"}
+    dump_compact(NATIVES_MANIFEST, {**common,
+        "evidence": ("StaticRegisterNatives<Class>: the only function that LEA-references the class's attributed "
+                     "FNameNativePtrPair array, with the 34-byte UHT shape. See docs/REVERSE_ENGINEERING.md."),
+        "entry_defaults": {"category": "uht-static-register-natives",
+                           "source": "FortniteGameCode/Source/Generated/UHT/{class}.gen.cpp",
+                           "object": "Source/Generated/UHT/{class}.gen.obj",
+                           "symbol": "?{name}@{class}@@SAXXZ", "name_confidence": "confirmed", "compact": True},
+        "functions": native_entries})
+    dump_compact(THUNK_MANIFEST, {**common,
+        "evidence": ("<Class>::StaticClass: ClassNoRegisterFunc of the class's FClassParams record, a 5-byte "
+                     "jmp GetPrivateStaticClass with no .pdata entry (outside the denominator)."),
+        "entry_defaults": {"category": "uht-staticclass-thunk",
+                           "source": "FortniteGameCode/Source/Generated/UHT/{class}.gen.cpp",
+                           "object": "Source/Generated/UHT/{class}.gen.obj",
+                           "symbol": "?StaticClass@{class}@@SAPEAVUClass@@XZ", "name_confidence": "confirmed",
+                           "compact": True},
+        "functions": thunk_entries})
     SYMBOLS.write_text(json.dumps({
         "schema_version": 2,
         "generated_by": "tools/codegen/uht_creators.py",
@@ -290,6 +355,8 @@ def main() -> int:
             "name": "the only FFunctionParams record in .data whose NameUTF8 names this function",
             "name+outer": "the only FFunctionParams record naming this function whose OuterFunc is the class consensus",
             "link-array": "the only FClassParams record whose FunctionLinkArray points at this class's FClassFunctionLinkInfo table",
+            "native-array": "the FNameNativePtrPair array attributed to this class in analysis/reflection-natives.json",
+            "gpsc-chain": "the only function that LEA-loads &StaticRegisterNatives<Class> (GetPrivateStaticClassBody argument), per analysis/reflection-natives.json",
         },
         "symbols": symbols,
     }, separators=(",", ":")).replace('],"', '],\n"') + "\n", encoding="utf-8")

@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AManorPortal();  // RVA 0x010E9D40 (consensus OuterFunc)
 
+class AManorPortal
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAManorPortal();
+	static void execGetCurrencyCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerCurrencyAmount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPortalUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsProfileValidToReadPortalAvailability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpenUnlockMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnlockPortal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E8D80 (end 0x010E8DA2)
+// Original VA: 0x00000001410E8D80 | File offset: 0x010E8380
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03447160) | Matching: see analysis/functions-uht-natives.json
+void AManorPortal::StaticRegisterNativesAManorPortal()
+{
+	UClass* Class = AManorPortal::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCurrencyCost", &AManorPortal::execGetCurrencyCost },
+		{ "GetPlayerCurrencyAmount", &AManorPortal::execGetPlayerCurrencyAmount },
+		{ "IsPortalUnlocked", &AManorPortal::execIsPortalUnlocked },
+		{ "IsProfileValidToReadPortalAvailability", &AManorPortal::execIsProfileValidToReadPortalAvailability },
+		{ "OpenUnlockMenu", &AManorPortal::execOpenUnlockMenu },
+		{ "UnlockPortal", &AManorPortal::execUnlockPortal },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AManorPortal_BlueprintOnUnlockPortalComplete_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -145,11 +176,6 @@ UFunction* Z_Construct_UFunction_AManorPortal_UnlockPortal()
 	return ReturnFunction;
 }
 
-class AManorPortal
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AManorPortal_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

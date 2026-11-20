@@ -6,6 +6,47 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHomebaseNodeItemUtilities();  // RVA 0x028B3D80 (consensus OuterFunc)
 
+class UFortHomebaseNodeItemUtilities
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortHomebaseNodeItemUtilities();
+	static void execAreAnyHomebaseNodeItemsUnseenForSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreAnyHomebaseNodeItemsUnseenForSquadType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHomebaseNodeItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHomebaseNodeItemForSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHomebaseNodeItemForTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHomebaseNodeItemNameForTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHomebaseNodeItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHomebaseNodePageNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsHomebaseNodeItemUnseenForTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSquadSlotUnseen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetHomebaseNodeState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3950 (end 0x028B3972)
+// Original VA: 0x00000001428B3950 | File offset: 0x028B2F50
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CA7040) | Matching: see analysis/functions-uht-natives.json
+void UFortHomebaseNodeItemUtilities::StaticRegisterNativesUFortHomebaseNodeItemUtilities()
+{
+	UClass* Class = UFortHomebaseNodeItemUtilities::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AreAnyHomebaseNodeItemsUnseenForSquadId", &UFortHomebaseNodeItemUtilities::execAreAnyHomebaseNodeItemsUnseenForSquadId },
+		{ "AreAnyHomebaseNodeItemsUnseenForSquadType", &UFortHomebaseNodeItemUtilities::execAreAnyHomebaseNodeItemsUnseenForSquadType },
+		{ "GetHomebaseNodeItem", &UFortHomebaseNodeItemUtilities::execGetHomebaseNodeItem },
+		{ "GetHomebaseNodeItemForSquadSlot", &UFortHomebaseNodeItemUtilities::execGetHomebaseNodeItemForSquadSlot },
+		{ "GetHomebaseNodeItemForTagContainer", &UFortHomebaseNodeItemUtilities::execGetHomebaseNodeItemForTagContainer },
+		{ "GetHomebaseNodeItemNameForTagContainer", &UFortHomebaseNodeItemUtilities::execGetHomebaseNodeItemNameForTagContainer },
+		{ "GetHomebaseNodeItems", &UFortHomebaseNodeItemUtilities::execGetHomebaseNodeItems },
+		{ "GetHomebaseNodePageNames", &UFortHomebaseNodeItemUtilities::execGetHomebaseNodePageNames },
+		{ "IsHomebaseNodeItemUnseenForTagContainer", &UFortHomebaseNodeItemUtilities::execIsHomebaseNodeItemUnseenForTagContainer },
+		{ "IsSquadSlotUnseen", &UFortHomebaseNodeItemUtilities::execIsSquadSlotUnseen },
+		{ "TryGetHomebaseNodeState", &UFortHomebaseNodeItemUtilities::execTryGetHomebaseNodeState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_AreAnyHomebaseNodeItemsUnseenForSquadId_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -226,11 +267,6 @@ UFunction* Z_Construct_UFunction_UFortHomebaseNodeItemUtilities_TryGetHomebaseNo
 	return ReturnFunction;
 }
 
-class UFortHomebaseNodeItemUtilities
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHomebaseNodeItemUtilities_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

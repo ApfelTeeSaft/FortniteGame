@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortInitializeFromObjectInterface();  // RVA 0x01006C10 (consensus OuterFunc)
 
+class UFortInitializeFromObjectInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortInitializeFromObjectInterface_InitFromObject_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +33,6 @@ UFunction* Z_Construct_UFunction_UFortInitializeFromObjectInterface_InitFromObje
 	return ReturnFunction;
 }
 
-class UFortInitializeFromObjectInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortInitializeFromObjectInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

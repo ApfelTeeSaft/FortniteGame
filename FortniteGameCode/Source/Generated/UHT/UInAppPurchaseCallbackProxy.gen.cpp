@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UInAppPurchaseCallbackProxy();  // RVA 0x0032EAD0 (consensus OuterFunc)
 
+class UInAppPurchaseCallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUInAppPurchaseCallbackProxy();
+	static void execCreateProxyObjectForInAppPurchase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E2E0 (end 0x0032E302)
+// Original VA: 0x000000014032E2E0 | File offset: 0x0032D8E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EADAD8) | Matching: see analysis/functions-uht-natives.json
+void UInAppPurchaseCallbackProxy::StaticRegisterNativesUInAppPurchaseCallbackProxy()
+{
+	UClass* Class = UInAppPurchaseCallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateProxyObjectForInAppPurchase", &UInAppPurchaseCallbackProxy::execCreateProxyObjectForInAppPurchase },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UInAppPurchaseCallbackProxy_CreateProxyObjectForInAppPurchase_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UInAppPurchaseCallbackProxy_CreateProxyObjectFo
 	return ReturnFunction;
 }
 
-class UInAppPurchaseCallbackProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UInAppPurchaseCallbackProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortStoreSummary();  // RVA 0x029049E0 (consensus OuterFunc)
 
+class UFortStoreSummary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortStoreSummary();
+	static void execSetCards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904340 (end 0x02904362)
+// Original VA: 0x0000000142904340 | File offset: 0x02903940
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D2ECF8) | Matching: see analysis/functions-uht-natives.json
+void UFortStoreSummary::StaticRegisterNativesUFortStoreSummary()
+{
+	UClass* Class = UFortStoreSummary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetCards", &UFortStoreSummary::execSetCards },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortStoreSummary_SetCards_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortStoreSummary_SetCards()
 	return ReturnFunction;
 }
 
-class UFortStoreSummary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortStoreSummary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

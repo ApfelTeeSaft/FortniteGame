@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UImage();  // RVA 0x01BED490 (consensus OuterFunc)
 
+class UImage
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUImage();
+	static void execGetDynamicMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushFromAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushFromAtlasInterface(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushFromMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushFromTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushFromTextureDynamic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECF40 (end 0x01BECF62)
+// Original VA: 0x0000000141BECF40 | File offset: 0x01BEC540
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03696E00) | Matching: see analysis/functions-uht-natives.json
+void UImage::StaticRegisterNativesUImage()
+{
+	UClass* Class = UImage::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDynamicMaterial", &UImage::execGetDynamicMaterial },
+		{ "SetBrush", &UImage::execSetBrush },
+		{ "SetBrushFromAsset", &UImage::execSetBrushFromAsset },
+		{ "SetBrushFromAtlasInterface", &UImage::execSetBrushFromAtlasInterface },
+		{ "SetBrushFromMaterial", &UImage::execSetBrushFromMaterial },
+		{ "SetBrushFromTexture", &UImage::execSetBrushFromTexture },
+		{ "SetBrushFromTextureDynamic", &UImage::execSetBrushFromTextureDynamic },
+		{ "SetColorAndOpacity", &UImage::execSetColorAndOpacity },
+		{ "SetOpacity", &UImage::execSetOpacity },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UImage_GetDynamicMaterial_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +223,6 @@ UFunction* Z_Construct_UFunction_UImage_SetOpacity()
 	return ReturnFunction;
 }
 
-class UImage
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UImage_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

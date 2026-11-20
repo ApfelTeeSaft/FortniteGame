@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayEffectRemoved();  // RVA 0x0054D630 (consensus OuterFunc)
 
+class UAbilityTask_WaitGameplayEffectRemoved
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitGameplayEffectRemoved();
+	static void execOnGameplayEffectRemoved(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitForGameplayEffectRemoved(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CED0 (end 0x0054CEF2)
+// Original VA: 0x000000014054CED0 | File offset: 0x0054C4D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F32B80) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitGameplayEffectRemoved::StaticRegisterNativesUAbilityTask_WaitGameplayEffectRemoved()
+{
+	UClass* Class = UAbilityTask_WaitGameplayEffectRemoved::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnGameplayEffectRemoved", &UAbilityTask_WaitGameplayEffectRemoved::execOnGameplayEffectRemoved },
+		{ "WaitForGameplayEffectRemoved", &UAbilityTask_WaitGameplayEffectRemoved::execWaitForGameplayEffectRemoved },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_OnGameplayEffectRemoved_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectRemoved_WaitForG
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitGameplayEffectRemoved
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitGameplayEffectRemoved_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

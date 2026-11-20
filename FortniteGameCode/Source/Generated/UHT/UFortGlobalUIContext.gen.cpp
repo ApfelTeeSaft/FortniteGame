@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortGlobalUIContext();  // RVA 0x028AC410 (consensus OuterFunc)
 
+class UFortGlobalUIContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UFortGlobalUIContext_OnLoadingScreenVisibilityChangedDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -2174,11 +2181,6 @@ UFunction* Z_Construct_UFunction_UFortGlobalUIContext_UnregisterToReceiveNotific
 	return ReturnFunction;
 }
 
-class UFortGlobalUIContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortGlobalUIContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

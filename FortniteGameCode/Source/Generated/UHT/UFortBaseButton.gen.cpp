@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortBaseButton();  // RVA 0x02894430 (consensus OuterFunc)
 
+class UFortBaseButton
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortBaseButton_ForceClick_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -344,11 +351,6 @@ UFunction* Z_Construct_UFunction_UFortBaseButton_SetStyle()
 	return ReturnFunction;
 }
 
-class UFortBaseButton
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortBaseButton_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

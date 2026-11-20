@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTooltipUIContext();  // RVA 0x02904CA0 (consensus OuterFunc)
 
+class UFortTooltipUIContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortTooltipUIContext();
+	static void execGetCombinedDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetComparisonStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayNameAndMultiBrushForTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipStat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUIDataForTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpgradeStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904520 (end 0x02904542)
+// Original VA: 0x0000000142904520 | File offset: 0x02903B20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D31A20) | Matching: see analysis/functions-uht-natives.json
+void UFortTooltipUIContext::StaticRegisterNativesUFortTooltipUIContext()
+{
+	UClass* Class = UFortTooltipUIContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCombinedDescription", &UFortTooltipUIContext::execGetCombinedDescription },
+		{ "GetComparisonStats", &UFortTooltipUIContext::execGetComparisonStats },
+		{ "GetDescription", &UFortTooltipUIContext::execGetDescription },
+		{ "GetDisplayNameAndMultiBrushForTag", &UFortTooltipUIContext::execGetDisplayNameAndMultiBrushForTag },
+		{ "GetTooltipAttributes", &UFortTooltipUIContext::execGetTooltipAttributes },
+		{ "GetTooltipStat", &UFortTooltipUIContext::execGetTooltipStat },
+		{ "GetTooltipStats", &UFortTooltipUIContext::execGetTooltipStats },
+		{ "GetUIDataForTag", &UFortTooltipUIContext::execGetUIDataForTag },
+		{ "GetUpgradeStats", &UFortTooltipUIContext::execGetUpgradeStats },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTooltipUIContext_GetCombinedDescription_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +223,6 @@ UFunction* Z_Construct_UFunction_UFortTooltipUIContext_GetUpgradeStats()
 	return ReturnFunction;
 }
 
-class UFortTooltipUIContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTooltipUIContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFileMediaSource();  // RVA 0x025DE8A0 (consensus OuterFunc)
 
+class UFileMediaSource
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFileMediaSource();
+	static void execSetFilePath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE640 (end 0x025DE662)
+// Original VA: 0x00000001425DE640 | File offset: 0x025DDC40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03B63778) | Matching: see analysis/functions-uht-natives.json
+void UFileMediaSource::StaticRegisterNativesUFileMediaSource()
+{
+	UClass* Class = UFileMediaSource::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetFilePath", &UFileMediaSource::execSetFilePath },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFileMediaSource_SetFilePath_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFileMediaSource_SetFilePath()
 	return ReturnFunction;
 }
 
-class UFileMediaSource
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFileMediaSource_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

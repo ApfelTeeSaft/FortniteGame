@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingActor();  // RVA 0x00F61030 (consensus OuterFunc)
 
+class ABuildingActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ABuildingActor_AddEditorOnlyInstanceGameplayTags_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -994,11 +1001,6 @@ UFunction* Z_Construct_UFunction_ABuildingActor_UseDefaultHealthBar()
 	return ReturnFunction;
 }
 
-class ABuildingActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

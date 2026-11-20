@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTextStyleList();  // RVA 0x02904C10 (consensus OuterFunc)
 
+class UFortTextStyleList
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortTextStyleList();
+	static void execGetTextStyles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904490 (end 0x029044B2)
+// Original VA: 0x0000000142904490 | File offset: 0x02903A90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D31708) | Matching: see analysis/functions-uht-natives.json
+void UFortTextStyleList::StaticRegisterNativesUFortTextStyleList()
+{
+	UClass* Class = UFortTextStyleList::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTextStyles", &UFortTextStyleList::execGetTextStyles },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTextStyleList_GetTextStyles_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortTextStyleList_GetTextStyles()
 	return ReturnFunction;
 }
 
-class UFortTextStyleList
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTextStyleList_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

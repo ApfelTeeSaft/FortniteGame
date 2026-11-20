@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce();  // RVA 0x00546800 (consensus OuterFunc)
 
+class UAbilityTask_ApplyRootMotionMoveToActorForce
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAbilityTask_ApplyRootMotionMoveToActorForce_ApplyRootMotionMoveToActorForce_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -85,11 +92,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_ApplyRootMotionMoveToActorForce_On
 	return ReturnFunction;
 }
 
-class UAbilityTask_ApplyRootMotionMoveToActorForce
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToActorForce_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortJournalQuestProgressBar();  // RVA 0x028CF750 (consensus OuterFunc)
 
+class UFortJournalQuestProgressBar
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortJournalQuestProgressBar();
+	static void execGetProgressDetails(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF300 (end 0x028CF322)
+// Original VA: 0x00000001428CF300 | File offset: 0x028CE900
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CDA578) | Matching: see analysis/functions-uht-natives.json
+void UFortJournalQuestProgressBar::StaticRegisterNativesUFortJournalQuestProgressBar()
+{
+	UClass* Class = UFortJournalQuestProgressBar::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetProgressDetails", &UFortJournalQuestProgressBar::execGetProgressDetails },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortJournalQuestProgressBar_GetProgressDetails_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -45,11 +66,6 @@ UFunction* Z_Construct_UFunction_UFortJournalQuestProgressBar_HandleNewQuestObje
 	return ReturnFunction;
 }
 
-class UFortJournalQuestProgressBar
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortJournalQuestProgressBar_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

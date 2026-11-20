@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortResultsSummaryScreenWidget();  // RVA 0x028ED4A0 (consensus OuterFunc)
 
+class UFortResultsSummaryScreenWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortResultsSummaryScreenWidget();
+	static void execGetTotalScoreSortedScoreIndices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECE00 (end 0x028ECE22)
+// Original VA: 0x00000001428ECE00 | File offset: 0x028EC400
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D0A4D8) | Matching: see analysis/functions-uht-natives.json
+void UFortResultsSummaryScreenWidget::StaticRegisterNativesUFortResultsSummaryScreenWidget()
+{
+	UClass* Class = UFortResultsSummaryScreenWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTotalScoreSortedScoreIndices", &UFortResultsSummaryScreenWidget::execGetTotalScoreSortedScoreIndices },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortResultsSummaryScreenWidget_GetTotalScoreSortedScoreIndices_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortResultsSummaryScreenWidget_GetTotalScoreSo
 	return ReturnFunction;
 }
 
-class UFortResultsSummaryScreenWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortResultsSummaryScreenWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerStateAthena();  // RVA 0x0108B380 (consensus OuterFunc)
 
+class AFortPlayerStateAthena
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortPlayerStateAthena_ClientReportDBNO_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -239,11 +246,6 @@ UFunction* Z_Construct_UFunction_AFortPlayerStateAthena_ServerSetInAircraft()
 	return ReturnFunction;
 }
 
-class AFortPlayerStateAthena
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPlayerStateAthena_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AKeepHeartBase();  // RVA 0x010E30B0 (consensus OuterFunc)
 
+class AKeepHeartBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAKeepHeartBase();
+	static void execIsKeepLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsKeepOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadUserKeep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetUserKeep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSaveUserKeep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllowLooting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E28F0 (end 0x010E2912)
+// Original VA: 0x00000001410E28F0 | File offset: 0x010E1EF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0343ECF0) | Matching: see analysis/functions-uht-natives.json
+void AKeepHeartBase::StaticRegisterNativesAKeepHeartBase()
+{
+	UClass* Class = AKeepHeartBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsKeepLoaded", &AKeepHeartBase::execIsKeepLoaded },
+		{ "IsKeepOwner", &AKeepHeartBase::execIsKeepOwner },
+		{ "LoadUserKeep", &AKeepHeartBase::execLoadUserKeep },
+		{ "ResetUserKeep", &AKeepHeartBase::execResetUserKeep },
+		{ "SaveUserKeep", &AKeepHeartBase::execSaveUserKeep },
+		{ "SetAllowLooting", &AKeepHeartBase::execSetAllowLooting },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AKeepHeartBase_IsKeepLoaded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_AKeepHeartBase_SetAllowLooting()
 	return ReturnFunction;
 }
 
-class AKeepHeartBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AKeepHeartBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

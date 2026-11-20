@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortSkillTreeCanvasEntityInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayIntroTransitionBP: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortSkillTreeCanvasEntityInterface_PlayOutroTransitionBP: FFunctionParams record not identified; creator not emitted.

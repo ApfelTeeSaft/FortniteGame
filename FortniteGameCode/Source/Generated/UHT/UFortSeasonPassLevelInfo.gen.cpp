@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSeasonPassLevelInfo();  // RVA 0x02918AA0 (consensus OuterFunc)
 
+class UFortSeasonPassLevelInfo
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSeasonPassLevelInfo();
+	static void execGetLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLevelProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumRewardItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRewardItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSeasonPassMaxLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFreeClaimed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFreeUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPaidClaimed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPaidUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918800 (end 0x02918822)
+// Original VA: 0x0000000142918800 | File offset: 0x02917E00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D56820) | Matching: see analysis/functions-uht-natives.json
+void UFortSeasonPassLevelInfo::StaticRegisterNativesUFortSeasonPassLevelInfo()
+{
+	UClass* Class = UFortSeasonPassLevelInfo::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetLevel", &UFortSeasonPassLevelInfo::execGetLevel },
+		{ "GetLevelProgress", &UFortSeasonPassLevelInfo::execGetLevelProgress },
+		{ "GetNumRewardItems", &UFortSeasonPassLevelInfo::execGetNumRewardItems },
+		{ "GetRewardItems", &UFortSeasonPassLevelInfo::execGetRewardItems },
+		{ "GetSeasonPassMaxLevel", &UFortSeasonPassLevelInfo::execGetSeasonPassMaxLevel },
+		{ "IsFreeClaimed", &UFortSeasonPassLevelInfo::execIsFreeClaimed },
+		{ "IsFreeUnlocked", &UFortSeasonPassLevelInfo::execIsFreeUnlocked },
+		{ "IsPaidClaimed", &UFortSeasonPassLevelInfo::execIsPaidClaimed },
+		{ "IsPaidUnlocked", &UFortSeasonPassLevelInfo::execIsPaidUnlocked },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSeasonPassLevelInfo_GetLevel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +223,6 @@ UFunction* Z_Construct_UFunction_UFortSeasonPassLevelInfo_IsPaidUnlocked()
 	return ReturnFunction;
 }
 
-class UFortSeasonPassLevelInfo
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSeasonPassLevelInfo_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

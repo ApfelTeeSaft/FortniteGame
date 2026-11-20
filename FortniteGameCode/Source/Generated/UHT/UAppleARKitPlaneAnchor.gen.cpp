@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAppleARKitPlaneAnchor();  // RVA 0x00806430 (consensus OuterFunc)
 
+class UAppleARKitPlaneAnchor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetCenter_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +73,6 @@ UFunction* Z_Construct_UFunction_UAppleARKitPlaneAnchor_GetTransformToCenter()
 	return ReturnFunction;
 }
 
-class UAppleARKitPlaneAnchor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAppleARKitPlaneAnchor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

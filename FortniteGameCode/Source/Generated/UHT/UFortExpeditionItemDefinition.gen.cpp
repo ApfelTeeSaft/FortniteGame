@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionItemDefinition();  // RVA 0x00FDB6A0 (consensus OuterFunc)
 
+class UFortExpeditionItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortExpeditionItemDefinition();
+	static void execGetAllRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetExpeditionCosts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRequiredTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDAB20 (end 0x00FDAB42)
+// Original VA: 0x0000000140FDAB20 | File offset: 0x00FDA120
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0330F8C8) | Matching: see analysis/functions-uht-natives.json
+void UFortExpeditionItemDefinition::StaticRegisterNativesUFortExpeditionItemDefinition()
+{
+	UClass* Class = UFortExpeditionItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAllRewards", &UFortExpeditionItemDefinition::execGetAllRewards },
+		{ "GetExpeditionCosts", &UFortExpeditionItemDefinition::execGetExpeditionCosts },
+		{ "GetRequiredTags", &UFortExpeditionItemDefinition::execGetRequiredTags },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortExpeditionItemDefinition_GetAllRewards_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortExpeditionItemDefinition_GetRequiredTags()
 	return ReturnFunction;
 }
 
-class UFortExpeditionItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortExpeditionItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,61 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCanvasPanelSlot();  // RVA 0x01BE60E0 (consensus OuterFunc)
 
+class UCanvasPanelSlot
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCanvasPanelSlot();
+	static void execGetAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAnchors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAutoSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLayout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOffsets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetZOrder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAnchors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAutoSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLayout(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMaximum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMinimum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOffsets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetZOrder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5BE0 (end 0x01BE5C02)
+// Original VA: 0x0000000141BE5BE0 | File offset: 0x01BE51E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03691830) | Matching: see analysis/functions-uht-natives.json
+void UCanvasPanelSlot::StaticRegisterNativesUCanvasPanelSlot()
+{
+	UClass* Class = UCanvasPanelSlot::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAlignment", &UCanvasPanelSlot::execGetAlignment },
+		{ "GetAnchors", &UCanvasPanelSlot::execGetAnchors },
+		{ "GetAutoSize", &UCanvasPanelSlot::execGetAutoSize },
+		{ "GetLayout", &UCanvasPanelSlot::execGetLayout },
+		{ "GetOffsets", &UCanvasPanelSlot::execGetOffsets },
+		{ "GetPosition", &UCanvasPanelSlot::execGetPosition },
+		{ "GetSize", &UCanvasPanelSlot::execGetSize },
+		{ "GetZOrder", &UCanvasPanelSlot::execGetZOrder },
+		{ "SetAlignment", &UCanvasPanelSlot::execSetAlignment },
+		{ "SetAnchors", &UCanvasPanelSlot::execSetAnchors },
+		{ "SetAutoSize", &UCanvasPanelSlot::execSetAutoSize },
+		{ "SetLayout", &UCanvasPanelSlot::execSetLayout },
+		{ "SetMaximum", &UCanvasPanelSlot::execSetMaximum },
+		{ "SetMinimum", &UCanvasPanelSlot::execSetMinimum },
+		{ "SetOffsets", &UCanvasPanelSlot::execSetOffsets },
+		{ "SetPosition", &UCanvasPanelSlot::execSetPosition },
+		{ "SetSize", &UCanvasPanelSlot::execSetSize },
+		{ "SetZOrder", &UCanvasPanelSlot::execSetZOrder },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCanvasPanelSlot_GetAlignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -366,11 +421,6 @@ UFunction* Z_Construct_UFunction_UCanvasPanelSlot_SetZOrder()
 	return ReturnFunction;
 }
 
-class UCanvasPanelSlot
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCanvasPanelSlot_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

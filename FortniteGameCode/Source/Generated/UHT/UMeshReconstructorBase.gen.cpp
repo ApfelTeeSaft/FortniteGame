@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMeshReconstructorBase();  // RVA 0x01D5EDE0 (consensus OuterFunc)
 
+class UMeshReconstructorBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UMeshReconstructorBase_ConnectMRMesh_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -142,11 +149,6 @@ UFunction* Z_Construct_UFunction_UMeshReconstructorBase_StopReconstruction()
 	return ReturnFunction;
 }
 
-class UMeshReconstructorBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMeshReconstructorBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

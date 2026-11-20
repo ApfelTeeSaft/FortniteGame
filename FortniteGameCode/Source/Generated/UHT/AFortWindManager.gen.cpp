@@ -6,6 +6,55 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortWindManager();  // RVA 0x010DC880 (consensus OuterFunc)
 
+class AFortWindManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortWindManager();
+	static void execAddWindImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddWindImpulseCylinder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakWindImpulseCylinder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakWindImpulseCylinderAdvanced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakWindImpulseCylinderDelta(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakWindImpulseRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentWindImpulseCylinderDelta(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGlobalWindIntensityAndDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWindManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasWindImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeWindImpulseCylinder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeWindImpulseRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveWindImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWindImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWindImpulseCylinderMagnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC160 (end 0x010DC182)
+// Original VA: 0x00000001410DC160 | File offset: 0x010DB760
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03435C40) | Matching: see analysis/functions-uht-natives.json
+void AFortWindManager::StaticRegisterNativesAFortWindManager()
+{
+	UClass* Class = AFortWindManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddWindImpulse", &AFortWindManager::execAddWindImpulse },
+		{ "AddWindImpulseCylinder", &AFortWindManager::execAddWindImpulseCylinder },
+		{ "BreakWindImpulseCylinder", &AFortWindManager::execBreakWindImpulseCylinder },
+		{ "BreakWindImpulseCylinderAdvanced", &AFortWindManager::execBreakWindImpulseCylinderAdvanced },
+		{ "BreakWindImpulseCylinderDelta", &AFortWindManager::execBreakWindImpulseCylinderDelta },
+		{ "BreakWindImpulseRadius", &AFortWindManager::execBreakWindImpulseRadius },
+		{ "GetCurrentWindImpulseCylinderDelta", &AFortWindManager::execGetCurrentWindImpulseCylinderDelta },
+		{ "GetGlobalWindIntensityAndDirection", &AFortWindManager::execGetGlobalWindIntensityAndDirection },
+		{ "GetWindManager", &AFortWindManager::execGetWindManager },
+		{ "HasWindImpulse", &AFortWindManager::execHasWindImpulse },
+		{ "MakeWindImpulseCylinder", &AFortWindManager::execMakeWindImpulseCylinder },
+		{ "MakeWindImpulseRadius", &AFortWindManager::execMakeWindImpulseRadius },
+		{ "RemoveWindImpulse", &AFortWindManager::execRemoveWindImpulse },
+		{ "SetWindImpulse", &AFortWindManager::execSetWindImpulse },
+		{ "SetWindImpulseCylinderMagnitude", &AFortWindManager::execSetWindImpulseCylinderMagnitude },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortWindManager_AddWindImpulse_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -465,11 +514,6 @@ UFunction* Z_Construct_UFunction_AFortWindManager_SetWindImpulseCylinderMagnitud
 	return ReturnFunction;
 }
 
-class AFortWindManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortWindManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

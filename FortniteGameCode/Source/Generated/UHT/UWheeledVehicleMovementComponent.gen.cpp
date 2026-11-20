@@ -6,6 +6,69 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UWheeledVehicleMovementComponent();  // RVA 0x0067BEC0 (consensus OuterFunc)
 
+class UWheeledVehicleMovementComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUWheeledVehicleMovementComponent();
+	static void execGetCurrentGear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEngineMaxRotationSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEngineRotationSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetForwardSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTargetGear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUseAutoGears(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerUpdateState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAvoidanceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAvoidanceGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAvoidanceGroupMask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrakeInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGearDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGearUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGroupsToAvoid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGroupsToAvoidMask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGroupsToIgnore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGroupsToIgnoreMask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHandbrakeInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSteeringInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTargetGear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetThrottleInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUseAutoGears(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067B840 (end 0x0067B862)
+// Original VA: 0x000000014067B840 | File offset: 0x0067AE40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F9D6C0) | Matching: see analysis/functions-uht-natives.json
+void UWheeledVehicleMovementComponent::StaticRegisterNativesUWheeledVehicleMovementComponent()
+{
+	UClass* Class = UWheeledVehicleMovementComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCurrentGear", &UWheeledVehicleMovementComponent::execGetCurrentGear },
+		{ "GetEngineMaxRotationSpeed", &UWheeledVehicleMovementComponent::execGetEngineMaxRotationSpeed },
+		{ "GetEngineRotationSpeed", &UWheeledVehicleMovementComponent::execGetEngineRotationSpeed },
+		{ "GetForwardSpeed", &UWheeledVehicleMovementComponent::execGetForwardSpeed },
+		{ "GetTargetGear", &UWheeledVehicleMovementComponent::execGetTargetGear },
+		{ "GetUseAutoGears", &UWheeledVehicleMovementComponent::execGetUseAutoGears },
+		{ "ServerUpdateState", &UWheeledVehicleMovementComponent::execServerUpdateState },
+		{ "SetAvoidanceEnabled", &UWheeledVehicleMovementComponent::execSetAvoidanceEnabled },
+		{ "SetAvoidanceGroup", &UWheeledVehicleMovementComponent::execSetAvoidanceGroup },
+		{ "SetAvoidanceGroupMask", &UWheeledVehicleMovementComponent::execSetAvoidanceGroupMask },
+		{ "SetBrakeInput", &UWheeledVehicleMovementComponent::execSetBrakeInput },
+		{ "SetGearDown", &UWheeledVehicleMovementComponent::execSetGearDown },
+		{ "SetGearUp", &UWheeledVehicleMovementComponent::execSetGearUp },
+		{ "SetGroupsToAvoid", &UWheeledVehicleMovementComponent::execSetGroupsToAvoid },
+		{ "SetGroupsToAvoidMask", &UWheeledVehicleMovementComponent::execSetGroupsToAvoidMask },
+		{ "SetGroupsToIgnore", &UWheeledVehicleMovementComponent::execSetGroupsToIgnore },
+		{ "SetGroupsToIgnoreMask", &UWheeledVehicleMovementComponent::execSetGroupsToIgnoreMask },
+		{ "SetHandbrakeInput", &UWheeledVehicleMovementComponent::execSetHandbrakeInput },
+		{ "SetSteeringInput", &UWheeledVehicleMovementComponent::execSetSteeringInput },
+		{ "SetTargetGear", &UWheeledVehicleMovementComponent::execSetTargetGear },
+		{ "SetThrottleInput", &UWheeledVehicleMovementComponent::execSetThrottleInput },
+		{ "SetUseAutoGears", &UWheeledVehicleMovementComponent::execSetUseAutoGears },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UWheeledVehicleMovementComponent_GetCurrentGear_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -446,11 +509,6 @@ UFunction* Z_Construct_UFunction_UWheeledVehicleMovementComponent_SetUseAutoGear
 	return ReturnFunction;
 }
 
-class UWheeledVehicleMovementComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UWheeledVehicleMovementComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

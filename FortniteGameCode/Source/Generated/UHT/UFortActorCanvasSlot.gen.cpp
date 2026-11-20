@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortActorCanvasSlot();  // RVA 0x028877A0 (consensus OuterFunc)
 
+class UFortActorCanvasSlot
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortActorCanvasSlot();
+	static void execSetCanAutoRemove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886E40 (end 0x02886E62)
+// Original VA: 0x0000000142886E40 | File offset: 0x02886440
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C60C08) | Matching: see analysis/functions-uht-natives.json
+void UFortActorCanvasSlot::StaticRegisterNativesUFortActorCanvasSlot()
+{
+	UClass* Class = UFortActorCanvasSlot::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetCanAutoRemove", &UFortActorCanvasSlot::execSetCanAutoRemove },
+		{ "SetHorizontalAlignment", &UFortActorCanvasSlot::execSetHorizontalAlignment },
+		{ "SetVerticalAlignment", &UFortActorCanvasSlot::execSetVerticalAlignment },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortActorCanvasSlot_SetCanAutoRemove_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortActorCanvasSlot_SetVerticalAlignment()
 	return ReturnFunction;
 }
 
-class UFortActorCanvasSlot
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortActorCanvasSlot_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

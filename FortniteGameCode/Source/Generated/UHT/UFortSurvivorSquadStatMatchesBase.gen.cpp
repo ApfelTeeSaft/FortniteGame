@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase();  // RVA 0x02904B40 (consensus OuterFunc)
 
+class UFortSurvivorSquadStatMatchesBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_AddStatMatch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -125,11 +132,6 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadStatMatchesBase_TryGetStaticS
 	return ReturnFunction;
 }
 
-class UFortSurvivorSquadStatMatchesBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSurvivorSquadStatMatchesBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

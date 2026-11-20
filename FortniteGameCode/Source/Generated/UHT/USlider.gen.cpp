@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USlider();  // RVA 0x01BF3100 (consensus OuterFunc)
 
+class USlider
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSlider();
+	static void execGetValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIndentHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSliderBarColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSliderHandleColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStepSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2B80 (end 0x01BF2BA2)
+// Original VA: 0x0000000141BF2B80 | File offset: 0x01BF2180
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369DBF0) | Matching: see analysis/functions-uht-natives.json
+void USlider::StaticRegisterNativesUSlider()
+{
+	UClass* Class = USlider::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetValue", &USlider::execGetValue },
+		{ "SetIndentHandle", &USlider::execSetIndentHandle },
+		{ "SetLocked", &USlider::execSetLocked },
+		{ "SetSliderBarColor", &USlider::execSetSliderBarColor },
+		{ "SetSliderHandleColor", &USlider::execSetSliderHandleColor },
+		{ "SetStepSize", &USlider::execSetStepSize },
+		{ "SetValue", &USlider::execSetValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USlider_GetValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +179,6 @@ UFunction* Z_Construct_UFunction_USlider_SetValue()
 	return ReturnFunction;
 }
 
-class USlider
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USlider_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

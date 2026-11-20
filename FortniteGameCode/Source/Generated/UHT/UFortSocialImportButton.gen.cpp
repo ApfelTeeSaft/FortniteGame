@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSocialImportButton();  // RVA 0x028F56F0 (consensus OuterFunc)
 
+class UFortSocialImportButton
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSocialImportButton();
+	static void execDynamicHandleClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4FF0 (end 0x028F5012)
+// Original VA: 0x00000001428F4FF0 | File offset: 0x028F45F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D14318) | Matching: see analysis/functions-uht-natives.json
+void UFortSocialImportButton::StaticRegisterNativesUFortSocialImportButton()
+{
+	UClass* Class = UFortSocialImportButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DynamicHandleClicked", &UFortSocialImportButton::execDynamicHandleClicked },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSocialImportButton_DynamicHandleClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +67,6 @@ UFunction* Z_Construct_UFunction_UFortSocialImportButton_OnCaptionGenerated()
 	return ReturnFunction;
 }
 
-class UFortSocialImportButton
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSocialImportButton_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

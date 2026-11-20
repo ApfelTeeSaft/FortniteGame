@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMediaTexture();  // RVA 0x025DE9C0 (consensus OuterFunc)
 
+class UMediaTexture
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUMediaTexture();
+	static void execGetAspectRatio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMediaPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMediaPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE760 (end 0x025DE782)
+// Original VA: 0x00000001425DE760 | File offset: 0x025DDD60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03B64D20) | Matching: see analysis/functions-uht-natives.json
+void UMediaTexture::StaticRegisterNativesUMediaTexture()
+{
+	UClass* Class = UMediaTexture::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAspectRatio", &UMediaTexture::execGetAspectRatio },
+		{ "GetHeight", &UMediaTexture::execGetHeight },
+		{ "GetMediaPlayer", &UMediaTexture::execGetMediaPlayer },
+		{ "GetWidth", &UMediaTexture::execGetWidth },
+		{ "SetMediaPlayer", &UMediaTexture::execSetMediaPlayer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMediaTexture_GetAspectRatio_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UMediaTexture_SetMediaPlayer()
 	return ReturnFunction;
 }
 
-class UMediaTexture
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMediaTexture_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

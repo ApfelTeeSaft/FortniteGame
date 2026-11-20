@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCapsuleComponent();  // RVA 0x023EE0E0 (consensus OuterFunc)
 
+class UCapsuleComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCapsuleComponent_GetScaledCapsuleHalfHeight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -286,11 +293,6 @@ UFunction* Z_Construct_UFunction_UCapsuleComponent_SetCapsuleSize()
 	return ReturnFunction;
 }
 
-class UCapsuleComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCapsuleComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

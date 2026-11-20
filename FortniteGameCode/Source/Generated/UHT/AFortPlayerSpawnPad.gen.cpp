@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerSpawnPad();  // RVA 0x0108B2B0 (consensus OuterFunc)
 
+class AFortPlayerSpawnPad
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortPlayerSpawnPad_ChestProgressionUpdate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -104,11 +111,6 @@ UFunction* Z_Construct_UFunction_AFortPlayerSpawnPad_PrestreamChestTextures()
 	return ReturnFunction;
 }
 
-class AFortPlayerSpawnPad
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPlayerSpawnPad_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

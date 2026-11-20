@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortInteractInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortInteractInterface();
+	static void execServerOnAttemptInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006360 (end 0x01006382)
+// Original VA: 0x0000000141006360 | File offset: 0x01005960
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0334A740) | Matching: see analysis/functions-uht-natives.json
+void UFortInteractInterface::StaticRegisterNativesUFortInteractInterface()
+{
+	UClass* Class = UFortInteractInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ServerOnAttemptInteract", &UFortInteractInterface::execServerOnAttemptInteract },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortInteractInterface_ServerOnAttemptInteract: FFunctionParams record not identified; creator not emitted.

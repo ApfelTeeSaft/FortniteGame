@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonTextStyle();  // RVA 0x002CA650 (consensus OuterFunc)
 
+class UCommonTextStyle
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCommonTextStyle();
+	static void execGetColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFont(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLineHeightPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMargin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShadowColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShadowOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA1F0 (end 0x002CA212)
+// Original VA: 0x00000001402CA1F0 | File offset: 0x002C97F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E82D40) | Matching: see analysis/functions-uht-natives.json
+void UCommonTextStyle::StaticRegisterNativesUCommonTextStyle()
+{
+	UClass* Class = UCommonTextStyle::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetColor", &UCommonTextStyle::execGetColor },
+		{ "GetFont", &UCommonTextStyle::execGetFont },
+		{ "GetLineHeightPercentage", &UCommonTextStyle::execGetLineHeightPercentage },
+		{ "GetMargin", &UCommonTextStyle::execGetMargin },
+		{ "GetShadowColor", &UCommonTextStyle::execGetShadowColor },
+		{ "GetShadowOffset", &UCommonTextStyle::execGetShadowOffset },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonTextStyle_GetColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UCommonTextStyle_GetShadowOffset()
 	return ReturnFunction;
 }
 
-class UCommonTextStyle
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonTextStyle_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

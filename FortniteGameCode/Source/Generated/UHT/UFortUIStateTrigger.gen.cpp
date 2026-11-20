@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortUIStateTrigger();  // RVA 0x02911E40 (consensus OuterFunc)
 
+class UFortUIStateTrigger
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortUIStateTrigger();
+	static void execEvalBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLoggedIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911760 (end 0x02911782)
+// Original VA: 0x0000000142911760 | File offset: 0x02910D60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D4A2A8) | Matching: see analysis/functions-uht-natives.json
+void UFortUIStateTrigger::StaticRegisterNativesUFortUIStateTrigger()
+{
+	UClass* Class = UFortUIStateTrigger::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EvalBP", &UFortUIStateTrigger::execEvalBP },
+		{ "IsLoggedIn", &UFortUIStateTrigger::execIsLoggedIn },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortUIStateTrigger_EvalBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortUIStateTrigger_IsLoggedIn()
 	return ReturnFunction;
 }
 
-class UFortUIStateTrigger
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortUIStateTrigger_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

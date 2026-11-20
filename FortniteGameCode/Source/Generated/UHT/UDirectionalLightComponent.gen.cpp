@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UDirectionalLightComponent();  // RVA 0x023FE930 (consensus OuterFunc)
 
+class UDirectionalLightComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUDirectionalLightComponent();
+	static void execSetCascadeDistributionExponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCascadeTransitionFraction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDynamicShadowCascades(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDynamicShadowDistanceMovableLight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDynamicShadowDistanceStationaryLight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEnableLightShaftOcclusion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightShaftOverrideDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOcclusionMaskDarkness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShadowDistanceFadeoutFraction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDD00 (end 0x023FDD22)
+// Original VA: 0x00000001423FDD00 | File offset: 0x023FD300
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038CFA90) | Matching: see analysis/functions-uht-natives.json
+void UDirectionalLightComponent::StaticRegisterNativesUDirectionalLightComponent()
+{
+	UClass* Class = UDirectionalLightComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetCascadeDistributionExponent", &UDirectionalLightComponent::execSetCascadeDistributionExponent },
+		{ "SetCascadeTransitionFraction", &UDirectionalLightComponent::execSetCascadeTransitionFraction },
+		{ "SetDynamicShadowCascades", &UDirectionalLightComponent::execSetDynamicShadowCascades },
+		{ "SetDynamicShadowDistanceMovableLight", &UDirectionalLightComponent::execSetDynamicShadowDistanceMovableLight },
+		{ "SetDynamicShadowDistanceStationaryLight", &UDirectionalLightComponent::execSetDynamicShadowDistanceStationaryLight },
+		{ "SetEnableLightShaftOcclusion", &UDirectionalLightComponent::execSetEnableLightShaftOcclusion },
+		{ "SetLightShaftOverrideDirection", &UDirectionalLightComponent::execSetLightShaftOverrideDirection },
+		{ "SetOcclusionMaskDarkness", &UDirectionalLightComponent::execSetOcclusionMaskDarkness },
+		{ "SetShadowDistanceFadeoutFraction", &UDirectionalLightComponent::execSetShadowDistanceFadeoutFraction },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UDirectionalLightComponent_SetCascadeDistributionExponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +223,6 @@ UFunction* Z_Construct_UFunction_UDirectionalLightComponent_SetShadowDistanceFad
 	return ReturnFunction;
 }
 
-class UDirectionalLightComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UDirectionalLightComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

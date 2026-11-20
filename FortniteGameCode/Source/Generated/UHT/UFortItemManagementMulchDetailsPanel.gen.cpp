@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemManagementMulchDetailsPanel();  // RVA 0x028CA060 (consensus OuterFunc)
 
+class UFortItemManagementMulchDetailsPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_CommitMulch_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -123,11 +130,6 @@ UFunction* Z_Construct_UFunction_UFortItemManagementMulchDetailsPanel_IsSpaceAva
 	return ReturnFunction;
 }
 
-class UFortItemManagementMulchDetailsPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemManagementMulchDetailsPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

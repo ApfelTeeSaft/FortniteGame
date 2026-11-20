@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortGameData();  // RVA 0x00FE1480 (consensus OuterFunc)
 
+class UFortGameData
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortGameData();
+	static void execGetPersonalXpBoost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamXpBoost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetXpPerAccountLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0B20 (end 0x00FE0B42)
+// Original VA: 0x0000000140FE0B20 | File offset: 0x00FE0120
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033185F8) | Matching: see analysis/functions-uht-natives.json
+void UFortGameData::StaticRegisterNativesUFortGameData()
+{
+	UClass* Class = UFortGameData::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPersonalXpBoost", &UFortGameData::execGetPersonalXpBoost },
+		{ "GetTeamXpBoost", &UFortGameData::execGetTeamXpBoost },
+		{ "GetXpPerAccountLevel", &UFortGameData::execGetXpPerAccountLevel },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortGameData_GetPersonalXpBoost_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortGameData_GetXpPerAccountLevel()
 	return ReturnFunction;
 }
 
-class UFortGameData
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortGameData_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

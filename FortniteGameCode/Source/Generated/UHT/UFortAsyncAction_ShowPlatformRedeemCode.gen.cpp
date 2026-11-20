@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode();  // RVA 0x02887890 (consensus OuterFunc)
 
+class UFortAsyncAction_ShowPlatformRedeemCode
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_ShowPlatformRedeemCode();
+	static void execShowPlatformRedeemCode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886ED0 (end 0x02886EF2)
+// Original VA: 0x0000000142886ED0 | File offset: 0x028864D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C60338) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_ShowPlatformRedeemCode::StaticRegisterNativesUFortAsyncAction_ShowPlatformRedeemCode()
+{
+	UClass* Class = UFortAsyncAction_ShowPlatformRedeemCode::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ShowPlatformRedeemCode", &UFortAsyncAction_ShowPlatformRedeemCode::execShowPlatformRedeemCode },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_ShowPlatformRedeemCode_ShowPlatformRedeemCode_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowPlatformRedeemCode_ShowPla
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_ShowPlatformRedeemCode
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

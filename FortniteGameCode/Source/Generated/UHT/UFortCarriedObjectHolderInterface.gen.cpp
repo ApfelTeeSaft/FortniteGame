@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCarriedObjectHolderInterface();  // RVA 0x00FB0140 (consensus OuterFunc)
 
+class UFortCarriedObjectHolderInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCarriedObjectHolderInterface();
+	static void execCanHoldObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttachmentComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCarriedObjectAttachmentInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCarriedObjectAttach(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCarriedObjectDetach(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAFDE0 (end 0x00FAFE02)
+// Original VA: 0x0000000140FAFDE0 | File offset: 0x00FAF3E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032DA600) | Matching: see analysis/functions-uht-natives.json
+void UFortCarriedObjectHolderInterface::StaticRegisterNativesUFortCarriedObjectHolderInterface()
+{
+	UClass* Class = UFortCarriedObjectHolderInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanHoldObject", &UFortCarriedObjectHolderInterface::execCanHoldObject },
+		{ "GetAttachmentComponent", &UFortCarriedObjectHolderInterface::execGetAttachmentComponent },
+		{ "GetCarriedObjectAttachmentInfo", &UFortCarriedObjectHolderInterface::execGetCarriedObjectAttachmentInfo },
+		{ "OnCarriedObjectAttach", &UFortCarriedObjectHolderInterface::execOnCarriedObjectAttach },
+		{ "OnCarriedObjectDetach", &UFortCarriedObjectHolderInterface::execOnCarriedObjectDetach },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCarriedObjectHolderInterface_CanHoldObject_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UFortCarriedObjectHolderInterface_OnCarriedObje
 	return ReturnFunction;
 }
 
-class UFortCarriedObjectHolderInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCarriedObjectHolderInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

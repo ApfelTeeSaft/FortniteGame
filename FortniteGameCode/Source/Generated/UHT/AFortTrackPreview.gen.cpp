@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortTrackPreview();  // RVA 0x010CA9D0 (consensus OuterFunc)
 
+class AFortTrackPreview
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortTrackPreview();
+	static void execInitializeTrackPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9380 (end 0x010C93A2)
+// Original VA: 0x00000001410C9380 | File offset: 0x010C8980
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0341C958) | Matching: see analysis/functions-uht-natives.json
+void AFortTrackPreview::StaticRegisterNativesAFortTrackPreview()
+{
+	UClass* Class = AFortTrackPreview::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "InitializeTrackPreview", &AFortTrackPreview::execInitializeTrackPreview },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortTrackPreview_InitializeTrackPreview_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_AFortTrackPreview_InitializeTrackPreview()
 	return ReturnFunction;
 }
 
-class AFortTrackPreview
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortTrackPreview_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

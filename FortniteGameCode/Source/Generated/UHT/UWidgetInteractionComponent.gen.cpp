@@ -6,6 +6,53 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UWidgetInteractionComponent();  // RVA 0x01C00DF0 (consensus OuterFunc)
 
+class UWidgetInteractionComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUWidgetInteractionComponent();
+	static void execGet2DHitLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHoveredWidgetComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLastHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOverFocusableWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOverHitTestVisibleWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsOverInteractableWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPressAndReleaseKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPressKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPressPointerKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReleaseKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReleasePointerKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScrollWheel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendKeyChar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCustomHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00B80 (end 0x01C00BA2)
+// Original VA: 0x0000000141C00B80 | File offset: 0x01C00180
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036A9DE0) | Matching: see analysis/functions-uht-natives.json
+void UWidgetInteractionComponent::StaticRegisterNativesUWidgetInteractionComponent()
+{
+	UClass* Class = UWidgetInteractionComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Get2DHitLocation", &UWidgetInteractionComponent::execGet2DHitLocation },
+		{ "GetHoveredWidgetComponent", &UWidgetInteractionComponent::execGetHoveredWidgetComponent },
+		{ "GetLastHitResult", &UWidgetInteractionComponent::execGetLastHitResult },
+		{ "IsOverFocusableWidget", &UWidgetInteractionComponent::execIsOverFocusableWidget },
+		{ "IsOverHitTestVisibleWidget", &UWidgetInteractionComponent::execIsOverHitTestVisibleWidget },
+		{ "IsOverInteractableWidget", &UWidgetInteractionComponent::execIsOverInteractableWidget },
+		{ "PressAndReleaseKey", &UWidgetInteractionComponent::execPressAndReleaseKey },
+		{ "PressKey", &UWidgetInteractionComponent::execPressKey },
+		{ "PressPointerKey", &UWidgetInteractionComponent::execPressPointerKey },
+		{ "ReleaseKey", &UWidgetInteractionComponent::execReleaseKey },
+		{ "ReleasePointerKey", &UWidgetInteractionComponent::execReleasePointerKey },
+		{ "ScrollWheel", &UWidgetInteractionComponent::execScrollWheel },
+		{ "SendKeyChar", &UWidgetInteractionComponent::execSendKeyChar },
+		{ "SetCustomHitResult", &UWidgetInteractionComponent::execSetCustomHitResult },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UWidgetInteractionComponent_Get2DHitLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -286,11 +333,6 @@ UFunction* Z_Construct_UFunction_UWidgetInteractionComponent_SetCustomHitResult(
 	return ReturnFunction;
 }
 
-class UWidgetInteractionComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UWidgetInteractionComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

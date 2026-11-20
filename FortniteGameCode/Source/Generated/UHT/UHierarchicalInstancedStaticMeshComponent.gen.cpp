@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UHierarchicalInstancedStaticMeshComponent();  // RVA 0x0241F200 (consensus OuterFunc)
 
+class UHierarchicalInstancedStaticMeshComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUHierarchicalInstancedStaticMeshComponent();
+	static void execRemoveInstances(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241ED70 (end 0x0241ED92)
+// Original VA: 0x000000014241ED70 | File offset: 0x0241E370
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038F93C8) | Matching: see analysis/functions-uht-natives.json
+void UHierarchicalInstancedStaticMeshComponent::StaticRegisterNativesUHierarchicalInstancedStaticMeshComponent()
+{
+	UClass* Class = UHierarchicalInstancedStaticMeshComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "RemoveInstances", &UHierarchicalInstancedStaticMeshComponent::execRemoveInstances },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UHierarchicalInstancedStaticMeshComponent_RemoveInstances_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UHierarchicalInstancedStaticMeshComponent_Remov
 	return ReturnFunction;
 }
 
-class UHierarchicalInstancedStaticMeshComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UHierarchicalInstancedStaticMeshComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

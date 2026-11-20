@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMcpProfileCollectionBook();  // RVA 0x01030AE0 (consensus OuterFunc)
 
+class UFortMcpProfileCollectionBook
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortMcpProfileCollectionBook_ClaimCollectionBookPageRewards_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +73,6 @@ UFunction* Z_Construct_UFunction_UFortMcpProfileCollectionBook_UpgradeSlottedIte
 	return ReturnFunction;
 }
 
-class UFortMcpProfileCollectionBook
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMcpProfileCollectionBook_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

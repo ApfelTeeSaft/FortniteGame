@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreeCanvasSlot();  // RVA 0x028F5560 (consensus OuterFunc)
 
+class UFortSkillTreeCanvasSlot
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSkillTreeCanvasSlot();
+	static void execGetBasePosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetZOrder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetZOrder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4ED0 (end 0x028F4EF2)
+// Original VA: 0x00000001428F4ED0 | File offset: 0x028F44D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D13560) | Matching: see analysis/functions-uht-natives.json
+void UFortSkillTreeCanvasSlot::StaticRegisterNativesUFortSkillTreeCanvasSlot()
+{
+	UClass* Class = UFortSkillTreeCanvasSlot::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBasePosition", &UFortSkillTreeCanvasSlot::execGetBasePosition },
+		{ "GetPosition", &UFortSkillTreeCanvasSlot::execGetPosition },
+		{ "GetZOrder", &UFortSkillTreeCanvasSlot::execGetZOrder },
+		{ "SetPosition", &UFortSkillTreeCanvasSlot::execSetPosition },
+		{ "SetZOrder", &UFortSkillTreeCanvasSlot::execSetZOrder },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSkillTreeCanvasSlot_GetBasePosition_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeCanvasSlot_SetZOrder()
 	return ReturnFunction;
 }
 
-class UFortSkillTreeCanvasSlot
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSkillTreeCanvasSlot_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

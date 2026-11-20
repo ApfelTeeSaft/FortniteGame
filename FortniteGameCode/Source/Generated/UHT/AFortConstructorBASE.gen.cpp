@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortConstructorBASE();  // RVA 0x00FC5FB0 (consensus OuterFunc)
 
+class AFortConstructorBASE
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortConstructorBASE();
+	static void execGetBuildingActorsInBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBaseCollisionTouched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBaseCollisionUnTouched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBasePawnDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBasePawnDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC54E0 (end 0x00FC5502)
+// Original VA: 0x0000000140FC54E0 | File offset: 0x00FC4AE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032F1310) | Matching: see analysis/functions-uht-natives.json
+void AFortConstructorBASE::StaticRegisterNativesAFortConstructorBASE()
+{
+	UClass* Class = AFortConstructorBASE::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBuildingActorsInBase", &AFortConstructorBASE::execGetBuildingActorsInBase },
+		{ "OnBaseCollisionTouched", &AFortConstructorBASE::execOnBaseCollisionTouched },
+		{ "OnBaseCollisionUnTouched", &AFortConstructorBASE::execOnBaseCollisionUnTouched },
+		{ "OnBasePawnDestroyed", &AFortConstructorBASE::execOnBasePawnDestroyed },
+		{ "OnBasePawnDied", &AFortConstructorBASE::execOnBasePawnDied },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortConstructorBASE_GetBuildingActorsInBase_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -206,11 +235,6 @@ UFunction* Z_Construct_UFunction_AFortConstructorBASE_StopBuildingActorVisuals()
 	return ReturnFunction;
 }
 
-class AFortConstructorBASE
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortConstructorBASE_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemDetailsHostPanel();  // RVA 0x028C9DE0 (consensus OuterFunc)
 
+class UFortItemDetailsHostPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortItemDetailsHostPanel_HandleDifferentItemToCompareSet_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -201,11 +208,6 @@ UFunction* Z_Construct_UFunction_UFortItemDetailsHostPanel_ShouldPreviewUpgradin
 	return ReturnFunction;
 }
 
-class UFortItemDetailsHostPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemDetailsHostPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityTask_WaitTargetSelection();  // RVA 0x00F81F80 (consensus OuterFunc)
 
+class UFortAbilityTask_WaitTargetSelection
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_OnTargetDataCancelledCallback_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -65,11 +72,6 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_WaitTargetSelection_WaitTarget
 	return ReturnFunction;
 }
 
-class UFortAbilityTask_WaitTargetSelection
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAbilityTask_WaitTargetSelection_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UNavigationPath();  // RVA 0x0248B8C0 (consensus OuterFunc)
 
+class UNavigationPath
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUNavigationPath();
+	static void execEnableDebugDrawing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableRecalculationOnInvalidation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDebugString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPathCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPathLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPartial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsStringPulled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248AEE0 (end 0x0248AF02)
+// Original VA: 0x000000014248AEE0 | File offset: 0x0248A4E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039559B0) | Matching: see analysis/functions-uht-natives.json
+void UNavigationPath::StaticRegisterNativesUNavigationPath()
+{
+	UClass* Class = UNavigationPath::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EnableDebugDrawing", &UNavigationPath::execEnableDebugDrawing },
+		{ "EnableRecalculationOnInvalidation", &UNavigationPath::execEnableRecalculationOnInvalidation },
+		{ "GetDebugString", &UNavigationPath::execGetDebugString },
+		{ "GetPathCost", &UNavigationPath::execGetPathCost },
+		{ "GetPathLength", &UNavigationPath::execGetPathLength },
+		{ "IsPartial", &UNavigationPath::execIsPartial },
+		{ "IsStringPulled", &UNavigationPath::execIsStringPulled },
+		{ "IsValid", &UNavigationPath::execIsValid },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UNavigationPath_EnableDebugDrawing_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -166,11 +201,6 @@ UFunction* Z_Construct_UFunction_UNavigationPath_IsValid()
 	return ReturnFunction;
 }
 
-class UNavigationPath
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UNavigationPath_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

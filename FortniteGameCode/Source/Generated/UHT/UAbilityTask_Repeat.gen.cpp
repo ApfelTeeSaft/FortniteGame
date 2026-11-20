@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_Repeat();  // RVA 0x00546970 (consensus OuterFunc)
 
+class UAbilityTask_Repeat
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_Repeat();
+	static void execRepeatAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005464F0 (end 0x00546512)
+// Original VA: 0x00000001405464F0 | File offset: 0x00545AF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F2B6C0) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_Repeat::StaticRegisterNativesUAbilityTask_Repeat()
+{
+	UClass* Class = UAbilityTask_Repeat::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "RepeatAction", &UAbilityTask_Repeat::execRepeatAction },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_Repeat_RepeatAction_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_Repeat_RepeatAction()
 	return ReturnFunction;
 }
 
-class UAbilityTask_Repeat
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_Repeat_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

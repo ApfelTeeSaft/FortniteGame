@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortAbilityDecoTool();  // RVA 0x00F7D280 (consensus OuterFunc)
 
+class AFortAbilityDecoTool
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortAbilityDecoTool();
+	static void execAbilitySpawnDeco(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlacementAbilityHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlacementAbilityInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpawnParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7C9E0 (end 0x00F7CA02)
+// Original VA: 0x0000000140F7C9E0 | File offset: 0x00F7BFE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0328F2A0) | Matching: see analysis/functions-uht-natives.json
+void AFortAbilityDecoTool::StaticRegisterNativesAFortAbilityDecoTool()
+{
+	UClass* Class = AFortAbilityDecoTool::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AbilitySpawnDeco", &AFortAbilityDecoTool::execAbilitySpawnDeco },
+		{ "GetPlacementAbilityHandle", &AFortAbilityDecoTool::execGetPlacementAbilityHandle },
+		{ "GetPlacementAbilityInstance", &AFortAbilityDecoTool::execGetPlacementAbilityInstance },
+		{ "GetSpawnParameters", &AFortAbilityDecoTool::execGetSpawnParameters },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortAbilityDecoTool_AbilitySpawnDeco_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_AFortAbilityDecoTool_GetSpawnParameters()
 	return ReturnFunction;
 }
 
-class AFortAbilityDecoTool
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortAbilityDecoTool_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USpinBox();  // RVA 0x01BF3160 (consensus OuterFunc)
 
+class USpinBox
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_USpinBox_OnSpinBoxBeginSliderMovement__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -361,11 +368,6 @@ UFunction* Z_Construct_UFunction_USpinBox_SetValue()
 	return ReturnFunction;
 }
 
-class USpinBox
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USpinBox_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

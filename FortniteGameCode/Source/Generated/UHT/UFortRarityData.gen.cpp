@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortRarityData();  // RVA 0x0109DC30 (consensus OuterFunc)
 
+class UFortRarityData
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortRarityData();
+	static void execBPGetRarityData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D270 (end 0x0109D292)
+// Original VA: 0x000000014109D270 | File offset: 0x0109C870
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033EEA88) | Matching: see analysis/functions-uht-natives.json
+void UFortRarityData::StaticRegisterNativesUFortRarityData()
+{
+	UClass* Class = UFortRarityData::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BPGetRarityData", &UFortRarityData::execBPGetRarityData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortRarityData_BPGetRarityData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortRarityData_BPGetRarityData()
 	return ReturnFunction;
 }
 
-class UFortRarityData
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortRarityData_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class USpacer
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSpacer();
+	static void execSetSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2BB0 (end 0x01BF2BD2)
+// Original VA: 0x0000000141BF2BB0 | File offset: 0x01BF21B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369DDF8) | Matching: see analysis/functions-uht-natives.json
+void USpacer::StaticRegisterNativesUSpacer()
+{
+	UClass* Class = USpacer::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetSize", &USpacer::execSetSize },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_USpacer_SetSize: FFunctionParams record not identified; creator not emitted.

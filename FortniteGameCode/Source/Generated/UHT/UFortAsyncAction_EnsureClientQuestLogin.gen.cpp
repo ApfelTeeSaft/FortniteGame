@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_EnsureClientQuestLogin();  // RVA 0x00F9F160 (consensus OuterFunc)
 
+class UFortAsyncAction_EnsureClientQuestLogin
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_EnsureClientQuestLogin();
+	static void execSendEnsureClientQuestLogin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E540 (end 0x00F9E562)
+// Original VA: 0x0000000140F9E540 | File offset: 0x00F9DB40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032BF7B8) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_EnsureClientQuestLogin::StaticRegisterNativesUFortAsyncAction_EnsureClientQuestLogin()
+{
+	UClass* Class = UFortAsyncAction_EnsureClientQuestLogin::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SendEnsureClientQuestLogin", &UFortAsyncAction_EnsureClientQuestLogin::execSendEnsureClientQuestLogin },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_EnsureClientQuestLogin_SendEnsureClientQuestLogin_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_EnsureClientQuestLogin_SendEns
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_EnsureClientQuestLogin
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_EnsureClientQuestLogin_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

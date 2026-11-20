@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTask_WaitDelay();  // RVA 0x01C9AC30 (consensus OuterFunc)
 
+class UGameplayTask_WaitDelay
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUGameplayTask_WaitDelay();
+	static void execTaskWaitDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9AA00 (end 0x01C9AA22)
+// Original VA: 0x0000000141C9AA00 | File offset: 0x01C9A000
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036C6788) | Matching: see analysis/functions-uht-natives.json
+void UGameplayTask_WaitDelay::StaticRegisterNativesUGameplayTask_WaitDelay()
+{
+	UClass* Class = UGameplayTask_WaitDelay::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "TaskWaitDelay", &UGameplayTask_WaitDelay::execTaskWaitDelay },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UGameplayTask_WaitDelay_TaskDelayDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +66,6 @@ UFunction* Z_Construct_UFunction_UGameplayTask_WaitDelay_TaskWaitDelay()
 	return ReturnFunction;
 }
 
-class UGameplayTask_WaitDelay
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGameplayTask_WaitDelay_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ALevelScriptActor();  // RVA 0x02470290 (consensus OuterFunc)
 
+class ALevelScriptActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesALevelScriptActor();
+	static void execRemoteEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCinematicMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FE30 (end 0x0246FE52)
+// Original VA: 0x000000014246FE30 | File offset: 0x0246F430
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03930438) | Matching: see analysis/functions-uht-natives.json
+void ALevelScriptActor::StaticRegisterNativesALevelScriptActor()
+{
+	UClass* Class = ALevelScriptActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "RemoteEvent", &ALevelScriptActor::execRemoteEvent },
+		{ "SetCinematicMode", &ALevelScriptActor::execSetCinematicMode },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ALevelScriptActor_LevelReset_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -85,11 +108,6 @@ UFunction* Z_Construct_UFunction_ALevelScriptActor_WorldOriginLocationChanged()
 	return ReturnFunction;
 }
 
-class ALevelScriptActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ALevelScriptActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems();  // RVA 0x01023A30 (consensus OuterFunc)
 
+class UFortAsyncAction_MCPContextRecycleItems
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_MCPContextRecycleItems();
+	static void execRecycleItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023550 (end 0x01023572)
+// Original VA: 0x0000000141023550 | File offset: 0x01022B50
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03368758) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_MCPContextRecycleItems::StaticRegisterNativesUFortAsyncAction_MCPContextRecycleItems()
+{
+	UClass* Class = UFortAsyncAction_MCPContextRecycleItems::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "RecycleItems", &UFortAsyncAction_MCPContextRecycleItems::execRecycleItems },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextRecycleItems_OnMCPRequestComplete__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +66,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_MCPContextRecycleItems_Recycle
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_MCPContextRecycleItems
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

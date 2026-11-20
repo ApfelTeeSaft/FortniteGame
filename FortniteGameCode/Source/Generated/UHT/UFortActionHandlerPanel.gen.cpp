@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortActionHandlerPanel();  // RVA 0x02887700 (consensus OuterFunc)
 
+class UFortActionHandlerPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortActionHandlerPanel_ActivateActionHandler_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -124,11 +131,6 @@ UFunction* Z_Construct_UFunction_UFortActionHandlerPanel_SetOnPanelDeactivated()
 	return ReturnFunction;
 }
 
-class UFortActionHandlerPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortActionHandlerPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

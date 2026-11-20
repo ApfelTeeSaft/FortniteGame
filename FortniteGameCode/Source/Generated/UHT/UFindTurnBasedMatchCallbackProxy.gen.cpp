@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy();  // RVA 0x0032EAA0 (consensus OuterFunc)
 
+class UFindTurnBasedMatchCallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFindTurnBasedMatchCallbackProxy();
+	static void execFindTurnBasedMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E2B0 (end 0x0032E2D2)
+// Original VA: 0x000000014032E2B0 | File offset: 0x0032D8B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAD9E0) | Matching: see analysis/functions-uht-natives.json
+void UFindTurnBasedMatchCallbackProxy::StaticRegisterNativesUFindTurnBasedMatchCallbackProxy()
+{
+	UClass* Class = UFindTurnBasedMatchCallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FindTurnBasedMatch", &UFindTurnBasedMatchCallbackProxy::execFindTurnBasedMatch },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFindTurnBasedMatchCallbackProxy_FindTurnBasedMatch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFindTurnBasedMatchCallbackProxy_FindTurnBasedM
 	return ReturnFunction;
 }
 
-class UFindTurnBasedMatchCallbackProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

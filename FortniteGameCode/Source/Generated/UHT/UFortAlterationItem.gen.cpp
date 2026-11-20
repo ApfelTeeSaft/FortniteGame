@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAlterationItem();  // RVA 0x00F99420 (consensus OuterFunc)
 
+class UFortAlterationItem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAlterationItem();
+	static void execGetAlterationDefinitionBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98840 (end 0x00F98862)
+// Original VA: 0x0000000140F98840 | File offset: 0x00F97E40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032B6B38) | Matching: see analysis/functions-uht-natives.json
+void UFortAlterationItem::StaticRegisterNativesUFortAlterationItem()
+{
+	UClass* Class = UFortAlterationItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAlterationDefinitionBP", &UFortAlterationItem::execGetAlterationDefinitionBP },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAlterationItem_GetAlterationDefinitionBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAlterationItem_GetAlterationDefinitionBP()
 	return ReturnFunction;
 }
 
-class UFortAlterationItem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAlterationItem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

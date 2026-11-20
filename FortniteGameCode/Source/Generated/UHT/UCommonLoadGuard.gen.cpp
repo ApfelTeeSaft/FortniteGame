@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonLoadGuard();  // RVA 0x002CA480 (consensus OuterFunc)
 
+class UCommonLoadGuard
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCommonLoadGuard();
+	static void execBP_GuardAndLoadAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLoading(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsLoading(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLoadingText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA070 (end 0x002CA092)
+// Original VA: 0x00000001402CA070 | File offset: 0x002C9670
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E81EB0) | Matching: see analysis/functions-uht-natives.json
+void UCommonLoadGuard::StaticRegisterNativesUCommonLoadGuard()
+{
+	UClass* Class = UCommonLoadGuard::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BP_GuardAndLoadAsset", &UCommonLoadGuard::execBP_GuardAndLoadAsset },
+		{ "IsLoading", &UCommonLoadGuard::execIsLoading },
+		{ "SetIsLoading", &UCommonLoadGuard::execSetIsLoading },
+		{ "SetLoadingText", &UCommonLoadGuard::execSetLoadingText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UCommonLoadGuard_OnAssetLoaded__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +133,6 @@ UFunction* Z_Construct_UFunction_UCommonLoadGuard_SetLoadingText()
 	return ReturnFunction;
 }
 
-class UCommonLoadGuard
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonLoadGuard_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

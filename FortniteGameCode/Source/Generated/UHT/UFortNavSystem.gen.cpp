@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortNavSystem();  // RVA 0x01050C70 (consensus OuterFunc)
 
+class UFortNavSystem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortNavSystem();
+	static void execIsNavmeshInRadiusInitialized(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnNavDataRegistered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010500A0 (end 0x010500C2)
+// Original VA: 0x00000001410500A0 | File offset: 0x0104F6A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03391A98) | Matching: see analysis/functions-uht-natives.json
+void UFortNavSystem::StaticRegisterNativesUFortNavSystem()
+{
+	UClass* Class = UFortNavSystem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsNavmeshInRadiusInitialized", &UFortNavSystem::execIsNavmeshInRadiusInitialized },
+		{ "OnNavDataRegistered", &UFortNavSystem::execOnNavDataRegistered },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortNavSystem_IsNavmeshInRadiusInitialized_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortNavSystem_OnNavDataRegistered()
 	return ReturnFunction;
 }
 
-class UFortNavSystem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortNavSystem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

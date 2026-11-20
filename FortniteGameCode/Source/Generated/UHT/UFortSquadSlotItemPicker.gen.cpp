@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotItemPicker();  // RVA 0x028FB5D0 (consensus OuterFunc)
 
+class UFortSquadSlotItemPicker
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UFortSquadSlotItemPicker_FortSquadSlotSortChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -105,11 +112,6 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemPicker_SetSortTypes()
 	return ReturnFunction;
 }
 
-class UFortSquadSlotItemPicker
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSquadSlotItemPicker_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

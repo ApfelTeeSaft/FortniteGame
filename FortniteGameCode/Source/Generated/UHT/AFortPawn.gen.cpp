@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPawn();  // RVA 0x0105DDF0 (consensus OuterFunc)
 
+class AFortPawn
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortPawn_AlignRotationToHitDirection_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -2144,11 +2151,6 @@ UFunction* Z_Construct_UFunction_AFortPawn_TriggerFeedbackEvent()
 	return ReturnFunction;
 }
 
-class AFortPawn
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPawn_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

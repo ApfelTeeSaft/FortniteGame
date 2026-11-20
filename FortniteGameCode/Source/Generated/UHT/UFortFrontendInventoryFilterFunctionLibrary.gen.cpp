@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortFrontendInventoryFilterFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortFrontendInventoryFilterFunctionLibrary();
+	static void execToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF0C0 (end 0x028CF0E2)
+// Original VA: 0x00000001428CF0C0 | File offset: 0x028CE6C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CD7E58) | Matching: see analysis/functions-uht-natives.json
+void UFortFrontendInventoryFilterFunctionLibrary::StaticRegisterNativesUFortFrontendInventoryFilterFunctionLibrary()
+{
+	UClass* Class = UFortFrontendInventoryFilterFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ToText", &UFortFrontendInventoryFilterFunctionLibrary::execToText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortFrontendInventoryFilterFunctionLibrary_ToText: FFunctionParams record not identified; creator not emitted.

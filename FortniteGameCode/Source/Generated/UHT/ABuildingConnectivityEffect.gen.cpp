@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingConnectivityEffect();  // RVA 0x00F66470 (consensus OuterFunc)
 
+class ABuildingConnectivityEffect
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ABuildingConnectivityEffect_OnConnect_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_ABuildingConnectivityEffect_OnDisconnect()
 	return ReturnFunction;
 }
 
-class ABuildingConnectivityEffect
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingConnectivityEffect_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

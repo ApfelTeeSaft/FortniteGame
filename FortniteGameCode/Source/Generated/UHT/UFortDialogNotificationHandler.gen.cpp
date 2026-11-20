@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortDialogNotificationHandler();  // RVA 0x00FD6FE0 (consensus OuterFunc)
 
+class UFortDialogNotificationHandler
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UFortDialogNotificationHandler_OnActionComplete__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -102,11 +109,6 @@ UFunction* Z_Construct_UFunction_UFortDialogNotificationHandler_Timeout()
 	return ReturnFunction;
 }
 
-class UFortDialogNotificationHandler
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortDialogNotificationHandler_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

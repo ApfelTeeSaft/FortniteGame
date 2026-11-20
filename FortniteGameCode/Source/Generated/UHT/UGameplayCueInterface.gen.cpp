@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGameplayCueInterface();  // RVA 0x0055BFB0 (consensus OuterFunc)
 
+class UGameplayCueInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UGameplayCueInterface_BlueprintCustomHandler_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_UGameplayCueInterface_ForwardGameplayCueToParen
 	return ReturnFunction;
 }
 
-class UGameplayCueInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGameplayCueInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemManagementItemPopupMenu();  // RVA 0x028C9FD0 (consensus OuterFunc)
 
+class UFortItemManagementItemPopupMenu
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortItemManagementItemPopupMenu_GetHostButton_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -65,11 +72,6 @@ UFunction* Z_Construct_UFunction_UFortItemManagementItemPopupMenu_HandleItemChan
 	return ReturnFunction;
 }
 
-class UFortItemManagementItemPopupMenu
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemManagementItemPopupMenu_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

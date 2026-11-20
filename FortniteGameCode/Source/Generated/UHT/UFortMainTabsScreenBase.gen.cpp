@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMainTabsScreenBase();  // RVA 0x028D73F0 (consensus OuterFunc)
 
+class UFortMainTabsScreenBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortMainTabsScreenBase_ConstructTabs_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -124,11 +131,6 @@ UFunction* Z_Construct_UFunction_UFortMainTabsScreenBase_HandleRefreshSkillTreeN
 	return ReturnFunction;
 }
 
-class UFortMainTabsScreenBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMainTabsScreenBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

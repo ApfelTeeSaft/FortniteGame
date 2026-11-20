@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGameplayModMagnitudeCalculation();  // RVA 0x005646D0 (consensus OuterFunc)
 
+class UGameplayModMagnitudeCalculation
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUGameplayModMagnitudeCalculation();
+	static void execCalculateBaseMagnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563600 (end 0x00563622)
+// Original VA: 0x0000000140563600 | File offset: 0x00562C00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F48078) | Matching: see analysis/functions-uht-natives.json
+void UGameplayModMagnitudeCalculation::StaticRegisterNativesUGameplayModMagnitudeCalculation()
+{
+	UClass* Class = UGameplayModMagnitudeCalculation::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CalculateBaseMagnitude", &UGameplayModMagnitudeCalculation::execCalculateBaseMagnitude },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UGameplayModMagnitudeCalculation_CalculateBaseMagnitude_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UGameplayModMagnitudeCalculation_CalculateBaseM
 	return ReturnFunction;
 }
 
-class UGameplayModMagnitudeCalculation
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGameplayModMagnitudeCalculation_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

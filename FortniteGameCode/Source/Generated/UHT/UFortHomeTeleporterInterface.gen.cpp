@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHomeTeleporterInterface();  // RVA 0x010068E0 (consensus OuterFunc)
 
+class UFortHomeTeleporterInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortHomeTeleporterInterface_OnHomeTeleporterBound_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +93,6 @@ UFunction* Z_Construct_UFunction_UFortHomeTeleporterInterface_OnHomeTeleporterUn
 	return ReturnFunction;
 }
 
-class UFortHomeTeleporterInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHomeTeleporterInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

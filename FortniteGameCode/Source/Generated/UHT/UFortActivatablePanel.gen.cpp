@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortActivatablePanel();  // RVA 0x02887740 (consensus OuterFunc)
 
+class UFortActivatablePanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortActivatablePanel();
+	static void execRestoreCenterWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRestoreScrollWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886DE0 (end 0x02886E02)
+// Original VA: 0x0000000142886DE0 | File offset: 0x028863E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C60A50) | Matching: see analysis/functions-uht-natives.json
+void UFortActivatablePanel::StaticRegisterNativesUFortActivatablePanel()
+{
+	UClass* Class = UFortActivatablePanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "RestoreCenterWidget", &UFortActivatablePanel::execRestoreCenterWidget },
+		{ "RestoreScrollWidget", &UFortActivatablePanel::execRestoreScrollWidget },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortActivatablePanel_RestoreCenterWidget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortActivatablePanel_RestoreScrollWidget()
 	return ReturnFunction;
 }
 
-class UFortActivatablePanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortActivatablePanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

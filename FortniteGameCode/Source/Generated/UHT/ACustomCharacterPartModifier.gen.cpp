@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class ACustomCharacterPartModifier
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesACustomCharacterPartModifier();
+	static void execGetAssociatedPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCharacterPartType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78010 (end 0x00F78032)
+// Original VA: 0x0000000140F78010 | File offset: 0x00F77610
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03288EB8) | Matching: see analysis/functions-uht-natives.json
+void ACustomCharacterPartModifier::StaticRegisterNativesACustomCharacterPartModifier()
+{
+	UClass* Class = ACustomCharacterPartModifier::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAssociatedPlayerPawn", &ACustomCharacterPartModifier::execGetAssociatedPlayerPawn },
+		{ "GetCharacterPartType", &ACustomCharacterPartModifier::execGetCharacterPartType },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_ACustomCharacterPartModifier_GetAssociatedPlayerPawn: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_ACustomCharacterPartModifier_GetCharacterPartType: FFunctionParams record not identified; creator not emitted.

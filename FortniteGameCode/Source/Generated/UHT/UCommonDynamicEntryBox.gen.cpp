@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonDynamicEntryBox();  // RVA 0x002C2DD0 (consensus OuterFunc)
 
+class UCommonDynamicEntryBox
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCommonDynamicEntryBox();
+	static void execGetAllEntries(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumEntries(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEntrySpacing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2A40 (end 0x002C2A62)
+// Original VA: 0x00000001402C2A40 | File offset: 0x002C2040
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E7C8D0) | Matching: see analysis/functions-uht-natives.json
+void UCommonDynamicEntryBox::StaticRegisterNativesUCommonDynamicEntryBox()
+{
+	UClass* Class = UCommonDynamicEntryBox::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAllEntries", &UCommonDynamicEntryBox::execGetAllEntries },
+		{ "GetNumEntries", &UCommonDynamicEntryBox::execGetNumEntries },
+		{ "RemoveEntry", &UCommonDynamicEntryBox::execRemoveEntry },
+		{ "Reset", &UCommonDynamicEntryBox::execReset },
+		{ "SetEntrySpacing", &UCommonDynamicEntryBox::execSetEntrySpacing },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonDynamicEntryBox_GetAllEntries_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UCommonDynamicEntryBox_SetEntrySpacing()
 	return ReturnFunction;
 }
 
-class UCommonDynamicEntryBox
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonDynamicEntryBox_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

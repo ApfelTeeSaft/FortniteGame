@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortTeamInfoPvPBaseDestruction();  // RVA 0x010B3910 (consensus OuterFunc)
 
+class AFortTeamInfoPvPBaseDestruction
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortTeamInfoPvPBaseDestruction_GetStrategicBuildingActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -162,11 +169,6 @@ UFunction* Z_Construct_UFunction_AFortTeamInfoPvPBaseDestruction_OnRep_TeamLevel
 	return ReturnFunction;
 }
 
-class AFortTeamInfoPvPBaseDestruction
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortTeamInfoPvPBaseDestruction_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

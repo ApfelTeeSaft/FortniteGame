@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UDropTimecodeToStringConversion();  // RVA 0x007E0240 (consensus OuterFunc)
 
+class UDropTimecodeToStringConversion
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUDropTimecodeToStringConversion();
+	static void execConv_DropTimecodeToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x007E0160 (end 0x007E0182)
+// Original VA: 0x00000001407E0160 | File offset: 0x007DF760
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02FD3C48) | Matching: see analysis/functions-uht-natives.json
+void UDropTimecodeToStringConversion::StaticRegisterNativesUDropTimecodeToStringConversion()
+{
+	UClass* Class = UDropTimecodeToStringConversion::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Conv_DropTimecodeToString", &UDropTimecodeToStringConversion::execConv_DropTimecodeToString },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UDropTimecodeToStringConversion_Conv_DropTimecodeToString_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UDropTimecodeToStringConversion_Conv_DropTimeco
 	return ReturnFunction;
 }
 
-class UDropTimecodeToStringConversion
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UDropTimecodeToStringConversion_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

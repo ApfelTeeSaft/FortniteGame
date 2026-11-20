@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilitySystemComponent();  // RVA 0x00538410 (consensus OuterFunc)
 
+class UAbilitySystemComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UAbilitySystemComponent_AbilityAbilityKey__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -1317,11 +1324,6 @@ UFunction* Z_Construct_UFunction_UAbilitySystemComponent_TryActivateAbilityByCla
 	return ReturnFunction;
 }
 
-class UAbilitySystemComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilitySystemComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

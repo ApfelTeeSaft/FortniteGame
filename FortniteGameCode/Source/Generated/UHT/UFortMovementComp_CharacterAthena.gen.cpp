@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortMovementComp_CharacterAthena
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortMovementComp_CharacterAthena();
+	static void execIsActivelySkydiving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActivelyStrafingInAir(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPassivelySkydiving(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A3B0 (end 0x0104A3D2)
+// Original VA: 0x000000014104A3B0 | File offset: 0x010499B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0338A8A0) | Matching: see analysis/functions-uht-natives.json
+void UFortMovementComp_CharacterAthena::StaticRegisterNativesUFortMovementComp_CharacterAthena()
+{
+	UClass* Class = UFortMovementComp_CharacterAthena::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsActivelySkydiving", &UFortMovementComp_CharacterAthena::execIsActivelySkydiving },
+		{ "IsActivelyStrafingInAir", &UFortMovementComp_CharacterAthena::execIsActivelyStrafingInAir },
+		{ "IsPassivelySkydiving", &UFortMovementComp_CharacterAthena::execIsPassivelySkydiving },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelySkydiving: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortMovementComp_CharacterAthena_IsActivelyStrafingInAir: FFunctionParams record not identified; creator not emitted.

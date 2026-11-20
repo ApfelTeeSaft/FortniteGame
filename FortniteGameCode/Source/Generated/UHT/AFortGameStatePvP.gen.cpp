@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortGameStatePvP();  // RVA 0x00FEE7B0 (consensus OuterFunc)
 
+class AFortGameStatePvP
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortGameStatePvP_GetAverageHomebaseRating_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -282,11 +289,6 @@ UFunction* Z_Construct_UFunction_AFortGameStatePvP_SetMatchLevel()
 	return ReturnFunction;
 }
 
-class AFortGameStatePvP
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortGameStatePvP_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

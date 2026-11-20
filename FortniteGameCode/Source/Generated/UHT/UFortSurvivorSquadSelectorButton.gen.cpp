@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSurvivorSquadSelectorButton();  // RVA 0x02904AD0 (consensus OuterFunc)
 
+class UFortSurvivorSquadSelectorButton
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSurvivorSquadSelectorButton();
+	static void execTryGetPersonalityMatches(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetSquadMembers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetSummaryStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029043A0 (end 0x029043C2)
+// Original VA: 0x00000001429043A0 | File offset: 0x029039A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D2FD90) | Matching: see analysis/functions-uht-natives.json
+void UFortSurvivorSquadSelectorButton::StaticRegisterNativesUFortSurvivorSquadSelectorButton()
+{
+	UClass* Class = UFortSurvivorSquadSelectorButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "TryGetPersonalityMatches", &UFortSurvivorSquadSelectorButton::execTryGetPersonalityMatches },
+		{ "TryGetSquadMembers", &UFortSurvivorSquadSelectorButton::execTryGetSquadMembers },
+		{ "TryGetSummaryStats", &UFortSurvivorSquadSelectorButton::execTryGetSummaryStats },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSurvivorSquadSelectorButton_TryGetPersonalityMatches_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortSurvivorSquadSelectorButton_TryGetSummaryS
 	return ReturnFunction;
 }
 
-class UFortSurvivorSquadSelectorButton
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSurvivorSquadSelectorButton_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

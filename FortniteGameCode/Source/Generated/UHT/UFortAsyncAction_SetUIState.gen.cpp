@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_SetUIState();  // RVA 0x0288C9C0 (consensus OuterFunc)
 
+class UFortAsyncAction_SetUIState
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_SetUIState();
+	static void execSetUIState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C500 (end 0x0288C522)
+// Original VA: 0x000000014288C500 | File offset: 0x0288BB00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C6A088) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_SetUIState::StaticRegisterNativesUFortAsyncAction_SetUIState()
+{
+	UClass* Class = UFortAsyncAction_SetUIState::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetUIState", &UFortAsyncAction_SetUIState::execSetUIState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_SetUIState_SetUIState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_SetUIState_SetUIState()
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_SetUIState
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_SetUIState_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

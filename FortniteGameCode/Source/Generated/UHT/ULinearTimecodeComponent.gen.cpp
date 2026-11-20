@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ULinearTimecodeComponent();  // RVA 0x007E0270 (consensus OuterFunc)
 
+class ULinearTimecodeComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesULinearTimecodeComponent();
+	static void execGetDropFrameNumber(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDropTimeCodeFrameNumber(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDropTimecodeFrameNumber(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x007E0190 (end 0x007E01B2)
+// Original VA: 0x00000001407E0190 | File offset: 0x007DF790
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02FD3B28) | Matching: see analysis/functions-uht-natives.json
+void ULinearTimecodeComponent::StaticRegisterNativesULinearTimecodeComponent()
+{
+	UClass* Class = ULinearTimecodeComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDropFrameNumber", &ULinearTimecodeComponent::execGetDropFrameNumber },
+		{ "GetDropTimeCodeFrameNumber", &ULinearTimecodeComponent::execGetDropTimeCodeFrameNumber },
+		{ "SetDropTimecodeFrameNumber", &ULinearTimecodeComponent::execSetDropTimecodeFrameNumber },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ULinearTimecodeComponent_GetDropFrameNumber_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_ULinearTimecodeComponent_SetDropTimecodeFrameNu
 	return ReturnFunction;
 }
 
-class ULinearTimecodeComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ULinearTimecodeComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

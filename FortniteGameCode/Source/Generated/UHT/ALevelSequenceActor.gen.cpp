@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ALevelSequenceActor();  // RVA 0x01D4ED40 (consensus OuterFunc)
 
+class ALevelSequenceActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesALevelSequenceActor();
+	static void execAddBinding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSequence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveBinding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetBinding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetBindings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBinding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEventReceivers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSequence(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4E830 (end 0x01D4E852)
+// Original VA: 0x0000000141D4E830 | File offset: 0x01D4DE30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03719CF0) | Matching: see analysis/functions-uht-natives.json
+void ALevelSequenceActor::StaticRegisterNativesALevelSequenceActor()
+{
+	UClass* Class = ALevelSequenceActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddBinding", &ALevelSequenceActor::execAddBinding },
+		{ "GetSequence", &ALevelSequenceActor::execGetSequence },
+		{ "RemoveBinding", &ALevelSequenceActor::execRemoveBinding },
+		{ "ResetBinding", &ALevelSequenceActor::execResetBinding },
+		{ "ResetBindings", &ALevelSequenceActor::execResetBindings },
+		{ "SetBinding", &ALevelSequenceActor::execSetBinding },
+		{ "SetEventReceivers", &ALevelSequenceActor::execSetEventReceivers },
+		{ "SetSequence", &ALevelSequenceActor::execSetSequence },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ALevelSequenceActor_AddBinding_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -165,11 +200,6 @@ UFunction* Z_Construct_UFunction_ALevelSequenceActor_SetSequence()
 	return ReturnFunction;
 }
 
-class ALevelSequenceActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ALevelSequenceActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

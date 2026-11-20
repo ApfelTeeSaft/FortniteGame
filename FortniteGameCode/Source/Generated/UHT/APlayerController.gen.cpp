@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_APlayerController();  // RVA 0x024A9E00 (consensus OuterFunc)
 
+class APlayerController
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_APlayerController_ActivateTouchInterface_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -2502,11 +2509,6 @@ UFunction* Z_Construct_UFunction_APlayerController_WasInputKeyJustReleased()
 	return ReturnFunction;
 }
 
-class APlayerController
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_APlayerController_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

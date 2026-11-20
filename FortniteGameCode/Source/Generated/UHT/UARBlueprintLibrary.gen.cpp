@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UARBlueprintLibrary();  // RVA 0x02921790 (consensus OuterFunc)
 
+class UARBlueprintLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UARBlueprintLibrary_DebugDrawTrackedGeometry_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -205,11 +212,6 @@ UFunction* Z_Construct_UFunction_UARBlueprintLibrary_StopAR()
 	return ReturnFunction;
 }
 
-class UARBlueprintLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UARBlueprintLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

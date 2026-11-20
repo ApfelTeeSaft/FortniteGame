@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortUIDataConfiguration();  // RVA 0x0290A9A0 (consensus OuterFunc)
 
+class UFortUIDataConfiguration
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortUIDataConfiguration();
+	static void execGetDefenderSubtypeIconMultiSizeBrushByTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A740 (end 0x0290A762)
+// Original VA: 0x000000014290A740 | File offset: 0x02909D40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D3CE40) | Matching: see analysis/functions-uht-natives.json
+void UFortUIDataConfiguration::StaticRegisterNativesUFortUIDataConfiguration()
+{
+	UClass* Class = UFortUIDataConfiguration::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDefenderSubtypeIconMultiSizeBrushByTag", &UFortUIDataConfiguration::execGetDefenderSubtypeIconMultiSizeBrushByTag },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortUIDataConfiguration_GetDefenderSubtypeIconMultiSizeBrushByTag_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortUIDataConfiguration_GetDefenderSubtypeIcon
 	return ReturnFunction;
 }
 
-class UFortUIDataConfiguration
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortUIDataConfiguration_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

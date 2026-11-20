@@ -6,6 +6,51 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCanvas();  // RVA 0x023EE070 (consensus OuterFunc)
 
+class UCanvas
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCanvas();
+	static void execK2_Deproject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DrawBorder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DrawBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DrawLine(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DrawMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DrawMaterialTriangle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DrawPolygon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DrawText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DrawTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_DrawTriangle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_Project(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_StrLen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_TextSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EDC70 (end 0x023EDC92)
+// Original VA: 0x00000001423EDC70 | File offset: 0x023ED270
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038BFBD0) | Matching: see analysis/functions-uht-natives.json
+void UCanvas::StaticRegisterNativesUCanvas()
+{
+	UClass* Class = UCanvas::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "K2_Deproject", &UCanvas::execK2_Deproject },
+		{ "K2_DrawBorder", &UCanvas::execK2_DrawBorder },
+		{ "K2_DrawBox", &UCanvas::execK2_DrawBox },
+		{ "K2_DrawLine", &UCanvas::execK2_DrawLine },
+		{ "K2_DrawMaterial", &UCanvas::execK2_DrawMaterial },
+		{ "K2_DrawMaterialTriangle", &UCanvas::execK2_DrawMaterialTriangle },
+		{ "K2_DrawPolygon", &UCanvas::execK2_DrawPolygon },
+		{ "K2_DrawText", &UCanvas::execK2_DrawText },
+		{ "K2_DrawTexture", &UCanvas::execK2_DrawTexture },
+		{ "K2_DrawTriangle", &UCanvas::execK2_DrawTriangle },
+		{ "K2_Project", &UCanvas::execK2_Project },
+		{ "K2_StrLen", &UCanvas::execK2_StrLen },
+		{ "K2_TextSize", &UCanvas::execK2_TextSize },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCanvas_K2_Deproject_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -266,11 +311,6 @@ UFunction* Z_Construct_UFunction_UCanvas_K2_TextSize()
 	return ReturnFunction;
 }
 
-class UCanvas
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCanvas_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

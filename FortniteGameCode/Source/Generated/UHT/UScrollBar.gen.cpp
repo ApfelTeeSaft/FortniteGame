@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UScrollBar
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUScrollBar();
+	static void execSetState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2A60 (end 0x01BF2A82)
+// Original VA: 0x0000000141BF2A60 | File offset: 0x01BF2060
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369CC38) | Matching: see analysis/functions-uht-natives.json
+void UScrollBar::StaticRegisterNativesUScrollBar()
+{
+	UClass* Class = UScrollBar::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetState", &UScrollBar::execSetState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UScrollBar_SetState: FFunctionParams record not identified; creator not emitted.

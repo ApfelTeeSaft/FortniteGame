@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBuildingEditModeSupport();  // RVA 0x00F66860 (consensus OuterFunc)
 
+class UBuildingEditModeSupport
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UBuildingEditModeSupport_OnSuccessfulMatchInteractComplete_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_UBuildingEditModeSupport_OnSuccessfulMatchInter
 	return ReturnFunction;
 }
 
-class UBuildingEditModeSupport
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBuildingEditModeSupport_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

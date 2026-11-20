@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortNotificationHandler
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UFortNotificationHandler_ClearNotification: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortNotificationHandler_CreateWidget: FFunctionParams record not identified; creator not emitted.

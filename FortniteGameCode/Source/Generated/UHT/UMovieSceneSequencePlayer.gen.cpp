@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMovieSceneSequencePlayer();  // RVA 0x01AC5510 (consensus OuterFunc)
 
+class UMovieSceneSequencePlayer
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UMovieSceneSequencePlayer_ChangePlaybackDirection_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -458,11 +465,6 @@ UFunction* Z_Construct_UFunction_UMovieSceneSequencePlayer_Stop()
 	return ReturnFunction;
 }
 
-class UMovieSceneSequencePlayer
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMovieSceneSequencePlayer_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

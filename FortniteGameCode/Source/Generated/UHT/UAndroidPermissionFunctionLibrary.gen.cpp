@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAndroidPermissionFunctionLibrary();  // RVA 0x00803F00 (consensus OuterFunc)
 
+class UAndroidPermissionFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAndroidPermissionFunctionLibrary();
+	static void execAcquirePermissions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCheckPermission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00803EA0 (end 0x00803EC2)
+// Original VA: 0x0000000140803EA0 | File offset: 0x008034A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02FE1208) | Matching: see analysis/functions-uht-natives.json
+void UAndroidPermissionFunctionLibrary::StaticRegisterNativesUAndroidPermissionFunctionLibrary()
+{
+	UClass* Class = UAndroidPermissionFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AcquirePermissions", &UAndroidPermissionFunctionLibrary::execAcquirePermissions },
+		{ "CheckPermission", &UAndroidPermissionFunctionLibrary::execCheckPermission },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_AcquirePermissions_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UAndroidPermissionFunctionLibrary_CheckPermissi
 	return ReturnFunction;
 }
 
-class UAndroidPermissionFunctionLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAndroidPermissionFunctionLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

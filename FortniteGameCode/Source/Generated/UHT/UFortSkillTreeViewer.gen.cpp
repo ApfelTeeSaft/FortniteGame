@@ -6,6 +6,49 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreeViewer();  // RVA 0x028F56C0 (consensus OuterFunc)
 
+class UFortSkillTreeViewer
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSkillTreeViewer();
+	static void execBackOutOfSubPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanBackOutOfSubPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrillDownToSubPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrenciesNeededForPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPageAquiredNodes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPageLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPageTotalNodes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedNodeId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetViewParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigateTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowPage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetSkillTreePageStaticData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4FC0 (end 0x028F4FE2)
+// Original VA: 0x00000001428F4FC0 | File offset: 0x028F45C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D13FB0) | Matching: see analysis/functions-uht-natives.json
+void UFortSkillTreeViewer::StaticRegisterNativesUFortSkillTreeViewer()
+{
+	UClass* Class = UFortSkillTreeViewer::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BackOutOfSubPage", &UFortSkillTreeViewer::execBackOutOfSubPage },
+		{ "CanBackOutOfSubPage", &UFortSkillTreeViewer::execCanBackOutOfSubPage },
+		{ "DrillDownToSubPage", &UFortSkillTreeViewer::execDrillDownToSubPage },
+		{ "GetCurrenciesNeededForPage", &UFortSkillTreeViewer::execGetCurrenciesNeededForPage },
+		{ "GetPageAquiredNodes", &UFortSkillTreeViewer::execGetPageAquiredNodes },
+		{ "GetPageLocked", &UFortSkillTreeViewer::execGetPageLocked },
+		{ "GetPageTotalNodes", &UFortSkillTreeViewer::execGetPageTotalNodes },
+		{ "GetSelectedNodeId", &UFortSkillTreeViewer::execGetSelectedNodeId },
+		{ "GetViewParameters", &UFortSkillTreeViewer::execGetViewParameters },
+		{ "NavigateTo", &UFortSkillTreeViewer::execNavigateTo },
+		{ "ShowPage", &UFortSkillTreeViewer::execShowPage },
+		{ "TryGetSkillTreePageStaticData", &UFortSkillTreeViewer::execTryGetSkillTreePageStaticData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortSkillTreeViewer_OnNodeSelectionChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -342,11 +385,6 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeViewer_TryGetSkillTreePageStaticD
 	return ReturnFunction;
 }
 
-class UFortSkillTreeViewer
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSkillTreeViewer_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

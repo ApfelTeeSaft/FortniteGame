@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class AFortAthenaVehicle
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortAthenaVehicle();
+	static void execServerOnAttemptInteract(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3350 (end 0x00FA3372)
+// Original VA: 0x0000000140FA3350 | File offset: 0x00FA2950
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C6178) | Matching: see analysis/functions-uht-natives.json
+void AFortAthenaVehicle::StaticRegisterNativesAFortAthenaVehicle()
+{
+	UClass* Class = AFortAthenaVehicle::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ServerOnAttemptInteract", &AFortAthenaVehicle::execServerOnAttemptInteract },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_AFortAthenaVehicle_ServerOnAttemptInteract: FFunctionParams record not identified; creator not emitted.

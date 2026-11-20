@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortDefenderSlotItemPicker();  // RVA 0x0289B550 (consensus OuterFunc)
 
+class UFortDefenderSlotItemPicker
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortDefenderSlotItemPicker();
+	static void execHandleItemWidgetCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopulateDefenderSlotItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AF40 (end 0x0289AF62)
+// Original VA: 0x000000014289AF40 | File offset: 0x0289A540
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C83C18) | Matching: see analysis/functions-uht-natives.json
+void UFortDefenderSlotItemPicker::StaticRegisterNativesUFortDefenderSlotItemPicker()
+{
+	UClass* Class = UFortDefenderSlotItemPicker::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleItemWidgetCreated", &UFortDefenderSlotItemPicker::execHandleItemWidgetCreated },
+		{ "PopulateDefenderSlotItems", &UFortDefenderSlotItemPicker::execPopulateDefenderSlotItems },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDefenderSlotItemPicker_HandleItemWidgetCreated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortDefenderSlotItemPicker_PopulateDefenderSlo
 	return ReturnFunction;
 }
 
-class UFortDefenderSlotItemPicker
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortDefenderSlotItemPicker_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ALevelTestingActorBase();  // RVA 0x010E9CE0 (consensus OuterFunc)
 
+class ALevelTestingActorBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesALevelTestingActorBase();
+	static void execExtractSkeletalMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExtractSkeletalMeshScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E8D20 (end 0x010E8D42)
+// Original VA: 0x00000001410E8D20 | File offset: 0x010E8320
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03446B18) | Matching: see analysis/functions-uht-natives.json
+void ALevelTestingActorBase::StaticRegisterNativesALevelTestingActorBase()
+{
+	UClass* Class = ALevelTestingActorBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ExtractSkeletalMesh", &ALevelTestingActorBase::execExtractSkeletalMesh },
+		{ "ExtractSkeletalMeshScale", &ALevelTestingActorBase::execExtractSkeletalMeshScale },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMesh_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_ALevelTestingActorBase_ExtractSkeletalMeshScale
 	return ReturnFunction;
 }
 
-class ALevelTestingActorBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ALevelTestingActorBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

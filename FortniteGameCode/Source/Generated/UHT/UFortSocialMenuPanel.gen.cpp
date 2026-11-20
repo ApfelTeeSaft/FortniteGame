@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSocialMenuPanel();  // RVA 0x028F57C0 (consensus OuterFunc)
 
+class UFortSocialMenuPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSocialMenuPanel();
+	static void execSetOnSocialMenuPanelClosedDelegate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5080 (end 0x028F50A2)
+// Original VA: 0x00000001428F5080 | File offset: 0x028F4680
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D149F8) | Matching: see analysis/functions-uht-natives.json
+void UFortSocialMenuPanel::StaticRegisterNativesUFortSocialMenuPanel()
+{
+	UClass* Class = UFortSocialMenuPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetOnSocialMenuPanelClosedDelegate", &UFortSocialMenuPanel::execSetOnSocialMenuPanelClosedDelegate },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSocialMenuPanel_SetOnSocialMenuPanelClosedDelegate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortSocialMenuPanel_SetOnSocialMenuPanelClosed
 	return ReturnFunction;
 }
 
-class UFortSocialMenuPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSocialMenuPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

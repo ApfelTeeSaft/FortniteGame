@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTwitchLoginModalWidget();  // RVA 0x0290A940 (consensus OuterFunc)
 
+class UFortTwitchLoginModalWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortTwitchLoginModalWidget_OnNativeHostContentChanged_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_UFortTwitchLoginModalWidget_OnNativeHostContent
 	return ReturnFunction;
 }
 
-class UFortTwitchLoginModalWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTwitchLoginModalWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

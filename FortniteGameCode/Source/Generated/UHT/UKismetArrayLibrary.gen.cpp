@@ -6,6 +6,63 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UKismetArrayLibrary();  // RVA 0x024319D0 (consensus OuterFunc)
 
+class UKismetArrayLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUKismetArrayLibrary();
+	static void execArray_Add(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_AddUnique(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_Append(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_Clear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_Contains(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_Find(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_Get(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_Insert(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_IsValidIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_LastIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_Length(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_Remove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_RemoveItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_Resize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_Set(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_Shuffle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execArray_Swap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFilterArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetArrayPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02431730 (end 0x02431752)
+// Original VA: 0x0000000142431730 | File offset: 0x02430D30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03914390) | Matching: see analysis/functions-uht-natives.json
+void UKismetArrayLibrary::StaticRegisterNativesUKismetArrayLibrary()
+{
+	UClass* Class = UKismetArrayLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Array_Add", &UKismetArrayLibrary::execArray_Add },
+		{ "Array_AddUnique", &UKismetArrayLibrary::execArray_AddUnique },
+		{ "Array_Append", &UKismetArrayLibrary::execArray_Append },
+		{ "Array_Clear", &UKismetArrayLibrary::execArray_Clear },
+		{ "Array_Contains", &UKismetArrayLibrary::execArray_Contains },
+		{ "Array_Find", &UKismetArrayLibrary::execArray_Find },
+		{ "Array_Get", &UKismetArrayLibrary::execArray_Get },
+		{ "Array_Insert", &UKismetArrayLibrary::execArray_Insert },
+		{ "Array_IsValidIndex", &UKismetArrayLibrary::execArray_IsValidIndex },
+		{ "Array_LastIndex", &UKismetArrayLibrary::execArray_LastIndex },
+		{ "Array_Length", &UKismetArrayLibrary::execArray_Length },
+		{ "Array_Remove", &UKismetArrayLibrary::execArray_Remove },
+		{ "Array_RemoveItem", &UKismetArrayLibrary::execArray_RemoveItem },
+		{ "Array_Resize", &UKismetArrayLibrary::execArray_Resize },
+		{ "Array_Set", &UKismetArrayLibrary::execArray_Set },
+		{ "Array_Shuffle", &UKismetArrayLibrary::execArray_Shuffle },
+		{ "Array_Swap", &UKismetArrayLibrary::execArray_Swap },
+		{ "FilterArray", &UKismetArrayLibrary::execFilterArray },
+		{ "SetArrayPropertyByName", &UKismetArrayLibrary::execSetArrayPropertyByName },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UKismetArrayLibrary_Array_Add_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -386,11 +443,6 @@ UFunction* Z_Construct_UFunction_UKismetArrayLibrary_SetArrayPropertyByName()
 	return ReturnFunction;
 }
 
-class UKismetArrayLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UKismetArrayLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayTag();  // RVA 0x0054D6D0 (consensus OuterFunc)
 
+class UAbilityTask_WaitGameplayTag
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitGameplayTag();
+	static void execGameplayTagCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CF60 (end 0x0054CF82)
+// Original VA: 0x000000014054CF60 | File offset: 0x0054C560
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F32FC8) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitGameplayTag::StaticRegisterNativesUAbilityTask_WaitGameplayTag()
+{
+	UClass* Class = UAbilityTask_WaitGameplayTag::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GameplayTagCallback", &UAbilityTask_WaitGameplayTag::execGameplayTagCallback },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitGameplayTag_GameplayTagCallback_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayTag_GameplayTagCallbac
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitGameplayTag
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitGameplayTag_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

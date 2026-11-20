@@ -6,6 +6,57 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UWidgetLayoutLibrary();  // RVA 0x01C00E20 (consensus OuterFunc)
 
+class UWidgetLayoutLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUWidgetLayoutLibrary();
+	static void execGetMousePositionOnPlatform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMousePositionOnViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMousePositionScaledByDPI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerScreenWidgetGeometry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetViewportScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetViewportSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetViewportWidgetGeometry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execProjectWorldLocationToWidgetPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveAllWidgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSlotAsBorderSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSlotAsCanvasSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSlotAsGridSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSlotAsHorizontalBoxSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSlotAsOverlaySlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSlotAsUniformGridSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSlotAsVerticalBoxSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00BB0 (end 0x01C00BD2)
+// Original VA: 0x0000000141C00BB0 | File offset: 0x01C001B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036AA150) | Matching: see analysis/functions-uht-natives.json
+void UWidgetLayoutLibrary::StaticRegisterNativesUWidgetLayoutLibrary()
+{
+	UClass* Class = UWidgetLayoutLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetMousePositionOnPlatform", &UWidgetLayoutLibrary::execGetMousePositionOnPlatform },
+		{ "GetMousePositionOnViewport", &UWidgetLayoutLibrary::execGetMousePositionOnViewport },
+		{ "GetMousePositionScaledByDPI", &UWidgetLayoutLibrary::execGetMousePositionScaledByDPI },
+		{ "GetPlayerScreenWidgetGeometry", &UWidgetLayoutLibrary::execGetPlayerScreenWidgetGeometry },
+		{ "GetViewportScale", &UWidgetLayoutLibrary::execGetViewportScale },
+		{ "GetViewportSize", &UWidgetLayoutLibrary::execGetViewportSize },
+		{ "GetViewportWidgetGeometry", &UWidgetLayoutLibrary::execGetViewportWidgetGeometry },
+		{ "ProjectWorldLocationToWidgetPosition", &UWidgetLayoutLibrary::execProjectWorldLocationToWidgetPosition },
+		{ "RemoveAllWidgets", &UWidgetLayoutLibrary::execRemoveAllWidgets },
+		{ "SlotAsBorderSlot", &UWidgetLayoutLibrary::execSlotAsBorderSlot },
+		{ "SlotAsCanvasSlot", &UWidgetLayoutLibrary::execSlotAsCanvasSlot },
+		{ "SlotAsGridSlot", &UWidgetLayoutLibrary::execSlotAsGridSlot },
+		{ "SlotAsHorizontalBoxSlot", &UWidgetLayoutLibrary::execSlotAsHorizontalBoxSlot },
+		{ "SlotAsOverlaySlot", &UWidgetLayoutLibrary::execSlotAsOverlaySlot },
+		{ "SlotAsUniformGridSlot", &UWidgetLayoutLibrary::execSlotAsUniformGridSlot },
+		{ "SlotAsVerticalBoxSlot", &UWidgetLayoutLibrary::execSlotAsVerticalBoxSlot },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UWidgetLayoutLibrary_GetMousePositionOnPlatform_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -326,11 +377,6 @@ UFunction* Z_Construct_UFunction_UWidgetLayoutLibrary_SlotAsVerticalBoxSlot()
 	return ReturnFunction;
 }
 
-class UWidgetLayoutLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UWidgetLayoutLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

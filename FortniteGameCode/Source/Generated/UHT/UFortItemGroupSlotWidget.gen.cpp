@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemGroupSlotWidget();  // RVA 0x02918A00 (consensus OuterFunc)
 
+class UFortItemGroupSlotWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UFortItemGroupSlotWidget_OnAttributeBonusValueChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -401,11 +408,6 @@ UFunction* Z_Construct_UFunction_UFortItemGroupSlotWidget_TryGetSquadSlot()
 	return ReturnFunction;
 }
 
-class UFortItemGroupSlotWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemGroupSlotWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

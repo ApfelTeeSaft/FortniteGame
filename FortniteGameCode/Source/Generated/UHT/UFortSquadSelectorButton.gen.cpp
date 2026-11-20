@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSelectorButton();  // RVA 0x028FB500 (consensus OuterFunc)
 
+class UFortSquadSelectorButton
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSquadSelectorButton();
+	static void execGetIdOfSquadToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIdOfSquadToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetStaticSquadDataBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB110 (end 0x028FB132)
+// Original VA: 0x00000001428FB110 | File offset: 0x028FA710
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D24258) | Matching: see analysis/functions-uht-natives.json
+void UFortSquadSelectorButton::StaticRegisterNativesUFortSquadSelectorButton()
+{
+	UClass* Class = UFortSquadSelectorButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIdOfSquadToManageBP", &UFortSquadSelectorButton::execGetIdOfSquadToManageBP },
+		{ "SetIdOfSquadToManageBP", &UFortSquadSelectorButton::execSetIdOfSquadToManageBP },
+		{ "TryGetStaticSquadDataBP", &UFortSquadSelectorButton::execTryGetStaticSquadDataBP },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSquadSelectorButton_GetIdOfSquadToManageBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -104,11 +129,6 @@ UFunction* Z_Construct_UFunction_UFortSquadSelectorButton_TryGetStaticSquadDataB
 	return ReturnFunction;
 }
 
-class UFortSquadSelectorButton
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSquadSelectorButton_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

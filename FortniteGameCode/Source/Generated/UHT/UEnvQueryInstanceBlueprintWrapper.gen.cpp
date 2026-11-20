@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper();  // RVA 0x01D2F8B0 (consensus OuterFunc)
 
+class UEnvQueryInstanceBlueprintWrapper
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUEnvQueryInstanceBlueprintWrapper();
+	static void execGetItemScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetResultsAsActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetResultsAsLocations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNamedParam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2F090 (end 0x01D2F0B2)
+// Original VA: 0x0000000141D2F090 | File offset: 0x01D2E690
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03707E60) | Matching: see analysis/functions-uht-natives.json
+void UEnvQueryInstanceBlueprintWrapper::StaticRegisterNativesUEnvQueryInstanceBlueprintWrapper()
+{
+	UClass* Class = UEnvQueryInstanceBlueprintWrapper::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetItemScore", &UEnvQueryInstanceBlueprintWrapper::execGetItemScore },
+		{ "GetResultsAsActors", &UEnvQueryInstanceBlueprintWrapper::execGetResultsAsActors },
+		{ "GetResultsAsLocations", &UEnvQueryInstanceBlueprintWrapper::execGetResultsAsLocations },
+		{ "SetNamedParam", &UEnvQueryInstanceBlueprintWrapper::execSetNamedParam },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UEnvQueryInstanceBlueprintWrapper_EQSQueryDoneSignature__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +133,6 @@ UFunction* Z_Construct_UFunction_UEnvQueryInstanceBlueprintWrapper_SetNamedParam
 	return ReturnFunction;
 }
 
-class UEnvQueryInstanceBlueprintWrapper
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UEnvQueryInstanceBlueprintWrapper_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

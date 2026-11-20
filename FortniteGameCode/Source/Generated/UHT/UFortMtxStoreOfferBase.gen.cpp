@@ -6,6 +6,51 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortMtxStoreOfferBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortMtxStoreOfferBase();
+	static void execGetBackground(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBonusQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDetailsAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDetailsImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGradient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNormalPrice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOfferId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSalePrice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStoreOfferType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTileImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DDF40 (end 0x028DDF62)
+// Original VA: 0x00000001428DDF40 | File offset: 0x028DD540
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CF00E0) | Matching: see analysis/functions-uht-natives.json
+void UFortMtxStoreOfferBase::StaticRegisterNativesUFortMtxStoreOfferBase()
+{
+	UClass* Class = UFortMtxStoreOfferBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBackground", &UFortMtxStoreOfferBase::execGetBackground },
+		{ "GetBaseQuantity", &UFortMtxStoreOfferBase::execGetBaseQuantity },
+		{ "GetBonusQuantity", &UFortMtxStoreOfferBase::execGetBonusQuantity },
+		{ "GetDescription", &UFortMtxStoreOfferBase::execGetDescription },
+		{ "GetDetailsAttributes", &UFortMtxStoreOfferBase::execGetDetailsAttributes },
+		{ "GetDetailsImage", &UFortMtxStoreOfferBase::execGetDetailsImage },
+		{ "GetGradient", &UFortMtxStoreOfferBase::execGetGradient },
+		{ "GetName", &UFortMtxStoreOfferBase::execGetName },
+		{ "GetNormalPrice", &UFortMtxStoreOfferBase::execGetNormalPrice },
+		{ "GetOfferId", &UFortMtxStoreOfferBase::execGetOfferId },
+		{ "GetSalePrice", &UFortMtxStoreOfferBase::execGetSalePrice },
+		{ "GetStoreOfferType", &UFortMtxStoreOfferBase::execGetStoreOfferType },
+		{ "GetTileImage", &UFortMtxStoreOfferBase::execGetTileImage },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBackground: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortMtxStoreOfferBase_GetBaseQuantity: FFunctionParams record not identified; creator not emitted.

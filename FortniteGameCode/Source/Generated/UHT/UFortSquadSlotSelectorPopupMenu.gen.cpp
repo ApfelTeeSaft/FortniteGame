@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortSquadSlotSelectorPopupMenu
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSquadSlotSelectorPopupMenu();
+	static void execGetHostButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB260 (end 0x028FB282)
+// Original VA: 0x00000001428FB260 | File offset: 0x028FA860
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D22EC8) | Matching: see analysis/functions-uht-natives.json
+void UFortSquadSlotSelectorPopupMenu::StaticRegisterNativesUFortSquadSlotSelectorPopupMenu()
+{
+	UClass* Class = UFortSquadSlotSelectorPopupMenu::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetHostButton", &UFortSquadSlotSelectorPopupMenu::execGetHostButton },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortSquadSlotSelectorPopupMenu_GetHostButton: FFunctionParams record not identified; creator not emitted.

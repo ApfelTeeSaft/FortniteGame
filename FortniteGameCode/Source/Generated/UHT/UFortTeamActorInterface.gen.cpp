@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTeamActorInterface();  // RVA 0x010B3B60 (consensus OuterFunc)
 
+class UFortTeamActorInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortTeamActorInterface();
+	static void execGetTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2E30 (end 0x010B2E52)
+// Original VA: 0x00000001410B2E30 | File offset: 0x010B2430
+// Recovery: confirmed (registers FNameNativePtrPair array 0x034001F8) | Matching: see analysis/functions-uht-natives.json
+void UFortTeamActorInterface::StaticRegisterNativesUFortTeamActorInterface()
+{
+	UClass* Class = UFortTeamActorInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTeam", &UFortTeamActorInterface::execGetTeam },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTeamActorInterface_GetTeam_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortTeamActorInterface_GetTeam()
 	return ReturnFunction;
 }
 
-class UFortTeamActorInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTeamActorInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

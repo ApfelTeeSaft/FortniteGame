@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ANavLinkProxy();  // RVA 0x0248F770 (consensus OuterFunc)
 
+class ANavLinkProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesANavLinkProxy();
+	static void execHasMovingAgents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSmartLinkEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResumePathFollowing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSmartLinkEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F2F0 (end 0x0248F312)
+// Original VA: 0x000000014248F2F0 | File offset: 0x0248E8F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0395B6A0) | Matching: see analysis/functions-uht-natives.json
+void ANavLinkProxy::StaticRegisterNativesANavLinkProxy()
+{
+	UClass* Class = ANavLinkProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HasMovingAgents", &ANavLinkProxy::execHasMovingAgents },
+		{ "IsSmartLinkEnabled", &ANavLinkProxy::execIsSmartLinkEnabled },
+		{ "ResumePathFollowing", &ANavLinkProxy::execResumePathFollowing },
+		{ "SetSmartLinkEnabled", &ANavLinkProxy::execSetSmartLinkEnabled },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ANavLinkProxy_HasMovingAgents_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +133,6 @@ UFunction* Z_Construct_UFunction_ANavLinkProxy_SetSmartLinkEnabled()
 	return ReturnFunction;
 }
 
-class ANavLinkProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ANavLinkProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

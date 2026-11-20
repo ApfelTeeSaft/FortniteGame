@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class ADeployableBaseCore
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesADeployableBaseCore();
+	static void execGetSimpleDeathFXTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78040 (end 0x00F78062)
+// Original VA: 0x0000000140F78040 | File offset: 0x00F77640
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03289648) | Matching: see analysis/functions-uht-natives.json
+void ADeployableBaseCore::StaticRegisterNativesADeployableBaseCore()
+{
+	UClass* Class = ADeployableBaseCore::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetSimpleDeathFXTransform", &ADeployableBaseCore::execGetSimpleDeathFXTransform },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_ADeployableBaseCore_GetSimpleDeathFXTransform: FFunctionParams record not identified; creator not emitted.

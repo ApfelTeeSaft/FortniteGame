@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortWeap_WannaGun();  // RVA 0x010D4950 (consensus OuterFunc)
 
+class AFortWeap_WannaGun
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortWeap_WannaGun_OnRep_LastHitActorClass_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_AFortWeap_WannaGun_OnRep_LastHitActorClass()
 	return ReturnFunction;
 }
 
-class AFortWeap_WannaGun
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortWeap_WannaGun_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

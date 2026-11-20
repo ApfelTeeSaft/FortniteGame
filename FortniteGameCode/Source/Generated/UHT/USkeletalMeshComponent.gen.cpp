@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USkeletalMeshComponent();  // RVA 0x024CCA10 (consensus OuterFunc)
 
+class USkeletalMeshComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_USkeletalMeshComponent_AccumulateAllBodiesBelowPhysicsBlendWeight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -1454,11 +1461,6 @@ UFunction* Z_Construct_UFunction_USkeletalMeshComponent_UnbindClothFromMasterPos
 	return ReturnFunction;
 }
 
-class USkeletalMeshComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USkeletalMeshComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

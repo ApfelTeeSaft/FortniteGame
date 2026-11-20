@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCheatManager();  // RVA 0x00FB03D0 (consensus OuterFunc)
 
+class UFortCheatManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortCheatManager_AddAllScores_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -7199,11 +7206,6 @@ UFunction* Z_Construct_UFunction_UFortCheatManager_WriteLootReport()
 	return ReturnFunction;
 }
 
-class UFortCheatManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCheatManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

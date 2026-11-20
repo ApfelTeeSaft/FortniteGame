@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingLayoutRequirement();  // RVA 0x00F6C390 (consensus OuterFunc)
 
+class ABuildingLayoutRequirement
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ABuildingLayoutRequirement_ActivateRequirement_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -105,11 +112,6 @@ UFunction* Z_Construct_UFunction_ABuildingLayoutRequirement_SetRequirementVisibl
 	return ReturnFunction;
 }
 
-class ABuildingLayoutRequirement
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingLayoutRequirement_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

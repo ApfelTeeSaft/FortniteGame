@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UWidgetAnimation();  // RVA 0x01C00D00 (consensus OuterFunc)
 
+class UWidgetAnimation
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUWidgetAnimation();
+	static void execGetEndTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStartTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00AC0 (end 0x01C00AE2)
+// Original VA: 0x0000000141C00AC0 | File offset: 0x01C000C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036A8A00) | Matching: see analysis/functions-uht-natives.json
+void UWidgetAnimation::StaticRegisterNativesUWidgetAnimation()
+{
+	UClass* Class = UWidgetAnimation::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetEndTime", &UWidgetAnimation::execGetEndTime },
+		{ "GetStartTime", &UWidgetAnimation::execGetStartTime },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UWidgetAnimation_GetEndTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UWidgetAnimation_GetStartTime()
 	return ReturnFunction;
 }
 
-class UWidgetAnimation
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UWidgetAnimation_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

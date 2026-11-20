@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPlatformEventsComponent();  // RVA 0x024A9FC0 (consensus OuterFunc)
 
+class UPlatformEventsComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUPlatformEventsComponent();
+	static void execIsInLaptopMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInTabletMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSupportsConvertibleLaptops(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A98D0 (end 0x024A98F2)
+// Original VA: 0x00000001424A98D0 | File offset: 0x024A8ED0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03983468) | Matching: see analysis/functions-uht-natives.json
+void UPlatformEventsComponent::StaticRegisterNativesUPlatformEventsComponent()
+{
+	UClass* Class = UPlatformEventsComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsInLaptopMode", &UPlatformEventsComponent::execIsInLaptopMode },
+		{ "IsInTabletMode", &UPlatformEventsComponent::execIsInTabletMode },
+		{ "SupportsConvertibleLaptops", &UPlatformEventsComponent::execSupportsConvertibleLaptops },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UPlatformEventsComponent_PlatformEventDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -85,11 +110,6 @@ UFunction* Z_Construct_UFunction_UPlatformEventsComponent_SupportsConvertibleLap
 	return ReturnFunction;
 }
 
-class UPlatformEventsComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPlatformEventsComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

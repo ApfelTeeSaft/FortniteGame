@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortOptionsTab();  // RVA 0x028E6AA0 (consensus OuterFunc)
 
+class UFortOptionsTab
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortOptionsTab();
+	static void execIsAthena(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPS4Platform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsXboxPlatform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E63B0 (end 0x028E63D2)
+// Original VA: 0x00000001428E63B0 | File offset: 0x028E59B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CFD248) | Matching: see analysis/functions-uht-natives.json
+void UFortOptionsTab::StaticRegisterNativesUFortOptionsTab()
+{
+	UClass* Class = UFortOptionsTab::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsAthena", &UFortOptionsTab::execIsAthena },
+		{ "IsPS4Platform", &UFortOptionsTab::execIsPS4Platform },
+		{ "IsXboxPlatform", &UFortOptionsTab::execIsXboxPlatform },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortOptionsTab_CenterOnTab_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -104,11 +129,6 @@ UFunction* Z_Construct_UFunction_UFortOptionsTab_UpdateOptionsTab()
 	return ReturnFunction;
 }
 
-class UFortOptionsTab
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortOptionsTab_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

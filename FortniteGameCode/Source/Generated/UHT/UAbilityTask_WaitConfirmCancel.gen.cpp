@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitConfirmCancel();  // RVA 0x0054D500 (consensus OuterFunc)
 
+class UAbilityTask_WaitConfirmCancel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAbilityTask_WaitConfirmCancel_OnCancelCallback_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -102,11 +109,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitConfirmCancel_WaitConfirmCance
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitConfirmCancel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitConfirmCancel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

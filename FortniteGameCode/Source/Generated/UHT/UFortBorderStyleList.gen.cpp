@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortBorderStyleList();  // RVA 0x02894490 (consensus OuterFunc)
 
+class UFortBorderStyleList
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortBorderStyleList();
+	static void execGetBorderStyles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894070 (end 0x02894092)
+// Original VA: 0x0000000142894070 | File offset: 0x02893670
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C75A08) | Matching: see analysis/functions-uht-natives.json
+void UFortBorderStyleList::StaticRegisterNativesUFortBorderStyleList()
+{
+	UClass* Class = UFortBorderStyleList::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBorderStyles", &UFortBorderStyleList::execGetBorderStyles },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortBorderStyleList_GetBorderStyles_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortBorderStyleList_GetBorderStyles()
 	return ReturnFunction;
 }
 
-class UFortBorderStyleList
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortBorderStyleList_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

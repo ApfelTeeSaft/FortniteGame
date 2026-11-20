@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHealthRegenInterface();  // RVA 0x0109DB40 (consensus OuterFunc)
 
+class UFortHealthRegenInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortHealthRegenInterface();
+	static void execGetHealthRegenDelayGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHealthRegenGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHealthRegenGameplayEffectClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShieldRegenDelayGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShieldRegenGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShieldRegenGameplayEffectClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D1B0 (end 0x0109D1D2)
+// Original VA: 0x000000014109D1B0 | File offset: 0x0109C7B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033EEDA0) | Matching: see analysis/functions-uht-natives.json
+void UFortHealthRegenInterface::StaticRegisterNativesUFortHealthRegenInterface()
+{
+	UClass* Class = UFortHealthRegenInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetHealthRegenDelayGameplayEffect", &UFortHealthRegenInterface::execGetHealthRegenDelayGameplayEffect },
+		{ "GetHealthRegenGameplayEffect", &UFortHealthRegenInterface::execGetHealthRegenGameplayEffect },
+		{ "GetHealthRegenGameplayEffectClass", &UFortHealthRegenInterface::execGetHealthRegenGameplayEffectClass },
+		{ "GetShieldRegenDelayGameplayEffect", &UFortHealthRegenInterface::execGetShieldRegenDelayGameplayEffect },
+		{ "GetShieldRegenGameplayEffect", &UFortHealthRegenInterface::execGetShieldRegenGameplayEffect },
+		{ "GetShieldRegenGameplayEffectClass", &UFortHealthRegenInterface::execGetShieldRegenGameplayEffectClass },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHealthRegenInterface_GetHealthRegenDelayGameplayEffect_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UFortHealthRegenInterface_GetShieldRegenGamepla
 	return ReturnFunction;
 }
 
-class UFortHealthRegenInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHealthRegenInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

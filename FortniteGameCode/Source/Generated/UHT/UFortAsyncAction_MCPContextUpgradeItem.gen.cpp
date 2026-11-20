@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortAsyncAction_MCPContextUpgradeItem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_MCPContextUpgradeItem();
+	static void execUpgradeItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023580 (end 0x010235A2)
+// Original VA: 0x0000000141023580 | File offset: 0x01022B80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03368688) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_MCPContextUpgradeItem::StaticRegisterNativesUFortAsyncAction_MCPContextUpgradeItem()
+{
+	UClass* Class = UFortAsyncAction_MCPContextUpgradeItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "UpgradeItem", &UFortAsyncAction_MCPContextUpgradeItem::execUpgradeItem },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextUpgradeItem_OnMCPRequestComplete__DelegateSignature: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortAsyncAction_MCPContextUpgradeItem_UpgradeItem: FFunctionParams record not identified; creator not emitted.

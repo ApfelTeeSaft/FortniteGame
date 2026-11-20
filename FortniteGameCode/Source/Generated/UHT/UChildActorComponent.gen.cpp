@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UChildActorComponent();  // RVA 0x023F7830 (consensus OuterFunc)
 
+class UChildActorComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUChildActorComponent();
+	static void execSetChildActorClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F70F0 (end 0x023F7112)
+// Original VA: 0x00000001423F70F0 | File offset: 0x023F66F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038C6D78) | Matching: see analysis/functions-uht-natives.json
+void UChildActorComponent::StaticRegisterNativesUChildActorComponent()
+{
+	UClass* Class = UChildActorComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetChildActorClass", &UChildActorComponent::execSetChildActorClass },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UChildActorComponent_SetChildActorClass_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UChildActorComponent_SetChildActorClass()
 	return ReturnFunction;
 }
 
-class UChildActorComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UChildActorComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAlterationFunctionLibrary();  // RVA 0x00F993F0 (consensus OuterFunc)
 
+class UFortAlterationFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAlterationFunctionLibrary();
+	static void execGetAlterationImpactPhysicalSurfaceEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98810 (end 0x00F98832)
+// Original VA: 0x0000000140F98810 | File offset: 0x00F97E10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032B6F38) | Matching: see analysis/functions-uht-natives.json
+void UFortAlterationFunctionLibrary::StaticRegisterNativesUFortAlterationFunctionLibrary()
+{
+	UClass* Class = UFortAlterationFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAlterationImpactPhysicalSurfaceEffects", &UFortAlterationFunctionLibrary::execGetAlterationImpactPhysicalSurfaceEffects },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAlterationFunctionLibrary_GetAlterationImpactPhysicalSurfaceEffects_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAlterationFunctionLibrary_GetAlterationImp
 	return ReturnFunction;
 }
 
-class UFortAlterationFunctionLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAlterationFunctionLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

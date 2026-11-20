@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UExpandableArea();  // RVA 0x01BED360 (consensus OuterFunc)
 
+class UExpandableArea
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUExpandableArea();
+	static void execGetIsExpanded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsExpanded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsExpanded_Animated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECE20 (end 0x01BECE42)
+// Original VA: 0x0000000141BECE20 | File offset: 0x01BEC420
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03696700) | Matching: see analysis/functions-uht-natives.json
+void UExpandableArea::StaticRegisterNativesUExpandableArea()
+{
+	UClass* Class = UExpandableArea::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIsExpanded", &UExpandableArea::execGetIsExpanded },
+		{ "SetIsExpanded", &UExpandableArea::execSetIsExpanded },
+		{ "SetIsExpanded_Animated", &UExpandableArea::execSetIsExpanded_Animated },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UExpandableArea_GetIsExpanded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UExpandableArea_SetIsExpanded_Animated()
 	return ReturnFunction;
 }
 
-class UExpandableArea
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UExpandableArea_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

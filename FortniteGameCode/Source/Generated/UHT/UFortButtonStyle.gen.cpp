@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortButtonStyle();  // RVA 0x028944F0 (consensus OuterFunc)
 
+class UFortButtonStyle
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortButtonStyle();
+	static void execGetBrushBySizeFromMultiSizeBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetButtonPaddingBySize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCustomPaddingBySize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFontBySize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFontBySizeFromMultiSizeFont(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMarginBySizeFromMultiSizeMargin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028940A0 (end 0x028940C2)
+// Original VA: 0x00000001428940A0 | File offset: 0x028936A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C75390) | Matching: see analysis/functions-uht-natives.json
+void UFortButtonStyle::StaticRegisterNativesUFortButtonStyle()
+{
+	UClass* Class = UFortButtonStyle::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBrushBySizeFromMultiSizeBrush", &UFortButtonStyle::execGetBrushBySizeFromMultiSizeBrush },
+		{ "GetButtonPaddingBySize", &UFortButtonStyle::execGetButtonPaddingBySize },
+		{ "GetCustomPaddingBySize", &UFortButtonStyle::execGetCustomPaddingBySize },
+		{ "GetFontBySize", &UFortButtonStyle::execGetFontBySize },
+		{ "GetFontBySizeFromMultiSizeFont", &UFortButtonStyle::execGetFontBySizeFromMultiSizeFont },
+		{ "GetMarginBySizeFromMultiSizeMargin", &UFortButtonStyle::execGetMarginBySizeFromMultiSizeMargin },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortButtonStyle_GetBrushBySizeFromMultiSizeBrush_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UFortButtonStyle_GetMarginBySizeFromMultiSizeMa
 	return ReturnFunction;
 }
 
-class UFortButtonStyle
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortButtonStyle_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

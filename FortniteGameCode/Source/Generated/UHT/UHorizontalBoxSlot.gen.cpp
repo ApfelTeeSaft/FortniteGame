@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UHorizontalBoxSlot
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUHorizontalBoxSlot();
+	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECF10 (end 0x01BECF32)
+// Original VA: 0x0000000141BECF10 | File offset: 0x01BEC510
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03696CC0) | Matching: see analysis/functions-uht-natives.json
+void UHorizontalBoxSlot::StaticRegisterNativesUHorizontalBoxSlot()
+{
+	UClass* Class = UHorizontalBoxSlot::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetHorizontalAlignment", &UHorizontalBoxSlot::execSetHorizontalAlignment },
+		{ "SetPadding", &UHorizontalBoxSlot::execSetPadding },
+		{ "SetSize", &UHorizontalBoxSlot::execSetSize },
+		{ "SetVerticalAlignment", &UHorizontalBoxSlot::execSetVerticalAlignment },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UHorizontalBoxSlot_SetHorizontalAlignment: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UHorizontalBoxSlot_SetPadding: FFunctionParams record not identified; creator not emitted.

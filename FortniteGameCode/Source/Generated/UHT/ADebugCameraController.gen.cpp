@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ADebugCameraController();  // RVA 0x023FE360 (consensus OuterFunc)
 
+class ADebugCameraController
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ADebugCameraController_GetSelectedActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -144,11 +151,6 @@ UFunction* Z_Construct_UFunction_ADebugCameraController_ToggleDisplay()
 	return ReturnFunction;
 }
 
-class ADebugCameraController
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ADebugCameraController_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

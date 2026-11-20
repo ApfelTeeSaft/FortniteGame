@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortLobbyBeaconClientRM();  // RVA 0x0101E2B0 (consensus OuterFunc)
 
+class AFortLobbyBeaconClientRM
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortLobbyBeaconClientRM_ClientBroadcastLobbyPlayerPadTop_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -104,11 +111,6 @@ UFunction* Z_Construct_UFunction_AFortLobbyBeaconClientRM_UpdateNewlyJoinedPlaye
 	return ReturnFunction;
 }
 
-class AFortLobbyBeaconClientRM
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortLobbyBeaconClientRM_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

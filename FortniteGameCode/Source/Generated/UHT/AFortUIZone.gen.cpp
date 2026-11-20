@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortUIZone();  // RVA 0x010D4860 (consensus OuterFunc)
 
+class AFortUIZone
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortUIZone_ToggleTargetInfo_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -102,11 +109,6 @@ UFunction* Z_Construct_UFunction_AFortUIZone_ToggleTargetInfoSensing()
 	return ReturnFunction;
 }
 
-class AFortUIZone
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortUIZone_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

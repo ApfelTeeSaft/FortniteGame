@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortChallengeBundleScheduleItem();  // RVA 0x00FB0230 (consensus OuterFunc)
 
+class UFortChallengeBundleScheduleItem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortChallengeBundleScheduleItem();
+	static void execGetAchievedCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPercentageComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScheduleDefinitionBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAFEA0 (end 0x00FAFEC2)
+// Original VA: 0x0000000140FAFEA0 | File offset: 0x00FAF4A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032DB360) | Matching: see analysis/functions-uht-natives.json
+void UFortChallengeBundleScheduleItem::StaticRegisterNativesUFortChallengeBundleScheduleItem()
+{
+	UClass* Class = UFortChallengeBundleScheduleItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAchievedCount", &UFortChallengeBundleScheduleItem::execGetAchievedCount },
+		{ "GetPercentageComplete", &UFortChallengeBundleScheduleItem::execGetPercentageComplete },
+		{ "GetScheduleDefinitionBP", &UFortChallengeBundleScheduleItem::execGetScheduleDefinitionBP },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortChallengeBundleScheduleItem_GetAchievedCount_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortChallengeBundleScheduleItem_GetScheduleDef
 	return ReturnFunction;
 }
 
-class UFortChallengeBundleScheduleItem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortChallengeBundleScheduleItem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

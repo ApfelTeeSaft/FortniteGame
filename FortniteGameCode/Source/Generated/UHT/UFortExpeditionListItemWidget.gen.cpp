@@ -6,4 +6,11 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortExpeditionListItemWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UFortExpeditionListItemWidget_OnItemChanged: FFunctionParams record not identified; creator not emitted.

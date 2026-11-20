@@ -6,6 +6,151 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UKismetStringLibrary();  // RVA 0x02452CB0 (consensus OuterFunc)
 
+class UKismetStringLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUKismetStringLibrary();
+	static void execBuildString_Bool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBuildString_Color(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBuildString_Float(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBuildString_Int(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBuildString_IntVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBuildString_Name(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBuildString_Object(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBuildString_Rotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBuildString_Vector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBuildString_Vector2d(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConcat_StrStr(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execContains(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_BoolToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_ByteToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_ColorToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_FloatToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_IntToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_IntVectorToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_NameToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_ObjectToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_RotatorToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_StringToColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_StringToFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_StringToInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_StringToName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_StringToRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_StringToVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_StringToVector2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_TransformToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_Vector2dToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_VectorToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCullArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndsWith(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_StriStri(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_StrStr(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindSubstring(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCharacterArrayFromString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCharacterAsNumber(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSubstring(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsNumeric(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execJoinStringArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLeft(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLeftChop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLeftPad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMatchesWildcard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_StriStri(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_StrStr(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execParseIntoArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReplace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReplaceInline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReverse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRightChop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRightPad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSplit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartsWith(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTimeSecondsToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToLower(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToUpper(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTrim(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTrimTrailing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02452B00 (end 0x02452B22)
+// Original VA: 0x0000000142452B00 | File offset: 0x02452100
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03926020) | Matching: see analysis/functions-uht-natives.json
+void UKismetStringLibrary::StaticRegisterNativesUKismetStringLibrary()
+{
+	UClass* Class = UKismetStringLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BuildString_Bool", &UKismetStringLibrary::execBuildString_Bool },
+		{ "BuildString_Color", &UKismetStringLibrary::execBuildString_Color },
+		{ "BuildString_Float", &UKismetStringLibrary::execBuildString_Float },
+		{ "BuildString_Int", &UKismetStringLibrary::execBuildString_Int },
+		{ "BuildString_IntVector", &UKismetStringLibrary::execBuildString_IntVector },
+		{ "BuildString_Name", &UKismetStringLibrary::execBuildString_Name },
+		{ "BuildString_Object", &UKismetStringLibrary::execBuildString_Object },
+		{ "BuildString_Rotator", &UKismetStringLibrary::execBuildString_Rotator },
+		{ "BuildString_Vector", &UKismetStringLibrary::execBuildString_Vector },
+		{ "BuildString_Vector2d", &UKismetStringLibrary::execBuildString_Vector2d },
+		{ "Concat_StrStr", &UKismetStringLibrary::execConcat_StrStr },
+		{ "Contains", &UKismetStringLibrary::execContains },
+		{ "Conv_BoolToString", &UKismetStringLibrary::execConv_BoolToString },
+		{ "Conv_ByteToString", &UKismetStringLibrary::execConv_ByteToString },
+		{ "Conv_ColorToString", &UKismetStringLibrary::execConv_ColorToString },
+		{ "Conv_FloatToString", &UKismetStringLibrary::execConv_FloatToString },
+		{ "Conv_IntToString", &UKismetStringLibrary::execConv_IntToString },
+		{ "Conv_IntVectorToString", &UKismetStringLibrary::execConv_IntVectorToString },
+		{ "Conv_NameToString", &UKismetStringLibrary::execConv_NameToString },
+		{ "Conv_ObjectToString", &UKismetStringLibrary::execConv_ObjectToString },
+		{ "Conv_RotatorToString", &UKismetStringLibrary::execConv_RotatorToString },
+		{ "Conv_StringToColor", &UKismetStringLibrary::execConv_StringToColor },
+		{ "Conv_StringToFloat", &UKismetStringLibrary::execConv_StringToFloat },
+		{ "Conv_StringToInt", &UKismetStringLibrary::execConv_StringToInt },
+		{ "Conv_StringToName", &UKismetStringLibrary::execConv_StringToName },
+		{ "Conv_StringToRotator", &UKismetStringLibrary::execConv_StringToRotator },
+		{ "Conv_StringToVector", &UKismetStringLibrary::execConv_StringToVector },
+		{ "Conv_StringToVector2D", &UKismetStringLibrary::execConv_StringToVector2D },
+		{ "Conv_TransformToString", &UKismetStringLibrary::execConv_TransformToString },
+		{ "Conv_Vector2dToString", &UKismetStringLibrary::execConv_Vector2dToString },
+		{ "Conv_VectorToString", &UKismetStringLibrary::execConv_VectorToString },
+		{ "CullArray", &UKismetStringLibrary::execCullArray },
+		{ "EndsWith", &UKismetStringLibrary::execEndsWith },
+		{ "EqualEqual_StriStri", &UKismetStringLibrary::execEqualEqual_StriStri },
+		{ "EqualEqual_StrStr", &UKismetStringLibrary::execEqualEqual_StrStr },
+		{ "FindSubstring", &UKismetStringLibrary::execFindSubstring },
+		{ "GetCharacterArrayFromString", &UKismetStringLibrary::execGetCharacterArrayFromString },
+		{ "GetCharacterAsNumber", &UKismetStringLibrary::execGetCharacterAsNumber },
+		{ "GetSubstring", &UKismetStringLibrary::execGetSubstring },
+		{ "IsNumeric", &UKismetStringLibrary::execIsNumeric },
+		{ "JoinStringArray", &UKismetStringLibrary::execJoinStringArray },
+		{ "Left", &UKismetStringLibrary::execLeft },
+		{ "LeftChop", &UKismetStringLibrary::execLeftChop },
+		{ "LeftPad", &UKismetStringLibrary::execLeftPad },
+		{ "Len", &UKismetStringLibrary::execLen },
+		{ "MatchesWildcard", &UKismetStringLibrary::execMatchesWildcard },
+		{ "Mid", &UKismetStringLibrary::execMid },
+		{ "NotEqual_StriStri", &UKismetStringLibrary::execNotEqual_StriStri },
+		{ "NotEqual_StrStr", &UKismetStringLibrary::execNotEqual_StrStr },
+		{ "ParseIntoArray", &UKismetStringLibrary::execParseIntoArray },
+		{ "Replace", &UKismetStringLibrary::execReplace },
+		{ "ReplaceInline", &UKismetStringLibrary::execReplaceInline },
+		{ "Reverse", &UKismetStringLibrary::execReverse },
+		{ "Right", &UKismetStringLibrary::execRight },
+		{ "RightChop", &UKismetStringLibrary::execRightChop },
+		{ "RightPad", &UKismetStringLibrary::execRightPad },
+		{ "Split", &UKismetStringLibrary::execSplit },
+		{ "StartsWith", &UKismetStringLibrary::execStartsWith },
+		{ "TimeSecondsToString", &UKismetStringLibrary::execTimeSecondsToString },
+		{ "ToLower", &UKismetStringLibrary::execToLower },
+		{ "ToUpper", &UKismetStringLibrary::execToUpper },
+		{ "Trim", &UKismetStringLibrary::execTrim },
+		{ "TrimTrailing", &UKismetStringLibrary::execTrimTrailing },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UKismetStringLibrary_BuildString_Bool_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -1266,11 +1411,6 @@ UFunction* Z_Construct_UFunction_UKismetStringLibrary_TrimTrailing()
 	return ReturnFunction;
 }
 
-class UKismetStringLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UKismetStringLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

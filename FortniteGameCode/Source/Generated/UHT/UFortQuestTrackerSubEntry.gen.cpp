@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestTrackerSubEntry();  // RVA 0x028ED3B0 (consensus OuterFunc)
 
+class UFortQuestTrackerSubEntry
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortQuestTrackerSubEntry_HandleQuestsUpdated_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -101,11 +108,6 @@ UFunction* Z_Construct_UFunction_UFortQuestTrackerSubEntry_OnSetup()
 	return ReturnFunction;
 }
 
-class UFortQuestTrackerSubEntry
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortQuestTrackerSubEntry_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

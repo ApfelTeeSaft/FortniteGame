@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortUINotification();  // RVA 0x010D4A70 (consensus OuterFunc)
 
+class UFortUINotification
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortUINotification_ClearNotification_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -123,11 +130,6 @@ UFunction* Z_Construct_UFunction_UFortUINotification_TakeAction()
 	return ReturnFunction;
 }
 
-class UFortUINotification
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortUINotification_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

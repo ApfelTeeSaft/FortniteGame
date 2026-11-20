@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UContentWidget();  // RVA 0x01BE6230 (consensus OuterFunc)
 
+class UContentWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUContentWidget();
+	static void execGetContent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetContentSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetContent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5D00 (end 0x01BE5D22)
+// Original VA: 0x0000000141BE5D00 | File offset: 0x01BE5300
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03692338) | Matching: see analysis/functions-uht-natives.json
+void UContentWidget::StaticRegisterNativesUContentWidget()
+{
+	UClass* Class = UContentWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetContent", &UContentWidget::execGetContent },
+		{ "GetContentSlot", &UContentWidget::execGetContentSlot },
+		{ "SetContent", &UContentWidget::execSetContent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UContentWidget_GetContent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UContentWidget_SetContent()
 	return ReturnFunction;
 }
 
-class UContentWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UContentWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortObjectiveSucceededParams
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortObjectiveSucceededParams();
+	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E90B0 (end 0x010E90D2)
+// Original VA: 0x00000001410E90B0 | File offset: 0x010E86B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0344A168) | Matching: see analysis/functions-uht-natives.json
+void UFortObjectiveSucceededParams::StaticRegisterNativesUFortObjectiveSucceededParams()
+{
+	UClass* Class = UFortObjectiveSucceededParams::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BreakParams", &UFortObjectiveSucceededParams::execBreakParams },
+		{ "SetParams", &UFortObjectiveSucceededParams::execSetParams },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortObjectiveSucceededParams_BreakParams: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortObjectiveSucceededParams_SetParams: FFunctionParams record not identified; creator not emitted.

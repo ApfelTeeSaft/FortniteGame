@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBlueprintGameplayStatsLibrary();  // RVA 0x007927B0 (consensus OuterFunc)
 
+class UBlueprintGameplayStatsLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBlueprintGameplayStatsLibrary();
+	static void execEqualEqual_GameplayStatTagGameplayStatTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_GameplayStatTagGameplayStatTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00792580 (end 0x007925A2)
+// Original VA: 0x0000000140792580 | File offset: 0x00791B80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02FBF5E8) | Matching: see analysis/functions-uht-natives.json
+void UBlueprintGameplayStatsLibrary::StaticRegisterNativesUBlueprintGameplayStatsLibrary()
+{
+	UClass* Class = UBlueprintGameplayStatsLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EqualEqual_GameplayStatTagGameplayStatTag", &UBlueprintGameplayStatsLibrary::execEqualEqual_GameplayStatTagGameplayStatTag },
+		{ "NotEqual_GameplayStatTagGameplayStatTag", &UBlueprintGameplayStatsLibrary::execNotEqual_GameplayStatTagGameplayStatTag },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBlueprintGameplayStatsLibrary_EqualEqual_GameplayStatTagGameplayStatTag_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UBlueprintGameplayStatsLibrary_NotEqual_Gamepla
 	return ReturnFunction;
 }
 
-class UBlueprintGameplayStatsLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBlueprintGameplayStatsLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

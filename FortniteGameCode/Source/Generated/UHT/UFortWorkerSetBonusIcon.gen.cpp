@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortWorkerSetBonusIcon();  // RVA 0x02918BF0 (consensus OuterFunc)
 
+class UFortWorkerSetBonusIcon
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortWorkerSetBonusIcon_HandleDifferentGameplayTagSetBP_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_UFortWorkerSetBonusIcon_SetGameplayTag()
 	return ReturnFunction;
 }
 
-class UFortWorkerSetBonusIcon
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortWorkerSetBonusIcon_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortGameplayCueNotify_Looping();  // RVA 0x00FE7A90 (consensus OuterFunc)
 
+class AFortGameplayCueNotify_Looping
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortGameplayCueNotify_Looping();
+	static void execGetSpawnTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTargetComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE7670 (end 0x00FE7692)
+// Original VA: 0x0000000140FE7670 | File offset: 0x00FE6C70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033265F8) | Matching: see analysis/functions-uht-natives.json
+void AFortGameplayCueNotify_Looping::StaticRegisterNativesAFortGameplayCueNotify_Looping()
+{
+	UClass* Class = AFortGameplayCueNotify_Looping::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetSpawnTransform", &AFortGameplayCueNotify_Looping::execGetSpawnTransform },
+		{ "GetTargetComponent", &AFortGameplayCueNotify_Looping::execGetTargetComponent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortGameplayCueNotify_Looping_GetSpawnTransform_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +149,6 @@ UFunction* Z_Construct_UFunction_AFortGameplayCueNotify_Looping_OnWhileActivePar
 	return ReturnFunction;
 }
 
-class AFortGameplayCueNotify_Looping
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortGameplayCueNotify_Looping_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

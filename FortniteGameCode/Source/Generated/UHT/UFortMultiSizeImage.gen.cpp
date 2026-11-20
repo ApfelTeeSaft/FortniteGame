@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMultiSizeImage();  // RVA 0x028DE3E0 (consensus OuterFunc)
 
+class UFortMultiSizeImage
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortMultiSizeImage();
+	static void execSetBrushSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMultiSizeBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DDFA0 (end 0x028DDFC2)
+// Original VA: 0x00000001428DDFA0 | File offset: 0x028DD5A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CF0538) | Matching: see analysis/functions-uht-natives.json
+void UFortMultiSizeImage::StaticRegisterNativesUFortMultiSizeImage()
+{
+	UClass* Class = UFortMultiSizeImage::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetBrushSize", &UFortMultiSizeImage::execSetBrushSize },
+		{ "SetColorAndOpacity", &UFortMultiSizeImage::execSetColorAndOpacity },
+		{ "SetMultiSizeBrush", &UFortMultiSizeImage::execSetMultiSizeBrush },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMultiSizeImage_SetBrushSize_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortMultiSizeImage_SetMultiSizeBrush()
 	return ReturnFunction;
 }
 
-class UFortMultiSizeImage
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMultiSizeImage_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

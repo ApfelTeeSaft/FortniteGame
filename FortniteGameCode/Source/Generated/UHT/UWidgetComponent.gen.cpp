@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UWidgetComponent();  // RVA 0x01C00DC0 (consensus OuterFunc)
 
+class UWidgetComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UWidgetComponent_GetDrawSize_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -225,11 +232,6 @@ UFunction* Z_Construct_UFunction_UWidgetComponent_SetWidget()
 	return ReturnFunction;
 }
 
-class UWidgetComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UWidgetComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

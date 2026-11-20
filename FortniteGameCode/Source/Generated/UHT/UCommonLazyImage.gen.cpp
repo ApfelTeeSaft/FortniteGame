@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonLazyImage();  // RVA 0x002CA3B0 (consensus OuterFunc)
 
+class UCommonLazyImage
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCommonLazyImage_ForwardLoadingStateChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -125,11 +132,6 @@ UFunction* Z_Construct_UFunction_UCommonLazyImage_ShowDefaultImage()
 	return ReturnFunction;
 }
 
-class UCommonLazyImage
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonLazyImage_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

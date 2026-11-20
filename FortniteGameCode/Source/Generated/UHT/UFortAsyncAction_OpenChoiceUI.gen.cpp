@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortAsyncAction_OpenChoiceUI
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_OpenChoiceUI();
+	static void execOpenChoiceUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E5A0 (end 0x00F9E5C2)
+// Original VA: 0x0000000140F9E5A0 | File offset: 0x00F9DBA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032BF950) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_OpenChoiceUI::StaticRegisterNativesUFortAsyncAction_OpenChoiceUI()
+{
+	UClass* Class = UFortAsyncAction_OpenChoiceUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OpenChoiceUI", &UFortAsyncAction_OpenChoiceUI::execOpenChoiceUI },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortAsyncAction_OpenChoiceUI_OpenChoiceUI: FFunctionParams record not identified; creator not emitted.

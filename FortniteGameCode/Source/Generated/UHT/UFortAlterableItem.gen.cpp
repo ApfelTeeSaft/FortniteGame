@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAlterableItem();  // RVA 0x00F99390 (consensus OuterFunc)
 
+class UFortAlterableItem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAlterableItem();
+	static void execGetNumberOfSlotsForAlterationType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F987E0 (end 0x00F98802)
+// Original VA: 0x0000000140F987E0 | File offset: 0x00F97DE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032B69B8) | Matching: see analysis/functions-uht-natives.json
+void UFortAlterableItem::StaticRegisterNativesUFortAlterableItem()
+{
+	UClass* Class = UFortAlterableItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetNumberOfSlotsForAlterationType", &UFortAlterableItem::execGetNumberOfSlotsForAlterationType },
+		{ "GetRating", &UFortAlterableItem::execGetRating },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAlterableItem_GetNumberOfSlotsForAlterationType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortAlterableItem_GetRating()
 	return ReturnFunction;
 }
 
-class UFortAlterableItem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAlterableItem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

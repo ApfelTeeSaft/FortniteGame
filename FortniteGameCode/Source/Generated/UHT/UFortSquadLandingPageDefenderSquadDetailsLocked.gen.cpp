@@ -6,4 +6,11 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortSquadLandingPageDefenderSquadDetailsLocked
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UFortSquadLandingPageDefenderSquadDetailsLocked_SetDefenderSquadInfo: FFunctionParams record not identified; creator not emitted.

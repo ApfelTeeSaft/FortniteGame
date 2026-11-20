@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USeasonPassScreenBase();  // RVA 0x02918D10 (consensus OuterFunc)
 
+class USeasonPassScreenBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSeasonPassScreenBase();
+	static void execGetAllLevelInfos(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLevelInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSeasonEndDate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSeasonPassLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSeasonPassLevelMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNavigateToLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOwnsSeasonPass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02918950 (end 0x02918972)
+// Original VA: 0x0000000142918950 | File offset: 0x02917F50
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D56D80) | Matching: see analysis/functions-uht-natives.json
+void USeasonPassScreenBase::StaticRegisterNativesUSeasonPassScreenBase()
+{
+	UClass* Class = USeasonPassScreenBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAllLevelInfos", &USeasonPassScreenBase::execGetAllLevelInfos },
+		{ "GetLevelInfo", &USeasonPassScreenBase::execGetLevelInfo },
+		{ "GetSeasonEndDate", &USeasonPassScreenBase::execGetSeasonEndDate },
+		{ "GetSeasonPassLevel", &USeasonPassScreenBase::execGetSeasonPassLevel },
+		{ "GetSeasonPassLevelMax", &USeasonPassScreenBase::execGetSeasonPassLevelMax },
+		{ "NavigateToLevel", &USeasonPassScreenBase::execNavigateToLevel },
+		{ "OwnsSeasonPass", &USeasonPassScreenBase::execOwnsSeasonPass },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USeasonPassScreenBase_GenerateLevelWidgets_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -282,11 +315,6 @@ UFunction* Z_Construct_UFunction_USeasonPassScreenBase_UpdateStoreHasStarsNotifi
 	return ReturnFunction;
 }
 
-class USeasonPassScreenBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USeasonPassScreenBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

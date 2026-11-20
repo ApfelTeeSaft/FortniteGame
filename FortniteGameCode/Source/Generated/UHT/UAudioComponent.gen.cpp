@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAudioComponent();  // RVA 0x023DB270 (consensus OuterFunc)
 
+class UAudioComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAudioComponent_AdjustAttenuation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -405,11 +412,6 @@ UFunction* Z_Construct_UFunction_UAudioComponent_Stop()
 	return ReturnFunction;
 }
 
-class UAudioComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAudioComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

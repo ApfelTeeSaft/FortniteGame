@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTransformSlotItemPicker();  // RVA 0x02904E20 (consensus OuterFunc)
 
+class UFortTransformSlotItemPicker
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortTransformSlotItemPicker();
+	static void execRebuildSlottableItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904610 (end 0x02904632)
+// Original VA: 0x0000000142904610 | File offset: 0x02903C10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D32760) | Matching: see analysis/functions-uht-natives.json
+void UFortTransformSlotItemPicker::StaticRegisterNativesUFortTransformSlotItemPicker()
+{
+	UClass* Class = UFortTransformSlotItemPicker::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "RebuildSlottableItems", &UFortTransformSlotItemPicker::execRebuildSlottableItems },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTransformSlotItemPicker_RebuildSlottableItems_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortTransformSlotItemPicker_RebuildSlottableIt
 	return ReturnFunction;
 }
 
-class UFortTransformSlotItemPicker
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTransformSlotItemPicker_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

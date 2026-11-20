@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonUILibrary();  // RVA 0x002D0480 (consensus OuterFunc)
 
+class UCommonUILibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCommonUILibrary();
+	static void execFindParentWidgetOfType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0210 (end 0x002D0232)
+// Original VA: 0x00000001402D0210 | File offset: 0x002CF810
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E859F8) | Matching: see analysis/functions-uht-natives.json
+void UCommonUILibrary::StaticRegisterNativesUCommonUILibrary()
+{
+	UClass* Class = UCommonUILibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FindParentWidgetOfType", &UCommonUILibrary::execFindParentWidgetOfType },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonUILibrary_FindParentWidgetOfType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UCommonUILibrary_FindParentWidgetOfType()
 	return ReturnFunction;
 }
 
-class UCommonUILibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonUILibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

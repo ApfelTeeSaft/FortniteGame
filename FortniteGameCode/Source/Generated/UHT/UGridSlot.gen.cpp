@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGridSlot();  // RVA 0x01BED3F0 (consensus OuterFunc)
 
+class UGridSlot
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUGridSlot();
+	static void execSetColumn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetColumnSpan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRowSpan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECEB0 (end 0x01BECED2)
+// Original VA: 0x0000000141BECEB0 | File offset: 0x01BEC4B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03696A20) | Matching: see analysis/functions-uht-natives.json
+void UGridSlot::StaticRegisterNativesUGridSlot()
+{
+	UClass* Class = UGridSlot::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetColumn", &UGridSlot::execSetColumn },
+		{ "SetColumnSpan", &UGridSlot::execSetColumnSpan },
+		{ "SetHorizontalAlignment", &UGridSlot::execSetHorizontalAlignment },
+		{ "SetLayer", &UGridSlot::execSetLayer },
+		{ "SetPadding", &UGridSlot::execSetPadding },
+		{ "SetRow", &UGridSlot::execSetRow },
+		{ "SetRowSpan", &UGridSlot::execSetRowSpan },
+		{ "SetVerticalAlignment", &UGridSlot::execSetVerticalAlignment },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UGridSlot_SetColumn_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -166,11 +201,6 @@ UFunction* Z_Construct_UFunction_UGridSlot_SetVerticalAlignment()
 	return ReturnFunction;
 }
 
-class UGridSlot
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGridSlot_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

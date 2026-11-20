@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortClientAnnouncement_Cinematic();  // RVA 0x00FC0080 (consensus OuterFunc)
 
+class AFortClientAnnouncement_Cinematic
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortClientAnnouncement_Cinematic_OnPlayerSkippedCutscene_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_AFortClientAnnouncement_Cinematic_OnPlayerSkipp
 	return ReturnFunction;
 }
 
-class AFortClientAnnouncement_Cinematic
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortClientAnnouncement_Cinematic_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

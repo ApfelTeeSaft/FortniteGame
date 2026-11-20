@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UTexture2D();  // RVA 0x024ECC70 (consensus OuterFunc)
 
+class UTexture2D
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUTexture2D();
+	static void execBlueprint_GetSizeX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBlueprint_GetSizeY(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC3B0 (end 0x024EC3D2)
+// Original VA: 0x00000001424EC3B0 | File offset: 0x024EB9B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039C9998) | Matching: see analysis/functions-uht-natives.json
+void UTexture2D::StaticRegisterNativesUTexture2D()
+{
+	UClass* Class = UTexture2D::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Blueprint_GetSizeX", &UTexture2D::execBlueprint_GetSizeX },
+		{ "Blueprint_GetSizeY", &UTexture2D::execBlueprint_GetSizeY },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UTexture2D_Blueprint_GetSizeX_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UTexture2D_Blueprint_GetSizeY()
 	return ReturnFunction;
 }
 
-class UTexture2D
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UTexture2D_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

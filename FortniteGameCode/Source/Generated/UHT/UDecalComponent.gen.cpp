@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UDecalComponent();  // RVA 0x023FE720 (consensus OuterFunc)
 
+class UDecalComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUDecalComponent();
+	static void execCreateDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDecalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFadeDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFadeStartDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDecalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFadeOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFadeScreenSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSortOrder(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDCD0 (end 0x023FDCF2)
+// Original VA: 0x00000001423FDCD0 | File offset: 0x023FD2D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038CE880) | Matching: see analysis/functions-uht-natives.json
+void UDecalComponent::StaticRegisterNativesUDecalComponent()
+{
+	UClass* Class = UDecalComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateDynamicMaterialInstance", &UDecalComponent::execCreateDynamicMaterialInstance },
+		{ "GetDecalMaterial", &UDecalComponent::execGetDecalMaterial },
+		{ "GetFadeDuration", &UDecalComponent::execGetFadeDuration },
+		{ "GetFadeStartDelay", &UDecalComponent::execGetFadeStartDelay },
+		{ "SetDecalMaterial", &UDecalComponent::execSetDecalMaterial },
+		{ "SetFadeOut", &UDecalComponent::execSetFadeOut },
+		{ "SetFadeScreenSize", &UDecalComponent::execSetFadeScreenSize },
+		{ "SetSortOrder", &UDecalComponent::execSetSortOrder },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UDecalComponent_CreateDynamicMaterialInstance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -166,11 +201,6 @@ UFunction* Z_Construct_UFunction_UDecalComponent_SetSortOrder()
 	return ReturnFunction;
 }
 
-class UDecalComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UDecalComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

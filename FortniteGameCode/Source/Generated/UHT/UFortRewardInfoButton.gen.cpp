@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortRewardInfoButton();  // RVA 0x028ED680 (consensus OuterFunc)
 
+class UFortRewardInfoButton
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortRewardInfoButton();
+	static void execGetItemInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemInstanceQuantityPair(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShowDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECFB0 (end 0x028ECFD2)
+// Original VA: 0x00000001428ECFB0 | File offset: 0x028EC5B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D0AE80) | Matching: see analysis/functions-uht-natives.json
+void UFortRewardInfoButton::StaticRegisterNativesUFortRewardInfoButton()
+{
+	UClass* Class = UFortRewardInfoButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetItemInstance", &UFortRewardInfoButton::execGetItemInstance },
+		{ "GetQuantity", &UFortRewardInfoButton::execGetQuantity },
+		{ "SetItemInstanceQuantityPair", &UFortRewardInfoButton::execSetItemInstanceQuantityPair },
+		{ "SetShowDescription", &UFortRewardInfoButton::execSetShowDescription },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortRewardInfoButton_GetItemInstance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -125,11 +152,6 @@ UFunction* Z_Construct_UFunction_UFortRewardInfoButton_SetShowDescriptionBP()
 	return ReturnFunction;
 }
 
-class UFortRewardInfoButton
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortRewardInfoButton_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

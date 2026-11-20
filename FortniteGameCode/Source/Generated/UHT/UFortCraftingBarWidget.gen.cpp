@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCraftingBarWidget();  // RVA 0x0289B3D0 (consensus OuterFunc)
 
+class UFortCraftingBarWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortCraftingBarWidget_HandlePlayerStartedCrafting_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -84,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortCraftingBarWidget_SetHideCraftingBar()
 	return ReturnFunction;
 }
 
-class UFortCraftingBarWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCraftingBarWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMcpProfileWorld();  // RVA 0x01038590 (consensus OuterFunc)
 
+class UFortMcpProfileWorld
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortMcpProfileWorld_AbortDisintegration_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -306,11 +313,6 @@ UFunction* Z_Construct_UFunction_UFortMcpProfileWorld_UnlockProfiles()
 	return ReturnFunction;
 }
 
-class UFortMcpProfileWorld
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMcpProfileWorld_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

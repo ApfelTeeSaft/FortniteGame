@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemRatingIndicator();  // RVA 0x028CF5A0 (consensus OuterFunc)
 
+class UFortItemRatingIndicator
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortItemRatingIndicator_HandleViewModelChanged_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -85,11 +92,6 @@ UFunction* Z_Construct_UFunction_UFortItemRatingIndicator_SetItemViewContext()
 	return ReturnFunction;
 }
 
-class UFortItemRatingIndicator
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemRatingIndicator_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

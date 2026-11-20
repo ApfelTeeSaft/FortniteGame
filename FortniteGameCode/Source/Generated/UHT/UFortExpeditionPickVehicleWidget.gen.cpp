@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortExpeditionPickVehicleWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortExpeditionPickVehicleWidget();
+	static void execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3070 (end 0x028A3092)
+// Original VA: 0x00000001428A3070 | File offset: 0x028A2670
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C8FB38) | Matching: see analysis/functions-uht-natives.json
+void UFortExpeditionPickVehicleWidget::StaticRegisterNativesUFortExpeditionPickVehicleWidget()
+{
+	UClass* Class = UFortExpeditionPickVehicleWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetData", &UFortExpeditionPickVehicleWidget::execSetData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortExpeditionPickVehicleWidget_SetData: FFunctionParams record not identified; creator not emitted.

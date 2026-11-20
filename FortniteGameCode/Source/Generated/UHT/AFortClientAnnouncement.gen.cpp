@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortClientAnnouncement();  // RVA 0x00FBFFF0 (consensus OuterFunc)
 
+class AFortClientAnnouncement
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortClientAnnouncement_CancelClientAnnouncement_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -102,11 +109,6 @@ UFunction* Z_Construct_UFunction_AFortClientAnnouncement_StopClientAnnouncement(
 	return ReturnFunction;
 }
 
-class AFortClientAnnouncement
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortClientAnnouncement_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

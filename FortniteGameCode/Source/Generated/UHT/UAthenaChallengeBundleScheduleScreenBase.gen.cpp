@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase();  // RVA 0x0287F260 (consensus OuterFunc)
 
+class UAthenaChallengeBundleScheduleScreenBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaChallengeBundleScheduleScreenBase();
+	static void execGetChallengeBundleItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetChallengeBundleSchedules(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EC00 (end 0x0287EC22)
+// Original VA: 0x000000014287EC00 | File offset: 0x0287E200
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C51AC8) | Matching: see analysis/functions-uht-natives.json
+void UAthenaChallengeBundleScheduleScreenBase::StaticRegisterNativesUAthenaChallengeBundleScheduleScreenBase()
+{
+	UClass* Class = UAthenaChallengeBundleScheduleScreenBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetChallengeBundleItems", &UAthenaChallengeBundleScheduleScreenBase::execGetChallengeBundleItems },
+		{ "GetChallengeBundleSchedules", &UAthenaChallengeBundleScheduleScreenBase::execGetChallengeBundleSchedules },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetChallengeBundleItems_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UAthenaChallengeBundleScheduleScreenBase_GetCha
 	return ReturnFunction;
 }
 
-class UAthenaChallengeBundleScheduleScreenBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

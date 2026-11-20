@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPawnAction_BlueprintBase();  // RVA 0x01D31DA0 (consensus OuterFunc)
 
+class UPawnAction_BlueprintBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UPawnAction_BlueprintBase_ActionFinished_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +113,6 @@ UFunction* Z_Construct_UFunction_UPawnAction_BlueprintBase_ActionTick()
 	return ReturnFunction;
 }
 
-class UPawnAction_BlueprintBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPawnAction_BlueprintBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

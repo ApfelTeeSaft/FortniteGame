@@ -6,4 +6,11 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortGameplayCueNotify_Simple
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UFortGameplayCueNotify_Simple_OnStartParticleSystemSpawned: FFunctionParams record not identified; creator not emitted.

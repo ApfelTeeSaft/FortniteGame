@@ -6,6 +6,347 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortKismetLibrary();  // RVA 0x0100C180 (consensus OuterFunc)
 
+class UFortKismetLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortKismetLibrary();
+	static void execAddRegenItemToInventoryOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyEncounterOptionOverridesFromWaveDataToEncounterSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyGlobalEnvironmentDamageToActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execApplyGlobalEnvironmentGameplayEffectToActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAuthorityGetFortPossessedPlayerPawns(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBroadcastMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBroadcastPlayerImpactAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBroadcastSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBroadcastSoundAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearTutorialHighlights(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCloseTalkingHead(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConvertToGameTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConvertToRealTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateNewSplineObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDisableTutorialHighlight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectContextAddSourceObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEmptyQuickBarSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableTutorialHighlight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndWaitForConfirmationDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_FFortDialogWaitingForLatentActionHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_UniqueNetIdReplUniqueNetIdRepl(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEquipFortAbilitySet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEquipItemToQuickBarSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEvaluateCurveTableRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExecuteClientEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFilterSingleTargetActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFilterSingleTargetHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFilterTargetActorList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFilterTargetHitResultList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorTeamInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAIDirector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAIGoalManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllFortPlayerControllers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllFortPlayerPawns(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBroadcasterGrantWindowSecondsRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingHealthPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBuildingStructuralSupportSystem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCalculatedGameDifficulty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetClosestActorFromArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetClosestBuildingActorFromArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetClosestFortPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentDayPhase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDayNightDirectionalLightColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDayNightDirectionalLightVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDebugStringForUniqueId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefaultAbsoluteTimeOfDaySpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDirectionActorToActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFloatHoursUntilDayPhase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFortPhysicalSurface(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFortPlayerPawns(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameDifficulty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGrantedAbilityKit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHostilityPercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHoursUntilDayPhase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHumanReadableName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetImpulseData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalFortPlayerControllers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalPlayerHasHeroBackpack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalPlayerHasHeroHeadAccessories(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLootLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMatchmakingDifficultyRangeFromDifficultyInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMeleeWeaponStatsRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMIDForSkeletalMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMusicManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumericCVar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPawnStatsRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerInfoFromUniqueID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviousDayPhase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrimaryInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRandomLiveStreamingViewerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRandomSurvivorName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRangedWeaponStatsRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRemovedAbilityKit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShowHeroBackpackForLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShowHeroHeadAccessoriesForLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStunTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSubGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamAffiliation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamAffiliationBetweenTeams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetThreatVisualsManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeDayPhaseBegins(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeOfDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeOfDayAccumulator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeOfDaySpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimeUntilInRealTimeSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipDescriptionFromTooltipClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipNumericValueFromTooltipClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipTextFromToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipTextFromTokenFromTooltipClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTrapStatsRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWeaponDurabilityByRarityStatsRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWeaponStatsRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveItemToInventoryOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasMultipleVisibleRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasOpenBroadcasterGrantWindow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasSelectableRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideTutorialWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInvalidateLatentActionHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAssetNull(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsConsolePlatform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsCriticalHit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDiceCritical(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFatalHit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFullBodyHit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLatentActionHandleValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLinkingStreamedAccountsEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMobileGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMobilePlatform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingBattlEye(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValid_UniqueNetIdRepl(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execJonLHack_GetAllObjectsOfClassFromPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetClosestAxisXY(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetItemQuantityOnPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GiveItemToAllPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GiveItemToPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_RemoveItemFromAllPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_RemoveItemFromPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SpawnPickupInWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeAllPlayersTalkToSelf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeBuildingState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeDayNightPhase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeGameplayEffectContainerSpecFromAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeGameplayEffectContainerSpecFromAbilityComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeMovementStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeResourceType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeWeaponCoreAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNormalizedAngleInDegreesToVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_FFortDialogWaitingForLatentActionHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_UniqueNetIdReplUniqueNetIdRepl(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotifyProjectileThrown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSameTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOpenTalkingHead(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPickLootDrops(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayLocalForceFeedbackAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayLocalForceFeedbackAtLocationMulti(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushOffHitLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPushOffTransformByHitLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterDayPhaseHitCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterDayTimeHitCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveActorsOfClassFromBuildingSMActorArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSelectMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCanBeDamaged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimeOfDay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimeOfDaySpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldHideTutorialWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnAreaOfEffectCloud(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnBuildingGameplayActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnProjectile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnTracerFromPool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSwitchHeroType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTriggerFeedbackEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnequipFortAbilitySet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnhideAllTutorialWidgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnhideTutorialWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execVectorToNormalizedAngleInDegrees(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BCC0 (end 0x0100BCE2)
+// Original VA: 0x000000014100BCC0 | File offset: 0x0100B2C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03355290) | Matching: see analysis/functions-uht-natives.json
+void UFortKismetLibrary::StaticRegisterNativesUFortKismetLibrary()
+{
+	UClass* Class = UFortKismetLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddRegenItemToInventoryOwner", &UFortKismetLibrary::execAddRegenItemToInventoryOwner },
+		{ "ApplyEncounterOptionOverridesFromWaveDataToEncounterSettings", &UFortKismetLibrary::execApplyEncounterOptionOverridesFromWaveDataToEncounterSettings },
+		{ "ApplyGlobalEnvironmentDamageToActor", &UFortKismetLibrary::execApplyGlobalEnvironmentDamageToActor },
+		{ "ApplyGlobalEnvironmentGameplayEffectToActor", &UFortKismetLibrary::execApplyGlobalEnvironmentGameplayEffectToActor },
+		{ "AuthorityGetFortPossessedPlayerPawns", &UFortKismetLibrary::execAuthorityGetFortPossessedPlayerPawns },
+		{ "BroadcastMessage", &UFortKismetLibrary::execBroadcastMessage },
+		{ "BroadcastPlayerImpactAtLocation", &UFortKismetLibrary::execBroadcastPlayerImpactAtLocation },
+		{ "BroadcastSound", &UFortKismetLibrary::execBroadcastSound },
+		{ "BroadcastSoundAtLocation", &UFortKismetLibrary::execBroadcastSoundAtLocation },
+		{ "ClearTutorialHighlights", &UFortKismetLibrary::execClearTutorialHighlights },
+		{ "CloseTalkingHead", &UFortKismetLibrary::execCloseTalkingHead },
+		{ "ConvertToGameTime", &UFortKismetLibrary::execConvertToGameTime },
+		{ "ConvertToRealTime", &UFortKismetLibrary::execConvertToRealTime },
+		{ "CreateNewSplineObject", &UFortKismetLibrary::execCreateNewSplineObject },
+		{ "DisableTutorialHighlight", &UFortKismetLibrary::execDisableTutorialHighlight },
+		{ "EffectContextAddSourceObject", &UFortKismetLibrary::execEffectContextAddSourceObject },
+		{ "EmptyQuickBarSlot", &UFortKismetLibrary::execEmptyQuickBarSlot },
+		{ "EnableTutorialHighlight", &UFortKismetLibrary::execEnableTutorialHighlight },
+		{ "EndWaitForConfirmationDialog", &UFortKismetLibrary::execEndWaitForConfirmationDialog },
+		{ "EqualEqual_FFortDialogWaitingForLatentActionHandle", &UFortKismetLibrary::execEqualEqual_FFortDialogWaitingForLatentActionHandle },
+		{ "EqualEqual_UniqueNetIdReplUniqueNetIdRepl", &UFortKismetLibrary::execEqualEqual_UniqueNetIdReplUniqueNetIdRepl },
+		{ "EquipFortAbilitySet", &UFortKismetLibrary::execEquipFortAbilitySet },
+		{ "EquipItemToQuickBarSlot", &UFortKismetLibrary::execEquipItemToQuickBarSlot },
+		{ "EvaluateCurveTableRow", &UFortKismetLibrary::execEvaluateCurveTableRow },
+		{ "ExecuteClientEvent", &UFortKismetLibrary::execExecuteClientEvent },
+		{ "FilterSingleTargetActor", &UFortKismetLibrary::execFilterSingleTargetActor },
+		{ "FilterSingleTargetHitResult", &UFortKismetLibrary::execFilterSingleTargetHitResult },
+		{ "FilterTargetActorList", &UFortKismetLibrary::execFilterTargetActorList },
+		{ "FilterTargetHitResultList", &UFortKismetLibrary::execFilterTargetHitResultList },
+		{ "GetActorTeam", &UFortKismetLibrary::execGetActorTeam },
+		{ "GetActorTeamInfo", &UFortKismetLibrary::execGetActorTeamInfo },
+		{ "GetAIDirector", &UFortKismetLibrary::execGetAIDirector },
+		{ "GetAIGoalManager", &UFortKismetLibrary::execGetAIGoalManager },
+		{ "GetAllFortPlayerControllers", &UFortKismetLibrary::execGetAllFortPlayerControllers },
+		{ "GetAllFortPlayerPawns", &UFortKismetLibrary::execGetAllFortPlayerPawns },
+		{ "GetBroadcasterGrantWindowSecondsRemaining", &UFortKismetLibrary::execGetBroadcasterGrantWindowSecondsRemaining },
+		{ "GetBuildingHealthPercentage", &UFortKismetLibrary::execGetBuildingHealthPercentage },
+		{ "GetBuildingStructuralSupportSystem", &UFortKismetLibrary::execGetBuildingStructuralSupportSystem },
+		{ "GetCalculatedGameDifficulty", &UFortKismetLibrary::execGetCalculatedGameDifficulty },
+		{ "GetClosestActorFromArray", &UFortKismetLibrary::execGetClosestActorFromArray },
+		{ "GetClosestBuildingActorFromArray", &UFortKismetLibrary::execGetClosestBuildingActorFromArray },
+		{ "GetClosestFortPlayerPawn", &UFortKismetLibrary::execGetClosestFortPlayerPawn },
+		{ "GetCurrentDayPhase", &UFortKismetLibrary::execGetCurrentDayPhase },
+		{ "GetDayNightDirectionalLightColor", &UFortKismetLibrary::execGetDayNightDirectionalLightColor },
+		{ "GetDayNightDirectionalLightVector", &UFortKismetLibrary::execGetDayNightDirectionalLightVector },
+		{ "GetDebugStringForUniqueId", &UFortKismetLibrary::execGetDebugStringForUniqueId },
+		{ "GetDefaultAbsoluteTimeOfDaySpeed", &UFortKismetLibrary::execGetDefaultAbsoluteTimeOfDaySpeed },
+		{ "GetDirectionActorToActor", &UFortKismetLibrary::execGetDirectionActorToActor },
+		{ "GetFloatHoursUntilDayPhase", &UFortKismetLibrary::execGetFloatHoursUntilDayPhase },
+		{ "GetFortPhysicalSurface", &UFortKismetLibrary::execGetFortPhysicalSurface },
+		{ "GetFortPlayerPawns", &UFortKismetLibrary::execGetFortPlayerPawns },
+		{ "GetGameDifficulty", &UFortKismetLibrary::execGetGameDifficulty },
+		{ "GetGrantedAbilityKit", &UFortKismetLibrary::execGetGrantedAbilityKit },
+		{ "GetHostilityPercentage", &UFortKismetLibrary::execGetHostilityPercentage },
+		{ "GetHoursUntilDayPhase", &UFortKismetLibrary::execGetHoursUntilDayPhase },
+		{ "GetHumanReadableName", &UFortKismetLibrary::execGetHumanReadableName },
+		{ "GetImpulseData", &UFortKismetLibrary::execGetImpulseData },
+		{ "GetLocalFortPlayerControllers", &UFortKismetLibrary::execGetLocalFortPlayerControllers },
+		{ "GetLocalPlayerHasHeroBackpack", &UFortKismetLibrary::execGetLocalPlayerHasHeroBackpack },
+		{ "GetLocalPlayerHasHeroHeadAccessories", &UFortKismetLibrary::execGetLocalPlayerHasHeroHeadAccessories },
+		{ "GetLootLevel", &UFortKismetLibrary::execGetLootLevel },
+		{ "GetMatchmakingDifficultyRangeFromDifficultyInfo", &UFortKismetLibrary::execGetMatchmakingDifficultyRangeFromDifficultyInfo },
+		{ "GetMeleeWeaponStatsRow", &UFortKismetLibrary::execGetMeleeWeaponStatsRow },
+		{ "GetMIDForSkeletalMeshComponent", &UFortKismetLibrary::execGetMIDForSkeletalMeshComponent },
+		{ "GetMusicManager", &UFortKismetLibrary::execGetMusicManager },
+		{ "GetNumericCVar", &UFortKismetLibrary::execGetNumericCVar },
+		{ "GetPawnStatsRow", &UFortKismetLibrary::execGetPawnStatsRow },
+		{ "GetPlayerInfoFromUniqueID", &UFortKismetLibrary::execGetPlayerInfoFromUniqueID },
+		{ "GetPreviousDayPhase", &UFortKismetLibrary::execGetPreviousDayPhase },
+		{ "GetPrimaryInstance", &UFortKismetLibrary::execGetPrimaryInstance },
+		{ "GetRandomLiveStreamingViewerName", &UFortKismetLibrary::execGetRandomLiveStreamingViewerName },
+		{ "GetRandomSurvivorName", &UFortKismetLibrary::execGetRandomSurvivorName },
+		{ "GetRangedWeaponStatsRow", &UFortKismetLibrary::execGetRangedWeaponStatsRow },
+		{ "GetRemovedAbilityKit", &UFortKismetLibrary::execGetRemovedAbilityKit },
+		{ "GetShowHeroBackpackForLocalPlayer", &UFortKismetLibrary::execGetShowHeroBackpackForLocalPlayer },
+		{ "GetShowHeroHeadAccessoriesForLocalPlayer", &UFortKismetLibrary::execGetShowHeroHeadAccessoriesForLocalPlayer },
+		{ "GetStunTime", &UFortKismetLibrary::execGetStunTime },
+		{ "GetSubGame", &UFortKismetLibrary::execGetSubGame },
+		{ "GetTeamAffiliation", &UFortKismetLibrary::execGetTeamAffiliation },
+		{ "GetTeamAffiliationBetweenTeams", &UFortKismetLibrary::execGetTeamAffiliationBetweenTeams },
+		{ "GetTeamInfo", &UFortKismetLibrary::execGetTeamInfo },
+		{ "GetThreatVisualsManager", &UFortKismetLibrary::execGetThreatVisualsManager },
+		{ "GetTimeDayPhaseBegins", &UFortKismetLibrary::execGetTimeDayPhaseBegins },
+		{ "GetTimeOfDay", &UFortKismetLibrary::execGetTimeOfDay },
+		{ "GetTimeOfDayAccumulator", &UFortKismetLibrary::execGetTimeOfDayAccumulator },
+		{ "GetTimeOfDaySpeed", &UFortKismetLibrary::execGetTimeOfDaySpeed },
+		{ "GetTimeUntilInRealTimeSeconds", &UFortKismetLibrary::execGetTimeUntilInRealTimeSeconds },
+		{ "GetTooltipDescription", &UFortKismetLibrary::execGetTooltipDescription },
+		{ "GetTooltipDescriptionFromTooltipClass", &UFortKismetLibrary::execGetTooltipDescriptionFromTooltipClass },
+		{ "GetTooltipNumericValue", &UFortKismetLibrary::execGetTooltipNumericValue },
+		{ "GetTooltipNumericValueFromTooltipClass", &UFortKismetLibrary::execGetTooltipNumericValueFromTooltipClass },
+		{ "GetTooltipTextFromToken", &UFortKismetLibrary::execGetTooltipTextFromToken },
+		{ "GetTooltipTextFromTokenFromTooltipClass", &UFortKismetLibrary::execGetTooltipTextFromTokenFromTooltipClass },
+		{ "GetTrapStatsRow", &UFortKismetLibrary::execGetTrapStatsRow },
+		{ "GetWeaponDurabilityByRarityStatsRow", &UFortKismetLibrary::execGetWeaponDurabilityByRarityStatsRow },
+		{ "GetWeaponStatsRow", &UFortKismetLibrary::execGetWeaponStatsRow },
+		{ "GiveItemToInventoryOwner", &UFortKismetLibrary::execGiveItemToInventoryOwner },
+		{ "HasMultipleVisibleRewards", &UFortKismetLibrary::execHasMultipleVisibleRewards },
+		{ "HasOpenBroadcasterGrantWindow", &UFortKismetLibrary::execHasOpenBroadcasterGrantWindow },
+		{ "HasRewards", &UFortKismetLibrary::execHasRewards },
+		{ "HasSelectableRewards", &UFortKismetLibrary::execHasSelectableRewards },
+		{ "HideTutorialWidget", &UFortKismetLibrary::execHideTutorialWidget },
+		{ "InvalidateLatentActionHandle", &UFortKismetLibrary::execInvalidateLatentActionHandle },
+		{ "IsAssetNull", &UFortKismetLibrary::execIsAssetNull },
+		{ "IsConsolePlatform", &UFortKismetLibrary::execIsConsolePlatform },
+		{ "IsCriticalHit", &UFortKismetLibrary::execIsCriticalHit },
+		{ "IsDiceCritical", &UFortKismetLibrary::execIsDiceCritical },
+		{ "IsFatalHit", &UFortKismetLibrary::execIsFatalHit },
+		{ "IsFullBodyHit", &UFortKismetLibrary::execIsFullBodyHit },
+		{ "IsLatentActionHandleValid", &UFortKismetLibrary::execIsLatentActionHandleValid },
+		{ "IsLinkingStreamedAccountsEnabled", &UFortKismetLibrary::execIsLinkingStreamedAccountsEnabled },
+		{ "IsMobileGame", &UFortKismetLibrary::execIsMobileGame },
+		{ "IsMobilePlatform", &UFortKismetLibrary::execIsMobilePlatform },
+		{ "IsUsingBattlEye", &UFortKismetLibrary::execIsUsingBattlEye },
+		{ "IsValid", &UFortKismetLibrary::execIsValid },
+		{ "IsValid_UniqueNetIdRepl", &UFortKismetLibrary::execIsValid_UniqueNetIdRepl },
+		{ "JonLHack_GetAllObjectsOfClassFromPath", &UFortKismetLibrary::execJonLHack_GetAllObjectsOfClassFromPath },
+		{ "K2_GetClosestAxisXY", &UFortKismetLibrary::execK2_GetClosestAxisXY },
+		{ "K2_GetItemQuantityOnPlayer", &UFortKismetLibrary::execK2_GetItemQuantityOnPlayer },
+		{ "K2_GiveItemToAllPlayers", &UFortKismetLibrary::execK2_GiveItemToAllPlayers },
+		{ "K2_GiveItemToPlayer", &UFortKismetLibrary::execK2_GiveItemToPlayer },
+		{ "K2_RemoveItemFromAllPlayers", &UFortKismetLibrary::execK2_RemoveItemFromAllPlayers },
+		{ "K2_RemoveItemFromPlayer", &UFortKismetLibrary::execK2_RemoveItemFromPlayer },
+		{ "K2_SpawnPickupInWorld", &UFortKismetLibrary::execK2_SpawnPickupInWorld },
+		{ "MakeAllPlayersTalkToSelf", &UFortKismetLibrary::execMakeAllPlayersTalkToSelf },
+		{ "MakeBuildingState", &UFortKismetLibrary::execMakeBuildingState },
+		{ "MakeDayNightPhase", &UFortKismetLibrary::execMakeDayNightPhase },
+		{ "MakeGameplayEffectContainerSpecFromAbility", &UFortKismetLibrary::execMakeGameplayEffectContainerSpecFromAbility },
+		{ "MakeGameplayEffectContainerSpecFromAbilityComponent", &UFortKismetLibrary::execMakeGameplayEffectContainerSpecFromAbilityComponent },
+		{ "MakeMovementStyle", &UFortKismetLibrary::execMakeMovementStyle },
+		{ "MakeResourceType", &UFortKismetLibrary::execMakeResourceType },
+		{ "MakeWeaponCoreAnimation", &UFortKismetLibrary::execMakeWeaponCoreAnimation },
+		{ "NormalizedAngleInDegreesToVector", &UFortKismetLibrary::execNormalizedAngleInDegreesToVector },
+		{ "NotEqual_FFortDialogWaitingForLatentActionHandle", &UFortKismetLibrary::execNotEqual_FFortDialogWaitingForLatentActionHandle },
+		{ "NotEqual_UniqueNetIdReplUniqueNetIdRepl", &UFortKismetLibrary::execNotEqual_UniqueNetIdReplUniqueNetIdRepl },
+		{ "NotifyProjectileThrown", &UFortKismetLibrary::execNotifyProjectileThrown },
+		{ "OnSameTeam", &UFortKismetLibrary::execOnSameTeam },
+		{ "OpenTalkingHead", &UFortKismetLibrary::execOpenTalkingHead },
+		{ "PickLootDrops", &UFortKismetLibrary::execPickLootDrops },
+		{ "PlayLocalForceFeedbackAtLocation", &UFortKismetLibrary::execPlayLocalForceFeedbackAtLocation },
+		{ "PlayLocalForceFeedbackAtLocationMulti", &UFortKismetLibrary::execPlayLocalForceFeedbackAtLocationMulti },
+		{ "PushOffHitLocation", &UFortKismetLibrary::execPushOffHitLocation },
+		{ "PushOffTransformByHitLocation", &UFortKismetLibrary::execPushOffTransformByHitLocation },
+		{ "RegisterDayPhaseHitCallback", &UFortKismetLibrary::execRegisterDayPhaseHitCallback },
+		{ "RegisterDayTimeHitCallback", &UFortKismetLibrary::execRegisterDayTimeHitCallback },
+		{ "RemoveActorsOfClassFromBuildingSMActorArray", &UFortKismetLibrary::execRemoveActorsOfClassFromBuildingSMActorArray },
+		{ "SelectMaterialInstance", &UFortKismetLibrary::execSelectMaterialInstance },
+		{ "SetCanBeDamaged", &UFortKismetLibrary::execSetCanBeDamaged },
+		{ "SetTimeOfDay", &UFortKismetLibrary::execSetTimeOfDay },
+		{ "SetTimeOfDaySpeed", &UFortKismetLibrary::execSetTimeOfDaySpeed },
+		{ "ShouldHideTutorialWidget", &UFortKismetLibrary::execShouldHideTutorialWidget },
+		{ "SpawnAreaOfEffectCloud", &UFortKismetLibrary::execSpawnAreaOfEffectCloud },
+		{ "SpawnBuildingGameplayActor", &UFortKismetLibrary::execSpawnBuildingGameplayActor },
+		{ "SpawnProjectile", &UFortKismetLibrary::execSpawnProjectile },
+		{ "SpawnTracerFromPool", &UFortKismetLibrary::execSpawnTracerFromPool },
+		{ "SwitchHeroType", &UFortKismetLibrary::execSwitchHeroType },
+		{ "TriggerFeedbackEvent", &UFortKismetLibrary::execTriggerFeedbackEvent },
+		{ "UnequipFortAbilitySet", &UFortKismetLibrary::execUnequipFortAbilitySet },
+		{ "UnhideAllTutorialWidgets", &UFortKismetLibrary::execUnhideAllTutorialWidgets },
+		{ "UnhideTutorialWidget", &UFortKismetLibrary::execUnhideTutorialWidget },
+		{ "VectorToNormalizedAngleInDegrees", &UFortKismetLibrary::execVectorToNormalizedAngleInDegrees },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortKismetLibrary_AddRegenItemToInventoryOwner_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -3226,11 +3567,6 @@ UFunction* Z_Construct_UFunction_UFortKismetLibrary_VectorToNormalizedAngleInDeg
 	return ReturnFunction;
 }
 
-class UFortKismetLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortKismetLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

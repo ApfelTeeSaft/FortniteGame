@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UQuitMatchCallbackProxy();  // RVA 0x0032ED90 (consensus OuterFunc)
 
+class UQuitMatchCallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUQuitMatchCallbackProxy();
+	static void execQuitMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E460 (end 0x0032E482)
+// Original VA: 0x000000014032E460 | File offset: 0x0032DA60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAF018) | Matching: see analysis/functions-uht-natives.json
+void UQuitMatchCallbackProxy::StaticRegisterNativesUQuitMatchCallbackProxy()
+{
+	UClass* Class = UQuitMatchCallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "QuitMatch", &UQuitMatchCallbackProxy::execQuitMatch },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UQuitMatchCallbackProxy_QuitMatch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UQuitMatchCallbackProxy_QuitMatch()
 	return ReturnFunction;
 }
 
-class UQuitMatchCallbackProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UQuitMatchCallbackProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

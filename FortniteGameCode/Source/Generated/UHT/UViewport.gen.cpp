@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UViewport();  // RVA 0x01BFB280 (consensus OuterFunc)
 
+class UViewport
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUViewport();
+	static void execGetViewLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetViewportWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetViewRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetViewLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetViewRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFAEE0 (end 0x01BFAF02)
+// Original VA: 0x0000000141BFAEE0 | File offset: 0x01BFA4E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036A43A0) | Matching: see analysis/functions-uht-natives.json
+void UViewport::StaticRegisterNativesUViewport()
+{
+	UClass* Class = UViewport::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetViewLocation", &UViewport::execGetViewLocation },
+		{ "GetViewportWorld", &UViewport::execGetViewportWorld },
+		{ "GetViewRotation", &UViewport::execGetViewRotation },
+		{ "SetViewLocation", &UViewport::execSetViewLocation },
+		{ "SetViewRotation", &UViewport::execSetViewRotation },
+		{ "Spawn", &UViewport::execSpawn },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UViewport_GetViewLocation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UViewport_Spawn()
 	return ReturnFunction;
 }
 
-class UViewport
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UViewport_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

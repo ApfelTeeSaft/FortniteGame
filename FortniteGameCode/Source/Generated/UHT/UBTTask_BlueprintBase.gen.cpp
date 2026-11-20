@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBTTask_BlueprintBase();  // RVA 0x01D28DA0 (consensus OuterFunc)
 
+class UBTTask_BlueprintBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UBTTask_BlueprintBase_FinishAbort_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -245,11 +252,6 @@ UFunction* Z_Construct_UFunction_UBTTask_BlueprintBase_SetFinishOnMessageWithId(
 	return ReturnFunction;
 }
 
-class UBTTask_BlueprintBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBTTask_BlueprintBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

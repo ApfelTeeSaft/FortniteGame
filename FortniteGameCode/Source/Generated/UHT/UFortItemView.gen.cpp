@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortItemView
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortItemView();
+	static void execSetInspectMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF240 (end 0x028CF262)
+// Original VA: 0x00000001428CF240 | File offset: 0x028CE840
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CD97C8) | Matching: see analysis/functions-uht-natives.json
+void UFortItemView::StaticRegisterNativesUFortItemView()
+{
+	UClass* Class = UFortItemView::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetInspectMode", &UFortItemView::execSetInspectMode },
+		{ "SetItemToRepresent", &UFortItemView::execSetItemToRepresent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortItemView_SetInspectMode: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortItemView_SetItemToRepresent: FFunctionParams record not identified; creator not emitted.

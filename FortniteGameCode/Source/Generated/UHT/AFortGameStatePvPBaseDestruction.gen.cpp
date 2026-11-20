@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortGameStatePvPBaseDestruction();  // RVA 0x00FEE7E0 (consensus OuterFunc)
 
+class AFortGameStatePvPBaseDestruction
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortGameStatePvPBaseDestruction();
+	static void execGetExperienceRequiredForTeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxTeamExperience(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxTeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamLevelForExperienceAmount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE100 (end 0x00FEE122)
+// Original VA: 0x0000000140FEE100 | File offset: 0x00FED700
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0332ED80) | Matching: see analysis/functions-uht-natives.json
+void AFortGameStatePvPBaseDestruction::StaticRegisterNativesAFortGameStatePvPBaseDestruction()
+{
+	UClass* Class = AFortGameStatePvPBaseDestruction::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetExperienceRequiredForTeamLevel", &AFortGameStatePvPBaseDestruction::execGetExperienceRequiredForTeamLevel },
+		{ "GetMaxTeamExperience", &AFortGameStatePvPBaseDestruction::execGetMaxTeamExperience },
+		{ "GetMaxTeamLevel", &AFortGameStatePvPBaseDestruction::execGetMaxTeamLevel },
+		{ "GetTeamLevelForExperienceAmount", &AFortGameStatePvPBaseDestruction::execGetTeamLevelForExperienceAmount },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetExperienceRequiredForTeamLevel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_AFortGameStatePvPBaseDestruction_GetTeamLevelFo
 	return ReturnFunction;
 }
 
-class AFortGameStatePvPBaseDestruction
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortGameStatePvPBaseDestruction_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

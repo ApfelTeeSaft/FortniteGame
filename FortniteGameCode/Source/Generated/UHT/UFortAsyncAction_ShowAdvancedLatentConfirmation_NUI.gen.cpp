@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI();  // RVA 0x0288CA00 (consensus OuterFunc)
 
+class UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_ShowAdvancedLatentConfirmation_NUI();
+	static void execShowAdvancedLatentActionConfirmation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C530 (end 0x0288C552)
+// Original VA: 0x000000014288C530 | File offset: 0x0288BB30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C6A170) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI::StaticRegisterNativesUFortAsyncAction_ShowAdvancedLatentConfirmation_NUI()
+{
+	UClass* Class = UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ShowAdvancedLatentActionConfirmation", &UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI::execShowAdvancedLatentActionConfirmation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI_ShowAdvancedLatentActionConfirmation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowAdvancedLatentConfirmation
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_ShowAdvancedLatentConfirmation_NUI_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

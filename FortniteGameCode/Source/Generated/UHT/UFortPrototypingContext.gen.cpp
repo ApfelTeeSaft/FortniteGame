@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPrototypingContext();  // RVA 0x0108B6E0 (consensus OuterFunc)
 
+class UFortPrototypingContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UFortPrototypingContext_OnPrototypingStatusChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_UFortPrototypingContext_GetPrototypingStatus()
 	return ReturnFunction;
 }
 
-class UFortPrototypingContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPrototypingContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

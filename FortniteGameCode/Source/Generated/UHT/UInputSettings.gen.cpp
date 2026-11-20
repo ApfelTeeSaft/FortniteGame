@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UInputSettings();  // RVA 0x02427FA0 (consensus OuterFunc)
 
+class UInputSettings
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UInputSettings_AddActionMapping_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -224,11 +231,6 @@ UFunction* Z_Construct_UFunction_UInputSettings_SaveKeyMappings()
 	return ReturnFunction;
 }
 
-class UInputSettings
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UInputSettings_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

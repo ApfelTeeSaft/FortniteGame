@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemCategoryIndicator();  // RVA 0x028C9C90 (consensus OuterFunc)
 
+class UFortItemCategoryIndicator
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortItemCategoryIndicator_ClearLabelColorOverride_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -85,11 +92,6 @@ UFunction* Z_Construct_UFunction_UFortItemCategoryIndicator_SetOrdinalOfCategory
 	return ReturnFunction;
 }
 
-class UFortItemCategoryIndicator
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemCategoryIndicator_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

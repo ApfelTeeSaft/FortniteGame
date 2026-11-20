@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerStatePvP();  // RVA 0x0108B4A0 (consensus OuterFunc)
 
+class AFortPlayerStatePvP
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortPlayerStatePvP();
+	static void execOnRep_TotalQuantum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108ADA0 (end 0x0108ADC2)
+// Original VA: 0x000000014108ADA0 | File offset: 0x0108A3A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033D5038) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerStatePvP::StaticRegisterNativesAFortPlayerStatePvP()
+{
+	UClass* Class = AFortPlayerStatePvP::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_TotalQuantum", &AFortPlayerStatePvP::execOnRep_TotalQuantum },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerStatePvP_OnRep_TotalQuantum_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_AFortPlayerStatePvP_OnRep_TotalQuantum()
 	return ReturnFunction;
 }
 
-class AFortPlayerStatePvP
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPlayerStatePvP_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

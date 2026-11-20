@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortMusicManager();  // RVA 0x0104A830 (consensus OuterFunc)
 
+class AFortMusicManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortMusicManager();
+	static void execChangeMusic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEventHeatPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEventHeatPercentTotal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A2F0 (end 0x0104A312)
+// Original VA: 0x000000014104A2F0 | File offset: 0x010498F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0338AC90) | Matching: see analysis/functions-uht-natives.json
+void AFortMusicManager::StaticRegisterNativesAFortMusicManager()
+{
+	UClass* Class = AFortMusicManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ChangeMusic", &AFortMusicManager::execChangeMusic },
+		{ "GetEventHeatPercent", &AFortMusicManager::execGetEventHeatPercent },
+		{ "GetEventHeatPercentTotal", &AFortMusicManager::execGetEventHeatPercentTotal },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortMusicManager_ChangeMusic_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +131,6 @@ UFunction* Z_Construct_UFunction_AFortMusicManager_OnThresholdChange()
 	return ReturnFunction;
 }
 
-class AFortMusicManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortMusicManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortListView();  // RVA 0x028D72A0 (consensus OuterFunc)
 
+class UFortListView
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortListView_AddItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -184,11 +191,6 @@ UFunction* Z_Construct_UFunction_UFortListView_SetItemSelected()
 	return ReturnFunction;
 }
 
-class UFortListView
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortListView_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

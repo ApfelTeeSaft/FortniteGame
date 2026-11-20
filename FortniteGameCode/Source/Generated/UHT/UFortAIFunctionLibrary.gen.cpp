@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAIFunctionLibrary();  // RVA 0x00F91430 (consensus OuterFunc)
 
+class UFortAIFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAIFunctionLibrary();
+	static void execMakeNoiseEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeNoiseEventAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90C60 (end 0x00F90C82)
+// Original VA: 0x0000000140F90C60 | File offset: 0x00F90260
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032AC988) | Matching: see analysis/functions-uht-natives.json
+void UFortAIFunctionLibrary::StaticRegisterNativesUFortAIFunctionLibrary()
+{
+	UClass* Class = UFortAIFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "MakeNoiseEvent", &UFortAIFunctionLibrary::execMakeNoiseEvent },
+		{ "MakeNoiseEventAtLocation", &UFortAIFunctionLibrary::execMakeNoiseEventAtLocation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEvent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortAIFunctionLibrary_MakeNoiseEventAtLocation
 	return ReturnFunction;
 }
 
-class UFortAIFunctionLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAIFunctionLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,45 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortPerkWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortPerkWidget();
+	static void execGetIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPerkTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRequiredLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSupportBonusType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipTitle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPerkHighlighted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPerkUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTierPerk(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6470 (end 0x028E6492)
+// Original VA: 0x00000001428E6470 | File offset: 0x028E5A70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CFDBB0) | Matching: see analysis/functions-uht-natives.json
+void UFortPerkWidget::StaticRegisterNativesUFortPerkWidget()
+{
+	UClass* Class = UFortPerkWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIcon", &UFortPerkWidget::execGetIcon },
+		{ "GetPerkTier", &UFortPerkWidget::execGetPerkTier },
+		{ "GetRequiredLevel", &UFortPerkWidget::execGetRequiredLevel },
+		{ "GetSupportBonusType", &UFortPerkWidget::execGetSupportBonusType },
+		{ "GetTooltipDescription", &UFortPerkWidget::execGetTooltipDescription },
+		{ "GetTooltipTitle", &UFortPerkWidget::execGetTooltipTitle },
+		{ "HasAbility", &UFortPerkWidget::execHasAbility },
+		{ "IsPerkHighlighted", &UFortPerkWidget::execIsPerkHighlighted },
+		{ "IsPerkUnlocked", &UFortPerkWidget::execIsPerkUnlocked },
+		{ "IsTierPerk", &UFortPerkWidget::execIsTierPerk },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortPerkWidget_GetIcon: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortPerkWidget_GetPerkTier: FFunctionParams record not identified; creator not emitted.

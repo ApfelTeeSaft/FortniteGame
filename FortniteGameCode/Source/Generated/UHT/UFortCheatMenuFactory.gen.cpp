@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortCheatMenuFactory
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCheatMenuFactory();
+	static void execAddGrantCheatMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddStoreCheatMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894190 (end 0x028941B2)
+// Original VA: 0x0000000142894190 | File offset: 0x02893790
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C75ED8) | Matching: see analysis/functions-uht-natives.json
+void UFortCheatMenuFactory::StaticRegisterNativesUFortCheatMenuFactory()
+{
+	UClass* Class = UFortCheatMenuFactory::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddGrantCheatMenu", &UFortCheatMenuFactory::execAddGrantCheatMenu },
+		{ "AddStoreCheatMenu", &UFortCheatMenuFactory::execAddStoreCheatMenu },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortCheatMenuFactory_AddGrantCheatMenu: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortCheatMenuFactory_AddStoreCheatMenu: FFunctionParams record not identified; creator not emitted.

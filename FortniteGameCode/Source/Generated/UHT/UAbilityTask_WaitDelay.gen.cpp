@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitDelay();  // RVA 0x0054D530 (consensus OuterFunc)
 
+class UAbilityTask_WaitDelay
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitDelay();
+	static void execWaitDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CDE0 (end 0x0054CE02)
+// Original VA: 0x000000014054CDE0 | File offset: 0x0054C3E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F32698) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitDelay::StaticRegisterNativesUAbilityTask_WaitDelay()
+{
+	UClass* Class = UAbilityTask_WaitDelay::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "WaitDelay", &UAbilityTask_WaitDelay::execWaitDelay },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitDelay_WaitDelay_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitDelay_WaitDelay()
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitDelay
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitDelay_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

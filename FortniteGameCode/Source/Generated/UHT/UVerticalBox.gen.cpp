@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UVerticalBox();  // RVA 0x01BFB210 (consensus OuterFunc)
 
+class UVerticalBox
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUVerticalBox();
+	static void execAddChildToVerticalBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFAE80 (end 0x01BFAEA2)
+// Original VA: 0x0000000141BFAE80 | File offset: 0x01BFA480
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036A41B8) | Matching: see analysis/functions-uht-natives.json
+void UVerticalBox::StaticRegisterNativesUVerticalBox()
+{
+	UClass* Class = UVerticalBox::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddChildToVerticalBox", &UVerticalBox::execAddChildToVerticalBox },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UVerticalBox_AddChildToVerticalBox_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UVerticalBox_AddChildToVerticalBox()
 	return ReturnFunction;
 }
 
-class UVerticalBox
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UVerticalBox_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

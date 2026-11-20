@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMissionPowerPointsInterface();  // RVA 0x0104A990 (consensus OuterFunc)
 
+class UFortMissionPowerPointsInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortMissionPowerPointsInterface();
+	static void execGetAvailabilityWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInitialRangeLerpValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxRangeLerpValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPowerPointsCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A320 (end 0x0104A342)
+// Original VA: 0x000000014104A320 | File offset: 0x01049920
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033898D0) | Matching: see analysis/functions-uht-natives.json
+void UFortMissionPowerPointsInterface::StaticRegisterNativesUFortMissionPowerPointsInterface()
+{
+	UClass* Class = UFortMissionPowerPointsInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAvailabilityWeight", &UFortMissionPowerPointsInterface::execGetAvailabilityWeight },
+		{ "GetInitialRangeLerpValue", &UFortMissionPowerPointsInterface::execGetInitialRangeLerpValue },
+		{ "GetMaxRangeLerpValue", &UFortMissionPowerPointsInterface::execGetMaxRangeLerpValue },
+		{ "GetPowerPointsCost", &UFortMissionPowerPointsInterface::execGetPowerPointsCost },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetAvailabilityWeight_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UFortMissionPowerPointsInterface_GetPowerPoints
 	return ReturnFunction;
 }
 
-class UFortMissionPowerPointsInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMissionPowerPointsInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitMovementModeChange();  // RVA 0x0054D7E0 (consensus OuterFunc)
 
+class UAbilityTask_WaitMovementModeChange
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitMovementModeChange();
+	static void execCreateWaitMovementModeChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMovementModeChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D050 (end 0x0054D072)
+// Original VA: 0x000000014054D050 | File offset: 0x0054C650
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F33240) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitMovementModeChange::StaticRegisterNativesUAbilityTask_WaitMovementModeChange()
+{
+	UClass* Class = UAbilityTask_WaitMovementModeChange::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateWaitMovementModeChange", &UAbilityTask_WaitMovementModeChange::execCreateWaitMovementModeChange },
+		{ "OnMovementModeChange", &UAbilityTask_WaitMovementModeChange::execOnMovementModeChange },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_CreateWaitMovementModeChange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitMovementModeChange_OnMovementM
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitMovementModeChange
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitMovementModeChange_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

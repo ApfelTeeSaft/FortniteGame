@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class AInteractiveFoliageActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAInteractiveFoliageActor();
+	static void execCapsuleTouched(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A48780 (end 0x01A487A2)
+// Original VA: 0x0000000141A48780 | File offset: 0x01A47D80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03611C88) | Matching: see analysis/functions-uht-natives.json
+void AInteractiveFoliageActor::StaticRegisterNativesAInteractiveFoliageActor()
+{
+	UClass* Class = AInteractiveFoliageActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CapsuleTouched", &AInteractiveFoliageActor::execCapsuleTouched },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_AInteractiveFoliageActor_CapsuleTouched: FFunctionParams record not identified; creator not emitted.

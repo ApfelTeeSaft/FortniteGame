@@ -6,6 +6,53 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMtxOfferDetailsBase();  // RVA 0x028D7680 (consensus OuterFunc)
 
+class UFortMtxOfferDetailsBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortMtxOfferDetailsBase();
+	static void execGetBackground(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBonusQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDetailsAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDetailsImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGradient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNormalPrice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOfferId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSalePrice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStoreOfferType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTileImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateMtxOffer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6F60 (end 0x028D6F82)
+// Original VA: 0x00000001428D6F60 | File offset: 0x028D6560
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE6BB0) | Matching: see analysis/functions-uht-natives.json
+void UFortMtxOfferDetailsBase::StaticRegisterNativesUFortMtxOfferDetailsBase()
+{
+	UClass* Class = UFortMtxOfferDetailsBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBackground", &UFortMtxOfferDetailsBase::execGetBackground },
+		{ "GetBaseQuantity", &UFortMtxOfferDetailsBase::execGetBaseQuantity },
+		{ "GetBonusQuantity", &UFortMtxOfferDetailsBase::execGetBonusQuantity },
+		{ "GetDescription", &UFortMtxOfferDetailsBase::execGetDescription },
+		{ "GetDetailsAttributes", &UFortMtxOfferDetailsBase::execGetDetailsAttributes },
+		{ "GetDetailsImage", &UFortMtxOfferDetailsBase::execGetDetailsImage },
+		{ "GetGradient", &UFortMtxOfferDetailsBase::execGetGradient },
+		{ "GetName", &UFortMtxOfferDetailsBase::execGetName },
+		{ "GetNormalPrice", &UFortMtxOfferDetailsBase::execGetNormalPrice },
+		{ "GetOfferId", &UFortMtxOfferDetailsBase::execGetOfferId },
+		{ "GetSalePrice", &UFortMtxOfferDetailsBase::execGetSalePrice },
+		{ "GetStoreOfferType", &UFortMtxOfferDetailsBase::execGetStoreOfferType },
+		{ "GetTileImage", &UFortMtxOfferDetailsBase::execGetTileImage },
+		{ "UpdateMtxOffer", &UFortMtxOfferDetailsBase::execUpdateMtxOffer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMtxOfferDetailsBase_GetBackground_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -286,11 +333,6 @@ UFunction* Z_Construct_UFunction_UFortMtxOfferDetailsBase_UpdateMtxOffer()
 	return ReturnFunction;
 }
 
-class UFortMtxOfferDetailsBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMtxOfferDetailsBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

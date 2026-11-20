@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AAudioVolume();  // RVA 0x023DAFE0 (consensus OuterFunc)
 
+class AAudioVolume
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AAudioVolume_OnRep_bEnabled_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -105,11 +112,6 @@ UFunction* Z_Construct_UFunction_AAudioVolume_SetReverbSettings()
 	return ReturnFunction;
 }
 
-class AAudioVolume
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AAudioVolume_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UAppleARKitAnchor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAppleARKitAnchor();
+	static void execGetTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00806100 (end 0x00806122)
+// Original VA: 0x0000000140806100 | File offset: 0x00805700
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02FE2A88) | Matching: see analysis/functions-uht-natives.json
+void UAppleARKitAnchor::StaticRegisterNativesUAppleARKitAnchor()
+{
+	UClass* Class = UAppleARKitAnchor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTransform", &UAppleARKitAnchor::execGetTransform },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UAppleARKitAnchor_GetTransform: FFunctionParams record not identified; creator not emitted.

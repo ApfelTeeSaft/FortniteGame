@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UVehicleAnimInstance();  // RVA 0x0067BE20 (consensus OuterFunc)
 
+class UVehicleAnimInstance
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUVehicleAnimInstance();
+	static void execGetVehicle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067B7E0 (end 0x0067B802)
+// Original VA: 0x000000014067B7E0 | File offset: 0x0067ADE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F9CFB8) | Matching: see analysis/functions-uht-natives.json
+void UVehicleAnimInstance::StaticRegisterNativesUVehicleAnimInstance()
+{
+	UClass* Class = UVehicleAnimInstance::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetVehicle", &UVehicleAnimInstance::execGetVehicle },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UVehicleAnimInstance_GetVehicle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UVehicleAnimInstance_GetVehicle()
 	return ReturnFunction;
 }
 
-class UVehicleAnimInstance
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UVehicleAnimInstance_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

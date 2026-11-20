@@ -6,6 +6,73 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHomebaseUIContext();  // RVA 0x028B3DB0 (consensus OuterFunc)
 
+class UFortHomebaseUIContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortHomebaseUIContext();
+	static void execGetEarlyGameNodePageId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEarlyGameNodeProgressionState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEarlyGameRootSkillTreeNodeId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEarlyGameRootSkillTreePageId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemInSquadSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemsInSquad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalPlayerHasHeroBackpack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalPlayerHasHeroHeadAccessories(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNodeAttributeBonusesForDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNodeDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNodeTagBonusesForDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumOwnedNodesInSkillTreePage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuestNodeColour(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRootSkillTreeNodeId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRootSkillTreePageId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShowHeroBackpackForLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShowHeroHeadAccessoriesForLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSquadIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalNodesInSkillTreePage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWorkerSetBonusEffectModifiers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAnySquadSlotUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInEarlyGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShowHeroBackpackForLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShowHeroHeadAccessoriesForLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3980 (end 0x028B39A2)
+// Original VA: 0x00000001428B3980 | File offset: 0x028B2F80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CA7350) | Matching: see analysis/functions-uht-natives.json
+void UFortHomebaseUIContext::StaticRegisterNativesUFortHomebaseUIContext()
+{
+	UClass* Class = UFortHomebaseUIContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetEarlyGameNodePageId", &UFortHomebaseUIContext::execGetEarlyGameNodePageId },
+		{ "GetEarlyGameNodeProgressionState", &UFortHomebaseUIContext::execGetEarlyGameNodeProgressionState },
+		{ "GetEarlyGameRootSkillTreeNodeId", &UFortHomebaseUIContext::execGetEarlyGameRootSkillTreeNodeId },
+		{ "GetEarlyGameRootSkillTreePageId", &UFortHomebaseUIContext::execGetEarlyGameRootSkillTreePageId },
+		{ "GetItemInSquadSlot", &UFortHomebaseUIContext::execGetItemInSquadSlot },
+		{ "GetItemsInSquad", &UFortHomebaseUIContext::execGetItemsInSquad },
+		{ "GetLocalPlayerHasHeroBackpack", &UFortHomebaseUIContext::execGetLocalPlayerHasHeroBackpack },
+		{ "GetLocalPlayerHasHeroHeadAccessories", &UFortHomebaseUIContext::execGetLocalPlayerHasHeroHeadAccessories },
+		{ "GetNodeAttributeBonusesForDisplay", &UFortHomebaseUIContext::execGetNodeAttributeBonusesForDisplay },
+		{ "GetNodeDescription", &UFortHomebaseUIContext::execGetNodeDescription },
+		{ "GetNodeTagBonusesForDisplay", &UFortHomebaseUIContext::execGetNodeTagBonusesForDisplay },
+		{ "GetNumOwnedNodesInSkillTreePage", &UFortHomebaseUIContext::execGetNumOwnedNodesInSkillTreePage },
+		{ "GetQuestNodeColour", &UFortHomebaseUIContext::execGetQuestNodeColour },
+		{ "GetRootSkillTreeNodeId", &UFortHomebaseUIContext::execGetRootSkillTreeNodeId },
+		{ "GetRootSkillTreePageId", &UFortHomebaseUIContext::execGetRootSkillTreePageId },
+		{ "GetShowHeroBackpackForLocalPlayer", &UFortHomebaseUIContext::execGetShowHeroBackpackForLocalPlayer },
+		{ "GetShowHeroHeadAccessoriesForLocalPlayer", &UFortHomebaseUIContext::execGetShowHeroHeadAccessoriesForLocalPlayer },
+		{ "GetSquadIcon", &UFortHomebaseUIContext::execGetSquadIcon },
+		{ "GetTotalNodesInSkillTreePage", &UFortHomebaseUIContext::execGetTotalNodesInSkillTreePage },
+		{ "GetWorkerSetBonusEffectModifiers", &UFortHomebaseUIContext::execGetWorkerSetBonusEffectModifiers },
+		{ "IsAnySquadSlotUnlocked", &UFortHomebaseUIContext::execIsAnySquadSlotUnlocked },
+		{ "IsInEarlyGame", &UFortHomebaseUIContext::execIsInEarlyGame },
+		{ "SetShowHeroBackpackForLocalPlayer", &UFortHomebaseUIContext::execSetShowHeroBackpackForLocalPlayer },
+		{ "SetShowHeroHeadAccessoriesForLocalPlayer", &UFortHomebaseUIContext::execSetShowHeroHeadAccessoriesForLocalPlayer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortHomebaseUIContext_OnNodesPurchased__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -526,11 +593,6 @@ UFunction* Z_Construct_UFunction_UFortHomebaseUIContext_SetShowHeroHeadAccessori
 	return ReturnFunction;
 }
 
-class UFortHomebaseUIContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHomebaseUIContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

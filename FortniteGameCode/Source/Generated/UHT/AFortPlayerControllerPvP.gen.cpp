@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerPvP();  // RVA 0x010777D0 (consensus OuterFunc)
 
+class AFortPlayerControllerPvP
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortPlayerControllerPvP();
+	static void execClientReceiveKillNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClientShowGameOverWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerAttemptSelectFOBCore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01077570 (end 0x01077592)
+// Original VA: 0x0000000141077570 | File offset: 0x01076B70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033C3DF8) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerControllerPvP::StaticRegisterNativesAFortPlayerControllerPvP()
+{
+	UClass* Class = AFortPlayerControllerPvP::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientReceiveKillNotification", &AFortPlayerControllerPvP::execClientReceiveKillNotification },
+		{ "ClientShowGameOverWidget", &AFortPlayerControllerPvP::execClientShowGameOverWidget },
+		{ "ServerAttemptSelectFOBCore", &AFortPlayerControllerPvP::execServerAttemptSelectFOBCore },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerControllerPvP_ClientReceiveKillNotification_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerPvP_ServerAttemptSelectFOB
 	return ReturnFunction;
 }
 
-class AFortPlayerControllerPvP
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPlayerControllerPvP_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

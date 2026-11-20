@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaAccountContext();  // RVA 0x0287F200 (consensus OuterFunc)
 
+class UAthenaAccountContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaAccountContext();
+	static void execGetBattleBookPurchaseLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentSeasonDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentSeasonName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSimulateBattleBookPurchase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EBA0 (end 0x0287EBC2)
+// Original VA: 0x000000014287EBA0 | File offset: 0x0287E1A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C518D0) | Matching: see analysis/functions-uht-natives.json
+void UAthenaAccountContext::StaticRegisterNativesUAthenaAccountContext()
+{
+	UClass* Class = UAthenaAccountContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBattleBookPurchaseLimit", &UAthenaAccountContext::execGetBattleBookPurchaseLimit },
+		{ "GetCurrentSeasonDefinition", &UAthenaAccountContext::execGetCurrentSeasonDefinition },
+		{ "GetCurrentSeasonName", &UAthenaAccountContext::execGetCurrentSeasonName },
+		{ "SimulateBattleBookPurchase", &UAthenaAccountContext::execSimulateBattleBookPurchase },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaAccountContext_GetBattleBookPurchaseLimit_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UAthenaAccountContext_SimulateBattleBookPurchas
 	return ReturnFunction;
 }
 
-class UAthenaAccountContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaAccountContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

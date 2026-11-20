@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreeCanvasNode();  // RVA 0x028F5520 (consensus OuterFunc)
 
+class UFortSkillTreeCanvasNode
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSkillTreeCanvasNode();
+	static void execTryGetNodeDisplayData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetSkillTreeNodeState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetStaticSkillTreeNodeData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4EA0 (end 0x028F4EC2)
+// Original VA: 0x00000001428F4EA0 | File offset: 0x028F44A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D13368) | Matching: see analysis/functions-uht-natives.json
+void UFortSkillTreeCanvasNode::StaticRegisterNativesUFortSkillTreeCanvasNode()
+{
+	UClass* Class = UFortSkillTreeCanvasNode::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "TryGetNodeDisplayData", &UFortSkillTreeCanvasNode::execTryGetNodeDisplayData },
+		{ "TryGetSkillTreeNodeState", &UFortSkillTreeCanvasNode::execTryGetSkillTreeNodeState },
+		{ "TryGetStaticSkillTreeNodeData", &UFortSkillTreeCanvasNode::execTryGetStaticSkillTreeNodeData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSkillTreeCanvasNode_HandleSkillTreeNodeStateChanged_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -85,11 +110,6 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeCanvasNode_TryGetStaticSkillTreeN
 	return ReturnFunction;
 }
 
-class UFortSkillTreeCanvasNode
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSkillTreeCanvasNode_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

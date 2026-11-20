@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UMediaSoundComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUMediaSoundComponent();
+	static void execSetMediaPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE700 (end 0x025DE722)
+// Original VA: 0x00000001425DE700 | File offset: 0x025DDD00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03B64BA8) | Matching: see analysis/functions-uht-natives.json
+void UMediaSoundComponent::StaticRegisterNativesUMediaSoundComponent()
+{
+	UClass* Class = UMediaSoundComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetMediaPlayer", &UMediaSoundComponent::execSetMediaPlayer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UMediaSoundComponent_SetMediaPlayer: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ULeaderboardQueryCallbackProxy();  // RVA 0x0032EC50 (consensus OuterFunc)
 
+class ULeaderboardQueryCallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesULeaderboardQueryCallbackProxy();
+	static void execCreateProxyObjectForIntQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E400 (end 0x0032E422)
+// Original VA: 0x000000014032E400 | File offset: 0x0032DA00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAE0A0) | Matching: see analysis/functions-uht-natives.json
+void ULeaderboardQueryCallbackProxy::StaticRegisterNativesULeaderboardQueryCallbackProxy()
+{
+	UClass* Class = ULeaderboardQueryCallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateProxyObjectForIntQuery", &ULeaderboardQueryCallbackProxy::execCreateProxyObjectForIntQuery },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ULeaderboardQueryCallbackProxy_CreateProxyObjectForIntQuery_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_ULeaderboardQueryCallbackProxy_CreateProxyObjec
 	return ReturnFunction;
 }
 
-class ULeaderboardQueryCallbackProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ULeaderboardQueryCallbackProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

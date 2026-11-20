@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UInvalidationBox();  // RVA 0x01BED530 (consensus OuterFunc)
 
+class UInvalidationBox
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UInvalidationBox_GetCanCache_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -65,11 +72,6 @@ UFunction* Z_Construct_UFunction_UInvalidationBox_SetCanCache()
 	return ReturnFunction;
 }
 
-class UInvalidationBox
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UInvalidationBox_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

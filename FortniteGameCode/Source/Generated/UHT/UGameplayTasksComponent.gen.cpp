@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTasksComponent();  // RVA 0x01C9AC70 (consensus OuterFunc)
 
+class UGameplayTasksComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UGameplayTasksComponent_K2_RunGameplayTask_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_UGameplayTasksComponent_OnRep_SimulatedTasks()
 	return ReturnFunction;
 }
 
-class UGameplayTasksComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGameplayTasksComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

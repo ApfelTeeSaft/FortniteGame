@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortScriptedAction();  // RVA 0x010A5800 (consensus OuterFunc)
 
+class AFortScriptedAction
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortScriptedAction();
+	static void execCancelAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanExecute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCompleteAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExecute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4E60 (end 0x010A4E82)
+// Original VA: 0x00000001410A4E60 | File offset: 0x010A4460
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033F6300) | Matching: see analysis/functions-uht-natives.json
+void AFortScriptedAction::StaticRegisterNativesAFortScriptedAction()
+{
+	UClass* Class = AFortScriptedAction::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CancelAction", &AFortScriptedAction::execCancelAction },
+		{ "CanExecute", &AFortScriptedAction::execCanExecute },
+		{ "CompleteAction", &AFortScriptedAction::execCompleteAction },
+		{ "Execute", &AFortScriptedAction::execExecute },
+		{ "GetParams", &AFortScriptedAction::execGetParams },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortScriptedAction_CancelAction_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_AFortScriptedAction_GetParams()
 	return ReturnFunction;
 }
 
-class AFortScriptedAction
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortScriptedAction_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortDailyRewards();  // RVA 0x0289B400 (consensus OuterFunc)
 
+class UFortDailyRewards
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortDailyRewards_ClaimResultReceived_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -84,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortDailyRewards_TryGetDailyRewardsData()
 	return ReturnFunction;
 }
 
-class UFortDailyRewards
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortDailyRewards_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

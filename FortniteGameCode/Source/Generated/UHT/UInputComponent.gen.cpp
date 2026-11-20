@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UInputComponent();  // RVA 0x02427F10 (consensus OuterFunc)
 
+class UInputComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUInputComponent();
+	static void execGetControllerAnalogKeyState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetControllerAnalogStickState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetControllerKeyTimeDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetControllerMouseDelta(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetControllerVectorKeyState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTouchState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsControllerKeyDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWasControllerKeyJustPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWasControllerKeyJustReleased(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427530 (end 0x02427552)
+// Original VA: 0x0000000142427530 | File offset: 0x02426B30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038FFBE0) | Matching: see analysis/functions-uht-natives.json
+void UInputComponent::StaticRegisterNativesUInputComponent()
+{
+	UClass* Class = UInputComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetControllerAnalogKeyState", &UInputComponent::execGetControllerAnalogKeyState },
+		{ "GetControllerAnalogStickState", &UInputComponent::execGetControllerAnalogStickState },
+		{ "GetControllerKeyTimeDown", &UInputComponent::execGetControllerKeyTimeDown },
+		{ "GetControllerMouseDelta", &UInputComponent::execGetControllerMouseDelta },
+		{ "GetControllerVectorKeyState", &UInputComponent::execGetControllerVectorKeyState },
+		{ "GetTouchState", &UInputComponent::execGetTouchState },
+		{ "IsControllerKeyDown", &UInputComponent::execIsControllerKeyDown },
+		{ "WasControllerKeyJustPressed", &UInputComponent::execWasControllerKeyJustPressed },
+		{ "WasControllerKeyJustReleased", &UInputComponent::execWasControllerKeyJustReleased },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UInputComponent_GetControllerAnalogKeyState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +223,6 @@ UFunction* Z_Construct_UFunction_UInputComponent_WasControllerKeyJustReleased()
 	return ReturnFunction;
 }
 
-class UInputComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UInputComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

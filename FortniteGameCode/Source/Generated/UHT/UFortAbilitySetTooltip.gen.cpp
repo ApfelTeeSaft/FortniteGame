@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortAbilitySetTooltip
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAbilitySetTooltip();
+	static void execGetTextForToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTokenizedDescriptionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7CA70 (end 0x00F7CA92)
+// Original VA: 0x0000000140F7CA70 | File offset: 0x00F7C070
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0328F968) | Matching: see analysis/functions-uht-natives.json
+void UFortAbilitySetTooltip::StaticRegisterNativesUFortAbilitySetTooltip()
+{
+	UClass* Class = UFortAbilitySetTooltip::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTextForToken", &UFortAbilitySetTooltip::execGetTextForToken },
+		{ "GetTokenizedDescriptionText", &UFortAbilitySetTooltip::execGetTokenizedDescriptionText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortAbilitySetTooltip_GetTextForToken: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortAbilitySetTooltip_GetTokenizedDescriptionText: FFunctionParams record not identified; creator not emitted.

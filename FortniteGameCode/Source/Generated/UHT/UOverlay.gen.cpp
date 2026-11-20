@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UOverlay();  // RVA 0x01BED800 (consensus OuterFunc)
 
+class UOverlay
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUOverlay();
+	static void execAddChildToOverlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED0C0 (end 0x01BED0E2)
+// Original VA: 0x0000000141BED0C0 | File offset: 0x01BEC6C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036981F8) | Matching: see analysis/functions-uht-natives.json
+void UOverlay::StaticRegisterNativesUOverlay()
+{
+	UClass* Class = UOverlay::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddChildToOverlay", &UOverlay::execAddChildToOverlay },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UOverlay_AddChildToOverlay_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UOverlay_AddChildToOverlay()
 	return ReturnFunction;
 }
 
-class UOverlay
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UOverlay_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

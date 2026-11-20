@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortAsyncAction_MCPContextConsumeItem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_MCPContextConsumeItem();
+	static void execConsumeItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023520 (end 0x01023542)
+// Original VA: 0x0000000141023520 | File offset: 0x01022B20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03368838) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_MCPContextConsumeItem::StaticRegisterNativesUFortAsyncAction_MCPContextConsumeItem()
+{
+	UClass* Class = UFortAsyncAction_MCPContextConsumeItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ConsumeItem", &UFortAsyncAction_MCPContextConsumeItem::execConsumeItem },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UDelegateFunction_UFortAsyncAction_MCPContextConsumeItem_OnMCPRequestComplete__DelegateSignature: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortAsyncAction_MCPContextConsumeItem_ConsumeItem: FFunctionParams record not identified; creator not emitted.

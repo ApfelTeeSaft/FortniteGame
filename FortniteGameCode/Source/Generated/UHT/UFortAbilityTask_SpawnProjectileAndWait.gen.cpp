@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait();  // RVA 0x00F81F10 (consensus OuterFunc)
 
+class UFortAbilityTask_SpawnProjectileAndWait
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAbilityTask_SpawnProjectileAndWait();
+	static void execBeginSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFinishSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnProjectileDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnProjectileAndWait(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81810 (end 0x00F81832)
+// Original VA: 0x0000000140F81810 | File offset: 0x00F80E10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03296420) | Matching: see analysis/functions-uht-natives.json
+void UFortAbilityTask_SpawnProjectileAndWait::StaticRegisterNativesUFortAbilityTask_SpawnProjectileAndWait()
+{
+	UClass* Class = UFortAbilityTask_SpawnProjectileAndWait::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BeginSpawningActor", &UFortAbilityTask_SpawnProjectileAndWait::execBeginSpawningActor },
+		{ "FinishSpawningActor", &UFortAbilityTask_SpawnProjectileAndWait::execFinishSpawningActor },
+		{ "OnProjectileDestroyed", &UFortAbilityTask_SpawnProjectileAndWait::execOnProjectileDestroyed },
+		{ "SpawnProjectileAndWait", &UFortAbilityTask_SpawnProjectileAndWait::execSpawnProjectileAndWait },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_BeginSpawningActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_SpawnProjectileAndWait_SpawnPr
 	return ReturnFunction;
 }
 
-class UFortAbilityTask_SpawnProjectileAndWait
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

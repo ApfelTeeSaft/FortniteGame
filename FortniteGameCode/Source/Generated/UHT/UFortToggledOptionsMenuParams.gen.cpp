@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortToggledOptionsMenuParams
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortToggledOptionsMenuParams();
+	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9290 (end 0x010E92B2)
+// Original VA: 0x00000001410E9290 | File offset: 0x010E8890
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0344A4C8) | Matching: see analysis/functions-uht-natives.json
+void UFortToggledOptionsMenuParams::StaticRegisterNativesUFortToggledOptionsMenuParams()
+{
+	UClass* Class = UFortToggledOptionsMenuParams::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BreakParams", &UFortToggledOptionsMenuParams::execBreakParams },
+		{ "SetParams", &UFortToggledOptionsMenuParams::execSetParams },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortToggledOptionsMenuParams_BreakParams: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortToggledOptionsMenuParams_SetParams: FFunctionParams record not identified; creator not emitted.

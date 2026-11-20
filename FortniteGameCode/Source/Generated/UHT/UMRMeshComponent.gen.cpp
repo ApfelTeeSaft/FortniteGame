@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMRMeshComponent();  // RVA 0x01D5EDA0 (consensus OuterFunc)
 
+class UMRMeshComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUMRMeshComponent();
+	static void execConnectReconstructor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetReconstructor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5ECC0 (end 0x01D5ECE2)
+// Original VA: 0x0000000141D5ECC0 | File offset: 0x01D5E2C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03720DC0) | Matching: see analysis/functions-uht-natives.json
+void UMRMeshComponent::StaticRegisterNativesUMRMeshComponent()
+{
+	UClass* Class = UMRMeshComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ConnectReconstructor", &UMRMeshComponent::execConnectReconstructor },
+		{ "GetReconstructor", &UMRMeshComponent::execGetReconstructor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMRMeshComponent_ConnectReconstructor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UMRMeshComponent_GetReconstructor()
 	return ReturnFunction;
 }
 
-class UMRMeshComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMRMeshComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

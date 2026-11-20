@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBacchusButton();  // RVA 0x02887520 (consensus OuterFunc)
 
+class UBacchusButton
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UBacchusButton_OnClicked_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -65,11 +72,6 @@ UFunction* Z_Construct_UFunction_UBacchusButton_SetButtonSprite()
 	return ReturnFunction;
 }
 
-class UBacchusButton
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBacchusButton_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

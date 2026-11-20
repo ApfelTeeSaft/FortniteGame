@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortUIDataConfigurationContext();  // RVA 0x0290A9D0 (consensus OuterFunc)
 
+class UFortUIDataConfigurationContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortUIDataConfigurationContext();
+	static void execArePartyFeaturesEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreSocialFeaturesEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFrontEndFFSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsChatEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLimitedToES2Features(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsQuestVOEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUseSpecificPinataWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A770 (end 0x0290A792)
+// Original VA: 0x000000014290A770 | File offset: 0x02909D70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D3D6D0) | Matching: see analysis/functions-uht-natives.json
+void UFortUIDataConfigurationContext::StaticRegisterNativesUFortUIDataConfigurationContext()
+{
+	UClass* Class = UFortUIDataConfigurationContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ArePartyFeaturesEnabled", &UFortUIDataConfigurationContext::execArePartyFeaturesEnabled },
+		{ "AreSocialFeaturesEnabled", &UFortUIDataConfigurationContext::execAreSocialFeaturesEnabled },
+		{ "GetFrontEndFFSettings", &UFortUIDataConfigurationContext::execGetFrontEndFFSettings },
+		{ "IsChatEnabled", &UFortUIDataConfigurationContext::execIsChatEnabled },
+		{ "IsLimitedToES2Features", &UFortUIDataConfigurationContext::execIsLimitedToES2Features },
+		{ "IsQuestVOEnabled", &UFortUIDataConfigurationContext::execIsQuestVOEnabled },
+		{ "UseSpecificPinataWeapon", &UFortUIDataConfigurationContext::execUseSpecificPinataWeapon },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortUIDataConfigurationContext_ArePartyFeaturesEnabled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +179,6 @@ UFunction* Z_Construct_UFunction_UFortUIDataConfigurationContext_UseSpecificPina
 	return ReturnFunction;
 }
 
-class UFortUIDataConfigurationContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortUIDataConfigurationContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

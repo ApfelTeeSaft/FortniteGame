@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UDragDropOperation();  // RVA 0x01BE6270 (consensus OuterFunc)
 
+class UDragDropOperation
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUDragDropOperation();
+	static void execDragCancelled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDragged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5D30 (end 0x01BE5D52)
+// Original VA: 0x0000000141BE5D30 | File offset: 0x01BE5330
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036924D0) | Matching: see analysis/functions-uht-natives.json
+void UDragDropOperation::StaticRegisterNativesUDragDropOperation()
+{
+	UClass* Class = UDragDropOperation::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DragCancelled", &UDragDropOperation::execDragCancelled },
+		{ "Dragged", &UDragDropOperation::execDragged },
+		{ "Drop", &UDragDropOperation::execDrop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UDragDropOperation_DragCancelled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UDragDropOperation_Drop()
 	return ReturnFunction;
 }
 
-class UDragDropOperation
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UDragDropOperation_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

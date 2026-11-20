@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortAttributeList
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UFortAttributeList_Clear: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortAttributeList_ClearPreviewData: FFunctionParams record not identified; creator not emitted.

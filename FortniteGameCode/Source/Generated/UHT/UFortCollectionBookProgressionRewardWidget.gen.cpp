@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortCollectionBookProgressionRewardWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCollectionBookProgressionRewardWidget();
+	static void execSetAssociatedLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894340 (end 0x02894362)
+// Original VA: 0x0000000142894340 | File offset: 0x02893940
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C76CE8) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookProgressionRewardWidget::StaticRegisterNativesUFortCollectionBookProgressionRewardWidget()
+{
+	UClass* Class = UFortCollectionBookProgressionRewardWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetAssociatedLevel", &UFortCollectionBookProgressionRewardWidget::execSetAssociatedLevel },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortCollectionBookProgressionRewardWidget_SetAssociatedLevel: FFunctionParams record not identified; creator not emitted.

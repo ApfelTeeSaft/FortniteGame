@@ -6,6 +6,47 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortLobbyBeaconClient();  // RVA 0x0101E220 (consensus OuterFunc)
 
+class AFortLobbyBeaconClient
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortLobbyBeaconClient();
+	static void execClientCreateOrJoinChatRoom(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerIncrementHomeBaseVersion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetCharacterGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetConsoleUniqueNetId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetCurrentCharacterXp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetGadget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetHeroId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetHeroSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetHeroType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerSetMatchmakingLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerTeamChatRoomReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101DC70 (end 0x0101DC92)
+// Original VA: 0x000000014101DC70 | File offset: 0x0101D270
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0335E4E0) | Matching: see analysis/functions-uht-natives.json
+void AFortLobbyBeaconClient::StaticRegisterNativesAFortLobbyBeaconClient()
+{
+	UClass* Class = AFortLobbyBeaconClient::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientCreateOrJoinChatRoom", &AFortLobbyBeaconClient::execClientCreateOrJoinChatRoom },
+		{ "ServerIncrementHomeBaseVersion", &AFortLobbyBeaconClient::execServerIncrementHomeBaseVersion },
+		{ "ServerSetCharacterGender", &AFortLobbyBeaconClient::execServerSetCharacterGender },
+		{ "ServerSetConsoleUniqueNetId", &AFortLobbyBeaconClient::execServerSetConsoleUniqueNetId },
+		{ "ServerSetCurrentCharacterXp", &AFortLobbyBeaconClient::execServerSetCurrentCharacterXp },
+		{ "ServerSetGadget", &AFortLobbyBeaconClient::execServerSetGadget },
+		{ "ServerSetHeroId", &AFortLobbyBeaconClient::execServerSetHeroId },
+		{ "ServerSetHeroSquadId", &AFortLobbyBeaconClient::execServerSetHeroSquadId },
+		{ "ServerSetHeroType", &AFortLobbyBeaconClient::execServerSetHeroType },
+		{ "ServerSetMatchmakingLevel", &AFortLobbyBeaconClient::execServerSetMatchmakingLevel },
+		{ "ServerTeamChatRoomReady", &AFortLobbyBeaconClient::execServerTeamChatRoomReady },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortLobbyBeaconClient_ClientCreateOrJoinChatRoom_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -226,11 +267,6 @@ UFunction* Z_Construct_UFunction_AFortLobbyBeaconClient_ServerTeamChatRoomReady(
 	return ReturnFunction;
 }
 
-class AFortLobbyBeaconClient
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortLobbyBeaconClient_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

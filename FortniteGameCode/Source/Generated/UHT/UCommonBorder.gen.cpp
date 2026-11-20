@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UCommonBorder
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCommonBorder();
+	static void execSetStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2920 (end 0x002C2942)
+// Original VA: 0x00000001402C2920 | File offset: 0x002C1F20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E7B568) | Matching: see analysis/functions-uht-natives.json
+void UCommonBorder::StaticRegisterNativesUCommonBorder()
+{
+	UClass* Class = UCommonBorder::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetStyle", &UCommonBorder::execSetStyle },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UCommonBorder_SetStyle: FFunctionParams record not identified; creator not emitted.

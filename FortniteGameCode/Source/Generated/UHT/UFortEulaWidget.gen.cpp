@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortEulaWidget();  // RVA 0x028A34C0 (consensus OuterFunc)
 
+class UFortEulaWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortEulaWidget_HandleConfirmClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +53,6 @@ UFunction* Z_Construct_UFunction_UFortEulaWidget_HandleDeclineClicked()
 	return ReturnFunction;
 }
 
-class UFortEulaWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortEulaWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

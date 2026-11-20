@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPartyTreeItemBase();  // RVA 0x028E6B00 (consensus OuterFunc)
 
+class UFortPartyTreeItemBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortPartyTreeItemBase_ExpansionChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_UFortPartyTreeItemBase_OnSocialItemSet()
 	return ReturnFunction;
 }
 
-class UFortPartyTreeItemBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPartyTreeItemBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

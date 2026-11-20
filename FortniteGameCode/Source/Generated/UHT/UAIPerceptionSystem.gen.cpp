@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAIPerceptionSystem();  // RVA 0x01D1BC70 (consensus OuterFunc)
 
+class UAIPerceptionSystem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAIPerceptionSystem();
+	static void execGetSenseClassForStimulus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPerceptionStimuliSourceEndPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterPerceptionStimuliSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReportEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReportPerceptionEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B200 (end 0x01D1B222)
+// Original VA: 0x0000000141D1B200 | File offset: 0x01D1A800
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F1E60) | Matching: see analysis/functions-uht-natives.json
+void UAIPerceptionSystem::StaticRegisterNativesUAIPerceptionSystem()
+{
+	UClass* Class = UAIPerceptionSystem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetSenseClassForStimulus", &UAIPerceptionSystem::execGetSenseClassForStimulus },
+		{ "OnPerceptionStimuliSourceEndPlay", &UAIPerceptionSystem::execOnPerceptionStimuliSourceEndPlay },
+		{ "RegisterPerceptionStimuliSource", &UAIPerceptionSystem::execRegisterPerceptionStimuliSource },
+		{ "ReportEvent", &UAIPerceptionSystem::execReportEvent },
+		{ "ReportPerceptionEvent", &UAIPerceptionSystem::execReportPerceptionEvent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAIPerceptionSystem_GetSenseClassForStimulus_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UAIPerceptionSystem_ReportPerceptionEvent()
 	return ReturnFunction;
 }
 
-class UAIPerceptionSystem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAIPerceptionSystem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

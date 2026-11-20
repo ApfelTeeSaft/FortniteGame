@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ULevelSequencePlayer();  // RVA 0x01D4EE70 (consensus OuterFunc)
 
+class ULevelSequencePlayer
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesULevelSequencePlayer();
+	static void execCreateLevelSequencePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4E890 (end 0x01D4E8B2)
+// Original VA: 0x0000000141D4E890 | File offset: 0x01D4DE90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0371A930) | Matching: see analysis/functions-uht-natives.json
+void ULevelSequencePlayer::StaticRegisterNativesULevelSequencePlayer()
+{
+	UClass* Class = ULevelSequencePlayer::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateLevelSequencePlayer", &ULevelSequencePlayer::execCreateLevelSequencePlayer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ULevelSequencePlayer_CreateLevelSequencePlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_ULevelSequencePlayer_CreateLevelSequencePlayer(
 	return ReturnFunction;
 }
 
-class ULevelSequencePlayer
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ULevelSequencePlayer_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

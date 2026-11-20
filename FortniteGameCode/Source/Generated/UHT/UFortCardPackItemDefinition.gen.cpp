@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCardPackItemDefinition();  // RVA 0x00FAD900 (consensus OuterFunc)
 
+class UFortCardPackItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCardPackItemDefinition();
+	static void execGetPackColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPackImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPackPersonality(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsChoicePack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLlama(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACDB0 (end 0x00FACDD2)
+// Original VA: 0x0000000140FACDB0 | File offset: 0x00FAC3B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032D0AF0) | Matching: see analysis/functions-uht-natives.json
+void UFortCardPackItemDefinition::StaticRegisterNativesUFortCardPackItemDefinition()
+{
+	UClass* Class = UFortCardPackItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPackColor", &UFortCardPackItemDefinition::execGetPackColor },
+		{ "GetPackImage", &UFortCardPackItemDefinition::execGetPackImage },
+		{ "GetPackPersonality", &UFortCardPackItemDefinition::execGetPackPersonality },
+		{ "IsChoicePack", &UFortCardPackItemDefinition::execIsChoicePack },
+		{ "IsLlama", &UFortCardPackItemDefinition::execIsLlama },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCardPackItemDefinition_GetPackColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UFortCardPackItemDefinition_IsLlama()
 	return ReturnFunction;
 }
 
-class UFortCardPackItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCardPackItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

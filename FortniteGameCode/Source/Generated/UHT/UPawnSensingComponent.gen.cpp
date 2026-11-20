@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPawnSensingComponent();  // RVA 0x01D31ED0 (consensus OuterFunc)
 
+class UPawnSensingComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UPawnSensingComponent_HearNoiseDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +153,6 @@ UFunction* Z_Construct_UFunction_UPawnSensingComponent_SetSensingUpdatesEnabled(
 	return ReturnFunction;
 }
 
-class UPawnSensingComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPawnSensingComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

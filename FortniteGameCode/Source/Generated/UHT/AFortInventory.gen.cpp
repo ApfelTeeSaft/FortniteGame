@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortInventory();  // RVA 0x01006850 (consensus OuterFunc)
 
+class AFortInventory
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortInventory_HandleInventoryLocalUpdate_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_AFortInventory_HandleInventoryLocalUpdate()
 	return ReturnFunction;
 }
 
-class AFortInventory
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortInventory_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

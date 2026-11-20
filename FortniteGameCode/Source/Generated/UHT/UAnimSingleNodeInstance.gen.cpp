@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAnimSingleNodeInstance();  // RVA 0x023D65F0 (consensus OuterFunc)
 
+class UAnimSingleNodeInstance
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAnimSingleNodeInstance_GetAnimationAsset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -265,11 +272,6 @@ UFunction* Z_Construct_UFunction_UAnimSingleNodeInstance_StopAnim()
 	return ReturnFunction;
 }
 
-class UAnimSingleNodeInstance
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAnimSingleNodeInstance_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

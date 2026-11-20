@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingItemCollectorActor();  // RVA 0x00F6C350 (consensus OuterFunc)
 
+class ABuildingItemCollectorActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ABuildingItemCollectorActor_GetNumberOfTeamCaptures_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -242,11 +249,6 @@ UFunction* Z_Construct_UFunction_ABuildingItemCollectorActor_UpdateTeamDepositVa
 	return ReturnFunction;
 }
 
-class ABuildingItemCollectorActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingItemCollectorActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

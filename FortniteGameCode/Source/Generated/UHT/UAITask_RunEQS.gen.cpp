@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAITask_RunEQS();  // RVA 0x01D22F20 (consensus OuterFunc)
 
+class UAITask_RunEQS
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAITask_RunEQS();
+	static void execRunEQS(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22950 (end 0x01D22972)
+// Original VA: 0x0000000141D22950 | File offset: 0x01D21F50
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F9448) | Matching: see analysis/functions-uht-natives.json
+void UAITask_RunEQS::StaticRegisterNativesUAITask_RunEQS()
+{
+	UClass* Class = UAITask_RunEQS::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "RunEQS", &UAITask_RunEQS::execRunEQS },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAITask_RunEQS_RunEQS_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAITask_RunEQS_RunEQS()
 	return ReturnFunction;
 }
 
-class UAITask_RunEQS
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAITask_RunEQS_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortRichTextBlock
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortRichTextBlock();
+	static void execSetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED100 (end 0x028ED122)
+// Original VA: 0x00000001428ED100 | File offset: 0x028EC700
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D0BBB8) | Matching: see analysis/functions-uht-natives.json
+void UFortRichTextBlock::StaticRegisterNativesUFortRichTextBlock()
+{
+	UClass* Class = UFortRichTextBlock::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetText", &UFortRichTextBlock::execSetText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortRichTextBlock_SetText: FFunctionParams record not identified; creator not emitted.

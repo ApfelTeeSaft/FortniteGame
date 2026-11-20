@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ULightComponentBase();  // RVA 0x02478B50 (consensus OuterFunc)
 
+class ULightComponentBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesULightComponentBase();
+	static void execGetLightColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCastShadows(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCastVolumetricShadow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02478720 (end 0x02478742)
+// Original VA: 0x0000000142478720 | File offset: 0x02477D20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03934DB8) | Matching: see analysis/functions-uht-natives.json
+void ULightComponentBase::StaticRegisterNativesULightComponentBase()
+{
+	UClass* Class = ULightComponentBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetLightColor", &ULightComponentBase::execGetLightColor },
+		{ "SetCastShadows", &ULightComponentBase::execSetCastShadows },
+		{ "SetCastVolumetricShadow", &ULightComponentBase::execSetCastVolumetricShadow },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ULightComponentBase_GetLightColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_ULightComponentBase_SetCastVolumetricShadow()
 	return ReturnFunction;
 }
 
-class ULightComponentBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ULightComponentBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

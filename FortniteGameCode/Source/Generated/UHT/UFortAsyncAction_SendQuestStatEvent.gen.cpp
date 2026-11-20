@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_SendQuestStatEvent();  // RVA 0x00F9F270 (consensus OuterFunc)
 
+class UFortAsyncAction_SendQuestStatEvent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_SendQuestStatEvent();
+	static void execSendClientStatEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendClientStatEventWithTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E630 (end 0x00F9E652)
+// Original VA: 0x0000000140F9E630 | File offset: 0x00F9DC30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032BFBA8) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_SendQuestStatEvent::StaticRegisterNativesUFortAsyncAction_SendQuestStatEvent()
+{
+	UClass* Class = UFortAsyncAction_SendQuestStatEvent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SendClientStatEvent", &UFortAsyncAction_SendQuestStatEvent::execSendClientStatEvent },
+		{ "SendClientStatEventWithTags", &UFortAsyncAction_SendQuestStatEvent::execSendClientStatEventWithTags },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_SendQuestStatEvent_SendClientStatEvent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_SendQuestStatEvent_SendClientS
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_SendQuestStatEvent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_SendQuestStatEvent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

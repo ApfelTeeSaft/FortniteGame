@@ -6,4 +6,11 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortSquadStatValueWithIcon
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UFortSquadStatValueWithIcon_HandleDifferentAttributeSetBP: FFunctionParams record not identified; creator not emitted.

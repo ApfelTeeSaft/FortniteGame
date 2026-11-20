@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AEmitter();  // RVA 0x02404D50 (consensus OuterFunc)
 
+class AEmitter
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AEmitter_Activate_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -242,11 +249,6 @@ UFunction* Z_Construct_UFunction_AEmitter_ToggleActive()
 	return ReturnFunction;
 }
 
-class AEmitter
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AEmitter_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

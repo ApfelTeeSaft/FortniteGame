@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGameViewportClient();  // RVA 0x0241F100 (consensus OuterFunc)
 
+class UGameViewportClient
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UGameViewportClient_SetConsoleTarget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -64,11 +71,6 @@ UFunction* Z_Construct_UFunction_UGameViewportClient_SSSwapControllers()
 	return ReturnFunction;
 }
 
-class UGameViewportClient
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGameViewportClient_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

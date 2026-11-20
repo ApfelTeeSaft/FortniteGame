@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAnimInstance();  // RVA 0x00F99520 (consensus OuterFunc)
 
+class UFortAnimInstance
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAnimInstance();
+	static void execAnimNotify_LeftFootStep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAnimNotify_RightFootStep(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetFortAIPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetFortPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F988A0 (end 0x00F988C2)
+// Original VA: 0x0000000140F988A0 | File offset: 0x00F97EA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032B7B10) | Matching: see analysis/functions-uht-natives.json
+void UFortAnimInstance::StaticRegisterNativesUFortAnimInstance()
+{
+	UClass* Class = UFortAnimInstance::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AnimNotify_LeftFootStep", &UFortAnimInstance::execAnimNotify_LeftFootStep },
+		{ "AnimNotify_RightFootStep", &UFortAnimInstance::execAnimNotify_RightFootStep },
+		{ "TryGetFortAIPawn", &UFortAnimInstance::execTryGetFortAIPawn },
+		{ "TryGetFortPawn", &UFortAnimInstance::execTryGetFortPawn },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAnimInstance_AnimNotify_LeftFootStep_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UFortAnimInstance_TryGetFortPawn()
 	return ReturnFunction;
 }
 
-class UFortAnimInstance
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAnimInstance_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestManager();  // RVA 0x01096560 (consensus OuterFunc)
 
+class UFortQuestManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortQuestManager_ClaimNextCompletedQuestReward_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -644,11 +651,6 @@ UFunction* Z_Construct_UFunction_UFortQuestManager_SetQuestPinned()
 	return ReturnFunction;
 }
 
-class UFortQuestManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortQuestManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

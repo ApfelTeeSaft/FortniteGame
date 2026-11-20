@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortClientEventInterface();  // RVA 0x00FC0430 (consensus OuterFunc)
 
+class UFortClientEventInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortClientEventInterface_BlueprintCustomHandleClientEvent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +33,6 @@ UFunction* Z_Construct_UFunction_UFortClientEventInterface_BlueprintCustomHandle
 	return ReturnFunction;
 }
 
-class UFortClientEventInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortClientEventInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortBadgeItemDefinition();  // RVA 0x00FA3C20 (consensus OuterFunc)
 
+class UFortBadgeItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortBadgeItemDefinition();
+	static void execGetBadgeScoreCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBadgeScoreThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionPoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScoreAwarded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3440 (end 0x00FA3462)
+// Original VA: 0x0000000140FA3440 | File offset: 0x00FA2A40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C7E20) | Matching: see analysis/functions-uht-natives.json
+void UFortBadgeItemDefinition::StaticRegisterNativesUFortBadgeItemDefinition()
+{
+	UClass* Class = UFortBadgeItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBadgeScoreCategory", &UFortBadgeItemDefinition::execGetBadgeScoreCategory },
+		{ "GetBadgeScoreThreshold", &UFortBadgeItemDefinition::execGetBadgeScoreThreshold },
+		{ "GetMissionPoints", &UFortBadgeItemDefinition::execGetMissionPoints },
+		{ "GetScoreAwarded", &UFortBadgeItemDefinition::execGetScoreAwarded },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortBadgeItemDefinition_GetBadgeScoreCategory_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UFortBadgeItemDefinition_GetScoreAwarded()
 	return ReturnFunction;
 }
 
-class UFortBadgeItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortBadgeItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_AbandonSession();  // RVA 0x00F9F130 (consensus OuterFunc)
 
+class UFortAsyncAction_AbandonSession
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_AbandonSession();
+	static void execAbandonSession(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E510 (end 0x00F9E532)
+// Original VA: 0x0000000140F9E510 | File offset: 0x00F9DB10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032BF6F8) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_AbandonSession::StaticRegisterNativesUFortAsyncAction_AbandonSession()
+{
+	UClass* Class = UFortAsyncAction_AbandonSession::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AbandonSession", &UFortAsyncAction_AbandonSession::execAbandonSession },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_AbandonSession_AbandonSession_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_AbandonSession_AbandonSession(
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_AbandonSession
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_AbandonSession_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

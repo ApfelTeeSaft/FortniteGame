@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBlueprintPlatformLibrary();  // RVA 0x023E3800 (consensus OuterFunc)
 
+class UBlueprintPlatformLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UBlueprintPlatformLibrary_CancelLocalNotification_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -145,11 +152,6 @@ UFunction* Z_Construct_UFunction_UBlueprintPlatformLibrary_ScheduleLocalNotifica
 	return ReturnFunction;
 }
 
-class UBlueprintPlatformLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBlueprintPlatformLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

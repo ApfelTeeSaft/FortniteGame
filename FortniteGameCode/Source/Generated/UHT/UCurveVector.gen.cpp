@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCurveVector();  // RVA 0x023FE5C0 (consensus OuterFunc)
 
+class UCurveVector
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCurveVector();
+	static void execGetVectorValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDC70 (end 0x023FDC92)
+// Original VA: 0x00000001423FDC70 | File offset: 0x023FD270
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038CD928) | Matching: see analysis/functions-uht-natives.json
+void UCurveVector::StaticRegisterNativesUCurveVector()
+{
+	UClass* Class = UCurveVector::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetVectorValue", &UCurveVector::execGetVectorValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCurveVector_GetVectorValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UCurveVector_GetVectorValue()
 	return ReturnFunction;
 }
 
-class UCurveVector
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCurveVector_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

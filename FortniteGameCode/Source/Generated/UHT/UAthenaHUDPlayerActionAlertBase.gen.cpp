@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase();  // RVA 0x0287F4D0 (consensus OuterFunc)
 
+class UAthenaHUDPlayerActionAlertBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_AlertPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_UAthenaHUDPlayerActionAlertBase_RequestNextAler
 	return ReturnFunction;
 }
 
-class UAthenaHUDPlayerActionAlertBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

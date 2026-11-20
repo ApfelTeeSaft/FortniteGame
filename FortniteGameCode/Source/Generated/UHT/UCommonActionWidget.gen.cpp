@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonActionWidget();  // RVA 0x002C2BD0 (consensus OuterFunc)
 
+class UCommonActionWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCommonActionWidget();
+	static void execGetDisplayText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsHeldAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInputAction(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C28C0 (end 0x002C28E2)
+// Original VA: 0x00000001402C28C0 | File offset: 0x002C1EC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E7AE70) | Matching: see analysis/functions-uht-natives.json
+void UCommonActionWidget::StaticRegisterNativesUCommonActionWidget()
+{
+	UClass* Class = UCommonActionWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDisplayText", &UCommonActionWidget::execGetDisplayText },
+		{ "GetIcon", &UCommonActionWidget::execGetIcon },
+		{ "IsHeldAction", &UCommonActionWidget::execIsHeldAction },
+		{ "SetInputAction", &UCommonActionWidget::execSetInputAction },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UCommonActionWidget_OnInputMethodChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +133,6 @@ UFunction* Z_Construct_UFunction_UCommonActionWidget_SetInputAction()
 	return ReturnFunction;
 }
 
-class UCommonActionWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonActionWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

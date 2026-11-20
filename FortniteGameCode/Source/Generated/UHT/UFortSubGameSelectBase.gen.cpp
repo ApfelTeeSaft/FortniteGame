@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSubGameSelectBase();  // RVA 0x02904A40 (consensus OuterFunc)
 
+class UFortSubGameSelectBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSubGameSelectBase();
+	static void execGetFullDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIsOnSale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShortDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904370 (end 0x02904392)
+// Original VA: 0x0000000142904370 | File offset: 0x02903970
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D2EDB8) | Matching: see analysis/functions-uht-natives.json
+void UFortSubGameSelectBase::StaticRegisterNativesUFortSubGameSelectBase()
+{
+	UClass* Class = UFortSubGameSelectBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetFullDescription", &UFortSubGameSelectBase::execGetFullDescription },
+		{ "GetIsOnSale", &UFortSubGameSelectBase::execGetIsOnSale },
+		{ "GetShortDescription", &UFortSubGameSelectBase::execGetShortDescription },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSubGameSelectBase_GetFullDescription_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortSubGameSelectBase_GetShortDescription()
 	return ReturnFunction;
 }
 
-class UFortSubGameSelectBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSubGameSelectBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

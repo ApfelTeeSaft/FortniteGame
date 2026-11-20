@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UKismetProceduralMeshLibrary();  // RVA 0x0069BCB0 (consensus OuterFunc)
 
+class UKismetProceduralMeshLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUKismetProceduralMeshLibrary();
+	static void execCalculateTangentsForMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConvertQuadToTriangles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCopyProceduralMeshFromStaticMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateGridMeshTriangles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGenerateBoxMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSectionFromProceduralMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSectionFromStaticMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSliceProceduralMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0069BAD0 (end 0x0069BAF2)
+// Original VA: 0x000000014069BAD0 | File offset: 0x0069B0D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02FA1FE0) | Matching: see analysis/functions-uht-natives.json
+void UKismetProceduralMeshLibrary::StaticRegisterNativesUKismetProceduralMeshLibrary()
+{
+	UClass* Class = UKismetProceduralMeshLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CalculateTangentsForMesh", &UKismetProceduralMeshLibrary::execCalculateTangentsForMesh },
+		{ "ConvertQuadToTriangles", &UKismetProceduralMeshLibrary::execConvertQuadToTriangles },
+		{ "CopyProceduralMeshFromStaticMeshComponent", &UKismetProceduralMeshLibrary::execCopyProceduralMeshFromStaticMeshComponent },
+		{ "CreateGridMeshTriangles", &UKismetProceduralMeshLibrary::execCreateGridMeshTriangles },
+		{ "GenerateBoxMesh", &UKismetProceduralMeshLibrary::execGenerateBoxMesh },
+		{ "GetSectionFromProceduralMesh", &UKismetProceduralMeshLibrary::execGetSectionFromProceduralMesh },
+		{ "GetSectionFromStaticMesh", &UKismetProceduralMeshLibrary::execGetSectionFromStaticMesh },
+		{ "SliceProceduralMesh", &UKismetProceduralMeshLibrary::execSliceProceduralMesh },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UKismetProceduralMeshLibrary_CalculateTangentsForMesh_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -166,11 +201,6 @@ UFunction* Z_Construct_UFunction_UKismetProceduralMeshLibrary_SliceProceduralMes
 	return ReturnFunction;
 }
 
-class UKismetProceduralMeshLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UKismetProceduralMeshLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

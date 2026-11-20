@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortTheaterMapViewer();  // RVA 0x010BE180 (consensus OuterFunc)
 
+class AFortTheaterMapViewer
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortTheaterMapViewer_HandleMarkedQuestsChanged_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapViewer_HandleMarkedQuestsChanged
 	return ReturnFunction;
 }
 
-class AFortTheaterMapViewer
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortTheaterMapViewer_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

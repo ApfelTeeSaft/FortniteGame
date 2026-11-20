@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemTileView();  // RVA 0x028CF600 (consensus OuterFunc)
 
+class UFortItemTileView
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UFortItemTileView_OnInventoryUpdated__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -240,11 +247,6 @@ UFunction* Z_Construct_UFunction_UFortItemTileView_ShowNullItemTile()
 	return ReturnFunction;
 }
 
-class UFortItemTileView
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemTileView_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

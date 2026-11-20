@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortAthenaSupplyDrop();  // RVA 0x00FA38C0 (consensus OuterFunc)
 
+class AFortAthenaSupplyDrop
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortAthenaSupplyDrop();
+	static void execFindGroundLocationAt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGroundTrace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnPickup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3320 (end 0x00FA3342)
+// Original VA: 0x0000000140FA3320 | File offset: 0x00FA2920
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C5F00) | Matching: see analysis/functions-uht-natives.json
+void AFortAthenaSupplyDrop::StaticRegisterNativesAFortAthenaSupplyDrop()
+{
+	UClass* Class = AFortAthenaSupplyDrop::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FindGroundLocationAt", &AFortAthenaSupplyDrop::execFindGroundLocationAt },
+		{ "GroundTrace", &AFortAthenaSupplyDrop::execGroundTrace },
+		{ "SpawnPickup", &AFortAthenaSupplyDrop::execSpawnPickup },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortAthenaSupplyDrop_FindGroundLocationAt_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_AFortAthenaSupplyDrop_SpawnPickup()
 	return ReturnFunction;
 }
 
-class AFortAthenaSupplyDrop
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortAthenaSupplyDrop_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

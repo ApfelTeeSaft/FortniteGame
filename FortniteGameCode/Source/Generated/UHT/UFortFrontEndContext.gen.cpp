@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortFrontEndContext();  // RVA 0x028A37D0 (consensus OuterFunc)
 
+class UFortFrontEndContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortFrontEndContext_AreProfilesAvailableToWIFE_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -1615,11 +1622,6 @@ UFunction* Z_Construct_UFunction_UFortFrontEndContext_ViewVaultItemFromDefinitio
 	return ReturnFunction;
 }
 
-class UFortFrontEndContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortFrontEndContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

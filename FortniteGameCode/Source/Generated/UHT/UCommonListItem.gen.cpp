@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonListItem();  // RVA 0x002CA3F0 (consensus OuterFunc)
 
+class UCommonListItem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCommonListItem_DoesItemHaveChildren_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -184,11 +191,6 @@ UFunction* Z_Construct_UFunction_UCommonListItem_ToggleExpansion()
 	return ReturnFunction;
 }
 
-class UCommonListItem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonListItem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

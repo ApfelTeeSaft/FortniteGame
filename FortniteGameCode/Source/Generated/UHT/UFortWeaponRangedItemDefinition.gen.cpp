@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortWeaponRangedItemDefinition();  // RVA 0x010D8C40 (consensus OuterFunc)
 
+class UFortWeaponRangedItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortWeaponRangedItemDefinition();
+	static void execGetBulletShellFXTemplate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetProjectileTemplate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldSpawnBulletShellFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldTraceThroughPawns(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldUseNativeWeaponTrace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldUsePerfectAimWhenTargetingMinSpread(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8920 (end 0x010D8942)
+// Original VA: 0x00000001410D8920 | File offset: 0x010D7F20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03430AD0) | Matching: see analysis/functions-uht-natives.json
+void UFortWeaponRangedItemDefinition::StaticRegisterNativesUFortWeaponRangedItemDefinition()
+{
+	UClass* Class = UFortWeaponRangedItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBulletShellFXTemplate", &UFortWeaponRangedItemDefinition::execGetBulletShellFXTemplate },
+		{ "GetProjectileTemplate", &UFortWeaponRangedItemDefinition::execGetProjectileTemplate },
+		{ "ShouldSpawnBulletShellFX", &UFortWeaponRangedItemDefinition::execShouldSpawnBulletShellFX },
+		{ "ShouldTraceThroughPawns", &UFortWeaponRangedItemDefinition::execShouldTraceThroughPawns },
+		{ "ShouldUseNativeWeaponTrace", &UFortWeaponRangedItemDefinition::execShouldUseNativeWeaponTrace },
+		{ "ShouldUsePerfectAimWhenTargetingMinSpread", &UFortWeaponRangedItemDefinition::execShouldUsePerfectAimWhenTargetingMinSpread },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortWeaponRangedItemDefinition_GetBulletShellFXTemplate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UFortWeaponRangedItemDefinition_ShouldUsePerfec
 	return ReturnFunction;
 }
 
-class UFortWeaponRangedItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortWeaponRangedItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

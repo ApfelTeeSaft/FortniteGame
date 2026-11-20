@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGameUserSettings();  // RVA 0x0241F0D0 (consensus OuterFunc)
 
+class UGameUserSettings
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UGameUserSettings_ApplyHardwareBenchmarkResults_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -1297,11 +1304,6 @@ UFunction* Z_Construct_UFunction_UGameUserSettings_ValidateSettings()
 	return ReturnFunction;
 }
 
-class UGameUserSettings
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGameUserSettings_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

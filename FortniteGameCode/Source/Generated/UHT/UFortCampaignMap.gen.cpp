@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCampaignMap();  // RVA 0x02894520 (consensus OuterFunc)
 
+class UFortCampaignMap
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortCampaignMap_OnShowNextPage_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -82,11 +89,6 @@ UFunction* Z_Construct_UFunction_UFortCampaignMap_OnSwipeRight()
 	return ReturnFunction;
 }
 
-class UFortCampaignMap
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCampaignMap_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTooltipContext();  // RVA 0x010CABC0 (consensus OuterFunc)
 
+class UFortTooltipContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortTooltipContext();
+	static void execSpawnTooltipContext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnTooltipContextWithNetID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnTooltipContextWithSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9440 (end 0x010C9462)
+// Original VA: 0x00000001410C9440 | File offset: 0x010C8A40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0341B788) | Matching: see analysis/functions-uht-natives.json
+void UFortTooltipContext::StaticRegisterNativesUFortTooltipContext()
+{
+	UClass* Class = UFortTooltipContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SpawnTooltipContext", &UFortTooltipContext::execSpawnTooltipContext },
+		{ "SpawnTooltipContextWithNetID", &UFortTooltipContext::execSpawnTooltipContextWithNetID },
+		{ "SpawnTooltipContextWithSource", &UFortTooltipContext::execSpawnTooltipContextWithSource },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContext_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortTooltipContext_SpawnTooltipContextWithSour
 	return ReturnFunction;
 }
 
-class UFortTooltipContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTooltipContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortAlterationsWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UFortAlterationsWidget_OnGenerateAlteration: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortAlterationsWidget_ProcessAlterations: FFunctionParams record not identified; creator not emitted.

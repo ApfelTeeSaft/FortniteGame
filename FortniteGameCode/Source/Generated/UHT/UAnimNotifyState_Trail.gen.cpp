@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAnimNotifyState_Trail();  // RVA 0x023D6480 (consensus OuterFunc)
 
+class UAnimNotifyState_Trail
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAnimNotifyState_Trail_OverridePSTemplate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +33,6 @@ UFunction* Z_Construct_UFunction_UAnimNotifyState_Trail_OverridePSTemplate()
 	return ReturnFunction;
 }
 
-class UAnimNotifyState_Trail
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAnimNotifyState_Trail_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

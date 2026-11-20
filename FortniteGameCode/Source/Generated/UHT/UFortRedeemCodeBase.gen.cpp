@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortRedeemCodeBase();  // RVA 0x028ED410 (consensus OuterFunc)
 
+class UFortRedeemCodeBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortRedeemCodeBase();
+	static void execRedeemFriendCode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECD70 (end 0x028ECD92)
+// Original VA: 0x00000001428ECD70 | File offset: 0x028EC370
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D09CD0) | Matching: see analysis/functions-uht-natives.json
+void UFortRedeemCodeBase::StaticRegisterNativesUFortRedeemCodeBase()
+{
+	UClass* Class = UFortRedeemCodeBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "RedeemFriendCode", &UFortRedeemCodeBase::execRedeemFriendCode },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortRedeemCodeBase_OnRedeemFriendCodeComplete_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +67,6 @@ UFunction* Z_Construct_UFunction_UFortRedeemCodeBase_RedeemFriendCode()
 	return ReturnFunction;
 }
 
-class UFortRedeemCodeBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortRedeemCodeBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

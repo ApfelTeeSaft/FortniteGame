@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UVisualLoggerKismetLibrary();  // RVA 0x024F0C90 (consensus OuterFunc)
 
+class UVisualLoggerKismetLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUVisualLoggerKismetLibrary();
+	static void execEnableRecording(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLogBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLogLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLogSegment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLogText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRedirectVislog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0690 (end 0x024F06B2)
+// Original VA: 0x00000001424F0690 | File offset: 0x024EFC90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039CF310) | Matching: see analysis/functions-uht-natives.json
+void UVisualLoggerKismetLibrary::StaticRegisterNativesUVisualLoggerKismetLibrary()
+{
+	UClass* Class = UVisualLoggerKismetLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EnableRecording", &UVisualLoggerKismetLibrary::execEnableRecording },
+		{ "LogBox", &UVisualLoggerKismetLibrary::execLogBox },
+		{ "LogLocation", &UVisualLoggerKismetLibrary::execLogLocation },
+		{ "LogSegment", &UVisualLoggerKismetLibrary::execLogSegment },
+		{ "LogText", &UVisualLoggerKismetLibrary::execLogText },
+		{ "RedirectVislog", &UVisualLoggerKismetLibrary::execRedirectVislog },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UVisualLoggerKismetLibrary_EnableRecording_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UVisualLoggerKismetLibrary_RedirectVislog()
 	return ReturnFunction;
 }
 
-class UVisualLoggerKismetLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UVisualLoggerKismetLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

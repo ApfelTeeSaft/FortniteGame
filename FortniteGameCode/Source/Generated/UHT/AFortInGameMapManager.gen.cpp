@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortInGameMapManager();  // RVA 0x010067C0 (consensus OuterFunc)
 
+class AFortInGameMapManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortInGameMapManager_BroadcastExplorationEvents_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -85,11 +92,6 @@ UFunction* Z_Construct_UFunction_AFortInGameMapManager_PaintOnFog()
 	return ReturnFunction;
 }
 
-class AFortInGameMapManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortInGameMapManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

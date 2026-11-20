@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UBackgroundBlurSlot
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBackgroundBlurSlot();
+	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5A60 (end 0x01BE5A82)
+// Original VA: 0x0000000141BE5A60 | File offset: 0x01BE5060
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03690DA8) | Matching: see analysis/functions-uht-natives.json
+void UBackgroundBlurSlot::StaticRegisterNativesUBackgroundBlurSlot()
+{
+	UClass* Class = UBackgroundBlurSlot::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetHorizontalAlignment", &UBackgroundBlurSlot::execSetHorizontalAlignment },
+		{ "SetPadding", &UBackgroundBlurSlot::execSetPadding },
+		{ "SetVerticalAlignment", &UBackgroundBlurSlot::execSetVerticalAlignment },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UBackgroundBlurSlot_SetHorizontalAlignment: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UBackgroundBlurSlot_SetPadding: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,51 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortUIManagerWidget();  // RVA 0x0290AA00 (consensus OuterFunc)
 
+class UFortUIManagerWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortUIManagerWidget();
+	static void exec_BPGetCurrentUIState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateUIStateTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentUIStateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNavigationManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUIManagerWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsStateContentDisplayed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execKillConfirmationDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterStateTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReleaseNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStateContentDisplayed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowErrorDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterStateTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290A7A0 (end 0x0290A7C2)
+// Original VA: 0x000000014290A7A0 | File offset: 0x02909DA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D3D890) | Matching: see analysis/functions-uht-natives.json
+void UFortUIManagerWidget::StaticRegisterNativesUFortUIManagerWidget()
+{
+	UClass* Class = UFortUIManagerWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "_BPGetCurrentUIState", &UFortUIManagerWidget::exec_BPGetCurrentUIState },
+		{ "CreateNotification", &UFortUIManagerWidget::execCreateNotification },
+		{ "CreateUIStateTrigger", &UFortUIManagerWidget::execCreateUIStateTrigger },
+		{ "GetCurrentUIStateWidget", &UFortUIManagerWidget::execGetCurrentUIStateWidget },
+		{ "GetNavigationManager", &UFortUIManagerWidget::execGetNavigationManager },
+		{ "GetUIManagerWidget", &UFortUIManagerWidget::execGetUIManagerWidget },
+		{ "IsStateContentDisplayed", &UFortUIManagerWidget::execIsStateContentDisplayed },
+		{ "KillConfirmationDialog", &UFortUIManagerWidget::execKillConfirmationDialog },
+		{ "RegisterStateTrigger", &UFortUIManagerWidget::execRegisterStateTrigger },
+		{ "ReleaseNotification", &UFortUIManagerWidget::execReleaseNotification },
+		{ "SetStateContentDisplayed", &UFortUIManagerWidget::execSetStateContentDisplayed },
+		{ "ShowErrorDialog", &UFortUIManagerWidget::execShowErrorDialog },
+		{ "UnregisterStateTrigger", &UFortUIManagerWidget::execUnregisterStateTrigger },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortUIManagerWidget_OnBeginSpokenDialog__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -464,11 +509,6 @@ UFunction* Z_Construct_UFunction_UFortUIManagerWidget_UpdateStateWidgetContent()
 	return ReturnFunction;
 }
 
-class UFortUIManagerWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortUIManagerWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

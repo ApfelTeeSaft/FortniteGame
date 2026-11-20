@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel();  // RVA 0x028F55D0 (consensus OuterFunc)
 
+class UFortSkillTreeNodeDetailsPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSkillTreeNodeDetailsPanel();
+	static void execHasSkillTreeNodeToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSkillTreeNodeToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetNodeDisplayData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetNodeDisplayDataFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetNodeSquadAttributeData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetSkillTreeNodeState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4F30 (end 0x028F4F52)
+// Original VA: 0x00000001428F4F30 | File offset: 0x028F4530
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D13AA0) | Matching: see analysis/functions-uht-natives.json
+void UFortSkillTreeNodeDetailsPanel::StaticRegisterNativesUFortSkillTreeNodeDetailsPanel()
+{
+	UClass* Class = UFortSkillTreeNodeDetailsPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HasSkillTreeNodeToRepresent", &UFortSkillTreeNodeDetailsPanel::execHasSkillTreeNodeToRepresent },
+		{ "SetSkillTreeNodeToRepresent", &UFortSkillTreeNodeDetailsPanel::execSetSkillTreeNodeToRepresent },
+		{ "TryGetNodeDisplayData", &UFortSkillTreeNodeDetailsPanel::execTryGetNodeDisplayData },
+		{ "TryGetNodeDisplayDataFromID", &UFortSkillTreeNodeDetailsPanel::execTryGetNodeDisplayDataFromID },
+		{ "TryGetNodeSquadAttributeData", &UFortSkillTreeNodeDetailsPanel::execTryGetNodeSquadAttributeData },
+		{ "TryGetSkillTreeNodeState", &UFortSkillTreeNodeDetailsPanel::execTryGetSkillTreeNodeState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_HandleDifferentSkillTreeNodeToRepresentSetBP_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -164,11 +195,6 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeNodeDetailsPanel_TryGetSkillTreeN
 	return ReturnFunction;
 }
 
-class UFortSkillTreeNodeDetailsPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

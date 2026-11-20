@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortGameModeAthena();  // RVA 0x00FE4440 (consensus OuterFunc)
 
+class AFortGameModeAthena
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortGameModeAthena_OnAircraftEnteredDropZone_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -160,11 +167,6 @@ UFunction* Z_Construct_UFunction_AFortGameModeAthena_TrySupplyDrop()
 	return ReturnFunction;
 }
 
-class AFortGameModeAthena
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortGameModeAthena_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

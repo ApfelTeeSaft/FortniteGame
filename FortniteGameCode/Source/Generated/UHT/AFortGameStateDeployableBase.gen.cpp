@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortGameStateDeployableBase();  // RVA 0x00FEE690 (consensus OuterFunc)
 
+class AFortGameStateDeployableBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortGameStateDeployableBase_GetDeployableBaseUseType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -85,11 +92,6 @@ UFunction* Z_Construct_UFunction_AFortGameStateDeployableBase_SetGameDifficultyR
 	return ReturnFunction;
 }
 
-class AFortGameStateDeployableBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortGameStateDeployableBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

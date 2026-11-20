@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortUIStateWidget_Login();  // RVA 0x02911FD0 (consensus OuterFunc)
 
+class UFortUIStateWidget_Login
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortUIStateWidget_Login_ActivateWidgetOnFlowStack_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -416,11 +423,6 @@ UFunction* Z_Construct_UFunction_UFortUIStateWidget_Login_StartAutoLogin()
 	return ReturnFunction;
 }
 
-class UFortUIStateWidget_Login
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortUIStateWidget_Login_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

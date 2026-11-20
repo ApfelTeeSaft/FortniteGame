@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortUINavigationManager();  // RVA 0x02911D50 (consensus OuterFunc)
 
+class UFortUINavigationManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortUINavigationManager_AttemptMatchmakeForQuest_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -444,11 +451,6 @@ UFunction* Z_Construct_UFunction_UFortUINavigationManager_TryGetPendingNavigatio
 	return ReturnFunction;
 }
 
-class UFortUINavigationManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortUINavigationManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTierIndicator();  // RVA 0x02904C70 (consensus OuterFunc)
 
+class UFortTierIndicator
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortTierIndicator_ClearPreviewState_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -105,11 +112,6 @@ UFunction* Z_Construct_UFunction_UFortTierIndicator_SetPreviewState()
 	return ReturnFunction;
 }
 
-class UFortTierIndicator
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTierIndicator_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

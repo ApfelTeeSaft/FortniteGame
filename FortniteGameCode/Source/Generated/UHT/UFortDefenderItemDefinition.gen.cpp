@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortDefenderItemDefinition();  // RVA 0x00FD00E0 (consensus OuterFunc)
 
+class UFortDefenderItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortDefenderItemDefinition();
+	static void execGetDefenderSubtype(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDefenderSubtypeTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFAB0 (end 0x00FCFAD2)
+// Original VA: 0x0000000140FCFAB0 | File offset: 0x00FCF0B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032FFB80) | Matching: see analysis/functions-uht-natives.json
+void UFortDefenderItemDefinition::StaticRegisterNativesUFortDefenderItemDefinition()
+{
+	UClass* Class = UFortDefenderItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDefenderSubtype", &UFortDefenderItemDefinition::execGetDefenderSubtype },
+		{ "GetDefenderSubtypeTag", &UFortDefenderItemDefinition::execGetDefenderSubtypeTag },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDefenderItemDefinition_GetDefenderSubtype_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortDefenderItemDefinition_GetDefenderSubtypeT
 	return ReturnFunction;
 }
 
-class UFortDefenderItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortDefenderItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

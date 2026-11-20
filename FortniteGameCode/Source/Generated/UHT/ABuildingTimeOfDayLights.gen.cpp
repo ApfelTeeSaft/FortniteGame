@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingTimeOfDayLights();  // RVA 0x00F71EE0 (consensus OuterFunc)
 
+class ABuildingTimeOfDayLights
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesABuildingTimeOfDayLights();
+	static void execGetTimeOfDayBlueprintDefaultVariables(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71A60 (end 0x00F71A82)
+// Original VA: 0x0000000140F71A60 | File offset: 0x00F71060
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032801E8) | Matching: see analysis/functions-uht-natives.json
+void ABuildingTimeOfDayLights::StaticRegisterNativesABuildingTimeOfDayLights()
+{
+	UClass* Class = ABuildingTimeOfDayLights::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTimeOfDayBlueprintDefaultVariables", &ABuildingTimeOfDayLights::execGetTimeOfDayBlueprintDefaultVariables },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingTimeOfDayLights_GetTimeOfDayBlueprintDefaultVariables_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_ABuildingTimeOfDayLights_GetTimeOfDayBlueprintD
 	return ReturnFunction;
 }
 
-class ABuildingTimeOfDayLights
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingTimeOfDayLights_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

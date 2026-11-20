@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortResultsTeleportScreenWidget();  // RVA 0x028ED4D0 (consensus OuterFunc)
 
+class UFortResultsTeleportScreenWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortResultsTeleportScreenWidget_OnExitTimePercentagePassedUpdated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -84,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortResultsTeleportScreenWidget_StartExitTimer
 	return ReturnFunction;
 }
 
-class UFortResultsTeleportScreenWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortResultsTeleportScreenWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

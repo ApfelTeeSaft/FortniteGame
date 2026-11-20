@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPickupEffect();  // RVA 0x010657D0 (consensus OuterFunc)
 
+class AFortPickupEffect
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortPickupEffect();
+	static void execApplyCosmeticOverridesToMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01064F30 (end 0x01064F52)
+// Original VA: 0x0000000141064F30 | File offset: 0x01064530
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033AD6D8) | Matching: see analysis/functions-uht-natives.json
+void AFortPickupEffect::StaticRegisterNativesAFortPickupEffect()
+{
+	UClass* Class = AFortPickupEffect::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyCosmeticOverridesToMaterial", &AFortPickupEffect::execApplyCosmeticOverridesToMaterial },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPickupEffect_ApplyCosmeticOverridesToMaterial_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -103,11 +124,6 @@ UFunction* Z_Construct_UFunction_AFortPickupEffect_OnTossed()
 	return ReturnFunction;
 }
 
-class AFortPickupEffect
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPickupEffect_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

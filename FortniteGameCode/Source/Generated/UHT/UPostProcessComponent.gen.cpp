@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UPostProcessComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUPostProcessComponent();
+	static void execAddOrUpdateBlendable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B77B0 (end 0x024B77D2)
+// Original VA: 0x00000001424B77B0 | File offset: 0x024B6DB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0398E158) | Matching: see analysis/functions-uht-natives.json
+void UPostProcessComponent::StaticRegisterNativesUPostProcessComponent()
+{
+	UClass* Class = UPostProcessComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddOrUpdateBlendable", &UPostProcessComponent::execAddOrUpdateBlendable },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UPostProcessComponent_AddOrUpdateBlendable: FFunctionParams record not identified; creator not emitted.

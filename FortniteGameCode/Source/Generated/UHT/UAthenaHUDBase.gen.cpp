@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaHUDBase();  // RVA 0x0287F410 (consensus OuterFunc)
 
+class UAthenaHUDBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAthenaHUDBase_OnHUDScaleChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +53,6 @@ UFunction* Z_Construct_UFunction_UAthenaHUDBase_ViewModelChanged()
 	return ReturnFunction;
 }
 
-class UAthenaHUDBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaHUDBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

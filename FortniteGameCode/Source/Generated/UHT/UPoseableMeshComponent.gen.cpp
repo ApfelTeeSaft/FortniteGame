@@ -6,6 +6,45 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPoseableMeshComponent();  // RVA 0x024B7F60 (consensus OuterFunc)
 
+class UPoseableMeshComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUPoseableMeshComponent();
+	static void execCopyPoseFromSkeletalComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBoneLocationByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBoneRotationByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBoneScaleByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBoneTransformByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetBoneTransformByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBoneLocationByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBoneRotationByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBoneScaleByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBoneTransformByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7780 (end 0x024B77A2)
+// Original VA: 0x00000001424B7780 | File offset: 0x024B6D80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0398D9C0) | Matching: see analysis/functions-uht-natives.json
+void UPoseableMeshComponent::StaticRegisterNativesUPoseableMeshComponent()
+{
+	UClass* Class = UPoseableMeshComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CopyPoseFromSkeletalComponent", &UPoseableMeshComponent::execCopyPoseFromSkeletalComponent },
+		{ "GetBoneLocationByName", &UPoseableMeshComponent::execGetBoneLocationByName },
+		{ "GetBoneRotationByName", &UPoseableMeshComponent::execGetBoneRotationByName },
+		{ "GetBoneScaleByName", &UPoseableMeshComponent::execGetBoneScaleByName },
+		{ "GetBoneTransformByName", &UPoseableMeshComponent::execGetBoneTransformByName },
+		{ "ResetBoneTransformByName", &UPoseableMeshComponent::execResetBoneTransformByName },
+		{ "SetBoneLocationByName", &UPoseableMeshComponent::execSetBoneLocationByName },
+		{ "SetBoneRotationByName", &UPoseableMeshComponent::execSetBoneRotationByName },
+		{ "SetBoneScaleByName", &UPoseableMeshComponent::execSetBoneScaleByName },
+		{ "SetBoneTransformByName", &UPoseableMeshComponent::execSetBoneTransformByName },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPoseableMeshComponent_CopyPoseFromSkeletalComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -206,11 +245,6 @@ UFunction* Z_Construct_UFunction_UPoseableMeshComponent_SetBoneTransformByName()
 	return ReturnFunction;
 }
 
-class UPoseableMeshComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPoseableMeshComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

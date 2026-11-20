@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingCapturePointActor();  // RVA 0x00F66440 (consensus OuterFunc)
 
+class ABuildingCapturePointActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ABuildingCapturePointActor_GetCaptureState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -222,11 +229,6 @@ UFunction* Z_Construct_UFunction_ABuildingCapturePointActor_SetActivatedState()
 	return ReturnFunction;
 }
 
-class ABuildingCapturePointActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingCapturePointActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

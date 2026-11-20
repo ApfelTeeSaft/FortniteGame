@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortRedirectToEpicAccountWidget();  // RVA 0x028ED440 (consensus OuterFunc)
 
+class UFortRedirectToEpicAccountWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortRedirectToEpicAccountWidget();
+	static void execHandleBackSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleEpicClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleNewAccountSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLoginType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECDA0 (end 0x028ECDC2)
+// Original VA: 0x00000001428ECDA0 | File offset: 0x028EC3A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D0A270) | Matching: see analysis/functions-uht-natives.json
+void UFortRedirectToEpicAccountWidget::StaticRegisterNativesUFortRedirectToEpicAccountWidget()
+{
+	UClass* Class = UFortRedirectToEpicAccountWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleBackSelected", &UFortRedirectToEpicAccountWidget::execHandleBackSelected },
+		{ "HandleEpicClicked", &UFortRedirectToEpicAccountWidget::execHandleEpicClicked },
+		{ "HandleNewAccountSelected", &UFortRedirectToEpicAccountWidget::execHandleNewAccountSelected },
+		{ "SetLoginType", &UFortRedirectToEpicAccountWidget::execSetLoginType },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_HandleBackSelected_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +133,6 @@ UFunction* Z_Construct_UFunction_UFortRedirectToEpicAccountWidget_UpdateNewAccou
 	return ReturnFunction;
 }
 
-class UFortRedirectToEpicAccountWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortRedirectToEpicAccountWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

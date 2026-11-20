@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonTextBlock();  // RVA 0x002CA5F0 (consensus OuterFunc)
 
+class UCommonTextBlock
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCommonTextBlock_ResetScrollState_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -105,11 +112,6 @@ UFunction* Z_Construct_UFunction_UCommonTextBlock_SetWrapTextWidth()
 	return ReturnFunction;
 }
 
-class UCommonTextBlock
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonTextBlock_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

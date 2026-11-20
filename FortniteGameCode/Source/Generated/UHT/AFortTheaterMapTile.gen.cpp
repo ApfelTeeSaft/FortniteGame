@@ -6,6 +6,59 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortTheaterMapTile();  // RVA 0x010BE150 (consensus OuterFunc)
 
+class AFortTheaterMapTile
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortTheaterMapTile();
+	static void execDoesTileAllowQuickplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionAlertCategoryName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionAlertVisualTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetZoneDifficulty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasValidMissionData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMissionAlertTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTileHidden(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTileLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTilePlayable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTileQuestRecommended(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTileSelectable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTileValidForMarkedQuest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnDeselectWrapper(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMouseOverBegin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMouseOverEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSelectWrapper(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnTileClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD5B0 (end 0x010BD5D2)
+// Original VA: 0x00000001410BD5B0 | File offset: 0x010BCBB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0340A010) | Matching: see analysis/functions-uht-natives.json
+void AFortTheaterMapTile::StaticRegisterNativesAFortTheaterMapTile()
+{
+	UClass* Class = AFortTheaterMapTile::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DoesTileAllowQuickplay", &AFortTheaterMapTile::execDoesTileAllowQuickplay },
+		{ "GetMissionAlertCategoryName", &AFortTheaterMapTile::execGetMissionAlertCategoryName },
+		{ "GetMissionAlertVisualTags", &AFortTheaterMapTile::execGetMissionAlertVisualTags },
+		{ "GetZoneDifficulty", &AFortTheaterMapTile::execGetZoneDifficulty },
+		{ "HasValidMissionData", &AFortTheaterMapTile::execHasValidMissionData },
+		{ "IsMissionAlertTile", &AFortTheaterMapTile::execIsMissionAlertTile },
+		{ "IsTileHidden", &AFortTheaterMapTile::execIsTileHidden },
+		{ "IsTileLocked", &AFortTheaterMapTile::execIsTileLocked },
+		{ "IsTilePlayable", &AFortTheaterMapTile::execIsTilePlayable },
+		{ "IsTileQuestRecommended", &AFortTheaterMapTile::execIsTileQuestRecommended },
+		{ "IsTileSelectable", &AFortTheaterMapTile::execIsTileSelectable },
+		{ "IsTileValidForMarkedQuest", &AFortTheaterMapTile::execIsTileValidForMarkedQuest },
+		{ "OnDeselectWrapper", &AFortTheaterMapTile::execOnDeselectWrapper },
+		{ "OnMouseOverBegin", &AFortTheaterMapTile::execOnMouseOverBegin },
+		{ "OnMouseOverEnd", &AFortTheaterMapTile::execOnMouseOverEnd },
+		{ "OnSelectWrapper", &AFortTheaterMapTile::execOnSelectWrapper },
+		{ "OnTileClicked", &AFortTheaterMapTile::execOnTileClicked },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortTheaterMapTile_DoesTileAllowQuickplay_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -555,11 +608,6 @@ UFunction* Z_Construct_UFunction_AFortTheaterMapTile_OnTileClicked()
 	return ReturnFunction;
 }
 
-class AFortTheaterMapTile
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortTheaterMapTile_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

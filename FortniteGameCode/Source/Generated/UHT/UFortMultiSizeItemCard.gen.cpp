@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMultiSizeItemCard();  // RVA 0x028DE420 (consensus OuterFunc)
 
+class UFortMultiSizeItemCard
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortMultiSizeItemCard_GetCardSize_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +153,6 @@ UFunction* Z_Construct_UFunction_UFortMultiSizeItemCard_ShouldUseNewItemCards()
 	return ReturnFunction;
 }
 
-class UFortMultiSizeItemCard
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMultiSizeItemCard_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USpringArmComponent();  // RVA 0x024DD7F0 (consensus OuterFunc)
 
+class USpringArmComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSpringArmComponent();
+	static void execGetTargetRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUnfixedCameraPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsCollisionFixApplied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD5B0 (end 0x024DD5D2)
+// Original VA: 0x00000001424DD5B0 | File offset: 0x024DCBB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039BE368) | Matching: see analysis/functions-uht-natives.json
+void USpringArmComponent::StaticRegisterNativesUSpringArmComponent()
+{
+	UClass* Class = USpringArmComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTargetRotation", &USpringArmComponent::execGetTargetRotation },
+		{ "GetUnfixedCameraPosition", &USpringArmComponent::execGetUnfixedCameraPosition },
+		{ "IsCollisionFixApplied", &USpringArmComponent::execIsCollisionFixApplied },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USpringArmComponent_GetTargetRotation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_USpringArmComponent_IsCollisionFixApplied()
 	return ReturnFunction;
 }
 
-class USpringArmComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USpringArmComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

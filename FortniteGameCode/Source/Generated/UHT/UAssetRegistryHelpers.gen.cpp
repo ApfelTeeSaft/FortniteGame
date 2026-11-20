@@ -6,6 +6,51 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAssetRegistryHelpers();  // RVA 0x01C80000 (consensus OuterFunc)
 
+class UAssetRegistryHelpers
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAssetRegistryHelpers();
+	static void execCreateAssetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAssetRegistry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetExportTextName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFullName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTagValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAssetLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsRedirector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFilterTagsAndValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execToSoftObjectPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C7FD20 (end 0x01C7FD42)
+// Original VA: 0x0000000141C7FD20 | File offset: 0x01C7F320
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036B85A0) | Matching: see analysis/functions-uht-natives.json
+void UAssetRegistryHelpers::StaticRegisterNativesUAssetRegistryHelpers()
+{
+	UClass* Class = UAssetRegistryHelpers::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateAssetData", &UAssetRegistryHelpers::execCreateAssetData },
+		{ "GetAsset", &UAssetRegistryHelpers::execGetAsset },
+		{ "GetAssetRegistry", &UAssetRegistryHelpers::execGetAssetRegistry },
+		{ "GetClass", &UAssetRegistryHelpers::execGetClass },
+		{ "GetExportTextName", &UAssetRegistryHelpers::execGetExportTextName },
+		{ "GetFullName", &UAssetRegistryHelpers::execGetFullName },
+		{ "GetTagValue", &UAssetRegistryHelpers::execGetTagValue },
+		{ "IsAssetLoaded", &UAssetRegistryHelpers::execIsAssetLoaded },
+		{ "IsRedirector", &UAssetRegistryHelpers::execIsRedirector },
+		{ "IsUAsset", &UAssetRegistryHelpers::execIsUAsset },
+		{ "IsValid", &UAssetRegistryHelpers::execIsValid },
+		{ "SetFilterTagsAndValues", &UAssetRegistryHelpers::execSetFilterTagsAndValues },
+		{ "ToSoftObjectPath", &UAssetRegistryHelpers::execToSoftObjectPath },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAssetRegistryHelpers_CreateAssetData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -266,11 +311,6 @@ UFunction* Z_Construct_UFunction_UAssetRegistryHelpers_ToSoftObjectPath()
 	return ReturnFunction;
 }
 
-class UAssetRegistryHelpers
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAssetRegistryHelpers_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAsyncActionLoadPrimaryAssetClassList();  // RVA 0x023DB1C0 (consensus OuterFunc)
 
+class UAsyncActionLoadPrimaryAssetClassList
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAsyncActionLoadPrimaryAssetClassList();
+	static void execAsyncLoadPrimaryAssetClassList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA590 (end 0x023DA5B2)
+// Original VA: 0x00000001423DA590 | File offset: 0x023D9B90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038AAF18) | Matching: see analysis/functions-uht-natives.json
+void UAsyncActionLoadPrimaryAssetClassList::StaticRegisterNativesUAsyncActionLoadPrimaryAssetClassList()
+{
+	UClass* Class = UAsyncActionLoadPrimaryAssetClassList::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AsyncLoadPrimaryAssetClassList", &UAsyncActionLoadPrimaryAssetClassList::execAsyncLoadPrimaryAssetClassList },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAsyncActionLoadPrimaryAssetClassList_AsyncLoadPrimaryAssetClassList_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAsyncActionLoadPrimaryAssetClassList_AsyncLoad
 	return ReturnFunction;
 }
 
-class UAsyncActionLoadPrimaryAssetClassList
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAsyncActionLoadPrimaryAssetClassList_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortUIStateWidget_NUI();  // RVA 0x02912000 (consensus OuterFunc)
 
+class UFortUIStateWidget_NUI
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortUIStateWidget_NUI_OnEnterState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -224,11 +231,6 @@ UFunction* Z_Construct_UFunction_UFortUIStateWidget_NUI_SetFrontEndVisibility()
 	return ReturnFunction;
 }
 
-class UFortUIStateWidget_NUI
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortUIStateWidget_NUI_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

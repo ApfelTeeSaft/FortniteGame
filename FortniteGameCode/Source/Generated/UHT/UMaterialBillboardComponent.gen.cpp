@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMaterialBillboardComponent();  // RVA 0x02478D50 (consensus OuterFunc)
 
+class UMaterialBillboardComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUMaterialBillboardComponent();
+	static void execAddElement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetElements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02478750 (end 0x02478772)
+// Original VA: 0x0000000142478750 | File offset: 0x02477D50
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03936168) | Matching: see analysis/functions-uht-natives.json
+void UMaterialBillboardComponent::StaticRegisterNativesUMaterialBillboardComponent()
+{
+	UClass* Class = UMaterialBillboardComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddElement", &UMaterialBillboardComponent::execAddElement },
+		{ "SetElements", &UMaterialBillboardComponent::execSetElements },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMaterialBillboardComponent_AddElement_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UMaterialBillboardComponent_SetElements()
 	return ReturnFunction;
 }
 
-class UMaterialBillboardComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMaterialBillboardComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

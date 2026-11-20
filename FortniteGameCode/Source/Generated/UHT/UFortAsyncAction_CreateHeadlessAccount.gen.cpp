@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_CreateHeadlessAccount();  // RVA 0x02887860 (consensus OuterFunc)
 
+class UFortAsyncAction_CreateHeadlessAccount
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_CreateHeadlessAccount();
+	static void execCreateHeadlessAccount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886EA0 (end 0x02886EC2)
+// Original VA: 0x0000000142886EA0 | File offset: 0x028864A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C604C8) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_CreateHeadlessAccount::StaticRegisterNativesUFortAsyncAction_CreateHeadlessAccount()
+{
+	UClass* Class = UFortAsyncAction_CreateHeadlessAccount::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateHeadlessAccount", &UFortAsyncAction_CreateHeadlessAccount::execCreateHeadlessAccount },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_CreateHeadlessAccount_CreateHeadlessAccount_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_CreateHeadlessAccount_CreateHe
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_CreateHeadlessAccount
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_CreateHeadlessAccount_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

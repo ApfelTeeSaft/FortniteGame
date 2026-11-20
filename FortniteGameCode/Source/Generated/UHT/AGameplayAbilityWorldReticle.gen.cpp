@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AGameplayAbilityWorldReticle();  // RVA 0x0055BE60 (consensus OuterFunc)
 
+class AGameplayAbilityWorldReticle
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAGameplayAbilityWorldReticle();
+	static void execFaceTowardSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B020 (end 0x0055B042)
+// Original VA: 0x000000014055B020 | File offset: 0x0055A620
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F3D2B8) | Matching: see analysis/functions-uht-natives.json
+void AGameplayAbilityWorldReticle::StaticRegisterNativesAGameplayAbilityWorldReticle()
+{
+	UClass* Class = AGameplayAbilityWorldReticle::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FaceTowardSource", &AGameplayAbilityWorldReticle::execFaceTowardSource },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AGameplayAbilityWorldReticle_FaceTowardSource_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -125,11 +146,6 @@ UFunction* Z_Construct_UFunction_AGameplayAbilityWorldReticle_SetReticleMaterial
 	return ReturnFunction;
 }
 
-class AGameplayAbilityWorldReticle
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AGameplayAbilityWorldReticle_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

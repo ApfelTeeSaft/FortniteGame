@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortWorldItemDefinition();  // RVA 0x010DC9E0 (consensus OuterFunc)
 
+class UFortWorldItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortWorldItemDefinition();
+	static void execCanBeDisassembled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAmmoWorldItemDefinition_BP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDPSAtLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFabricationValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC280 (end 0x010DC2A2)
+// Original VA: 0x00000001410DC280 | File offset: 0x010DB880
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03436F90) | Matching: see analysis/functions-uht-natives.json
+void UFortWorldItemDefinition::StaticRegisterNativesUFortWorldItemDefinition()
+{
+	UClass* Class = UFortWorldItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanBeDisassembled", &UFortWorldItemDefinition::execCanBeDisassembled },
+		{ "GetAmmoWorldItemDefinition_BP", &UFortWorldItemDefinition::execGetAmmoWorldItemDefinition_BP },
+		{ "GetDPSAtLevel", &UFortWorldItemDefinition::execGetDPSAtLevel },
+		{ "GetFabricationValue", &UFortWorldItemDefinition::execGetFabricationValue },
+		{ "GetMaxDurability", &UFortWorldItemDefinition::execGetMaxDurability },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortWorldItemDefinition_CanBeDisassembled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UFortWorldItemDefinition_GetMaxDurability()
 	return ReturnFunction;
 }
 
-class UFortWorldItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortWorldItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

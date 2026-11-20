@@ -6,6 +6,73 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBlackboardComponent();  // RVA 0x01D231D0 (consensus OuterFunc)
 
+class UBlackboardComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBlackboardComponent();
+	static void execClearValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocationFromEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRotationFromEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValueAsBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValueAsClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValueAsEnum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValueAsFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValueAsInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValueAsName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValueAsObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValueAsRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValueAsString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetValueAsVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsVectorValueSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetValueAsBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetValueAsClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetValueAsEnum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetValueAsFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetValueAsInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetValueAsName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetValueAsObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetValueAsRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetValueAsString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetValueAsVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D229E0 (end 0x01D22A02)
+// Original VA: 0x0000000141D229E0 | File offset: 0x01D21FE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F9DA0) | Matching: see analysis/functions-uht-natives.json
+void UBlackboardComponent::StaticRegisterNativesUBlackboardComponent()
+{
+	UClass* Class = UBlackboardComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearValue", &UBlackboardComponent::execClearValue },
+		{ "GetLocationFromEntry", &UBlackboardComponent::execGetLocationFromEntry },
+		{ "GetRotationFromEntry", &UBlackboardComponent::execGetRotationFromEntry },
+		{ "GetValueAsBool", &UBlackboardComponent::execGetValueAsBool },
+		{ "GetValueAsClass", &UBlackboardComponent::execGetValueAsClass },
+		{ "GetValueAsEnum", &UBlackboardComponent::execGetValueAsEnum },
+		{ "GetValueAsFloat", &UBlackboardComponent::execGetValueAsFloat },
+		{ "GetValueAsInt", &UBlackboardComponent::execGetValueAsInt },
+		{ "GetValueAsName", &UBlackboardComponent::execGetValueAsName },
+		{ "GetValueAsObject", &UBlackboardComponent::execGetValueAsObject },
+		{ "GetValueAsRotator", &UBlackboardComponent::execGetValueAsRotator },
+		{ "GetValueAsString", &UBlackboardComponent::execGetValueAsString },
+		{ "GetValueAsVector", &UBlackboardComponent::execGetValueAsVector },
+		{ "IsVectorValueSet", &UBlackboardComponent::execIsVectorValueSet },
+		{ "SetValueAsBool", &UBlackboardComponent::execSetValueAsBool },
+		{ "SetValueAsClass", &UBlackboardComponent::execSetValueAsClass },
+		{ "SetValueAsEnum", &UBlackboardComponent::execSetValueAsEnum },
+		{ "SetValueAsFloat", &UBlackboardComponent::execSetValueAsFloat },
+		{ "SetValueAsInt", &UBlackboardComponent::execSetValueAsInt },
+		{ "SetValueAsName", &UBlackboardComponent::execSetValueAsName },
+		{ "SetValueAsObject", &UBlackboardComponent::execSetValueAsObject },
+		{ "SetValueAsRotator", &UBlackboardComponent::execSetValueAsRotator },
+		{ "SetValueAsString", &UBlackboardComponent::execSetValueAsString },
+		{ "SetValueAsVector", &UBlackboardComponent::execSetValueAsVector },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBlackboardComponent_ClearValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -486,11 +553,6 @@ UFunction* Z_Construct_UFunction_UBlackboardComponent_SetValueAsVector()
 	return ReturnFunction;
 }
 
-class UBlackboardComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBlackboardComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,85 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USkinnedMeshComponent();  // RVA 0x024D5130 (consensus OuterFunc)
 
+class USkinnedMeshComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSkinnedMeshComponent();
+	static void execBoneIsChildOf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearSkinWeightOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearVertexColorOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindClosestBone_K2(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBoneIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBoneName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumBones(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumLODs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetParentBone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRefPosePosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSocketBoneName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHideBoneByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBoneHiddenByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMaterialSectionShown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCapsuleIndirectShadowMinVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCastCapsuleDirectShadow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCastCapsuleIndirectShadow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetForcedLOD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMasterPoseComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMinLOD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPhysicsAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRenderStatic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSkeletalMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSkinWeightOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVertexColorOverride_LinearColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowAllMaterialSections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowMaterialSection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTransformFromBoneSpace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTransformToBoneSpace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnHideBoneByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D45F0 (end 0x024D4612)
+// Original VA: 0x00000001424D45F0 | File offset: 0x024D3BF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039AE850) | Matching: see analysis/functions-uht-natives.json
+void USkinnedMeshComponent::StaticRegisterNativesUSkinnedMeshComponent()
+{
+	UClass* Class = USkinnedMeshComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BoneIsChildOf", &USkinnedMeshComponent::execBoneIsChildOf },
+		{ "ClearSkinWeightOverride", &USkinnedMeshComponent::execClearSkinWeightOverride },
+		{ "ClearVertexColorOverride", &USkinnedMeshComponent::execClearVertexColorOverride },
+		{ "FindClosestBone_K2", &USkinnedMeshComponent::execFindClosestBone_K2 },
+		{ "GetBoneIndex", &USkinnedMeshComponent::execGetBoneIndex },
+		{ "GetBoneName", &USkinnedMeshComponent::execGetBoneName },
+		{ "GetNumBones", &USkinnedMeshComponent::execGetNumBones },
+		{ "GetNumLODs", &USkinnedMeshComponent::execGetNumLODs },
+		{ "GetParentBone", &USkinnedMeshComponent::execGetParentBone },
+		{ "GetRefPosePosition", &USkinnedMeshComponent::execGetRefPosePosition },
+		{ "GetSocketBoneName", &USkinnedMeshComponent::execGetSocketBoneName },
+		{ "HideBoneByName", &USkinnedMeshComponent::execHideBoneByName },
+		{ "IsBoneHiddenByName", &USkinnedMeshComponent::execIsBoneHiddenByName },
+		{ "IsMaterialSectionShown", &USkinnedMeshComponent::execIsMaterialSectionShown },
+		{ "SetCapsuleIndirectShadowMinVisibility", &USkinnedMeshComponent::execSetCapsuleIndirectShadowMinVisibility },
+		{ "SetCastCapsuleDirectShadow", &USkinnedMeshComponent::execSetCastCapsuleDirectShadow },
+		{ "SetCastCapsuleIndirectShadow", &USkinnedMeshComponent::execSetCastCapsuleIndirectShadow },
+		{ "SetForcedLOD", &USkinnedMeshComponent::execSetForcedLOD },
+		{ "SetMasterPoseComponent", &USkinnedMeshComponent::execSetMasterPoseComponent },
+		{ "SetMinLOD", &USkinnedMeshComponent::execSetMinLOD },
+		{ "SetPhysicsAsset", &USkinnedMeshComponent::execSetPhysicsAsset },
+		{ "SetRenderStatic", &USkinnedMeshComponent::execSetRenderStatic },
+		{ "SetSkeletalMesh", &USkinnedMeshComponent::execSetSkeletalMesh },
+		{ "SetSkinWeightOverride", &USkinnedMeshComponent::execSetSkinWeightOverride },
+		{ "SetVertexColorOverride_LinearColor", &USkinnedMeshComponent::execSetVertexColorOverride_LinearColor },
+		{ "ShowAllMaterialSections", &USkinnedMeshComponent::execShowAllMaterialSections },
+		{ "ShowMaterialSection", &USkinnedMeshComponent::execShowMaterialSection },
+		{ "TransformFromBoneSpace", &USkinnedMeshComponent::execTransformFromBoneSpace },
+		{ "TransformToBoneSpace", &USkinnedMeshComponent::execTransformToBoneSpace },
+		{ "UnHideBoneByName", &USkinnedMeshComponent::execUnHideBoneByName },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USkinnedMeshComponent_BoneIsChildOf_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -606,11 +685,6 @@ UFunction* Z_Construct_UFunction_USkinnedMeshComponent_UnHideBoneByName()
 	return ReturnFunction;
 }
 
-class USkinnedMeshComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USkinnedMeshComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

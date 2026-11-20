@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USubtitleDisplay();  // RVA 0x00781740 (consensus OuterFunc)
 
+class USubtitleDisplay
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSubtitleDisplay();
+	static void execHasSubtitles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x007816E0 (end 0x00781702)
+// Original VA: 0x00000001407816E0 | File offset: 0x00780CE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02FBB658) | Matching: see analysis/functions-uht-natives.json
+void USubtitleDisplay::StaticRegisterNativesUSubtitleDisplay()
+{
+	UClass* Class = USubtitleDisplay::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HasSubtitles", &USubtitleDisplay::execHasSubtitles },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USubtitleDisplay_HasSubtitles_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_USubtitleDisplay_HasSubtitles()
 	return ReturnFunction;
 }
 
-class USubtitleDisplay
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USubtitleDisplay_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitVelocityChange();  // RVA 0x0054D880 (consensus OuterFunc)
 
+class UAbilityTask_WaitVelocityChange
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitVelocityChange();
+	static void execCreateWaitVelocityChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054D0E0 (end 0x0054D102)
+// Original VA: 0x000000014054D0E0 | File offset: 0x0054C6E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F33658) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitVelocityChange::StaticRegisterNativesUAbilityTask_WaitVelocityChange()
+{
+	UClass* Class = UAbilityTask_WaitVelocityChange::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateWaitVelocityChange", &UAbilityTask_WaitVelocityChange::execCreateWaitVelocityChange },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitVelocityChange_CreateWaitVelocityChange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitVelocityChange_CreateWaitVeloc
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitVelocityChange
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitVelocityChange_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

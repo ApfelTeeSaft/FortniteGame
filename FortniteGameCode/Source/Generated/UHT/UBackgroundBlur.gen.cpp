@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBackgroundBlur();  // RVA 0x01BE5F20 (consensus OuterFunc)
 
+class UBackgroundBlur
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBackgroundBlur();
+	static void execSetApplyAlphaToBlur(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlurRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlurStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLowQualityFallbackBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5A30 (end 0x01BE5A52)
+// Original VA: 0x0000000141BE5A30 | File offset: 0x01BE5030
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03690BD0) | Matching: see analysis/functions-uht-natives.json
+void UBackgroundBlur::StaticRegisterNativesUBackgroundBlur()
+{
+	UClass* Class = UBackgroundBlur::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetApplyAlphaToBlur", &UBackgroundBlur::execSetApplyAlphaToBlur },
+		{ "SetBlurRadius", &UBackgroundBlur::execSetBlurRadius },
+		{ "SetBlurStrength", &UBackgroundBlur::execSetBlurStrength },
+		{ "SetHorizontalAlignment", &UBackgroundBlur::execSetHorizontalAlignment },
+		{ "SetLowQualityFallbackBrush", &UBackgroundBlur::execSetLowQualityFallbackBrush },
+		{ "SetPadding", &UBackgroundBlur::execSetPadding },
+		{ "SetVerticalAlignment", &UBackgroundBlur::execSetVerticalAlignment },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBackgroundBlur_SetApplyAlphaToBlur_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +179,6 @@ UFunction* Z_Construct_UFunction_UBackgroundBlur_SetVerticalAlignment()
 	return ReturnFunction;
 }
 
-class UBackgroundBlur
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBackgroundBlur_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

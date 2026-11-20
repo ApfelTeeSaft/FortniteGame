@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget();  // RVA 0x02894810 (consensus OuterFunc)
 
+class UFortCollectionBookProgressionRewardsModalWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCollectionBookProgressionRewardsModalWidget();
+	static void execOnInputMethodChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLevelProgressionSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSelectedButtonChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894370 (end 0x02894392)
+// Original VA: 0x0000000142894370 | File offset: 0x02893970
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C76B08) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookProgressionRewardsModalWidget::StaticRegisterNativesUFortCollectionBookProgressionRewardsModalWidget()
+{
+	UClass* Class = UFortCollectionBookProgressionRewardsModalWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnInputMethodChanged", &UFortCollectionBookProgressionRewardsModalWidget::execOnInputMethodChanged },
+		{ "OnLevelProgressionSet", &UFortCollectionBookProgressionRewardsModalWidget::execOnLevelProgressionSet },
+		{ "OnSelectedButtonChanged", &UFortCollectionBookProgressionRewardsModalWidget::execOnSelectedButtonChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCollectionBookProgressionRewardsModalWidget_InspectItemBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +111,6 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressionRewardsModalWidge
 	return ReturnFunction;
 }
 
-class UFortCollectionBookProgressionRewardsModalWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortRuntimeOptions();  // RVA 0x0109DDE0 (consensus OuterFunc)
 
+class UFortRuntimeOptions
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UFortRuntimeOptions_OnHotfixApplied__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -85,11 +92,6 @@ UFunction* Z_Construct_UFunction_UFortRuntimeOptions_SetEnableMainMenuSocialButt
 	return ReturnFunction;
 }
 
-class UFortRuntimeOptions
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortRuntimeOptions_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

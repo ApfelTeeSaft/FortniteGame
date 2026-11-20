@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortNumericTextBlock();  // RVA 0x028DE560 (consensus OuterFunc)
 
+class UFortNumericTextBlock
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortNumericTextBlock_DirectlySet_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +93,6 @@ UFunction* Z_Construct_UFunction_UFortNumericTextBlock_IsInterpolatingNumber()
 	return ReturnFunction;
 }
 
-class UFortNumericTextBlock
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortNumericTextBlock_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

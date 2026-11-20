@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortVideoOptions();  // RVA 0x02918B90 (consensus OuterFunc)
 
+class UFortVideoOptions
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortVideoOptions_AntiAliasingQualityChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -665,11 +672,6 @@ UFunction* Z_Construct_UFunction_UFortVideoOptions_WindowModeChanged()
 	return ReturnFunction;
 }
 
-class UFortVideoOptions
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortVideoOptions_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

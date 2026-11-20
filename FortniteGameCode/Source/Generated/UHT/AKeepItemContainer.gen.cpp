@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AKeepItemContainer();  // RVA 0x010E9C80 (consensus OuterFunc)
 
+class AKeepItemContainer
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AKeepItemContainer_GetContainerNameAndLevelKey_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -143,11 +150,6 @@ UFunction* Z_Construct_UFunction_AKeepItemContainer_RestoreLoot()
 	return ReturnFunction;
 }
 
-class AKeepItemContainer
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AKeepItemContainer_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPlayerInput();  // RVA 0x024B7E40 (consensus OuterFunc)
 
+class UPlayerInput
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UPlayerInput_ClearSmoothing_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -105,11 +112,6 @@ UFunction* Z_Construct_UFunction_UPlayerInput_SetMouseSensitivity()
 	return ReturnFunction;
 }
 
-class UPlayerInput
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPlayerInput_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USeasonPassLevelPanel();  // RVA 0x02918C80 (consensus OuterFunc)
 
+class USeasonPassLevelPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSeasonPassLevelPanel();
+	static void execGetLevelInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029188C0 (end 0x029188E2)
+// Original VA: 0x00000001429188C0 | File offset: 0x02917EC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D56B58) | Matching: see analysis/functions-uht-natives.json
+void USeasonPassLevelPanel::StaticRegisterNativesUSeasonPassLevelPanel()
+{
+	UClass* Class = USeasonPassLevelPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetLevelInfo", &USeasonPassLevelPanel::execGetLevelInfo },
+		{ "Setup", &USeasonPassLevelPanel::execSetup },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USeasonPassLevelPanel_GetLevelInfo_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -85,11 +108,6 @@ UFunction* Z_Construct_UFunction_USeasonPassLevelPanel_Setup()
 	return ReturnFunction;
 }
 
-class USeasonPassLevelPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USeasonPassLevelPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

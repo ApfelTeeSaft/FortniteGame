@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTask();  // RVA 0x01C9AAE0 (consensus OuterFunc)
 
+class UGameplayTask
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UGameplayTask_GenericGameplayTaskDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -63,11 +70,6 @@ UFunction* Z_Construct_UFunction_UGameplayTask_ReadyForActivation()
 	return ReturnFunction;
 }
 
-class UGameplayTask
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGameplayTask_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

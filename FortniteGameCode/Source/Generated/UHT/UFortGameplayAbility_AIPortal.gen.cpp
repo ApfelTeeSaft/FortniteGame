@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortGameplayAbility_AIPortal();  // RVA 0x00FE7B50 (consensus OuterFunc)
 
+class UFortGameplayAbility_AIPortal
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortGameplayAbility_AIPortal_GetPortalBuilding_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -105,11 +112,6 @@ UFunction* Z_Construct_UFunction_UFortGameplayAbility_AIPortal_ModifyCollisions(
 	return ReturnFunction;
 }
 
-class UFortGameplayAbility_AIPortal
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortGameplayAbility_AIPortal_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

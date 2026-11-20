@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHeroSupportPerkWidget();  // RVA 0x028B3D50 (consensus OuterFunc)
 
+class UFortHeroSupportPerkWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortHeroSupportPerkWidget();
+	static void execIsHeroInSupportSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPerkActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPerkEmpty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPerkHighlighted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPerkInCorrectSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPerkUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHeroToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSupportTypeToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3920 (end 0x028B3942)
+// Original VA: 0x00000001428B3920 | File offset: 0x028B2F20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CA6DD0) | Matching: see analysis/functions-uht-natives.json
+void UFortHeroSupportPerkWidget::StaticRegisterNativesUFortHeroSupportPerkWidget()
+{
+	UClass* Class = UFortHeroSupportPerkWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsHeroInSupportSlot", &UFortHeroSupportPerkWidget::execIsHeroInSupportSlot },
+		{ "IsPerkActive", &UFortHeroSupportPerkWidget::execIsPerkActive },
+		{ "IsPerkEmpty", &UFortHeroSupportPerkWidget::execIsPerkEmpty },
+		{ "IsPerkHighlighted", &UFortHeroSupportPerkWidget::execIsPerkHighlighted },
+		{ "IsPerkInCorrectSlot", &UFortHeroSupportPerkWidget::execIsPerkInCorrectSlot },
+		{ "IsPerkUnlocked", &UFortHeroSupportPerkWidget::execIsPerkUnlocked },
+		{ "SetHeroToRepresent", &UFortHeroSupportPerkWidget::execSetHeroToRepresent },
+		{ "SetState", &UFortHeroSupportPerkWidget::execSetState },
+		{ "SetSupportTypeToRepresent", &UFortHeroSupportPerkWidget::execSetSupportTypeToRepresent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHeroSupportPerkWidget_IsHeroInSupportSlot_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -243,11 +280,6 @@ UFunction* Z_Construct_UFunction_UFortHeroSupportPerkWidget_SetSupportTypeToRepr
 	return ReturnFunction;
 }
 
-class UFortHeroSupportPerkWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHeroSupportPerkWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

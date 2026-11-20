@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortLoginStatus();  // RVA 0x028D73B0 (consensus OuterFunc)
 
+class UFortLoginStatus
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortLoginStatus_SetTitleText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +53,6 @@ UFunction* Z_Construct_UFunction_UFortLoginStatus_UpdateLoginStatusText()
 	return ReturnFunction;
 }
 
-class UFortLoginStatus
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortLoginStatus_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

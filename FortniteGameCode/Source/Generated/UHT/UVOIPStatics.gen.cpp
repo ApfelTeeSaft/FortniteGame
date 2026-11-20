@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UVOIPStatics();  // RVA 0x024F0B70 (consensus OuterFunc)
 
+class UVOIPStatics
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUVOIPStatics();
+	static void execSetMicThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0600 (end 0x024F0622)
+// Original VA: 0x00000001424F0600 | File offset: 0x024EFC00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039CF9D8) | Matching: see analysis/functions-uht-natives.json
+void UVOIPStatics::StaticRegisterNativesUVOIPStatics()
+{
+	UClass* Class = UVOIPStatics::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetMicThreshold", &UVOIPStatics::execSetMicThreshold },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UVOIPStatics_SetMicThreshold_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UVOIPStatics_SetMicThreshold()
 	return ReturnFunction;
 }
 
-class UVOIPStatics
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UVOIPStatics_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

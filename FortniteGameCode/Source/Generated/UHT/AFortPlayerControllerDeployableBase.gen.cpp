@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerDeployableBase();  // RVA 0x01077670 (consensus OuterFunc)
 
+class AFortPlayerControllerDeployableBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortPlayerControllerDeployableBase_ClientOnHordeTierComplete_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -224,11 +231,6 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerDeployableBase_ServerMoveI
 	return ReturnFunction;
 }
 
-class AFortPlayerControllerDeployableBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPlayerControllerDeployableBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

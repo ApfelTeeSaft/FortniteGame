@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCircularThrobber();  // RVA 0x01BE6170 (consensus OuterFunc)
 
+class UCircularThrobber
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCircularThrobber();
+	static void execSetNumberOfPieces(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPeriod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5C70 (end 0x01BE5C92)
+// Original VA: 0x0000000141BE5C70 | File offset: 0x01BE5270
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03691E18) | Matching: see analysis/functions-uht-natives.json
+void UCircularThrobber::StaticRegisterNativesUCircularThrobber()
+{
+	UClass* Class = UCircularThrobber::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetNumberOfPieces", &UCircularThrobber::execSetNumberOfPieces },
+		{ "SetPeriod", &UCircularThrobber::execSetPeriod },
+		{ "SetRadius", &UCircularThrobber::execSetRadius },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCircularThrobber_SetNumberOfPieces_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UCircularThrobber_SetRadius()
 	return ReturnFunction;
 }
 
-class UCircularThrobber
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCircularThrobber_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction();  // RVA 0x01093190 (consensus OuterFunc)
 
+class AFortPvPMission_EnemyBaseDestruction
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortPvPMission_EnemyBaseDestruction();
+	static void execGetCornerstoneForTeam(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01092EC0 (end 0x01092EE2)
+// Original VA: 0x0000000141092EC0 | File offset: 0x010924C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033DCAE8) | Matching: see analysis/functions-uht-natives.json
+void AFortPvPMission_EnemyBaseDestruction::StaticRegisterNativesAFortPvPMission_EnemyBaseDestruction()
+{
+	UClass* Class = AFortPvPMission_EnemyBaseDestruction::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCornerstoneForTeam", &AFortPvPMission_EnemyBaseDestruction::execGetCornerstoneForTeam },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPvPMission_EnemyBaseDestruction_GetCornerstoneForTeam_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_AFortPvPMission_EnemyBaseDestruction_GetCorners
 	return ReturnFunction;
 }
 
-class AFortPvPMission_EnemyBaseDestruction
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

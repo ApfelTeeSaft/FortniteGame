@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPaperTerrainComponent();  // RVA 0x00667840 (consensus OuterFunc)
 
+class UPaperTerrainComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUPaperTerrainComponent();
+	static void execSetTerrainColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00666E50 (end 0x00666E72)
+// Original VA: 0x0000000140666E50 | File offset: 0x00666450
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F94B58) | Matching: see analysis/functions-uht-natives.json
+void UPaperTerrainComponent::StaticRegisterNativesUPaperTerrainComponent()
+{
+	UClass* Class = UPaperTerrainComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetTerrainColor", &UPaperTerrainComponent::execSetTerrainColor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPaperTerrainComponent_SetTerrainColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UPaperTerrainComponent_SetTerrainColor()
 	return ReturnFunction;
 }
 
-class UPaperTerrainComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPaperTerrainComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

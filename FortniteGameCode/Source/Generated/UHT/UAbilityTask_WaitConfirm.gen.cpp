@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitConfirm();  // RVA 0x0054D4D0 (consensus OuterFunc)
 
+class UAbilityTask_WaitConfirm
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitConfirm();
+	static void execOnConfirmCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitConfirm(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CD80 (end 0x0054CDA2)
+// Original VA: 0x000000014054CD80 | File offset: 0x0054C380
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F32488) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitConfirm::StaticRegisterNativesUAbilityTask_WaitConfirm()
+{
+	UClass* Class = UAbilityTask_WaitConfirm::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnConfirmCallback", &UAbilityTask_WaitConfirm::execOnConfirmCallback },
+		{ "WaitConfirm", &UAbilityTask_WaitConfirm::execWaitConfirm },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitConfirm_OnConfirmCallback_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitConfirm_WaitConfirm()
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitConfirm
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitConfirm_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

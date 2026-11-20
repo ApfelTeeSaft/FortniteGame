@@ -6,6 +6,47 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBorder();  // RVA 0x01BE5FB0 (consensus OuterFunc)
 
+class UBorder
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBorder();
+	static void execGetDynamicMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushFromAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushFromMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBrushFromTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetContentColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDesiredSizeScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5AC0 (end 0x01BE5AE2)
+// Original VA: 0x0000000141BE5AC0 | File offset: 0x01BE50C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03690F50) | Matching: see analysis/functions-uht-natives.json
+void UBorder::StaticRegisterNativesUBorder()
+{
+	UClass* Class = UBorder::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDynamicMaterial", &UBorder::execGetDynamicMaterial },
+		{ "SetBrush", &UBorder::execSetBrush },
+		{ "SetBrushColor", &UBorder::execSetBrushColor },
+		{ "SetBrushFromAsset", &UBorder::execSetBrushFromAsset },
+		{ "SetBrushFromMaterial", &UBorder::execSetBrushFromMaterial },
+		{ "SetBrushFromTexture", &UBorder::execSetBrushFromTexture },
+		{ "SetContentColorAndOpacity", &UBorder::execSetContentColorAndOpacity },
+		{ "SetDesiredSizeScale", &UBorder::execSetDesiredSizeScale },
+		{ "SetHorizontalAlignment", &UBorder::execSetHorizontalAlignment },
+		{ "SetPadding", &UBorder::execSetPadding },
+		{ "SetVerticalAlignment", &UBorder::execSetVerticalAlignment },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBorder_GetDynamicMaterial_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -226,11 +267,6 @@ UFunction* Z_Construct_UFunction_UBorder_SetVerticalAlignment()
 	return ReturnFunction;
 }
 
-class UBorder
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBorder_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

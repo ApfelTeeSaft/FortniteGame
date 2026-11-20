@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaPlayerInfoBase();  // RVA 0x02887340 (consensus OuterFunc)
 
+class UAthenaPlayerInfoBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaPlayerInfoBase();
+	static void execSetPlayerState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886BD0 (end 0x02886BF2)
+// Original VA: 0x0000000142886BD0 | File offset: 0x028861D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C5EC98) | Matching: see analysis/functions-uht-natives.json
+void UAthenaPlayerInfoBase::StaticRegisterNativesUAthenaPlayerInfoBase()
+{
+	UClass* Class = UAthenaPlayerInfoBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetPlayerState", &UAthenaPlayerInfoBase::execSetPlayerState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaPlayerInfoBase_BeingRevivedStateChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +207,6 @@ UFunction* Z_Construct_UFunction_UAthenaPlayerInfoBase_TalkingStateChanged()
 	return ReturnFunction;
 }
 
-class UAthenaPlayerInfoBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaPlayerInfoBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortAthenaSMVehicle();  // RVA 0x00F9ED90 (consensus OuterFunc)
 
+class AFortAthenaSMVehicle
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortAthenaSMVehicle_OnRep_MovementParams_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_AFortAthenaSMVehicle_ServerUpdateMoveParams()
 	return ReturnFunction;
 }
 
-class AFortAthenaSMVehicle
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortAthenaSMVehicle_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

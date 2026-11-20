@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortTeamInfo();  // RVA 0x010B38B0 (consensus OuterFunc)
 
+class AFortTeamInfo
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortTeamInfo();
+	static void execGetTeamExperience(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSpottedActorDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2D70 (end 0x010B2D92)
+// Original VA: 0x00000001410B2D70 | File offset: 0x010B2370
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03400560) | Matching: see analysis/functions-uht-natives.json
+void AFortTeamInfo::StaticRegisterNativesAFortTeamInfo()
+{
+	UClass* Class = AFortTeamInfo::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTeamExperience", &AFortTeamInfo::execGetTeamExperience },
+		{ "GetTeamLevel", &AFortTeamInfo::execGetTeamLevel },
+		{ "OnSpottedActorDied", &AFortTeamInfo::execOnSpottedActorDied },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortTeamInfo_GetTeamExperience_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_AFortTeamInfo_OnSpottedActorDied()
 	return ReturnFunction;
 }
 
-class AFortTeamInfo
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortTeamInfo_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

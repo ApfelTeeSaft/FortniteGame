@@ -6,6 +6,49 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCameraComponent();  // RVA 0x023EAA00 (consensus OuterFunc)
 
+class UCameraComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCameraComponent();
+	static void execAddOrUpdateBlendable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCameraView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveBlendable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAspectRatio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetConstraintAspectRatio(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFieldOfView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOrthoFarClipPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOrthoNearClipPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOrthoWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPostProcessBlendWeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetProjectionMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUseFieldOfViewForLOD(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9F40 (end 0x023E9F62)
+// Original VA: 0x00000001423E9F40 | File offset: 0x023E9540
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038B99F0) | Matching: see analysis/functions-uht-natives.json
+void UCameraComponent::StaticRegisterNativesUCameraComponent()
+{
+	UClass* Class = UCameraComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddOrUpdateBlendable", &UCameraComponent::execAddOrUpdateBlendable },
+		{ "GetCameraView", &UCameraComponent::execGetCameraView },
+		{ "RemoveBlendable", &UCameraComponent::execRemoveBlendable },
+		{ "SetAspectRatio", &UCameraComponent::execSetAspectRatio },
+		{ "SetConstraintAspectRatio", &UCameraComponent::execSetConstraintAspectRatio },
+		{ "SetFieldOfView", &UCameraComponent::execSetFieldOfView },
+		{ "SetOrthoFarClipPlane", &UCameraComponent::execSetOrthoFarClipPlane },
+		{ "SetOrthoNearClipPlane", &UCameraComponent::execSetOrthoNearClipPlane },
+		{ "SetOrthoWidth", &UCameraComponent::execSetOrthoWidth },
+		{ "SetPostProcessBlendWeight", &UCameraComponent::execSetPostProcessBlendWeight },
+		{ "SetProjectionMode", &UCameraComponent::execSetProjectionMode },
+		{ "SetUseFieldOfViewForLOD", &UCameraComponent::execSetUseFieldOfViewForLOD },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCameraComponent_AddOrUpdateBlendable_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -246,11 +289,6 @@ UFunction* Z_Construct_UFunction_UCameraComponent_SetUseFieldOfViewForLOD()
 	return ReturnFunction;
 }
 
-class UCameraComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCameraComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

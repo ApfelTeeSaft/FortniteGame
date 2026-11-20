@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAISense_Hearing();  // RVA 0x01D1BEB0 (consensus OuterFunc)
 
+class UAISense_Hearing
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAISense_Hearing();
+	static void execReportNoiseEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B290 (end 0x01D1B2B2)
+// Original VA: 0x0000000141D1B290 | File offset: 0x01D1A890
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F2A80) | Matching: see analysis/functions-uht-natives.json
+void UAISense_Hearing::StaticRegisterNativesUAISense_Hearing()
+{
+	UClass* Class = UAISense_Hearing::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ReportNoiseEvent", &UAISense_Hearing::execReportNoiseEvent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAISense_Hearing_ReportNoiseEvent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAISense_Hearing_ReportNoiseEvent()
 	return ReturnFunction;
 }
 
-class UAISense_Hearing
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAISense_Hearing_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

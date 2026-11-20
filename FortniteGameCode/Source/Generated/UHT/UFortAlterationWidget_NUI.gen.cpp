@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortAlterationWidget_NUI
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAlterationWidget_NUI();
+	static void execGetAlterationDefintion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRequiredLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAlterationHighlighted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAlterationUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C410 (end 0x0288C432)
+// Original VA: 0x000000014288C410 | File offset: 0x0288BA10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C69D70) | Matching: see analysis/functions-uht-natives.json
+void UFortAlterationWidget_NUI::StaticRegisterNativesUFortAlterationWidget_NUI()
+{
+	UClass* Class = UFortAlterationWidget_NUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAlterationDefintion", &UFortAlterationWidget_NUI::execGetAlterationDefintion },
+		{ "GetRequiredLevel", &UFortAlterationWidget_NUI::execGetRequiredLevel },
+		{ "IsAlterationHighlighted", &UFortAlterationWidget_NUI::execIsAlterationHighlighted },
+		{ "IsAlterationUnlocked", &UFortAlterationWidget_NUI::execIsAlterationUnlocked },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortAlterationWidget_NUI_GetAlterationDefintion: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortAlterationWidget_NUI_GetRequiredLevel: FFunctionParams record not identified; creator not emitted.

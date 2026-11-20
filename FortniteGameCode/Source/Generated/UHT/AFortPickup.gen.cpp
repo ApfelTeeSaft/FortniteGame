@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPickup();  // RVA 0x01065740 (consensus OuterFunc)
 
+class AFortPickup
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortPickup_GetDisplayName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -201,11 +208,6 @@ UFunction* Z_Construct_UFunction_AFortPickup_TossPickup()
 	return ReturnFunction;
 }
 
-class AFortPickup
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPickup_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

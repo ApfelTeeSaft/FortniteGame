@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMaterialInterface();  // RVA 0x024869B0 (consensus OuterFunc)
 
+class UMaterialInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUMaterialInterface();
+	static void execGetBaseMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPhysicalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetForceMipLevelsToBeResident(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02485F40 (end 0x02485F62)
+// Original VA: 0x0000000142485F40 | File offset: 0x02485540
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0394DBF0) | Matching: see analysis/functions-uht-natives.json
+void UMaterialInterface::StaticRegisterNativesUMaterialInterface()
+{
+	UClass* Class = UMaterialInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBaseMaterial", &UMaterialInterface::execGetBaseMaterial },
+		{ "GetPhysicalMaterial", &UMaterialInterface::execGetPhysicalMaterial },
+		{ "SetForceMipLevelsToBeResident", &UMaterialInterface::execSetForceMipLevelsToBeResident },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMaterialInterface_GetBaseMaterial_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UMaterialInterface_SetForceMipLevelsToBeResiden
 	return ReturnFunction;
 }
 
-class UMaterialInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMaterialInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

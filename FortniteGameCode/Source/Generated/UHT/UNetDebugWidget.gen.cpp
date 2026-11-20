@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UNetDebugWidget();  // RVA 0x00589630 (consensus OuterFunc)
 
+class UNetDebugWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UNetDebugWidget_StartTimer_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -44,11 +51,6 @@ UFunction* Z_Construct_UFunction_UNetDebugWidget_StopTimer()
 	return ReturnFunction;
 }
 
-class UNetDebugWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UNetDebugWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

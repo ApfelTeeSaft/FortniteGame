@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPersistentResourceItemDefinition();  // RVA 0x01065920 (consensus OuterFunc)
 
+class UFortPersistentResourceItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortPersistentResourceItemDefinition();
+	static void execIsEventItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01064F90 (end 0x01064FB2)
+// Original VA: 0x0000000141064F90 | File offset: 0x01064590
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033AB538) | Matching: see analysis/functions-uht-natives.json
+void UFortPersistentResourceItemDefinition::StaticRegisterNativesUFortPersistentResourceItemDefinition()
+{
+	UClass* Class = UFortPersistentResourceItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsEventItem", &UFortPersistentResourceItemDefinition::execIsEventItem },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPersistentResourceItemDefinition_IsEventItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortPersistentResourceItemDefinition_IsEventIt
 	return ReturnFunction;
 }
 
-class UFortPersistentResourceItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPersistentResourceItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

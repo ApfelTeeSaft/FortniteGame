@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTagReponseTable();  // RVA 0x00565FC0 (consensus OuterFunc)
 
+class UGameplayTagReponseTable
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUGameplayTagReponseTable();
+	static void execTagResponseEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00565DB0 (end 0x00565DD2)
+// Original VA: 0x0000000140565DB0 | File offset: 0x005653B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F49930) | Matching: see analysis/functions-uht-natives.json
+void UGameplayTagReponseTable::StaticRegisterNativesUGameplayTagReponseTable()
+{
+	UClass* Class = UGameplayTagReponseTable::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "TagResponseEvent", &UGameplayTagReponseTable::execTagResponseEvent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UGameplayTagReponseTable_TagResponseEvent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UGameplayTagReponseTable_TagResponseEvent()
 	return ReturnFunction;
 }
 
-class UGameplayTagReponseTable
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGameplayTagReponseTable_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

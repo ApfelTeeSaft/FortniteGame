@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMediaPlaylist();  // RVA 0x025DE930 (consensus OuterFunc)
 
+class UMediaPlaylist
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UMediaPlaylist_Add_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -246,11 +253,6 @@ UFunction* Z_Construct_UFunction_UMediaPlaylist_Replace()
 	return ReturnFunction;
 }
 
-class UMediaPlaylist
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMediaPlaylist_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

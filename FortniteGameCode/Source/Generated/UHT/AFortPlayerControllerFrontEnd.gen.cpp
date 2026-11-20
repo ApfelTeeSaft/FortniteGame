@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerFrontEnd();  // RVA 0x010776D0 (consensus OuterFunc)
 
+class AFortPlayerControllerFrontEnd
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortPlayerControllerFrontEnd();
+	static void execIsInVoiceChat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsVoiceChatPlayerMuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsXboxPlatform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnMutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01077480 (end 0x010774A2)
+// Original VA: 0x0000000141077480 | File offset: 0x01076A80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033C2E80) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerControllerFrontEnd::StaticRegisterNativesAFortPlayerControllerFrontEnd()
+{
+	UClass* Class = AFortPlayerControllerFrontEnd::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsInVoiceChat", &AFortPlayerControllerFrontEnd::execIsInVoiceChat },
+		{ "IsVoiceChatPlayerMuted", &AFortPlayerControllerFrontEnd::execIsVoiceChatPlayerMuted },
+		{ "IsXboxPlatform", &AFortPlayerControllerFrontEnd::execIsXboxPlatform },
+		{ "MutePlayer", &AFortPlayerControllerFrontEnd::execMutePlayer },
+		{ "UnMutePlayer", &AFortPlayerControllerFrontEnd::execUnMutePlayer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerControllerFrontEnd_IsInVoiceChat_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerFrontEnd_UnMutePlayer()
 	return ReturnFunction;
 }
 
-class AFortPlayerControllerFrontEnd
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPlayerControllerFrontEnd_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

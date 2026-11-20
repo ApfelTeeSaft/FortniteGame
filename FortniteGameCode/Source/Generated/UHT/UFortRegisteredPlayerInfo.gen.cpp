@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortRegisteredPlayerInfo
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetAbilitySystemComponent: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortRegisteredPlayerInfo_GetPlayerName: FFunctionParams record not identified; creator not emitted.

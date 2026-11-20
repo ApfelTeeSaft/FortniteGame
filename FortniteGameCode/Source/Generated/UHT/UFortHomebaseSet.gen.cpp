@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHomebaseSet();  // RVA 0x010069D0 (consensus OuterFunc)
 
+class UFortHomebaseSet
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortHomebaseSet_OnRep_InventorySizeBonus_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -481,11 +488,6 @@ UFunction* Z_Construct_UFunction_UFortHomebaseSet_OnRep_WorldInventorySizeBonus(
 	return ReturnFunction;
 }
 
-class UFortHomebaseSet
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHomebaseSet_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

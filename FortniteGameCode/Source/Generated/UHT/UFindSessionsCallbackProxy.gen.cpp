@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFindSessionsCallbackProxy();  // RVA 0x0032EA70 (consensus OuterFunc)
 
+class UFindSessionsCallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFindSessionsCallbackProxy();
+	static void execFindSessions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPingInMs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetServerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E280 (end 0x0032E2A2)
+// Original VA: 0x000000014032E280 | File offset: 0x0032D880
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAD840) | Matching: see analysis/functions-uht-natives.json
+void UFindSessionsCallbackProxy::StaticRegisterNativesUFindSessionsCallbackProxy()
+{
+	UClass* Class = UFindSessionsCallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FindSessions", &UFindSessionsCallbackProxy::execFindSessions },
+		{ "GetCurrentPlayers", &UFindSessionsCallbackProxy::execGetCurrentPlayers },
+		{ "GetMaxPlayers", &UFindSessionsCallbackProxy::execGetMaxPlayers },
+		{ "GetPingInMs", &UFindSessionsCallbackProxy::execGetPingInMs },
+		{ "GetServerName", &UFindSessionsCallbackProxy::execGetServerName },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFindSessionsCallbackProxy_FindSessions_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UFindSessionsCallbackProxy_GetServerName()
 	return ReturnFunction;
 }
 
-class UFindSessionsCallbackProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFindSessionsCallbackProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

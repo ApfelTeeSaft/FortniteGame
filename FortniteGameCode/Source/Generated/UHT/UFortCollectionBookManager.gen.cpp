@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookManager();  // RVA 0x00FC60D0 (consensus OuterFunc)
 
+class UFortCollectionBookManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCollectionBookManager();
+	static void execCalculateBookXp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCalculatePageXp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanSlotItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClaimReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBookTotalXPToNextLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBookXPPercentToNextLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemInSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPopulateCollectionBookRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSlotItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5540 (end 0x00FC5562)
+// Original VA: 0x0000000140FC5540 | File offset: 0x00FC4B40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032EE870) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookManager::StaticRegisterNativesUFortCollectionBookManager()
+{
+	UClass* Class = UFortCollectionBookManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CalculateBookXp", &UFortCollectionBookManager::execCalculateBookXp },
+		{ "CalculatePageXp", &UFortCollectionBookManager::execCalculatePageXp },
+		{ "CanSlotItem", &UFortCollectionBookManager::execCanSlotItem },
+		{ "ClaimReward", &UFortCollectionBookManager::execClaimReward },
+		{ "GetBookTotalXPToNextLevel", &UFortCollectionBookManager::execGetBookTotalXPToNextLevel },
+		{ "GetBookXPPercentToNextLevel", &UFortCollectionBookManager::execGetBookXPPercentToNextLevel },
+		{ "GetItemInSlot", &UFortCollectionBookManager::execGetItemInSlot },
+		{ "PopulateCollectionBookRewards", &UFortCollectionBookManager::execPopulateCollectionBookRewards },
+		{ "SlotItem", &UFortCollectionBookManager::execSlotItem },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCollectionBookManager_CalculateBookXp_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +223,6 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookManager_SlotItem()
 	return ReturnFunction;
 }
 
-class UFortCollectionBookManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCollectionBookManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

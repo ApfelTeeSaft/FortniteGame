@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPlayerAnimInstance();  // RVA 0x010659C0 (consensus OuterFunc)
 
+class UFortPlayerAnimInstance
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortPlayerAnimInstance();
+	static void execAnimNotify_PlayFireFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAnimNotify_PlaySecondaryFireFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAnimNotify_StopFireFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCardinalDirectionFromAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRelativeAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01064FF0 (end 0x01065012)
+// Original VA: 0x0000000141064FF0 | File offset: 0x010645F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033ADB00) | Matching: see analysis/functions-uht-natives.json
+void UFortPlayerAnimInstance::StaticRegisterNativesUFortPlayerAnimInstance()
+{
+	UClass* Class = UFortPlayerAnimInstance::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AnimNotify_PlayFireFX", &UFortPlayerAnimInstance::execAnimNotify_PlayFireFX },
+		{ "AnimNotify_PlaySecondaryFireFX", &UFortPlayerAnimInstance::execAnimNotify_PlaySecondaryFireFX },
+		{ "AnimNotify_StopFireFX", &UFortPlayerAnimInstance::execAnimNotify_StopFireFX },
+		{ "GetCardinalDirectionFromAngle", &UFortPlayerAnimInstance::execGetCardinalDirectionFromAngle },
+		{ "GetRelativeAngle", &UFortPlayerAnimInstance::execGetRelativeAngle },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPlayerAnimInstance_AnimNotify_PlayFireFX_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +155,6 @@ UFunction* Z_Construct_UFunction_UFortPlayerAnimInstance_OnPlayMontageFromGamepl
 	return ReturnFunction;
 }
 
-class UFortPlayerAnimInstance
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPlayerAnimInstance_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

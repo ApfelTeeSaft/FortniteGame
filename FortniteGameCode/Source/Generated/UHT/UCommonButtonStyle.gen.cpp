@@ -6,6 +6,55 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonButtonStyle();  // RVA 0x002C2D30 (consensus OuterFunc)
 
+class UCommonButtonStyle
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCommonButtonStyle();
+	static void execGetButtonPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCustomPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisabledBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisabledTextStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaterialBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNormalBaseBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNormalHoveredBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNormalHoveredTextStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNormalPressedBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNormalTextStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedBaseBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedHoveredBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedHoveredTextStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedPressedBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSelectedTextStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C29E0 (end 0x002C2A02)
+// Original VA: 0x00000001402C29E0 | File offset: 0x002C1FE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E7B870) | Matching: see analysis/functions-uht-natives.json
+void UCommonButtonStyle::StaticRegisterNativesUCommonButtonStyle()
+{
+	UClass* Class = UCommonButtonStyle::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetButtonPadding", &UCommonButtonStyle::execGetButtonPadding },
+		{ "GetCustomPadding", &UCommonButtonStyle::execGetCustomPadding },
+		{ "GetDisabledBrush", &UCommonButtonStyle::execGetDisabledBrush },
+		{ "GetDisabledTextStyle", &UCommonButtonStyle::execGetDisabledTextStyle },
+		{ "GetMaterialBrush", &UCommonButtonStyle::execGetMaterialBrush },
+		{ "GetNormalBaseBrush", &UCommonButtonStyle::execGetNormalBaseBrush },
+		{ "GetNormalHoveredBrush", &UCommonButtonStyle::execGetNormalHoveredBrush },
+		{ "GetNormalHoveredTextStyle", &UCommonButtonStyle::execGetNormalHoveredTextStyle },
+		{ "GetNormalPressedBrush", &UCommonButtonStyle::execGetNormalPressedBrush },
+		{ "GetNormalTextStyle", &UCommonButtonStyle::execGetNormalTextStyle },
+		{ "GetSelectedBaseBrush", &UCommonButtonStyle::execGetSelectedBaseBrush },
+		{ "GetSelectedHoveredBrush", &UCommonButtonStyle::execGetSelectedHoveredBrush },
+		{ "GetSelectedHoveredTextStyle", &UCommonButtonStyle::execGetSelectedHoveredTextStyle },
+		{ "GetSelectedPressedBrush", &UCommonButtonStyle::execGetSelectedPressedBrush },
+		{ "GetSelectedTextStyle", &UCommonButtonStyle::execGetSelectedTextStyle },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonButtonStyle_GetButtonPadding_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -306,11 +355,6 @@ UFunction* Z_Construct_UFunction_UCommonButtonStyle_GetSelectedTextStyle()
 	return ReturnFunction;
 }
 
-class UCommonButtonStyle
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonButtonStyle_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

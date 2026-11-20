@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortBrushSizeFunctionLibrary();  // RVA 0x010CAA60 (consensus OuterFunc)
 
+class UFortBrushSizeFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortBrushSizeFunctionLibrary();
+	static void execGrowBrushSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShrinkBrushSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C93B0 (end 0x010C93D2)
+// Original VA: 0x00000001410C93B0 | File offset: 0x010C89B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03421428) | Matching: see analysis/functions-uht-natives.json
+void UFortBrushSizeFunctionLibrary::StaticRegisterNativesUFortBrushSizeFunctionLibrary()
+{
+	UClass* Class = UFortBrushSizeFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GrowBrushSize", &UFortBrushSizeFunctionLibrary::execGrowBrushSize },
+		{ "ShrinkBrushSize", &UFortBrushSizeFunctionLibrary::execShrinkBrushSize },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortBrushSizeFunctionLibrary_GrowBrushSize_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortBrushSizeFunctionLibrary_ShrinkBrushSize()
 	return ReturnFunction;
 }
 
-class UFortBrushSizeFunctionLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortBrushSizeFunctionLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

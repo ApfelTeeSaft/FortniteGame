@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPickerContext();  // RVA 0x028E6C60 (consensus OuterFunc)
 
+class UFortPickerContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortPickerContext_DoesRadialCloseOnRelease_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -204,11 +211,6 @@ UFunction* Z_Construct_UFunction_UFortPickerContext_UseLeftThumbstick()
 	return ReturnFunction;
 }
 
-class UFortPickerContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPickerContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

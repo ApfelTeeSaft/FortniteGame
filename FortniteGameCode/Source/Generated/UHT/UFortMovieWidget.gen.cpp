@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMovieWidget();  // RVA 0x028D7610 (consensus OuterFunc)
 
+class UFortMovieWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortMovieWidget_GetMediaPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -165,11 +172,6 @@ UFunction* Z_Construct_UFunction_UFortMovieWidget_SetMediaSource()
 	return ReturnFunction;
 }
 
-class UFortMovieWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMovieWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

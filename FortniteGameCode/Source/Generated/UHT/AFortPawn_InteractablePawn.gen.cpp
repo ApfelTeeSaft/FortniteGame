@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class AFortPawn_InteractablePawn
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintCanInteract: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_AFortPawn_InteractablePawn_BlueprintGetInteractionString: FFunctionParams record not identified; creator not emitted.

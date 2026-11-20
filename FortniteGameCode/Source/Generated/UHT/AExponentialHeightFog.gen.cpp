@@ -6,4 +6,11 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class AExponentialHeightFog
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_AExponentialHeightFog_OnRep_bEnabled: FFunctionParams record not identified; creator not emitted.

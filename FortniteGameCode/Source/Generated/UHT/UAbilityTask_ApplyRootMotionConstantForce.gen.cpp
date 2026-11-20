@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_ApplyRootMotionConstantForce();  // RVA 0x005467A0 (consensus OuterFunc)
 
+class UAbilityTask_ApplyRootMotionConstantForce
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_ApplyRootMotionConstantForce();
+	static void execApplyRootMotionConstantForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546370 (end 0x00546392)
+// Original VA: 0x0000000140546370 | File offset: 0x00545970
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F2AA38) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_ApplyRootMotionConstantForce::StaticRegisterNativesUAbilityTask_ApplyRootMotionConstantForce()
+{
+	UClass* Class = UAbilityTask_ApplyRootMotionConstantForce::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyRootMotionConstantForce", &UAbilityTask_ApplyRootMotionConstantForce::execApplyRootMotionConstantForce },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_ApplyRootMotionConstantForce_ApplyRootMotionConstantForce_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_ApplyRootMotionConstantForce_Apply
 	return ReturnFunction;
 }
 
-class UAbilityTask_ApplyRootMotionConstantForce
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_ApplyRootMotionConstantForce_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class AFortGameStateSurvival
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortGameStateSurvival();
+	static void execSetGameDifficultyRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF2F90 (end 0x00FF2FB2)
+// Original VA: 0x0000000140FF2F90 | File offset: 0x00FF2590
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03334518) | Matching: see analysis/functions-uht-natives.json
+void AFortGameStateSurvival::StaticRegisterNativesAFortGameStateSurvival()
+{
+	UClass* Class = AFortGameStateSurvival::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetGameDifficultyRow", &AFortGameStateSurvival::execSetGameDifficultyRow },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_AFortGameStateSurvival_SetGameDifficultyRow: FFunctionParams record not identified; creator not emitted.

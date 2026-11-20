@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAISense_Blueprint();  // RVA 0x01D1BE50 (consensus OuterFunc)
 
+class UAISense_Blueprint
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAISense_Blueprint();
+	static void execGetAllListenerActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllListenerComponents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B230 (end 0x01D1B252)
+// Original VA: 0x0000000141D1B230 | File offset: 0x01D1A830
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F2598) | Matching: see analysis/functions-uht-natives.json
+void UAISense_Blueprint::StaticRegisterNativesUAISense_Blueprint()
+{
+	UClass* Class = UAISense_Blueprint::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAllListenerActors", &UAISense_Blueprint::execGetAllListenerActors },
+		{ "GetAllListenerComponents", &UAISense_Blueprint::execGetAllListenerComponents },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAISense_Blueprint_GetAllListenerActors_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +169,6 @@ UFunction* Z_Construct_UFunction_UAISense_Blueprint_OnUpdate()
 	return ReturnFunction;
 }
 
-class UAISense_Blueprint
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAISense_Blueprint_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

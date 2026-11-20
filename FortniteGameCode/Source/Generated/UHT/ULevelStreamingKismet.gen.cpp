@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ULevelStreamingKismet();  // RVA 0x02470490 (consensus OuterFunc)
 
+class ULevelStreamingKismet
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesULevelStreamingKismet();
+	static void execLoadLevelInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadLevelInstanceBySoftObjectPtr(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShouldBeLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FEF0 (end 0x0246FF12)
+// Original VA: 0x000000014246FEF0 | File offset: 0x0246F4F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039308B8) | Matching: see analysis/functions-uht-natives.json
+void ULevelStreamingKismet::StaticRegisterNativesULevelStreamingKismet()
+{
+	UClass* Class = ULevelStreamingKismet::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "LoadLevelInstance", &ULevelStreamingKismet::execLoadLevelInstance },
+		{ "LoadLevelInstanceBySoftObjectPtr", &ULevelStreamingKismet::execLoadLevelInstanceBySoftObjectPtr },
+		{ "SetShouldBeLoaded", &ULevelStreamingKismet::execSetShouldBeLoaded },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ULevelStreamingKismet_LoadLevelInstance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_ULevelStreamingKismet_SetShouldBeLoaded()
 	return ReturnFunction;
 }
 
-class ULevelStreamingKismet
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ULevelStreamingKismet_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCrashlyticsBlueprintLibrary();  // RVA 0x002D1DD0 (consensus OuterFunc)
 
+class UCrashlyticsBlueprintLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCrashlyticsBlueprintLibrary();
+	static void execLogException(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLogMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBooleanKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFloatKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIntegerKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStringKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUserEmail(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUserIdentifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUserName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D1DA0 (end 0x002D1DC2)
+// Original VA: 0x00000001402D1DA0 | File offset: 0x002D13A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E86ED0) | Matching: see analysis/functions-uht-natives.json
+void UCrashlyticsBlueprintLibrary::StaticRegisterNativesUCrashlyticsBlueprintLibrary()
+{
+	UClass* Class = UCrashlyticsBlueprintLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "LogException", &UCrashlyticsBlueprintLibrary::execLogException },
+		{ "LogMessage", &UCrashlyticsBlueprintLibrary::execLogMessage },
+		{ "SetBooleanKey", &UCrashlyticsBlueprintLibrary::execSetBooleanKey },
+		{ "SetFloatKey", &UCrashlyticsBlueprintLibrary::execSetFloatKey },
+		{ "SetIntegerKey", &UCrashlyticsBlueprintLibrary::execSetIntegerKey },
+		{ "SetStringKey", &UCrashlyticsBlueprintLibrary::execSetStringKey },
+		{ "SetUserEmail", &UCrashlyticsBlueprintLibrary::execSetUserEmail },
+		{ "SetUserIdentifier", &UCrashlyticsBlueprintLibrary::execSetUserIdentifier },
+		{ "SetUserName", &UCrashlyticsBlueprintLibrary::execSetUserName },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCrashlyticsBlueprintLibrary_LogException_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +223,6 @@ UFunction* Z_Construct_UFunction_UCrashlyticsBlueprintLibrary_SetUserName()
 	return ReturnFunction;
 }
 
-class UCrashlyticsBlueprintLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCrashlyticsBlueprintLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

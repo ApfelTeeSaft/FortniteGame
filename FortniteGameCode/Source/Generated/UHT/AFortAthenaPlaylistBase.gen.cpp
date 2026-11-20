@@ -6,4 +6,11 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class AFortAthenaPlaylistBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_AFortAthenaPlaylistBase_OnInitializePlaylist: FFunctionParams record not identified; creator not emitted.

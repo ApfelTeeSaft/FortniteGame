@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonUserWidget();  // RVA 0x002D04E0 (consensus OuterFunc)
 
+class UCommonUserWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCommonUserWidget();
+	static void execSetConsumePointerInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D0240 (end 0x002D0262)
+// Original VA: 0x00000001402D0240 | File offset: 0x002CF840
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E86230) | Matching: see analysis/functions-uht-natives.json
+void UCommonUserWidget::StaticRegisterNativesUCommonUserWidget()
+{
+	UClass* Class = UCommonUserWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetConsumePointerInput", &UCommonUserWidget::execSetConsumePointerInput },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonUserWidget_SetConsumePointerInput_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UCommonUserWidget_SetConsumePointerInput()
 	return ReturnFunction;
 }
 
-class UCommonUserWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonUserWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

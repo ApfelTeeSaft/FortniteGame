@@ -6,6 +6,45 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortGridWidgetBase();  // RVA 0x028B3C20 (consensus OuterFunc)
 
+class UFortGridWidgetBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortGridWidgetBase();
+	static void execGetTileForObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTiles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetClearWidgetType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDataProvider(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPeekOverflowTilePercentage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTileHeight(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTilePadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTilesAcross(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTilesDown(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTileWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3890 (end 0x028B38B2)
+// Original VA: 0x00000001428B3890 | File offset: 0x028B2E90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CA4920) | Matching: see analysis/functions-uht-natives.json
+void UFortGridWidgetBase::StaticRegisterNativesUFortGridWidgetBase()
+{
+	UClass* Class = UFortGridWidgetBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTileForObject", &UFortGridWidgetBase::execGetTileForObject },
+		{ "GetTiles", &UFortGridWidgetBase::execGetTiles },
+		{ "SetClearWidgetType", &UFortGridWidgetBase::execSetClearWidgetType },
+		{ "SetDataProvider", &UFortGridWidgetBase::execSetDataProvider },
+		{ "SetPeekOverflowTilePercentage", &UFortGridWidgetBase::execSetPeekOverflowTilePercentage },
+		{ "SetTileHeight", &UFortGridWidgetBase::execSetTileHeight },
+		{ "SetTilePadding", &UFortGridWidgetBase::execSetTilePadding },
+		{ "SetTilesAcross", &UFortGridWidgetBase::execSetTilesAcross },
+		{ "SetTilesDown", &UFortGridWidgetBase::execSetTilesDown },
+		{ "SetTileWidth", &UFortGridWidgetBase::execSetTileWidth },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortGridWidgetBase_GetTileForObject_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -206,11 +245,6 @@ UFunction* Z_Construct_UFunction_UFortGridWidgetBase_SetTileWidth()
 	return ReturnFunction;
 }
 
-class UFortGridWidgetBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortGridWidgetBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

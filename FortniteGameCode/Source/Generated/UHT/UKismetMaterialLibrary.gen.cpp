@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UKismetMaterialLibrary();  // RVA 0x02431A90 (consensus OuterFunc)
 
+class UKismetMaterialLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUKismetMaterialLibrary();
+	static void execCreateDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScalarParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVectorParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetScalarParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVectorParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024317F0 (end 0x02431812)
+// Original VA: 0x00000001424317F0 | File offset: 0x02430DF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03915540) | Matching: see analysis/functions-uht-natives.json
+void UKismetMaterialLibrary::StaticRegisterNativesUKismetMaterialLibrary()
+{
+	UClass* Class = UKismetMaterialLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateDynamicMaterialInstance", &UKismetMaterialLibrary::execCreateDynamicMaterialInstance },
+		{ "GetScalarParameterValue", &UKismetMaterialLibrary::execGetScalarParameterValue },
+		{ "GetVectorParameterValue", &UKismetMaterialLibrary::execGetVectorParameterValue },
+		{ "SetScalarParameterValue", &UKismetMaterialLibrary::execSetScalarParameterValue },
+		{ "SetVectorParameterValue", &UKismetMaterialLibrary::execSetVectorParameterValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UKismetMaterialLibrary_CreateDynamicMaterialInstance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UKismetMaterialLibrary_SetVectorParameterValue(
 	return ReturnFunction;
 }
 
-class UKismetMaterialLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UKismetMaterialLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

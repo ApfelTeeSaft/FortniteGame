@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_StartAbilityState();  // RVA 0x005469E0 (consensus OuterFunc)
 
+class UAbilityTask_StartAbilityState
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_StartAbilityState();
+	static void execStartAbilityState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546550 (end 0x00546572)
+// Original VA: 0x0000000140546550 | File offset: 0x00545B50
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F2B8D8) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_StartAbilityState::StaticRegisterNativesUAbilityTask_StartAbilityState()
+{
+	UClass* Class = UAbilityTask_StartAbilityState::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "StartAbilityState", &UAbilityTask_StartAbilityState::execStartAbilityState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_StartAbilityState_StartAbilityState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_StartAbilityState_StartAbilityStat
 	return ReturnFunction;
 }
 
-class UAbilityTask_StartAbilityState
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_StartAbilityState_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

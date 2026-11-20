@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemCardUtilities();  // RVA 0x028C9C60 (consensus OuterFunc)
 
+class UFortItemCardUtilities
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortItemCardUtilities();
+	static void execGetCardDimensions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9840 (end 0x028C9862)
+// Original VA: 0x00000001428C9840 | File offset: 0x028C8E40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CCAFC8) | Matching: see analysis/functions-uht-natives.json
+void UFortItemCardUtilities::StaticRegisterNativesUFortItemCardUtilities()
+{
+	UClass* Class = UFortItemCardUtilities::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCardDimensions", &UFortItemCardUtilities::execGetCardDimensions },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemCardUtilities_GetCardDimensions_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortItemCardUtilities_GetCardDimensions()
 	return ReturnFunction;
 }
 
-class UFortItemCardUtilities
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemCardUtilities_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

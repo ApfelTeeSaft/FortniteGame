@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortKeepEventList();  // RVA 0x0100C110 (consensus OuterFunc)
 
+class UFortKeepEventList
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortKeepEventList();
+	static void execGetEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEventDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BC90 (end 0x0100BCB2)
+// Original VA: 0x000000014100BC90 | File offset: 0x0100B290
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03354EB8) | Matching: see analysis/functions-uht-natives.json
+void UFortKeepEventList::StaticRegisterNativesUFortKeepEventList()
+{
+	UClass* Class = UFortKeepEventList::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetEvent", &UFortKeepEventList::execGetEvent },
+		{ "GetEventDescription", &UFortKeepEventList::execGetEventDescription },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortKeepEventList_GetEvent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortKeepEventList_GetEventDescription()
 	return ReturnFunction;
 }
 
-class UFortKeepEventList
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortKeepEventList_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

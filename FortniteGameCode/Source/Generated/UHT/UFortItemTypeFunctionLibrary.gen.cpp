@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortItemTypeFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortItemTypeFunctionLibrary();
+	static void execToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01064F60 (end 0x01064F82)
+// Original VA: 0x0000000141064F60 | File offset: 0x01064560
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033AC8B8) | Matching: see analysis/functions-uht-natives.json
+void UFortItemTypeFunctionLibrary::StaticRegisterNativesUFortItemTypeFunctionLibrary()
+{
+	UClass* Class = UFortItemTypeFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ToText", &UFortItemTypeFunctionLibrary::execToText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortItemTypeFunctionLibrary_ToText: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UComboBoxString();  // RVA 0x01BE6200 (consensus OuterFunc)
 
+class UComboBoxString
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UComboBoxString_OnOpeningEvent__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -242,11 +249,6 @@ UFunction* Z_Construct_UFunction_UComboBoxString_SetSelectedOption()
 	return ReturnFunction;
 }
 
-class UComboBoxString
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UComboBoxString_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

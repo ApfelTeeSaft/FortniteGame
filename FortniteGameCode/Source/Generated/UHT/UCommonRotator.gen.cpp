@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonRotator();  // RVA 0x002CA590 (consensus OuterFunc)
 
+class UCommonRotator
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCommonRotator_GetSelectedIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -124,11 +131,6 @@ UFunction* Z_Construct_UFunction_UCommonRotator_ShiftTextRight()
 	return ReturnFunction;
 }
 
-class UCommonRotator
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonRotator_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

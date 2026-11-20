@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAtmosphericFogComponent();  // RVA 0x023DB240 (consensus OuterFunc)
 
+class UAtmosphericFogComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAtmosphericFogComponent_DisableGroundScattering_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -285,11 +292,6 @@ UFunction* Z_Construct_UFunction_UAtmosphericFogComponent_StartPrecompute()
 	return ReturnFunction;
 }
 
-class UAtmosphericFogComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAtmosphericFogComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

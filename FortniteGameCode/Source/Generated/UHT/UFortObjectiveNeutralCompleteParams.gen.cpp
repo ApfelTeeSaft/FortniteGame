@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortObjectiveNeutralCompleteParams
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortObjectiveNeutralCompleteParams();
+	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9080 (end 0x010E90A2)
+// Original VA: 0x00000001410E9080 | File offset: 0x010E8680
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0344A308) | Matching: see analysis/functions-uht-natives.json
+void UFortObjectiveNeutralCompleteParams::StaticRegisterNativesUFortObjectiveNeutralCompleteParams()
+{
+	UClass* Class = UFortObjectiveNeutralCompleteParams::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BreakParams", &UFortObjectiveNeutralCompleteParams::execBreakParams },
+		{ "SetParams", &UFortObjectiveNeutralCompleteParams::execSetParams },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortObjectiveNeutralCompleteParams_BreakParams: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortObjectiveNeutralCompleteParams_SetParams: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_NetworkSyncPoint();  // RVA 0x00546900 (consensus OuterFunc)
 
+class UAbilityTask_NetworkSyncPoint
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAbilityTask_NetworkSyncPoint_OnSignalCallback_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_NetworkSyncPoint_WaitNetSync()
 	return ReturnFunction;
 }
 
-class UAbilityTask_NetworkSyncPoint
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_NetworkSyncPoint_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

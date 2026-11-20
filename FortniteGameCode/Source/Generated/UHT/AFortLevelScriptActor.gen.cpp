@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class AFortLevelScriptActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_AFortLevelScriptActor_OnMatchStarted: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_AFortLevelScriptActor_OnWorldReady: FFunctionParams record not identified; creator not emitted.

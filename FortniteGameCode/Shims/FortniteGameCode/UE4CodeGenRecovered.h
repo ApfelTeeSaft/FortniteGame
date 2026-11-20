@@ -32,6 +32,22 @@ enum EFunctionFlags : uint32
 	FUNC_None = 0x00000000,
 };
 
+struct FFrame;
+
+// CoreUObject/Public/UObject/CoreNative.h and Script.h (RESULT_DECL is void*const Z_Param__Result).
+typedef void (*FNativeFuncPtr)(UObject* Context, FFrame& TheStack, void* const Z_Param__Result);
+
+struct FNameNativePtrPair
+{
+	const char* NameUTF8;
+	FNativeFuncPtr Pointer;
+};
+
+struct FNativeFunctionRegistrar
+{
+	static void RegisterFunctions(class UClass* Class, const FNameNativePtrPair* InArray, int32 NumFunctions);
+};
+
 struct FClassFunctionLinkInfo
 {
 	UFunction* (*CreateFuncPtr)();

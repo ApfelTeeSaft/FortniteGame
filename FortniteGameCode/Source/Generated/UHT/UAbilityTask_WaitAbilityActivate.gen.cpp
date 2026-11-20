@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitAbilityActivate();  // RVA 0x00546A50 (consensus OuterFunc)
 
+class UAbilityTask_WaitAbilityActivate
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitAbilityActivate();
+	static void execOnAbilityActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitForAbilityActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitForAbilityActivate_Query(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitForAbilityActivateWithTagRequirements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005465B0 (end 0x005465D2)
+// Original VA: 0x00000001405465B0 | File offset: 0x00545BB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F2BB20) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitAbilityActivate::StaticRegisterNativesUAbilityTask_WaitAbilityActivate()
+{
+	UClass* Class = UAbilityTask_WaitAbilityActivate::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnAbilityActivate", &UAbilityTask_WaitAbilityActivate::execOnAbilityActivate },
+		{ "WaitForAbilityActivate", &UAbilityTask_WaitAbilityActivate::execWaitForAbilityActivate },
+		{ "WaitForAbilityActivate_Query", &UAbilityTask_WaitAbilityActivate::execWaitForAbilityActivate_Query },
+		{ "WaitForAbilityActivateWithTagRequirements", &UAbilityTask_WaitAbilityActivate::execWaitForAbilityActivateWithTagRequirements },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitAbilityActivate_OnAbilityActivate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitAbilityActivate_WaitForAbility
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitAbilityActivate
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitAbilityActivate_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

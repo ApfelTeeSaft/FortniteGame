@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget();  // RVA 0x00F81EA0 (consensus OuterFunc)
 
+class UFortAbilityTask_PlayMontageWaitTarget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortAbilityTask_PlayMontageWaitTarget_EnableScalingWithRateOfFire_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -124,11 +131,6 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_PlayMontageWaitTarget_PlayMont
 	return ReturnFunction;
 }
 
-class UFortAbilityTask_PlayMontageWaitTarget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

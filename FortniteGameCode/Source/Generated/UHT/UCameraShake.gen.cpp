@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCameraShake();  // RVA 0x023EAA90 (consensus OuterFunc)
 
+class UCameraShake
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCameraShake();
+	static void execReceiveIsFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9FA0 (end 0x023E9FC2)
+// Original VA: 0x00000001423E9FA0 | File offset: 0x023E95A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038BA1B0) | Matching: see analysis/functions-uht-natives.json
+void UCameraShake::StaticRegisterNativesUCameraShake()
+{
+	UClass* Class = UCameraShake::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ReceiveIsFinished", &UCameraShake::execReceiveIsFinished },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCameraShake_BlueprintUpdateCameraShake_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +107,6 @@ UFunction* Z_Construct_UFunction_UCameraShake_ReceiveStopShake()
 	return ReturnFunction;
 }
 
-class UCameraShake
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCameraShake_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ULeaderboardBlueprintLibrary();  // RVA 0x0032EBF0 (consensus OuterFunc)
 
+class ULeaderboardBlueprintLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesULeaderboardBlueprintLibrary();
+	static void execWriteLeaderboardInteger(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E3A0 (end 0x0032E3C2)
+// Original VA: 0x000000014032E3A0 | File offset: 0x0032D9A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EADF28) | Matching: see analysis/functions-uht-natives.json
+void ULeaderboardBlueprintLibrary::StaticRegisterNativesULeaderboardBlueprintLibrary()
+{
+	UClass* Class = ULeaderboardBlueprintLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "WriteLeaderboardInteger", &ULeaderboardBlueprintLibrary::execWriteLeaderboardInteger },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ULeaderboardBlueprintLibrary_WriteLeaderboardInteger_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_ULeaderboardBlueprintLibrary_WriteLeaderboardIn
 	return ReturnFunction;
 }
 
-class ULeaderboardBlueprintLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ULeaderboardBlueprintLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

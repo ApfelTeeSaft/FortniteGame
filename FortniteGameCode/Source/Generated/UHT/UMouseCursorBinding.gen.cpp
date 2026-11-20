@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UMouseCursorBinding
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUMouseCursorBinding();
+	static void execGetValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED030 (end 0x01BED052)
+// Original VA: 0x0000000141BED030 | File offset: 0x01BEC630
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03697668) | Matching: see analysis/functions-uht-natives.json
+void UMouseCursorBinding::StaticRegisterNativesUMouseCursorBinding()
+{
+	UClass* Class = UMouseCursorBinding::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetValue", &UMouseCursorBinding::execGetValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UMouseCursorBinding_GetValue: FFunctionParams record not identified; creator not emitted.

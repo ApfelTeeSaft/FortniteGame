@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerManor();  // RVA 0x01077760 (consensus OuterFunc)
 
+class AFortPlayerControllerManor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortPlayerControllerManor();
+	static void execClientOpenManorPortalUnlockMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerOnUnlockPortalComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01077510 (end 0x01077532)
+// Original VA: 0x0000000141077510 | File offset: 0x01076B10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033C32F0) | Matching: see analysis/functions-uht-natives.json
+void AFortPlayerControllerManor::StaticRegisterNativesAFortPlayerControllerManor()
+{
+	UClass* Class = AFortPlayerControllerManor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientOpenManorPortalUnlockMenu", &AFortPlayerControllerManor::execClientOpenManorPortalUnlockMenu },
+		{ "ServerOnUnlockPortalComplete", &AFortPlayerControllerManor::execServerOnUnlockPortalComplete },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortPlayerControllerManor_ClientOpenManorPortalUnlockMenu_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerManor_ServerOnUnlockPortal
 	return ReturnFunction;
 }
 
-class AFortPlayerControllerManor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPlayerControllerManor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

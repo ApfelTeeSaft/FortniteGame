@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UBoolBinding
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBoolBinding();
+	static void execGetValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5A90 (end 0x01BE5AB2)
+// Original VA: 0x0000000141BE5A90 | File offset: 0x01BE5090
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03690EA8) | Matching: see analysis/functions-uht-natives.json
+void UBoolBinding::StaticRegisterNativesUBoolBinding()
+{
+	UClass* Class = UBoolBinding::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetValue", &UBoolBinding::execGetValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UBoolBinding_GetValue: FFunctionParams record not identified; creator not emitted.

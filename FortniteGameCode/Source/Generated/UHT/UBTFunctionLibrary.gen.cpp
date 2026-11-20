@@ -6,6 +6,79 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBTFunctionLibrary();  // RVA 0x01D28BE0 (consensus OuterFunc)
 
+class UBTFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBTFunctionLibrary();
+	static void execClearBlackboardValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearBlackboardValueAsVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBlackboardValueAsActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBlackboardValueAsBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBlackboardValueAsClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBlackboardValueAsEnum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBlackboardValueAsFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBlackboardValueAsInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBlackboardValueAsName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBlackboardValueAsObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBlackboardValueAsRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBlackboardValueAsString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBlackboardValueAsVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwnerComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwnersBlackboard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlackboardValueAsBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlackboardValueAsClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlackboardValueAsEnum(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlackboardValueAsFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlackboardValueAsInt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlackboardValueAsName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlackboardValueAsObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlackboardValueAsRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlackboardValueAsString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBlackboardValueAsVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartUsingExternalEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopUsingExternalEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D28790 (end 0x01D287B2)
+// Original VA: 0x0000000141D28790 | File offset: 0x01D27D90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x037003C0) | Matching: see analysis/functions-uht-natives.json
+void UBTFunctionLibrary::StaticRegisterNativesUBTFunctionLibrary()
+{
+	UClass* Class = UBTFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearBlackboardValue", &UBTFunctionLibrary::execClearBlackboardValue },
+		{ "ClearBlackboardValueAsVector", &UBTFunctionLibrary::execClearBlackboardValueAsVector },
+		{ "GetBlackboardValueAsActor", &UBTFunctionLibrary::execGetBlackboardValueAsActor },
+		{ "GetBlackboardValueAsBool", &UBTFunctionLibrary::execGetBlackboardValueAsBool },
+		{ "GetBlackboardValueAsClass", &UBTFunctionLibrary::execGetBlackboardValueAsClass },
+		{ "GetBlackboardValueAsEnum", &UBTFunctionLibrary::execGetBlackboardValueAsEnum },
+		{ "GetBlackboardValueAsFloat", &UBTFunctionLibrary::execGetBlackboardValueAsFloat },
+		{ "GetBlackboardValueAsInt", &UBTFunctionLibrary::execGetBlackboardValueAsInt },
+		{ "GetBlackboardValueAsName", &UBTFunctionLibrary::execGetBlackboardValueAsName },
+		{ "GetBlackboardValueAsObject", &UBTFunctionLibrary::execGetBlackboardValueAsObject },
+		{ "GetBlackboardValueAsRotator", &UBTFunctionLibrary::execGetBlackboardValueAsRotator },
+		{ "GetBlackboardValueAsString", &UBTFunctionLibrary::execGetBlackboardValueAsString },
+		{ "GetBlackboardValueAsVector", &UBTFunctionLibrary::execGetBlackboardValueAsVector },
+		{ "GetOwnerComponent", &UBTFunctionLibrary::execGetOwnerComponent },
+		{ "GetOwnersBlackboard", &UBTFunctionLibrary::execGetOwnersBlackboard },
+		{ "SetBlackboardValueAsBool", &UBTFunctionLibrary::execSetBlackboardValueAsBool },
+		{ "SetBlackboardValueAsClass", &UBTFunctionLibrary::execSetBlackboardValueAsClass },
+		{ "SetBlackboardValueAsEnum", &UBTFunctionLibrary::execSetBlackboardValueAsEnum },
+		{ "SetBlackboardValueAsFloat", &UBTFunctionLibrary::execSetBlackboardValueAsFloat },
+		{ "SetBlackboardValueAsInt", &UBTFunctionLibrary::execSetBlackboardValueAsInt },
+		{ "SetBlackboardValueAsName", &UBTFunctionLibrary::execSetBlackboardValueAsName },
+		{ "SetBlackboardValueAsObject", &UBTFunctionLibrary::execSetBlackboardValueAsObject },
+		{ "SetBlackboardValueAsRotator", &UBTFunctionLibrary::execSetBlackboardValueAsRotator },
+		{ "SetBlackboardValueAsString", &UBTFunctionLibrary::execSetBlackboardValueAsString },
+		{ "SetBlackboardValueAsVector", &UBTFunctionLibrary::execSetBlackboardValueAsVector },
+		{ "StartUsingExternalEvent", &UBTFunctionLibrary::execStartUsingExternalEvent },
+		{ "StopUsingExternalEvent", &UBTFunctionLibrary::execStopUsingExternalEvent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBTFunctionLibrary_ClearBlackboardValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -546,11 +619,6 @@ UFunction* Z_Construct_UFunction_UBTFunctionLibrary_StopUsingExternalEvent()
 	return ReturnFunction;
 }
 
-class UBTFunctionLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBTFunctionLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

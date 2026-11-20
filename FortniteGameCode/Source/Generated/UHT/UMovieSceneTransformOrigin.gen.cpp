@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMovieSceneTransformOrigin();  // RVA 0x01B528F0 (consensus OuterFunc)
 
+class UMovieSceneTransformOrigin
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UMovieSceneTransformOrigin_BP_GetTransformOrigin_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +33,6 @@ UFunction* Z_Construct_UFunction_UMovieSceneTransformOrigin_BP_GetTransformOrigi
 	return ReturnFunction;
 }
 
-class UMovieSceneTransformOrigin
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMovieSceneTransformOrigin_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

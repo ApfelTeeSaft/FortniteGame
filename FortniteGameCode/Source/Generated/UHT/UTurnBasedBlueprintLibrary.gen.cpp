@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UTurnBasedBlueprintLibrary();  // RVA 0x0032EDF0 (consensus OuterFunc)
 
+class UTurnBasedBlueprintLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUTurnBasedBlueprintLibrary();
+	static void execGetIsMyTurn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMyPlayerIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterTurnBasedMatchInterfaceObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E4C0 (end 0x0032E4E2)
+// Original VA: 0x000000014032E4C0 | File offset: 0x0032DAC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAF300) | Matching: see analysis/functions-uht-natives.json
+void UTurnBasedBlueprintLibrary::StaticRegisterNativesUTurnBasedBlueprintLibrary()
+{
+	UClass* Class = UTurnBasedBlueprintLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIsMyTurn", &UTurnBasedBlueprintLibrary::execGetIsMyTurn },
+		{ "GetMyPlayerIndex", &UTurnBasedBlueprintLibrary::execGetMyPlayerIndex },
+		{ "GetPlayerDisplayName", &UTurnBasedBlueprintLibrary::execGetPlayerDisplayName },
+		{ "RegisterTurnBasedMatchInterfaceObject", &UTurnBasedBlueprintLibrary::execRegisterTurnBasedMatchInterfaceObject },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UTurnBasedBlueprintLibrary_GetIsMyTurn_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UTurnBasedBlueprintLibrary_RegisterTurnBasedMat
 	return ReturnFunction;
 }
 
-class UTurnBasedBlueprintLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UTurnBasedBlueprintLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

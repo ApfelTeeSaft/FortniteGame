@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCameraAnimInst();  // RVA 0x023EA9C0 (consensus OuterFunc)
 
+class UCameraAnimInst
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCameraAnimInst();
+	static void execSetDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9F10 (end 0x023E9F32)
+// Original VA: 0x00000001423E9F10 | File offset: 0x023E9510
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038B9858) | Matching: see analysis/functions-uht-natives.json
+void UCameraAnimInst::StaticRegisterNativesUCameraAnimInst()
+{
+	UClass* Class = UCameraAnimInst::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetDuration", &UCameraAnimInst::execSetDuration },
+		{ "SetScale", &UCameraAnimInst::execSetScale },
+		{ "Stop", &UCameraAnimInst::execStop },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCameraAnimInst_SetDuration_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UCameraAnimInst_Stop()
 	return ReturnFunction;
 }
 
-class UCameraAnimInst
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCameraAnimInst_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingTrapDefender();  // RVA 0x00F78590 (consensus OuterFunc)
 
+class ABuildingTrapDefender
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesABuildingTrapDefender();
+	static void execGetLastInteractErrorText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnDefenderfromItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSupplyDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTakeWeaponAwayFromDefender(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F77FB0 (end 0x00F77FD2)
+// Original VA: 0x0000000140F77FB0 | File offset: 0x00F775B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03286D60) | Matching: see analysis/functions-uht-natives.json
+void ABuildingTrapDefender::StaticRegisterNativesABuildingTrapDefender()
+{
+	UClass* Class = ABuildingTrapDefender::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetLastInteractErrorText", &ABuildingTrapDefender::execGetLastInteractErrorText },
+		{ "SpawnDefenderfromItem", &ABuildingTrapDefender::execSpawnDefenderfromItem },
+		{ "SupplyDefender", &ABuildingTrapDefender::execSupplyDefender },
+		{ "TakeWeaponAwayFromDefender", &ABuildingTrapDefender::execTakeWeaponAwayFromDefender },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingTrapDefender_ClearCurrentDefender_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -204,11 +231,6 @@ UFunction* Z_Construct_UFunction_ABuildingTrapDefender_TakeWeaponAwayFromDefende
 	return ReturnFunction;
 }
 
-class ABuildingTrapDefender
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingTrapDefender_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

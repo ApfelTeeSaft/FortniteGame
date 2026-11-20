@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPaperTileMapComponent();  // RVA 0x00667940 (consensus OuterFunc)
 
+class UPaperTileMapComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UPaperTileMapComponent_AddNewLayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -384,11 +391,6 @@ UFunction* Z_Construct_UFunction_UPaperTileMapComponent_SetTileMapColor()
 	return ReturnFunction;
 }
 
-class UPaperTileMapComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPaperTileMapComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

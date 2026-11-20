@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPanelWidget();  // RVA 0x01BED890 (consensus OuterFunc)
 
+class UPanelWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UPanelWidget_AddChild_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -185,11 +192,6 @@ UFunction* Z_Construct_UFunction_UPanelWidget_RemoveChildAt()
 	return ReturnFunction;
 }
 
-class UPanelWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPanelWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

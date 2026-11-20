@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget();  // RVA 0x028FB6A0 (consensus OuterFunc)
 
+class UFortSquadSlotSurvivorTraitMatchesDetailWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortSquadSlotSurvivorTraitMatchesDetailWidget_HandleTraitValuesUpdatedBP_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotSurvivorTraitMatchesDetailWidget_
 	return ReturnFunction;
 }
 
-class UFortSquadSlotSurvivorTraitMatchesDetailWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

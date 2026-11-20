@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMovieSceneEasingFunction();  // RVA 0x01AC5390 (consensus OuterFunc)
 
+class UMovieSceneEasingFunction
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UMovieSceneEasingFunction_OnEvaluate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +33,6 @@ UFunction* Z_Construct_UFunction_UMovieSceneEasingFunction_OnEvaluate()
 	return ReturnFunction;
 }
 
-class UMovieSceneEasingFunction
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMovieSceneEasingFunction_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

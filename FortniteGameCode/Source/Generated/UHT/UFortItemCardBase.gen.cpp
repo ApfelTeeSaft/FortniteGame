@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemCardBase();  // RVA 0x028C1990 (consensus OuterFunc)
 
+class UFortItemCardBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortItemCardBase();
+	static void execPortBrushSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C0E80 (end 0x028C0EA2)
+// Original VA: 0x00000001428C0E80 | File offset: 0x028C0480
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CBFEA8) | Matching: see analysis/functions-uht-natives.json
+void UFortItemCardBase::StaticRegisterNativesUFortItemCardBase()
+{
+	UClass* Class = UFortItemCardBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "PortBrushSize", &UFortItemCardBase::execPortBrushSize },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemCardBase_PortBrushSize_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortItemCardBase_PortBrushSize()
 	return ReturnFunction;
 }
 
-class UFortItemCardBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemCardBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

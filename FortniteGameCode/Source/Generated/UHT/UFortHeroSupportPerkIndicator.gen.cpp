@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortHeroSupportPerkIndicator
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortHeroSupportPerkIndicator();
+	static void execSetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSupportTypeToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B38F0 (end 0x028B3912)
+// Original VA: 0x00000001428B38F0 | File offset: 0x028B2EF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CA6CB8) | Matching: see analysis/functions-uht-natives.json
+void UFortHeroSupportPerkIndicator::StaticRegisterNativesUFortHeroSupportPerkIndicator()
+{
+	UClass* Class = UFortHeroSupportPerkIndicator::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetItemToRepresent", &UFortHeroSupportPerkIndicator::execSetItemToRepresent },
+		{ "SetSupportTypeToRepresent", &UFortHeroSupportPerkIndicator::execSetSupportTypeToRepresent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetItemToRepresent: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortHeroSupportPerkIndicator_SetSupportTypeToRepresent: FFunctionParams record not identified; creator not emitted.

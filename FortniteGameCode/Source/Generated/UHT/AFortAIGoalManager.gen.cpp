@@ -6,6 +6,55 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortAIGoalManager();  // RVA 0x00F91260 (consensus OuterFunc)
 
+class AFortAIGoalManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortAIGoalManager();
+	static void execAddGoal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddGoalActorToAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddGoalsToWorldAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddGoalToWorldAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddWorldAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateWorldAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeGoalFromActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeGoalFromLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeGoalsFromActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeGoalsFromLocations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeGoalsFromLocationsAndActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveGoalFromWorldAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveGoalsFromWorldAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveWorldAssignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentGoalDiscouragement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90C00 (end 0x00F90C22)
+// Original VA: 0x0000000140F90C00 | File offset: 0x00F90200
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032ACF60) | Matching: see analysis/functions-uht-natives.json
+void AFortAIGoalManager::StaticRegisterNativesAFortAIGoalManager()
+{
+	UClass* Class = AFortAIGoalManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddGoal", &AFortAIGoalManager::execAddGoal },
+		{ "AddGoalActorToAssignment", &AFortAIGoalManager::execAddGoalActorToAssignment },
+		{ "AddGoalsToWorldAssignment", &AFortAIGoalManager::execAddGoalsToWorldAssignment },
+		{ "AddGoalToWorldAssignment", &AFortAIGoalManager::execAddGoalToWorldAssignment },
+		{ "AddWorldAssignment", &AFortAIGoalManager::execAddWorldAssignment },
+		{ "CreateWorldAssignment", &AFortAIGoalManager::execCreateWorldAssignment },
+		{ "MakeGoalFromActor", &AFortAIGoalManager::execMakeGoalFromActor },
+		{ "MakeGoalFromLocation", &AFortAIGoalManager::execMakeGoalFromLocation },
+		{ "MakeGoalsFromActors", &AFortAIGoalManager::execMakeGoalsFromActors },
+		{ "MakeGoalsFromLocations", &AFortAIGoalManager::execMakeGoalsFromLocations },
+		{ "MakeGoalsFromLocationsAndActor", &AFortAIGoalManager::execMakeGoalsFromLocationsAndActor },
+		{ "RemoveGoalFromWorldAssignment", &AFortAIGoalManager::execRemoveGoalFromWorldAssignment },
+		{ "RemoveGoalsFromWorldAssignment", &AFortAIGoalManager::execRemoveGoalsFromWorldAssignment },
+		{ "RemoveWorldAssignment", &AFortAIGoalManager::execRemoveWorldAssignment },
+		{ "SetCurrentGoalDiscouragement", &AFortAIGoalManager::execSetCurrentGoalDiscouragement },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortAIGoalManager_AddGoal_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -306,11 +355,6 @@ UFunction* Z_Construct_UFunction_AFortAIGoalManager_SetCurrentGoalDiscouragement
 	return ReturnFunction;
 }
 
-class AFortAIGoalManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortAIGoalManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

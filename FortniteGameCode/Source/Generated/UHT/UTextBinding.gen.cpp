@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UTextBinding();  // RVA 0x01BF31C0 (consensus OuterFunc)
 
+class UTextBinding
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUTextBinding();
+	static void execGetStringValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTextValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2C10 (end 0x01BF2C32)
+// Original VA: 0x0000000141BF2C10 | File offset: 0x01BF2210
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369E2D8) | Matching: see analysis/functions-uht-natives.json
+void UTextBinding::StaticRegisterNativesUTextBinding()
+{
+	UClass* Class = UTextBinding::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetStringValue", &UTextBinding::execGetStringValue },
+		{ "GetTextValue", &UTextBinding::execGetTextValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UTextBinding_GetStringValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UTextBinding_GetTextValue()
 	return ReturnFunction;
 }
 
-class UTextBinding
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UTextBinding_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

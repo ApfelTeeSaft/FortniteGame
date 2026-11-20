@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMediaSource();  // RVA 0x025DE990 (consensus OuterFunc)
 
+class UMediaSource
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUMediaSource();
+	static void execGetUrl(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execValidate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE730 (end 0x025DE752)
+// Original VA: 0x00000001425DE730 | File offset: 0x025DDD30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03B64C58) | Matching: see analysis/functions-uht-natives.json
+void UMediaSource::StaticRegisterNativesUMediaSource()
+{
+	UClass* Class = UMediaSource::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetUrl", &UMediaSource::execGetUrl },
+		{ "Validate", &UMediaSource::execValidate },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMediaSource_GetUrl_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UMediaSource_Validate()
 	return ReturnFunction;
 }
 
-class UMediaSource
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMediaSource_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

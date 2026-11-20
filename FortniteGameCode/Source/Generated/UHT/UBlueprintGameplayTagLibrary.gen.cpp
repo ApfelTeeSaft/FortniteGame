@@ -6,6 +6,83 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBlueprintGameplayTagLibrary();  // RVA 0x01C936F0 (consensus OuterFunc)
 
+class UBlueprintGameplayTagLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBlueprintGameplayTagLibrary();
+	static void execAddGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAppendGameplayTagContainers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakGameplayTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesContainerMatchTagQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesTagAssetInterfaceHaveTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_GameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_GameplayTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllActorsOfClassMatchingTagQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDebugStringFromGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDebugStringFromGameplayTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumGameplayTagsInContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTagName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAllMatchingGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAllTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAnyTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsGameplayTagValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeGameplayTagContainerFromArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeGameplayTagContainerFromTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeGameplayTagQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeLiteralGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeLiteralGameplayTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMatchesAnyTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMatchesTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_GameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_GameplayTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_TagContainerTagContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_TagTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C93190 (end 0x01C931B2)
+// Original VA: 0x0000000141C93190 | File offset: 0x01C92790
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036C1840) | Matching: see analysis/functions-uht-natives.json
+void UBlueprintGameplayTagLibrary::StaticRegisterNativesUBlueprintGameplayTagLibrary()
+{
+	UClass* Class = UBlueprintGameplayTagLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddGameplayTag", &UBlueprintGameplayTagLibrary::execAddGameplayTag },
+		{ "AppendGameplayTagContainers", &UBlueprintGameplayTagLibrary::execAppendGameplayTagContainers },
+		{ "BreakGameplayTagContainer", &UBlueprintGameplayTagLibrary::execBreakGameplayTagContainer },
+		{ "DoesContainerMatchTagQuery", &UBlueprintGameplayTagLibrary::execDoesContainerMatchTagQuery },
+		{ "DoesTagAssetInterfaceHaveTag", &UBlueprintGameplayTagLibrary::execDoesTagAssetInterfaceHaveTag },
+		{ "EqualEqual_GameplayTag", &UBlueprintGameplayTagLibrary::execEqualEqual_GameplayTag },
+		{ "EqualEqual_GameplayTagContainer", &UBlueprintGameplayTagLibrary::execEqualEqual_GameplayTagContainer },
+		{ "GetAllActorsOfClassMatchingTagQuery", &UBlueprintGameplayTagLibrary::execGetAllActorsOfClassMatchingTagQuery },
+		{ "GetDebugStringFromGameplayTag", &UBlueprintGameplayTagLibrary::execGetDebugStringFromGameplayTag },
+		{ "GetDebugStringFromGameplayTagContainer", &UBlueprintGameplayTagLibrary::execGetDebugStringFromGameplayTagContainer },
+		{ "GetNumGameplayTagsInContainer", &UBlueprintGameplayTagLibrary::execGetNumGameplayTagsInContainer },
+		{ "GetTagName", &UBlueprintGameplayTagLibrary::execGetTagName },
+		{ "HasAllMatchingGameplayTags", &UBlueprintGameplayTagLibrary::execHasAllMatchingGameplayTags },
+		{ "HasAllTags", &UBlueprintGameplayTagLibrary::execHasAllTags },
+		{ "HasAnyTags", &UBlueprintGameplayTagLibrary::execHasAnyTags },
+		{ "HasTag", &UBlueprintGameplayTagLibrary::execHasTag },
+		{ "IsGameplayTagValid", &UBlueprintGameplayTagLibrary::execIsGameplayTagValid },
+		{ "MakeGameplayTagContainerFromArray", &UBlueprintGameplayTagLibrary::execMakeGameplayTagContainerFromArray },
+		{ "MakeGameplayTagContainerFromTag", &UBlueprintGameplayTagLibrary::execMakeGameplayTagContainerFromTag },
+		{ "MakeGameplayTagQuery", &UBlueprintGameplayTagLibrary::execMakeGameplayTagQuery },
+		{ "MakeLiteralGameplayTag", &UBlueprintGameplayTagLibrary::execMakeLiteralGameplayTag },
+		{ "MakeLiteralGameplayTagContainer", &UBlueprintGameplayTagLibrary::execMakeLiteralGameplayTagContainer },
+		{ "MatchesAnyTags", &UBlueprintGameplayTagLibrary::execMatchesAnyTags },
+		{ "MatchesTag", &UBlueprintGameplayTagLibrary::execMatchesTag },
+		{ "NotEqual_GameplayTag", &UBlueprintGameplayTagLibrary::execNotEqual_GameplayTag },
+		{ "NotEqual_GameplayTagContainer", &UBlueprintGameplayTagLibrary::execNotEqual_GameplayTagContainer },
+		{ "NotEqual_TagContainerTagContainer", &UBlueprintGameplayTagLibrary::execNotEqual_TagContainerTagContainer },
+		{ "NotEqual_TagTag", &UBlueprintGameplayTagLibrary::execNotEqual_TagTag },
+		{ "RemoveGameplayTag", &UBlueprintGameplayTagLibrary::execRemoveGameplayTag },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBlueprintGameplayTagLibrary_AddGameplayTag_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -586,11 +663,6 @@ UFunction* Z_Construct_UFunction_UBlueprintGameplayTagLibrary_RemoveGameplayTag(
 	return ReturnFunction;
 }
 
-class UBlueprintGameplayTagLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBlueprintGameplayTagLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

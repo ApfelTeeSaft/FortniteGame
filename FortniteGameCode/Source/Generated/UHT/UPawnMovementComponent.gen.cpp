@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPawnMovementComponent();  // RVA 0x024A09B0 (consensus OuterFunc)
 
+class UPawnMovementComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUPawnMovementComponent();
+	static void execAddInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConsumeInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLastInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPawnOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPendingInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsMoveInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A04E0 (end 0x024A0502)
+// Original VA: 0x00000001424A04E0 | File offset: 0x0249FAE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03978420) | Matching: see analysis/functions-uht-natives.json
+void UPawnMovementComponent::StaticRegisterNativesUPawnMovementComponent()
+{
+	UClass* Class = UPawnMovementComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddInputVector", &UPawnMovementComponent::execAddInputVector },
+		{ "ConsumeInputVector", &UPawnMovementComponent::execConsumeInputVector },
+		{ "GetLastInputVector", &UPawnMovementComponent::execGetLastInputVector },
+		{ "GetPawnOwner", &UPawnMovementComponent::execGetPawnOwner },
+		{ "GetPendingInputVector", &UPawnMovementComponent::execGetPendingInputVector },
+		{ "IsMoveInputIgnored", &UPawnMovementComponent::execIsMoveInputIgnored },
+		{ "K2_GetInputVector", &UPawnMovementComponent::execK2_GetInputVector },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPawnMovementComponent_AddInputVector_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +179,6 @@ UFunction* Z_Construct_UFunction_UPawnMovementComponent_K2_GetInputVector()
 	return ReturnFunction;
 }
 
-class UPawnMovementComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPawnMovementComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

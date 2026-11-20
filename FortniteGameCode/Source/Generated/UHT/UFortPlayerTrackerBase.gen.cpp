@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPlayerTrackerBase();  // RVA 0x028E6D90 (consensus OuterFunc)
 
+class UFortPlayerTrackerBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortPlayerTrackerBase_GetBaseFortitude_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -620,11 +627,6 @@ UFunction* Z_Construct_UFunction_UFortPlayerTrackerBase_UpdateBasedOnId()
 	return ReturnFunction;
 }
 
-class UFortPlayerTrackerBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPlayerTrackerBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

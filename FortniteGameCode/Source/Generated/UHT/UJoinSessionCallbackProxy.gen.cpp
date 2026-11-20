@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UJoinSessionCallbackProxy();  // RVA 0x0032EBC0 (consensus OuterFunc)
 
+class UJoinSessionCallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUJoinSessionCallbackProxy();
+	static void execJoinSession(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E370 (end 0x0032E392)
+// Original VA: 0x000000014032E370 | File offset: 0x0032D970
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EADE68) | Matching: see analysis/functions-uht-natives.json
+void UJoinSessionCallbackProxy::StaticRegisterNativesUJoinSessionCallbackProxy()
+{
+	UClass* Class = UJoinSessionCallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "JoinSession", &UJoinSessionCallbackProxy::execJoinSession },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UJoinSessionCallbackProxy_JoinSession_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UJoinSessionCallbackProxy_JoinSession()
 	return ReturnFunction;
 }
 
-class UJoinSessionCallbackProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UJoinSessionCallbackProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCheckBox();  // RVA 0x01BE6110 (consensus OuterFunc)
 
+class UCheckBox
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCheckBox();
+	static void execGetCheckedState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsChecked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCheckedState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsChecked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5C10 (end 0x01BE5C32)
+// Original VA: 0x0000000141BE5C10 | File offset: 0x01BE5210
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03691B90) | Matching: see analysis/functions-uht-natives.json
+void UCheckBox::StaticRegisterNativesUCheckBox()
+{
+	UClass* Class = UCheckBox::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCheckedState", &UCheckBox::execGetCheckedState },
+		{ "IsChecked", &UCheckBox::execIsChecked },
+		{ "IsPressed", &UCheckBox::execIsPressed },
+		{ "SetCheckedState", &UCheckBox::execSetCheckedState },
+		{ "SetIsChecked", &UCheckBox::execSetIsChecked },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCheckBox_GetCheckedState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UCheckBox_SetIsChecked()
 	return ReturnFunction;
 }
 
-class UCheckBox
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCheckBox_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

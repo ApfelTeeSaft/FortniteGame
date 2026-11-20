@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAnimSequenceBase();  // RVA 0x023D6570 (consensus OuterFunc)
 
+class UAnimSequenceBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAnimSequenceBase();
+	static void execGetPlayLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D57F0 (end 0x023D5812)
+// Original VA: 0x00000001423D57F0 | File offset: 0x023D4DF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038A27B8) | Matching: see analysis/functions-uht-natives.json
+void UAnimSequenceBase::StaticRegisterNativesUAnimSequenceBase()
+{
+	UClass* Class = UAnimSequenceBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPlayLength", &UAnimSequenceBase::execGetPlayLength },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAnimSequenceBase_GetPlayLength_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAnimSequenceBase_GetPlayLength()
 	return ReturnFunction;
 }
 
-class UAnimSequenceBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAnimSequenceBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

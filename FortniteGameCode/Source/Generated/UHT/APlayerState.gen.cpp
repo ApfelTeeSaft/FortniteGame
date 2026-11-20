@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_APlayerState();  // RVA 0x024B7D50 (consensus OuterFunc)
 
+class APlayerState
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_APlayerState_GetPlayerName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -161,11 +168,6 @@ UFunction* Z_Construct_UFunction_APlayerState_ReceiveOverrideWith()
 	return ReturnFunction;
 }
 
-class APlayerState
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_APlayerState_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

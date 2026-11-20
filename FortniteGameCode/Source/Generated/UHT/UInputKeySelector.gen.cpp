@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UInputKeySelector();  // RVA 0x01BED4D0 (consensus OuterFunc)
 
+class UInputKeySelector
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUInputKeySelector();
+	static void execGetIsSelectingKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllowGamepadKeys(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAllowModifierKeys(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEscapeKeys(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetKeySelectionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNoKeySpecifiedText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSelectedKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTextBlockVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECF70 (end 0x01BECF92)
+// Original VA: 0x0000000141BECF70 | File offset: 0x01BEC570
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03697020) | Matching: see analysis/functions-uht-natives.json
+void UInputKeySelector::StaticRegisterNativesUInputKeySelector()
+{
+	UClass* Class = UInputKeySelector::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIsSelectingKey", &UInputKeySelector::execGetIsSelectingKey },
+		{ "SetAllowGamepadKeys", &UInputKeySelector::execSetAllowGamepadKeys },
+		{ "SetAllowModifierKeys", &UInputKeySelector::execSetAllowModifierKeys },
+		{ "SetEscapeKeys", &UInputKeySelector::execSetEscapeKeys },
+		{ "SetKeySelectionText", &UInputKeySelector::execSetKeySelectionText },
+		{ "SetNoKeySpecifiedText", &UInputKeySelector::execSetNoKeySpecifiedText },
+		{ "SetSelectedKey", &UInputKeySelector::execSetSelectedKey },
+		{ "SetTextBlockVisibility", &UInputKeySelector::execSetTextBlockVisibility },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UInputKeySelector_OnIsSelectingKeyChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -205,11 +240,6 @@ UFunction* Z_Construct_UFunction_UInputKeySelector_SetTextBlockVisibility()
 	return ReturnFunction;
 }
 
-class UInputKeySelector
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UInputKeySelector_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,53 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UTextRenderComponent();  // RVA 0x024E7B00 (consensus OuterFunc)
 
+class UTextRenderComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUTextRenderComponent();
+	static void execGetTextLocalSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTextWorldSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_SetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFont(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHorizSpacingAdjust(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTextMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTextRenderColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVertSpacingAdjust(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWorldSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetXScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetYScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E70A0 (end 0x024E70C2)
+// Original VA: 0x00000001424E70A0 | File offset: 0x024E66A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039C4970) | Matching: see analysis/functions-uht-natives.json
+void UTextRenderComponent::StaticRegisterNativesUTextRenderComponent()
+{
+	UClass* Class = UTextRenderComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTextLocalSize", &UTextRenderComponent::execGetTextLocalSize },
+		{ "GetTextWorldSize", &UTextRenderComponent::execGetTextWorldSize },
+		{ "K2_SetText", &UTextRenderComponent::execK2_SetText },
+		{ "SetFont", &UTextRenderComponent::execSetFont },
+		{ "SetHorizontalAlignment", &UTextRenderComponent::execSetHorizontalAlignment },
+		{ "SetHorizSpacingAdjust", &UTextRenderComponent::execSetHorizSpacingAdjust },
+		{ "SetText", &UTextRenderComponent::execSetText },
+		{ "SetTextMaterial", &UTextRenderComponent::execSetTextMaterial },
+		{ "SetTextRenderColor", &UTextRenderComponent::execSetTextRenderColor },
+		{ "SetVerticalAlignment", &UTextRenderComponent::execSetVerticalAlignment },
+		{ "SetVertSpacingAdjust", &UTextRenderComponent::execSetVertSpacingAdjust },
+		{ "SetWorldSize", &UTextRenderComponent::execSetWorldSize },
+		{ "SetXScale", &UTextRenderComponent::execSetXScale },
+		{ "SetYScale", &UTextRenderComponent::execSetYScale },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UTextRenderComponent_GetTextLocalSize_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -286,11 +333,6 @@ UFunction* Z_Construct_UFunction_UTextRenderComponent_SetYScale()
 	return ReturnFunction;
 }
 
-class UTextRenderComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UTextRenderComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookPageDetailsWidget();  // RVA 0x028946A0 (consensus OuterFunc)
 
+class UFortCollectionBookPageDetailsWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCollectionBookPageDetailsWidget();
+	static void execHandleRewardDetailsModalWidgetDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnDetailsPageChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPageProgressionUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRewardDetailsButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotItemComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894220 (end 0x02894242)
+// Original VA: 0x0000000142894220 | File offset: 0x02893820
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C763D0) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookPageDetailsWidget::StaticRegisterNativesUFortCollectionBookPageDetailsWidget()
+{
+	UClass* Class = UFortCollectionBookPageDetailsWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleRewardDetailsModalWidgetDeactivated", &UFortCollectionBookPageDetailsWidget::execHandleRewardDetailsModalWidgetDeactivated },
+		{ "OnDetailsPageChanged", &UFortCollectionBookPageDetailsWidget::execOnDetailsPageChanged },
+		{ "OnPageProgressionUpdated", &UFortCollectionBookPageDetailsWidget::execOnPageProgressionUpdated },
+		{ "OnRewardDetailsButtonClicked", &UFortCollectionBookPageDetailsWidget::execOnRewardDetailsButtonClicked },
+		{ "OnSlotItemComplete", &UFortCollectionBookPageDetailsWidget::execOnSlotItemComplete },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCollectionBookPageDetailsWidget_HandleRewardDetailsModalWidgetDeactivated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPageDetailsWidget_OnSlotItem
 	return ReturnFunction;
 }
 
-class UFortCollectionBookPageDetailsWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCollectionBookPageDetailsWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

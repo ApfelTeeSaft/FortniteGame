@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_ShowConfirmation();  // RVA 0x0288CA40 (consensus OuterFunc)
 
+class UFortAsyncAction_ShowConfirmation
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_ShowConfirmation();
+	static void execShowConfirmationDialog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C560 (end 0x0288C582)
+// Original VA: 0x000000014288C560 | File offset: 0x0288BB60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C6A268) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_ShowConfirmation::StaticRegisterNativesUFortAsyncAction_ShowConfirmation()
+{
+	UClass* Class = UFortAsyncAction_ShowConfirmation::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ShowConfirmationDialog", &UFortAsyncAction_ShowConfirmation::execShowConfirmationDialog },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_ShowConfirmationDialog_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_ShowConfirmation_ShowConfirmat
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_ShowConfirmation
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

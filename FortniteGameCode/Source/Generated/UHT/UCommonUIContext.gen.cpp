@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonUIContext();  // RVA 0x002D0450 (consensus OuterFunc)
 
+class UCommonUIContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UCommonUIContext_InputMethodChangedDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +193,6 @@ UFunction* Z_Construct_UFunction_UCommonUIContext_SetGamepadInputType()
 	return ReturnFunction;
 }
 
-class UCommonUIContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonUIContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPaperFlipbook();  // RVA 0x006676B0 (consensus OuterFunc)
 
+class UPaperFlipbook
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UPaperFlipbook_GetKeyFrameIndexAtTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +153,6 @@ UFunction* Z_Construct_UFunction_UPaperFlipbook_IsValidKeyFrameIndex()
 	return ReturnFunction;
 }
 
-class UPaperFlipbook
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPaperFlipbook_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

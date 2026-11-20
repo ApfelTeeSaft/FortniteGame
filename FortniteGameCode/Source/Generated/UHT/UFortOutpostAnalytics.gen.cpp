@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortOutpostAnalytics();  // RVA 0x00FA3DA0 (consensus OuterFunc)
 
+class UFortOutpostAnalytics
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortOutpostAnalytics();
+	static void execFireAnalyticsEvent_OutpostAttackWaveCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_OutpostAttackWaveStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_OutpostBuildingActivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_OutpostBuildingDefended(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_OutpostDefenseEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_OutpostDefenseStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_OutpostLeaveOutpost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_OutpostLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_OutpostSupplyDropPickedUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3530 (end 0x00FA3552)
+// Original VA: 0x0000000140FA3530 | File offset: 0x00FA2B30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C8B70) | Matching: see analysis/functions-uht-natives.json
+void UFortOutpostAnalytics::StaticRegisterNativesUFortOutpostAnalytics()
+{
+	UClass* Class = UFortOutpostAnalytics::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FireAnalyticsEvent_OutpostAttackWaveCompleted", &UFortOutpostAnalytics::execFireAnalyticsEvent_OutpostAttackWaveCompleted },
+		{ "FireAnalyticsEvent_OutpostAttackWaveStarted", &UFortOutpostAnalytics::execFireAnalyticsEvent_OutpostAttackWaveStarted },
+		{ "FireAnalyticsEvent_OutpostBuildingActivated", &UFortOutpostAnalytics::execFireAnalyticsEvent_OutpostBuildingActivated },
+		{ "FireAnalyticsEvent_OutpostBuildingDefended", &UFortOutpostAnalytics::execFireAnalyticsEvent_OutpostBuildingDefended },
+		{ "FireAnalyticsEvent_OutpostDefenseEnd", &UFortOutpostAnalytics::execFireAnalyticsEvent_OutpostDefenseEnd },
+		{ "FireAnalyticsEvent_OutpostDefenseStart", &UFortOutpostAnalytics::execFireAnalyticsEvent_OutpostDefenseStart },
+		{ "FireAnalyticsEvent_OutpostLeaveOutpost", &UFortOutpostAnalytics::execFireAnalyticsEvent_OutpostLeaveOutpost },
+		{ "FireAnalyticsEvent_OutpostLoaded", &UFortOutpostAnalytics::execFireAnalyticsEvent_OutpostLoaded },
+		{ "FireAnalyticsEvent_OutpostSupplyDropPickedUp", &UFortOutpostAnalytics::execFireAnalyticsEvent_OutpostSupplyDropPickedUp },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_OutpostAttackWaveCompleted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +223,6 @@ UFunction* Z_Construct_UFunction_UFortOutpostAnalytics_FireAnalyticsEvent_Outpos
 	return ReturnFunction;
 }
 
-class UFortOutpostAnalytics
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortOutpostAnalytics_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

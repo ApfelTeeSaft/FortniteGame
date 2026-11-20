@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFrontendAnimInstance();  // RVA 0x010E32F0 (consensus OuterFunc)
 
+class UFrontendAnimInstance
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFrontendAnimInstance_OnPlayMontageFromGameplayTagQuery_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -83,11 +90,6 @@ UFunction* Z_Construct_UFunction_UFrontendAnimInstance_PlaySelected()
 	return ReturnFunction;
 }
 
-class UFrontendAnimInstance
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFrontendAnimInstance_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

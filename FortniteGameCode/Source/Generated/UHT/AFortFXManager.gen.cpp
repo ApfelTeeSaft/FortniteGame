@@ -6,6 +6,57 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortFXManager();  // RVA 0x00FDB4E0 (consensus OuterFunc)
 
+class AFortFXManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortFXManager();
+	static void execAddLightAnimationIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddMIDAnimationColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddMIDAnimationColorCurve(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddMIDAnimationFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddParticleAnimationFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddSplineMeshScaleAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddSplineMeshSnapAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPickupRarityMID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPickupStretchMIDFromPool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveLightAnimations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveMIDAnimations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveParticleAnimations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveSplineMeshAnimations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReturnFXActorToPool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReturnPickupStretchMIDToPool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnPooledFXActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDAA30 (end 0x00FDAA52)
+// Original VA: 0x0000000140FDAA30 | File offset: 0x00FDA030
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033123C0) | Matching: see analysis/functions-uht-natives.json
+void AFortFXManager::StaticRegisterNativesAFortFXManager()
+{
+	UClass* Class = AFortFXManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddLightAnimationIntensity", &AFortFXManager::execAddLightAnimationIntensity },
+		{ "AddMIDAnimationColor", &AFortFXManager::execAddMIDAnimationColor },
+		{ "AddMIDAnimationColorCurve", &AFortFXManager::execAddMIDAnimationColorCurve },
+		{ "AddMIDAnimationFloat", &AFortFXManager::execAddMIDAnimationFloat },
+		{ "AddParticleAnimationFloat", &AFortFXManager::execAddParticleAnimationFloat },
+		{ "AddSplineMeshScaleAnimation", &AFortFXManager::execAddSplineMeshScaleAnimation },
+		{ "AddSplineMeshSnapAnimation", &AFortFXManager::execAddSplineMeshSnapAnimation },
+		{ "GetPickupRarityMID", &AFortFXManager::execGetPickupRarityMID },
+		{ "GetPickupStretchMIDFromPool", &AFortFXManager::execGetPickupStretchMIDFromPool },
+		{ "RemoveLightAnimations", &AFortFXManager::execRemoveLightAnimations },
+		{ "RemoveMIDAnimations", &AFortFXManager::execRemoveMIDAnimations },
+		{ "RemoveParticleAnimations", &AFortFXManager::execRemoveParticleAnimations },
+		{ "RemoveSplineMeshAnimations", &AFortFXManager::execRemoveSplineMeshAnimations },
+		{ "ReturnFXActorToPool", &AFortFXManager::execReturnFXActorToPool },
+		{ "ReturnPickupStretchMIDToPool", &AFortFXManager::execReturnPickupStretchMIDToPool },
+		{ "SpawnPooledFXActor", &AFortFXManager::execSpawnPooledFXActor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortFXManager_AddLightAnimationIntensity_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -326,11 +377,6 @@ UFunction* Z_Construct_UFunction_AFortFXManager_SpawnPooledFXActor()
 	return ReturnFunction;
 }
 
-class AFortFXManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortFXManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

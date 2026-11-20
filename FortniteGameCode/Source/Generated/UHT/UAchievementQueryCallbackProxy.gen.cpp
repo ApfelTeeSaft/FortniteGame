@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAchievementQueryCallbackProxy();  // RVA 0x0032E8F0 (consensus OuterFunc)
 
+class UAchievementQueryCallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAchievementQueryCallbackProxy();
+	static void execCacheAchievementDescriptions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCacheAchievements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E130 (end 0x0032E152)
+// Original VA: 0x000000014032E130 | File offset: 0x0032D730
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAD138) | Matching: see analysis/functions-uht-natives.json
+void UAchievementQueryCallbackProxy::StaticRegisterNativesUAchievementQueryCallbackProxy()
+{
+	UClass* Class = UAchievementQueryCallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CacheAchievementDescriptions", &UAchievementQueryCallbackProxy::execCacheAchievementDescriptions },
+		{ "CacheAchievements", &UAchievementQueryCallbackProxy::execCacheAchievements },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievementDescriptions_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UAchievementQueryCallbackProxy_CacheAchievement
 	return ReturnFunction;
 }
 
-class UAchievementQueryCallbackProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAchievementQueryCallbackProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

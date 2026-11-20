@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerSpectating();  // RVA 0x01077830 (consensus OuterFunc)
 
+class AFortPlayerControllerSpectating
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowNextPlayer_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -64,11 +71,6 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerSpectating_FollowPrevPlaye
 	return ReturnFunction;
 }
 
-class AFortPlayerControllerSpectating
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPlayerControllerSpectating_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

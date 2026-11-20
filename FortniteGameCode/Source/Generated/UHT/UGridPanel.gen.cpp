@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGridPanel();  // RVA 0x01BED3C0 (consensus OuterFunc)
 
+class UGridPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUGridPanel();
+	static void execAddChildToGrid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetColumnFill(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRowFill(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECE80 (end 0x01BECEA2)
+// Original VA: 0x0000000141BECE80 | File offset: 0x01BEC480
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036968F8) | Matching: see analysis/functions-uht-natives.json
+void UGridPanel::StaticRegisterNativesUGridPanel()
+{
+	UClass* Class = UGridPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddChildToGrid", &UGridPanel::execAddChildToGrid },
+		{ "SetColumnFill", &UGridPanel::execSetColumnFill },
+		{ "SetRowFill", &UGridPanel::execSetRowFill },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UGridPanel_AddChildToGrid_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UGridPanel_SetRowFill()
 	return ReturnFunction;
 }
 
-class UGridPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGridPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

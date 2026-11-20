@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGameInstance();  // RVA 0x0240FEE0 (consensus OuterFunc)
 
+class UGameInstance
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUGameInstance();
+	static void execDebugCreatePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDebugRemovePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FA00 (end 0x0240FA22)
+// Original VA: 0x000000014240FA00 | File offset: 0x0240F000
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038F0AD8) | Matching: see analysis/functions-uht-natives.json
+void UGameInstance::StaticRegisterNativesUGameInstance()
+{
+	UClass* Class = UGameInstance::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DebugCreatePlayer", &UGameInstance::execDebugCreatePlayer },
+		{ "DebugRemovePlayer", &UGameInstance::execDebugRemovePlayer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UGameInstance_DebugCreatePlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -124,11 +147,6 @@ UFunction* Z_Construct_UFunction_UGameInstance_ReceiveShutdown()
 	return ReturnFunction;
 }
 
-class UGameInstance
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGameInstance_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

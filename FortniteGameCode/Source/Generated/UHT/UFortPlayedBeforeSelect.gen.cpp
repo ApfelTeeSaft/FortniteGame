@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPlayedBeforeSelect();  // RVA 0x028E6CD0 (consensus OuterFunc)
 
+class UFortPlayedBeforeSelect
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleNoClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +53,6 @@ UFunction* Z_Construct_UFunction_UFortPlayedBeforeSelect_HandleYesClicked()
 	return ReturnFunction;
 }
 
-class UFortPlayedBeforeSelect
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPlayedBeforeSelect_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortBaseCanvasEntity();  // RVA 0x028DE320 (consensus OuterFunc)
 
+class UFortBaseCanvasEntity
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortBaseCanvasEntity_Intro_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +53,6 @@ UFunction* Z_Construct_UFunction_UFortBaseCanvasEntity_Outro()
 	return ReturnFunction;
 }
 
-class UFortBaseCanvasEntity
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortBaseCanvasEntity_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

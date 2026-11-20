@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHomeCMSScreenBase();  // RVA 0x028BBE90 (consensus OuterFunc)
 
+class UFortHomeCMSScreenBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortHomeCMSScreenBase();
+	static void execAreTilesLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBB20 (end 0x028BBB42)
+// Original VA: 0x00000001428BBB20 | File offset: 0x028BB120
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CB0C50) | Matching: see analysis/functions-uht-natives.json
+void UFortHomeCMSScreenBase::StaticRegisterNativesUFortHomeCMSScreenBase()
+{
+	UClass* Class = UFortHomeCMSScreenBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AreTilesLoaded", &UFortHomeCMSScreenBase::execAreTilesLoaded },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHomeCMSScreenBase_AreTilesLoaded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -45,11 +66,6 @@ UFunction* Z_Construct_UFunction_UFortHomeCMSScreenBase_OnTilesLoaded()
 	return ReturnFunction;
 }
 
-class UFortHomeCMSScreenBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHomeCMSScreenBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

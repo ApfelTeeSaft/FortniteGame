@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UConnectionCallbackProxy();  // RVA 0x0032E960 (consensus OuterFunc)
 
+class UConnectionCallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUConnectionCallbackProxy();
+	static void execConnectToService(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E190 (end 0x0032E1B2)
+// Original VA: 0x000000014032E190 | File offset: 0x0032D790
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAD320) | Matching: see analysis/functions-uht-natives.json
+void UConnectionCallbackProxy::StaticRegisterNativesUConnectionCallbackProxy()
+{
+	UClass* Class = UConnectionCallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ConnectToService", &UConnectionCallbackProxy::execConnectToService },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UConnectionCallbackProxy_ConnectToService_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UConnectionCallbackProxy_ConnectToService()
 	return ReturnFunction;
 }
 
-class UConnectionCallbackProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UConnectionCallbackProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

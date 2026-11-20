@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortMarkActor();  // RVA 0x0101E580 (consensus OuterFunc)
 
+class AFortMarkActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortMarkActor_OnRep_AttachedToActor_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_AFortMarkActor_OnRep_AttachedToActor()
 	return ReturnFunction;
 }
 
-class AFortMarkActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortMarkActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

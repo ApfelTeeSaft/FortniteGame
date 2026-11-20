@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USceneCaptureComponent();  // RVA 0x024C6DB0 (consensus OuterFunc)
 
+class USceneCaptureComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_USceneCaptureComponent_ClearHiddenComponents_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -185,11 +192,6 @@ UFunction* Z_Construct_UFunction_USceneCaptureComponent_ShowOnlyComponent()
 	return ReturnFunction;
 }
 
-class USceneCaptureComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USceneCaptureComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

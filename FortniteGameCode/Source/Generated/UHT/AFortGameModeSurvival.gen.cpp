@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortGameModeSurvival();  // RVA 0x00FE45C0 (consensus OuterFunc)
 
+class AFortGameModeSurvival
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortGameModeSurvival();
+	static void execFireEvent_SurvivalPeriodicReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireEvent_SurvivalVoteReport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE3F90 (end 0x00FE3FB2)
+// Original VA: 0x0000000140FE3F90 | File offset: 0x00FE3590
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0331F198) | Matching: see analysis/functions-uht-natives.json
+void AFortGameModeSurvival::StaticRegisterNativesAFortGameModeSurvival()
+{
+	UClass* Class = AFortGameModeSurvival::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FireEvent_SurvivalPeriodicReport", &AFortGameModeSurvival::execFireEvent_SurvivalPeriodicReport },
+		{ "FireEvent_SurvivalVoteReport", &AFortGameModeSurvival::execFireEvent_SurvivalVoteReport },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortGameModeSurvival_FireEvent_SurvivalPeriodicReport_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_AFortGameModeSurvival_FireEvent_SurvivalVoteRep
 	return ReturnFunction;
 }
 
-class AFortGameModeSurvival
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortGameModeSurvival_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

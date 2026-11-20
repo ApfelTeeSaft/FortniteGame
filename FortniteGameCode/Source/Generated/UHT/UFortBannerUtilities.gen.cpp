@@ -6,6 +6,71 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortBannerUtilities();  // RVA 0x00FA3C50 (consensus OuterFunc)
 
+class UFortBannerUtilities
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortBannerUtilities();
+	static void execGetBannerColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerColorCategoryName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerColorCategoryRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerColorFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerColorItemFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerColorPrimaryColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerColorPrimaryColorFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerColorSecondaryColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerColorSecondaryColorFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerColorsForCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerIconCategoryName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerIconCategoryRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerIconItemFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerIconsForCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerLargeIconAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerLargeIconAssetFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerSmallIconAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerSmallIconAssetFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrimaryColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRowNameForBannerColorItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRowNameForBannerIconItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSecondaryColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadAndGetBannerLargeIconFromRowName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3470 (end 0x00FA3492)
+// Original VA: 0x0000000140FA3470 | File offset: 0x00FA2A70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C7F80) | Matching: see analysis/functions-uht-natives.json
+void UFortBannerUtilities::StaticRegisterNativesUFortBannerUtilities()
+{
+	UClass* Class = UFortBannerUtilities::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBannerColor", &UFortBannerUtilities::execGetBannerColor },
+		{ "GetBannerColorCategoryName", &UFortBannerUtilities::execGetBannerColorCategoryName },
+		{ "GetBannerColorCategoryRowName", &UFortBannerUtilities::execGetBannerColorCategoryRowName },
+		{ "GetBannerColorFromRowName", &UFortBannerUtilities::execGetBannerColorFromRowName },
+		{ "GetBannerColorItemFromRowName", &UFortBannerUtilities::execGetBannerColorItemFromRowName },
+		{ "GetBannerColorPrimaryColor", &UFortBannerUtilities::execGetBannerColorPrimaryColor },
+		{ "GetBannerColorPrimaryColorFromRowName", &UFortBannerUtilities::execGetBannerColorPrimaryColorFromRowName },
+		{ "GetBannerColorSecondaryColor", &UFortBannerUtilities::execGetBannerColorSecondaryColor },
+		{ "GetBannerColorSecondaryColorFromRowName", &UFortBannerUtilities::execGetBannerColorSecondaryColorFromRowName },
+		{ "GetBannerColorsForCategory", &UFortBannerUtilities::execGetBannerColorsForCategory },
+		{ "GetBannerIconCategoryName", &UFortBannerUtilities::execGetBannerIconCategoryName },
+		{ "GetBannerIconCategoryRowName", &UFortBannerUtilities::execGetBannerIconCategoryRowName },
+		{ "GetBannerIconItemFromRowName", &UFortBannerUtilities::execGetBannerIconItemFromRowName },
+		{ "GetBannerIconsForCategory", &UFortBannerUtilities::execGetBannerIconsForCategory },
+		{ "GetBannerLargeIconAsset", &UFortBannerUtilities::execGetBannerLargeIconAsset },
+		{ "GetBannerLargeIconAssetFromRowName", &UFortBannerUtilities::execGetBannerLargeIconAssetFromRowName },
+		{ "GetBannerSmallIconAsset", &UFortBannerUtilities::execGetBannerSmallIconAsset },
+		{ "GetBannerSmallIconAssetFromRowName", &UFortBannerUtilities::execGetBannerSmallIconAssetFromRowName },
+		{ "GetPrimaryColor", &UFortBannerUtilities::execGetPrimaryColor },
+		{ "GetRowNameForBannerColorItem", &UFortBannerUtilities::execGetRowNameForBannerColorItem },
+		{ "GetRowNameForBannerIconItem", &UFortBannerUtilities::execGetRowNameForBannerIconItem },
+		{ "GetSecondaryColor", &UFortBannerUtilities::execGetSecondaryColor },
+		{ "LoadAndGetBannerLargeIconFromRowName", &UFortBannerUtilities::execLoadAndGetBannerLargeIconFromRowName },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortBannerUtilities_GetBannerColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -466,11 +531,6 @@ UFunction* Z_Construct_UFunction_UFortBannerUtilities_LoadAndGetBannerLargeIconF
 	return ReturnFunction;
 }
 
-class UFortBannerUtilities
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortBannerUtilities_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

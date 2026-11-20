@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortDateTimeLibrary();  // RVA 0x00FCBC40 (consensus OuterFunc)
 
+class UFortDateTimeLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortDateTimeLibrary();
+	static void execGetMcpRelativeUtcNow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTimespanAsText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB1D0 (end 0x00FCB1F2)
+// Original VA: 0x0000000140FCB1D0 | File offset: 0x00FCA7D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032F9898) | Matching: see analysis/functions-uht-natives.json
+void UFortDateTimeLibrary::StaticRegisterNativesUFortDateTimeLibrary()
+{
+	UClass* Class = UFortDateTimeLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetMcpRelativeUtcNow", &UFortDateTimeLibrary::execGetMcpRelativeUtcNow },
+		{ "GetTimespanAsText", &UFortDateTimeLibrary::execGetTimespanAsText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDateTimeLibrary_GetMcpRelativeUtcNow_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortDateTimeLibrary_GetTimespanAsText()
 	return ReturnFunction;
 }
 
-class UFortDateTimeLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortDateTimeLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

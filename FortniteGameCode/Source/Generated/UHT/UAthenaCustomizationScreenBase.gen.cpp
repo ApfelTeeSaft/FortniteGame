@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaCustomizationScreenBase();  // RVA 0x0287F320 (consensus OuterFunc)
 
+class UAthenaCustomizationScreenBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaCustomizationScreenBase();
+	static void execGetFavoriteItemForCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EC90 (end 0x0287ECB2)
+// Original VA: 0x000000014287EC90 | File offset: 0x0287E290
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C51E18) | Matching: see analysis/functions-uht-natives.json
+void UAthenaCustomizationScreenBase::StaticRegisterNativesUAthenaCustomizationScreenBase()
+{
+	UClass* Class = UAthenaCustomizationScreenBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetFavoriteItemForCategory", &UAthenaCustomizationScreenBase::execGetFavoriteItemForCategory },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaCustomizationScreenBase_GetFavoriteItemForCategory_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAthenaCustomizationScreenBase_GetFavoriteItemF
 	return ReturnFunction;
 }
 
-class UAthenaCustomizationScreenBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaCustomizationScreenBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingFOBCoreSpawnPad();  // RVA 0x00F6C1D0 (consensus OuterFunc)
 
+class ABuildingFOBCoreSpawnPad
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesABuildingFOBCoreSpawnPad();
+	static void execGetCoreSpawnTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BD20 (end 0x00F6BD42)
+// Original VA: 0x0000000140F6BD20 | File offset: 0x00F6B320
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03276F48) | Matching: see analysis/functions-uht-natives.json
+void ABuildingFOBCoreSpawnPad::StaticRegisterNativesABuildingFOBCoreSpawnPad()
+{
+	UClass* Class = ABuildingFOBCoreSpawnPad::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCoreSpawnTransform", &ABuildingFOBCoreSpawnPad::execGetCoreSpawnTransform },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingFOBCoreSpawnPad_GetCoreSpawnTransform_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_ABuildingFOBCoreSpawnPad_GetCoreSpawnTransform(
 	return ReturnFunction;
 }
 
-class ABuildingFOBCoreSpawnPad
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingFOBCoreSpawnPad_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

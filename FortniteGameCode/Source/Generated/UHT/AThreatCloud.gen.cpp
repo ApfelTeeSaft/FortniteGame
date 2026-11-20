@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AThreatCloud();  // RVA 0x010F1910 (consensus OuterFunc)
 
+class AThreatCloud
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAThreatCloud();
+	static void execGetThreatVolume(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F1280 (end 0x010F12A2)
+// Original VA: 0x00000001410F1280 | File offset: 0x010F0880
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03450E58) | Matching: see analysis/functions-uht-natives.json
+void AThreatCloud::StaticRegisterNativesAThreatCloud()
+{
+	UClass* Class = AThreatCloud::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetThreatVolume", &AThreatCloud::execGetThreatVolume },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AThreatCloud_GetThreatVolume_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -181,11 +202,6 @@ UFunction* Z_Construct_UFunction_AThreatCloud_OnThreatVolumeChanged()
 	return ReturnFunction;
 }
 
-class AThreatCloud
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AThreatCloud_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

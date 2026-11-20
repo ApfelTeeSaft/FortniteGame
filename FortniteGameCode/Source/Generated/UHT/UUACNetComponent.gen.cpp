@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UUACNetComponent();  // RVA 0x0068ECC0 (consensus OuterFunc)
 
+class UUACNetComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UUACNetComponent_SendClientHello_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -65,11 +72,6 @@ UFunction* Z_Construct_UFunction_UUACNetComponent_SendPacketToServer()
 	return ReturnFunction;
 }
 
-class UUACNetComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UUACNetComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

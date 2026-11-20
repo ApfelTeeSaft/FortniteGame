@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMotionControllerComponent();  // RVA 0x0199D350 (consensus OuterFunc)
 
+class UMotionControllerComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UMotionControllerComponent_GetParameterValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -205,11 +212,6 @@ UFunction* Z_Construct_UFunction_UMotionControllerComponent_SetTrackingSource()
 	return ReturnFunction;
 }
 
-class UMotionControllerComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMotionControllerComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

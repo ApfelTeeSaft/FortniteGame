@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCardPackItem();  // RVA 0x00FAD8D0 (consensus OuterFunc)
 
+class UFortCardPackItem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCardPackItem();
+	static void execCanStoreOpen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetChoices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsChoicePack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACD80 (end 0x00FACDA2)
+// Original VA: 0x0000000140FACD80 | File offset: 0x00FAC380
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032D09D8) | Matching: see analysis/functions-uht-natives.json
+void UFortCardPackItem::StaticRegisterNativesUFortCardPackItem()
+{
+	UClass* Class = UFortCardPackItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanStoreOpen", &UFortCardPackItem::execCanStoreOpen },
+		{ "GetChoices", &UFortCardPackItem::execGetChoices },
+		{ "IsChoicePack", &UFortCardPackItem::execIsChoicePack },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCardPackItem_CanStoreOpen_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortCardPackItem_IsChoicePack()
 	return ReturnFunction;
 }
 
-class UFortCardPackItem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCardPackItem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

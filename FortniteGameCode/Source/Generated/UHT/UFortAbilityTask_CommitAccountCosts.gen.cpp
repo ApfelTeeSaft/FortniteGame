@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityTask_CommitAccountCosts();  // RVA 0x00F81E00 (consensus OuterFunc)
 
+class UFortAbilityTask_CommitAccountCosts
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAbilityTask_CommitAccountCosts();
+	static void execCommitAccountCosts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81720 (end 0x00F81742)
+// Original VA: 0x0000000140F81720 | File offset: 0x00F80D20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03295AF8) | Matching: see analysis/functions-uht-natives.json
+void UFortAbilityTask_CommitAccountCosts::StaticRegisterNativesUFortAbilityTask_CommitAccountCosts()
+{
+	UClass* Class = UFortAbilityTask_CommitAccountCosts::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CommitAccountCosts", &UFortAbilityTask_CommitAccountCosts::execCommitAccountCosts },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAbilityTask_CommitAccountCosts_CommitAccountCosts_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_CommitAccountCosts_CommitAccou
 	return ReturnFunction;
 }
 
-class UFortAbilityTask_CommitAccountCosts
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAbilityTask_CommitAccountCosts_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

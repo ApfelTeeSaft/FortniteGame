@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreeLandingPage();  // RVA 0x028F55A0 (consensus OuterFunc)
 
+class UFortSkillTreeLandingPage
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSkillTreeLandingPage();
+	static void execSetupEventBasedSkillTreePages(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4F00 (end 0x028F4F22)
+// Original VA: 0x00000001428F4F00 | File offset: 0x028F4500
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D13988) | Matching: see analysis/functions-uht-natives.json
+void UFortSkillTreeLandingPage::StaticRegisterNativesUFortSkillTreeLandingPage()
+{
+	UClass* Class = UFortSkillTreeLandingPage::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetupEventBasedSkillTreePages", &UFortSkillTreeLandingPage::execSetupEventBasedSkillTreePages },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSkillTreeLandingPage_ClearEventSkillTrees_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +87,6 @@ UFunction* Z_Construct_UFunction_UFortSkillTreeLandingPage_SetupEventBasedSkillT
 	return ReturnFunction;
 }
 
-class UFortSkillTreeLandingPage
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSkillTreeLandingPage_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

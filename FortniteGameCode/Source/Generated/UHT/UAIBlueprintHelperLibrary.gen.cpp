@@ -6,6 +6,47 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAIBlueprintHelperLibrary();  // RVA 0x01D1BAE0 (consensus OuterFunc)
 
+class UAIBlueprintHelperLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAIBlueprintHelperLibrary();
+	static void execCreateMoveToProxyObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAIController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBlackboard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidAIDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidAILocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidAIRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLockAIResourcesWithAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendAIMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnAIFromClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnlockAIResourcesWithAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B170 (end 0x01D1B192)
+// Original VA: 0x0000000141D1B170 | File offset: 0x01D1A770
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F0800) | Matching: see analysis/functions-uht-natives.json
+void UAIBlueprintHelperLibrary::StaticRegisterNativesUAIBlueprintHelperLibrary()
+{
+	UClass* Class = UAIBlueprintHelperLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateMoveToProxyObject", &UAIBlueprintHelperLibrary::execCreateMoveToProxyObject },
+		{ "GetAIController", &UAIBlueprintHelperLibrary::execGetAIController },
+		{ "GetBlackboard", &UAIBlueprintHelperLibrary::execGetBlackboard },
+		{ "GetCurrentPath", &UAIBlueprintHelperLibrary::execGetCurrentPath },
+		{ "IsValidAIDirection", &UAIBlueprintHelperLibrary::execIsValidAIDirection },
+		{ "IsValidAILocation", &UAIBlueprintHelperLibrary::execIsValidAILocation },
+		{ "IsValidAIRotation", &UAIBlueprintHelperLibrary::execIsValidAIRotation },
+		{ "LockAIResourcesWithAnimation", &UAIBlueprintHelperLibrary::execLockAIResourcesWithAnimation },
+		{ "SendAIMessage", &UAIBlueprintHelperLibrary::execSendAIMessage },
+		{ "SpawnAIFromClass", &UAIBlueprintHelperLibrary::execSpawnAIFromClass },
+		{ "UnlockAIResourcesWithAnimation", &UAIBlueprintHelperLibrary::execUnlockAIResourcesWithAnimation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAIBlueprintHelperLibrary_CreateMoveToProxyObject_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -226,11 +267,6 @@ UFunction* Z_Construct_UFunction_UAIBlueprintHelperLibrary_UnlockAIResourcesWith
 	return ReturnFunction;
 }
 
-class UAIBlueprintHelperLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAIBlueprintHelperLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

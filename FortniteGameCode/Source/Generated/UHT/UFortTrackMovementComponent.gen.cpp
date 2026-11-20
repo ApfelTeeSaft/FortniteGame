@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTrackMovementComponent();  // RVA 0x010CAD30 (consensus OuterFunc)
 
+class UFortTrackMovementComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortTrackMovementComponent_FlipDirection_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -124,11 +131,6 @@ UFunction* Z_Construct_UFunction_UFortTrackMovementComponent_OnRep_ReplicatedTra
 	return ReturnFunction;
 }
 
-class UFortTrackMovementComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTrackMovementComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

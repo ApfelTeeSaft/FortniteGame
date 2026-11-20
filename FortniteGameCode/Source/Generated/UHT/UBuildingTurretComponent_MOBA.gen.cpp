@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBuildingTurretComponent_MOBA();  // RVA 0x00F78710 (consensus OuterFunc)
 
+class UBuildingTurretComponent_MOBA
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBuildingTurretComponent_MOBA();
+	static void execOnAllyHarmed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F780A0 (end 0x00F780C2)
+// Original VA: 0x0000000140F780A0 | File offset: 0x00F776A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03287410) | Matching: see analysis/functions-uht-natives.json
+void UBuildingTurretComponent_MOBA::StaticRegisterNativesUBuildingTurretComponent_MOBA()
+{
+	UClass* Class = UBuildingTurretComponent_MOBA::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnAllyHarmed", &UBuildingTurretComponent_MOBA::execOnAllyHarmed },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBuildingTurretComponent_MOBA_OnAllyHarmed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UBuildingTurretComponent_MOBA_OnAllyHarmed()
 	return ReturnFunction;
 }
 
-class UBuildingTurretComponent_MOBA
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBuildingTurretComponent_MOBA_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

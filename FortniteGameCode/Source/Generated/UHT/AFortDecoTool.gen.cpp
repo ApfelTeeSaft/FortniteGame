@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortDecoTool();  // RVA 0x00FCFFC0 (consensus OuterFunc)
 
+class AFortDecoTool
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortDecoTool_ClientDestroyDecoPreview_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -104,11 +111,6 @@ UFunction* Z_Construct_UFunction_AFortDecoTool_ServerSpawnDeco()
 	return ReturnFunction;
 }
 
-class AFortDecoTool
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortDecoTool_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

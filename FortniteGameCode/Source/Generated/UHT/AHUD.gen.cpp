@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AHUD();  // RVA 0x0241F0A0 (consensus OuterFunc)
 
+class AHUD
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AHUD_AddDebugText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -582,11 +589,6 @@ UFunction* Z_Construct_UFunction_AHUD_ShowHUD()
 	return ReturnFunction;
 }
 
-class AHUD
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AHUD_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

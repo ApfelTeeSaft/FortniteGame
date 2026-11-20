@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonTabListWidget();  // RVA 0x002CA5C0 (consensus OuterFunc)
 
+class UCommonTabListWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UCommonTabListWidget_OnTabButtonCreated__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -503,11 +510,6 @@ UFunction* Z_Construct_UFunction_UCommonTabListWidget_SetTabVisibility()
 	return ReturnFunction;
 }
 
-class UCommonTabListWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonTabListWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaPlayerHitPointBarBase();  // RVA 0x028872E0 (consensus OuterFunc)
 
+class UAthenaPlayerHitPointBarBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaPlayerHitPointBarBase();
+	static void execSetDataSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886B70 (end 0x02886B92)
+// Original VA: 0x0000000142886B70 | File offset: 0x02886170
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C5EA88) | Matching: see analysis/functions-uht-natives.json
+void UAthenaPlayerHitPointBarBase::StaticRegisterNativesUAthenaPlayerHitPointBarBase()
+{
+	UClass* Class = UAthenaPlayerHitPointBarBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetDataSource", &UAthenaPlayerHitPointBarBase::execSetDataSource },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaPlayerHitPointBarBase_OnDBNOStateChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +107,6 @@ UFunction* Z_Construct_UFunction_UAthenaPlayerHitPointBarBase_SetDataSource()
 	return ReturnFunction;
 }
 
-class UAthenaPlayerHitPointBarBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaPlayerHitPointBarBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

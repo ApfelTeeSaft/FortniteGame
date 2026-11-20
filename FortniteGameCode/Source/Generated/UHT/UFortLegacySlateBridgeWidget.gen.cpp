@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortLegacySlateBridgeWidget();  // RVA 0x028D7210 (consensus OuterFunc)
 
+class UFortLegacySlateBridgeWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortLegacySlateBridgeWidget();
+	static void execSetOnCloseHandler(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateSlateWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6C90 (end 0x028D6CB2)
+// Original VA: 0x00000001428D6C90 | File offset: 0x028D6290
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE3BA0) | Matching: see analysis/functions-uht-natives.json
+void UFortLegacySlateBridgeWidget::StaticRegisterNativesUFortLegacySlateBridgeWidget()
+{
+	UClass* Class = UFortLegacySlateBridgeWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetOnCloseHandler", &UFortLegacySlateBridgeWidget::execSetOnCloseHandler },
+		{ "UpdateSlateWidget", &UFortLegacySlateBridgeWidget::execUpdateSlateWidget },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortLegacySlateBridgeWidget_SetOnCloseHandler_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortLegacySlateBridgeWidget_UpdateSlateWidget(
 	return ReturnFunction;
 }
 
-class UFortLegacySlateBridgeWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortLegacySlateBridgeWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

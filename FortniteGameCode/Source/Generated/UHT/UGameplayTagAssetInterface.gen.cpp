@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTagAssetInterface();  // RVA 0x01C938A0 (consensus OuterFunc)
 
+class UGameplayTagAssetInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUGameplayTagAssetInterface();
+	static void execGetOwnedGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAllMatchingGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAnyMatchingGameplayTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasMatchingGameplayTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C931C0 (end 0x01C931E2)
+// Original VA: 0x0000000141C931C0 | File offset: 0x01C927C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036C1F00) | Matching: see analysis/functions-uht-natives.json
+void UGameplayTagAssetInterface::StaticRegisterNativesUGameplayTagAssetInterface()
+{
+	UClass* Class = UGameplayTagAssetInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetOwnedGameplayTags", &UGameplayTagAssetInterface::execGetOwnedGameplayTags },
+		{ "HasAllMatchingGameplayTags", &UGameplayTagAssetInterface::execHasAllMatchingGameplayTags },
+		{ "HasAnyMatchingGameplayTags", &UGameplayTagAssetInterface::execHasAnyMatchingGameplayTags },
+		{ "HasMatchingGameplayTag", &UGameplayTagAssetInterface::execHasMatchingGameplayTag },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UGameplayTagAssetInterface_GetOwnedGameplayTags_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UGameplayTagAssetInterface_HasMatchingGameplayT
 	return ReturnFunction;
 }
 
-class UGameplayTagAssetInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGameplayTagAssetInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

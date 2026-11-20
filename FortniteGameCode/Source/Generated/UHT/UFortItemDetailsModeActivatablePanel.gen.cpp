@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemDetailsModeActivatablePanel();  // RVA 0x028C9E20 (consensus OuterFunc)
 
+class UFortItemDetailsModeActivatablePanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortItemDetailsModeActivatablePanel();
+	static void execHandleOnActiveWidgetChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9960 (end 0x028C9982)
+// Original VA: 0x00000001428C9960 | File offset: 0x028C8F60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CCC4C8) | Matching: see analysis/functions-uht-natives.json
+void UFortItemDetailsModeActivatablePanel::StaticRegisterNativesUFortItemDetailsModeActivatablePanel()
+{
+	UClass* Class = UFortItemDetailsModeActivatablePanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleOnActiveWidgetChanged", &UFortItemDetailsModeActivatablePanel::execHandleOnActiveWidgetChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemDetailsModeActivatablePanel_HandleOnActiveWidgetChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortItemDetailsModeActivatablePanel_HandleOnAc
 	return ReturnFunction;
 }
 
-class UFortItemDetailsModeActivatablePanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemDetailsModeActivatablePanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

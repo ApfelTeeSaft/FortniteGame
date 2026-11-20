@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayTagRemoved();  // RVA 0x0054D730 (consensus OuterFunc)
 
+class UAbilityTask_WaitGameplayTagRemoved
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitGameplayTagRemoved();
+	static void execWaitGameplayTagRemove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CFC0 (end 0x0054CFE2)
+// Original VA: 0x000000014054CFC0 | File offset: 0x0054C5C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F32F08) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitGameplayTagRemoved::StaticRegisterNativesUAbilityTask_WaitGameplayTagRemoved()
+{
+	UClass* Class = UAbilityTask_WaitGameplayTagRemoved::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "WaitGameplayTagRemove", &UAbilityTask_WaitGameplayTagRemoved::execWaitGameplayTagRemove },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitGameplayTagRemoved_WaitGameplayTagRemove_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayTagRemoved_WaitGamepla
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitGameplayTagRemoved
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitGameplayTagRemoved_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

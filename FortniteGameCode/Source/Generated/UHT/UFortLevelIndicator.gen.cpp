@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortLevelIndicator();  // RVA 0x028D7240 (consensus OuterFunc)
 
+class UFortLevelIndicator
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortLevelIndicator();
+	static void execHandleItemForComparisonChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleItemToRepresentChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemForComparison(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemToRepresent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShouldShowMaximumLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6CC0 (end 0x028D6CE2)
+// Original VA: 0x00000001428D6CC0 | File offset: 0x028D62C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE3C90) | Matching: see analysis/functions-uht-natives.json
+void UFortLevelIndicator::StaticRegisterNativesUFortLevelIndicator()
+{
+	UClass* Class = UFortLevelIndicator::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleItemForComparisonChanged", &UFortLevelIndicator::execHandleItemForComparisonChanged },
+		{ "HandleItemToRepresentChanged", &UFortLevelIndicator::execHandleItemToRepresentChanged },
+		{ "SetItemForComparison", &UFortLevelIndicator::execSetItemForComparison },
+		{ "SetItemToRepresent", &UFortLevelIndicator::execSetItemToRepresent },
+		{ "SetShouldShowMaximumLevel", &UFortLevelIndicator::execSetShouldShowMaximumLevel },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortLevelIndicator_HandleItemForComparisonChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UFortLevelIndicator_SetShouldShowMaximumLevel()
 	return ReturnFunction;
 }
 
-class UFortLevelIndicator
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortLevelIndicator_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

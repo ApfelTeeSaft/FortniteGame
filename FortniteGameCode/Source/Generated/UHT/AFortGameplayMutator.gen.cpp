@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortGameplayMutator();  // RVA 0x00FEE810 (consensus OuterFunc)
 
+class AFortGameplayMutator
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortGameplayMutator();
+	static void execIsMutatorActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE130 (end 0x00FEE152)
+// Original VA: 0x0000000140FEE130 | File offset: 0x00FED730
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0332CBD8) | Matching: see analysis/functions-uht-natives.json
+void AFortGameplayMutator::StaticRegisterNativesAFortGameplayMutator()
+{
+	UClass* Class = AFortGameplayMutator::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsMutatorActive", &AFortGameplayMutator::execIsMutatorActive },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortGameplayMutator_IsMutatorActive_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_AFortGameplayMutator_IsMutatorActive()
 	return ReturnFunction;
 }
 
-class AFortGameplayMutator
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortGameplayMutator_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

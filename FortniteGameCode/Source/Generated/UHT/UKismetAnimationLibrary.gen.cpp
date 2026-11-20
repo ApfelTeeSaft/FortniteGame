@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UKismetAnimationLibrary();  // RVA 0x01B0E380 (consensus OuterFunc)
 
+class UKismetAnimationLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUKismetAnimationLibrary();
+	static void execK2_LookAt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_TwoBoneIK(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0C060 (end 0x01B0C082)
+// Original VA: 0x0000000141B0C060 | File offset: 0x01B0B660
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03654738) | Matching: see analysis/functions-uht-natives.json
+void UKismetAnimationLibrary::StaticRegisterNativesUKismetAnimationLibrary()
+{
+	UClass* Class = UKismetAnimationLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "K2_LookAt", &UKismetAnimationLibrary::execK2_LookAt },
+		{ "K2_TwoBoneIK", &UKismetAnimationLibrary::execK2_TwoBoneIK },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UKismetAnimationLibrary_K2_LookAt_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UKismetAnimationLibrary_K2_TwoBoneIK()
 	return ReturnFunction;
 }
 
-class UKismetAnimationLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UKismetAnimationLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

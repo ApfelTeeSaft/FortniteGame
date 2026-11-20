@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCustomCharacterPartOwnerInterface();  // RVA 0x00F78950 (consensus OuterFunc)
 
+class UCustomCharacterPartOwnerInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCustomCharacterPartOwnerInterface();
+	static void execGetCustomizationRootSkeletalMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPlayAnimationsMatchingQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78100 (end 0x00F78122)
+// Original VA: 0x0000000140F78100 | File offset: 0x00F77700
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03288FD8) | Matching: see analysis/functions-uht-natives.json
+void UCustomCharacterPartOwnerInterface::StaticRegisterNativesUCustomCharacterPartOwnerInterface()
+{
+	UClass* Class = UCustomCharacterPartOwnerInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCustomizationRootSkeletalMeshComponent", &UCustomCharacterPartOwnerInterface::execGetCustomizationRootSkeletalMeshComponent },
+		{ "PlayAnimationsMatchingQuery", &UCustomCharacterPartOwnerInterface::execPlayAnimationsMatchingQuery },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_GetCustomizationRootSkeletalMeshComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UCustomCharacterPartOwnerInterface_PlayAnimatio
 	return ReturnFunction;
 }
 
-class UCustomCharacterPartOwnerInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCustomCharacterPartOwnerInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

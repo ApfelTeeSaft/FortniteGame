@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortItemIcon
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortItemIcon();
+	static void execSetBrushSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShadowColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C99F0 (end 0x028C9A12)
+// Original VA: 0x00000001428C99F0 | File offset: 0x028C8FF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CCD150) | Matching: see analysis/functions-uht-natives.json
+void UFortItemIcon::StaticRegisterNativesUFortItemIcon()
+{
+	UClass* Class = UFortItemIcon::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetBrushSize", &UFortItemIcon::execSetBrushSize },
+		{ "SetColorAndOpacity", &UFortItemIcon::execSetColorAndOpacity },
+		{ "SetItemDefinition", &UFortItemIcon::execSetItemDefinition },
+		{ "SetOpacity", &UFortItemIcon::execSetOpacity },
+		{ "SetShadowColorAndOpacity", &UFortItemIcon::execSetShadowColorAndOpacity },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortItemIcon_SetBrushSize: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortItemIcon_SetColorAndOpacity: FFunctionParams record not identified; creator not emitted.

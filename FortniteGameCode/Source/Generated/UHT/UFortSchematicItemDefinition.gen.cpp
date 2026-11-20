@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSchematicItemDefinition();  // RVA 0x010A5890 (consensus OuterFunc)
 
+class UFortSchematicItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSchematicItemDefinition();
+	static void execGetCraftingSuccessSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCraftingTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCraftingTimeForCharacter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuantityProduced(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRecipe(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetResultWorldItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4EF0 (end 0x010A4F12)
+// Original VA: 0x00000001410A4EF0 | File offset: 0x010A44F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033F5BE0) | Matching: see analysis/functions-uht-natives.json
+void UFortSchematicItemDefinition::StaticRegisterNativesUFortSchematicItemDefinition()
+{
+	UClass* Class = UFortSchematicItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCraftingSuccessSound", &UFortSchematicItemDefinition::execGetCraftingSuccessSound },
+		{ "GetCraftingTime", &UFortSchematicItemDefinition::execGetCraftingTime },
+		{ "GetCraftingTimeForCharacter", &UFortSchematicItemDefinition::execGetCraftingTimeForCharacter },
+		{ "GetQuantityProduced", &UFortSchematicItemDefinition::execGetQuantityProduced },
+		{ "GetRecipe", &UFortSchematicItemDefinition::execGetRecipe },
+		{ "GetResultWorldItemDefinition", &UFortSchematicItemDefinition::execGetResultWorldItemDefinition },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSchematicItemDefinition_GetCraftingSuccessSound_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UFortSchematicItemDefinition_GetResultWorldItem
 	return ReturnFunction;
 }
 
-class UFortSchematicItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSchematicItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

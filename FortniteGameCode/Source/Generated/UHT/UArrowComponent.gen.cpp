@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UArrowComponent();  // RVA 0x023D6680 (consensus OuterFunc)
 
+class UArrowComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUArrowComponent();
+	static void execSetArrowColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5850 (end 0x023D5872)
+// Original VA: 0x00000001423D5850 | File offset: 0x023D4E50
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038A3F28) | Matching: see analysis/functions-uht-natives.json
+void UArrowComponent::StaticRegisterNativesUArrowComponent()
+{
+	UClass* Class = UArrowComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetArrowColor", &UArrowComponent::execSetArrowColor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UArrowComponent_SetArrowColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UArrowComponent_SetArrowColor()
 	return ReturnFunction;
 }
 
-class UArrowComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UArrowComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

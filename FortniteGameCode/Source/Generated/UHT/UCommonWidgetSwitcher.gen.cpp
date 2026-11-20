@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonWidgetSwitcher();  // RVA 0x002D05E0 (consensus OuterFunc)
 
+class UCommonWidgetSwitcher
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCommonWidgetSwitcher_ActivateNextWidget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -164,11 +171,6 @@ UFunction* Z_Construct_UFunction_UCommonWidgetSwitcher_SetActiveWidgetIndex_Adva
 	return ReturnFunction;
 }
 
-class UCommonWidgetSwitcher
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonWidgetSwitcher_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortControlResistanceSet();  // RVA 0x00FCB990 (consensus OuterFunc)
 
+class UFortControlResistanceSet
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortControlResistanceSet_OnRep_ControlResistance_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -44,11 +51,6 @@ UFunction* Z_Construct_UFunction_UFortControlResistanceSet_OnRep_MaxControlResis
 	return ReturnFunction;
 }
 
-class UFortControlResistanceSet
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortControlResistanceSet_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

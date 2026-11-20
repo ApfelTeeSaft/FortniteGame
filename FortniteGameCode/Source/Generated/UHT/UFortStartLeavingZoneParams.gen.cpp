@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortStartLeavingZoneParams
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortStartLeavingZoneParams();
+	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9200 (end 0x010E9222)
+// Original VA: 0x00000001410E9200 | File offset: 0x010E8800
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0344A7A8) | Matching: see analysis/functions-uht-natives.json
+void UFortStartLeavingZoneParams::StaticRegisterNativesUFortStartLeavingZoneParams()
+{
+	UClass* Class = UFortStartLeavingZoneParams::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BreakParams", &UFortStartLeavingZoneParams::execBreakParams },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortStartLeavingZoneParams_BreakParams: FFunctionParams record not identified; creator not emitted.

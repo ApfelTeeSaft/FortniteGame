@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGameplayAbility();  // RVA 0x0054D8F0 (consensus OuterFunc)
 
+class UGameplayAbility
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UGameplayAbility_BP_ApplyGameplayEffectToOwner_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -1000,11 +1007,6 @@ UFunction* Z_Construct_UFunction_UGameplayAbility_SetShouldBlockOtherAbilities()
 	return ReturnFunction;
 }
 
-class UGameplayAbility
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGameplayAbility_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

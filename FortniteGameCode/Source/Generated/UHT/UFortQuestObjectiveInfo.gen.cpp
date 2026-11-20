@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestObjectiveInfo();  // RVA 0x0109DB70 (consensus OuterFunc)
 
+class UFortQuestObjectiveInfo
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortQuestObjectiveInfo_DisplayDynamicQuestUpdate_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -125,11 +132,6 @@ UFunction* Z_Construct_UFunction_UFortQuestObjectiveInfo_IsVisibleToUser()
 	return ReturnFunction;
 }
 
-class UFortQuestObjectiveInfo
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortQuestObjectiveInfo_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonWidgetStack();  // RVA 0x002D05B0 (consensus OuterFunc)
 
+class UCommonWidgetStack
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCommonWidgetStack_ActivateWidget_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -84,11 +91,6 @@ UFunction* Z_Construct_UFunction_UCommonWidgetStack_PushWidget()
 	return ReturnFunction;
 }
 
-class UCommonWidgetStack
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonWidgetStack_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

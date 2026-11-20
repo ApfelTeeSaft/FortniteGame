@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class ASceneCapture2D
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesASceneCapture2D();
+	static void execOnInterpToggle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6AB0 (end 0x024C6AD2)
+// Original VA: 0x00000001424C6AB0 | File offset: 0x024C60B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039A0418) | Matching: see analysis/functions-uht-natives.json
+void ASceneCapture2D::StaticRegisterNativesASceneCapture2D()
+{
+	UClass* Class = ASceneCapture2D::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnInterpToggle", &ASceneCapture2D::execOnInterpToggle },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_ASceneCapture2D_OnInterpToggle: FFunctionParams record not identified; creator not emitted.

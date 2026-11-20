@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UGameplayCueNotify_Static
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUGameplayCueNotify_Static();
+	static void execOnActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnExecute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRemove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWhileActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B0B0 (end 0x0055B0D2)
+// Original VA: 0x000000014055B0B0 | File offset: 0x0055A6B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F3DF30) | Matching: see analysis/functions-uht-natives.json
+void UGameplayCueNotify_Static::StaticRegisterNativesUGameplayCueNotify_Static()
+{
+	UClass* Class = UGameplayCueNotify_Static::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnActive", &UGameplayCueNotify_Static::execOnActive },
+		{ "OnExecute", &UGameplayCueNotify_Static::execOnExecute },
+		{ "OnRemove", &UGameplayCueNotify_Static::execOnRemove },
+		{ "WhileActive", &UGameplayCueNotify_Static::execWhileActive },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UGameplayCueNotify_Static_K2_HandleGameplayCue: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UGameplayCueNotify_Static_OnActive: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class USpotLightComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSpotLightComponent();
+	static void execSetInnerConeAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOuterConeAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD580 (end 0x024DD5A2)
+// Original VA: 0x00000001424DD580 | File offset: 0x024DCB80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039BE288) | Matching: see analysis/functions-uht-natives.json
+void USpotLightComponent::StaticRegisterNativesUSpotLightComponent()
+{
+	UClass* Class = USpotLightComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetInnerConeAngle", &USpotLightComponent::execSetInnerConeAngle },
+		{ "SetOuterConeAngle", &USpotLightComponent::execSetOuterConeAngle },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_USpotLightComponent_SetInnerConeAngle: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_USpotLightComponent_SetOuterConeAngle: FFunctionParams record not identified; creator not emitted.

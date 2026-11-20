@@ -6,6 +6,105 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortDirectAcquisitionOfferInfo();  // RVA 0x0289B640 (consensus OuterFunc)
 
+class UFortDirectAcquisitionOfferInfo
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortDirectAcquisitionOfferInfo();
+	static void execCreatePreviewItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBackground(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBannerOverrideTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBonusQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCategoryText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrencyItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDetailsAttributes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDetailsImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFirstGrantItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFirstGrantQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFortStoreOfferCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFortStoreOfferType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGradient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemOfferCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemTypeText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMetaAsBool(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNormalPrice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOfferId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPriceItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetQuantityRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSalePrice(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSaleText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSaleType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShortDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSortPriority(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStorefrontName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTileImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasDisplayAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasRequirement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsExclusive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLockedByRequirement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPriceInMTX(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPriceInRealMoney(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUnique(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOfferHasDenyRequirements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AFD0 (end 0x0289AFF2)
+// Original VA: 0x000000014289AFD0 | File offset: 0x0289A5D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C847B0) | Matching: see analysis/functions-uht-natives.json
+void UFortDirectAcquisitionOfferInfo::StaticRegisterNativesUFortDirectAcquisitionOfferInfo()
+{
+	UClass* Class = UFortDirectAcquisitionOfferInfo::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreatePreviewItem", &UFortDirectAcquisitionOfferInfo::execCreatePreviewItem },
+		{ "GetBackground", &UFortDirectAcquisitionOfferInfo::execGetBackground },
+		{ "GetBannerOverrideTag", &UFortDirectAcquisitionOfferInfo::execGetBannerOverrideTag },
+		{ "GetBaseQuantity", &UFortDirectAcquisitionOfferInfo::execGetBaseQuantity },
+		{ "GetBonusQuantity", &UFortDirectAcquisitionOfferInfo::execGetBonusQuantity },
+		{ "GetCategoryText", &UFortDirectAcquisitionOfferInfo::execGetCategoryText },
+		{ "GetCurrencyItemDefinition", &UFortDirectAcquisitionOfferInfo::execGetCurrencyItemDefinition },
+		{ "GetDescription", &UFortDirectAcquisitionOfferInfo::execGetDescription },
+		{ "GetDetailsAttributes", &UFortDirectAcquisitionOfferInfo::execGetDetailsAttributes },
+		{ "GetDetailsImage", &UFortDirectAcquisitionOfferInfo::execGetDetailsImage },
+		{ "GetFirstGrantItemDefinition", &UFortDirectAcquisitionOfferInfo::execGetFirstGrantItemDefinition },
+		{ "GetFirstGrantQuantity", &UFortDirectAcquisitionOfferInfo::execGetFirstGrantQuantity },
+		{ "GetFortStoreOfferCategory", &UFortDirectAcquisitionOfferInfo::execGetFortStoreOfferCategory },
+		{ "GetFortStoreOfferType", &UFortDirectAcquisitionOfferInfo::execGetFortStoreOfferType },
+		{ "GetGradient", &UFortDirectAcquisitionOfferInfo::execGetGradient },
+		{ "GetItemOfferCount", &UFortDirectAcquisitionOfferInfo::execGetItemOfferCount },
+		{ "GetItemQuantity", &UFortDirectAcquisitionOfferInfo::execGetItemQuantity },
+		{ "GetItemTypeText", &UFortDirectAcquisitionOfferInfo::execGetItemTypeText },
+		{ "GetMetaAsBool", &UFortDirectAcquisitionOfferInfo::execGetMetaAsBool },
+		{ "GetName", &UFortDirectAcquisitionOfferInfo::execGetName },
+		{ "GetNormalPrice", &UFortDirectAcquisitionOfferInfo::execGetNormalPrice },
+		{ "GetOfferId", &UFortDirectAcquisitionOfferInfo::execGetOfferId },
+		{ "GetPriceItem", &UFortDirectAcquisitionOfferInfo::execGetPriceItem },
+		{ "GetQuantityRemaining", &UFortDirectAcquisitionOfferInfo::execGetQuantityRemaining },
+		{ "GetSalePrice", &UFortDirectAcquisitionOfferInfo::execGetSalePrice },
+		{ "GetSaleText", &UFortDirectAcquisitionOfferInfo::execGetSaleText },
+		{ "GetSaleType", &UFortDirectAcquisitionOfferInfo::execGetSaleType },
+		{ "GetShortDescription", &UFortDirectAcquisitionOfferInfo::execGetShortDescription },
+		{ "GetSortPriority", &UFortDirectAcquisitionOfferInfo::execGetSortPriority },
+		{ "GetStorefrontName", &UFortDirectAcquisitionOfferInfo::execGetStorefrontName },
+		{ "GetTileImage", &UFortDirectAcquisitionOfferInfo::execGetTileImage },
+		{ "GetTotalQuantity", &UFortDirectAcquisitionOfferInfo::execGetTotalQuantity },
+		{ "HasDisplayAsset", &UFortDirectAcquisitionOfferInfo::execHasDisplayAsset },
+		{ "HasRequirement", &UFortDirectAcquisitionOfferInfo::execHasRequirement },
+		{ "IsExclusive", &UFortDirectAcquisitionOfferInfo::execIsExclusive },
+		{ "IsLockedByRequirement", &UFortDirectAcquisitionOfferInfo::execIsLockedByRequirement },
+		{ "IsPriceInMTX", &UFortDirectAcquisitionOfferInfo::execIsPriceInMTX },
+		{ "IsPriceInRealMoney", &UFortDirectAcquisitionOfferInfo::execIsPriceInRealMoney },
+		{ "IsUnique", &UFortDirectAcquisitionOfferInfo::execIsUnique },
+		{ "OfferHasDenyRequirements", &UFortDirectAcquisitionOfferInfo::execOfferHasDenyRequirements },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_CreatePreviewItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -806,11 +905,6 @@ UFunction* Z_Construct_UFunction_UFortDirectAcquisitionOfferInfo_OfferHasDenyReq
 	return ReturnFunction;
 }
 
-class UFortDirectAcquisitionOfferInfo
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortDirectAcquisitionOfferInfo_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

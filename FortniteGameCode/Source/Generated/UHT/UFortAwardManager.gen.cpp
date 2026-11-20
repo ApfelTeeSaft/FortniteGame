@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortAwardManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAwardManager();
+	static void execGetSourceAndContextTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3410 (end 0x00FA3432)
+// Original VA: 0x0000000140FA3410 | File offset: 0x00FA2A10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C7BB8) | Matching: see analysis/functions-uht-natives.json
+void UFortAwardManager::StaticRegisterNativesUFortAwardManager()
+{
+	UClass* Class = UFortAwardManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetSourceAndContextTags", &UFortAwardManager::execGetSourceAndContextTags },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortAwardManager_GetSourceAndContextTags: FFunctionParams record not identified; creator not emitted.

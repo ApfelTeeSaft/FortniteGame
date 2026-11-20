@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitTargetData();  // RVA 0x0054D850 (consensus OuterFunc)
 
+class UAbilityTask_WaitTargetData
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAbilityTask_WaitTargetData_BeginSpawningActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -165,11 +172,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitTargetData_WaitTargetDataUsing
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitTargetData
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitTargetData_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

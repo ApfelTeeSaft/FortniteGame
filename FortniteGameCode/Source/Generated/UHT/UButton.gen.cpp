@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UButton();  // RVA 0x01BE6050 (consensus OuterFunc)
 
+class UButton
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUButton();
+	static void execIsPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBackgroundColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetClickMethod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTouchMethod(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5B50 (end 0x01BE5B72)
+// Original VA: 0x0000000141BE5B50 | File offset: 0x01BE5150
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036913A0) | Matching: see analysis/functions-uht-natives.json
+void UButton::StaticRegisterNativesUButton()
+{
+	UClass* Class = UButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsPressed", &UButton::execIsPressed },
+		{ "SetBackgroundColor", &UButton::execSetBackgroundColor },
+		{ "SetClickMethod", &UButton::execSetClickMethod },
+		{ "SetColorAndOpacity", &UButton::execSetColorAndOpacity },
+		{ "SetStyle", &UButton::execSetStyle },
+		{ "SetTouchMethod", &UButton::execSetTouchMethod },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UButton_IsPressed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UButton_SetTouchMethod()
 	return ReturnFunction;
 }
 
-class UButton
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UButton_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

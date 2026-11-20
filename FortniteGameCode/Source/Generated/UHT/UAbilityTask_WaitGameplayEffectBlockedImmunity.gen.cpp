@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayEffectBlockedImmunity();  // RVA 0x0054D600 (consensus OuterFunc)
 
+class UAbilityTask_WaitGameplayEffectBlockedImmunity
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitGameplayEffectBlockedImmunity();
+	static void execWaitGameplayEffectBlockedByImmunity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CEA0 (end 0x0054CEC2)
+// Original VA: 0x000000014054CEA0 | File offset: 0x0054C4A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F32AA8) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitGameplayEffectBlockedImmunity::StaticRegisterNativesUAbilityTask_WaitGameplayEffectBlockedImmunity()
+{
+	UClass* Class = UAbilityTask_WaitGameplayEffectBlockedImmunity::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "WaitGameplayEffectBlockedByImmunity", &UAbilityTask_WaitGameplayEffectBlockedImmunity::execWaitGameplayEffectBlockedByImmunity },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectBlockedImmunity_WaitGameplayEffectBlockedByImmunity_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectBlockedImmunity_
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitGameplayEffectBlockedImmunity
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitGameplayEffectBlockedImmunity_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

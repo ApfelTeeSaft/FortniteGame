@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortBannerSelectorBase();  // RVA 0x02894400 (consensus OuterFunc)
 
+class UFortBannerSelectorBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortBannerSelectorBase_CompleteHomebaseBannerSelection_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -162,11 +169,6 @@ UFunction* Z_Construct_UFunction_UFortBannerSelectorBase_UpdateErrorText()
 	return ReturnFunction;
 }
 
-class UFortBannerSelectorBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortBannerSelectorBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

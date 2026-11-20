@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortInventorySortFunctionLibrary();  // RVA 0x010CAA90 (consensus OuterFunc)
 
+class UFortInventorySortFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortInventorySortFunctionLibrary();
+	static void execGetCriterionDisplayNameOfSortType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C93E0 (end 0x010C9402)
+// Original VA: 0x00000001410C93E0 | File offset: 0x010C89E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03421380) | Matching: see analysis/functions-uht-natives.json
+void UFortInventorySortFunctionLibrary::StaticRegisterNativesUFortInventorySortFunctionLibrary()
+{
+	UClass* Class = UFortInventorySortFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCriterionDisplayNameOfSortType", &UFortInventorySortFunctionLibrary::execGetCriterionDisplayNameOfSortType },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortInventorySortFunctionLibrary_GetCriterionDisplayNameOfSortType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortInventorySortFunctionLibrary_GetCriterionD
 	return ReturnFunction;
 }
 
-class UFortInventorySortFunctionLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortInventorySortFunctionLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortConsumableItemDefinition();  // RVA 0x00FCB8D0 (consensus OuterFunc)
 
+class UFortConsumableItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortConsumableItemDefinition();
+	static void execConsumeItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAnimPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHealthRestored(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUseAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB0B0 (end 0x00FCB0D2)
+// Original VA: 0x0000000140FCB0B0 | File offset: 0x00FCA6B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032F7420) | Matching: see analysis/functions-uht-natives.json
+void UFortConsumableItemDefinition::StaticRegisterNativesUFortConsumableItemDefinition()
+{
+	UClass* Class = UFortConsumableItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ConsumeItem", &UFortConsumableItemDefinition::execConsumeItem },
+		{ "GetAnimPlayRate", &UFortConsumableItemDefinition::execGetAnimPlayRate },
+		{ "GetHealthRestored", &UFortConsumableItemDefinition::execGetHealthRestored },
+		{ "GetUseAnimation", &UFortConsumableItemDefinition::execGetUseAnimation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortConsumableItemDefinition_ConsumeItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UFortConsumableItemDefinition_GetUseAnimation()
 	return ReturnFunction;
 }
 
-class UFortConsumableItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortConsumableItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

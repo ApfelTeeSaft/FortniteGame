@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UStaticMesh();  // RVA 0x024E7940 (consensus OuterFunc)
 
+class UStaticMesh
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUStaticMesh();
+	static void execGetBoundingBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaterialIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumLODs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumSections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E6FE0 (end 0x024E7002)
+// Original VA: 0x00000001424E6FE0 | File offset: 0x024E65E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039C30A0) | Matching: see analysis/functions-uht-natives.json
+void UStaticMesh::StaticRegisterNativesUStaticMesh()
+{
+	UClass* Class = UStaticMesh::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBoundingBox", &UStaticMesh::execGetBoundingBox },
+		{ "GetBounds", &UStaticMesh::execGetBounds },
+		{ "GetMaterial", &UStaticMesh::execGetMaterial },
+		{ "GetMaterialIndex", &UStaticMesh::execGetMaterialIndex },
+		{ "GetNumLODs", &UStaticMesh::execGetNumLODs },
+		{ "GetNumSections", &UStaticMesh::execGetNumSections },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UStaticMesh_GetBoundingBox_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UStaticMesh_GetNumSections()
 	return ReturnFunction;
 }
 
-class UStaticMesh
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UStaticMesh_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

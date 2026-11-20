@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UPawnNoiseEmitterComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUPawnNoiseEmitterComponent();
+	static void execMakeNoise(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0510 (end 0x024A0532)
+// Original VA: 0x00000001424A0510 | File offset: 0x0249FB10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039785B8) | Matching: see analysis/functions-uht-natives.json
+void UPawnNoiseEmitterComponent::StaticRegisterNativesUPawnNoiseEmitterComponent()
+{
+	UClass* Class = UPawnNoiseEmitterComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "MakeNoise", &UPawnNoiseEmitterComponent::execMakeNoise },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UPawnNoiseEmitterComponent_MakeNoise: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBTService_BlueprintBase();  // RVA 0x01D28CA0 (consensus OuterFunc)
 
+class UBTService_BlueprintBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBTService_BlueprintBase();
+	static void execIsServiceActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D287C0 (end 0x01D287E2)
+// Original VA: 0x0000000141D287C0 | File offset: 0x01D27DC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03700B98) | Matching: see analysis/functions-uht-natives.json
+void UBTService_BlueprintBase::StaticRegisterNativesUBTService_BlueprintBase()
+{
+	UClass* Class = UBTService_BlueprintBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsServiceActive", &UBTService_BlueprintBase::execIsServiceActive },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBTService_BlueprintBase_IsServiceActive_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +207,6 @@ UFunction* Z_Construct_UFunction_UBTService_BlueprintBase_ReceiveTickAI()
 	return ReturnFunction;
 }
 
-class UBTService_BlueprintBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBTService_BlueprintBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

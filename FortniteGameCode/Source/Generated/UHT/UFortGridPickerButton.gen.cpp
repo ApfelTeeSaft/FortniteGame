@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortGridPickerButton();  // RVA 0x028AC440 (consensus OuterFunc)
 
+class UFortGridPickerButton
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UFortGridPickerButton_CreateGridWidget__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -85,11 +92,6 @@ UFunction* Z_Construct_UFunction_UFortGridPickerButton_SetIsOpen()
 	return ReturnFunction;
 }
 
-class UFortGridPickerButton
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortGridPickerButton_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UParticleSystem();  // RVA 0x0249EBA0 (consensus OuterFunc)
 
+class UParticleSystem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUParticleSystem();
+	static void execContainsEmitterType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E0B0 (end 0x0249E0D2)
+// Original VA: 0x000000014249E0B0 | File offset: 0x0249D6B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03972438) | Matching: see analysis/functions-uht-natives.json
+void UParticleSystem::StaticRegisterNativesUParticleSystem()
+{
+	UClass* Class = UParticleSystem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ContainsEmitterType", &UParticleSystem::execContainsEmitterType },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UParticleSystem_ContainsEmitterType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UParticleSystem_ContainsEmitterType()
 	return ReturnFunction;
 }
 
-class UParticleSystem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UParticleSystem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

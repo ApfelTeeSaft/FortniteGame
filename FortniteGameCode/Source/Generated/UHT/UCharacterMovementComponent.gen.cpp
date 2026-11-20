@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCharacterMovementComponent();  // RVA 0x023EE150 (consensus OuterFunc)
 
+class UCharacterMovementComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCharacterMovementComponent_AddForce_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -704,11 +711,6 @@ UFunction* Z_Construct_UFunction_UCharacterMovementComponent_SetWalkableFloorZ()
 	return ReturnFunction;
 }
 
-class UCharacterMovementComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCharacterMovementComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class ADecalActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesADecalActor();
+	static void execCreateDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDecalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDecalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDB50 (end 0x023FDB72)
+// Original VA: 0x00000001423FDB50 | File offset: 0x023FD150
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038CE788) | Matching: see analysis/functions-uht-natives.json
+void ADecalActor::StaticRegisterNativesADecalActor()
+{
+	UClass* Class = ADecalActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateDynamicMaterialInstance", &ADecalActor::execCreateDynamicMaterialInstance },
+		{ "GetDecalMaterial", &ADecalActor::execGetDecalMaterial },
+		{ "SetDecalMaterial", &ADecalActor::execSetDecalMaterial },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_ADecalActor_CreateDynamicMaterialInstance: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_ADecalActor_GetDecalMaterial: FFunctionParams record not identified; creator not emitted.

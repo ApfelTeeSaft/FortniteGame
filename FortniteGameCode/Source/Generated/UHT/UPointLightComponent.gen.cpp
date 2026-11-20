@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPointLightComponent();  // RVA 0x024B7EA0 (consensus OuterFunc)
 
+class UPointLightComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUPointLightComponent();
+	static void execGetUnitsConversionFactor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAttenuationRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightFalloffExponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSoftSourceRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSourceLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSourceRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7750 (end 0x024B7772)
+// Original VA: 0x00000001424B7750 | File offset: 0x024B6D50
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0398D520) | Matching: see analysis/functions-uht-natives.json
+void UPointLightComponent::StaticRegisterNativesUPointLightComponent()
+{
+	UClass* Class = UPointLightComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetUnitsConversionFactor", &UPointLightComponent::execGetUnitsConversionFactor },
+		{ "SetAttenuationRadius", &UPointLightComponent::execSetAttenuationRadius },
+		{ "SetLightFalloffExponent", &UPointLightComponent::execSetLightFalloffExponent },
+		{ "SetSoftSourceRadius", &UPointLightComponent::execSetSoftSourceRadius },
+		{ "SetSourceLength", &UPointLightComponent::execSetSourceLength },
+		{ "SetSourceRadius", &UPointLightComponent::execSetSourceRadius },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPointLightComponent_GetUnitsConversionFactor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UPointLightComponent_SetSourceRadius()
 	return ReturnFunction;
 }
 
-class UPointLightComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPointLightComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

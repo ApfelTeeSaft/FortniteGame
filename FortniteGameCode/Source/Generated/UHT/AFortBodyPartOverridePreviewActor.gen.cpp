@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortBodyPartOverridePreviewActor();  // RVA 0x00FAD020 (consensus OuterFunc)
 
+class AFortBodyPartOverridePreviewActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortBodyPartOverridePreviewActor();
+	static void execApplyMyCosmeticItemToHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACC30 (end 0x00FACC52)
+// Original VA: 0x0000000140FACC30 | File offset: 0x00FAC230
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032CE8E8) | Matching: see analysis/functions-uht-natives.json
+void AFortBodyPartOverridePreviewActor::StaticRegisterNativesAFortBodyPartOverridePreviewActor()
+{
+	UClass* Class = AFortBodyPartOverridePreviewActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyMyCosmeticItemToHero", &AFortBodyPartOverridePreviewActor::execApplyMyCosmeticItemToHero },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_ApplyMyCosmeticItemToHero_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -45,11 +66,6 @@ UFunction* Z_Construct_UFunction_AFortBodyPartOverridePreviewActor_OnPreviewCosm
 	return ReturnFunction;
 }
 
-class AFortBodyPartOverridePreviewActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortBodyPartOverridePreviewActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

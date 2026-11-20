@@ -6,6 +6,47 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USlateBlueprintLibrary();  // RVA 0x01BF3070 (consensus OuterFunc)
 
+class USlateBlueprintLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSlateBlueprintLibrary();
+	static void execAbsoluteToLocal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAbsoluteToViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_SlateBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAbsoluteSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocalSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUnderLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLocalToAbsolute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLocalToViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScreenToViewport(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScreenToWidgetAbsolute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScreenToWidgetLocal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2B50 (end 0x01BF2B72)
+// Original VA: 0x0000000141BF2B50 | File offset: 0x01BF2150
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369D470) | Matching: see analysis/functions-uht-natives.json
+void USlateBlueprintLibrary::StaticRegisterNativesUSlateBlueprintLibrary()
+{
+	UClass* Class = USlateBlueprintLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AbsoluteToLocal", &USlateBlueprintLibrary::execAbsoluteToLocal },
+		{ "AbsoluteToViewport", &USlateBlueprintLibrary::execAbsoluteToViewport },
+		{ "EqualEqual_SlateBrush", &USlateBlueprintLibrary::execEqualEqual_SlateBrush },
+		{ "GetAbsoluteSize", &USlateBlueprintLibrary::execGetAbsoluteSize },
+		{ "GetLocalSize", &USlateBlueprintLibrary::execGetLocalSize },
+		{ "IsUnderLocation", &USlateBlueprintLibrary::execIsUnderLocation },
+		{ "LocalToAbsolute", &USlateBlueprintLibrary::execLocalToAbsolute },
+		{ "LocalToViewport", &USlateBlueprintLibrary::execLocalToViewport },
+		{ "ScreenToViewport", &USlateBlueprintLibrary::execScreenToViewport },
+		{ "ScreenToWidgetAbsolute", &USlateBlueprintLibrary::execScreenToWidgetAbsolute },
+		{ "ScreenToWidgetLocal", &USlateBlueprintLibrary::execScreenToWidgetLocal },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USlateBlueprintLibrary_AbsoluteToLocal_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -226,11 +267,6 @@ UFunction* Z_Construct_UFunction_USlateBlueprintLibrary_ScreenToWidgetLocal()
 	return ReturnFunction;
 }
 
-class USlateBlueprintLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USlateBlueprintLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

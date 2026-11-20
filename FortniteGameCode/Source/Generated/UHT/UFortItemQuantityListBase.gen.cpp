@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemQuantityListBase();  // RVA 0x028CF520 (consensus OuterFunc)
 
+class UFortItemQuantityListBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortItemQuantityListBase();
+	static void execGetItemDefinitions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEmptyList(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemDefinitionsAndQuantities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemInspectMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemInstancesAndQuantities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemToCompareDefinitionsAndQuantities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF150 (end 0x028CF172)
+// Original VA: 0x00000001428CF150 | File offset: 0x028CE750
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CD8B80) | Matching: see analysis/functions-uht-natives.json
+void UFortItemQuantityListBase::StaticRegisterNativesUFortItemQuantityListBase()
+{
+	UClass* Class = UFortItemQuantityListBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetItemDefinitions", &UFortItemQuantityListBase::execGetItemDefinitions },
+		{ "IsEmptyList", &UFortItemQuantityListBase::execIsEmptyList },
+		{ "SetItemDefinitionsAndQuantities", &UFortItemQuantityListBase::execSetItemDefinitionsAndQuantities },
+		{ "SetItemInspectMode", &UFortItemQuantityListBase::execSetItemInspectMode },
+		{ "SetItemInstancesAndQuantities", &UFortItemQuantityListBase::execSetItemInstancesAndQuantities },
+		{ "SetItemToCompareDefinitionsAndQuantities", &UFortItemQuantityListBase::execSetItemToCompareDefinitionsAndQuantities },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItemQuantityListBase_AddListEntry_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -165,11 +196,6 @@ UFunction* Z_Construct_UFunction_UFortItemQuantityListBase_SetItemToCompareDefin
 	return ReturnFunction;
 }
 
-class UFortItemQuantityListBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemQuantityListBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

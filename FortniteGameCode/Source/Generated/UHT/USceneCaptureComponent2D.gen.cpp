@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class USceneCaptureComponent2D
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_USceneCaptureComponent2D_AddOrUpdateBlendable: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_USceneCaptureComponent2D_CaptureScene: FFunctionParams record not identified; creator not emitted.

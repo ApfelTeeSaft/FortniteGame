@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBillboardComponent();  // RVA 0x023E35A0 (consensus OuterFunc)
 
+class UBillboardComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBillboardComponent();
+	static void execSetSprite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSpriteAndUV(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUV(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2C60 (end 0x023E2C82)
+// Original VA: 0x00000001423E2C60 | File offset: 0x023E2260
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038B15A8) | Matching: see analysis/functions-uht-natives.json
+void UBillboardComponent::StaticRegisterNativesUBillboardComponent()
+{
+	UClass* Class = UBillboardComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetSprite", &UBillboardComponent::execSetSprite },
+		{ "SetSpriteAndUV", &UBillboardComponent::execSetSpriteAndUV },
+		{ "SetUV", &UBillboardComponent::execSetUV },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBillboardComponent_SetSprite_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UBillboardComponent_SetUV()
 	return ReturnFunction;
 }
 
-class UBillboardComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBillboardComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

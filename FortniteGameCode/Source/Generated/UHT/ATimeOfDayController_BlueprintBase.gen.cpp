@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ATimeOfDayController_BlueprintBase();  // RVA 0x00F61060 (consensus OuterFunc)
 
+class ATimeOfDayController_BlueprintBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetPostProcessSettings_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -44,11 +51,6 @@ UFunction* Z_Construct_UFunction_ATimeOfDayController_BlueprintBase_SetSunOrMoon
 	return ReturnFunction;
 }
 
-class ATimeOfDayController_BlueprintBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ATimeOfDayController_BlueprintBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

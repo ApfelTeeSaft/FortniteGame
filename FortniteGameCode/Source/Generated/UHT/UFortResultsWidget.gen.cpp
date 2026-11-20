@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortResultsWidget();  // RVA 0x028ED500 (consensus OuterFunc)
 
+class UFortResultsWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortResultsWidget_GetRewardsByType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -203,11 +210,6 @@ UFunction* Z_Construct_UFunction_UFortResultsWidget_TriggerSetupTeleportCameraEv
 	return ReturnFunction;
 }
 
-class UFortResultsWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortResultsWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

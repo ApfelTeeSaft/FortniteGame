@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortAIEncounterInfoOwnerInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAIEncounterInfoOwnerInterface();
+	static void execGetEncounterInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8BCE0 (end 0x00F8BD02)
+// Original VA: 0x0000000140F8BCE0 | File offset: 0x00F8B2E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032A5DE8) | Matching: see analysis/functions-uht-natives.json
+void UFortAIEncounterInfoOwnerInterface::StaticRegisterNativesUFortAIEncounterInfoOwnerInterface()
+{
+	UClass* Class = UFortAIEncounterInfoOwnerInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetEncounterInfo", &UFortAIEncounterInfoOwnerInterface::execGetEncounterInfo },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortAIEncounterInfoOwnerInterface_GetEncounterInfo: FFunctionParams record not identified; creator not emitted.

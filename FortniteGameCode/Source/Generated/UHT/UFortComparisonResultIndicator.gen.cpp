@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortComparisonResultIndicator();  // RVA 0x0289B3A0 (consensus OuterFunc)
 
+class UFortComparisonResultIndicator
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortComparisonResultIndicator();
+	static void execSetComparisonResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AE80 (end 0x0289AEA2)
+// Original VA: 0x000000014289AE80 | File offset: 0x0289A480
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C81FE8) | Matching: see analysis/functions-uht-natives.json
+void UFortComparisonResultIndicator::StaticRegisterNativesUFortComparisonResultIndicator()
+{
+	UClass* Class = UFortComparisonResultIndicator::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetComparisonResult", &UFortComparisonResultIndicator::execSetComparisonResult },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortComparisonResultIndicator_SetComparisonResult_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortComparisonResultIndicator_SetComparisonRes
 	return ReturnFunction;
 }
 
-class UFortComparisonResultIndicator
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortComparisonResultIndicator_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

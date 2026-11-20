@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortSquadSlotItemDetailsHostPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSquadSlotItemDetailsHostPanel();
+	static void execGetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemInSquadSlotBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSquadSlotLockedBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIdOfSquadSlotToManageBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB1A0 (end 0x028FB1C2)
+// Original VA: 0x00000001428FB1A0 | File offset: 0x028FA7A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D22700) | Matching: see analysis/functions-uht-natives.json
+void UFortSquadSlotItemDetailsHostPanel::StaticRegisterNativesUFortSquadSlotItemDetailsHostPanel()
+{
+	UClass* Class = UFortSquadSlotItemDetailsHostPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIdOfSquadSlotToManageBP", &UFortSquadSlotItemDetailsHostPanel::execGetIdOfSquadSlotToManageBP },
+		{ "GetItemInSquadSlotBP", &UFortSquadSlotItemDetailsHostPanel::execGetItemInSquadSlotBP },
+		{ "IsSquadSlotLockedBP", &UFortSquadSlotItemDetailsHostPanel::execIsSquadSlotLockedBP },
+		{ "SetIdOfSquadSlotToManageBP", &UFortSquadSlotItemDetailsHostPanel::execSetIdOfSquadSlotToManageBP },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetIdOfSquadSlotToManageBP: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortSquadSlotItemDetailsHostPanel_GetItemInSquadSlotBP: FFunctionParams record not identified; creator not emitted.

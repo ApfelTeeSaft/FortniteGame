@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPaperFlipbookComponent();  // RVA 0x006676E0 (consensus OuterFunc)
 
+class UPaperFlipbookComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UPaperFlipbookComponent_GetFlipbook_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -461,11 +468,6 @@ UFunction* Z_Construct_UFunction_UPaperFlipbookComponent_Stop()
 	return ReturnFunction;
 }
 
-class UPaperFlipbookComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPaperFlipbookComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

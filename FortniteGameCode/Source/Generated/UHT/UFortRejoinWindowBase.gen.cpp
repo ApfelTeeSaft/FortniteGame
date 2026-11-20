@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortRejoinWindowBase();  // RVA 0x028ED470 (consensus OuterFunc)
 
+class UFortRejoinWindowBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortRejoinWindowBase_OnTimeoutTimeReached_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -64,11 +71,6 @@ UFunction* Z_Construct_UFunction_UFortRejoinWindowBase_StopTimeout()
 	return ReturnFunction;
 }
 
-class UFortRejoinWindowBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortRejoinWindowBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_WebCreateEpicAccountAndLink();  // RVA 0x02887900 (consensus OuterFunc)
 
+class UFortAsyncAction_WebCreateEpicAccountAndLink
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_WebCreateEpicAccountAndLink();
+	static void execWebCreateEpicAccountAndLink(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886F30 (end 0x02886F52)
+// Original VA: 0x0000000142886F30 | File offset: 0x02886530
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C603F8) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_WebCreateEpicAccountAndLink::StaticRegisterNativesUFortAsyncAction_WebCreateEpicAccountAndLink()
+{
+	UClass* Class = UFortAsyncAction_WebCreateEpicAccountAndLink::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "WebCreateEpicAccountAndLink", &UFortAsyncAction_WebCreateEpicAccountAndLink::execWebCreateEpicAccountAndLink },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_WebCreateEpicAccountAndLink_WebCreateEpicAccountAndLink_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_WebCreateEpicAccountAndLink_We
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_WebCreateEpicAccountAndLink
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_WebCreateEpicAccountAndLink_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

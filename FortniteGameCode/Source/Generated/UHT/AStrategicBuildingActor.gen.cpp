@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AStrategicBuildingActor();  // RVA 0x010F18E0 (consensus OuterFunc)
 
+class AStrategicBuildingActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AStrategicBuildingActor_ApplyProximityPulseEffects_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -360,11 +367,6 @@ UFunction* Z_Construct_UFunction_AStrategicBuildingActor_SetupVisibilityComponen
 	return ReturnFunction;
 }
 
-class AStrategicBuildingActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AStrategicBuildingActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

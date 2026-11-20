@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortBluGloCounter();  // RVA 0x02894460 (consensus OuterFunc)
 
+class UFortBluGloCounter
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortBluGloCounter();
+	static void execOnBluGloQuantityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894040 (end 0x02894062)
+// Original VA: 0x0000000142894040 | File offset: 0x02893640
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C75968) | Matching: see analysis/functions-uht-natives.json
+void UFortBluGloCounter::StaticRegisterNativesUFortBluGloCounter()
+{
+	UClass* Class = UFortBluGloCounter::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnBluGloQuantityChanged", &UFortBluGloCounter::execOnBluGloQuantityChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortBluGloCounter_OnBluGloQuantityChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortBluGloCounter_OnBluGloQuantityChanged()
 	return ReturnFunction;
 }
 
-class UFortBluGloCounter
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortBluGloCounter_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UNavLocalGridManager();  // RVA 0x01D31D10 (consensus OuterFunc)
 
+class UNavLocalGridManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUNavLocalGridManager();
+	static void execAddLocalNavigationGridForBox(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddLocalNavigationGridForCapsule(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddLocalNavigationGridForPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddLocalNavigationGridForPoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindLocalNavigationGridPath(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveLocalNavigationGrid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLocalNavigationGridDensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31AD0 (end 0x01D31AF2)
+// Original VA: 0x0000000141D31AD0 | File offset: 0x01D310D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0370C730) | Matching: see analysis/functions-uht-natives.json
+void UNavLocalGridManager::StaticRegisterNativesUNavLocalGridManager()
+{
+	UClass* Class = UNavLocalGridManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddLocalNavigationGridForBox", &UNavLocalGridManager::execAddLocalNavigationGridForBox },
+		{ "AddLocalNavigationGridForCapsule", &UNavLocalGridManager::execAddLocalNavigationGridForCapsule },
+		{ "AddLocalNavigationGridForPoint", &UNavLocalGridManager::execAddLocalNavigationGridForPoint },
+		{ "AddLocalNavigationGridForPoints", &UNavLocalGridManager::execAddLocalNavigationGridForPoints },
+		{ "FindLocalNavigationGridPath", &UNavLocalGridManager::execFindLocalNavigationGridPath },
+		{ "RemoveLocalNavigationGrid", &UNavLocalGridManager::execRemoveLocalNavigationGrid },
+		{ "SetLocalNavigationGridDensity", &UNavLocalGridManager::execSetLocalNavigationGridDensity },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UNavLocalGridManager_AddLocalNavigationGridForBox_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +179,6 @@ UFunction* Z_Construct_UFunction_UNavLocalGridManager_SetLocalNavigationGridDens
 	return ReturnFunction;
 }
 
-class UNavLocalGridManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UNavLocalGridManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

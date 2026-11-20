@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortDecoItemDefinition();  // RVA 0x00FD0050 (consensus OuterFunc)
 
+class UFortDecoItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortDecoItemDefinition_GetBlueprintClass_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -506,11 +513,6 @@ UFunction* Z_Construct_UFunction_UFortDecoItemDefinition_ShouldUseRelativeCamera
 	return ReturnFunction;
 }
 
-class UFortDecoItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortDecoItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMicIndicatorWidget();  // RVA 0x028D7490 (consensus OuterFunc)
 
+class UFortMicIndicatorWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortMicIndicatorWidget();
+	static void execSetPlayerUniqueId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6E10 (end 0x028D6E32)
+// Original VA: 0x00000001428D6E10 | File offset: 0x028D6410
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE5AA8) | Matching: see analysis/functions-uht-natives.json
+void UFortMicIndicatorWidget::StaticRegisterNativesUFortMicIndicatorWidget()
+{
+	UClass* Class = UFortMicIndicatorWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetPlayerUniqueId", &UFortMicIndicatorWidget::execSetPlayerUniqueId },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMicIndicatorWidget_OnPlayerMicAvailable_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +107,6 @@ UFunction* Z_Construct_UFunction_UFortMicIndicatorWidget_SetPlayerUniqueId()
 	return ReturnFunction;
 }
 
-class UFortMicIndicatorWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMicIndicatorWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

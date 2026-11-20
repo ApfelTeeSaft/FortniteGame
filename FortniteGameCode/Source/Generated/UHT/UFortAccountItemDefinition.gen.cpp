@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAccountItemDefinition();  // RVA 0x00F820B0 (consensus OuterFunc)
 
+class UFortAccountItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAccountItemDefinition();
+	static void execGetRecyclingRefunds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F818D0 (end 0x00F818F2)
+// Original VA: 0x0000000140F818D0 | File offset: 0x00F80ED0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032976B8) | Matching: see analysis/functions-uht-natives.json
+void UFortAccountItemDefinition::StaticRegisterNativesUFortAccountItemDefinition()
+{
+	UClass* Class = UFortAccountItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetRecyclingRefunds", &UFortAccountItemDefinition::execGetRecyclingRefunds },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAccountItemDefinition_GetRecyclingRefunds_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAccountItemDefinition_GetRecyclingRefunds(
 	return ReturnFunction;
 }
 
-class UFortAccountItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAccountItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortChallengeBundleScheduleDefinition();  // RVA 0x00FB0200 (consensus OuterFunc)
 
+class UFortChallengeBundleScheduleDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortChallengeBundleScheduleDefinition();
+	static void execDoesChallengeBundleScheduleExpire(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBundleDefinitions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEventName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAFE70 (end 0x00FAFE92)
+// Original VA: 0x0000000140FAFE70 | File offset: 0x00FAF470
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032DAD68) | Matching: see analysis/functions-uht-natives.json
+void UFortChallengeBundleScheduleDefinition::StaticRegisterNativesUFortChallengeBundleScheduleDefinition()
+{
+	UClass* Class = UFortChallengeBundleScheduleDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DoesChallengeBundleScheduleExpire", &UFortChallengeBundleScheduleDefinition::execDoesChallengeBundleScheduleExpire },
+		{ "GetBundleDefinitions", &UFortChallengeBundleScheduleDefinition::execGetBundleDefinitions },
+		{ "GetEventName", &UFortChallengeBundleScheduleDefinition::execGetEventName },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortChallengeBundleScheduleDefinition_DoesChallengeBundleScheduleExpire_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortChallengeBundleScheduleDefinition_GetEvent
 	return ReturnFunction;
 }
 
-class UFortChallengeBundleScheduleDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortChallengeBundleScheduleDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

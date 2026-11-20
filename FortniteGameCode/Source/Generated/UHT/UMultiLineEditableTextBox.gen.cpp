@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMultiLineEditableTextBox();  // RVA 0x01BED720 (consensus OuterFunc)
 
+class UMultiLineEditableTextBox
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUMultiLineEditableTextBox();
+	static void execGetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetError(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsReadOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED090 (end 0x01BED0B2)
+// Original VA: 0x0000000141BED090 | File offset: 0x01BEC690
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03697EF0) | Matching: see analysis/functions-uht-natives.json
+void UMultiLineEditableTextBox::StaticRegisterNativesUMultiLineEditableTextBox()
+{
+	UClass* Class = UMultiLineEditableTextBox::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetText", &UMultiLineEditableTextBox::execGetText },
+		{ "SetError", &UMultiLineEditableTextBox::execSetError },
+		{ "SetIsReadOnly", &UMultiLineEditableTextBox::execSetIsReadOnly },
+		{ "SetText", &UMultiLineEditableTextBox::execSetText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UMultiLineEditableTextBox_OnMultiLineEditableTextBoxChangedEvent__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +153,6 @@ UFunction* Z_Construct_UFunction_UMultiLineEditableTextBox_SetText()
 	return ReturnFunction;
 }
 
-class UMultiLineEditableTextBox
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMultiLineEditableTextBox_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

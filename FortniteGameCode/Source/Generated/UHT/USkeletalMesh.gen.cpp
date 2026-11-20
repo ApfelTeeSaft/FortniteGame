@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USkeletalMesh();  // RVA 0x024CC9E0 (consensus OuterFunc)
 
+class USkeletalMesh
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSkeletalMesh();
+	static void execFindSocket(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindSocketAndIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetImportedBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNodeMappingContainer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSocketByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSectionUsingCloth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNumSockets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLODSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC590 (end 0x024CC5B2)
+// Original VA: 0x00000001424CC590 | File offset: 0x024CBB90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039A6DA0) | Matching: see analysis/functions-uht-natives.json
+void USkeletalMesh::StaticRegisterNativesUSkeletalMesh()
+{
+	UClass* Class = USkeletalMesh::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FindSocket", &USkeletalMesh::execFindSocket },
+		{ "FindSocketAndIndex", &USkeletalMesh::execFindSocketAndIndex },
+		{ "GetBounds", &USkeletalMesh::execGetBounds },
+		{ "GetImportedBounds", &USkeletalMesh::execGetImportedBounds },
+		{ "GetNodeMappingContainer", &USkeletalMesh::execGetNodeMappingContainer },
+		{ "GetSocketByIndex", &USkeletalMesh::execGetSocketByIndex },
+		{ "IsSectionUsingCloth", &USkeletalMesh::execIsSectionUsingCloth },
+		{ "NumSockets", &USkeletalMesh::execNumSockets },
+		{ "SetLODSettings", &USkeletalMesh::execSetLODSettings },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USkeletalMesh_FindSocket_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +223,6 @@ UFunction* Z_Construct_UFunction_USkeletalMesh_SetLODSettings()
 	return ReturnFunction;
 }
 
-class USkeletalMesh
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USkeletalMesh_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTooltipLibrary();  // RVA 0x010CACA0 (consensus OuterFunc)
 
+class UFortTooltipLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortTooltipLibrary();
+	static void execFormatAttributeBuffs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C94A0 (end 0x010C94C2)
+// Original VA: 0x00000001410C94A0 | File offset: 0x010C8AA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0341B4C8) | Matching: see analysis/functions-uht-natives.json
+void UFortTooltipLibrary::StaticRegisterNativesUFortTooltipLibrary()
+{
+	UClass* Class = UFortTooltipLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FormatAttributeBuffs", &UFortTooltipLibrary::execFormatAttributeBuffs },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTooltipLibrary_FormatAttributeBuffs_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortTooltipLibrary_FormatAttributeBuffs()
 	return ReturnFunction;
 }
 
-class UFortTooltipLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTooltipLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

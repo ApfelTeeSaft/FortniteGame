@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UGameplayEffectExecutionCalculation
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUGameplayEffectExecutionCalculation();
+	static void execExecute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005635D0 (end 0x005635F2)
+// Original VA: 0x00000001405635D0 | File offset: 0x00562BD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F46F70) | Matching: see analysis/functions-uht-natives.json
+void UGameplayEffectExecutionCalculation::StaticRegisterNativesUGameplayEffectExecutionCalculation()
+{
+	UClass* Class = UGameplayEffectExecutionCalculation::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Execute", &UGameplayEffectExecutionCalculation::execExecute },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UGameplayEffectExecutionCalculation_Execute: FFunctionParams record not identified; creator not emitted.

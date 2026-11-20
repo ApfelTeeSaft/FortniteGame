@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UForceFeedbackComponent();  // RVA 0x0240FE50 (consensus OuterFunc)
 
+class UForceFeedbackComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UForceFeedbackComponent_AdjustAttenuation_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -125,11 +132,6 @@ UFunction* Z_Construct_UFunction_UForceFeedbackComponent_Stop()
 	return ReturnFunction;
 }
 
-class UForceFeedbackComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UForceFeedbackComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

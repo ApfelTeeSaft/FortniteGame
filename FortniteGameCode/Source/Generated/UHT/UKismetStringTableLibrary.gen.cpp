@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UKismetStringTableLibrary();  // RVA 0x02452CE0 (consensus OuterFunc)
 
+class UKismetStringTableLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUKismetStringTableLibrary();
+	static void execGetKeysFromStringTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMetaDataIdsFromStringTableEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRegisteredStringTables(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTableEntryMetaData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTableEntrySourceString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTableNamespace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsRegisteredTableEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsRegisteredTableId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02452B30 (end 0x02452B52)
+// Original VA: 0x0000000142452B30 | File offset: 0x02452130
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03926F00) | Matching: see analysis/functions-uht-natives.json
+void UKismetStringTableLibrary::StaticRegisterNativesUKismetStringTableLibrary()
+{
+	UClass* Class = UKismetStringTableLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetKeysFromStringTable", &UKismetStringTableLibrary::execGetKeysFromStringTable },
+		{ "GetMetaDataIdsFromStringTableEntry", &UKismetStringTableLibrary::execGetMetaDataIdsFromStringTableEntry },
+		{ "GetRegisteredStringTables", &UKismetStringTableLibrary::execGetRegisteredStringTables },
+		{ "GetTableEntryMetaData", &UKismetStringTableLibrary::execGetTableEntryMetaData },
+		{ "GetTableEntrySourceString", &UKismetStringTableLibrary::execGetTableEntrySourceString },
+		{ "GetTableNamespace", &UKismetStringTableLibrary::execGetTableNamespace },
+		{ "IsRegisteredTableEntry", &UKismetStringTableLibrary::execIsRegisteredTableEntry },
+		{ "IsRegisteredTableId", &UKismetStringTableLibrary::execIsRegisteredTableId },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UKismetStringTableLibrary_GetKeysFromStringTable_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -166,11 +201,6 @@ UFunction* Z_Construct_UFunction_UKismetStringTableLibrary_IsRegisteredTableId()
 	return ReturnFunction;
 }
 
-class UKismetStringTableLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UKismetStringTableLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

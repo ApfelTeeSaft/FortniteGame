@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemTransform();  // RVA 0x028CF630 (consensus OuterFunc)
 
+class UFortItemTransform
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortItemTransform_OnRequestCloseItemPicker_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -44,11 +51,6 @@ UFunction* Z_Construct_UFunction_UFortItemTransform_ProcessPendingSeenTransformK
 	return ReturnFunction;
 }
 
-class UFortItemTransform
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemTransform_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

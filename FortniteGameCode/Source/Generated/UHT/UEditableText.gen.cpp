@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UEditableText();  // RVA 0x01BE62B0 (consensus OuterFunc)
 
+class UEditableText
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUEditableText();
+	static void execGetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHintText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsPassword(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsReadOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5D60 (end 0x01BE5D82)
+// Original VA: 0x0000000141BE5D60 | File offset: 0x01BE5360
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03692870) | Matching: see analysis/functions-uht-natives.json
+void UEditableText::StaticRegisterNativesUEditableText()
+{
+	UClass* Class = UEditableText::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetText", &UEditableText::execGetText },
+		{ "SetHintText", &UEditableText::execSetHintText },
+		{ "SetIsPassword", &UEditableText::execSetIsPassword },
+		{ "SetIsReadOnly", &UEditableText::execSetIsReadOnly },
+		{ "SetText", &UEditableText::execSetText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UEditableText_OnEditableTextChangedEvent__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +175,6 @@ UFunction* Z_Construct_UFunction_UEditableText_SetText()
 	return ReturnFunction;
 }
 
-class UEditableText
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UEditableText_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

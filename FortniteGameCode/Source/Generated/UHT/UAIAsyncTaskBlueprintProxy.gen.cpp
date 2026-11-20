@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAIAsyncTaskBlueprintProxy();  // RVA 0x01D1BAA0 (consensus OuterFunc)
 
+class UAIAsyncTaskBlueprintProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAIAsyncTaskBlueprintProxy();
+	static void execOnMoveCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B140 (end 0x01D1B162)
+// Original VA: 0x0000000141D1B140 | File offset: 0x01D1A740
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F0740) | Matching: see analysis/functions-uht-natives.json
+void UAIAsyncTaskBlueprintProxy::StaticRegisterNativesUAIAsyncTaskBlueprintProxy()
+{
+	UClass* Class = UAIAsyncTaskBlueprintProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnMoveCompleted", &UAIAsyncTaskBlueprintProxy::execOnMoveCompleted },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAIAsyncTaskBlueprintProxy_OnMoveCompleted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAIAsyncTaskBlueprintProxy_OnMoveCompleted()
 	return ReturnFunction;
 }
 
-class UAIAsyncTaskBlueprintProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAIAsyncTaskBlueprintProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAccountLinkingWindow();  // RVA 0x02887640 (consensus OuterFunc)
 
+class UFortAccountLinkingWindow
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAccountLinkingWindow();
+	static void execIsPurchaseFree(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886D20 (end 0x02886D42)
+// Original VA: 0x0000000142886D20 | File offset: 0x02886320
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C60100) | Matching: see analysis/functions-uht-natives.json
+void UFortAccountLinkingWindow::StaticRegisterNativesUFortAccountLinkingWindow()
+{
+	UClass* Class = UFortAccountLinkingWindow::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsPurchaseFree", &UFortAccountLinkingWindow::execIsPurchaseFree },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAccountLinkingWindow_IsPurchaseFree_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAccountLinkingWindow_IsPurchaseFree()
 	return ReturnFunction;
 }
 
-class UFortAccountLinkingWindow
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAccountLinkingWindow_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,51 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortOutpostFunctionLibrary();  // RVA 0x01056030 (consensus OuterFunc)
 
+class UFortOutpostFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortOutpostFunctionLibrary();
+	static void execActivateCraftingTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeactivateCraftingTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDeployOutpostBuildingTagOnPlacementTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOutpostBuildingItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOutpostBuildingTagFromPlacementTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOutpostOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOutpostQuestMissionConfigData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlacementTagFromOutpostBuildingTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCriticalMissionJoinability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOutpostDefenseActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOutpostGameDifficultyRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTransferItemFromStorage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTransferItemToStorage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01055C90 (end 0x01055CB2)
+// Original VA: 0x0000000141055C90 | File offset: 0x01055290
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0339A940) | Matching: see analysis/functions-uht-natives.json
+void UFortOutpostFunctionLibrary::StaticRegisterNativesUFortOutpostFunctionLibrary()
+{
+	UClass* Class = UFortOutpostFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ActivateCraftingTable", &UFortOutpostFunctionLibrary::execActivateCraftingTable },
+		{ "DeactivateCraftingTable", &UFortOutpostFunctionLibrary::execDeactivateCraftingTable },
+		{ "DeployOutpostBuildingTagOnPlacementTag", &UFortOutpostFunctionLibrary::execDeployOutpostBuildingTagOnPlacementTag },
+		{ "GetOutpostBuildingItemDefinition", &UFortOutpostFunctionLibrary::execGetOutpostBuildingItemDefinition },
+		{ "GetOutpostBuildingTagFromPlacementTag", &UFortOutpostFunctionLibrary::execGetOutpostBuildingTagFromPlacementTag },
+		{ "GetOutpostOwner", &UFortOutpostFunctionLibrary::execGetOutpostOwner },
+		{ "GetOutpostQuestMissionConfigData", &UFortOutpostFunctionLibrary::execGetOutpostQuestMissionConfigData },
+		{ "GetPlacementTagFromOutpostBuildingTag", &UFortOutpostFunctionLibrary::execGetPlacementTagFromOutpostBuildingTag },
+		{ "SetCriticalMissionJoinability", &UFortOutpostFunctionLibrary::execSetCriticalMissionJoinability },
+		{ "SetOutpostDefenseActive", &UFortOutpostFunctionLibrary::execSetOutpostDefenseActive },
+		{ "SetOutpostGameDifficultyRow", &UFortOutpostFunctionLibrary::execSetOutpostGameDifficultyRow },
+		{ "TransferItemFromStorage", &UFortOutpostFunctionLibrary::execTransferItemFromStorage },
+		{ "TransferItemToStorage", &UFortOutpostFunctionLibrary::execTransferItemToStorage },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortOutpostFunctionLibrary_ActivateCraftingTable_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -266,11 +311,6 @@ UFunction* Z_Construct_UFunction_UFortOutpostFunctionLibrary_TransferItemToStora
 	return ReturnFunction;
 }
 
-class UFortOutpostFunctionLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortOutpostFunctionLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

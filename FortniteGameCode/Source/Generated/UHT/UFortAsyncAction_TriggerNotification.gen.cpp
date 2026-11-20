@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_TriggerNotification();  // RVA 0x00F9F2A0 (consensus OuterFunc)
 
+class UFortAsyncAction_TriggerNotification
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_TriggerNotification();
+	static void execTriggerNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E660 (end 0x00F9E682)
+// Original VA: 0x0000000140F9E660 | File offset: 0x00F9DC60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032BFCF8) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_TriggerNotification::StaticRegisterNativesUFortAsyncAction_TriggerNotification()
+{
+	UClass* Class = UFortAsyncAction_TriggerNotification::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "TriggerNotification", &UFortAsyncAction_TriggerNotification::execTriggerNotification },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_TriggerNotification_TriggerNotification_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_TriggerNotification_TriggerNot
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_TriggerNotification
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_TriggerNotification_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

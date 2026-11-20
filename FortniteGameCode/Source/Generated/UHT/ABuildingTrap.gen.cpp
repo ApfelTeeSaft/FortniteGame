@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingTrap();  // RVA 0x00F71F10 (consensus OuterFunc)
 
+class ABuildingTrap
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ABuildingTrap_AddDamageComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -616,11 +623,6 @@ UFunction* Z_Construct_UFunction_ABuildingTrap_TriggerIfAppropriate()
 	return ReturnFunction;
 }
 
-class ABuildingTrap
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingTrap_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

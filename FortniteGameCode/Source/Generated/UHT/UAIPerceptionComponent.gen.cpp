@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAIPerceptionComponent();  // RVA 0x01D1BBD0 (consensus OuterFunc)
 
+class UAIPerceptionComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAIPerceptionComponent_GetActorsPerception_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -165,11 +172,6 @@ UFunction* Z_Construct_UFunction_UAIPerceptionComponent_SetSenseEnabled()
 	return ReturnFunction;
 }
 
-class UAIPerceptionComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAIPerceptionComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,177 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilitySystemBlueprintLibrary();  // RVA 0x005383E0 (consensus OuterFunc)
 
+class UAbilitySystemBlueprintLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilitySystemBlueprintLibrary();
+	static void execAbilityTargetDataFromActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAbilityTargetDataFromActorArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAbilityTargetDataFromHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAbilityTargetDataFromLocations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddAssetTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddAssetTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddGrantedTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddGrantedTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddLinkedGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddLinkedGameplayEffectSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAppendTargetDataHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAssignSetByCallerMagnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAssignTagSetByCallerMagnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCloneSpecHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesGameplayCueMeetTagRequirements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesTargetDataContainActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectContextAddHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectContextGetEffectCauser(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectContextGetHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectContextGetInstigatorActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectContextGetOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectContextGetOriginalInstigatorActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectContextGetSourceObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectContextHasHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectContextIsInstigatorLocallyControlled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectContextIsValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEffectContextSetOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_GameplayAttributeGameplayAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEvaluateAttributeValueWithTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEvaluateAttributeValueWithTagsAndBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFilterTargetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForwardGameplayCueToTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAbilitySystemComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveGameplayEffectDebugString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveGameplayEffectExpectedEndTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveGameplayEffectRemainingDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveGameplayEffectStackCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveGameplayEffectStackLimitCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveGameplayEffectStartTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveGameplayEffectTotalDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActorsFromTargetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllLinkedGameplayEffectSpecHandles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDataCountFromTargetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEffectContext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFloatAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFloatAttributeBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFloatAttributeBaseFromAbilitySystemComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFloatAttributeFromAbilitySystemComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameplayCueDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameplayCueEndLocationAndNormal(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHitResultFromTargetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstigatorActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetInstigatorTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetModifiedAttributeMagnitude(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTargetDataEndPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTargetDataEndPointTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTargetDataOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInstigatorLocallyControlled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInstigatorLocallyControlledPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeFilterHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeSpecHandle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_GameplayAttributeGameplayAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSendGameplayEventToActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStackCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStackCountToMax(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTargetDataHasActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTargetDataHasEndPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTargetDataHasHitResult(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTargetDataHasOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00538380 (end 0x005383A2)
+// Original VA: 0x0000000140538380 | File offset: 0x00537980
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F22CC0) | Matching: see analysis/functions-uht-natives.json
+void UAbilitySystemBlueprintLibrary::StaticRegisterNativesUAbilitySystemBlueprintLibrary()
+{
+	UClass* Class = UAbilitySystemBlueprintLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AbilityTargetDataFromActor", &UAbilitySystemBlueprintLibrary::execAbilityTargetDataFromActor },
+		{ "AbilityTargetDataFromActorArray", &UAbilitySystemBlueprintLibrary::execAbilityTargetDataFromActorArray },
+		{ "AbilityTargetDataFromHitResult", &UAbilitySystemBlueprintLibrary::execAbilityTargetDataFromHitResult },
+		{ "AbilityTargetDataFromLocations", &UAbilitySystemBlueprintLibrary::execAbilityTargetDataFromLocations },
+		{ "AddAssetTag", &UAbilitySystemBlueprintLibrary::execAddAssetTag },
+		{ "AddAssetTags", &UAbilitySystemBlueprintLibrary::execAddAssetTags },
+		{ "AddGrantedTag", &UAbilitySystemBlueprintLibrary::execAddGrantedTag },
+		{ "AddGrantedTags", &UAbilitySystemBlueprintLibrary::execAddGrantedTags },
+		{ "AddLinkedGameplayEffect", &UAbilitySystemBlueprintLibrary::execAddLinkedGameplayEffect },
+		{ "AddLinkedGameplayEffectSpec", &UAbilitySystemBlueprintLibrary::execAddLinkedGameplayEffectSpec },
+		{ "AppendTargetDataHandle", &UAbilitySystemBlueprintLibrary::execAppendTargetDataHandle },
+		{ "AssignSetByCallerMagnitude", &UAbilitySystemBlueprintLibrary::execAssignSetByCallerMagnitude },
+		{ "AssignTagSetByCallerMagnitude", &UAbilitySystemBlueprintLibrary::execAssignTagSetByCallerMagnitude },
+		{ "CloneSpecHandle", &UAbilitySystemBlueprintLibrary::execCloneSpecHandle },
+		{ "DoesGameplayCueMeetTagRequirements", &UAbilitySystemBlueprintLibrary::execDoesGameplayCueMeetTagRequirements },
+		{ "DoesTargetDataContainActor", &UAbilitySystemBlueprintLibrary::execDoesTargetDataContainActor },
+		{ "EffectContextAddHitResult", &UAbilitySystemBlueprintLibrary::execEffectContextAddHitResult },
+		{ "EffectContextGetEffectCauser", &UAbilitySystemBlueprintLibrary::execEffectContextGetEffectCauser },
+		{ "EffectContextGetHitResult", &UAbilitySystemBlueprintLibrary::execEffectContextGetHitResult },
+		{ "EffectContextGetInstigatorActor", &UAbilitySystemBlueprintLibrary::execEffectContextGetInstigatorActor },
+		{ "EffectContextGetOrigin", &UAbilitySystemBlueprintLibrary::execEffectContextGetOrigin },
+		{ "EffectContextGetOriginalInstigatorActor", &UAbilitySystemBlueprintLibrary::execEffectContextGetOriginalInstigatorActor },
+		{ "EffectContextGetSourceObject", &UAbilitySystemBlueprintLibrary::execEffectContextGetSourceObject },
+		{ "EffectContextHasHitResult", &UAbilitySystemBlueprintLibrary::execEffectContextHasHitResult },
+		{ "EffectContextIsInstigatorLocallyControlled", &UAbilitySystemBlueprintLibrary::execEffectContextIsInstigatorLocallyControlled },
+		{ "EffectContextIsValid", &UAbilitySystemBlueprintLibrary::execEffectContextIsValid },
+		{ "EffectContextSetOrigin", &UAbilitySystemBlueprintLibrary::execEffectContextSetOrigin },
+		{ "EqualEqual_GameplayAttributeGameplayAttribute", &UAbilitySystemBlueprintLibrary::execEqualEqual_GameplayAttributeGameplayAttribute },
+		{ "EvaluateAttributeValueWithTags", &UAbilitySystemBlueprintLibrary::execEvaluateAttributeValueWithTags },
+		{ "EvaluateAttributeValueWithTagsAndBase", &UAbilitySystemBlueprintLibrary::execEvaluateAttributeValueWithTagsAndBase },
+		{ "FilterTargetData", &UAbilitySystemBlueprintLibrary::execFilterTargetData },
+		{ "ForwardGameplayCueToTarget", &UAbilitySystemBlueprintLibrary::execForwardGameplayCueToTarget },
+		{ "GetAbilitySystemComponent", &UAbilitySystemBlueprintLibrary::execGetAbilitySystemComponent },
+		{ "GetActiveGameplayEffectDebugString", &UAbilitySystemBlueprintLibrary::execGetActiveGameplayEffectDebugString },
+		{ "GetActiveGameplayEffectExpectedEndTime", &UAbilitySystemBlueprintLibrary::execGetActiveGameplayEffectExpectedEndTime },
+		{ "GetActiveGameplayEffectRemainingDuration", &UAbilitySystemBlueprintLibrary::execGetActiveGameplayEffectRemainingDuration },
+		{ "GetActiveGameplayEffectStackCount", &UAbilitySystemBlueprintLibrary::execGetActiveGameplayEffectStackCount },
+		{ "GetActiveGameplayEffectStackLimitCount", &UAbilitySystemBlueprintLibrary::execGetActiveGameplayEffectStackLimitCount },
+		{ "GetActiveGameplayEffectStartTime", &UAbilitySystemBlueprintLibrary::execGetActiveGameplayEffectStartTime },
+		{ "GetActiveGameplayEffectTotalDuration", &UAbilitySystemBlueprintLibrary::execGetActiveGameplayEffectTotalDuration },
+		{ "GetActorByIndex", &UAbilitySystemBlueprintLibrary::execGetActorByIndex },
+		{ "GetActorCount", &UAbilitySystemBlueprintLibrary::execGetActorCount },
+		{ "GetActorsFromTargetData", &UAbilitySystemBlueprintLibrary::execGetActorsFromTargetData },
+		{ "GetAllLinkedGameplayEffectSpecHandles", &UAbilitySystemBlueprintLibrary::execGetAllLinkedGameplayEffectSpecHandles },
+		{ "GetDataCountFromTargetData", &UAbilitySystemBlueprintLibrary::execGetDataCountFromTargetData },
+		{ "GetEffectContext", &UAbilitySystemBlueprintLibrary::execGetEffectContext },
+		{ "GetFloatAttribute", &UAbilitySystemBlueprintLibrary::execGetFloatAttribute },
+		{ "GetFloatAttributeBase", &UAbilitySystemBlueprintLibrary::execGetFloatAttributeBase },
+		{ "GetFloatAttributeBaseFromAbilitySystemComponent", &UAbilitySystemBlueprintLibrary::execGetFloatAttributeBaseFromAbilitySystemComponent },
+		{ "GetFloatAttributeFromAbilitySystemComponent", &UAbilitySystemBlueprintLibrary::execGetFloatAttributeFromAbilitySystemComponent },
+		{ "GetGameplayCueDirection", &UAbilitySystemBlueprintLibrary::execGetGameplayCueDirection },
+		{ "GetGameplayCueEndLocationAndNormal", &UAbilitySystemBlueprintLibrary::execGetGameplayCueEndLocationAndNormal },
+		{ "GetHitResult", &UAbilitySystemBlueprintLibrary::execGetHitResult },
+		{ "GetHitResultFromTargetData", &UAbilitySystemBlueprintLibrary::execGetHitResultFromTargetData },
+		{ "GetInstigatorActor", &UAbilitySystemBlueprintLibrary::execGetInstigatorActor },
+		{ "GetInstigatorTransform", &UAbilitySystemBlueprintLibrary::execGetInstigatorTransform },
+		{ "GetModifiedAttributeMagnitude", &UAbilitySystemBlueprintLibrary::execGetModifiedAttributeMagnitude },
+		{ "GetOrigin", &UAbilitySystemBlueprintLibrary::execGetOrigin },
+		{ "GetTargetDataEndPoint", &UAbilitySystemBlueprintLibrary::execGetTargetDataEndPoint },
+		{ "GetTargetDataEndPointTransform", &UAbilitySystemBlueprintLibrary::execGetTargetDataEndPointTransform },
+		{ "GetTargetDataOrigin", &UAbilitySystemBlueprintLibrary::execGetTargetDataOrigin },
+		{ "HasHitResult", &UAbilitySystemBlueprintLibrary::execHasHitResult },
+		{ "IsInstigatorLocallyControlled", &UAbilitySystemBlueprintLibrary::execIsInstigatorLocallyControlled },
+		{ "IsInstigatorLocallyControlledPlayer", &UAbilitySystemBlueprintLibrary::execIsInstigatorLocallyControlledPlayer },
+		{ "IsValid", &UAbilitySystemBlueprintLibrary::execIsValid },
+		{ "MakeFilterHandle", &UAbilitySystemBlueprintLibrary::execMakeFilterHandle },
+		{ "MakeSpecHandle", &UAbilitySystemBlueprintLibrary::execMakeSpecHandle },
+		{ "NotEqual_GameplayAttributeGameplayAttribute", &UAbilitySystemBlueprintLibrary::execNotEqual_GameplayAttributeGameplayAttribute },
+		{ "SendGameplayEventToActor", &UAbilitySystemBlueprintLibrary::execSendGameplayEventToActor },
+		{ "SetDuration", &UAbilitySystemBlueprintLibrary::execSetDuration },
+		{ "SetStackCount", &UAbilitySystemBlueprintLibrary::execSetStackCount },
+		{ "SetStackCountToMax", &UAbilitySystemBlueprintLibrary::execSetStackCountToMax },
+		{ "TargetDataHasActor", &UAbilitySystemBlueprintLibrary::execTargetDataHasActor },
+		{ "TargetDataHasEndPoint", &UAbilitySystemBlueprintLibrary::execTargetDataHasEndPoint },
+		{ "TargetDataHasHitResult", &UAbilitySystemBlueprintLibrary::execTargetDataHasHitResult },
+		{ "TargetDataHasOrigin", &UAbilitySystemBlueprintLibrary::execTargetDataHasOrigin },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilitySystemBlueprintLibrary_AbilityTargetDataFromActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -1526,11 +1697,6 @@ UFunction* Z_Construct_UFunction_UAbilitySystemBlueprintLibrary_TargetDataHasOri
 	return ReturnFunction;
 }
 
-class UAbilitySystemBlueprintLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilitySystemBlueprintLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ARadialForceActor();  // RVA 0x024C2B40 (consensus OuterFunc)
 
+class ARadialForceActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ARadialForceActor_DisableForce_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -82,11 +89,6 @@ UFunction* Z_Construct_UFunction_ARadialForceActor_ToggleForce()
 	return ReturnFunction;
 }
 
-class ARadialForceActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ARadialForceActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

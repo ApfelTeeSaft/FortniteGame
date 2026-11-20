@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ALight();  // RVA 0x02470300 (consensus OuterFunc)
 
+class ALight
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ALight_GetBrightness_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -264,11 +271,6 @@ UFunction* Z_Construct_UFunction_ALight_ToggleEnabled()
 	return ReturnFunction;
 }
 
-class ALight
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ALight_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

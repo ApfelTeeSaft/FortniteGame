@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortTheaterCamera();  // RVA 0x010B3980 (consensus OuterFunc)
 
+class AFortTheaterCamera
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortTheaterCamera();
+	static void execLimitToTheater(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2DD0 (end 0x010B2DF2)
+// Original VA: 0x00000001410B2DD0 | File offset: 0x010B23D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x034020C8) | Matching: see analysis/functions-uht-natives.json
+void AFortTheaterCamera::StaticRegisterNativesAFortTheaterCamera()
+{
+	UClass* Class = AFortTheaterCamera::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "LimitToTheater", &AFortTheaterCamera::execLimitToTheater },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortTheaterCamera_LimitToTheater_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +67,6 @@ UFunction* Z_Construct_UFunction_AFortTheaterCamera_SetTileFocus()
 	return ReturnFunction;
 }
 
-class AFortTheaterCamera
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortTheaterCamera_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AGameplayAbilityTargetActor();  // RVA 0x0055BD40 (consensus OuterFunc)
 
+class AGameplayAbilityTargetActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AGameplayAbilityTargetActor_CancelTargeting_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -44,11 +51,6 @@ UFunction* Z_Construct_UFunction_AGameplayAbilityTargetActor_ConfirmTargeting()
 	return ReturnFunction;
 }
 
-class AGameplayAbilityTargetActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AGameplayAbilityTargetActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -215,6 +215,22 @@ The fields resolve the same way as for creators:
 1,031 are exact. The added `OuterClass` neighbour also resolves most single-creator classes,
 raising exact creators from 10,342 to 10,553.
 
+### Native registrars and `StaticClass` thunks
+
+`StaticRegisterNatives<Class>` is a uniform 34-byte function: `call GetPrivateStaticClass`,
+`mov r8d, N`, `lea rdx, Funcs`, tail-`jmp RegisterFunctions`. All 696 attributed registrars
+are exact. Their fields resolve as follows:
+
+| Field | Evidence |
+| --- | --- |
+| `Funcs` | the class's `FNameNativePtrPair` array from the reflection tables |
+| `RegisterFunctions` | corroborated across registrars |
+| `GetPrivateStaticClass` | the unique function that LEA-loads `&StaticRegisterNatives<Class>` (part of the attribution chain), or corroboration by the class's `StaticClass` thunk |
+
+The thunk (`jmp GetPrivateStaticClass`, 5 bytes, no `.pdata` entry, named by `FClassParams`) is
+emitted because the class constructor takes `&Class::StaticClass`. 533 thunks are exact. They
+are reported outside the denominator, so they don't count toward the headline figure.
+
 Open data questions, which don't affect creator code:
 - The reference keeps `FuncParams` in `.data`, while public 4.20 (`constexpr` `ENUM_CLASS_FLAGS`) puts it in `.rdata`.
 - `PropPointers` arrays are declared but not yet reconstructed (property-parameter recovery).

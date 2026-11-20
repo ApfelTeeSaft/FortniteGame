@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonNumericTextBlock();  // RVA 0x002CA4B0 (consensus OuterFunc)
 
+class UCommonNumericTextBlock
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCommonNumericTextBlock();
+	static void execGetTargetValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInterpolateToValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInterpolatingNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CA0A0 (end 0x002CA0C2)
+// Original VA: 0x00000001402CA0A0 | File offset: 0x002C96A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E821B0) | Matching: see analysis/functions-uht-natives.json
+void UCommonNumericTextBlock::StaticRegisterNativesUCommonNumericTextBlock()
+{
+	UClass* Class = UCommonNumericTextBlock::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTargetValue", &UCommonNumericTextBlock::execGetTargetValue },
+		{ "InterpolateToValue", &UCommonNumericTextBlock::execInterpolateToValue },
+		{ "IsInterpolatingNumericValue", &UCommonNumericTextBlock::execIsInterpolatingNumericValue },
+		{ "SetCurrentValue", &UCommonNumericTextBlock::execSetCurrentValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UCommonNumericTextBlock_OnInterpolationEnded__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +153,6 @@ UFunction* Z_Construct_UFunction_UCommonNumericTextBlock_SetCurrentValue()
 	return ReturnFunction;
 }
 
-class UCommonNumericTextBlock
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonNumericTextBlock_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

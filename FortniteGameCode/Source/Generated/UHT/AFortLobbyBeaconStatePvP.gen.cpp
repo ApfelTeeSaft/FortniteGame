@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortLobbyBeaconStatePvP();  // RVA 0x0101E520 (consensus OuterFunc)
 
+class AFortLobbyBeaconStatePvP
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortLobbyBeaconStatePvP_OnRep_PvPLobbyTimeRemaining_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_AFortLobbyBeaconStatePvP_OnRep_PvPLobbyTimeRema
 	return ReturnFunction;
 }
 
-class AFortLobbyBeaconStatePvP
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortLobbyBeaconStatePvP_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMcpContext();  // RVA 0x01023C20 (consensus OuterFunc)
 
+class UFortMcpContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UFortMcpContext_OnDownloadEULAComplete__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -1439,11 +1446,6 @@ UFunction* Z_Construct_UFunction_UFortMcpContext_UpgradeItemRarity()
 	return ReturnFunction;
 }
 
-class UFortMcpContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMcpContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGeometryCacheComponent();  // RVA 0x01D40030 (consensus OuterFunc)
 
+class UGeometryCacheComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UGeometryCacheComponent_GetPlaybackSpeed_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -300,11 +307,6 @@ UFunction* Z_Construct_UFunction_UGeometryCacheComponent_Stop()
 	return ReturnFunction;
 }
 
-class UGeometryCacheComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGeometryCacheComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

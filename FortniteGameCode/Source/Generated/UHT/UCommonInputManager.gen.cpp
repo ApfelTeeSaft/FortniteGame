@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonInputManager();  // RVA 0x002C2E40 (consensus OuterFunc)
 
+class UCommonInputManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCommonInputManager_GetAvailableInputActions_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -224,11 +231,6 @@ UFunction* Z_Construct_UFunction_UCommonInputManager_SuspendStartingOperationPro
 	return ReturnFunction;
 }
 
-class UCommonInputManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonInputManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

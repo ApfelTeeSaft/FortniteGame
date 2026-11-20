@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AKeepHeart();  // RVA 0x010E3080 (consensus OuterFunc)
 
+class AKeepHeart
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AKeepHeart_DelayedVoteSuccess_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -458,11 +465,6 @@ UFunction* Z_Construct_UFunction_AKeepHeart_UpgradeAllPermaniteStructures()
 	return ReturnFunction;
 }
 
-class AKeepHeart
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AKeepHeart_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

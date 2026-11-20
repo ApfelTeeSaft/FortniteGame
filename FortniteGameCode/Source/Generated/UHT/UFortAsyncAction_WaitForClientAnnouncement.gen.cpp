@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_WaitForClientAnnouncement();  // RVA 0x00F9F2D0 (consensus OuterFunc)
 
+class UFortAsyncAction_WaitForClientAnnouncement
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_WaitForClientAnnouncement();
+	static void execWaitForClientAnnouncement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E690 (end 0x00F9E6B2)
+// Original VA: 0x0000000140F9E690 | File offset: 0x00F9DC90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032BFDE8) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_WaitForClientAnnouncement::StaticRegisterNativesUFortAsyncAction_WaitForClientAnnouncement()
+{
+	UClass* Class = UFortAsyncAction_WaitForClientAnnouncement::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "WaitForClientAnnouncement", &UFortAsyncAction_WaitForClientAnnouncement::execWaitForClientAnnouncement },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_WaitForClientAnnouncement_WaitForClientAnnouncement_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_WaitForClientAnnouncement_Wait
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_WaitForClientAnnouncement
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_WaitForClientAnnouncement_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

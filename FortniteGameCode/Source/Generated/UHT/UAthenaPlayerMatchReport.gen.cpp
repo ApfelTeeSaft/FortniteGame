@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaPlayerMatchReport();  // RVA 0x00F59B60 (consensus OuterFunc)
 
+class UAthenaPlayerMatchReport
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaPlayerMatchReport();
+	static void execGetLootRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalBookXpEarned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalScoreEarned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalSeasonalXpEarned(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetXpRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59300 (end 0x00F59322)
+// Original VA: 0x0000000140F59300 | File offset: 0x00F58900
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032618F0) | Matching: see analysis/functions-uht-natives.json
+void UAthenaPlayerMatchReport::StaticRegisterNativesUAthenaPlayerMatchReport()
+{
+	UClass* Class = UAthenaPlayerMatchReport::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetLootRewards", &UAthenaPlayerMatchReport::execGetLootRewards },
+		{ "GetTotalBookXpEarned", &UAthenaPlayerMatchReport::execGetTotalBookXpEarned },
+		{ "GetTotalScoreEarned", &UAthenaPlayerMatchReport::execGetTotalScoreEarned },
+		{ "GetTotalSeasonalXpEarned", &UAthenaPlayerMatchReport::execGetTotalSeasonalXpEarned },
+		{ "GetXpRewards", &UAthenaPlayerMatchReport::execGetXpRewards },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UAthenaPlayerMatchReport_DataAvailableEvent__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -125,11 +154,6 @@ UFunction* Z_Construct_UFunction_UAthenaPlayerMatchReport_GetXpRewards()
 	return ReturnFunction;
 }
 
-class UAthenaPlayerMatchReport
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaPlayerMatchReport_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

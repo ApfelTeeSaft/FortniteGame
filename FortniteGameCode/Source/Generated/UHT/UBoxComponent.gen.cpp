@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBoxComponent();  // RVA 0x023EA850 (consensus OuterFunc)
 
+class UBoxComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UBoxComponent_GetScaledBoxExtent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +73,6 @@ UFunction* Z_Construct_UFunction_UBoxComponent_SetBoxExtent()
 	return ReturnFunction;
 }
 
-class UBoxComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBoxComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

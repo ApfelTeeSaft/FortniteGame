@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaPlayersLeftBase();  // RVA 0x02887400 (consensus OuterFunc)
 
+class UAthenaPlayersLeftBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAthenaPlayersLeftBase_SetPlayersLeftText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +33,6 @@ UFunction* Z_Construct_UFunction_UAthenaPlayersLeftBase_SetPlayersLeftText()
 	return ReturnFunction;
 }
 
-class UAthenaPlayersLeftBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaPlayersLeftBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

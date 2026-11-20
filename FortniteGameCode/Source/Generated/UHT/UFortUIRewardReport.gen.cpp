@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortUIRewardReport
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortUIRewardReport();
+	static void execGetRewardedChestIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911700 (end 0x02911722)
+// Original VA: 0x0000000142911700 | File offset: 0x02910D00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D49D88) | Matching: see analysis/functions-uht-natives.json
+void UFortUIRewardReport::StaticRegisterNativesUFortUIRewardReport()
+{
+	UClass* Class = UFortUIRewardReport::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetRewardedChestIndex", &UFortUIRewardReport::execGetRewardedChestIndex },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortUIRewardReport_GetRewardedChestIndex: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortWeaponTooltip
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortWeaponTooltip();
+	static void execGetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTextForToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTokenizedDescriptionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC1C0 (end 0x010DC1E2)
+// Original VA: 0x00000001410DC1C0 | File offset: 0x010DB7C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03435158) | Matching: see analysis/functions-uht-natives.json
+void UFortWeaponTooltip::StaticRegisterNativesUFortWeaponTooltip()
+{
+	UClass* Class = UFortWeaponTooltip::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetNumericValue", &UFortWeaponTooltip::execGetNumericValue },
+		{ "GetTextForToken", &UFortWeaponTooltip::execGetTextForToken },
+		{ "GetTokenizedDescriptionText", &UFortWeaponTooltip::execGetTokenizedDescriptionText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortWeaponTooltip_GetNumericValue: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortWeaponTooltip_GetTextForToken: FFunctionParams record not identified; creator not emitted.

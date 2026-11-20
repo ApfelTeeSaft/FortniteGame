@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortReplaySpectator();  // RVA 0x0109DA80 (consensus OuterFunc)
 
+class AFortReplaySpectator
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortReplaySpectator();
+	static void execSetCloudAltitudes(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D150 (end 0x0109D172)
+// Original VA: 0x000000014109D150 | File offset: 0x0109C750
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033EF988) | Matching: see analysis/functions-uht-natives.json
+void AFortReplaySpectator::StaticRegisterNativesAFortReplaySpectator()
+{
+	UClass* Class = AFortReplaySpectator::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetCloudAltitudes", &AFortReplaySpectator::execSetCloudAltitudes },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortReplaySpectator_SetCloudAltitudes_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_AFortReplaySpectator_SetCloudAltitudes()
 	return ReturnFunction;
 }
 
-class AFortReplaySpectator
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortReplaySpectator_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaLeaderboardScreenBase();  // RVA 0x0287F5F0 (consensus OuterFunc)
 
+class UAthenaLeaderboardScreenBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaLeaderboardScreenBase();
+	static void execCanShowFriendsOnlyLeaderboard(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnActiveLeaderboardTabChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnFriendsFilterChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnMatchTypeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EE40 (end 0x0287EE62)
+// Original VA: 0x000000014287EE40 | File offset: 0x0287E440
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C53A20) | Matching: see analysis/functions-uht-natives.json
+void UAthenaLeaderboardScreenBase::StaticRegisterNativesUAthenaLeaderboardScreenBase()
+{
+	UClass* Class = UAthenaLeaderboardScreenBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanShowFriendsOnlyLeaderboard", &UAthenaLeaderboardScreenBase::execCanShowFriendsOnlyLeaderboard },
+		{ "OnActiveLeaderboardTabChanged", &UAthenaLeaderboardScreenBase::execOnActiveLeaderboardTabChanged },
+		{ "OnFriendsFilterChanged", &UAthenaLeaderboardScreenBase::execOnFriendsFilterChanged },
+		{ "OnMatchTypeChanged", &UAthenaLeaderboardScreenBase::execOnMatchTypeChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaLeaderboardScreenBase_CanShowFriendsOnlyLeaderboard_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -184,11 +211,6 @@ UFunction* Z_Construct_UFunction_UAthenaLeaderboardScreenBase_OnUpdateTabButtonT
 	return ReturnFunction;
 }
 
-class UAthenaLeaderboardScreenBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaLeaderboardScreenBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

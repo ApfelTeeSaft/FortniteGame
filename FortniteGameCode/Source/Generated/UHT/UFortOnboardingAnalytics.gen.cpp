@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortOnboardingAnalytics();  // RVA 0x00FA3D70 (consensus OuterFunc)
 
+class UFortOnboardingAnalytics
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortOnboardingAnalytics();
+	static void execFireAnalyticsEvent_CinematicSkipped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_MineCartDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_TutorialCanceled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_TutorialCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_TutorialStartupFailed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_VinderTipPlayed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3500 (end 0x00FA3522)
+// Original VA: 0x0000000140FA3500 | File offset: 0x00FA2B00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C89E0) | Matching: see analysis/functions-uht-natives.json
+void UFortOnboardingAnalytics::StaticRegisterNativesUFortOnboardingAnalytics()
+{
+	UClass* Class = UFortOnboardingAnalytics::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FireAnalyticsEvent_CinematicSkipped", &UFortOnboardingAnalytics::execFireAnalyticsEvent_CinematicSkipped },
+		{ "FireAnalyticsEvent_MineCartDestroyed", &UFortOnboardingAnalytics::execFireAnalyticsEvent_MineCartDestroyed },
+		{ "FireAnalyticsEvent_TutorialCanceled", &UFortOnboardingAnalytics::execFireAnalyticsEvent_TutorialCanceled },
+		{ "FireAnalyticsEvent_TutorialCompleted", &UFortOnboardingAnalytics::execFireAnalyticsEvent_TutorialCompleted },
+		{ "FireAnalyticsEvent_TutorialStartupFailed", &UFortOnboardingAnalytics::execFireAnalyticsEvent_TutorialStartupFailed },
+		{ "FireAnalyticsEvent_VinderTipPlayed", &UFortOnboardingAnalytics::execFireAnalyticsEvent_VinderTipPlayed },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortOnboardingAnalytics_FireAnalyticsEvent_CinematicSkipped_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UFortOnboardingAnalytics_FireAnalyticsEvent_Vin
 	return ReturnFunction;
 }
 
-class UFortOnboardingAnalytics
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortOnboardingAnalytics_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

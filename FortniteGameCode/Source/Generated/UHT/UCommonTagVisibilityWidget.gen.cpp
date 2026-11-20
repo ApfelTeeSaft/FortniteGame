@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UCommonTagVisibilityWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDElementVisibilityChanged: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UCommonTagVisibilityWidget_HandleOnHUDResetToDefaults: FFunctionParams record not identified; creator not emitted.

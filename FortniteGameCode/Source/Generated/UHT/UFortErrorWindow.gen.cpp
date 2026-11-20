@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortErrorWindow();  // RVA 0x028A3490 (consensus OuterFunc)
 
+class UFortErrorWindow
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortErrorWindow();
+	static void execDismissErrors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetErrorEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPutErrorEntries(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A2EF0 (end 0x028A2F12)
+// Original VA: 0x00000001428A2EF0 | File offset: 0x028A24F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C8EAA8) | Matching: see analysis/functions-uht-natives.json
+void UFortErrorWindow::StaticRegisterNativesUFortErrorWindow()
+{
+	UClass* Class = UFortErrorWindow::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DismissErrors", &UFortErrorWindow::execDismissErrors },
+		{ "GetErrorEntry", &UFortErrorWindow::execGetErrorEntry },
+		{ "PutErrorEntries", &UFortErrorWindow::execPutErrorEntries },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortErrorWindow_DismissErrors_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortErrorWindow_PutErrorEntries()
 	return ReturnFunction;
 }
 
-class UFortErrorWindow
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortErrorWindow_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

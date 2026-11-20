@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaHUDContext();  // RVA 0x0287F440 (consensus OuterFunc)
 
+class UAthenaHUDContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAthenaHUDContext_BeginUseFromHUD_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -916,11 +923,6 @@ UFunction* Z_Construct_UFunction_UAthenaHUDContext_UseOrRleoadFromHUDStop()
 	return ReturnFunction;
 }
 
-class UAthenaHUDContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaHUDContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

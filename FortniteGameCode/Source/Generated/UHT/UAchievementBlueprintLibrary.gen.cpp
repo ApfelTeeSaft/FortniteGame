@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAchievementBlueprintLibrary();  // RVA 0x0032E8C0 (consensus OuterFunc)
 
+class UAchievementBlueprintLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAchievementBlueprintLibrary();
+	static void execGetCachedAchievementDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCachedAchievementProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E100 (end 0x0032E122)
+// Original VA: 0x000000014032E100 | File offset: 0x0032D700
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAD018) | Matching: see analysis/functions-uht-natives.json
+void UAchievementBlueprintLibrary::StaticRegisterNativesUAchievementBlueprintLibrary()
+{
+	UClass* Class = UAchievementBlueprintLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCachedAchievementDescription", &UAchievementBlueprintLibrary::execGetCachedAchievementDescription },
+		{ "GetCachedAchievementProgress", &UAchievementBlueprintLibrary::execGetCachedAchievementProgress },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchievementDescription_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UAchievementBlueprintLibrary_GetCachedAchieveme
 	return ReturnFunction;
 }
 
-class UAchievementBlueprintLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAchievementBlueprintLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

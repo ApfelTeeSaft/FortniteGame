@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilitySystemUI();  // RVA 0x00F7D580 (consensus OuterFunc)
 
+class UFortAbilitySystemUI
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAbilitySystemUI();
+	static void execGetDefaultObjectOfGameplayEffectType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStaticGameplayEffectDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7CB30 (end 0x00F7CB52)
+// Original VA: 0x0000000140F7CB30 | File offset: 0x00F7C130
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03290758) | Matching: see analysis/functions-uht-natives.json
+void UFortAbilitySystemUI::StaticRegisterNativesUFortAbilitySystemUI()
+{
+	UClass* Class = UFortAbilitySystemUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDefaultObjectOfGameplayEffectType", &UFortAbilitySystemUI::execGetDefaultObjectOfGameplayEffectType },
+		{ "GetStaticGameplayEffectDescription", &UFortAbilitySystemUI::execGetStaticGameplayEffectDescription },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAbilitySystemUI_GetDefaultObjectOfGameplayEffectType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortAbilitySystemUI_GetStaticGameplayEffectDes
 	return ReturnFunction;
 }
 
-class UFortAbilitySystemUI
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAbilitySystemUI_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

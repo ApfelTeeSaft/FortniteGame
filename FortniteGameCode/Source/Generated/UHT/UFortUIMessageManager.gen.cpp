@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortUIMessageManager();  // RVA 0x02911CE0 (consensus OuterFunc)
 
+class UFortUIMessageManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortUIMessageManager();
+	static void execAddMessageItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNextMessageInQueue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumDisplayedItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleMessageDisplayed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleMessageRemoved(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911640 (end 0x02911662)
+// Original VA: 0x0000000142911640 | File offset: 0x02910C40
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D48D20) | Matching: see analysis/functions-uht-natives.json
+void UFortUIMessageManager::StaticRegisterNativesUFortUIMessageManager()
+{
+	UClass* Class = UFortUIMessageManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddMessageItem", &UFortUIMessageManager::execAddMessageItem },
+		{ "GetNextMessageInQueue", &UFortUIMessageManager::execGetNextMessageInQueue },
+		{ "GetNumDisplayedItems", &UFortUIMessageManager::execGetNumDisplayedItems },
+		{ "HandleMessageDisplayed", &UFortUIMessageManager::execHandleMessageDisplayed },
+		{ "HandleMessageRemoved", &UFortUIMessageManager::execHandleMessageRemoved },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortUIMessageManager_AddMessageItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UFortUIMessageManager_HandleMessageRemoved()
 	return ReturnFunction;
 }
 
-class UFortUIMessageManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortUIMessageManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

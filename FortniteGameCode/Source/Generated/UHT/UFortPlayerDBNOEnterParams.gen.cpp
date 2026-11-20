@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortPlayerDBNOEnterParams
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortPlayerDBNOEnterParams();
+	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9110 (end 0x010E9132)
+// Original VA: 0x00000001410E9110 | File offset: 0x010E8710
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03449728) | Matching: see analysis/functions-uht-natives.json
+void UFortPlayerDBNOEnterParams::StaticRegisterNativesUFortPlayerDBNOEnterParams()
+{
+	UClass* Class = UFortPlayerDBNOEnterParams::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BreakParams", &UFortPlayerDBNOEnterParams::execBreakParams },
+		{ "SetParams", &UFortPlayerDBNOEnterParams::execSetParams },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortPlayerDBNOEnterParams_BreakParams: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortPlayerDBNOEnterParams_SetParams: FFunctionParams record not identified; creator not emitted.

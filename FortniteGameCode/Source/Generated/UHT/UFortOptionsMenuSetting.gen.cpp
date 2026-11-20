@@ -6,6 +6,153 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortOptionsMenuSetting();  // RVA 0x028DE5F0 (consensus OuterFunc)
 
+class UFortOptionsMenuSetting
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortOptionsMenuSetting();
+	static void execAutoEquipChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConsoleUnlockedFPSChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFirstPersonCameraChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGamepadLookSensitivityXChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGamepadLookSensitivityYChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGamepadScopedMultiplierValueChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGamepadTargetingMultiplierValueChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAimAssistState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAutoEquipState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetConsoleUnlockedFPSState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentLanguage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentRegion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFirstPersonCameraState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFocusOnFirstBuildingPieceWhenQuickbarSwappedState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFocusOnFirstBuildingPieceWhenQuickbarSwappedStateAthena(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetForceFeedbackState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGamepadAutoRunState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGamepadLookSensitivityValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGamepadScopedMultiplierValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGamepadTargetingMultiplierValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHUDScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLookInversionState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMouseSensitivityValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPeripheralLightingEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPossibleLanguages(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRegionDisplayNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSafeZoneValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScopedMultiplierValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSettingDisplayNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSettingValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShowHeroBackpack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShowHeroHeadAccessories(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetShowViewerCountEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSprintCancelsReloadState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSprintToggleState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTapInteractState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTargetingMultiplierValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTargetingToggleState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTouchDragScopedSensitivityValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTouchLookSensitivityValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTouchTargetingMultiplierValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLanguageChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLookInversionChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMouseSensitivityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnAimAssistChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnFocusOnFirstBuildingPieceWhenQuickbarSwappedChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnFocusOnFirstBuildingPieceWhenQuickbarSwappedChangedAthena(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnForceFeedbackChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnGamepadAutoRunChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnHUDScaleChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPeripheralLightingChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegionChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSafeZoneChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execScopedMultiplierValueChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSettingChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShowViewerCountChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSprintCancelsReloadChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSprintToggleChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTapInteractChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTargetingMultiplierValueChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTargetingToggleChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTouchDragScopedSensitivityValueChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTouchLookSensitivityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTouchTargetingMultiplierValueChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE0F0 (end 0x028DE112)
+// Original VA: 0x00000001428DE0F0 | File offset: 0x028DD6F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CF2CF0) | Matching: see analysis/functions-uht-natives.json
+void UFortOptionsMenuSetting::StaticRegisterNativesUFortOptionsMenuSetting()
+{
+	UClass* Class = UFortOptionsMenuSetting::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AutoEquipChanged", &UFortOptionsMenuSetting::execAutoEquipChanged },
+		{ "ConsoleUnlockedFPSChanged", &UFortOptionsMenuSetting::execConsoleUnlockedFPSChanged },
+		{ "FirstPersonCameraChanged", &UFortOptionsMenuSetting::execFirstPersonCameraChanged },
+		{ "GamepadLookSensitivityXChanged", &UFortOptionsMenuSetting::execGamepadLookSensitivityXChanged },
+		{ "GamepadLookSensitivityYChanged", &UFortOptionsMenuSetting::execGamepadLookSensitivityYChanged },
+		{ "GamepadScopedMultiplierValueChanged", &UFortOptionsMenuSetting::execGamepadScopedMultiplierValueChanged },
+		{ "GamepadTargetingMultiplierValueChanged", &UFortOptionsMenuSetting::execGamepadTargetingMultiplierValueChanged },
+		{ "GetAimAssistState", &UFortOptionsMenuSetting::execGetAimAssistState },
+		{ "GetAutoEquipState", &UFortOptionsMenuSetting::execGetAutoEquipState },
+		{ "GetConsoleUnlockedFPSState", &UFortOptionsMenuSetting::execGetConsoleUnlockedFPSState },
+		{ "GetCurrentLanguage", &UFortOptionsMenuSetting::execGetCurrentLanguage },
+		{ "GetCurrentRegion", &UFortOptionsMenuSetting::execGetCurrentRegion },
+		{ "GetFirstPersonCameraState", &UFortOptionsMenuSetting::execGetFirstPersonCameraState },
+		{ "GetFocusOnFirstBuildingPieceWhenQuickbarSwappedState", &UFortOptionsMenuSetting::execGetFocusOnFirstBuildingPieceWhenQuickbarSwappedState },
+		{ "GetFocusOnFirstBuildingPieceWhenQuickbarSwappedStateAthena", &UFortOptionsMenuSetting::execGetFocusOnFirstBuildingPieceWhenQuickbarSwappedStateAthena },
+		{ "GetForceFeedbackState", &UFortOptionsMenuSetting::execGetForceFeedbackState },
+		{ "GetGamepadAutoRunState", &UFortOptionsMenuSetting::execGetGamepadAutoRunState },
+		{ "GetGamepadLookSensitivityValue", &UFortOptionsMenuSetting::execGetGamepadLookSensitivityValue },
+		{ "GetGamepadScopedMultiplierValue", &UFortOptionsMenuSetting::execGetGamepadScopedMultiplierValue },
+		{ "GetGamepadTargetingMultiplierValue", &UFortOptionsMenuSetting::execGetGamepadTargetingMultiplierValue },
+		{ "GetHUDScale", &UFortOptionsMenuSetting::execGetHUDScale },
+		{ "GetLookInversionState", &UFortOptionsMenuSetting::execGetLookInversionState },
+		{ "GetMouseSensitivityValue", &UFortOptionsMenuSetting::execGetMouseSensitivityValue },
+		{ "GetPeripheralLightingEnabled", &UFortOptionsMenuSetting::execGetPeripheralLightingEnabled },
+		{ "GetPossibleLanguages", &UFortOptionsMenuSetting::execGetPossibleLanguages },
+		{ "GetRegionDisplayNames", &UFortOptionsMenuSetting::execGetRegionDisplayNames },
+		{ "GetSafeZoneValue", &UFortOptionsMenuSetting::execGetSafeZoneValue },
+		{ "GetScopedMultiplierValue", &UFortOptionsMenuSetting::execGetScopedMultiplierValue },
+		{ "GetSettingDisplayNames", &UFortOptionsMenuSetting::execGetSettingDisplayNames },
+		{ "GetSettingValue", &UFortOptionsMenuSetting::execGetSettingValue },
+		{ "GetShowHeroBackpack", &UFortOptionsMenuSetting::execGetShowHeroBackpack },
+		{ "GetShowHeroHeadAccessories", &UFortOptionsMenuSetting::execGetShowHeroHeadAccessories },
+		{ "GetShowViewerCountEnabled", &UFortOptionsMenuSetting::execGetShowViewerCountEnabled },
+		{ "GetSprintCancelsReloadState", &UFortOptionsMenuSetting::execGetSprintCancelsReloadState },
+		{ "GetSprintToggleState", &UFortOptionsMenuSetting::execGetSprintToggleState },
+		{ "GetTapInteractState", &UFortOptionsMenuSetting::execGetTapInteractState },
+		{ "GetTargetingMultiplierValue", &UFortOptionsMenuSetting::execGetTargetingMultiplierValue },
+		{ "GetTargetingToggleState", &UFortOptionsMenuSetting::execGetTargetingToggleState },
+		{ "GetTouchDragScopedSensitivityValue", &UFortOptionsMenuSetting::execGetTouchDragScopedSensitivityValue },
+		{ "GetTouchLookSensitivityValue", &UFortOptionsMenuSetting::execGetTouchLookSensitivityValue },
+		{ "GetTouchTargetingMultiplierValue", &UFortOptionsMenuSetting::execGetTouchTargetingMultiplierValue },
+		{ "LanguageChanged", &UFortOptionsMenuSetting::execLanguageChanged },
+		{ "LookInversionChanged", &UFortOptionsMenuSetting::execLookInversionChanged },
+		{ "MouseSensitivityChanged", &UFortOptionsMenuSetting::execMouseSensitivityChanged },
+		{ "OnAimAssistChanged", &UFortOptionsMenuSetting::execOnAimAssistChanged },
+		{ "OnFocusOnFirstBuildingPieceWhenQuickbarSwappedChanged", &UFortOptionsMenuSetting::execOnFocusOnFirstBuildingPieceWhenQuickbarSwappedChanged },
+		{ "OnFocusOnFirstBuildingPieceWhenQuickbarSwappedChangedAthena", &UFortOptionsMenuSetting::execOnFocusOnFirstBuildingPieceWhenQuickbarSwappedChangedAthena },
+		{ "OnForceFeedbackChanged", &UFortOptionsMenuSetting::execOnForceFeedbackChanged },
+		{ "OnGamepadAutoRunChanged", &UFortOptionsMenuSetting::execOnGamepadAutoRunChanged },
+		{ "OnHUDScaleChanged", &UFortOptionsMenuSetting::execOnHUDScaleChanged },
+		{ "PeripheralLightingChanged", &UFortOptionsMenuSetting::execPeripheralLightingChanged },
+		{ "RegionChanged", &UFortOptionsMenuSetting::execRegionChanged },
+		{ "SafeZoneChanged", &UFortOptionsMenuSetting::execSafeZoneChanged },
+		{ "ScopedMultiplierValueChanged", &UFortOptionsMenuSetting::execScopedMultiplierValueChanged },
+		{ "SettingChanged", &UFortOptionsMenuSetting::execSettingChanged },
+		{ "ShowViewerCountChanged", &UFortOptionsMenuSetting::execShowViewerCountChanged },
+		{ "SprintCancelsReloadChanged", &UFortOptionsMenuSetting::execSprintCancelsReloadChanged },
+		{ "SprintToggleChanged", &UFortOptionsMenuSetting::execSprintToggleChanged },
+		{ "TapInteractChanged", &UFortOptionsMenuSetting::execTapInteractChanged },
+		{ "TargetingMultiplierValueChanged", &UFortOptionsMenuSetting::execTargetingMultiplierValueChanged },
+		{ "TargetingToggleChanged", &UFortOptionsMenuSetting::execTargetingToggleChanged },
+		{ "TouchDragScopedSensitivityValueChanged", &UFortOptionsMenuSetting::execTouchDragScopedSensitivityValueChanged },
+		{ "TouchLookSensitivityChanged", &UFortOptionsMenuSetting::execTouchLookSensitivityChanged },
+		{ "TouchTargetingMultiplierValueChanged", &UFortOptionsMenuSetting::execTouchTargetingMultiplierValueChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortOptionsMenuSetting_AutoEquipChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -1286,11 +1433,6 @@ UFunction* Z_Construct_UFunction_UFortOptionsMenuSetting_TouchTargetingMultiplie
 	return ReturnFunction;
 }
 
-class UFortOptionsMenuSetting
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortOptionsMenuSetting_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

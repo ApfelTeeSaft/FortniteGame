@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortSafeZoneIndicator();  // RVA 0x0109DB10 (consensus OuterFunc)
 
+class AFortSafeZoneIndicator
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortSafeZoneIndicator();
+	static void execGetClockTickingAudioCurveValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMovementAudioCurveValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSafeZoneCenter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSafeZoneRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSafeZoneShrinkSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSafeZoneRadiusAndCenter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D180 (end 0x0109D1A2)
+// Original VA: 0x000000014109D180 | File offset: 0x0109C780
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033F00B0) | Matching: see analysis/functions-uht-natives.json
+void AFortSafeZoneIndicator::StaticRegisterNativesAFortSafeZoneIndicator()
+{
+	UClass* Class = AFortSafeZoneIndicator::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetClockTickingAudioCurveValues", &AFortSafeZoneIndicator::execGetClockTickingAudioCurveValues },
+		{ "GetMovementAudioCurveValues", &AFortSafeZoneIndicator::execGetMovementAudioCurveValues },
+		{ "GetSafeZoneCenter", &AFortSafeZoneIndicator::execGetSafeZoneCenter },
+		{ "GetSafeZoneRadius", &AFortSafeZoneIndicator::execGetSafeZoneRadius },
+		{ "GetSafeZoneShrinkSpeed", &AFortSafeZoneIndicator::execGetSafeZoneShrinkSpeed },
+		{ "SetSafeZoneRadiusAndCenter", &AFortSafeZoneIndicator::execSetSafeZoneRadiusAndCenter },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortSafeZoneIndicator_GetClockTickingAudioCurveValues_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +177,6 @@ UFunction* Z_Construct_UFunction_AFortSafeZoneIndicator_SetSafeZoneRadiusAndCent
 	return ReturnFunction;
 }
 
-class AFortSafeZoneIndicator
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortSafeZoneIndicator_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

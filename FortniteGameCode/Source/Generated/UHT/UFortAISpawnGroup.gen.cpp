@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAISpawnGroup();  // RVA 0x00F99090 (consensus OuterFunc)
 
+class UFortAISpawnGroup
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAISpawnGroup();
+	static void execGetEnemy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumberOfEnemies(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLargeSpawnGroup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPrototype(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValidForEnemySpawners(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98780 (end 0x00F987A2)
+// Original VA: 0x0000000140F98780 | File offset: 0x00F97D80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032B5A70) | Matching: see analysis/functions-uht-natives.json
+void UFortAISpawnGroup::StaticRegisterNativesUFortAISpawnGroup()
+{
+	UClass* Class = UFortAISpawnGroup::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetEnemy", &UFortAISpawnGroup::execGetEnemy },
+		{ "GetNumberOfEnemies", &UFortAISpawnGroup::execGetNumberOfEnemies },
+		{ "IsLargeSpawnGroup", &UFortAISpawnGroup::execIsLargeSpawnGroup },
+		{ "IsPrototype", &UFortAISpawnGroup::execIsPrototype },
+		{ "IsValidForEnemySpawners", &UFortAISpawnGroup::execIsValidForEnemySpawners },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAISpawnGroup_GetEnemy_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_UFortAISpawnGroup_IsValidForEnemySpawners()
 	return ReturnFunction;
 }
 
-class UFortAISpawnGroup
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAISpawnGroup_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

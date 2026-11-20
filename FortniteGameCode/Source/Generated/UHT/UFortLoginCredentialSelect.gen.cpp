@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortLoginCredentialSelect();  // RVA 0x028D7330 (consensus OuterFunc)
 
+class UFortLoginCredentialSelect
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortLoginCredentialSelect();
+	static void execHandleBackSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleEpicClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleFacebookClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleGoogleClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandlePSClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleXBClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6D20 (end 0x028D6D42)
+// Original VA: 0x00000001428D6D20 | File offset: 0x028D6320
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE4800) | Matching: see analysis/functions-uht-natives.json
+void UFortLoginCredentialSelect::StaticRegisterNativesUFortLoginCredentialSelect()
+{
+	UClass* Class = UFortLoginCredentialSelect::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleBackSelected", &UFortLoginCredentialSelect::execHandleBackSelected },
+		{ "HandleEpicClicked", &UFortLoginCredentialSelect::execHandleEpicClicked },
+		{ "HandleFacebookClicked", &UFortLoginCredentialSelect::execHandleFacebookClicked },
+		{ "HandleGoogleClicked", &UFortLoginCredentialSelect::execHandleGoogleClicked },
+		{ "HandlePSClicked", &UFortLoginCredentialSelect::execHandlePSClicked },
+		{ "HandleXBClicked", &UFortLoginCredentialSelect::execHandleXBClicked },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortLoginCredentialSelect_HandleBackSelected_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UFortLoginCredentialSelect_HandleXBClicked()
 	return ReturnFunction;
 }
 
-class UFortLoginCredentialSelect
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortLoginCredentialSelect_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaCustomizationSlotSelectorButton();  // RVA 0x0287F350 (consensus OuterFunc)
 
+class UAthenaCustomizationSlotSelectorButton
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaCustomizationSlotSelectorButton();
+	static void execSetCustomizationType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287ECC0 (end 0x0287ECE2)
+// Original VA: 0x000000014287ECC0 | File offset: 0x0287E2C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C51ED8) | Matching: see analysis/functions-uht-natives.json
+void UAthenaCustomizationSlotSelectorButton::StaticRegisterNativesUAthenaCustomizationSlotSelectorButton()
+{
+	UClass* Class = UAthenaCustomizationSlotSelectorButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetCustomizationType", &UAthenaCustomizationSlotSelectorButton::execSetCustomizationType },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaCustomizationSlotSelectorButton_SetCustomizationType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAthenaCustomizationSlotSelectorButton_SetCusto
 	return ReturnFunction;
 }
 
-class UAthenaCustomizationSlotSelectorButton
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaCustomizationSlotSelectorButton_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

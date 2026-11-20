@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaEmojiItemDefinition();  // RVA 0x00F59970 (consensus OuterFunc)
 
+class UAthenaEmojiItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaEmojiItemDefinition();
+	static void execConfigureParticleSystem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F592A0 (end 0x00F592C2)
+// Original VA: 0x0000000140F592A0 | File offset: 0x00F588A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03260AF8) | Matching: see analysis/functions-uht-natives.json
+void UAthenaEmojiItemDefinition::StaticRegisterNativesUAthenaEmojiItemDefinition()
+{
+	UClass* Class = UAthenaEmojiItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ConfigureParticleSystem", &UAthenaEmojiItemDefinition::execConfigureParticleSystem },
+		{ "GetMaterialInstance", &UAthenaEmojiItemDefinition::execGetMaterialInstance },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaEmojiItemDefinition_ConfigureParticleSystem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UAthenaEmojiItemDefinition_GetMaterialInstance(
 	return ReturnFunction;
 }
 
-class UAthenaEmojiItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaEmojiItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

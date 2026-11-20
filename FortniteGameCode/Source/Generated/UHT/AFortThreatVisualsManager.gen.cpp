@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortThreatVisualsManager();  // RVA 0x010BE1F0 (consensus OuterFunc)
 
+class AFortThreatVisualsManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortThreatVisualsManager_BeginThreatVisualsPrecursor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -300,11 +307,6 @@ UFunction* Z_Construct_UFunction_AFortThreatVisualsManager_StormsExist()
 	return ReturnFunction;
 }
 
-class AFortThreatVisualsManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortThreatVisualsManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

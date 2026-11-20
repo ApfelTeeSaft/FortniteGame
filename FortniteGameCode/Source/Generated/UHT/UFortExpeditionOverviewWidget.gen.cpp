@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionOverviewWidget();  // RVA 0x028A3650 (consensus OuterFunc)
 
+class UFortExpeditionOverviewWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortExpeditionOverviewWidget_HandleExpeditionTabButtonCreated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -104,11 +111,6 @@ UFunction* Z_Construct_UFunction_UFortExpeditionOverviewWidget_UpdateExpeditionT
 	return ReturnFunction;
 }
 
-class UFortExpeditionOverviewWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortExpeditionOverviewWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

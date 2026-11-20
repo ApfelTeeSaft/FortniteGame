@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPrivacyBase();  // RVA 0x028E6DF0 (consensus OuterFunc)
 
+class UFortPrivacyBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortPrivacyBase_AddPrivacyButton_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -105,11 +112,6 @@ UFunction* Z_Construct_UFunction_UFortPrivacyBase_SetTencentBuild()
 	return ReturnFunction;
 }
 
-class UFortPrivacyBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPrivacyBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

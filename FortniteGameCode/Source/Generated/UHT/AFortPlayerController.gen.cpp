@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerController();  // RVA 0x0106AD20 (consensus OuterFunc)
 
+class AFortPlayerController
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortPlayerController_ActivateSlot_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -3623,11 +3630,6 @@ UFunction* Z_Construct_UFunction_AFortPlayerController_ToggleVirtualCursor()
 	return ReturnFunction;
 }
 
-class AFortPlayerController
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPlayerController_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

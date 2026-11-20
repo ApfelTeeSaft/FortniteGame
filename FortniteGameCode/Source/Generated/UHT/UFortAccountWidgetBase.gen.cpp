@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAccountWidgetBase();  // RVA 0x028876D0 (consensus OuterFunc)
 
+class UFortAccountWidgetBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAccountWidgetBase();
+	static void execGetNextSeasonChaseReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNextSeasonReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSeasonBannerInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleCurrentlyViewedAccountInfoChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886D80 (end 0x02886DA2)
+// Original VA: 0x0000000142886D80 | File offset: 0x02886380
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C606A0) | Matching: see analysis/functions-uht-natives.json
+void UFortAccountWidgetBase::StaticRegisterNativesUFortAccountWidgetBase()
+{
+	UClass* Class = UFortAccountWidgetBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetNextSeasonChaseReward", &UFortAccountWidgetBase::execGetNextSeasonChaseReward },
+		{ "GetNextSeasonReward", &UFortAccountWidgetBase::execGetNextSeasonReward },
+		{ "GetSeasonBannerInfo", &UFortAccountWidgetBase::execGetSeasonBannerInfo },
+		{ "HandleCurrentlyViewedAccountInfoChanged", &UFortAccountWidgetBase::execHandleCurrentlyViewedAccountInfoChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAccountWidgetBase_GetNextSeasonChaseReward_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +133,6 @@ UFunction* Z_Construct_UFunction_UFortAccountWidgetBase_OnAccountInfoChanged()
 	return ReturnFunction;
 }
 
-class UFortAccountWidgetBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAccountWidgetBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

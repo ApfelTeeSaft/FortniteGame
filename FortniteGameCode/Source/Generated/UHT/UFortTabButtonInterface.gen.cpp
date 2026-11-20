@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTabButtonInterface();  // RVA 0x02904BB0 (consensus OuterFunc)
 
+class UFortTabButtonInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortTabButtonInterface();
+	static void execSetTabLabelInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904430 (end 0x02904452)
+// Original VA: 0x0000000142904430 | File offset: 0x02903A30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D31438) | Matching: see analysis/functions-uht-natives.json
+void UFortTabButtonInterface::StaticRegisterNativesUFortTabButtonInterface()
+{
+	UClass* Class = UFortTabButtonInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetTabLabelInfo", &UFortTabButtonInterface::execSetTabLabelInfo },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTabButtonInterface_SetTabLabelInfo_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortTabButtonInterface_SetTabLabelInfo()
 	return ReturnFunction;
 }
 
-class UFortTabButtonInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTabButtonInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

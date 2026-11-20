@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortPlayerExitParams
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortPlayerExitParams();
+	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E91A0 (end 0x010E91C2)
+// Original VA: 0x00000001410E91A0 | File offset: 0x010E87A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03449498) | Matching: see analysis/functions-uht-natives.json
+void UFortPlayerExitParams::StaticRegisterNativesUFortPlayerExitParams()
+{
+	UClass* Class = UFortPlayerExitParams::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BreakParams", &UFortPlayerExitParams::execBreakParams },
+		{ "SetParams", &UFortPlayerExitParams::execSetParams },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortPlayerExitParams_BreakParams: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortPlayerExitParams_SetParams: FFunctionParams record not identified; creator not emitted.

@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class USubmixEffectDynamicsProcessorPreset
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSubmixEffectDynamicsProcessorPreset();
+	static void execSetSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02559E80 (end 0x02559EA2)
+// Original VA: 0x0000000142559E80 | File offset: 0x02559480
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03B47F90) | Matching: see analysis/functions-uht-natives.json
+void USubmixEffectDynamicsProcessorPreset::StaticRegisterNativesUSubmixEffectDynamicsProcessorPreset()
+{
+	UClass* Class = USubmixEffectDynamicsProcessorPreset::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetSettings", &USubmixEffectDynamicsProcessorPreset::execSetSettings },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_USubmixEffectDynamicsProcessorPreset_SetSettings: FFunctionParams record not identified; creator not emitted.

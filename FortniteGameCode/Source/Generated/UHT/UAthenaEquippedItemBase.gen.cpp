@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaEquippedItemBase();  // RVA 0x0287F380 (consensus OuterFunc)
 
+class UAthenaEquippedItemBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAthenaEquippedItemBase_AmmoChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -283,11 +290,6 @@ UFunction* Z_Construct_UFunction_UAthenaEquippedItemBase_WeaponTypeChanged()
 	return ReturnFunction;
 }
 
-class UAthenaEquippedItemBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaEquippedItemBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

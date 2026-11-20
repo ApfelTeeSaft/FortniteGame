@@ -6,6 +6,53 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionUtilities();  // RVA 0x028A3740 (consensus OuterFunc)
 
+class UFortExpeditionUtilities
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortExpeditionUtilities();
+	static void execAreAnyExpeditionsComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAreExpeditionsUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCalculateExpeditionPercentageChanceForSuccess(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCalculateGlobalAndItemRatingModValuesBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCalculateTotalPower(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllExpeditionSquadIds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetExpeditionSquadPower(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetExpeditionSquadsThatMatchRequirements(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMatchedCriteriaTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTotalExpeditionVehiclesAvailable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVehicleTagFromSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVehicleTagRequiredForExpedition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSquadOnExpedition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTotalUnseenExpeditionsForTab(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3130 (end 0x028A3152)
+// Original VA: 0x00000001428A3130 | File offset: 0x028A2730
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C90020) | Matching: see analysis/functions-uht-natives.json
+void UFortExpeditionUtilities::StaticRegisterNativesUFortExpeditionUtilities()
+{
+	UClass* Class = UFortExpeditionUtilities::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AreAnyExpeditionsComplete", &UFortExpeditionUtilities::execAreAnyExpeditionsComplete },
+		{ "AreExpeditionsUnlocked", &UFortExpeditionUtilities::execAreExpeditionsUnlocked },
+		{ "CalculateExpeditionPercentageChanceForSuccess", &UFortExpeditionUtilities::execCalculateExpeditionPercentageChanceForSuccess },
+		{ "CalculateGlobalAndItemRatingModValuesBP", &UFortExpeditionUtilities::execCalculateGlobalAndItemRatingModValuesBP },
+		{ "CalculateTotalPower", &UFortExpeditionUtilities::execCalculateTotalPower },
+		{ "GetAllExpeditionSquadIds", &UFortExpeditionUtilities::execGetAllExpeditionSquadIds },
+		{ "GetExpeditionSquadPower", &UFortExpeditionUtilities::execGetExpeditionSquadPower },
+		{ "GetExpeditionSquadsThatMatchRequirements", &UFortExpeditionUtilities::execGetExpeditionSquadsThatMatchRequirements },
+		{ "GetMatchedCriteriaTags", &UFortExpeditionUtilities::execGetMatchedCriteriaTags },
+		{ "GetTotalExpeditionVehiclesAvailable", &UFortExpeditionUtilities::execGetTotalExpeditionVehiclesAvailable },
+		{ "GetVehicleTagFromSquadId", &UFortExpeditionUtilities::execGetVehicleTagFromSquadId },
+		{ "GetVehicleTagRequiredForExpedition", &UFortExpeditionUtilities::execGetVehicleTagRequiredForExpedition },
+		{ "IsSquadOnExpedition", &UFortExpeditionUtilities::execIsSquadOnExpedition },
+		{ "TotalUnseenExpeditionsForTab", &UFortExpeditionUtilities::execTotalUnseenExpeditionsForTab },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortExpeditionUtilities_AreAnyExpeditionsComplete_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -286,11 +333,6 @@ UFunction* Z_Construct_UFunction_UFortExpeditionUtilities_TotalUnseenExpeditions
 	return ReturnFunction;
 }
 
-class UFortExpeditionUtilities
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortExpeditionUtilities_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

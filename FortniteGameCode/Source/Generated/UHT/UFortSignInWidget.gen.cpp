@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSignInWidget();  // RVA 0x028F5430 (consensus OuterFunc)
 
+class UFortSignInWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortSignInWidget_HandleBackSelected_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -163,11 +170,6 @@ UFunction* Z_Construct_UFunction_UFortSignInWidget_UpdateSignInButton()
 	return ReturnFunction;
 }
 
-class UFortSignInWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSignInWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

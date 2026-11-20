@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UVehicleWheel();  // RVA 0x0067BE50 (consensus OuterFunc)
 
+class UVehicleWheel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUVehicleWheel();
+	static void execGetRotationAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSteerAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSuspensionOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInAir(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067B810 (end 0x0067B832)
+// Original VA: 0x000000014067B810 | File offset: 0x0067AE10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F9D090) | Matching: see analysis/functions-uht-natives.json
+void UVehicleWheel::StaticRegisterNativesUVehicleWheel()
+{
+	UClass* Class = UVehicleWheel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetRotationAngle", &UVehicleWheel::execGetRotationAngle },
+		{ "GetSteerAngle", &UVehicleWheel::execGetSteerAngle },
+		{ "GetSuspensionOffset", &UVehicleWheel::execGetSuspensionOffset },
+		{ "IsInAir", &UVehicleWheel::execIsInAir },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UVehicleWheel_GetRotationAngle_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UVehicleWheel_IsInAir()
 	return ReturnFunction;
 }
 
-class UVehicleWheel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UVehicleWheel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

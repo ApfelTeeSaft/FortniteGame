@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortGameplayEffectDeliveryActor();  // RVA 0x00FE7AC0 (consensus OuterFunc)
 
+class AFortGameplayEffectDeliveryActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_BroadcastExplosion_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -262,11 +269,6 @@ UFunction* Z_Construct_UFunction_AFortGameplayEffectDeliveryActor_SetIgnoreInsti
 	return ReturnFunction;
 }
 
-class AFortGameplayEffectDeliveryActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortGameplayEffectDeliveryActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

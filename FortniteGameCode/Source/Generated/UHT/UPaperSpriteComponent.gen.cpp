@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPaperSpriteComponent();  // RVA 0x00667800 (consensus OuterFunc)
 
+class UPaperSpriteComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUPaperSpriteComponent();
+	static void execGetSprite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSprite(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSpriteColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00666E20 (end 0x00666E42)
+// Original VA: 0x0000000140666E20 | File offset: 0x00666420
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F949B8) | Matching: see analysis/functions-uht-natives.json
+void UPaperSpriteComponent::StaticRegisterNativesUPaperSpriteComponent()
+{
+	UClass* Class = UPaperSpriteComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetSprite", &UPaperSpriteComponent::execGetSprite },
+		{ "SetSprite", &UPaperSpriteComponent::execSetSprite },
+		{ "SetSpriteColor", &UPaperSpriteComponent::execSetSpriteColor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPaperSpriteComponent_GetSprite_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UPaperSpriteComponent_SetSpriteColor()
 	return ReturnFunction;
 }
 
-class UPaperSpriteComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPaperSpriteComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

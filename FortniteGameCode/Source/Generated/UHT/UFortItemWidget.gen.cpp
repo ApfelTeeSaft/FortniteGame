@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemWidget();  // RVA 0x028CF6C0 (consensus OuterFunc)
 
+class UFortItemWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_UFortItemWidget_OnGetItemToCompare__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -584,11 +591,6 @@ UFunction* Z_Construct_UFunction_UFortItemWidget_SetOnGetItemToCompareDelegate()
 	return ReturnFunction;
 }
 
-class UFortItemWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

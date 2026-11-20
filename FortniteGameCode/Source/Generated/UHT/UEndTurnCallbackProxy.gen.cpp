@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UEndTurnCallbackProxy();  // RVA 0x0032EA40 (consensus OuterFunc)
 
+class UEndTurnCallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUEndTurnCallbackProxy();
+	static void execEndTurn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E250 (end 0x0032E272)
+// Original VA: 0x000000014032E250 | File offset: 0x0032D850
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAD648) | Matching: see analysis/functions-uht-natives.json
+void UEndTurnCallbackProxy::StaticRegisterNativesUEndTurnCallbackProxy()
+{
+	UClass* Class = UEndTurnCallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EndTurn", &UEndTurnCallbackProxy::execEndTurn },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UEndTurnCallbackProxy_EndTurn_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UEndTurnCallbackProxy_EndTurn()
 	return ReturnFunction;
 }
 
-class UEndTurnCallbackProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UEndTurnCallbackProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

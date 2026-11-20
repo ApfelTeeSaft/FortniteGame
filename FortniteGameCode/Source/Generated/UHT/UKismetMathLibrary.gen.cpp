@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UKismetMathLibrary();  // RVA 0x02431AC0 (consensus OuterFunc)
 
+class UKismetMathLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UKismetMathLibrary_Abs_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -7766,11 +7773,6 @@ UFunction* Z_Construct_UFunction_UKismetMathLibrary_Xor_IntInt()
 	return ReturnFunction;
 }
 
-class UKismetMathLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UKismetMathLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

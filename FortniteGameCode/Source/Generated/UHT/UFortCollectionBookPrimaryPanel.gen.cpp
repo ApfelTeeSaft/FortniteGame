@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookPrimaryPanel();  // RVA 0x02894740 (consensus OuterFunc)
 
+class UFortCollectionBookPrimaryPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCollectionBookPrimaryPanel();
+	static void execHandleSectionTileClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBackActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCollectionBookPageClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCollectionBookPageSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCollectionBookSectionClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnInputMethodChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSummonInfoPanelExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028942B0 (end 0x028942D2)
+// Original VA: 0x00000001428942B0 | File offset: 0x028938B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C76830) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookPrimaryPanel::StaticRegisterNativesUFortCollectionBookPrimaryPanel()
+{
+	UClass* Class = UFortCollectionBookPrimaryPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleSectionTileClicked", &UFortCollectionBookPrimaryPanel::execHandleSectionTileClicked },
+		{ "OnBackActionExecuted", &UFortCollectionBookPrimaryPanel::execOnBackActionExecuted },
+		{ "OnCollectionBookPageClicked", &UFortCollectionBookPrimaryPanel::execOnCollectionBookPageClicked },
+		{ "OnCollectionBookPageSelected", &UFortCollectionBookPrimaryPanel::execOnCollectionBookPageSelected },
+		{ "OnCollectionBookSectionClicked", &UFortCollectionBookPrimaryPanel::execOnCollectionBookSectionClicked },
+		{ "OnInputMethodChanged", &UFortCollectionBookPrimaryPanel::execOnInputMethodChanged },
+		{ "OnSummonInfoPanelExecuted", &UFortCollectionBookPrimaryPanel::execOnSummonInfoPanelExecuted },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_HandleSectionTileClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +179,6 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPrimaryPanel_OnSummonInfoPan
 	return ReturnFunction;
 }
 
-class UFortCollectionBookPrimaryPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCollectionBookPrimaryPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortUIMessageItemWidget();  // RVA 0x02911CA0 (consensus OuterFunc)
 
+class UFortUIMessageItemWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortUIMessageItemWidget_OnBeginRemove_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -64,11 +71,6 @@ UFunction* Z_Construct_UFunction_UFortUIMessageItemWidget_OnStackSizeChanged()
 	return ReturnFunction;
 }
 
-class UFortUIMessageItemWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortUIMessageItemWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

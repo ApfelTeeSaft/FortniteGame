@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaIndicatorLayerBase();  // RVA 0x0287F530 (consensus OuterFunc)
 
+class UAthenaIndicatorLayerBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaIndicatorLayerBase();
+	static void execGetPlayerViewModel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSquadMembers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDataSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EDE0 (end 0x0287EE02)
+// Original VA: 0x000000014287EDE0 | File offset: 0x0287E3E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C532D8) | Matching: see analysis/functions-uht-natives.json
+void UAthenaIndicatorLayerBase::StaticRegisterNativesUAthenaIndicatorLayerBase()
+{
+	UClass* Class = UAthenaIndicatorLayerBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPlayerViewModel", &UAthenaIndicatorLayerBase::execGetPlayerViewModel },
+		{ "GetSquadMembers", &UAthenaIndicatorLayerBase::execGetSquadMembers },
+		{ "SetDataSource", &UAthenaIndicatorLayerBase::execSetDataSource },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaIndicatorLayerBase_GetPlayerViewModel_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +111,6 @@ UFunction* Z_Construct_UFunction_UAthenaIndicatorLayerBase_SquadIndicatorsChange
 	return ReturnFunction;
 }
 
-class UAthenaIndicatorLayerBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaIndicatorLayerBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

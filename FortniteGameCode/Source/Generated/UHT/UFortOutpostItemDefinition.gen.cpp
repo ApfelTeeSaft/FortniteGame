@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortOutpostItemDefinition();  // RVA 0x01056090 (consensus OuterFunc)
 
+class UFortOutpostItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortOutpostItemDefinition();
+	static void execGetLongDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01055CC0 (end 0x01055CE2)
+// Original VA: 0x0000000141055CC0 | File offset: 0x010552C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0339B520) | Matching: see analysis/functions-uht-natives.json
+void UFortOutpostItemDefinition::StaticRegisterNativesUFortOutpostItemDefinition()
+{
+	UClass* Class = UFortOutpostItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetLongDescription", &UFortOutpostItemDefinition::execGetLongDescription },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortOutpostItemDefinition_GetLongDescription_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortOutpostItemDefinition_GetLongDescription()
 	return ReturnFunction;
 }
 
-class UFortOutpostItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortOutpostItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAccountItem();  // RVA 0x00F82080 (consensus OuterFunc)
 
+class UFortAccountItem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortAccountItem_HasBeenSeenLocally_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -65,11 +72,6 @@ UFunction* Z_Construct_UFunction_UFortAccountItem_MarkItemAsSeenBP()
 	return ReturnFunction;
 }
 
-class UFortAccountItem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAccountItem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

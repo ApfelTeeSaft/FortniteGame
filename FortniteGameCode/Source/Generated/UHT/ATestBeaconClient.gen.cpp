@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ATestBeaconClient();  // RVA 0x0032E860 (consensus OuterFunc)
 
+class ATestBeaconClient
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ATestBeaconClient_ClientPing_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -44,11 +51,6 @@ UFunction* Z_Construct_UFunction_ATestBeaconClient_ServerPong()
 	return ReturnFunction;
 }
 
-class ATestBeaconClient
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ATestBeaconClient_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

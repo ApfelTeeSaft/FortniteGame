@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSpline();  // RVA 0x010A5BC0 (consensus OuterFunc)
 
+class UFortSpline
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortSpline_AddControlPoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -345,11 +352,6 @@ UFunction* Z_Construct_UFunction_UFortSpline_SetupSpline()
 	return ReturnFunction;
 }
 
-class UFortSpline
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSpline_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

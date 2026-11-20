@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookPageListWidget();  // RVA 0x028946D0 (consensus OuterFunc)
 
+class UFortCollectionBookPageListWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCollectionBookPageListWidget();
+	static void execOnSlotItemComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894250 (end 0x02894272)
+// Original VA: 0x0000000142894250 | File offset: 0x02893850
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C76578) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookPageListWidget::StaticRegisterNativesUFortCollectionBookPageListWidget()
+{
+	UClass* Class = UFortCollectionBookPageListWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnSlotItemComplete", &UFortCollectionBookPageListWidget::execOnSlotItemComplete },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCollectionBookPageListWidget_OnCategoryDetailsUpdated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +147,6 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPageListWidget_SetupAsPage()
 	return ReturnFunction;
 }
 
-class UFortCollectionBookPageListWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCollectionBookPageListWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

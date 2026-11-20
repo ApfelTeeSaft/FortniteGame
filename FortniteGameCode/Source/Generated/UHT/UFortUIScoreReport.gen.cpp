@@ -6,6 +6,55 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortUIScoreReport();  // RVA 0x02911E00 (consensus OuterFunc)
 
+class UFortUIScoreReport
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortUIScoreReport();
+	static void execGetBadgeScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDifficultBonusMultiplier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDifficultBonusScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLevelProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerIDFromScoreReportIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPlayerScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScoreReportIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetScoreReportIndicesByPlayerID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamScore(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetXpInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetXpToCompleteLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLocalPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911730 (end 0x02911752)
+// Original VA: 0x0000000142911730 | File offset: 0x02910D30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D49F60) | Matching: see analysis/functions-uht-natives.json
+void UFortUIScoreReport::StaticRegisterNativesUFortUIScoreReport()
+{
+	UClass* Class = UFortUIScoreReport::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBadgeScore", &UFortUIScoreReport::execGetBadgeScore },
+		{ "GetCurrentPlayerPawn", &UFortUIScoreReport::execGetCurrentPlayerPawn },
+		{ "GetDifficultBonusMultiplier", &UFortUIScoreReport::execGetDifficultBonusMultiplier },
+		{ "GetDifficultBonusScore", &UFortUIScoreReport::execGetDifficultBonusScore },
+		{ "GetLevelProgress", &UFortUIScoreReport::execGetLevelProgress },
+		{ "GetPlayerCount", &UFortUIScoreReport::execGetPlayerCount },
+		{ "GetPlayerIDFromScoreReportIndex", &UFortUIScoreReport::execGetPlayerIDFromScoreReportIndex },
+		{ "GetPlayerName", &UFortUIScoreReport::execGetPlayerName },
+		{ "GetPlayerScore", &UFortUIScoreReport::execGetPlayerScore },
+		{ "GetScoreReportIndex", &UFortUIScoreReport::execGetScoreReportIndex },
+		{ "GetScoreReportIndicesByPlayerID", &UFortUIScoreReport::execGetScoreReportIndicesByPlayerID },
+		{ "GetTeamScore", &UFortUIScoreReport::execGetTeamScore },
+		{ "GetXpInfo", &UFortUIScoreReport::execGetXpInfo },
+		{ "GetXpToCompleteLevel", &UFortUIScoreReport::execGetXpToCompleteLevel },
+		{ "IsLocalPlayer", &UFortUIScoreReport::execIsLocalPlayer },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortUIScoreReport_GetBadgeScore_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -306,11 +355,6 @@ UFunction* Z_Construct_UFunction_UFortUIScoreReport_IsLocalPlayer()
 	return ReturnFunction;
 }
 
-class UFortUIScoreReport
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortUIScoreReport_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

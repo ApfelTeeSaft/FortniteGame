@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortAsyncAction_PlayConversation
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_PlayConversation();
+	static void execPlayConversation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E5D0 (end 0x00F9E5F2)
+// Original VA: 0x0000000140F9E5D0 | File offset: 0x00F9DBD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032BFA18) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_PlayConversation::StaticRegisterNativesUFortAsyncAction_PlayConversation()
+{
+	UClass* Class = UFortAsyncAction_PlayConversation::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "PlayConversation", &UFortAsyncAction_PlayConversation::execPlayConversation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortAsyncAction_PlayConversation_PlayConversation: FFunctionParams record not identified; creator not emitted.

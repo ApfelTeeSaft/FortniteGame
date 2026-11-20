@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USplineComponent();  // RVA 0x024DD760 (consensus OuterFunc)
 
+class USplineComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_USplineComponent_AddPoint_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -1605,11 +1612,6 @@ UFunction* Z_Construct_UFunction_USplineComponent_UpdateSpline()
 	return ReturnFunction;
 }
 
-class USplineComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USplineComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

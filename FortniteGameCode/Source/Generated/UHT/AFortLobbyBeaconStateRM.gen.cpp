@@ -6,4 +6,11 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class AFortLobbyBeaconStateRM
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_AFortLobbyBeaconStateRM_OnRep_LobbyTimeRemaining: FFunctionParams record not identified; creator not emitted.

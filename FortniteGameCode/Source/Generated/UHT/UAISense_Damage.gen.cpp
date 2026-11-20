@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAISense_Damage();  // RVA 0x01D1BE80 (consensus OuterFunc)
 
+class UAISense_Damage
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAISense_Damage();
+	static void execReportDamageEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1B260 (end 0x01D1B282)
+// Original VA: 0x0000000141D1B260 | File offset: 0x01D1A860
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036F2870) | Matching: see analysis/functions-uht-natives.json
+void UAISense_Damage::StaticRegisterNativesUAISense_Damage()
+{
+	UClass* Class = UAISense_Damage::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ReportDamageEvent", &UAISense_Damage::execReportDamageEvent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAISense_Damage_ReportDamageEvent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAISense_Damage_ReportDamageEvent()
 	return ReturnFunction;
 }
 
-class UAISense_Damage
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAISense_Damage_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

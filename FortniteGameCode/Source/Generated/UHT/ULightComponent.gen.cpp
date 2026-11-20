@@ -6,6 +6,61 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ULightComponent();  // RVA 0x024704F0 (consensus OuterFunc)
 
+class ULightComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesULightComponent();
+	static void execSetAffectDynamicIndirectLighting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAffectTranslucentLighting(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBloomScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBloomThreshold(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBloomTint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetEnableLightShaftBloom(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetForceCachedShadowsForMovablePrimitives(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIESTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIndirectLightingIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightFunctionDisabledBrightness(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightFunctionFadeDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightFunctionMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLightFunctionScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShadowBias(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTemperature(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVolumetricScatteringIntensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FF20 (end 0x0246FF42)
+// Original VA: 0x000000014246FF20 | File offset: 0x0246F520
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03930E10) | Matching: see analysis/functions-uht-natives.json
+void ULightComponent::StaticRegisterNativesULightComponent()
+{
+	UClass* Class = ULightComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetAffectDynamicIndirectLighting", &ULightComponent::execSetAffectDynamicIndirectLighting },
+		{ "SetAffectTranslucentLighting", &ULightComponent::execSetAffectTranslucentLighting },
+		{ "SetBloomScale", &ULightComponent::execSetBloomScale },
+		{ "SetBloomThreshold", &ULightComponent::execSetBloomThreshold },
+		{ "SetBloomTint", &ULightComponent::execSetBloomTint },
+		{ "SetEnableLightShaftBloom", &ULightComponent::execSetEnableLightShaftBloom },
+		{ "SetForceCachedShadowsForMovablePrimitives", &ULightComponent::execSetForceCachedShadowsForMovablePrimitives },
+		{ "SetIESTexture", &ULightComponent::execSetIESTexture },
+		{ "SetIndirectLightingIntensity", &ULightComponent::execSetIndirectLightingIntensity },
+		{ "SetIntensity", &ULightComponent::execSetIntensity },
+		{ "SetLightColor", &ULightComponent::execSetLightColor },
+		{ "SetLightFunctionDisabledBrightness", &ULightComponent::execSetLightFunctionDisabledBrightness },
+		{ "SetLightFunctionFadeDistance", &ULightComponent::execSetLightFunctionFadeDistance },
+		{ "SetLightFunctionMaterial", &ULightComponent::execSetLightFunctionMaterial },
+		{ "SetLightFunctionScale", &ULightComponent::execSetLightFunctionScale },
+		{ "SetShadowBias", &ULightComponent::execSetShadowBias },
+		{ "SetTemperature", &ULightComponent::execSetTemperature },
+		{ "SetVolumetricScatteringIntensity", &ULightComponent::execSetVolumetricScatteringIntensity },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ULightComponent_SetAffectDynamicIndirectLighting_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -366,11 +421,6 @@ UFunction* Z_Construct_UFunction_ULightComponent_SetVolumetricScatteringIntensit
 	return ReturnFunction;
 }
 
-class ULightComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ULightComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

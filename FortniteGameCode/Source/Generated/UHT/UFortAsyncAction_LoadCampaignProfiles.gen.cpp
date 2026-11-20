@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles();  // RVA 0x0288C980 (consensus OuterFunc)
 
+class UFortAsyncAction_LoadCampaignProfiles
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_LoadCampaignProfiles();
+	static void execLoadCampaignProfiles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288C4D0 (end 0x0288C4F2)
+// Original VA: 0x000000014288C4D0 | File offset: 0x0288BAD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C69FC8) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_LoadCampaignProfiles::StaticRegisterNativesUFortAsyncAction_LoadCampaignProfiles()
+{
+	UClass* Class = UFortAsyncAction_LoadCampaignProfiles::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "LoadCampaignProfiles", &UFortAsyncAction_LoadCampaignProfiles::execLoadCampaignProfiles },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAsyncAction_LoadCampaignProfiles_LoadCampaignProfiles_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_LoadCampaignProfiles_LoadCampa
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_LoadCampaignProfiles
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

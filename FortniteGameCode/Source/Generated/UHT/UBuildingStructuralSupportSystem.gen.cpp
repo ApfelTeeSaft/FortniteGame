@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBuildingStructuralSupportSystem();  // RVA 0x00F71F50 (consensus OuterFunc)
 
+class UBuildingStructuralSupportSystem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBuildingStructuralSupportSystem();
+	static void execGetLogicalBuildingGroundSupportedActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBuildingActorStructurallySupported(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetLogicalBuildingActors(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71AC0 (end 0x00F71AE2)
+// Original VA: 0x0000000140F71AC0 | File offset: 0x00F710C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0327FCA0) | Matching: see analysis/functions-uht-natives.json
+void UBuildingStructuralSupportSystem::StaticRegisterNativesUBuildingStructuralSupportSystem()
+{
+	UClass* Class = UBuildingStructuralSupportSystem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetLogicalBuildingGroundSupportedActors", &UBuildingStructuralSupportSystem::execGetLogicalBuildingGroundSupportedActors },
+		{ "IsBuildingActorStructurallySupported", &UBuildingStructuralSupportSystem::execIsBuildingActorStructurallySupported },
+		{ "K2_GetLogicalBuildingActors", &UBuildingStructuralSupportSystem::execK2_GetLogicalBuildingActors },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBuildingStructuralSupportSystem_GetLogicalBuildingGroundSupportedActors_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UBuildingStructuralSupportSystem_K2_GetLogicalB
 	return ReturnFunction;
 }
 
-class UBuildingStructuralSupportSystem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBuildingStructuralSupportSystem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortSaveFileBuildingInstructionsHandler();  // RVA 0x010A57C0 (consensus OuterFunc)
 
+class AFortSaveFileBuildingInstructionsHandler
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortSaveFileBuildingInstructionsHandler();
+	static void execAreBuildingsLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadBuildings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetBuildings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSaveBuildings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4E30 (end 0x010A4E52)
+// Original VA: 0x00000001410A4E30 | File offset: 0x010A4430
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033F5960) | Matching: see analysis/functions-uht-natives.json
+void AFortSaveFileBuildingInstructionsHandler::StaticRegisterNativesAFortSaveFileBuildingInstructionsHandler()
+{
+	UClass* Class = AFortSaveFileBuildingInstructionsHandler::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AreBuildingsLoaded", &AFortSaveFileBuildingInstructionsHandler::execAreBuildingsLoaded },
+		{ "LoadBuildings", &AFortSaveFileBuildingInstructionsHandler::execLoadBuildings },
+		{ "ResetBuildings", &AFortSaveFileBuildingInstructionsHandler::execResetBuildings },
+		{ "SaveBuildings", &AFortSaveFileBuildingInstructionsHandler::execSaveBuildings },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_AreBuildingsLoaded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_AFortSaveFileBuildingInstructionsHandler_SaveBu
 	return ReturnFunction;
 }
 
-class AFortSaveFileBuildingInstructionsHandler
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortSaveFileBuildingInstructionsHandler_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

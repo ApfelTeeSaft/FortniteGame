@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UGameplayTask_ClaimResource();  // RVA 0x01C9AB90 (consensus OuterFunc)
 
+class UGameplayTask_ClaimResource
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUGameplayTask_ClaimResource();
+	static void execClaimResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClaimResources(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9A9A0 (end 0x01C9A9C2)
+// Original VA: 0x0000000141C9A9A0 | File offset: 0x01C99FA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036C61C8) | Matching: see analysis/functions-uht-natives.json
+void UGameplayTask_ClaimResource::StaticRegisterNativesUGameplayTask_ClaimResource()
+{
+	UClass* Class = UGameplayTask_ClaimResource::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClaimResource", &UGameplayTask_ClaimResource::execClaimResource },
+		{ "ClaimResources", &UGameplayTask_ClaimResource::execClaimResources },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UGameplayTask_ClaimResource_ClaimResource_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UGameplayTask_ClaimResource_ClaimResources()
 	return ReturnFunction;
 }
 
-class UGameplayTask_ClaimResource
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UGameplayTask_ClaimResource_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

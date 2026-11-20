@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemDetailsActivatablePanel();  // RVA 0x028C9DB0 (consensus OuterFunc)
 
+class UFortItemDetailsActivatablePanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortItemDetailsActivatablePanel_HandleConsumeItemProgressChangedBP_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -63,11 +70,6 @@ UFunction* Z_Construct_UFunction_UFortItemDetailsActivatablePanel_HandleDifferen
 	return ReturnFunction;
 }
 
-class UFortItemDetailsActivatablePanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemDetailsActivatablePanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

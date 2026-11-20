@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortToggledCursorModeParams
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortToggledCursorModeParams();
+	static void execBreakParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9230 (end 0x010E9252)
+// Original VA: 0x00000001410E9230 | File offset: 0x010E8830
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0344A3D8) | Matching: see analysis/functions-uht-natives.json
+void UFortToggledCursorModeParams::StaticRegisterNativesUFortToggledCursorModeParams()
+{
+	UClass* Class = UFortToggledCursorModeParams::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BreakParams", &UFortToggledCursorModeParams::execBreakParams },
+		{ "SetParams", &UFortToggledCursorModeParams::execSetParams },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortToggledCursorModeParams_BreakParams: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortToggledCursorModeParams_SetParams: FFunctionParams record not identified; creator not emitted.

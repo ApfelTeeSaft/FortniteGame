@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingGameplayActorConsumable();  // RVA 0x00F6C300 (consensus OuterFunc)
 
+class ABuildingGameplayActorConsumable
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesABuildingGameplayActorConsumable();
+	static void execGetDeathFXTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOnConsumeGameplayEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOnConsumeMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeOnConsumeGameplayEffectSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPrepareOnConsumeGameplayEffectSpec(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BDB0 (end 0x00F6BDD2)
+// Original VA: 0x0000000140F6BDB0 | File offset: 0x00F6B3B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03277B60) | Matching: see analysis/functions-uht-natives.json
+void ABuildingGameplayActorConsumable::StaticRegisterNativesABuildingGameplayActorConsumable()
+{
+	UClass* Class = ABuildingGameplayActorConsumable::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDeathFXTransform", &ABuildingGameplayActorConsumable::execGetDeathFXTransform },
+		{ "GetOnConsumeGameplayEffect", &ABuildingGameplayActorConsumable::execGetOnConsumeGameplayEffect },
+		{ "GetOnConsumeMontage", &ABuildingGameplayActorConsumable::execGetOnConsumeMontage },
+		{ "MakeOnConsumeGameplayEffectSpec", &ABuildingGameplayActorConsumable::execMakeOnConsumeGameplayEffectSpec },
+		{ "PrepareOnConsumeGameplayEffectSpec", &ABuildingGameplayActorConsumable::execPrepareOnConsumeGameplayEffectSpec },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingGameplayActorConsumable_GetDeathFXTransform_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -125,11 +154,6 @@ UFunction* Z_Construct_UFunction_ABuildingGameplayActorConsumable_PrepareOnConsu
 	return ReturnFunction;
 }
 
-class ABuildingGameplayActorConsumable
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingGameplayActorConsumable_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

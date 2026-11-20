@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortNodeCanvas();  // RVA 0x028DE490 (consensus OuterFunc)
 
+class UFortNodeCanvas
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortNodeCanvas();
+	static void execPanToNode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DE030 (end 0x028DE052)
+// Original VA: 0x00000001428DE030 | File offset: 0x028DD630
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CF1DB8) | Matching: see analysis/functions-uht-natives.json
+void UFortNodeCanvas::StaticRegisterNativesUFortNodeCanvas()
+{
+	UClass* Class = UFortNodeCanvas::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "PanToNode", &UFortNodeCanvas::execPanToNode },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortNodeCanvas_PanToNode_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortNodeCanvas_PanToNode()
 	return ReturnFunction;
 }
 
-class UFortNodeCanvas
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortNodeCanvas_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

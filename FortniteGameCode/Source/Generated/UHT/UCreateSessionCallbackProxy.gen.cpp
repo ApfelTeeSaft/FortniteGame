@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCreateSessionCallbackProxy();  // RVA 0x0032E9A0 (consensus OuterFunc)
 
+class UCreateSessionCallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCreateSessionCallbackProxy();
+	static void execCreateSession(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E1C0 (end 0x0032E1E2)
+// Original VA: 0x000000014032E1C0 | File offset: 0x0032D7C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAD3D8) | Matching: see analysis/functions-uht-natives.json
+void UCreateSessionCallbackProxy::StaticRegisterNativesUCreateSessionCallbackProxy()
+{
+	UClass* Class = UCreateSessionCallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateSession", &UCreateSessionCallbackProxy::execCreateSession },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCreateSessionCallbackProxy_CreateSession_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UCreateSessionCallbackProxy_CreateSession()
 	return ReturnFunction;
 }
 
-class UCreateSessionCallbackProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCreateSessionCallbackProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

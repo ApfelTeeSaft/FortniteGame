@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMaterialProgressBar();  // RVA 0x028D7420 (consensus OuterFunc)
 
+class UFortMaterialProgressBar
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortMaterialProgressBar();
+	static void execSetBackgroundColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetProgressBarSectionColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetProgressBarSectionPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStyle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6DE0 (end 0x028D6E02)
+// Original VA: 0x00000001428D6DE0 | File offset: 0x028D63E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE5930) | Matching: see analysis/functions-uht-natives.json
+void UFortMaterialProgressBar::StaticRegisterNativesUFortMaterialProgressBar()
+{
+	UClass* Class = UFortMaterialProgressBar::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetBackgroundColor", &UFortMaterialProgressBar::execSetBackgroundColor },
+		{ "SetProgressBarSectionColor", &UFortMaterialProgressBar::execSetProgressBarSectionColor },
+		{ "SetProgressBarSectionPercent", &UFortMaterialProgressBar::execSetProgressBarSectionPercent },
+		{ "SetStyle", &UFortMaterialProgressBar::execSetStyle },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMaterialProgressBar_SetBackgroundColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UFortMaterialProgressBar_SetStyle()
 	return ReturnFunction;
 }
 
-class UFortMaterialProgressBar
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMaterialProgressBar_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

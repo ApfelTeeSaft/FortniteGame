@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPvPMission_3PtDomination();  // RVA 0x01093130 (consensus OuterFunc)
 
+class AFortPvPMission_3PtDomination
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortPvPMission_3PtDomination_CapturePointSetterHackTimer_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_AFortPvPMission_3PtDomination_CapturePointSette
 	return ReturnFunction;
 }
 
-class AFortPvPMission_3PtDomination
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPvPMission_3PtDomination_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

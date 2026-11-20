@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortGameplayTagVolumeInterface();  // RVA 0x00FEE9D0 (consensus OuterFunc)
 
+class UFortGameplayTagVolumeInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortGameplayTagVolumeInterface_ApplyTags_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_UFortGameplayTagVolumeInterface_ApplyTags()
 	return ReturnFunction;
 }
 
-class UFortGameplayTagVolumeInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortGameplayTagVolumeInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

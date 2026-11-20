@@ -6,6 +6,45 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPvPFunctionLibrary();  // RVA 0x0108B740 (consensus OuterFunc)
 
+class UFortPvPFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortPvPFunctionLibrary();
+	static void execDestroyAllFortPickupsWithItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFirePvPVictoryMissionEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseBuildingCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBaseDestructionTeamInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDifficultyRowNamesFromPvPRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMatchLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRoundTimeAccumulated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamCornerstone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamStrategicBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMatchLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108AEF0 (end 0x0108AF12)
+// Original VA: 0x000000014108AEF0 | File offset: 0x0108A4F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033D6490) | Matching: see analysis/functions-uht-natives.json
+void UFortPvPFunctionLibrary::StaticRegisterNativesUFortPvPFunctionLibrary()
+{
+	UClass* Class = UFortPvPFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DestroyAllFortPickupsWithItem", &UFortPvPFunctionLibrary::execDestroyAllFortPickupsWithItem },
+		{ "FirePvPVictoryMissionEvent", &UFortPvPFunctionLibrary::execFirePvPVictoryMissionEvent },
+		{ "GetBaseBuildingCost", &UFortPvPFunctionLibrary::execGetBaseBuildingCost },
+		{ "GetBaseDestructionTeamInfo", &UFortPvPFunctionLibrary::execGetBaseDestructionTeamInfo },
+		{ "GetDifficultyRowNamesFromPvPRating", &UFortPvPFunctionLibrary::execGetDifficultyRowNamesFromPvPRating },
+		{ "GetMatchLevel", &UFortPvPFunctionLibrary::execGetMatchLevel },
+		{ "GetRoundTimeAccumulated", &UFortPvPFunctionLibrary::execGetRoundTimeAccumulated },
+		{ "GetTeamCornerstone", &UFortPvPFunctionLibrary::execGetTeamCornerstone },
+		{ "GetTeamStrategicBuildingActor", &UFortPvPFunctionLibrary::execGetTeamStrategicBuildingActor },
+		{ "SetMatchLevel", &UFortPvPFunctionLibrary::execSetMatchLevel },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPvPFunctionLibrary_DestroyAllFortPickupsWithItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -206,11 +245,6 @@ UFunction* Z_Construct_UFunction_UFortPvPFunctionLibrary_SetMatchLevel()
 	return ReturnFunction;
 }
 
-class UFortPvPFunctionLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPvPFunctionLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

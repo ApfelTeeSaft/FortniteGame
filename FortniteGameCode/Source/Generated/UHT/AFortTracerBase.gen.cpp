@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortTracerBase();  // RVA 0x010CA970 (consensus OuterFunc)
 
+class AFortTracerBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortTracerBase();
+	static void execInit(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9320 (end 0x010C9342)
+// Original VA: 0x00000001410C9320 | File offset: 0x010C8920
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0341B9C8) | Matching: see analysis/functions-uht-natives.json
+void AFortTracerBase::StaticRegisterNativesAFortTracerBase()
+{
+	UClass* Class = AFortTracerBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Init", &AFortTracerBase::execInit },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortTracerBase_Init_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -65,11 +86,6 @@ UFunction* Z_Construct_UFunction_AFortTracerBase_OnInit()
 	return ReturnFunction;
 }
 
-class AFortTracerBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortTracerBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

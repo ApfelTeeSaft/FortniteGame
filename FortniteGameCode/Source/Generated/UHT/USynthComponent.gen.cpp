@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class USynthComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_USynthComponent_IsPlaying: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_USynthComponent_SetSubmixSend: FFunctionParams record not identified; creator not emitted.

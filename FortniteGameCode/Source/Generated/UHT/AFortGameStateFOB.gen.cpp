@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class AFortGameStateFOB
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortGameStateFOB();
+	static void execSetGameDifficultyExplicitly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetGameDifficultyRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE040 (end 0x00FEE062)
+// Original VA: 0x0000000140FEE040 | File offset: 0x00FED640
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0332E730) | Matching: see analysis/functions-uht-natives.json
+void AFortGameStateFOB::StaticRegisterNativesAFortGameStateFOB()
+{
+	UClass* Class = AFortGameStateFOB::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetGameDifficultyExplicitly", &AFortGameStateFOB::execSetGameDifficultyExplicitly },
+		{ "SetGameDifficultyRow", &AFortGameStateFOB::execSetGameDifficultyRow },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyExplicitly: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_AFortGameStateFOB_SetGameDifficultyRow: FFunctionParams record not identified; creator not emitted.

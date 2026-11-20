@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase();  // RVA 0x0287F470 (consensus OuterFunc)
 
+class UAthenaHUDGamePhaseChangingBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaHUDGamePhaseChangingBase();
+	static void execHandleGamePhaseStepChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287ED80 (end 0x0287EDA2)
+// Original VA: 0x000000014287ED80 | File offset: 0x0287E380
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C53008) | Matching: see analysis/functions-uht-natives.json
+void UAthenaHUDGamePhaseChangingBase::StaticRegisterNativesUAthenaHUDGamePhaseChangingBase()
+{
+	UClass* Class = UAthenaHUDGamePhaseChangingBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleGamePhaseStepChanged", &UAthenaHUDGamePhaseChangingBase::execHandleGamePhaseStepChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_GamePhaseStepChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +87,6 @@ UFunction* Z_Construct_UFunction_UAthenaHUDGamePhaseChangingBase_UpdateMessaging
 	return ReturnFunction;
 }
 
-class UAthenaHUDGamePhaseChangingBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

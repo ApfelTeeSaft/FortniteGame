@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortQueryTwoPointSolver();  // RVA 0x01096470 (consensus OuterFunc)
 
+class UFortQueryTwoPointSolver
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortQueryTwoPointSolver_AddNamedFloatParamA_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -145,11 +152,6 @@ UFunction* Z_Construct_UFunction_UFortQueryTwoPointSolver_Start()
 	return ReturnFunction;
 }
 
-class UFortQueryTwoPointSolver
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortQueryTwoPointSolver_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

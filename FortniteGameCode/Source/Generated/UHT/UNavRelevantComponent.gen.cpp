@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UNavRelevantComponent();  // RVA 0x0248FA90 (consensus OuterFunc)
 
+class UNavRelevantComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUNavRelevantComponent();
+	static void execSetNavigationRelevancy(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F3B0 (end 0x0248F3D2)
+// Original VA: 0x000000014248F3B0 | File offset: 0x0248E9B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0395BDF8) | Matching: see analysis/functions-uht-natives.json
+void UNavRelevantComponent::StaticRegisterNativesUNavRelevantComponent()
+{
+	UClass* Class = UNavRelevantComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetNavigationRelevancy", &UNavRelevantComponent::execSetNavigationRelevancy },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UNavRelevantComponent_SetNavigationRelevancy_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UNavRelevantComponent_SetNavigationRelevancy()
 	return ReturnFunction;
 }
 
-class UNavRelevantComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UNavRelevantComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

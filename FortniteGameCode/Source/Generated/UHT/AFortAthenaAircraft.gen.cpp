@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortAthenaAircraft();  // RVA 0x00F9ECF0 (consensus OuterFunc)
 
+class AFortAthenaAircraft
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UDelegateFunction_AFortAthenaAircraft_FortAthenaAircraftDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -103,11 +110,6 @@ UFunction* Z_Construct_UFunction_AFortAthenaAircraft_PlayEffectsForPlayerJumped(
 	return ReturnFunction;
 }
 
-class AFortAthenaAircraft
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortAthenaAircraft_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

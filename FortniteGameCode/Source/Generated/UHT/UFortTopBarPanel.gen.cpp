@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTopBarPanel();  // RVA 0x02904CD0 (consensus OuterFunc)
 
+class UFortTopBarPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortTopBarPanel_AddIconToScreen_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +33,6 @@ UFunction* Z_Construct_UFunction_UFortTopBarPanel_AddIconToScreen()
 	return ReturnFunction;
 }
 
-class UFortTopBarPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTopBarPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

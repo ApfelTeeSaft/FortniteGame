@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UScaleBox();  // RVA 0x01BF2F10 (consensus OuterFunc)
 
+class UScaleBox
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUScaleBox();
+	static void execSetIgnoreInheritedScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStretch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStretchDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetUserSpecifiedScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2A00 (end 0x01BF2A22)
+// Original VA: 0x0000000141BF2A00 | File offset: 0x01BF2000
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369CA00) | Matching: see analysis/functions-uht-natives.json
+void UScaleBox::StaticRegisterNativesUScaleBox()
+{
+	UClass* Class = UScaleBox::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetIgnoreInheritedScale", &UScaleBox::execSetIgnoreInheritedScale },
+		{ "SetStretch", &UScaleBox::execSetStretch },
+		{ "SetStretchDirection", &UScaleBox::execSetStretchDirection },
+		{ "SetUserSpecifiedScale", &UScaleBox::execSetUserSpecifiedScale },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UScaleBox_SetIgnoreInheritedScale_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UScaleBox_SetUserSpecifiedScale()
 	return ReturnFunction;
 }
 
-class UScaleBox
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UScaleBox_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

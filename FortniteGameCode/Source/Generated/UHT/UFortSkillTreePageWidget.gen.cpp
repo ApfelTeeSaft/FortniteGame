@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortSkillTreePageWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSkillTreePageWidget();
+	static void execTryGetStaticSkillTreePageData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4F90 (end 0x028F4FB2)
+// Original VA: 0x00000001428F4F90 | File offset: 0x028F4590
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D13E28) | Matching: see analysis/functions-uht-natives.json
+void UFortSkillTreePageWidget::StaticRegisterNativesUFortSkillTreePageWidget()
+{
+	UClass* Class = UFortSkillTreePageWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "TryGetStaticSkillTreePageData", &UFortSkillTreePageWidget::execTryGetStaticSkillTreePageData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortSkillTreePageWidget_PlayIntroTransitionBP: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortSkillTreePageWidget_PlayOutroTransitionBP: FFunctionParams record not identified; creator not emitted.

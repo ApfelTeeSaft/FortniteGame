@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAnimInstance();  // RVA 0x023CE4E0 (consensus OuterFunc)
 
+class UAnimInstance
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAnimInstance_BlueprintBeginPlay_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -1182,11 +1189,6 @@ UFunction* Z_Construct_UFunction_UAnimInstance_UnlockAIResources()
 	return ReturnFunction;
 }
 
-class UAnimInstance
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAnimInstance_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

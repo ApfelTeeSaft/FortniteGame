@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPlatformInterfaceWebResponse();  // RVA 0x024AA020 (consensus OuterFunc)
 
+class UPlatformInterfaceWebResponse
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUPlatformInterfaceWebResponse();
+	static void execGetHeader(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHeaderValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumHeaders(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9900 (end 0x024A9922)
+// Original VA: 0x00000001424A9900 | File offset: 0x024A8F00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039839F8) | Matching: see analysis/functions-uht-natives.json
+void UPlatformInterfaceWebResponse::StaticRegisterNativesUPlatformInterfaceWebResponse()
+{
+	UClass* Class = UPlatformInterfaceWebResponse::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetHeader", &UPlatformInterfaceWebResponse::execGetHeader },
+		{ "GetHeaderValue", &UPlatformInterfaceWebResponse::execGetHeaderValue },
+		{ "GetNumHeaders", &UPlatformInterfaceWebResponse::execGetNumHeaders },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPlatformInterfaceWebResponse_GetHeader_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UPlatformInterfaceWebResponse_GetNumHeaders()
 	return ReturnFunction;
 }
 
-class UPlatformInterfaceWebResponse
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPlatformInterfaceWebResponse_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

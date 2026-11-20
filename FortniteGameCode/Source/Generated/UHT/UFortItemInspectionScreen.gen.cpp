@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemInspectionScreen();  // RVA 0x028C9F20 (consensus OuterFunc)
 
+class UFortItemInspectionScreen
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortItemInspectionScreen_GetCycleWidget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +53,6 @@ UFunction* Z_Construct_UFunction_UFortItemInspectionScreen_OpenItemInspect()
 	return ReturnFunction;
 }
 
-class UFortItemInspectionScreen
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemInspectionScreen_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

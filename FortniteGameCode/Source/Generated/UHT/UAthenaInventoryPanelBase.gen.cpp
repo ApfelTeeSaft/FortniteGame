@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaInventoryPanelBase();  // RVA 0x0287F5C0 (consensus OuterFunc)
 
+class UAthenaInventoryPanelBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAthenaInventoryPanelBase_AdvanceSelection_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -265,11 +272,6 @@ UFunction* Z_Construct_UFunction_UAthenaInventoryPanelBase_RequestEquip()
 	return ReturnFunction;
 }
 
-class UAthenaInventoryPanelBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaInventoryPanelBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

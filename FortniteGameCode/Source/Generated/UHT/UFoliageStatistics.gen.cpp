@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFoliageStatistics();  // RVA 0x01A48A90 (consensus OuterFunc)
 
+class UFoliageStatistics
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFoliageStatistics();
+	static void execFoliageOverlappingBoxCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFoliageOverlappingSphereCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A487B0 (end 0x01A487D2)
+// Original VA: 0x0000000141A487B0 | File offset: 0x01A47DB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03611438) | Matching: see analysis/functions-uht-natives.json
+void UFoliageStatistics::StaticRegisterNativesUFoliageStatistics()
+{
+	UClass* Class = UFoliageStatistics::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FoliageOverlappingBoxCount", &UFoliageStatistics::execFoliageOverlappingBoxCount },
+		{ "FoliageOverlappingSphereCount", &UFoliageStatistics::execFoliageOverlappingSphereCount },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFoliageStatistics_FoliageOverlappingBoxCount_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFoliageStatistics_FoliageOverlappingSphereCoun
 	return ReturnFunction;
 }
 
-class UFoliageStatistics
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFoliageStatistics_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

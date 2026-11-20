@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortDeployableBaseAnalytics();  // RVA 0x00FA3D10 (consensus OuterFunc)
 
+class UFortDeployableBaseAnalytics
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortDeployableBaseAnalytics();
+	static void execFireAnalyticsEvent_CombatZone_ConsoleOpened(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_CombatZone_TierCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_CombatZone_TierFailed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_CombatZone_TierStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_CombatZone_WaveFailed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_CombatZone_WaveStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_Neighborhood_ConsoleOpened(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA34D0 (end 0x00FA34F2)
+// Original VA: 0x0000000140FA34D0 | File offset: 0x00FA2AD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C8E30) | Matching: see analysis/functions-uht-natives.json
+void UFortDeployableBaseAnalytics::StaticRegisterNativesUFortDeployableBaseAnalytics()
+{
+	UClass* Class = UFortDeployableBaseAnalytics::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "FireAnalyticsEvent_CombatZone_ConsoleOpened", &UFortDeployableBaseAnalytics::execFireAnalyticsEvent_CombatZone_ConsoleOpened },
+		{ "FireAnalyticsEvent_CombatZone_TierCompleted", &UFortDeployableBaseAnalytics::execFireAnalyticsEvent_CombatZone_TierCompleted },
+		{ "FireAnalyticsEvent_CombatZone_TierFailed", &UFortDeployableBaseAnalytics::execFireAnalyticsEvent_CombatZone_TierFailed },
+		{ "FireAnalyticsEvent_CombatZone_TierStarted", &UFortDeployableBaseAnalytics::execFireAnalyticsEvent_CombatZone_TierStarted },
+		{ "FireAnalyticsEvent_CombatZone_WaveFailed", &UFortDeployableBaseAnalytics::execFireAnalyticsEvent_CombatZone_WaveFailed },
+		{ "FireAnalyticsEvent_CombatZone_WaveStarted", &UFortDeployableBaseAnalytics::execFireAnalyticsEvent_CombatZone_WaveStarted },
+		{ "FireAnalyticsEvent_Neighborhood_ConsoleOpened", &UFortDeployableBaseAnalytics::execFireAnalyticsEvent_Neighborhood_ConsoleOpened },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDeployableBaseAnalytics_FireAnalyticsEvent_CombatZone_ConsoleOpened_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +179,6 @@ UFunction* Z_Construct_UFunction_UFortDeployableBaseAnalytics_FireAnalyticsEvent
 	return ReturnFunction;
 }
 
-class UFortDeployableBaseAnalytics
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortDeployableBaseAnalytics_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

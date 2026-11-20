@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class ANavModifierVolume
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesANavModifierVolume();
+	static void execSetAreaClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F320 (end 0x0248F342)
+// Original VA: 0x000000014248F320 | File offset: 0x0248E920
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0395BAA8) | Matching: see analysis/functions-uht-natives.json
+void ANavModifierVolume::StaticRegisterNativesANavModifierVolume()
+{
+	UClass* Class = ANavModifierVolume::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetAreaClass", &ANavModifierVolume::execSetAreaClass },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_ANavModifierVolume_SetAreaClass: FFunctionParams record not identified; creator not emitted.

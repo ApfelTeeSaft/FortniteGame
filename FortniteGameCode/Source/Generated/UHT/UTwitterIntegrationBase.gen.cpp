@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UTwitterIntegrationBase();  // RVA 0x024ECF20 (consensus OuterFunc)
 
+class UTwitterIntegrationBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UTwitterIntegrationBase_AuthorizeAccounts_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -145,11 +152,6 @@ UFunction* Z_Construct_UFunction_UTwitterIntegrationBase_TwitterRequest()
 	return ReturnFunction;
 }
 
-class UTwitterIntegrationBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UTwitterIntegrationBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

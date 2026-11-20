@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_APartyDisplayManager();  // RVA 0x010F1880 (consensus OuterFunc)
 
+class APartyDisplayManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAPartyDisplayManager();
+	static void execBeginLoadingAssetsForItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHeroPlayerPawnForCurrentDisplayedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPawnBeginCursorOver(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPawnClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPawnEndCursorOver(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F11F0 (end 0x010F1212)
+// Original VA: 0x00000001410F11F0 | File offset: 0x010F07F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0344FD50) | Matching: see analysis/functions-uht-natives.json
+void APartyDisplayManager::StaticRegisterNativesAPartyDisplayManager()
+{
+	UClass* Class = APartyDisplayManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BeginLoadingAssetsForItem", &APartyDisplayManager::execBeginLoadingAssetsForItem },
+		{ "GetHeroPlayerPawnForCurrentDisplayedItem", &APartyDisplayManager::execGetHeroPlayerPawnForCurrentDisplayedItem },
+		{ "OnPawnBeginCursorOver", &APartyDisplayManager::execOnPawnBeginCursorOver },
+		{ "OnPawnClicked", &APartyDisplayManager::execOnPawnClicked },
+		{ "OnPawnEndCursorOver", &APartyDisplayManager::execOnPawnEndCursorOver },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_APartyDisplayManager_BeginLoadingAssetsForItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -242,11 +271,6 @@ UFunction* Z_Construct_UFunction_APartyDisplayManager_ShowLoading()
 	return ReturnFunction;
 }
 
-class APartyDisplayManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_APartyDisplayManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMcpProfileAthena();  // RVA 0x01030AB0 (consensus OuterFunc)
 
+class UFortMcpProfileAthena
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortMcpProfileAthena();
+	static void execCanPurchaseSeasonBook(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveSeasonDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSeasonFriendMatchXpBoost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSeasonLevelInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSeasonLevelUpReward(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSeasonMatchXpBoost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasPurchasedSeasonBook(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102F680 (end 0x0102F6A2)
+// Original VA: 0x000000014102F680 | File offset: 0x0102EC80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03370B40) | Matching: see analysis/functions-uht-natives.json
+void UFortMcpProfileAthena::StaticRegisterNativesUFortMcpProfileAthena()
+{
+	UClass* Class = UFortMcpProfileAthena::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanPurchaseSeasonBook", &UFortMcpProfileAthena::execCanPurchaseSeasonBook },
+		{ "GetActiveSeasonDefinition", &UFortMcpProfileAthena::execGetActiveSeasonDefinition },
+		{ "GetSeasonFriendMatchXpBoost", &UFortMcpProfileAthena::execGetSeasonFriendMatchXpBoost },
+		{ "GetSeasonLevelInfo", &UFortMcpProfileAthena::execGetSeasonLevelInfo },
+		{ "GetSeasonLevelUpReward", &UFortMcpProfileAthena::execGetSeasonLevelUpReward },
+		{ "GetSeasonMatchXpBoost", &UFortMcpProfileAthena::execGetSeasonMatchXpBoost },
+		{ "HasPurchasedSeasonBook", &UFortMcpProfileAthena::execHasPurchasedSeasonBook },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMcpProfileAthena_CanPurchaseSeasonBook_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -226,11 +259,6 @@ UFunction* Z_Construct_UFunction_UFortMcpProfileAthena_SetBattleRoyaleBanner()
 	return ReturnFunction;
 }
 
-class UFortMcpProfileAthena
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMcpProfileAthena_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

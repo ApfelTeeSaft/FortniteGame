@@ -6,6 +6,145 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItem();  // RVA 0x01006D90 (consensus OuterFunc)
 
+class UFortItem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortItem();
+	static void execCanBeDropped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanBeUnslotted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanBeUpgraded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanEvolve(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanUpgradeItemRarity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDoesMatchSearchString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAlterationSlots(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCoolDownTimeRemaining(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayNameWithoutPrefix(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEvolveRestrictionReasonText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFilterCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemDefinitionBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetItemGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLargePreviewImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLevelRelativeCostForRarityUpgrade(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLoadedAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNormalizedDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumInStack(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetOwningController(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPreviewAssets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrimaryCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRarity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRarityColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRaritySecondaryColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRecycleValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRemainingAmmo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSchematicCraftingResultBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSchematicCraftingResultOrCraftedWeaponBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSchematicResultType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSearchTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSecondaryCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSmallPreviewImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTertiaryCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpgradeCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpgradeResourceItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUpgradeRestrictionReasonText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasEvolutions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasRarityUpgrade(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsActivatable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEquipable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEquipped(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInStorageVault(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsInventoryOverflowItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSchematic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSchematicOrCraftedWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSlotted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTemporaryItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOwningControllerForTemporaryItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006390 (end 0x010063B2)
+// Original VA: 0x0000000141006390 | File offset: 0x01005990
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0334ACD0) | Matching: see analysis/functions-uht-natives.json
+void UFortItem::StaticRegisterNativesUFortItem()
+{
+	UClass* Class = UFortItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanBeDropped", &UFortItem::execCanBeDropped },
+		{ "CanBeUnslotted", &UFortItem::execCanBeUnslotted },
+		{ "CanBeUpgraded", &UFortItem::execCanBeUpgraded },
+		{ "CanEvolve", &UFortItem::execCanEvolve },
+		{ "CanUpgradeItemRarity", &UFortItem::execCanUpgradeItemRarity },
+		{ "DoesMatchSearchString", &UFortItem::execDoesMatchSearchString },
+		{ "GetActiveAlterations", &UFortItem::execGetActiveAlterations },
+		{ "GetAlterationSlots", &UFortItem::execGetAlterationSlots },
+		{ "GetCoolDownTimeRemaining", &UFortItem::execGetCoolDownTimeRemaining },
+		{ "GetDescription", &UFortItem::execGetDescription },
+		{ "GetDisplayName", &UFortItem::execGetDisplayName },
+		{ "GetDisplayNameWithoutPrefix", &UFortItem::execGetDisplayNameWithoutPrefix },
+		{ "GetDurability", &UFortItem::execGetDurability },
+		{ "GetEvolveRestrictionReasonText", &UFortItem::execGetEvolveRestrictionReasonText },
+		{ "GetFilterCategory", &UFortItem::execGetFilterCategory },
+		{ "GetItemDefinitionBP", &UFortItem::execGetItemDefinitionBP },
+		{ "GetItemGuid", &UFortItem::execGetItemGuid },
+		{ "GetLargePreviewImage", &UFortItem::execGetLargePreviewImage },
+		{ "GetLevel", &UFortItem::execGetLevel },
+		{ "GetLevelRelativeCostForRarityUpgrade", &UFortItem::execGetLevelRelativeCostForRarityUpgrade },
+		{ "GetLoadedAmmo", &UFortItem::execGetLoadedAmmo },
+		{ "GetMaxLevel", &UFortItem::execGetMaxLevel },
+		{ "GetMaxTier", &UFortItem::execGetMaxTier },
+		{ "GetNormalizedDurability", &UFortItem::execGetNormalizedDurability },
+		{ "GetNumInStack", &UFortItem::execGetNumInStack },
+		{ "GetOwningController", &UFortItem::execGetOwningController },
+		{ "GetPreviewAssets", &UFortItem::execGetPreviewAssets },
+		{ "GetPrimaryCategory", &UFortItem::execGetPrimaryCategory },
+		{ "GetRarity", &UFortItem::execGetRarity },
+		{ "GetRarityColor", &UFortItem::execGetRarityColor },
+		{ "GetRaritySecondaryColor", &UFortItem::execGetRaritySecondaryColor },
+		{ "GetRating", &UFortItem::execGetRating },
+		{ "GetRecycleValue", &UFortItem::execGetRecycleValue },
+		{ "GetRemainingAmmo", &UFortItem::execGetRemainingAmmo },
+		{ "GetSchematicCraftingResultBP", &UFortItem::execGetSchematicCraftingResultBP },
+		{ "GetSchematicCraftingResultOrCraftedWeaponBP", &UFortItem::execGetSchematicCraftingResultOrCraftedWeaponBP },
+		{ "GetSchematicResultType", &UFortItem::execGetSchematicResultType },
+		{ "GetSearchTags", &UFortItem::execGetSearchTags },
+		{ "GetSecondaryCategory", &UFortItem::execGetSecondaryCategory },
+		{ "GetSmallPreviewImage", &UFortItem::execGetSmallPreviewImage },
+		{ "GetTertiaryCategory", &UFortItem::execGetTertiaryCategory },
+		{ "GetTier", &UFortItem::execGetTier },
+		{ "GetType", &UFortItem::execGetType },
+		{ "GetUpgradeCost", &UFortItem::execGetUpgradeCost },
+		{ "GetUpgradeResourceItemDefinition", &UFortItem::execGetUpgradeResourceItemDefinition },
+		{ "GetUpgradeRestrictionReasonText", &UFortItem::execGetUpgradeRestrictionReasonText },
+		{ "HasDurability", &UFortItem::execHasDurability },
+		{ "HasEvolutions", &UFortItem::execHasEvolutions },
+		{ "HasRarityUpgrade", &UFortItem::execHasRarityUpgrade },
+		{ "IsActivatable", &UFortItem::execIsActivatable },
+		{ "IsEquipable", &UFortItem::execIsEquipable },
+		{ "IsEquipped", &UFortItem::execIsEquipped },
+		{ "IsInStorageVault", &UFortItem::execIsInStorageVault },
+		{ "IsInventoryOverflowItem", &UFortItem::execIsInventoryOverflowItem },
+		{ "IsSchematic", &UFortItem::execIsSchematic },
+		{ "IsSchematicOrCraftedWeapon", &UFortItem::execIsSchematicOrCraftedWeapon },
+		{ "IsSlotted", &UFortItem::execIsSlotted },
+		{ "IsTemporaryItem", &UFortItem::execIsTemporaryItem },
+		{ "SetOwningControllerForTemporaryItem", &UFortItem::execSetOwningControllerForTemporaryItem },
+		{ "TryGetCategory", &UFortItem::execTryGetCategory },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortItem_CanBeDropped_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -1206,11 +1345,6 @@ UFunction* Z_Construct_UFunction_UFortItem_TryGetCategory()
 	return ReturnFunction;
 }
 
-class UFortItem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

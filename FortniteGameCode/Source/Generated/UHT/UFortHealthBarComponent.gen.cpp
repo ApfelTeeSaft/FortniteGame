@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHealthBarComponent();  // RVA 0x00FFAEC0 (consensus OuterFunc)
 
+class UFortHealthBarComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortHealthBarComponent_GetHealthBarDisplayText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -124,11 +131,6 @@ UFunction* Z_Construct_UFunction_UFortHealthBarComponent_SetHealthBarWidgetVisib
 	return ReturnFunction;
 }
 
-class UFortHealthBarComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHealthBarComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

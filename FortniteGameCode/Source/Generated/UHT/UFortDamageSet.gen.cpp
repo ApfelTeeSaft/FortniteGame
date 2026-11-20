@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortDamageSet();  // RVA 0x00FCBB80 (consensus OuterFunc)
 
+class UFortDamageSet
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortDamageSet_OnRep_DiceCritChance_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -272,11 +279,6 @@ UFunction* Z_Construct_UFunction_UFortDamageSet_OnRep_ZoneCritMultiplier()
 	return ReturnFunction;
 }
 
-class UFortDamageSet
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortDamageSet_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

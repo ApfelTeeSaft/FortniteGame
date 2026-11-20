@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ASkeletalMeshActor();  // RVA 0x024CC9B0 (consensus OuterFunc)
 
+class ASkeletalMeshActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedMaterial0_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -82,11 +89,6 @@ UFunction* Z_Construct_UFunction_ASkeletalMeshActor_OnRep_ReplicatedPhysAsset()
 	return ReturnFunction;
 }
 
-class ASkeletalMeshActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ASkeletalMeshActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

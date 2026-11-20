@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBlueprintContextLibrary();  // RVA 0x0027B6A0 (consensus OuterFunc)
 
+class UBlueprintContextLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBlueprintContextLibrary();
+	static void execGetContext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0027B630 (end 0x0027B652)
+// Original VA: 0x000000014027B630 | File offset: 0x0027AC30
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E67CA8) | Matching: see analysis/functions-uht-natives.json
+void UBlueprintContextLibrary::StaticRegisterNativesUBlueprintContextLibrary()
+{
+	UClass* Class = UBlueprintContextLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetContext", &UBlueprintContextLibrary::execGetContext },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBlueprintContextLibrary_GetContext_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UBlueprintContextLibrary_GetContext()
 	return ReturnFunction;
 }
 
-class UBlueprintContextLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBlueprintContextLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

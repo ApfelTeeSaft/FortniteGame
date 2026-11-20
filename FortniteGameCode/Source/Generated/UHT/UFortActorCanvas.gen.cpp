@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortActorCanvas();  // RVA 0x02887770 (consensus OuterFunc)
 
+class UFortActorCanvas
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortActorCanvas();
+	static void execAddActorIndicator(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnHUDElementVisibilityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886E10 (end 0x02886E32)
+// Original VA: 0x0000000142886E10 | File offset: 0x02886410
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C60B38) | Matching: see analysis/functions-uht-natives.json
+void UFortActorCanvas::StaticRegisterNativesUFortActorCanvas()
+{
+	UClass* Class = UFortActorCanvas::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddActorIndicator", &UFortActorCanvas::execAddActorIndicator },
+		{ "OnHUDElementVisibilityChanged", &UFortActorCanvas::execOnHUDElementVisibilityChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortActorCanvas_AddActorIndicator_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortActorCanvas_OnHUDElementVisibilityChanged(
 	return ReturnFunction;
 }
 
-class UFortActorCanvas
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortActorCanvas_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

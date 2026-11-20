@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortLeaderboardEntryWidget();  // RVA 0x028D71E0 (consensus OuterFunc)
 
+class UFortLeaderboardEntryWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortLeaderboardEntryWidget_OnLeaderboardEntryDataSet_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_UFortLeaderboardEntryWidget_OnLeaderboardEntryD
 	return ReturnFunction;
 }
 
-class UFortLeaderboardEntryWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortLeaderboardEntryWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortConversionControlItemDefinition();  // RVA 0x00FCB9F0 (consensus OuterFunc)
 
+class UFortConversionControlItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortConversionControlItemDefinition();
+	static void execGetFirstConversionTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxConversionTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPointsForTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRequiredCatalysts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRequiredItemDefinition(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRequiredItemQuantity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRewardName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTierFromSacrificePoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB170 (end 0x00FCB192)
+// Original VA: 0x0000000140FCB170 | File offset: 0x00FCA770
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032F7F40) | Matching: see analysis/functions-uht-natives.json
+void UFortConversionControlItemDefinition::StaticRegisterNativesUFortConversionControlItemDefinition()
+{
+	UClass* Class = UFortConversionControlItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetFirstConversionTier", &UFortConversionControlItemDefinition::execGetFirstConversionTier },
+		{ "GetMaxConversionTier", &UFortConversionControlItemDefinition::execGetMaxConversionTier },
+		{ "GetPointsForTier", &UFortConversionControlItemDefinition::execGetPointsForTier },
+		{ "GetRequiredCatalysts", &UFortConversionControlItemDefinition::execGetRequiredCatalysts },
+		{ "GetRequiredItemDefinition", &UFortConversionControlItemDefinition::execGetRequiredItemDefinition },
+		{ "GetRequiredItemQuantity", &UFortConversionControlItemDefinition::execGetRequiredItemQuantity },
+		{ "GetRewardName", &UFortConversionControlItemDefinition::execGetRewardName },
+		{ "GetTierFromSacrificePoints", &UFortConversionControlItemDefinition::execGetTierFromSacrificePoints },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortConversionControlItemDefinition_GetFirstConversionTier_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -166,11 +201,6 @@ UFunction* Z_Construct_UFunction_UFortConversionControlItemDefinition_GetTierFro
 	return ReturnFunction;
 }
 
-class UFortConversionControlItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortConversionControlItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

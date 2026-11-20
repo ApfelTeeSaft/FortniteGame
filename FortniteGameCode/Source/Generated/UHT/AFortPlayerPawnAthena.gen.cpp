@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerPawnAthena();  // RVA 0x0107FE30 (consensus OuterFunc)
 
+class AFortPlayerPawnAthena
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortPlayerPawnAthena_BushStateChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -915,11 +922,6 @@ UFunction* Z_Construct_UFunction_AFortPlayerPawnAthena_StopConsumableUseAudio()
 	return ReturnFunction;
 }
 
-class AFortPlayerPawnAthena
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPlayerPawnAthena_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

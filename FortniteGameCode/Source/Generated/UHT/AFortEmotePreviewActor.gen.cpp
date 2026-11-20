@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortEmotePreviewActor();  // RVA 0x00FD6EE0 (consensus OuterFunc)
 
+class AFortEmotePreviewActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortEmotePreviewActor();
+	static void execGetAthenaSlottedCharacter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6AD0 (end 0x00FD6AF2)
+// Original VA: 0x0000000140FD6AD0 | File offset: 0x00FD60D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033099E8) | Matching: see analysis/functions-uht-natives.json
+void AFortEmotePreviewActor::StaticRegisterNativesAFortEmotePreviewActor()
+{
+	UClass* Class = AFortEmotePreviewActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAthenaSlottedCharacter", &AFortEmotePreviewActor::execGetAthenaSlottedCharacter },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortEmotePreviewActor_GetAthenaSlottedCharacter_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +67,6 @@ UFunction* Z_Construct_UFunction_AFortEmotePreviewActor_PreviewEmote()
 	return ReturnFunction;
 }
 
-class AFortEmotePreviewActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortEmotePreviewActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

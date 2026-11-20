@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UThrobber();  // RVA 0x01BF3260 (consensus OuterFunc)
 
+class UThrobber
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUThrobber();
+	static void execSetAnimateHorizontally(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAnimateOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAnimateVertically(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNumberOfPieces(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2C70 (end 0x01BF2C92)
+// Original VA: 0x0000000141BF2C70 | File offset: 0x01BF2270
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369E850) | Matching: see analysis/functions-uht-natives.json
+void UThrobber::StaticRegisterNativesUThrobber()
+{
+	UClass* Class = UThrobber::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetAnimateHorizontally", &UThrobber::execSetAnimateHorizontally },
+		{ "SetAnimateOpacity", &UThrobber::execSetAnimateOpacity },
+		{ "SetAnimateVertically", &UThrobber::execSetAnimateVertically },
+		{ "SetNumberOfPieces", &UThrobber::execSetNumberOfPieces },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UThrobber_SetAnimateHorizontally_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UThrobber_SetNumberOfPieces()
 	return ReturnFunction;
 }
 
-class UThrobber
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UThrobber_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

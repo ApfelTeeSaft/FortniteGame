@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPlayerProfileBannerEditor();  // RVA 0x028E6D00 (consensus OuterFunc)
 
+class UFortPlayerProfileBannerEditor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortPlayerProfileBannerEditor_CommitChosenIconAndColor_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -160,11 +167,6 @@ UFunction* Z_Construct_UFunction_UFortPlayerProfileBannerEditor_SetBannerIcon()
 	return ReturnFunction;
 }
 
-class UFortPlayerProfileBannerEditor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPlayerProfileBannerEditor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

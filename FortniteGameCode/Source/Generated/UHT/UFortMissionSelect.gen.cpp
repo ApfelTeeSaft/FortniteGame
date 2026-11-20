@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMissionSelect();  // RVA 0x028D74C0 (consensus OuterFunc)
 
+class UFortMissionSelect
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortMissionSelect();
+	static void execNavigateMissionTiles(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6E40 (end 0x028D6E62)
+// Original VA: 0x00000001428D6E40 | File offset: 0x028D6440
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CE5BA8) | Matching: see analysis/functions-uht-natives.json
+void UFortMissionSelect::StaticRegisterNativesUFortMissionSelect()
+{
+	UClass* Class = UFortMissionSelect::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "NavigateMissionTiles", &UFortMissionSelect::execNavigateMissionTiles },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMissionSelect_NavigateMissionTiles_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortMissionSelect_NavigateMissionTiles()
 	return ReturnFunction;
 }
 
-class UFortMissionSelect
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMissionSelect_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

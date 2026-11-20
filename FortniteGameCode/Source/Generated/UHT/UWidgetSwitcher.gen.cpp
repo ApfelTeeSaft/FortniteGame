@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UWidgetSwitcher();  // RVA 0x01C07CB0 (consensus OuterFunc)
 
+class UWidgetSwitcher
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUWidgetSwitcher();
+	static void execGetActiveWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetActiveWidgetIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumWidgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetWidgetAtIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActiveWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetActiveWidgetIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07B30 (end 0x01C07B52)
+// Original VA: 0x0000000141C07B30 | File offset: 0x01C07130
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036AB410) | Matching: see analysis/functions-uht-natives.json
+void UWidgetSwitcher::StaticRegisterNativesUWidgetSwitcher()
+{
+	UClass* Class = UWidgetSwitcher::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetActiveWidget", &UWidgetSwitcher::execGetActiveWidget },
+		{ "GetActiveWidgetIndex", &UWidgetSwitcher::execGetActiveWidgetIndex },
+		{ "GetNumWidgets", &UWidgetSwitcher::execGetNumWidgets },
+		{ "GetWidgetAtIndex", &UWidgetSwitcher::execGetWidgetAtIndex },
+		{ "SetActiveWidget", &UWidgetSwitcher::execSetActiveWidget },
+		{ "SetActiveWidgetIndex", &UWidgetSwitcher::execSetActiveWidgetIndex },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UWidgetSwitcher_GetActiveWidget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UWidgetSwitcher_SetActiveWidgetIndex()
 	return ReturnFunction;
 }
 
-class UWidgetSwitcher
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UWidgetSwitcher_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

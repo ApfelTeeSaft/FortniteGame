@@ -6,6 +6,65 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UExponentialHeightFogComponent();  // RVA 0x0240FD00 (consensus OuterFunc)
 
+class UExponentialHeightFogComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUExponentialHeightFogComponent();
+	static void execSetDirectionalInscatteringColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDirectionalInscatteringExponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDirectionalInscatteringStartDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFogCutoffDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFogDensity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFogHeightFalloff(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFogInscatteringColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFogMaxOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFullyDirectionalInscatteringColorDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInscatteringColorCubemap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInscatteringColorCubemapAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInscatteringTextureTint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetNonDirectionalInscatteringColorDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStartDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVolumetricFog(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVolumetricFogAlbedo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVolumetricFogDistance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVolumetricFogEmissive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVolumetricFogExtinctionScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVolumetricFogScatteringDistribution(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240F9A0 (end 0x0240F9C2)
+// Original VA: 0x000000014240F9A0 | File offset: 0x0240EFA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038EF620) | Matching: see analysis/functions-uht-natives.json
+void UExponentialHeightFogComponent::StaticRegisterNativesUExponentialHeightFogComponent()
+{
+	UClass* Class = UExponentialHeightFogComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetDirectionalInscatteringColor", &UExponentialHeightFogComponent::execSetDirectionalInscatteringColor },
+		{ "SetDirectionalInscatteringExponent", &UExponentialHeightFogComponent::execSetDirectionalInscatteringExponent },
+		{ "SetDirectionalInscatteringStartDistance", &UExponentialHeightFogComponent::execSetDirectionalInscatteringStartDistance },
+		{ "SetFogCutoffDistance", &UExponentialHeightFogComponent::execSetFogCutoffDistance },
+		{ "SetFogDensity", &UExponentialHeightFogComponent::execSetFogDensity },
+		{ "SetFogHeightFalloff", &UExponentialHeightFogComponent::execSetFogHeightFalloff },
+		{ "SetFogInscatteringColor", &UExponentialHeightFogComponent::execSetFogInscatteringColor },
+		{ "SetFogMaxOpacity", &UExponentialHeightFogComponent::execSetFogMaxOpacity },
+		{ "SetFullyDirectionalInscatteringColorDistance", &UExponentialHeightFogComponent::execSetFullyDirectionalInscatteringColorDistance },
+		{ "SetInscatteringColorCubemap", &UExponentialHeightFogComponent::execSetInscatteringColorCubemap },
+		{ "SetInscatteringColorCubemapAngle", &UExponentialHeightFogComponent::execSetInscatteringColorCubemapAngle },
+		{ "SetInscatteringTextureTint", &UExponentialHeightFogComponent::execSetInscatteringTextureTint },
+		{ "SetNonDirectionalInscatteringColorDistance", &UExponentialHeightFogComponent::execSetNonDirectionalInscatteringColorDistance },
+		{ "SetStartDistance", &UExponentialHeightFogComponent::execSetStartDistance },
+		{ "SetVolumetricFog", &UExponentialHeightFogComponent::execSetVolumetricFog },
+		{ "SetVolumetricFogAlbedo", &UExponentialHeightFogComponent::execSetVolumetricFogAlbedo },
+		{ "SetVolumetricFogDistance", &UExponentialHeightFogComponent::execSetVolumetricFogDistance },
+		{ "SetVolumetricFogEmissive", &UExponentialHeightFogComponent::execSetVolumetricFogEmissive },
+		{ "SetVolumetricFogExtinctionScale", &UExponentialHeightFogComponent::execSetVolumetricFogExtinctionScale },
+		{ "SetVolumetricFogScatteringDistribution", &UExponentialHeightFogComponent::execSetVolumetricFogScatteringDistribution },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UExponentialHeightFogComponent_SetDirectionalInscatteringColor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -406,11 +465,6 @@ UFunction* Z_Construct_UFunction_UExponentialHeightFogComponent_SetVolumetricFog
 	return ReturnFunction;
 }
 
-class UExponentialHeightFogComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UExponentialHeightFogComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

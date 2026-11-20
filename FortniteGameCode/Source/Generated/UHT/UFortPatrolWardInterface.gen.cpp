@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPatrolWardInterface();  // RVA 0x0105DF00 (consensus OuterFunc)
 
+class UFortPatrolWardInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingDistance_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +53,6 @@ UFunction* Z_Construct_UFunction_UFortPatrolWardInterface_GetAffectingType()
 	return ReturnFunction;
 }
 
-class UFortPatrolWardInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPatrolWardInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

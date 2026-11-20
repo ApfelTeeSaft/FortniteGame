@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBuildingTurretComponent();  // RVA 0x00F786E0 (consensus OuterFunc)
 
+class UBuildingTurretComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UBuildingTurretComponent_AttemptSetCurrentTarget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -184,11 +191,6 @@ UFunction* Z_Construct_UFunction_UBuildingTurretComponent_SetTargetingOverlapCom
 	return ReturnFunction;
 }
 
-class UBuildingTurretComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBuildingTurretComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

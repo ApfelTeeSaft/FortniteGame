@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UOnlineHotfixManager();  // RVA 0x005D33F0 (consensus OuterFunc)
 
+class UOnlineHotfixManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UOnlineHotfixManager_StartHotfixProcess_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_UOnlineHotfixManager_StartHotfixProcess()
 	return ReturnFunction;
 }
 
-class UOnlineHotfixManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UOnlineHotfixManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

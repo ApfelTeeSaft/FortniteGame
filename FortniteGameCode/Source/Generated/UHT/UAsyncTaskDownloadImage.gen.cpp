@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAsyncTaskDownloadImage();  // RVA 0x01BE5EE0 (consensus OuterFunc)
 
+class UAsyncTaskDownloadImage
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAsyncTaskDownloadImage();
+	static void execDownloadImage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5A00 (end 0x01BE5A22)
+// Original VA: 0x0000000141BE5A00 | File offset: 0x01BE5000
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03690B10) | Matching: see analysis/functions-uht-natives.json
+void UAsyncTaskDownloadImage::StaticRegisterNativesUAsyncTaskDownloadImage()
+{
+	UClass* Class = UAsyncTaskDownloadImage::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DownloadImage", &UAsyncTaskDownloadImage::execDownloadImage },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAsyncTaskDownloadImage_DownloadImage_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UAsyncTaskDownloadImage_DownloadImage()
 	return ReturnFunction;
 }
 
-class UAsyncTaskDownloadImage
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAsyncTaskDownloadImage_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

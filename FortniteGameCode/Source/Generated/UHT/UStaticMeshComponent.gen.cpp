@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UStaticMeshComponent();  // RVA 0x024E7970 (consensus OuterFunc)
 
+class UStaticMeshComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUStaticMeshComponent();
+	static void execGetLocalBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRep_StaticMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDistanceFieldSelfShadowBias(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetForcedLodModel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetReverseCulling(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetStaticMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7010 (end 0x024E7032)
+// Original VA: 0x00000001424E7010 | File offset: 0x024E6610
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039C34E0) | Matching: see analysis/functions-uht-natives.json
+void UStaticMeshComponent::StaticRegisterNativesUStaticMeshComponent()
+{
+	UClass* Class = UStaticMeshComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetLocalBounds", &UStaticMeshComponent::execGetLocalBounds },
+		{ "OnRep_StaticMesh", &UStaticMeshComponent::execOnRep_StaticMesh },
+		{ "SetDistanceFieldSelfShadowBias", &UStaticMeshComponent::execSetDistanceFieldSelfShadowBias },
+		{ "SetForcedLodModel", &UStaticMeshComponent::execSetForcedLodModel },
+		{ "SetReverseCulling", &UStaticMeshComponent::execSetReverseCulling },
+		{ "SetStaticMesh", &UStaticMeshComponent::execSetStaticMesh },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UStaticMeshComponent_GetLocalBounds_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UStaticMeshComponent_SetStaticMesh()
 	return ReturnFunction;
 }
 
-class UStaticMeshComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UStaticMeshComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

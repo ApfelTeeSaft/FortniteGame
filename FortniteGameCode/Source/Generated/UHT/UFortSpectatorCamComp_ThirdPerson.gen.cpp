@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson();  // RVA 0x010A5B60 (consensus OuterFunc)
 
+class UFortSpectatorCamComp_ThirdPerson
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSpectatorCamComp_ThirdPerson();
+	static void execSetAutoFollow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLazyAutoFollow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5040 (end 0x010A5062)
+// Original VA: 0x00000001410A5040 | File offset: 0x010A4640
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033F8458) | Matching: see analysis/functions-uht-natives.json
+void UFortSpectatorCamComp_ThirdPerson::StaticRegisterNativesUFortSpectatorCamComp_ThirdPerson()
+{
+	UClass* Class = UFortSpectatorCamComp_ThirdPerson::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetAutoFollow", &UFortSpectatorCamComp_ThirdPerson::execSetAutoFollow },
+		{ "SetLazyAutoFollow", &UFortSpectatorCamComp_ThirdPerson::execSetLazyAutoFollow },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSpectatorCamComp_ThirdPerson_SetAutoFollow_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortSpectatorCamComp_ThirdPerson_SetLazyAutoFo
 	return ReturnFunction;
 }
 
-class UFortSpectatorCamComp_ThirdPerson
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

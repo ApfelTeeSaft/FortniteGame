@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPathFollowingComponent();  // RVA 0x01D31D40 (consensus OuterFunc)
 
+class UPathFollowingComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUPathFollowingComponent();
+	static void execGetPathActionType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPathDestination(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnActorBump(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnNavDataRegistered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31B00 (end 0x01D31B22)
+// Original VA: 0x0000000141D31B00 | File offset: 0x01D31100
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0370CB00) | Matching: see analysis/functions-uht-natives.json
+void UPathFollowingComponent::StaticRegisterNativesUPathFollowingComponent()
+{
+	UClass* Class = UPathFollowingComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetPathActionType", &UPathFollowingComponent::execGetPathActionType },
+		{ "GetPathDestination", &UPathFollowingComponent::execGetPathDestination },
+		{ "OnActorBump", &UPathFollowingComponent::execOnActorBump },
+		{ "OnNavDataRegistered", &UPathFollowingComponent::execOnNavDataRegistered },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPathFollowingComponent_GetPathActionType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UPathFollowingComponent_OnNavDataRegistered()
 	return ReturnFunction;
 }
 
-class UPathFollowingComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPathFollowingComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

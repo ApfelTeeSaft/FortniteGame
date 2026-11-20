@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSocialItem();  // RVA 0x010A5A90 (consensus OuterFunc)
 
+class UFortSocialItem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSocialItem();
+	static void execGetDisplayName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLFGTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPresenceStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetUniquePlayerId(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsLFG(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A4FE0 (end 0x010A5002)
+// Original VA: 0x00000001410A4FE0 | File offset: 0x010A45E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033F7F70) | Matching: see analysis/functions-uht-natives.json
+void UFortSocialItem::StaticRegisterNativesUFortSocialItem()
+{
+	UClass* Class = UFortSocialItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDisplayName", &UFortSocialItem::execGetDisplayName },
+		{ "GetLFGTime", &UFortSocialItem::execGetLFGTime },
+		{ "GetLocation", &UFortSocialItem::execGetLocation },
+		{ "GetPresenceStatus", &UFortSocialItem::execGetPresenceStatus },
+		{ "GetUniquePlayerId", &UFortSocialItem::execGetUniquePlayerId },
+		{ "IsLFG", &UFortSocialItem::execIsLFG },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSocialItem_GetDisplayName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UFortSocialItem_IsLFG()
 	return ReturnFunction;
 }
 
-class UFortSocialItem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSocialItem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

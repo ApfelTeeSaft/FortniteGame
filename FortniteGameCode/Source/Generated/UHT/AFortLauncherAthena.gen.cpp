@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortLauncherAthena();  // RVA 0x0101E190 (consensus OuterFunc)
 
+class AFortLauncherAthena
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortLauncherAthena_OnRepLaunchServerInfo_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_AFortLauncherAthena_TriggerLaunchEffects()
 	return ReturnFunction;
 }
 
-class AFortLauncherAthena
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortLauncherAthena_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

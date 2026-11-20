@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AGameplayCueNotify_Actor();  // RVA 0x0055BEC0 (consensus OuterFunc)
 
+class AGameplayCueNotify_Actor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AGameplayCueNotify_Actor_K2_EndGameplayCue_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -145,11 +152,6 @@ UFunction* Z_Construct_UFunction_AGameplayCueNotify_Actor_WhileActive()
 	return ReturnFunction;
 }
 
-class AGameplayCueNotify_Actor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AGameplayCueNotify_Actor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

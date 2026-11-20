@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitInputRelease();  // RVA 0x0054D7A0 (consensus OuterFunc)
 
+class UAbilityTask_WaitInputRelease
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAbilityTask_WaitInputRelease_OnReleaseCallback_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +52,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitInputRelease_WaitInputRelease(
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitInputRelease
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitInputRelease_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

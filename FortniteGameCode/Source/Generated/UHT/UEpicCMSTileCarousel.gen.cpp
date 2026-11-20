@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UEpicCMSTileCarousel();  // RVA 0x002E3CA0 (consensus OuterFunc)
 
+class UEpicCMSTileCarousel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UEpicCMSTileCarousel_GetCurrentPageIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -124,11 +131,6 @@ UFunction* Z_Construct_UFunction_UEpicCMSTileCarousel_SetCurrentPageByIndex()
 	return ReturnFunction;
 }
 
-class UEpicCMSTileCarousel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UEpicCMSTileCarousel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UAbilityTask_SpawnActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_SpawnActor();
+	static void execBeginSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFinishSpawningActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00546520 (end 0x00546542)
+// Original VA: 0x0000000140546520 | File offset: 0x00545B20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F2B790) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_SpawnActor::StaticRegisterNativesUAbilityTask_SpawnActor()
+{
+	UClass* Class = UAbilityTask_SpawnActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BeginSpawningActor", &UAbilityTask_SpawnActor::execBeginSpawningActor },
+		{ "FinishSpawningActor", &UAbilityTask_SpawnActor::execFinishSpawningActor },
+		{ "SpawnActor", &UAbilityTask_SpawnActor::execSpawnActor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UAbilityTask_SpawnActor_BeginSpawningActor: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UAbilityTask_SpawnActor_FinishSpawningActor: FFunctionParams record not identified; creator not emitted.

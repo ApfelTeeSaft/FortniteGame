@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayEffectStackChange();  // RVA 0x0054D670 (consensus OuterFunc)
 
+class UAbilityTask_WaitGameplayEffectStackChange
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitGameplayEffectStackChange();
+	static void execOnGameplayEffectStackChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitForGameplayEffectStackChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CF00 (end 0x0054CF22)
+// Original VA: 0x000000014054CF00 | File offset: 0x0054C500
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F32C80) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitGameplayEffectStackChange::StaticRegisterNativesUAbilityTask_WaitGameplayEffectStackChange()
+{
+	UClass* Class = UAbilityTask_WaitGameplayEffectStackChange::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnGameplayEffectStackChange", &UAbilityTask_WaitGameplayEffectStackChange::execOnGameplayEffectStackChange },
+		{ "WaitForGameplayEffectStackChange", &UAbilityTask_WaitGameplayEffectStackChange::execWaitForGameplayEffectStackChange },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectStackChange_OnGameplayEffectStackChange_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectStackChange_Wait
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitGameplayEffectStackChange
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitGameplayEffectStackChange_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

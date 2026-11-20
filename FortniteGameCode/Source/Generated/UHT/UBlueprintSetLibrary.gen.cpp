@@ -6,6 +6,49 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBlueprintSetLibrary();  // RVA 0x023E3830 (consensus OuterFunc)
 
+class UBlueprintSetLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBlueprintSetLibrary();
+	static void execSet_Add(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSet_AddItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSet_Clear(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSet_Contains(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSet_Difference(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSet_Intersection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSet_Length(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSet_Remove(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSet_RemoveItems(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSet_ToArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSet_Union(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSetPropertyByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2D20 (end 0x023E2D42)
+// Original VA: 0x00000001423E2D20 | File offset: 0x023E2320
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038B3EE0) | Matching: see analysis/functions-uht-natives.json
+void UBlueprintSetLibrary::StaticRegisterNativesUBlueprintSetLibrary()
+{
+	UClass* Class = UBlueprintSetLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Set_Add", &UBlueprintSetLibrary::execSet_Add },
+		{ "Set_AddItems", &UBlueprintSetLibrary::execSet_AddItems },
+		{ "Set_Clear", &UBlueprintSetLibrary::execSet_Clear },
+		{ "Set_Contains", &UBlueprintSetLibrary::execSet_Contains },
+		{ "Set_Difference", &UBlueprintSetLibrary::execSet_Difference },
+		{ "Set_Intersection", &UBlueprintSetLibrary::execSet_Intersection },
+		{ "Set_Length", &UBlueprintSetLibrary::execSet_Length },
+		{ "Set_Remove", &UBlueprintSetLibrary::execSet_Remove },
+		{ "Set_RemoveItems", &UBlueprintSetLibrary::execSet_RemoveItems },
+		{ "Set_ToArray", &UBlueprintSetLibrary::execSet_ToArray },
+		{ "Set_Union", &UBlueprintSetLibrary::execSet_Union },
+		{ "SetSetPropertyByName", &UBlueprintSetLibrary::execSetSetPropertyByName },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBlueprintSetLibrary_Set_Add_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -246,11 +289,6 @@ UFunction* Z_Construct_UFunction_UBlueprintSetLibrary_SetSetPropertyByName()
 	return ReturnFunction;
 }
 
-class UBlueprintSetLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBlueprintSetLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

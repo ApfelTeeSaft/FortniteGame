@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortRewardQuestData
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortRewardQuestData();
+	static void execGetIconBrush(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED0D0 (end 0x028ED0F2)
+// Original VA: 0x00000001428ED0D0 | File offset: 0x028EC6D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D0B9D8) | Matching: see analysis/functions-uht-natives.json
+void UFortRewardQuestData::StaticRegisterNativesUFortRewardQuestData()
+{
+	UClass* Class = UFortRewardQuestData::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetIconBrush", &UFortRewardQuestData::execGetIconBrush },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortRewardQuestData_GetIconBrush: FFunctionParams record not identified; creator not emitted.

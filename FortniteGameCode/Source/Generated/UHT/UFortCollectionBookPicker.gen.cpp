@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookPicker();  // RVA 0x02894700 (consensus OuterFunc)
 
+class UFortCollectionBookPicker
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCollectionBookPicker();
+	static void execGetCurrentSlottedItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSlotItemConfirmationComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894280 (end 0x028942A2)
+// Original VA: 0x0000000142894280 | File offset: 0x02893880
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C76710) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookPicker::StaticRegisterNativesUFortCollectionBookPicker()
+{
+	UClass* Class = UFortCollectionBookPicker::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCurrentSlottedItem", &UFortCollectionBookPicker::execGetCurrentSlottedItem },
+		{ "SlotItemConfirmationComplete", &UFortCollectionBookPicker::execSlotItemConfirmationComplete },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortCollectionBookPicker_OnSlotItemConfirmed__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +89,6 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookPicker_SlotItemConfirmationC
 	return ReturnFunction;
 }
 
-class UFortCollectionBookPicker
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCollectionBookPicker_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

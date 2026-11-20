@@ -6,6 +6,49 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UTextBlock();  // RVA 0x01BF31F0 (consensus OuterFunc)
 
+class UTextBlock
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUTextBlock();
+	static void execGetDynamicFontMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDynamicOutlineMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAutoWrapText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFont(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetJustification(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetMinDesiredWidth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShadowColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetShadowOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2C40 (end 0x01BF2C62)
+// Original VA: 0x0000000141BF2C40 | File offset: 0x01BF2240
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369E3A0) | Matching: see analysis/functions-uht-natives.json
+void UTextBlock::StaticRegisterNativesUTextBlock()
+{
+	UClass* Class = UTextBlock::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDynamicFontMaterial", &UTextBlock::execGetDynamicFontMaterial },
+		{ "GetDynamicOutlineMaterial", &UTextBlock::execGetDynamicOutlineMaterial },
+		{ "GetText", &UTextBlock::execGetText },
+		{ "SetAutoWrapText", &UTextBlock::execSetAutoWrapText },
+		{ "SetColorAndOpacity", &UTextBlock::execSetColorAndOpacity },
+		{ "SetFont", &UTextBlock::execSetFont },
+		{ "SetJustification", &UTextBlock::execSetJustification },
+		{ "SetMinDesiredWidth", &UTextBlock::execSetMinDesiredWidth },
+		{ "SetOpacity", &UTextBlock::execSetOpacity },
+		{ "SetShadowColorAndOpacity", &UTextBlock::execSetShadowColorAndOpacity },
+		{ "SetShadowOffset", &UTextBlock::execSetShadowOffset },
+		{ "SetText", &UTextBlock::execSetText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UTextBlock_GetDynamicFontMaterial_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -246,11 +289,6 @@ UFunction* Z_Construct_UFunction_UTextBlock_SetText()
 	return ReturnFunction;
 }
 
-class UTextBlock
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UTextBlock_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

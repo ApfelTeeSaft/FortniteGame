@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonPoolableWidgetInterface();  // RVA 0x002CA520 (consensus OuterFunc)
 
+class UCommonPoolableWidgetInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnAcquireFromPool_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -44,11 +51,6 @@ UFunction* Z_Construct_UFunction_UCommonPoolableWidgetInterface_OnReleaseToPool(
 	return ReturnFunction;
 }
 
-class UCommonPoolableWidgetInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonPoolableWidgetInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

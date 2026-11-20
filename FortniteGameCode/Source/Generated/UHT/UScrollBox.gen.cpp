@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UScrollBox();  // RVA 0x01BF2FA0 (consensus OuterFunc)
 
+class UScrollBox
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UScrollBox_GetScrollOffset_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -204,11 +211,6 @@ UFunction* Z_Construct_UFunction_UScrollBox_SetScrollOffset()
 	return ReturnFunction;
 }
 
-class UScrollBox
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UScrollBox_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

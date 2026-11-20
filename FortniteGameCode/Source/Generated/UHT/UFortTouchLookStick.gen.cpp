@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortTouchLookStick();  // RVA 0x02904D30 (consensus OuterFunc)
 
+class UFortTouchLookStick
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortTouchLookStick();
+	static void execIsFireButtonUnderTouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFiringState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904580 (end 0x029045A2)
+// Original VA: 0x0000000142904580 | File offset: 0x02903B80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D32288) | Matching: see analysis/functions-uht-natives.json
+void UFortTouchLookStick::StaticRegisterNativesUFortTouchLookStick()
+{
+	UClass* Class = UFortTouchLookStick::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsFireButtonUnderTouch", &UFortTouchLookStick::execIsFireButtonUnderTouch },
+		{ "SetFiringState", &UFortTouchLookStick::execSetFiringState },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortTouchLookStick_IsFireButtonUnderTouch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortTouchLookStick_SetFiringState()
 	return ReturnFunction;
 }
 
-class UFortTouchLookStick
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortTouchLookStick_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

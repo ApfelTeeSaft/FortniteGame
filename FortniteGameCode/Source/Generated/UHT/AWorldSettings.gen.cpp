@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AWorldSettings();  // RVA 0x024F0B10 (consensus OuterFunc)
 
+class AWorldSettings
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AWorldSettings_OnRep_WorldGravityZ_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_AWorldSettings_OnRep_WorldGravityZ()
 	return ReturnFunction;
 }
 
-class AWorldSettings
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AWorldSettings_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

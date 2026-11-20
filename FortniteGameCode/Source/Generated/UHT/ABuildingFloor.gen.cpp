@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingFloor();  // RVA 0x00F665C0 (consensus OuterFunc)
 
+class ABuildingFloor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesABuildingFloor();
+	static void execIsBalcony(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66080 (end 0x00F660A2)
+// Original VA: 0x0000000140F66080 | File offset: 0x00F65680
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03271278) | Matching: see analysis/functions-uht-natives.json
+void ABuildingFloor::StaticRegisterNativesABuildingFloor()
+{
+	UClass* Class = ABuildingFloor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsBalcony", &ABuildingFloor::execIsBalcony },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingFloor_IsBalcony_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_ABuildingFloor_IsBalcony()
 	return ReturnFunction;
 }
 
-class ABuildingFloor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingFloor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

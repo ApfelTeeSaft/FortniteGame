@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UVoipListenerSynthComponent();  // RVA 0x0032EE20 (consensus OuterFunc)
 
+class UVoipListenerSynthComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUVoipListenerSynthComponent();
+	static void execIsIdling(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E4F0 (end 0x0032E512)
+// Original VA: 0x000000014032E4F0 | File offset: 0x0032DAF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAF478) | Matching: see analysis/functions-uht-natives.json
+void UVoipListenerSynthComponent::StaticRegisterNativesUVoipListenerSynthComponent()
+{
+	UClass* Class = UVoipListenerSynthComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsIdling", &UVoipListenerSynthComponent::execIsIdling },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UVoipListenerSynthComponent_IsIdling_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UVoipListenerSynthComponent_IsIdling()
 	return ReturnFunction;
 }
 
-class UVoipListenerSynthComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UVoipListenerSynthComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

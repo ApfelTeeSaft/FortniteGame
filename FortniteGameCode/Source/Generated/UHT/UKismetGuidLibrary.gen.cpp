@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UKismetGuidLibrary();  // RVA 0x02431A00 (consensus OuterFunc)
 
+class UKismetGuidLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUKismetGuidLibrary();
+	static void execConv_GuidToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_GuidGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execInvalidate_Guid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsValid_Guid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNewGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_GuidGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execParse_StringToGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02431760 (end 0x02431782)
+// Original VA: 0x0000000142431760 | File offset: 0x02430D60
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039148A0) | Matching: see analysis/functions-uht-natives.json
+void UKismetGuidLibrary::StaticRegisterNativesUKismetGuidLibrary()
+{
+	UClass* Class = UKismetGuidLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Conv_GuidToString", &UKismetGuidLibrary::execConv_GuidToString },
+		{ "EqualEqual_GuidGuid", &UKismetGuidLibrary::execEqualEqual_GuidGuid },
+		{ "Invalidate_Guid", &UKismetGuidLibrary::execInvalidate_Guid },
+		{ "IsValid_Guid", &UKismetGuidLibrary::execIsValid_Guid },
+		{ "NewGuid", &UKismetGuidLibrary::execNewGuid },
+		{ "NotEqual_GuidGuid", &UKismetGuidLibrary::execNotEqual_GuidGuid },
+		{ "Parse_StringToGuid", &UKismetGuidLibrary::execParse_StringToGuid },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UKismetGuidLibrary_Conv_GuidToString_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +179,6 @@ UFunction* Z_Construct_UFunction_UKismetGuidLibrary_Parse_StringToGuid()
 	return ReturnFunction;
 }
 
-class UKismetGuidLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UKismetGuidLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

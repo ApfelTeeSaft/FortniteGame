@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAnimNotify();  // RVA 0x023D63C0 (consensus OuterFunc)
 
+class UAnimNotify
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAnimNotify();
+	static void execGetNotifyName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5790 (end 0x023D57B2)
+// Original VA: 0x00000001423D5790 | File offset: 0x023D4D90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038A1698) | Matching: see analysis/functions-uht-natives.json
+void UAnimNotify::StaticRegisterNativesUAnimNotify()
+{
+	UClass* Class = UAnimNotify::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetNotifyName", &UAnimNotify::execGetNotifyName },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAnimNotify_GetNotifyName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +67,6 @@ UFunction* Z_Construct_UFunction_UAnimNotify_Received_Notify()
 	return ReturnFunction;
 }
 
-class UAnimNotify
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAnimNotify_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

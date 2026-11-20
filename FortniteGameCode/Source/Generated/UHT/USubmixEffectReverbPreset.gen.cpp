@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USubmixEffectReverbPreset();  // RVA 0x0255A1A0 (consensus OuterFunc)
 
+class USubmixEffectReverbPreset
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSubmixEffectReverbPreset();
+	static void execSetSettings(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSettingsWithReverbEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02559EB0 (end 0x02559ED2)
+// Original VA: 0x0000000142559EB0 | File offset: 0x025594B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03B489C0) | Matching: see analysis/functions-uht-natives.json
+void USubmixEffectReverbPreset::StaticRegisterNativesUSubmixEffectReverbPreset()
+{
+	UClass* Class = USubmixEffectReverbPreset::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetSettings", &USubmixEffectReverbPreset::execSetSettings },
+		{ "SetSettingsWithReverbEffect", &USubmixEffectReverbPreset::execSetSettingsWithReverbEffect },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USubmixEffectReverbPreset_SetSettings_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_USubmixEffectReverbPreset_SetSettingsWithReverb
 	return ReturnFunction;
 }
 
-class USubmixEffectReverbPreset
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USubmixEffectReverbPreset_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

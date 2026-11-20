@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortDirectAcquisitionOfferWidgetBase();  // RVA 0x0289B670 (consensus OuterFunc)
 
+class UFortDirectAcquisitionOfferWidgetBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortDirectAcquisitionOfferWidgetBase_AddOffer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -162,11 +169,6 @@ UFunction* Z_Construct_UFunction_UFortDirectAcquisitionOfferWidgetBase_SetupOffe
 	return ReturnFunction;
 }
 
-class UFortDirectAcquisitionOfferWidgetBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortDirectAcquisitionOfferWidgetBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

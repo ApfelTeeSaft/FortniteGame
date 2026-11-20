@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UBorderSlot
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBorderSlot();
+	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5AF0 (end 0x01BE5B12)
+// Original VA: 0x0000000141BE5AF0 | File offset: 0x01BE50F0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036911F8) | Matching: see analysis/functions-uht-natives.json
+void UBorderSlot::StaticRegisterNativesUBorderSlot()
+{
+	UClass* Class = UBorderSlot::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetHorizontalAlignment", &UBorderSlot::execSetHorizontalAlignment },
+		{ "SetPadding", &UBorderSlot::execSetPadding },
+		{ "SetVerticalAlignment", &UBorderSlot::execSetVerticalAlignment },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UBorderSlot_SetHorizontalAlignment: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UBorderSlot_SetPadding: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ACameraActor();  // RVA 0x023EA720 (consensus OuterFunc)
 
+class ACameraActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesACameraActor();
+	static void execGetAutoActivatePlayerIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9EB0 (end 0x023E9ED2)
+// Original VA: 0x00000001423E9EB0 | File offset: 0x023E94B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038B96B0) | Matching: see analysis/functions-uht-natives.json
+void ACameraActor::StaticRegisterNativesACameraActor()
+{
+	UClass* Class = ACameraActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAutoActivatePlayerIndex", &ACameraActor::execGetAutoActivatePlayerIndex },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ACameraActor_GetAutoActivatePlayerIndex_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_ACameraActor_GetAutoActivatePlayerIndex()
 	return ReturnFunction;
 }
 
-class ACameraActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ACameraActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityKit();  // RVA 0x00F7D340 (consensus OuterFunc)
 
+class UFortAbilityKit
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAbilityKit();
+	static void execBP_GetGadgets(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7CA10 (end 0x00F7CA32)
+// Original VA: 0x0000000140F7CA10 | File offset: 0x00F7C010
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0328F4F0) | Matching: see analysis/functions-uht-natives.json
+void UFortAbilityKit::StaticRegisterNativesUFortAbilityKit()
+{
+	UClass* Class = UFortAbilityKit::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BP_GetGadgets", &UFortAbilityKit::execBP_GetGadgets },
+		{ "GetDescription", &UFortAbilityKit::execGetDescription },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAbilityKit_BP_GetGadgets_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UFortAbilityKit_GetDescription()
 	return ReturnFunction;
 }
 
-class UFortAbilityKit
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAbilityKit_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

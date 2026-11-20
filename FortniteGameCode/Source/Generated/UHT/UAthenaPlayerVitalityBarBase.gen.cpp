@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UAthenaPlayerVitalityBarBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaPlayerVitalityBarBase();
+	static void execSetDataSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02886C00 (end 0x02886C22)
+// Original VA: 0x0000000142886C00 | File offset: 0x02886200
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C5EF98) | Matching: see analysis/functions-uht-natives.json
+void UAthenaPlayerVitalityBarBase::StaticRegisterNativesUAthenaPlayerVitalityBarBase()
+{
+	UClass* Class = UAthenaPlayerVitalityBarBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetDataSource", &UAthenaPlayerVitalityBarBase::execSetDataSource },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UAthenaPlayerVitalityBarBase_SetDataSource: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortSquadSlotItemDetailElementWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_GetIdOfSquadSlotToManageBP: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortSquadSlotItemDetailElementWidget_GetItemInSquadSlotBP: FFunctionParams record not identified; creator not emitted.

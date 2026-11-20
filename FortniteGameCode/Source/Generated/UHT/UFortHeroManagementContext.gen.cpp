@@ -6,6 +6,117 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHeroManagementContext();  // RVA 0x028B3C90 (consensus OuterFunc)
 
+class UFortHeroManagementContext
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortHeroManagementContext();
+	static void execCanAffordAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanAffordAbilityFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanAffordNextAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanAffordNextAbilityFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanModifyTraitDepth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanModifyTraitDepthFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCanRedeemAllAbilities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCheckHeroNameValidity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFocusOnHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGenerateRandomHeroName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAbilityCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAbilityCostFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAbilitySystemComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllHeroIDs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttributeValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttributeValueFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttributeValuesArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAttributeValuesArrayFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCoreAbilities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentHeroID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDisplayStats(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHeroData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHeroDataFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxNameLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNextAbilityCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNextAbilityCostFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumHeroTraits(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumUnspentAbilityPoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumUnspentAbilityPointsFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTraitDepth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTraitDepthFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsCreateHeroEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsShowingStatsScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSkillTreeUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMarkHeroAsSeen(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPurchaseNextAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPurchaseNextAbilityFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRedeemAllAbilities(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRedeemAllAbilitiesFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRedeemPrevAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRedeemPrevAbilityFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestCreateHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestSetTraitDepth(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestSetTraitDepthFromID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHeroName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B38C0 (end 0x028B38E2)
+// Original VA: 0x00000001428B38C0 | File offset: 0x028B2EC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CA52D0) | Matching: see analysis/functions-uht-natives.json
+void UFortHeroManagementContext::StaticRegisterNativesUFortHeroManagementContext()
+{
+	UClass* Class = UFortHeroManagementContext::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CanAffordAbility", &UFortHeroManagementContext::execCanAffordAbility },
+		{ "CanAffordAbilityFromID", &UFortHeroManagementContext::execCanAffordAbilityFromID },
+		{ "CanAffordNextAbility", &UFortHeroManagementContext::execCanAffordNextAbility },
+		{ "CanAffordNextAbilityFromID", &UFortHeroManagementContext::execCanAffordNextAbilityFromID },
+		{ "CanModifyTraitDepth", &UFortHeroManagementContext::execCanModifyTraitDepth },
+		{ "CanModifyTraitDepthFromID", &UFortHeroManagementContext::execCanModifyTraitDepthFromID },
+		{ "CanRedeemAllAbilities", &UFortHeroManagementContext::execCanRedeemAllAbilities },
+		{ "CheckHeroNameValidity", &UFortHeroManagementContext::execCheckHeroNameValidity },
+		{ "FocusOnHero", &UFortHeroManagementContext::execFocusOnHero },
+		{ "GenerateRandomHeroName", &UFortHeroManagementContext::execGenerateRandomHeroName },
+		{ "GetAbilityCost", &UFortHeroManagementContext::execGetAbilityCost },
+		{ "GetAbilityCostFromID", &UFortHeroManagementContext::execGetAbilityCostFromID },
+		{ "GetAbilitySystemComponent", &UFortHeroManagementContext::execGetAbilitySystemComponent },
+		{ "GetAllHeroIDs", &UFortHeroManagementContext::execGetAllHeroIDs },
+		{ "GetAttributeValue", &UFortHeroManagementContext::execGetAttributeValue },
+		{ "GetAttributeValueFromID", &UFortHeroManagementContext::execGetAttributeValueFromID },
+		{ "GetAttributeValuesArray", &UFortHeroManagementContext::execGetAttributeValuesArray },
+		{ "GetAttributeValuesArrayFromID", &UFortHeroManagementContext::execGetAttributeValuesArrayFromID },
+		{ "GetCoreAbilities", &UFortHeroManagementContext::execGetCoreAbilities },
+		{ "GetCurrentHeroID", &UFortHeroManagementContext::execGetCurrentHeroID },
+		{ "GetDisplayStats", &UFortHeroManagementContext::execGetDisplayStats },
+		{ "GetHeroData", &UFortHeroManagementContext::execGetHeroData },
+		{ "GetHeroDataFromID", &UFortHeroManagementContext::execGetHeroDataFromID },
+		{ "GetMaxNameLength", &UFortHeroManagementContext::execGetMaxNameLength },
+		{ "GetNextAbilityCost", &UFortHeroManagementContext::execGetNextAbilityCost },
+		{ "GetNextAbilityCostFromID", &UFortHeroManagementContext::execGetNextAbilityCostFromID },
+		{ "GetNumHeroTraits", &UFortHeroManagementContext::execGetNumHeroTraits },
+		{ "GetNumUnspentAbilityPoints", &UFortHeroManagementContext::execGetNumUnspentAbilityPoints },
+		{ "GetNumUnspentAbilityPointsFromID", &UFortHeroManagementContext::execGetNumUnspentAbilityPointsFromID },
+		{ "GetTraitDepth", &UFortHeroManagementContext::execGetTraitDepth },
+		{ "GetTraitDepthFromID", &UFortHeroManagementContext::execGetTraitDepthFromID },
+		{ "IsCreateHeroEnabled", &UFortHeroManagementContext::execIsCreateHeroEnabled },
+		{ "IsShowingStatsScreen", &UFortHeroManagementContext::execIsShowingStatsScreen },
+		{ "IsSkillTreeUnlocked", &UFortHeroManagementContext::execIsSkillTreeUnlocked },
+		{ "MarkHeroAsSeen", &UFortHeroManagementContext::execMarkHeroAsSeen },
+		{ "PurchaseNextAbility", &UFortHeroManagementContext::execPurchaseNextAbility },
+		{ "PurchaseNextAbilityFromID", &UFortHeroManagementContext::execPurchaseNextAbilityFromID },
+		{ "RedeemAllAbilities", &UFortHeroManagementContext::execRedeemAllAbilities },
+		{ "RedeemAllAbilitiesFromID", &UFortHeroManagementContext::execRedeemAllAbilitiesFromID },
+		{ "RedeemPrevAbility", &UFortHeroManagementContext::execRedeemPrevAbility },
+		{ "RedeemPrevAbilityFromID", &UFortHeroManagementContext::execRedeemPrevAbilityFromID },
+		{ "RequestCreateHero", &UFortHeroManagementContext::execRequestCreateHero },
+		{ "RequestSetTraitDepth", &UFortHeroManagementContext::execRequestSetTraitDepth },
+		{ "RequestSetTraitDepthFromID", &UFortHeroManagementContext::execRequestSetTraitDepthFromID },
+		{ "SetCurrentHero", &UFortHeroManagementContext::execSetCurrentHero },
+		{ "SetHeroName", &UFortHeroManagementContext::execSetHeroName },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHeroManagementContext_CanAffordAbility_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -926,11 +1037,6 @@ UFunction* Z_Construct_UFunction_UFortHeroManagementContext_SetHeroName()
 	return ReturnFunction;
 }
 
-class UFortHeroManagementContext
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHeroManagementContext_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

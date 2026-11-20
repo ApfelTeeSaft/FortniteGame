@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortIndicator();  // RVA 0x01006AC0 (consensus OuterFunc)
 
+class UFortIndicator
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortIndicator();
+	static void execOnParentActorEndPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010062D0 (end 0x010062F2)
+// Original VA: 0x00000001410062D0 | File offset: 0x010058D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03349998) | Matching: see analysis/functions-uht-natives.json
+void UFortIndicator::StaticRegisterNativesUFortIndicator()
+{
+	UClass* Class = UFortIndicator::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnParentActorEndPlay", &UFortIndicator::execOnParentActorEndPlay },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortIndicator_OnParentActorEndPlay_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortIndicator_OnParentActorEndPlay()
 	return ReturnFunction;
 }
 
-class UFortIndicator
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortIndicator_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

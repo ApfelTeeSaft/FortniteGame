@@ -6,6 +6,43 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UImportanceSamplingLibrary();  // RVA 0x02427DA0 (consensus OuterFunc)
 
+class UImportanceSamplingLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUImportanceSamplingLibrary();
+	static void execBreakImportanceTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execImportanceSample(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeImportanceTexture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNextSobolCell2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNextSobolCell3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNextSobolFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomSobolCell2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomSobolCell3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRandomSobolFloat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427500 (end 0x02427522)
+// Original VA: 0x0000000142427500 | File offset: 0x02426B00
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038FEAA0) | Matching: see analysis/functions-uht-natives.json
+void UImportanceSamplingLibrary::StaticRegisterNativesUImportanceSamplingLibrary()
+{
+	UClass* Class = UImportanceSamplingLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BreakImportanceTexture", &UImportanceSamplingLibrary::execBreakImportanceTexture },
+		{ "ImportanceSample", &UImportanceSamplingLibrary::execImportanceSample },
+		{ "MakeImportanceTexture", &UImportanceSamplingLibrary::execMakeImportanceTexture },
+		{ "NextSobolCell2D", &UImportanceSamplingLibrary::execNextSobolCell2D },
+		{ "NextSobolCell3D", &UImportanceSamplingLibrary::execNextSobolCell3D },
+		{ "NextSobolFloat", &UImportanceSamplingLibrary::execNextSobolFloat },
+		{ "RandomSobolCell2D", &UImportanceSamplingLibrary::execRandomSobolCell2D },
+		{ "RandomSobolCell3D", &UImportanceSamplingLibrary::execRandomSobolCell3D },
+		{ "RandomSobolFloat", &UImportanceSamplingLibrary::execRandomSobolFloat },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UImportanceSamplingLibrary_BreakImportanceTexture_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -186,11 +223,6 @@ UFunction* Z_Construct_UFunction_UImportanceSamplingLibrary_RandomSobolFloat()
 	return ReturnFunction;
 }
 
-class UImportanceSamplingLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UImportanceSamplingLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

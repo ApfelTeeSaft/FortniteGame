@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortItemDetailsPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortItemDetailsPanel();
+	static void execHandleCursorModeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleItemToCompareWithChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleItemToDetailChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemToCompareWith(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetItemToDetail(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9990 (end 0x028C99B2)
+// Original VA: 0x00000001428C9990 | File offset: 0x028C8F90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CCCDF0) | Matching: see analysis/functions-uht-natives.json
+void UFortItemDetailsPanel::StaticRegisterNativesUFortItemDetailsPanel()
+{
+	UClass* Class = UFortItemDetailsPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleCursorModeChanged", &UFortItemDetailsPanel::execHandleCursorModeChanged },
+		{ "HandleItemToCompareWithChanged", &UFortItemDetailsPanel::execHandleItemToCompareWithChanged },
+		{ "HandleItemToDetailChanged", &UFortItemDetailsPanel::execHandleItemToDetailChanged },
+		{ "SetItemToCompareWith", &UFortItemDetailsPanel::execSetItemToCompareWith },
+		{ "SetItemToDetail", &UFortItemDetailsPanel::execSetItemToDetail },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortItemDetailsPanel_HandleCursorModeChanged: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortItemDetailsPanel_HandleDifferentItemToCompareSet: FFunctionParams record not identified; creator not emitted.

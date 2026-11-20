@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary();  // RVA 0x0199D320 (consensus OuterFunc)
 
+class UHeadMountedDisplayFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_AddDeviceVisualizationComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -606,11 +613,6 @@ UFunction* Z_Construct_UFunction_UHeadMountedDisplayFunctionLibrary_SetWorldToMe
 	return ReturnFunction;
 }
 
-class UHeadMountedDisplayFunctionLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

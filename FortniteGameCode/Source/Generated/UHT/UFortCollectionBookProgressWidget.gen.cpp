@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookProgressWidget();  // RVA 0x02894770 (consensus OuterFunc)
 
+class UFortCollectionBookProgressWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCollectionBookProgressWidget();
+	static void execHandleDetailsModalWidgetDeactivated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCollectionBookLevelChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCollectionBookLevelProgressionChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCollectionBookPageSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnCollectionBookPreviewXPChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnDetailsButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlottedItemOperationComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028942E0 (end 0x02894302)
+// Original VA: 0x00000001428942E0 | File offset: 0x028938E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C76DA0) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookProgressWidget::StaticRegisterNativesUFortCollectionBookProgressWidget()
+{
+	UClass* Class = UFortCollectionBookProgressWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleDetailsModalWidgetDeactivated", &UFortCollectionBookProgressWidget::execHandleDetailsModalWidgetDeactivated },
+		{ "OnCollectionBookLevelChanged", &UFortCollectionBookProgressWidget::execOnCollectionBookLevelChanged },
+		{ "OnCollectionBookLevelProgressionChanged", &UFortCollectionBookProgressWidget::execOnCollectionBookLevelProgressionChanged },
+		{ "OnCollectionBookPageSelected", &UFortCollectionBookProgressWidget::execOnCollectionBookPageSelected },
+		{ "OnCollectionBookPreviewXPChange", &UFortCollectionBookProgressWidget::execOnCollectionBookPreviewXPChange },
+		{ "OnDetailsButtonClicked", &UFortCollectionBookProgressWidget::execOnDetailsButtonClicked },
+		{ "OnSlottedItemOperationComplete", &UFortCollectionBookProgressWidget::execOnSlottedItemOperationComplete },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCollectionBookProgressWidget_HandleDetailsModalWidgetDeactivated_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +179,6 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookProgressWidget_OnSlottedItem
 	return ReturnFunction;
 }
 
-class UFortCollectionBookProgressWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCollectionBookProgressWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

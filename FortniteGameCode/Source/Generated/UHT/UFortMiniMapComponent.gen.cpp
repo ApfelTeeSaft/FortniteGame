@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMiniMapComponent();  // RVA 0x01038780 (consensus OuterFunc)
 
+class UFortMiniMapComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortMiniMapComponent_OnRep_MiniMapData_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -285,11 +292,6 @@ UFunction* Z_Construct_UFunction_UFortMiniMapComponent_SetupMiniMapComponent()
 	return ReturnFunction;
 }
 
-class UFortMiniMapComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMiniMapComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

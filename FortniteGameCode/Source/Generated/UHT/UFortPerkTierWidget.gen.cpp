@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortPerkTierWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UFortPerkTierWidget_OnGeneratePerk: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortPerkTierWidget_ProcessPerks: FFunctionParams record not identified; creator not emitted.

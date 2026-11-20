@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookWidget();  // RVA 0x0289B340 (consensus OuterFunc)
 
+class UFortCollectionBookWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortCollectionBookWidget_OnCollectionBookPageClicked_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -105,11 +112,6 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookWidget_OnPreviewXPChangeRequ
 	return ReturnFunction;
 }
 
-class UFortCollectionBookWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCollectionBookWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

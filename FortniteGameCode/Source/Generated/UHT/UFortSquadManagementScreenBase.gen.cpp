@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadManagementScreenBase();  // RVA 0x028FB4D0 (consensus OuterFunc)
 
+class UFortSquadManagementScreenBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortSquadManagementScreenBase_GetIdOfSquadToManageBP_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -455,11 +462,6 @@ UFunction* Z_Construct_UFunction_UFortSquadManagementScreenBase_TryGetStaticSqua
 	return ReturnFunction;
 }
 
-class UFortSquadManagementScreenBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSquadManagementScreenBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

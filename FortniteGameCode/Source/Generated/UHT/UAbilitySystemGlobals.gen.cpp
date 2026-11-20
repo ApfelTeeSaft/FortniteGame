@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilitySystemGlobals();  // RVA 0x005466A0 (consensus OuterFunc)
 
+class UAbilitySystemGlobals
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystemCooldowns_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -44,11 +51,6 @@ UFunction* Z_Construct_UFunction_UAbilitySystemGlobals_ToggleIgnoreAbilitySystem
 	return ReturnFunction;
 }
 
-class UAbilitySystemGlobals
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilitySystemGlobals_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

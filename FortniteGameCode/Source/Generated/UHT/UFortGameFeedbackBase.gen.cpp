@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortGameFeedbackBase();  // RVA 0x028AC3B0 (consensus OuterFunc)
 
+class UFortGameFeedbackBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortGameFeedbackBase_AddButtonWithFeedbackType_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -122,11 +129,6 @@ UFunction* Z_Construct_UFunction_UFortGameFeedbackBase_SubmitFeedback()
 	return ReturnFunction;
 }
 
-class UFortGameFeedbackBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortGameFeedbackBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

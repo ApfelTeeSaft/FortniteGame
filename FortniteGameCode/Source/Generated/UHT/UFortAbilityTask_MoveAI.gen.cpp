@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityTask_MoveAI();  // RVA 0x00F81E60 (consensus OuterFunc)
 
+class UFortAbilityTask_MoveAI
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAbilityTask_MoveAI();
+	static void execCreateMoveAITask(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81780 (end 0x00F817A2)
+// Original VA: 0x0000000140F81780 | File offset: 0x00F80D80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03295E78) | Matching: see analysis/functions-uht-natives.json
+void UFortAbilityTask_MoveAI::StaticRegisterNativesUFortAbilityTask_MoveAI()
+{
+	UClass* Class = UFortAbilityTask_MoveAI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateMoveAITask", &UFortAbilityTask_MoveAI::execCreateMoveAITask },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAbilityTask_MoveAI_CreateMoveAITask_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_MoveAI_CreateMoveAITask()
 	return ReturnFunction;
 }
 
-class UFortAbilityTask_MoveAI
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAbilityTask_MoveAI_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

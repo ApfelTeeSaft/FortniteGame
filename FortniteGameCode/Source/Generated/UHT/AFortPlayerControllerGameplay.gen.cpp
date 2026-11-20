@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerControllerGameplay();  // RVA 0x01077700 (consensus OuterFunc)
 
+class AFortPlayerControllerGameplay
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortPlayerControllerGameplay_AreHUDElementsVisible_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -85,11 +92,6 @@ UFunction* Z_Construct_UFunction_AFortPlayerControllerGameplay_SetHUDElementVisi
 	return ReturnFunction;
 }
 
-class AFortPlayerControllerGameplay
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPlayerControllerGameplay_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

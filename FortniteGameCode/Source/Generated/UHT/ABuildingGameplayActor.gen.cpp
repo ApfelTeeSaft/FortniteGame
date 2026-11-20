@@ -6,6 +6,51 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingGameplayActor();  // RVA 0x00F6C2D0 (consensus OuterFunc)
 
+class ABuildingGameplayActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesABuildingGameplayActor();
+	static void execDisableAbilityDeliveryInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnableAbilityDeliveryInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTargetingSourceTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_AddGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ExecuteGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_ExecuteGameplayCueWithParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_RemoveGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRegisteredTouchComponentBeginOverlap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnRegisteredTouchComponentEndOverlap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetAbilitySourceLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIgnoreInstigatorCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetInitialVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTouchComponentForAbilityDeliveryInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BD80 (end 0x00F6BDA2)
+// Original VA: 0x0000000140F6BD80 | File offset: 0x00F6B380
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032777F0) | Matching: see analysis/functions-uht-natives.json
+void ABuildingGameplayActor::StaticRegisterNativesABuildingGameplayActor()
+{
+	UClass* Class = ABuildingGameplayActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DisableAbilityDeliveryInfo", &ABuildingGameplayActor::execDisableAbilityDeliveryInfo },
+		{ "EnableAbilityDeliveryInfo", &ABuildingGameplayActor::execEnableAbilityDeliveryInfo },
+		{ "GetTargetingSourceTransform", &ABuildingGameplayActor::execGetTargetingSourceTransform },
+		{ "K2_AddGameplayCue", &ABuildingGameplayActor::execK2_AddGameplayCue },
+		{ "K2_ExecuteGameplayCue", &ABuildingGameplayActor::execK2_ExecuteGameplayCue },
+		{ "K2_ExecuteGameplayCueWithParams", &ABuildingGameplayActor::execK2_ExecuteGameplayCueWithParams },
+		{ "K2_RemoveGameplayCue", &ABuildingGameplayActor::execK2_RemoveGameplayCue },
+		{ "OnRegisteredTouchComponentBeginOverlap", &ABuildingGameplayActor::execOnRegisteredTouchComponentBeginOverlap },
+		{ "OnRegisteredTouchComponentEndOverlap", &ABuildingGameplayActor::execOnRegisteredTouchComponentEndOverlap },
+		{ "SetAbilitySourceLevel", &ABuildingGameplayActor::execSetAbilitySourceLevel },
+		{ "SetIgnoreInstigatorCollision", &ABuildingGameplayActor::execSetIgnoreInstigatorCollision },
+		{ "SetInitialVelocity", &ABuildingGameplayActor::execSetInitialVelocity },
+		{ "SetTouchComponentForAbilityDeliveryInfo", &ABuildingGameplayActor::execSetTouchComponentForAbilityDeliveryInfo },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ABuildingGameplayActor_DisableAbilityDeliveryInfo_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -266,11 +311,6 @@ UFunction* Z_Construct_UFunction_ABuildingGameplayActor_SetTouchComponentForAbil
 	return ReturnFunction;
 }
 
-class ABuildingGameplayActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingGameplayActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

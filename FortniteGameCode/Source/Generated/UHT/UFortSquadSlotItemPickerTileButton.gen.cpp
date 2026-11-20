@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSquadSlotItemPickerTileButton();  // RVA 0x028FB600 (consensus OuterFunc)
 
+class UFortSquadSlotItemPickerTileButton
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSquadSlotItemPickerTileButton();
+	static void execGetSlottingRestrictionReasons(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB200 (end 0x028FB222)
+// Original VA: 0x00000001428FB200 | File offset: 0x028FA800
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D22998) | Matching: see analysis/functions-uht-natives.json
+void UFortSquadSlotItemPickerTileButton::StaticRegisterNativesUFortSquadSlotItemPickerTileButton()
+{
+	UClass* Class = UFortSquadSlotItemPickerTileButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetSlottingRestrictionReasons", &UFortSquadSlotItemPickerTileButton::execGetSlottingRestrictionReasons },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_GetSlottingRestrictionReasons_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -65,11 +86,6 @@ UFunction* Z_Construct_UFunction_UFortSquadSlotItemPickerTileButton_HandleSlotti
 	return ReturnFunction;
 }
 
-class UFortSquadSlotItemPickerTileButton
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSquadSlotItemPickerTileButton_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,97 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortGlobals();  // RVA 0x00FF36A0 (consensus OuterFunc)
 
+class UFortGlobals
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortGlobals();
+	static void execAreFriendCodesEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccountLinkingUIConfig(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAccountLinkingUIURL(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMaxTheaterListRefreshDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMinTheaterListRefreshDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIs50v50CalenderEventEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIs50v50ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIs_X_CalendarForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAccountLinkingEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsAccountLinkingUIURLButtonEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsBROnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDisplayingTwitchViewerNamesAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent1ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent2ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent3ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent4ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent5ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent6ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent7ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent8ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsEvent_X_ForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFrontendCraftingEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsFrontendStorageEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsNewRewardFlowEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlatoonCalenderEventEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPlatoonForceEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsShootingTest3Enabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTencentBuild(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTwitchEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsWIFEEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldDisableParticleEffectsDuringMissionResults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldDisablePlayerTeleportDuringMissionResults(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldFlushGPUWhenPlayerIsTeleportedAtEndOfZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldShowMissionResultsMovies(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldShowSkillTreeMovies(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldStreamOutTextureDataWhenPlayerIsTeleportedAtEndOfZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF3020 (end 0x00FF3042)
+// Original VA: 0x0000000140FF3020 | File offset: 0x00FF2620
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03336990) | Matching: see analysis/functions-uht-natives.json
+void UFortGlobals::StaticRegisterNativesUFortGlobals()
+{
+	UClass* Class = UFortGlobals::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AreFriendCodesEnabled", &UFortGlobals::execAreFriendCodesEnabled },
+		{ "GetAccountLinkingUIConfig", &UFortGlobals::execGetAccountLinkingUIConfig },
+		{ "GetAccountLinkingUIURL", &UFortGlobals::execGetAccountLinkingUIURL },
+		{ "GetMaxTheaterListRefreshDelay", &UFortGlobals::execGetMaxTheaterListRefreshDelay },
+		{ "GetMinTheaterListRefreshDelay", &UFortGlobals::execGetMinTheaterListRefreshDelay },
+		{ "Is50v50CalenderEventEnabled", &UFortGlobals::execIs50v50CalenderEventEnabled },
+		{ "Is50v50ForceEnabled", &UFortGlobals::execIs50v50ForceEnabled },
+		{ "Is_X_CalendarForceEnabled", &UFortGlobals::execIs_X_CalendarForceEnabled },
+		{ "IsAccountLinkingEnabled", &UFortGlobals::execIsAccountLinkingEnabled },
+		{ "IsAccountLinkingUIURLButtonEnabled", &UFortGlobals::execIsAccountLinkingUIURLButtonEnabled },
+		{ "IsBROnly", &UFortGlobals::execIsBROnly },
+		{ "IsDisplayingTwitchViewerNamesAllowed", &UFortGlobals::execIsDisplayingTwitchViewerNamesAllowed },
+		{ "IsEvent1ForceEnabled", &UFortGlobals::execIsEvent1ForceEnabled },
+		{ "IsEvent2ForceEnabled", &UFortGlobals::execIsEvent2ForceEnabled },
+		{ "IsEvent3ForceEnabled", &UFortGlobals::execIsEvent3ForceEnabled },
+		{ "IsEvent4ForceEnabled", &UFortGlobals::execIsEvent4ForceEnabled },
+		{ "IsEvent5ForceEnabled", &UFortGlobals::execIsEvent5ForceEnabled },
+		{ "IsEvent6ForceEnabled", &UFortGlobals::execIsEvent6ForceEnabled },
+		{ "IsEvent7ForceEnabled", &UFortGlobals::execIsEvent7ForceEnabled },
+		{ "IsEvent8ForceEnabled", &UFortGlobals::execIsEvent8ForceEnabled },
+		{ "IsEvent_X_ForceEnabled", &UFortGlobals::execIsEvent_X_ForceEnabled },
+		{ "IsFrontendCraftingEnabled", &UFortGlobals::execIsFrontendCraftingEnabled },
+		{ "IsFrontendStorageEnabled", &UFortGlobals::execIsFrontendStorageEnabled },
+		{ "IsNewRewardFlowEnabled", &UFortGlobals::execIsNewRewardFlowEnabled },
+		{ "IsPlatoonCalenderEventEnabled", &UFortGlobals::execIsPlatoonCalenderEventEnabled },
+		{ "IsPlatoonForceEnabled", &UFortGlobals::execIsPlatoonForceEnabled },
+		{ "IsShootingTest3Enabled", &UFortGlobals::execIsShootingTest3Enabled },
+		{ "IsTencentBuild", &UFortGlobals::execIsTencentBuild },
+		{ "IsTwitchEnabled", &UFortGlobals::execIsTwitchEnabled },
+		{ "IsWIFEEnabled", &UFortGlobals::execIsWIFEEnabled },
+		{ "ShouldDisableParticleEffectsDuringMissionResults", &UFortGlobals::execShouldDisableParticleEffectsDuringMissionResults },
+		{ "ShouldDisablePlayerTeleportDuringMissionResults", &UFortGlobals::execShouldDisablePlayerTeleportDuringMissionResults },
+		{ "ShouldFlushGPUWhenPlayerIsTeleportedAtEndOfZone", &UFortGlobals::execShouldFlushGPUWhenPlayerIsTeleportedAtEndOfZone },
+		{ "ShouldShowMissionResultsMovies", &UFortGlobals::execShouldShowMissionResultsMovies },
+		{ "ShouldShowSkillTreeMovies", &UFortGlobals::execShouldShowSkillTreeMovies },
+		{ "ShouldStreamOutTextureDataWhenPlayerIsTeleportedAtEndOfZone", &UFortGlobals::execShouldStreamOutTextureDataWhenPlayerIsTeleportedAtEndOfZone },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortGlobals_AreFriendCodesEnabled_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -726,11 +817,6 @@ UFunction* Z_Construct_UFunction_UFortGlobals_ShouldStreamOutTextureDataWhenPlay
 	return ReturnFunction;
 }
 
-class UFortGlobals
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortGlobals_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

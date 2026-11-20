@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSocialItemWidget();  // RVA 0x028F5760 (consensus OuterFunc)
 
+class UFortSocialItemWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortSocialItemWidget_SetSocialItem_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +33,6 @@ UFunction* Z_Construct_UFunction_UFortSocialItemWidget_SetSocialItem()
 	return ReturnFunction;
 }
 
-class UFortSocialItemWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSocialItemWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

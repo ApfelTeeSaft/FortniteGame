@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortInfoWindow
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortInfoWindow();
+	static void execGetListWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBB50 (end 0x028BBB72)
+// Original VA: 0x00000001428BBB50 | File offset: 0x028BB150
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CB29F8) | Matching: see analysis/functions-uht-natives.json
+void UFortInfoWindow::StaticRegisterNativesUFortInfoWindow()
+{
+	UClass* Class = UFortInfoWindow::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetListWidget", &UFortInfoWindow::execGetListWidget },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortInfoWindow_GetListWidget: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UProgressBar();  // RVA 0x01BED8D0 (consensus OuterFunc)
 
+class UProgressBar
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUProgressBar();
+	static void execSetFillColorAndOpacity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIsMarquee(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED150 (end 0x01BED172)
+// Original VA: 0x0000000141BED150 | File offset: 0x01BEC750
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03698638) | Matching: see analysis/functions-uht-natives.json
+void UProgressBar::StaticRegisterNativesUProgressBar()
+{
+	UClass* Class = UProgressBar::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetFillColorAndOpacity", &UProgressBar::execSetFillColorAndOpacity },
+		{ "SetIsMarquee", &UProgressBar::execSetIsMarquee },
+		{ "SetPercent", &UProgressBar::execSetPercent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UProgressBar_SetFillColorAndOpacity_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UProgressBar_SetPercent()
 	return ReturnFunction;
 }
 
-class UProgressBar
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UProgressBar_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

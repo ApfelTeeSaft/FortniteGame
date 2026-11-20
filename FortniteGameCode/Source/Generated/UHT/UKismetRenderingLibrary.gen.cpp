@@ -6,6 +6,49 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UKismetRenderingLibrary();  // RVA 0x02452C80 (consensus OuterFunc)
 
+class UKismetRenderingLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUKismetRenderingLibrary();
+	static void execBeginDrawCanvasToRenderTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBreakSkinWeightInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearRenderTarget2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConvertRenderTargetToTexture2DEditorOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateRenderTarget2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDrawMaterialToRenderTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEndDrawCanvasToRenderTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExportRenderTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExportTexture2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeSkinWeightInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execReleaseRenderTarget2D(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRenderTargetCreateStaticTexture2DEditorOnly(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02452AD0 (end 0x02452AF2)
+// Original VA: 0x0000000142452AD0 | File offset: 0x024520D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03925C60) | Matching: see analysis/functions-uht-natives.json
+void UKismetRenderingLibrary::StaticRegisterNativesUKismetRenderingLibrary()
+{
+	UClass* Class = UKismetRenderingLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BeginDrawCanvasToRenderTarget", &UKismetRenderingLibrary::execBeginDrawCanvasToRenderTarget },
+		{ "BreakSkinWeightInfo", &UKismetRenderingLibrary::execBreakSkinWeightInfo },
+		{ "ClearRenderTarget2D", &UKismetRenderingLibrary::execClearRenderTarget2D },
+		{ "ConvertRenderTargetToTexture2DEditorOnly", &UKismetRenderingLibrary::execConvertRenderTargetToTexture2DEditorOnly },
+		{ "CreateRenderTarget2D", &UKismetRenderingLibrary::execCreateRenderTarget2D },
+		{ "DrawMaterialToRenderTarget", &UKismetRenderingLibrary::execDrawMaterialToRenderTarget },
+		{ "EndDrawCanvasToRenderTarget", &UKismetRenderingLibrary::execEndDrawCanvasToRenderTarget },
+		{ "ExportRenderTarget", &UKismetRenderingLibrary::execExportRenderTarget },
+		{ "ExportTexture2D", &UKismetRenderingLibrary::execExportTexture2D },
+		{ "MakeSkinWeightInfo", &UKismetRenderingLibrary::execMakeSkinWeightInfo },
+		{ "ReleaseRenderTarget2D", &UKismetRenderingLibrary::execReleaseRenderTarget2D },
+		{ "RenderTargetCreateStaticTexture2DEditorOnly", &UKismetRenderingLibrary::execRenderTargetCreateStaticTexture2DEditorOnly },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UKismetRenderingLibrary_BeginDrawCanvasToRenderTarget_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -246,11 +289,6 @@ UFunction* Z_Construct_UFunction_UKismetRenderingLibrary_RenderTargetCreateStati
 	return ReturnFunction;
 }
 
-class UKismetRenderingLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UKismetRenderingLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

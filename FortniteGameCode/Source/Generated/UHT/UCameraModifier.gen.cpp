@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCameraModifier();  // RVA 0x023EAA30 (consensus OuterFunc)
 
+class UCameraModifier
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCameraModifier_BlueprintModifyCamera_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -125,11 +132,6 @@ UFunction* Z_Construct_UFunction_UCameraModifier_IsDisabled()
 	return ReturnFunction;
 }
 
-class UCameraModifier
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCameraModifier_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

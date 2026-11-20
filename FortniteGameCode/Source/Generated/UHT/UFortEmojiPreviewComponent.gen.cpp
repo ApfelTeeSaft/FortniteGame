@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortEmojiPreviewComponent();  // RVA 0x00FD7A00 (consensus OuterFunc)
 
+class UFortEmojiPreviewComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortEmojiPreviewComponent();
+	static void execPushPreviewEmoji(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6B30 (end 0x00FD6B52)
+// Original VA: 0x0000000140FD6B30 | File offset: 0x00FD6130
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033098A8) | Matching: see analysis/functions-uht-natives.json
+void UFortEmojiPreviewComponent::StaticRegisterNativesUFortEmojiPreviewComponent()
+{
+	UClass* Class = UFortEmojiPreviewComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "PushPreviewEmoji", &UFortEmojiPreviewComponent::execPushPreviewEmoji },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortEmojiPreviewComponent_PushPreviewEmoji_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortEmojiPreviewComponent_PushPreviewEmoji()
 	return ReturnFunction;
 }
 
-class UFortEmojiPreviewComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortEmojiPreviewComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

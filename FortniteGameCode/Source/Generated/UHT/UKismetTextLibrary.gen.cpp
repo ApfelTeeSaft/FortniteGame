@@ -6,6 +6,109 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UKismetTextLibrary();  // RVA 0x02470330 (consensus OuterFunc)
 
+class UKismetTextLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUKismetTextLibrary();
+	static void execAsCurrency_Float(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAsCurrency_Integer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAsCurrencyBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAsDate_DateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAsDateTime_DateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAsPercent_Float(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAsTime_DateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAsTimespan_Timespan(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAsTimeZoneDate_DateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAsTimeZoneDateTime_DateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAsTimeZoneTime_DateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_BoolToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_ByteToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_ColorToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_FloatToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_IntToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_NameToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_ObjectToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_RotatorToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_StringToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_TextToString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_TransformToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_Vector2dToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execConv_VectorToText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_IgnoreCase_TextText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEqualEqual_TextText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindTextInLocalizationTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFormat(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetEmptyText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_IgnoreCase_TextText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNotEqual_TextText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStringTableIdAndKeyFromText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTextFromStringTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTextIsCultureInvariant(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTextIsEmpty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTextIsFromStringTable(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTextIsTransient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTextToLower(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTextToUpper(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTextTrimPreceding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTextTrimPrecedingAndTrailing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTextTrimTrailing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FE90 (end 0x0246FEB2)
+// Original VA: 0x000000014246FE90 | File offset: 0x0246F490
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0392EEF0) | Matching: see analysis/functions-uht-natives.json
+void UKismetTextLibrary::StaticRegisterNativesUKismetTextLibrary()
+{
+	UClass* Class = UKismetTextLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AsCurrency_Float", &UKismetTextLibrary::execAsCurrency_Float },
+		{ "AsCurrency_Integer", &UKismetTextLibrary::execAsCurrency_Integer },
+		{ "AsCurrencyBase", &UKismetTextLibrary::execAsCurrencyBase },
+		{ "AsDate_DateTime", &UKismetTextLibrary::execAsDate_DateTime },
+		{ "AsDateTime_DateTime", &UKismetTextLibrary::execAsDateTime_DateTime },
+		{ "AsPercent_Float", &UKismetTextLibrary::execAsPercent_Float },
+		{ "AsTime_DateTime", &UKismetTextLibrary::execAsTime_DateTime },
+		{ "AsTimespan_Timespan", &UKismetTextLibrary::execAsTimespan_Timespan },
+		{ "AsTimeZoneDate_DateTime", &UKismetTextLibrary::execAsTimeZoneDate_DateTime },
+		{ "AsTimeZoneDateTime_DateTime", &UKismetTextLibrary::execAsTimeZoneDateTime_DateTime },
+		{ "AsTimeZoneTime_DateTime", &UKismetTextLibrary::execAsTimeZoneTime_DateTime },
+		{ "Conv_BoolToText", &UKismetTextLibrary::execConv_BoolToText },
+		{ "Conv_ByteToText", &UKismetTextLibrary::execConv_ByteToText },
+		{ "Conv_ColorToText", &UKismetTextLibrary::execConv_ColorToText },
+		{ "Conv_FloatToText", &UKismetTextLibrary::execConv_FloatToText },
+		{ "Conv_IntToText", &UKismetTextLibrary::execConv_IntToText },
+		{ "Conv_NameToText", &UKismetTextLibrary::execConv_NameToText },
+		{ "Conv_ObjectToText", &UKismetTextLibrary::execConv_ObjectToText },
+		{ "Conv_RotatorToText", &UKismetTextLibrary::execConv_RotatorToText },
+		{ "Conv_StringToText", &UKismetTextLibrary::execConv_StringToText },
+		{ "Conv_TextToString", &UKismetTextLibrary::execConv_TextToString },
+		{ "Conv_TransformToText", &UKismetTextLibrary::execConv_TransformToText },
+		{ "Conv_Vector2dToText", &UKismetTextLibrary::execConv_Vector2dToText },
+		{ "Conv_VectorToText", &UKismetTextLibrary::execConv_VectorToText },
+		{ "EqualEqual_IgnoreCase_TextText", &UKismetTextLibrary::execEqualEqual_IgnoreCase_TextText },
+		{ "EqualEqual_TextText", &UKismetTextLibrary::execEqualEqual_TextText },
+		{ "FindTextInLocalizationTable", &UKismetTextLibrary::execFindTextInLocalizationTable },
+		{ "Format", &UKismetTextLibrary::execFormat },
+		{ "GetEmptyText", &UKismetTextLibrary::execGetEmptyText },
+		{ "NotEqual_IgnoreCase_TextText", &UKismetTextLibrary::execNotEqual_IgnoreCase_TextText },
+		{ "NotEqual_TextText", &UKismetTextLibrary::execNotEqual_TextText },
+		{ "StringTableIdAndKeyFromText", &UKismetTextLibrary::execStringTableIdAndKeyFromText },
+		{ "TextFromStringTable", &UKismetTextLibrary::execTextFromStringTable },
+		{ "TextIsCultureInvariant", &UKismetTextLibrary::execTextIsCultureInvariant },
+		{ "TextIsEmpty", &UKismetTextLibrary::execTextIsEmpty },
+		{ "TextIsFromStringTable", &UKismetTextLibrary::execTextIsFromStringTable },
+		{ "TextIsTransient", &UKismetTextLibrary::execTextIsTransient },
+		{ "TextToLower", &UKismetTextLibrary::execTextToLower },
+		{ "TextToUpper", &UKismetTextLibrary::execTextToUpper },
+		{ "TextTrimPreceding", &UKismetTextLibrary::execTextTrimPreceding },
+		{ "TextTrimPrecedingAndTrailing", &UKismetTextLibrary::execTextTrimPrecedingAndTrailing },
+		{ "TextTrimTrailing", &UKismetTextLibrary::execTextTrimTrailing },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UKismetTextLibrary_AsCurrency_Float_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -846,11 +949,6 @@ UFunction* Z_Construct_UFunction_UKismetTextLibrary_TextTrimTrailing()
 	return ReturnFunction;
 }
 
-class UKismetTextLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UKismetTextLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

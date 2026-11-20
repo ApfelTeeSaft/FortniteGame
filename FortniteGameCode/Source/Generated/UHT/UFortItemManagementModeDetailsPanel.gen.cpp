@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortItemManagementModeDetailsPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortItemManagementModeDetailsPanel();
+	static void execGetItemManagementMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C9B10 (end 0x028C9B32)
+// Original VA: 0x00000001428C9B10 | File offset: 0x028C9110
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CCE9B8) | Matching: see analysis/functions-uht-natives.json
+void UFortItemManagementModeDetailsPanel::StaticRegisterNativesUFortItemManagementModeDetailsPanel()
+{
+	UClass* Class = UFortItemManagementModeDetailsPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetItemManagementMode", &UFortItemManagementModeDetailsPanel::execGetItemManagementMode },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_GetItemManagementMode: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortItemManagementModeDetailsPanel_HandleDifferentItemManagementModeSetBP: FFunctionParams record not identified; creator not emitted.

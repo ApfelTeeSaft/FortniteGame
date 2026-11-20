@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortExpeditionListViewWidget();  // RVA 0x028A35F0 (consensus OuterFunc)
 
+class UFortExpeditionListViewWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortExpeditionListViewWidget();
+	static void execGetExpeditionListSortName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleListItemSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetExpeditionListSortType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3010 (end 0x028A3032)
+// Original VA: 0x00000001428A3010 | File offset: 0x028A2610
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C8F720) | Matching: see analysis/functions-uht-natives.json
+void UFortExpeditionListViewWidget::StaticRegisterNativesUFortExpeditionListViewWidget()
+{
+	UClass* Class = UFortExpeditionListViewWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetExpeditionListSortName", &UFortExpeditionListViewWidget::execGetExpeditionListSortName },
+		{ "HandleListItemSelected", &UFortExpeditionListViewWidget::execHandleListItemSelected },
+		{ "SetExpeditionListSortType", &UFortExpeditionListViewWidget::execSetExpeditionListSortType },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortExpeditionListViewWidget_GetExpeditionListSortName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortExpeditionListViewWidget_SetExpeditionList
 	return ReturnFunction;
 }
 
-class UFortExpeditionListViewWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortExpeditionListViewWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

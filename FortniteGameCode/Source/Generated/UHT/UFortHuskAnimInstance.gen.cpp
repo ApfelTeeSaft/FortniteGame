@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHuskAnimInstance();  // RVA 0x01006A90 (consensus OuterFunc)
 
+class UFortHuskAnimInstance
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortHuskAnimInstance();
+	static void execAnimNotify_SleepingFullyBlended(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHuskAnimType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetHuskAnimType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010062A0 (end 0x010062C2)
+// Original VA: 0x00000001410062A0 | File offset: 0x010058A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033497A0) | Matching: see analysis/functions-uht-natives.json
+void UFortHuskAnimInstance::StaticRegisterNativesUFortHuskAnimInstance()
+{
+	UClass* Class = UFortHuskAnimInstance::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AnimNotify_SleepingFullyBlended", &UFortHuskAnimInstance::execAnimNotify_SleepingFullyBlended },
+		{ "GetHuskAnimType", &UFortHuskAnimInstance::execGetHuskAnimType },
+		{ "SetHuskAnimType", &UFortHuskAnimInstance::execSetHuskAnimType },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHuskAnimInstance_AnimNotify_SleepingFullyBlended_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortHuskAnimInstance_SetHuskAnimType()
 	return ReturnFunction;
 }
 
-class UFortHuskAnimInstance
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHuskAnimInstance_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

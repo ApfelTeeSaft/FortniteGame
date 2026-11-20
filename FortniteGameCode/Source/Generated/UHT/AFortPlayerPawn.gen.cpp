@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortPlayerPawn();  // RVA 0x0107FE00 (consensus OuterFunc)
 
+class AFortPlayerPawn
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortPlayerPawn_AddAttachment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -1089,11 +1096,6 @@ UFunction* Z_Construct_UFunction_AFortPlayerPawn_UpdateAimbotDetectionStatus()
 	return ReturnFunction;
 }
 
-class AFortPlayerPawn
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortPlayerPawn_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

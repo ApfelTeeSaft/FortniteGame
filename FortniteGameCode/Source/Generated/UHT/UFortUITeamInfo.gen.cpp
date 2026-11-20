@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortUITeamInfo();  // RVA 0x010D4AA0 (consensus OuterFunc)
 
+class UFortUITeamInfo
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortUITeamInfo();
+	static void execGetTeamHitPointFractions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamMemberIDs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTeamMembers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTeamMemberSynchronizing(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4410 (end 0x010D4432)
+// Original VA: 0x00000001410D4410 | File offset: 0x010D3A10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03428BB0) | Matching: see analysis/functions-uht-natives.json
+void UFortUITeamInfo::StaticRegisterNativesUFortUITeamInfo()
+{
+	UClass* Class = UFortUITeamInfo::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetTeamHitPointFractions", &UFortUITeamInfo::execGetTeamHitPointFractions },
+		{ "GetTeamMemberIDs", &UFortUITeamInfo::execGetTeamMemberIDs },
+		{ "GetTeamMembers", &UFortUITeamInfo::execGetTeamMembers },
+		{ "IsTeamMemberSynchronizing", &UFortUITeamInfo::execIsTeamMemberSynchronizing },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortUITeamInfo_OnTeamHitPointFractionsChanged__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -205,11 +232,6 @@ UFunction* Z_Construct_UFunction_UFortUITeamInfo_IsTeamMemberSynchronizing()
 	return ReturnFunction;
 }
 
-class UFortUITeamInfo
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortUITeamInfo_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

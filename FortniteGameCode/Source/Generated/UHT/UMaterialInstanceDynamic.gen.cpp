@@ -6,6 +6,45 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMaterialInstanceDynamic();  // RVA 0x02486960 (consensus OuterFunc)
 
+class UMaterialInstanceDynamic
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUMaterialInstanceDynamic();
+	static void execCopyInterpParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCopyParameterOverrides(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_CopyMaterialInstanceParameters(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetScalarParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetTextureParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetVectorParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_InterpolateMaterialInstanceParams(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetScalarParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTextureParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVectorParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02485F10 (end 0x02485F32)
+// Original VA: 0x0000000142485F10 | File offset: 0x02485510
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0394D640) | Matching: see analysis/functions-uht-natives.json
+void UMaterialInstanceDynamic::StaticRegisterNativesUMaterialInstanceDynamic()
+{
+	UClass* Class = UMaterialInstanceDynamic::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CopyInterpParameters", &UMaterialInstanceDynamic::execCopyInterpParameters },
+		{ "CopyParameterOverrides", &UMaterialInstanceDynamic::execCopyParameterOverrides },
+		{ "K2_CopyMaterialInstanceParameters", &UMaterialInstanceDynamic::execK2_CopyMaterialInstanceParameters },
+		{ "K2_GetScalarParameterValue", &UMaterialInstanceDynamic::execK2_GetScalarParameterValue },
+		{ "K2_GetTextureParameterValue", &UMaterialInstanceDynamic::execK2_GetTextureParameterValue },
+		{ "K2_GetVectorParameterValue", &UMaterialInstanceDynamic::execK2_GetVectorParameterValue },
+		{ "K2_InterpolateMaterialInstanceParams", &UMaterialInstanceDynamic::execK2_InterpolateMaterialInstanceParams },
+		{ "SetScalarParameterValue", &UMaterialInstanceDynamic::execSetScalarParameterValue },
+		{ "SetTextureParameterValue", &UMaterialInstanceDynamic::execSetTextureParameterValue },
+		{ "SetVectorParameterValue", &UMaterialInstanceDynamic::execSetVectorParameterValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMaterialInstanceDynamic_CopyInterpParameters_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -206,11 +245,6 @@ UFunction* Z_Construct_UFunction_UMaterialInstanceDynamic_SetVectorParameterValu
 	return ReturnFunction;
 }
 
-class UMaterialInstanceDynamic
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMaterialInstanceDynamic_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

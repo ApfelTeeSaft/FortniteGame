@@ -6,6 +6,41 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortDecoPreview();  // RVA 0x00FCFED0 (consensus OuterFunc)
 
+class AFortDecoPreview
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortDecoPreview();
+	static void execCreatePreviewMID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTextureParameterValueFromMeshComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnBounceMotionUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnInitializeDecoPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnUpdateScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnUpdateVisuals(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetScalarParameterValueOnAllPreviewMIDs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVectorParameterValueOnAllPreviewMIDs(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCF9C0 (end 0x00FCF9E2)
+// Original VA: 0x0000000140FCF9C0 | File offset: 0x00FCEFC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032FF2F0) | Matching: see analysis/functions-uht-natives.json
+void AFortDecoPreview::StaticRegisterNativesAFortDecoPreview()
+{
+	UClass* Class = AFortDecoPreview::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreatePreviewMID", &AFortDecoPreview::execCreatePreviewMID },
+		{ "GetTextureParameterValueFromMeshComponent", &AFortDecoPreview::execGetTextureParameterValueFromMeshComponent },
+		{ "OnBounceMotionUpdate", &AFortDecoPreview::execOnBounceMotionUpdate },
+		{ "OnInitializeDecoPreview", &AFortDecoPreview::execOnInitializeDecoPreview },
+		{ "OnUpdateScale", &AFortDecoPreview::execOnUpdateScale },
+		{ "OnUpdateVisuals", &AFortDecoPreview::execOnUpdateVisuals },
+		{ "SetScalarParameterValueOnAllPreviewMIDs", &AFortDecoPreview::execSetScalarParameterValueOnAllPreviewMIDs },
+		{ "SetVectorParameterValueOnAllPreviewMIDs", &AFortDecoPreview::execSetVectorParameterValueOnAllPreviewMIDs },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortDecoPreview_CreatePreviewMID_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -166,11 +201,6 @@ UFunction* Z_Construct_UFunction_AFortDecoPreview_SetVectorParameterValueOnAllPr
 	return ReturnFunction;
 }
 
-class AFortDecoPreview
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortDecoPreview_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

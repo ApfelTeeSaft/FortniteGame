@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self();  // RVA 0x0054D5A0 (consensus OuterFunc)
 
+class UAbilityTask_WaitGameplayEffectApplied_Self
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAbilityTask_WaitGameplayEffectApplied_Self();
+	static void execWaitGameplayEffectAppliedToSelf(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execWaitGameplayEffectAppliedToSelf_Query(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054CE40 (end 0x0054CE62)
+// Original VA: 0x000000014054CE40 | File offset: 0x0054C440
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F32810) | Matching: see analysis/functions-uht-natives.json
+void UAbilityTask_WaitGameplayEffectApplied_Self::StaticRegisterNativesUAbilityTask_WaitGameplayEffectApplied_Self()
+{
+	UClass* Class = UAbilityTask_WaitGameplayEffectApplied_Self::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "WaitGameplayEffectAppliedToSelf", &UAbilityTask_WaitGameplayEffectApplied_Self::execWaitGameplayEffectAppliedToSelf },
+		{ "WaitGameplayEffectAppliedToSelf_Query", &UAbilityTask_WaitGameplayEffectApplied_Self::execWaitGameplayEffectAppliedToSelf_Query },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_Self_WaitGameplayEffectAppliedToSelf_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UAbilityTask_WaitGameplayEffectApplied_Self_Wai
 	return ReturnFunction;
 }
 
-class UAbilityTask_WaitGameplayEffectApplied_Self
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

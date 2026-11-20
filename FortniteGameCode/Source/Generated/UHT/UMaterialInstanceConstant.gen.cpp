@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UMaterialInstanceConstant
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUMaterialInstanceConstant();
+	static void execK2_GetScalarParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetTextureParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execK2_GetVectorParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02485EE0 (end 0x02485F02)
+// Original VA: 0x0000000142485EE0 | File offset: 0x024854E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0394D530) | Matching: see analysis/functions-uht-natives.json
+void UMaterialInstanceConstant::StaticRegisterNativesUMaterialInstanceConstant()
+{
+	UClass* Class = UMaterialInstanceConstant::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "K2_GetScalarParameterValue", &UMaterialInstanceConstant::execK2_GetScalarParameterValue },
+		{ "K2_GetTextureParameterValue", &UMaterialInstanceConstant::execK2_GetTextureParameterValue },
+		{ "K2_GetVectorParameterValue", &UMaterialInstanceConstant::execK2_GetVectorParameterValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetScalarParameterValue: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UMaterialInstanceConstant_K2_GetTextureParameterValue: FFunctionParams record not identified; creator not emitted.

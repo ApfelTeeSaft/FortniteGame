@@ -6,6 +6,123 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMissionLibrary();  // RVA 0x010415B0 (consensus OuterFunc)
 
+class UFortMissionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortMissionLibrary();
+	static void execAddCompletionTagsToMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddCompletionTagToMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAdjustWaveBasedGameDifficulty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateDynamicBuildingDeconstructor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execCreateMissionEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExecuteMissionEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execExecuteMissionEventEx(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindActorsWithTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFindOriginatingPlacementActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetAllLoadedMissions(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetBluGloManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionActorsInEncounterDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionActorsInVectorDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionFromGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionHUDTextLineHeightEstimate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTieredWaveBaseNumKillPoints(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTieredWaveBaseNumKills(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTieredWaveBaseWaveLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTieredWaveSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveMissionRewardsToPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveMissionRewardsToPlayerAsPickups(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGiveMissionSchematicItemDirectlyToPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasTags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsUsingNewMissionGeneration(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execLoadMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNumBluGloFromPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execNumBluGloFromPlayerState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPingMinimap(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execPollActorsInVolume(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterForMissionEvents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterMissionInfoUIActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRespawnOutlanderFragments(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetOnlinePresenceDoNotDisturb(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetWorldSavingEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execShouldUseAlternateAIDirectorBalance(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnAndCollectPlayerPickups(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnAtPlacementActorsHelper(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnBuildingActorAtTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnMissionItemPickup(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnMissionItemPickupInWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSpawnPlacementMissionActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartAIEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartAIEncounterWithEnvironmentQuery(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStartPlayingMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopAIEncounter(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopAIEncounterAgainstActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTeleportPawnNearLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTeleportPlayerPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUnregisterForMissionEvents(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01040C20 (end 0x01040C42)
+// Original VA: 0x0000000141040C20 | File offset: 0x01040220
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03382B30) | Matching: see analysis/functions-uht-natives.json
+void UFortMissionLibrary::StaticRegisterNativesUFortMissionLibrary()
+{
+	UClass* Class = UFortMissionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddCompletionTagsToMission", &UFortMissionLibrary::execAddCompletionTagsToMission },
+		{ "AddCompletionTagToMission", &UFortMissionLibrary::execAddCompletionTagToMission },
+		{ "AdjustWaveBasedGameDifficulty", &UFortMissionLibrary::execAdjustWaveBasedGameDifficulty },
+		{ "CreateDynamicBuildingDeconstructor", &UFortMissionLibrary::execCreateDynamicBuildingDeconstructor },
+		{ "CreateMissionEvent", &UFortMissionLibrary::execCreateMissionEvent },
+		{ "ExecuteMissionEvent", &UFortMissionLibrary::execExecuteMissionEvent },
+		{ "ExecuteMissionEventEx", &UFortMissionLibrary::execExecuteMissionEventEx },
+		{ "FindActorsWithTags", &UFortMissionLibrary::execFindActorsWithTags },
+		{ "FindOriginatingPlacementActor", &UFortMissionLibrary::execFindOriginatingPlacementActor },
+		{ "GetAllLoadedMissions", &UFortMissionLibrary::execGetAllLoadedMissions },
+		{ "GetBluGloManager", &UFortMissionLibrary::execGetBluGloManager },
+		{ "GetMissionActorsInEncounterDirection", &UFortMissionLibrary::execGetMissionActorsInEncounterDirection },
+		{ "GetMissionActorsInVectorDirection", &UFortMissionLibrary::execGetMissionActorsInVectorDirection },
+		{ "GetMissionFromGuid", &UFortMissionLibrary::execGetMissionFromGuid },
+		{ "GetMissionHUDTextLineHeightEstimate", &UFortMissionLibrary::execGetMissionHUDTextLineHeightEstimate },
+		{ "GetTieredWaveBaseNumKillPoints", &UFortMissionLibrary::execGetTieredWaveBaseNumKillPoints },
+		{ "GetTieredWaveBaseNumKills", &UFortMissionLibrary::execGetTieredWaveBaseNumKills },
+		{ "GetTieredWaveBaseWaveLength", &UFortMissionLibrary::execGetTieredWaveBaseWaveLength },
+		{ "GetTieredWaveSet", &UFortMissionLibrary::execGetTieredWaveSet },
+		{ "GiveMissionRewardsToPlayer", &UFortMissionLibrary::execGiveMissionRewardsToPlayer },
+		{ "GiveMissionRewardsToPlayerAsPickups", &UFortMissionLibrary::execGiveMissionRewardsToPlayerAsPickups },
+		{ "GiveMissionSchematicItemDirectlyToPlayer", &UFortMissionLibrary::execGiveMissionSchematicItemDirectlyToPlayer },
+		{ "HasTags", &UFortMissionLibrary::execHasTags },
+		{ "IsUsingNewMissionGeneration", &UFortMissionLibrary::execIsUsingNewMissionGeneration },
+		{ "LoadMission", &UFortMissionLibrary::execLoadMission },
+		{ "NumBluGloFromPlayerPawn", &UFortMissionLibrary::execNumBluGloFromPlayerPawn },
+		{ "NumBluGloFromPlayerState", &UFortMissionLibrary::execNumBluGloFromPlayerState },
+		{ "PingMinimap", &UFortMissionLibrary::execPingMinimap },
+		{ "PollActorsInVolume", &UFortMissionLibrary::execPollActorsInVolume },
+		{ "RegisterForMissionEvents", &UFortMissionLibrary::execRegisterForMissionEvents },
+		{ "RegisterMissionInfoUIActor", &UFortMissionLibrary::execRegisterMissionInfoUIActor },
+		{ "RespawnOutlanderFragments", &UFortMissionLibrary::execRespawnOutlanderFragments },
+		{ "SetOnlinePresenceDoNotDisturb", &UFortMissionLibrary::execSetOnlinePresenceDoNotDisturb },
+		{ "SetWorldSavingEnabled", &UFortMissionLibrary::execSetWorldSavingEnabled },
+		{ "ShouldUseAlternateAIDirectorBalance", &UFortMissionLibrary::execShouldUseAlternateAIDirectorBalance },
+		{ "SpawnAndCollectPlayerPickups", &UFortMissionLibrary::execSpawnAndCollectPlayerPickups },
+		{ "SpawnAtPlacementActorsHelper", &UFortMissionLibrary::execSpawnAtPlacementActorsHelper },
+		{ "SpawnBuildingActorAtTransform", &UFortMissionLibrary::execSpawnBuildingActorAtTransform },
+		{ "SpawnMissionItemPickup", &UFortMissionLibrary::execSpawnMissionItemPickup },
+		{ "SpawnMissionItemPickupInWorld", &UFortMissionLibrary::execSpawnMissionItemPickupInWorld },
+		{ "SpawnPlacementMissionActor", &UFortMissionLibrary::execSpawnPlacementMissionActor },
+		{ "StartAIEncounter", &UFortMissionLibrary::execStartAIEncounter },
+		{ "StartAIEncounterWithEnvironmentQuery", &UFortMissionLibrary::execStartAIEncounterWithEnvironmentQuery },
+		{ "StartPlayingMission", &UFortMissionLibrary::execStartPlayingMission },
+		{ "StopAIEncounter", &UFortMissionLibrary::execStopAIEncounter },
+		{ "StopAIEncounterAgainstActor", &UFortMissionLibrary::execStopAIEncounterAgainstActor },
+		{ "TeleportPawnNearLocation", &UFortMissionLibrary::execTeleportPawnNearLocation },
+		{ "TeleportPlayerPawn", &UFortMissionLibrary::execTeleportPlayerPawn },
+		{ "UnregisterForMissionEvents", &UFortMissionLibrary::execUnregisterForMissionEvents },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMissionLibrary_AddCompletionTagsToMission_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -986,11 +1103,6 @@ UFunction* Z_Construct_UFunction_UFortMissionLibrary_UnregisterForMissionEvents(
 	return ReturnFunction;
 }
 
-class UFortMissionLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMissionLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

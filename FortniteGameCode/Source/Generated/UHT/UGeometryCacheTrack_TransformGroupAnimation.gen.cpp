@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UGeometryCacheTrack_TransformGroupAnimation
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUGeometryCacheTrack_TransformGroupAnimation();
+	static void execSetMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3FE20 (end 0x01D3FE42)
+// Original VA: 0x0000000141D3FE20 | File offset: 0x01D3F420
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03714CF8) | Matching: see analysis/functions-uht-natives.json
+void UGeometryCacheTrack_TransformGroupAnimation::StaticRegisterNativesUGeometryCacheTrack_TransformGroupAnimation()
+{
+	UClass* Class = UGeometryCacheTrack_TransformGroupAnimation::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetMesh", &UGeometryCacheTrack_TransformGroupAnimation::execSetMesh },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UGeometryCacheTrack_TransformGroupAnimation_SetMesh: FFunctionParams record not identified; creator not emitted.

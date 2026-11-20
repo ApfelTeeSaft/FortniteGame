@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ASBAGrantedBuildingGameplayActor();  // RVA 0x010F18B0 (consensus OuterFunc)
 
+class ASBAGrantedBuildingGameplayActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesASBAGrantedBuildingGameplayActor();
+	static void execGetOwnerStrategicBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F1220 (end 0x010F1242)
+// Original VA: 0x00000001410F1220 | File offset: 0x010F0820
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0344FFF8) | Matching: see analysis/functions-uht-natives.json
+void ASBAGrantedBuildingGameplayActor::StaticRegisterNativesASBAGrantedBuildingGameplayActor()
+{
+	UClass* Class = ASBAGrantedBuildingGameplayActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetOwnerStrategicBuildingActor", &ASBAGrantedBuildingGameplayActor::execGetOwnerStrategicBuildingActor },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ASBAGrantedBuildingGameplayActor_GetOwnerStrategicBuildingActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_ASBAGrantedBuildingGameplayActor_GetOwnerStrate
 	return ReturnFunction;
 }
 
-class ASBAGrantedBuildingGameplayActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ASBAGrantedBuildingGameplayActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

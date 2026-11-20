@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaAwardAlertBase();  // RVA 0x0287F230 (consensus OuterFunc)
 
+class UAthenaAwardAlertBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaAwardAlertBase();
+	static void execSetDataSource(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EBD0 (end 0x0287EBF2)
+// Original VA: 0x000000014287EBD0 | File offset: 0x0287E1D0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C51A08) | Matching: see analysis/functions-uht-natives.json
+void UAthenaAwardAlertBase::StaticRegisterNativesUAthenaAwardAlertBase()
+{
+	UClass* Class = UAthenaAwardAlertBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetDataSource", &UAthenaAwardAlertBase::execSetDataSource },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaAwardAlertBase_OnAwardGranted_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +67,6 @@ UFunction* Z_Construct_UFunction_UAthenaAwardAlertBase_SetDataSource()
 	return ReturnFunction;
 }
 
-class UAthenaAwardAlertBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaAwardAlertBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

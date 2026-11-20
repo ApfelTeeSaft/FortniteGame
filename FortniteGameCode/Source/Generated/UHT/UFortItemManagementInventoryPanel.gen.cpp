@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortItemManagementInventoryPanel();  // RVA 0x028C9F60 (consensus OuterFunc)
 
+class UFortItemManagementInventoryPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortItemManagementInventoryPanel_AddItemStackToMulch_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -574,11 +581,6 @@ UFunction* Z_Construct_UFunction_UFortItemManagementInventoryPanel_UpdateSchemat
 	return ReturnFunction;
 }
 
-class UFortItemManagementInventoryPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortItemManagementInventoryPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

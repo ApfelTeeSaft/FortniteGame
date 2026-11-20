@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortBuildingTrapSet();  // RVA 0x00FAD7E0 (consensus OuterFunc)
 
+class UFortBuildingTrapSet
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortBuildingTrapSet_OnRep_Durability_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_UFortBuildingTrapSet_OnRep_Durability()
 	return ReturnFunction;
 }
 
-class UFortBuildingTrapSet
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortBuildingTrapSet_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortWeap_EditingTool();  // RVA 0x010D4920 (consensus OuterFunc)
 
+class AFortWeap_EditingTool
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortWeap_EditingTool_OnRep_EditActor_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_AFortWeap_EditingTool_OnRep_EditActor()
 	return ReturnFunction;
 }
 
-class AFortWeap_EditingTool
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortWeap_EditingTool_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

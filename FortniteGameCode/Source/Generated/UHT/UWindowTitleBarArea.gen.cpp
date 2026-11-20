@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UWindowTitleBarArea
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUWindowTitleBarArea();
+	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVerticalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07B90 (end 0x01C07BB2)
+// Original VA: 0x0000000141C07B90 | File offset: 0x01C07190
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036AB848) | Matching: see analysis/functions-uht-natives.json
+void UWindowTitleBarArea::StaticRegisterNativesUWindowTitleBarArea()
+{
+	UClass* Class = UWindowTitleBarArea::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetHorizontalAlignment", &UWindowTitleBarArea::execSetHorizontalAlignment },
+		{ "SetPadding", &UWindowTitleBarArea::execSetPadding },
+		{ "SetVerticalAlignment", &UWindowTitleBarArea::execSetVerticalAlignment },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UWindowTitleBarArea_SetHorizontalAlignment: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UWindowTitleBarArea_SetPadding: FFunctionParams record not identified; creator not emitted.

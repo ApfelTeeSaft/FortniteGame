@@ -6,6 +6,45 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UKismetInternationalizationLibrary();  // RVA 0x02431A60 (consensus OuterFunc)
 
+class UKismetInternationalizationLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUKismetInternationalizationLibrary();
+	static void execClearCurrentAssetGroupCulture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentAssetGroupCulture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentCulture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentLanguage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetCurrentLocale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentAssetGroupCulture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentCulture(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentLanguage(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentLanguageAndLocale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetCurrentLocale(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024317C0 (end 0x024317E2)
+// Original VA: 0x00000001424317C0 | File offset: 0x02430DC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x039152C0) | Matching: see analysis/functions-uht-natives.json
+void UKismetInternationalizationLibrary::StaticRegisterNativesUKismetInternationalizationLibrary()
+{
+	UClass* Class = UKismetInternationalizationLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClearCurrentAssetGroupCulture", &UKismetInternationalizationLibrary::execClearCurrentAssetGroupCulture },
+		{ "GetCurrentAssetGroupCulture", &UKismetInternationalizationLibrary::execGetCurrentAssetGroupCulture },
+		{ "GetCurrentCulture", &UKismetInternationalizationLibrary::execGetCurrentCulture },
+		{ "GetCurrentLanguage", &UKismetInternationalizationLibrary::execGetCurrentLanguage },
+		{ "GetCurrentLocale", &UKismetInternationalizationLibrary::execGetCurrentLocale },
+		{ "SetCurrentAssetGroupCulture", &UKismetInternationalizationLibrary::execSetCurrentAssetGroupCulture },
+		{ "SetCurrentCulture", &UKismetInternationalizationLibrary::execSetCurrentCulture },
+		{ "SetCurrentLanguage", &UKismetInternationalizationLibrary::execSetCurrentLanguage },
+		{ "SetCurrentLanguageAndLocale", &UKismetInternationalizationLibrary::execSetCurrentLanguageAndLocale },
+		{ "SetCurrentLocale", &UKismetInternationalizationLibrary::execSetCurrentLocale },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UKismetInternationalizationLibrary_ClearCurrentAssetGroupCulture_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -206,11 +245,6 @@ UFunction* Z_Construct_UFunction_UKismetInternationalizationLibrary_SetCurrentLo
 	return ReturnFunction;
 }
 
-class UKismetInternationalizationLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UKismetInternationalizationLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

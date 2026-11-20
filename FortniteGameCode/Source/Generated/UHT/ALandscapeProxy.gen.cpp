@@ -6,6 +6,45 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ALandscapeProxy();  // RVA 0x01A75AC0 (consensus OuterFunc)
 
+class ALandscapeProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesALandscapeProxy();
+	static void execChangeComponentScreenSizeToUseSubSections(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execChangeLODDistanceFactor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execChangeTessellationComponentScreenSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execChangeTessellationComponentScreenSizeFalloff(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execChangeUseTessellationComponentScreenSizeFalloff(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEditorApplySpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEditorSetLandscapeMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLandscapeMaterialScalarParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLandscapeMaterialTextureParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLandscapeMaterialVectorParameterValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A750A0 (end 0x01A750C2)
+// Original VA: 0x0000000141A750A0 | File offset: 0x01A746A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036291D0) | Matching: see analysis/functions-uht-natives.json
+void ALandscapeProxy::StaticRegisterNativesALandscapeProxy()
+{
+	UClass* Class = ALandscapeProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ChangeComponentScreenSizeToUseSubSections", &ALandscapeProxy::execChangeComponentScreenSizeToUseSubSections },
+		{ "ChangeLODDistanceFactor", &ALandscapeProxy::execChangeLODDistanceFactor },
+		{ "ChangeTessellationComponentScreenSize", &ALandscapeProxy::execChangeTessellationComponentScreenSize },
+		{ "ChangeTessellationComponentScreenSizeFalloff", &ALandscapeProxy::execChangeTessellationComponentScreenSizeFalloff },
+		{ "ChangeUseTessellationComponentScreenSizeFalloff", &ALandscapeProxy::execChangeUseTessellationComponentScreenSizeFalloff },
+		{ "EditorApplySpline", &ALandscapeProxy::execEditorApplySpline },
+		{ "EditorSetLandscapeMaterial", &ALandscapeProxy::execEditorSetLandscapeMaterial },
+		{ "SetLandscapeMaterialScalarParameterValue", &ALandscapeProxy::execSetLandscapeMaterialScalarParameterValue },
+		{ "SetLandscapeMaterialTextureParameterValue", &ALandscapeProxy::execSetLandscapeMaterialTextureParameterValue },
+		{ "SetLandscapeMaterialVectorParameterValue", &ALandscapeProxy::execSetLandscapeMaterialVectorParameterValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_ALandscapeProxy_ChangeComponentScreenSizeToUseSubSections_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -206,11 +245,6 @@ UFunction* Z_Construct_UFunction_ALandscapeProxy_SetLandscapeMaterialVectorParam
 	return ReturnFunction;
 }
 
-class ALandscapeProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ALandscapeProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

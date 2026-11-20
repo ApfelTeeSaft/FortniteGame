@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UTileMapBlueprintLibrary();  // RVA 0x006679A0 (consensus OuterFunc)
 
+class UTileMapBlueprintLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUTileMapBlueprintLibrary();
+	static void execBreakTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTileTransform(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTileUserData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execMakeTile(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00666EB0 (end 0x00666ED2)
+// Original VA: 0x0000000140666EB0 | File offset: 0x006664B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F96000) | Matching: see analysis/functions-uht-natives.json
+void UTileMapBlueprintLibrary::StaticRegisterNativesUTileMapBlueprintLibrary()
+{
+	UClass* Class = UTileMapBlueprintLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "BreakTile", &UTileMapBlueprintLibrary::execBreakTile },
+		{ "GetTileTransform", &UTileMapBlueprintLibrary::execGetTileTransform },
+		{ "GetTileUserData", &UTileMapBlueprintLibrary::execGetTileUserData },
+		{ "MakeTile", &UTileMapBlueprintLibrary::execMakeTile },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UTileMapBlueprintLibrary_BreakTile_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UTileMapBlueprintLibrary_MakeTile()
 	return ReturnFunction;
 }
 
-class UTileMapBlueprintLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UTileMapBlueprintLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

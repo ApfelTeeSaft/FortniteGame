@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCanvasPanel();  // RVA 0x01BE60B0 (consensus OuterFunc)
 
+class UCanvasPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCanvasPanel();
+	static void execAddChildToCanvas(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5BB0 (end 0x01BE5BD2)
+// Original VA: 0x0000000141BE5BB0 | File offset: 0x01BE51B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03691668) | Matching: see analysis/functions-uht-natives.json
+void UCanvasPanel::StaticRegisterNativesUCanvasPanel()
+{
+	UClass* Class = UCanvasPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddChildToCanvas", &UCanvasPanel::execAddChildToCanvas },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCanvasPanel_AddChildToCanvas_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UCanvasPanel_AddChildToCanvas()
 	return ReturnFunction;
 }
 
-class UCanvasPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCanvasPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

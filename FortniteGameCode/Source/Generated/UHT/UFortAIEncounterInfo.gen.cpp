@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAIEncounterInfo();  // RVA 0x00F8C4F0 (consensus OuterFunc)
 
+class UFortAIEncounterInfo
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortAIEncounterInfo_CreateEncounterAssignment_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -401,11 +408,6 @@ UFunction* Z_Construct_UFunction_UFortAIEncounterInfo_UnRegisterAISpawner()
 	return ReturnFunction;
 }
 
-class UFortAIEncounterInfo
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAIEncounterInfo_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

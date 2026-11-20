@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class APointLight
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAPointLight();
+	static void execSetLightFalloffExponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetRadius(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B76C0 (end 0x024B76E2)
+// Original VA: 0x00000001424B76C0 | File offset: 0x024B6CC0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0398D448) | Matching: see analysis/functions-uht-natives.json
+void APointLight::StaticRegisterNativesAPointLight()
+{
+	UClass* Class = APointLight::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetLightFalloffExponent", &APointLight::execSetLightFalloffExponent },
+		{ "SetRadius", &APointLight::execSetRadius },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_APointLight_SetLightFalloffExponent: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_APointLight_SetRadius: FFunctionParams record not identified; creator not emitted.

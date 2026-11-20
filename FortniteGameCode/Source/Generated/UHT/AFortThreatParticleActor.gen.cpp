@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class AFortThreatParticleActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortThreatParticleActor();
+	static void execGetThreatClouds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD610 (end 0x010BD632)
+// Original VA: 0x00000001410BD610 | File offset: 0x010BCC10
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0340ACC8) | Matching: see analysis/functions-uht-natives.json
+void AFortThreatParticleActor::StaticRegisterNativesAFortThreatParticleActor()
+{
+	UClass* Class = AFortThreatParticleActor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetThreatClouds", &AFortThreatParticleActor::execGetThreatClouds },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_AFortThreatParticleActor_GetThreatClouds: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_AFortThreatParticleActor_OnThreatCloudsChanged: FFunctionParams record not identified; creator not emitted.

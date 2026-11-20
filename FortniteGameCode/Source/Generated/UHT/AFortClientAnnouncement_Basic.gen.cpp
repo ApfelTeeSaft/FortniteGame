@@ -6,6 +6,35 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortClientAnnouncement_Basic();  // RVA 0x00FC0050 (consensus OuterFunc)
 
+class AFortClientAnnouncement_Basic
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortClientAnnouncement_Basic();
+	static void execOnRep_BasicData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDetailText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDisplayTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTitleText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFA80 (end 0x00FBFAA2)
+// Original VA: 0x0000000140FBFA80 | File offset: 0x00FBF080
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032E5240) | Matching: see analysis/functions-uht-natives.json
+void AFortClientAnnouncement_Basic::StaticRegisterNativesAFortClientAnnouncement_Basic()
+{
+	UClass* Class = AFortClientAnnouncement_Basic::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_BasicData", &AFortClientAnnouncement_Basic::execOnRep_BasicData },
+		{ "SetDetailText", &AFortClientAnnouncement_Basic::execSetDetailText },
+		{ "SetDisplayTime", &AFortClientAnnouncement_Basic::execSetDisplayTime },
+		{ "SetIcon", &AFortClientAnnouncement_Basic::execSetIcon },
+		{ "SetTitleText", &AFortClientAnnouncement_Basic::execSetTitleText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortClientAnnouncement_Basic_OnRep_BasicData_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +135,6 @@ UFunction* Z_Construct_UFunction_AFortClientAnnouncement_Basic_SetTitleText()
 	return ReturnFunction;
 }
 
-class AFortClientAnnouncement_Basic
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortClientAnnouncement_Basic_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAIEncounterRiftManager();  // RVA 0x00F8C550 (consensus OuterFunc)
 
+class UFortAIEncounterRiftManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAIEncounterRiftManager();
+	static void execGetAssociatedMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8BD10 (end 0x00F8BD32)
+// Original VA: 0x0000000140F8BD10 | File offset: 0x00F8B310
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032A63B8) | Matching: see analysis/functions-uht-natives.json
+void UFortAIEncounterRiftManager::StaticRegisterNativesUFortAIEncounterRiftManager()
+{
+	UClass* Class = UFortAIEncounterRiftManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAssociatedMission", &UFortAIEncounterRiftManager::execGetAssociatedMission },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAIEncounterRiftManager_GetAssociatedMission_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortAIEncounterRiftManager_GetAssociatedMissio
 	return ReturnFunction;
 }
 
-class UFortAIEncounterRiftManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAIEncounterRiftManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

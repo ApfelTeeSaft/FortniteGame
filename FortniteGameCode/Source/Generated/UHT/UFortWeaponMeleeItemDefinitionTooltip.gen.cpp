@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortWeaponMeleeItemDefinitionTooltip
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortWeaponMeleeItemDefinitionTooltip();
+	static void execGetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTextForToken(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTokenizedDescriptionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D88F0 (end 0x010D8912)
+// Original VA: 0x00000001410D88F0 | File offset: 0x010D7EF0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03430248) | Matching: see analysis/functions-uht-natives.json
+void UFortWeaponMeleeItemDefinitionTooltip::StaticRegisterNativesUFortWeaponMeleeItemDefinitionTooltip()
+{
+	UClass* Class = UFortWeaponMeleeItemDefinitionTooltip::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetNumericValue", &UFortWeaponMeleeItemDefinitionTooltip::execGetNumericValue },
+		{ "GetTextForToken", &UFortWeaponMeleeItemDefinitionTooltip::execGetTextForToken },
+		{ "GetTokenizedDescriptionText", &UFortWeaponMeleeItemDefinitionTooltip::execGetTokenizedDescriptionText },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetNumericValue: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortWeaponMeleeItemDefinitionTooltip_GetTextForToken: FFunctionParams record not identified; creator not emitted.

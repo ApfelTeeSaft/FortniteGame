@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortAbilityTestObserver();  // RVA 0x00F81D20 (consensus OuterFunc)
 
+class AFortAbilityTestObserver
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortAbilityTestObserver_StartObserving_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -85,11 +92,6 @@ UFunction* Z_Construct_UFunction_AFortAbilityTestObserver_WasAbilityTagActivated
 	return ReturnFunction;
 }
 
-class AFortAbilityTestObserver
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortAbilityTestObserver_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,4 +6,11 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortSurvivorSquadManagementScreen
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 // Z_Construct_UFunction_UFortSurvivorSquadManagementScreen_PlayFeedbackForSlottingPerson: FFunctionParams record not identified; creator not emitted.

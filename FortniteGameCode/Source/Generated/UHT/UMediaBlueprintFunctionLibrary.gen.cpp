@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UMediaBlueprintFunctionLibrary();  // RVA 0x025DE8D0 (consensus OuterFunc)
 
+class UMediaBlueprintFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUMediaBlueprintFunctionLibrary();
+	static void execEnumerateAudioCaptureDevices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnumerateVideoCaptureDevices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execEnumerateWebcamCaptureDevices(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE670 (end 0x025DE692)
+// Original VA: 0x00000001425DE670 | File offset: 0x025DDC70
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03B63A50) | Matching: see analysis/functions-uht-natives.json
+void UMediaBlueprintFunctionLibrary::StaticRegisterNativesUMediaBlueprintFunctionLibrary()
+{
+	UClass* Class = UMediaBlueprintFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EnumerateAudioCaptureDevices", &UMediaBlueprintFunctionLibrary::execEnumerateAudioCaptureDevices },
+		{ "EnumerateVideoCaptureDevices", &UMediaBlueprintFunctionLibrary::execEnumerateVideoCaptureDevices },
+		{ "EnumerateWebcamCaptureDevices", &UMediaBlueprintFunctionLibrary::execEnumerateWebcamCaptureDevices },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UMediaBlueprintFunctionLibrary_EnumerateAudioCaptureDevices_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UMediaBlueprintFunctionLibrary_EnumerateWebcamC
 	return ReturnFunction;
 }
 
-class UMediaBlueprintFunctionLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UMediaBlueprintFunctionLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

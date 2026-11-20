@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMtxStoreRootBase();  // RVA 0x028DE3B0 (consensus OuterFunc)
 
+class UFortMtxStoreRootBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortMtxStoreRootBase();
+	static void execAreOffersLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetStoreOfferType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleMtxPackagesRead(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028DDF70 (end 0x028DDF92)
+// Original VA: 0x00000001428DDF70 | File offset: 0x028DD570
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CF0388) | Matching: see analysis/functions-uht-natives.json
+void UFortMtxStoreRootBase::StaticRegisterNativesUFortMtxStoreRootBase()
+{
+	UClass* Class = UFortMtxStoreRootBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AreOffersLoaded", &UFortMtxStoreRootBase::execAreOffersLoaded },
+		{ "GetStoreOfferType", &UFortMtxStoreRootBase::execGetStoreOfferType },
+		{ "HandleMtxPackagesRead", &UFortMtxStoreRootBase::execHandleMtxPackagesRead },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortMtxStoreRootBase_AreOffersLoaded_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -143,11 +168,6 @@ UFunction* Z_Construct_UFunction_UFortMtxStoreRootBase_OnStartReadingOffers()
 	return ReturnFunction;
 }
 
-class UFortMtxStoreRootBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMtxStoreRootBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

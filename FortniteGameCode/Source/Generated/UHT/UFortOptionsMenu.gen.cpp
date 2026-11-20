@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortOptionsMenu();  // RVA 0x028DE590 (consensus OuterFunc)
 
+class UFortOptionsMenu
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortOptionsMenu_ClearCachedEula_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -316,11 +323,6 @@ UFunction* Z_Construct_UFunction_UFortOptionsMenu_ShowVideoOptions()
 	return ReturnFunction;
 }
 
-class UFortOptionsMenu
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortOptionsMenu_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,49 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortBlueprintAnalytics();  // RVA 0x00FA3CB0 (consensus OuterFunc)
 
+class UFortBlueprintAnalytics
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortBlueprintAnalytics();
+	static void execConstructAnalyticsAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_Blueprint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireAnalyticsEvent_BlueprintArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireEvent_BuildLimitProgressDecremented(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireEvent_BuildLimitProgressIncremented(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireEvent_MatchmakingClientEnded(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireEvent_MatchmakingClientStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireEvent_MatchmakingClientStatusTextChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireMissionAnalyticsEvent_Blueprint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireMissionAnalyticsEvent_BlueprintArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireQuestAnalyticsEvent_Blueprint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execFireQuestAnalyticsEvent_BlueprintArray(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA34A0 (end 0x00FA34C2)
+// Original VA: 0x0000000140FA34A0 | File offset: 0x00FA2AA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032C8600) | Matching: see analysis/functions-uht-natives.json
+void UFortBlueprintAnalytics::StaticRegisterNativesUFortBlueprintAnalytics()
+{
+	UClass* Class = UFortBlueprintAnalytics::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ConstructAnalyticsAttribute", &UFortBlueprintAnalytics::execConstructAnalyticsAttribute },
+		{ "FireAnalyticsEvent_Blueprint", &UFortBlueprintAnalytics::execFireAnalyticsEvent_Blueprint },
+		{ "FireAnalyticsEvent_BlueprintArray", &UFortBlueprintAnalytics::execFireAnalyticsEvent_BlueprintArray },
+		{ "FireEvent_BuildLimitProgressDecremented", &UFortBlueprintAnalytics::execFireEvent_BuildLimitProgressDecremented },
+		{ "FireEvent_BuildLimitProgressIncremented", &UFortBlueprintAnalytics::execFireEvent_BuildLimitProgressIncremented },
+		{ "FireEvent_MatchmakingClientEnded", &UFortBlueprintAnalytics::execFireEvent_MatchmakingClientEnded },
+		{ "FireEvent_MatchmakingClientStarted", &UFortBlueprintAnalytics::execFireEvent_MatchmakingClientStarted },
+		{ "FireEvent_MatchmakingClientStatusTextChanged", &UFortBlueprintAnalytics::execFireEvent_MatchmakingClientStatusTextChanged },
+		{ "FireMissionAnalyticsEvent_Blueprint", &UFortBlueprintAnalytics::execFireMissionAnalyticsEvent_Blueprint },
+		{ "FireMissionAnalyticsEvent_BlueprintArray", &UFortBlueprintAnalytics::execFireMissionAnalyticsEvent_BlueprintArray },
+		{ "FireQuestAnalyticsEvent_Blueprint", &UFortBlueprintAnalytics::execFireQuestAnalyticsEvent_Blueprint },
+		{ "FireQuestAnalyticsEvent_BlueprintArray", &UFortBlueprintAnalytics::execFireQuestAnalyticsEvent_BlueprintArray },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortBlueprintAnalytics_ConstructAnalyticsAttribute_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -246,11 +289,6 @@ UFunction* Z_Construct_UFunction_UFortBlueprintAnalytics_FireQuestAnalyticsEvent
 	return ReturnFunction;
 }
 
-class UFortBlueprintAnalytics
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortBlueprintAnalytics_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

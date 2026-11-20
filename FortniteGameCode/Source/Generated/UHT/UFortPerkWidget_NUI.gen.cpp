@@ -6,6 +6,51 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortPerkWidget_NUI();  // RVA 0x028E6BD0 (consensus OuterFunc)
 
+class UFortPerkWidget_NUI
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortPerkWidget_NUI();
+	static void execGetCombinedTooltipDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIcon(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPerkTier(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetRequiredLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSupportBonusType(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipDescription(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTooltipTitle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHasAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPerkEmpty(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPerkHighlighted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsPerkUnlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsTierPerk(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTooltipContext(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E64A0 (end 0x028E64C2)
+// Original VA: 0x00000001428E64A0 | File offset: 0x028E5AA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CFDDE0) | Matching: see analysis/functions-uht-natives.json
+void UFortPerkWidget_NUI::StaticRegisterNativesUFortPerkWidget_NUI()
+{
+	UClass* Class = UFortPerkWidget_NUI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetCombinedTooltipDescription", &UFortPerkWidget_NUI::execGetCombinedTooltipDescription },
+		{ "GetIcon", &UFortPerkWidget_NUI::execGetIcon },
+		{ "GetPerkTier", &UFortPerkWidget_NUI::execGetPerkTier },
+		{ "GetRequiredLevel", &UFortPerkWidget_NUI::execGetRequiredLevel },
+		{ "GetSupportBonusType", &UFortPerkWidget_NUI::execGetSupportBonusType },
+		{ "GetTooltipDescription", &UFortPerkWidget_NUI::execGetTooltipDescription },
+		{ "GetTooltipTitle", &UFortPerkWidget_NUI::execGetTooltipTitle },
+		{ "HasAbility", &UFortPerkWidget_NUI::execHasAbility },
+		{ "IsPerkEmpty", &UFortPerkWidget_NUI::execIsPerkEmpty },
+		{ "IsPerkHighlighted", &UFortPerkWidget_NUI::execIsPerkHighlighted },
+		{ "IsPerkUnlocked", &UFortPerkWidget_NUI::execIsPerkUnlocked },
+		{ "IsTierPerk", &UFortPerkWidget_NUI::execIsTierPerk },
+		{ "SetTooltipContext", &UFortPerkWidget_NUI::execSetTooltipContext },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortPerkWidget_NUI_GetCombinedTooltipDescription_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -285,11 +330,6 @@ UFunction* Z_Construct_UFunction_UFortPerkWidget_NUI_SetTooltipContext()
 	return ReturnFunction;
 }
 
-class UFortPerkWidget_NUI
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortPerkWidget_NUI_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

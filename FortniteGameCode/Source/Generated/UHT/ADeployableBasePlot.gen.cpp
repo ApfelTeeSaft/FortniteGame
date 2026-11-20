@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ADeployableBasePlot();  // RVA 0x00F7D220 (consensus OuterFunc)
 
+class ADeployableBasePlot
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ADeployableBasePlot_GetNumOfItemsInPlot_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -243,11 +250,6 @@ UFunction* Z_Construct_UFunction_ADeployableBasePlot_OnRep_OccupantNetID()
 	return ReturnFunction;
 }
 
-class ADeployableBasePlot
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ADeployableBasePlot_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMissionTracker();  // RVA 0x028D74F0 (consensus OuterFunc)
 
+class UFortMissionTracker
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortMissionTracker_HandleDebugHUDObjectiveHeightChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -65,11 +72,6 @@ UFunction* Z_Construct_UFunction_UFortMissionTracker_RefreshSizeEstimate()
 	return ReturnFunction;
 }
 
-class UFortMissionTracker
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMissionTracker_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

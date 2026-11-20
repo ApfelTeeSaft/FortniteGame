@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSkillTreePageSelectorButton();  // RVA 0x028F5630 (consensus OuterFunc)
 
+class UFortSkillTreePageSelectorButton
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSkillTreePageSelectorButton();
+	static void execGetButtonNodeCompletionText(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsSkillTreePageLocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetSkillTreeNodeState(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execTryGetStaticSkillTreePageData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F4F60 (end 0x028F4F82)
+// Original VA: 0x00000001428F4F60 | File offset: 0x028F4560
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D13820) | Matching: see analysis/functions-uht-natives.json
+void UFortSkillTreePageSelectorButton::StaticRegisterNativesUFortSkillTreePageSelectorButton()
+{
+	UClass* Class = UFortSkillTreePageSelectorButton::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetButtonNodeCompletionText", &UFortSkillTreePageSelectorButton::execGetButtonNodeCompletionText },
+		{ "IsSkillTreePageLocked", &UFortSkillTreePageSelectorButton::execIsSkillTreePageLocked },
+		{ "TryGetSkillTreeNodeState", &UFortSkillTreePageSelectorButton::execTryGetSkillTreeNodeState },
+		{ "TryGetStaticSkillTreePageData", &UFortSkillTreePageSelectorButton::execTryGetStaticSkillTreePageData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortSkillTreePageSelectorButton_GetButtonNodeCompletionText_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -124,11 +151,6 @@ UFunction* Z_Construct_UFunction_UFortSkillTreePageSelectorButton_TryGetStaticSk
 	return ReturnFunction;
 }
 
-class UFortSkillTreePageSelectorButton
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSkillTreePageSelectorButton_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

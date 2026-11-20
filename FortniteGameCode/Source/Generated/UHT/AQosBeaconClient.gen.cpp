@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AQosBeaconClient();  // RVA 0x005A20C0 (consensus OuterFunc)
 
+class AQosBeaconClient
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAQosBeaconClient();
+	static void execClientQosResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execServerQosRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005A1E90 (end 0x005A1EB2)
+// Original VA: 0x00000001405A1E90 | File offset: 0x005A1490
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F5AC88) | Matching: see analysis/functions-uht-natives.json
+void AQosBeaconClient::StaticRegisterNativesAQosBeaconClient()
+{
+	UClass* Class = AQosBeaconClient::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ClientQosResponse", &AQosBeaconClient::execClientQosResponse },
+		{ "ServerQosRequest", &AQosBeaconClient::execServerQosRequest },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AQosBeaconClient_ClientQosResponse_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_AQosBeaconClient_ServerQosRequest()
 	return ReturnFunction;
 }
 
-class AQosBeaconClient
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AQosBeaconClient_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

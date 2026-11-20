@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortMovementSet();  // RVA 0x0104AB40 (consensus OuterFunc)
 
+class UFortMovementSet
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortMovementSet_OnRep_SpeedMultiplier_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +32,6 @@ UFunction* Z_Construct_UFunction_UFortMovementSet_OnRep_SpeedMultiplier()
 	return ReturnFunction;
 }
 
-class UFortMovementSet
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortMovementSet_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

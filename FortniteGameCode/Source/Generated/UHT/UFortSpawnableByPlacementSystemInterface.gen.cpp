@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UFortSpawnableByPlacementSystemInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortSpawnableByPlacementSystemInterface();
+	static void execGetMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetMissionGuid(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5010 (end 0x010A5032)
+// Original VA: 0x00000001410A5010 | File offset: 0x010A4610
+// Recovery: confirmed (registers FNameNativePtrPair array 0x033F8118) | Matching: see analysis/functions-uht-natives.json
+void UFortSpawnableByPlacementSystemInterface::StaticRegisterNativesUFortSpawnableByPlacementSystemInterface()
+{
+	UClass* Class = UFortSpawnableByPlacementSystemInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetMission", &UFortSpawnableByPlacementSystemInterface::execGetMission },
+		{ "GetMissionGuid", &UFortSpawnableByPlacementSystemInterface::execGetMissionGuid },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMission: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UFortSpawnableByPlacementSystemInterface_GetMissionGuid: FFunctionParams record not identified; creator not emitted.

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCapturePointWidget();  // RVA 0x02894550 (consensus OuterFunc)
 
+class UFortCapturePointWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCapturePointWidget();
+	static void execOnCapturePointDataChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02894100 (end 0x02894122)
+// Original VA: 0x0000000142894100 | File offset: 0x02893700
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C75C18) | Matching: see analysis/functions-uht-natives.json
+void UFortCapturePointWidget::StaticRegisterNativesUFortCapturePointWidget()
+{
+	UClass* Class = UFortCapturePointWidget::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnCapturePointDataChanged", &UFortCapturePointWidget::execOnCapturePointDataChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortCapturePointWidget_OnCapturePointDataChanged_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortCapturePointWidget_OnCapturePointDataChang
 	return ReturnFunction;
 }
 
-class UFortCapturePointWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCapturePointWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

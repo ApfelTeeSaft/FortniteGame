@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AAIHotSpot();  // RVA 0x00F59690 (consensus OuterFunc)
 
+class AAIHotSpot
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AAIHotSpot_AssignFromWaitingList_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -843,11 +850,6 @@ UFunction* Z_Construct_UFunction_AAIHotSpot_SetEnabled()
 	return ReturnFunction;
 }
 
-class AAIHotSpot
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AAIHotSpot_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

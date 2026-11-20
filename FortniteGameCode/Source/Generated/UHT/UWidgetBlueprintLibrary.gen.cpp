@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UWidgetBlueprintLibrary();  // RVA 0x01C00D90 (consensus OuterFunc)
 
+class UWidgetBlueprintLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UWidgetBlueprintLibrary_CancelDragDrop_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -1042,11 +1049,6 @@ UFunction* Z_Construct_UFunction_UWidgetBlueprintLibrary_UnlockMouse()
 	return ReturnFunction;
 }
 
-class UWidgetBlueprintLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UWidgetBlueprintLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

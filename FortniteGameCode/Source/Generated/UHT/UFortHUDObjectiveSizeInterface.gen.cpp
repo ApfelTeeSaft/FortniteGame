@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHUDObjectiveSizeInterface();  // RVA 0x028BBDF0 (consensus OuterFunc)
 
+class UFortHUDObjectiveSizeInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortHUDObjectiveSizeInterface();
+	static void execGetHeightEstimate(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028BBAC0 (end 0x028BBAE2)
+// Original VA: 0x00000001428BBAC0 | File offset: 0x028BB0C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03CB2470) | Matching: see analysis/functions-uht-natives.json
+void UFortHUDObjectiveSizeInterface::StaticRegisterNativesUFortHUDObjectiveSizeInterface()
+{
+	UClass* Class = UFortHUDObjectiveSizeInterface::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetHeightEstimate", &UFortHUDObjectiveSizeInterface::execGetHeightEstimate },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortHUDObjectiveSizeInterface_GetHeightEstimate_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UFortHUDObjectiveSizeInterface_GetHeightEstimat
 	return ReturnFunction;
 }
 
-class UFortHUDObjectiveSizeInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHUDObjectiveSizeInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortQuestTrackerEntry();  // RVA 0x028ED350 (consensus OuterFunc)
 
+class UFortQuestTrackerEntry
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortQuestTrackerEntry();
+	static void execHandleHUDObjectiveCompletion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execHandleObjectiveEntryCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ECCB0 (end 0x028ECCD2)
+// Original VA: 0x00000001428ECCB0 | File offset: 0x028EC2B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03D09780) | Matching: see analysis/functions-uht-natives.json
+void UFortQuestTrackerEntry::StaticRegisterNativesUFortQuestTrackerEntry()
+{
+	UClass* Class = UFortQuestTrackerEntry::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "HandleHUDObjectiveCompletion", &UFortQuestTrackerEntry::execHandleHUDObjectiveCompletion },
+		{ "HandleObjectiveEntryCreated", &UFortQuestTrackerEntry::execHandleObjectiveEntryCreated },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortQuestTrackerEntry_HandleHUDObjectiveCompletion_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -65,11 +88,6 @@ UFunction* Z_Construct_UFunction_UFortQuestTrackerEntry_OnSetup()
 	return ReturnFunction;
 }
 
-class UFortQuestTrackerEntry
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortQuestTrackerEntry_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

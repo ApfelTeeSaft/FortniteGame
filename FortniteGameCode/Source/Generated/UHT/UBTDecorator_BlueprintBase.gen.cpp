@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UBTDecorator_BlueprintBase();  // RVA 0x01D230E0 (consensus OuterFunc)
 
+class UBTDecorator_BlueprintBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUBTDecorator_BlueprintBase();
+	static void execIsDecoratorExecutionActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsDecoratorObserverActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22980 (end 0x01D229A2)
+// Original VA: 0x0000000141D22980 | File offset: 0x01D21F80
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036FB358) | Matching: see analysis/functions-uht-natives.json
+void UBTDecorator_BlueprintBase::StaticRegisterNativesUBTDecorator_BlueprintBase()
+{
+	UClass* Class = UBTDecorator_BlueprintBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "IsDecoratorExecutionActive", &UBTDecorator_BlueprintBase::execIsDecoratorExecutionActive },
+		{ "IsDecoratorObserverActive", &UBTDecorator_BlueprintBase::execIsDecoratorObserverActive },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UBTDecorator_BlueprintBase_IsDecoratorExecutionActive_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -286,11 +309,6 @@ UFunction* Z_Construct_UFunction_UBTDecorator_BlueprintBase_ReceiveTickAI()
 	return ReturnFunction;
 }
 
-class UBTDecorator_BlueprintBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UBTDecorator_BlueprintBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

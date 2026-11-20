@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPhysicsSpringComponent();  // RVA 0x024A9EF0 (consensus OuterFunc)
 
+class UPhysicsSpringComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUPhysicsSpringComponent();
+	static void execGetNormalizedCompressionScalar(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpringCurrentEndPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpringDirection(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetSpringRestingPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A98A0 (end 0x024A98C2)
+// Original VA: 0x00000001424A98A0 | File offset: 0x024A8EA0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03982EF0) | Matching: see analysis/functions-uht-natives.json
+void UPhysicsSpringComponent::StaticRegisterNativesUPhysicsSpringComponent()
+{
+	UClass* Class = UPhysicsSpringComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetNormalizedCompressionScalar", &UPhysicsSpringComponent::execGetNormalizedCompressionScalar },
+		{ "GetSpringCurrentEndPoint", &UPhysicsSpringComponent::execGetSpringCurrentEndPoint },
+		{ "GetSpringDirection", &UPhysicsSpringComponent::execGetSpringDirection },
+		{ "GetSpringRestingPoint", &UPhysicsSpringComponent::execGetSpringRestingPoint },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPhysicsSpringComponent_GetNormalizedCompressionScalar_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UPhysicsSpringComponent_GetSpringRestingPoint()
 	return ReturnFunction;
 }
 
-class UPhysicsSpringComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPhysicsSpringComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UStereoLayerComponent();  // RVA 0x024E79D0 (consensus OuterFunc)
 
+class UStereoLayerComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UStereoLayerComponent_GetPriority_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -185,11 +192,6 @@ UFunction* Z_Construct_UFunction_UStereoLayerComponent_SetUVRect()
 	return ReturnFunction;
 }
 
-class UStereoLayerComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UStereoLayerComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ACineCameraActor();  // RVA 0x01C0B030 (consensus OuterFunc)
 
+class ACineCameraActor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ACineCameraActor_GetCineCameraComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +33,6 @@ UFunction* Z_Construct_UFunction_ACineCameraActor_GetCineCameraComponent()
 	return ReturnFunction;
 }
 
-class ACineCameraActor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ACineCameraActor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

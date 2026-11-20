@@ -6,6 +6,57 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortDeployableBaseLibrary();  // RVA 0x00FD0170 (consensus OuterFunc)
 
+class UFortDeployableBaseLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortDeployableBaseLibrary();
+	static void execApplyTieredModifierSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execBroadcastHordeTierComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceClearAllDefenders(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceDeployableBaseHordePlayersToResetAndRespawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execForceRestartDeployableBasePlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetGameDifficultyInfo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHordeTierStartStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPrimaryHordeMission(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetTieredModifierSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGrantPlayersCompletedWaveRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execIsWorldItemDefValidToPersistForDeployableBasePlayerInventory(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnPreHordeTierStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execResetDeployableBaseHordePlayerInventories(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDeployableBaseMatchJoinability(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetupDeployableBaseCombatZoneInventoriesOnPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execUpdateDeployableBaseTierProgressionForPlayers(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFAE0 (end 0x00FCFB02)
+// Original VA: 0x0000000140FCFAE0 | File offset: 0x00FCF0E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032FFDF0) | Matching: see analysis/functions-uht-natives.json
+void UFortDeployableBaseLibrary::StaticRegisterNativesUFortDeployableBaseLibrary()
+{
+	UClass* Class = UFortDeployableBaseLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ApplyTieredModifierSet", &UFortDeployableBaseLibrary::execApplyTieredModifierSet },
+		{ "BroadcastHordeTierComplete", &UFortDeployableBaseLibrary::execBroadcastHordeTierComplete },
+		{ "ForceClearAllDefenders", &UFortDeployableBaseLibrary::execForceClearAllDefenders },
+		{ "ForceDeployableBaseHordePlayersToResetAndRespawn", &UFortDeployableBaseLibrary::execForceDeployableBaseHordePlayersToResetAndRespawn },
+		{ "ForceRestartDeployableBasePlayers", &UFortDeployableBaseLibrary::execForceRestartDeployableBasePlayers },
+		{ "GetGameDifficultyInfo", &UFortDeployableBaseLibrary::execGetGameDifficultyInfo },
+		{ "GetHordeTierStartStatus", &UFortDeployableBaseLibrary::execGetHordeTierStartStatus },
+		{ "GetPrimaryHordeMission", &UFortDeployableBaseLibrary::execGetPrimaryHordeMission },
+		{ "GetTieredModifierSet", &UFortDeployableBaseLibrary::execGetTieredModifierSet },
+		{ "GrantPlayersCompletedWaveRewards", &UFortDeployableBaseLibrary::execGrantPlayersCompletedWaveRewards },
+		{ "IsWorldItemDefValidToPersistForDeployableBasePlayerInventory", &UFortDeployableBaseLibrary::execIsWorldItemDefValidToPersistForDeployableBasePlayerInventory },
+		{ "OnPreHordeTierStart", &UFortDeployableBaseLibrary::execOnPreHordeTierStart },
+		{ "ResetDeployableBaseHordePlayerInventories", &UFortDeployableBaseLibrary::execResetDeployableBaseHordePlayerInventories },
+		{ "SetDeployableBaseMatchJoinability", &UFortDeployableBaseLibrary::execSetDeployableBaseMatchJoinability },
+		{ "SetupDeployableBaseCombatZoneInventoriesOnPlayers", &UFortDeployableBaseLibrary::execSetupDeployableBaseCombatZoneInventoriesOnPlayers },
+		{ "UpdateDeployableBaseTierProgressionForPlayers", &UFortDeployableBaseLibrary::execUpdateDeployableBaseTierProgressionForPlayers },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortDeployableBaseLibrary_ApplyTieredModifierSet_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -326,11 +377,6 @@ UFunction* Z_Construct_UFunction_UFortDeployableBaseLibrary_UpdateDeployableBase
 	return ReturnFunction;
 }
 
-class UFortDeployableBaseLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortDeployableBaseLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

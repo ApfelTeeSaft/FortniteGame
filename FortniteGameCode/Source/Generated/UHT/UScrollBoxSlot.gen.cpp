@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class UScrollBoxSlot
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUScrollBoxSlot();
+	static void execSetHorizontalAlignment(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetPadding(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2AC0 (end 0x01BF2AE2)
+// Original VA: 0x0000000141BF2AC0 | File offset: 0x01BF20C0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369CFA8) | Matching: see analysis/functions-uht-natives.json
+void UScrollBoxSlot::StaticRegisterNativesUScrollBoxSlot()
+{
+	UClass* Class = UScrollBoxSlot::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetHorizontalAlignment", &UScrollBoxSlot::execSetHorizontalAlignment },
+		{ "SetPadding", &UScrollBoxSlot::execSetPadding },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_UScrollBoxSlot_SetHorizontalAlignment: FFunctionParams record not identified; creator not emitted.
 
 // Z_Construct_UFunction_UScrollBoxSlot_SetPadding: FFunctionParams record not identified; creator not emitted.

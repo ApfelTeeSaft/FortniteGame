@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonPopupMenu();  // RVA 0x002CA560 (consensus OuterFunc)
 
+class UCommonPopupMenu
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UCommonPopupMenu_HandlePostDifferentContextProviderSet_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -123,11 +130,6 @@ UFunction* Z_Construct_UFunction_UCommonPopupMenu_SetOwningMenuAnchor()
 	return ReturnFunction;
 }
 
-class UCommonPopupMenu
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonPopupMenu_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode();  // RVA 0x00FFAE60 (consensus OuterFunc)
 
+class UFortAsyncAction_HomebaseContextPurchaseNode
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAsyncAction_HomebaseContextPurchaseNode();
+	static void execPurchaseNode(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA3B0 (end 0x00FFA3D2)
+// Original VA: 0x0000000140FFA3B0 | File offset: 0x00FF99B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0333EA08) | Matching: see analysis/functions-uht-natives.json
+void UFortAsyncAction_HomebaseContextPurchaseNode::StaticRegisterNativesUFortAsyncAction_HomebaseContextPurchaseNode()
+{
+	UClass* Class = UFortAsyncAction_HomebaseContextPurchaseNode::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "PurchaseNode", &UFortAsyncAction_HomebaseContextPurchaseNode::execPurchaseNode },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortAsyncAction_HomebaseContextPurchaseNode_OnMCPRequestComplete__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -45,11 +66,6 @@ UFunction* Z_Construct_UFunction_UFortAsyncAction_HomebaseContextPurchaseNode_Pu
 	return ReturnFunction;
 }
 
-class UFortAsyncAction_HomebaseContextPurchaseNode
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

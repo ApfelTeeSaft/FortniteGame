@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortGridPickerTile();  // RVA 0x028B3BC0 (consensus OuterFunc)
 
+class UFortGridPickerTile
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortGridPickerTile_ForwardClicked_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -104,11 +111,6 @@ UFunction* Z_Construct_UFunction_UFortGridPickerTile_SetData()
 	return ReturnFunction;
 }
 
-class UFortGridPickerTile
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortGridPickerTile_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

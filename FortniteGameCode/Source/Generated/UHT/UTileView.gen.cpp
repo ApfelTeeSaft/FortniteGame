@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UTileView();  // RVA 0x01BFB100 (consensus OuterFunc)
 
+class UTileView
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UTileView_RequestListRefresh_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -65,11 +72,6 @@ UFunction* Z_Construct_UFunction_UTileView_SetItemWidth()
 	return ReturnFunction;
 }
 
-class UTileView
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UTileView_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

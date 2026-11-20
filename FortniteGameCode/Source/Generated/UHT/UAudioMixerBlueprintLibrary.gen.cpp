@@ -6,6 +6,39 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAudioMixerBlueprintLibrary();  // RVA 0x0255A140 (consensus OuterFunc)
 
+class UAudioMixerBlueprintLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAudioMixerBlueprintLibrary();
+	static void execAddMasterSubmixEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execAddSourceEffectToPresetChain(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execClearMasterSubmixEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNumberOfEntriesInSourceEffectChain(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveMasterSubmixEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRemoveSourceEffectFromPresetChain(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetBypassSourceEffectChainEntry(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02559E50 (end 0x02559E72)
+// Original VA: 0x0000000142559E50 | File offset: 0x02559450
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03B47B90) | Matching: see analysis/functions-uht-natives.json
+void UAudioMixerBlueprintLibrary::StaticRegisterNativesUAudioMixerBlueprintLibrary()
+{
+	UClass* Class = UAudioMixerBlueprintLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "AddMasterSubmixEffect", &UAudioMixerBlueprintLibrary::execAddMasterSubmixEffect },
+		{ "AddSourceEffectToPresetChain", &UAudioMixerBlueprintLibrary::execAddSourceEffectToPresetChain },
+		{ "ClearMasterSubmixEffects", &UAudioMixerBlueprintLibrary::execClearMasterSubmixEffects },
+		{ "GetNumberOfEntriesInSourceEffectChain", &UAudioMixerBlueprintLibrary::execGetNumberOfEntriesInSourceEffectChain },
+		{ "RemoveMasterSubmixEffect", &UAudioMixerBlueprintLibrary::execRemoveMasterSubmixEffect },
+		{ "RemoveSourceEffectFromPresetChain", &UAudioMixerBlueprintLibrary::execRemoveSourceEffectFromPresetChain },
+		{ "SetBypassSourceEffectChainEntry", &UAudioMixerBlueprintLibrary::execSetBypassSourceEffectChainEntry },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAudioMixerBlueprintLibrary_AddMasterSubmixEffect_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -146,11 +179,6 @@ UFunction* Z_Construct_UFunction_UAudioMixerBlueprintLibrary_SetBypassSourceEffe
 	return ReturnFunction;
 }
 
-class UAudioMixerBlueprintLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAudioMixerBlueprintLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

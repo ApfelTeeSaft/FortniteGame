@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortSubGameSelectButtonBase();  // RVA 0x02904A70 (consensus OuterFunc)
 
+class UFortSubGameSelectButtonBase
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortSubGameSelectButtonBase_UpdateButtonState_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +33,6 @@ UFunction* Z_Construct_UFunction_UFortSubGameSelectButtonBase_UpdateButtonState(
 	return ReturnFunction;
 }
 
-class UFortSubGameSelectButtonBase
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortSubGameSelectButtonBase_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

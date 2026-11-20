@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortGameOptions();  // RVA 0x028AC3E0 (consensus OuterFunc)
 
+class UFortGameOptions
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortGameOptions_ConstructHUDTagList_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -263,11 +270,6 @@ UFunction* Z_Construct_UFunction_UFortGameOptions_UpdatePossibleLanguages()
 	return ReturnFunction;
 }
 
-class UFortGameOptions
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortGameOptions_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

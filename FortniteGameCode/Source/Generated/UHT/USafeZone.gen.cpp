@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USafeZone();  // RVA 0x01BF2EB0 (consensus OuterFunc)
 
+class USafeZone
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSafeZone();
+	static void execSetSidesToPad(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF29D0 (end 0x01BF29F2)
+// Original VA: 0x0000000141BF29D0 | File offset: 0x01BF1FD0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0369C888) | Matching: see analysis/functions-uht-natives.json
+void USafeZone::StaticRegisterNativesUSafeZone()
+{
+	UClass* Class = USafeZone::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetSidesToPad", &USafeZone::execSetSidesToPad },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USafeZone_SetSidesToPad_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_USafeZone_SetSidesToPad()
 	return ReturnFunction;
 }
 
-class USafeZone
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USafeZone_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

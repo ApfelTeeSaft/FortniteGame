@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortChallengeBundleItem();  // RVA 0x00FB01A0 (consensus OuterFunc)
 
+class UFortChallengeBundleItem
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortChallengeBundleItem();
+	static void execGetAchievedCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetChallengeDefinitionBP(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetPercentageComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAFE10 (end 0x00FAFE32)
+// Original VA: 0x0000000140FAFE10 | File offset: 0x00FAF410
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032DA8E0) | Matching: see analysis/functions-uht-natives.json
+void UFortChallengeBundleItem::StaticRegisterNativesUFortChallengeBundleItem()
+{
+	UClass* Class = UFortChallengeBundleItem::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAchievedCount", &UFortChallengeBundleItem::execGetAchievedCount },
+		{ "GetChallengeDefinitionBP", &UFortChallengeBundleItem::execGetChallengeDefinitionBP },
+		{ "GetPercentageComplete", &UFortChallengeBundleItem::execGetPercentageComplete },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortChallengeBundleItem_GetAchievedCount_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UFortChallengeBundleItem_GetPercentageComplete(
 	return ReturnFunction;
 }
 
-class UFortChallengeBundleItem
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortChallengeBundleItem_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

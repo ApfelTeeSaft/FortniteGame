@@ -6,4 +6,25 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 
 
+class AFortClientAnnouncement_Tutorial
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortClientAnnouncement_Tutorial();
+	static void execOnRep_TutorialData(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFAE0 (end 0x00FBFB02)
+// Original VA: 0x0000000140FBFAE0 | File offset: 0x00FBF0E0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032E5F68) | Matching: see analysis/functions-uht-natives.json
+void AFortClientAnnouncement_Tutorial::StaticRegisterNativesAFortClientAnnouncement_Tutorial()
+{
+	UClass* Class = AFortClientAnnouncement_Tutorial::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnRep_TutorialData", &AFortClientAnnouncement_Tutorial::execOnRep_TutorialData },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 // Z_Construct_UFunction_AFortClientAnnouncement_Tutorial_OnRep_TutorialData: FFunctionParams record not identified; creator not emitted.

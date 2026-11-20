@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCineCameraComponent();  // RVA 0x01C0B060 (consensus OuterFunc)
 
+class UCineCameraComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCineCameraComponent();
+	static void execGetFilmbackPresetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetHorizontalFieldOfView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLensPresetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetVerticalFieldOfView(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetFilmbackPresetByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetLensPresetByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0AC20 (end 0x01C0AC42)
+// Original VA: 0x0000000141C0AC20 | File offset: 0x01C0A220
+// Recovery: confirmed (registers FNameNativePtrPair array 0x036AED20) | Matching: see analysis/functions-uht-natives.json
+void UCineCameraComponent::StaticRegisterNativesUCineCameraComponent()
+{
+	UClass* Class = UCineCameraComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetFilmbackPresetName", &UCineCameraComponent::execGetFilmbackPresetName },
+		{ "GetHorizontalFieldOfView", &UCineCameraComponent::execGetHorizontalFieldOfView },
+		{ "GetLensPresetName", &UCineCameraComponent::execGetLensPresetName },
+		{ "GetVerticalFieldOfView", &UCineCameraComponent::execGetVerticalFieldOfView },
+		{ "SetFilmbackPresetByName", &UCineCameraComponent::execSetFilmbackPresetByName },
+		{ "SetLensPresetByName", &UCineCameraComponent::execSetLensPresetByName },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCineCameraComponent_GetFilmbackPresetName_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UCineCameraComponent_SetLensPresetByName()
 	return ReturnFunction;
 }
 
-class UCineCameraComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCineCameraComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

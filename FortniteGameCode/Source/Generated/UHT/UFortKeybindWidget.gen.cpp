@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortKeybindWidget();  // RVA 0x028CF780 (consensus OuterFunc)
 
+class UFortKeybindWidget
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortKeybindWidget_GetBrushForKey_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -204,11 +211,6 @@ UFunction* Z_Construct_UFunction_UFortKeybindWidget_UpdateKeybindWidget()
 	return ReturnFunction;
 }
 
-class UFortKeybindWidget
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortKeybindWidget_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,29 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPurchaseFlowJSBridge();  // RVA 0x006A8060 (consensus OuterFunc)
 
+class UPurchaseFlowJSBridge
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUPurchaseFlowJSBridge();
+	static void execReceipt(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRequestClose(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x006A7EB0 (end 0x006A7ED2)
+// Original VA: 0x00000001406A7EB0 | File offset: 0x006A74B0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02FA4898) | Matching: see analysis/functions-uht-natives.json
+void UPurchaseFlowJSBridge::StaticRegisterNativesUPurchaseFlowJSBridge()
+{
+	UClass* Class = UPurchaseFlowJSBridge::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "Receipt", &UPurchaseFlowJSBridge::execReceipt },
+		{ "RequestClose", &UPurchaseFlowJSBridge::execRequestClose },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UPurchaseFlowJSBridge_Receipt_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +69,6 @@ UFunction* Z_Construct_UFunction_UPurchaseFlowJSBridge_RequestClose()
 	return ReturnFunction;
 }
 
-class UPurchaseFlowJSBridge
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPurchaseFlowJSBridge_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

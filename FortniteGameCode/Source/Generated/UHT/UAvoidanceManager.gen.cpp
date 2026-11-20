@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAvoidanceManager();  // RVA 0x023E3560 (consensus OuterFunc)
 
+class UAvoidanceManager
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAvoidanceManager();
+	static void execGetAvoidanceVelocityForComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetNewAvoidanceUID(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetObjectCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execRegisterMovementComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2C30 (end 0x023E2C52)
+// Original VA: 0x00000001423E2C30 | File offset: 0x023E2230
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038B1440) | Matching: see analysis/functions-uht-natives.json
+void UAvoidanceManager::StaticRegisterNativesUAvoidanceManager()
+{
+	UClass* Class = UAvoidanceManager::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetAvoidanceVelocityForComponent", &UAvoidanceManager::execGetAvoidanceVelocityForComponent },
+		{ "GetNewAvoidanceUID", &UAvoidanceManager::execGetNewAvoidanceUID },
+		{ "GetObjectCount", &UAvoidanceManager::execGetObjectCount },
+		{ "RegisterMovementComponent", &UAvoidanceManager::execRegisterMovementComponent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAvoidanceManager_GetAvoidanceVelocityForComponent_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UAvoidanceManager_RegisterMovementComponent()
 	return ReturnFunction;
 }
 
-class UAvoidanceManager
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAvoidanceManager_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

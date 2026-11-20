@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UProjectileMovementComponent();  // RVA 0x024C2C10 (consensus OuterFunc)
 
+class UProjectileMovementComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUProjectileMovementComponent();
+	static void execLimitVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetVelocityInLocalSpace(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execStopSimulating(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C24E0 (end 0x024C2502)
+// Original VA: 0x00000001424C24E0 | File offset: 0x024C1AE0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03995140) | Matching: see analysis/functions-uht-natives.json
+void UProjectileMovementComponent::StaticRegisterNativesUProjectileMovementComponent()
+{
+	UClass* Class = UProjectileMovementComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "LimitVelocity", &UProjectileMovementComponent::execLimitVelocity },
+		{ "SetVelocityInLocalSpace", &UProjectileMovementComponent::execSetVelocityInLocalSpace },
+		{ "StopSimulating", &UProjectileMovementComponent::execStopSimulating },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UProjectileMovementComponent_OnProjectileBounceDelegate__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +131,6 @@ UFunction* Z_Construct_UFunction_UProjectileMovementComponent_StopSimulating()
 	return ReturnFunction;
 }
 
-class UProjectileMovementComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UProjectileMovementComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

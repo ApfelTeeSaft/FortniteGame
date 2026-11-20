@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortGameState();  // RVA 0x00FEE630 (consensus OuterFunc)
 
+class AFortGameState
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortGameState_Client_InitiateEndOfDayRecap_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -314,11 +321,6 @@ UFunction* Z_Construct_UFunction_AFortGameState_OnRep_WorldManager()
 	return ReturnFunction;
 }
 
-class AFortGameState
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortGameState_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_ABuildingFlagSpawn();  // RVA 0x00F66590 (consensus OuterFunc)
 
+class ABuildingFlagSpawn
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_ABuildingFlagSpawn_IsSpawnedObjectAwayFromBase_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -83,11 +90,6 @@ UFunction* Z_Construct_UFunction_ABuildingFlagSpawn_SpawnCarriedObject()
 	return ReturnFunction;
 }
 
-class ABuildingFlagSpawn
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_ABuildingFlagSpawn_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

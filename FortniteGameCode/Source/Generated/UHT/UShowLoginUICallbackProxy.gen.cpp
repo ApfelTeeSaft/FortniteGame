@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UShowLoginUICallbackProxy();  // RVA 0x0032EDC0 (consensus OuterFunc)
 
+class UShowLoginUICallbackProxy
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUShowLoginUICallbackProxy();
+	static void execShowExternalLoginUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032E490 (end 0x0032E4B2)
+// Original VA: 0x000000014032E490 | File offset: 0x0032DA90
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02EAF0F0) | Matching: see analysis/functions-uht-natives.json
+void UShowLoginUICallbackProxy::StaticRegisterNativesUShowLoginUICallbackProxy()
+{
+	UClass* Class = UShowLoginUICallbackProxy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ShowExternalLoginUI", &UShowLoginUICallbackProxy::execShowExternalLoginUI },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UShowLoginUICallbackProxy_ShowExternalLoginUI_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UShowLoginUICallbackProxy_ShowExternalLoginUI()
 	return ReturnFunction;
 }
 
-class UShowLoginUICallbackProxy
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UShowLoginUICallbackProxy_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

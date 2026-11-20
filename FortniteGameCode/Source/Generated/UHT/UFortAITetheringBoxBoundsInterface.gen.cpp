@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAITetheringBoxBoundsInterface();  // RVA 0x00F99360 (consensus OuterFunc)
 
+class UFortAITetheringBoxBoundsInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredBoxBoundsCenter_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -106,11 +113,6 @@ UFunction* Z_Construct_UFunction_UFortAITetheringBoxBoundsInterface_GetTetheredB
 	return ReturnFunction;
 }
 
-class UFortAITetheringBoxBoundsInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAITetheringBoxBoundsInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

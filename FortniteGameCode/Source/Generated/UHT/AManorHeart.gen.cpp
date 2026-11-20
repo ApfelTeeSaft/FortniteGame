@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AManorHeart();  // RVA 0x010E9D10 (consensus OuterFunc)
 
+class AManorHeart
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAManorHeart();
+	static void execTravelToNewWorld(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E8D50 (end 0x010E8D72)
+// Original VA: 0x00000001410E8D50 | File offset: 0x010E8350
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03447098) | Matching: see analysis/functions-uht-natives.json
+void AManorHeart::StaticRegisterNativesAManorHeart()
+{
+	UClass* Class = AManorHeart::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "TravelToNewWorld", &AManorHeart::execTravelToNewWorld },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AManorHeart_TravelToNewWorld_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_AManorHeart_TravelToNewWorld()
 	return ReturnFunction;
 }
 
-class AManorHeart
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AManorHeart_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

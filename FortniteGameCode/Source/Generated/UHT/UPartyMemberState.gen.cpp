@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UPartyMemberState();  // RVA 0x005B8F20 (consensus OuterFunc)
 
+class UPartyMemberState
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UPartyMemberState_IsLocalPlayer_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -46,11 +53,6 @@ UFunction* Z_Construct_UFunction_UPartyMemberState_IsPartyLeader()
 	return ReturnFunction;
 }
 
-class UPartyMemberState
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UPartyMemberState_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

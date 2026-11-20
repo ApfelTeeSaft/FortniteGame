@@ -6,6 +6,53 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortCollectionBookSectionPanel();  // RVA 0x0289B220 (consensus OuterFunc)
 
+class UFortCollectionBookSectionPanel
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortCollectionBookSectionPanel();
+	static void execOnBackActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnInputMethodChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnInspectActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnLogAllowedItemsActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnOpenPickerActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSectionChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotButtonCommitted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotButtonSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotItemActionExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotItemComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotItemConfirmationCompleted(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotPickerItemHovered(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlotPickerItemSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execOnSlottedItemOperationComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289AD60 (end 0x0289AD82)
+// Original VA: 0x000000014289AD60 | File offset: 0x0289A360
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03C81480) | Matching: see analysis/functions-uht-natives.json
+void UFortCollectionBookSectionPanel::StaticRegisterNativesUFortCollectionBookSectionPanel()
+{
+	UClass* Class = UFortCollectionBookSectionPanel::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnBackActionExecuted", &UFortCollectionBookSectionPanel::execOnBackActionExecuted },
+		{ "OnInputMethodChanged", &UFortCollectionBookSectionPanel::execOnInputMethodChanged },
+		{ "OnInspectActionExecuted", &UFortCollectionBookSectionPanel::execOnInspectActionExecuted },
+		{ "OnLogAllowedItemsActionExecuted", &UFortCollectionBookSectionPanel::execOnLogAllowedItemsActionExecuted },
+		{ "OnOpenPickerActionExecuted", &UFortCollectionBookSectionPanel::execOnOpenPickerActionExecuted },
+		{ "OnSectionChanged", &UFortCollectionBookSectionPanel::execOnSectionChanged },
+		{ "OnSlotButtonCommitted", &UFortCollectionBookSectionPanel::execOnSlotButtonCommitted },
+		{ "OnSlotButtonSelected", &UFortCollectionBookSectionPanel::execOnSlotButtonSelected },
+		{ "OnSlotItemActionExecuted", &UFortCollectionBookSectionPanel::execOnSlotItemActionExecuted },
+		{ "OnSlotItemComplete", &UFortCollectionBookSectionPanel::execOnSlotItemComplete },
+		{ "OnSlotItemConfirmationCompleted", &UFortCollectionBookSectionPanel::execOnSlotItemConfirmationCompleted },
+		{ "OnSlotPickerItemHovered", &UFortCollectionBookSectionPanel::execOnSlotPickerItemHovered },
+		{ "OnSlotPickerItemSelected", &UFortCollectionBookSectionPanel::execOnSlotPickerItemSelected },
+		{ "OnSlottedItemOperationComplete", &UFortCollectionBookSectionPanel::execOnSlottedItemOperationComplete },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UDelegateFunction_UFortCollectionBookSectionPanel_OnItemAction__DelegateSignature_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -326,11 +373,6 @@ UFunction* Z_Construct_UFunction_UFortCollectionBookSectionPanel_OnSlottedItemOp
 	return ReturnFunction;
 }
 
-class UFortCollectionBookSectionPanel
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortCollectionBookSectionPanel_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

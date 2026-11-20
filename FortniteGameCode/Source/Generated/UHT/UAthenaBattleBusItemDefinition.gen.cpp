@@ -6,6 +6,37 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UAthenaBattleBusItemDefinition();  // RVA 0x00F59810 (consensus OuterFunc)
 
+class UAthenaBattleBusItemDefinition
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUAthenaBattleBusItemDefinition();
+	static void execGetBusPrefabClass(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFlightLoopingMusic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetFlightLoopingSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetIgnitionSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLobbyLoopingMusic(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetLobbyLoopingSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59270 (end 0x00F59292)
+// Original VA: 0x0000000140F59270 | File offset: 0x00F58870
+// Recovery: confirmed (registers FNameNativePtrPair array 0x032604D0) | Matching: see analysis/functions-uht-natives.json
+void UAthenaBattleBusItemDefinition::StaticRegisterNativesUAthenaBattleBusItemDefinition()
+{
+	UClass* Class = UAthenaBattleBusItemDefinition::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetBusPrefabClass", &UAthenaBattleBusItemDefinition::execGetBusPrefabClass },
+		{ "GetFlightLoopingMusic", &UAthenaBattleBusItemDefinition::execGetFlightLoopingMusic },
+		{ "GetFlightLoopingSound", &UAthenaBattleBusItemDefinition::execGetFlightLoopingSound },
+		{ "GetIgnitionSound", &UAthenaBattleBusItemDefinition::execGetIgnitionSound },
+		{ "GetLobbyLoopingMusic", &UAthenaBattleBusItemDefinition::execGetLobbyLoopingMusic },
+		{ "GetLobbyLoopingSound", &UAthenaBattleBusItemDefinition::execGetLobbyLoopingSound },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetBusPrefabClass_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -126,11 +157,6 @@ UFunction* Z_Construct_UFunction_UAthenaBattleBusItemDefinition_GetLobbyLoopingS
 	return ReturnFunction;
 }
 
-class UAthenaBattleBusItemDefinition
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UAthenaBattleBusItemDefinition_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

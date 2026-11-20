@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortAbilityTask_DirectedMovement();  // RVA 0x00F81E30 (consensus OuterFunc)
 
+class UFortAbilityTask_DirectedMovement
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUFortAbilityTask_DirectedMovement();
+	static void execDirectedMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDirectedMovementToActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDirectedMovementToComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execDirectedMovementToLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81750 (end 0x00F81772)
+// Original VA: 0x0000000140F81750 | File offset: 0x00F80D50
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03295C20) | Matching: see analysis/functions-uht-natives.json
+void UFortAbilityTask_DirectedMovement::StaticRegisterNativesUFortAbilityTask_DirectedMovement()
+{
+	UClass* Class = UFortAbilityTask_DirectedMovement::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "DirectedMovement", &UFortAbilityTask_DirectedMovement::execDirectedMovement },
+		{ "DirectedMovementToActor", &UFortAbilityTask_DirectedMovement::execDirectedMovementToActor },
+		{ "DirectedMovementToComponent", &UFortAbilityTask_DirectedMovement::execDirectedMovementToComponent },
+		{ "DirectedMovementToLocation", &UFortAbilityTask_DirectedMovement::execDirectedMovementToLocation },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UFortAbilityTask_DirectedMovement_DirectedMovement_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UFortAbilityTask_DirectedMovement_DirectedMovem
 	return ReturnFunction;
 }
 
-class UFortAbilityTask_DirectedMovement
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortAbilityTask_DirectedMovement_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

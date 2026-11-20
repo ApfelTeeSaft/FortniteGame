@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCurveLinearColor();  // RVA 0x023FE530 (consensus OuterFunc)
 
+class UCurveLinearColor
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCurveLinearColor();
+	static void execGetLinearColorValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDC10 (end 0x023FDC32)
+// Original VA: 0x00000001423FDC10 | File offset: 0x023FD210
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038CD5D8) | Matching: see analysis/functions-uht-natives.json
+void UCurveLinearColor::StaticRegisterNativesUCurveLinearColor()
+{
+	UClass* Class = UCurveLinearColor::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetLinearColorValue", &UCurveLinearColor::execGetLinearColorValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCurveLinearColor_GetLinearColorValue_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UCurveLinearColor_GetLinearColorValue()
 	return ReturnFunction;
 }
 
-class UCurveLinearColor
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCurveLinearColor_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

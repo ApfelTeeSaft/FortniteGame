@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortHealthSet();  // RVA 0x00FFAF20 (consensus OuterFunc)
 
+class UFortHealthSet
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortHealthSet_OnRep_CurrentShield_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -82,11 +89,6 @@ UFunction* Z_Construct_UFunction_UFortHealthSet_OnRep_Shield()
 	return ReturnFunction;
 }
 
-class UFortHealthSet
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortHealthSet_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

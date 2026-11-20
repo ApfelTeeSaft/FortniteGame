@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortLobbyBeaconClientPvP();  // RVA 0x0101E280 (consensus OuterFunc)
 
+class AFortLobbyBeaconClientPvP
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesAFortLobbyBeaconClientPvP();
+	static void execServerReadyUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101DCA0 (end 0x0101DCC2)
+// Original VA: 0x000000014101DCA0 | File offset: 0x0101D2A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x0335E808) | Matching: see analysis/functions-uht-natives.json
+void AFortLobbyBeaconClientPvP::StaticRegisterNativesAFortLobbyBeaconClientPvP()
+{
+	UClass* Class = AFortLobbyBeaconClientPvP::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ServerReadyUp", &AFortLobbyBeaconClientPvP::execServerReadyUp },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_AFortLobbyBeaconClientPvP_ServerReadyUp_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -25,11 +46,6 @@ UFunction* Z_Construct_UFunction_AFortLobbyBeaconClientPvP_ServerReadyUp()
 	return ReturnFunction;
 }
 
-class AFortLobbyBeaconClientPvP
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortLobbyBeaconClientPvP_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

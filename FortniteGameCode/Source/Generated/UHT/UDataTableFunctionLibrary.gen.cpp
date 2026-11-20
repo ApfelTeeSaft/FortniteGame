@@ -6,6 +6,33 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UDataTableFunctionLibrary();  // RVA 0x023FE6C0 (consensus OuterFunc)
 
+class UDataTableFunctionLibrary
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUDataTableFunctionLibrary();
+	static void execEvaluateCurveTableRow(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDataTableColumnAsString(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDataTableRowFromName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execGetDataTableRowNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDCA0 (end 0x023FDCC2)
+// Original VA: 0x00000001423FDCA0 | File offset: 0x023FD2A0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x038CE0E0) | Matching: see analysis/functions-uht-natives.json
+void UDataTableFunctionLibrary::StaticRegisterNativesUDataTableFunctionLibrary()
+{
+	UClass* Class = UDataTableFunctionLibrary::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "EvaluateCurveTableRow", &UDataTableFunctionLibrary::execEvaluateCurveTableRow },
+		{ "GetDataTableColumnAsString", &UDataTableFunctionLibrary::execGetDataTableColumnAsString },
+		{ "GetDataTableRowFromName", &UDataTableFunctionLibrary::execGetDataTableRowFromName },
+		{ "GetDataTableRowNames", &UDataTableFunctionLibrary::execGetDataTableRowNames },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UDataTableFunctionLibrary_EvaluateCurveTableRow_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -86,11 +113,6 @@ UFunction* Z_Construct_UFunction_UDataTableFunctionLibrary_GetDataTableRowNames(
 	return ReturnFunction;
 }
 
-class UDataTableFunctionLibrary
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UDataTableFunctionLibrary_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

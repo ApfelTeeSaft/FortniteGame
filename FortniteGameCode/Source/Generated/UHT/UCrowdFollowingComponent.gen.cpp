@@ -6,6 +6,27 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCrowdFollowingComponent();  // RVA 0x01D290D0 (consensus OuterFunc)
 
+class UCrowdFollowingComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCrowdFollowingComponent();
+	static void execSuspendCrowdSteering(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D28820 (end 0x01D28842)
+// Original VA: 0x0000000141D28820 | File offset: 0x01D27E20
+// Recovery: confirmed (registers FNameNativePtrPair array 0x03701A68) | Matching: see analysis/functions-uht-natives.json
+void UCrowdFollowingComponent::StaticRegisterNativesUCrowdFollowingComponent()
+{
+	UClass* Class = UCrowdFollowingComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SuspendCrowdSteering", &UCrowdFollowingComponent::execSuspendCrowdSteering },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCrowdFollowingComponent_SuspendCrowdSteering_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -26,11 +47,6 @@ UFunction* Z_Construct_UFunction_UCrowdFollowingComponent_SuspendCrowdSteering()
 	return ReturnFunction;
 }
 
-class UCrowdFollowingComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCrowdFollowingComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

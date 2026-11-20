@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UCommonDateTimeTextBlock();  // RVA 0x002C2DA0 (consensus OuterFunc)
 
+class UCommonDateTimeTextBlock
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUCommonDateTimeTextBlock();
+	static void execGetDateTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDateTimeValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetTimespanValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2A10 (end 0x002C2A32)
+// Original VA: 0x00000001402C2A10 | File offset: 0x002C2010
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02E7C798) | Matching: see analysis/functions-uht-natives.json
+void UCommonDateTimeTextBlock::StaticRegisterNativesUCommonDateTimeTextBlock()
+{
+	UClass* Class = UCommonDateTimeTextBlock::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetDateTime", &UCommonDateTimeTextBlock::execGetDateTime },
+		{ "SetDateTimeValue", &UCommonDateTimeTextBlock::execSetDateTimeValue },
+		{ "SetTimespanValue", &UCommonDateTimeTextBlock::execSetTimespanValue },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_UCommonDateTimeTextBlock_GetDateTime_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_UCommonDateTimeTextBlock_SetTimespanValue()
 	return ReturnFunction;
 }
 
-class UCommonDateTimeTextBlock
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UCommonDateTimeTextBlock_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

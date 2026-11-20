@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_AFortAIController();  // RVA 0x00F87C60 (consensus OuterFunc)
 
+class AFortAIController
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_AFortAIController_CreateBuildingActor_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -399,11 +406,6 @@ UFunction* Z_Construct_UFunction_AFortAIController_WakeUp()
 	return ReturnFunction;
 }
 
-class AFortAIController
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_AFortAIController_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

@@ -6,6 +6,31 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_USimpleWheeledVehicleMovementComponent();  // RVA 0x0067BDB0 (consensus OuterFunc)
 
+class USimpleWheeledVehicleMovementComponent
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+	static void StaticRegisterNativesUSimpleWheeledVehicleMovementComponent();
+	static void execSetBrakeTorque(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetDriveTorque(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+	static void execSetSteerAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
+};
+
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067B7B0 (end 0x0067B7D2)
+// Original VA: 0x000000014067B7B0 | File offset: 0x0067ADB0
+// Recovery: confirmed (registers FNameNativePtrPair array 0x02F9CBF0) | Matching: see analysis/functions-uht-natives.json
+void USimpleWheeledVehicleMovementComponent::StaticRegisterNativesUSimpleWheeledVehicleMovementComponent()
+{
+	UClass* Class = USimpleWheeledVehicleMovementComponent::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "SetBrakeTorque", &USimpleWheeledVehicleMovementComponent::execSetBrakeTorque },
+		{ "SetDriveTorque", &USimpleWheeledVehicleMovementComponent::execSetDriveTorque },
+		{ "SetSteerAngle", &USimpleWheeledVehicleMovementComponent::execSetSteerAngle },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, sizeof(Funcs) / sizeof(Funcs[0]));
+}
+
 struct Z_Construct_UFunction_USimpleWheeledVehicleMovementComponent_SetBrakeTorque_Statics
 {
 	static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];  // definition pending property-parameter recovery
@@ -66,11 +91,6 @@ UFunction* Z_Construct_UFunction_USimpleWheeledVehicleMovementComponent_SetSteer
 	return ReturnFunction;
 }
 
-class USimpleWheeledVehicleMovementComponent
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_USimpleWheeledVehicleMovementComponent_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending

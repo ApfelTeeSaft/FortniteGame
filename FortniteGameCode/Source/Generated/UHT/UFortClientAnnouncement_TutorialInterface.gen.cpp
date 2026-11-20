@@ -6,6 +6,13 @@
 #include "FortniteGameCode/UE4CodeGenRecovered.h"
 UClass* Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface();  // RVA 0x00FC02B0 (consensus OuterFunc)
 
+class UFortClientAnnouncement_TutorialInterface
+{
+	static UClass* GetPrivateStaticClass();
+public:
+	inline static UClass* StaticClass() { return GetPrivateStaticClass(); }
+};
+
 struct Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_HideTutorialWidget_Statics
 {
 	static const UE4CodeGen_Private::FFunctionParams FuncParams;
@@ -245,11 +252,6 @@ UFunction* Z_Construct_UFunction_UFortClientAnnouncement_TutorialInterface_WaitF
 	return ReturnFunction;
 }
 
-class UFortClientAnnouncement_TutorialInterface
-{
-public:
-	static UClass* StaticClass();
-};
 struct Z_Construct_UClass_UFortClientAnnouncement_TutorialInterface_Statics
 {
 	static UObject* (*const DependentSingletons[])();  // pending
