@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "note": "Object-file symbols whose reference RVA is established independently of the bytes being compared. compare.py resolves relocations only through this table; anything absent stays an unresolved relocation and blocks an exact verdict.",
+  "symbols": {}
+}

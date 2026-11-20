@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "reference": {
+    "path": "FortniteGame/2.5/2.5/FortniteGame/Binaries/Win64/FortniteClient-Win64-Shipping.exe",
+    "sha256": "9731a6b5e1fab894c089849713c371182e357dcbefa7d8d4e71dc19eeb449102"
+  },
+  "denominator": {
+    "definition": "Primary (non-chained) .pdata RUNTIME_FUNCTION entries whose start lies in the main .text section. Every unit the image's own exception data describes counts, including compiler-generated funclets and library code, because encrypted bodies prevent finer classification. Leaf functions without .pdata entries are not counted.",
+    "count": 157719
+  },
+  "functions": [
+    {
+      "start_rva": "0x02DAE750",
+      "end_rva": "0x02DAE77A",
+      "name": "SafeTestD3D11CreateDevice SEH filter funclet",
+      "category": "seh-filter-funclet",
+      "module": "D3D11RHI",
+      "source": "FortniteGameCode/Source/Runtime/Windows/D3D11RHI/Private/Windows/WindowsD3D11Device.cpp",
+      "object": "Source/Runtime/Windows/D3D11RHI/Module.D3D11RHI.obj",
+      "symbol": "?filt$0@?0??SafeTestD3D11CreateDevice@@YA_NPEAUIDXGIAdapter@@W4D3D_FEATURE_LEVEL@@PEAW42@@Z@4HA",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Sole C-scope filter of the parent at 0x016138F0. Inlines IsDelayLoadException (codes 0xC06D007E/0xC06D007F). Its frame slots +0x68/+0x50 follow from the parent's frame layout.",
+      "reference_state": "plaintext",
+      "match": "exact",
+      "original_sha256": "6f0d5cb9af142cc472884c129246917dbb2d7287e3cbe3b18e8eb30bdf70932b",
+      "candidate_sha256": "6f0d5cb9af142cc472884c129246917dbb2d7287e3cbe3b18e8eb30bdf70932b",
+      "byte_diff": {
+        "reference_size": 42,
+        "candidate_size": 42,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "structure": {
+        "pdata_size_matches": true,
+        "unwind_codes_identical": true
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x02DAE780",
+      "end_rva": "0x02DAE7AA",
+      "name": "SafeCreateDXGIFactory SEH filter funclet (ICF-folded)",
+      "category": "seh-filter-funclet",
+      "module": "D3D11RHI",
+      "source": "FortniteGameCode/Source/Runtime/Windows/D3D11RHI/Private/Windows/WindowsD3D11Device.cpp",
+      "object": "Source/Runtime/Windows/D3D11RHI/Module.D3D11RHI.obj",
+      "symbol": "?filt$0@?0??SafeCreateDXGIFactory@@YAXPEAPEAUIDXGIFactory1@@@Z@4HA",
+      "folded_sources": [
+        {
+          "object": "Source/Runtime/D3D12RHI/Private/Windows/WindowsD3D12Device.obj",
+          "symbol": "?filt$0@?0??SafeCreateDXGIFactory@@YAXPEAPEAUIDXGIFactory4@@@Z@4HA"
+        }
+      ],
+      "name_confidence": "high-confidence inferred",
+      "evidence": "C-scope filter shared by the parents at 0x016138D0 and 0x0165FEB0 (/OPT:ICF folded two identical funclets). Counted once.",
+      "reference_state": "plaintext",
+      "match": "exact",
+      "original_sha256": "de533b234b4d5ebf1d969d2008ddd1770ca08471b7c9b0a11403f53cdbc76152",
+      "candidate_sha256": "de533b234b4d5ebf1d969d2008ddd1770ca08471b7c9b0a11403f53cdbc76152",
+      "byte_diff": {
+        "reference_size": 42,
+        "candidate_size": 42,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "structure": {
+        "pdata_size_matches": true,
+        "unwind_codes_identical": true
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x016138D0",
+      "end_rva": "0x016138EA",
+      "name": "SafeCreateDXGIFactory (D3D11RHI)",
+      "category": "source-function",
+      "module": "D3D11RHI",
+      "source": "FortniteGameCode/Source/Runtime/Windows/D3D11RHI/Private/Windows/WindowsD3D11Device.cpp",
+      "object": "Source/Runtime/Windows/D3D11RHI/Module.D3D11RHI.obj",
+      "symbol": "?SafeCreateDXGIFactory@@YAXPEAPEAUIDXGIFactory1@@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Parent of filter 0x02DAE780. It sits next to 0x016138F0, which has the SafeTestD3D11CreateDevice shape. The 17-byte guarded range excludes the public 4.20.0 -quad_buffer_stereo code.",
+      "reference_state": "encrypted",
+      "match": "unknown",
+      "original_sha256": "82e721c09deda992b1d15de1d4715236e844b87c54baf8ff481099435390ca5c",
+      "candidate_sha256": "655beb00be48fbd3d5e1c2b61182c26d1264441ee791e0eae8541d3cb0852b4c",
+      "byte_diff": {
+        "reference_size": 26,
+        "candidate_size": 26,
+        "note": "reference body is encrypted on disk; bytes not comparable"
+      },
+      "structure": {
+        "pdata_size_matches": true,
+        "unwind_codes_identical": true,
+        "handler": {
+          "candidate_symbol": "__C_specific_handler",
+          "reference_rva": "0x02D9ADDA",
+          "status": "unresolved-relocation (reported, not compared)"
+        },
+        "scope_table": {
+          "count_candidate": 1,
+          "count_reference": 1,
+          "identical": true,
+          "entries": [
+            {
+              "begin": {
+                "candidate_offset": "0x00000004",
+                "reference_offset": "0x00000004",
+                "equal": true
+              },
+              "end": {
+                "candidate_offset": "0x00000015",
+                "reference_offset": "0x00000015",
+                "equal": true
+              },
+              "handler": {
+                "candidate_symbol": "?filt$0@?0??SafeCreateDXGIFactory@@YAXPEAPEAUIDXGIFactory1@@@Z@4HA",
+                "reference_rva": "0x02DAE780",
+                "resolves_to_manifest_rva": "0x02DAE780",
+                "equal": true
+              },
+              "target": {
+                "candidate_offset": "0x00000015",
+                "reference_offset": "0x00000015",
+                "equal": true
+              }
+            }
+          ]
+        }
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x016138F0",
+      "end_rva": "0x01613A2E",
+      "name": "SafeTestD3D11CreateDevice",
+      "category": "source-function",
+      "module": "D3D11RHI",
+      "source": "FortniteGameCode/Source/Runtime/Windows/D3D11RHI/Private/Windows/WindowsD3D11Device.cpp",
+      "object": "Source/Runtime/Windows/D3D11RHI/Module.D3D11RHI.obj",
+      "symbol": "?SafeTestD3D11CreateDevice@@YA_NPEAUIDXGIAdapter@@W4D3D_FEATURE_LEVEL@@PEAW42@@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Size, all unwind codes, handler kind and scope offsets reproduce only with the inlined debug-device helper and a two-level request list. Public 4.20.0 has three levels, which adds a /GS cookie under the global /GS switch.",
+      "reference_state": "encrypted",
+      "match": "unknown",
+      "original_sha256": "c636bbac9a3ea01fe0060b523f5977a83eee2f6646a75c29db20dc4e61d9fac4",
+      "candidate_sha256": "d13b5f81e5700a4cf7556a4d500bbd42428880bcda2d5dd21e61c3b952cf2539",
+      "byte_diff": {
+        "reference_size": 318,
+        "candidate_size": 318,
+        "note": "reference body is encrypted on disk; bytes not comparable"
+      },
+      "structure": {
+        "pdata_size_matches": true,
+        "unwind_codes_identical": true,
+        "handler": {
+          "candidate_symbol": "__C_specific_handler",
+          "reference_rva": "0x02D9ADDA",
+          "status": "unresolved-relocation (reported, not compared)"
+        },
+        "scope_table": {
+          "count_candidate": 1,
+          "count_reference": 1,
+          "identical": true,
+          "entries": [
+            {
+              "begin": {
+                "candidate_offset": "0x000000BD",
+                "reference_offset": "0x000000BD",
+                "equal": true
+              },
+              "end": {
+                "candidate_offset": "0x00000126",
+                "reference_offset": "0x00000126",
+                "equal": true
+              },
+              "handler": {
+                "candidate_symbol": "?filt$0@?0??SafeTestD3D11CreateDevice@@YA_NPEAUIDXGIAdapter@@W4D3D_FEATURE_LEVEL@@PEAW42@@Z@4HA",
+                "reference_rva": "0x02DAE750",
+                "resolves_to_manifest_rva": "0x02DAE750",
+                "equal": true
+              },
+              "target": {
+                "candidate_offset": "0x00000126",
+                "reference_offset": "0x00000126",
+                "equal": true
+              }
+            }
+          ]
+        }
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": "0x0165FEB0",
+      "end_rva": "0x0165FECA",
+      "name": "SafeCreateDXGIFactory (D3D12RHI candidate)",
+      "category": "source-function",
+      "module": "D3D12RHI",
+      "source": "FortniteGameCode/Source/Runtime/D3D12RHI/Private/Windows/WindowsD3D12Device.cpp",
+      "object": "Source/Runtime/D3D12RHI/Private/Windows/WindowsD3D12Device.obj",
+      "symbol": "?SafeCreateDXGIFactory@@YAXPEAPEAUIDXGIFactory4@@@Z",
+      "name_confidence": "low-confidence inferred",
+      "evidence": "Unwind and scope layout are identical to 0x016138D0 and its filter folds into 0x02DAE780. Nothing yet ties it to D3D12RHI specifically.",
+      "reference_state": "encrypted",
+      "match": "unknown",
+      "original_sha256": "4e93e8a975332cf3408c9278d47f20a86144d4269ca6605315191223ace8e63c",
+      "candidate_sha256": "655beb00be48fbd3d5e1c2b61182c26d1264441ee791e0eae8541d3cb0852b4c",
+      "byte_diff": {
+        "reference_size": 26,
+        "candidate_size": 26,
+        "note": "reference body is encrypted on disk; bytes not comparable"
+      },
+      "structure": {
+        "pdata_size_matches": true,
+        "unwind_codes_identical": true,
+        "handler": {
+          "candidate_symbol": "__C_specific_handler",
+          "reference_rva": "0x02D9ADDA",
+          "status": "unresolved-relocation (reported, not compared)"
+        },
+        "scope_table": {
+          "count_candidate": 1,
+          "count_reference": 1,
+          "identical": true,
+          "entries": [
+            {
+              "begin": {
+                "candidate_offset": "0x00000004",
+                "reference_offset": "0x00000004",
+                "equal": true
+              },
+              "end": {
+                "candidate_offset": "0x00000015",
+                "reference_offset": "0x00000015",
+                "equal": true
+              },
+              "handler": {
+                "candidate_symbol": "?filt$0@?0??SafeCreateDXGIFactory@@YAXPEAPEAUIDXGIFactory4@@@Z@4HA",
+                "reference_rva": "0x02DAE780",
+                "resolves_to_manifest_rva": "0x02DAE780",
+                "equal": true
+              },
+              "target": {
+                "candidate_offset": "0x00000015",
+                "reference_offset": "0x00000015",
+                "equal": true
+              }
+            }
+          ]
+        }
+      },
+      "compiler": "prodid 261 build 24215"
+    },
+    {
+      "start_rva": null,
+      "end_rva": null,
+      "name": "D3D11RHI_ShouldCreateWithD3DDebug",
+      "category": "source-function",
+      "module": "D3D11RHI",
+      "source": "FortniteGameCode/Source/Runtime/Windows/D3D11RHI/Private/D3D11Device.cpp",
+      "object": "Source/Runtime/Windows/D3D11RHI/Module.D3D11RHI.obj",
+      "symbol": "?D3D11RHI_ShouldCreateWithD3DDebug@@YA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Needed inline for 0x016138F0 to reproduce its structure. The standalone copy is unlocated: 636 reference functions share its 0x58-byte size and generic unwind record.",
+      "reference_state": "not-located",
+      "match": "unknown",
+      "candidate_sha256": "f9e2634184d7668ce4a2498db66da969599290535bde4d362022f606f964d621",
+      "compiler": "prodid 261 build 24215"
+    }
+  ]
+}

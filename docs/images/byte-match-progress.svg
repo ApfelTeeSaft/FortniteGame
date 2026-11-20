@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="232" viewBox="0 0 760 232" role="img" aria-labelledby="t d">
+<title id="t">Fortnite 2.5 — Exact Function Matches</title>
+<desc id="d">2 of 157,719 identified functions match the reference bytes exactly (0.0013%).</desc>
+<rect x="0.5" y="0.5" width="759" height="231" rx="10" fill="#0f141a" stroke="#2a323c"/>
+<text x="32" y="40" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="19" font-weight="600" fill="#e6edf3">Fortnite 2.5 — Exact Function Matches</text>
+<text x="32" y="82" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#e6edf3">2<tspan font-size="18" font-weight="400" fill="#8b949e"> / 157,719 functions</tspan></text>
+<text x="728" y="82" text-anchor="end" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#3fb950">0.0013%</text>
+<rect x="32" y="104" width="696" height="14" rx="7" fill="#21262d"/>
+<rect x="32" y="104" width="0.009" height="14" rx="0.004" fill="#3fb950"/>
+<text x="32" y="146" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9">exact 2 · relocation-equivalent 0 · partial 0 · unmatched 0 · body encrypted, structure matched 3 · not located 1</text>
+<text x="32" y="166" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#c9d1d9">exact by category: seh filter funclet 2 (84 bytes)</text>
+<text x="32" y="192" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b949e">Denominator: primary .pdata functions in the main .text. Their bodies are encrypted on disk, which blocks</text>
+<text x="32" y="207" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="11.5" fill="#8b949e">byte matching for nearly all of them. Exact = raw bytes identical over the original range, no relocation masking.</text>
+<text x="728" y="40" text-anchor="end" font-family="Segoe UI, -apple-system, Helvetica, Arial, sans-serif" font-size="11" fill="#6e7681">manifest 14fb73677197 · ref 9731a6b5e1fa</text>
+</svg>
