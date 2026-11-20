@@ -76,11 +76,13 @@ def run(*args: str) -> None:
 def test_leave_one_out() -> None:
     from compare import Resolver
     r = Resolver.__new__(Resolver)
-    r.observations = {"?F@@YAXXZ": {1: {0x1000}}, "?G@@YAXXZ": {1: {0x2000}, 2: {0x3000}}}
+    # symbol key -> {observed RVA: {observing manifest entries}}
+    r.observations = {"?F@@YAXXZ": {0x1000: {1}}, "?G@@YAXXZ": {0x2000: {1}, 0x3000: {2}}}
     r.entry_names = {1: "A", 2: "B"}
-    assert r._observed("?F@@YAXXZ", exclude=1) == (set(), [])          # never self-corroborated
-    assert r._observed("?F@@YAXXZ", exclude=2) == ({0x1000}, ["A"])
+    assert r._observed("?F@@YAXXZ", exclude=1)[0] == set()                # never self-corroborated
+    assert r._observed("?F@@YAXXZ", exclude=2)[0] == {0x1000}
     assert r._observed("?G@@YAXXZ", exclude=None)[0] == {0x2000, 0x3000}  # conflict is visible
+    assert r._observed("?G@@YAXXZ", exclude=2)[0] == {0x2000}             # leave-one-out drops B
     print("leave-one-out: ok")
 
 
@@ -91,7 +93,7 @@ def main() -> int:
     if not DEFAULT_REFERENCE.exists():
         print("reference EXE not present: skipping manifest verification")
         return 0
-    run(str(HERE / "compare.py"), "--build", "--check")
+    run(str(HERE / "compare.py"), "--build", "--check", "--quiet")
     run(str(REPO_ROOT / "tools" / "progress" / "generate.py"), "--verify")
     print("selftest: ok")
     return 0

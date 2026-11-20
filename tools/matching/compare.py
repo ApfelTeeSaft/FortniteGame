@@ -24,6 +24,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import hashlib
 import json
 import struct
@@ -31,6 +32,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import manifest_io  # noqa: E402
 import symbols_auto  # noqa: E402
 from coff import REL_FIELD_SIZE, CoffObject  # noqa: E402
 from dump import DecryptedImage  # noqa: E402
@@ -38,7 +40,11 @@ from pe import REPO_ROOT, PEImage  # noqa: E402
 from unwind import UNW_FLAG_CHAININFO, parse_unwind, verify_prologue  # noqa: E402
 
 MANIFEST = REPO_ROOT / "analysis" / "functions.json"
+# Bulk manifests produced by generators (e.g. tools/codegen/uht_creators.py) share the denominator.
+EXTRA_MANIFESTS = "functions-*.json"
 SYMBOLS = REPO_ROOT / "analysis" / "symbols.json"
+# Generated symbol evidence: {symbol: {rva, evidence}} files written by analysis/codegen tools.
+GENERATED_SYMBOLS = ("uht-creator-symbols.json",)
 SOLUTION = REPO_ROOT / "FortniteGameCode" / "FortniteGameCode.sln"
 OBJ_ROOT = REPO_ROOT / "FortniteGameCode" / "Build" / "ClientShipping" / "obj"
 DECRYPTED_REPORT = REPO_ROOT / "analysis" / "decrypted-reference.json"
@@ -76,9 +82,8 @@ def load_decrypted(img: PEImage) -> DecryptedImage | None:
 class Resolver:
     """Symbol -> reference RVA, each with the evidence that established it."""
 
-    def __init__(self, img: PEImage, dimg, manual: dict[str, int]):
-        self.known: dict[str, list[tuple[int, str]]] = {
-            k: [(v, "analysis/symbols.json")] for k, v in manual.items()}
+    def __init__(self, img: PEImage, dimg, manual: dict[str, tuple[int, str]]):
+        self.known: dict[str, list[tuple[int, str]]] = {k: [v] for k, v in manual.items()}
         for k, lst in symbols_auto.build(img, dimg).items():
             self.known.setdefault(k, [(x["rva"], x["evidence"]) for x in lst])
         self.functions: dict[str, tuple[int, str]] = {}
@@ -88,8 +93,7 @@ class Resolver:
         lo = symbols_auto._iat_rdata_extent(img)[1]
         exp_rva, exp_size = img.directory(0)
         self.hay_rva, self.hay = lo, img.read(lo, exp_rva + exp_size - lo)
-
-        # Leave-one-out observations: symbol key -> {manifest entry index: {observed RVAs}}.
+        # Leave-one-out observations: symbol key -> {observed RVA: {manifest entry indices}}.
         self.observations: dict = {}
         self.entry_names: dict[int, str] = {}
 
@@ -99,13 +103,17 @@ class Resolver:
         s = obj.symbol(symbol)
         return (objpath, symbol) if s is not None and s.storage == 3 else symbol
 
-    def _observed(self, key, exclude: int | None) -> tuple[set[int], list[str]]:
-        vals, who = set(), []
-        for idx, targets in self.observations.get(key, {}).items():
-            if idx != exclude:
-                vals |= targets
-                who.append(self.entry_names.get(idx, str(idx)))
-        return vals, sorted(who)
+    def _observed(self, key, exclude: int | None) -> tuple[set[int], str]:
+        vals, who, n = set(), [], 0
+        for val, ents in self.observations.get(key, {}).items():
+            others = ents - {exclude} if exclude in ents else ents
+            if others:
+                vals.add(val)
+                n += len(others)
+                if len(who) < 2:
+                    who.extend(sorted(self.entry_names.get(i, str(i)) for i in list(others)[:2]))
+        desc = ", ".join(who[:2]) + (f" and {n - len(who[:2])} more" if n > len(who[:2]) else "")
+        return vals, desc
 
     def resolve(self, obj: CoffObject, objpath: str, symbol: str,
                 exclude: int | None = None) -> list[tuple[int, str]]:
@@ -128,28 +136,37 @@ class Resolver:
         # Same symbol observed at one address by other relocation-equivalent-or-better functions.
         vals, who = self._observed(self.key(obj, objpath, symbol), exclude)
         if len(vals) == 1:
-            return [(next(iter(vals)), "corroborated: same symbol at this address in " + ", ".join(who))]
+            return [(next(iter(vals)), "corroborated: same symbol at this address in " + who)]
         if len(vals) > 1:
             return []
-        # Section-relative: neighbours in the same non-COMDAT data section observed elsewhere.
+        # Section-relative: neighbours in the object's data layout (same section name, sections
+        # in object order), observed by other functions. The prediction supported by the most
+        # neighbours is used if it strictly outnumbers every alternative; gaps in the layout
+        # model (statics not reconstructed) then cost only the neighbours across the gap. The
+        # byte comparison decides, and a failed prediction is reported as unresolved.
         sym = obj.symbol(symbol)
         if sym is None or sym.section <= 0:
             return []
-        sec = obj.sections[sym.section - 1]
-        if sec.chars & 0x20 or sec.chars & 0x1000:  # code, or COMDAT (placed independently)
+        group = obj.data_layout().get(obj.sections[sym.section - 1].name)
+        if not group:
+            return []
+        mine = next((off for name, off, _ in group if name == symbol), None)
+        if mine is None:
             return []
         preds: dict[int, list[str]] = {}
-        for other in obj.symbols:
-            if (other is None or other.section != sym.section or other.name == symbol
-                    or other.storage not in (2, 3)):
+        for name, off, _ in group:
+            if name == symbol:
                 continue
-            ovals, owho = self._observed(self.key(obj, objpath, other.name), exclude)
+            ovals, owho = self._observed(self.key(obj, objpath, name), exclude)
             if len(ovals) == 1:
-                pred = next(iter(ovals)) + sym.value - other.value
-                preds.setdefault(pred, []).append(f"{other.name} (seen in {', '.join(owho)})")
-        if len(preds) == 1:
-            pred, basis = next(iter(preds.items()))
-            return [(pred, "section-relative to " + "; ".join(basis[:3]))]
+                preds.setdefault(next(iter(ovals)) + mine - off, []).append(f"{name} (seen in {owho})")
+        ranked = sorted(preds.items(), key=lambda kv: -len(kv[1]))
+        if ranked and (len(ranked) == 1 or len(ranked[0][1]) > len(ranked[1][1])):
+            pred, basis = ranked[0]
+            extra = f" and {len(basis) - 1} more neighbours" if len(basis) > 1 else ""
+            dissent = sum(len(b) for _, b in ranked[1:])
+            note = f" ({dissent} dissenting)" if dissent else ""
+            return [(pred, "section-relative to " + basis[0] + extra + note)]
         return []
 
     def observe(self, idx: int, obj: CoffObject, objpath: str, relocs, ref: bytes, start: int,
@@ -171,7 +188,7 @@ class Resolver:
                 target = val + start + r.offset + 4 + extra - addend
             else:
                 continue
-            self.observations.setdefault(self.key(obj, objpath, r.symbol), {}).setdefault(idx, set()).add(target)
+            self.observations.setdefault(self.key(obj, objpath, r.symbol), {}).setdefault(target, set()).add(idx)
 
 
 def reference_state(img: PEImage, rf, ref: bytes, cand: bytes) -> str:
@@ -235,6 +252,11 @@ def resolve_fields(cand: bytes, relocs, start: int, image_base: int, resolver: R
         chosen = options[0]
         if ref is not None:
             chosen = next((o for o in options if o[0] == ref[r.offset:r.offset + size]), chosen)
+            if chosen[0] != ref[r.offset:r.offset + size] and chosen[2].startswith("section-relative"):
+                # A layout prediction that does not reproduce the reference is missing evidence,
+                # not a code difference: report the field as unresolved.
+                unresolved.append((r.offset, size, r.symbol, r.kind))
+                continue
         buf[r.offset:r.offset + size] = chosen[0]
         resolved.append({"offset": hx(r.offset), "symbol": r.symbol, "rva": hx(chosen[1]), "evidence": chosen[2]})
     return bytes(buf), unresolved, resolved
@@ -339,9 +361,36 @@ def compare_structure(img: PEImage, rf, obj: CoffObject, symbol: str, start: int
     return out
 
 
+_OBJ_CACHE: dict[str, CoffObject] = {}
+
+
+def load_obj(objpath: str) -> CoffObject:
+    obj = _OBJ_CACHE.get(objpath)
+    if obj is None:
+        obj = _OBJ_CACHE[objpath] = CoffObject(OBJ_ROOT / objpath)
+    return obj
+
+
+def compact_diff(diff: dict) -> dict:
+    kinds = Counter(r["evidence"].split(":")[0].split(" (")[0].split(" to ")[0]
+                    for r in diff.get("resolved_relocations", []))
+    if diff["differing_bytes"] == 0 and not diff.get("unresolved_relocations") \
+            and diff["reference_size"] == diff["candidate_size"]:
+        return {"differing_bytes": 0, "resolved_by": dict(sorted(kinds.items()))}
+    return {
+        "reference_size": diff["reference_size"], "candidate_size": diff["candidate_size"],
+        "differing_bytes": diff["differing_bytes"], "first_difference": diff.get("first_difference"),
+        "resolved_relocations": len(diff.get("resolved_relocations", [])),
+        "resolved_by": dict(sorted(kinds.items())),
+        "unresolved_relocations": [{"offset": u["offset"], "symbol": u["symbol"]}
+                                   for u in diff.get("unresolved_relocations", [])],
+    }
+
+
 def evaluate(idx: int, entry: dict, img: PEImage, dimg, rfmap: dict, resolver: Resolver,
              funclet_rvas: dict) -> dict:
     res: dict = {}
+    compact = bool(entry.get("compact"))
     if not entry.get("object") or not entry.get("symbol"):
         res["match"] = "unimplemented"
         return res
@@ -349,7 +398,7 @@ def evaluate(idx: int, entry: dict, img: PEImage, dimg, rfmap: dict, resolver: R
         (s["object"], s["symbol"]) for s in entry.get("folded_sources", [])]
     start = int(entry["start_rva"], 16) if entry.get("start_rva") else None
     if start is None:
-        obj = CoffObject(OBJ_ROOT / entry["object"])
+        obj = load_obj(entry["object"])
         res["compiler"] = comp_id(obj)
         cand, _ = obj.function_bytes(entry["symbol"])
         res["candidate_sha256"] = hashlib.sha256(cand).hexdigest()
@@ -358,16 +407,17 @@ def evaluate(idx: int, entry: dict, img: PEImage, dimg, rfmap: dict, resolver: R
         return res
     end = int(entry["end_rva"], 16)
     ref_file = img.read(start, end - start)
-    res["original_sha256"] = hashlib.sha256(ref_file).hexdigest()
+    if not compact:
+        res["original_sha256"] = hashlib.sha256(ref_file).hexdigest()
     rf = rfmap.get(start)
     worst = None
     order = ["exact", "relocation-equivalent", "partial", "unmatched", "unknown"]
     file_state = reference_state(img, rf, ref_file, b"")
     ref_dec = dimg.read(start, end - start) if dimg is not None and file_state != "plaintext" else None
-    if ref_dec is not None:
+    if ref_dec is not None and not compact:
         res["decrypted_sha256"] = hashlib.sha256(ref_dec).hexdigest()
     for objpath, symbol in sources:
-        obj = CoffObject(OBJ_ROOT / objpath)
+        obj = load_obj(objpath)
         cand_raw, relocs = obj.function_bytes(symbol)
         ref = ref_dec if ref_dec is not None else ref_file
         cand, unresolved, resolved = resolve_fields(cand_raw, relocs, start, img.image_base,
@@ -379,28 +429,50 @@ def evaluate(idx: int, entry: dict, img: PEImage, dimg, rfmap: dict, resolver: R
         diff = byte_diff(ref, cand, unresolved, resolved)
         status = classify(state, diff)
         if (objpath, symbol) == sources[0]:
-            res["compiler"] = comp_id(obj)
-            res["candidate_sha256"] = hashlib.sha256(cand).hexdigest()
+            if not compact:
+                res["compiler"] = comp_id(obj)
+            digest = hashlib.sha256(cand).hexdigest()
+            res["candidate_sha256"] = digest[:16] if compact else digest
             res["reference_state"] = state
-            res["byte_diff"] = diff if state not in ("encrypted", "unknown") else {
-                "reference_size": len(ref), "candidate_size": len(cand),
-                "note": "reference body is encrypted on disk and no decrypted image is available"}
+            if state in ("encrypted", "unknown"):
+                res["byte_diff"] = {"reference_size": len(ref), "candidate_size": len(cand),
+                                    "note": "reference body is encrypted on disk and no decrypted image is available"}
+            else:
+                res["byte_diff"] = compact_diff(diff) if compact else diff
             if status in ("exact", "relocation-equivalent"):
                 res["_observe"] = (obj, objpath, relocs, cand_raw, ref, start)
-            st = compare_structure(img, rf, obj, symbol, start, funclet_rvas)
-            if st is not None:
-                st["pdata_size_matches"] = len(cand) == end - start
-                res["structure"] = st
+            if not compact:
+                st = compare_structure(img, rf, obj, symbol, start, funclet_rvas)
+                if st is not None:
+                    st["pdata_size_matches"] = len(cand) == end - start
+                    res["structure"] = st
         if worst is None or order.index(status) > order.index(worst):
             worst = status
     res["match"] = worst
     return res
 
 
+def load_manual_symbols() -> dict[str, tuple[int, str]]:
+    manual: dict[str, tuple[int, str]] = {}
+    if SYMBOLS.exists():
+        for k, v in json.loads(SYMBOLS.read_text(encoding="utf-8")).get("symbols", {}).items():
+            manual[k] = (int(v["rva"], 16), v.get("evidence", "analysis/symbols.json"))
+    for name in GENERATED_SYMBOLS:
+        path = REPO_ROOT / "analysis" / name
+        if path.exists():
+            doc = json.loads(path.read_text(encoding="utf-8"))
+            codes = doc.get("evidence_codes", {})
+            for k, v in doc.get("symbols", {}).items():
+                rva, ev = (v["rva"], v["evidence"]) if isinstance(v, dict) else (v[0], codes.get(v[1], v[1]))
+                manual.setdefault(k, (int(rva, 16), f"{name}: {ev}"))
+    return manual
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--build", action="store_true")
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--quiet", action="store_true", help="print a summary instead of every entry")
     args = ap.parse_args()
     if args.build:
         import msvc
@@ -409,14 +481,19 @@ def main() -> int:
         if r.returncode:
             return r.returncode
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    symbols = json.loads(SYMBOLS.read_text(encoding="utf-8")) if SYMBOLS.exists() else {"symbols": {}}
-    manual = {k: int(v["rva"], 16) for k, v in symbols.get("symbols", {}).items()}
+    extra = [(p, json.loads(p.read_text(encoding="utf-8")))
+             for p in sorted((REPO_ROOT / "analysis").glob(EXTRA_MANIFESTS))]
+    entries = list(manifest["functions"])
+    owner = [MANIFEST] * len(entries)
+    for p, m in extra:
+        entries += manifest_io.expand(m)
+        owner += [p] * len(m["functions"])
     img = PEImage()
     if img.sha256() != manifest["reference"]["sha256"]:
         print("reference SHA-256 differs from manifest", file=sys.stderr)
         return 2
     dimg = load_decrypted(img)
-    resolver = Resolver(img, dimg, manual)
+    resolver = Resolver(img, dimg, load_manual_symbols())
     rfs = img.runtime_functions()
     rfmap = {rf.begin: rf for rf in rfs}
     text = img.sections[0]
@@ -424,18 +501,18 @@ def main() -> int:
                    and not parse_unwind(img, rf.unwind).flags & UNW_FLAG_CHAININFO}
     primary = len(primary_set)
     funclet_rvas = {}
-    for e in manifest["functions"]:
+    for e in entries:
         if e.get("start_rva") and e.get("symbol"):
             funclet_rvas[e["symbol"]] = int(e["start_rva"], 16)
             for s in e.get("folded_sources", []):
                 funclet_rvas[s["symbol"]] = int(e["start_rva"], 16)
 
     # Entries verified against the decrypted image can only be re-checked where it exists.
-    skip = {i for i, e in enumerate(manifest["functions"])
+    skip = {i for i, e in enumerate(entries)
             if dimg is None and e.get("reference_state") in DECRYPTED_STATES}
     if dimg is None:
         for i in skip:  # their recorded exact matches still resolve callers
-            e = manifest["functions"][i]
+            e = entries[i]
             if e.get("match") == "exact":
                 resolver.functions[e["symbol"]] = (int(e["start_rva"], 16),
                                                    f"recorded exact match of manifest entry {e['start_rva']}")
@@ -443,16 +520,21 @@ def main() -> int:
     # Evaluate to a fixpoint. An exact function's symbol may resolve its callers' relocations,
     # and relocation-equivalent-or-better functions contribute observations that resolve
     # *other* entries' fields (leave-one-out). Observations are gathered between passes only.
-    for i, e in enumerate(manifest["functions"]):
+    for i, e in enumerate(entries):
         resolver.entry_names[i] = e["name"]
+
+    def snapshot() -> int:
+        return hash(frozenset((repr(k), v, frozenset(ents))
+                              for k, d in resolver.observations.items() for v, ents in d.items()))
+
+    results: dict = {}
     for _ in range(32):
         results = {i: evaluate(i, e, img, dimg, rfmap, resolver, funclet_rvas)
-                   for i, e in enumerate(manifest["functions"]) if i not in skip}
+                   for i, e in enumerate(entries) if i not in skip}
         for i, res in results.items():
-            e = manifest["functions"][i]
+            e = entries[i]
             res["in_denominator"] = bool(e.get("start_rva")) and int(e["start_rva"], 16) in primary_set
-        before = repr(sorted((repr(k), sorted((i, sorted(v)) for i, v in d.items()))
-                             for k, d in resolver.observations.items()))
+        before = snapshot()
         resolver.observations = {}
         for i, res in results.items():
             ob = res.pop("_observe", None)
@@ -460,11 +542,9 @@ def main() -> int:
                 obj, objpath, relocs, cand_raw, ref, start = ob
                 resolver._cand[i] = cand_raw
                 resolver.observe(i, obj, objpath, relocs, ref, start, img.image_base)
-        after = repr(sorted((repr(k), sorted((i, sorted(v)) for i, v in d.items()))
-                            for k, d in resolver.observations.items()))
-        added = before != after
+        added = before != snapshot()
         for i, res in results.items():
-            e = manifest["functions"][i]
+            e = entries[i]
             if res.get("match") == "exact" and e.get("start_rva"):
                 for sym in [e["symbol"]] + [s["symbol"] for s in e.get("folded_sources", [])]:
                     if sym not in resolver.functions:
@@ -476,7 +556,7 @@ def main() -> int:
 
     stale = []
     for i, res in results.items():
-        e = manifest["functions"][i]
+        e = entries[i]
         for k in COMPUTED:
             if e.get(k) != res.get(k):
                 stale.append((e.get("start_rva") or e.get("name"), k))
@@ -488,19 +568,27 @@ def main() -> int:
     if denom.get("count") != primary:
         stale.append(("denominator", "count"))
     denom["count"] = primary
-    for e in manifest["functions"]:
-        print(f"{e.get('start_rva') or '(unlocated)':>12}  {e.get('match', '?'):22} "
-              f"{e.get('reference_state', '-'):21} {e['name']}")
+    if args.quiet:
+        for path in [MANIFEST] + [p for p, _ in extra]:
+            st = Counter(e.get("match") for e, o in zip(entries, owner) if o == path)
+            print(f"{path.name}: {dict(sorted(st.items()))}")
+    else:
+        for e in entries:
+            print(f"{e.get('start_rva') or '(unlocated)':>12}  {e.get('match', '?'):22} "
+                  f"{e.get('reference_state', '-'):21} {e['name']}")
     if skip:
         print(f"note: {len(skip)} entries verified against the decrypted image were not re-checked "
               "(local decrypted image not present)")
     if args.check:
         if stale:
-            print("stale manifest fields:", stale, file=sys.stderr)
+            print(f"stale manifest fields ({len(stale)}):", stale[:20], file=sys.stderr)
             return 1
         print("manifest up to date")
         return 0
     MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    for p, m in extra:
+        manifest_io.strip(m)
+        manifest_io.dump_compact(p, m)
     return 0
 
 

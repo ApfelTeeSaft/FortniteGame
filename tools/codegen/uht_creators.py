@@ -1,0 +1,218 @@
+"""Generate UHT-shaped UFunction creators from the reference's reflection data.
+
+For every class whose FClassFunctionLinkInfo array consists only of creators with the
+standard 47-byte UHT shape, this writes FortniteGameCode/Source/Generated/UHT/<Class>.gen.cpp,
+matching UnrealHeaderTool 4.20 output (CodeGenerator.cpp): a <Creator>_Statics struct, a
+const FFunctionParams definition, and the creator with its static ReturnFunction. Creators
+appear in table order, which is also their order in the image.
+
+FFunctionParams values come from the binary's own record (.data, plaintext on disk). The
+record is located by content alone: its NameUTF8 must point at the function's name, and its
+OuterFunc must be the class's consensus outer. The creator's code is never read for this.
+These addresses go to analysis/uht-creator-symbols.json with that evidence. PropPointers are
+declared but not defined: property-parameter recovery is a separate, pending data task.
+
+Outputs: generated sources, analysis/functions-uht-creators.json (manifest entries),
+analysis/uht-creator-symbols.json (FuncParams addresses with evidence).
+
+Usage: python tools/codegen/uht_creators.py
+"""
+from __future__ import annotations
+
+import json
+import re
+import struct
+import sys
+from collections import Counter, defaultdict
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "tools" / "matching"))
+from compare import load_decrypted  # noqa: E402
+from manifest_io import dump_compact  # noqa: E402
+from pe import PEImage  # noqa: E402
+
+GEN_DIR = ROOT / "FortniteGameCode" / "Source" / "Generated" / "UHT"
+MANIFEST = ROOT / "analysis" / "functions-uht-creators.json"
+SYMBOLS = ROOT / "analysis" / "uht-creator-symbols.json"
+CREATOR_SIZE = 47
+# Relocated displacement bytes of the standard creator (RF x3, FuncParams, call).
+MASK = set(range(7, 11)) | set(range(0x13, 0x17)) | set(range(0x1A, 0x1E)) | set(range(0x1F, 0x23)) | set(range(0x26, 0x2A))
+TEMPLATE = bytes.fromhex("4883ec28488b05000000004885c0751a488d1500000000488d0d00000000e800000000488b05000000004883c428c3")
+IDENT = re.compile(rb"[A-Za-z_][A-Za-z0-9_]{0,250}\x00")
+OBJECT_FLAGS = {0x45: "RF_Public|RF_Transient|RF_MarkAsNative", 0x41: "RF_Public|RF_Transient"}
+
+
+def creator_name(cls: str, fn: str) -> str:
+    kind = "UDelegateFunction" if fn.endswith("__DelegateSignature") else "UFunction"
+    return f"Z_Construct_{kind}_{cls}_{fn}"
+
+
+def main() -> int:
+    img = PEImage()
+    dimg = load_decrypted(img)
+    if dimg is None:
+        print("needs the validated decrypted image", file=sys.stderr)
+        return 1
+    base = img.image_base
+    refl = json.loads((ROOT / "analysis" / "reflection-natives.json").read_text(encoding="utf-8"))
+    rfs = {rf.begin: rf for rf in img.runtime_functions()}
+    starts = set(rfs)
+    rd = next(s for s in img.sections if s.name == ".rdata")
+    rdata = img.read(rd.rva, rd.rawsize)
+    ds = next(s for s in img.sections if s.name == ".data")
+    data = img.read(ds.rva, ds.rawsize)
+
+    def is_creator(rva: int) -> bool:
+        rf = rfs.get(rva)
+        if rf is None or rf.end - rf.begin != CREATOR_SIZE:
+            return False
+        b = dimg.read(rva, CREATOR_SIZE)
+        return all(b[i] == TEMPLATE[i] for i in range(CREATOR_SIZE) if i not in MASK)
+
+    # FFunctionParams candidates in .data: {OuterFunc -> function start, NameUTF8 -> identifier}.
+    by_name: dict[str, list[tuple[int, int]]] = defaultdict(list)
+    for off in range(0, len(data) - 0x40, 8):
+        a, b = struct.unpack_from("<QQ", data, off)
+        if not (base <= a < base + img.size_of_image and base <= b < base + img.size_of_image):
+            continue
+        a -= base
+        b -= base
+        if a in starts and rd.rva <= b < rd.rva + rd.rawsize:
+            m = IDENT.match(rdata, b - rd.rva)
+            if m:
+                by_name[m.group(0)[:-1].decode()].append((ds.rva + off, a))
+
+    classes = []
+    for arr in refl["function_link_arrays"]:
+        fns = [(f["name"], int(f["construct_rva"], 16)) for f in arr["functions"]]
+        if not arr["class"] or not all(is_creator(c) for _, c in fns):
+            continue
+        # Definition order: UHT emits a class's delegate signatures first, in header order
+        # (their creators' code addresses preserve it), then its functions sorted by name,
+        # which is the FClassFunctionLinkInfo order.
+        delegates = sorted((x for x in fns if x[0].endswith("__DelegateSignature")), key=lambda x: x[1])
+        functions = [x for x in fns if not x[0].endswith("__DelegateSignature")]
+        classes.append((arr["class"], arr, delegates + functions))
+
+    # Consensus outer per class from uniquely named records.
+    consensus: dict[str, int | None] = {}
+    for cls, _, fns in classes:
+        outers = Counter(by_name[n][0][1] for n, _ in fns if len(by_name.get(n, [])) == 1)
+        top = outers.most_common(1)
+        consensus[cls] = top[0][0] if top and top[0][1] * 2 > sum(outers.values()) else None
+    outer_class = {v: k for k, v in consensus.items() if v is not None}
+    creator_by_rva = {c: creator_name(cls, n) for cls, _, fns in classes for n, c in fns}
+
+    GEN_DIR.mkdir(parents=True, exist_ok=True)
+    for old in GEN_DIR.glob("*.gen.cpp"):
+        old.unlink()
+    entries, symbols = [], {}
+    stats = Counter()
+    for cls, arr, fns in classes:
+        lines = [
+            "// Generated by tools/codegen/uht_creators.py from the reflection data of",
+            "// FortniteClient-Win64-Shipping.exe (++Fortnite+Release-2.5-CL-3889387). Do not edit by hand.",
+            f"// Class {cls}: UFunction creators in UnrealHeaderTool 4.20 output shape, in original order.",
+            f"// FClassFunctionLinkInfo array RVA {arr['array_rva']}, FClassParams RVA {arr['class_params_rva']}.",
+            "",
+            '#include "FortniteGameCode/UE4CodeGenRecovered.h"',
+            "",
+        ]
+        externs, bodies = set(), []
+        for fname, crva in fns:
+            cname = creator_name(cls, fname)
+            statics = f"{cname}_Statics"
+            cands = by_name.get(fname, [])
+            if len(cands) == 1:
+                rec, why = cands[0][0], "unique FFunctionParams record whose NameUTF8 names this function"
+            else:
+                hits = [c for c in cands if consensus.get(cls) is not None and c[1] == consensus[cls]]
+                rec = hits[0][0] if len(hits) == 1 else None
+                why = "only FFunctionParams record naming this function with the class's consensus OuterFunc"
+            if rec is None:
+                stats["funcparams_unresolved"] += 1
+                bodies.append(f"// {cname}: FFunctionParams record not identified; creator not emitted.\n")
+                continue
+            stats["funcparams_resolved"] += 1
+            outer, nameptr, oflags, superf, fflags, size, props, nprops, rpc, rpcr = struct.unpack(
+                "<QQIxxxxQIxxxxQQiHH", img.read(rec, 0x40))
+            outer -= base
+            name_lit = IDENT.match(rdata, nameptr - base - rd.rva).group(0)[:-1].decode()
+            if outer == consensus.get(cls):
+                outer_expr = f"Z_Construct_UClass_{cls}"
+                externs.add(f"UClass* Z_Construct_UClass_{cls}();  // RVA 0x{outer:08X} (consensus OuterFunc)")
+            elif outer in outer_class:
+                outer_expr = f"Z_Construct_UClass_{outer_class[outer]}"
+                externs.add(f"UClass* Z_Construct_UClass_{outer_class[outer]}();  // RVA 0x{outer:08X}")
+            else:
+                outer_expr = f"Z_Construct_Unrecovered_0x{outer:08X}"
+                externs.add(f"UObject* Z_Construct_Unrecovered_0x{outer:08X}();  // outer not yet named")
+            if superf:
+                s = superf - base
+                super_expr = creator_by_rva.get(s, f"Z_Construct_UnrecoveredFunction_0x{s:08X}")
+                if s not in creator_by_rva or creator_by_rva[s] not in {creator_name(cls, n) for n, _ in fns}:
+                    externs.add(f"UFunction* {super_expr}();  // RVA 0x{s:08X}")
+                super_expr = f"{super_expr}"
+            else:
+                super_expr = "nullptr"
+            flags_expr = OBJECT_FLAGS.get(oflags, f"(EObjectFlags)0x{oflags:08X}")
+            prop_decl = ""
+            if nprops:
+                prop_decl = ("\tstatic const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];"
+                             "  // definition pending property-parameter recovery\n")
+                prop_expr = f"{statics}::PropPointers, {nprops}"
+            else:
+                prop_expr = "nullptr, 0"
+            end = rfs[crva].end
+            bodies.append(
+                f"struct {statics}\n{{\n{prop_decl}"
+                f"\tstatic const UE4CodeGen_Private::FFunctionParams FuncParams;\n}};\n"
+                f"// FuncParams: original RVA 0x{rec:08X}; StructureSize 0x{size:X} is sizeof the event parms struct.\n"
+                f"const UE4CodeGen_Private::FFunctionParams {statics}::FuncParams = {{ (UObject*(*)()){outer_expr}, "
+                f"\"{name_lit}\", {flags_expr}, {super_expr}, (EFunctionFlags)0x{fflags:08X}, 0x{size:X}, "
+                f"{prop_expr}, {rpc}, {rpcr} }};\n"
+                f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{crva:08X} (end 0x{end:08X})\n"
+                f"// Original VA: 0x{base + crva:016X} | File offset: 0x{img.rva_to_off(crva):08X}\n"
+                f"// Recovery: confirmed name (FClassFunctionLinkInfo) | Matching: see analysis/functions-uht-creators.json\n"
+                f"UFunction* {cname}()\n{{\n\tstatic UFunction* ReturnFunction = nullptr;\n\tif (!ReturnFunction)\n\t{{\n"
+                f"\t\tUE4CodeGen_Private::ConstructUFunction(ReturnFunction, {statics}::FuncParams);\n\t}}\n"
+                f"\treturn ReturnFunction;\n}}\n")
+            symbols[f"?FuncParams@{statics}@@2UFFunctionParams@UE4CodeGen_Private@@B"] = [
+                f"0x{rec:08X}", "name" if len(cands) == 1 else "name+outer"]
+            entries.append({"start_rva": f"0x{crva:08X}", "end_rva": f"0x{end:08X}",
+                            "name": cname, "class": cls})
+        text = "\n".join(lines) + "\n".join(sorted(externs)) + "\n\n" + "\n".join(bodies)
+        (GEN_DIR / f"{cls}.gen.cpp").write_text(text, encoding="utf-8", newline="\n")
+    stats["classes"] = len(classes)
+    stats["creators"] = len(entries)
+    dump_compact(MANIFEST, {
+        "schema_version": 1,
+        "generated_by": "tools/codegen/uht_creators.py",
+        "evidence": ("Names from FClassFunctionLinkInfo tables. Classes via FClassParams -> StaticClass -> "
+                     "GetPrivateStaticClass. Shape: the 47-byte UHT creator. See docs/REVERSE_ENGINEERING.md."),
+        "entry_defaults": {
+            "category": "uht-ufunction-creator",
+            "source": "FortniteGameCode/Source/Generated/UHT/{class}.gen.cpp",
+            "object": "Source/Generated/UHT/{class}.gen.obj",
+            "symbol": "?{name}@@YAPEAVUFunction@@XZ",
+            "name_confidence": "confirmed",
+            "compact": True,
+        },
+        "functions": entries,
+    })
+    SYMBOLS.write_text(json.dumps({
+        "schema_version": 2,
+        "generated_by": "tools/codegen/uht_creators.py",
+        "evidence_codes": {
+            "name": "the only FFunctionParams record in .data whose NameUTF8 names this function",
+            "name+outer": "the only FFunctionParams record naming this function whose OuterFunc is the class consensus",
+        },
+        "symbols": symbols,
+    }, separators=(",", ":")).replace('],"', '],\n"') + "\n", encoding="utf-8")
+    print(dict(stats))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -169,12 +169,55 @@ def main() -> int:
                                          "TEXT(\"<class>\") + 1")
         classes.append(entry)
 
+    def class_from_gpsc(g: int) -> str | None:
+        j = bisect.bisect_right(begins, g) - 1
+        if j < 0 or rfs[j][0] != g:
+            return None
+        body = dimg.read(g, rfs[j][1] - g)
+        names = set()
+        for m in re.finditer(rb"[\x48\x4c]\x8d[\x05\x0d\x15\x1d\x25\x2d\x35\x3d]", body):
+            p = m.start()
+            if p + 7 <= len(body):
+                w = wide_at(g + p + 7 + struct.unpack_from("<i", body, p + 3)[0] - 2)
+                if w and w[0] in "UAFI" and len(w) > 1:
+                    names.add(w)
+        return names.pop() if len(names) == 1 else None
+
+    # FClassParams {ClassNoRegisterFunc, DependencySingletons, Num, ClassFlags, FunctionLinkArray, ...}:
+    # find the record whose +0x18 points at the link array; ClassNoRegisterFunc is the
+    # StaticClass thunk, a `jmp GetPrivateStaticClass`.
+    link_refs: dict[int, list[int]] = defaultdict(list)
+    link_vas = {base + lo + r[0] for r in links}
+    for sec in img.sections:
+        if sec.name not in (".rdata", ".data"):
+            continue
+        blob = img.data[sec.raw:sec.raw + sec.rawsize]
+        for off in range(0, len(blob) - 8, 8):
+            v = struct.unpack_from("<Q", blob, off)[0]
+            if v in link_vas:
+                link_refs[v - base].append(sec.rva + off)
+
     link_arrays = []
     for r in links:
-        link_arrays.append({
-            "array_rva": f"0x{lo + r[0]:08X}",
+        arr = lo + r[0]
+        entry = {
+            "array_rva": f"0x{arr:08X}",
+            "class_params_rva": None, "static_class_rva": None, "get_private_static_class_rva": None,
+            "class": None,
             "functions": [{"name": fn[o][1], "construct_rva": f"0x{fn[o][0]:08X}"} for o in r],
-        })
+        }
+        refs = link_refs.get(arr, [])
+        if len(refs) == 1:
+            rec = refs[0] - 0x18
+            entry["class_params_rva"] = f"0x{rec:08X}"
+            sc = struct.unpack("<Q", img.read(rec, 8))[0] - base
+            code5 = dimg.read(sc, 5)
+            if code5[0] == 0xE9:
+                g = sc + 5 + struct.unpack_from("<i", code5, 1)[0]
+                entry["static_class_rva"] = f"0x{sc:08X}"
+                entry["get_private_static_class_rva"] = f"0x{g:08X}"
+                entry["class"] = class_from_gpsc(g)
+        link_arrays.append(entry)
 
     named_execs = sum(len(c["functions"]) for c in classes)
     named = {int(f["exec_rva"], 16) for c in classes for f in c["functions"]}
@@ -190,6 +233,7 @@ def main() -> int:
             "native_functions": named_execs,
             "native_arrays_with_class": sum(1 for c in classes if c["class"]),
             "function_link_arrays": len(link_arrays),
+            "function_link_arrays_with_class": sum(1 for a in link_arrays if a["class"]),
             "function_link_entries": sum(len(a["functions"]) for a in link_arrays),
             "distinct_exec_rvas": len({f["exec_rva"] for c in classes for f in c["functions"]}),
             "distinct_construct_rvas": len({f["construct_rva"] for a in link_arrays for f in a["functions"]}),

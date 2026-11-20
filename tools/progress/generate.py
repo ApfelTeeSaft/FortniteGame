@@ -94,7 +94,7 @@ def esc(s: str) -> str:
 
 
 def render(s: dict) -> str:
-    W, H = 760, 232
+    W, H = 760, 252
     bar_x, bar_y, bar_w, bar_h = 32, 104, W - 64, 14
     fill = bar_w * s["exact"] / s["denominator"] if s["denominator"] else 0
     cat = ", ".join(f"{k.replace('-', ' ')} {v}" for k, v in s["exact_by_category"].items()) or "none"
@@ -114,9 +114,10 @@ def render(s: dict) -> str:
         lines.append(f'<rect x="{bar_x}" y="{bar_y}" width="{fill:.3f}" height="{bar_h}" rx="{min(7, fill / 2):.3f}" fill="#3fb950"/>')
     lines += [
         f'<text x="32" y="146" {font} font-size="13" fill="#c9d1d9">exact {st["exact"]} · relocation-equivalent {st["relocation-equivalent"]} · partial {st["partial"]} · unmatched {st["unmatched"]} · unknown {st["unknown"]} · not located {s["unlocated"]} · absent from image {s["not_present"]}</text>',
-        f'<text x="32" y="166" {font} font-size="13" fill="#c9d1d9">exact by category: {esc(cat)} ({s["exact_bytes"]} bytes) · vs on-disk bytes {s["exact_vs_disk"]}, vs decrypted image {s["exact_vs_decrypted"]}</text>',
-        f'<text x="32" y="192" {font} font-size="11.5" fill="#8b949e">Denominator: primary .pdata functions in the main .text ({s["outside_denominator"]} recovered leaf functions outside it, {s["outside_denominator_exact"]} exact).</text>',
-        f'<text x="32" y="207" {font} font-size="11.5" fill="#8b949e">Encrypted bodies are compared with a validated decrypted image. Exact = identical bytes; relocations from independent evidence.</text>',
+        f'<text x="32" y="166" {font} font-size="13" fill="#c9d1d9">exact by category: {esc(cat)} ({s["exact_bytes"]:,} bytes)</text>',
+        f'<text x="32" y="184" {font} font-size="13" fill="#c9d1d9">compared with on-disk bytes {s["exact_vs_disk"]:,} · with the validated decrypted image {s["exact_vs_decrypted"]:,}</text>',
+        f'<text x="32" y="212" {font} font-size="11.5" fill="#8b949e">Denominator: primary .pdata functions in the main .text ({s["outside_denominator"]} recovered leaf functions outside it, {s["outside_denominator_exact"]} exact).</text>',
+        f'<text x="32" y="227" {font} font-size="11.5" fill="#8b949e">Encrypted bodies are compared with a validated decrypted image. Exact = identical bytes; relocations from independent evidence.</text>',
         f'<text x="{W - 32}" y="40" text-anchor="end" {font} font-size="11" fill="#6e7681">manifest {s["manifest_digest"]} · ref {s["reference"]}</text>',
         "</svg>",
     ]
@@ -128,6 +129,10 @@ def main() -> int:
     ap.add_argument("--verify", action="store_true")
     args = ap.parse_args()
     m = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    sys.path.insert(0, str(ROOT / "tools" / "matching"))
+    import manifest_io
+    for extra in sorted((ROOT / "analysis").glob("functions-*.json")):
+        m["functions"] += manifest_io.expand(json.loads(extra.read_text(encoding="utf-8")))
     errors = validate(m)
     if errors:
         print("manifest inconsistent:\n  " + "\n  ".join(errors), file=sys.stderr)

@@ -91,13 +91,66 @@ class CoffObject:
 
     def symbol(self, name: str) -> CoffSymbol | None:
         """The defining record of `name` if there is one, else its first (undefined) record."""
-        found = None
+        idx = self.__dict__.get("_sym_index")
+        if idx is None:
+            idx = {}
+            for s in self.symbols:
+                if s is None:
+                    continue
+                cur = idx.get(s.name)
+                if cur is None or (cur.section <= 0 < s.section):
+                    idx[s.name] = s
+            self._sym_index = idx
+        return idx.get(name)
+
+    def data_layout(self) -> dict[str, list[tuple[str, int, int]]]:
+        """Per section name: [(symbol, offset, storage)] for defined data symbols.
+
+        Sections that share a name (e.g. one COMDAT .bss per static local) are laid out in
+        section-table order with their alignment, as the linker places one object's
+        contributions. Offsets are relative to the start of that group.
+        """
+        cached = self.__dict__.get("_layout")
+        if cached is not None:
+            return cached
+        base: dict[int, int] = {}
+        cursor: dict[str, int] = {}
+        for sec in self.sections:
+            if sec.chars & 0x20:  # code
+                continue
+            bits = (sec.chars >> 20) & 0xF
+            align = 1 << (bits - 1) if bits else 16
+            cur = cursor.get(sec.name, 0)
+            cur = (cur + align - 1) & ~(align - 1)
+            base[sec.index] = cur
+            cursor[sec.name] = cur + len(sec.data)
+        groups: dict[str, list[tuple[str, int, int]]] = {}
         for s in self.symbols:
-            if s is not None and s.name == name:
-                if s.section > 0:
-                    return s
-                found = found or s
-        return found
+            if s is None or s.section <= 0 or s.section not in base or s.storage not in (2, 3):
+                continue
+            if s.name.startswith((".", "$unwind", "$pdata", "$chain")):
+                continue
+            sec = self.sections[s.section - 1]
+            groups.setdefault(sec.name, []).append((s.name, base[s.section] + s.value, s.storage))
+        self._layout = groups
+        return groups
+
+    def function_index(self) -> dict[str, tuple[int, int, CoffSection]]:
+        cached = self.__dict__.get("_fn_index")
+        if cached is not None:
+            return cached
+        per_sec: dict[int, list[CoffSymbol]] = {}
+        for sym, sec in self.functions():
+            per_sec.setdefault(sec.index, []).append(sym)
+        idx = {}
+        for secidx, syms in per_sec.items():
+            sec = self.sections[secidx - 1]
+            syms.sort(key=lambda s: s.value)
+            for i, s in enumerate(syms):
+                end = next((t.value for t in syms[i + 1:] if t.value > s.value), len(sec.data))
+                idx.setdefault(s.name, (s.value, end, sec))
+        self._fn_index = idx
+        return idx
 
     def functions(self):
         """Yield (symbol, section) for every function symbol defined in a code section."""
@@ -112,11 +165,9 @@ class CoffObject:
 
     def function_bytes(self, symname: str) -> tuple[bytes, list[Reloc]]:
         """Bytes of a function from its symbol to the next symbol in the same section."""
-        for sym, sec in self.functions():
-            if sym.name == symname:
-                starts = sorted(s.value for s, x in self.functions() if x is sec and s.value > sym.value)
-                end = starts[0] if starts else len(sec.data)
-                rel = [Reloc(r.offset - sym.value, r.symbol, r.kind)
-                       for r in sec.relocs if sym.value <= r.offset < end]
-                return sec.data[sym.value:end], rel
-        raise KeyError(symname)
+        hit = self.function_index().get(symname)
+        if hit is None:
+            raise KeyError(symname)
+        start, end, sec = hit
+        rel = [Reloc(r.offset - start, r.symbol, r.kind) for r in sec.relocs if start <= r.offset < end]
+        return sec.data[start:end], rel
