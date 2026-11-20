@@ -70,9 +70,18 @@ same import, and the manifest records which.
   - a unique import thunk;
   - a unique data match: a NUL-terminated literal on a string boundary, or a data block at
     its alignment;
-  - an already-exact function, iterated to a fixpoint.
+  - an already-exact function, iterated to a fixpoint;
+  - **corroboration (leave-one-out):** the same symbol observed at one address in a
+    *different* manifest function whose size and every non-relocation byte equal the
+    reference. Internal-linkage symbols (literals, statics) count only within the same
+    object file. Observations made in the function under test are never used for its own
+    fields, and conflicting observations resolve nothing;
+  - **section-relative (leave-one-out):** a symbol in a non-COMDAT data section, predicted
+    from a neighbour in that section that another function observed, using the
+    object-file offset difference. Every prediction must agree.
 
-  Nothing is masked.
+  Nothing is masked. Every resolved field records its evidence in `analysis/functions.json`,
+  and a wrong prediction simply fails the byte comparison.
 * `relocation-equivalent`: identical except for unresolved relocation fields. Not exact.
 * `partial` / `unmatched`: some or no bytes agree.
 * `unknown`: the reference body is encrypted and no decrypted image is available.
@@ -105,8 +114,25 @@ plaintext funclets:
 | `0x02DAE780` | filter of `SafeCreateDXGIFactory` (ICF-folded, two parents) | exact vs on-disk bytes, 42/42. The D3D12 source compiles to the same bytes |
 | `0x016138D0` | `SafeCreateDXGIFactory` (D3D11) | exact vs decrypted image, 26/26. GUID resolved by unique content, `CreateDXGIFactory1` by its import thunk |
 | `0x0165FEB0` | `SafeCreateDXGIFactory` (D3D12-shaped twin) | exact vs decrypted image, 26/26 (IDXGIFactory4 GUID, `CreateDXGIFactory` thunk) |
-| `0x016138F0` | `SafeTestD3D11CreateDevice` | relocation-equivalent: 318 bytes, all non-relocation bytes identical. Literals ambiguous, Core callees not yet matched |
-| `0x015FEDD0` | `D3D11RHI_ShouldCreateWithD3DDebug` | relocation-equivalent. Located as the only same-shape function whose literal fields reference `d3ddebug`/`d3debug`/`dxdebug` |
+| `0x016138F0` | `SafeTestD3D11CreateDevice` | exact vs decrypted image, 318/318. `FParse::Param` via its exact match; `FCommandLine::Get` and the three literals corroborated by `D3D11RHI_ShouldCreateWithD3DDebug` |
+| `0x015FEDD0` | `D3D11RHI_ShouldCreateWithD3DDebug` | exact vs decrypted image, 88/88, corroborated the other way. Located by content: the only same-shape function whose literals read `d3ddebug`/`d3debug`/`dxdebug` (the other reads `NoEpicPortal`/`q`/`EpicPortal`) |
+
+## Second family: Core command-line helpers
+
+| RVA | Function | Result |
+| --- | --- | --- |
+| `0x011BFED0` | `FParse::Param` | exact vs decrypted image, 376/376. Inlines `TCString::Strifind(..., true)`, the `wcslen` loop and `iswspace`; `_wcsnicmp`/`iswspace` resolve through import tables |
+| `0x01193BC0` | `FCommandLine::Get` | relocation-equivalent. `bIsInitialized`, `LogInit`, `FMsg::Logf_InternalImpl` and `FDebug::AssertFailed` are corroborated by the other getters, but its five literal copies are not |
+| `0x01194B20` | `FCommandLine::GetForLogging` | relocation-equivalent (same reason) |
+| `0x011953C0` | `FCommandLine::GetOriginalForLogging` | relocation-equivalent (same reason) |
+| `0x01199E30` | `FCommandLine::IsInitialized` | exact, 8/8, but a leaf without `.pdata` (outside the denominator) and located by its own signature |
+| — | `FCommandLine::GetOriginal` | not present in the image: no function matches even with the line immediate ignored. Presumably removed by `/OPT:REF` |
+
+The fatal-log line immediates (29, 35, 47) and the `"Unknown"` source file (`DO_CHECK 0`)
+agree with public 4.20.0. Without `/GF` every literal occurrence gets its own copy. The
+original unity TU also packs small literals into alignment holes left by earlier literals,
+so a literal used once with repeated text cannot be pinned to its copy until more of that
+TU is reconstructed. Those fields stay unresolved rather than guessed.
 
 Before the dump arrived, structural matches had already pinned down two differences from
 public 4.20.0 (see [ENGINE_DIFFERENCES.md](ENGINE_DIFFERENCES.md)). They also showed

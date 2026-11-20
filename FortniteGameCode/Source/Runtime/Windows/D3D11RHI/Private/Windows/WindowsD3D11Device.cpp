@@ -44,7 +44,7 @@ static void SafeCreateDXGIFactory(IDXGIFactory1** DXGIFactory1)
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x016138F0 (end 0x01613A2E)
 // Original VA: 0x00000001416138F0 | File offset: 0x01612EF0
-// Recovery: high-confidence inferred (UE4 name) | Matching: relocation-equivalent (vs decrypted image; 3 literals ambiguous, FCommandLine::Get/FParse::Param not yet matched)
+// Recovery: high-confidence inferred (UE4 name) | Matching: exact (vs decrypted image; literals and callees corroborated, see analysis/functions.json)
 // Evidence: unwind saves rbx/rsi, pushes rdi/r14/r15, ALLOC_SMALL 0x70; one C scope
 //   [+0xBD,+0x126) -> filter funclet 0x02DAE750 (frame slots +0x68/+0x50). This
 //   reconstruction reproduces the 0x13E size, every unwind code, the handler kind and the

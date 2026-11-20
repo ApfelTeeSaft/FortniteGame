@@ -7,7 +7,7 @@
 
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x015FEDD0 (end 0x015FEE28)
 // Original VA: 0x00000001415FEDD0 | File offset: 0x015FE3D0
-// Recovery: high-confidence inferred (UE4 name, extern) | Matching: relocation-equivalent (vs decrypted image; literals ambiguous, callees not yet matched)
+// Recovery: high-confidence inferred (UE4 name, extern) | Matching: exact (vs decrypted image; literals and callees corroborated, see analysis/functions.json)
 // Evidence: SafeTestD3D11CreateDevice (RVA 0x016138F0) only reproduces its structure with this
 //   body inlined. In the decrypted image two 0x58-byte functions match every non-relocation
 //   byte; only this one references the literals d3ddebug/d3debug/dxdebug, and they are the

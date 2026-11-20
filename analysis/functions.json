@@ -37,7 +37,8 @@
         "pdata_size_matches": true,
         "unwind_codes_identical": true
       },
-      "compiler": "prodid 261 build 24215"
+      "compiler": "prodid 261 build 24215",
+      "in_denominator": true
     },
     {
       "start_rva": "0x02DAE780",
@@ -73,7 +74,8 @@
         "pdata_size_matches": true,
         "unwind_codes_identical": true
       },
-      "compiler": "prodid 261 build 24215"
+      "compiler": "prodid 261 build 24215",
+      "in_denominator": true
     },
     {
       "start_rva": "0x016138D0",
@@ -152,7 +154,8 @@
         }
       },
       "compiler": "prodid 261 build 24215",
-      "decrypted_sha256": "bebd6014501d0d37ba82e2e8345026aa7b9deff7544dccb9963dc98d5c9106f7"
+      "decrypted_sha256": "bebd6014501d0d37ba82e2e8345026aa7b9deff7544dccb9963dc98d5c9106f7",
+      "in_denominator": true
     },
     {
       "start_rva": "0x016138F0",
@@ -166,9 +169,9 @@
       "name_confidence": "high-confidence inferred",
       "evidence": "Size, all unwind codes, handler kind and scope offsets reproduce only with the inlined debug-device helper and a two-level request list. Public 4.20.0 has three levels, which adds a /GS cookie under the global /GS switch.",
       "reference_state": "decrypted",
-      "match": "relocation-equivalent",
+      "match": "exact",
       "original_sha256": "c636bbac9a3ea01fe0060b523f5977a83eee2f6646a75c29db20dc4e61d9fac4",
-      "candidate_sha256": "17c9ebe532aad78881d9fdbd526e7b020e4a61adc36d78e2098ab6212eadd749",
+      "candidate_sha256": "48847585b788607295d091b3d95696c4224c19ff0c8654bc60591f6e5b957da3",
       "byte_diff": {
         "reference_size": 318,
         "candidate_size": 318,
@@ -176,69 +179,68 @@
         "first_difference": null,
         "resolved_relocations": [
           {
+            "offset": "0x0000002B",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
+          },
+          {
+            "offset": "0x00000035",
+            "symbol": "$SG98143",
+            "rva": "0x0353EF98",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
+          },
+          {
+            "offset": "0x0000003A",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x00000043",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
+          },
+          {
+            "offset": "0x0000004D",
+            "symbol": "$SG98144",
+            "rva": "0x0353F2E8",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
+          },
+          {
+            "offset": "0x00000052",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
+            "offset": "0x0000005B",
+            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
+          },
+          {
+            "offset": "0x00000065",
+            "symbol": "$SG98145",
+            "rva": "0x0353F368",
+            "evidence": "corroborated: same symbol at this address in D3D11RHI_ShouldCreateWithD3DDebug"
+          },
+          {
+            "offset": "0x0000006A",
+            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          },
+          {
             "offset": "0x00000102",
             "symbol": "D3D11CreateDevice",
             "rva": "0x02CEC212",
             "evidence": "import thunk jmp [0x04DDC66C] (D3D11CreateDevice)"
           }
         ],
-        "unresolved_relocations": [
-          {
-            "offset": "0x0000002B",
-            "size": 4,
-            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
-            "kind": "REL32"
-          },
-          {
-            "offset": "0x00000035",
-            "size": 4,
-            "symbol": "$SG98002",
-            "kind": "REL32"
-          },
-          {
-            "offset": "0x0000003A",
-            "size": 4,
-            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
-            "kind": "REL32"
-          },
-          {
-            "offset": "0x00000043",
-            "size": 4,
-            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
-            "kind": "REL32"
-          },
-          {
-            "offset": "0x0000004D",
-            "size": 4,
-            "symbol": "$SG98003",
-            "kind": "REL32"
-          },
-          {
-            "offset": "0x00000052",
-            "size": 4,
-            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
-            "kind": "REL32"
-          },
-          {
-            "offset": "0x0000005B",
-            "size": 4,
-            "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
-            "kind": "REL32"
-          },
-          {
-            "offset": "0x00000065",
-            "size": 4,
-            "symbol": "$SG98004",
-            "kind": "REL32"
-          },
-          {
-            "offset": "0x0000006A",
-            "size": 4,
-            "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
-            "kind": "REL32"
-          }
-        ],
-        "bytes_differing_only_in_unresolved_fields": 36
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
       },
       "structure": {
         "pdata_size_matches": true,
@@ -280,7 +282,8 @@
         }
       },
       "compiler": "prodid 261 build 24215",
-      "decrypted_sha256": "48847585b788607295d091b3d95696c4224c19ff0c8654bc60591f6e5b957da3"
+      "decrypted_sha256": "48847585b788607295d091b3d95696c4224c19ff0c8654bc60591f6e5b957da3",
+      "in_denominator": true
     },
     {
       "start_rva": "0x0165FEB0",
@@ -359,7 +362,8 @@
         }
       },
       "compiler": "prodid 261 build 24215",
-      "decrypted_sha256": "4b7e4b0fad6e6ffd94287a4e0b5cbe34003de9b077a215928f38f6fd0bc73ae3"
+      "decrypted_sha256": "4b7e4b0fad6e6ffd94287a4e0b5cbe34003de9b077a215928f38f6fd0bc73ae3",
+      "in_denominator": true
     },
     {
       "start_rva": "0x015FEDD0",
@@ -373,8 +377,8 @@
       "name_confidence": "high-confidence inferred",
       "evidence": "Inlined into 0x016138F0, which needs it to reproduce its structure. Located in the decrypted image as one of two 0x58-byte functions identical in every non-relocation byte; the only one whose string fields reference d3ddebug/d3debug/dxdebug, the same literal copies the inlined use references.",
       "reference_state": "decrypted",
-      "match": "relocation-equivalent",
-      "candidate_sha256": "f9e2634184d7668ce4a2498db66da969599290535bde4d362022f606f964d621",
+      "match": "exact",
+      "candidate_sha256": "776c822d039ff7760d1ec2ba7ae9fe6852a5bda82e77c47685624982226ebd7f",
       "compiler": "prodid 261 build 24215",
       "original_sha256": "6471509a20d087b24e4b285c926df80a41c5ddd21c99b398d90a051686f3c637",
       "decrypted_sha256": "776c822d039ff7760d1ec2ba7ae9fe6852a5bda82e77c47685624982226ebd7f",
@@ -383,65 +387,436 @@
         "candidate_size": 88,
         "differing_bytes": 0,
         "first_difference": null,
-        "resolved_relocations": [],
-        "unresolved_relocations": [
+        "resolved_relocations": [
           {
             "offset": "0x00000005",
-            "size": 4,
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
-            "kind": "REL32"
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
           {
             "offset": "0x0000000F",
-            "size": 4,
-            "symbol": "$SG98002",
-            "kind": "REL32"
+            "symbol": "$SG98143",
+            "rva": "0x0353EF98",
+            "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
           {
             "offset": "0x00000014",
-            "size": 4,
             "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
-            "kind": "REL32"
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
           },
           {
             "offset": "0x0000001D",
-            "size": 4,
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
-            "kind": "REL32"
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
           {
             "offset": "0x00000027",
-            "size": 4,
-            "symbol": "$SG98003",
-            "kind": "REL32"
+            "symbol": "$SG98144",
+            "rva": "0x0353F2E8",
+            "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
           {
             "offset": "0x0000002C",
-            "size": 4,
             "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
-            "kind": "REL32"
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
           },
           {
             "offset": "0x00000035",
-            "size": 4,
             "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
-            "kind": "REL32"
+            "rva": "0x01193BC0",
+            "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
           {
             "offset": "0x0000003F",
-            "size": 4,
-            "symbol": "$SG98004",
-            "kind": "REL32"
+            "symbol": "$SG98145",
+            "rva": "0x0353F368",
+            "evidence": "corroborated: same symbol at this address in SafeTestD3D11CreateDevice"
           },
           {
             "offset": "0x00000044",
-            "size": 4,
             "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+            "rva": "0x011BFED0",
+            "evidence": "exact match of manifest entry 0x011BFED0"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "in_denominator": true
+    },
+    {
+      "start_rva": "0x011BFED0",
+      "end_rva": "0x011C0048",
+      "name": "FParse::Param",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Misc/Parse.cpp",
+      "object": "Source/Runtime/Core/Private/Misc/Parse.obj",
+      "symbol": "?Param@FParse@@SA_NPEB_W0@Z",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "Call target, with (FCommandLine::Get(), L\"d3ddebug\") arguments, in SafeTestD3D11CreateDevice and D3D11RHI_ShouldCreateWithD3DDebug. The body inlines TCString::Strifind(..., true), the wcslen loop and iswspace/_wcsnicmp imports.",
+      "reference_state": "decrypted",
+      "match": "exact",
+      "original_sha256": "bbbc4568ba98850e74b48af012d728fc04ec390470a9bb605068e29a19497e54",
+      "decrypted_sha256": "40542c23411580cfcc9a69617089827301c31aa6e8c893e75b942ea91e4532c7",
+      "candidate_sha256": "40542c23411580cfcc9a69617089827301c31aa6e8c893e75b942ea91e4532c7",
+      "byte_diff": {
+        "reference_size": 376,
+        "candidate_size": 376,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x000000A7",
+            "symbol": "__imp__wcsnicmp",
+            "rva": "0x04DDC5DC",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!_wcsnicmp"
+          },
+          {
+            "offset": "0x0000012F",
+            "symbol": "__imp_iswspace",
+            "rva": "0x04DDC4EC",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!iswspace"
+          },
+          {
+            "offset": "0x00000160",
+            "symbol": "__imp_iswspace",
+            "rva": "0x04DDC4EC",
+            "evidence": "protector import table slot of api-ms-win-crt-string-l1-1-0.dll!iswspace"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215",
+      "in_denominator": true
+    },
+    {
+      "start_rva": "0x01193BC0",
+      "end_rva": "0x01193C2C",
+      "name": "FCommandLine::Get",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Misc/CommandLine.cpp",
+      "object": "Source/Runtime/Core/Private/Misc/CommandLine.obj",
+      "symbol": "?Get@FCommandLine@@SAPEB_WXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "First call in the FParse::Param argument chain. Fatal UE_CLOG at source line 29 (0x1D) with the \"Attempting to get the command line...\" format, as in public 4.20.0. Returns the first of four 0x8000-byte arrays.",
+      "reference_state": "decrypted",
+      "match": "relocation-equivalent",
+      "original_sha256": "255bf2cd42421977dc0979f62777284c270358543fc1fe4c2d8da3c30d6be432",
+      "decrypted_sha256": "048044ec1c5b8555d090b7342289bd31e6fb16c6c2e1637f25c81451271478a0",
+      "candidate_sha256": "72d819bf1eb054ff0b484b85e3785a34285a45b1d1df12311aee259763d53ad5",
+      "byte_diff": {
+        "reference_size": 108,
+        "candidate_size": 108,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000006",
+            "symbol": "?bIsInitialized@FCommandLine@@0_NA",
+            "rva": "0x04680E39",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::GetForLogging, FCommandLine::GetOriginalForLogging, FCommandLine::IsInitialized"
+          },
+          {
+            "offset": "0x00000010",
+            "symbol": "?LogInit@@3UFLogCategoryLogInit@@A",
+            "rva": "0x046ADC84",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::GetForLogging, FCommandLine::GetOriginalForLogging"
+          },
+          {
+            "offset": "0x0000003C",
+            "symbol": "?Logf_InternalImpl@FMsg@@SAXPEBDHAEBVFName@@W4Type@ELogVerbosity@@PEB_WZZ",
+            "rva": "0x01177BF0",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::GetForLogging, FCommandLine::GetOriginalForLogging"
+          },
+          {
+            "offset": "0x0000005C",
+            "symbol": "?AssertFailed@FDebug@@SAXPEBD0HPEB_WZZ",
+            "rva": "0x0118AE40",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::GetForLogging, FCommandLine::GetOriginalForLogging"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000027",
+            "size": 4,
+            "symbol": "$SG2949",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000002E",
+            "size": 4,
+            "symbol": "$SG2950",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000043",
+            "size": 4,
+            "symbol": "$SG2951",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000050",
+            "size": 4,
+            "symbol": "$SG2952",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000057",
+            "size": 4,
+            "symbol": "$SG2953",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000063",
+            "size": 4,
+            "symbol": "?CmdLine@FCommandLine@@0PA_WA",
             "kind": "REL32"
           }
         ],
-        "bytes_differing_only_in_unresolved_fields": 36
-      }
+        "bytes_differing_only_in_unresolved_fields": 24
+      },
+      "compiler": "prodid 261 build 24215",
+      "in_denominator": true
+    },
+    {
+      "start_rva": "0x01194B20",
+      "end_rva": "0x01194B8C",
+      "name": "FCommandLine::GetForLogging",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Misc/CommandLine.cpp",
+      "object": "Source/Runtime/Core/Private/Misc/CommandLine.obj",
+      "symbol": "?GetForLogging@FCommandLine@@SAPEB_WXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "The only 0x6C-byte function equal to the reconstruction in every non-relocation byte. Line 35 (0x23); returns the array at +0x10000 from CmdLine.",
+      "reference_state": "decrypted",
+      "match": "relocation-equivalent",
+      "original_sha256": "1c3f12ef823d29dbc2b7f41fc66ad05f5e51a8b84c580ed095f081814fd5b82f",
+      "decrypted_sha256": "ada36de5bd138d1af520db0e326837456a5cc4ed2453ca9d996c9b62f506d91d",
+      "candidate_sha256": "b65e7a00ba98bdd2e895fd1bdc2e61535325882719767ad260ecc43b8030d7d8",
+      "byte_diff": {
+        "reference_size": 108,
+        "candidate_size": 108,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000006",
+            "symbol": "?bIsInitialized@FCommandLine@@0_NA",
+            "rva": "0x04680E39",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetOriginalForLogging, FCommandLine::IsInitialized"
+          },
+          {
+            "offset": "0x00000010",
+            "symbol": "?LogInit@@3UFLogCategoryLogInit@@A",
+            "rva": "0x046ADC84",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetOriginalForLogging"
+          },
+          {
+            "offset": "0x0000003C",
+            "symbol": "?Logf_InternalImpl@FMsg@@SAXPEBDHAEBVFName@@W4Type@ELogVerbosity@@PEB_WZZ",
+            "rva": "0x01177BF0",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetOriginalForLogging"
+          },
+          {
+            "offset": "0x0000005C",
+            "symbol": "?AssertFailed@FDebug@@SAXPEBD0HPEB_WZZ",
+            "rva": "0x0118AE40",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetOriginalForLogging"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000027",
+            "size": 4,
+            "symbol": "$SG2958",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000002E",
+            "size": 4,
+            "symbol": "$SG2959",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000043",
+            "size": 4,
+            "symbol": "$SG2960",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000050",
+            "size": 4,
+            "symbol": "$SG2961",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000057",
+            "size": 4,
+            "symbol": "$SG2962",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000063",
+            "size": 4,
+            "symbol": "?LoggingCmdLine@FCommandLine@@0PA_WA",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 24
+      },
+      "compiler": "prodid 261 build 24215",
+      "in_denominator": true
+    },
+    {
+      "start_rva": "0x011953C0",
+      "end_rva": "0x0119542C",
+      "name": "FCommandLine::GetOriginalForLogging",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Misc/CommandLine.cpp",
+      "object": "Source/Runtime/Core/Private/Misc/CommandLine.obj",
+      "symbol": "?GetOriginalForLogging@FCommandLine@@SAPEB_WXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "The only 0x6C-byte function equal to the reconstruction in every non-relocation byte. Line 47 (0x2F); returns the array at +0x18000 from CmdLine.",
+      "reference_state": "decrypted",
+      "match": "relocation-equivalent",
+      "original_sha256": "e015388a0242fcba18018db48aa4c5ec29aca23611a2d29f01bc30e6ad5da088",
+      "decrypted_sha256": "378ab8230f04750a40a7591d4b1fa617b6029dc8502799c5b46821fc5e820779",
+      "candidate_sha256": "e6bba8b7aa282f5a81b66c0c2101506d428dd71864c51f61c2624fe230111283",
+      "byte_diff": {
+        "reference_size": 108,
+        "candidate_size": 108,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000006",
+            "symbol": "?bIsInitialized@FCommandLine@@0_NA",
+            "rva": "0x04680E39",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetForLogging, FCommandLine::IsInitialized"
+          },
+          {
+            "offset": "0x00000010",
+            "symbol": "?LogInit@@3UFLogCategoryLogInit@@A",
+            "rva": "0x046ADC84",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetForLogging"
+          },
+          {
+            "offset": "0x0000003C",
+            "symbol": "?Logf_InternalImpl@FMsg@@SAXPEBDHAEBVFName@@W4Type@ELogVerbosity@@PEB_WZZ",
+            "rva": "0x01177BF0",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetForLogging"
+          },
+          {
+            "offset": "0x0000005C",
+            "symbol": "?AssertFailed@FDebug@@SAXPEBD0HPEB_WZZ",
+            "rva": "0x0118AE40",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetForLogging"
+          }
+        ],
+        "unresolved_relocations": [
+          {
+            "offset": "0x00000027",
+            "size": 4,
+            "symbol": "$SG2976",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x0000002E",
+            "size": 4,
+            "symbol": "$SG2977",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000043",
+            "size": 4,
+            "symbol": "$SG2978",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000050",
+            "size": 4,
+            "symbol": "$SG2979",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000057",
+            "size": 4,
+            "symbol": "$SG2980",
+            "kind": "REL32"
+          },
+          {
+            "offset": "0x00000063",
+            "size": 4,
+            "symbol": "?LoggingOriginalCmdLine@FCommandLine@@0PA_WA",
+            "kind": "REL32"
+          }
+        ],
+        "bytes_differing_only_in_unresolved_fields": 24
+      },
+      "compiler": "prodid 261 build 24215",
+      "in_denominator": true
+    },
+    {
+      "start_rva": "0x01199E30",
+      "end_rva": "0x01199E38",
+      "name": "FCommandLine::IsInitialized",
+      "category": "source-function (leaf, no .pdata)",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Misc/CommandLine.cpp",
+      "object": "Source/Runtime/Core/Private/Misc/CommandLine.obj",
+      "symbol": "?IsInitialized@FCommandLine@@SA_NXZ",
+      "name_confidence": "high-confidence inferred",
+      "evidence": "The only movzx eax, byte [bIsInitialized]; ret leaf in decrypted .text. bIsInitialized (0x04680E39) is the flag all three located getters test. A leaf with no .pdata entry, so outside the denominator.",
+      "reference_state": "decrypted",
+      "match": "exact",
+      "original_sha256": "d26969efdb8d6222c60ac71a7a7d24cc6ada6b2280b1b786fb4599e1345ec522",
+      "decrypted_sha256": "630f1f876ca9fbba30acf507f995384e54f9d25a8c47016df85b59a13272bf2b",
+      "candidate_sha256": "630f1f876ca9fbba30acf507f995384e54f9d25a8c47016df85b59a13272bf2b",
+      "byte_diff": {
+        "reference_size": 8,
+        "candidate_size": 8,
+        "differing_bytes": 0,
+        "first_difference": null,
+        "resolved_relocations": [
+          {
+            "offset": "0x00000003",
+            "symbol": "?bIsInitialized@FCommandLine@@0_NA",
+            "rva": "0x04680E39",
+            "evidence": "corroborated: same symbol at this address in FCommandLine::Get, FCommandLine::GetForLogging, FCommandLine::GetOriginalForLogging"
+          }
+        ],
+        "unresolved_relocations": [],
+        "bytes_differing_only_in_unresolved_fields": 0
+      },
+      "compiler": "prodid 261 build 24215",
+      "in_denominator": false
+    },
+    {
+      "start_rva": null,
+      "end_rva": null,
+      "name": "FCommandLine::GetOriginal",
+      "category": "source-function",
+      "module": "Core",
+      "source": "FortniteGameCode/Source/Runtime/Core/Private/Misc/CommandLine.cpp",
+      "object": "Source/Runtime/Core/Private/Misc/CommandLine.obj",
+      "symbol": "?GetOriginal@FCommandLine@@SAPEB_WXZ",
+      "name_confidence": "high-confidence inferred",
+      "reference_presence": "not present in reference",
+      "evidence": "No 0x6C-byte function matches it, even allowing the line immediate to differ, while the other three getters match exactly that way. It was most likely discarded by /OPT:REF as unreferenced. Kept in source because the original translation unit compiled it.",
+      "reference_state": "not-located",
+      "match": "unknown",
+      "candidate_sha256": "e8f4ad01775c562b5553cd733905639ac6e12d75af8a82d8184c4c64aec2fd4b",
+      "compiler": "prodid 261 build 24215",
+      "in_denominator": false
     }
   ]
 }

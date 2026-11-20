@@ -9,8 +9,8 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **4 / 157,719** primary `.pdata` functions (0.0025 %, 136 bytes). Two match on-disk plaintext (SEH filter funclets). Two match the decrypted image (`SafeCreateDXGIFactory` in D3D11RHI and its D3D12-shaped twin), with every relocation resolved from independent evidence |
-| Relocation-equivalent | `SafeTestD3D11CreateDevice` and `D3D11RHI_ShouldCreateWithD3DDebug`: every non-relocation byte is identical. Three wide literals occur 3+ times in `.rdata`, and `FCommandLine::Get`/`FParse::Param` are not matched yet |
+| Exact functions | **7 / 157,719** primary `.pdata` functions (0.0044 %, 918 bytes). Two match on-disk plaintext (SEH filter funclets). Five match the decrypted image: `SafeCreateDXGIFactory` ×2, `SafeTestD3D11CreateDevice`, `D3D11RHI_ShouldCreateWithD3DDebug`, `FParse::Param`. Every relocation is resolved from independent or leave-one-out corroborated evidence. Also exact, outside the denominator: `FCommandLine::IsInitialized` (leaf, no `.pdata`) |
+| Relocation-equivalent | `FCommandLine::Get`, `GetForLogging` and `GetOriginalForLogging`: every non-relocation byte is identical; only their per-occurrence literal copies are unresolved. `FCommandLine::GetOriginal` is absent from the image (presumably `/OPT:REF`) |
 | Whole-file identity | Not achievable as things stand: encrypted bodies on disk, a protector section and rewritten import references, a patched entry stub, and an Authenticode signature |
 | IDA | IDA Professional 9.4 `idat.exe` headless export verified on a test binary. The reference has not been analysed in IDA yet |
 
@@ -26,12 +26,12 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 
 ## Next verifiable tasks
 
-1. Recover `FCommandLine::Get` (`0x01193BC0`, 0x6C bytes) and `FParse::Param` (`0x011BFED0`,
-   0x178 bytes) from Core. Matching them resolves the callee fields of two pending functions
-   through the fixpoint. `Get` needs the shipping expansion of `UE_CLOG(..., Fatal, ...)`.
-2. Resolve per-TU string literal copies. With `/Ox` there is no string pooling, so identical
-   literals repeat per translation unit. This needs a faithful unity layout or more of
-   each TU's literals.
+1. Grow corroboration by reconstructing more callers of shared symbols. Candidates are
+   `FCommandLine::Set`/`Append` (they reference the arrays and `bIsInitialized`) and other
+   `FParse::Param` / `FCommandLine::Get` callers found by masked search over the decrypted image.
+2. Resolve per-occurrence literal copies (no `/GF`, and holes are packed with literals from
+   earlier in the TU). Either reconstruct the literal sequence of the surrounding Core unity
+   TU, or accept the getters as relocation-equivalent.
 3. Recover reflection data from plaintext `.rdata`/`.data` (UClass/UFunction registration
    and native function tables) to name `.pdata` ranges at scale, then batch-match small
    leaf-like functions.
