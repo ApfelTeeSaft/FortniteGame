@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	UPackage* Z_Construct_UPackage__Script_Engine();  // RVA 0x0240CE30
-struct alignas(8) FHitResult
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x88];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FHitResult is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240B0E0 (end 0x0240B151, chained .pdata fragments; the reference inlines the package singleton, which this unit does not define yet)
 // Original VA: 0x000000014240B0E0 | File offset: 0x0240A6E0
 // Recovery: confirmed (TEXT("HitResult") and Z_Construct_UScriptStruct_FHitResult) | Matching: see analysis/functions-uht-staticstruct.json

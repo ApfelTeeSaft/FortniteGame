@@ -25,6 +25,15 @@ void AFortWeapon::execClientReportShotFlags(UObject* Context, FFrame& Stack, voi
 	P_THIS->ClientReportShotFlags_Implementation(Z_Param_ShotFlags,Z_Param_ShotIndex);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6320 (end 0x010D6356)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDetermineReticleColor) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execDetermineReticleColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FColor*)Z_Param__Result=P_THIS->DetermineReticleColor();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6720 (end 0x010D679E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAlterations) | Matching: see analysis/functions-uht-exec.json
 void AFortWeapon::execGetAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -114,6 +123,15 @@ void AFortWeapon::execGetRemainingAmmo(UObject* Context, FFrame& Stack, void* co
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(int32*)Z_Param__Result=P_THIS->GetRemainingAmmo();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6BA0 (end 0x010D6BD6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetReticleColor) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetReticleColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FColor*)Z_Param__Result=P_THIS->GetReticleColor();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6ED0 (end 0x010D6EFF)

@@ -19,6 +19,19 @@ void AFortPlayerController::execClientAddHeroSpecialization(UObject* Context, FF
 	P_THIS->ClientAddHeroSpecialization_Implementation(Z_Param_NewSpecialization);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106DBE0 (end 0x0106DD13)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientAddScoreNumber) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execClientAddScoreNumber(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_Score);
+	P_GET_ENUM(EStatCategory,Z_Param_ScoreCategory);
+	P_GET_STRUCT(FVector_NetQuantize,Z_Param_ScoreLocation);
+	P_GET_UBOOL(Z_Param_bDisplayScoreOnPlayer);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientAddScoreNumber_Implementation(Z_Param_Score,EStatCategory(Z_Param_ScoreCategory),Z_Param_ScoreLocation,Z_Param_bDisplayScoreOnPlayer);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0106DD20 (end 0x0106DD3F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientCancelCrafting) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerController::execClientCancelCrafting(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -136,6 +149,17 @@ void AFortPlayerController::execClientReadyCheckComplete(UObject* Context, FFram
 		return;
 	}
 	P_THIS->ClientReadyCheckComplete_Implementation(Z_Param_bPassed);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106E3C0 (end 0x0106E55E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientReceivePresetTeamChat) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execClientReceivePresetTeamChat(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_ChatText);
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_SenderID);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientReceivePresetTeamChat_Implementation(Z_Param_ChatText,Z_Param_SenderID);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0106E6E0 (end 0x0106E6FF), leaf (no .pdata)
@@ -706,6 +730,39 @@ void AFortPlayerController::execServerExecuteInventoryItem(UObject* Context, FFr
 	P_THIS->ServerExecuteInventoryItem_Implementation(Z_Param_ItemGuid);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01071EE0 (end 0x010720CC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerExecutePresetTeamChat) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execServerExecutePresetTeamChat(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_ChatText);
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_SenderID);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerExecutePresetTeamChat_Validate(Z_Param_ChatText,Z_Param_SenderID))
+	{
+		RPC_ValidateFailed(TEXT("ServerExecutePresetTeamChat_Validate"));
+		return;
+	}
+	P_THIS->ServerExecutePresetTeamChat_Implementation(Z_Param_ChatText,Z_Param_SenderID);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010720D0 (end 0x010722C9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerGiftInventoryItemToOtherPlayer) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execServerGiftInventoryItemToOtherPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGuid,Z_Param_ItemGuid);
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_PlayerId);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Quantity);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerGiftInventoryItemToOtherPlayer_Validate(Z_Param_ItemGuid,Z_Param_PlayerId,Z_Param_Quantity))
+	{
+		RPC_ValidateFailed(TEXT("ServerGiftInventoryItemToOtherPlayer_Validate"));
+		return;
+	}
+	P_THIS->ServerGiftInventoryItemToOtherPlayer_Implementation(Z_Param_ItemGuid,Z_Param_PlayerId,Z_Param_Quantity);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010722D0 (end 0x01072385)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerHandleMissionEvent_StartLeavingZone) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerController::execServerHandleMissionEvent_StartLeavingZone(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -768,6 +825,22 @@ void AFortPlayerController::execServerItemWillBeDestroyed(UObject* Context, FFra
 		return;
 	}
 	P_THIS->ServerItemWillBeDestroyed_Implementation(Z_Param_DestroyedItemGuid,Z_Param_Count);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010726F0 (end 0x01072882)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerKickPlayer) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execServerKickPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_PlayerToKick);
+	P_GET_PROPERTY(UTextProperty,Z_Param_Reason);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerKickPlayer_Validate(Z_Param_PlayerToKick,Z_Param_Reason))
+	{
+		RPC_ValidateFailed(TEXT("ServerKickPlayer_Validate"));
+		return;
+	}
+	P_THIS->ServerKickPlayer_Implementation(Z_Param_PlayerToKick,Z_Param_Reason);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01072890 (end 0x010728DE)
@@ -1123,6 +1196,21 @@ void AFortPlayerController::execServerSetMarkText(UObject* Context, FFrame& Stac
 		return;
 	}
 	P_THIS->ServerSetMarkText_Implementation(Z_Param_MarkActor,Z_Param_MarkText);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01073ED0 (end 0x01073FE2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetPartyOwner) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerController::execServerSetPartyOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_PartyOwnerUniqueId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetPartyOwner_Validate(Z_Param_PartyOwnerUniqueId))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetPartyOwner_Validate"));
+		return;
+	}
+	P_THIS->ServerSetPartyOwner_Implementation(Z_Param_PartyOwnerUniqueId);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01073FF0 (end 0x0107412B)

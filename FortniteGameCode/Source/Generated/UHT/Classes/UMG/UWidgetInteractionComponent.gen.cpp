@@ -4,6 +4,57 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C05410 (end 0x01C05501)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPressAndReleaseKey) | Matching: see analysis/functions-uht-exec.json
+void UWidgetInteractionComponent::execPressAndReleaseKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FKey,Z_Param_Key);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->PressAndReleaseKey(Z_Param_Key);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C05510 (end 0x01C05642)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPressKey) | Matching: see analysis/functions-uht-exec.json
+void UWidgetInteractionComponent::execPressKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FKey,Z_Param_Key);
+	P_GET_UBOOL(Z_Param_bRepeat);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->PressKey(Z_Param_Key,Z_Param_bRepeat);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C05650 (end 0x01C0572F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPressPointerKey) | Matching: see analysis/functions-uht-exec.json
+void UWidgetInteractionComponent::execPressPointerKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FKey,Z_Param_Key);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PressPointerKey(Z_Param_Key);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C059F0 (end 0x01C05AE1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execReleaseKey) | Matching: see analysis/functions-uht-exec.json
+void UWidgetInteractionComponent::execReleaseKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FKey,Z_Param_Key);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ReleaseKey(Z_Param_Key);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C05C40 (end 0x01C05D1F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execReleasePointerKey) | Matching: see analysis/functions-uht-exec.json
+void UWidgetInteractionComponent::execReleasePointerKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FKey,Z_Param_Key);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ReleasePointerKey(Z_Param_Key);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C05DD0 (end 0x01C05E4F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execScrollWheel) | Matching: see analysis/functions-uht-exec.json
 void UWidgetInteractionComponent::execScrollWheel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -14,6 +14,151 @@ void AFortLobbyBeaconClient::execClientCreateOrJoinChatRoom(UObject* Context, FF
 	P_THIS->ClientCreateOrJoinChatRoom_Implementation(Z_Param_ChatRoomId);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01020280 (end 0x01020392)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerIncrementHomeBaseVersion) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClient::execServerIncrementHomeBaseVersion(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerIncrementHomeBaseVersion_Validate(Z_Param_InUniqueId))
+	{
+		RPC_ValidateFailed(TEXT("ServerIncrementHomeBaseVersion_Validate"));
+		return;
+	}
+	P_THIS->ServerIncrementHomeBaseVersion_Implementation(Z_Param_InUniqueId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010203F0 (end 0x01020548)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetCharacterGender) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClient::execServerSetCharacterGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_GET_PROPERTY(UByteProperty,Z_Param_GenderType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetCharacterGender_Validate(Z_Param_InUniqueId,EFortCustomGender::Type(Z_Param_GenderType)))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetCharacterGender_Validate"));
+		return;
+	}
+	P_THIS->ServerSetCharacterGender_Implementation(Z_Param_InUniqueId,EFortCustomGender::Type(Z_Param_GenderType));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01020550 (end 0x01020731)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetConsoleUniqueNetId) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClient::execServerSetConsoleUniqueNetId(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_GET_PROPERTY(UNameProperty,Z_Param_NewConsoleOSS);
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_NewConsoleNetId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetConsoleUniqueNetId_Validate(Z_Param_InUniqueId,Z_Param_NewConsoleOSS,Z_Param_NewConsoleNetId))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetConsoleUniqueNetId_Validate"));
+		return;
+	}
+	P_THIS->ServerSetConsoleUniqueNetId_Implementation(Z_Param_InUniqueId,Z_Param_NewConsoleOSS,Z_Param_NewConsoleNetId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01020740 (end 0x01020895)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetCurrentCharacterXp) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClient::execServerSetCurrentCharacterXp(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_GET_PROPERTY(UIntProperty,Z_Param_CurrentCharacterXp);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetCurrentCharacterXp_Validate(Z_Param_InUniqueId,Z_Param_CurrentCharacterXp))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetCurrentCharacterXp_Validate"));
+		return;
+	}
+	P_THIS->ServerSetCurrentCharacterXp_Implementation(Z_Param_InUniqueId,Z_Param_CurrentCharacterXp);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010208A0 (end 0x01020A3D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetGadget) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClient::execServerSetGadget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_GET_PROPERTY(UStrProperty,Z_Param_GadgetPersistentName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetGadget_Validate(Z_Param_InUniqueId,Z_Param_Index,Z_Param_GadgetPersistentName))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetGadget_Validate"));
+		return;
+	}
+	P_THIS->ServerSetGadget_Implementation(Z_Param_InUniqueId,Z_Param_Index,Z_Param_GadgetPersistentName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01020A40 (end 0x01020BAD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetHeroId) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClient::execServerSetHeroId(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_GET_PROPERTY(UStrProperty,Z_Param_InHeroId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetHeroId_Validate(Z_Param_InUniqueId,Z_Param_InHeroId))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetHeroId_Validate"));
+		return;
+	}
+	P_THIS->ServerSetHeroId_Implementation(Z_Param_InUniqueId,Z_Param_InHeroId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01020BB0 (end 0x01020D06)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetHeroSquadId) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClient::execServerSetHeroSquadId(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_GET_PROPERTY(UNameProperty,Z_Param_InHeroSquadId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetHeroSquadId_Validate(Z_Param_InUniqueId,Z_Param_InHeroSquadId))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetHeroSquadId_Validate"));
+		return;
+	}
+	P_THIS->ServerSetHeroSquadId_Implementation(Z_Param_InUniqueId,Z_Param_InHeroSquadId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01020D10 (end 0x01020E66)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetHeroType) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClient::execServerSetHeroType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_GET_OBJECT(UFortHeroType,Z_Param_InHeroType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetHeroType_Validate(Z_Param_InUniqueId,Z_Param_InHeroType))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetHeroType_Validate"));
+		return;
+	}
+	P_THIS->ServerSetHeroType_Implementation(Z_Param_InUniqueId,Z_Param_InHeroType);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01020E70 (end 0x01020FC5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetMatchmakingLevel) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClient::execServerSetMatchmakingLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_GET_PROPERTY(UIntProperty,Z_Param_MatchmakingLevel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetMatchmakingLevel_Validate(Z_Param_InUniqueId,Z_Param_MatchmakingLevel))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetMatchmakingLevel_Validate"));
+		return;
+	}
+	P_THIS->ServerSetMatchmakingLevel_Implementation(Z_Param_InUniqueId,Z_Param_MatchmakingLevel);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01020FD0 (end 0x0102108D)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerTeamChatRoomReady) | Matching: see analysis/functions-uht-exec.json
 void AFortLobbyBeaconClient::execServerTeamChatRoomReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

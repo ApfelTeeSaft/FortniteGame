@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FMargin();
 	UPackage* Z_Construct_UPackage__Script_SlateCore();  // RVA 0x0145CAE0
-struct alignas(4) FMargin
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FMargin is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0145B7F0 (end 0x0145B861, chained .pdata fragments; the reference inlines the package singleton, which this unit does not define yet)
 // Original VA: 0x000000014145B7F0 | File offset: 0x0145ADF0
 // Recovery: confirmed (TEXT("Margin") and Z_Construct_UScriptStruct_FMargin) | Matching: see analysis/functions-uht-staticstruct.json

@@ -4,6 +4,27 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108DAB0 (end 0x0108DBBD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnBounceCallback) | Matching: see analysis/functions-uht-exec.json
+void AFortProjectileBase::execOnBounceCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FHitResult,Z_Param_Out_Hit);
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_ImpactVelocity);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnBounceCallback(Z_Param_Out_Hit,Z_Param_Out_ImpactVelocity);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108E270 (end 0x0108E326)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnStopCallback) | Matching: see analysis/functions-uht-exec.json
+void AFortProjectileBase::execOnStopCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FHitResult,Z_Param_Out_Hit);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnStopCallback(Z_Param_Out_Hit);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortProjectileBase, 1197337080u)
 // Original dynamic initializer: RVA 0x0010D510 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortProjectileBase> AutoInitializeAFortProjectileBase(TEXT("AFortProjectileBase"), sizeof(AFortProjectileBase), 1197337080u);

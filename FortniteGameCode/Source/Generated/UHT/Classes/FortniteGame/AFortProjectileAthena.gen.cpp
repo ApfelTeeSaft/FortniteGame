@@ -31,6 +31,21 @@ void AFortProjectileAthena::execOnRep_PawnHitResult(UObject* Context, FFrame& St
 	P_THIS->OnRep_PawnHitResult();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108E350 (end 0x0108E5E2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerNotifyPawnHit) | Matching: see analysis/functions-uht-exec.json
+void AFortProjectileAthena::execServerNotifyPawnHit(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FHitResult,Z_Param_Hit);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerNotifyPawnHit_Validate(Z_Param_Hit))
+	{
+		RPC_ValidateFailed(TEXT("ServerNotifyPawnHit_Validate"));
+		return;
+	}
+	P_THIS->ServerNotifyPawnHit_Implementation(Z_Param_Hit);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortProjectileAthena, 436058295u)
 // Original dynamic initializer: RVA 0x0010D4F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortProjectileAthena> AutoInitializeAFortProjectileAthena(TEXT("AFortProjectileAthena"), sizeof(AFortProjectileAthena), 436058295u);

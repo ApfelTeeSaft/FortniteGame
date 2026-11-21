@@ -4,6 +4,19 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D334E0 (end 0x01D33678)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnActorBump) | Matching: see analysis/functions-uht-exec.json
+void UPathFollowingComponent::execOnActorBump(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_SelfActor);
+	P_GET_OBJECT(AActor,Z_Param_OtherActor);
+	P_GET_STRUCT(FVector,Z_Param_NormalImpulse);
+	P_GET_STRUCT_REF(FHitResult,Z_Param_Out_Hit);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnActorBump(Z_Param_SelfActor,Z_Param_OtherActor,Z_Param_NormalImpulse,Z_Param_Out_Hit);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPathFollowingComponent, 1720310592u)
 // Original dynamic initializer: RVA 0x001BF420 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPathFollowingComponent> AutoInitializeUPathFollowingComponent(TEXT("UPathFollowingComponent"), sizeof(UPathFollowingComponent), 1720310592u);

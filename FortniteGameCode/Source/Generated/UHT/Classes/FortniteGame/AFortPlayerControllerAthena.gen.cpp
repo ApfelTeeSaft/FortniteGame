@@ -174,6 +174,21 @@ void AFortPlayerControllerAthena::execServerGenerateMockMatchReport(UObject* Con
 	P_THIS->ServerGenerateMockMatchReport_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C810 (end 0x0107C8D9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPlaceMapCursor) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execServerPlaceMapCursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector_NetQuantize,Z_Param_CursorPos);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerPlaceMapCursor_Validate(Z_Param_CursorPos))
+	{
+		RPC_ValidateFailed(TEXT("ServerPlaceMapCursor_Validate"));
+		return;
+	}
+	P_THIS->ServerPlaceMapCursor_Implementation(Z_Param_CursorPos);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CB90 (end 0x0107CBDE)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerRemoveMapCursor) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerAthena::execServerRemoveMapCursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

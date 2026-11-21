@@ -38,6 +38,21 @@ void UCharacterMovementComponent::execCalcVelocity(UObject* Context, FFrame& Sta
 	P_THIS->CalcVelocity(Z_Param_DeltaTime,Z_Param_Friction,Z_Param_bFluid,Z_Param_BrakingDeceleration);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EFCA0 (end 0x023EFE81)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCapsuleTouched) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execCapsuleTouched(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp);
+	P_GET_OBJECT(AActor,Z_Param_Other);
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp);
+	P_GET_PROPERTY(UIntProperty,Z_Param_OtherBodyIndex);
+	P_GET_UBOOL(Z_Param_bFromSweep);
+	P_GET_STRUCT_REF(FHitResult,Z_Param_Out_SweepResult);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->CapsuleTouched(Z_Param_OverlappedComp,Z_Param_Other,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EFE90 (end 0x023EFEAF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClearAccumulatedForces) | Matching: see analysis/functions-uht-exec.json
 void UCharacterMovementComponent::execClearAccumulatedForces(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -108,6 +123,16 @@ void UCharacterMovementComponent::execGetMinAnalogSpeed(UObject* Context, FFrame
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(float*)Z_Param__Result=P_THIS->GetMinAnalogSpeed();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F1780 (end 0x023F1847)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsWalkable) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execIsWalkable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FHitResult,Z_Param_Out_Hit);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsWalkable(Z_Param_Out_Hit);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F2F00 (end 0x023F2F31)

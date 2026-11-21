@@ -15,6 +15,29 @@ void UAbilitySystemComponent::execClientActivateAbilityFailed(UObject* Context, 
 	P_THIS->ClientActivateAbilityFailed_Implementation(Z_Param_AbilityToActivate,Z_Param_PredictionKey);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0053B750 (end 0x0053B838)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientActivateAbilitySucceed) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execClientActivateAbilitySucceed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityToActivate);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientActivateAbilitySucceed_Implementation(Z_Param_AbilityToActivate,Z_Param_PredictionKey);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0053BD90 (end 0x0053BEB8)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSetReplicatedEvent) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execClientSetReplicatedEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityHandle);
+	P_GET_STRUCT(FPredictionKey,Z_Param_AbilityOriginalPredictionKey);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientSetReplicatedEvent_Implementation(EAbilityGenericReplicatedEvent::Type(Z_Param_EventType),Z_Param_AbilityHandle,Z_Param_AbilityOriginalPredictionKey);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0053BEC0 (end 0x0053BF3C)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientTryActivateAbility) | Matching: see analysis/functions-uht-exec.json
 void UAbilitySystemComponent::execClientTryActivateAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -23,6 +46,30 @@ void UAbilitySystemComponent::execClientTryActivateAbility(UObject* Context, FFr
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->ClientTryActivateAbility_Implementation(Z_Param_AbilityToActivate);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00540FB0 (end 0x00541138)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCueAdded) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execNetMulticast_InvokeGameplayCueAdded(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_GameplayCueTag);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_GET_STRUCT(FGameplayEffectContextHandle,Z_Param_EffectContext);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_InvokeGameplayCueAdded_Implementation(Z_Param_GameplayCueTag,Z_Param_PredictionKey,Z_Param_EffectContext);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005416A0 (end 0x00541828)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCueExecuted) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execNetMulticast_InvokeGameplayCueExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_GameplayCueTag);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_GET_STRUCT(FGameplayEffectContextHandle,Z_Param_EffectContext);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_InvokeGameplayCueExecuted_Implementation(Z_Param_GameplayCueTag,Z_Param_PredictionKey,Z_Param_EffectContext);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00542400 (end 0x0054241F), leaf (no .pdata)
@@ -135,6 +182,77 @@ void UAbilitySystemComponent::execServerSetInputReleased(UObject* Context, FFram
 		return;
 	}
 	P_THIS->ServerSetInputReleased_Implementation(Z_Param_AbilityHandle);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005435A0 (end 0x0054376C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetReplicatedEvent) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerSetReplicatedEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityHandle);
+	P_GET_STRUCT(FPredictionKey,Z_Param_AbilityOriginalPredictionKey);
+	P_GET_STRUCT(FPredictionKey,Z_Param_CurrentPredictionKey);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetReplicatedEvent_Validate(EAbilityGenericReplicatedEvent::Type(Z_Param_EventType),Z_Param_AbilityHandle,Z_Param_AbilityOriginalPredictionKey,Z_Param_CurrentPredictionKey))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetReplicatedEvent_Validate"));
+		return;
+	}
+	P_THIS->ServerSetReplicatedEvent_Implementation(EAbilityGenericReplicatedEvent::Type(Z_Param_EventType),Z_Param_AbilityHandle,Z_Param_AbilityOriginalPredictionKey,Z_Param_CurrentPredictionKey);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00543770 (end 0x005439A1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetReplicatedEventWithPayload) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerSetReplicatedEventWithPayload(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_EventType);
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityHandle);
+	P_GET_STRUCT(FPredictionKey,Z_Param_AbilityOriginalPredictionKey);
+	P_GET_STRUCT(FPredictionKey,Z_Param_CurrentPredictionKey);
+	P_GET_STRUCT(FVector_NetQuantize100,Z_Param_VectorPayload);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetReplicatedEventWithPayload_Validate(EAbilityGenericReplicatedEvent::Type(Z_Param_EventType),Z_Param_AbilityHandle,Z_Param_AbilityOriginalPredictionKey,Z_Param_CurrentPredictionKey,Z_Param_VectorPayload))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetReplicatedEventWithPayload_Validate"));
+		return;
+	}
+	P_THIS->ServerSetReplicatedEventWithPayload_Implementation(EAbilityGenericReplicatedEvent::Type(Z_Param_EventType),Z_Param_AbilityHandle,Z_Param_AbilityOriginalPredictionKey,Z_Param_CurrentPredictionKey,Z_Param_VectorPayload);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00543BF0 (end 0x00543D7E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetReplicatedTargetDataCancelled) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerSetReplicatedTargetDataCancelled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityHandle);
+	P_GET_STRUCT(FPredictionKey,Z_Param_AbilityOriginalPredictionKey);
+	P_GET_STRUCT(FPredictionKey,Z_Param_CurrentPredictionKey);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetReplicatedTargetDataCancelled_Validate(Z_Param_AbilityHandle,Z_Param_AbilityOriginalPredictionKey,Z_Param_CurrentPredictionKey))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetReplicatedTargetDataCancelled_Validate"));
+		return;
+	}
+	P_THIS->ServerSetReplicatedTargetDataCancelled_Implementation(Z_Param_AbilityHandle,Z_Param_AbilityOriginalPredictionKey,Z_Param_CurrentPredictionKey);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00543D80 (end 0x00543EDE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerTryActivateAbility) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerTryActivateAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityToActivate);
+	P_GET_UBOOL(Z_Param_InputPressed);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerTryActivateAbility_Validate(Z_Param_AbilityToActivate,Z_Param_InputPressed,Z_Param_PredictionKey))
+	{
+		RPC_ValidateFailed(TEXT("ServerTryActivateAbility_Validate"));
+		return;
+	}
+	P_THIS->ServerTryActivateAbility_Implementation(Z_Param_AbilityToActivate,Z_Param_InputPressed,Z_Param_PredictionKey);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UAbilitySystemComponent, 219976785u)

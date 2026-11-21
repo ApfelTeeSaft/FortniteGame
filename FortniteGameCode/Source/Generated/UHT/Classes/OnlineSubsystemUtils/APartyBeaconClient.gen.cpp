@@ -43,6 +43,21 @@ void APartyBeaconClient::execClientSendReservationUpdates(UObject* Context, FFra
 	P_THIS->ClientSendReservationUpdates_Implementation(Z_Param_NumRemainingReservations);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00331F40 (end 0x00332052)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerCancelReservationRequest) | Matching: see analysis/functions-uht-exec.json
+void APartyBeaconClient::execServerCancelReservationRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_PartyLeader);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerCancelReservationRequest_Validate(Z_Param_PartyLeader))
+	{
+		RPC_ValidateFailed(TEXT("ServerCancelReservationRequest_Validate"));
+		return;
+	}
+	P_THIS->ServerCancelReservationRequest_Implementation(Z_Param_PartyLeader);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(APartyBeaconClient, 378953535u)
 // Original dynamic initializer: RVA 0x00099220 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<APartyBeaconClient> AutoInitializeAPartyBeaconClient(TEXT("APartyBeaconClient"), sizeof(APartyBeaconClient), 378953535u);

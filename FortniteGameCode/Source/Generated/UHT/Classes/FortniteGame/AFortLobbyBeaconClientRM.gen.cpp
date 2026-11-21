@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101F9B0 (end 0x0101FAE1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientBroadcastLobbyPlayerPadTop) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClientRM::execClientBroadcastLobbyPlayerPadTop(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_ReadiedPlayer);
+	P_GET_UBOOL(Z_Param_bIsReadiedUp);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientBroadcastLobbyPlayerPadTop_Implementation(Z_Param_ReadiedPlayer,Z_Param_bIsReadiedUp);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01021090 (end 0x010210DE)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerUpdateNewlyJoinedPlayerInternal) | Matching: see analysis/functions-uht-exec.json
 void AFortLobbyBeaconClientRM::execServerUpdateNewlyJoinedPlayerInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

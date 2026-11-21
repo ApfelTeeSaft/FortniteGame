@@ -4,6 +4,30 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01082C70 (end 0x01082DF8)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCueAdded) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueAdded(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_GameplayCueTag);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_GET_STRUCT(FGameplayEffectContextHandle,Z_Param_EffectContext);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_InvokeGameplayCueAdded_Implementation(Z_Param_GameplayCueTag,Z_Param_PredictionKey,Z_Param_EffectContext);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01083360 (end 0x010834E8)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNetMulticast_InvokeGameplayCueExecuted) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawnAthena::execNetMulticast_InvokeGameplayCueExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_GameplayCueTag);
+	P_GET_STRUCT(FPredictionKey,Z_Param_PredictionKey);
+	P_GET_STRUCT(FGameplayEffectContextHandle,Z_Param_EffectContext);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NetMulticast_InvokeGameplayCueExecuted_Implementation(Z_Param_GameplayCueTag,Z_Param_PredictionKey,Z_Param_EffectContext);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerPawnAthena, 85586729u)
 // Original dynamic initializer: RVA 0x0010C4E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerPawnAthena> AutoInitializeAFortPlayerPawnAthena(TEXT("AFortPlayerPawnAthena"), sizeof(AFortPlayerPawnAthena), 85586729u);

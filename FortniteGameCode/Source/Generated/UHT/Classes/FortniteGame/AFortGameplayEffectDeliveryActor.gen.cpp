@@ -40,6 +40,35 @@ void AFortGameplayEffectDeliveryActor::execKillTimerExpired(UObject* Context, FF
 	P_THIS->KillTimerExpired();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEB260 (end 0x00FEB441)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnComponentOverlap) | Matching: see analysis/functions-uht-exec.json
+void AFortGameplayEffectDeliveryActor::execOnComponentOverlap(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp);
+	P_GET_OBJECT(AActor,Z_Param_OtherActor);
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp);
+	P_GET_PROPERTY(UIntProperty,Z_Param_OtherBodyIndex);
+	P_GET_UBOOL(Z_Param_bFromSweep);
+	P_GET_STRUCT_REF(FHitResult,Z_Param_Out_SweepResult);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnComponentOverlap(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEB450 (end 0x00FEB603)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnComponentTouch) | Matching: see analysis/functions-uht-exec.json
+void AFortGameplayEffectDeliveryActor::execOnComponentTouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_HitComp);
+	P_GET_OBJECT(AActor,Z_Param_OtherActor);
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp);
+	P_GET_STRUCT(FVector,Z_Param_NormalImpulse);
+	P_GET_STRUCT_REF(FHitResult,Z_Param_Out_Hit);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnComponentTouch(Z_Param_HitComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_NormalImpulse,Z_Param_Out_Hit);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEB6A0 (end 0x00FEB6BF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_IsBeingKilled) | Matching: see analysis/functions-uht-exec.json
 void AFortGameplayEffectDeliveryActor::execOnRep_IsBeingKilled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

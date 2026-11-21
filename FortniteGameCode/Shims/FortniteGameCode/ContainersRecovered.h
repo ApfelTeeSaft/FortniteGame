@@ -19,6 +19,11 @@ struct FMemory
 		return memcpy(Dest, Src, Count);  // FGenericPlatformMemory::Memcpy
 	}
 
+	static __forceinline void* Memzero(void* Dest, SIZE_T Count)
+	{
+		return memset(Dest, 0, Count);  // FGenericPlatformMemory::Memzero
+	}
+
 	static void* Realloc(void* Original, SIZE_T Count, uint32 Alignment = DEFAULT_ALIGNMENT);
 	static void Free(void* Original);
 	static SIZE_T QuantizeSize(SIZE_T Count, uint32 Alignment = DEFAULT_ALIGNMENT);

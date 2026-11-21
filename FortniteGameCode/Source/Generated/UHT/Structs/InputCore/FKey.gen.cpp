@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FKey();
 	UPackage* Z_Construct_UPackage__Script_InputCore();  // RVA 0x013C2780
-struct alignas(8) FKey
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FKey is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x013C2610 (end 0x013C2681, chained .pdata fragments; the reference inlines the package singleton, which this unit does not define yet)
 // Original VA: 0x00000001413C2610 | File offset: 0x013C1C10
 // Recovery: confirmed (TEXT("Key") and Z_Construct_UScriptStruct_FKey) | Matching: see analysis/functions-uht-staticstruct.json

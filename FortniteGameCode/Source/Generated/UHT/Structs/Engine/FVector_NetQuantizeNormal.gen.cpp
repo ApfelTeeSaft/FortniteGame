@@ -10,11 +10,7 @@
 	UScriptStruct* Z_Construct_UScriptStruct_FVector_NetQuantizeNormal();
 	UPackage* Z_Construct_UPackage__Script_Engine();  // RVA 0x0240CE30
 UScriptStruct* Z_Construct_UScriptStruct_Unrecovered_0x013A83A0();  // RVA 0x013A83A0
-struct alignas(4) FVector_NetQuantizeNormal
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FVector_NetQuantizeNormal is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02495890 (end 0x024958E2, chained .pdata fragments)
 // Original VA: 0x0000000142495890 | File offset: 0x02494E90
 // Recovery: confirmed (TEXT("Vector_NetQuantizeNormal") and Z_Construct_UScriptStruct_FVector_NetQuantizeNormal) | Matching: see analysis/functions-uht-staticstruct.json

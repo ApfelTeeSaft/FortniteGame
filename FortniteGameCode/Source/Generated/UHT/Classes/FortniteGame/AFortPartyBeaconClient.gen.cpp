@@ -42,6 +42,38 @@ void AFortPartyBeaconClient::execClientReconnectResponse(UObject* Context, FFram
 	P_THIS->ClientReconnectResponse_Implementation(EPartyReservationResult::Type(Z_Param_ReservationResponse));
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105A5C0 (end 0x0105A785)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerAbandonExistingReservation) | Matching: see analysis/functions-uht-exec.json
+void AFortPartyBeaconClient::execServerAbandonExistingReservation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_InSessionId);
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_RequestingPlayer);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerAbandonExistingReservation_Validate(Z_Param_InSessionId,Z_Param_RequestingPlayer))
+	{
+		RPC_ValidateFailed(TEXT("ServerAbandonExistingReservation_Validate"));
+		return;
+	}
+	P_THIS->ServerAbandonExistingReservation_Implementation(Z_Param_InSessionId,Z_Param_RequestingPlayer);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105AA40 (end 0x0105AC05)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerReconnectExistingReservation) | Matching: see analysis/functions-uht-exec.json
+void AFortPartyBeaconClient::execServerReconnectExistingReservation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_InSessionId);
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_RequestingPlayer);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerReconnectExistingReservation_Validate(Z_Param_InSessionId,Z_Param_RequestingPlayer))
+	{
+		RPC_ValidateFailed(TEXT("ServerReconnectExistingReservation_Validate"));
+		return;
+	}
+	P_THIS->ServerReconnectExistingReservation_Implementation(Z_Param_InSessionId,Z_Param_RequestingPlayer);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPartyBeaconClient, 4065731529u)
 // Original dynamic initializer: RVA 0x001072F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPartyBeaconClient> AutoInitializeAFortPartyBeaconClient(TEXT("AFortPartyBeaconClient"), sizeof(AFortPartyBeaconClient), 4065731529u);

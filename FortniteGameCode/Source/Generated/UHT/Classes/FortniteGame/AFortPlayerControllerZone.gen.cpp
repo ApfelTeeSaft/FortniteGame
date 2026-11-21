@@ -58,6 +58,22 @@ void AFortPlayerControllerZone::execServerSendLoadoutConfig(UObject* Context, FF
 	P_THIS->ServerSendLoadoutConfig_Implementation(Z_Param_LoadoutSeed,Z_Param_Loadout);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01085000 (end 0x0108516D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSendPartyJoinInfoToPlayer) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerZone::execServerSendPartyJoinInfoToPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_RecipientId);
+	P_GET_PROPERTY(UStrProperty,Z_Param_JoinInfoStr);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSendPartyJoinInfoToPlayer_Validate(Z_Param_RecipientId,Z_Param_JoinInfoStr))
+	{
+		RPC_ValidateFailed(TEXT("ServerSendPartyJoinInfoToPlayer_Validate"));
+		return;
+	}
+	P_THIS->ServerSendPartyJoinInfoToPlayer_Implementation(Z_Param_RecipientId,Z_Param_JoinInfoStr);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010852F0 (end 0x0108533E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetShouldDisablePlayerTeleportingDuringMissionResults) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerZone::execServerSetShouldDisablePlayerTeleportingDuringMissionResults(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

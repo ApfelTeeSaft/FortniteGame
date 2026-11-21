@@ -238,3 +238,5 @@ struct FGameplayAbilitySpecHandle
 private:
 	int32 Handle;
 };
+
+#include "FortniteGameCode/EngineStructsRecovered.h"

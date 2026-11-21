@@ -35,6 +35,8 @@ enum class ESPMode
 
 namespace SharedPointerInternals
 {
+	struct FNullTag {};
+
 	class FReferenceControllerBase
 	{
 	public:
@@ -60,6 +62,37 @@ namespace SharedPointerInternals
 
 	template <ESPMode Mode>
 	struct FReferenceControllerOps;
+
+	template <>
+	struct FReferenceControllerOps<ESPMode::NotThreadSafe>
+	{
+		static __forceinline void AddSharedReference(FReferenceControllerBase* ReferenceController)
+		{
+			++ReferenceController->SharedReferenceCount;
+		}
+
+		static __forceinline void ReleaseSharedReference(FReferenceControllerBase* ReferenceController)
+		{
+			if( --ReferenceController->SharedReferenceCount == 0 )
+			{
+				// Last shared reference was released!  Destroy the referenced object.
+				ReferenceController->DestroyObject();
+
+				// No more shared referencers, so decrement the weak reference count by one.  When the weak
+				// reference count reaches zero, this object will be deleted.
+				ReleaseWeakReference(ReferenceController);
+			}
+		}
+
+		static void ReleaseWeakReference(FReferenceControllerBase* ReferenceController)
+		{
+			if( --ReferenceController->WeakReferenceCount == 0 )
+			{
+				// No more references to this reference count.  Destroy it!
+				delete ReferenceController;
+			}
+		}
+	};
 
 	template <>
 	struct FReferenceControllerOps<ESPMode::ThreadSafe>
@@ -93,6 +126,23 @@ namespace SharedPointerInternals
 		typedef FReferenceControllerOps<Mode> TOps;
 
 	public:
+		/** Constructor for an empty shared referencer object */
+		__forceinline FSharedReferencer()
+			: ReferenceController( nullptr )
+		{ }
+
+		/** Copy constructor creates a new reference to the existing object */
+		__forceinline FSharedReferencer( FSharedReferencer const& InSharedReference )
+			: ReferenceController( InSharedReference.ReferenceController )
+		{
+			// If the incoming reference had an object associated with it, then go ahead and increment the
+			// shared reference count
+			if( ReferenceController != nullptr )
+			{
+				TOps::AddSharedReference(ReferenceController);
+			}
+		}
+
 		__forceinline ~FSharedReferencer()
 		{
 			if( ReferenceController != nullptr )
@@ -108,10 +158,30 @@ namespace SharedPointerInternals
 	};
 }
 
-// Templates/SharedPointer.h: only the members (construction and copies are not modelled).
+// Templates/SharedPointer.h: TSharedRef's members only (FText's copies are out of line).
 template< class ObjectType, ESPMode Mode = ESPMode::Fast >
 class TSharedRef
 {
+private:
+	ObjectType* Object;
+	SharedPointerInternals::FSharedReferencer< Mode > SharedReferenceCount;
+};
+
+// Templates/SharedPointer.h: empty construction, copy and destruction only.
+template< class ObjectType, ESPMode Mode = ESPMode::Fast >
+class TSharedPtr
+{
+public:
+	__forceinline TSharedPtr( SharedPointerInternals::FNullTag* = nullptr )
+		: Object( nullptr )
+		, SharedReferenceCount()
+	{ }
+
+	__forceinline TSharedPtr( TSharedPtr const& InSharedPtr )
+		: Object( InSharedPtr.Object )
+		, SharedReferenceCount( InSharedPtr.SharedReferenceCount )
+	{ }
+
 private:
 	ObjectType* Object;
 	SharedPointerInternals::FSharedReferencer< Mode > SharedReferenceCount;

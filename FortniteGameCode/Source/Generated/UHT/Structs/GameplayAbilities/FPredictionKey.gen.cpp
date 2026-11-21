@@ -9,11 +9,7 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FPredictionKey();
 	UPackage* Z_Construct_UPackage__Script_GameplayAbilities();  // RVA 0x0054EE20
-struct alignas(8) FPredictionKey
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FPredictionKey is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00565EA0 (end 0x00565EF2, chained .pdata fragments)
 // Original VA: 0x0000000140565EA0 | File offset: 0x005654A0
 // Recovery: confirmed (TEXT("PredictionKey") and Z_Construct_UScriptStruct_FPredictionKey) | Matching: see analysis/functions-uht-staticstruct.json

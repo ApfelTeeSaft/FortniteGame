@@ -50,7 +50,15 @@ NUMERIC = {"Byte": ("uint8", "UByteProperty"), "Int8": ("int8", "UInt8Property")
 # UScriptStruct name -> (SizeOf, AlignOf) of the structs ScriptRecovered.h defines from the
 # UE4.20 headers; a struct parameter is supported only when its FStructParams agree.
 MODELLED_STRUCTS = {"Vector": (12, 4), "Rotator": (12, 4), "Vector2D": (8, 4), "LinearColor": (16, 4),
-                    "Guid": (16, 4), "GameplayTag": (8, 8), "GameplayAbilitySpecHandle": (4, 4)}
+                    "Guid": (16, 4), "GameplayTag": (8, 8), "GameplayAbilitySpecHandle": (4, 4),
+                    # EngineStructsRecovered.h
+                    "Vector_NetQuantize": (12, 4), "Vector_NetQuantize10": (12, 4),
+                    "Vector_NetQuantize100": (12, 4), "Vector_NetQuantizeNormal": (12, 4),
+                    "HitResult": (136, 8), "PredictionKey": (24, 8), "Color": (4, 4), "Margin": (16, 4),
+                    "Key": (24, 8), "UniqueNetIdRepl": (40, 8), "GameplayEffectContextHandle": (24, 8)}
+# Of those, the ones TArray may hold (ConstructItems / DestructItems model trivial copies only):
+# FHitResult's FWeakObjectPtr members have a user-defined copy constructor.
+TRIVIAL_STRUCTS = set(MODELLED_STRUCTS) - {"HitResult", "Key", "UniqueNetIdRepl", "GameplayEffectContextHandle"}
 REGISTER_RETURN = {"bool", "uint8", "int8", "int16", "int32", "int64", "uint16", "uint32", "uint64", "float", "double"}
 
 
@@ -212,7 +220,8 @@ def element_type(inner: dict, names: Names, base: int) -> str | None:
         return "UClass*"
     if t == "Struct":
         info = names.structs.get(inner["func"] - base) if inner["func"] else None
-        return f"F{info[0]}" if info and MODELLED_STRUCTS.get(info[0]) == info[1:] else None
+        return (f"F{info[0]}" if info and MODELLED_STRUCTS.get(info[0]) == info[1:]
+                and info[0] in TRIVIAL_STRUCTS else None)
     return None
 
 

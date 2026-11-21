@@ -142,6 +142,21 @@ void ABuildingTrap::execOnRep_ReplicatedAppliedAlterations(UObject* Context, FFr
 	P_THIS->OnRep_ReplicatedAppliedAlterations();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74B20 (end 0x00F74D01)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnTriggerTouch) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execOnTriggerTouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp);
+	P_GET_OBJECT(AActor,Z_Param_OtherActor);
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp);
+	P_GET_PROPERTY(UIntProperty,Z_Param_OtherBodyIndex);
+	P_GET_UBOOL(Z_Param_bFromSweep);
+	P_GET_STRUCT_REF(FHitResult,Z_Param_Out_SweepResult);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnTriggerTouch(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex,Z_Param_bFromSweep,Z_Param_Out_SweepResult);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74FA0 (end 0x00F74FBF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execTriggerIfAppropriate) | Matching: see analysis/functions-uht-exec.json
 void ABuildingTrap::execTriggerIfAppropriate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

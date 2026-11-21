@@ -172,6 +172,16 @@ void APlayerController::execClientMessage(UObject* Context, FFrame& Stack, void*
 	P_THIS->ClientMessage_Implementation(Z_Param_S,Z_Param_Type,Z_Param_MsgLifeTime);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024ACFF0 (end 0x024AD118)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientMutePlayer) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientMutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_PlayerId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientMutePlayer_Implementation(Z_Param_PlayerId);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AD120 (end 0x024AD3B8)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientPlayCameraAnim) | Matching: see analysis/functions-uht-exec.json
 void APlayerController::execClientPlayCameraAnim(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -348,6 +358,20 @@ void APlayerController::execClientSetBlockOnAsyncLoading(UObject* Context, FFram
 	P_THIS->ClientSetBlockOnAsyncLoading_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AE000 (end 0x024AE18A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSetCameraFade) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientSetCameraFade(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bEnableFading);
+	P_GET_STRUCT(FColor,Z_Param_FadeColor);
+	P_GET_STRUCT(FVector2D,Z_Param_FadeAlpha);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_FadeTime);
+	P_GET_UBOOL(Z_Param_bFadeAudio);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientSetCameraFade_Implementation(Z_Param_bEnableFading,Z_Param_FadeColor,Z_Param_FadeAlpha,Z_Param_FadeTime,Z_Param_bFadeAudio);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AE190 (end 0x024AE214)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSetCameraMode) | Matching: see analysis/functions-uht-exec.json
 void APlayerController::execClientSetCameraMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -480,6 +504,16 @@ void APlayerController::execClientTravelInternal(UObject* Context, FFrame& Stack
 	P_THIS->ClientTravelInternal_Implementation(Z_Param_URL,ETravelType(Z_Param_TravelType),Z_Param_bSeamless,Z_Param_MapPackageGuid);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AEDF0 (end 0x024AEF18)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientUnmutePlayer) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientUnmutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_PlayerId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientUnmutePlayer_Implementation(Z_Param_PlayerId);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AEF20 (end 0x024AF0C7)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientUpdateLevelStreamingStatus) | Matching: see analysis/functions-uht-exec.json
 void APlayerController::execClientUpdateLevelStreamingStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -511,6 +545,16 @@ void APlayerController::execClientWasKicked(UObject* Context, FFrame& Stack, voi
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->ClientWasKicked_Implementation(Z_Param_KickReason);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF250 (end 0x024AF32F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execConsoleKey) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execConsoleKey(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FKey,Z_Param_Key);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ConsoleKey(Z_Param_Key);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF5B0 (end 0x024AF5CF), leaf (no .pdata)
@@ -662,6 +706,21 @@ void APlayerController::execServerCheckClientPossessionReliable(UObject* Context
 	P_THIS->ServerCheckClientPossessionReliable_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B25A0 (end 0x024B2710)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerMutePlayer) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerMutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_PlayerId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerMutePlayer_Validate(Z_Param_PlayerId))
+	{
+		RPC_ValidateFailed(TEXT("ServerMutePlayer_Validate"));
+		return;
+	}
+	P_THIS->ServerMutePlayer_Implementation(Z_Param_PlayerId);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B27C0 (end 0x024B280E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPause) | Matching: see analysis/functions-uht-exec.json
 void APlayerController::execServerPause(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -747,6 +806,37 @@ void APlayerController::execServerToggleAILogging(UObject* Context, FFrame& Stac
 		return;
 	}
 	P_THIS->ServerToggleAILogging_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2AF0 (end 0x024B2C60)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerUnmutePlayer) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerUnmutePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_PlayerId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerUnmutePlayer_Validate(Z_Param_PlayerId))
+	{
+		RPC_ValidateFailed(TEXT("ServerUnmutePlayer_Validate"));
+		return;
+	}
+	P_THIS->ServerUnmutePlayer_Implementation(Z_Param_PlayerId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2C60 (end 0x024B2D7C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerUpdateCamera) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerUpdateCamera(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector_NetQuantize,Z_Param_CamLoc);
+	P_GET_PROPERTY(UIntProperty,Z_Param_CamPitchAndYaw);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerUpdateCamera_Validate(Z_Param_CamLoc,Z_Param_CamPitchAndYaw))
+	{
+		RPC_ValidateFailed(TEXT("ServerUpdateCamera_Validate"));
+		return;
+	}
+	P_THIS->ServerUpdateCamera_Implementation(Z_Param_CamLoc,Z_Param_CamPitchAndYaw);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2F30 (end 0x024B2F7E)

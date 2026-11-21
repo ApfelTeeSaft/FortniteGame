@@ -188,6 +188,12 @@ def test_uht_parameters() -> None:
     t = P.parameter(arr("Locs", const | out | ref, {"type": "Struct", "flags": 0, "func": base + 0x400}), names, base)
     assert t["decl"] == "TArray<FVector> const& Locs", t
     assert P.parameter(arr("Names", 0, {"type": "Str", "flags": 0, "func": 0}), names, base) is None  # FString elements: not modelled
+    names.structs[0x500] = ("HitResult", 136, 8)                     # user-defined copy (FWeakObjectPtr)
+    assert P.parameter(arr("Hits", 0, {"type": "Struct", "flags": 0, "func": base + 0x500}), names, base) is None
+    t = P.parameter(rec("Struct", "Hit", const | out | ref, 0x500), names, base)
+    assert t["decl"] == "FHitResult const& Hit", t
+    names.structs[0x600] = ("HitResult", 136, 4)                     # FStructParams disagree: not used
+    assert P.parameter(rec("Struct", "Hit", const | out | ref, 0x600), names, base) is None
     t = P.parameter(rec("Text", "Label", 0), names, base)
     assert (t["decl"], t["line"]) == ("FText Label", "P_GET_PROPERTY(UTextProperty,Z_Param_Label);"), t
     t = P.parameter(rec("Text", "Label", const | out | ref), names, base)

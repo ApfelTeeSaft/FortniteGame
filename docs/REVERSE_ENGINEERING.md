@@ -315,10 +315,10 @@ come from the inlined-native error. This brings the named denominator functions 
 
 **Generated declarations and thunks.** `Classes.gen.h` declares each class's new slots in
 order. An introduced slot is declared by name when its UFunction's whole signature is
-supported (see "Exec thunk parameters" below); `_Validate` returns bool. That gives 1,510
+supported (see "Exec thunk parameters" below); `_Validate` returns bool. That gives 1,606
 named declarations.
 
-Other slots are placeholders (`virtual void FNGC_VSlot_0x<offset>()`): 4,053 gaps and 262
+Other slots are placeholders (`virtual void FNGC_VSlot_0x<offset>()`): 4,053 gaps and 166
 named slots whose signature uses a type not modelled yet. MSVC lays out single-inheritance vtables in declaration
 order. The root becomes polymorphic, its destructor in slot 0 as in `UObjectBase`, and its
 opaque member shrinks by the vptr, so every `sizeof` is unchanged.
@@ -337,14 +337,31 @@ predictions.
 Out of line, the effect is small and changes as thunks are added. Even one definition in
 `Paper2D.1` moves one `StaticEnum` singleton to the front of the unit's `.bss`. With the
 first 379 thunk addresses, the net was 2 `StaticEnum` matches fewer than without thunks.
-With 979 it was 1 more (381; `FCompiledInDeferEnum` 252, 1 more), with 1,052 level (380),
-and with 1,091 it is 2 fewer (378; 251). That is consistent with the reference, which contains every thunk. The
-individual units still differ.
+The count then moved with each batch:
+
+| Thunk addresses | `StaticEnum` | `FCompiledInDeferEnum` |
+| --- | --- | --- |
+| 979 | 381 (1 more) | 252 (1 more) |
+| 1,052 | 380 (level) | — |
+| 1,091 | 378 | 251 |
+| 1,115 | 367 | 239 |
+| 1,158 | 381 | 251 |
+
+Bisecting one unit (`NVIDIAGfeSDK.1`, which has no thunk of its own) showed something more.
+The order changes once enough unrelated declarations in `Classes.gen.h` change, here 31 slot
+declarations gaining their signatures; no single line does it. So these layout predictions
+depend on the whole unit, not only on the thunks.
+
+A plausible mechanism, not verified: UHT makes `<Enum>_StaticEnum` file-static. MSVC emits
+such internal functions, with their static locals, in an order that depends on the whole
+unit. The reference, with its full engine headers, had an order of its own. The predictions
+that hold are byte-checked as usual; the ones that come and go are reported as
+relocation-equivalent.
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,338, at 1,091 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 707 read parameters |
-| exact | 1,082: 880 in the denominator, 202 leaf (no `.pdata`) |
+| UFunction thunks defined | 1,405, at 1,158 addresses (132 bodies shared by folded UFunctions; one manifest entry each); 772 read parameters |
+| exact | 1,149: 947 in the denominator, 202 leaf (no `.pdata`) |
 | `partial` | 9: three natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) and six byte enums whose native is declared with `TEnumAsByte` (below) |
 
 The thunks call `RPC_ValidateFailed`, `FFrame::Step` and `FFrame::StepExplicitProperty`,
@@ -382,7 +399,14 @@ Supported types:
   `FLinearColor`, `FGuid`, `FGameplayTag` and `FGameplayAbilitySpecHandle`;
 - `FString`, and `TArray` of trivially copyable and destructible elements (the types above
   except enums);
-- `FText` and `TSubclassOf<C>` (`TextRecovered.h`).
+- `FText` and `TSubclassOf<C>` (`TextRecovered.h`);
+- from `EngineStructsRecovered.h`:
+  - `FVector_NetQuantize` and its 10/100/Normal forms, `FHitResult`, `FPredictionKey`,
+    `FColor`, `FMargin`;
+  - `FKey` (`FName` and a non-thread-safe `TSharedPtr`);
+  - `FUniqueNetIdRepl` (`FUniqueNetIdWrapper`'s vptr and `TSharedPtr`, then
+    `ReplicationBytes`);
+  - `FGameplayEffectContextHandle` (vptr and `TSharedPtr`).
 
 A struct is used only when the reference's `FStructParams` give the same `SizeOf` and
 `AlignOf`. Enums are declared with their form and underlying type only, no enumerators.
@@ -436,6 +460,20 @@ Limits:
   `TSubclassOf` parameter as a `UClass*` (`P_GET_OBJECT(UClass, ...)`) and converts it at
   the call. An out parameter is passed as the wrapper itself (`bPassAsNoPtr`:
   `P_GET_OBJECT_REF_NO_PTR`). Its class comes from `FClassPropertyParams::MetaClassFunc`.
+- **More structs.** Each struct's member offsets were checked against its reflected
+  properties (`FStructParams`) before modelling. For example, `FHitResult`'s `Time` is at 8,
+  its weak pointers at 96-112 and its names at 120/128; `FUniqueNetIdRepl::ReplicationBytes`
+  is at 24.
+  - The constructors and destructors are the 4.20 ones. `FHitResult()` is `Memzero` plus
+    `Time = 1.f`; `FWeakObjectPtr()` sets `INDEX_NONE`. Each polymorphic struct's inline
+    constructor stores its own vtable. Its destructor stores the struct's vtable, then the
+    base's, then releases the `TSharedPtr` (non-atomic: `ESPMode::Fast` is not thread-safe
+    on Windows). The other thunks corroborate the vtables' addresses.
+  - Only trivially copyable structs may be `TArray` elements; `FHitResult`, `FKey`,
+    `FUniqueNetIdRepl` and `FGameplayEffectContextHandle` may not.
+  - `FTransform` is not modelled. Its default constructor reads `GlobalVectorConstants`,
+    per-unit dynamically initialised statics, the same 16-byte constants that delimit units
+    in the layout model. Modelling them would move the units' `.bss` layout.
 - **`<intrin.h>`.** Including it for `_InterlockedDecrement` changed the order in which MSVC
   emitted other functions' static locals in every unit. That cost 36 `StaticEnum` and 27
   `FCompiledInDeferEnum` layout predictions, even in units without new thunks. Declaring the
@@ -451,15 +489,14 @@ Limits:
   with `TEnumAsByte`, which MSVC passes through a temporary because of its copy
   constructor; their thunks do not match. Recovering the form from the reference's
   argument setup is a possible next step.
-- Of the 1,661 virtual-native UFunctions, 1,420 have a supported signature and 1,338 have
-  thunks (folded bodies counted per UFunction). For the other 82, a slot is not declared
+- Of the 1,661 virtual-native UFunctions, 1,488 have a supported signature and 1,405 have
+  thunks (folded bodies counted per UFunction). For the other 83, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
   pair). The unsupported ones mostly use structs not modelled:
-  - `FUniqueNetIdRepl` (29), `FGameplayCueParameters` (18), `FHitResult` (12),
-    `FTransform` (10);
-  - `FSlateBrush`, `FGameplayTagContainer` and `FKey` (6 each);
+  - `FGameplayCueParameters` (25), `FTransform` (10), `FGameplayTagContainer` (8),
+    `FSlateBrush` (6);
   - soft object pointers (6) and arrays of strings (5);
-  - 37 use several such types.
+  - 12 use several such types.
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)
 

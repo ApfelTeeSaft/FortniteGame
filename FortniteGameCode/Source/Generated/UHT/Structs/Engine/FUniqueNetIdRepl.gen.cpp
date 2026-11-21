@@ -10,11 +10,7 @@
 	UScriptStruct* Z_Construct_UScriptStruct_FUniqueNetIdRepl();
 	UPackage* Z_Construct_UPackage__Script_Engine();  // RVA 0x0240CE30
 UScriptStruct* Z_Construct_UScriptStruct_Unrecovered_0x013A8310();  // RVA 0x013A8310
-struct alignas(8) FUniqueNetIdRepl
-{
-	static class UScriptStruct* StaticStruct();
-	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
-};
+// FUniqueNetIdRepl is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02495710 (end 0x02495762, chained .pdata fragments)
 // Original VA: 0x0000000142495710 | File offset: 0x02494D10
 // Recovery: confirmed (TEXT("UniqueNetIdRepl") and Z_Construct_UScriptStruct_FUniqueNetIdRepl) | Matching: see analysis/functions-uht-staticstruct.json

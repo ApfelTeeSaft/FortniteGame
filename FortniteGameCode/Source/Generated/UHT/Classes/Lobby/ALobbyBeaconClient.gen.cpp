@@ -22,6 +22,38 @@ void ALobbyBeaconClient::execClientJoinGame(UObject* Context, FFrame& Stack, voi
 	P_THIS->ClientJoinGame_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005C2680 (end 0x005C27B1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientLoginComplete) | Matching: see analysis/functions-uht-exec.json
+void ALobbyBeaconClient::execClientLoginComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_GET_UBOOL(Z_Param_bWasSuccessful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientLoginComplete_Implementation(Z_Param_InUniqueId,Z_Param_bWasSuccessful);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005C27C0 (end 0x005C2930)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientPlayerJoined) | Matching: see analysis/functions-uht-exec.json
+void ALobbyBeaconClient::execClientPlayerJoined(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UTextProperty,Z_Param_NewPlayerName);
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientPlayerJoined_Implementation(Z_Param_NewPlayerName,Z_Param_InUniqueId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005C2930 (end 0x005C2A1F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientPlayerLeft) | Matching: see analysis/functions-uht-exec.json
+void ALobbyBeaconClient::execClientPlayerLeft(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientPlayerLeft_Implementation(Z_Param_InUniqueId);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005C2AB0 (end 0x005C2B65)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientWasKicked) | Matching: see analysis/functions-uht-exec.json
 void ALobbyBeaconClient::execClientWasKicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -61,6 +93,39 @@ void ALobbyBeaconClient::execServerDisconnectFromLobby(UObject* Context, FFrame&
 	P_THIS->ServerDisconnectFromLobby_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005C2D00 (end 0x005C2E92)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerKickPlayer) | Matching: see analysis/functions-uht-exec.json
+void ALobbyBeaconClient::execServerKickPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_PlayerToKick);
+	P_GET_PROPERTY(UTextProperty,Z_Param_Reason);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerKickPlayer_Validate(Z_Param_PlayerToKick,Z_Param_Reason))
+	{
+		RPC_ValidateFailed(TEXT("ServerKickPlayer_Validate"));
+		return;
+	}
+	P_THIS->ServerKickPlayer_Implementation(Z_Param_PlayerToKick,Z_Param_Reason);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005C2EA0 (end 0x005C3064)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerLoginPlayer) | Matching: see analysis/functions-uht-exec.json
+void ALobbyBeaconClient::execServerLoginPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_InSessionId);
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_GET_PROPERTY(UStrProperty,Z_Param_UrlString);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerLoginPlayer_Validate(Z_Param_InSessionId,Z_Param_InUniqueId,Z_Param_UrlString))
+	{
+		RPC_ValidateFailed(TEXT("ServerLoginPlayer_Validate"));
+		return;
+	}
+	P_THIS->ServerLoginPlayer_Implementation(Z_Param_InSessionId,Z_Param_InUniqueId,Z_Param_UrlString);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005C3070 (end 0x005C30BE)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerNotifyJoiningServer) | Matching: see analysis/functions-uht-exec.json
 void ALobbyBeaconClient::execServerNotifyJoiningServer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -73,6 +138,22 @@ void ALobbyBeaconClient::execServerNotifyJoiningServer(UObject* Context, FFrame&
 		return;
 	}
 	P_THIS->ServerNotifyJoiningServer_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005C30C0 (end 0x005C326E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetPartyOwner) | Matching: see analysis/functions-uht-exec.json
+void ALobbyBeaconClient::execServerSetPartyOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InUniqueId);
+	P_GET_STRUCT(FUniqueNetIdRepl,Z_Param_InPartyOwnerId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetPartyOwner_Validate(Z_Param_InUniqueId,Z_Param_InPartyOwnerId))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetPartyOwner_Validate"));
+		return;
+	}
+	P_THIS->ServerSetPartyOwner_Implementation(Z_Param_InUniqueId,Z_Param_InPartyOwnerId);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(ALobbyBeaconClient, 387611509u)
