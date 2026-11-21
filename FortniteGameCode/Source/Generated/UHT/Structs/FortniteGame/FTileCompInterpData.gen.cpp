@@ -14,7 +14,7 @@ struct alignas(4) FTileCompInterpData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F663B0 (end 0x00F66402, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F663B0 (end 0x00F66402, chained .pdata fragments)
 // Original VA: 0x0000000140F663B0 | File offset: 0x00F659B0
 // Recovery: confirmed (TEXT("TileCompInterpData") and Z_Construct_UScriptStruct_FTileCompInterpData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTileCompInterpData::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortAthenaConsumableRecord
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102F710 (end 0x0102F762, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102F710 (end 0x0102F762, chained .pdata fragments)
 // Original VA: 0x000000014102F710 | File offset: 0x0102ED10
 // Recovery: confirmed (TEXT("FortAthenaConsumableRecord") and Z_Construct_UScriptStruct_FFortAthenaConsumableRecord) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAthenaConsumableRecord::StaticStruct()

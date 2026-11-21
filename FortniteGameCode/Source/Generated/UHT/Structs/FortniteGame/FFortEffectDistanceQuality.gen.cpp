@@ -14,7 +14,7 @@ struct alignas(4) FFortEffectDistanceQuality
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9B30 (end 0x010C9B82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9B30 (end 0x010C9B82, chained .pdata fragments)
 // Original VA: 0x00000001410C9B30 | File offset: 0x010C9130
 // Recovery: confirmed (TEXT("FortEffectDistanceQuality") and Z_Construct_UScriptStruct_FFortEffectDistanceQuality) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortEffectDistanceQuality::StaticStruct()

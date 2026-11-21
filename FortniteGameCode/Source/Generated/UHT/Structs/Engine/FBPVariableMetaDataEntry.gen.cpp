@@ -14,7 +14,7 @@ struct alignas(8) FBPVariableMetaDataEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2E10 (end 0x023E2E62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2E10 (end 0x023E2E62, chained .pdata fragments)
 // Original VA: 0x00000001423E2E10 | File offset: 0x023E2410
 // Recovery: confirmed (TEXT("BPVariableMetaDataEntry") and Z_Construct_UScriptStruct_FBPVariableMetaDataEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBPVariableMetaDataEntry::StaticStruct()

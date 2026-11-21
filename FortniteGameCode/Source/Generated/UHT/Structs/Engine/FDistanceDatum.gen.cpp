@@ -14,7 +14,7 @@ struct alignas(4) FDistanceDatum
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB5F0 (end 0x024DB642, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB5F0 (end 0x024DB642, chained .pdata fragments)
 // Original VA: 0x00000001424DB5F0 | File offset: 0x024DABF0
 // Recovery: confirmed (TEXT("DistanceDatum") and Z_Construct_UScriptStruct_FDistanceDatum) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDistanceDatum::StaticStruct()

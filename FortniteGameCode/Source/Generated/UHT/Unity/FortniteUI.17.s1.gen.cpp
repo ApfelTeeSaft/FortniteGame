@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/FortniteUI/EFortReturnToFrontendBehavior.static.gen.cpp"
+#include "../Enums/FortniteUI/EFortUISurvivorSquadMatchType.static.gen.cpp"

@@ -14,7 +14,7 @@ struct alignas(8) FImportFriendsRewardNotification
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01030130 (end 0x01030182, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01030130 (end 0x01030182, chained .pdata fragments)
 // Original VA: 0x0000000141030130 | File offset: 0x0102F730
 // Recovery: confirmed (TEXT("ImportFriendsRewardNotification") and Z_Construct_UScriptStruct_FImportFriendsRewardNotification) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FImportFriendsRewardNotification::StaticStruct()

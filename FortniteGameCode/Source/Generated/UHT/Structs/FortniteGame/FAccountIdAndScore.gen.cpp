@@ -14,7 +14,7 @@ struct alignas(8) FAccountIdAndScore
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE3FF0 (end 0x00FE4042, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE3FF0 (end 0x00FE4042, chained .pdata fragments)
 // Original VA: 0x0000000140FE3FF0 | File offset: 0x00FE35F0
 // Recovery: confirmed (TEXT("AccountIdAndScore") and Z_Construct_UScriptStruct_FAccountIdAndScore) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAccountIdAndScore::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortHomebaseView
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102FCB0 (end 0x0102FD02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102FCB0 (end 0x0102FD02, chained .pdata fragments)
 // Original VA: 0x000000014102FCB0 | File offset: 0x0102F2B0
 // Recovery: confirmed (TEXT("FortHomebaseView") and Z_Construct_UScriptStruct_FFortHomebaseView) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortHomebaseView::StaticStruct()

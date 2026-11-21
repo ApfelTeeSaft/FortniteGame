@@ -14,7 +14,7 @@ struct alignas(8) FFortBanHammerStrike
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE250 (end 0x00FEE2A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE250 (end 0x00FEE2A2, chained .pdata fragments)
 // Original VA: 0x0000000140FEE250 | File offset: 0x00FED850
 // Recovery: confirmed (TEXT("FortBanHammerStrike") and Z_Construct_UScriptStruct_FFortBanHammerStrike) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortBanHammerStrike::StaticStruct()

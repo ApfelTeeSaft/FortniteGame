@@ -14,7 +14,7 @@ struct alignas(8) FFortMultiSizeFont
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x210];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9E90 (end 0x010C9EE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9E90 (end 0x010C9EE2, chained .pdata fragments)
 // Original VA: 0x00000001410C9E90 | File offset: 0x010C9490
 // Recovery: confirmed (TEXT("FortMultiSizeFont") and Z_Construct_UScriptStruct_FFortMultiSizeFont) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortMultiSizeFont::StaticStruct()

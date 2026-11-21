@@ -14,7 +14,7 @@ struct alignas(8) FFortChallengeBundleScheduleEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB0020 (end 0x00FB0072, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB0020 (end 0x00FB0072, chained .pdata fragments)
 // Original VA: 0x0000000140FB0020 | File offset: 0x00FAF620
 // Recovery: confirmed (TEXT("FortChallengeBundleScheduleEntry") and Z_Construct_UScriptStruct_FFortChallengeBundleScheduleEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortChallengeBundleScheduleEntry::StaticStruct()

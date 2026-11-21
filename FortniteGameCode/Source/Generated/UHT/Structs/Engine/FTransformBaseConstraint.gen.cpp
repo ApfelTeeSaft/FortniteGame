@@ -14,7 +14,7 @@ struct alignas(8) FTransformBaseConstraint
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C2AE0 (end 0x024C2B32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C2AE0 (end 0x024C2B32, chained .pdata fragments)
 // Original VA: 0x00000001424C2AE0 | File offset: 0x024C20E0
 // Recovery: confirmed (TEXT("TransformBaseConstraint") and Z_Construct_UScriptStruct_FTransformBaseConstraint) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTransformBaseConstraint::StaticStruct()

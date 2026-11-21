@@ -14,7 +14,7 @@ struct alignas(16) FGPUSpriteResourceData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x160];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E200 (end 0x0249E252, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E200 (end 0x0249E252, chained .pdata fragments)
 // Original VA: 0x000000014249E200 | File offset: 0x0249D800
 // Recovery: confirmed (TEXT("GPUSpriteResourceData") and Z_Construct_UScriptStruct_FGPUSpriteResourceData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGPUSpriteResourceData::StaticStruct()

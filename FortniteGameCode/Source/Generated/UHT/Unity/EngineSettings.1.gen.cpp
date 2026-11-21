@@ -5,9 +5,14 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/EngineSettings.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Structs/EngineSettings/FAutoCompleteCommand.gen.cpp"
 #include "../Classes/EngineSettings/UConsoleSettings.gen.cpp"
+#include "../Enums/EngineSettings/EThreePlayerSplitScreenType.static.gen.cpp"
 #include "../Enums/EngineSettings/EThreePlayerSplitScreenType.gen.cpp"
+#include "../Enums/EngineSettings/ETwoPlayerSplitScreenType.static.gen.cpp"
 #include "../Enums/EngineSettings/ETwoPlayerSplitScreenType.gen.cpp"
+#include "../Structs/EngineSettings/FGameModeName.gen.cpp"
 #include "../Classes/EngineSettings/UGameMapsSettings.gen.cpp"
 #include "../Classes/EngineSettings/UGameNetworkManagerSettings.gen.cpp"
 #include "../Classes/EngineSettings/UGameSessionSettings.gen.cpp"

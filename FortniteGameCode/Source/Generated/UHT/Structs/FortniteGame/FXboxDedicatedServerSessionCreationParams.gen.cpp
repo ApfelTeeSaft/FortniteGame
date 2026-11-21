@@ -14,7 +14,7 @@ struct alignas(8) FXboxDedicatedServerSessionCreationParams
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01038050 (end 0x010380A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01038050 (end 0x010380A2, chained .pdata fragments)
 // Original VA: 0x0000000141038050 | File offset: 0x01037650
 // Recovery: confirmed (TEXT("XboxDedicatedServerSessionCreationParams") and Z_Construct_UScriptStruct_FXboxDedicatedServerSessionCreationParams) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FXboxDedicatedServerSessionCreationParams::StaticStruct()

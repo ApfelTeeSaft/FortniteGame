@@ -14,7 +14,7 @@ struct alignas(8) FStaticTerrainLayerWeightParameter
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E75B0 (end 0x024E7602, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E75B0 (end 0x024E7602, chained .pdata fragments)
 // Original VA: 0x00000001424E75B0 | File offset: 0x024E6BB0
 // Recovery: confirmed (TEXT("StaticTerrainLayerWeightParameter") and Z_Construct_UScriptStruct_FStaticTerrainLayerWeightParameter) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FStaticTerrainLayerWeightParameter::StaticStruct()

@@ -15,7 +15,7 @@ struct alignas(4) FConeConstraint
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7300 (end 0x023F7352, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7300 (end 0x023F7352, chained .pdata fragments)
 // Original VA: 0x00000001423F7300 | File offset: 0x023F6900
 // Recovery: confirmed (TEXT("ConeConstraint") and Z_Construct_UScriptStruct_FConeConstraint) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FConeConstraint::StaticStruct()

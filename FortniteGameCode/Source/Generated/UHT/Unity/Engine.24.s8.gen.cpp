@@ -4,5 +4,5 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/ETimelineDirection.static.gen.cpp"
-#include "../Enums/Engine/ETimelineLengthMode.static.gen.cpp"
+#include "../Enums/Engine/ESplineCoordinateSpace.static.gen.cpp"
+#include "../Enums/Engine/ESplinePointType.static.gen.cpp"

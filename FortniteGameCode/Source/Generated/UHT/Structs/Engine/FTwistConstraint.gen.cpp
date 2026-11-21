@@ -15,7 +15,7 @@ struct alignas(4) FTwistConstraint
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7720 (end 0x023F7772, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7720 (end 0x023F7772, chained .pdata fragments)
 // Original VA: 0x00000001423F7720 | File offset: 0x023F6D20
 // Recovery: confirmed (TEXT("TwistConstraint") and Z_Construct_UScriptStruct_FTwistConstraint) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTwistConstraint::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FWorldItemAndMinMaxCount
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1390 (end 0x00FE13E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1390 (end 0x00FE13E2, chained .pdata fragments)
 // Original VA: 0x0000000140FE1390 | File offset: 0x00FE0990
 // Recovery: confirmed (TEXT("WorldItemAndMinMaxCount") and Z_Construct_UScriptStruct_FWorldItemAndMinMaxCount) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FWorldItemAndMinMaxCount::StaticStruct()

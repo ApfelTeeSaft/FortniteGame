@@ -14,7 +14,7 @@ struct alignas(1) FTrackSplineConfig
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x3];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA850 (end 0x010CA8A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA850 (end 0x010CA8A2, chained .pdata fragments)
 // Original VA: 0x00000001410CA850 | File offset: 0x010C9E50
 // Recovery: confirmed (TEXT("TrackSplineConfig") and Z_Construct_UScriptStruct_FTrackSplineConfig) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTrackSplineConfig::StaticStruct()

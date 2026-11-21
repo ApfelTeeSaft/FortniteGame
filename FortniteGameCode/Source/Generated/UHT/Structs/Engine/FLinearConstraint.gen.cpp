@@ -15,7 +15,7 @@ struct alignas(4) FLinearConstraint
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7600 (end 0x023F7652, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7600 (end 0x023F7652, chained .pdata fragments)
 // Original VA: 0x00000001423F7600 | File offset: 0x023F6C00
 // Recovery: confirmed (TEXT("LinearConstraint") and Z_Construct_UScriptStruct_FLinearConstraint) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FLinearConstraint::StaticStruct()

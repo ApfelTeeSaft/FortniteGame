@@ -14,7 +14,7 @@ struct alignas(4) FBatchedLine
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x34];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02478780 (end 0x024787D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02478780 (end 0x024787D2, chained .pdata fragments)
 // Original VA: 0x0000000142478780 | File offset: 0x02477D80
 // Recovery: confirmed (TEXT("BatchedLine") and Z_Construct_UScriptStruct_FBatchedLine) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBatchedLine::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortItemInstanceQuantityPair
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9CB0 (end 0x010C9D02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9CB0 (end 0x010C9D02, chained .pdata fragments)
 // Original VA: 0x00000001410C9CB0 | File offset: 0x010C92B0
 // Recovery: confirmed (TEXT("FortItemInstanceQuantityPair") and Z_Construct_UScriptStruct_FFortItemInstanceQuantityPair) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortItemInstanceQuantityPair::StaticStruct()

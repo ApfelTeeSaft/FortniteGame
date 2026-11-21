@@ -15,7 +15,7 @@ struct alignas(8) FBlueprintInputActionDelegateBinding
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024275C0 (end 0x02427612, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024275C0 (end 0x02427612, chained .pdata fragments)
 // Original VA: 0x00000001424275C0 | File offset: 0x02426BC0
 // Recovery: confirmed (TEXT("BlueprintInputActionDelegateBinding") and Z_Construct_UScriptStruct_FBlueprintInputActionDelegateBinding) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBlueprintInputActionDelegateBinding::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FConvolutionBloomSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C5400 (end 0x024C5452, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C5400 (end 0x024C5452, chained .pdata fragments)
 // Original VA: 0x00000001424C5400 | File offset: 0x024C4A00
 // Recovery: confirmed (TEXT("ConvolutionBloomSettings") and Z_Construct_UScriptStruct_FConvolutionBloomSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FConvolutionBloomSettings::StaticStruct()

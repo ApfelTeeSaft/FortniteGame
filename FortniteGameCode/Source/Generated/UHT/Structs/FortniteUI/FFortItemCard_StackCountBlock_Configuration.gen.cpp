@@ -14,7 +14,7 @@ struct alignas(8) FFortItemCard_StackCountBlock_Configuration
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C1510 (end 0x028C1562, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C1510 (end 0x028C1562, chained .pdata fragments)
 // Original VA: 0x00000001428C1510 | File offset: 0x028C0B10
 // Recovery: confirmed (TEXT("FortItemCard_StackCountBlock_Configuration") and Z_Construct_UScriptStruct_FFortItemCard_StackCountBlock_Configuration) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortItemCard_StackCountBlock_Configuration::StaticStruct()

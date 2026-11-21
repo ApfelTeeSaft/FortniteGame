@@ -14,7 +14,7 @@ struct alignas(8) FAnimParentNodeAssetOverride
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7C20 (end 0x023C7C72, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7C20 (end 0x023C7C72, chained .pdata fragments)
 // Original VA: 0x00000001423C7C20 | File offset: 0x023C7220
 // Recovery: confirmed (TEXT("AnimParentNodeAssetOverride") and Z_Construct_UScriptStruct_FAnimParentNodeAssetOverride) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimParentNodeAssetOverride::StaticStruct()

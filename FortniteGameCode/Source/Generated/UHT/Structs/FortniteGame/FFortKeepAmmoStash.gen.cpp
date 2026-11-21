@@ -15,7 +15,7 @@ struct alignas(8) FFortKeepAmmoStash
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9680 (end 0x010E96D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9680 (end 0x010E96D2, chained .pdata fragments)
 // Original VA: 0x00000001410E9680 | File offset: 0x010E8C80
 // Recovery: confirmed (TEXT("FortKeepAmmoStash") and Z_Construct_UScriptStruct_FFortKeepAmmoStash) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortKeepAmmoStash::StaticStruct()

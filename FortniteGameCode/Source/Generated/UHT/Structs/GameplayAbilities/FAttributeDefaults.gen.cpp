@@ -14,7 +14,7 @@ struct alignas(8) FAttributeDefaults
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B260 (end 0x0055B2B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B260 (end 0x0055B2B2, chained .pdata fragments)
 // Original VA: 0x000000014055B260 | File offset: 0x0055A860
 // Recovery: confirmed (TEXT("AttributeDefaults") and Z_Construct_UScriptStruct_FAttributeDefaults) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAttributeDefaults::StaticStruct()

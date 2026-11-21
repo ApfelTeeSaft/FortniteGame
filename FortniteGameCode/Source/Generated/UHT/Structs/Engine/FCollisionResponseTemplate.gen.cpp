@@ -14,7 +14,7 @@ struct alignas(8) FCollisionResponseTemplate
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F72A0 (end 0x023F72F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F72A0 (end 0x023F72F2, chained .pdata fragments)
 // Original VA: 0x00000001423F72A0 | File offset: 0x023F68A0
 // Recovery: confirmed (TEXT("CollisionResponseTemplate") and Z_Construct_UScriptStruct_FCollisionResponseTemplate) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCollisionResponseTemplate::StaticStruct()

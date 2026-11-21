@@ -14,7 +14,7 @@ struct alignas(8) FGameplayModifierEvaluatedData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x005641D0 (end 0x00564222, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005641D0 (end 0x00564222, chained .pdata fragments)
 // Original VA: 0x00000001405641D0 | File offset: 0x005637D0
 // Recovery: confirmed (TEXT("GameplayModifierEvaluatedData") and Z_Construct_UScriptStruct_FGameplayModifierEvaluatedData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayModifierEvaluatedData::StaticStruct()

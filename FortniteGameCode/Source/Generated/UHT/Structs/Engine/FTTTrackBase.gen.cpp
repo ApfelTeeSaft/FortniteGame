@@ -14,7 +14,7 @@ struct alignas(8) FTTTrackBase
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC680 (end 0x024EC6D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC680 (end 0x024EC6D2, chained .pdata fragments)
 // Original VA: 0x00000001424EC680 | File offset: 0x024EBC80
 // Recovery: confirmed (TEXT("TTTrackBase") and Z_Construct_UScriptStruct_FTTTrackBase) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTTTrackBase::StaticStruct()

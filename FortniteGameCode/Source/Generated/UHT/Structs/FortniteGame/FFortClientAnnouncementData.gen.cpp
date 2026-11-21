@@ -14,7 +14,7 @@ struct alignas(1) FFortClientAnnouncementData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFC90 (end 0x00FBFCE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFC90 (end 0x00FBFCE2, chained .pdata fragments)
 // Original VA: 0x0000000140FBFC90 | File offset: 0x00FBF290
 // Recovery: confirmed (TEXT("FortClientAnnouncementData") and Z_Construct_UScriptStruct_FFortClientAnnouncementData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortClientAnnouncementData::StaticStruct()

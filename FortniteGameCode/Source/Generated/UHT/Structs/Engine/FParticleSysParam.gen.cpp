@@ -14,7 +14,7 @@ struct alignas(16) FParticleSysParam
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x80];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0600 (end 0x024A0652, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0600 (end 0x024A0652, chained .pdata fragments)
 // Original VA: 0x00000001424A0600 | File offset: 0x0249FC00
 // Recovery: confirmed (TEXT("ParticleSysParam") and Z_Construct_UScriptStruct_FParticleSysParam) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FParticleSysParam::StaticStruct()

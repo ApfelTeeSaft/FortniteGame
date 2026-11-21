@@ -14,7 +14,7 @@ struct alignas(8) FIntensityData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87A80 (end 0x00F87AD2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87A80 (end 0x00F87AD2, chained .pdata fragments)
 // Original VA: 0x0000000140F87A80 | File offset: 0x00F87080
 // Recovery: confirmed (TEXT("IntensityData") and Z_Construct_UScriptStruct_FIntensityData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FIntensityData::StaticStruct()

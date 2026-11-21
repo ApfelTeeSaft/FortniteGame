@@ -14,7 +14,7 @@ struct alignas(8) FGameplayAbilityBindInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B380 (end 0x0055B3D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B380 (end 0x0055B3D2, chained .pdata fragments)
 // Original VA: 0x000000014055B380 | File offset: 0x0055A980
 // Recovery: confirmed (TEXT("GameplayAbilityBindInfo") and Z_Construct_UScriptStruct_FGameplayAbilityBindInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayAbilityBindInfo::StaticStruct()

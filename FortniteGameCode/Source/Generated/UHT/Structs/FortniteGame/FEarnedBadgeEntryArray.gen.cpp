@@ -15,7 +15,7 @@ struct alignas(8) FEarnedBadgeEntryArray
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A530 (end 0x0104A582, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A530 (end 0x0104A582, chained .pdata fragments)
 // Original VA: 0x000000014104A530 | File offset: 0x01049B30
 // Recovery: confirmed (TEXT("EarnedBadgeEntryArray") and Z_Construct_UScriptStruct_FEarnedBadgeEntryArray) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FEarnedBadgeEntryArray::StaticStruct()

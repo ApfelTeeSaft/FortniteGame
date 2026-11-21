@@ -14,7 +14,7 @@ struct alignas(8) FMaterialSpriteElement
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024789C0 (end 0x02478A12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024789C0 (end 0x02478A12, chained .pdata fragments)
 // Original VA: 0x00000001424789C0 | File offset: 0x02477FC0
 // Recovery: confirmed (TEXT("MaterialSpriteElement") and Z_Construct_UScriptStruct_FMaterialSpriteElement) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMaterialSpriteElement::StaticStruct()

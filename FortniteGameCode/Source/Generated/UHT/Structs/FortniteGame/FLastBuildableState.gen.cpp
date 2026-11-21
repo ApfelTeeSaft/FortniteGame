@@ -14,7 +14,7 @@ struct alignas(8) FLastBuildableState
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106ABD0 (end 0x0106AC22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106ABD0 (end 0x0106AC22, chained .pdata fragments)
 // Original VA: 0x000000014106ABD0 | File offset: 0x0106A1D0
 // Recovery: confirmed (TEXT("LastBuildableState") and Z_Construct_UScriptStruct_FLastBuildableState) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FLastBuildableState::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FInterpLookupPoint
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242F140 (end 0x0242F192, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242F140 (end 0x0242F192, chained .pdata fragments)
 // Original VA: 0x000000014242F140 | File offset: 0x0242E740
 // Recovery: confirmed (TEXT("InterpLookupPoint") and Z_Construct_UScriptStruct_FInterpLookupPoint) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FInterpLookupPoint::StaticStruct()

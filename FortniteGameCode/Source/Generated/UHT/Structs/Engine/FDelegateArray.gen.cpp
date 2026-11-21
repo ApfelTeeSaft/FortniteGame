@@ -14,7 +14,7 @@ struct alignas(8) FDelegateArray
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9990 (end 0x024A99E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9990 (end 0x024A99E2, chained .pdata fragments)
 // Original VA: 0x00000001424A9990 | File offset: 0x024A8F90
 // Recovery: confirmed (TEXT("DelegateArray") and Z_Construct_UScriptStruct_FDelegateArray) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDelegateArray::StaticStruct()

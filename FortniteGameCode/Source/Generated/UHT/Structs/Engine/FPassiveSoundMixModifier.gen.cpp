@@ -14,7 +14,7 @@ struct alignas(8) FPassiveSoundMixModifier
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB770 (end 0x024DB7C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB770 (end 0x024DB7C2, chained .pdata fragments)
 // Original VA: 0x00000001424DB770 | File offset: 0x024DAD70
 // Recovery: confirmed (TEXT("PassiveSoundMixModifier") and Z_Construct_UScriptStruct_FPassiveSoundMixModifier) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPassiveSoundMixModifier::StaticStruct()

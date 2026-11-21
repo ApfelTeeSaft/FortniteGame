@@ -14,7 +14,7 @@ struct alignas(8) FCurveMetaData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4830 (end 0x024D4882, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4830 (end 0x024D4882, chained .pdata fragments)
 // Original VA: 0x00000001424D4830 | File offset: 0x024D3E30
 // Recovery: confirmed (TEXT("CurveMetaData") and Z_Construct_UScriptStruct_FCurveMetaData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCurveMetaData::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FAirControlParams
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A410 (end 0x0104A462, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A410 (end 0x0104A462, chained .pdata fragments)
 // Original VA: 0x000000014104A410 | File offset: 0x01049A10
 // Recovery: confirmed (TEXT("AirControlParams") and Z_Construct_UScriptStruct_FAirControlParams) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAirControlParams::StaticStruct()

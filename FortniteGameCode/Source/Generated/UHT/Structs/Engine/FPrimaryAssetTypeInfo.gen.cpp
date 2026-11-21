@@ -14,7 +14,7 @@ struct alignas(8) FPrimaryAssetTypeInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x88];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAEF0 (end 0x023DAF42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAEF0 (end 0x023DAF42, chained .pdata fragments)
 // Original VA: 0x00000001423DAEF0 | File offset: 0x023DA4F0
 // Recovery: confirmed (TEXT("PrimaryAssetTypeInfo") and Z_Construct_UScriptStruct_FPrimaryAssetTypeInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPrimaryAssetTypeInfo::StaticStruct()

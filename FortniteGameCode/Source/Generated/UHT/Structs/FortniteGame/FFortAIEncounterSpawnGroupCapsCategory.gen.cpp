@@ -14,7 +14,7 @@ struct alignas(8) FFortAIEncounterSpawnGroupCapsCategory
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x140];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87660 (end 0x00F876B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87660 (end 0x00F876B2, chained .pdata fragments)
 // Original VA: 0x0000000140F87660 | File offset: 0x00F86C60
 // Recovery: confirmed (TEXT("FortAIEncounterSpawnGroupCapsCategory") and Z_Construct_UScriptStruct_FFortAIEncounterSpawnGroupCapsCategory) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIEncounterSpawnGroupCapsCategory::StaticStruct()

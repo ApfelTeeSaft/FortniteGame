@@ -14,7 +14,7 @@ struct alignas(8) FNamedVector
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8280 (end 0x023C82D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8280 (end 0x023C82D2, chained .pdata fragments)
 // Original VA: 0x00000001423C8280 | File offset: 0x023C7880
 // Recovery: confirmed (TEXT("NamedVector") and Z_Construct_UScriptStruct_FNamedVector) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FNamedVector::StaticStruct()

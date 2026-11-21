@@ -14,7 +14,7 @@ struct alignas(4) FFortDialogExternalLatentActionHandle
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9AD0 (end 0x010C9B22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9AD0 (end 0x010C9B22, chained .pdata fragments)
 // Original VA: 0x00000001410C9AD0 | File offset: 0x010C90D0
 // Recovery: confirmed (TEXT("FortDialogExternalLatentActionHandle") and Z_Construct_UScriptStruct_FFortDialogExternalLatentActionHandle) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortDialogExternalLatentActionHandle::StaticStruct()

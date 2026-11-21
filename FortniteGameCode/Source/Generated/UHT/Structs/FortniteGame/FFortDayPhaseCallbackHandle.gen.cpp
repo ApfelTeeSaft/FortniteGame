@@ -14,7 +14,7 @@ struct alignas(4) FFortDayPhaseCallbackHandle
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C99B0 (end 0x010C9A02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C99B0 (end 0x010C9A02, chained .pdata fragments)
 // Original VA: 0x00000001410C99B0 | File offset: 0x010C8FB0
 // Recovery: confirmed (TEXT("FortDayPhaseCallbackHandle") and Z_Construct_UScriptStruct_FFortDayPhaseCallbackHandle) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortDayPhaseCallbackHandle::StaticStruct()

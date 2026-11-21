@@ -14,7 +14,7 @@ struct alignas(8) FBlackboardEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22C20 (end 0x01D22C72, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22C20 (end 0x01D22C72, chained .pdata fragments)
 // Original VA: 0x0000000141D22C20 | File offset: 0x01D22220
 // Recovery: confirmed (TEXT("BlackboardEntry") and Z_Construct_UScriptStruct_FBlackboardEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBlackboardEntry::StaticStruct()

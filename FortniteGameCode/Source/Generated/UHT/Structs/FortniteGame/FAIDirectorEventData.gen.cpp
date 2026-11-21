@@ -14,7 +14,7 @@ struct alignas(8) FAIDirectorEventData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F873C0 (end 0x00F87412, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F873C0 (end 0x00F87412, chained .pdata fragments)
 // Original VA: 0x0000000140F873C0 | File offset: 0x00F869C0
 // Recovery: confirmed (TEXT("AIDirectorEventData") and Z_Construct_UScriptStruct_FAIDirectorEventData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAIDirectorEventData::StaticStruct()

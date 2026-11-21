@@ -14,7 +14,7 @@ struct alignas(8) FBlendProfileBoneEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2ED0 (end 0x023E2F22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2ED0 (end 0x023E2F22, chained .pdata fragments)
 // Original VA: 0x00000001423E2ED0 | File offset: 0x023E24D0
 // Recovery: confirmed (TEXT("BlendProfileBoneEntry") and Z_Construct_UScriptStruct_FBlendProfileBoneEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBlendProfileBoneEntry::StaticStruct()

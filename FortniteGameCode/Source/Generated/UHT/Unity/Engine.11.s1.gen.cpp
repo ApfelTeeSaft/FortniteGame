@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EImportanceWeight.static.gen.cpp"
+#include "../Enums/Engine/ESuggestProjVelocityTraceOption.static.gen.cpp"

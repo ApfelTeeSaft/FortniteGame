@@ -14,7 +14,7 @@ struct alignas(8) FBuildPromotionOpenAssetSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAA10 (end 0x023DAA62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAA10 (end 0x023DAA62, chained .pdata fragments)
 // Original VA: 0x00000001423DAA10 | File offset: 0x023DA010
 // Recovery: confirmed (TEXT("BuildPromotionOpenAssetSettings") and Z_Construct_UScriptStruct_FBuildPromotionOpenAssetSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBuildPromotionOpenAssetSettings::StaticStruct()

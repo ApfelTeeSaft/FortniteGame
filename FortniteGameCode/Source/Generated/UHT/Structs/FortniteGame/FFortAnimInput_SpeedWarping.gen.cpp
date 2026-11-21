@@ -14,7 +14,7 @@ struct alignas(8) FFortAnimInput_SpeedWarping
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98C30 (end 0x00F98C82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98C30 (end 0x00F98C82, chained .pdata fragments)
 // Original VA: 0x0000000140F98C30 | File offset: 0x00F98230
 // Recovery: confirmed (TEXT("FortAnimInput_SpeedWarping") and Z_Construct_UScriptStruct_FFortAnimInput_SpeedWarping) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAnimInput_SpeedWarping::StaticStruct()

@@ -15,7 +15,7 @@ struct alignas(8) FStringCurve
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x78];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7610 (end 0x024E7662, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7610 (end 0x024E7662, chained .pdata fragments)
 // Original VA: 0x00000001424E7610 | File offset: 0x024E6C10
 // Recovery: confirmed (TEXT("StringCurve") and Z_Construct_UScriptStruct_FStringCurve) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FStringCurve::StaticStruct()

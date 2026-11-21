@@ -9,13 +9,13 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FFortPartyRepState();
 	UPackage* Z_Construct_UPackage__Script_FortniteGame();  // RVA 0x01051BE0
-UScriptStruct* Z_Construct_UScriptStruct_Unrecovered_0x005B9080();  // RVA 0x005B9080
+UScriptStruct* Z_Construct_UScriptStruct_FPartyState();  // RVA 0x005B9080
 struct alignas(8) FFortPartyRepState
 {
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x98];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105DC70 (end 0x0105DCC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105DC70 (end 0x0105DCC2, chained .pdata fragments)
 // Original VA: 0x000000014105DC70 | File offset: 0x0105D270
 // Recovery: confirmed (TEXT("FortPartyRepState") and Z_Construct_UScriptStruct_FFortPartyRepState) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortPartyRepState::StaticStruct()
@@ -42,7 +42,7 @@ class UScriptStruct* FFortPartyRepState::StaticStruct()
 	// ReturnStructParams: original RVA 0x042E4B00
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortPartyRepState_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_Unrecovered_0x005B9080,
+		Z_Construct_UScriptStruct_FPartyState,
 		&NewStructOps,
 		"FortPartyRepState",
 		RF_Public|RF_Transient|RF_MarkAsNative,

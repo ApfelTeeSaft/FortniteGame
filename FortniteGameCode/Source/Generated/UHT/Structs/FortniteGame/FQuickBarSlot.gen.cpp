@@ -14,7 +14,7 @@ struct alignas(8) FQuickBarSlot
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D930 (end 0x0109D982, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D930 (end 0x0109D982, chained .pdata fragments)
 // Original VA: 0x000000014109D930 | File offset: 0x0109CF30
 // Recovery: confirmed (TEXT("QuickBarSlot") and Z_Construct_UScriptStruct_FQuickBarSlot) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FQuickBarSlot::StaticStruct()

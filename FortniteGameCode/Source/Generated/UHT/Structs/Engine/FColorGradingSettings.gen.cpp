@@ -14,7 +14,7 @@ struct alignas(16) FColorGradingSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x150];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C53A0 (end 0x024C53F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C53A0 (end 0x024C53F2, chained .pdata fragments)
 // Original VA: 0x00000001424C53A0 | File offset: 0x024C49A0
 // Recovery: confirmed (TEXT("ColorGradingSettings") and Z_Construct_UScriptStruct_FColorGradingSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FColorGradingSettings::StaticStruct()

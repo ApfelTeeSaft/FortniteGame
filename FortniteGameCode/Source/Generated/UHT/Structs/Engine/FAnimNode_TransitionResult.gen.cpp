@@ -15,7 +15,7 @@ struct alignas(16) FAnimNode_TransitionResult
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x80];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CDF40 (end 0x023CDF92, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CDF40 (end 0x023CDF92, chained .pdata fragments)
 // Original VA: 0x00000001423CDF40 | File offset: 0x023CD540
 // Recovery: confirmed (TEXT("AnimNode_TransitionResult") and Z_Construct_UScriptStruct_FAnimNode_TransitionResult) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimNode_TransitionResult::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FCameraPair
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDABB0 (end 0x00FDAC02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDABB0 (end 0x00FDAC02, chained .pdata fragments)
 // Original VA: 0x0000000140FDABB0 | File offset: 0x00FDA1B0
 // Recovery: confirmed (TEXT("CameraPair") and Z_Construct_UScriptStruct_FCameraPair) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCameraPair::StaticStruct()

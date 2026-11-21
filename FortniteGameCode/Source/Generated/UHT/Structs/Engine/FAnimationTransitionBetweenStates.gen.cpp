@@ -15,7 +15,7 @@ struct alignas(8) FAnimationTransitionBetweenStates
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5DC0 (end 0x023D5E12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5DC0 (end 0x023D5E12, chained .pdata fragments)
 // Original VA: 0x00000001423D5DC0 | File offset: 0x023D53C0
 // Recovery: confirmed (TEXT("AnimationTransitionBetweenStates") and Z_Construct_UScriptStruct_FAnimationTransitionBetweenStates) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimationTransitionBetweenStates::StaticStruct()

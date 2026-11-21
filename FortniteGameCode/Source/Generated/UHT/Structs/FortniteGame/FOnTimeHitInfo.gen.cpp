@@ -14,7 +14,7 @@ struct alignas(8) FOnTimeHitInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA5B0 (end 0x010CA602, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA5B0 (end 0x010CA602, chained .pdata fragments)
 // Original VA: 0x00000001410CA5B0 | File offset: 0x010C9BB0
 // Recovery: confirmed (TEXT("OnTimeHitInfo") and Z_Construct_UScriptStruct_FOnTimeHitInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FOnTimeHitInfo::StaticStruct()

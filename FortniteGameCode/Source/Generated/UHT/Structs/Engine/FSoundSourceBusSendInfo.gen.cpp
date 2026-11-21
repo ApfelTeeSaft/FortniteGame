@@ -14,7 +14,7 @@ struct alignas(8) FSoundSourceBusSendInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DBA10 (end 0x024DBA62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DBA10 (end 0x024DBA62, chained .pdata fragments)
 // Original VA: 0x00000001424DBA10 | File offset: 0x024DB010
 // Recovery: confirmed (TEXT("SoundSourceBusSendInfo") and Z_Construct_UScriptStruct_FSoundSourceBusSendInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSoundSourceBusSendInfo::StaticStruct()

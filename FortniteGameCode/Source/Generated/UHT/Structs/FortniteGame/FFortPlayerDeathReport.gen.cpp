@@ -14,7 +14,7 @@ struct alignas(8) FFortPlayerDeathReport
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5DB0 (end 0x00FC5E02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5DB0 (end 0x00FC5E02, chained .pdata fragments)
 // Original VA: 0x0000000140FC5DB0 | File offset: 0x00FC53B0
 // Recovery: confirmed (TEXT("FortPlayerDeathReport") and Z_Construct_UScriptStruct_FFortPlayerDeathReport) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortPlayerDeathReport::StaticStruct()

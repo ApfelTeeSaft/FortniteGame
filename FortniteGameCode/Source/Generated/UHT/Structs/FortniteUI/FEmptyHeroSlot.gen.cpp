@@ -14,7 +14,7 @@ struct alignas(8) FEmptyHeroSlot
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B39B0 (end 0x028B3A02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B39B0 (end 0x028B3A02, chained .pdata fragments)
 // Original VA: 0x00000001428B39B0 | File offset: 0x028B2FB0
 // Recovery: confirmed (TEXT("EmptyHeroSlot") and Z_Construct_UScriptStruct_FEmptyHeroSlot) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FEmptyHeroSlot::StaticStruct()

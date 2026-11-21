@@ -14,7 +14,7 @@ struct alignas(8) FFortActiveMontageDecisionWindow
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5810 (end 0x00FC5862, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5810 (end 0x00FC5862, chained .pdata fragments)
 // Original VA: 0x0000000140FC5810 | File offset: 0x00FC4E10
 // Recovery: confirmed (TEXT("FortActiveMontageDecisionWindow") and Z_Construct_UScriptStruct_FFortActiveMontageDecisionWindow) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortActiveMontageDecisionWindow::StaticStruct()

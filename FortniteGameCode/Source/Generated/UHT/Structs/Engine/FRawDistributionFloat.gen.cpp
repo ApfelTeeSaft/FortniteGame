@@ -15,7 +15,7 @@ struct alignas(8) FRawDistributionFloat
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FE150 (end 0x023FE1A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FE150 (end 0x023FE1A2, chained .pdata fragments)
 // Original VA: 0x00000001423FE150 | File offset: 0x023FD750
 // Recovery: confirmed (TEXT("RawDistributionFloat") and Z_Construct_UScriptStruct_FRawDistributionFloat) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRawDistributionFloat::StaticStruct()

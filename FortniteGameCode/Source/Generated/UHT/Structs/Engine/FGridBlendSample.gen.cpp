@@ -14,7 +14,7 @@ struct alignas(4) FGridBlendSample
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E32F0 (end 0x023E3342, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E32F0 (end 0x023E3342, chained .pdata fragments)
 // Original VA: 0x00000001423E32F0 | File offset: 0x023E28F0
 // Recovery: confirmed (TEXT("GridBlendSample") and Z_Construct_UScriptStruct_FGridBlendSample) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGridBlendSample::StaticStruct()

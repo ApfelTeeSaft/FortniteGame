@@ -14,7 +14,7 @@ struct alignas(4) FPermaniteBoundariesInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE430 (end 0x00FEE482, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE430 (end 0x00FEE482, chained .pdata fragments)
 // Original VA: 0x0000000140FEE430 | File offset: 0x00FEDA30
 // Recovery: confirmed (TEXT("PermaniteBoundariesInfo") and Z_Construct_UScriptStruct_FPermaniteBoundariesInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPermaniteBoundariesInfo::StaticStruct()

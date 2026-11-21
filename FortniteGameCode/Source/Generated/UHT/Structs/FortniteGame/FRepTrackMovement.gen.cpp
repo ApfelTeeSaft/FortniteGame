@@ -15,7 +15,7 @@ struct alignas(8) FRepTrackMovement
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA670 (end 0x010CA6C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA670 (end 0x010CA6C2, chained .pdata fragments)
 // Original VA: 0x00000001410CA670 | File offset: 0x010C9C70
 // Recovery: confirmed (TEXT("RepTrackMovement") and Z_Construct_UScriptStruct_FRepTrackMovement) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRepTrackMovement::StaticStruct()

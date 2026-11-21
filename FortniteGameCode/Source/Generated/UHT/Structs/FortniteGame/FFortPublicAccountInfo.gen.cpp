@@ -14,7 +14,7 @@ struct alignas(4) FFortPublicAccountInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x34];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023820 (end 0x01023872, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023820 (end 0x01023872, chained .pdata fragments)
 // Original VA: 0x0000000141023820 | File offset: 0x01022E20
 // Recovery: confirmed (TEXT("FortPublicAccountInfo") and Z_Construct_UScriptStruct_FFortPublicAccountInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortPublicAccountInfo::StaticStruct()

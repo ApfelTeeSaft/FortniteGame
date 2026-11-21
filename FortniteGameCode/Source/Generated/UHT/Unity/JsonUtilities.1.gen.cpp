@@ -5,4 +5,6 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/JsonUtilities.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Structs/JsonUtilities/FJsonObjectWrapper.gen.cpp"
 #include "../Classes/JsonUtilities/UJsonUtilitiesDummyObject.gen.cpp"

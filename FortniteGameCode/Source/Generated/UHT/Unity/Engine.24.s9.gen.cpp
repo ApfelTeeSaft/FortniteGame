@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/ETimeStretchCurveMapping.static.gen.cpp"
+#include "../Enums/Engine/ESplineMeshAxis.static.gen.cpp"

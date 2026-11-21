@@ -15,7 +15,7 @@ struct alignas(16) FKConvexElem
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x90];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F75A0 (end 0x023F75F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F75A0 (end 0x023F75F2, chained .pdata fragments)
 // Original VA: 0x00000001423F75A0 | File offset: 0x023F6BA0
 // Recovery: confirmed (TEXT("KConvexElem") and Z_Construct_UScriptStruct_FKConvexElem) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FKConvexElem::StaticStruct()

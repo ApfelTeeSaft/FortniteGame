@@ -14,7 +14,7 @@ struct alignas(4) FBuildingActorNavArea
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98930 (end 0x00F98982, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98930 (end 0x00F98982, chained .pdata fragments)
 // Original VA: 0x0000000140F98930 | File offset: 0x00F97F30
 // Recovery: confirmed (TEXT("BuildingActorNavArea") and Z_Construct_UScriptStruct_FBuildingActorNavArea) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBuildingActorNavArea::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FSetByCallerFloat
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564410 (end 0x00564462, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564410 (end 0x00564462, chained .pdata fragments)
 // Original VA: 0x0000000140564410 | File offset: 0x00563A10
 // Recovery: confirmed (TEXT("SetByCallerFloat") and Z_Construct_UScriptStruct_FSetByCallerFloat) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSetByCallerFloat::StaticStruct()

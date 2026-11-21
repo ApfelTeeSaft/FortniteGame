@@ -14,7 +14,7 @@ struct alignas(4) FLockOnInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106AC30 (end 0x0106AC82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106AC30 (end 0x0106AC82, chained .pdata fragments)
 // Original VA: 0x000000014106AC30 | File offset: 0x0106A230
 // Recovery: confirmed (TEXT("LockOnInfo") and Z_Construct_UScriptStruct_FLockOnInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FLockOnInfo::StaticStruct()

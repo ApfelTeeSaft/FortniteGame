@@ -14,7 +14,7 @@ struct alignas(8) FCompressedTrack
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6000 (end 0x023D6052, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6000 (end 0x023D6052, chained .pdata fragments)
 // Original VA: 0x00000001423D6000 | File offset: 0x023D5600
 // Recovery: confirmed (TEXT("CompressedTrack") and Z_Construct_UScriptStruct_FCompressedTrack) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCompressedTrack::StaticStruct()

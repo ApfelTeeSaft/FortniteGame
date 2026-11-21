@@ -14,7 +14,7 @@ struct alignas(8) FAlphaBlend
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C79E0 (end 0x023C7A32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C79E0 (end 0x023C7A32, chained .pdata fragments)
 // Original VA: 0x00000001423C79E0 | File offset: 0x023C6FE0
 // Recovery: confirmed (TEXT("AlphaBlend") and Z_Construct_UScriptStruct_FAlphaBlend) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAlphaBlend::StaticStruct()

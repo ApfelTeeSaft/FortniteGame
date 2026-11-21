@@ -14,7 +14,7 @@ struct alignas(8) FHeroSpecializationAttributeRequirement
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA7D0 (end 0x00FFA822, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA7D0 (end 0x00FFA822, chained .pdata fragments)
 // Original VA: 0x0000000140FFA7D0 | File offset: 0x00FF9DD0
 // Recovery: confirmed (TEXT("HeroSpecializationAttributeRequirement") and Z_Construct_UScriptStruct_FHeroSpecializationAttributeRequirement) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FHeroSpecializationAttributeRequirement::StaticStruct()

@@ -47,7 +47,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools" / "matching"))
 sys.path.insert(0, str(ROOT / "tools" / "codegen"))
 from compare import load_decrypted  # noqa: E402
-from unity import UNIT_OBJECT, static_unit_of, unit_of  # noqa: E402
+from unity import UNIT_OBJECT, static_in_unity, static_unit_of, unit_of  # noqa: E402
 from genio import sync_tree  # noqa: E402
 from manifest_io import dump_compact  # noqa: E402
 from pe import PEImage  # noqa: E402
@@ -137,6 +137,20 @@ def main() -> int:
             if n:
                 records[(n, outer - base)].append(ds.rva + off)
 
+    inlined_static = {}
+    for u in json.loads((ROOT / "analysis" / "unity-order.json").read_text(encoding="utf-8"))["units"]:
+        for it in u["items"]:
+            if it["kind"] == "enum" and static_in_unity(it):
+                p = int(it["static_enum"], 16)
+                try:
+                    b = dimg.read(p, 0x60)
+                except ValueError:
+                    continue
+                # the constructor is the LEA rcx target just before the GetStaticEnum call
+                for i in range(len(b) - 7, -1, -1):
+                    if b[i:i + 3] == b"\x48\x8d\x0d":
+                        inlined_static[p + i + 7 + struct.unpack_from("<i", b, i + 3)[0]] = p
+                        break
     enums = []
     for ctor, (rf, rec, callee) in singletons.items():
         if callee != construct_enum:
@@ -157,9 +171,15 @@ def main() -> int:
             stats["enumerator_names_unreadable"] += 1
             continue
         se = static_enums.get(ctor)
-        if se is not None and wstr(img, se["name"]) != name:
+        if se is None and ctor in inlined_static:
+            # 85-byte StaticEnum that inlines the package singleton; compiled after init.gen.cpp in
+            # its unity unit when that position is recovered. Located through its
+            # FCompiledInDeferEnum initializer (analysis/unity-order.json).
+            p = inlined_static[ctor]
+            se = {"rva": p, "end": allrf[p].end, "name": None, "package": pkg, "inlined": True}
+        if se is not None and not se.get("inlined") and wstr(img, se["name"]) != name:
             se = None
-        if se is not None and se["package"] != pkg:
+        if se is not None and not se.get("inlined") and se["package"] != pkg:
             se = None
         defer = defer_by_target.get(se["rva"], []) if se else []
         enums.append(dict(ctor=ctor, ctor_end=allrf[ctor].end, rec=rec, name=name, pkg=pkg,
@@ -187,7 +207,7 @@ def main() -> int:
         if e["disp"]:
             disp_expr = f"Unrecovered_EnumDisplayNameFn_0x{e['disp']:08X}"
             disp_decl = f"FText {disp_expr}(int32);  // RVA 0x{e['disp']:08X}\n"
-        se_note = (f"\t// Original FortniteClient-Win64-Shipping.exe: RVA 0x{se['rva']:08X} (end 0x{se['rva'] + len(SE_TEMPLATE):08X})\n"
+        se_note = (f"\t// Original FortniteClient-Win64-Shipping.exe: RVA 0x{se['rva']:08X} (end 0x{se.get('end', se['rva'] + len(SE_TEMPLATE)):08X})\n"
                    f"\t// Recovery: confirmed (TEXT(\"{name}\"), {zc}) | Matching: see analysis/functions-uht-staticenum.json\n"
                    if se else "\t// StaticEnum: not the plain 55-byte form in the reference (package singleton inlined)\n")
         cid_note = f"\t// Original dynamic initializer: RVA 0x{cid:08X}\n" if cid else ""
@@ -200,7 +220,7 @@ def main() -> int:
         outputs[GEN_DIR / short / f"{name}.static.gen.cpp"] = (
             head_text +
             f"// UENUM {name} of {e['pkg_name']}: its file-static StaticEnum and FCompiledInDeferEnum object, compiled in\n"
-            f"// unit {static_units[name]} with the other enums of its run (see tools/codegen/unity.py).\n\n"
+            f"// unit {unit if se and se.get('inlined') else static_units.get(name, unit)} (see tools/codegen/unity.py).\n\n"
             '#include "FortniteGameCode/UHTRecovered.h"\n\n' + refs +
             f"{se_note}"
             f"\tstatic UEnum* {name}_StaticEnum()\n\t{{\n\t\tstatic UEnum* Singleton = nullptr;\n"
@@ -236,13 +256,14 @@ def main() -> int:
         symbols[f"?EnumParams@?4??{zc}@@YAPEAVUEnum@@XZ@4UFEnumParams@UE4CodeGen_Private@@B"] = [
             f"0x{e['rec']:08X}", "name+package"]
         if se:
-            se_entries.append({"start_rva": f"0x{se['rva']:08X}", "end_rva": f"0x{se['rva'] + len(SE_TEMPLATE):08X}",
-                               "name": f"{name}_StaticEnum", **common, "unit": static_units[name]})
+            se_entries.append({"start_rva": f"0x{se['rva']:08X}", "end_rva": f"0x{se.get('end', se['rva'] + len(SE_TEMPLATE)):08X}",
+                               "name": f"{name}_StaticEnum", **common,
+                               "unit": unit if se.get("inlined") else static_units[name]})
             stats["staticenum_plain"] += 1
         if cid:
             defer_entries.append({"start_rva": f"0x{cid:08X}", "end_rva": f"0x{cid + len(CID_TEMPLATE):08X}",
                                   "name": f"dynamic initializer for Z_CompiledInDeferEnum_UEnum_{name}", **common,
-                                  "unit": static_units[name]})
+                                  "unit": unit if se.get("inlined") else static_units[name]})
             stats["defer_initializers"] += 1
         stats["enums_emitted"] += 1
 

@@ -14,7 +14,7 @@ struct alignas(8) FServerAbilityRPCBatch
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x48];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055BB60 (end 0x0055BBB2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055BB60 (end 0x0055BBB2, chained .pdata fragments)
 // Original VA: 0x000000014055BB60 | File offset: 0x0055B160
 // Recovery: confirmed (TEXT("ServerAbilityRPCBatch") and Z_Construct_UScriptStruct_FServerAbilityRPCBatch) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FServerAbilityRPCBatch::StaticStruct()

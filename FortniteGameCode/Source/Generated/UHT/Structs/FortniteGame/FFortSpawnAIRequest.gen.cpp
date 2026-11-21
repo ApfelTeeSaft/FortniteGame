@@ -14,7 +14,7 @@ struct alignas(8) FFortSpawnAIRequest
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C2B0 (end 0x00F8C302, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C2B0 (end 0x00F8C302, chained .pdata fragments)
 // Original VA: 0x0000000140F8C2B0 | File offset: 0x00F8B8B0
 // Recovery: confirmed (TEXT("FortSpawnAIRequest") and Z_Construct_UScriptStruct_FFortSpawnAIRequest) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSpawnAIRequest::StaticStruct()

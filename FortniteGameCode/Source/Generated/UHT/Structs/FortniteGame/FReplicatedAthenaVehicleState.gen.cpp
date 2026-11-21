@@ -14,7 +14,7 @@ struct alignas(4) FReplicatedAthenaVehicleState
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3860 (end 0x00FA38B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3860 (end 0x00FA38B2, chained .pdata fragments)
 // Original VA: 0x0000000140FA3860 | File offset: 0x00FA2E60
 // Recovery: confirmed (TEXT("ReplicatedAthenaVehicleState") and Z_Construct_UScriptStruct_FReplicatedAthenaVehicleState) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FReplicatedAthenaVehicleState::StaticStruct()

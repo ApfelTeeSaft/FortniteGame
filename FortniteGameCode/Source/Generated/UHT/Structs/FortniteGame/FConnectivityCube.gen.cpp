@@ -14,7 +14,7 @@ struct alignas(8) FConnectivityCube
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F661D0 (end 0x00F66222, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F661D0 (end 0x00F66222, chained .pdata fragments)
 // Original VA: 0x0000000140F661D0 | File offset: 0x00F657D0
 // Recovery: confirmed (TEXT("ConnectivityCube") and Z_Construct_UScriptStruct_FConnectivityCube) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FConnectivityCube::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FBlackboardKeySelector
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22C80 (end 0x01D22CD2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22C80 (end 0x01D22CD2, chained .pdata fragments)
 // Original VA: 0x0000000141D22C80 | File offset: 0x01D22280
 // Recovery: confirmed (TEXT("BlackboardKeySelector") and Z_Construct_UScriptStruct_FBlackboardKeySelector) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBlackboardKeySelector::StaticStruct()

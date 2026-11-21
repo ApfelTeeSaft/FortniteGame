@@ -14,7 +14,7 @@ struct alignas(4) FElementalCharValues
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD970 (end 0x010BD9C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD970 (end 0x010BD9C2, chained .pdata fragments)
 // Original VA: 0x00000001410BD970 | File offset: 0x010BCF70
 // Recovery: confirmed (TEXT("ElementalCharValues") and Z_Construct_UScriptStruct_FElementalCharValues) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FElementalCharValues::StaticStruct()

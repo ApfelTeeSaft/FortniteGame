@@ -14,7 +14,7 @@ struct alignas(8) FAnimNotifyTrack
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5B20 (end 0x023D5B72, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5B20 (end 0x023D5B72, chained .pdata fragments)
 // Original VA: 0x00000001423D5B20 | File offset: 0x023D5120
 // Recovery: confirmed (TEXT("AnimNotifyTrack") and Z_Construct_UScriptStruct_FAnimNotifyTrack) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimNotifyTrack::StaticStruct()

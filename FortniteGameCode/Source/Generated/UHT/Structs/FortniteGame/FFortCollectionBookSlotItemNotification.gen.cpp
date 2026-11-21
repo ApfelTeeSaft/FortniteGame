@@ -14,7 +14,7 @@ struct alignas(8) FFortCollectionBookSlotItemNotification
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102F8F0 (end 0x0102F942, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102F8F0 (end 0x0102F942, chained .pdata fragments)
 // Original VA: 0x000000014102F8F0 | File offset: 0x0102EEF0
 // Recovery: confirmed (TEXT("FortCollectionBookSlotItemNotification") and Z_Construct_UScriptStruct_FFortCollectionBookSlotItemNotification) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCollectionBookSlotItemNotification::StaticStruct()

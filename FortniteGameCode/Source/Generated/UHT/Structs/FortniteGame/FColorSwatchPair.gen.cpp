@@ -14,7 +14,7 @@ struct alignas(8) FColorSwatchPair
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78190 (end 0x00F781E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78190 (end 0x00F781E2, chained .pdata fragments)
 // Original VA: 0x0000000140F78190 | File offset: 0x00F77790
 // Recovery: confirmed (TEXT("ColorSwatchPair") and Z_Construct_UScriptStruct_FColorSwatchPair) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FColorSwatchPair::StaticStruct()

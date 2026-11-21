@@ -14,7 +14,7 @@ struct alignas(8) FDelegateRuntimeBinding
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00BE0 (end 0x01C00C32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00BE0 (end 0x01C00C32, chained .pdata fragments)
 // Original VA: 0x0000000141C00BE0 | File offset: 0x01C001E0
 // Recovery: confirmed (TEXT("DelegateRuntimeBinding") and Z_Construct_UScriptStruct_FDelegateRuntimeBinding) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDelegateRuntimeBinding::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(4) FFortWindImpulseHandle
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC4F0 (end 0x010DC542, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC4F0 (end 0x010DC542, chained .pdata fragments)
 // Original VA: 0x00000001410DC4F0 | File offset: 0x010DBAF0
 // Recovery: confirmed (TEXT("FortWindImpulseHandle") and Z_Construct_UScriptStruct_FFortWindImpulseHandle) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortWindImpulseHandle::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFindFloorResult
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x98];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EDE50 (end 0x023EDEA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EDE50 (end 0x023EDEA2, chained .pdata fragments)
 // Original VA: 0x00000001423EDE50 | File offset: 0x023ED450
 // Recovery: confirmed (TEXT("FindFloorResult") and Z_Construct_UScriptStruct_FFindFloorResult) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFindFloorResult::StaticStruct()

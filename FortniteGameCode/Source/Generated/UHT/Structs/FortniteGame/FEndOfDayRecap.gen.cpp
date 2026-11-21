@@ -14,7 +14,7 @@ struct alignas(8) FEndOfDayRecap
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4170 (end 0x00FE41C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4170 (end 0x00FE41C2, chained .pdata fragments)
 // Original VA: 0x0000000140FE4170 | File offset: 0x00FE3770
 // Recovery: confirmed (TEXT("EndOfDayRecap") and Z_Construct_UScriptStruct_FEndOfDayRecap) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FEndOfDayRecap::StaticStruct()

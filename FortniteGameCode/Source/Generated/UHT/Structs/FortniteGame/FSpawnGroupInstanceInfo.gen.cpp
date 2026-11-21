@@ -14,7 +14,7 @@ struct alignas(8) FSpawnGroupInstanceInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x130];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C3D0 (end 0x00F8C422, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C3D0 (end 0x00F8C422, chained .pdata fragments)
 // Original VA: 0x0000000140F8C3D0 | File offset: 0x00F8B9D0
 // Recovery: confirmed (TEXT("SpawnGroupInstanceInfo") and Z_Construct_UScriptStruct_FSpawnGroupInstanceInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSpawnGroupInstanceInfo::StaticStruct()

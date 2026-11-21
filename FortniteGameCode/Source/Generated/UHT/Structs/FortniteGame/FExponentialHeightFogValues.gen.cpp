@@ -14,7 +14,7 @@ struct alignas(4) FExponentialHeightFogValues
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x44];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD9D0 (end 0x010BDA22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD9D0 (end 0x010BDA22, chained .pdata fragments)
 // Original VA: 0x00000001410BD9D0 | File offset: 0x010BCFD0
 // Recovery: confirmed (TEXT("ExponentialHeightFogValues") and Z_Construct_UScriptStruct_FExponentialHeightFogValues) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FExponentialHeightFogValues::StaticStruct()

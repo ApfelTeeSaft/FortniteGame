@@ -15,7 +15,7 @@ struct alignas(8) FItemDefOptionData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x98];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E68C0 (end 0x028E6912, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E68C0 (end 0x028E6912, chained .pdata fragments)
 // Original VA: 0x00000001428E68C0 | File offset: 0x028E5EC0
 // Recovery: confirmed (TEXT("ItemDefOptionData") and Z_Construct_UScriptStruct_FItemDefOptionData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FItemDefOptionData::StaticStruct()

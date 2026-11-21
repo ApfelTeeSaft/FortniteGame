@@ -14,7 +14,7 @@ struct alignas(8) FKeepEventWaveData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BF30 (end 0x0100BF82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BF30 (end 0x0100BF82, chained .pdata fragments)
 // Original VA: 0x000000014100BF30 | File offset: 0x0100B530
 // Recovery: confirmed (TEXT("KeepEventWaveData") and Z_Construct_UScriptStruct_FKeepEventWaveData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FKeepEventWaveData::StaticStruct()

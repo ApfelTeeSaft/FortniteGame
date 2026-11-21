@@ -14,7 +14,7 @@ struct alignas(8) FFortTooltipDisplayInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA250 (end 0x010CA2A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA250 (end 0x010CA2A2, chained .pdata fragments)
 // Original VA: 0x00000001410CA250 | File offset: 0x010C9850
 // Recovery: confirmed (TEXT("FortTooltipDisplayInfo") and Z_Construct_UScriptStruct_FFortTooltipDisplayInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortTooltipDisplayInfo::StaticStruct()

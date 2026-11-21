@@ -9,13 +9,13 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FStartAsyncSimulationFunction();
 	UPackage* Z_Construct_UPackage__Script_Engine();  // RVA 0x0240CE30
-UScriptStruct* Z_Construct_UScriptStruct_Unrecovered_0x0240D700();  // RVA 0x0240D700
+UScriptStruct* Z_Construct_UScriptStruct_FTickFunction();  // RVA 0x0240D700
 struct alignas(8) FStartAsyncSimulationFunction
 {
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0930 (end 0x024F0982, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0930 (end 0x024F0982, chained .pdata fragments)
 // Original VA: 0x00000001424F0930 | File offset: 0x024EFF30
 // Recovery: confirmed (TEXT("StartAsyncSimulationFunction") and Z_Construct_UScriptStruct_FStartAsyncSimulationFunction) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FStartAsyncSimulationFunction::StaticStruct()
@@ -41,7 +41,7 @@ class UScriptStruct* FStartAsyncSimulationFunction::StaticStruct()
 	// ReturnStructParams: original RVA 0x04533480
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FStartAsyncSimulationFunction_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_Unrecovered_0x0240D700,
+		Z_Construct_UScriptStruct_FTickFunction,
 		&NewStructOps,
 		"StartAsyncSimulationFunction",
 		RF_Public|RF_Transient|RF_MarkAsNative,

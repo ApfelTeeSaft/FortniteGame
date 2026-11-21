@@ -14,7 +14,7 @@ struct alignas(4) FPlayerStatsRecord
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x88];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E2DD0 (end 0x010E2E22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E2DD0 (end 0x010E2E22, chained .pdata fragments)
 // Original VA: 0x00000001410E2DD0 | File offset: 0x010E23D0
 // Recovery: confirmed (TEXT("PlayerStatsRecord") and Z_Construct_UScriptStruct_FPlayerStatsRecord) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPlayerStatsRecord::StaticStruct()

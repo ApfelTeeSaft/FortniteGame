@@ -15,7 +15,7 @@ struct alignas(8) FFortGiftGiver
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BCF0 (end 0x0100BD42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BCF0 (end 0x0100BD42, chained .pdata fragments)
 // Original VA: 0x000000014100BCF0 | File offset: 0x0100B2F0
 // Recovery: confirmed (TEXT("FortGiftGiver") and Z_Construct_UScriptStruct_FFortGiftGiver) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortGiftGiver::StaticStruct()

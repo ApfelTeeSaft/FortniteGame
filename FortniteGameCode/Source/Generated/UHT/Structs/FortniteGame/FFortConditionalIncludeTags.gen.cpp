@@ -14,7 +14,7 @@ struct alignas(8) FFortConditionalIncludeTags
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81A20 (end 0x00F81A72, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81A20 (end 0x00F81A72, chained .pdata fragments)
 // Original VA: 0x0000000140F81A20 | File offset: 0x00F81020
 // Recovery: confirmed (TEXT("FortConditionalIncludeTags") and Z_Construct_UScriptStruct_FFortConditionalIncludeTags) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortConditionalIncludeTags::StaticStruct()

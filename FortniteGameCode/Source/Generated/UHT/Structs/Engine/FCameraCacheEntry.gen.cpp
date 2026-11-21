@@ -14,7 +14,7 @@ struct alignas(16) FCameraCacheEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x580];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9930 (end 0x024A9982, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9930 (end 0x024A9982, chained .pdata fragments)
 // Original VA: 0x00000001424A9930 | File offset: 0x024A8F30
 // Recovery: confirmed (TEXT("CameraCacheEntry") and Z_Construct_UScriptStruct_FCameraCacheEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCameraCacheEntry::StaticStruct()

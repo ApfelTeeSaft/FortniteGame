@@ -14,7 +14,7 @@ struct alignas(8) FZoneLoadingScreenConfig
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x110];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01041370 (end 0x010413C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01041370 (end 0x010413C2, chained .pdata fragments)
 // Original VA: 0x0000000141041370 | File offset: 0x01040970
 // Recovery: confirmed (TEXT("ZoneLoadingScreenConfig") and Z_Construct_UScriptStruct_FZoneLoadingScreenConfig) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FZoneLoadingScreenConfig::StaticStruct()

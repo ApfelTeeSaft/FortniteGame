@@ -14,7 +14,7 @@ struct alignas(8) FSubTrackGroup
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242F2C0 (end 0x0242F312, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242F2C0 (end 0x0242F312, chained .pdata fragments)
 // Original VA: 0x000000014242F2C0 | File offset: 0x0242E8C0
 // Recovery: confirmed (TEXT("SubTrackGroup") and Z_Construct_UScriptStruct_FSubTrackGroup) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSubTrackGroup::StaticStruct()

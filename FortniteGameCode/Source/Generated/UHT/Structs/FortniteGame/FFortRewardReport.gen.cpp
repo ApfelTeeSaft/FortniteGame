@@ -14,7 +14,7 @@ struct alignas(8) FFortRewardReport
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x70];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01065440 (end 0x01065492, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01065440 (end 0x01065492, chained .pdata fragments)
 // Original VA: 0x0000000141065440 | File offset: 0x01064A40
 // Recovery: confirmed (TEXT("FortRewardReport") and Z_Construct_UScriptStruct_FFortRewardReport) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortRewardReport::StaticStruct()

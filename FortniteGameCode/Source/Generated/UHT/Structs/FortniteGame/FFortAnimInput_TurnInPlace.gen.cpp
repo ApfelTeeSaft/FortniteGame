@@ -14,7 +14,7 @@ struct alignas(8) FFortAnimInput_TurnInPlace
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98C90 (end 0x00F98CE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98C90 (end 0x00F98CE2, chained .pdata fragments)
 // Original VA: 0x0000000140F98C90 | File offset: 0x00F98290
 // Recovery: confirmed (TEXT("FortAnimInput_TurnInPlace") and Z_Construct_UScriptStruct_FFortAnimInput_TurnInPlace) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAnimInput_TurnInPlace::StaticStruct()

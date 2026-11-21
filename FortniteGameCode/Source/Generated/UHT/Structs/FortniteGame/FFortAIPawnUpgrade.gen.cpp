@@ -14,7 +14,7 @@ struct alignas(8) FFortAIPawnUpgrade
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87780 (end 0x00F877D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87780 (end 0x00F877D2, chained .pdata fragments)
 // Original VA: 0x0000000140F87780 | File offset: 0x00F86D80
 // Recovery: confirmed (TEXT("FortAIPawnUpgrade") and Z_Construct_UScriptStruct_FFortAIPawnUpgrade) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIPawnUpgrade::StaticStruct()

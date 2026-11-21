@@ -14,7 +14,7 @@ struct alignas(8) FRootMotionExtractionStep
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8340 (end 0x023C8392, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8340 (end 0x023C8392, chained .pdata fragments)
 // Original VA: 0x00000001423C8340 | File offset: 0x023C7940
 // Recovery: confirmed (TEXT("RootMotionExtractionStep") and Z_Construct_UScriptStruct_FRootMotionExtractionStep) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRootMotionExtractionStep::StaticStruct()

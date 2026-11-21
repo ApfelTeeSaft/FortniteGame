@@ -14,7 +14,7 @@ struct alignas(8) FActiveForceFeedbackEffect
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FA60 (end 0x0240FAB2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FA60 (end 0x0240FAB2, chained .pdata fragments)
 // Original VA: 0x000000014240FA60 | File offset: 0x0240F060
 // Recovery: confirmed (TEXT("ActiveForceFeedbackEffect") and Z_Construct_UScriptStruct_FActiveForceFeedbackEffect) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FActiveForceFeedbackEffect::StaticStruct()

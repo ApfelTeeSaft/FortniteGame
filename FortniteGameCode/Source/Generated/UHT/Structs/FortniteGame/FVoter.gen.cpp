@@ -14,7 +14,7 @@ struct alignas(8) FVoter
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF3470 (end 0x00FF34C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF3470 (end 0x00FF34C2, chained .pdata fragments)
 // Original VA: 0x0000000140FF3470 | File offset: 0x00FF2A70
 // Recovery: confirmed (TEXT("Voter") and Z_Construct_UScriptStruct_FVoter) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FVoter::StaticStruct()

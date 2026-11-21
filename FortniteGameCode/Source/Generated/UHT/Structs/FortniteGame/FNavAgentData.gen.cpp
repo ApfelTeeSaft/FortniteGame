@@ -14,7 +14,7 @@ struct alignas(8) FNavAgentData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037F90 (end 0x01037FE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037F90 (end 0x01037FE2, chained .pdata fragments)
 // Original VA: 0x0000000141037F90 | File offset: 0x01037590
 // Recovery: confirmed (TEXT("NavAgentData") and Z_Construct_UScriptStruct_FNavAgentData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FNavAgentData::StaticStruct()

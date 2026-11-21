@@ -14,7 +14,7 @@ struct alignas(8) FFortAIPawnVariantDefinition
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x68];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F989F0 (end 0x00F98A42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F989F0 (end 0x00F98A42, chained .pdata fragments)
 // Original VA: 0x0000000140F989F0 | File offset: 0x00F97FF0
 // Recovery: confirmed (TEXT("FortAIPawnVariantDefinition") and Z_Construct_UScriptStruct_FFortAIPawnVariantDefinition) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIPawnVariantDefinition::StaticStruct()

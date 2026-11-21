@@ -14,7 +14,7 @@ struct alignas(8) FMarkerSyncData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D60C0 (end 0x023D6112, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D60C0 (end 0x023D6112, chained .pdata fragments)
 // Original VA: 0x00000001423D60C0 | File offset: 0x023D56C0
 // Recovery: confirmed (TEXT("MarkerSyncData") and Z_Construct_UScriptStruct_FMarkerSyncData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMarkerSyncData::StaticStruct()

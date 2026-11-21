@@ -14,7 +14,7 @@ struct alignas(8) FBlendSampleData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7F20 (end 0x023C7F72, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7F20 (end 0x023C7F72, chained .pdata fragments)
 // Original VA: 0x00000001423C7F20 | File offset: 0x023C7520
 // Recovery: confirmed (TEXT("BlendSampleData") and Z_Construct_UScriptStruct_FBlendSampleData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBlendSampleData::StaticStruct()

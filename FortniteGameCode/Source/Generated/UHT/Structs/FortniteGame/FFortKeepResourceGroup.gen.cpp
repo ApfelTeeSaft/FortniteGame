@@ -15,7 +15,7 @@ struct alignas(8) FFortKeepResourceGroup
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9740 (end 0x010E9792, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9740 (end 0x010E9792, chained .pdata fragments)
 // Original VA: 0x00000001410E9740 | File offset: 0x010E8D40
 // Recovery: confirmed (TEXT("FortKeepResourceGroup") and Z_Construct_UScriptStruct_FFortKeepResourceGroup) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortKeepResourceGroup::StaticStruct()

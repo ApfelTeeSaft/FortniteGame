@@ -14,7 +14,7 @@ struct alignas(8) FFortFeedbackHandle
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDAE50 (end 0x00FDAEA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDAE50 (end 0x00FDAEA2, chained .pdata fragments)
 // Original VA: 0x0000000140FDAE50 | File offset: 0x00FDA450
 // Recovery: confirmed (TEXT("FortFeedbackHandle") and Z_Construct_UScriptStruct_FFortFeedbackHandle) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortFeedbackHandle::StaticStruct()

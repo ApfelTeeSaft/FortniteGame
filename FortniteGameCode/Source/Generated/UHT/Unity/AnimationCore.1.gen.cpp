@@ -5,5 +5,22 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/AnimationCore.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Structs/AnimationCore/FAxis.gen.cpp"
+#include "../Enums/AnimationCore/ETransformConstraintType.static.gen.cpp"
 #include "../Enums/AnimationCore/ETransformConstraintType.gen.cpp"
+#include "../Enums/AnimationCore/EConstraintType.static.gen.cpp"
 #include "../Enums/AnimationCore/EConstraintType.gen.cpp"
+#include "../Structs/AnimationCore/FConstraintData.gen.cpp"
+#include "../Structs/AnimationCore/FConstraintDescriptor.gen.cpp"
+#include "../Structs/AnimationCore/FAimConstraintDescription.gen.cpp"
+#include "../Structs/AnimationCore/FTransformConstraintDescription.gen.cpp"
+#include "../Structs/AnimationCore/FConstraintDescriptionEx.gen.cpp"
+#include "../Structs/AnimationCore/FTransformConstraint.gen.cpp"
+#include "../Structs/AnimationCore/FConstraintOffset.gen.cpp"
+#include "../Structs/AnimationCore/FConstraintDescription.gen.cpp"
+#include "../Structs/AnimationCore/FFilterOptionPerAxis.gen.cpp"
+#include "../Structs/AnimationCore/FNodeChain.gen.cpp"
+#include "../Structs/AnimationCore/FNodeHierarchyWithUserData.gen.cpp"
+#include "../Structs/AnimationCore/FNodeHierarchyData.gen.cpp"
+#include "../Structs/AnimationCore/FNodeObject.gen.cpp"

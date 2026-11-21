@@ -14,7 +14,7 @@ struct alignas(8) FDebugTextInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDF10 (end 0x023FDF62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDF10 (end 0x023FDF62, chained .pdata fragments)
 // Original VA: 0x00000001423FDF10 | File offset: 0x023FD510
 // Recovery: confirmed (TEXT("DebugTextInfo") and Z_Construct_UScriptStruct_FDebugTextInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDebugTextInfo::StaticStruct()

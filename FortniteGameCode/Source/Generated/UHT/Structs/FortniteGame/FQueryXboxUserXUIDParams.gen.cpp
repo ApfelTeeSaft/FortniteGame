@@ -14,7 +14,7 @@ struct alignas(8) FQueryXboxUserXUIDParams
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037FF0 (end 0x01038042, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037FF0 (end 0x01038042, chained .pdata fragments)
 // Original VA: 0x0000000141037FF0 | File offset: 0x010375F0
 // Recovery: confirmed (TEXT("QueryXboxUserXUIDParams") and Z_Construct_UScriptStruct_FQueryXboxUserXUIDParams) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FQueryXboxUserXUIDParams::StaticStruct()

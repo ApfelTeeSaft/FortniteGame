@@ -9,13 +9,13 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FMovieSceneWidgetMaterialSectionTemplate();
 	UPackage* Z_Construct_UPackage__Script_UMG();  // RVA 0x01BFD110
-UScriptStruct* Z_Construct_UScriptStruct_Unrecovered_0x01B53140();  // RVA 0x01B53140
+UScriptStruct* Z_Construct_UScriptStruct_FMovieSceneParameterSectionTemplate();  // RVA 0x01B53140
 struct alignas(8) FMovieSceneWidgetMaterialSectionTemplate
 {
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED2A0 (end 0x01BED2F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED2A0 (end 0x01BED2F2, chained .pdata fragments)
 // Original VA: 0x0000000141BED2A0 | File offset: 0x01BEC8A0
 // Recovery: confirmed (TEXT("MovieSceneWidgetMaterialSectionTemplate") and Z_Construct_UScriptStruct_FMovieSceneWidgetMaterialSectionTemplate) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMovieSceneWidgetMaterialSectionTemplate::StaticStruct()
@@ -42,7 +42,7 @@ class UScriptStruct* FMovieSceneWidgetMaterialSectionTemplate::StaticStruct()
 	// ReturnStructParams: original RVA 0x043C25E0
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieSceneWidgetMaterialSectionTemplate_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_UMG,
-		Z_Construct_UScriptStruct_Unrecovered_0x01B53140,
+		Z_Construct_UScriptStruct_FMovieSceneParameterSectionTemplate,
 		&NewStructOps,
 		"MovieSceneWidgetMaterialSectionTemplate",
 		RF_Public|RF_Transient|RF_MarkAsNative,

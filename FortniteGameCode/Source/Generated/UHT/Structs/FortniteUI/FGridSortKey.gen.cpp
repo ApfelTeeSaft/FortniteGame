@@ -14,7 +14,7 @@ struct alignas(8) FGridSortKey
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3A70 (end 0x028B3AC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028B3A70 (end 0x028B3AC2, chained .pdata fragments)
 // Original VA: 0x00000001428B3A70 | File offset: 0x028B3070
 // Recovery: confirmed (TEXT("GridSortKey") and Z_Construct_UScriptStruct_FGridSortKey) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGridSortKey::StaticStruct()

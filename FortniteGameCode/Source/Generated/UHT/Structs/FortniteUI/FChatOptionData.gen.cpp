@@ -15,7 +15,7 @@ struct alignas(8) FChatOptionData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xA8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E66E0 (end 0x028E6732, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E66E0 (end 0x028E6732, chained .pdata fragments)
 // Original VA: 0x00000001428E66E0 | File offset: 0x028E5CE0
 // Recovery: confirmed (TEXT("ChatOptionData") and Z_Construct_UScriptStruct_FChatOptionData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FChatOptionData::StaticStruct()

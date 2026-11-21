@@ -14,7 +14,7 @@ struct alignas(8) FFortAIEncounterRift
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8BEF0 (end 0x00F8BF42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8BEF0 (end 0x00F8BF42, chained .pdata fragments)
 // Original VA: 0x0000000140F8BEF0 | File offset: 0x00F8B4F0
 // Recovery: confirmed (TEXT("FortAIEncounterRift") and Z_Construct_UScriptStruct_FFortAIEncounterRift) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIEncounterRift::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FDayPhaseInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x170];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD7F0 (end 0x010BD842, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BD7F0 (end 0x010BD842, chained .pdata fragments)
 // Original VA: 0x00000001410BD7F0 | File offset: 0x010BCDF0
 // Recovery: confirmed (TEXT("DayPhaseInfo") and Z_Construct_UScriptStruct_FDayPhaseInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDayPhaseInfo::StaticStruct()

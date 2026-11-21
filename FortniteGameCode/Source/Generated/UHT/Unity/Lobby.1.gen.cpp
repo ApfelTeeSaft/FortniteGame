@@ -5,11 +5,15 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/Lobby.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/Lobby/ELobbyBeaconJoinState.static.gen.cpp"
 #include "../Enums/Lobby/ELobbyBeaconJoinState.gen.cpp"
 #include "../ALobbyBeaconClient.gen.cpp"
 #include "../Classes/Lobby/ALobbyBeaconClient.gen.cpp"
 #include "../Classes/Lobby/ALobbyBeaconHost.gen.cpp"
 #include "../ALobbyBeaconPlayerState.gen.cpp"
 #include "../Classes/Lobby/ALobbyBeaconPlayerState.gen.cpp"
+#include "../Structs/Lobby/FLobbyPlayerStateInfoArray.gen.cpp"
+#include "../Structs/Lobby/FLobbyPlayerStateActorInfo.gen.cpp"
 #include "../ALobbyBeaconState.gen.cpp"
 #include "../Classes/Lobby/ALobbyBeaconState.gen.cpp"

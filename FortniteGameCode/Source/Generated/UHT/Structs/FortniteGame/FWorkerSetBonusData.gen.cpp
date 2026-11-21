@@ -14,7 +14,7 @@ struct alignas(8) FWorkerSetBonusData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFAD10 (end 0x00FFAD62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFAD10 (end 0x00FFAD62, chained .pdata fragments)
 // Original VA: 0x0000000140FFAD10 | File offset: 0x00FFA310
 // Recovery: confirmed (TEXT("WorkerSetBonusData") and Z_Construct_UScriptStruct_FWorkerSetBonusData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FWorkerSetBonusData::StaticStruct()

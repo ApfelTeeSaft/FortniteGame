@@ -14,7 +14,7 @@ struct alignas(4) FMaterialProxySettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486360 (end 0x024863B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486360 (end 0x024863B2, chained .pdata fragments)
 // Original VA: 0x0000000142486360 | File offset: 0x02485960
 // Recovery: confirmed (TEXT("MaterialProxySettings") and Z_Construct_UScriptStruct_FMaterialProxySettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMaterialProxySettings::StaticStruct()

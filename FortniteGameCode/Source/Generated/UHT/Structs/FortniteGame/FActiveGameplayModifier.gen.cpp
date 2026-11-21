@@ -15,7 +15,7 @@ struct alignas(8) FActiveGameplayModifier
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xD8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF3050 (end 0x00FF30A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF3050 (end 0x00FF30A2, chained .pdata fragments)
 // Original VA: 0x0000000140FF3050 | File offset: 0x00FF2650
 // Recovery: confirmed (TEXT("ActiveGameplayModifier") and Z_Construct_UScriptStruct_FActiveGameplayModifier) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FActiveGameplayModifier::StaticStruct()

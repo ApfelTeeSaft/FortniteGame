@@ -15,7 +15,7 @@ struct alignas(16) FActiveGameplayEffectsContainer
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4F0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563750 (end 0x005637A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563750 (end 0x005637A2, chained .pdata fragments)
 // Original VA: 0x0000000140563750 | File offset: 0x00562D50
 // Recovery: confirmed (TEXT("ActiveGameplayEffectsContainer") and Z_Construct_UScriptStruct_FActiveGameplayEffectsContainer) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FActiveGameplayEffectsContainer::StaticStruct()

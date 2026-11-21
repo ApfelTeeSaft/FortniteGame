@@ -14,7 +14,7 @@ struct alignas(16) FMinimalViewInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x570];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA570 (end 0x023EA5C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA570 (end 0x023EA5C2, chained .pdata fragments)
 // Original VA: 0x00000001423EA570 | File offset: 0x023E9B70
 // Recovery: confirmed (TEXT("MinimalViewInfo") and Z_Construct_UScriptStruct_FMinimalViewInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMinimalViewInfo::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FMissionTimerData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A710 (end 0x0104A762, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A710 (end 0x0104A762, chained .pdata fragments)
 // Original VA: 0x000000014104A710 | File offset: 0x01049D10
 // Recovery: confirmed (TEXT("MissionTimerData") and Z_Construct_UScriptStruct_FMissionTimerData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMissionTimerData::StaticStruct()

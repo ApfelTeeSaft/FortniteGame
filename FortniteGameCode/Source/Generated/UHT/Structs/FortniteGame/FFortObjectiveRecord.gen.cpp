@@ -14,7 +14,7 @@ struct alignas(8) FFortObjectiveRecord
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9B00 (end 0x010E9B52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9B00 (end 0x010E9B52, chained .pdata fragments)
 // Original VA: 0x00000001410E9B00 | File offset: 0x010E9100
 // Recovery: confirmed (TEXT("FortObjectiveRecord") and Z_Construct_UScriptStruct_FFortObjectiveRecord) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortObjectiveRecord::StaticStruct()

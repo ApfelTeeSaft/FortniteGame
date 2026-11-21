@@ -14,7 +14,7 @@ struct alignas(8) FFortQuestObjectiveCompletion
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D4B0 (end 0x0109D502, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D4B0 (end 0x0109D502, chained .pdata fragments)
 // Original VA: 0x000000014109D4B0 | File offset: 0x0109CAB0
 // Recovery: confirmed (TEXT("FortQuestObjectiveCompletion") and Z_Construct_UScriptStruct_FFortQuestObjectiveCompletion) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortQuestObjectiveCompletion::StaticStruct()

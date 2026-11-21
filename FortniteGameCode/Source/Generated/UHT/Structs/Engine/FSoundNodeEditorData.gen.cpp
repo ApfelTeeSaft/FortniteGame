@@ -14,7 +14,7 @@ struct alignas(4) FSoundNodeEditorData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB9B0 (end 0x024DBA02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB9B0 (end 0x024DBA02, chained .pdata fragments)
 // Original VA: 0x00000001424DB9B0 | File offset: 0x024DAFB0
 // Recovery: confirmed (TEXT("SoundNodeEditorData") and Z_Construct_UScriptStruct_FSoundNodeEditorData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSoundNodeEditorData::StaticStruct()

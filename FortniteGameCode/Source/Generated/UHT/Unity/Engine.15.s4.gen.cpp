@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/ENavLinkDirection.static.gen.cpp"
+#include "../Enums/Engine/ETextureColorChannel.static.gen.cpp"

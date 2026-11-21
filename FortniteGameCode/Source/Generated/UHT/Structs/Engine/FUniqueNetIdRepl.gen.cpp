@@ -15,7 +15,7 @@ struct alignas(8) FUniqueNetIdRepl
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02495710 (end 0x02495762, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02495710 (end 0x02495762, chained .pdata fragments)
 // Original VA: 0x0000000142495710 | File offset: 0x02494D10
 // Recovery: confirmed (TEXT("UniqueNetIdRepl") and Z_Construct_UScriptStruct_FUniqueNetIdRepl) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FUniqueNetIdRepl::StaticStruct()

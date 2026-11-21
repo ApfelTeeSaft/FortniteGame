@@ -14,7 +14,7 @@ struct alignas(8) FClassRedirect
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404540 (end 0x02404592, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404540 (end 0x02404592, chained .pdata fragments)
 // Original VA: 0x0000000142404540 | File offset: 0x02403B40
 // Recovery: confirmed (TEXT("ClassRedirect") and Z_Construct_UScriptStruct_FClassRedirect) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FClassRedirect::StaticStruct()

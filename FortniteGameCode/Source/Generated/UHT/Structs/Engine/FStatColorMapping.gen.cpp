@@ -14,7 +14,7 @@ struct alignas(8) FStatColorMapping
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404C00 (end 0x02404C52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404C00 (end 0x02404C52, chained .pdata fragments)
 // Original VA: 0x0000000142404C00 | File offset: 0x02404200
 // Recovery: confirmed (TEXT("StatColorMapping") and Z_Construct_UScriptStruct_FStatColorMapping) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FStatColorMapping::StaticStruct()

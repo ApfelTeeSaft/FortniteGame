@@ -14,7 +14,7 @@ struct alignas(8) FBlueprintCookedComponentInstancingData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2FF0 (end 0x023E3042, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2FF0 (end 0x023E3042, chained .pdata fragments)
 // Original VA: 0x00000001423E2FF0 | File offset: 0x023E25F0
 // Recovery: confirmed (TEXT("BlueprintCookedComponentInstancingData") and Z_Construct_UScriptStruct_FBlueprintCookedComponentInstancingData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBlueprintCookedComponentInstancingData::StaticStruct()

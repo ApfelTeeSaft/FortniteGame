@@ -14,7 +14,7 @@ struct alignas(1) FRootMotionSourceStatus
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C2840 (end 0x024C2892, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C2840 (end 0x024C2892, chained .pdata fragments)
 // Original VA: 0x00000001424C2840 | File offset: 0x024C1E40
 // Recovery: confirmed (TEXT("RootMotionSourceStatus") and Z_Construct_UScriptStruct_FRootMotionSourceStatus) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRootMotionSourceStatus::StaticStruct()

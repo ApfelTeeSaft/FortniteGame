@@ -4,6 +4,6 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EParticleSystemOcclusionBoundsMethod.static.gen.cpp"
-#include "../Enums/Engine/ParticleSystemLODMethod.static.gen.cpp"
-#include "../Enums/Engine/EParticleSystemUpdateMode.static.gen.cpp"
+#include "../Enums/Engine/EParticleSystemInsignificanceReaction.static.gen.cpp"
+#include "../Enums/Engine/EParticleSignificanceLevel.static.gen.cpp"
+#include "../Enums/Engine/EParticleDetailMode.static.gen.cpp"

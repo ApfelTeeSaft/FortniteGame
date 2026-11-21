@@ -5,8 +5,16 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/OnlineSubsystem.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Structs/OnlineSubsystem/FNamedInterfaceDef.gen.cpp"
+#include "../Structs/OnlineSubsystem/FNamedInterface.gen.cpp"
 #include "../Classes/OnlineSubsystem/UNamedInterfaces.gen.cpp"
+#include "../Enums/OnlineSubsystem/EInAppPurchaseState.static.gen.cpp"
 #include "../Enums/OnlineSubsystem/EInAppPurchaseState.gen.cpp"
+#include "../Structs/OnlineSubsystem/FInAppPurchaseRestoreInfo.gen.cpp"
+#include "../Structs/OnlineSubsystem/FInAppPurchaseProductInfo.gen.cpp"
+#include "../Structs/OnlineSubsystem/FInAppPurchaseProductRequest.gen.cpp"
+#include "../Enums/OnlineSubsystem/EMPMatchOutcome.static.gen.cpp"
 #include "../Enums/OnlineSubsystem/EMPMatchOutcome.gen.cpp"
 #include "../UTurnBasedMatchInterface.gen.cpp"
 #include "../Classes/OnlineSubsystem/UTurnBasedMatchInterface.gen.cpp"

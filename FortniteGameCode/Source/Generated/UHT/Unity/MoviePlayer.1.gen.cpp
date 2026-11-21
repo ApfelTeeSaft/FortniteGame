@@ -5,5 +5,7 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/MoviePlayer.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/MoviePlayer/EMoviePlaybackType.static.gen.cpp"
 #include "../Enums/MoviePlayer/EMoviePlaybackType.gen.cpp"
 #include "../Classes/MoviePlayer/UMoviePlayerSettings.gen.cpp"

@@ -14,7 +14,7 @@ struct alignas(8) FConsumableTestDefinition
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFBD0 (end 0x00FBFC22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFBD0 (end 0x00FBFC22, chained .pdata fragments)
 // Original VA: 0x0000000140FBFBD0 | File offset: 0x00FBF1D0
 // Recovery: confirmed (TEXT("ConsumableTestDefinition") and Z_Construct_UScriptStruct_FConsumableTestDefinition) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FConsumableTestDefinition::StaticStruct()

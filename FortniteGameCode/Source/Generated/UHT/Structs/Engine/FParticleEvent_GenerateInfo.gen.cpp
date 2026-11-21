@@ -14,7 +14,7 @@ struct alignas(8) FParticleEvent_GenerateInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02499D70 (end 0x02499DC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02499D70 (end 0x02499DC2, chained .pdata fragments)
 // Original VA: 0x0000000142499D70 | File offset: 0x02499370
 // Recovery: confirmed (TEXT("ParticleEvent_GenerateInfo") and Z_Construct_UScriptStruct_FParticleEvent_GenerateInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FParticleEvent_GenerateInfo::StaticStruct()

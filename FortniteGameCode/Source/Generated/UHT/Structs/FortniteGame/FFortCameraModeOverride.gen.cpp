@@ -14,7 +14,7 @@ struct alignas(8) FFortCameraModeOverride
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106AB10 (end 0x0106AB62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106AB10 (end 0x0106AB62, chained .pdata fragments)
 // Original VA: 0x000000014106AB10 | File offset: 0x0106A110
 // Recovery: confirmed (TEXT("FortCameraModeOverride") and Z_Construct_UScriptStruct_FFortCameraModeOverride) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCameraModeOverride::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FSpawnGroupEnemy
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98F30 (end 0x00F98F82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98F30 (end 0x00F98F82, chained .pdata fragments)
 // Original VA: 0x0000000140F98F30 | File offset: 0x00F98530
 // Recovery: confirmed (TEXT("SpawnGroupEnemy") and Z_Construct_UScriptStruct_FSpawnGroupEnemy) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSpawnGroupEnemy::StaticStruct()

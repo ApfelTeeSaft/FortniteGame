@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/FortniteUI/ESkillTreePageType.static.gen.cpp"
+#include "../Enums/FortniteUI/ESaveProfileForBanners.static.gen.cpp"

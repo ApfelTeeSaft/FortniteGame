@@ -14,7 +14,7 @@ struct alignas(8) FSquadSlotSortTypes
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F52F0 (end 0x028F5342, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F52F0 (end 0x028F5342, chained .pdata fragments)
 // Original VA: 0x00000001428F52F0 | File offset: 0x028F48F0
 // Recovery: confirmed (TEXT("SquadSlotSortTypes") and Z_Construct_UScriptStruct_FSquadSlotSortTypes) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSquadSlotSortTypes::StaticStruct()

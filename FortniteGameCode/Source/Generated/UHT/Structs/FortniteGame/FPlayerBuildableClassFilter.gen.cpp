@@ -14,7 +14,7 @@ struct alignas(8) FPlayerBuildableClassFilter
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF32F0 (end 0x00FF3342, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF32F0 (end 0x00FF3342, chained .pdata fragments)
 // Original VA: 0x0000000140FF32F0 | File offset: 0x00FF28F0
 // Recovery: confirmed (TEXT("PlayerBuildableClassFilter") and Z_Construct_UScriptStruct_FPlayerBuildableClassFilter) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPlayerBuildableClassFilter::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(4) FParticleReplayTrackKey
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242F200 (end 0x0242F252, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242F200 (end 0x0242F252, chained .pdata fragments)
 // Original VA: 0x000000014242F200 | File offset: 0x0242E800
 // Recovery: confirmed (TEXT("ParticleReplayTrackKey") and Z_Construct_UScriptStruct_FParticleReplayTrackKey) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FParticleReplayTrackKey::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortTwitchViewerGrantedQuestNotification
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037BD0 (end 0x01037C22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037BD0 (end 0x01037C22, chained .pdata fragments)
 // Original VA: 0x0000000141037BD0 | File offset: 0x010371D0
 // Recovery: confirmed (TEXT("FortTwitchViewerGrantedQuestNotification") and Z_Construct_UScriptStruct_FFortTwitchViewerGrantedQuestNotification) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortTwitchViewerGrantedQuestNotification::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(4) FLevelSimplificationDetails
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x134];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024700D0 (end 0x02470122, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024700D0 (end 0x02470122, chained .pdata fragments)
 // Original VA: 0x00000001424700D0 | File offset: 0x0246F6D0
 // Recovery: confirmed (TEXT("LevelSimplificationDetails") and Z_Construct_UScriptStruct_FLevelSimplificationDetails) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FLevelSimplificationDetails::StaticStruct()

@@ -5,5 +5,9 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/PurchaseFlow.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Structs/PurchaseFlow/FPurchaseFlowReceiptParam.gen.cpp"
+#include "../Structs/PurchaseFlow/FPurchaseFlowOffer.gen.cpp"
+#include "../Structs/PurchaseFlow/FPurchaseFlowItem.gen.cpp"
 #include "../UPurchaseFlowJSBridge.gen.cpp"
 #include "../Classes/PurchaseFlow/UPurchaseFlowJSBridge.gen.cpp"

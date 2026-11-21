@@ -14,7 +14,7 @@ struct alignas(8) FMyTownWorkerPersonalityData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F13A0 (end 0x010F13F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F13A0 (end 0x010F13F2, chained .pdata fragments)
 // Original VA: 0x00000001410F13A0 | File offset: 0x010F09A0
 // Recovery: confirmed (TEXT("MyTownWorkerPersonalityData") and Z_Construct_UScriptStruct_FMyTownWorkerPersonalityData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMyTownWorkerPersonalityData::StaticStruct()

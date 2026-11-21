@@ -14,7 +14,7 @@ struct alignas(8) FFortWindResponderMaterialVariablePairData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC730 (end 0x010DC782, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC730 (end 0x010DC782, chained .pdata fragments)
 // Original VA: 0x00000001410DC730 | File offset: 0x010DBD30
 // Recovery: confirmed (TEXT("FortWindResponderMaterialVariablePairData") and Z_Construct_UScriptStruct_FFortWindResponderMaterialVariablePairData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortWindResponderMaterialVariablePairData::StaticStruct()

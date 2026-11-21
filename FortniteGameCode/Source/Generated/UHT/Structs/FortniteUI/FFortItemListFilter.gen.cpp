@@ -14,7 +14,7 @@ struct alignas(8) FFortItemListFilter
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C1870 (end 0x028C18C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C1870 (end 0x028C18C2, chained .pdata fragments)
 // Original VA: 0x00000001428C1870 | File offset: 0x028C0E70
 // Recovery: confirmed (TEXT("FortItemListFilter") and Z_Construct_UScriptStruct_FFortItemListFilter) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortItemListFilter::StaticStruct()

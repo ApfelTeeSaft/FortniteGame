@@ -15,7 +15,7 @@ struct alignas(8) FFortAnimNode_ScaleHuskBones
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1E0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E720 (end 0x00F9E772, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E720 (end 0x00F9E772, chained .pdata fragments)
 // Original VA: 0x0000000140F9E720 | File offset: 0x00F9DD20
 // Recovery: confirmed (TEXT("FortAnimNode_ScaleHuskBones") and Z_Construct_UScriptStruct_FFortAnimNode_ScaleHuskBones) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAnimNode_ScaleHuskBones::StaticStruct()

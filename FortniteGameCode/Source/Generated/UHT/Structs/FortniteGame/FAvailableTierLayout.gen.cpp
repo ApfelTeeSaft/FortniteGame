@@ -14,7 +14,7 @@ struct alignas(8) FAvailableTierLayout
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFBD0 (end 0x00FCFC22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFBD0 (end 0x00FCFC22, chained .pdata fragments)
 // Original VA: 0x0000000140FCFBD0 | File offset: 0x00FCF1D0
 // Recovery: confirmed (TEXT("AvailableTierLayout") and Z_Construct_UScriptStruct_FAvailableTierLayout) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAvailableTierLayout::StaticStruct()

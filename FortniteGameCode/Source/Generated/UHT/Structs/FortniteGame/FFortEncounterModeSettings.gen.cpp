@@ -14,7 +14,7 @@ struct alignas(1) FFortEncounterModeSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9380 (end 0x010E93D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9380 (end 0x010E93D2, chained .pdata fragments)
 // Original VA: 0x00000001410E9380 | File offset: 0x010E8980
 // Recovery: confirmed (TEXT("FortEncounterModeSettings") and Z_Construct_UScriptStruct_FFortEncounterModeSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortEncounterModeSettings::StaticStruct()

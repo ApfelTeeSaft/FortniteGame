@@ -14,7 +14,7 @@ struct alignas(8) FKeyHandleMap
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024318B0 (end 0x02431902, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024318B0 (end 0x02431902, chained .pdata fragments)
 // Original VA: 0x00000001424318B0 | File offset: 0x02430EB0
 // Recovery: confirmed (TEXT("KeyHandleMap") and Z_Construct_UScriptStruct_FKeyHandleMap) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FKeyHandleMap::StaticStruct()

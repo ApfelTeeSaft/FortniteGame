@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/CylinderHeightAxis.static.gen.cpp"
+#include "../Enums/Engine/ETextureMipValueMode.static.gen.cpp"

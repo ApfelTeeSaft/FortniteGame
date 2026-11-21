@@ -14,7 +14,7 @@ struct alignas(8) FGameplayEffectExecutionDefinition
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563E10 (end 0x00563E62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563E10 (end 0x00563E62, chained .pdata fragments)
 // Original VA: 0x0000000140563E10 | File offset: 0x00563410
 // Recovery: confirmed (TEXT("GameplayEffectExecutionDefinition") and Z_Construct_UScriptStruct_FGameplayEffectExecutionDefinition) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayEffectExecutionDefinition::StaticStruct()

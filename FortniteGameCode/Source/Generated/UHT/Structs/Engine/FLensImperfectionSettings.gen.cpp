@@ -14,7 +14,7 @@ struct alignas(8) FLensImperfectionSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C5580 (end 0x024C55D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C5580 (end 0x024C55D2, chained .pdata fragments)
 // Original VA: 0x00000001424C5580 | File offset: 0x024C4B80
 // Recovery: confirmed (TEXT("LensImperfectionSettings") and Z_Construct_UScriptStruct_FLensImperfectionSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FLensImperfectionSettings::StaticStruct()

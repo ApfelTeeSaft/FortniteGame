@@ -14,7 +14,7 @@ struct alignas(8) FKeepEventInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BED0 (end 0x0100BF22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BED0 (end 0x0100BF22, chained .pdata fragments)
 // Original VA: 0x000000014100BED0 | File offset: 0x0100B4D0
 // Recovery: confirmed (TEXT("KeepEventInfo") and Z_Construct_UScriptStruct_FKeepEventInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FKeepEventInfo::StaticStruct()

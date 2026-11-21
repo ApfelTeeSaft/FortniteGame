@@ -14,7 +14,7 @@ struct alignas(8) FAthenaQuickChatLeafEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xB0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60C00 (end 0x00F60C52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60C00 (end 0x00F60C52, chained .pdata fragments)
 // Original VA: 0x0000000140F60C00 | File offset: 0x00F60200
 // Recovery: confirmed (TEXT("AthenaQuickChatLeafEntry") and Z_Construct_UScriptStruct_FAthenaQuickChatLeafEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAthenaQuickChatLeafEntry::StaticStruct()

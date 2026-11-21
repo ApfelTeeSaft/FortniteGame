@@ -14,7 +14,7 @@ struct alignas(8) FGameplayEventData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xA8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B9E0 (end 0x0055BA32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B9E0 (end 0x0055BA32, chained .pdata fragments)
 // Original VA: 0x000000014055B9E0 | File offset: 0x0055AFE0
 // Recovery: confirmed (TEXT("GameplayEventData") and Z_Construct_UScriptStruct_FGameplayEventData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayEventData::StaticStruct()

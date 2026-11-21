@@ -15,7 +15,7 @@ struct alignas(8) FExpeditionSlot
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA530 (end 0x00FFA582, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA530 (end 0x00FFA582, chained .pdata fragments)
 // Original VA: 0x0000000140FFA530 | File offset: 0x00FF9B30
 // Recovery: confirmed (TEXT("ExpeditionSlot") and Z_Construct_UScriptStruct_FExpeditionSlot) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FExpeditionSlot::StaticStruct()

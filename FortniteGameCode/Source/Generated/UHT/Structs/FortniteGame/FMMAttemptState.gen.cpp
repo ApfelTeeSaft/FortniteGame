@@ -14,7 +14,7 @@ struct alignas(4) FMMAttemptState
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5760 (end 0x010A57B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5760 (end 0x010A57B2, chained .pdata fragments)
 // Original VA: 0x00000001410A5760 | File offset: 0x010A4D60
 // Recovery: confirmed (TEXT("MMAttemptState") and Z_Construct_UScriptStruct_FMMAttemptState) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMMAttemptState::StaticStruct()

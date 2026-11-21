@@ -14,7 +14,7 @@ struct alignas(8) FCachedPlayerFOBInformation
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE1F0 (end 0x00FEE242, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE1F0 (end 0x00FEE242, chained .pdata fragments)
 // Original VA: 0x0000000140FEE1F0 | File offset: 0x00FED7F0
 // Recovery: confirmed (TEXT("CachedPlayerFOBInformation") and Z_Construct_UScriptStruct_FCachedPlayerFOBInformation) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCachedPlayerFOBInformation::StaticStruct()

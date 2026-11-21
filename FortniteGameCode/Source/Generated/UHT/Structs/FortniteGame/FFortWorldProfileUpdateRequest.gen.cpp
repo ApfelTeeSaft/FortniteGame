@@ -14,7 +14,7 @@ struct alignas(16) FFortWorldProfileUpdateRequest
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x110];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037CF0 (end 0x01037D42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037CF0 (end 0x01037D42, chained .pdata fragments)
 // Original VA: 0x0000000141037CF0 | File offset: 0x010372F0
 // Recovery: confirmed (TEXT("FortWorldProfileUpdateRequest") and Z_Construct_UScriptStruct_FFortWorldProfileUpdateRequest) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortWorldProfileUpdateRequest::StaticStruct()

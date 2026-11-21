@@ -15,7 +15,7 @@ struct alignas(8) FVisibiltyInfoArray
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4740 (end 0x010D4792, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D4740 (end 0x010D4792, chained .pdata fragments)
 // Original VA: 0x00000001410D4740 | File offset: 0x010D3D40
 // Recovery: confirmed (TEXT("VisibiltyInfoArray") and Z_Construct_UScriptStruct_FVisibiltyInfoArray) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FVisibiltyInfoArray::StaticStruct()

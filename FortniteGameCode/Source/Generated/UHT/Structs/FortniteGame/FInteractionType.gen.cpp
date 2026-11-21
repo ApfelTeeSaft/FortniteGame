@@ -14,7 +14,7 @@ struct alignas(4) FInteractionType
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006660 (end 0x010066B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006660 (end 0x010066B2, chained .pdata fragments)
 // Original VA: 0x0000000141006660 | File offset: 0x01005C60
 // Recovery: confirmed (TEXT("InteractionType") and Z_Construct_UScriptStruct_FInteractionType) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FInteractionType::StaticStruct()

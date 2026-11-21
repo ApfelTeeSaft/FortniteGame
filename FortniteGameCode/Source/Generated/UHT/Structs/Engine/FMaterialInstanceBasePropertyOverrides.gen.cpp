@@ -14,7 +14,7 @@ struct alignas(4) FMaterialInstanceBasePropertyOverrides
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486240 (end 0x02486292, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486240 (end 0x02486292, chained .pdata fragments)
 // Original VA: 0x0000000142486240 | File offset: 0x02485840
 // Recovery: confirmed (TEXT("MaterialInstanceBasePropertyOverrides") and Z_Construct_UScriptStruct_FMaterialInstanceBasePropertyOverrides) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMaterialInstanceBasePropertyOverrides::StaticStruct()

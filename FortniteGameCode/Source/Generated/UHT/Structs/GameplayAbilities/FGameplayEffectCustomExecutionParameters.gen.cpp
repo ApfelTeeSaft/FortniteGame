@@ -14,7 +14,7 @@ struct alignas(8) FGameplayEffectCustomExecutionParameters
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xA8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563DB0 (end 0x00563E02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563DB0 (end 0x00563E02, chained .pdata fragments)
 // Original VA: 0x0000000140563DB0 | File offset: 0x005633B0
 // Recovery: confirmed (TEXT("GameplayEffectCustomExecutionParameters") and Z_Construct_UScriptStruct_FGameplayEffectCustomExecutionParameters) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayEffectCustomExecutionParameters::StaticStruct()

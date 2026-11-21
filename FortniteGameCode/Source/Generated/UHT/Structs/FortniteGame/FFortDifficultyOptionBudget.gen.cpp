@@ -14,7 +14,7 @@ struct alignas(8) FFortDifficultyOptionBudget
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01040CB0 (end 0x01040D02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01040CB0 (end 0x01040D02, chained .pdata fragments)
 // Original VA: 0x0000000141040CB0 | File offset: 0x010402B0
 // Recovery: confirmed (TEXT("FortDifficultyOptionBudget") and Z_Construct_UScriptStruct_FFortDifficultyOptionBudget) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortDifficultyOptionBudget::StaticStruct()

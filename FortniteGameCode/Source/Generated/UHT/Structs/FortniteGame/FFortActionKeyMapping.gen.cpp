@@ -14,7 +14,7 @@ struct alignas(8) FFortActionKeyMapping
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFC30 (end 0x00FBFC82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFC30 (end 0x00FBFC82, chained .pdata fragments)
 // Original VA: 0x0000000140FBFC30 | File offset: 0x00FBF230
 // Recovery: confirmed (TEXT("FortActionKeyMapping") and Z_Construct_UScriptStruct_FFortActionKeyMapping) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortActionKeyMapping::StaticStruct()

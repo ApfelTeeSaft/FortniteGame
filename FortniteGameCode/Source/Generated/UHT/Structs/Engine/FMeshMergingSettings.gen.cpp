@@ -14,7 +14,7 @@ struct alignas(4) FMeshMergingSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xCC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248AF70 (end 0x0248AFC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248AF70 (end 0x0248AFC2, chained .pdata fragments)
 // Original VA: 0x000000014248AF70 | File offset: 0x0248A570
 // Recovery: confirmed (TEXT("MeshMergingSettings") and Z_Construct_UScriptStruct_FMeshMergingSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMeshMergingSettings::StaticStruct()

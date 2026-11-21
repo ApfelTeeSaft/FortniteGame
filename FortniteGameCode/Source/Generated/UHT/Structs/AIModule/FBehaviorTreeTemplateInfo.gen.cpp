@@ -14,7 +14,7 @@ struct alignas(8) FBehaviorTreeTemplateInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22BC0 (end 0x01D22C12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22BC0 (end 0x01D22C12, chained .pdata fragments)
 // Original VA: 0x0000000141D22BC0 | File offset: 0x01D221C0
 // Recovery: confirmed (TEXT("BehaviorTreeTemplateInfo") and Z_Construct_UScriptStruct_FBehaviorTreeTemplateInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBehaviorTreeTemplateInfo::StaticStruct()

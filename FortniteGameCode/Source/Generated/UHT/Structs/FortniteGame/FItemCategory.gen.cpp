@@ -14,7 +14,7 @@ struct alignas(8) FItemCategory
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x308];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA4F0 (end 0x010CA542, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA4F0 (end 0x010CA542, chained .pdata fragments)
 // Original VA: 0x00000001410CA4F0 | File offset: 0x010C9AF0
 // Recovery: confirmed (TEXT("ItemCategory") and Z_Construct_UScriptStruct_FItemCategory) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FItemCategory::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FCardPackOffer
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x90];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB410 (end 0x028FB462, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FB410 (end 0x028FB462, chained .pdata fragments)
 // Original VA: 0x00000001428FB410 | File offset: 0x028FAA10
 // Recovery: confirmed (TEXT("CardPackOffer") and Z_Construct_UScriptStruct_FCardPackOffer) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCardPackOffer::StaticStruct()

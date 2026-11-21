@@ -14,7 +14,7 @@ struct alignas(8) FFortAvailableMissionAlerts
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDA90 (end 0x010BDAE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDA90 (end 0x010BDAE2, chained .pdata fragments)
 // Original VA: 0x00000001410BDA90 | File offset: 0x010BD090
 // Recovery: confirmed (TEXT("FortAvailableMissionAlerts") and Z_Construct_UScriptStruct_FFortAvailableMissionAlerts) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAvailableMissionAlerts::StaticStruct()

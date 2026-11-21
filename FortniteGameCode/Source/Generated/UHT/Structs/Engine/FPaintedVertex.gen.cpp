@@ -14,7 +14,7 @@ struct alignas(4) FPaintedVertex
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7250 (end 0x024E72A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7250 (end 0x024E72A2, chained .pdata fragments)
 // Original VA: 0x00000001424E7250 | File offset: 0x024E6850
 // Recovery: confirmed (TEXT("PaintedVertex") and Z_Construct_UScriptStruct_FPaintedVertex) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPaintedVertex::StaticStruct()

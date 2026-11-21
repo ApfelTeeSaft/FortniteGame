@@ -14,7 +14,7 @@ struct alignas(16) FAnimInstanceProxy
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x580];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CDAC0 (end 0x023CDB12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CDAC0 (end 0x023CDB12, chained .pdata fragments)
 // Original VA: 0x00000001423CDAC0 | File offset: 0x023CD0C0
 // Recovery: confirmed (TEXT("AnimInstanceProxy") and Z_Construct_UScriptStruct_FAnimInstanceProxy) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimInstanceProxy::StaticStruct()

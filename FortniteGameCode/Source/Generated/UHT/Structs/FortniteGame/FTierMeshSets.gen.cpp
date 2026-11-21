@@ -14,7 +14,7 @@ struct alignas(8) FTierMeshSets
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71D90 (end 0x00F71DE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71D90 (end 0x00F71DE2, chained .pdata fragments)
 // Original VA: 0x0000000140F71D90 | File offset: 0x00F71390
 // Recovery: confirmed (TEXT("TierMeshSets") and Z_Construct_UScriptStruct_FTierMeshSets) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTierMeshSets::StaticStruct()

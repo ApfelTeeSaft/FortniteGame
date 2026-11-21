@@ -14,7 +14,7 @@ struct alignas(16) FConstraintInstance
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1F0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7420 (end 0x023F7472, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7420 (end 0x023F7472, chained .pdata fragments)
 // Original VA: 0x00000001423F7420 | File offset: 0x023F6A20
 // Recovery: confirmed (TEXT("ConstraintInstance") and Z_Construct_UScriptStruct_FConstraintInstance) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FConstraintInstance::StaticStruct()

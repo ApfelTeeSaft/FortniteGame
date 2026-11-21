@@ -14,7 +14,7 @@ struct alignas(8) FTeamMapInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x48];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006720 (end 0x01006772, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006720 (end 0x01006772, chained .pdata fragments)
 // Original VA: 0x0000000141006720 | File offset: 0x01005D20
 // Recovery: confirmed (TEXT("TeamMapInfo") and Z_Construct_UScriptStruct_FTeamMapInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTeamMapInfo::StaticStruct()

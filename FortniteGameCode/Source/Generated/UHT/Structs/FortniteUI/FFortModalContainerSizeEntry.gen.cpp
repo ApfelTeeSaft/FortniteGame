@@ -14,7 +14,7 @@ struct alignas(4) FFortModalContainerSizeEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7050 (end 0x028D70A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7050 (end 0x028D70A2, chained .pdata fragments)
 // Original VA: 0x00000001428D7050 | File offset: 0x028D6650
 // Recovery: confirmed (TEXT("FortModalContainerSizeEntry") and Z_Construct_UScriptStruct_FFortModalContainerSizeEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortModalContainerSizeEntry::StaticStruct()

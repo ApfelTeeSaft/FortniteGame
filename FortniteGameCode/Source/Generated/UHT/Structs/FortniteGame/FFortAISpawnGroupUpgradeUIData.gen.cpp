@@ -14,7 +14,7 @@ struct alignas(8) FFortAISpawnGroupUpgradeUIData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xA8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91020 (end 0x00F91072, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91020 (end 0x00F91072, chained .pdata fragments)
 // Original VA: 0x0000000140F91020 | File offset: 0x00F90620
 // Recovery: confirmed (TEXT("FortAISpawnGroupUpgradeUIData") and Z_Construct_UScriptStruct_FFortAISpawnGroupUpgradeUIData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAISpawnGroupUpgradeUIData::StaticStruct()

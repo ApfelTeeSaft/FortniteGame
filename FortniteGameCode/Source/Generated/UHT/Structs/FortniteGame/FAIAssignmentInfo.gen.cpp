@@ -14,7 +14,7 @@ struct alignas(8) FAIAssignmentInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x80];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90CC0 (end 0x00F90D12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90CC0 (end 0x00F90D12, chained .pdata fragments)
 // Original VA: 0x0000000140F90CC0 | File offset: 0x00F902C0
 // Recovery: confirmed (TEXT("AIAssignmentInfo") and Z_Construct_UScriptStruct_FAIAssignmentInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAIAssignmentInfo::StaticStruct()

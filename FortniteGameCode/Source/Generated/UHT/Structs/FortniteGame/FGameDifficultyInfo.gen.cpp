@@ -15,7 +15,7 @@ struct alignas(8) FGameDifficultyInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x98];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4290 (end 0x00FE42E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4290 (end 0x00FE42E2, chained .pdata fragments)
 // Original VA: 0x0000000140FE4290 | File offset: 0x00FE3890
 // Recovery: confirmed (TEXT("GameDifficultyInfo") and Z_Construct_UScriptStruct_FGameDifficultyInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameDifficultyInfo::StaticStruct()

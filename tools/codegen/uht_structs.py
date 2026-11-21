@@ -55,7 +55,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools" / "matching"))
 sys.path.insert(0, str(ROOT / "tools" / "codegen"))
 from compare import load_decrypted  # noqa: E402
-from unity import UNIT_OBJECT, unit_of  # noqa: E402
+from unity import UNIT_OBJECT, package_init_located, unit_of  # noqa: E402
 from genio import sync_tree  # noqa: E402
 from manifest_io import dump_compact  # noqa: E402
 from pe import PEImage  # noqa: E402
@@ -109,6 +109,44 @@ def shape(b: bytes | None, rva: int, template: bytes, fields: dict) -> dict | No
         return None
     return {k: (rva + off + 4 + struct.unpack_from("<i", b, off)[0] if kind == "rel"
                 else struct.unpack_from("<I", b, off)[0]) for k, (off, kind) in fields.items()}
+
+
+def decode_staticstruct(dimg, rva: int) -> dict | None:
+    """Fields of a StaticStruct body of any form, from its instruction stream (to the ret).
+
+    The last call is GetStaticStruct(rcx ctor, rdx outer, r8 TEXT name, r9d sizeof, CRC). The
+    CRC call precedes it. The package singleton is either called (its address is recorded) or
+    inlined (package is None).
+    """
+    import re
+    from capstone import CS_ARCH_X86, CS_MODE_64, Cs
+    try:
+        b = dimg.read(rva, 0x100)
+    except ValueError:
+        return None
+    md = Cs(CS_ARCH_X86, CS_MODE_64)
+    regs, calls, load, store, r9 = {}, [], None, None, None
+    for ins in md.disasm(b, rva):
+        op, mn = ins.op_str, ins.mnemonic
+        m = re.search(r"\[rip ([+-]) (0x[0-9a-f]+)\]", op)
+        tgt = ins.address + ins.size + (1 if m.group(1) == "+" else -1) * int(m.group(2), 16) if m else None
+        if mn == "mov" and op.startswith("rax, qword ptr [rip") and load is None:
+            load = tgt
+        elif mn == "lea" and tgt is not None:
+            regs[op.split(",")[0]] = tgt
+        elif mn == "mov" and op.startswith("r9d, ") and re.fullmatch(r"r9d, (0x[0-9a-f]+|\d+)", op):
+            r9 = int(op.split(", ")[1], 0)
+        elif mn == "call" and op.startswith("0x"):
+            calls.append((int(op, 16), dict(regs)))
+        elif mn == "mov" and op.startswith("qword ptr [rip") and op.endswith(", rax"):
+            store = tgt
+        elif mn == "ret":
+            if len(calls) < 2 or r9 is None:
+                return None
+            gss, last = calls[-1]
+            return {"singleton": load, "store": store, "size": r9, "name": last.get("r8"), "ctor": last.get("rcx"),
+                    "get_static_struct": gss, "end": ins.address + 1, "calls": [c for c, _ in calls[:-1]]}
+    return None
 
 
 def rel32(b: bytes, at: int, nxt: int, rva: int) -> int:
@@ -186,11 +224,47 @@ def main() -> int:
     pkg_sing = {f["package"]: singleton(f["package"]) for f in found}
     construct_package = Counter(v[2] for v in pkg_sing.values() if v).most_common(1)[0][0]
     packages = {}
-    for rva, s in pkg_sing.items():
+    for rva in primary:
+        s = singleton(rva)
         if s and s[2] == construct_package:
             name = cstr(img, struct.unpack("<Q", img.read(s[1], 8))[0] - base)
             if name and name.startswith("/Script/"):
                 packages[rva] = name
+
+    # StaticStruct of the other structs the unity order registers: the package singleton is
+    # inlined (their .gen.cpp follows <Module>.init.gen.cpp in the unity file). Decoded from the
+    # instruction stream: Singleton, the CRC call, sizeof, TEXT name and the constructor.
+    def read6(rva: int) -> bytes:
+        try:
+            return dimg.read(rva, 6)
+        except ValueError:
+            return b""
+
+    plain_ss = {f["staticstruct"] for f in found}
+    for u in json.loads((ROOT / "analysis" / "unity-order.json").read_text(encoding="utf-8"))["units"]:
+        for it in u["items"]:
+            if it["kind"] != "struct" or int(it["static_struct"], 16) in plain_ss:
+                continue
+            p = int(it["static_struct"], 16)
+            f = decode_staticstruct(dimg, p)
+            if f is None or f["get_static_struct"] != gss or f["store"] != f["singleton"]:
+                stats["staticstruct_other_not_decoded"] += 1
+                continue
+            # The CRC function is the "mov eax, imm32; ret" callee; a called package singleton is
+            # recorded, an inlined one shows as a ConstructUPackage call.
+            crcs = [c for c in f["calls"] if read6(c)[:1] == b"\xb8" and read6(c)[5:6] == b"\xc3"]
+            called = [c for c in f["calls"] if c in packages]
+            if len(crcs) != 1 or (not called and construct_package not in f["calls"]):
+                stats["staticstruct_other_not_decoded"] += 1
+                continue
+            f["crc_fn"], f["package"] = crcs[0], (called[0] if called else None)
+            frags = sorted(x for x in allrf if p <= x < f["end"])
+            if not all(allrf[a].end == nb for a, nb in zip(frags, frags[1:] + [f["end"]])):
+                stats["staticstruct_other_fragments_mismatch"] += 1
+                continue
+            f["staticstruct"], f["variant"] = p, "inlined" if f["package"] is None else "other"
+            found.append(f)
+            stats[f"staticstruct_{f['variant']}"] += 1
 
     # FStructParams candidates in .data keyed by (NameUTF8, OuterFunc).
     ds = next(s for s in img.sections if s.name == ".data")
@@ -213,14 +287,18 @@ def main() -> int:
     ctor_name = {}   # ctor RVA -> struct name, for SuperFunc references
     rows = []
     for f in found:
-        sing = ctors.get(f["ctor"])
+        sing = ctors.get(f["ctor"]) or singleton(f["ctor"])
         if sing is None or sing[2] != construct_struct:
             stats["ctor_not_singleton"] += 1
             continue
+        name = wstr(img, f["name"])
+        if f["package"] is None and name:
+            # Inlined package singleton: the package is the OuterFunc of the struct's only record.
+            outers = [o for (n, o) in records if n == name]
+            f["package"] = outers[0] if len(outers) == 1 else None
         if f["package"] not in packages:
             stats["package_unknown"] += 1
             continue
-        name = wstr(img, f["name"])
         recs = records.get((name, f["package"]), []) if name else []
         if len(recs) != 1:
             stats["record_not_unique"] += 1
@@ -291,6 +369,7 @@ def main() -> int:
     for pkg_rva, pname in packages.items():
         symbols[f"?Z_Construct_UPackage_{pname.replace('/', '_')}@@YAPEAVUPackage@@XZ"] = [
             f"0x{pkg_rva:08X}", "package-params"]
+    located = package_init_located()   # packages whose init.gen.cpp position is recovered
     for r in sorted(rows, key=lambda r: r["ctor"]):
         short = r["pkg_name"].rsplit("/", 1)[1]
         pkg_fn = f"Z_Construct_UPackage_{r['pkg_name'].replace('/', '_')}"
@@ -298,7 +377,8 @@ def main() -> int:
         zc = f"Z_Construct_UScriptStruct_{cpp}"
         statics = f"{zc}_Statics"
         crc_fn = f"Get_{zc}_CRC"
-        ss, ss_end = r["staticstruct"], r["staticstruct"] + SS_SIZE
+        ss, ss_end = r["staticstruct"], r.get("end", r["staticstruct"] + SS_SIZE)
+        variant = r.get("variant", "plain")
         if r["sup"]:
             sup_name = ctor_name.get(r["sup"])
             super_expr = f"Z_Construct_UScriptStruct_{sup_name}" if sup_name else f"Z_Construct_UScriptStruct_Unrecovered_0x{r['sup']:08X}"
@@ -329,7 +409,9 @@ def main() -> int:
             f"{super_decl}"
             f"struct alignas({r['align']}) {cpp}\n{{\n\tstatic class UScriptStruct* StaticStruct();\n"
             f"\tunsigned char Opaque[0x{r['size']:X}];  // layout not reconstructed; sizeof/alignof from FStructParams\n}};\n"
-            f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{ss:08X} (end 0x{ss_end:08X}, three .pdata fragments)\n"
+            f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{ss:08X} (end 0x{ss_end:08X}, chained .pdata fragments"
+            + (")\n" if variant == "plain" else
+               "; the reference inlines the package singleton, which this unit does not define yet)\n") +
             f"// Original VA: 0x{base + ss:016X} | File offset: 0x{img.rva_to_off(ss):08X}\n"
             f"// Recovery: confirmed (TEXT(\"{name}\") and {zc}) | Matching: see analysis/functions-uht-staticstruct.json\n"
             f"class UScriptStruct* {cpp}::StaticStruct()\n{{\n"
@@ -368,8 +450,9 @@ def main() -> int:
         common = {"package": short, "struct": cpp}
         ctor_entries.append({"start_rva": f"0x{r['ctor']:08X}", "end_rva": f"0x{r['ctor_end']:08X}",
                              "name": zc, **common})
-        ss_entries.append({"start_rva": f"0x{ss:08X}", "end_rva": f"0x{ss_end:08X}",
-                           "name": f"{cpp}::StaticStruct", **common})
+        if variant == "plain" or (variant == "inlined" and r["pkg_name"] in located):
+            ss_entries.append({"start_rva": f"0x{ss:08X}", "end_rva": f"0x{ss_end:08X}",
+                               "name": f"{cpp}::StaticStruct", **common})
         if r["cid"]:
             defer_entries.append({"start_rva": f"0x{r['cid'][0]:08X}",
                                   "end_rva": f"0x{r['cid'][0] + len(CID_TEMPLATE):08X}",

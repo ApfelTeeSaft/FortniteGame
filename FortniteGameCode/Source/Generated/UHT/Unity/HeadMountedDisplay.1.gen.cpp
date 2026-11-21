@@ -5,13 +5,21 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/HeadMountedDisplay.init.gen.cpp"  // init.gen.cpp position recovered
 #include "../UHeadMountedDisplayFunctionLibrary.gen.cpp"
 #include "../Classes/HeadMountedDisplay/UHeadMountedDisplayFunctionLibrary.gen.cpp"
+#include "../Enums/HeadMountedDisplay/EXRTrackedDeviceType.static.gen.cpp"
 #include "../Enums/HeadMountedDisplay/EXRTrackedDeviceType.gen.cpp"
+#include "../Enums/HeadMountedDisplay/ESpectatorScreenMode.static.gen.cpp"
 #include "../Enums/HeadMountedDisplay/ESpectatorScreenMode.gen.cpp"
+#include "../Enums/HeadMountedDisplay/EHMDWornState.static.gen.cpp"
 #include "../Enums/HeadMountedDisplay/EHMDWornState.gen.cpp"
+#include "../Enums/HeadMountedDisplay/EHMDTrackingOrigin.static.gen.cpp"
 #include "../Enums/HeadMountedDisplay/EHMDTrackingOrigin.gen.cpp"
+#include "../Enums/HeadMountedDisplay/EOrientPositionSelector.static.gen.cpp"
 #include "../Enums/HeadMountedDisplay/EOrientPositionSelector.gen.cpp"
+#include "../Structs/HeadMountedDisplay/FXRDeviceId.gen.cpp"
+#include "../Enums/HeadMountedDisplay/ETrackingStatus.static.gen.cpp"
 #include "../Enums/HeadMountedDisplay/ETrackingStatus.gen.cpp"
 #include "../UMotionControllerComponent.gen.cpp"
 #include "../Classes/HeadMountedDisplay/UMotionControllerComponent.gen.cpp"

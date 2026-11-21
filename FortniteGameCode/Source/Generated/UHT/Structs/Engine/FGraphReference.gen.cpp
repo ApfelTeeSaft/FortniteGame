@@ -14,7 +14,7 @@ struct alignas(8) FGraphReference
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024048A0 (end 0x024048F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024048A0 (end 0x024048F2, chained .pdata fragments)
 // Original VA: 0x00000001424048A0 | File offset: 0x02403EA0
 // Recovery: confirmed (TEXT("GraphReference") and Z_Construct_UScriptStruct_FGraphReference) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGraphReference::StaticStruct()

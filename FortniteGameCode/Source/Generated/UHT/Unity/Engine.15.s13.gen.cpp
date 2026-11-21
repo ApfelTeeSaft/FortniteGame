@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EParticleCollisionResponse.static.gen.cpp"
+#include "../Enums/Engine/ESceneTextureId.static.gen.cpp"

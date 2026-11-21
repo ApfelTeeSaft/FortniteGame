@@ -14,7 +14,7 @@ struct alignas(8) FFortMissionCompletionNotification
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102FE90 (end 0x0102FEE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102FE90 (end 0x0102FEE2, chained .pdata fragments)
 // Original VA: 0x000000014102FE90 | File offset: 0x0102F490
 // Recovery: confirmed (TEXT("FortMissionCompletionNotification") and Z_Construct_UScriptStruct_FFortMissionCompletionNotification) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortMissionCompletionNotification::StaticStruct()

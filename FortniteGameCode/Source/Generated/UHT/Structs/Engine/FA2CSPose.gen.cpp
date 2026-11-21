@@ -15,7 +15,7 @@ struct alignas(8) FA2CSPose
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CDA00 (end 0x023CDA52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CDA00 (end 0x023CDA52, chained .pdata fragments)
 // Original VA: 0x00000001423CDA00 | File offset: 0x023CD000
 // Recovery: confirmed (TEXT("A2CSPose") and Z_Construct_UScriptStruct_FA2CSPose) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FA2CSPose::StaticStruct()

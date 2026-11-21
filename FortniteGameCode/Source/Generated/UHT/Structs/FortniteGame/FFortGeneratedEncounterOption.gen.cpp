@@ -14,7 +14,7 @@ struct alignas(8) FFortGeneratedEncounterOption
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9500 (end 0x010E9552, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9500 (end 0x010E9552, chained .pdata fragments)
 // Original VA: 0x00000001410E9500 | File offset: 0x010E8B00
 // Recovery: confirmed (TEXT("FortGeneratedEncounterOption") and Z_Construct_UScriptStruct_FFortGeneratedEncounterOption) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortGeneratedEncounterOption::StaticStruct()

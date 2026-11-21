@@ -14,7 +14,7 @@ struct alignas(8) FAthenaSeasonRewardLevelInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60E40 (end 0x00F60E92, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60E40 (end 0x00F60E92, chained .pdata fragments)
 // Original VA: 0x0000000140F60E40 | File offset: 0x00F60440
 // Recovery: confirmed (TEXT("AthenaSeasonRewardLevelInfo") and Z_Construct_UScriptStruct_FAthenaSeasonRewardLevelInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAthenaSeasonRewardLevelInfo::StaticStruct()

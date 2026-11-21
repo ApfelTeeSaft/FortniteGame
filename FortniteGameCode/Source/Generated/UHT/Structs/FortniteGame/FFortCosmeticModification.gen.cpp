@@ -14,7 +14,7 @@ struct alignas(8) FFortCosmeticModification
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xB20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98D50 (end 0x00F98DA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98D50 (end 0x00F98DA2, chained .pdata fragments)
 // Original VA: 0x0000000140F98D50 | File offset: 0x00F98350
 // Recovery: confirmed (TEXT("FortCosmeticModification") and Z_Construct_UScriptStruct_FFortCosmeticModification) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCosmeticModification::StaticStruct()

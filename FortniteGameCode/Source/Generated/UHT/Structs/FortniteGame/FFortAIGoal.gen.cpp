@@ -15,7 +15,7 @@ struct alignas(8) FFortAIGoal
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90F00 (end 0x00F90F52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90F00 (end 0x00F90F52, chained .pdata fragments)
 // Original VA: 0x0000000140F90F00 | File offset: 0x00F90500
 // Recovery: confirmed (TEXT("FortAIGoal") and Z_Construct_UScriptStruct_FFortAIGoal) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIGoal::StaticStruct()

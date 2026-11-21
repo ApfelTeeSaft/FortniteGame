@@ -14,7 +14,7 @@ struct alignas(8) FAthenaWeaponAlterationRule
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60F00 (end 0x00F60F52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60F00 (end 0x00F60F52, chained .pdata fragments)
 // Original VA: 0x0000000140F60F00 | File offset: 0x00F60500
 // Recovery: confirmed (TEXT("AthenaWeaponAlterationRule") and Z_Construct_UScriptStruct_FAthenaWeaponAlterationRule) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAthenaWeaponAlterationRule::StaticStruct()

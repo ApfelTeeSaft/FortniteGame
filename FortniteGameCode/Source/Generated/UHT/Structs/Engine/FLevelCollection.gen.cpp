@@ -14,7 +14,7 @@ struct alignas(8) FLevelCollection
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x80];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F07B0 (end 0x024F0802, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F07B0 (end 0x024F0802, chained .pdata fragments)
 // Original VA: 0x00000001424F07B0 | File offset: 0x024EFDB0
 // Recovery: confirmed (TEXT("LevelCollection") and Z_Construct_UScriptStruct_FLevelCollection) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FLevelCollection::StaticStruct()

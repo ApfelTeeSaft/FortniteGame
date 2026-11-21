@@ -15,7 +15,7 @@ struct alignas(8) FFortSpectatorAthenaArray
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B040 (end 0x0108B092, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B040 (end 0x0108B092, chained .pdata fragments)
 // Original VA: 0x000000014108B040 | File offset: 0x0108A640
 // Recovery: confirmed (TEXT("FortSpectatorAthenaArray") and Z_Construct_UScriptStruct_FFortSpectatorAthenaArray) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSpectatorAthenaArray::StaticStruct()

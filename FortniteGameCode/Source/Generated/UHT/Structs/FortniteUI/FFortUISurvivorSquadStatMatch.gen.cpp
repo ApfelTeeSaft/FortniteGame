@@ -14,7 +14,7 @@ struct alignas(8) FFortUISurvivorSquadStatMatch
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x310];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x029048E0 (end 0x02904932, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029048E0 (end 0x02904932, chained .pdata fragments)
 // Original VA: 0x00000001429048E0 | File offset: 0x02903EE0
 // Recovery: confirmed (TEXT("FortUISurvivorSquadStatMatch") and Z_Construct_UScriptStruct_FFortUISurvivorSquadStatMatch) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortUISurvivorSquadStatMatch::StaticStruct()

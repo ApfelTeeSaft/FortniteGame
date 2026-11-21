@@ -14,7 +14,7 @@ struct alignas(8) FFortMaterialProgressBarSectionStyle
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6FF0 (end 0x028D7042, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6FF0 (end 0x028D7042, chained .pdata fragments)
 // Original VA: 0x00000001428D6FF0 | File offset: 0x028D65F0
 // Recovery: confirmed (TEXT("FortMaterialProgressBarSectionStyle") and Z_Construct_UScriptStruct_FFortMaterialProgressBarSectionStyle) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortMaterialProgressBarSectionStyle::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortTokenContextInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA1F0 (end 0x010CA242, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA1F0 (end 0x010CA242, chained .pdata fragments)
 // Original VA: 0x00000001410CA1F0 | File offset: 0x010C97F0
 // Recovery: confirmed (TEXT("FortTokenContextInfo") and Z_Construct_UScriptStruct_FFortTokenContextInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortTokenContextInfo::StaticStruct()

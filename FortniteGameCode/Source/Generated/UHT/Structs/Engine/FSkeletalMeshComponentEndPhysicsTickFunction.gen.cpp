@@ -9,13 +9,13 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FSkeletalMeshComponentEndPhysicsTickFunction();
 	UPackage* Z_Construct_UPackage__Script_Engine();  // RVA 0x0240CE30
-UScriptStruct* Z_Construct_UScriptStruct_Unrecovered_0x0240D700();  // RVA 0x0240D700
+UScriptStruct* Z_Construct_UScriptStruct_FTickFunction();  // RVA 0x0240D700
 struct alignas(8) FSkeletalMeshComponentEndPhysicsTickFunction
 {
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC8F0 (end 0x024CC942, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC8F0 (end 0x024CC942, chained .pdata fragments)
 // Original VA: 0x00000001424CC8F0 | File offset: 0x024CBEF0
 // Recovery: confirmed (TEXT("SkeletalMeshComponentEndPhysicsTickFunction") and Z_Construct_UScriptStruct_FSkeletalMeshComponentEndPhysicsTickFunction) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSkeletalMeshComponentEndPhysicsTickFunction::StaticStruct()
@@ -41,7 +41,7 @@ class UScriptStruct* FSkeletalMeshComponentEndPhysicsTickFunction::StaticStruct(
 	// ReturnStructParams: original RVA 0x04511330
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FSkeletalMeshComponentEndPhysicsTickFunction_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_Unrecovered_0x0240D700,
+		Z_Construct_UScriptStruct_FTickFunction,
 		&NewStructOps,
 		"SkeletalMeshComponentEndPhysicsTickFunction",
 		RF_Public|RF_Transient|RF_MarkAsNative,

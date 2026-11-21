@@ -14,7 +14,7 @@ struct alignas(4) FFortPointOnCurveRange
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01092F50 (end 0x01092FA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01092F50 (end 0x01092FA2, chained .pdata fragments)
 // Original VA: 0x0000000141092F50 | File offset: 0x01092550
 // Recovery: confirmed (TEXT("FortPointOnCurveRange") and Z_Construct_UScriptStruct_FFortPointOnCurveRange) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortPointOnCurveRange::StaticStruct()

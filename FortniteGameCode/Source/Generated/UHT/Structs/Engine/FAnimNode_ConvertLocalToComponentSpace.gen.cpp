@@ -15,7 +15,7 @@ struct alignas(8) FAnimNode_ConvertLocalToComponentSpace
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x48];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D58E0 (end 0x023D5932, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D58E0 (end 0x023D5932, chained .pdata fragments)
 // Original VA: 0x00000001423D58E0 | File offset: 0x023D4EE0
 // Recovery: confirmed (TEXT("AnimNode_ConvertLocalToComponentSpace") and Z_Construct_UScriptStruct_FAnimNode_ConvertLocalToComponentSpace) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimNode_ConvertLocalToComponentSpace::StaticStruct()

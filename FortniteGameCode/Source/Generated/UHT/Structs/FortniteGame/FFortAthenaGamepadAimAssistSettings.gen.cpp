@@ -14,7 +14,7 @@ struct alignas(8) FFortAthenaGamepadAimAssistSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xB8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE41D0 (end 0x00FE4222, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE41D0 (end 0x00FE4222, chained .pdata fragments)
 // Original VA: 0x0000000140FE41D0 | File offset: 0x00FE37D0
 // Recovery: confirmed (TEXT("FortAthenaGamepadAimAssistSettings") and Z_Construct_UScriptStruct_FFortAthenaGamepadAimAssistSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAthenaGamepadAimAssistSettings::StaticStruct()

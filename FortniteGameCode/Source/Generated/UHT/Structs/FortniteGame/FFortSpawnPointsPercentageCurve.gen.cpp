@@ -15,7 +15,7 @@ struct alignas(8) FFortSpawnPointsPercentageCurve
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C310 (end 0x00F8C362, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C310 (end 0x00F8C362, chained .pdata fragments)
 // Original VA: 0x0000000140F8C310 | File offset: 0x00F8B910
 // Recovery: confirmed (TEXT("FortSpawnPointsPercentageCurve") and Z_Construct_UScriptStruct_FFortSpawnPointsPercentageCurve) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSpawnPointsPercentageCurve::StaticStruct()

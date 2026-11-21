@@ -14,7 +14,7 @@ struct alignas(8) FScorePlacementTable
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE43B0 (end 0x00FE4402, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE43B0 (end 0x00FE4402, chained .pdata fragments)
 // Original VA: 0x0000000140FE43B0 | File offset: 0x00FE39B0
 // Recovery: confirmed (TEXT("ScorePlacementTable") and Z_Construct_UScriptStruct_FScorePlacementTable) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FScorePlacementTable::StaticStruct()

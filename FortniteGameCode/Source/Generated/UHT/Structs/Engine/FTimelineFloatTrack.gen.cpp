@@ -14,7 +14,7 @@ struct alignas(16) FTimelineFloatTrack
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x70];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC980 (end 0x024EC9D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC980 (end 0x024EC9D2, chained .pdata fragments)
 // Original VA: 0x00000001424EC980 | File offset: 0x024EBF80
 // Recovery: confirmed (TEXT("TimelineFloatTrack") and Z_Construct_UScriptStruct_FTimelineFloatTrack) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTimelineFloatTrack::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(16) FNode
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C2540 (end 0x024C2592, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C2540 (end 0x024C2592, chained .pdata fragments)
 // Original VA: 0x00000001424C2540 | File offset: 0x024C1B40
 // Recovery: confirmed (TEXT("Node") and Z_Construct_UScriptStruct_FNode) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FNode::StaticStruct()

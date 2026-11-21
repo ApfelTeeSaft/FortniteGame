@@ -14,7 +14,7 @@ struct alignas(8) FBTCompositeChild
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22B00 (end 0x01D22B52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22B00 (end 0x01D22B52, chained .pdata fragments)
 // Original VA: 0x0000000141D22B00 | File offset: 0x01D22100
 // Recovery: confirmed (TEXT("BTCompositeChild") and Z_Construct_UScriptStruct_FBTCompositeChild) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBTCompositeChild::StaticStruct()

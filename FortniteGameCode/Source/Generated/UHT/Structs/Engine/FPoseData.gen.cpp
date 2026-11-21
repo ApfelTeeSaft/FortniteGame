@@ -14,7 +14,7 @@ struct alignas(8) FPoseData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7A50 (end 0x024B7AA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7A50 (end 0x024B7AA2, chained .pdata fragments)
 // Original VA: 0x00000001424B7A50 | File offset: 0x024B7050
 // Recovery: confirmed (TEXT("PoseData") and Z_Construct_UScriptStruct_FPoseData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPoseData::StaticStruct()

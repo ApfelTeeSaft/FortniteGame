@@ -14,7 +14,7 @@ struct alignas(8) FFortMontageInputAction
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5CF0 (end 0x00FC5D42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5CF0 (end 0x00FC5D42, chained .pdata fragments)
 // Original VA: 0x0000000140FC5CF0 | File offset: 0x00FC52F0
 // Recovery: confirmed (TEXT("FortMontageInputAction") and Z_Construct_UScriptStruct_FFortMontageInputAction) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortMontageInputAction::StaticStruct()

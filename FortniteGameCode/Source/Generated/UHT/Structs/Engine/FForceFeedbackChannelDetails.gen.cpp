@@ -14,7 +14,7 @@ struct alignas(8) FForceFeedbackChannelDetails
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x80];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FBE0 (end 0x0240FC32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FBE0 (end 0x0240FC32, chained .pdata fragments)
 // Original VA: 0x000000014240FBE0 | File offset: 0x0240F1E0
 // Recovery: confirmed (TEXT("ForceFeedbackChannelDetails") and Z_Construct_UScriptStruct_FForceFeedbackChannelDetails) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FForceFeedbackChannelDetails::StaticStruct()

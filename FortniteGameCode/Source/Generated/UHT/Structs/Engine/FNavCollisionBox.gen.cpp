@@ -14,7 +14,7 @@ struct alignas(4) FNavCollisionBox
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248B1B0 (end 0x0248B202, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248B1B0 (end 0x0248B202, chained .pdata fragments)
 // Original VA: 0x000000014248B1B0 | File offset: 0x0248A7B0
 // Recovery: confirmed (TEXT("NavCollisionBox") and Z_Construct_UScriptStruct_FNavCollisionBox) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FNavCollisionBox::StaticStruct()

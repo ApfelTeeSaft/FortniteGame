@@ -14,7 +14,7 @@ struct alignas(8) FCanvasIcon
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EDD90 (end 0x023EDDE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EDD90 (end 0x023EDDE2, chained .pdata fragments)
 // Original VA: 0x00000001423EDD90 | File offset: 0x023ED390
 // Recovery: confirmed (TEXT("CanvasIcon") and Z_Construct_UScriptStruct_FCanvasIcon) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCanvasIcon::StaticStruct()

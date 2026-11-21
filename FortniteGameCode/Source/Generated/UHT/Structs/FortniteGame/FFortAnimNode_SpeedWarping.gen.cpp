@@ -9,13 +9,13 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FFortAnimNode_SpeedWarping();
 	UPackage* Z_Construct_UPackage__Script_FortniteGame();  // RVA 0x01051BE0
-UScriptStruct* Z_Construct_UScriptStruct_Unrecovered_0x01B0F190();  // RVA 0x01B0F190
+UScriptStruct* Z_Construct_UScriptStruct_FAnimNode_SkeletalControlBase();  // RVA 0x01B0F190
 struct alignas(8) FFortAnimNode_SpeedWarping
 {
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x158];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E7E0 (end 0x00F9E832, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E7E0 (end 0x00F9E832, chained .pdata fragments)
 // Original VA: 0x0000000140F9E7E0 | File offset: 0x00F9DDE0
 // Recovery: confirmed (TEXT("FortAnimNode_SpeedWarping") and Z_Construct_UScriptStruct_FFortAnimNode_SpeedWarping) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAnimNode_SpeedWarping::StaticStruct()
@@ -42,7 +42,7 @@ class UScriptStruct* FFortAnimNode_SpeedWarping::StaticStruct()
 	// ReturnStructParams: original RVA 0x04236C90
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortAnimNode_SpeedWarping_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_Unrecovered_0x01B0F190,
+		Z_Construct_UScriptStruct_FAnimNode_SkeletalControlBase,
 		&NewStructOps,
 		"FortAnimNode_SpeedWarping",
 		RF_Public|RF_Transient|RF_MarkAsNative,

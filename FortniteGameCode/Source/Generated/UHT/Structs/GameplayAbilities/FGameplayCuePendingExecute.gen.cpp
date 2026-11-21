@@ -14,7 +14,7 @@ struct alignas(8) FGameplayCuePendingExecute
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x170];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B920 (end 0x0055B972, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B920 (end 0x0055B972, chained .pdata fragments)
 // Original VA: 0x000000014055B920 | File offset: 0x0055AF20
 // Recovery: confirmed (TEXT("GameplayCuePendingExecute") and Z_Construct_UScriptStruct_FGameplayCuePendingExecute) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayCuePendingExecute::StaticStruct()

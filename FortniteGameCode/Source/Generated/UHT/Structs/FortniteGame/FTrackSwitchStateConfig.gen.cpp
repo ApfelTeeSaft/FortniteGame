@@ -14,7 +14,7 @@ struct alignas(4) FTrackSwitchStateConfig
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x24];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA8B0 (end 0x010CA902, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA8B0 (end 0x010CA902, chained .pdata fragments)
 // Original VA: 0x00000001410CA8B0 | File offset: 0x010C9EB0
 // Recovery: confirmed (TEXT("TrackSwitchStateConfig") and Z_Construct_UScriptStruct_FTrackSwitchStateConfig) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTrackSwitchStateConfig::StaticStruct()

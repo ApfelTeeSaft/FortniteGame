@@ -14,7 +14,7 @@ struct alignas(8) FFortAIEncounterTimedModifierTags
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6B90 (end 0x00FD6BE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6B90 (end 0x00FD6BE2, chained .pdata fragments)
 // Original VA: 0x0000000140FD6B90 | File offset: 0x00FD6190
 // Recovery: confirmed (TEXT("FortAIEncounterTimedModifierTags") and Z_Construct_UScriptStruct_FFortAIEncounterTimedModifierTags) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIEncounterTimedModifierTags::StaticStruct()

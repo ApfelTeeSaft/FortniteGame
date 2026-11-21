@@ -14,7 +14,7 @@ struct alignas(16) FGameplayCueObjectLibrary
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B8C0 (end 0x0055B912, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B8C0 (end 0x0055B912, chained .pdata fragments)
 // Original VA: 0x000000014055B8C0 | File offset: 0x0055AEC0
 // Recovery: confirmed (TEXT("GameplayCueObjectLibrary") and Z_Construct_UScriptStruct_FGameplayCueObjectLibrary) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayCueObjectLibrary::StaticStruct()

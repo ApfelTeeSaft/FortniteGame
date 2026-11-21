@@ -14,7 +14,7 @@ struct alignas(8) FAnimSequenceTrackContainer
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5B80 (end 0x023D5BD2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5B80 (end 0x023D5BD2, chained .pdata fragments)
 // Original VA: 0x00000001423D5B80 | File offset: 0x023D5180
 // Recovery: confirmed (TEXT("AnimSequenceTrackContainer") and Z_Construct_UScriptStruct_FAnimSequenceTrackContainer) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimSequenceTrackContainer::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FAutoCompleteNode
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7180 (end 0x023F71D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7180 (end 0x023F71D2, chained .pdata fragments)
 // Original VA: 0x00000001423F7180 | File offset: 0x023F6780
 // Recovery: confirmed (TEXT("AutoCompleteNode") and Z_Construct_UScriptStruct_FAutoCompleteNode) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAutoCompleteNode::StaticStruct()

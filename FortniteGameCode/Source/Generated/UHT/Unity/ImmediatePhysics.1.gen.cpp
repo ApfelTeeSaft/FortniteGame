@@ -5,4 +5,7 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/ImmediatePhysics.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/ImmediatePhysics/ESimulationSpace.static.gen.cpp"
 #include "../Enums/ImmediatePhysics/ESimulationSpace.gen.cpp"
+#include "../Structs/ImmediatePhysics/FAnimNode_RigidBody.gen.cpp"

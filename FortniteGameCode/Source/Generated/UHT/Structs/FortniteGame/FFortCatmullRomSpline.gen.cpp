@@ -15,7 +15,7 @@ struct alignas(8) FFortCatmullRomSpline
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5160 (end 0x010A51B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5160 (end 0x010A51B2, chained .pdata fragments)
 // Original VA: 0x00000001410A5160 | File offset: 0x010A4760
 // Recovery: confirmed (TEXT("FortCatmullRomSpline") and Z_Construct_UScriptStruct_FFortCatmullRomSpline) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCatmullRomSpline::StaticStruct()

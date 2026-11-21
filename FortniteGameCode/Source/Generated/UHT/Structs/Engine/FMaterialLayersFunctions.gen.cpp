@@ -14,7 +14,7 @@ struct alignas(8) FMaterialLayersFunctions
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024862A0 (end 0x024862F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024862A0 (end 0x024862F2, chained .pdata fragments)
 // Original VA: 0x00000001424862A0 | File offset: 0x024858A0
 // Recovery: confirmed (TEXT("MaterialLayersFunctions") and Z_Construct_UScriptStruct_FMaterialLayersFunctions) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMaterialLayersFunctions::StaticStruct()

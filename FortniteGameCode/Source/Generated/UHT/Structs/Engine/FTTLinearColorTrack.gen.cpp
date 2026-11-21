@@ -15,7 +15,7 @@ struct alignas(8) FTTLinearColorTrack
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC620 (end 0x024EC672, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC620 (end 0x024EC672, chained .pdata fragments)
 // Original VA: 0x00000001424EC620 | File offset: 0x024EBC20
 // Recovery: confirmed (TEXT("TTLinearColorTrack") and Z_Construct_UScriptStruct_FTTLinearColorTrack) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTTLinearColorTrack::StaticStruct()

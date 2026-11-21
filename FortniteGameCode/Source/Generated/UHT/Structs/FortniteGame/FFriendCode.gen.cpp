@@ -14,7 +14,7 @@ struct alignas(8) FFriendCode
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023880 (end 0x010238D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023880 (end 0x010238D2, chained .pdata fragments)
 // Original VA: 0x0000000141023880 | File offset: 0x01022E80
 // Recovery: confirmed (TEXT("FriendCode") and Z_Construct_UScriptStruct_FFriendCode) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFriendCode::StaticStruct()

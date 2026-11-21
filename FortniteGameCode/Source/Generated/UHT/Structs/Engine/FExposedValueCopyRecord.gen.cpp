@@ -14,7 +14,7 @@ struct alignas(8) FExposedValueCopyRecord
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x68];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CE240 (end 0x023CE292, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CE240 (end 0x023CE292, chained .pdata fragments)
 // Original VA: 0x00000001423CE240 | File offset: 0x023CD840
 // Recovery: confirmed (TEXT("ExposedValueCopyRecord") and Z_Construct_UScriptStruct_FExposedValueCopyRecord) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FExposedValueCopyRecord::StaticStruct()

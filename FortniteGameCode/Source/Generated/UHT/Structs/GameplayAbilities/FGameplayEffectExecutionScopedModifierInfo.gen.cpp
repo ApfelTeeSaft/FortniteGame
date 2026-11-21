@@ -14,7 +14,7 @@ struct alignas(8) FGameplayEffectExecutionScopedModifierInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x280];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563E70 (end 0x00563EC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563E70 (end 0x00563EC2, chained .pdata fragments)
 // Original VA: 0x0000000140563E70 | File offset: 0x00563470
 // Recovery: confirmed (TEXT("GameplayEffectExecutionScopedModifierInfo") and Z_Construct_UScriptStruct_FGameplayEffectExecutionScopedModifierInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayEffectExecutionScopedModifierInfo::StaticStruct()

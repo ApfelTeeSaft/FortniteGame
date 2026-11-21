@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/ETextureRenderTargetFormat.static.gen.cpp"
+#include "../Enums/Engine/EDecompressionType.static.gen.cpp"

@@ -14,7 +14,7 @@ struct alignas(8) FFortItemEntryStateValue
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BE10 (end 0x0100BE62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100BE10 (end 0x0100BE62, chained .pdata fragments)
 // Original VA: 0x000000014100BE10 | File offset: 0x0100B410
 // Recovery: confirmed (TEXT("FortItemEntryStateValue") and Z_Construct_UScriptStruct_FFortItemEntryStateValue) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortItemEntryStateValue::StaticStruct()

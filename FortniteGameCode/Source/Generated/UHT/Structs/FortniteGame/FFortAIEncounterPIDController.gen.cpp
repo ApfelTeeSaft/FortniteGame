@@ -14,7 +14,7 @@ struct alignas(8) FFortAIEncounterPIDController
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x68];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F874E0 (end 0x00F87532, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F874E0 (end 0x00F87532, chained .pdata fragments)
 // Original VA: 0x0000000140F874E0 | File offset: 0x00F86AE0
 // Recovery: confirmed (TEXT("FortAIEncounterPIDController") and Z_Construct_UScriptStruct_FFortAIEncounterPIDController) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIEncounterPIDController::StaticStruct()

@@ -15,7 +15,7 @@ struct alignas(8) FFortVariantSpawnPoints
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98ED0 (end 0x00F98F22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98ED0 (end 0x00F98F22, chained .pdata fragments)
 // Original VA: 0x0000000140F98ED0 | File offset: 0x00F984D0
 // Recovery: confirmed (TEXT("FortVariantSpawnPoints") and Z_Construct_UScriptStruct_FFortVariantSpawnPoints) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortVariantSpawnPoints::StaticStruct()

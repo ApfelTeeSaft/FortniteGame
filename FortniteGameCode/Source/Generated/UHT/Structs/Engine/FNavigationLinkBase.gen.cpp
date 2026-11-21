@@ -14,7 +14,7 @@ struct alignas(8) FNavigationLinkBase
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F6B0 (end 0x0248F702, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F6B0 (end 0x0248F702, chained .pdata fragments)
 // Original VA: 0x000000014248F6B0 | File offset: 0x0248ECB0
 // Recovery: confirmed (TEXT("NavigationLinkBase") and Z_Construct_UScriptStruct_FNavigationLinkBase) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FNavigationLinkBase::StaticStruct()

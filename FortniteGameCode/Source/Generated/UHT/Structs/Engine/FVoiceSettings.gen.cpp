@@ -14,7 +14,7 @@ struct alignas(8) FVoiceSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F09F0 (end 0x024F0A42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F09F0 (end 0x024F0A42, chained .pdata fragments)
 // Original VA: 0x00000001424F09F0 | File offset: 0x024EFFF0
 // Recovery: confirmed (TEXT("VoiceSettings") and Z_Construct_UScriptStruct_FVoiceSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FVoiceSettings::StaticStruct()

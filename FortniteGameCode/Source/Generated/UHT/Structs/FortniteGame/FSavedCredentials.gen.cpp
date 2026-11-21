@@ -14,7 +14,7 @@ struct alignas(8) FSavedCredentials
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF33B0 (end 0x00FF3402, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF33B0 (end 0x00FF3402, chained .pdata fragments)
 // Original VA: 0x0000000140FF33B0 | File offset: 0x00FF29B0
 // Recovery: confirmed (TEXT("SavedCredentials") and Z_Construct_UScriptStruct_FSavedCredentials) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSavedCredentials::StaticStruct()

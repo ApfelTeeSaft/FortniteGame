@@ -14,7 +14,7 @@ struct alignas(8) FProfileGoCollection
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B160 (end 0x0108B1B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B160 (end 0x0108B1B2, chained .pdata fragments)
 // Original VA: 0x000000014108B160 | File offset: 0x0108A760
 // Recovery: confirmed (TEXT("ProfileGoCollection") and Z_Construct_UScriptStruct_FProfileGoCollection) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FProfileGoCollection::StaticStruct()

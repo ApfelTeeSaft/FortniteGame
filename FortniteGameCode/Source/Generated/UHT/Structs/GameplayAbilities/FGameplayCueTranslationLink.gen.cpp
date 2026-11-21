@@ -14,7 +14,7 @@ struct alignas(8) FGameplayCueTranslationLink
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563990 (end 0x005639E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563990 (end 0x005639E2, chained .pdata fragments)
 // Original VA: 0x0000000140563990 | File offset: 0x00562F90
 // Recovery: confirmed (TEXT("GameplayCueTranslationLink") and Z_Construct_UScriptStruct_FGameplayCueTranslationLink) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayCueTranslationLink::StaticStruct()

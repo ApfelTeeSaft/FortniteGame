@@ -14,7 +14,7 @@ struct alignas(8) FKeybindIcon
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x2E8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA550 (end 0x010CA5A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA550 (end 0x010CA5A2, chained .pdata fragments)
 // Original VA: 0x00000001410CA550 | File offset: 0x010C9B50
 // Recovery: confirmed (TEXT("KeybindIcon") and Z_Construct_UScriptStruct_FKeybindIcon) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FKeybindIcon::StaticStruct()

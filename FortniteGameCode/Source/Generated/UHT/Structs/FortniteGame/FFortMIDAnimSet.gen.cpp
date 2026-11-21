@@ -14,7 +14,7 @@ struct alignas(8) FFortMIDAnimSet
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDB270 (end 0x00FDB2C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDB270 (end 0x00FDB2C2, chained .pdata fragments)
 // Original VA: 0x0000000140FDB270 | File offset: 0x00FDA870
 // Recovery: confirmed (TEXT("FortMIDAnimSet") and Z_Construct_UScriptStruct_FFortMIDAnimSet) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortMIDAnimSet::StaticStruct()

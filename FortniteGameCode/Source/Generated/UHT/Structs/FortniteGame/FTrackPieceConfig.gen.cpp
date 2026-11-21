@@ -14,7 +14,7 @@ struct alignas(4) FTrackPieceConfig
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA7F0 (end 0x010CA842, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA7F0 (end 0x010CA842, chained .pdata fragments)
 // Original VA: 0x00000001410CA7F0 | File offset: 0x010C9DF0
 // Recovery: confirmed (TEXT("TrackPieceConfig") and Z_Construct_UScriptStruct_FTrackPieceConfig) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTrackPieceConfig::StaticStruct()

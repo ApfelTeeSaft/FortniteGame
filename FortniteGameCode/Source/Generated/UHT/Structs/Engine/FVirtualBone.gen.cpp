@@ -14,7 +14,7 @@ struct alignas(8) FVirtualBone
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D5010 (end 0x024D5062, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D5010 (end 0x024D5062, chained .pdata fragments)
 // Original VA: 0x00000001424D5010 | File offset: 0x024D4610
 // Recovery: confirmed (TEXT("VirtualBone") and Z_Construct_UScriptStruct_FVirtualBone) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FVirtualBone::StaticStruct()

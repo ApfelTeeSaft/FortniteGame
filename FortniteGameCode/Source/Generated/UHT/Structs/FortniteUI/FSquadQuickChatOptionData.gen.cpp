@@ -15,7 +15,7 @@ struct alignas(8) FSquadQuickChatOptionData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xA8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6A40 (end 0x028E6A92, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6A40 (end 0x028E6A92, chained .pdata fragments)
 // Original VA: 0x00000001428E6A40 | File offset: 0x028E6040
 // Recovery: confirmed (TEXT("SquadQuickChatOptionData") and Z_Construct_UScriptStruct_FSquadQuickChatOptionData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSquadQuickChatOptionData::StaticStruct()

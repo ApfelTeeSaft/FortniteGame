@@ -14,7 +14,7 @@ struct alignas(8) FFortMissionPlacementActorPreferredTagInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010379F0 (end 0x01037A42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010379F0 (end 0x01037A42, chained .pdata fragments)
 // Original VA: 0x00000001410379F0 | File offset: 0x01036FF0
 // Recovery: confirmed (TEXT("FortMissionPlacementActorPreferredTagInfo") and Z_Construct_UScriptStruct_FFortMissionPlacementActorPreferredTagInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortMissionPlacementActorPreferredTagInfo::StaticStruct()

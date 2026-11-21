@@ -14,7 +14,7 @@ struct alignas(8) FAccumulatedItemEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108AF20 (end 0x0108AF72, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108AF20 (end 0x0108AF72, chained .pdata fragments)
 // Original VA: 0x000000014108AF20 | File offset: 0x0108A520
 // Recovery: confirmed (TEXT("AccumulatedItemEntry") and Z_Construct_UScriptStruct_FAccumulatedItemEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAccumulatedItemEntry::StaticStruct()

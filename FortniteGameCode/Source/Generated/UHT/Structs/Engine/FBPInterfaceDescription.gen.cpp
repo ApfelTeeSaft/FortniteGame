@@ -14,7 +14,7 @@ struct alignas(8) FBPInterfaceDescription
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2D50 (end 0x023E2DA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E2D50 (end 0x023E2DA2, chained .pdata fragments)
 // Original VA: 0x00000001423E2D50 | File offset: 0x023E2350
 // Recovery: confirmed (TEXT("BPInterfaceDescription") and Z_Construct_UScriptStruct_FBPInterfaceDescription) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBPInterfaceDescription::StaticStruct()

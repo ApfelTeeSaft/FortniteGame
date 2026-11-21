@@ -14,7 +14,7 @@ struct alignas(8) FFortRequirementsInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x48];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA070 (end 0x010CA0C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA070 (end 0x010CA0C2, chained .pdata fragments)
 // Original VA: 0x00000001410CA070 | File offset: 0x010C9670
 // Recovery: confirmed (TEXT("FortRequirementsInfo") and Z_Construct_UScriptStruct_FFortRequirementsInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortRequirementsInfo::StaticStruct()

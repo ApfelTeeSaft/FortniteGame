@@ -14,7 +14,7 @@ struct alignas(8) FAnimationTransitionRule
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5E20 (end 0x023D5E72, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5E20 (end 0x023D5E72, chained .pdata fragments)
 // Original VA: 0x00000001423D5E20 | File offset: 0x023D5420
 // Recovery: confirmed (TEXT("AnimationTransitionRule") and Z_Construct_UScriptStruct_FAnimationTransitionRule) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimationTransitionRule::StaticStruct()

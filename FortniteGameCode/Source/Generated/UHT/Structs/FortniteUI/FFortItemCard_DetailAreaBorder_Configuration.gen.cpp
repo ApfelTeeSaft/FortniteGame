@@ -14,7 +14,7 @@ struct alignas(4) FFortItemCard_DetailAreaBorder_Configuration
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C0F10 (end 0x028C0F62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C0F10 (end 0x028C0F62, chained .pdata fragments)
 // Original VA: 0x00000001428C0F10 | File offset: 0x028C0510
 // Recovery: confirmed (TEXT("FortItemCard_DetailAreaBorder_Configuration") and Z_Construct_UScriptStruct_FFortItemCard_DetailAreaBorder_Configuration) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortItemCard_DetailAreaBorder_Configuration::StaticStruct()

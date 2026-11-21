@@ -5,5 +5,7 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/DatasmithContent.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/DatasmithContent/EDatasmithAreaLightActorShape.static.gen.cpp"
 #include "../Enums/DatasmithContent/EDatasmithAreaLightActorShape.gen.cpp"
 #include "../Classes/DatasmithContent/ADatasmithAreaLightActor.gen.cpp"

@@ -14,7 +14,7 @@ struct alignas(4) FAthenaMatchStats
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x74];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59510 (end 0x00F59562, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59510 (end 0x00F59562, chained .pdata fragments)
 // Original VA: 0x0000000140F59510 | File offset: 0x00F58B10
 // Recovery: confirmed (TEXT("AthenaMatchStats") and Z_Construct_UScriptStruct_FAthenaMatchStats) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAthenaMatchStats::StaticStruct()

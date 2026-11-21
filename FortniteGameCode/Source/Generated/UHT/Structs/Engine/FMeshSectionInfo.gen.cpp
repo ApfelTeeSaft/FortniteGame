@@ -14,7 +14,7 @@ struct alignas(4) FMeshSectionInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7190 (end 0x024E71E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7190 (end 0x024E71E2, chained .pdata fragments)
 // Original VA: 0x00000001424E7190 | File offset: 0x024E6790
 // Recovery: confirmed (TEXT("MeshSectionInfo") and Z_Construct_UScriptStruct_FMeshSectionInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMeshSectionInfo::StaticStruct()

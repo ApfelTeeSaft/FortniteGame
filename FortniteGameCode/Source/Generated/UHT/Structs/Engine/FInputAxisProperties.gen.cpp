@@ -14,7 +14,7 @@ struct alignas(4) FInputAxisProperties
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7930 (end 0x024B7982, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7930 (end 0x024B7982, chained .pdata fragments)
 // Original VA: 0x00000001424B7930 | File offset: 0x024B6F30
 // Recovery: confirmed (TEXT("InputAxisProperties") and Z_Construct_UScriptStruct_FInputAxisProperties) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FInputAxisProperties::StaticStruct()

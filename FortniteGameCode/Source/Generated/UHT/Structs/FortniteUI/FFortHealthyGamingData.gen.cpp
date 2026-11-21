@@ -15,7 +15,7 @@ struct alignas(8) FFortHealthyGamingData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x70];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911A00 (end 0x02911A52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911A00 (end 0x02911A52, chained .pdata fragments)
 // Original VA: 0x0000000142911A00 | File offset: 0x02911000
 // Recovery: confirmed (TEXT("FortHealthyGamingData") and Z_Construct_UScriptStruct_FFortHealthyGamingData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortHealthyGamingData::StaticStruct()

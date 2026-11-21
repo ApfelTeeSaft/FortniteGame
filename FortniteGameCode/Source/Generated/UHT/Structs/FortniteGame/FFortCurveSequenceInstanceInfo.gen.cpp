@@ -14,7 +14,7 @@ struct alignas(4) FFortCurveSequenceInstanceInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C0D0 (end 0x00F8C122, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C0D0 (end 0x00F8C122, chained .pdata fragments)
 // Original VA: 0x0000000140F8C0D0 | File offset: 0x00F8B6D0
 // Recovery: confirmed (TEXT("FortCurveSequenceInstanceInfo") and Z_Construct_UScriptStruct_FFortCurveSequenceInstanceInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCurveSequenceInstanceInfo::StaticStruct()

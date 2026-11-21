@@ -14,7 +14,7 @@ struct alignas(8) FFortCachedMatchmakingSearchParams
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xB8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101DE50 (end 0x0101DEA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101DE50 (end 0x0101DEA2, chained .pdata fragments)
 // Original VA: 0x000000014101DE50 | File offset: 0x0101D450
 // Recovery: confirmed (TEXT("FortCachedMatchmakingSearchParams") and Z_Construct_UScriptStruct_FFortCachedMatchmakingSearchParams) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCachedMatchmakingSearchParams::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(4) FRootMotionFinishVelocitySettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C26C0 (end 0x024C2712, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C26C0 (end 0x024C2712, chained .pdata fragments)
 // Original VA: 0x00000001424C26C0 | File offset: 0x024C1CC0
 // Recovery: confirmed (TEXT("RootMotionFinishVelocitySettings") and Z_Construct_UScriptStruct_FRootMotionFinishVelocitySettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRootMotionFinishVelocitySettings::StaticStruct()

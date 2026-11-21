@@ -15,7 +15,7 @@ struct alignas(8) FFortBaseWeaponStats
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x120];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8980 (end 0x010D89D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8980 (end 0x010D89D2, chained .pdata fragments)
 // Original VA: 0x00000001410D8980 | File offset: 0x010D7F80
 // Recovery: confirmed (TEXT("FortBaseWeaponStats") and Z_Construct_UScriptStruct_FFortBaseWeaponStats) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortBaseWeaponStats::StaticStruct()

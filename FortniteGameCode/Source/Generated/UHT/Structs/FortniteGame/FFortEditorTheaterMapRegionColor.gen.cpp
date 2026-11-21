@@ -14,7 +14,7 @@ struct alignas(8) FFortEditorTheaterMapRegionColor
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2E60 (end 0x010B2EB2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2E60 (end 0x010B2EB2, chained .pdata fragments)
 // Original VA: 0x00000001410B2E60 | File offset: 0x010B2460
 // Recovery: confirmed (TEXT("FortEditorTheaterMapRegionColor") and Z_Construct_UScriptStruct_FFortEditorTheaterMapRegionColor) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortEditorTheaterMapRegionColor::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(4) FTeamStrategicBuildingHandle
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01093070 (end 0x010930C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01093070 (end 0x010930C2, chained .pdata fragments)
 // Original VA: 0x0000000141093070 | File offset: 0x01092670
 // Recovery: confirmed (TEXT("TeamStrategicBuildingHandle") and Z_Construct_UScriptStruct_FTeamStrategicBuildingHandle) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTeamStrategicBuildingHandle::StaticStruct()

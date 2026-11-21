@@ -14,7 +14,7 @@ struct alignas(4) FStreamingTextureBuildInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC4A0 (end 0x024EC4F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC4A0 (end 0x024EC4F2, chained .pdata fragments)
 // Original VA: 0x00000001424EC4A0 | File offset: 0x024EBAA0
 // Recovery: confirmed (TEXT("StreamingTextureBuildInfo") and Z_Construct_UScriptStruct_FStreamingTextureBuildInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FStreamingTextureBuildInfo::StaticStruct()

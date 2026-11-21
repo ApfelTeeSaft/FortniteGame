@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/ESubmixChannelFormat.static.gen.cpp"
+#include "../Enums/Engine/ESkyLightSourceType.static.gen.cpp"

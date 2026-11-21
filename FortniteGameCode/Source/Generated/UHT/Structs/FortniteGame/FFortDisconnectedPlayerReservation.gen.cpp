@@ -14,7 +14,7 @@ struct alignas(8) FFortDisconnectedPlayerReservation
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE2B0 (end 0x00FEE302, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEE2B0 (end 0x00FEE302, chained .pdata fragments)
 // Original VA: 0x0000000140FEE2B0 | File offset: 0x00FED8B0
 // Recovery: confirmed (TEXT("FortDisconnectedPlayerReservation") and Z_Construct_UScriptStruct_FFortDisconnectedPlayerReservation) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortDisconnectedPlayerReservation::StaticStruct()

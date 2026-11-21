@@ -14,7 +14,7 @@ struct alignas(8) FGameplayAbilityActorInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B320 (end 0x0055B372, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B320 (end 0x0055B372, chained .pdata fragments)
 // Original VA: 0x000000014055B320 | File offset: 0x0055A920
 // Recovery: confirmed (TEXT("GameplayAbilityActorInfo") and Z_Construct_UScriptStruct_FGameplayAbilityActorInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayAbilityActorInfo::StaticStruct()

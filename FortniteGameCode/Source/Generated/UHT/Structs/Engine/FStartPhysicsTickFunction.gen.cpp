@@ -9,13 +9,13 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FStartPhysicsTickFunction();
 	UPackage* Z_Construct_UPackage__Script_Engine();  // RVA 0x0240CE30
-UScriptStruct* Z_Construct_UScriptStruct_Unrecovered_0x0240D700();  // RVA 0x0240D700
+UScriptStruct* Z_Construct_UScriptStruct_FTickFunction();  // RVA 0x0240D700
 struct alignas(8) FStartPhysicsTickFunction
 {
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0990 (end 0x024F09E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0990 (end 0x024F09E2, chained .pdata fragments)
 // Original VA: 0x00000001424F0990 | File offset: 0x024EFF90
 // Recovery: confirmed (TEXT("StartPhysicsTickFunction") and Z_Construct_UScriptStruct_FStartPhysicsTickFunction) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FStartPhysicsTickFunction::StaticStruct()
@@ -41,7 +41,7 @@ class UScriptStruct* FStartPhysicsTickFunction::StaticStruct()
 	// ReturnStructParams: original RVA 0x04533520
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FStartPhysicsTickFunction_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_Engine,
-		Z_Construct_UScriptStruct_Unrecovered_0x0240D700,
+		Z_Construct_UScriptStruct_FTickFunction,
 		&NewStructOps,
 		"StartPhysicsTickFunction",
 		RF_Public|RF_Transient|RF_MarkAsNative,

@@ -14,7 +14,7 @@ struct alignas(4) FFortSocialItemBasicData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A56A0 (end 0x010A56F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A56A0 (end 0x010A56F2, chained .pdata fragments)
 // Original VA: 0x00000001410A56A0 | File offset: 0x010A4CA0
 // Recovery: confirmed (TEXT("FortSocialItemBasicData") and Z_Construct_UScriptStruct_FFortSocialItemBasicData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSocialItemBasicData::StaticStruct()

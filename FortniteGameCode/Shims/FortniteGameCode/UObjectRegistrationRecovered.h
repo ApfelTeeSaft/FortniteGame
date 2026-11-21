@@ -106,7 +106,26 @@ namespace UE4CodeGen_Private
 	};
 
 	void ConstructUEnum(UEnum*& OutEnum, const FEnumParams& Params);
+
+	struct FPackageParams
+	{
+		const char* NameUTF8;
+		uint32 PackageFlags; // EPackageFlags
+		uint32 BodiesHash;
+		uint32 DeclarationsHash;
+		UObject* (*const *SingletonFuncArray)();
+		int32 NumSingletons;
+	};
+
+	void ConstructUPackage(UPackage*& OutPackage, const FPackageParams& Params);
 }
+
+// ObjectMacros.h (EPackageFlags); only the flag init.gen.cpp code names.
+enum EPackageFlags
+{
+	PKG_None = 0x00000000,
+	PKG_CompiledIn = 0x00000010,
+};
 
 // Class.h: the parts of UScriptStruct that registration code touches, added to its declaration
 // in Classes.gen.h. ICppStructOps keeps the engine layout (vtable pointer, Size, Alignment) and

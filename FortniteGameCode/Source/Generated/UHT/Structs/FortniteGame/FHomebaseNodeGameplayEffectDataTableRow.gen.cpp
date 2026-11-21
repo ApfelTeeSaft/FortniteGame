@@ -15,7 +15,7 @@ struct alignas(8) FHomebaseNodeGameplayEffectDataTableRow
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xD8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006600 (end 0x01006652, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01006600 (end 0x01006652, chained .pdata fragments)
 // Original VA: 0x0000000141006600 | File offset: 0x01005C00
 // Recovery: confirmed (TEXT("HomebaseNodeGameplayEffectDataTableRow") and Z_Construct_UScriptStruct_FHomebaseNodeGameplayEffectDataTableRow) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FHomebaseNodeGameplayEffectDataTableRow::StaticStruct()

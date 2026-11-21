@@ -14,7 +14,7 @@ struct alignas(8) FAudioQualitySettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA830 (end 0x023DA882, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA830 (end 0x023DA882, chained .pdata fragments)
 // Original VA: 0x00000001423DA830 | File offset: 0x023D9E30
 // Recovery: confirmed (TEXT("AudioQualitySettings") and Z_Construct_UScriptStruct_FAudioQualitySettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAudioQualitySettings::StaticStruct()

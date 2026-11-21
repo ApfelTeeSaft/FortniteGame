@@ -14,7 +14,7 @@ struct alignas(8) FFortRarityItemData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x80];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D570 (end 0x0109D5C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D570 (end 0x0109D5C2, chained .pdata fragments)
 // Original VA: 0x000000014109D570 | File offset: 0x0109CB70
 // Recovery: confirmed (TEXT("FortRarityItemData") and Z_Construct_UScriptStruct_FFortRarityItemData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortRarityItemData::StaticStruct()

@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/FortniteUI/ESquadSlotItemRestrictionReason.static.gen.cpp"
+#include "../Enums/FortniteUI/EFortUINavigationOp.static.gen.cpp"

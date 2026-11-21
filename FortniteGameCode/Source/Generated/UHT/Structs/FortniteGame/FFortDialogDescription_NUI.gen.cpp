@@ -14,7 +14,7 @@ struct alignas(16) FFortDialogDescription_NUI
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x170];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9A70 (end 0x010C9AC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9A70 (end 0x010C9AC2, chained .pdata fragments)
 // Original VA: 0x00000001410C9A70 | File offset: 0x010C9070
 // Recovery: confirmed (TEXT("FortDialogDescription_NUI") and Z_Construct_UScriptStruct_FFortDialogDescription_NUI) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortDialogDescription_NUI::StaticStruct()

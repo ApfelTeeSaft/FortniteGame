@@ -14,7 +14,7 @@ struct alignas(8) FHomebaseSquadAttributeBonus
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFAA70 (end 0x00FFAAC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFAA70 (end 0x00FFAAC2, chained .pdata fragments)
 // Original VA: 0x0000000140FFAA70 | File offset: 0x00FFA070
 // Recovery: confirmed (TEXT("HomebaseSquadAttributeBonus") and Z_Construct_UScriptStruct_FHomebaseSquadAttributeBonus) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FHomebaseSquadAttributeBonus::StaticStruct()

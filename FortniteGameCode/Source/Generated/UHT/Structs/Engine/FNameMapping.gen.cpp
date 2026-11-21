@@ -14,7 +14,7 @@ struct alignas(8) FNameMapping
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4890 (end 0x024D48E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4890 (end 0x024D48E2, chained .pdata fragments)
 // Original VA: 0x00000001424D4890 | File offset: 0x024D3E90
 // Recovery: confirmed (TEXT("NameMapping") and Z_Construct_UScriptStruct_FNameMapping) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FNameMapping::StaticStruct()

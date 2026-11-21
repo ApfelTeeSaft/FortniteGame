@@ -14,7 +14,7 @@ struct alignas(8) FAthenaCarPlayerSlot
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3560 (end 0x00FA35B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3560 (end 0x00FA35B2, chained .pdata fragments)
 // Original VA: 0x0000000140FA3560 | File offset: 0x00FA2B60
 // Recovery: confirmed (TEXT("AthenaCarPlayerSlot") and Z_Construct_UScriptStruct_FAthenaCarPlayerSlot) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAthenaCarPlayerSlot::StaticStruct()

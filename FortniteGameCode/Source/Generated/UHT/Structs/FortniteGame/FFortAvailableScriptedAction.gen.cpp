@@ -14,7 +14,7 @@ struct alignas(8) FFortAvailableScriptedAction
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A50A0 (end 0x010A50F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A50A0 (end 0x010A50F2, chained .pdata fragments)
 // Original VA: 0x00000001410A50A0 | File offset: 0x010A46A0
 // Recovery: confirmed (TEXT("FortAvailableScriptedAction") and Z_Construct_UScriptStruct_FFortAvailableScriptedAction) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAvailableScriptedAction::StaticStruct()

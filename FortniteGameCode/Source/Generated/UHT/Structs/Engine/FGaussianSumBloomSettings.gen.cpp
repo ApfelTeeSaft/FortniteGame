@@ -14,7 +14,7 @@ struct alignas(4) FGaussianSumBloomSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x84];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C54C0 (end 0x024C5512, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C54C0 (end 0x024C5512, chained .pdata fragments)
 // Original VA: 0x00000001424C54C0 | File offset: 0x024C4AC0
 // Recovery: confirmed (TEXT("GaussianSumBloomSettings") and Z_Construct_UScriptStruct_FGaussianSumBloomSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGaussianSumBloomSettings::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FCrowdAvoidanceSamplingPattern
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D288B0 (end 0x01D28902, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D288B0 (end 0x01D28902, chained .pdata fragments)
 // Original VA: 0x0000000141D288B0 | File offset: 0x01D27EB0
 // Recovery: confirmed (TEXT("CrowdAvoidanceSamplingPattern") and Z_Construct_UScriptStruct_FCrowdAvoidanceSamplingPattern) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCrowdAvoidanceSamplingPattern::StaticStruct()

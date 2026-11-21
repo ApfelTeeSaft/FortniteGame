@@ -14,7 +14,7 @@ struct alignas(8) FScreenMessageString
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404AE0 (end 0x02404B32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404AE0 (end 0x02404B32, chained .pdata fragments)
 // Original VA: 0x0000000142404AE0 | File offset: 0x024040E0
 // Recovery: confirmed (TEXT("ScreenMessageString") and Z_Construct_UScriptStruct_FScreenMessageString) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FScreenMessageString::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(4) FBoneMirrorInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC650 (end 0x024CC6A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC650 (end 0x024CC6A2, chained .pdata fragments)
 // Original VA: 0x00000001424CC650 | File offset: 0x024CBC50
 // Recovery: confirmed (TEXT("BoneMirrorInfo") and Z_Construct_UScriptStruct_FBoneMirrorInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBoneMirrorInfo::StaticStruct()

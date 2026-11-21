@@ -14,7 +14,7 @@ struct alignas(8) FConditionalFoundationQuotaTier
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0BB0 (end 0x00FE0C02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0BB0 (end 0x00FE0C02, chained .pdata fragments)
 // Original VA: 0x0000000140FE0BB0 | File offset: 0x00FE01B0
 // Recovery: confirmed (TEXT("ConditionalFoundationQuotaTier") and Z_Construct_UScriptStruct_FConditionalFoundationQuotaTier) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FConditionalFoundationQuotaTier::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FBlendFilter
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x90];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7EC0 (end 0x023C7F12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7EC0 (end 0x023C7F12, chained .pdata fragments)
 // Original VA: 0x00000001423C7EC0 | File offset: 0x023C74C0
 // Recovery: confirmed (TEXT("BlendFilter") and Z_Construct_UScriptStruct_FBlendFilter) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBlendFilter::StaticStruct()

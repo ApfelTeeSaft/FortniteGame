@@ -14,7 +14,7 @@ struct alignas(1) FFortEncounterLockedUtility
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x2];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6BF0 (end 0x00FD6C42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6BF0 (end 0x00FD6C42, chained .pdata fragments)
 // Original VA: 0x0000000140FD6BF0 | File offset: 0x00FD61F0
 // Recovery: confirmed (TEXT("FortEncounterLockedUtility") and Z_Construct_UScriptStruct_FFortEncounterLockedUtility) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortEncounterLockedUtility::StaticStruct()

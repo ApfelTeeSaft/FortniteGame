@@ -14,7 +14,7 @@ struct alignas(8) FFortReceivedGiftedBoostXpNotification
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102FFB0 (end 0x01030002, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102FFB0 (end 0x01030002, chained .pdata fragments)
 // Original VA: 0x000000014102FFB0 | File offset: 0x0102F5B0
 // Recovery: confirmed (TEXT("FortReceivedGiftedBoostXpNotification") and Z_Construct_UScriptStruct_FFortReceivedGiftedBoostXpNotification) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortReceivedGiftedBoostXpNotification::StaticStruct()

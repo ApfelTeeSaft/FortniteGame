@@ -15,7 +15,7 @@ struct alignas(8) FHomebaseSquad
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x88];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFAA10 (end 0x00FFAA62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFAA10 (end 0x00FFAA62, chained .pdata fragments)
 // Original VA: 0x0000000140FFAA10 | File offset: 0x00FFA010
 // Recovery: confirmed (TEXT("HomebaseSquad") and Z_Construct_UScriptStruct_FHomebaseSquad) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FHomebaseSquad::StaticStruct()

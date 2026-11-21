@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EBoneTranslationRetargetingMode.static.gen.cpp"
+#include "../Enums/Engine/EWindowTitleBarMode.static.gen.cpp"

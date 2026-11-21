@@ -14,7 +14,7 @@ struct alignas(8) FGoalSelectionCriteria
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91080 (end 0x00F910D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91080 (end 0x00F910D2, chained .pdata fragments)
 // Original VA: 0x0000000140F91080 | File offset: 0x00F90680
 // Recovery: confirmed (TEXT("GoalSelectionCriteria") and Z_Construct_UScriptStruct_FGoalSelectionCriteria) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGoalSelectionCriteria::StaticStruct()

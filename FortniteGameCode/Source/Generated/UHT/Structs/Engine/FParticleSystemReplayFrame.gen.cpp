@@ -14,7 +14,7 @@ struct alignas(8) FParticleSystemReplayFrame
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0660 (end 0x024A06B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0660 (end 0x024A06B2, chained .pdata fragments)
 // Original VA: 0x00000001424A0660 | File offset: 0x0249FC60
 // Recovery: confirmed (TEXT("ParticleSystemReplayFrame") and Z_Construct_UScriptStruct_FParticleSystemReplayFrame) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FParticleSystemReplayFrame::StaticStruct()

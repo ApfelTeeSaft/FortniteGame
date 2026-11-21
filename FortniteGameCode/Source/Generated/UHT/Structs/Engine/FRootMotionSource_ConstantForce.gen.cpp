@@ -15,7 +15,7 @@ struct alignas(16) FRootMotionSource_ConstantForce
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xB0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C28A0 (end 0x024C28F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C28A0 (end 0x024C28F2, chained .pdata fragments)
 // Original VA: 0x00000001424C28A0 | File offset: 0x024C1EA0
 // Recovery: confirmed (TEXT("RootMotionSource_ConstantForce") and Z_Construct_UScriptStruct_FRootMotionSource_ConstantForce) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRootMotionSource_ConstantForce::StaticStruct()

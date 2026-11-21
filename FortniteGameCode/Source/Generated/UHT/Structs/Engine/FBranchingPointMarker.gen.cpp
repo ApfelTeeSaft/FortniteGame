@@ -14,7 +14,7 @@ struct alignas(4) FBranchingPointMarker
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CE120 (end 0x023CE172, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CE120 (end 0x023CE172, chained .pdata fragments)
 // Original VA: 0x00000001423CE120 | File offset: 0x023CD720
 // Recovery: confirmed (TEXT("BranchingPointMarker") and Z_Construct_UScriptStruct_FBranchingPointMarker) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBranchingPointMarker::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortUINavigationRequest
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911B20 (end 0x02911B72, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911B20 (end 0x02911B72, chained .pdata fragments)
 // Original VA: 0x0000000142911B20 | File offset: 0x02911120
 // Recovery: confirmed (TEXT("FortUINavigationRequest") and Z_Construct_UScriptStruct_FFortUINavigationRequest) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortUINavigationRequest::StaticStruct()

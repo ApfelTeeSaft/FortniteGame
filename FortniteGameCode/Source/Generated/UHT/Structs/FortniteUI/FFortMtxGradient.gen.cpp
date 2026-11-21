@@ -14,7 +14,7 @@ struct alignas(4) FFortMtxGradient
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7110 (end 0x028D7162, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D7110 (end 0x028D7162, chained .pdata fragments)
 // Original VA: 0x00000001428D7110 | File offset: 0x028D6710
 // Recovery: confirmed (TEXT("FortMtxGradient") and Z_Construct_UScriptStruct_FFortMtxGradient) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortMtxGradient::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(16) FPostProcessSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x520];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C5640 (end 0x024C5692, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C5640 (end 0x024C5692, chained .pdata fragments)
 // Original VA: 0x00000001424C5640 | File offset: 0x024C4C40
 // Recovery: confirmed (TEXT("PostProcessSettings") and Z_Construct_UScriptStruct_FPostProcessSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPostProcessSettings::StaticStruct()

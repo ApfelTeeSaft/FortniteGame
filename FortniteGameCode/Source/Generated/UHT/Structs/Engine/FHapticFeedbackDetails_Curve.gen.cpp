@@ -14,7 +14,7 @@ struct alignas(8) FHapticFeedbackDetails_Curve
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xF0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241EE60 (end 0x0241EEB2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241EE60 (end 0x0241EEB2, chained .pdata fragments)
 // Original VA: 0x000000014241EE60 | File offset: 0x0241E460
 // Recovery: confirmed (TEXT("HapticFeedbackDetails_Curve") and Z_Construct_UScriptStruct_FHapticFeedbackDetails_Curve) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FHapticFeedbackDetails_Curve::StaticStruct()

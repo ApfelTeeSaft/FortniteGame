@@ -14,7 +14,7 @@ struct alignas(8) FFortItemCard_NameplateBorder_Configuration
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x88];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C1270 (end 0x028C12C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C1270 (end 0x028C12C2, chained .pdata fragments)
 // Original VA: 0x00000001428C1270 | File offset: 0x028C0870
 // Recovery: confirmed (TEXT("FortItemCard_NameplateBorder_Configuration") and Z_Construct_UScriptStruct_FFortItemCard_NameplateBorder_Configuration) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortItemCard_NameplateBorder_Configuration::StaticStruct()

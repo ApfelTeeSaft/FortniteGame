@@ -14,7 +14,7 @@ struct alignas(4) FOrbitOptions
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02499D10 (end 0x02499D62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02499D10 (end 0x02499D62, chained .pdata fragments)
 // Original VA: 0x0000000142499D10 | File offset: 0x02499310
 // Recovery: confirmed (TEXT("OrbitOptions") and Z_Construct_UScriptStruct_FOrbitOptions) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FOrbitOptions::StaticStruct()

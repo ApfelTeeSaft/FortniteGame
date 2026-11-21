@@ -14,7 +14,7 @@ struct alignas(8) FFortAIEncounterQueryDirectionTracker
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x48];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8BE90 (end 0x00F8BEE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8BE90 (end 0x00F8BEE2, chained .pdata fragments)
 // Original VA: 0x0000000140F8BE90 | File offset: 0x00F8B490
 // Recovery: confirmed (TEXT("FortAIEncounterQueryDirectionTracker") and Z_Construct_UScriptStruct_FFortAIEncounterQueryDirectionTracker) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIEncounterQueryDirectionTracker::StaticStruct()

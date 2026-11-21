@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EAttractorParticleSelectionMethod.static.gen.cpp"
+#include "../Enums/Engine/ECustomMaterialOutputType.static.gen.cpp"

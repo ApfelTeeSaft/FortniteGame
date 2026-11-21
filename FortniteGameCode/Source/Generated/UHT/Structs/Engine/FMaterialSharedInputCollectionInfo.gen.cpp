@@ -14,7 +14,7 @@ struct alignas(8) FMaterialSharedInputCollectionInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02478960 (end 0x024789B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02478960 (end 0x024789B2, chained .pdata fragments)
 // Original VA: 0x0000000142478960 | File offset: 0x02477F60
 // Recovery: confirmed (TEXT("MaterialSharedInputCollectionInfo") and Z_Construct_UScriptStruct_FMaterialSharedInputCollectionInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMaterialSharedInputCollectionInfo::StaticStruct()

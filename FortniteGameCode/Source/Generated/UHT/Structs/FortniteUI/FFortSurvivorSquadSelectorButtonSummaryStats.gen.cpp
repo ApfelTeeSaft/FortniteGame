@@ -14,7 +14,7 @@ struct alignas(8) FFortSurvivorSquadSelectorButtonSummaryStats
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x70];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904700 (end 0x02904752, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904700 (end 0x02904752, chained .pdata fragments)
 // Original VA: 0x0000000142904700 | File offset: 0x02903D00
 // Recovery: confirmed (TEXT("FortSurvivorSquadSelectorButtonSummaryStats") and Z_Construct_UScriptStruct_FFortSurvivorSquadSelectorButtonSummaryStats) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSurvivorSquadSelectorButtonSummaryStats::StaticStruct()

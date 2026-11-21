@@ -14,7 +14,7 @@ struct alignas(8) FFortInviteSessionParams
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023700 (end 0x01023752, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023700 (end 0x01023752, chained .pdata fragments)
 // Original VA: 0x0000000141023700 | File offset: 0x01022D00
 // Recovery: confirmed (TEXT("FortInviteSessionParams") and Z_Construct_UScriptStruct_FFortInviteSessionParams) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortInviteSessionParams::StaticStruct()

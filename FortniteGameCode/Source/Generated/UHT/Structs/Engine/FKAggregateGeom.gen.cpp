@@ -14,7 +14,7 @@ struct alignas(8) FKAggregateGeom
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x48];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8040 (end 0x023C8092, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8040 (end 0x023C8092, chained .pdata fragments)
 // Original VA: 0x00000001423C8040 | File offset: 0x023C7640
 // Recovery: confirmed (TEXT("KAggregateGeom") and Z_Construct_UScriptStruct_FKAggregateGeom) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FKAggregateGeom::StaticStruct()

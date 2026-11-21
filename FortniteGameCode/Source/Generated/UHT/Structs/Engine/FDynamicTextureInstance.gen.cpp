@@ -15,7 +15,7 @@ struct alignas(8) FDynamicTextureInstance
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FF50 (end 0x0246FFA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0246FF50 (end 0x0246FFA2, chained .pdata fragments)
 // Original VA: 0x000000014246FF50 | File offset: 0x0246F550
 // Recovery: confirmed (TEXT("DynamicTextureInstance") and Z_Construct_UScriptStruct_FDynamicTextureInstance) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDynamicTextureInstance::StaticStruct()

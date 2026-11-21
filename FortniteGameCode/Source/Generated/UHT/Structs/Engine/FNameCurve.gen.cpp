@@ -15,7 +15,7 @@ struct alignas(8) FNameCurve
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x68];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248B090 (end 0x0248B0E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248B090 (end 0x0248B0E2, chained .pdata fragments)
 // Original VA: 0x000000014248B090 | File offset: 0x0248A690
 // Recovery: confirmed (TEXT("NameCurve") and Z_Construct_UScriptStruct_FNameCurve) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FNameCurve::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortNotificationLevelUp
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102FEF0 (end 0x0102FF42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102FEF0 (end 0x0102FF42, chained .pdata fragments)
 // Original VA: 0x000000014102FEF0 | File offset: 0x0102F4F0
 // Recovery: confirmed (TEXT("FortNotificationLevelUp") and Z_Construct_UScriptStruct_FFortNotificationLevelUp) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortNotificationLevelUp::StaticStruct()

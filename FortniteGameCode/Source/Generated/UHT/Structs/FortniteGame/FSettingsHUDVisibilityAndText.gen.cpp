@@ -14,7 +14,7 @@ struct alignas(8) FSettingsHUDVisibilityAndText
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x48];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0F10 (end 0x00FE0F62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0F10 (end 0x00FE0F62, chained .pdata fragments)
 // Original VA: 0x0000000140FE0F10 | File offset: 0x00FE0510
 // Recovery: confirmed (TEXT("SettingsHUDVisibilityAndText") and Z_Construct_UScriptStruct_FSettingsHUDVisibilityAndText) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSettingsHUDVisibilityAndText::StaticStruct()

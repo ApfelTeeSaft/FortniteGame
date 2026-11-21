@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/FortniteUI/EFortRewardItemType.static.gen.cpp"
+#include "../Enums/FortniteUI/EFortPickerMode.static.gen.cpp"

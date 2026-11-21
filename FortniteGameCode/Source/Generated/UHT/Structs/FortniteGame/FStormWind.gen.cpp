@@ -15,7 +15,7 @@ struct alignas(8) FStormWind
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDDF0 (end 0x010BDE42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDDF0 (end 0x010BDE42, chained .pdata fragments)
 // Original VA: 0x00000001410BDDF0 | File offset: 0x010BD3F0
 // Recovery: confirmed (TEXT("StormWind") and Z_Construct_UScriptStruct_FStormWind) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FStormWind::StaticStruct()

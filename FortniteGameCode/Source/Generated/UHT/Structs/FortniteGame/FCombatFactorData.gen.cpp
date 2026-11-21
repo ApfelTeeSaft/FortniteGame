@@ -14,7 +14,7 @@ struct alignas(8) FCombatFactorData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC56F0 (end 0x00FC5742, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC56F0 (end 0x00FC5742, chained .pdata fragments)
 // Original VA: 0x0000000140FC56F0 | File offset: 0x00FC4CF0
 // Recovery: confirmed (TEXT("CombatFactorData") and Z_Construct_UScriptStruct_FCombatFactorData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCombatFactorData::StaticStruct()

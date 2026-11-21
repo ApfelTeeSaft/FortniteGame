@@ -14,7 +14,7 @@ struct alignas(8) FInputBlendPose
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA4B0 (end 0x023EA502, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA4B0 (end 0x023EA502, chained .pdata fragments)
 // Original VA: 0x00000001423EA4B0 | File offset: 0x023E9AB0
 // Recovery: confirmed (TEXT("InputBlendPose") and Z_Construct_UScriptStruct_FInputBlendPose) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FInputBlendPose::StaticStruct()

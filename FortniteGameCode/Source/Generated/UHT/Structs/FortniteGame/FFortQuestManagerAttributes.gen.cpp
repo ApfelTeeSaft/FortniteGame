@@ -14,7 +14,7 @@ struct alignas(8) FFortQuestManagerAttributes
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D3F0 (end 0x0109D442, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D3F0 (end 0x0109D442, chained .pdata fragments)
 // Original VA: 0x000000014109D3F0 | File offset: 0x0109C9F0
 // Recovery: confirmed (TEXT("FortQuestManagerAttributes") and Z_Construct_UScriptStruct_FFortQuestManagerAttributes) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortQuestManagerAttributes::StaticStruct()

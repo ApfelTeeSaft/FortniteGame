@@ -14,7 +14,7 @@ struct alignas(8) FDamagerInfoAnalytics
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90DE0 (end 0x00F90E32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90DE0 (end 0x00F90E32, chained .pdata fragments)
 // Original VA: 0x0000000140F90DE0 | File offset: 0x00F903E0
 // Recovery: confirmed (TEXT("DamagerInfoAnalytics") and Z_Construct_UScriptStruct_FDamagerInfoAnalytics) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDamagerInfoAnalytics::StaticStruct()

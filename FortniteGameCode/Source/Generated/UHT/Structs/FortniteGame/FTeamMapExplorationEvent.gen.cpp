@@ -14,7 +14,7 @@ struct alignas(1) FTeamMapExplorationEvent
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x2];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010066C0 (end 0x01006712, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010066C0 (end 0x01006712, chained .pdata fragments)
 // Original VA: 0x00000001410066C0 | File offset: 0x01005CC0
 // Recovery: confirmed (TEXT("TeamMapExplorationEvent") and Z_Construct_UScriptStruct_FTeamMapExplorationEvent) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTeamMapExplorationEvent::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(4) FInputScaleBiasClamp
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427B00 (end 0x02427B52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427B00 (end 0x02427B52, chained .pdata fragments)
 // Original VA: 0x0000000142427B00 | File offset: 0x02427100
 // Recovery: confirmed (TEXT("InputScaleBiasClamp") and Z_Construct_UScriptStruct_FInputScaleBiasClamp) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FInputScaleBiasClamp::StaticStruct()

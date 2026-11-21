@@ -15,7 +15,7 @@ struct alignas(8) FFortClientAnnouncementData_ZoneModifiers
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFE10 (end 0x00FBFE62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFE10 (end 0x00FBFE62, chained .pdata fragments)
 // Original VA: 0x0000000140FBFE10 | File offset: 0x00FBF410
 // Recovery: confirmed (TEXT("FortClientAnnouncementData_ZoneModifiers") and Z_Construct_UScriptStruct_FFortClientAnnouncementData_ZoneModifiers) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortClientAnnouncementData_ZoneModifiers::StaticStruct()

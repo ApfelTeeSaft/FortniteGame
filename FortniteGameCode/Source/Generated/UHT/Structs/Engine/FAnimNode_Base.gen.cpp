@@ -14,7 +14,7 @@ struct alignas(8) FAnimNode_Base
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CDCA0 (end 0x023CDCF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CDCA0 (end 0x023CDCF2, chained .pdata fragments)
 // Original VA: 0x00000001423CDCA0 | File offset: 0x023CD2A0
 // Recovery: confirmed (TEXT("AnimNode_Base") and Z_Construct_UScriptStruct_FAnimNode_Base) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimNode_Base::StaticStruct()

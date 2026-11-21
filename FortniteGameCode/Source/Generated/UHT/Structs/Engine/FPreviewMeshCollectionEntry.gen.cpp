@@ -14,7 +14,7 @@ struct alignas(8) FPreviewMeshCollectionEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7C30 (end 0x024B7C82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7C30 (end 0x024B7C82, chained .pdata fragments)
 // Original VA: 0x00000001424B7C30 | File offset: 0x024B7230
 // Recovery: confirmed (TEXT("PreviewMeshCollectionEntry") and Z_Construct_UScriptStruct_FPreviewMeshCollectionEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPreviewMeshCollectionEntry::StaticStruct()

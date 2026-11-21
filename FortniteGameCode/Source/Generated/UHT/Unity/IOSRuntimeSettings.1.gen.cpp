@@ -5,7 +5,13 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/IOSRuntimeSettings.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/IOSRuntimeSettings/EIOSMetalShaderStandard.static.gen.cpp"
 #include "../Enums/IOSRuntimeSettings/EIOSMetalShaderStandard.gen.cpp"
+#include "../Enums/IOSRuntimeSettings/EIOSVersion.static.gen.cpp"
 #include "../Enums/IOSRuntimeSettings/EIOSVersion.gen.cpp"
+#include "../Enums/IOSRuntimeSettings/EPowerUsageFrameRateLock.static.gen.cpp"
 #include "../Enums/IOSRuntimeSettings/EPowerUsageFrameRateLock.gen.cpp"
+#include "../Structs/IOSRuntimeSettings/FIOSBuildResourceDirectory.gen.cpp"
+#include "../Structs/IOSRuntimeSettings/FIOSBuildResourceFilePath.gen.cpp"
 #include "../Classes/IOSRuntimeSettings/UIOSRuntimeSettings.gen.cpp"

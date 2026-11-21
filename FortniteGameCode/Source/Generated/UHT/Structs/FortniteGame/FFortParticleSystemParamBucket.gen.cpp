@@ -14,7 +14,7 @@ struct alignas(8) FFortParticleSystemParamBucket
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9FB0 (end 0x010CA002, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9FB0 (end 0x010CA002, chained .pdata fragments)
 // Original VA: 0x00000001410C9FB0 | File offset: 0x010C95B0
 // Recovery: confirmed (TEXT("FortParticleSystemParamBucket") and Z_Construct_UScriptStruct_FFortParticleSystemParamBucket) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortParticleSystemParamBucket::StaticStruct()

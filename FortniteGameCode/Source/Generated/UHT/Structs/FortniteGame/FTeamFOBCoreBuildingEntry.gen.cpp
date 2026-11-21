@@ -15,7 +15,7 @@ struct alignas(8) FTeamFOBCoreBuildingEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B3580 (end 0x010B35D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B3580 (end 0x010B35D2, chained .pdata fragments)
 // Original VA: 0x00000001410B3580 | File offset: 0x010B2B80
 // Recovery: confirmed (TEXT("TeamFOBCoreBuildingEntry") and Z_Construct_UScriptStruct_FTeamFOBCoreBuildingEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTeamFOBCoreBuildingEntry::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(4) FAthenaJumpPenalty
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A470 (end 0x0104A4C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104A470 (end 0x0104A4C2, chained .pdata fragments)
 // Original VA: 0x000000014104A470 | File offset: 0x01049A70
 // Recovery: confirmed (TEXT("AthenaJumpPenalty") and Z_Construct_UScriptStruct_FAthenaJumpPenalty) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAthenaJumpPenalty::StaticStruct()

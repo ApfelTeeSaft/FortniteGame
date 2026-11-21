@@ -15,7 +15,7 @@ struct alignas(8) FGameplayAbilityTargetData_SingleTargetHit
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x90];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B800 (end 0x0055B852, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B800 (end 0x0055B852, chained .pdata fragments)
 // Original VA: 0x000000014055B800 | File offset: 0x0055AE00
 // Recovery: confirmed (TEXT("GameplayAbilityTargetData_SingleTargetHit") and Z_Construct_UScriptStruct_FGameplayAbilityTargetData_SingleTargetHit) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayAbilityTargetData_SingleTargetHit::StaticStruct()

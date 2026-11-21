@@ -15,7 +15,7 @@ struct alignas(8) FPlayerClampInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4350 (end 0x00FE43A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4350 (end 0x00FE43A2, chained .pdata fragments)
 // Original VA: 0x0000000140FE4350 | File offset: 0x00FE3950
 // Recovery: confirmed (TEXT("PlayerClampInfo") and Z_Construct_UScriptStruct_FPlayerClampInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPlayerClampInfo::StaticStruct()

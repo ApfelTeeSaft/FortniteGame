@@ -14,7 +14,7 @@ struct alignas(8) FMaterialEditorPromotionSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAD70 (end 0x023DADC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAD70 (end 0x023DADC2, chained .pdata fragments)
 // Original VA: 0x00000001423DAD70 | File offset: 0x023DA370
 // Recovery: confirmed (TEXT("MaterialEditorPromotionSettings") and Z_Construct_UScriptStruct_FMaterialEditorPromotionSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMaterialEditorPromotionSettings::StaticStruct()

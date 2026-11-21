@@ -15,7 +15,7 @@ struct alignas(8) FFortBadgeScoringData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3740 (end 0x00FA3792, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA3740 (end 0x00FA3792, chained .pdata fragments)
 // Original VA: 0x0000000140FA3740 | File offset: 0x00FA2D40
 // Recovery: confirmed (TEXT("FortBadgeScoringData") and Z_Construct_UScriptStruct_FFortBadgeScoringData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortBadgeScoringData::StaticStruct()

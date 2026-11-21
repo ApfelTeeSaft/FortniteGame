@@ -14,7 +14,7 @@ struct alignas(8) FConsumeEffectData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB200 (end 0x00FCB252, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB200 (end 0x00FCB252, chained .pdata fragments)
 // Original VA: 0x0000000140FCB200 | File offset: 0x00FCA800
 // Recovery: confirmed (TEXT("ConsumeEffectData") and Z_Construct_UScriptStruct_FConsumeEffectData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FConsumeEffectData::StaticStruct()

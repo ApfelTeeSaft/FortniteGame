@@ -14,7 +14,7 @@ struct alignas(4) FFortHighlightColors
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0C70 (end 0x00FE0CC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0C70 (end 0x00FE0CC2, chained .pdata fragments)
 // Original VA: 0x0000000140FE0C70 | File offset: 0x00FE0270
 // Recovery: confirmed (TEXT("FortHighlightColors") and Z_Construct_UScriptStruct_FFortHighlightColors) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortHighlightColors::StaticStruct()

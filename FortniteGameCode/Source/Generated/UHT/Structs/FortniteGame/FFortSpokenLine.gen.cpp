@@ -14,7 +14,7 @@ struct alignas(8) FFortSpokenLine
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDB450 (end 0x00FDB4A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDB450 (end 0x00FDB4A2, chained .pdata fragments)
 // Original VA: 0x0000000140FDB450 | File offset: 0x00FDAA50
 // Recovery: confirmed (TEXT("FortSpokenLine") and Z_Construct_UScriptStruct_FFortSpokenLine) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSpokenLine::StaticStruct()

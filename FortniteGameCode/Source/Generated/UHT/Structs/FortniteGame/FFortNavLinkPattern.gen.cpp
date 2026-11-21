@@ -14,7 +14,7 @@ struct alignas(4) FFortNavLinkPattern
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98E10 (end 0x00F98E62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98E10 (end 0x00F98E62, chained .pdata fragments)
 // Original VA: 0x0000000140F98E10 | File offset: 0x00F98410
 // Recovery: confirmed (TEXT("FortNavLinkPattern") and Z_Construct_UScriptStruct_FFortNavLinkPattern) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortNavLinkPattern::StaticStruct()

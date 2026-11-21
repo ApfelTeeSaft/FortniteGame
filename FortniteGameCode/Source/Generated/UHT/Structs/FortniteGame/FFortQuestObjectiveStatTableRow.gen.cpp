@@ -15,7 +15,7 @@ struct alignas(8) FFortQuestObjectiveStatTableRow
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xD8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D510 (end 0x0109D562, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D510 (end 0x0109D562, chained .pdata fragments)
 // Original VA: 0x000000014109D510 | File offset: 0x0109CB10
 // Recovery: confirmed (TEXT("FortQuestObjectiveStatTableRow") and Z_Construct_UScriptStruct_FFortQuestObjectiveStatTableRow) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortQuestObjectiveStatTableRow::StaticStruct()

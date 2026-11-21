@@ -14,7 +14,7 @@ struct alignas(8) FDataTableRowHandleQuantityPair
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9710 (end 0x010C9762, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9710 (end 0x010C9762, chained .pdata fragments)
 // Original VA: 0x00000001410C9710 | File offset: 0x010C8D10
 // Recovery: confirmed (TEXT("DataTableRowHandleQuantityPair") and Z_Construct_UScriptStruct_FDataTableRowHandleQuantityPair) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDataTableRowHandleQuantityPair::StaticStruct()

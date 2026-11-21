@@ -14,7 +14,7 @@ struct alignas(8) FReplicatedStaticActorDestructionInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02470130 (end 0x02470182, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02470130 (end 0x02470182, chained .pdata fragments)
 // Original VA: 0x0000000142470130 | File offset: 0x0246F730
 // Recovery: confirmed (TEXT("ReplicatedStaticActorDestructionInfo") and Z_Construct_UScriptStruct_FReplicatedStaticActorDestructionInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FReplicatedStaticActorDestructionInfo::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FBuildPromotionImportWorkflowSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x150];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA950 (end 0x023DA9A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA950 (end 0x023DA9A2, chained .pdata fragments)
 // Original VA: 0x00000001423DA950 | File offset: 0x023D9F50
 // Recovery: confirmed (TEXT("BuildPromotionImportWorkflowSettings") and Z_Construct_UScriptStruct_FBuildPromotionImportWorkflowSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBuildPromotionImportWorkflowSettings::StaticStruct()

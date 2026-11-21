@@ -14,7 +14,7 @@ struct alignas(4) FWidgetTransform
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07C50 (end 0x01C07CA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07C50 (end 0x01C07CA2, chained .pdata fragments)
 // Original VA: 0x0000000141C07C50 | File offset: 0x01C07250
 // Recovery: confirmed (TEXT("WidgetTransform") and Z_Construct_UScriptStruct_FWidgetTransform) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FWidgetTransform::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FEncounterGoalSelectionTableEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90E40 (end 0x00F90E92, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90E40 (end 0x00F90E92, chained .pdata fragments)
 // Original VA: 0x0000000140F90E40 | File offset: 0x00F90440
 // Recovery: confirmed (TEXT("EncounterGoalSelectionTableEntry") and Z_Construct_UScriptStruct_FEncounterGoalSelectionTableEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FEncounterGoalSelectionTableEntry::StaticStruct()

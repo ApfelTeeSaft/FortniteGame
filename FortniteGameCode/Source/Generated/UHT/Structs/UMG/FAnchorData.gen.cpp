@@ -14,7 +14,7 @@ struct alignas(4) FAnchorData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5DC0 (end 0x01BE5E12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5DC0 (end 0x01BE5E12, chained .pdata fragments)
 // Original VA: 0x0000000141BE5DC0 | File offset: 0x01BE53C0
 // Recovery: confirmed (TEXT("AnchorData") and Z_Construct_UScriptStruct_FAnchorData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnchorData::StaticStruct()

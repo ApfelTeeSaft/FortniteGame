@@ -15,7 +15,7 @@ struct alignas(8) FTeamSpottedActorInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B3640 (end 0x010B3692, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B3640 (end 0x010B3692, chained .pdata fragments)
 // Original VA: 0x00000001410B3640 | File offset: 0x010B2C40
 // Recovery: confirmed (TEXT("TeamSpottedActorInfo") and Z_Construct_UScriptStruct_FTeamSpottedActorInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTeamSpottedActorInfo::StaticStruct()

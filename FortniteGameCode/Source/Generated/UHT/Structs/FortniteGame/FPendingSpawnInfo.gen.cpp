@@ -14,7 +14,7 @@ struct alignas(8) FPendingSpawnInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x160];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87AE0 (end 0x00F87B32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87AE0 (end 0x00F87B32, chained .pdata fragments)
 // Original VA: 0x0000000140F87AE0 | File offset: 0x00F870E0
 // Recovery: confirmed (TEXT("PendingSpawnInfo") and Z_Construct_UScriptStruct_FPendingSpawnInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPendingSpawnInfo::StaticStruct()

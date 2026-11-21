@@ -15,7 +15,7 @@ struct alignas(8) FComponentSpacePoseLink
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CE180 (end 0x023CE1D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CE180 (end 0x023CE1D2, chained .pdata fragments)
 // Original VA: 0x00000001423CE180 | File offset: 0x023CD780
 // Recovery: confirmed (TEXT("ComponentSpacePoseLink") and Z_Construct_UScriptStruct_FComponentSpacePoseLink) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FComponentSpacePoseLink::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FBeamTargetData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E0E0 (end 0x0249E132, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E0E0 (end 0x0249E132, chained .pdata fragments)
 // Original VA: 0x000000014249E0E0 | File offset: 0x0249D6E0
 // Recovery: confirmed (TEXT("BeamTargetData") and Z_Construct_UScriptStruct_FBeamTargetData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBeamTargetData::StaticStruct()

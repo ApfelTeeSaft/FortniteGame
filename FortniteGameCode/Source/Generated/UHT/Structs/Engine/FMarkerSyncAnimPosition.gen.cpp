@@ -14,7 +14,7 @@ struct alignas(8) FMarkerSyncAnimPosition
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8100 (end 0x023C8152, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C8100 (end 0x023C8152, chained .pdata fragments)
 // Original VA: 0x00000001423C8100 | File offset: 0x023C7700
 // Recovery: confirmed (TEXT("MarkerSyncAnimPosition") and Z_Construct_UScriptStruct_FMarkerSyncAnimPosition) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMarkerSyncAnimPosition::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FDynamicPropertyPath
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5E20 (end 0x01BE5E72, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5E20 (end 0x01BE5E72, chained .pdata fragments)
 // Original VA: 0x0000000141BE5E20 | File offset: 0x01BE5420
 // Recovery: confirmed (TEXT("DynamicPropertyPath") and Z_Construct_UScriptStruct_FDynamicPropertyPath) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDynamicPropertyPath::StaticStruct()

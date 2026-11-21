@@ -14,7 +14,7 @@ struct alignas(8) FFortQuestMissionCreationContext
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D450 (end 0x0109D4A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D450 (end 0x0109D4A2, chained .pdata fragments)
 // Original VA: 0x000000014109D450 | File offset: 0x0109CA50
 // Recovery: confirmed (TEXT("FortQuestMissionCreationContext") and Z_Construct_UScriptStruct_FFortQuestMissionCreationContext) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortQuestMissionCreationContext::StaticStruct()

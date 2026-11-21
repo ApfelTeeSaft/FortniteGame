@@ -14,7 +14,7 @@ struct alignas(8) FPlatformSupportDesc
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED190 (end 0x028ED1E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028ED190 (end 0x028ED1E2, chained .pdata fragments)
 // Original VA: 0x00000001428ED190 | File offset: 0x028EC790
 // Recovery: confirmed (TEXT("PlatformSupportDesc") and Z_Construct_UScriptStruct_FPlatformSupportDesc) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPlatformSupportDesc::StaticStruct()

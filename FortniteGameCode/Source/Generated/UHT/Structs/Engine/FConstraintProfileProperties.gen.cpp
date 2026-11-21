@@ -14,7 +14,7 @@ struct alignas(4) FConstraintProfileProperties
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x104];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7480 (end 0x023F74D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7480 (end 0x023F74D2, chained .pdata fragments)
 // Original VA: 0x00000001423F7480 | File offset: 0x023F6A80
 // Recovery: confirmed (TEXT("ConstraintProfileProperties") and Z_Construct_UScriptStruct_FConstraintProfileProperties) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FConstraintProfileProperties::StaticStruct()

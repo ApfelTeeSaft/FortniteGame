@@ -14,7 +14,7 @@ struct alignas(8) FNamedEmitterMaterial
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E2C0 (end 0x0249E312, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E2C0 (end 0x0249E312, chained .pdata fragments)
 // Original VA: 0x000000014249E2C0 | File offset: 0x0249D8C0
 // Recovery: confirmed (TEXT("NamedEmitterMaterial") and Z_Construct_UScriptStruct_FNamedEmitterMaterial) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FNamedEmitterMaterial::StaticStruct()

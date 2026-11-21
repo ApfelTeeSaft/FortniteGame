@@ -14,7 +14,7 @@ struct alignas(8) FAssetAttachment
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105DAF0 (end 0x0105DB42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105DAF0 (end 0x0105DB42, chained .pdata fragments)
 // Original VA: 0x000000014105DAF0 | File offset: 0x0105D0F0
 // Recovery: confirmed (TEXT("AssetAttachment") and Z_Construct_UScriptStruct_FAssetAttachment) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAssetAttachment::StaticStruct()

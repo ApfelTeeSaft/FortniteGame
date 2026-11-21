@@ -14,7 +14,7 @@ struct alignas(8) FPawnActionEvent
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31BC0 (end 0x01D31C12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31BC0 (end 0x01D31C12, chained .pdata fragments)
 // Original VA: 0x0000000141D31BC0 | File offset: 0x01D311C0
 // Recovery: confirmed (TEXT("PawnActionEvent") and Z_Construct_UScriptStruct_FPawnActionEvent) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPawnActionEvent::StaticStruct()

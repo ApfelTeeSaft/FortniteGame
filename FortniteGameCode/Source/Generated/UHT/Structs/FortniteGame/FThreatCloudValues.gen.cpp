@@ -14,7 +14,7 @@ struct alignas(4) FThreatCloudValues
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xA0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDEB0 (end 0x010BDF02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDEB0 (end 0x010BDF02, chained .pdata fragments)
 // Original VA: 0x00000001410BDEB0 | File offset: 0x010BD4B0
 // Recovery: confirmed (TEXT("ThreatCloudValues") and Z_Construct_UScriptStruct_FThreatCloudValues) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FThreatCloudValues::StaticStruct()

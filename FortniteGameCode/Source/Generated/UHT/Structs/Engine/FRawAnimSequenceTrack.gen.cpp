@@ -14,7 +14,7 @@ struct alignas(8) FRawAnimSequenceTrack
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D61E0 (end 0x023D6232, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D61E0 (end 0x023D6232, chained .pdata fragments)
 // Original VA: 0x00000001423D61E0 | File offset: 0x023D57E0
 // Recovery: confirmed (TEXT("RawAnimSequenceTrack") and Z_Construct_UScriptStruct_FRawAnimSequenceTrack) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRawAnimSequenceTrack::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortGlobalWindInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC310 (end 0x010DC362, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC310 (end 0x010DC362, chained .pdata fragments)
 // Original VA: 0x00000001410DC310 | File offset: 0x010DB910
 // Recovery: confirmed (TEXT("FortGlobalWindInfo") and Z_Construct_UScriptStruct_FFortGlobalWindInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortGlobalWindInfo::StaticStruct()

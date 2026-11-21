@@ -14,7 +14,7 @@ struct alignas(8) FFortAthenaLoadout
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x78];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9EA80 (end 0x00F9EAD2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9EA80 (end 0x00F9EAD2, chained .pdata fragments)
 // Original VA: 0x0000000140F9EA80 | File offset: 0x00F9E080
 // Recovery: confirmed (TEXT("FortAthenaLoadout") and Z_Construct_UScriptStruct_FFortAthenaLoadout) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAthenaLoadout::StaticStruct()

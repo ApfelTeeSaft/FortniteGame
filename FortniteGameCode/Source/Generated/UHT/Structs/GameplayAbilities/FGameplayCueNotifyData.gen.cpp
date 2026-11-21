@@ -14,7 +14,7 @@ struct alignas(8) FGameplayCueNotifyData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x005638D0 (end 0x00563922, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005638D0 (end 0x00563922, chained .pdata fragments)
 // Original VA: 0x00000001405638D0 | File offset: 0x00562ED0
 // Recovery: confirmed (TEXT("GameplayCueNotifyData") and Z_Construct_UScriptStruct_FGameplayCueNotifyData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayCueNotifyData::StaticStruct()

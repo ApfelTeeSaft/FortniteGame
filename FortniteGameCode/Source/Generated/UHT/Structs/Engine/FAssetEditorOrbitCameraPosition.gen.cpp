@@ -14,7 +14,7 @@ struct alignas(4) FAssetEditorOrbitCameraPosition
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E70D0 (end 0x024E7122, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E70D0 (end 0x024E7122, chained .pdata fragments)
 // Original VA: 0x00000001424E70D0 | File offset: 0x024E66D0
 // Recovery: confirmed (TEXT("AssetEditorOrbitCameraPosition") and Z_Construct_UScriptStruct_FAssetEditorOrbitCameraPosition) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAssetEditorOrbitCameraPosition::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortAnimInput_AdjustedAim
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x130];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98A50 (end 0x00F98AA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98A50 (end 0x00F98AA2, chained .pdata fragments)
 // Original VA: 0x0000000140F98A50 | File offset: 0x00F98050
 // Recovery: confirmed (TEXT("FortAnimInput_AdjustedAim") and Z_Construct_UScriptStruct_FFortAnimInput_AdjustedAim) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAnimInput_AdjustedAim::StaticStruct()

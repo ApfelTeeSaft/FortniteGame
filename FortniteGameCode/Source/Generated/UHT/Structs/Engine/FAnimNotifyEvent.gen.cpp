@@ -15,7 +15,7 @@ struct alignas(8) FAnimNotifyEvent
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xA8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5A00 (end 0x023D5A52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5A00 (end 0x023D5A52, chained .pdata fragments)
 // Original VA: 0x00000001423D5A00 | File offset: 0x023D5000
 // Recovery: confirmed (TEXT("AnimNotifyEvent") and Z_Construct_UScriptStruct_FAnimNotifyEvent) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimNotifyEvent::StaticStruct()

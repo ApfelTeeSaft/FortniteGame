@@ -14,7 +14,7 @@ struct alignas(8) FReferencePose
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D48F0 (end 0x024D4942, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D48F0 (end 0x024D4942, chained .pdata fragments)
 // Original VA: 0x00000001424D48F0 | File offset: 0x024D3EF0
 // Recovery: confirmed (TEXT("ReferencePose") and Z_Construct_UScriptStruct_FReferencePose) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FReferencePose::StaticStruct()

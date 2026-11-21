@@ -14,7 +14,7 @@ struct alignas(16) FGPUSpriteEmitterInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x2C0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E140 (end 0x0249E192, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E140 (end 0x0249E192, chained .pdata fragments)
 // Original VA: 0x000000014249E140 | File offset: 0x0249D740
 // Recovery: confirmed (TEXT("GPUSpriteEmitterInfo") and Z_Construct_UScriptStruct_FGPUSpriteEmitterInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGPUSpriteEmitterInfo::StaticStruct()

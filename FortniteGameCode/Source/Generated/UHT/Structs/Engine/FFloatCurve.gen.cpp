@@ -15,7 +15,7 @@ struct alignas(8) FFloatCurve
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x90];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7FE0 (end 0x023C8032, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7FE0 (end 0x023C8032, chained .pdata fragments)
 // Original VA: 0x00000001423C7FE0 | File offset: 0x023C75E0
 // Recovery: confirmed (TEXT("FloatCurve") and Z_Construct_UScriptStruct_FFloatCurve) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFloatCurve::StaticStruct()

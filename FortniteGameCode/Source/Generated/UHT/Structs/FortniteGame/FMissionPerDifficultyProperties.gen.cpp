@@ -14,7 +14,7 @@ struct alignas(8) FMissionPerDifficultyProperties
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x68];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01041310 (end 0x01041362, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01041310 (end 0x01041362, chained .pdata fragments)
 // Original VA: 0x0000000141041310 | File offset: 0x01040910
 // Recovery: confirmed (TEXT("MissionPerDifficultyProperties") and Z_Construct_UScriptStruct_FMissionPerDifficultyProperties) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMissionPerDifficultyProperties::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FMaterialRemapIndex
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7130 (end 0x024E7182, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7130 (end 0x024E7182, chained .pdata fragments)
 // Original VA: 0x00000001424E7130 | File offset: 0x024E6730
 // Recovery: confirmed (TEXT("MaterialRemapIndex") and Z_Construct_UScriptStruct_FMaterialRemapIndex) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMaterialRemapIndex::StaticStruct()

@@ -5,6 +5,8 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/MRMesh.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Structs/MRMesh/FMRMeshConfiguration.gen.cpp"
 #include "../UMeshReconstructorBase.gen.cpp"
 #include "../Classes/MRMesh/UMeshReconstructorBase.gen.cpp"
 #include "../UMRMeshComponent.gen.cpp"

@@ -14,7 +14,7 @@ struct alignas(8) FDropNoteInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024045A0 (end 0x024045F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024045A0 (end 0x024045F2, chained .pdata fragments)
 // Original VA: 0x00000001424045A0 | File offset: 0x02403BA0
 // Recovery: confirmed (TEXT("DropNoteInfo") and Z_Construct_UScriptStruct_FDropNoteInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDropNoteInfo::StaticStruct()

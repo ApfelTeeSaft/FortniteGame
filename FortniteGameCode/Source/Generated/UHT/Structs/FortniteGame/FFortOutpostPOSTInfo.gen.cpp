@@ -14,7 +14,7 @@ struct alignas(8) FFortOutpostPOSTInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01055EA0 (end 0x01055EF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01055EA0 (end 0x01055EF2, chained .pdata fragments)
 // Original VA: 0x0000000141055EA0 | File offset: 0x010554A0
 // Recovery: confirmed (TEXT("FortOutpostPOSTInfo") and Z_Construct_UScriptStruct_FFortOutpostPOSTInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortOutpostPOSTInfo::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FTextSizingParameters
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EDF70 (end 0x023EDFC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EDF70 (end 0x023EDFC2, chained .pdata fragments)
 // Original VA: 0x00000001423EDF70 | File offset: 0x023ED570
 // Recovery: confirmed (TEXT("TextSizingParameters") and Z_Construct_UScriptStruct_FTextSizingParameters) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTextSizingParameters::StaticStruct()

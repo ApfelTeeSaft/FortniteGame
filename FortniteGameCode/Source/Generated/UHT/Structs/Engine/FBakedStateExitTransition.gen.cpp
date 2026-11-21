@@ -14,7 +14,7 @@ struct alignas(8) FBakedStateExitTransition
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5F40 (end 0x023D5F92, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5F40 (end 0x023D5F92, chained .pdata fragments)
 // Original VA: 0x00000001423D5F40 | File offset: 0x023D5540
 // Recovery: confirmed (TEXT("BakedStateExitTransition") and Z_Construct_UScriptStruct_FBakedStateExitTransition) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBakedStateExitTransition::StaticStruct()

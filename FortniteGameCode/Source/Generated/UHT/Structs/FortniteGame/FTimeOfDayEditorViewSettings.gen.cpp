@@ -14,7 +14,7 @@ struct alignas(1) FTimeOfDayEditorViewSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE0F0 (end 0x010BE142, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BE0F0 (end 0x010BE142, chained .pdata fragments)
 // Original VA: 0x00000001410BE0F0 | File offset: 0x010BD6F0
 // Recovery: confirmed (TEXT("TimeOfDayEditorViewSettings") and Z_Construct_UScriptStruct_FTimeOfDayEditorViewSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTimeOfDayEditorViewSettings::StaticStruct()

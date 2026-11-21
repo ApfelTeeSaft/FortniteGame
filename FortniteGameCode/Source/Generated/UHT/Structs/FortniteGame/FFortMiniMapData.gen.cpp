@@ -14,7 +14,7 @@ struct alignas(8) FFortMiniMapData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x80];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037930 (end 0x01037982, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037930 (end 0x01037982, chained .pdata fragments)
 // Original VA: 0x0000000141037930 | File offset: 0x01036F30
 // Recovery: confirmed (TEXT("FortMiniMapData") and Z_Construct_UScriptStruct_FFortMiniMapData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortMiniMapData::StaticStruct()

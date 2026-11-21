@@ -14,7 +14,7 @@ struct alignas(8) FBoneReductionSetting
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D47D0 (end 0x024D4822, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D47D0 (end 0x024D4822, chained .pdata fragments)
 // Original VA: 0x00000001424D47D0 | File offset: 0x024D3DD0
 // Recovery: confirmed (TEXT("BoneReductionSetting") and Z_Construct_UScriptStruct_FBoneReductionSetting) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBoneReductionSetting::StaticStruct()

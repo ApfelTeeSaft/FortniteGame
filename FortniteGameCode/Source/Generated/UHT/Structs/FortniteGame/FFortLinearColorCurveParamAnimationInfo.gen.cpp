@@ -15,7 +15,7 @@ struct alignas(8) FFortLinearColorCurveParamAnimationInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDB1B0 (end 0x00FDB202, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDB1B0 (end 0x00FDB202, chained .pdata fragments)
 // Original VA: 0x0000000140FDB1B0 | File offset: 0x00FDA7B0
 // Recovery: confirmed (TEXT("FortLinearColorCurveParamAnimationInfo") and Z_Construct_UScriptStruct_FFortLinearColorCurveParamAnimationInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortLinearColorCurveParamAnimationInfo::StaticStruct()

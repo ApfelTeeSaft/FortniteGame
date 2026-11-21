@@ -14,7 +14,7 @@ struct alignas(4) FFortAIEncounterWaveProgressEstimation
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C010 (end 0x00F8C062, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C010 (end 0x00F8C062, chained .pdata fragments)
 // Original VA: 0x0000000140F8C010 | File offset: 0x00F8B610
 // Recovery: confirmed (TEXT("FortAIEncounterWaveProgressEstimation") and Z_Construct_UScriptStruct_FFortAIEncounterWaveProgressEstimation) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIEncounterWaveProgressEstimation::StaticStruct()

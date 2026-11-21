@@ -14,7 +14,7 @@ struct alignas(8) FFriendCodeLocString
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010238E0 (end 0x01023932, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010238E0 (end 0x01023932, chained .pdata fragments)
 // Original VA: 0x00000001410238E0 | File offset: 0x01022EE0
 // Recovery: confirmed (TEXT("FriendCodeLocString") and Z_Construct_UScriptStruct_FFriendCodeLocString) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFriendCodeLocString::StaticStruct()

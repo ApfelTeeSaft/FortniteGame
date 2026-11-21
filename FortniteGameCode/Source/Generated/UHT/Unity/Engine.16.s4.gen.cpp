@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/ETrailsRenderAxisOption.static.gen.cpp"
+#include "../Enums/Engine/ENavLinkDirection.static.gen.cpp"

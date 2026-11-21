@@ -14,7 +14,7 @@ struct alignas(4) FClimbLinkData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78130 (end 0x00F78182, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78130 (end 0x00F78182, chained .pdata fragments)
 // Original VA: 0x0000000140F78130 | File offset: 0x00F77730
 // Recovery: confirmed (TEXT("ClimbLinkData") and Z_Construct_UScriptStruct_FClimbLinkData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FClimbLinkData::StaticStruct()

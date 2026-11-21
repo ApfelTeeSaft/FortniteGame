@@ -14,7 +14,7 @@ struct alignas(4) FLinearDriveConstraint
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7660 (end 0x023F76B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7660 (end 0x023F76B2, chained .pdata fragments)
 // Original VA: 0x00000001423F7660 | File offset: 0x023F6C60
 // Recovery: confirmed (TEXT("LinearDriveConstraint") and Z_Construct_UScriptStruct_FLinearDriveConstraint) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FLinearDriveConstraint::StaticStruct()

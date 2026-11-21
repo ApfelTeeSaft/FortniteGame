@@ -14,7 +14,7 @@ struct alignas(8) FCachedAnimRelevancyData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA1B0 (end 0x023EA202, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA1B0 (end 0x023EA202, chained .pdata fragments)
 // Original VA: 0x00000001423EA1B0 | File offset: 0x023E97B0
 // Recovery: confirmed (TEXT("CachedAnimRelevancyData") and Z_Construct_UScriptStruct_FCachedAnimRelevancyData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCachedAnimRelevancyData::StaticStruct()

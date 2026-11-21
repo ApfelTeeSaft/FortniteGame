@@ -14,7 +14,7 @@ struct alignas(4) FFortItemCard_DurabilityMeter_Configuration
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C0F70 (end 0x028C0FC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C0F70 (end 0x028C0FC2, chained .pdata fragments)
 // Original VA: 0x00000001428C0F70 | File offset: 0x028C0570
 // Recovery: confirmed (TEXT("FortItemCard_DurabilityMeter_Configuration") and Z_Construct_UScriptStruct_FFortItemCard_DurabilityMeter_Configuration) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortItemCard_DurabilityMeter_Configuration::StaticStruct()

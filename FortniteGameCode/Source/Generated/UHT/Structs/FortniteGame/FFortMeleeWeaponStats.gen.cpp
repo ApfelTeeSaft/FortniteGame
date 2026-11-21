@@ -15,7 +15,7 @@ struct alignas(8) FFortMeleeWeaponStats
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x148];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D89E0 (end 0x010D8A32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D89E0 (end 0x010D8A32, chained .pdata fragments)
 // Original VA: 0x00000001410D89E0 | File offset: 0x010D7FE0
 // Recovery: confirmed (TEXT("FortMeleeWeaponStats") and Z_Construct_UScriptStruct_FFortMeleeWeaponStats) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortMeleeWeaponStats::StaticStruct()

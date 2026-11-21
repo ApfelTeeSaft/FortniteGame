@@ -14,7 +14,7 @@ struct alignas(8) FCustomProfile
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7540 (end 0x023F7592, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7540 (end 0x023F7592, chained .pdata fragments)
 // Original VA: 0x00000001423F7540 | File offset: 0x023F6B40
 // Recovery: confirmed (TEXT("CustomProfile") and Z_Construct_UScriptStruct_FCustomProfile) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCustomProfile::StaticStruct()

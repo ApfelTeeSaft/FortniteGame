@@ -14,7 +14,7 @@ struct alignas(8) FSkeletalMeshSamplingRegionMaterialFilter
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4D70 (end 0x024D4DC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4D70 (end 0x024D4DC2, chained .pdata fragments)
 // Original VA: 0x00000001424D4D70 | File offset: 0x024D4370
 // Recovery: confirmed (TEXT("SkeletalMeshSamplingRegionMaterialFilter") and Z_Construct_UScriptStruct_FSkeletalMeshSamplingRegionMaterialFilter) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSkeletalMeshSamplingRegionMaterialFilter::StaticStruct()

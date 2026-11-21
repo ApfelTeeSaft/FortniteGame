@@ -15,7 +15,7 @@ struct alignas(8) FScoreMultiplierRow
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x88];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0EB0 (end 0x00FE0F02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0EB0 (end 0x00FE0F02, chained .pdata fragments)
 // Original VA: 0x0000000140FE0EB0 | File offset: 0x00FE04B0
 // Recovery: confirmed (TEXT("ScoreMultiplierRow") and Z_Construct_UScriptStruct_FScoreMultiplierRow) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FScoreMultiplierRow::StaticStruct()

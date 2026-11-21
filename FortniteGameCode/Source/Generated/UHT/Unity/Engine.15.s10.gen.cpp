@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/BeamModifierType.static.gen.cpp"
+#include "../Enums/Engine/EFunctionInputType.static.gen.cpp"

@@ -14,7 +14,7 @@ struct alignas(8) FConditionalGameplayEffect
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563810 (end 0x00563862, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563810 (end 0x00563862, chained .pdata fragments)
 // Original VA: 0x0000000140563810 | File offset: 0x00562E10
 // Recovery: confirmed (TEXT("ConditionalGameplayEffect") and Z_Construct_UScriptStruct_FConditionalGameplayEffect) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FConditionalGameplayEffect::StaticStruct()

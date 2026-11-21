@@ -14,7 +14,7 @@ struct alignas(8) FWorldTileSubArray
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E2EF0 (end 0x010E2F42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E2EF0 (end 0x010E2F42, chained .pdata fragments)
 // Original VA: 0x00000001410E2EF0 | File offset: 0x010E24F0
 // Recovery: confirmed (TEXT("WorldTileSubArray") and Z_Construct_UScriptStruct_FWorldTileSubArray) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FWorldTileSubArray::StaticStruct()

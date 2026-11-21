@@ -14,7 +14,7 @@ struct alignas(8) FFortMcpQuestRewardInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01096110 (end 0x01096162, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01096110 (end 0x01096162, chained .pdata fragments)
 // Original VA: 0x0000000141096110 | File offset: 0x01095710
 // Recovery: confirmed (TEXT("FortMcpQuestRewardInfo") and Z_Construct_UScriptStruct_FFortMcpQuestRewardInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortMcpQuestRewardInfo::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(16) FDecoPlacementState
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x80];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB260 (end 0x00FCB2B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCB260 (end 0x00FCB2B2, chained .pdata fragments)
 // Original VA: 0x0000000140FCB260 | File offset: 0x00FCA860
 // Recovery: confirmed (TEXT("DecoPlacementState") and Z_Construct_UScriptStruct_FDecoPlacementState) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDecoPlacementState::StaticStruct()

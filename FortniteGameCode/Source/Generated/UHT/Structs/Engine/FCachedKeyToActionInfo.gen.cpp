@@ -14,7 +14,7 @@ struct alignas(8) FCachedKeyToActionInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427800 (end 0x02427852, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427800 (end 0x02427852, chained .pdata fragments)
 // Original VA: 0x0000000142427800 | File offset: 0x02426E00
 // Recovery: confirmed (TEXT("CachedKeyToActionInfo") and Z_Construct_UScriptStruct_FCachedKeyToActionInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCachedKeyToActionInfo::StaticStruct()

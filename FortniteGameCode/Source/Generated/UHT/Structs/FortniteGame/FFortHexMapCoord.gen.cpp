@@ -14,7 +14,7 @@ struct alignas(4) FFortHexMapCoord
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA5F0 (end 0x00FFA642, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA5F0 (end 0x00FFA642, chained .pdata fragments)
 // Original VA: 0x0000000140FFA5F0 | File offset: 0x00FF9BF0
 // Recovery: confirmed (TEXT("FortHexMapCoord") and Z_Construct_UScriptStruct_FFortHexMapCoord) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortHexMapCoord::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortTaggedActorOctreeFilter
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x68];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B31C0 (end 0x010B3212, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B31C0 (end 0x010B3212, chained .pdata fragments)
 // Original VA: 0x00000001410B31C0 | File offset: 0x010B27C0
 // Recovery: confirmed (TEXT("FortTaggedActorOctreeFilter") and Z_Construct_UScriptStruct_FFortTaggedActorOctreeFilter) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortTaggedActorOctreeFilter::StaticStruct()

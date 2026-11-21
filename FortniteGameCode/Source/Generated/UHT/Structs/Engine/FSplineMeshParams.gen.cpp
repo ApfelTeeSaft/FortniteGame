@@ -14,7 +14,7 @@ struct alignas(4) FSplineMeshParams
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD640 (end 0x024DD692, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD640 (end 0x024DD692, chained .pdata fragments)
 // Original VA: 0x00000001424DD640 | File offset: 0x024DCC40
 // Recovery: confirmed (TEXT("SplineMeshParams") and Z_Construct_UScriptStruct_FSplineMeshParams) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSplineMeshParams::StaticStruct()

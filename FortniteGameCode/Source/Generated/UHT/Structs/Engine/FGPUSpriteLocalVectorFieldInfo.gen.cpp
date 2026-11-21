@@ -14,7 +14,7 @@ struct alignas(16) FGPUSpriteLocalVectorFieldInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x70];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E1A0 (end 0x0249E1F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E1A0 (end 0x0249E1F2, chained .pdata fragments)
 // Original VA: 0x000000014249E1A0 | File offset: 0x0249D7A0
 // Recovery: confirmed (TEXT("GPUSpriteLocalVectorFieldInfo") and Z_Construct_UScriptStruct_FGPUSpriteLocalVectorFieldInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGPUSpriteLocalVectorFieldInfo::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(16) FTViewTarget
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x590];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9B70 (end 0x024A9BC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9B70 (end 0x024A9BC2, chained .pdata fragments)
 // Original VA: 0x00000001424A9B70 | File offset: 0x024A9170
 // Recovery: confirmed (TEXT("TViewTarget") and Z_Construct_UScriptStruct_FTViewTarget) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTViewTarget::StaticStruct()

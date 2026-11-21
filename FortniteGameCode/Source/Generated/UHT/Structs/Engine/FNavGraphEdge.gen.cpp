@@ -14,7 +14,7 @@ struct alignas(8) FNavGraphEdge
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248B270 (end 0x0248B2C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248B270 (end 0x0248B2C2, chained .pdata fragments)
 // Original VA: 0x000000014248B270 | File offset: 0x0248A870
 // Recovery: confirmed (TEXT("NavGraphEdge") and Z_Construct_UScriptStruct_FNavGraphEdge) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FNavGraphEdge::StaticStruct()

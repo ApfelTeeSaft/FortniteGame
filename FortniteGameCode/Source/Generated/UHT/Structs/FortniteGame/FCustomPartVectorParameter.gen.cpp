@@ -14,7 +14,7 @@ struct alignas(8) FCustomPartVectorParameter
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78310 (end 0x00F78362, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78310 (end 0x00F78362, chained .pdata fragments)
 // Original VA: 0x0000000140F78310 | File offset: 0x00F77910
 // Recovery: confirmed (TEXT("CustomPartVectorParameter") and Z_Construct_UScriptStruct_FCustomPartVectorParameter) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCustomPartVectorParameter::StaticStruct()

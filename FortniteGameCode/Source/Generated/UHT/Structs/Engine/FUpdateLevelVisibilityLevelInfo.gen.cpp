@@ -14,7 +14,7 @@ struct alignas(8) FUpdateLevelVisibilityLevelInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9C30 (end 0x024A9C82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9C30 (end 0x024A9C82, chained .pdata fragments)
 // Original VA: 0x00000001424A9C30 | File offset: 0x024A9230
 // Recovery: confirmed (TEXT("UpdateLevelVisibilityLevelInfo") and Z_Construct_UScriptStruct_FUpdateLevelVisibilityLevelInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FUpdateLevelVisibilityLevelInfo::StaticStruct()

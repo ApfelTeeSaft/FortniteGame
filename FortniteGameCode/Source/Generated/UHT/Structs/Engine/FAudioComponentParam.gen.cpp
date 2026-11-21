@@ -14,7 +14,7 @@ struct alignas(8) FAudioComponentParam
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA7D0 (end 0x023DA822, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DA7D0 (end 0x023DA822, chained .pdata fragments)
 // Original VA: 0x00000001423DA7D0 | File offset: 0x023D9DD0
 // Recovery: confirmed (TEXT("AudioComponentParam") and Z_Construct_UScriptStruct_FAudioComponentParam) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAudioComponentParam::StaticStruct()

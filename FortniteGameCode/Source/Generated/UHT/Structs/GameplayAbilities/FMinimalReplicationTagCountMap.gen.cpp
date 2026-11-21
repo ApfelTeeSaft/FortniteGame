@@ -14,7 +14,7 @@ struct alignas(8) FMinimalReplicationTagCountMap
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564350 (end 0x005643A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564350 (end 0x005643A2, chained .pdata fragments)
 // Original VA: 0x0000000140564350 | File offset: 0x00563950
 // Recovery: confirmed (TEXT("MinimalReplicationTagCountMap") and Z_Construct_UScriptStruct_FMinimalReplicationTagCountMap) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMinimalReplicationTagCountMap::StaticStruct()

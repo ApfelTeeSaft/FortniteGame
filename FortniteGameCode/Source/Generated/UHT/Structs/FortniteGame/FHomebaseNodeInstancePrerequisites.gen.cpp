@@ -14,7 +14,7 @@ struct alignas(8) FHomebaseNodeInstancePrerequisites
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA8F0 (end 0x00FFA942, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA8F0 (end 0x00FFA942, chained .pdata fragments)
 // Original VA: 0x0000000140FFA8F0 | File offset: 0x00FF9EF0
 // Recovery: confirmed (TEXT("HomebaseNodeInstancePrerequisites") and Z_Construct_UScriptStruct_FHomebaseNodeInstancePrerequisites) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FHomebaseNodeInstancePrerequisites::StaticStruct()

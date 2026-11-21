@@ -14,7 +14,7 @@ struct alignas(4) FBuildingNavObstacle
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71AF0 (end 0x00F71B42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71AF0 (end 0x00F71B42, chained .pdata fragments)
 // Original VA: 0x0000000140F71AF0 | File offset: 0x00F710F0
 // Recovery: confirmed (TEXT("BuildingNavObstacle") and Z_Construct_UScriptStruct_FBuildingNavObstacle) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBuildingNavObstacle::StaticStruct()

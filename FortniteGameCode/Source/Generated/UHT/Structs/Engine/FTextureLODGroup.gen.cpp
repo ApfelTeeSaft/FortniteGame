@@ -14,7 +14,7 @@ struct alignas(8) FTextureLODGroup
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x48];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC740 (end 0x024EC792, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC740 (end 0x024EC792, chained .pdata fragments)
 // Original VA: 0x00000001424EC740 | File offset: 0x024EBD40
 // Recovery: confirmed (TEXT("TextureLODGroup") and Z_Construct_UScriptStruct_FTextureLODGroup) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTextureLODGroup::StaticStruct()

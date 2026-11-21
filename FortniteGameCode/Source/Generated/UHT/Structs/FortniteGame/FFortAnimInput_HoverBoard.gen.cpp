@@ -14,7 +14,7 @@ struct alignas(8) FFortAnimInput_HoverBoard
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98B10 (end 0x00F98B62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98B10 (end 0x00F98B62, chained .pdata fragments)
 // Original VA: 0x0000000140F98B10 | File offset: 0x00F98110
 // Recovery: confirmed (TEXT("FortAnimInput_HoverBoard") and Z_Construct_UScriptStruct_FFortAnimInput_HoverBoard) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAnimInput_HoverBoard::StaticStruct()

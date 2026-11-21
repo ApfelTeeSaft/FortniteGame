@@ -5,10 +5,15 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/Hotfix.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/Hotfix/EHotfixResult.static.gen.cpp"
 #include "../Enums/Hotfix/EHotfixResult.gen.cpp"
 #include "../UOnlineHotfixManager.gen.cpp"
 #include "../Classes/Hotfix/UOnlineHotfixManager.gen.cpp"
+#include "../Enums/Hotfix/EPatchCheckResult.static.gen.cpp"
 #include "../Enums/Hotfix/EPatchCheckResult.gen.cpp"
+#include "../Enums/Hotfix/EUpdateCompletionStatus.static.gen.cpp"
 #include "../Enums/Hotfix/EUpdateCompletionStatus.gen.cpp"
+#include "../Enums/Hotfix/EUpdateState.static.gen.cpp"
 #include "../Enums/Hotfix/EUpdateState.gen.cpp"
 #include "../Classes/Hotfix/UUpdateManager.gen.cpp"

@@ -14,7 +14,7 @@ struct alignas(8) FManagerSynergyData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFAB90 (end 0x00FFABE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFAB90 (end 0x00FFABE2, chained .pdata fragments)
 // Original VA: 0x0000000140FFAB90 | File offset: 0x00FFA190
 // Recovery: confirmed (TEXT("ManagerSynergyData") and Z_Construct_UScriptStruct_FManagerSynergyData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FManagerSynergyData::StaticStruct()

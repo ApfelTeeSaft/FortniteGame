@@ -14,7 +14,7 @@ struct alignas(8) FPredictProjectilePathResult
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xB8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241EF80 (end 0x0241EFD2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241EF80 (end 0x0241EFD2, chained .pdata fragments)
 // Original VA: 0x000000014241EF80 | File offset: 0x0241E580
 // Recovery: confirmed (TEXT("PredictProjectilePathResult") and Z_Construct_UScriptStruct_FPredictProjectilePathResult) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPredictProjectilePathResult::StaticStruct()

@@ -5,7 +5,13 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/AssetRegistry.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Structs/AssetRegistry/FARFilter.gen.cpp"
+#include "../Structs/AssetRegistry/FAssetBundleData.gen.cpp"
+#include "../Structs/AssetRegistry/FAssetBundleEntry.gen.cpp"
+#include "../Structs/AssetRegistry/FAssetData.gen.cpp"
 #include "../Classes/AssetRegistry/UAssetRegistryImpl.gen.cpp"
+#include "../Structs/AssetRegistry/FTagAndValue.gen.cpp"
 #include "../UAssetRegistryHelpers.gen.cpp"
 #include "../Classes/AssetRegistry/UAssetRegistryHelpers.gen.cpp"
 #include "../UAssetRegistry.gen.cpp"

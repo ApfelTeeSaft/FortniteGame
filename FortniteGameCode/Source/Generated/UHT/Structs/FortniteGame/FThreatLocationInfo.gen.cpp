@@ -15,7 +15,7 @@ struct alignas(8) FThreatLocationInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDFD0 (end 0x010BE022, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDFD0 (end 0x010BE022, chained .pdata fragments)
 // Original VA: 0x00000001410BDFD0 | File offset: 0x010BD5D0
 // Recovery: confirmed (TEXT("ThreatLocationInfo") and Z_Construct_UScriptStruct_FThreatLocationInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FThreatLocationInfo::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(4) FConstraintBaseParams
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7360 (end 0x023F73B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F7360 (end 0x023F73B2, chained .pdata fragments)
 // Original VA: 0x00000001423F7360 | File offset: 0x023F6960
 // Recovery: confirmed (TEXT("ConstraintBaseParams") and Z_Construct_UScriptStruct_FConstraintBaseParams) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FConstraintBaseParams::StaticStruct()

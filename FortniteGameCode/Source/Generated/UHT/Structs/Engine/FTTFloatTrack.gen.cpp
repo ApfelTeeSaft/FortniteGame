@@ -15,7 +15,7 @@ struct alignas(8) FTTFloatTrack
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC5C0 (end 0x024EC612, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC5C0 (end 0x024EC612, chained .pdata fragments)
 // Original VA: 0x00000001424EC5C0 | File offset: 0x024EBBC0
 // Recovery: confirmed (TEXT("TTFloatTrack") and Z_Construct_UScriptStruct_FTTFloatTrack) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTTFloatTrack::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(1) FParticleSystemLOD
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E320 (end 0x0249E372, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0249E320 (end 0x0249E372, chained .pdata fragments)
 // Original VA: 0x000000014249E320 | File offset: 0x0249D920
 // Recovery: confirmed (TEXT("ParticleSystemLOD") and Z_Construct_UScriptStruct_FParticleSystemLOD) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FParticleSystemLOD::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortUIPerk
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x98];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E67A0 (end 0x028E67F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E67A0 (end 0x028E67F2, chained .pdata fragments)
 // Original VA: 0x00000001428E67A0 | File offset: 0x028E5DA0
 // Recovery: confirmed (TEXT("FortUIPerk") and Z_Construct_UScriptStruct_FFortUIPerk) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortUIPerk::StaticStruct()

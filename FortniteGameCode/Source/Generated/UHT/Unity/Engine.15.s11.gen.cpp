@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EParticleCameraOffsetUpdateMethod.static.gen.cpp"
+#include "../Enums/Engine/ENoiseFunction.static.gen.cpp"

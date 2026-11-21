@@ -14,7 +14,7 @@ struct alignas(8) FPerBoneBlendWeights
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6180 (end 0x023D61D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6180 (end 0x023D61D2, chained .pdata fragments)
 // Original VA: 0x00000001423D6180 | File offset: 0x023D5780
 // Recovery: confirmed (TEXT("PerBoneBlendWeights") and Z_Construct_UScriptStruct_FPerBoneBlendWeights) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPerBoneBlendWeights::StaticStruct()

@@ -15,7 +15,7 @@ struct alignas(8) FFortIntensityCurve
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C1F0 (end 0x00F8C242, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8C1F0 (end 0x00F8C242, chained .pdata fragments)
 // Original VA: 0x0000000140F8C1F0 | File offset: 0x00F8B7F0
 // Recovery: confirmed (TEXT("FortIntensityCurve") and Z_Construct_UScriptStruct_FFortIntensityCurve) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortIntensityCurve::StaticStruct()

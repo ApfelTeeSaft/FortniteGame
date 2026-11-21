@@ -14,7 +14,7 @@ struct alignas(16) FPendingDeployableManagerAction
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x70];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFE70 (end 0x00FCFEC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFE70 (end 0x00FCFEC2, chained .pdata fragments)
 // Original VA: 0x0000000140FCFE70 | File offset: 0x00FCF470
 // Recovery: confirmed (TEXT("PendingDeployableManagerAction") and Z_Construct_UScriptStruct_FPendingDeployableManagerAction) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPendingDeployableManagerAction::StaticStruct()

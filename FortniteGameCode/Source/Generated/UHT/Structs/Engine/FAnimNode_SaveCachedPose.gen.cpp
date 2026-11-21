@@ -15,7 +15,7 @@ struct alignas(8) FAnimNode_SaveCachedPose
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xE0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CDD00 (end 0x023CDD52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CDD00 (end 0x023CDD52, chained .pdata fragments)
 // Original VA: 0x00000001423CDD00 | File offset: 0x023CD300
 // Recovery: confirmed (TEXT("AnimNode_SaveCachedPose") and Z_Construct_UScriptStruct_FAnimNode_SaveCachedPose) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimNode_SaveCachedPose::StaticStruct()

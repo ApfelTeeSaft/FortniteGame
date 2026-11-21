@@ -5,4 +5,7 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/AudioPlatformConfiguration.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/AudioPlatformConfiguration/ESoundwaveSampleRateSettings.static.gen.cpp"
 #include "../Enums/AudioPlatformConfiguration/ESoundwaveSampleRateSettings.gen.cpp"
+#include "../Structs/AudioPlatformConfiguration/FPlatformRuntimeAudioCompressionOverrides.gen.cpp"

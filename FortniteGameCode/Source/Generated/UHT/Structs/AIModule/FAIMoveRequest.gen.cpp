@@ -14,7 +14,7 @@ struct alignas(8) FAIMoveRequest
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22A40 (end 0x01D22A92, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22A40 (end 0x01D22A92, chained .pdata fragments)
 // Original VA: 0x0000000141D22A40 | File offset: 0x01D22040
 // Recovery: confirmed (TEXT("AIMoveRequest") and Z_Construct_UScriptStruct_FAIMoveRequest) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAIMoveRequest::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FMaterialParameterInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486300 (end 0x02486352, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486300 (end 0x02486352, chained .pdata fragments)
 // Original VA: 0x0000000142486300 | File offset: 0x02485900
 // Recovery: confirmed (TEXT("MaterialParameterInfo") and Z_Construct_UScriptStruct_FMaterialParameterInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMaterialParameterInfo::StaticStruct()

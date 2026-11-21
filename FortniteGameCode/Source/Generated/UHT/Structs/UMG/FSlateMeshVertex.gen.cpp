@@ -14,7 +14,7 @@ struct alignas(4) FSlateMeshVertex
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x3C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2E20 (end 0x01BF2E72, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2E20 (end 0x01BF2E72, chained .pdata fragments)
 // Original VA: 0x0000000141BF2E20 | File offset: 0x01BF2420
 // Recovery: confirmed (TEXT("SlateMeshVertex") and Z_Construct_UScriptStruct_FSlateMeshVertex) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSlateMeshVertex::StaticStruct()

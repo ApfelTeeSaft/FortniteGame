@@ -14,7 +14,7 @@ struct alignas(4) FInterpControlPoint
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242F0E0 (end 0x0242F132, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242F0E0 (end 0x0242F132, chained .pdata fragments)
 // Original VA: 0x000000014242F0E0 | File offset: 0x0242E6E0
 // Recovery: confirmed (TEXT("InterpControlPoint") and Z_Construct_UScriptStruct_FInterpControlPoint) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FInterpControlPoint::StaticStruct()

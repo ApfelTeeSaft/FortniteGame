@@ -14,7 +14,7 @@ struct alignas(8) FWindScalarMaterialInterpolationData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC790 (end 0x010DC7E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC790 (end 0x010DC7E2, chained .pdata fragments)
 // Original VA: 0x00000001410DC790 | File offset: 0x010DBD90
 // Recovery: confirmed (TEXT("WindScalarMaterialInterpolationData") and Z_Construct_UScriptStruct_FWindScalarMaterialInterpolationData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FWindScalarMaterialInterpolationData::StaticStruct()

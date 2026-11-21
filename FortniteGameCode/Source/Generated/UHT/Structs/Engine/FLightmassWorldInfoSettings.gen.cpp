@@ -14,7 +14,7 @@ struct alignas(4) FLightmassWorldInfoSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x54];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0870 (end 0x024F08C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F0870 (end 0x024F08C2, chained .pdata fragments)
 // Original VA: 0x00000001424F0870 | File offset: 0x024EFE70
 // Recovery: confirmed (TEXT("LightmassWorldInfoSettings") and Z_Construct_UScriptStruct_FLightmassWorldInfoSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FLightmassWorldInfoSettings::StaticStruct()

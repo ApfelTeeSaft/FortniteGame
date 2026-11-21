@@ -14,7 +14,7 @@ struct alignas(8) FFortPickupLocationData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010652C0 (end 0x01065312, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010652C0 (end 0x01065312, chained .pdata fragments)
 // Original VA: 0x00000001410652C0 | File offset: 0x010648C0
 // Recovery: confirmed (TEXT("FortPickupLocationData") and Z_Construct_UScriptStruct_FFortPickupLocationData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortPickupLocationData::StaticStruct()

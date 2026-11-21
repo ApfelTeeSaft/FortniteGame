@@ -14,7 +14,7 @@ struct alignas(4) FWorldReticleParameters
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055BBC0 (end 0x0055BC12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055BBC0 (end 0x0055BC12, chained .pdata fragments)
 // Original VA: 0x000000014055BBC0 | File offset: 0x0055B1C0
 // Recovery: confirmed (TEXT("WorldReticleParameters") and Z_Construct_UScriptStruct_FWorldReticleParameters) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FWorldReticleParameters::StaticStruct()

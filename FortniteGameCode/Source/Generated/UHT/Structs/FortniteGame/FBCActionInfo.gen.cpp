@@ -14,7 +14,7 @@ struct alignas(4) FBCActionInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4110 (end 0x00FE4162, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE4110 (end 0x00FE4162, chained .pdata fragments)
 // Original VA: 0x0000000140FE4110 | File offset: 0x00FE3710
 // Recovery: confirmed (TEXT("BCActionInfo") and Z_Construct_UScriptStruct_FBCActionInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBCActionInfo::StaticStruct()

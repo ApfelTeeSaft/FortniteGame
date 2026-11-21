@@ -14,7 +14,7 @@ struct alignas(4) FFortCombatManagerEvent
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5C30 (end 0x00FC5C82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5C30 (end 0x00FC5C82, chained .pdata fragments)
 // Original VA: 0x0000000140FC5C30 | File offset: 0x00FC5230
 // Recovery: confirmed (TEXT("FortCombatManagerEvent") and Z_Construct_UScriptStruct_FFortCombatManagerEvent) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCombatManagerEvent::StaticStruct()

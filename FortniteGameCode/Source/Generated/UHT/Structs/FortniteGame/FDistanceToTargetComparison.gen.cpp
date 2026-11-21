@@ -14,7 +14,7 @@ struct alignas(8) FDistanceToTargetComparison
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACDE0 (end 0x00FACE32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACDE0 (end 0x00FACE32, chained .pdata fragments)
 // Original VA: 0x0000000140FACDE0 | File offset: 0x00FAC3E0
 // Recovery: confirmed (TEXT("DistanceToTargetComparison") and Z_Construct_UScriptStruct_FDistanceToTargetComparison) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDistanceToTargetComparison::StaticStruct()

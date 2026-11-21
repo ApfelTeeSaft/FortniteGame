@@ -14,7 +14,7 @@ struct alignas(8) FAthenaPlaylistLeaderboardData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EED0 (end 0x0287EF22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EED0 (end 0x0287EF22, chained .pdata fragments)
 // Original VA: 0x000000014287EED0 | File offset: 0x0287E4D0
 // Recovery: confirmed (TEXT("AthenaPlaylistLeaderboardData") and Z_Construct_UScriptStruct_FAthenaPlaylistLeaderboardData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAthenaPlaylistLeaderboardData::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FHardwareCursorReference
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC440 (end 0x024EC492, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EC440 (end 0x024EC492, chained .pdata fragments)
 // Original VA: 0x00000001424EC440 | File offset: 0x024EBA40
 // Recovery: confirmed (TEXT("HardwareCursorReference") and Z_Construct_UScriptStruct_FHardwareCursorReference) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FHardwareCursorReference::StaticStruct()

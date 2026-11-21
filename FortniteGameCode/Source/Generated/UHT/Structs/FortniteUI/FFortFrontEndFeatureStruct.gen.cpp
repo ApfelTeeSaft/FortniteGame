@@ -14,7 +14,7 @@ struct alignas(8) FFortFrontEndFeatureStruct
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3310 (end 0x028A3362, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3310 (end 0x028A3362, chained .pdata fragments)
 // Original VA: 0x00000001428A3310 | File offset: 0x028A2910
 // Recovery: confirmed (TEXT("FortFrontEndFeatureStruct") and Z_Construct_UScriptStruct_FFortFrontEndFeatureStruct) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortFrontEndFeatureStruct::StaticStruct()

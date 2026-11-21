@@ -15,7 +15,7 @@ struct alignas(8) FFortSurfaceDamageRatioByAffiliationStats
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5E10 (end 0x00FC5E62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5E10 (end 0x00FC5E62, chained .pdata fragments)
 // Original VA: 0x0000000140FC5E10 | File offset: 0x00FC5410
 // Recovery: confirmed (TEXT("FortSurfaceDamageRatioByAffiliationStats") and Z_Construct_UScriptStruct_FFortSurfaceDamageRatioByAffiliationStats) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSurfaceDamageRatioByAffiliationStats::StaticStruct()

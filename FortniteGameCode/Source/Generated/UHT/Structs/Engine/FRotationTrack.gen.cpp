@@ -14,7 +14,7 @@ struct alignas(8) FRotationTrack
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6240 (end 0x023D6292, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6240 (end 0x023D6292, chained .pdata fragments)
 // Original VA: 0x00000001423D6240 | File offset: 0x023D5840
 // Recovery: confirmed (TEXT("RotationTrack") and Z_Construct_UScriptStruct_FRotationTrack) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRotationTrack::StaticStruct()

@@ -15,7 +15,7 @@ struct alignas(8) FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configur
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x190];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C1390 (end 0x028C13E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C1390 (end 0x028C13E2, chained .pdata fragments)
 // Original VA: 0x00000001428C1390 | File offset: 0x028C0990
 // Recovery: confirmed (TEXT("FortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration") and Z_Construct_UScriptStruct_FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortItemCard_PowerRatingBlock_PersonnelAndSchematics_Configuration::StaticStruct()

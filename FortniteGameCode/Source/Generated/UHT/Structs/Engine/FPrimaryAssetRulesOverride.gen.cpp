@@ -14,7 +14,7 @@ struct alignas(8) FPrimaryAssetRulesOverride
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAE90 (end 0x023DAEE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAE90 (end 0x023DAEE2, chained .pdata fragments)
 // Original VA: 0x00000001423DAE90 | File offset: 0x023DA490
 // Recovery: confirmed (TEXT("PrimaryAssetRulesOverride") and Z_Construct_UScriptStruct_FPrimaryAssetRulesOverride) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPrimaryAssetRulesOverride::StaticStruct()

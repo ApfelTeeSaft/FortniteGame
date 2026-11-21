@@ -15,7 +15,7 @@ struct alignas(8) FRichTextStyleRow
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1D0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED300 (end 0x01BED352, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED300 (end 0x01BED352, chained .pdata fragments)
 // Original VA: 0x0000000141BED300 | File offset: 0x01BEC900
 // Recovery: confirmed (TEXT("RichTextStyleRow") and Z_Construct_UScriptStruct_FRichTextStyleRow) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRichTextStyleRow::StaticStruct()

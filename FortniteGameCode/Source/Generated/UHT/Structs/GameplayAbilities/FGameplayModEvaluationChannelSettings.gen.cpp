@@ -14,7 +14,7 @@ struct alignas(1) FGameplayModEvaluationChannelSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564170 (end 0x005641C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00564170 (end 0x005641C2, chained .pdata fragments)
 // Original VA: 0x0000000140564170 | File offset: 0x00563770
 // Recovery: confirmed (TEXT("GameplayModEvaluationChannelSettings") and Z_Construct_UScriptStruct_FGameplayModEvaluationChannelSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayModEvaluationChannelSettings::StaticStruct()

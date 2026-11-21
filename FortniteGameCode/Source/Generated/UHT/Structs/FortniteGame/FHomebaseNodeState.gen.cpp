@@ -14,7 +14,7 @@ struct alignas(4) FHomebaseNodeState
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA9B0 (end 0x00FFAA02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA9B0 (end 0x00FFAA02, chained .pdata fragments)
 // Original VA: 0x0000000140FFA9B0 | File offset: 0x00FF9FB0
 // Recovery: confirmed (TEXT("HomebaseNodeState") and Z_Construct_UScriptStruct_FHomebaseNodeState) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FHomebaseNodeState::StaticStruct()

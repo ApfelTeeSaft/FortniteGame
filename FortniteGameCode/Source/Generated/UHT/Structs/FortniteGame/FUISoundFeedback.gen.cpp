@@ -14,7 +14,7 @@ struct alignas(8) FUISoundFeedback
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1330 (end 0x00FE1382, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1330 (end 0x00FE1382, chained .pdata fragments)
 // Original VA: 0x0000000140FE1330 | File offset: 0x00FE0930
 // Recovery: confirmed (TEXT("UISoundFeedback") and Z_Construct_UScriptStruct_FUISoundFeedback) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FUISoundFeedback::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(4) FUtilityContribution
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87B40 (end 0x00F87B92, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87B40 (end 0x00F87B92, chained .pdata fragments)
 // Original VA: 0x0000000140F87B40 | File offset: 0x00F87140
 // Recovery: confirmed (TEXT("UtilityContribution") and Z_Construct_UScriptStruct_FUtilityContribution) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FUtilityContribution::StaticStruct()

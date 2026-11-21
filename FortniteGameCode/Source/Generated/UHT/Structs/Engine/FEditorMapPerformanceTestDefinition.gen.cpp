@@ -14,7 +14,7 @@ struct alignas(8) FEditorMapPerformanceTestDefinition
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAB90 (end 0x023DABE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAB90 (end 0x023DABE2, chained .pdata fragments)
 // Original VA: 0x00000001423DAB90 | File offset: 0x023DA190
 // Recovery: confirmed (TEXT("EditorMapPerformanceTestDefinition") and Z_Construct_UScriptStruct_FEditorMapPerformanceTestDefinition) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FEditorMapPerformanceTestDefinition::StaticStruct()

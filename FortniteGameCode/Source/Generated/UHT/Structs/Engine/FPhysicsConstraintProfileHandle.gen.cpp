@@ -14,7 +14,7 @@ struct alignas(8) FPhysicsConstraintProfileHandle
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x110];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9A50 (end 0x024A9AA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A9A50 (end 0x024A9AA2, chained .pdata fragments)
 // Original VA: 0x00000001424A9A50 | File offset: 0x024A9050
 // Recovery: confirmed (TEXT("PhysicsConstraintProfileHandle") and Z_Construct_UScriptStruct_FPhysicsConstraintProfileHandle) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPhysicsConstraintProfileHandle::StaticStruct()

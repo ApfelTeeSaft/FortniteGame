@@ -14,7 +14,7 @@ struct alignas(4) FAIRequestID
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22AA0 (end 0x01D22AF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22AA0 (end 0x01D22AF2, chained .pdata fragments)
 // Original VA: 0x0000000141D22AA0 | File offset: 0x01D220A0
 // Recovery: confirmed (TEXT("AIRequestID") and Z_Construct_UScriptStruct_FAIRequestID) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAIRequestID::StaticStruct()

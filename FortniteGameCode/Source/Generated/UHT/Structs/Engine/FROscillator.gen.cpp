@@ -14,7 +14,7 @@ struct alignas(4) FROscillator
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x24];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA5D0 (end 0x023EA622, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA5D0 (end 0x023EA622, chained .pdata fragments)
 // Original VA: 0x00000001423EA5D0 | File offset: 0x023E9BD0
 // Recovery: confirmed (TEXT("ROscillator") and Z_Construct_UScriptStruct_FROscillator) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FROscillator::StaticStruct()

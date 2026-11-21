@@ -14,7 +14,7 @@ struct alignas(8) FGoalDistanceData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x90];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01093010 (end 0x01093062, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01093010 (end 0x01093062, chained .pdata fragments)
 // Original VA: 0x0000000141093010 | File offset: 0x01092610
 // Recovery: confirmed (TEXT("GoalDistanceData") and Z_Construct_UScriptStruct_FGoalDistanceData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGoalDistanceData::StaticStruct()

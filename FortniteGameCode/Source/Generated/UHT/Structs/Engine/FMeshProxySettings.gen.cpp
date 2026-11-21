@@ -14,7 +14,7 @@ struct alignas(4) FMeshProxySettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248AFD0 (end 0x0248B022, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248AFD0 (end 0x0248B022, chained .pdata fragments)
 // Original VA: 0x000000014248AFD0 | File offset: 0x0248A5D0
 // Recovery: confirmed (TEXT("MeshProxySettings") and Z_Construct_UScriptStruct_FMeshProxySettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMeshProxySettings::StaticStruct()

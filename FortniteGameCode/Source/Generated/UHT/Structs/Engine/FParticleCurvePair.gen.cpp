@@ -14,7 +14,7 @@ struct alignas(8) FParticleCurvePair
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02495650 (end 0x024956A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02495650 (end 0x024956A2, chained .pdata fragments)
 // Original VA: 0x0000000142495650 | File offset: 0x02494C50
 // Recovery: confirmed (TEXT("ParticleCurvePair") and Z_Construct_UScriptStruct_FParticleCurvePair) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FParticleCurvePair::StaticStruct()

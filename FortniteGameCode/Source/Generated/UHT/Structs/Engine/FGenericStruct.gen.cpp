@@ -14,7 +14,7 @@ struct alignas(4) FGenericStruct
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02452BF0 (end 0x02452C42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02452BF0 (end 0x02452C42, chained .pdata fragments)
 // Original VA: 0x0000000142452BF0 | File offset: 0x024521F0
 // Recovery: confirmed (TEXT("GenericStruct") and Z_Construct_UScriptStruct_FGenericStruct) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGenericStruct::StaticStruct()

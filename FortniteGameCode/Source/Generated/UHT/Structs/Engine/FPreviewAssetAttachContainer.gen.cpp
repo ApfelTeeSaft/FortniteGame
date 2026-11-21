@@ -14,7 +14,7 @@ struct alignas(8) FPreviewAssetAttachContainer
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7B70 (end 0x024B7BC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B7B70 (end 0x024B7BC2, chained .pdata fragments)
 // Original VA: 0x00000001424B7B70 | File offset: 0x024B7170
 // Recovery: confirmed (TEXT("PreviewAssetAttachContainer") and Z_Construct_UScriptStruct_FPreviewAssetAttachContainer) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPreviewAssetAttachContainer::StaticStruct()

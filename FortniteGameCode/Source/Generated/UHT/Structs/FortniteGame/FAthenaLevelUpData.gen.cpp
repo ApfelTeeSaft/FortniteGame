@@ -15,7 +15,7 @@ struct alignas(8) FAthenaLevelUpData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59450 (end 0x00F594A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F59450 (end 0x00F594A2, chained .pdata fragments)
 // Original VA: 0x0000000140F59450 | File offset: 0x00F58A50
 // Recovery: confirmed (TEXT("AthenaLevelUpData") and Z_Construct_UScriptStruct_FAthenaLevelUpData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAthenaLevelUpData::StaticStruct()

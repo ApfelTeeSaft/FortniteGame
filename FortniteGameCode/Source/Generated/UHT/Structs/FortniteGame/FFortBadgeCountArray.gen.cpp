@@ -15,7 +15,7 @@ struct alignas(8) FFortBadgeCountArray
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010377B0 (end 0x01037802, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010377B0 (end 0x01037802, chained .pdata fragments)
 // Original VA: 0x00000001410377B0 | File offset: 0x01036DB0
 // Recovery: confirmed (TEXT("FortBadgeCountArray") and Z_Construct_UScriptStruct_FFortBadgeCountArray) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortBadgeCountArray::StaticStruct()

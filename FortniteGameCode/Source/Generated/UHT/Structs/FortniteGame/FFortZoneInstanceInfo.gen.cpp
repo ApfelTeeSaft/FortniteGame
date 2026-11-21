@@ -14,7 +14,7 @@ struct alignas(8) FFortZoneInstanceInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x68];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010655C0 (end 0x01065612, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010655C0 (end 0x01065612, chained .pdata fragments)
 // Original VA: 0x00000001410655C0 | File offset: 0x01064BC0
 // Recovery: confirmed (TEXT("FortZoneInstanceInfo") and Z_Construct_UScriptStruct_FFortZoneInstanceInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortZoneInstanceInfo::StaticStruct()

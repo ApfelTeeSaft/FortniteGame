@@ -14,7 +14,7 @@ struct alignas(8) FMeshInstancingSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248AF10 (end 0x0248AF62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248AF10 (end 0x0248AF62, chained .pdata fragments)
 // Original VA: 0x000000014248AF10 | File offset: 0x0248A510
 // Recovery: confirmed (TEXT("MeshInstancingSettings") and Z_Construct_UScriptStruct_FMeshInstancingSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMeshInstancingSettings::StaticStruct()

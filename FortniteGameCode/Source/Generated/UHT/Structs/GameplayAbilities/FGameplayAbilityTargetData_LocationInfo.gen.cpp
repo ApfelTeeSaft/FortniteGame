@@ -15,7 +15,7 @@ struct alignas(16) FGameplayAbilityTargetData_LocationInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xF0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B7A0 (end 0x0055B7F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B7A0 (end 0x0055B7F2, chained .pdata fragments)
 // Original VA: 0x000000014055B7A0 | File offset: 0x0055ADA0
 // Recovery: confirmed (TEXT("GameplayAbilityTargetData_LocationInfo") and Z_Construct_UScriptStruct_FGameplayAbilityTargetData_LocationInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayAbilityTargetData_LocationInfo::StaticStruct()

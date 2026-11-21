@@ -14,7 +14,7 @@ struct alignas(16) FDeferredActorData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7CCE0 (end 0x00F7CD32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7CCE0 (end 0x00F7CD32, chained .pdata fragments)
 // Original VA: 0x0000000140F7CCE0 | File offset: 0x00F7C2E0
 // Recovery: confirmed (TEXT("DeferredActorData") and Z_Construct_UScriptStruct_FDeferredActorData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDeferredActorData::StaticStruct()

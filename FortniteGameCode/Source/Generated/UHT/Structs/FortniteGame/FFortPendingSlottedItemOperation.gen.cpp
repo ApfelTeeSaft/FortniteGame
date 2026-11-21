@@ -14,7 +14,7 @@ struct alignas(8) FFortPendingSlottedItemOperation
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5D50 (end 0x00FC5DA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5D50 (end 0x00FC5DA2, chained .pdata fragments)
 // Original VA: 0x0000000140FC5D50 | File offset: 0x00FC5350
 // Recovery: confirmed (TEXT("FortPendingSlottedItemOperation") and Z_Construct_UScriptStruct_FFortPendingSlottedItemOperation) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortPendingSlottedItemOperation::StaticStruct()

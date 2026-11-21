@@ -14,7 +14,7 @@ struct alignas(8) FSoundAttenuationPluginSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4F50 (end 0x024D4FA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4F50 (end 0x024D4FA2, chained .pdata fragments)
 // Original VA: 0x00000001424D4F50 | File offset: 0x024D4550
 // Recovery: confirmed (TEXT("SoundAttenuationPluginSettings") and Z_Construct_UScriptStruct_FSoundAttenuationPluginSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSoundAttenuationPluginSettings::StaticStruct()

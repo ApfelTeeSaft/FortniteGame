@@ -14,7 +14,7 @@ struct alignas(8) FAnimControlTrackKey
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242EF00 (end 0x0242EF52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242EF00 (end 0x0242EF52, chained .pdata fragments)
 // Original VA: 0x000000014242EF00 | File offset: 0x0242E500
 // Recovery: confirmed (TEXT("AnimControlTrackKey") and Z_Construct_UScriptStruct_FAnimControlTrackKey) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimControlTrackKey::StaticStruct()

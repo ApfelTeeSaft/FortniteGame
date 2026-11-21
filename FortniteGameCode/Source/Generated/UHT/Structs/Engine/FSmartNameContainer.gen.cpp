@@ -14,7 +14,7 @@ struct alignas(8) FSmartNameContainer
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4E90 (end 0x024D4EE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4E90 (end 0x024D4EE2, chained .pdata fragments)
 // Original VA: 0x00000001424D4E90 | File offset: 0x024D4490
 // Recovery: confirmed (TEXT("SmartNameContainer") and Z_Construct_UScriptStruct_FSmartNameContainer) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSmartNameContainer::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFontImportOptionsData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xB0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FB20 (end 0x0240FB72, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FB20 (end 0x0240FB72, chained .pdata fragments)
 // Original VA: 0x000000014240FB20 | File offset: 0x0240F120
 // Recovery: confirmed (TEXT("FontImportOptionsData") and Z_Construct_UScriptStruct_FFontImportOptionsData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFontImportOptionsData::StaticStruct()

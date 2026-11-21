@@ -14,7 +14,7 @@ struct alignas(8) FAbilityKitItem
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7CB60 (end 0x00F7CBB2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7CB60 (end 0x00F7CBB2, chained .pdata fragments)
 // Original VA: 0x0000000140F7CB60 | File offset: 0x00F7C160
 // Recovery: confirmed (TEXT("AbilityKitItem") and Z_Construct_UScriptStruct_FAbilityKitItem) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAbilityKitItem::StaticStruct()

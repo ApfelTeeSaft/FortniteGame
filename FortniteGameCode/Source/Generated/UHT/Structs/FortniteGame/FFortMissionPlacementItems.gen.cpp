@@ -14,7 +14,7 @@ struct alignas(8) FFortMissionPlacementItems
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01041010 (end 0x01041062, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01041010 (end 0x01041062, chained .pdata fragments)
 // Original VA: 0x0000000141041010 | File offset: 0x01040610
 // Recovery: confirmed (TEXT("FortMissionPlacementItems") and Z_Construct_UScriptStruct_FFortMissionPlacementItems) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortMissionPlacementItems::StaticStruct()

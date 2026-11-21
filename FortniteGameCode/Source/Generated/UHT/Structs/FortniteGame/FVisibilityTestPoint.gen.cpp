@@ -14,7 +14,7 @@ struct alignas(8) FVisibilityTestPoint
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7D1C0 (end 0x00F7D212, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7D1C0 (end 0x00F7D212, chained .pdata fragments)
 // Original VA: 0x0000000140F7D1C0 | File offset: 0x00F7C7C0
 // Recovery: confirmed (TEXT("VisibilityTestPoint") and Z_Construct_UScriptStruct_FVisibilityTestPoint) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FVisibilityTestPoint::StaticStruct()

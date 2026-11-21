@@ -14,7 +14,7 @@ struct alignas(4) FNavigationFilterFlags
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F5F0 (end 0x0248F642, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F5F0 (end 0x0248F642, chained .pdata fragments)
 // Original VA: 0x000000014248F5F0 | File offset: 0x0248EBF0
 // Recovery: confirmed (TEXT("NavigationFilterFlags") and Z_Construct_UScriptStruct_FNavigationFilterFlags) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FNavigationFilterFlags::StaticStruct()

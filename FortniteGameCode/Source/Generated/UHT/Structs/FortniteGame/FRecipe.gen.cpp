@@ -15,7 +15,7 @@ struct alignas(8) FRecipe
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA610 (end 0x010CA662, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA610 (end 0x010CA662, chained .pdata fragments)
 // Original VA: 0x00000001410CA610 | File offset: 0x010C9C10
 // Recovery: confirmed (TEXT("Recipe") and Z_Construct_UScriptStruct_FRecipe) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRecipe::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortItemTransformFilterTabLabelInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xB0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904640 (end 0x02904692, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904640 (end 0x02904692, chained .pdata fragments)
 // Original VA: 0x0000000142904640 | File offset: 0x02903C40
 // Recovery: confirmed (TEXT("FortItemTransformFilterTabLabelInfo") and Z_Construct_UScriptStruct_FFortItemTransformFilterTabLabelInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortItemTransformFilterTabLabelInfo::StaticStruct()

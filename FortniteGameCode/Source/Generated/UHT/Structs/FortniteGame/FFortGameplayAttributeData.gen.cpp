@@ -9,13 +9,13 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FFortGameplayAttributeData();
 	UPackage* Z_Construct_UPackage__Script_FortniteGame();  // RVA 0x01051BE0
-UScriptStruct* Z_Construct_UScriptStruct_Unrecovered_0x0054EEE0();  // RVA 0x0054EEE0
+UScriptStruct* Z_Construct_UScriptStruct_FGameplayAttributeData();  // RVA 0x0054EEE0
 struct alignas(8) FFortGameplayAttributeData
 {
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA37A0 (end 0x00FA37F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA37A0 (end 0x00FA37F2, chained .pdata fragments)
 // Original VA: 0x0000000140FA37A0 | File offset: 0x00FA2DA0
 // Recovery: confirmed (TEXT("FortGameplayAttributeData") and Z_Construct_UScriptStruct_FFortGameplayAttributeData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortGameplayAttributeData::StaticStruct()
@@ -42,7 +42,7 @@ class UScriptStruct* FFortGameplayAttributeData::StaticStruct()
 	// ReturnStructParams: original RVA 0x0423C7F0
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FFortGameplayAttributeData_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_FortniteGame,
-		Z_Construct_UScriptStruct_Unrecovered_0x0054EEE0,
+		Z_Construct_UScriptStruct_FGameplayAttributeData,
 		&NewStructOps,
 		"FortGameplayAttributeData",
 		RF_Public|RF_Transient|RF_MarkAsNative,

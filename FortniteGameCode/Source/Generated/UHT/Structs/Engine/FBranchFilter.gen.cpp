@@ -14,7 +14,7 @@ struct alignas(8) FBranchFilter
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA090 (end 0x023EA0E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EA090 (end 0x023EA0E2, chained .pdata fragments)
 // Original VA: 0x00000001423EA090 | File offset: 0x023E9690
 // Recovery: confirmed (TEXT("BranchFilter") and Z_Construct_UScriptStruct_FBranchFilter) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBranchFilter::StaticStruct()

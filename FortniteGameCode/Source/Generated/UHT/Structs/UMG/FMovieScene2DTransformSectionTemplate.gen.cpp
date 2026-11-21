@@ -9,13 +9,13 @@
 // Cross Module References
 	UScriptStruct* Z_Construct_UScriptStruct_FMovieScene2DTransformSectionTemplate();
 	UPackage* Z_Construct_UPackage__Script_UMG();  // RVA 0x01BFD110
-UScriptStruct* Z_Construct_UScriptStruct_Unrecovered_0x01AC6140();  // RVA 0x01AC6140
+UScriptStruct* Z_Construct_UScriptStruct_FMovieScenePropertySectionTemplate();  // RVA 0x01AC6140
 struct alignas(8) FMovieScene2DTransformSectionTemplate
 {
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x360];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED1E0 (end 0x01BED232, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BED1E0 (end 0x01BED232, chained .pdata fragments)
 // Original VA: 0x0000000141BED1E0 | File offset: 0x01BEC7E0
 // Recovery: confirmed (TEXT("MovieScene2DTransformSectionTemplate") and Z_Construct_UScriptStruct_FMovieScene2DTransformSectionTemplate) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMovieScene2DTransformSectionTemplate::StaticStruct()
@@ -42,7 +42,7 @@ class UScriptStruct* FMovieScene2DTransformSectionTemplate::StaticStruct()
 	// ReturnStructParams: original RVA 0x043C2250
 	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FMovieScene2DTransformSectionTemplate_Statics::ReturnStructParams = {
 		(UObject* (*)())Z_Construct_UPackage__Script_UMG,
-		Z_Construct_UScriptStruct_Unrecovered_0x01AC6140,
+		Z_Construct_UScriptStruct_FMovieScenePropertySectionTemplate,
 		&NewStructOps,
 		"MovieScene2DTransformSectionTemplate",
 		RF_Public|RF_Transient|RF_MarkAsNative,

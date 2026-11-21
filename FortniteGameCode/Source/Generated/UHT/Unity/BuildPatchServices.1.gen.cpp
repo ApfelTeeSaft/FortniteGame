@@ -5,5 +5,12 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/BuildPatchServices.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/BuildPatchServices/EManifestFileHeader.static.gen.cpp"
 #include "../Enums/BuildPatchServices/EManifestFileHeader.gen.cpp"
+#include "../Structs/BuildPatchServices/FFileManifestData.gen.cpp"
+#include "../Structs/BuildPatchServices/FChunkPartData.gen.cpp"
+#include "../Structs/BuildPatchServices/FChunkInfoData.gen.cpp"
+#include "../Structs/BuildPatchServices/FSHAHashData.gen.cpp"
+#include "../Structs/BuildPatchServices/FCustomFieldData.gen.cpp"
 #include "../Classes/BuildPatchServices/UBuildPatchManifest.gen.cpp"

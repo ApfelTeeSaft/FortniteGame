@@ -14,7 +14,7 @@ struct alignas(4) FInteriorSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x24];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DACB0 (end 0x023DAD02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DACB0 (end 0x023DAD02, chained .pdata fragments)
 // Original VA: 0x00000001423DACB0 | File offset: 0x023DA2B0
 // Recovery: confirmed (TEXT("InteriorSettings") and Z_Construct_UScriptStruct_FInteriorSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FInteriorSettings::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FMorphValuePair
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FD10 (end 0x0107FD62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FD10 (end 0x0107FD62, chained .pdata fragments)
 // Original VA: 0x000000014107FD10 | File offset: 0x0107F310
 // Recovery: confirmed (TEXT("MorphValuePair") and Z_Construct_UScriptStruct_FMorphValuePair) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMorphValuePair::StaticStruct()

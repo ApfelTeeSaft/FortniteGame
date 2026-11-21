@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EAdManagerDelegate.static.gen.cpp"
+#include "../Enums/Engine/EWindowMode.static.gen.cpp"

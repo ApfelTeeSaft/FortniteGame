@@ -14,7 +14,7 @@ struct alignas(4) FFortWindIntensityAndDirection
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC5B0 (end 0x010DC602, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DC5B0 (end 0x010DC602, chained .pdata fragments)
 // Original VA: 0x00000001410DC5B0 | File offset: 0x010DBBB0
 // Recovery: confirmed (TEXT("FortWindIntensityAndDirection") and Z_Construct_UScriptStruct_FFortWindIntensityAndDirection) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortWindIntensityAndDirection::StaticStruct()

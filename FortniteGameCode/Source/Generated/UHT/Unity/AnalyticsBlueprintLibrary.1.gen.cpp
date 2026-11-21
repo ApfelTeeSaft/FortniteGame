@@ -5,5 +5,7 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/AnalyticsBlueprintLibrary.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Structs/AnalyticsBlueprintLibrary/FAnalyticsEventAttr.gen.cpp"
 #include "../UAnalyticsBlueprintLibrary.gen.cpp"
 #include "../Classes/AnalyticsBlueprintLibrary/UAnalyticsBlueprintLibrary.gen.cpp"

@@ -47,7 +47,7 @@ SYMBOLS = REPO_ROOT / "analysis" / "symbols.json"
 # Literal elimination needs every copy enumerated; content with this many copies is skipped.
 ELIMINATION_LIMIT = 64
 GENERATED_SYMBOLS = ("uht-creator-symbols.json", "uht-struct-symbols.json", "uht-enum-symbols.json",
-                     "uht-class-symbols.json")
+                     "uht-class-symbols.json", "uht-package-symbols.json")
 SOLUTION = REPO_ROOT / "FortniteGameCode" / "FortniteGameCode.sln"
 OBJ_ROOT = REPO_ROOT / "FortniteGameCode" / "Build" / "ClientShipping" / "obj"
 DECRYPTED_REPORT = REPO_ROOT / "analysis" / "decrypted-reference.json"

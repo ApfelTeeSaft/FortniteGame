@@ -14,7 +14,7 @@ struct alignas(8) FCommonInputKeyDisplayData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1E0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D03F0 (end 0x002D0442, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D03F0 (end 0x002D0442, chained .pdata fragments)
 // Original VA: 0x00000001402D03F0 | File offset: 0x002CF9F0
 // Recovery: confirmed (TEXT("CommonInputKeyDisplayData") and Z_Construct_UScriptStruct_FCommonInputKeyDisplayData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCommonInputKeyDisplayData::StaticStruct()

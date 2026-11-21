@@ -14,7 +14,7 @@ struct alignas(8) FFortTheaterMissionWeight
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D7B0 (end 0x0109D802, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D7B0 (end 0x0109D802, chained .pdata fragments)
 // Original VA: 0x000000014109D7B0 | File offset: 0x0109CDB0
 // Recovery: confirmed (TEXT("FortTheaterMissionWeight") and Z_Construct_UScriptStruct_FFortTheaterMissionWeight) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortTheaterMissionWeight::StaticStruct()

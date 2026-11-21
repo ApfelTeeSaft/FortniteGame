@@ -14,7 +14,7 @@ struct alignas(8) FWidgetAnimationBinding
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00C40 (end 0x01C00C92, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00C40 (end 0x01C00C92, chained .pdata fragments)
 // Original VA: 0x0000000141C00C40 | File offset: 0x01C00240
 // Recovery: confirmed (TEXT("WidgetAnimationBinding") and Z_Construct_UScriptStruct_FWidgetAnimationBinding) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FWidgetAnimationBinding::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FStatManagerPeriodRecord
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E2E30 (end 0x010E2E82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E2E30 (end 0x010E2E82, chained .pdata fragments)
 // Original VA: 0x00000001410E2E30 | File offset: 0x010E2430
 // Recovery: confirmed (TEXT("StatManagerPeriodRecord") and Z_Construct_UScriptStruct_FStatManagerPeriodRecord) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FStatManagerPeriodRecord::StaticStruct()

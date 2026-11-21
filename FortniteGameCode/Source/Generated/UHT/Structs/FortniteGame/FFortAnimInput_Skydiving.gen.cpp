@@ -14,7 +14,7 @@ struct alignas(4) FFortAnimInput_Skydiving
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x24];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98BD0 (end 0x00F98C22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F98BD0 (end 0x00F98C22, chained .pdata fragments)
 // Original VA: 0x0000000140F98BD0 | File offset: 0x00F981D0
 // Recovery: confirmed (TEXT("FortAnimInput_Skydiving") and Z_Construct_UScriptStruct_FFortAnimInput_Skydiving) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAnimInput_Skydiving::StaticStruct()

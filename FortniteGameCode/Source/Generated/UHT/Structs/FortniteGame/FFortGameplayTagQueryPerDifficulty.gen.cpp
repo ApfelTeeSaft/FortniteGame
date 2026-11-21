@@ -14,7 +14,7 @@ struct alignas(8) FFortGameplayTagQueryPerDifficulty
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01092EF0 (end 0x01092F42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01092EF0 (end 0x01092F42, chained .pdata fragments)
 // Original VA: 0x0000000141092EF0 | File offset: 0x010924F0
 // Recovery: confirmed (TEXT("FortGameplayTagQueryPerDifficulty") and Z_Construct_UScriptStruct_FFortGameplayTagQueryPerDifficulty) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortGameplayTagQueryPerDifficulty::StaticStruct()

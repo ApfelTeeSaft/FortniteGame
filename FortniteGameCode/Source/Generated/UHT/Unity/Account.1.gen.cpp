@@ -5,9 +5,20 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/Account.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/Account/EExternalAccountType.static.gen.cpp"
 #include "../Enums/Account/EExternalAccountType.gen.cpp"
+#include "../Structs/Account/FExternalAccountServiceConfig.gen.cpp"
 #include "../Classes/Account/UExternalAccountProvider.gen.cpp"
+#include "../Enums/Account/ECreateAccountResult.static.gen.cpp"
 #include "../Enums/Account/ECreateAccountResult.gen.cpp"
+#include "../Enums/Account/ELoginResult.static.gen.cpp"
 #include "../Enums/Account/ELoginResult.gen.cpp"
+#include "../Enums/Account/EConsoleAuthLinkState.static.gen.cpp"
 #include "../Enums/Account/EConsoleAuthLinkState.gen.cpp"
+#include "../Structs/Account/FWebEnvUrl.gen.cpp"
+#include "../Structs/Account/FGiftMessage.gen.cpp"
+#include "../Structs/Account/FExchangeAccessParams.gen.cpp"
 #include "../Classes/Account/UOnlineAccountCommon.gen.cpp"
+#include "../Structs/Account/FOnlineAccountTexts.gen.cpp"
+#include "../Structs/Account/FOnlineAccountTexts_FailedLoginConsole.gen.cpp"

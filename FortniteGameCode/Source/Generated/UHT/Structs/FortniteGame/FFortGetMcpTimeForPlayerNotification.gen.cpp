@@ -14,7 +14,7 @@ struct alignas(8) FFortGetMcpTimeForPlayerNotification
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102FC50 (end 0x0102FCA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102FC50 (end 0x0102FCA2, chained .pdata fragments)
 // Original VA: 0x000000014102FC50 | File offset: 0x0102F250
 // Recovery: confirmed (TEXT("FortGetMcpTimeForPlayerNotification") and Z_Construct_UScriptStruct_FFortGetMcpTimeForPlayerNotification) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortGetMcpTimeForPlayerNotification::StaticStruct()

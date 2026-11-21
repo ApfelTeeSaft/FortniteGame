@@ -14,7 +14,7 @@ struct alignas(8) FEditorOnlyBuildingInstanceMaterialParameters
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71C10 (end 0x00F71C62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71C10 (end 0x00F71C62, chained .pdata fragments)
 // Original VA: 0x0000000140F71C10 | File offset: 0x00F71210
 // Recovery: confirmed (TEXT("EditorOnlyBuildingInstanceMaterialParameters") and Z_Construct_UScriptStruct_FEditorOnlyBuildingInstanceMaterialParameters) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FEditorOnlyBuildingInstanceMaterialParameters::StaticStruct()

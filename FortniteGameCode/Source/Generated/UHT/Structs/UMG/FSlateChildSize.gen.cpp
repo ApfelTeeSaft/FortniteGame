@@ -14,7 +14,7 @@ struct alignas(4) FSlateChildSize
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2DC0 (end 0x01BF2E12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2DC0 (end 0x01BF2E12, chained .pdata fragments)
 // Original VA: 0x0000000141BF2DC0 | File offset: 0x01BF23C0
 // Recovery: confirmed (TEXT("SlateChildSize") and Z_Construct_UScriptStruct_FSlateChildSize) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSlateChildSize::StaticStruct()

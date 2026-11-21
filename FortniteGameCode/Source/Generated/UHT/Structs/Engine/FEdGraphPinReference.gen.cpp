@@ -14,7 +14,7 @@ struct alignas(4) FEdGraphPinReference
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404600 (end 0x02404652, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404600 (end 0x02404652, chained .pdata fragments)
 // Original VA: 0x0000000142404600 | File offset: 0x02403C00
 // Recovery: confirmed (TEXT("EdGraphPinReference") and Z_Construct_UScriptStruct_FEdGraphPinReference) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FEdGraphPinReference::StaticStruct()

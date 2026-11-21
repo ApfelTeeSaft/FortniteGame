@@ -14,7 +14,7 @@ struct alignas(4) FFortAIDirectorFactorContribution
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87420 (end 0x00F87472, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87420 (end 0x00F87472, chained .pdata fragments)
 // Original VA: 0x0000000140F87420 | File offset: 0x00F86A20
 // Recovery: confirmed (TEXT("FortAIDirectorFactorContribution") and Z_Construct_UScriptStruct_FFortAIDirectorFactorContribution) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIDirectorFactorContribution::StaticStruct()

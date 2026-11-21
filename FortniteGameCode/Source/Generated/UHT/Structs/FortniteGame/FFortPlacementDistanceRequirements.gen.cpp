@@ -14,7 +14,7 @@ struct alignas(4) FFortPlacementDistanceRequirements
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9C20 (end 0x010E9C72, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9C20 (end 0x010E9C72, chained .pdata fragments)
 // Original VA: 0x00000001410E9C20 | File offset: 0x010E9220
 // Recovery: confirmed (TEXT("FortPlacementDistanceRequirements") and Z_Construct_UScriptStruct_FFortPlacementDistanceRequirements) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortPlacementDistanceRequirements::StaticStruct()

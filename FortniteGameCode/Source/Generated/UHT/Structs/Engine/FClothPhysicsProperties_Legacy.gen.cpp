@@ -14,7 +14,7 @@ struct alignas(4) FClothPhysicsProperties_Legacy
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC6B0 (end 0x024CC702, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC6B0 (end 0x024CC702, chained .pdata fragments)
 // Original VA: 0x00000001424CC6B0 | File offset: 0x024CBCB0
 // Recovery: confirmed (TEXT("ClothPhysicsProperties_Legacy") and Z_Construct_UScriptStruct_FClothPhysicsProperties_Legacy) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FClothPhysicsProperties_Legacy::StaticStruct()

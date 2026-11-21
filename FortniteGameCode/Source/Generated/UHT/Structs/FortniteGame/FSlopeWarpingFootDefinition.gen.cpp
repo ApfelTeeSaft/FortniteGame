@@ -14,7 +14,7 @@ struct alignas(8) FSlopeWarpingFootDefinition
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9EBA0 (end 0x00F9EBF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9EBA0 (end 0x00F9EBF2, chained .pdata fragments)
 // Original VA: 0x0000000140F9EBA0 | File offset: 0x00F9E1A0
 // Recovery: confirmed (TEXT("SlopeWarpingFootDefinition") and Z_Construct_UScriptStruct_FSlopeWarpingFootDefinition) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSlopeWarpingFootDefinition::StaticStruct()

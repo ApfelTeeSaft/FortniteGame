@@ -14,7 +14,7 @@ struct alignas(16) FEnvironmentBuildingRestorationRecord
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFCF0 (end 0x00FCFD42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCFCF0 (end 0x00FCFD42, chained .pdata fragments)
 // Original VA: 0x0000000140FCFCF0 | File offset: 0x00FCF2F0
 // Recovery: confirmed (TEXT("EnvironmentBuildingRestorationRecord") and Z_Construct_UScriptStruct_FEnvironmentBuildingRestorationRecord) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FEnvironmentBuildingRestorationRecord::StaticStruct()

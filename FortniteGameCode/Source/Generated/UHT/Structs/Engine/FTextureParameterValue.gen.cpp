@@ -14,7 +14,7 @@ struct alignas(8) FTextureParameterValue
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486540 (end 0x02486592, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486540 (end 0x02486592, chained .pdata fragments)
 // Original VA: 0x0000000142486540 | File offset: 0x02485B40
 // Recovery: confirmed (TEXT("TextureParameterValue") and Z_Construct_UScriptStruct_FTextureParameterValue) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTextureParameterValue::StaticStruct()

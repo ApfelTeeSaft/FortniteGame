@@ -14,7 +14,7 @@ struct alignas(8) FAbilityTaskDebugMessage
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B140 (end 0x0055B192, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B140 (end 0x0055B192, chained .pdata fragments)
 // Original VA: 0x000000014055B140 | File offset: 0x0055A740
 // Recovery: confirmed (TEXT("AbilityTaskDebugMessage") and Z_Construct_UScriptStruct_FAbilityTaskDebugMessage) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAbilityTaskDebugMessage::StaticStruct()

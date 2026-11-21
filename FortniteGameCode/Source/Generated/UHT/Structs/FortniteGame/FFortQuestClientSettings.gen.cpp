@@ -14,7 +14,7 @@ struct alignas(8) FFortQuestClientSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037AB0 (end 0x01037B02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037AB0 (end 0x01037B02, chained .pdata fragments)
 // Original VA: 0x0000000141037AB0 | File offset: 0x010370B0
 // Recovery: confirmed (TEXT("FortQuestClientSettings") and Z_Construct_UScriptStruct_FFortQuestClientSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortQuestClientSettings::StaticStruct()

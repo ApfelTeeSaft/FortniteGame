@@ -14,7 +14,7 @@ struct alignas(16) FFortAthenaAimAssistOwnerInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xA0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E8A0 (end 0x00F9E8F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E8A0 (end 0x00F9E8F2, chained .pdata fragments)
 // Original VA: 0x0000000140F9E8A0 | File offset: 0x00F9DEA0
 // Recovery: confirmed (TEXT("FortAthenaAimAssistOwnerInfo") and Z_Construct_UScriptStruct_FFortAthenaAimAssistOwnerInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAthenaAimAssistOwnerInfo::StaticStruct()

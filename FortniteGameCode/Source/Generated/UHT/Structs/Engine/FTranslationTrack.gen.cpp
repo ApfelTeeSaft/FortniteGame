@@ -14,7 +14,7 @@ struct alignas(8) FTranslationTrack
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6360 (end 0x023D63B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D6360 (end 0x023D63B2, chained .pdata fragments)
 // Original VA: 0x00000001423D6360 | File offset: 0x023D5960
 // Recovery: confirmed (TEXT("TranslationTrack") and Z_Construct_UScriptStruct_FTranslationTrack) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTranslationTrack::StaticStruct()

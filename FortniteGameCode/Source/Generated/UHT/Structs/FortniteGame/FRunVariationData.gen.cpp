@@ -14,7 +14,7 @@ struct alignas(4) FRunVariationData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91200 (end 0x00F91252, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F91200 (end 0x00F91252, chained .pdata fragments)
 // Original VA: 0x0000000140F91200 | File offset: 0x00F90800
 // Recovery: confirmed (TEXT("RunVariationData") and Z_Construct_UScriptStruct_FRunVariationData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRunVariationData::StaticStruct()

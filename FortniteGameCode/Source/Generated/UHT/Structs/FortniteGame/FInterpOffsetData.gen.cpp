@@ -14,7 +14,7 @@ struct alignas(4) FInterpOffsetData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACF60 (end 0x00FACFB2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACF60 (end 0x00FACFB2, chained .pdata fragments)
 // Original VA: 0x0000000140FACF60 | File offset: 0x00FAC560
 // Recovery: confirmed (TEXT("InterpOffsetData") and Z_Construct_UScriptStruct_FInterpOffsetData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FInterpOffsetData::StaticStruct()

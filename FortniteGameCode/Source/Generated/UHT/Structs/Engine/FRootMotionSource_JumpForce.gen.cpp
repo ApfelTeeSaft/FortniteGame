@@ -15,7 +15,7 @@ struct alignas(16) FRootMotionSource_JumpForce
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xD0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C2900 (end 0x024C2952, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C2900 (end 0x024C2952, chained .pdata fragments)
 // Original VA: 0x00000001424C2900 | File offset: 0x024C1F00
 // Recovery: confirmed (TEXT("RootMotionSource_JumpForce") and Z_Construct_UScriptStruct_FRootMotionSource_JumpForce) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRootMotionSource_JumpForce::StaticStruct()

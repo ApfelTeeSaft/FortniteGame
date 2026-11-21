@@ -15,7 +15,7 @@ struct alignas(8) FFortTaggedDeployableBasePlotExpansionUnlock
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6D10 (end 0x00FD6D62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6D10 (end 0x00FD6D62, chained .pdata fragments)
 // Original VA: 0x0000000140FD6D10 | File offset: 0x00FD6310
 // Recovery: confirmed (TEXT("FortTaggedDeployableBasePlotExpansionUnlock") and Z_Construct_UScriptStruct_FFortTaggedDeployableBasePlotExpansionUnlock) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortTaggedDeployableBasePlotExpansionUnlock::StaticStruct()

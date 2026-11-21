@@ -14,7 +14,7 @@ struct alignas(8) FLensBloomSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xB8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C5520 (end 0x024C5572, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C5520 (end 0x024C5572, chained .pdata fragments)
 // Original VA: 0x00000001424C5520 | File offset: 0x024C4B20
 // Recovery: confirmed (TEXT("LensBloomSettings") and Z_Construct_UScriptStruct_FLensBloomSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FLensBloomSettings::StaticStruct()

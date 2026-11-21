@@ -14,7 +14,7 @@ struct alignas(8) FWeightedBlendable
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C56A0 (end 0x024C56F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C56A0 (end 0x024C56F2, chained .pdata fragments)
 // Original VA: 0x00000001424C56A0 | File offset: 0x024C4CA0
 // Recovery: confirmed (TEXT("WeightedBlendable") and Z_Construct_UScriptStruct_FWeightedBlendable) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FWeightedBlendable::StaticStruct()

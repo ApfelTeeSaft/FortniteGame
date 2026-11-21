@@ -14,7 +14,7 @@ struct alignas(8) FFortLandingPageDefenderSummaryInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F51D0 (end 0x028F5222, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F51D0 (end 0x028F5222, chained .pdata fragments)
 // Original VA: 0x00000001428F51D0 | File offset: 0x028F47D0
 // Recovery: confirmed (TEXT("FortLandingPageDefenderSummaryInfo") and Z_Construct_UScriptStruct_FFortLandingPageDefenderSummaryInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortLandingPageDefenderSummaryInfo::StaticStruct()

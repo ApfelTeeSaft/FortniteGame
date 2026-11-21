@@ -14,7 +14,7 @@ struct alignas(4) FSplinePoint
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x44];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD6A0 (end 0x024DD6F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD6A0 (end 0x024DD6F2, chained .pdata fragments)
 // Original VA: 0x00000001424DD6A0 | File offset: 0x024DCCA0
 // Recovery: confirmed (TEXT("SplinePoint") and Z_Construct_UScriptStruct_FSplinePoint) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSplinePoint::StaticStruct()

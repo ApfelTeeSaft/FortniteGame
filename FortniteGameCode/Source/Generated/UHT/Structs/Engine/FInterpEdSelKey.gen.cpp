@@ -14,7 +14,7 @@ struct alignas(8) FInterpEdSelKey
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427CE0 (end 0x02427D32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427CE0 (end 0x02427D32, chained .pdata fragments)
 // Original VA: 0x0000000142427CE0 | File offset: 0x024272E0
 // Recovery: confirmed (TEXT("InterpEdSelKey") and Z_Construct_UScriptStruct_FInterpEdSelKey) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FInterpEdSelKey::StaticStruct()

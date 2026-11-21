@@ -14,7 +14,7 @@ struct alignas(8) FRandomDayphaseFX
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71D30 (end 0x00F71D82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F71D30 (end 0x00F71D82, chained .pdata fragments)
 // Original VA: 0x0000000140F71D30 | File offset: 0x00F71330
 // Recovery: confirmed (TEXT("RandomDayphaseFX") and Z_Construct_UScriptStruct_FRandomDayphaseFX) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRandomDayphaseFX::StaticStruct()

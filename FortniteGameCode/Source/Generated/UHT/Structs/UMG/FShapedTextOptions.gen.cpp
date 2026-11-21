@@ -14,7 +14,7 @@ struct alignas(4) FShapedTextOptions
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2D60 (end 0x01BF2DB2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2D60 (end 0x01BF2DB2, chained .pdata fragments)
 // Original VA: 0x0000000141BF2D60 | File offset: 0x01BF2360
 // Recovery: confirmed (TEXT("ShapedTextOptions") and Z_Construct_UScriptStruct_FShapedTextOptions) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FShapedTextOptions::StaticStruct()

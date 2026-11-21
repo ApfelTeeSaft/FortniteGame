@@ -15,7 +15,7 @@ struct alignas(8) FEdGraphSchemaAction_NewNode
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x108];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404720 (end 0x02404772, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404720 (end 0x02404772, chained .pdata fragments)
 // Original VA: 0x0000000142404720 | File offset: 0x02403D20
 // Recovery: confirmed (TEXT("EdGraphSchemaAction_NewNode") and Z_Construct_UScriptStruct_FEdGraphSchemaAction_NewNode) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FEdGraphSchemaAction_NewNode::StaticStruct()

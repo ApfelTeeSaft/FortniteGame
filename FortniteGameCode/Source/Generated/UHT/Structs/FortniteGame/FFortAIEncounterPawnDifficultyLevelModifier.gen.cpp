@@ -14,7 +14,7 @@ struct alignas(8) FFortAIEncounterPawnDifficultyLevelModifier
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F875A0 (end 0x00F875F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F875A0 (end 0x00F875F2, chained .pdata fragments)
 // Original VA: 0x0000000140F875A0 | File offset: 0x00F86BA0
 // Recovery: confirmed (TEXT("FortAIEncounterPawnDifficultyLevelModifier") and Z_Construct_UScriptStruct_FFortAIEncounterPawnDifficultyLevelModifier) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIEncounterPawnDifficultyLevelModifier::StaticStruct()

@@ -115,7 +115,7 @@ def render(s: dict) -> str:
               "uht-struct-registernatives": "struct ops registrars",
               "uht-struct-compiledindefer": "struct deferred registrars", "uht-enum-constructor": "UEnum constructors",
               "uht-staticenum": "StaticEnum", "uht-enum-compiledindefer": "enum deferred registrars",
-              "uht-getprivatestaticclass": "GetPrivateStaticClass"}
+              "uht-getprivatestaticclass": "GetPrivateStaticClass", "uht-package-constructor": "UPackage constructors"}
     items = [f"{labels.get(k, k.replace('-', ' '))} {v:,}" for k, v in s["exact_by_category"].items()] or ["none"]
     cat_lines = wrap("exact by category:", items, 96)
     W = 760

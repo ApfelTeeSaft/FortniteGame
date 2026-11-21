@@ -14,7 +14,7 @@ struct alignas(4) FLightmassMaterialInterfaceSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024861E0 (end 0x02486232, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024861E0 (end 0x02486232, chained .pdata fragments)
 // Original VA: 0x00000001424861E0 | File offset: 0x024857E0
 // Recovery: confirmed (TEXT("LightmassMaterialInterfaceSettings") and Z_Construct_UScriptStruct_FLightmassMaterialInterfaceSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FLightmassMaterialInterfaceSettings::StaticStruct()

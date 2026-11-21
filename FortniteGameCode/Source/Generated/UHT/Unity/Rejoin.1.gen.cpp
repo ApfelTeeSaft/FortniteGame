@@ -5,5 +5,7 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/Rejoin.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/Rejoin/ERejoinStatus.static.gen.cpp"
 #include "../Enums/Rejoin/ERejoinStatus.gen.cpp"
 #include "../Classes/Rejoin/URejoinCheck.gen.cpp"

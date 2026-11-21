@@ -14,7 +14,7 @@ struct alignas(8) FFortItemCard_L_TransformKey_Configuration
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C1090 (end 0x028C10E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028C1090 (end 0x028C10E2, chained .pdata fragments)
 // Original VA: 0x00000001428C1090 | File offset: 0x028C0690
 // Recovery: confirmed (TEXT("FortItemCard_L_TransformKey_Configuration") and Z_Construct_UScriptStruct_FFortItemCard_L_TransformKey_Configuration) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortItemCard_L_TransformKey_Configuration::StaticStruct()

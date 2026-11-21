@@ -14,7 +14,7 @@ struct alignas(8) FReverbSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAF50 (end 0x023DAFA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DAF50 (end 0x023DAFA2, chained .pdata fragments)
 // Original VA: 0x00000001423DAF50 | File offset: 0x023DA550
 // Recovery: confirmed (TEXT("ReverbSettings") and Z_Construct_UScriptStruct_FReverbSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FReverbSettings::StaticStruct()

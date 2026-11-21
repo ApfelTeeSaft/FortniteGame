@@ -14,7 +14,7 @@ struct alignas(8) FFortAIDirectorEvent
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC57B0 (end 0x00FC5802, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC57B0 (end 0x00FC5802, chained .pdata fragments)
 // Original VA: 0x0000000140FC57B0 | File offset: 0x00FC4DB0
 // Recovery: confirmed (TEXT("FortAIDirectorEvent") and Z_Construct_UScriptStruct_FFortAIDirectorEvent) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIDirectorEvent::StaticStruct()

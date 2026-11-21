@@ -4,5 +4,5 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EVolumeLightingMethod.static.gen.cpp"
-#include "../Enums/Engine/EVisibilityAggressiveness.static.gen.cpp"
+#include "../Enums/Engine/EStereoLayerShape.static.gen.cpp"
+#include "../Enums/Engine/EStereoLayerType.static.gen.cpp"

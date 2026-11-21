@@ -14,7 +14,7 @@ struct alignas(8) FAthenaQuickChatActiveEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60BA0 (end 0x00F60BF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60BA0 (end 0x00F60BF2, chained .pdata fragments)
 // Original VA: 0x0000000140F60BA0 | File offset: 0x00F601A0
 // Recovery: confirmed (TEXT("AthenaQuickChatActiveEntry") and Z_Construct_UScriptStruct_FAthenaQuickChatActiveEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAthenaQuickChatActiveEntry::StaticStruct()

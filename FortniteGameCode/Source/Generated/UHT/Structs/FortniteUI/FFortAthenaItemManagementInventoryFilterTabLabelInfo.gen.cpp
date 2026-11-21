@@ -15,7 +15,7 @@ struct alignas(8) FFortAthenaItemManagementInventoryFilterTabLabelInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x98];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EF30 (end 0x0287EF82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EF30 (end 0x0287EF82, chained .pdata fragments)
 // Original VA: 0x000000014287EF30 | File offset: 0x0287E530
 // Recovery: confirmed (TEXT("FortAthenaItemManagementInventoryFilterTabLabelInfo") and Z_Construct_UScriptStruct_FFortAthenaItemManagementInventoryFilterTabLabelInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAthenaItemManagementInventoryFilterTabLabelInfo::StaticStruct()

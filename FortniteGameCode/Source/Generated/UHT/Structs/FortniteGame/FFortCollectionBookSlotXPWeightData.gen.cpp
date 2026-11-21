@@ -15,7 +15,7 @@ struct alignas(8) FFortCollectionBookSlotXPWeightData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5B10 (end 0x00FC5B62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5B10 (end 0x00FC5B62, chained .pdata fragments)
 // Original VA: 0x0000000140FC5B10 | File offset: 0x00FC5110
 // Recovery: confirmed (TEXT("FortCollectionBookSlotXPWeightData") and Z_Construct_UScriptStruct_FFortCollectionBookSlotXPWeightData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCollectionBookSlotXPWeightData::StaticStruct()

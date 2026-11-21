@@ -5,8 +5,13 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/ProceduralMeshComponent.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/ProceduralMeshComponent/EProcMeshSliceCapOption.static.gen.cpp"
 #include "../Enums/ProceduralMeshComponent/EProcMeshSliceCapOption.gen.cpp"
 #include "../UKismetProceduralMeshLibrary.gen.cpp"
 #include "../Classes/ProceduralMeshComponent/UKismetProceduralMeshLibrary.gen.cpp"
+#include "../Structs/ProceduralMeshComponent/FProcMeshSection.gen.cpp"
+#include "../Structs/ProceduralMeshComponent/FProcMeshVertex.gen.cpp"
+#include "../Structs/ProceduralMeshComponent/FProcMeshTangent.gen.cpp"
 #include "../UProceduralMeshComponent.gen.cpp"
 #include "../Classes/ProceduralMeshComponent/UProceduralMeshComponent.gen.cpp"

@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/ESceneCapturePrimitiveRenderMode.static.gen.cpp"
+#include "../Enums/Engine/ERecastPartitioning.static.gen.cpp"

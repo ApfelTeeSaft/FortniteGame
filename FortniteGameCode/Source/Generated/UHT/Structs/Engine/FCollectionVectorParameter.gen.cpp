@@ -15,7 +15,7 @@ struct alignas(8) FCollectionVectorParameter
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024860C0 (end 0x02486112, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024860C0 (end 0x02486112, chained .pdata fragments)
 // Original VA: 0x00000001424860C0 | File offset: 0x024856C0
 // Recovery: confirmed (TEXT("CollectionVectorParameter") and Z_Construct_UScriptStruct_FCollectionVectorParameter) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCollectionVectorParameter::StaticStruct()

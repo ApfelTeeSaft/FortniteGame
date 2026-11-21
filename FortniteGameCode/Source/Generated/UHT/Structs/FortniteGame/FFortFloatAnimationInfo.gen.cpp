@@ -15,7 +15,7 @@ struct alignas(8) FFortFloatAnimationInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDAF70 (end 0x00FDAFC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDAF70 (end 0x00FDAFC2, chained .pdata fragments)
 // Original VA: 0x0000000140FDAF70 | File offset: 0x00FDA570
 // Recovery: confirmed (TEXT("FortFloatAnimationInfo") and Z_Construct_UScriptStruct_FFortFloatAnimationInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortFloatAnimationInfo::StaticStruct()

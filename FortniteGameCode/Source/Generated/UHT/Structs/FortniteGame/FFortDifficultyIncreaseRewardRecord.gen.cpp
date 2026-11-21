@@ -14,7 +14,7 @@ struct alignas(8) FFortDifficultyIncreaseRewardRecord
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102FAD0 (end 0x0102FB22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102FAD0 (end 0x0102FB22, chained .pdata fragments)
 // Original VA: 0x000000014102FAD0 | File offset: 0x0102F0D0
 // Recovery: confirmed (TEXT("FortDifficultyIncreaseRewardRecord") and Z_Construct_UScriptStruct_FFortDifficultyIncreaseRewardRecord) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortDifficultyIncreaseRewardRecord::StaticStruct()

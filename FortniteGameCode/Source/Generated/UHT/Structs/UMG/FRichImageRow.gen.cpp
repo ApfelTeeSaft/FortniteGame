@@ -15,7 +15,7 @@ struct alignas(8) FRichImageRow
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x80];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2D00 (end 0x01BF2D52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2D00 (end 0x01BF2D52, chained .pdata fragments)
 // Original VA: 0x0000000141BF2D00 | File offset: 0x01BF2300
 // Recovery: confirmed (TEXT("RichImageRow") and Z_Construct_UScriptStruct_FRichImageRow) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRichImageRow::StaticStruct()

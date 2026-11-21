@@ -14,7 +14,7 @@ struct alignas(8) FGameSummaryInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE42F0 (end 0x00FE4342, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE42F0 (end 0x00FE4342, chained .pdata fragments)
 // Original VA: 0x0000000140FE42F0 | File offset: 0x00FE38F0
 // Recovery: confirmed (TEXT("GameSummaryInfo") and Z_Construct_UScriptStruct_FGameSummaryInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameSummaryInfo::StaticStruct()

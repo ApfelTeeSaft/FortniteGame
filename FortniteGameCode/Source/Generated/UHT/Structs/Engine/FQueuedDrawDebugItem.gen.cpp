@@ -14,7 +14,7 @@ struct alignas(8) FQueuedDrawDebugItem
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x68];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CE3C0 (end 0x023CE412, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CE3C0 (end 0x023CE412, chained .pdata fragments)
 // Original VA: 0x00000001423CE3C0 | File offset: 0x023CD9C0
 // Recovery: confirmed (TEXT("QueuedDrawDebugItem") and Z_Construct_UScriptStruct_FQueuedDrawDebugItem) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FQueuedDrawDebugItem::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(4) FUtilityTypeFloatPair
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87C00 (end 0x00F87C52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87C00 (end 0x00F87C52, chained .pdata fragments)
 // Original VA: 0x0000000140F87C00 | File offset: 0x00F87200
 // Recovery: confirmed (TEXT("UtilityTypeFloatPair") and Z_Construct_UScriptStruct_FUtilityTypeFloatPair) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FUtilityTypeFloatPair::StaticStruct()

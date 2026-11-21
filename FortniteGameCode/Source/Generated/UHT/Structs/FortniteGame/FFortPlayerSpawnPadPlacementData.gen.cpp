@@ -14,7 +14,7 @@ struct alignas(8) FFortPlayerSpawnPadPlacementData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010411F0 (end 0x01041242, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010411F0 (end 0x01041242, chained .pdata fragments)
 // Original VA: 0x00000001410411F0 | File offset: 0x010407F0
 // Recovery: confirmed (TEXT("FortPlayerSpawnPadPlacementData") and Z_Construct_UScriptStruct_FFortPlayerSpawnPadPlacementData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortPlayerSpawnPadPlacementData::StaticStruct()

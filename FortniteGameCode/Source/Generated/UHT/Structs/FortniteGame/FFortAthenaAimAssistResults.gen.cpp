@@ -14,7 +14,7 @@ struct alignas(4) FFortAthenaAimAssistResults
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E960 (end 0x00F9E9B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E960 (end 0x00F9E9B2, chained .pdata fragments)
 // Original VA: 0x0000000140F9E960 | File offset: 0x00F9DF60
 // Recovery: confirmed (TEXT("FortAthenaAimAssistResults") and Z_Construct_UScriptStruct_FFortAthenaAimAssistResults) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAthenaAimAssistResults::StaticStruct()

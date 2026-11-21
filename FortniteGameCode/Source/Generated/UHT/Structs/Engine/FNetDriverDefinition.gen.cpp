@@ -14,7 +14,7 @@ struct alignas(8) FNetDriverDefinition
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024049C0 (end 0x02404A12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024049C0 (end 0x02404A12, chained .pdata fragments)
 // Original VA: 0x00000001424049C0 | File offset: 0x02403FC0
 // Recovery: confirmed (TEXT("NetDriverDefinition") and Z_Construct_UScriptStruct_FNetDriverDefinition) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FNetDriverDefinition::StaticStruct()

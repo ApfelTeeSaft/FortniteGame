@@ -14,7 +14,7 @@ struct alignas(8) FFortTheaterMapMissionData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D750 (end 0x0109D7A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D750 (end 0x0109D7A2, chained .pdata fragments)
 // Original VA: 0x000000014109D750 | File offset: 0x0109CD50
 // Recovery: confirmed (TEXT("FortTheaterMapMissionData") and Z_Construct_UScriptStruct_FFortTheaterMapMissionData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortTheaterMapMissionData::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(1) FAnimationFrameSnapshot
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7DA0 (end 0x023C7DF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7DA0 (end 0x023C7DF2, chained .pdata fragments)
 // Original VA: 0x00000001423C7DA0 | File offset: 0x023C73A0
 // Recovery: confirmed (TEXT("AnimationFrameSnapshot") and Z_Construct_UScriptStruct_FAnimationFrameSnapshot) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimationFrameSnapshot::StaticStruct()

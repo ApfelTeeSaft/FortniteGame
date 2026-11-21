@@ -14,7 +14,7 @@ struct alignas(8) FFortSelectableRewardOption
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA130 (end 0x010CA182, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA130 (end 0x010CA182, chained .pdata fragments)
 // Original VA: 0x00000001410CA130 | File offset: 0x010C9730
 // Recovery: confirmed (TEXT("FortSelectableRewardOption") and Z_Construct_UScriptStruct_FFortSelectableRewardOption) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSelectableRewardOption::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortGameplayAbilityMontageInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE78B0 (end 0x00FE7902, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE78B0 (end 0x00FE7902, chained .pdata fragments)
 // Original VA: 0x0000000140FE78B0 | File offset: 0x00FE6EB0
 // Recovery: confirmed (TEXT("FortGameplayAbilityMontageInfo") and Z_Construct_UScriptStruct_FFortGameplayAbilityMontageInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortGameplayAbilityMontageInfo::StaticStruct()

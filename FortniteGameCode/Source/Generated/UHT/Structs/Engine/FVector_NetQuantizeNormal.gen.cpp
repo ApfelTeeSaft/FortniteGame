@@ -15,7 +15,7 @@ struct alignas(4) FVector_NetQuantizeNormal
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02495890 (end 0x024958E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02495890 (end 0x024958E2, chained .pdata fragments)
 // Original VA: 0x0000000142495890 | File offset: 0x02494E90
 // Recovery: confirmed (TEXT("Vector_NetQuantizeNormal") and Z_Construct_UScriptStruct_FVector_NetQuantizeNormal) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FVector_NetQuantizeNormal::StaticStruct()

@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/FortniteUI/ESocialImportPanelType.static.gen.cpp"
+#include "../Enums/FortniteUI/EFortHitPointModificationReason.static.gen.cpp"

@@ -14,7 +14,7 @@ struct alignas(8) FFortAttributeModifierDisplayData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xA8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911880 (end 0x029118D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911880 (end 0x029118D2, chained .pdata fragments)
 // Original VA: 0x0000000142911880 | File offset: 0x02910E80
 // Recovery: confirmed (TEXT("FortAttributeModifierDisplayData") and Z_Construct_UScriptStruct_FFortAttributeModifierDisplayData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAttributeModifierDisplayData::StaticStruct()

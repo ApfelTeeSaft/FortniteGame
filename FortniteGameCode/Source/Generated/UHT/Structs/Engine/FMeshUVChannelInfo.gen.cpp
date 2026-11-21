@@ -14,7 +14,7 @@ struct alignas(4) FMeshUVChannelInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F76C0 (end 0x023F7712, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F76C0 (end 0x023F7712, chained .pdata fragments)
 // Original VA: 0x00000001423F76C0 | File offset: 0x023F6CC0
 // Recovery: confirmed (TEXT("MeshUVChannelInfo") and Z_Construct_UScriptStruct_FMeshUVChannelInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMeshUVChannelInfo::StaticStruct()

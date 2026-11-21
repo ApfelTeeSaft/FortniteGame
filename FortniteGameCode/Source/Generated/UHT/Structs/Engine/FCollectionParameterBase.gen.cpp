@@ -14,7 +14,7 @@ struct alignas(8) FCollectionParameterBase
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486000 (end 0x02486052, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02486000 (end 0x02486052, chained .pdata fragments)
 // Original VA: 0x0000000142486000 | File offset: 0x02485600
 // Recovery: confirmed (TEXT("CollectionParameterBase") and Z_Construct_UScriptStruct_FCollectionParameterBase) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCollectionParameterBase::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortSpawnContext
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA190 (end 0x010CA1E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA190 (end 0x010CA1E2, chained .pdata fragments)
 // Original VA: 0x00000001410CA190 | File offset: 0x010C9790
 // Recovery: confirmed (TEXT("FortSpawnContext") and Z_Construct_UScriptStruct_FFortSpawnContext) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSpawnContext::StaticStruct()

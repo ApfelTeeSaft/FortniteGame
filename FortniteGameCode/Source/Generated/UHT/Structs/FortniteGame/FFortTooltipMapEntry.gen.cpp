@@ -14,7 +14,7 @@ struct alignas(8) FFortTooltipMapEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA370 (end 0x010CA3C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA370 (end 0x010CA3C2, chained .pdata fragments)
 // Original VA: 0x00000001410CA370 | File offset: 0x010C9970
 // Recovery: confirmed (TEXT("FortTooltipMapEntry") and Z_Construct_UScriptStruct_FFortTooltipMapEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortTooltipMapEntry::StaticStruct()

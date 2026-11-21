@@ -15,7 +15,7 @@ struct alignas(8) FForceFeedbackAttenuationSettings
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xA8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FB80 (end 0x0240FBD2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0240FB80 (end 0x0240FBD2, chained .pdata fragments)
 // Original VA: 0x000000014240FB80 | File offset: 0x0240F180
 // Recovery: confirmed (TEXT("ForceFeedbackAttenuationSettings") and Z_Construct_UScriptStruct_FForceFeedbackAttenuationSettings) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FForceFeedbackAttenuationSettings::StaticStruct()

@@ -15,7 +15,7 @@ struct alignas(8) FFOBCoreChoiceArray
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F662F0 (end 0x00F66342, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F662F0 (end 0x00F66342, chained .pdata fragments)
 // Original VA: 0x0000000140F662F0 | File offset: 0x00F658F0
 // Recovery: confirmed (TEXT("FOBCoreChoiceArray") and Z_Construct_UScriptStruct_FFOBCoreChoiceArray) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFOBCoreChoiceArray::StaticStruct()

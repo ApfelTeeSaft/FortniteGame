@@ -5,8 +5,17 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/ClothingSystemRuntime.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/ClothingSystemRuntime/EClothingWindMethod.static.gen.cpp"
 #include "../Enums/ClothingSystemRuntime/EClothingWindMethod.gen.cpp"
+#include "../Enums/ClothingSystemRuntime/MaskTarget_PhysMesh.static.gen.cpp"
 #include "../Enums/ClothingSystemRuntime/MaskTarget_PhysMesh.gen.cpp"
+#include "../Structs/ClothingSystemRuntime/FClothConfig.gen.cpp"
+#include "../Structs/ClothingSystemRuntime/FClothConstraintSetup.gen.cpp"
+#include "../Structs/ClothingSystemRuntime/FClothLODData.gen.cpp"
+#include "../Structs/ClothingSystemRuntime/FClothPhysicalMeshData.gen.cpp"
+#include "../Structs/ClothingSystemRuntime/FClothVertBoneData.gen.cpp"
+#include "../Structs/ClothingSystemRuntime/FClothParameterMask_PhysMesh.gen.cpp"
 #include "../Classes/ClothingSystemRuntime/UClothingAssetCustomData.gen.cpp"
 #include "../Classes/ClothingSystemRuntime/UClothingAsset.gen.cpp"
 #include "../Classes/ClothingSystemRuntime/UClothingSimulationFactoryNv.gen.cpp"

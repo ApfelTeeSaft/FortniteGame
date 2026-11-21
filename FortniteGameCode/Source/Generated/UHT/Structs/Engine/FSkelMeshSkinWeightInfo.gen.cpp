@@ -14,7 +14,7 @@ struct alignas(4) FSkelMeshSkinWeightInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4A10 (end 0x024D4A62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4A10 (end 0x024D4A62, chained .pdata fragments)
 // Original VA: 0x00000001424D4A10 | File offset: 0x024D4010
 // Recovery: confirmed (TEXT("SkelMeshSkinWeightInfo") and Z_Construct_UScriptStruct_FSkelMeshSkinWeightInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSkelMeshSkinWeightInfo::StaticStruct()

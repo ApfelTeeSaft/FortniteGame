@@ -14,7 +14,7 @@ struct alignas(8) FNetViewer
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F08D0 (end 0x024F0922, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024F08D0 (end 0x024F0922, chained .pdata fragments)
 // Original VA: 0x00000001424F08D0 | File offset: 0x024EFED0
 // Recovery: confirmed (TEXT("NetViewer") and Z_Construct_UScriptStruct_FNetViewer) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FNetViewer::StaticStruct()

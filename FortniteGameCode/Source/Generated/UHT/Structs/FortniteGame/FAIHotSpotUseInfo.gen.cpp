@@ -15,7 +15,7 @@ struct alignas(8) FAIHotSpotUseInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F988D0 (end 0x00F98922, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F988D0 (end 0x00F98922, chained .pdata fragments)
 // Original VA: 0x0000000140F988D0 | File offset: 0x00F97ED0
 // Recovery: confirmed (TEXT("AIHotSpotUseInfo") and Z_Construct_UScriptStruct_FAIHotSpotUseInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAIHotSpotUseInfo::StaticStruct()

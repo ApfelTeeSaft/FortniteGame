@@ -14,7 +14,7 @@ struct alignas(8) FFortAlterationSlotStatus
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C97D0 (end 0x010C9822, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C97D0 (end 0x010C9822, chained .pdata fragments)
 // Original VA: 0x00000001410C97D0 | File offset: 0x010C8DD0
 // Recovery: confirmed (TEXT("FortAlterationSlotStatus") and Z_Construct_UScriptStruct_FFortAlterationSlotStatus) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAlterationSlotStatus::StaticStruct()

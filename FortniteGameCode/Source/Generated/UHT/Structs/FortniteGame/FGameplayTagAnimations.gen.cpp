@@ -14,7 +14,7 @@ struct alignas(8) FGameplayTagAnimations
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78430 (end 0x00F78482, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78430 (end 0x00F78482, chained .pdata fragments)
 // Original VA: 0x0000000140F78430 | File offset: 0x00F77A30
 // Recovery: confirmed (TEXT("GameplayTagAnimations") and Z_Construct_UScriptStruct_FGameplayTagAnimations) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayTagAnimations::StaticStruct()

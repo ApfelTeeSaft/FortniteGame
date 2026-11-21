@@ -14,7 +14,7 @@ struct alignas(4) FPerPlatformInt
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0720 (end 0x024A0772, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A0720 (end 0x024A0772, chained .pdata fragments)
 // Original VA: 0x00000001424A0720 | File offset: 0x0249FD20
 // Recovery: confirmed (TEXT("PerPlatformInt") and Z_Construct_UScriptStruct_FPerPlatformInt) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPerPlatformInt::StaticStruct()

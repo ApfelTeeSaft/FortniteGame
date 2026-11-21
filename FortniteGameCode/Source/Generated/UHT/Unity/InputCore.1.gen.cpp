@@ -5,8 +5,14 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/InputCore.init.gen.cpp"  // init.gen.cpp position recovered
+#include "../Enums/InputCore/ETouchType.static.gen.cpp"
 #include "../Enums/InputCore/ETouchType.gen.cpp"
+#include "../Enums/InputCore/EConsoleForGamepadLabels.static.gen.cpp"
 #include "../Enums/InputCore/EConsoleForGamepadLabels.gen.cpp"
+#include "../Enums/InputCore/ETouchIndex.static.gen.cpp"
 #include "../Enums/InputCore/ETouchIndex.gen.cpp"
+#include "../Enums/InputCore/EControllerHand.static.gen.cpp"
 #include "../Enums/InputCore/EControllerHand.gen.cpp"
+#include "../Structs/InputCore/FKey.gen.cpp"
 #include "../Classes/InputCore/UInputCoreTypes.gen.cpp"

@@ -14,7 +14,7 @@ struct alignas(8) FItemDefinitionAndCount
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0E50 (end 0x00FE0EA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0E50 (end 0x00FE0EA2, chained .pdata fragments)
 // Original VA: 0x0000000140FE0E50 | File offset: 0x00FE0450
 // Recovery: confirmed (TEXT("ItemDefinitionAndCount") and Z_Construct_UScriptStruct_FItemDefinitionAndCount) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FItemDefinitionAndCount::StaticStruct()

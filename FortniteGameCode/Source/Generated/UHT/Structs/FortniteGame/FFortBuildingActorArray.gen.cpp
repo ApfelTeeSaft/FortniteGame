@@ -14,7 +14,7 @@ struct alignas(8) FFortBuildingActorArray
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5100 (end 0x010A5152, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5100 (end 0x010A5152, chained .pdata fragments)
 // Original VA: 0x00000001410A5100 | File offset: 0x010A4700
 // Recovery: confirmed (TEXT("FortBuildingActorArray") and Z_Construct_UScriptStruct_FFortBuildingActorArray) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortBuildingActorArray::StaticStruct()

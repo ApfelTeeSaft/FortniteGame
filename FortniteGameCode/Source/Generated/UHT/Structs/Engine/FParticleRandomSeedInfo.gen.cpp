@@ -14,7 +14,7 @@ struct alignas(8) FParticleRandomSeedInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024956B0 (end 0x02495702, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024956B0 (end 0x02495702, chained .pdata fragments)
 // Original VA: 0x00000001424956B0 | File offset: 0x02494CB0
 // Recovery: confirmed (TEXT("ParticleRandomSeedInfo") and Z_Construct_UScriptStruct_FParticleRandomSeedInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FParticleRandomSeedInfo::StaticStruct()

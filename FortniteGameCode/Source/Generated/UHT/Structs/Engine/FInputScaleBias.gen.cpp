@@ -14,7 +14,7 @@ struct alignas(4) FInputScaleBias
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427AA0 (end 0x02427AF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427AA0 (end 0x02427AF2, chained .pdata fragments)
 // Original VA: 0x0000000142427AA0 | File offset: 0x024270A0
 // Recovery: confirmed (TEXT("InputScaleBias") and Z_Construct_UScriptStruct_FInputScaleBias) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FInputScaleBias::StaticStruct()

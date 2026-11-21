@@ -14,7 +14,7 @@ struct alignas(8) FBakedAnimationStateMachine
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5EE0 (end 0x023D5F32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5EE0 (end 0x023D5F32, chained .pdata fragments)
 // Original VA: 0x00000001423D5EE0 | File offset: 0x023D54E0
 // Recovery: confirmed (TEXT("BakedAnimationStateMachine") and Z_Construct_UScriptStruct_FBakedAnimationStateMachine) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBakedAnimationStateMachine::StaticStruct()

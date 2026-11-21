@@ -14,7 +14,7 @@ struct alignas(2) FBTDecoratorLogic
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22B60 (end 0x01D22BB2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D22B60 (end 0x01D22BB2, chained .pdata fragments)
 // Original VA: 0x0000000141D22B60 | File offset: 0x01D22160
 // Recovery: confirmed (TEXT("BTDecoratorLogic") and Z_Construct_UScriptStruct_FBTDecoratorLogic) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBTDecoratorLogic::StaticStruct()

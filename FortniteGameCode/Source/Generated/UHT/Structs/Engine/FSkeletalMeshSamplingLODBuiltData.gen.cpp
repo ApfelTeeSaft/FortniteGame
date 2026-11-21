@@ -14,7 +14,7 @@ struct alignas(8) FSkeletalMeshSamplingLODBuiltData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x48];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4BF0 (end 0x024D4C42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4BF0 (end 0x024D4C42, chained .pdata fragments)
 // Original VA: 0x00000001424D4BF0 | File offset: 0x024D41F0
 // Recovery: confirmed (TEXT("SkeletalMeshSamplingLODBuiltData") and Z_Construct_UScriptStruct_FSkeletalMeshSamplingLODBuiltData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSkeletalMeshSamplingLODBuiltData::StaticStruct()

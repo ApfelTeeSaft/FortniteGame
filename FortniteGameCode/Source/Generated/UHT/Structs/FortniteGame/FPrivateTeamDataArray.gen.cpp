@@ -15,7 +15,7 @@ struct alignas(8) FPrivateTeamDataArray
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x118];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B34C0 (end 0x010B3512, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B34C0 (end 0x010B3512, chained .pdata fragments)
 // Original VA: 0x00000001410B34C0 | File offset: 0x010B2AC0
 // Recovery: confirmed (TEXT("PrivateTeamDataArray") and Z_Construct_UScriptStruct_FPrivateTeamDataArray) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPrivateTeamDataArray::StaticStruct()

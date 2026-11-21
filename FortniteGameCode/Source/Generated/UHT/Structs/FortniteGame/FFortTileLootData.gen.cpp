@@ -14,7 +14,7 @@ struct alignas(8) FFortTileLootData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x318];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F12E0 (end 0x010F1332, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F12E0 (end 0x010F1332, chained .pdata fragments)
 // Original VA: 0x00000001410F12E0 | File offset: 0x010F08E0
 // Recovery: confirmed (TEXT("FortTileLootData") and Z_Construct_UScriptStruct_FFortTileLootData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortTileLootData::StaticStruct()

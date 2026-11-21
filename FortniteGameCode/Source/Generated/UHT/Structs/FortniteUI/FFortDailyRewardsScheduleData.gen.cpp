@@ -14,7 +14,7 @@ struct alignas(8) FFortDailyRewardsScheduleData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x98];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B0F0 (end 0x0289B142, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289B0F0 (end 0x0289B142, chained .pdata fragments)
 // Original VA: 0x000000014289B0F0 | File offset: 0x0289A6F0
 // Recovery: confirmed (TEXT("FortDailyRewardsScheduleData") and Z_Construct_UScriptStruct_FFortDailyRewardsScheduleData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortDailyRewardsScheduleData::StaticStruct()

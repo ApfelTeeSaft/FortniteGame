@@ -14,7 +14,7 @@ struct alignas(8) FEdGraphTerminalType
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404780 (end 0x024047D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404780 (end 0x024047D2, chained .pdata fragments)
 // Original VA: 0x0000000142404780 | File offset: 0x02403D80
 // Recovery: confirmed (TEXT("EdGraphTerminalType") and Z_Construct_UScriptStruct_FEdGraphTerminalType) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FEdGraphTerminalType::StaticStruct()

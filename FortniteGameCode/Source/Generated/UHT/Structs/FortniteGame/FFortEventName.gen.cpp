@@ -14,7 +14,7 @@ struct alignas(8) FFortEventName
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9BF0 (end 0x010C9C42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9BF0 (end 0x010C9C42, chained .pdata fragments)
 // Original VA: 0x00000001410C9BF0 | File offset: 0x010C91F0
 // Recovery: confirmed (TEXT("FortEventName") and Z_Construct_UScriptStruct_FFortEventName) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortEventName::StaticStruct()

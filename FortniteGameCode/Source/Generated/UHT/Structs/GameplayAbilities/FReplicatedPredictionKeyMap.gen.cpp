@@ -15,7 +15,7 @@ struct alignas(8) FReplicatedPredictionKeyMap
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00565F60 (end 0x00565FB2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00565F60 (end 0x00565FB2, chained .pdata fragments)
 // Original VA: 0x0000000140565F60 | File offset: 0x00565560
 // Recovery: confirmed (TEXT("ReplicatedPredictionKeyMap") and Z_Construct_UScriptStruct_FReplicatedPredictionKeyMap) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FReplicatedPredictionKeyMap::StaticStruct()

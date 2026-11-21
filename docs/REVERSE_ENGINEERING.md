@@ -463,22 +463,50 @@ objects. Two modelling points:
   source order does not reproduce. Consecutive enums are adjacent in it, though. Each run of
   consecutive enums' `StaticEnum` functions is therefore compiled as a unit of its own.
 
-**Results against per-item units.** Gains:
+**Package-scope delegates (`tools/codegen/uht_packages.py`).** UHT emits a header's
+package-scope delegates first, before its enums, structs and classes. They have no
+`.CRT$XCU` entry. Each package's `SingletonFuncArray` lists them, together with class-scope
+delegates and noexport structs, and those whose `OuterFunc` is the package are package-scope
+(632). `unity_order.py` places each one between the namespace-scope `.data` records around
+it (`FFunctionParams`, `FStructParams`). `EnumParams` is function-local, so it is no anchor:
+- if an enum lies between the anchors, the delegate goes right before it;
+- if classes without UFunctions lie between, `FClassParams` and the delegate's
+  `PropPointers` (both `.rdata` definitions) order them.
 
-| Category | Before | After |
+**Package singletons and `init.gen.cpp`.** Each package constructor is generated from its
+`FPackageParams` and `SingletonFuncArray`. `PackageParams` is resolved by content, as the
+only `FPackageParams`-shaped record naming the package. Its position comes from the code:
+- A `StaticStruct`/`StaticEnum` compiled where the package constructor is defined inlines it
+  (587 structs, 270 enums); one in another translation unit calls it.
+- MSVC inlines a function defined later in the same unit too. The first build of this model
+  inlined it into 21 Engine structs that the reference shows calling it. So
+  `init.gen.cpp` opens a unity file of its own, and no calling item shares its unit.
+- UBT orders a unity file's `.gen.cpp` files alphabetically, so `init.gen.cpp` sits between
+  the last calling and the first inlining item. Inside that window the alphabetical rule
+  places it, and the unit is split there (23 splits).
+
+The position is recovered for 68 modules. Two are inconsistent, and in 16 no item inlines.
+Their package constructors are compiled alone.
+
+**Results against per-item units.** After these additions:
+
+| Category | Per-item units | Unity units |
 | --- | --- | --- |
-| Class constructors | 1,034 | 3,183 |
-| Enum constructors | 726 | 997 |
-| `StaticClass` thunks (outside the denominator) | 533 | 696 |
+| Class constructors | 1,034 | 3,227 |
+| UFunction creators, including 551 package-scope delegates | 10,556 | 11,085 |
+| Struct constructors | 1,514 | 2,097 |
+| `StaticStruct` | 1,426 | 1,859 |
+| `NewStructOps` | 1,294 | 1,782 |
+| Struct-ops registrars | 1,427 | 1,888 |
+| Enum constructors | 726 | 1,071 |
+| `StaticEnum` | 301 | 370 |
+| Package constructors | — | 68 |
 
-`StaticEnum` holds at 309 and struct constructors at 1,517.
-
-Lower: UFunction creators 10,458 (from 10,556) and `StaticStruct` 1,401 (from
-1,426). In 65 of the 104 creators that lost their match, the reference slot just before
-them belongs to an item not yet modelled: package-scope delegate creators, the 587 structs
-whose `StaticStruct` inlines the package singleton, or the package constructor at its
-`init.gen.cpp` position. A per-item unit never had those neighbours; a unity unit
-needs them. Nothing was relaxed, and the affected fields are reported unresolved.
+63 entries that were exact in per-item units are not, mostly next to the remaining
+unmodelled items: creators of function tables not attributed to a class, and the 7
+intrinsic classes. One enum registration initializer is `partial`. Its name literal shares a
+copy with another use in this build, so literal elimination predicted the wrong copy, and
+the byte comparison reports it.
 
 The 3,283 `GetPrivateStaticClass` bodies are relocation-equivalent. Fields not yet resolved
 include `InternalConstructor<C>`, `InternalVTableHelperCtorCaller<C>`, the package and

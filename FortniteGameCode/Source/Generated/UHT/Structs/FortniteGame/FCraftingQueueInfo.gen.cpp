@@ -14,7 +14,7 @@ struct alignas(4) FCraftingQueueInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106AA50 (end 0x0106AAA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106AA50 (end 0x0106AAA2, chained .pdata fragments)
 // Original VA: 0x000000014106AA50 | File offset: 0x0106A050
 // Recovery: confirmed (TEXT("CraftingQueueInfo") and Z_Construct_UScriptStruct_FCraftingQueueInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCraftingQueueInfo::StaticStruct()

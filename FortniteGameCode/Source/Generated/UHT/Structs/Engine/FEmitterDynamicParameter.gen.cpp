@@ -14,7 +14,7 @@ struct alignas(8) FEmitterDynamicParameter
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02499C50 (end 0x02499CA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02499C50 (end 0x02499CA2, chained .pdata fragments)
 // Original VA: 0x0000000142499C50 | File offset: 0x02499250
 // Recovery: confirmed (TEXT("EmitterDynamicParameter") and Z_Construct_UScriptStruct_FEmitterDynamicParameter) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FEmitterDynamicParameter::StaticStruct()

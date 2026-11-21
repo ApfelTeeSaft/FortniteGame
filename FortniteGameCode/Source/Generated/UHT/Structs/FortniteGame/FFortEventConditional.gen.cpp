@@ -14,7 +14,7 @@ struct alignas(8) FFortEventConditional
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2EC0 (end 0x010B2F12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010B2EC0 (end 0x010B2F12, chained .pdata fragments)
 // Original VA: 0x00000001410B2EC0 | File offset: 0x010B24C0
 // Recovery: confirmed (TEXT("FortEventConditional") and Z_Construct_UScriptStruct_FFortEventConditional) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortEventConditional::StaticStruct()

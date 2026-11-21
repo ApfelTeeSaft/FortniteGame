@@ -14,7 +14,7 @@ struct alignas(8) FFortPendingStoppedEncounterData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87960 (end 0x00F879B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F87960 (end 0x00F879B2, chained .pdata fragments)
 // Original VA: 0x0000000140F87960 | File offset: 0x00F86F60
 // Recovery: confirmed (TEXT("FortPendingStoppedEncounterData") and Z_Construct_UScriptStruct_FFortPendingStoppedEncounterData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortPendingStoppedEncounterData::StaticStruct()

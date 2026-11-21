@@ -14,7 +14,7 @@ struct alignas(8) FFortInstensityCurveSequenceProgression
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010063C0 (end 0x01006412, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010063C0 (end 0x01006412, chained .pdata fragments)
 // Original VA: 0x00000001410063C0 | File offset: 0x010059C0
 // Recovery: confirmed (TEXT("FortInstensityCurveSequenceProgression") and Z_Construct_UScriptStruct_FFortInstensityCurveSequenceProgression) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortInstensityCurveSequenceProgression::StaticStruct()

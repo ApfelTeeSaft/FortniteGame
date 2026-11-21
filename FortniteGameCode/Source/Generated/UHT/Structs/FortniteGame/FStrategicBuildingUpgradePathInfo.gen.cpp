@@ -14,7 +14,7 @@ struct alignas(8) FStrategicBuildingUpgradePathInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xB0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F16A0 (end 0x010F16F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F16A0 (end 0x010F16F2, chained .pdata fragments)
 // Original VA: 0x00000001410F16A0 | File offset: 0x010F0CA0
 // Recovery: confirmed (TEXT("StrategicBuildingUpgradePathInfo") and Z_Construct_UScriptStruct_FStrategicBuildingUpgradePathInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FStrategicBuildingUpgradePathInfo::StaticStruct()

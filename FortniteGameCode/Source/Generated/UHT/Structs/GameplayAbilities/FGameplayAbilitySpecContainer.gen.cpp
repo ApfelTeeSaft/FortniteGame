@@ -15,7 +15,7 @@ struct alignas(8) FGameplayAbilitySpecContainer
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B500 (end 0x0055B552, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055B500 (end 0x0055B552, chained .pdata fragments)
 // Original VA: 0x000000014055B500 | File offset: 0x0055AB00
 // Recovery: confirmed (TEXT("GameplayAbilitySpecContainer") and Z_Construct_UScriptStruct_FGameplayAbilitySpecContainer) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayAbilitySpecContainer::StaticStruct()

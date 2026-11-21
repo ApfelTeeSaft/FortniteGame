@@ -14,7 +14,7 @@ struct alignas(8) FAthenaPickResult
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9590 (end 0x010C95E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9590 (end 0x010C95E2, chained .pdata fragments)
 // Original VA: 0x00000001410C9590 | File offset: 0x010C8B90
 // Recovery: confirmed (TEXT("AthenaPickResult") and Z_Construct_UScriptStruct_FAthenaPickResult) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAthenaPickResult::StaticStruct()

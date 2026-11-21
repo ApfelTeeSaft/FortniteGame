@@ -14,7 +14,7 @@ struct alignas(4) FFortItemEntryPreviewData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF360 (end 0x028CF3B2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF360 (end 0x028CF3B2, chained .pdata fragments)
 // Original VA: 0x00000001428CF360 | File offset: 0x028CE960
 // Recovery: confirmed (TEXT("FortItemEntryPreviewData") and Z_Construct_UScriptStruct_FFortItemEntryPreviewData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortItemEntryPreviewData::StaticStruct()

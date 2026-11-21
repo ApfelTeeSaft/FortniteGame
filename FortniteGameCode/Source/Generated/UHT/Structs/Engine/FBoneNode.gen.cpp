@@ -14,7 +14,7 @@ struct alignas(8) FBoneNode
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4770 (end 0x024D47C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D4770 (end 0x024D47C2, chained .pdata fragments)
 // Original VA: 0x00000001424D4770 | File offset: 0x024D3D70
 // Recovery: confirmed (TEXT("BoneNode") and Z_Construct_UScriptStruct_FBoneNode) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBoneNode::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortStateStyle
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x2F0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028943A0 (end 0x028943F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028943A0 (end 0x028943F2, chained .pdata fragments)
 // Original VA: 0x00000001428943A0 | File offset: 0x028939A0
 // Recovery: confirmed (TEXT("FortStateStyle") and Z_Construct_UScriptStruct_FFortStateStyle) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortStateStyle::StaticStruct()

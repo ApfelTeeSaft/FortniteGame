@@ -4,6 +4,6 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/EFormatArgumentType.static.gen.cpp"
-#include "../Enums/Engine/ETextGender.static.gen.cpp"
-#include "../Enums/Engine/ERoundingMode.static.gen.cpp"
+#include "../Enums/Engine/EQuitPreference.static.gen.cpp"
+#include "../Enums/Engine/EMoveComponentAction.static.gen.cpp"
+#include "../Enums/Engine/EDrawDebugTrace.static.gen.cpp"

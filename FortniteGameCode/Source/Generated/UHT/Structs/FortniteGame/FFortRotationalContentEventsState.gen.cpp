@@ -14,7 +14,7 @@ struct alignas(8) FFortRotationalContentEventsState
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x140];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A54C0 (end 0x010A5512, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A54C0 (end 0x010A5512, chained .pdata fragments)
 // Original VA: 0x00000001410A54C0 | File offset: 0x010A4AC0
 // Recovery: confirmed (TEXT("FortRotationalContentEventsState") and Z_Construct_UScriptStruct_FFortRotationalContentEventsState) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortRotationalContentEventsState::StaticStruct()

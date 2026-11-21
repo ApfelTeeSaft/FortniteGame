@@ -14,7 +14,7 @@ struct alignas(4) FMovementProperties
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x4];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F410 (end 0x0248F462, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248F410 (end 0x0248F462, chained .pdata fragments)
 // Original VA: 0x000000014248F410 | File offset: 0x0248EA10
 // Recovery: confirmed (TEXT("MovementProperties") and Z_Construct_UScriptStruct_FMovementProperties) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMovementProperties::StaticStruct()

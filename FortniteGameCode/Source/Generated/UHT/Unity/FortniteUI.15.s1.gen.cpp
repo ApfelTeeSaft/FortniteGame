@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/FortniteUI/EFortSquadSlottingRestrictionReason.static.gen.cpp"
+#include "../Enums/FortniteUI/ERedeemCodeFailureReason.static.gen.cpp"

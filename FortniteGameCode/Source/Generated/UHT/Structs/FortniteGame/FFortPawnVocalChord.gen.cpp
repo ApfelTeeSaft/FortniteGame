@@ -14,7 +14,7 @@ struct alignas(8) FFortPawnVocalChord
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xD8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105DD30 (end 0x0105DD82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0105DD30 (end 0x0105DD82, chained .pdata fragments)
 // Original VA: 0x000000014105DD30 | File offset: 0x0105D330
 // Recovery: confirmed (TEXT("FortPawnVocalChord") and Z_Construct_UScriptStruct_FFortPawnVocalChord) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortPawnVocalChord::StaticStruct()

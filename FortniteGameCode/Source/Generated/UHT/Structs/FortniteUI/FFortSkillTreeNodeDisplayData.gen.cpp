@@ -14,7 +14,7 @@ struct alignas(8) FFortSkillTreeNodeDisplayData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x2D8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5290 (end 0x028F52E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028F5290 (end 0x028F52E2, chained .pdata fragments)
 // Original VA: 0x00000001428F5290 | File offset: 0x028F4890
 // Recovery: confirmed (TEXT("FortSkillTreeNodeDisplayData") and Z_Construct_UScriptStruct_FFortSkillTreeNodeDisplayData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSkillTreeNodeDisplayData::StaticStruct()

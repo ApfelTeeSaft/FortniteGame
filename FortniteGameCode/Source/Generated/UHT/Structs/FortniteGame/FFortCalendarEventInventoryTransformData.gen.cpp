@@ -15,7 +15,7 @@ struct alignas(8) FFortCalendarEventInventoryTransformData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x110];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACEA0 (end 0x00FACEF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FACEA0 (end 0x00FACEF2, chained .pdata fragments)
 // Original VA: 0x0000000140FACEA0 | File offset: 0x00FAC4A0
 // Recovery: confirmed (TEXT("FortCalendarEventInventoryTransformData") and Z_Construct_UScriptStruct_FFortCalendarEventInventoryTransformData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCalendarEventInventoryTransformData::StaticStruct()

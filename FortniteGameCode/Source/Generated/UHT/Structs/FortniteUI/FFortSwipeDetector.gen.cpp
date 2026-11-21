@@ -14,7 +14,7 @@ struct alignas(16) FFortSwipeDetector
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x130];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x029047C0 (end 0x02904812, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029047C0 (end 0x02904812, chained .pdata fragments)
 // Original VA: 0x00000001429047C0 | File offset: 0x02903DC0
 // Recovery: confirmed (TEXT("FortSwipeDetector") and Z_Construct_UScriptStruct_FFortSwipeDetector) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSwipeDetector::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FGameplayEffectContext
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x70];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563C30 (end 0x00563C82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563C30 (end 0x00563C82, chained .pdata fragments)
 // Original VA: 0x0000000140563C30 | File offset: 0x00563230
 // Recovery: confirmed (TEXT("GameplayEffectContext") and Z_Construct_UScriptStruct_FGameplayEffectContext) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayEffectContext::StaticStruct()

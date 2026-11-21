@@ -14,7 +14,7 @@ struct alignas(8) FWorldContext
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x290];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404CC0 (end 0x02404D12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02404CC0 (end 0x02404D12, chained .pdata fragments)
 // Original VA: 0x0000000142404CC0 | File offset: 0x024042C0
 // Recovery: confirmed (TEXT("WorldContext") and Z_Construct_UScriptStruct_FWorldContext) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FWorldContext::StaticStruct()

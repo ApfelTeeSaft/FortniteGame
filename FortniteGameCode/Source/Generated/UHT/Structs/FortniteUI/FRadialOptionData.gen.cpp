@@ -14,7 +14,7 @@ struct alignas(8) FRadialOptionData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x90];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6980 (end 0x028E69D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028E6980 (end 0x028E69D2, chained .pdata fragments)
 // Original VA: 0x00000001428E6980 | File offset: 0x028E5F80
 // Recovery: confirmed (TEXT("RadialOptionData") and Z_Construct_UScriptStruct_FRadialOptionData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRadialOptionData::StaticStruct()

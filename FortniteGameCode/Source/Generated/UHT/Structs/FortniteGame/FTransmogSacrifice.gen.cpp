@@ -15,7 +15,7 @@ struct alignas(8) FTransmogSacrifice
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA910 (end 0x010CA962, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CA910 (end 0x010CA962, chained .pdata fragments)
 // Original VA: 0x00000001410CA910 | File offset: 0x010C9F10
 // Recovery: confirmed (TEXT("TransmogSacrifice") and Z_Construct_UScriptStruct_FTransmogSacrifice) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTransmogSacrifice::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortMultiSizeBrush
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x2D0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9E30 (end 0x010C9E82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C9E30 (end 0x010C9E82, chained .pdata fragments)
 // Original VA: 0x00000001410C9E30 | File offset: 0x010C9430
 // Recovery: confirmed (TEXT("FortMultiSizeBrush") and Z_Construct_UScriptStruct_FFortMultiSizeBrush) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortMultiSizeBrush::StaticStruct()

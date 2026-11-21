@@ -14,7 +14,7 @@ struct alignas(8) FFortInputActionKeyAlias
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FC50 (end 0x0107FCA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FC50 (end 0x0107FCA2, chained .pdata fragments)
 // Original VA: 0x000000014107FC50 | File offset: 0x0107F250
 // Recovery: confirmed (TEXT("FortInputActionKeyAlias") and Z_Construct_UScriptStruct_FFortInputActionKeyAlias) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortInputActionKeyAlias::StaticStruct()

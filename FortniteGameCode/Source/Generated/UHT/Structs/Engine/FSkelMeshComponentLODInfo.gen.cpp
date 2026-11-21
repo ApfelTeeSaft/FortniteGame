@@ -14,7 +14,7 @@ struct alignas(8) FSkelMeshComponentLODInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D49B0 (end 0x024D4A02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D49B0 (end 0x024D4A02, chained .pdata fragments)
 // Original VA: 0x00000001424D49B0 | File offset: 0x024D3FB0
 // Recovery: confirmed (TEXT("SkelMeshComponentLODInfo") and Z_Construct_UScriptStruct_FSkelMeshComponentLODInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSkelMeshComponentLODInfo::StaticStruct()

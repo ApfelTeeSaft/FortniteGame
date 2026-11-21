@@ -14,7 +14,7 @@ struct alignas(16) FBuildingGameplayActorAbilityDeliveryInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x80];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BF60 (end 0x00F6BFB2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6BF60 (end 0x00F6BFB2, chained .pdata fragments)
 // Original VA: 0x0000000140F6BF60 | File offset: 0x00F6B560
 // Recovery: confirmed (TEXT("BuildingGameplayActorAbilityDeliveryInfo") and Z_Construct_UScriptStruct_FBuildingGameplayActorAbilityDeliveryInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBuildingGameplayActorAbilityDeliveryInfo::StaticStruct()

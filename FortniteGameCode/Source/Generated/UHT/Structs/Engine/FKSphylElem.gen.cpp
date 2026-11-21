@@ -15,7 +15,7 @@ struct alignas(16) FKSphylElem
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x90];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB6B0 (end 0x024DB702, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024DB6B0 (end 0x024DB702, chained .pdata fragments)
 // Original VA: 0x00000001424DB6B0 | File offset: 0x024DACB0
 // Recovery: confirmed (TEXT("KSphylElem") and Z_Construct_UScriptStruct_FKSphylElem) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FKSphylElem::StaticStruct()

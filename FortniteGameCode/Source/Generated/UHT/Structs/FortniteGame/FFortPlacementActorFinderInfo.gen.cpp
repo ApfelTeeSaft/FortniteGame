@@ -14,7 +14,7 @@ struct alignas(8) FFortPlacementActorFinderInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9BC0 (end 0x010E9C12, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E9BC0 (end 0x010E9C12, chained .pdata fragments)
 // Original VA: 0x00000001410E9BC0 | File offset: 0x010E91C0
 // Recovery: confirmed (TEXT("FortPlacementActorFinderInfo") and Z_Construct_UScriptStruct_FFortPlacementActorFinderInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortPlacementActorFinderInfo::StaticStruct()

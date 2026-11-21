@@ -14,7 +14,7 @@ struct alignas(8) FMaterialFunctionInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024788A0 (end 0x024788F2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024788A0 (end 0x024788F2, chained .pdata fragments)
 // Original VA: 0x00000001424788A0 | File offset: 0x02477EA0
 // Recovery: confirmed (TEXT("MaterialFunctionInfo") and Z_Construct_UScriptStruct_FMaterialFunctionInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMaterialFunctionInfo::StaticStruct()

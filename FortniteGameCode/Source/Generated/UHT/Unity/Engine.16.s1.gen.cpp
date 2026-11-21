@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/ETrail2SourceMethod.static.gen.cpp"
+#include "../Enums/Engine/FNavigationSystemRunMode.static.gen.cpp"

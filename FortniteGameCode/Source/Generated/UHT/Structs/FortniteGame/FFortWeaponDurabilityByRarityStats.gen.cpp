@@ -15,7 +15,7 @@ struct alignas(8) FFortWeaponDurabilityByRarityStats
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8AA0 (end 0x010D8AF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8AA0 (end 0x010D8AF2, chained .pdata fragments)
 // Original VA: 0x00000001410D8AA0 | File offset: 0x010D80A0
 // Recovery: confirmed (TEXT("FortWeaponDurabilityByRarityStats") and Z_Construct_UScriptStruct_FFortWeaponDurabilityByRarityStats) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortWeaponDurabilityByRarityStats::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FRawCurveTracks
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C82E0 (end 0x023C8332, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C82E0 (end 0x023C8332, chained .pdata fragments)
 // Original VA: 0x00000001423C82E0 | File offset: 0x023C78E0
 // Recovery: confirmed (TEXT("RawCurveTracks") and Z_Construct_UScriptStruct_FRawCurveTracks) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRawCurveTracks::StaticStruct()

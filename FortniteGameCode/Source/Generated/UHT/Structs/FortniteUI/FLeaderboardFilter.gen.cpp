@@ -14,7 +14,7 @@ struct alignas(8) FLeaderboardFilter
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EF90 (end 0x0287EFE2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0287EF90 (end 0x0287EFE2, chained .pdata fragments)
 // Original VA: 0x000000014287EF90 | File offset: 0x0287E590
 // Recovery: confirmed (TEXT("LeaderboardFilter") and Z_Construct_UScriptStruct_FLeaderboardFilter) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FLeaderboardFilter::StaticStruct()

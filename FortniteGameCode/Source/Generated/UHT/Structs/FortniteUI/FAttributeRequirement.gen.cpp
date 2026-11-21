@@ -14,7 +14,7 @@ struct alignas(8) FAttributeRequirement
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3190 (end 0x028A31E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A3190 (end 0x028A31E2, chained .pdata fragments)
 // Original VA: 0x00000001428A3190 | File offset: 0x028A2790
 // Recovery: confirmed (TEXT("AttributeRequirement") and Z_Construct_UScriptStruct_FAttributeRequirement) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAttributeRequirement::StaticStruct()

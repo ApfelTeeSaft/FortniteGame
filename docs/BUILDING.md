@@ -62,6 +62,7 @@ python tools/codegen/uht_creators.py     # class fragments: StaticRegisterNative
 python tools/codegen/uht_structs.py      # USTRUCT fragments
 python tools/codegen/uht_enums.py        # UENUM fragments (constructor; StaticEnum in .static)
 python tools/codegen/uht_classes.py      # Classes.gen.h, IMPLEMENT_CLASS fragments
+python tools/codegen/uht_packages.py     # package-scope delegates, package constructors (init.gen.cpp)
 python tools/codegen/unity.py            # Unity/*.gen.cpp: fragments in recovered order
 ```
 

@@ -14,7 +14,7 @@ struct alignas(8) FGameplayEffectAttributeCaptureSpec
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x38];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563B70 (end 0x00563BC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563B70 (end 0x00563BC2, chained .pdata fragments)
 // Original VA: 0x0000000140563B70 | File offset: 0x00563170
 // Recovery: confirmed (TEXT("GameplayEffectAttributeCaptureSpec") and Z_Construct_UScriptStruct_FGameplayEffectAttributeCaptureSpec) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayEffectAttributeCaptureSpec::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(4) FMOBATurretPrioritySetting
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78490 (end 0x00F784E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F78490 (end 0x00F784E2, chained .pdata fragments)
 // Original VA: 0x0000000140F78490 | File offset: 0x00F77A90
 // Recovery: confirmed (TEXT("MOBATurretPrioritySetting") and Z_Construct_UScriptStruct_FMOBATurretPrioritySetting) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMOBATurretPrioritySetting::StaticStruct()

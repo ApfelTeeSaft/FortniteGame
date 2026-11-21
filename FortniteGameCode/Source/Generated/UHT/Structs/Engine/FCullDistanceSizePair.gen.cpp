@@ -14,7 +14,7 @@ struct alignas(4) FCullDistanceSizePair
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDD30 (end 0x023FDD82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FDD30 (end 0x023FDD82, chained .pdata fragments)
 // Original VA: 0x00000001423FDD30 | File offset: 0x023FD330
 // Recovery: confirmed (TEXT("CullDistanceSizePair") and Z_Construct_UScriptStruct_FCullDistanceSizePair) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCullDistanceSizePair::StaticStruct()

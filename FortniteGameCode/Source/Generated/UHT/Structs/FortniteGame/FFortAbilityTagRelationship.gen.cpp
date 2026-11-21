@@ -14,7 +14,7 @@ struct alignas(8) FFortAbilityTagRelationship
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x48];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0C10 (end 0x00FE0C62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE0C10 (end 0x00FE0C62, chained .pdata fragments)
 // Original VA: 0x0000000140FE0C10 | File offset: 0x00FE0210
 // Recovery: confirmed (TEXT("FortAbilityTagRelationship") and Z_Construct_UScriptStruct_FFortAbilityTagRelationship) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAbilityTagRelationship::StaticStruct()

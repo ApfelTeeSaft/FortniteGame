@@ -14,7 +14,7 @@ struct alignas(8) FFortCloudSaveRecordInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFF30 (end 0x00FBFF82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBFF30 (end 0x00FBFF82, chained .pdata fragments)
 // Original VA: 0x0000000140FBFF30 | File offset: 0x00FBF530
 // Recovery: confirmed (TEXT("FortCloudSaveRecordInfo") and Z_Construct_UScriptStruct_FFortCloudSaveRecordInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCloudSaveRecordInfo::StaticStruct()

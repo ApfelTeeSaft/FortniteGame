@@ -14,7 +14,7 @@ struct alignas(8) FTieredModifierSetData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1090 (end 0x00FE10E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE1090 (end 0x00FE10E2, chained .pdata fragments)
 // Original VA: 0x0000000140FE1090 | File offset: 0x00FE0690
 // Recovery: confirmed (TEXT("TieredModifierSetData") and Z_Construct_UScriptStruct_FTieredModifierSetData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTieredModifierSetData::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FTextureSource
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x80];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7790 (end 0x024E77E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024E7790 (end 0x024E77E2, chained .pdata fragments)
 // Original VA: 0x00000001424E7790 | File offset: 0x024E6D90
 // Recovery: confirmed (TEXT("TextureSource") and Z_Construct_UScriptStruct_FTextureSource) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTextureSource::StaticStruct()

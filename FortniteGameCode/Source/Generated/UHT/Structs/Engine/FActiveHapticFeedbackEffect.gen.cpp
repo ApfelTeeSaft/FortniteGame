@@ -14,7 +14,7 @@ struct alignas(8) FActiveHapticFeedbackEffect
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241EDA0 (end 0x0241EDF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0241EDA0 (end 0x0241EDF2, chained .pdata fragments)
 // Original VA: 0x000000014241EDA0 | File offset: 0x0241E3A0
 // Recovery: confirmed (TEXT("ActiveHapticFeedbackEffect") and Z_Construct_UScriptStruct_FActiveHapticFeedbackEffect) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FActiveHapticFeedbackEffect::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortBatchUpdatePlayer_Update
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xF8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037870 (end 0x010378C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037870 (end 0x010378C2, chained .pdata fragments)
 // Original VA: 0x0000000141037870 | File offset: 0x01036E70
 // Recovery: confirmed (TEXT("FortBatchUpdatePlayer_Update") and Z_Construct_UScriptStruct_FFortBatchUpdatePlayer_Update) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortBatchUpdatePlayer_Update::StaticStruct()

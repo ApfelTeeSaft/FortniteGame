@@ -14,7 +14,7 @@ struct alignas(8) FBranchingPointNotifyPayload
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x20];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5FA0 (end 0x023D5FF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5FA0 (end 0x023D5FF2, chained .pdata fragments)
 // Original VA: 0x00000001423D5FA0 | File offset: 0x023D55A0
 // Recovery: confirmed (TEXT("BranchingPointNotifyPayload") and Z_Construct_UScriptStruct_FBranchingPointNotifyPayload) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FBranchingPointNotifyPayload::StaticStruct()

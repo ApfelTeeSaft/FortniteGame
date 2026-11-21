@@ -14,7 +14,7 @@ struct alignas(8) FMinimapGoalByTagColorsData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F910E0 (end 0x00F91132, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F910E0 (end 0x00F91132, chained .pdata fragments)
 // Original VA: 0x0000000140F910E0 | File offset: 0x00F906E0
 // Recovery: confirmed (TEXT("MinimapGoalByTagColorsData") and Z_Construct_UScriptStruct_FMinimapGoalByTagColorsData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMinimapGoalByTagColorsData::StaticStruct()

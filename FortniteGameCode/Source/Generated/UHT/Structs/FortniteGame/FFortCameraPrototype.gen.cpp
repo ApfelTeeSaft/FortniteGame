@@ -14,7 +14,7 @@ struct alignas(8) FFortCameraPrototype
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106AB70 (end 0x0106ABC2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0106AB70 (end 0x0106ABC2, chained .pdata fragments)
 // Original VA: 0x000000014106AB70 | File offset: 0x0106A170
 // Recovery: confirmed (TEXT("FortCameraPrototype") and Z_Construct_UScriptStruct_FFortCameraPrototype) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCameraPrototype::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FAnimationGroupReference
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7E00 (end 0x023C7E52, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C7E00 (end 0x023C7E52, chained .pdata fragments)
 // Original VA: 0x00000001423C7E00 | File offset: 0x023C7400
 // Recovery: confirmed (TEXT("AnimationGroupReference") and Z_Construct_UScriptStruct_FAnimationGroupReference) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimationGroupReference::StaticStruct()

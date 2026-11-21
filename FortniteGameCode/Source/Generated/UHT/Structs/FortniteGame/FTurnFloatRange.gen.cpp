@@ -14,7 +14,7 @@ struct alignas(4) FTurnFloatRange
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE79D0 (end 0x00FE7A22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE79D0 (end 0x00FE7A22, chained .pdata fragments)
 // Original VA: 0x0000000140FE79D0 | File offset: 0x00FE6FD0
 // Recovery: confirmed (TEXT("TurnFloatRange") and Z_Construct_UScriptStruct_FTurnFloatRange) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FTurnFloatRange::StaticStruct()

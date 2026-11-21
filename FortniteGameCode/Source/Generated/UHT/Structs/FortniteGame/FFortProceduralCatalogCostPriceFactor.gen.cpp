@@ -15,7 +15,7 @@ struct alignas(8) FFortProceduralCatalogCostPriceFactor
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB0080 (end 0x00FB00D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB0080 (end 0x00FB00D2, chained .pdata fragments)
 // Original VA: 0x0000000140FB0080 | File offset: 0x00FAF680
 // Recovery: confirmed (TEXT("FortProceduralCatalogCostPriceFactor") and Z_Construct_UScriptStruct_FFortProceduralCatalogCostPriceFactor) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortProceduralCatalogCostPriceFactor::StaticStruct()

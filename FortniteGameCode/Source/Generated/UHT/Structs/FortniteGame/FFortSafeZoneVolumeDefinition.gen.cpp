@@ -14,7 +14,7 @@ struct alignas(8) FFortSafeZoneVolumeDefinition
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D690 (end 0x0109D6E2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109D690 (end 0x0109D6E2, chained .pdata fragments)
 // Original VA: 0x000000014109D690 | File offset: 0x0109CC90
 // Recovery: confirmed (TEXT("FortSafeZoneVolumeDefinition") and Z_Construct_UScriptStruct_FFortSafeZoneVolumeDefinition) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSafeZoneVolumeDefinition::StaticStruct()

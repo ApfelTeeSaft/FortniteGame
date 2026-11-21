@@ -15,7 +15,7 @@ struct alignas(8) FAnimNode_TransitionPoseEvaluator
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x78];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CDEE0 (end 0x023CDF32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023CDEE0 (end 0x023CDF32, chained .pdata fragments)
 // Original VA: 0x00000001423CDEE0 | File offset: 0x023CD4E0
 // Recovery: confirmed (TEXT("AnimNode_TransitionPoseEvaluator") and Z_Construct_UScriptStruct_FAnimNode_TransitionPoseEvaluator) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimNode_TransitionPoseEvaluator::StaticStruct()

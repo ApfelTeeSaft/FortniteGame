@@ -14,7 +14,7 @@ struct alignas(4) FDefenderNPCStatInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E29B0 (end 0x010E2A02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010E29B0 (end 0x010E2A02, chained .pdata fragments)
 // Original VA: 0x00000001410E29B0 | File offset: 0x010E1FB0
 // Recovery: confirmed (TEXT("DefenderNPCStatInfo") and Z_Construct_UScriptStruct_FDefenderNPCStatInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FDefenderNPCStatInfo::StaticStruct()

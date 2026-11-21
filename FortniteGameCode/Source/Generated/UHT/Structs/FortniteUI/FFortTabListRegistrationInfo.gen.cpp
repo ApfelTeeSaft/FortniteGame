@@ -14,7 +14,7 @@ struct alignas(8) FFortTabListRegistrationInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xB8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904880 (end 0x029048D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02904880 (end 0x029048D2, chained .pdata fragments)
 // Original VA: 0x0000000142904880 | File offset: 0x02903E80
 // Recovery: confirmed (TEXT("FortTabListRegistrationInfo") and Z_Construct_UScriptStruct_FFortTabListRegistrationInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortTabListRegistrationInfo::StaticStruct()

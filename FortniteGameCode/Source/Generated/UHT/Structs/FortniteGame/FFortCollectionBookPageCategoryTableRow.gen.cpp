@@ -15,7 +15,7 @@ struct alignas(8) FFortCollectionBookPageCategoryTableRow
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5870 (end 0x00FC58C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5870 (end 0x00FC58C2, chained .pdata fragments)
 // Original VA: 0x0000000140FC5870 | File offset: 0x00FC4E70
 // Recovery: confirmed (TEXT("FortCollectionBookPageCategoryTableRow") and Z_Construct_UScriptStruct_FFortCollectionBookPageCategoryTableRow) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCollectionBookPageCategoryTableRow::StaticStruct()

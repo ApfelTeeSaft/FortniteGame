@@ -14,7 +14,7 @@ struct alignas(8) FPlayerBannerInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B100 (end 0x0108B152, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108B100 (end 0x0108B152, chained .pdata fragments)
 // Original VA: 0x000000014108B100 | File offset: 0x0108A700
 // Recovery: confirmed (TEXT("PlayerBannerInfo") and Z_Construct_UScriptStruct_FPlayerBannerInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FPlayerBannerInfo::StaticStruct()

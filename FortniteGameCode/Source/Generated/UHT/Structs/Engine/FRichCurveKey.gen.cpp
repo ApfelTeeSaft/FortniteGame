@@ -14,7 +14,7 @@ struct alignas(4) FRichCurveKey
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1C];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C2600 (end 0x024C2652, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C2600 (end 0x024C2652, chained .pdata fragments)
 // Original VA: 0x00000001424C2600 | File offset: 0x024C1C00
 // Recovery: confirmed (TEXT("RichCurveKey") and Z_Construct_UScriptStruct_FRichCurveKey) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRichCurveKey::StaticStruct()

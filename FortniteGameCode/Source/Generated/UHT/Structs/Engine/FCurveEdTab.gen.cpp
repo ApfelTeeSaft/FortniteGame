@@ -14,7 +14,7 @@ struct alignas(8) FCurveEdTab
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427980 (end 0x024279D2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427980 (end 0x024279D2, chained .pdata fragments)
 // Original VA: 0x0000000142427980 | File offset: 0x02426F80
 // Recovery: confirmed (TEXT("CurveEdTab") and Z_Construct_UScriptStruct_FCurveEdTab) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCurveEdTab::StaticStruct()

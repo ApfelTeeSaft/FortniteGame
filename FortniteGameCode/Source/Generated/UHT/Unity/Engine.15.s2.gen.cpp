@@ -4,4 +4,4 @@
 
 #include "FortniteGameCode/UnityPrologue.h"
 
-#include "../Enums/Engine/ENavCostDisplay.static.gen.cpp"
+#include "../Enums/Engine/EStreamingVolumeUsage.static.gen.cpp"

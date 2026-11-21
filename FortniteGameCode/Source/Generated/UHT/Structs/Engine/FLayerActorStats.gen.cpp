@@ -14,7 +14,7 @@ struct alignas(8) FLayerActorStats
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02470070 (end 0x024700C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02470070 (end 0x024700C2, chained .pdata fragments)
 // Original VA: 0x0000000142470070 | File offset: 0x0246F670
 // Recovery: confirmed (TEXT("LayerActorStats") and Z_Construct_UScriptStruct_FLayerActorStats) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FLayerActorStats::StaticStruct()

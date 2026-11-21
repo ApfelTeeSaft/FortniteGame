@@ -14,7 +14,7 @@ struct alignas(8) FFortCraftingResultNotification
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102F9B0 (end 0x0102FA02, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102F9B0 (end 0x0102FA02, chained .pdata fragments)
 // Original VA: 0x000000014102F9B0 | File offset: 0x0102EFB0
 // Recovery: confirmed (TEXT("FortCraftingResultNotification") and Z_Construct_UScriptStruct_FFortCraftingResultNotification) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCraftingResultNotification::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFortAIAppearanceOverrideEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90EA0 (end 0x00F90EF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90EA0 (end 0x00F90EF2, chained .pdata fragments)
 // Original VA: 0x0000000140F90EA0 | File offset: 0x00F904A0
 // Recovery: confirmed (TEXT("FortAIAppearanceOverrideEntry") and Z_Construct_UScriptStruct_FFortAIAppearanceOverrideEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAIAppearanceOverrideEntry::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FFastArraySerializer
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xB0];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02495470 (end 0x024954C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02495470 (end 0x024954C2, chained .pdata fragments)
 // Original VA: 0x0000000142495470 | File offset: 0x02494A70
 // Recovery: confirmed (TEXT("FastArraySerializer") and Z_Construct_UScriptStruct_FFastArraySerializer) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFastArraySerializer::StaticStruct()

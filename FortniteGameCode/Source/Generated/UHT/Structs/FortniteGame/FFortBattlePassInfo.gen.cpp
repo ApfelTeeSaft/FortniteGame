@@ -14,7 +14,7 @@ struct alignas(4) FFortBattlePassInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x14];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023640 (end 0x01023692, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01023640 (end 0x01023692, chained .pdata fragments)
 // Original VA: 0x0000000141023640 | File offset: 0x01022C40
 // Recovery: confirmed (TEXT("FortBattlePassInfo") and Z_Construct_UScriptStruct_FFortBattlePassInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortBattlePassInfo::StaticStruct()

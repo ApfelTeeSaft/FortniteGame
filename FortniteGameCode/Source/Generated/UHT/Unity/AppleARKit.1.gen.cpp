@@ -5,13 +5,20 @@
 // Stand-in for the engine headers every unity file starts with (creates the plain .bss first).
 #include "FortniteGameCode/UnityPrologue.h"
 
+#include "../Packages/AppleARKit.init.gen.cpp"  // init.gen.cpp position recovered
 #include "../UAppleARKitAnchor.gen.cpp"
 #include "../Classes/AppleARKit/UAppleARKitAnchor.gen.cpp"
 #include "../UAppleARKitBlueprintLibrary.gen.cpp"
 #include "../Classes/AppleARKit/UAppleARKitBlueprintLibrary.gen.cpp"
+#include "../Structs/AppleARKit/FAppleARKitCamera.gen.cpp"
+#include "../Structs/AppleARKit/FAppleARKitFrame.gen.cpp"
+#include "../Enums/AppleARKit/EAppleARKitHitTestResultType.static.gen.cpp"
 #include "../Enums/AppleARKit/EAppleARKitHitTestResultType.gen.cpp"
+#include "../Structs/AppleARKit/FAppleARKitHitTestResult.gen.cpp"
+#include "../Structs/AppleARKit/FAppleARKitLightEstimate.gen.cpp"
 #include "../UAppleARKitPlaneAnchor.gen.cpp"
 #include "../Classes/AppleARKit/UAppleARKitPlaneAnchor.gen.cpp"
 #include "../Classes/AppleARKit/UARKitCameraOverlayMaterialLoader.gen.cpp"
+#include "../Enums/AppleARKit/EARKitTextureType.static.gen.cpp"
 #include "../Enums/AppleARKit/EARKitTextureType.gen.cpp"
 #include "../Classes/AppleARKit/UMaterialExpressionARKitPassthroughCamera.gen.cpp"

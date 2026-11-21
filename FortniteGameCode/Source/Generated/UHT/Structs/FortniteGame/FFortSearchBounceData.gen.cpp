@@ -14,7 +14,7 @@ struct alignas(4) FFortSearchBounceData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66350 (end 0x00F663A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F66350 (end 0x00F663A2, chained .pdata fragments)
 // Original VA: 0x0000000140F66350 | File offset: 0x00F65950
 // Recovery: confirmed (TEXT("FortSearchBounceData") and Z_Construct_UScriptStruct_FFortSearchBounceData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSearchBounceData::StaticStruct()

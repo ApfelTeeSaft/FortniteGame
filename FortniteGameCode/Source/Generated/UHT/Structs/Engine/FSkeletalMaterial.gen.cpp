@@ -14,7 +14,7 @@ struct alignas(8) FSkeletalMaterial
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x30];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC7D0 (end 0x024CC822, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CC7D0 (end 0x024CC822, chained .pdata fragments)
 // Original VA: 0x00000001424CC7D0 | File offset: 0x024CBDD0
 // Recovery: confirmed (TEXT("SkeletalMaterial") and Z_Construct_UScriptStruct_FSkeletalMaterial) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FSkeletalMaterial::StaticStruct()

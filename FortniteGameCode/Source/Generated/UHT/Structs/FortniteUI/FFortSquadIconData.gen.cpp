@@ -15,7 +15,7 @@ struct alignas(8) FFortSquadIconData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x2D8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911A60 (end 0x02911AB2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02911A60 (end 0x02911AB2, chained .pdata fragments)
 // Original VA: 0x0000000142911A60 | File offset: 0x02911060
 // Recovery: confirmed (TEXT("FortSquadIconData") and Z_Construct_UScriptStruct_FFortSquadIconData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortSquadIconData::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FAthenaBatchedDamageGameplayCues
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x58];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FAD0 (end 0x0107FB22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107FAD0 (end 0x0107FB22, chained .pdata fragments)
 // Original VA: 0x000000014107FAD0 | File offset: 0x0107F0D0
 // Recovery: confirmed (TEXT("AthenaBatchedDamageGameplayCues") and Z_Construct_UScriptStruct_FAthenaBatchedDamageGameplayCues) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAthenaBatchedDamageGameplayCues::StaticStruct()

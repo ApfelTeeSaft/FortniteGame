@@ -14,7 +14,7 @@ struct alignas(8) FAnimSetMeshLinkup
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5BE0 (end 0x023D5C32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D5BE0 (end 0x023D5C32, chained .pdata fragments)
 // Original VA: 0x00000001423D5BE0 | File offset: 0x023D51E0
 // Recovery: confirmed (TEXT("AnimSetMeshLinkup") and Z_Construct_UScriptStruct_FAnimSetMeshLinkup) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAnimSetMeshLinkup::StaticStruct()

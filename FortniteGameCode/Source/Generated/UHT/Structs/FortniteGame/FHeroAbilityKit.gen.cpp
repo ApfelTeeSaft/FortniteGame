@@ -14,7 +14,7 @@ struct alignas(8) FHeroAbilityKit
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA710 (end 0x00FFA762, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FFA710 (end 0x00FFA762, chained .pdata fragments)
 // Original VA: 0x0000000140FFA710 | File offset: 0x00FF9D10
 // Recovery: confirmed (TEXT("HeroAbilityKit") and Z_Construct_UScriptStruct_FHeroAbilityKit) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FHeroAbilityKit::StaticStruct()

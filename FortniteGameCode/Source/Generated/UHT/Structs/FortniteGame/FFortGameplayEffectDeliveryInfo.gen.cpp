@@ -14,7 +14,7 @@ struct alignas(8) FFortGameplayEffectDeliveryInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xA8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81BA0 (end 0x00F81BF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F81BA0 (end 0x00F81BF2, chained .pdata fragments)
 // Original VA: 0x0000000140F81BA0 | File offset: 0x00F811A0
 // Recovery: confirmed (TEXT("FortGameplayEffectDeliveryInfo") and Z_Construct_UScriptStruct_FFortGameplayEffectDeliveryInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortGameplayEffectDeliveryInfo::StaticStruct()

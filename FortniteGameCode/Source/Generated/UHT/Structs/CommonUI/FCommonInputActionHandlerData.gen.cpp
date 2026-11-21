@@ -14,7 +14,7 @@ struct alignas(8) FCommonInputActionHandlerData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2AA0 (end 0x002C2AF2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2AA0 (end 0x002C2AF2, chained .pdata fragments)
 // Original VA: 0x00000001402C2AA0 | File offset: 0x002C20A0
 // Recovery: confirmed (TEXT("CommonInputActionHandlerData") and Z_Construct_UScriptStruct_FCommonInputActionHandlerData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCommonInputActionHandlerData::StaticStruct()

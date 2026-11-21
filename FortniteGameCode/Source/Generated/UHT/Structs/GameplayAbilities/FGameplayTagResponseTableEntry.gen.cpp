@@ -14,7 +14,7 @@ struct alignas(8) FGameplayTagResponseTableEntry
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00565E40 (end 0x00565E92, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00565E40 (end 0x00565E92, chained .pdata fragments)
 // Original VA: 0x0000000140565E40 | File offset: 0x00565440
 // Recovery: confirmed (TEXT("GameplayTagResponseTableEntry") and Z_Construct_UScriptStruct_FGameplayTagResponseTableEntry) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayTagResponseTableEntry::StaticStruct()

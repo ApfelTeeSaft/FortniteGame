@@ -14,7 +14,7 @@ struct alignas(8) FCosmeticLoadoutPartyReplState
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E6C0 (end 0x00F9E712, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9E6C0 (end 0x00F9E712, chained .pdata fragments)
 // Original VA: 0x0000000140F9E6C0 | File offset: 0x00F9DCC0
 // Recovery: confirmed (TEXT("CosmeticLoadoutPartyReplState") and Z_Construct_UScriptStruct_FCosmeticLoadoutPartyReplState) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FCosmeticLoadoutPartyReplState::StaticStruct()

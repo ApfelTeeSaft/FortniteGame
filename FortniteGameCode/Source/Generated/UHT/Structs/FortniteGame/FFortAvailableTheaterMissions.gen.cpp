@@ -14,7 +14,7 @@ struct alignas(8) FFortAvailableTheaterMissions
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x28];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDB50 (end 0x010BDBA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDB50 (end 0x010BDBA2, chained .pdata fragments)
 // Original VA: 0x00000001410BDB50 | File offset: 0x010BD150
 // Recovery: confirmed (TEXT("FortAvailableTheaterMissions") and Z_Construct_UScriptStruct_FFortAvailableTheaterMissions) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAvailableTheaterMissions::StaticStruct()

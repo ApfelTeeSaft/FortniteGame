@@ -14,7 +14,7 @@ struct alignas(8) FRuntimeCurveLinearColor
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x1C8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FE210 (end 0x023FE262, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FE210 (end 0x023FE262, chained .pdata fragments)
 // Original VA: 0x00000001423FE210 | File offset: 0x023FD810
 // Recovery: confirmed (TEXT("RuntimeCurveLinearColor") and Z_Construct_UScriptStruct_FRuntimeCurveLinearColor) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRuntimeCurveLinearColor::StaticStruct()

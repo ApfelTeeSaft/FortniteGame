@@ -14,7 +14,7 @@ struct alignas(8) FMcpPlayerStatsResult
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x80];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037F30 (end 0x01037F82, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01037F30 (end 0x01037F82, chained .pdata fragments)
 // Original VA: 0x0000000141037F30 | File offset: 0x01037530
 // Recovery: confirmed (TEXT("McpPlayerStatsResult") and Z_Construct_UScriptStruct_FMcpPlayerStatsResult) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FMcpPlayerStatsResult::StaticStruct()

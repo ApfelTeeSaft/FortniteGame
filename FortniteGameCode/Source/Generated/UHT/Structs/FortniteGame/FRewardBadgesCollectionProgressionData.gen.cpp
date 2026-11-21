@@ -15,7 +15,7 @@ struct alignas(8) FRewardBadgesCollectionProgressionData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x18];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDCD0 (end 0x010BDD22, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDCD0 (end 0x010BDD22, chained .pdata fragments)
 // Original VA: 0x00000001410BDCD0 | File offset: 0x010BD2D0
 // Recovery: confirmed (TEXT("RewardBadgesCollectionProgressionData") and Z_Construct_UScriptStruct_FRewardBadgesCollectionProgressionData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FRewardBadgesCollectionProgressionData::StaticStruct()

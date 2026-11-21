@@ -14,7 +14,7 @@ struct alignas(4) FReplicatedStatValues
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x01065620 (end 0x01065672, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01065620 (end 0x01065672, chained .pdata fragments)
 // Original VA: 0x0000000141065620 | File offset: 0x01064C20
 // Recovery: confirmed (TEXT("ReplicatedStatValues") and Z_Construct_UScriptStruct_FReplicatedStatValues) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FReplicatedStatValues::StaticStruct()

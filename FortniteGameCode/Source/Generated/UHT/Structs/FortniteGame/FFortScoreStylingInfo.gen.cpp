@@ -14,7 +14,7 @@ struct alignas(8) FFortScoreStylingInfo
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x2F8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5520 (end 0x010A5572, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010A5520 (end 0x010A5572, chained .pdata fragments)
 // Original VA: 0x00000001410A5520 | File offset: 0x010A4B20
 // Recovery: confirmed (TEXT("FortScoreStylingInfo") and Z_Construct_UScriptStruct_FFortScoreStylingInfo) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortScoreStylingInfo::StaticStruct()

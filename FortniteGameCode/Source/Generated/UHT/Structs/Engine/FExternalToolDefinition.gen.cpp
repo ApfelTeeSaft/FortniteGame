@@ -14,7 +14,7 @@ struct alignas(8) FExternalToolDefinition
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x60];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DABF0 (end 0x023DAC42, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DABF0 (end 0x023DAC42, chained .pdata fragments)
 // Original VA: 0x00000001423DABF0 | File offset: 0x023DA1F0
 // Recovery: confirmed (TEXT("ExternalToolDefinition") and Z_Construct_UScriptStruct_FExternalToolDefinition) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FExternalToolDefinition::StaticStruct()

@@ -14,7 +14,7 @@ struct alignas(8) FAthenaSeasonBannerLevelSchedule
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x10];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60DE0 (end 0x00F60E32, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F60DE0 (end 0x00F60E32, chained .pdata fragments)
 // Original VA: 0x0000000140F60DE0 | File offset: 0x00F603E0
 // Recovery: confirmed (TEXT("AthenaSeasonBannerLevelSchedule") and Z_Construct_UScriptStruct_FAthenaSeasonBannerLevelSchedule) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FAthenaSeasonBannerLevelSchedule::StaticStruct()

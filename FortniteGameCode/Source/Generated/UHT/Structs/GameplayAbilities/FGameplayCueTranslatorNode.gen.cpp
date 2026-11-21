@@ -14,7 +14,7 @@ struct alignas(8) FGameplayCueTranslatorNode
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x78];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563A50 (end 0x00563AA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00563A50 (end 0x00563AA2, chained .pdata fragments)
 // Original VA: 0x0000000140563A50 | File offset: 0x00563050
 // Recovery: confirmed (TEXT("GameplayCueTranslatorNode") and Z_Construct_UScriptStruct_FGameplayCueTranslatorNode) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FGameplayCueTranslatorNode::StaticStruct()

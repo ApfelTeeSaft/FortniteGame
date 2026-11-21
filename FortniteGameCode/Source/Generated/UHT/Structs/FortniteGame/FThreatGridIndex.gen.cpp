@@ -14,7 +14,7 @@ struct alignas(4) FThreatGridIndex
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDF10 (end 0x010BDF62, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BDF10 (end 0x010BDF62, chained .pdata fragments)
 // Original VA: 0x00000001410BDF10 | File offset: 0x010BD510
 // Recovery: confirmed (TEXT("ThreatGridIndex") and Z_Construct_UScriptStruct_FThreatGridIndex) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FThreatGridIndex::StaticStruct()

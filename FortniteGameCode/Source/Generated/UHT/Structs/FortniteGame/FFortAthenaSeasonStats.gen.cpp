@@ -14,7 +14,7 @@ struct alignas(4) FFortAthenaSeasonStats
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0xC];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102F770 (end 0x0102F7C2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0102F770 (end 0x0102F7C2, chained .pdata fragments)
 // Original VA: 0x000000014102F770 | File offset: 0x0102ED70
 // Recovery: confirmed (TEXT("FortAthenaSeasonStats") and Z_Construct_UScriptStruct_FFortAthenaSeasonStats) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortAthenaSeasonStats::StaticStruct()

@@ -15,7 +15,7 @@ struct alignas(8) FFortCollectionBookSlotData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5A50 (end 0x00FC5AA2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC5A50 (end 0x00FC5AA2, chained .pdata fragments)
 // Original VA: 0x0000000140FC5A50 | File offset: 0x00FC5050
 // Recovery: confirmed (TEXT("FortCollectionBookSlotData") and Z_Construct_UScriptStruct_FFortCollectionBookSlotData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortCollectionBookSlotData::StaticStruct()

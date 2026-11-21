@@ -14,7 +14,7 @@ struct alignas(16) FInstancedStaticMeshInstanceData
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x40];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427B60 (end 0x02427BB2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02427B60 (end 0x02427BB2, chained .pdata fragments)
 // Original VA: 0x0000000142427B60 | File offset: 0x02427160
 // Recovery: confirmed (TEXT("InstancedStaticMeshInstanceData") and Z_Construct_UScriptStruct_FInstancedStaticMeshInstanceData) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FInstancedStaticMeshInstanceData::StaticStruct()

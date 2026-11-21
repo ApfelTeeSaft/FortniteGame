@@ -14,7 +14,7 @@ struct alignas(4) FFloatSpringState
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x8];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x02431850 (end 0x024318A2, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02431850 (end 0x024318A2, chained .pdata fragments)
 // Original VA: 0x0000000142431850 | File offset: 0x02430E50
 // Recovery: confirmed (TEXT("FloatSpringState") and Z_Construct_UScriptStruct_FFloatSpringState) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFloatSpringState::StaticStruct()

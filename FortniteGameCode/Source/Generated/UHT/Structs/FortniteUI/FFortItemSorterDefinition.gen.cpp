@@ -14,7 +14,7 @@ struct alignas(16) FFortItemSorterDefinition
 	static class UScriptStruct* StaticStruct();
 	unsigned char Opaque[0x50];  // layout not reconstructed; sizeof/alignof from FStructParams
 };
-// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF3C0 (end 0x028CF412, three .pdata fragments)
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CF3C0 (end 0x028CF412, chained .pdata fragments)
 // Original VA: 0x00000001428CF3C0 | File offset: 0x028CE9C0
 // Recovery: confirmed (TEXT("FortItemSorterDefinition") and Z_Construct_UScriptStruct_FFortItemSorterDefinition) | Matching: see analysis/functions-uht-staticstruct.json
 class UScriptStruct* FFortItemSorterDefinition::StaticStruct()
