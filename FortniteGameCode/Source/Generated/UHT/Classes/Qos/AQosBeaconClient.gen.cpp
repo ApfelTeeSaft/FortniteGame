@@ -14,6 +14,21 @@ void AQosBeaconClient::execClientQosResponse(UObject* Context, FFrame& Stack, vo
 	P_THIS->ClientQosResponse_Implementation(EQosResponseType(Z_Param_Response));
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005A23E0 (end 0x005A249D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerQosRequest) | Matching: see analysis/functions-uht-exec.json
+void AQosBeaconClient::execServerQosRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_InSessionId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerQosRequest_Validate(Z_Param_InSessionId))
+	{
+		RPC_ValidateFailed(TEXT("ServerQosRequest_Validate"));
+		return;
+	}
+	P_THIS->ServerQosRequest_Implementation(Z_Param_InSessionId);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AQosBeaconClient, 2022778159u)
 // Original dynamic initializer: RVA 0x000A7940 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AQosBeaconClient> AutoInitializeAQosBeaconClient(TEXT("AQosBeaconClient"), sizeof(AQosBeaconClient), 2022778159u);

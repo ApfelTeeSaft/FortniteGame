@@ -184,6 +184,21 @@ void AFortPlayerPawn::execServerRootMotionInterruptNotifyStopMontage(UObject* Co
 	P_THIS->ServerRootMotionInterruptNotifyStopMontage_Implementation(Z_Param_MontageToStop);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01084E40 (end 0x01084EFB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSendAimbotDetectionStatus) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerSendAimbotDetectionStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY(uint8,Z_Param_Payload);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSendAimbotDetectionStatus_Validate(Z_Param_Payload))
+	{
+		RPC_ValidateFailed(TEXT("ServerSendAimbotDetectionStatus_Validate"));
+		return;
+	}
+	P_THIS->ServerSendAimbotDetectionStatus_Implementation(Z_Param_Payload);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01085170 (end 0x01085226)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetAimbotDetection) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerPawn::execServerSetAimbotDetection(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

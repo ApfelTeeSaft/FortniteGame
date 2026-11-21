@@ -152,6 +152,16 @@ void ACharacter::execPlayAnimMontage(UObject* Context, FFrame& Stack, void* cons
 	*(float*)Z_Param__Result=P_THIS->PlayAnimMontage(Z_Param_AnimMontage,Z_Param_InPlayRate,Z_Param_StartSectionName);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F3690 (end 0x023F372A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRootMotionDebugClientPrintOnScreen) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execRootMotionDebugClientPrintOnScreen(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_InString);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RootMotionDebugClientPrintOnScreen_Implementation(Z_Param_InString);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F52A0 (end 0x023F5324)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execStopAnimMontage) | Matching: see analysis/functions-uht-exec.json
 void ACharacter::execStopAnimMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

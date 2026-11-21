@@ -14,6 +14,24 @@ void UMeshComponent::execGetMaterialIndex(UObject* Context, FFrame& Stack, void*
 	*(int32*)Z_Param__Result=P_THIS->GetMaterialIndex(Z_Param_MaterialSlotName);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024878F0 (end 0x0248796E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaterialSlotNames) | Matching: see analysis/functions-uht-exec.json
+void UMeshComponent::execGetMaterialSlotNames(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TArray<FName>*)Z_Param__Result=P_THIS->GetMaterialSlotNames();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02487970 (end 0x024879EE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaterials) | Matching: see analysis/functions-uht-exec.json
+void UMeshComponent::execGetMaterials(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TArray<UMaterialInterface*>*)Z_Param__Result=P_THIS->GetMaterials();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02487A20 (end 0x02487AB6)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsMaterialSlotNameValid) | Matching: see analysis/functions-uht-exec.json
 void UMeshComponent::execIsMaterialSlotNameValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5AEA0 (end 0x00F5AF93)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAssignGroupToHotspot) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execAssignGroupToHotspot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY(AAIController*,Z_Param_GroupOfAI);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->AssignGroupToHotspot(Z_Param_GroupOfAI);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5AFA0 (end 0x00F5B036)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execAssignToHotspot) | Matching: see analysis/functions-uht-exec.json
 void AAIHotSpot::execAssignToHotspot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -33,6 +43,16 @@ void AAIHotSpot::execFindBestSlotIndex(UObject* Context, FFrame& Stack, void* co
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(int32*)Z_Param__Result=P_THIS->FindBestSlotIndex(Z_Param_AI);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5B310 (end 0x00F5B443)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFindBestSlotIndices) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execFindBestSlotIndices(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY(AAIController*,Z_Param_AI);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TArray<int32>*)Z_Param__Result=P_THIS->FindBestSlotIndices(Z_Param_AI);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C2B0 (end 0x00F5C346)
@@ -225,6 +245,16 @@ void AAIHotSpot::execRemoveFromHotspot(UObject* Context, FFrame& Stack, void* co
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->RemoveFromHotspot(Z_Param_AI,Z_Param_bAssignFromWaitingList);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5D210 (end 0x00F5D303)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveGroupFromHotspot) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execRemoveGroupFromHotspot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY(AAIController*,Z_Param_GroupOfAI);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->RemoveGroupFromHotspot(Z_Param_GroupOfAI);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5D310 (end 0x00F5D396)

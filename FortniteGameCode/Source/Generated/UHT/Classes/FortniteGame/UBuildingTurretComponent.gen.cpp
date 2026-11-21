@@ -14,6 +14,16 @@ void UBuildingTurretComponent::execAttemptSetCurrentTarget(UObject* Context, FFr
 	*(bool*)Z_Param__Result=P_THIS->AttemptSetCurrentTarget(Z_Param_NewTarget);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79840 (end 0x00F798F9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execChooseBestTarget) | Matching: see analysis/functions-uht-exec.json
+void UBuildingTurretComponent::execChooseBestTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY_REF(AActor*,Z_Param_Out_InOutPotentialTargets);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AActor**)Z_Param__Result=P_THIS->ChooseBestTarget_Implementation(Z_Param_Out_InOutPotentialTargets);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79AD0 (end 0x00F79B66)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsValidTarget) | Matching: see analysis/functions-uht-exec.json
 void UBuildingTurretComponent::execIsValidTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

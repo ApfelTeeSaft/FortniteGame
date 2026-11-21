@@ -22,6 +22,16 @@ void UTwitterIntegrationBase::execCanShowTweetUI(UObject* Context, FFrame& Stack
 	*(bool*)Z_Param__Result=P_THIS->CanShowTweetUI();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDD90 (end 0x024EDE64)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAccountName) | Matching: see analysis/functions-uht-exec.json
+void UTwitterIntegrationBase::execGetAccountName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_AccountIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FString*)Z_Param__Result=P_THIS->GetAccountName(Z_Param_AccountIndex);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EDEA0 (end 0x024EDECF)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNumAccounts) | Matching: see analysis/functions-uht-exec.json
 void UTwitterIntegrationBase::execGetNumAccounts(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -38,6 +48,18 @@ void UTwitterIntegrationBase::execInit(UObject* Context, FFrame& Stack, void* co
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->Init();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024EE720 (end 0x024EE86F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShowTweetUI) | Matching: see analysis/functions-uht-exec.json
+void UTwitterIntegrationBase::execShowTweetUI(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_InitialMessage);
+	P_GET_PROPERTY(UStrProperty,Z_Param_URL);
+	P_GET_PROPERTY(UStrProperty,Z_Param_Picture);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShowTweetUI(Z_Param_InitialMessage,Z_Param_URL,Z_Param_Picture);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UTwitterIntegrationBase, 566021815u)

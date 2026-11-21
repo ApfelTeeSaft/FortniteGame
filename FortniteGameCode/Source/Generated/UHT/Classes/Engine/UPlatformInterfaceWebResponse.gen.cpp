@@ -4,6 +4,28 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF850 (end 0x024AF9A9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHeader) | Matching: see analysis/functions-uht-exec.json
+void UPlatformInterfaceWebResponse::execGetHeader(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_HeaderIndex);
+	P_GET_PROPERTY_REF(UStrProperty,Z_Param_Out_Header);
+	P_GET_PROPERTY_REF(UStrProperty,Z_Param_Out_Value);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetHeader(Z_Param_HeaderIndex,Z_Param_Out_Header,Z_Param_Out_Value);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF9B0 (end 0x024AFA9B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHeaderValue) | Matching: see analysis/functions-uht-exec.json
+void UPlatformInterfaceWebResponse::execGetHeaderValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_HeaderName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FString*)Z_Param__Result=P_THIS->GetHeaderValue(Z_Param_HeaderName);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B0CF0 (end 0x024B0D1F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNumHeaders) | Matching: see analysis/functions-uht-exec.json
 void UPlatformInterfaceWebResponse::execGetNumHeaders(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

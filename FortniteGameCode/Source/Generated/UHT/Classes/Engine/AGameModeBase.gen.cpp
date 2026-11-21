@@ -15,6 +15,18 @@ void AGameModeBase::execCanSpectate(UObject* Context, FFrame& Stack, void* const
 	*(bool*)Z_Param__Result=P_THIS->CanSpectate_Implementation(Z_Param_Viewer,Z_Param_ViewTarget);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02414DC0 (end 0x02414EDB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execChangeName) | Matching: see analysis/functions-uht-exec.json
+void AGameModeBase::execChangeName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AController,Z_Param_Controller);
+	P_GET_PROPERTY(UStrProperty,Z_Param_NewName);
+	P_GET_UBOOL(Z_Param_bNameChange);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ChangeName(Z_Param_Controller,Z_Param_NewName,Z_Param_bNameChange);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02414EE0 (end 0x02414F76)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execChoosePlayerStart) | Matching: see analysis/functions-uht-exec.json
 void AGameModeBase::execChoosePlayerStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -23,6 +35,17 @@ void AGameModeBase::execChoosePlayerStart(UObject* Context, FFrame& Stack, void*
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(AActor**)Z_Param__Result=P_THIS->ChoosePlayerStart_Implementation(Z_Param_Player);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02415C40 (end 0x02415D2B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFindPlayerStart) | Matching: see analysis/functions-uht-exec.json
+void AGameModeBase::execFindPlayerStart(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AController,Z_Param_Player);
+	P_GET_PROPERTY(UStrProperty,Z_Param_IncomingName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AActor**)Z_Param__Result=P_THIS->FindPlayerStart_Implementation(Z_Param_Player,Z_Param_IncomingName);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024167B0 (end 0x02416846)

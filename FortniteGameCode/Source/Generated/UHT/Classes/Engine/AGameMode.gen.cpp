@@ -67,6 +67,16 @@ void AGameMode::execRestartGame(UObject* Context, FFrame& Stack, void* const Z_P
 	P_THIS->RestartGame();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02419DE0 (end 0x02419E7A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSay) | Matching: see analysis/functions-uht-exec.json
+void AGameMode::execSay(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_Msg);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Say(Z_Param_Msg);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02419E80 (end 0x02419EFF)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetBandwidthLimit) | Matching: see analysis/functions-uht-exec.json
 void AGameMode::execSetBandwidthLimit(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

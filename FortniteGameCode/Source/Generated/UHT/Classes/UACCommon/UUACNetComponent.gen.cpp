@@ -13,6 +13,33 @@ void UUACNetComponent::execSendClientHello(UObject* Context, FFrame& Stack, void
 	P_THIS->SendClientHello_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0068EDB0 (end 0x0068EE88)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSendPacketToClient) | Matching: see analysis/functions-uht-exec.json
+void UUACNetComponent::execSendPacketToClient(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_Type);
+	P_GET_TARRAY(uint8,Z_Param_Packet);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SendPacketToClient_Implementation(Z_Param_Type,Z_Param_Packet);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0068EE90 (end 0x0068EF90)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSendPacketToServer) | Matching: see analysis/functions-uht-exec.json
+void UUACNetComponent::execSendPacketToServer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_Type);
+	P_GET_TARRAY(uint8,Z_Param_Packet);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->SendPacketToServer_Validate(Z_Param_Type,Z_Param_Packet))
+	{
+		RPC_ValidateFailed(TEXT("SendPacketToServer_Validate"));
+		return;
+	}
+	P_THIS->SendPacketToServer_Implementation(Z_Param_Type,Z_Param_Packet);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UUACNetComponent, 118349215u)
 // Original dynamic initializer: RVA 0x000AD790 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UUACNetComponent> AutoInitializeUUACNetComponent(TEXT("UUACNetComponent"), sizeof(UUACNetComponent), 118349215u);

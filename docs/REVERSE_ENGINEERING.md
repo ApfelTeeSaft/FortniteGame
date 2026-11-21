@@ -315,10 +315,10 @@ come from the inlined-native error. This brings the named denominator functions 
 
 **Generated declarations and thunks.** `Classes.gen.h` declares each class's new slots in
 order. An introduced slot is declared by name when its UFunction's whole signature is
-supported (see "Exec thunk parameters" below); `_Validate` returns bool. That gives 1,368
+supported (see "Exec thunk parameters" below); `_Validate` returns bool. That gives 1,463
 named declarations.
 
-Other slots are placeholders (`virtual void FNGC_VSlot_0x<offset>()`): 4,053 gaps and 404
+Other slots are placeholders (`virtual void FNGC_VSlot_0x<offset>()`): 4,053 gaps and 309
 named slots whose signature uses a type not modelled yet. MSVC lays out single-inheritance vtables in declaration
 order. The root becomes polymorphic, its destructor in slot 0 as in `UObjectBase`, and its
 opaque member shrinks by the vptr, so every `sizeof` is unchanged.
@@ -337,17 +337,20 @@ predictions.
 Out of line, the effect is small and changes as thunks are added. Even one definition in
 `Paper2D.1` moves one `StaticEnum` singleton to the front of the unit's `.bss`. With the
 first 379 thunk addresses, the net was 2 `StaticEnum` matches fewer than without thunks.
-With 979 it is 1 more (381; `FCompiledInDeferEnum` 252, 1 more), consistent with the
-reference, which contains every thunk. The individual units still differ.
+With 979 it was 1 more (381; `FCompiledInDeferEnum` 252, 1 more), and with 1,052 it is
+level (380). That is consistent with the reference, which contains every thunk. The
+individual units still differ.
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 1,219, at 979 addresses (128 bodies shared by folded UFunctions; one manifest entry each); 607 read parameters |
-| exact | 970: 768 in the denominator, 202 leaf (no `.pdata`) |
+| UFunction thunks defined | 1,294, at 1,052 addresses (129 bodies shared by folded UFunctions; one manifest entry each); 672 read parameters |
+| exact | 1,043: 841 in the denominator, 202 leaf (no `.pdata`) |
 | `partial` | 9: three natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) and six byte enums whose native is declared with `TEnumAsByte` (below) |
 
 The thunks call `RPC_ValidateFailed`, `FFrame::Step` and `FFrame::StepExplicitProperty`,
-each corroborated by the other thunks, and use `TEXT("<F>_Validate")` (literal content).
+and, for strings and arrays, `TArray<T>::ResizeForCopy`, `FMemory::Free` and `memcpy`
+(through its import thunk). Each is corroborated by the other thunks. The validated RPCs
+also use `TEXT("<F>_Validate")` (literal content).
 So the bytes alone, with the vtable offsets, carry the evidence.
 
 ## Exec thunk parameters (`tools/codegen/uht_props.py`)
@@ -375,7 +378,9 @@ Supported types:
 - `UClass*` (not `TSubclassOf`);
 - enums in their `UEnum::ECppForm` from `FEnumParams`;
 - seven structs defined from the UE4.20 headers: `FVector`, `FRotator`, `FVector2D`,
-  `FLinearColor`, `FGuid`, `FGameplayTag` and `FGameplayAbilitySpecHandle`.
+  `FLinearColor`, `FGuid`, `FGameplayTag` and `FGameplayAbilitySpecHandle`;
+- `FString`, and `TArray` of trivially copyable and destructible elements (the types above
+  except enums).
 
 A struct is used only when the reference's `FStructParams` give the same `SizeOf` and
 `AlignOf`. Enums are declared with their form and underlying type only, no enumerators.
@@ -397,20 +402,40 @@ Object properties' `ClassFunc` is `Z_Construct_UClass_<C>_NoRegister`, folded wi
 which left every object parameter unsupported.
 
 Limits:
+- **Containers.** `FString` and `TArray` come from `ContainersRecovered.h`, a port of the
+  4.20 members the thunks use:
+  - `FMemory`: out of line on Windows, `Memcpy` inline;
+  - `FHeapAllocator::ForAnyElementType` and `DefaultCalculateSlackReserve`;
+  - `TArray`'s constructors, assignments, destructor, `CopyToEmpty`, `MoveOrCopy` and the
+    `FORCENOINLINE ResizeForCopy`;
+  - `FString`'s defaulted members.
+
+  A by-value `FString` is copied through `CopyToEmpty` (`ResizeForCopy`, `memcpy`). A
+  returned one is move-assigned into `Z_Param__Result`. The destructor's `DebugGet` dummy
+  is kept as in the source; MSVC drops the side-effect-free call, as in the reference.
+- **`const FString&`.** HeaderParser drops `CPF_ConstParm` from `const FString&`
+  parameters; only UHT's own data keeps the reference. So the records show no flags for
+  either form. RPC parameters must be const references (UHT reports an error otherwise),
+  which settles 33 UFunctions. For the 20 others, the reference thunk shows the form:
+  - a by-value string is copied before the native call, two direct calls each;
+  - a reference passes the local's address with no call.
+
+  18 pass by reference and 2 by value. Declaring all 53 by value first left 41 thunks
+  unmatched; with the recovered forms, all match.
 - A byte enum (`TEnumAsByte` property) may be declared by the programmer as the raw enum
   or as `TEnumAsByte<E>`. The reflection data does not record which, and the thunk text is
   the same. UHT's own form (raw for values and returns) is used. Six natives are declared
   with `TEnumAsByte`, which MSVC passes through a temporary because of its copy
   constructor; their thunks do not match. Recovering the form from the reference's
   argument setup is a possible next step.
-- Of the 1,661 virtual-native UFunctions, 1,291 have a supported signature and 1,219 have
+- Of the 1,661 virtual-native UFunctions, 1,366 have a supported signature and 1,294 have
   thunks (folded bodies counted per UFunction). For the other 72, a slot is not declared
   by name (a name already declared higher in the hierarchy, or an incomplete validate
   pair). The unsupported ones use, most often:
-  - `FString` (52), `TArray` (49), `FText` (37), `TSubclassOf` (17);
-  - structs not modelled: `FGameplayCueParameters` (18), `FUniqueNetIdRepl` (18),
+  - `FText` (37), `TSubclassOf` (17), `TArray` of structs not modelled (15);
+  - structs not modelled: `FUniqueNetIdRepl` (24), `FGameplayCueParameters` (18),
     `FHitResult` (12), `FTransform` (10);
-  - 60 use several such types.
+  - 48 use several such types.
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)
 

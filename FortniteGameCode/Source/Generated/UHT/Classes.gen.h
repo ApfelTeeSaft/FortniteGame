@@ -3398,6 +3398,7 @@ enum class ESlateVisibility : uint8 {};
 enum class EStatCategory : uint8 {};
 enum class EStatMod : uint8 {};
 enum class ESubGame : uint8 {};
+enum ETravelType {};
 enum EViewTargetBlendFunction {};
 enum TInteractionType {};
 
@@ -3898,12 +3899,12 @@ public:
 	virtual void FNGC_VSlot_0x660();
 	virtual void SetEnabled(bool bEnabled);  // slot 205 (+0x668), UFunction AAIHotSpot::SetEnabled
 	virtual bool AssignToHotspot(AAIController* AI);  // slot 206 (+0x670), UFunction AAIHotSpot::AssignToHotspot
-	virtual void FNGC_VSlot_0x678();  // slot 207: AAIHotSpot::AssignGroupToHotspot (signature not recovered)
+	virtual int32 AssignGroupToHotspot(TArray<AAIController*> GroupOfAI);  // slot 207 (+0x678), UFunction AAIHotSpot::AssignGroupToHotspot
 	virtual bool AssignToSlotByIndex(AAIController* AI, int32 Index);  // slot 208 (+0x680), UFunction AAIHotSpot::AssignToSlotByIndex
 	virtual bool RemoveFromHotspot(AAIController* AI, bool bAssignFromWaitingList);  // slot 209 (+0x688), UFunction AAIHotSpot::RemoveFromHotspot
-	virtual void FNGC_VSlot_0x690();  // slot 210: AAIHotSpot::RemoveGroupFromHotspot (signature not recovered)
+	virtual int32 RemoveGroupFromHotspot(TArray<AAIController*> GroupOfAI);  // slot 210 (+0x690), UFunction AAIHotSpot::RemoveGroupFromHotspot
 	virtual int32 FindBestSlotIndex(AAIController* AI) const;  // slot 211 (+0x698), UFunction AAIHotSpot::FindBestSlotIndex
-	virtual void FNGC_VSlot_0x6A0();  // slot 212: AAIHotSpot::FindBestSlotIndices (signature not recovered)
+	virtual TArray<int32> FindBestSlotIndices(TArray<AAIController*> AI) const;  // slot 212 (+0x6A0), UFunction AAIHotSpot::FindBestSlotIndices
 	virtual void FNGC_VSlot_0x6A8();
 	virtual bool OccupySlotByIndex(int32 Index);  // slot 214 (+0x6B0), UFunction AAIHotSpot::OccupySlotByIndex
 	static void StaticRegisterNativesAAIHotSpot();
@@ -4371,8 +4372,8 @@ public:
 	virtual void FNGC_VSlot_0x740();
 	virtual void FNGC_VSlot_0x748();
 	virtual void InitializeKismetSpawnedBuildingActor(ABuildingActor* BuildingOwner, AFortPlayerController* SpawningController);  // slot 234 (+0x750), UFunction ABuildingActor::InitializeKismetSpawnedBuildingActor
-	virtual void FNGC_VSlot_0x758();  // slot 235: ABuildingActor::SetCustomState (signature not recovered)
-	virtual void FNGC_VSlot_0x760();  // slot 236: ABuildingActor::GetCustomState (signature not recovered)
+	virtual void SetCustomState(FString NewState);  // slot 235 (+0x758), UFunction ABuildingActor::SetCustomState
+	virtual FString GetCustomState() const;  // slot 236 (+0x760), UFunction ABuildingActor::GetCustomState
 	virtual void FNGC_VSlot_0x768();
 	virtual void FNGC_VSlot_0x770();
 	virtual void FNGC_VSlot_0x778();
@@ -5263,7 +5264,7 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	virtual void OnTeamReachedDepositGoal_Implementation(EFortTeam::Type InControllingTeam);  // slot 292 (+0x920), UFunction ABuildingItemCollectorActor::OnTeamReachedDepositGoal
-	virtual void FNGC_VSlot_0x928();  // slot 293: ABuildingItemCollectorActor::UpdateTeamDepositValues_Implementation (signature not recovered)
+	virtual void UpdateTeamDepositValues_Implementation(TArray<int32> const& DepositAmounts, TArray<int32> const& DepositGoals);  // slot 293 (+0x928), UFunction ABuildingItemCollectorActor::UpdateTeamDepositValues
 	virtual void OnItemCollectorStateChanged_Implementation(EFortItemCollectorState InItemCollectorState);  // slot 294 (+0x930), UFunction ABuildingItemCollectorActor::OnItemCollectorStateChanged
 	static void StaticRegisterNativesABuildingItemCollectorActor();
 	static void execGetNumberOfTeamCaptures(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -5647,7 +5648,7 @@ public:
 	virtual void FNGC_VSlot_0xD00();
 	virtual void FNGC_VSlot_0xD08();
 	virtual void FNGC_VSlot_0xD10();
-	virtual void FNGC_VSlot_0xD18();  // slot 419: ABuildingTrap::BP_ShouldTrigger_Implementation (signature not recovered)
+	virtual bool BP_ShouldTrigger_Implementation(TArray<AActor*> const& TouchingActors) const;  // slot 419 (+0xD18), UFunction ABuildingTrap::BP_ShouldTrigger
 	virtual float GetDurabilityPercent() const;  // slot 420 (+0xD20), UFunction ABuildingTrap::GetDurabilityPercent
 	virtual FVector GetCenter();  // slot 421 (+0xD28), UFunction ABuildingTrap::GetCenter
 	virtual void AddTriggerComponent(UPrimitiveComponent* TriggerComponent);  // slot 422 (+0xD30), UFunction ABuildingTrap::AddTriggerComponent
@@ -5664,7 +5665,7 @@ public:
 	virtual void FNGC_VSlot_0xD88();
 	virtual void FNGC_VSlot_0xD90();
 	virtual void OnRep_ReplicatedAppliedAlterations();  // slot 435 (+0xD98), UFunction ABuildingTrap::OnRep_ReplicatedAppliedAlterations
-	virtual void FNGC_VSlot_0xDA0();  // slot 436: ABuildingTrap::GetAlterations (signature not recovered)
+	virtual TArray<UFortAlterationItemDefinition*> GetAlterations() const;  // slot 436 (+0xDA0), UFunction ABuildingTrap::GetAlterations
 	virtual void OnRep_AttachedTo();  // slot 437 (+0xDA8), UFunction ABuildingTrap::OnRep_AttachedTo
 	virtual void TriggerIfAppropriate();  // slot 438 (+0xDB0), UFunction ABuildingTrap::TriggerIfAppropriate
 	virtual void FNGC_VSlot_0xDB8();  // slot 439: ABuildingTrap::OnTriggerTouch (signature not recovered)
@@ -5947,7 +5948,7 @@ public:
 	virtual void ClientCheatWalk_Implementation();  // slot 256 (+0x800), UFunction ACharacter::ClientCheatWalk
 	virtual void ClientCheatFly_Implementation();  // slot 257 (+0x808), UFunction ACharacter::ClientCheatFly
 	virtual void ClientCheatGhost_Implementation();  // slot 258 (+0x810), UFunction ACharacter::ClientCheatGhost
-	virtual void FNGC_VSlot_0x818();  // slot 259: ACharacter::RootMotionDebugClientPrintOnScreen_Implementation (signature not recovered)
+	virtual void RootMotionDebugClientPrintOnScreen_Implementation(const FString& InString);  // slot 259 (+0x818), UFunction ACharacter::RootMotionDebugClientPrintOnScreen
 	virtual void FNGC_VSlot_0x820();
 	virtual bool ServerTeleportNearLocation_Validate(FVector ActorLocation);  // slot 261 (+0x828), UFunction AFortPawn::ServerTeleportNearLocation
 	virtual void ServerTeleportNearLocation_Implementation(FVector ActorLocation);  // slot 262 (+0x830), UFunction AFortPawn::ServerTeleportNearLocation
@@ -6085,7 +6086,7 @@ public:
 	virtual void OnServerStartedVisualLogger_Implementation(bool bIsLogging);  // slot 228 (+0x720), UFunction APlayerController::OnServerStartedVisualLogger
 	virtual bool ServerToggleAILogging_Validate();  // slot 229 (+0x728), UFunction APlayerController::ServerToggleAILogging
 	virtual void ServerToggleAILogging_Implementation();  // slot 230 (+0x730), UFunction APlayerController::ServerToggleAILogging
-	virtual void FNGC_VSlot_0x738();  // slot 231: APlayerController::ClientTeamMessage_Implementation (signature not recovered)
+	virtual void ClientTeamMessage_Implementation(APlayerState* SenderPlayerState, const FString& S, FName Type, float MsgLifeTime);  // slot 231 (+0x738), UFunction APlayerController::ClientTeamMessage
 	virtual void FNGC_VSlot_0x740();  // slot 232: APlayerController::ServerViewSelf_Validate (signature not recovered)
 	virtual void FNGC_VSlot_0x748();  // slot 233: APlayerController::ServerViewSelf_Implementation (signature not recovered)
 	virtual bool ServerViewPrevPlayer_Validate();  // slot 234 (+0x750), UFunction APlayerController::ServerViewPrevPlayer
@@ -6108,8 +6109,8 @@ public:
 	virtual void ServerRestartPlayer_Implementation();  // slot 251 (+0x7D8), UFunction APlayerController::ServerRestartPlayer
 	virtual bool ServerPause_Validate();  // slot 252 (+0x7E0), UFunction APlayerController::ServerPause
 	virtual void ServerPause_Implementation();  // slot 253 (+0x7E8), UFunction APlayerController::ServerPause
-	virtual void FNGC_VSlot_0x7F0();  // slot 254: APlayerController::ServerChangeName_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x7F8();  // slot 255: APlayerController::ServerChangeName_Implementation (signature not recovered)
+	virtual bool ServerChangeName_Validate(const FString& S);  // slot 254 (+0x7F0), UFunction APlayerController::ServerChangeName
+	virtual void ServerChangeName_Implementation(const FString& S);  // slot 255 (+0x7F8), UFunction APlayerController::ServerChangeName
 	virtual bool ServerCamera_Validate(FName NewMode);  // slot 256 (+0x800), UFunction APlayerController::ServerCamera
 	virtual void ServerCamera_Implementation(FName NewMode);  // slot 257 (+0x808), UFunction APlayerController::ServerCamera
 	virtual bool ServerAcknowledgePossession_Validate(APawn* P);  // slot 258 (+0x810), UFunction APlayerController::ServerAcknowledgePossession
@@ -6121,7 +6122,7 @@ public:
 	virtual void FNGC_VSlot_0x840();  // slot 264: APlayerController::ClientWasKicked_Implementation (signature not recovered)
 	virtual void FNGC_VSlot_0x848();  // slot 265: APlayerController::ClientUpdateMultipleLevelsStreamingStatus_Implementation (signature not recovered)
 	virtual void ClientUpdateLevelStreamingStatus_Implementation(FName PackageName, bool bNewShouldBeLoaded, bool bNewShouldBeVisible, bool bNewShouldBlockOnLoad, int32 LODIndex);  // slot 266 (+0x850), UFunction APlayerController::ClientUpdateLevelStreamingStatus
-	virtual void FNGC_VSlot_0x858();  // slot 267: APlayerController::ClientTravelInternal_Implementation (signature not recovered)
+	virtual void ClientTravelInternal_Implementation(const FString& URL, ETravelType TravelType, bool bSeamless, FGuid MapPackageGuid);  // slot 267 (+0x858), UFunction APlayerController::ClientTravelInternal
 	virtual void ClientStopForceFeedback_Implementation(UForceFeedbackEffect* ForceFeedbackEffect, FName Tag);  // slot 268 (+0x860), UFunction APlayerController::ClientStopForceFeedback
 	virtual void ClientPlayForceFeedback_Implementation(UForceFeedbackEffect* ForceFeedbackEffect, bool bLooping, bool bIgnoreTimeDilation, FName Tag);  // slot 269 (+0x868), UFunction APlayerController::ClientPlayForceFeedback
 	virtual void FNGC_VSlot_0x870();  // slot 270: APlayerController::ClientStopCameraShake_Implementation (signature not recovered)
@@ -6143,7 +6144,7 @@ public:
 	virtual void ClientPlaySound_Implementation(USoundBase* Sound, float VolumeMultiplier, float PitchMultiplier);  // slot 286 (+0x8F0), UFunction APlayerController::ClientPlaySound
 	virtual void FNGC_VSlot_0x8F8();  // slot 287: APlayerController::ClientPlayCameraShake_Implementation (signature not recovered)
 	virtual void ClientPlayCameraAnim_Implementation(UCameraAnim* AnimToPlay, float Scale, float Rate, float BlendInTime, float BlendOutTime, bool bLoop, bool bRandomStartTime, ECameraAnimPlaySpace::Type Space, FRotator CustomPlaySpace);  // slot 288 (+0x900), UFunction APlayerController::ClientPlayCameraAnim
-	virtual void FNGC_VSlot_0x908();  // slot 289: APlayerController::ClientMessage_Implementation (signature not recovered)
+	virtual void ClientMessage_Implementation(const FString& S, FName Type, float MsgLifeTime);  // slot 289 (+0x908), UFunction APlayerController::ClientMessage
 	virtual void ClientIgnoreMoveInput_Implementation(bool bIgnore);  // slot 290 (+0x910), UFunction APlayerController::ClientIgnoreMoveInput
 	virtual void ClientIgnoreLookInput_Implementation(bool bIgnore);  // slot 291 (+0x918), UFunction APlayerController::ClientIgnoreLookInput
 	virtual void ClientGotoState_Implementation(FName NewState);  // slot 292 (+0x920), UFunction APlayerController::ClientGotoState
@@ -6162,7 +6163,7 @@ public:
 	virtual void ClientEnableNetworkVoice_Implementation(bool bEnable);  // slot 305 (+0x988), UFunction APlayerController::ClientEnableNetworkVoice
 	virtual void ClientRepObjRef_Implementation(UObject* Object);  // slot 306 (+0x990), UFunction APlayerController::ClientRepObjRef
 	virtual void FNGC_VSlot_0x998();  // slot 307: APlayerController::ClientReturnToMainMenuWithTextReason_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x9A0();  // slot 308: APlayerController::ClientReturnToMainMenu_Implementation (signature not recovered)
+	virtual void ClientReturnToMainMenu_Implementation(const FString& ReturnReason);  // slot 308 (+0x9A0), UFunction APlayerController::ClientReturnToMainMenu
 	virtual void ClientSetSpectatorWaiting_Implementation(bool bWaiting);  // slot 309 (+0x9A8), UFunction APlayerController::ClientSetSpectatorWaiting
 	virtual bool ServerSetSpectatorWaiting_Validate(bool bWaiting);  // slot 310 (+0x9B0), UFunction APlayerController::ServerSetSpectatorWaiting
 	virtual void ServerSetSpectatorWaiting_Implementation(bool bWaiting);  // slot 311 (+0x9B8), UFunction APlayerController::ServerSetSpectatorWaiting
@@ -6171,14 +6172,14 @@ public:
 	virtual void FNGC_VSlot_0x9D0();
 	virtual void FOV(float NewFOV);  // slot 315 (+0x9D8), UFunction APlayerController::FOV
 	virtual void RestartLevel();  // slot 316 (+0x9E0), UFunction APlayerController::RestartLevel
-	virtual void FNGC_VSlot_0x9E8();  // slot 317: APlayerController::LocalTravel (signature not recovered)
+	virtual void LocalTravel(const FString& URL);  // slot 317 (+0x9E8), UFunction APlayerController::LocalTravel
 	virtual void FNGC_VSlot_0x9F0();
 	virtual void FNGC_VSlot_0x9F8();
 	virtual void FNGC_VSlot_0xA00();
 	virtual void FNGC_VSlot_0xA08();
 	virtual void Pause();  // slot 322 (+0xA10), UFunction APlayerController::Pause
-	virtual void FNGC_VSlot_0xA18();  // slot 323: APlayerController::SetName (signature not recovered)
-	virtual void FNGC_VSlot_0xA20();  // slot 324: APlayerController::SwitchLevel (signature not recovered)
+	virtual void SetName(const FString& S);  // slot 323 (+0xA18), UFunction APlayerController::SetName
+	virtual void SwitchLevel(const FString& URL);  // slot 324 (+0xA20), UFunction APlayerController::SwitchLevel
 	virtual void FNGC_VSlot_0xA28();
 	virtual void FNGC_VSlot_0xA30();
 	virtual void FNGC_VSlot_0xA38();
@@ -6206,7 +6207,7 @@ public:
 	virtual void FNGC_VSlot_0xAE8();
 	virtual void FNGC_VSlot_0xAF0();
 	virtual void FNGC_VSlot_0xAF8();  // slot 351: APlayerController::ConsoleKey (signature not recovered)
-	virtual void FNGC_VSlot_0xB00();  // slot 352: APlayerController::SendToConsole (signature not recovered)
+	virtual void SendToConsole(const FString& Command);  // slot 352 (+0xB00), UFunction APlayerController::SendToConsole
 	virtual void FNGC_VSlot_0xB08();
 	virtual void FNGC_VSlot_0xB10();
 	virtual void FNGC_VSlot_0xB18();
@@ -7435,7 +7436,7 @@ public:
 	virtual void FNGC_VSlot_0x900();
 	virtual void FNGC_VSlot_0x908();
 	virtual void FNGC_VSlot_0x910();
-	virtual void FNGC_VSlot_0x918();  // slot 291: AFortWeapon::GetAlterations (signature not recovered)
+	virtual TArray<UFortAlterationItemDefinition*> GetAlterations() const;  // slot 291 (+0x918), UFunction AFortWeapon::GetAlterations
 	static void StaticRegisterNativesAFortWeapon();
 	static void execClientGivenTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClientReportShotFlags(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -8831,7 +8832,7 @@ public:
 	virtual void FNGC_VSlot_0x5F8();  // slot 191: AGameModeBase::SpawnDefaultPawnAtTransform_Implementation (signature not recovered)
 	virtual APawn* SpawnDefaultPawnFor_Implementation(AController* NewPlayer, AActor* StartSpot);  // slot 192 (+0x600), UFunction AGameModeBase::SpawnDefaultPawnFor
 	virtual bool PlayerCanRestart_Implementation(APlayerController* Player);  // slot 193 (+0x608), UFunction AGameModeBase::PlayerCanRestart
-	virtual void FNGC_VSlot_0x610();  // slot 194: AGameModeBase::FindPlayerStart_Implementation (signature not recovered)
+	virtual AActor* FindPlayerStart_Implementation(AController* Player, const FString& IncomingName);  // slot 194 (+0x610), UFunction AGameModeBase::FindPlayerStart
 	virtual AActor* ChoosePlayerStart_Implementation(AController* Player);  // slot 195 (+0x618), UFunction AGameModeBase::ChoosePlayerStart
 	virtual bool CanSpectate_Implementation(APlayerController* Viewer, APlayerState* ViewTarget);  // slot 196 (+0x620), UFunction AGameModeBase::CanSpectate
 	virtual bool MustSpectate_Implementation(APlayerController* NewPlayerController) const;  // slot 197 (+0x628), UFunction AGameModeBase::MustSpectate
@@ -8868,7 +8869,7 @@ public:
 	virtual void FNGC_VSlot_0x720();
 	virtual void FNGC_VSlot_0x728();
 	virtual void FNGC_VSlot_0x730();
-	virtual void FNGC_VSlot_0x738();  // slot 231: AGameModeBase::ChangeName (signature not recovered)
+	virtual void ChangeName(AController* Controller, const FString& NewName, bool bNameChange);  // slot 231 (+0x738), UFunction AGameModeBase::ChangeName
 	virtual void RestartPlayer(AController* NewPlayer);  // slot 232 (+0x740), UFunction AGameModeBase::RestartPlayer
 	virtual void RestartPlayerAtPlayerStart(AController* NewPlayer, AActor* StartSpot);  // slot 233 (+0x748), UFunction AGameModeBase::RestartPlayerAtPlayerStart
 	virtual void FNGC_VSlot_0x750();  // slot 234: AGameModeBase::RestartPlayerAtTransform (signature not recovered)
@@ -8948,7 +8949,7 @@ public:
 	virtual void FNGC_VSlot_0x860();
 	virtual void FNGC_VSlot_0x868();
 	virtual void FNGC_VSlot_0x870();
-	virtual void FNGC_VSlot_0x878();  // slot 271: AGameMode::Say (signature not recovered)
+	virtual void Say(const FString& Msg);  // slot 271 (+0x878), UFunction AGameMode::Say
 	virtual void SetBandwidthLimit(float AsyncIOBandwidthLimit);  // slot 272 (+0x880), UFunction AGameMode::SetBandwidthLimit
 	static void StaticRegisterNativesAGameMode();
 	static void execAbortMatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -9493,7 +9494,7 @@ public:
 	virtual bool ServerFireAIDirectorEvent_Validate(EFortAIDirectorEvent Event, UObject* EventSource, UObject* EventTarget, float EventMultiplier);  // slot 260 (+0x820), UFunction AFortGameStateZone::ServerFireAIDirectorEvent
 	virtual void ServerFireAIDirectorEvent_Implementation(EFortAIDirectorEvent Event, UObject* EventSource, UObject* EventTarget, float EventMultiplier);  // slot 261 (+0x828), UFunction AFortGameStateZone::ServerFireAIDirectorEvent
 	virtual void FNGC_VSlot_0x830();  // slot 262: AFortGameStateZone::OnWaveStart_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x838();  // slot 263: AFortGameStateZone::OnWaveBasedModifiersAppliedMulticast_Implementation (signature not recovered)
+	virtual void OnWaveBasedModifiersAppliedMulticast_Implementation(TArray<UFortGameplayModifierItemDefinition*> const& ModifiersApplied);  // slot 263 (+0x838), UFunction AFortGameStateZone::OnWaveBasedModifiersAppliedMulticast
 	virtual void FNGC_VSlot_0x840();
 	virtual void FNGC_VSlot_0x848();
 	virtual void FNGC_VSlot_0x850();
@@ -10407,8 +10408,8 @@ public:
 	virtual void ServerDisconnectFromLobby_Implementation();  // slot 208 (+0x680), UFunction ALobbyBeaconClient::ServerDisconnectFromLobby
 	virtual void FNGC_VSlot_0x688();  // slot 209: ALobbyBeaconClient::ServerLoginPlayer_Validate (signature not recovered)
 	virtual void FNGC_VSlot_0x690();  // slot 210: ALobbyBeaconClient::ServerLoginPlayer_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x698();  // slot 211: ALobbyBeaconClient::ServerCheat_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x6A0();  // slot 212: ALobbyBeaconClient::ServerCheat_Implementation (signature not recovered)
+	virtual bool ServerCheat_Validate(const FString& Msg);  // slot 211 (+0x698), UFunction ALobbyBeaconClient::ServerCheat
+	virtual void ServerCheat_Implementation(const FString& Msg);  // slot 212 (+0x6A0), UFunction ALobbyBeaconClient::ServerCheat
 	virtual void FNGC_VSlot_0x6A8();  // slot 213: ALobbyBeaconClient::ClientSetInviteFlags_Implementation (signature not recovered)
 	virtual void ClientJoinGame_Implementation();  // slot 214 (+0x6B0), UFunction ALobbyBeaconClient::ClientJoinGame
 	static void StaticRegisterNativesALobbyBeaconClient();
@@ -10473,9 +10474,9 @@ public:
 	virtual void FNGC_VSlot_0x7A0();  // slot 244: AFortLobbyBeaconClient::ServerSetHeroType_Implementation (signature not recovered)
 	virtual void FNGC_VSlot_0x7A8();  // slot 245: AFortLobbyBeaconClient::ServerSetHeroId_Validate (signature not recovered)
 	virtual void FNGC_VSlot_0x7B0();  // slot 246: AFortLobbyBeaconClient::ServerSetHeroId_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x7B8();  // slot 247: AFortLobbyBeaconClient::ClientCreateOrJoinChatRoom_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x7C0();  // slot 248: AFortLobbyBeaconClient::ServerTeamChatRoomReady_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x7C8();  // slot 249: AFortLobbyBeaconClient::ServerTeamChatRoomReady_Implementation (signature not recovered)
+	virtual void ClientCreateOrJoinChatRoom_Implementation(const FString& ChatRoomId);  // slot 247 (+0x7B8), UFunction AFortLobbyBeaconClient::ClientCreateOrJoinChatRoom
+	virtual bool ServerTeamChatRoomReady_Validate(const FString& ChatRoomId);  // slot 248 (+0x7C0), UFunction AFortLobbyBeaconClient::ServerTeamChatRoomReady
+	virtual void ServerTeamChatRoomReady_Implementation(const FString& ChatRoomId);  // slot 249 (+0x7C8), UFunction AFortLobbyBeaconClient::ServerTeamChatRoomReady
 	static void StaticRegisterNativesAFortLobbyBeaconClient();
 	static void execClientCreateOrJoinChatRoom(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execServerIncrementHomeBaseVersion(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -11246,7 +11247,7 @@ public:
 	virtual void FNGC_VSlot_0x638();  // slot 199: AFortObjectiveBase::GetObjectiveDisplayString (signature not recovered)
 	virtual void FNGC_VSlot_0x640();
 	virtual void FNGC_VSlot_0x648();
-	virtual void FNGC_VSlot_0x650();  // slot 202: AFortObjectiveBase::StopObjective (signature not recovered)
+	virtual void StopObjective(EFortObjectiveStatus Status, const FString& Description, UFortBadgeItemDefinition* ExtraBadgeToGrant);  // slot 202 (+0x650), UFunction AFortObjectiveBase::StopObjective
 	static void StaticRegisterNativesAFortObjectiveBase();
 	static void execAttemptMissionSave(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execClearObjectiveTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -11664,21 +11665,21 @@ public:
 	virtual void ServerTeleportToReticle_Implementation(FVector TeleportLocation);  // slot 422 (+0xD30), UFunction AFortPlayerController::ServerTeleportToReticle
 	virtual bool ServerKillAllAIPawnsAroundPlayer_Validate();  // slot 423 (+0xD38), UFunction AFortPlayerController::ServerKillAllAIPawnsAroundPlayer
 	virtual void ServerKillAllAIPawnsAroundPlayer_Implementation();  // slot 424 (+0xD40), UFunction AFortPlayerController::ServerKillAllAIPawnsAroundPlayer
-	virtual void FNGC_VSlot_0xD48();  // slot 425: AFortPlayerController::ServerCheatAll_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0xD50();  // slot 426: AFortPlayerController::ServerCheatAll_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0xD58();  // slot 427: AFortPlayerController::ServerCheat_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0xD60();  // slot 428: AFortPlayerController::ServerCheat_Implementation (signature not recovered)
+	virtual bool ServerCheatAll_Validate(const FString& Msg);  // slot 425 (+0xD48), UFunction AFortPlayerController::ServerCheatAll
+	virtual void ServerCheatAll_Implementation(const FString& Msg);  // slot 426 (+0xD50), UFunction AFortPlayerController::ServerCheatAll
+	virtual bool ServerCheat_Validate(const FString& Msg);  // slot 427 (+0xD58), UFunction AFortPlayerController::ServerCheat
+	virtual void ServerCheat_Implementation(const FString& Msg);  // slot 428 (+0xD60), UFunction AFortPlayerController::ServerCheat
 	virtual bool ServerPlayEmoteItem_Validate(const UFortMontageItemDefinitionBase* EmoteAsset);  // slot 429 (+0xD68), UFunction AFortPlayerController::ServerPlayEmoteItem
 	virtual void ServerPlayEmoteItem_Implementation(const UFortMontageItemDefinitionBase* EmoteAsset);  // slot 430 (+0xD70), UFunction AFortPlayerController::ServerPlayEmoteItem
 	virtual bool ServerEmote_Validate(FName const& AssetName);  // slot 431 (+0xD78), UFunction AFortPlayerController::ServerEmote
 	virtual void ServerEmote_Implementation(FName const& AssetName);  // slot 432 (+0xD80), UFunction AFortPlayerController::ServerEmote
 	virtual bool ServerTriggerGenericObjectiveEvent_Validate(AFortObjectiveBase* Objective);  // slot 433 (+0xD88), UFunction AFortPlayerController::ServerTriggerGenericObjectiveEvent
 	virtual void ServerTriggerGenericObjectiveEvent_Implementation(AFortObjectiveBase* Objective);  // slot 434 (+0xD90), UFunction AFortPlayerController::ServerTriggerGenericObjectiveEvent
-	virtual void FNGC_VSlot_0xD98();  // slot 435: AFortPlayerController::ServerSendClientProgressUpdate_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0xDA0();  // slot 436: AFortPlayerController::ServerSendClientProgressUpdate_Implementation (signature not recovered)
+	virtual bool ServerSendClientProgressUpdate_Validate(int32 ClientProgressState, TArray<uint64> const& ClientProgressUpdate);  // slot 435 (+0xD98), UFunction AFortPlayerController::ServerSendClientProgressUpdate
+	virtual void ServerSendClientProgressUpdate_Implementation(int32 ClientProgressState, TArray<uint64> const& ClientProgressUpdate);  // slot 436 (+0xDA0), UFunction AFortPlayerController::ServerSendClientProgressUpdate
 	virtual void FNGC_VSlot_0xDA8();  // slot 437: AFortPlayerController::ClientSendConfirmationMessage_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0xDB0();  // slot 438: AFortPlayerController::ServerSendProfilerData_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0xDB8();  // slot 439: AFortPlayerController::ServerSendProfilerData_Implementation (signature not recovered)
+	virtual bool ServerSendProfilerData_Validate(TArray<uint8> const& Payload);  // slot 438 (+0xDB0), UFunction AFortPlayerController::ServerSendProfilerData
+	virtual void ServerSendProfilerData_Implementation(TArray<uint8> const& Payload);  // slot 439 (+0xDB8), UFunction AFortPlayerController::ServerSendProfilerData
 	virtual void ClientSetActionMappingEnabled_Implementation(FName ActionName, bool bEnabled);  // slot 440 (+0xDC0), UFunction AFortPlayerController::ClientSetActionMappingEnabled
 	virtual bool ServerHandleMissionEvent_StartLeavingZone_Validate(AFortPlayerPawn* PlayerRequestingLeaving);  // slot 441 (+0xDC8), UFunction AFortPlayerController::ServerHandleMissionEvent_StartLeavingZone
 	virtual void ServerHandleMissionEvent_StartLeavingZone_Implementation(AFortPlayerPawn* PlayerRequestingLeaving);  // slot 442 (+0xDD0), UFunction AFortPlayerController::ServerHandleMissionEvent_StartLeavingZone
@@ -11696,8 +11697,8 @@ public:
 	virtual void ClientStayWithParty_Implementation(bool bStayWithParty);  // slot 454 (+0xE30), UFunction AFortPlayerController::ClientStayWithParty
 	virtual void ClientRegisterWithParty_Implementation();  // slot 455 (+0xE38), UFunction AFortPlayerController::ClientRegisterWithParty
 	virtual void FNGC_VSlot_0xE40();  // slot 456: AFortPlayerController::ClientSetInviteFlags_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0xE48();  // slot 457: AFortPlayerController::ServerSetHero_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0xE50();  // slot 458: AFortPlayerController::ServerSetHero_Implementation (signature not recovered)
+	virtual bool ServerSetHero_Validate(const FString& NewHeroID);  // slot 457 (+0xE48), UFunction AFortPlayerController::ServerSetHero
+	virtual void ServerSetHero_Implementation(const FString& NewHeroID);  // slot 458 (+0xE50), UFunction AFortPlayerController::ServerSetHero
 	virtual void ClientForceProfileQuery_Implementation();  // slot 459 (+0xE58), UFunction AFortPlayerController::ClientForceProfileQuery
 	virtual bool ClientAddHeroSpecialization_Validate(const UFortHeroSpecialization* NewSpecialization);  // slot 460 (+0xE60), UFunction AFortPlayerController::ClientAddHeroSpecialization
 	virtual void ClientAddHeroSpecialization_Implementation(const UFortHeroSpecialization* NewSpecialization);  // slot 461 (+0xE68), UFunction AFortPlayerController::ClientAddHeroSpecialization
@@ -11710,8 +11711,8 @@ public:
 	virtual void FNGC_VSlot_0xEA0();  // slot 468: AFortPlayerController::ServerSetInventoryStateValue_Implementation (signature not recovered)
 	virtual bool ServerModDurability_Validate(FGuid ItemGuid, float DurabilityMod, bool bForceSet);  // slot 469 (+0xEA8), UFunction AFortPlayerController::ServerModDurability
 	virtual void ServerModDurability_Implementation(FGuid ItemGuid, float DurabilityMod, bool bForceSet);  // slot 470 (+0xEB0), UFunction AFortPlayerController::ServerModDurability
-	virtual void FNGC_VSlot_0xEB8();  // slot 471: AFortPlayerController::ServerDisassembleInventoryItems_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0xEC0();  // slot 472: AFortPlayerController::ServerDisassembleInventoryItems_Implementation (signature not recovered)
+	virtual bool ServerDisassembleInventoryItems_Validate(TArray<FGuid> const& ItemGuids, TArray<int32> const& ItemCounts);  // slot 471 (+0xEB8), UFunction AFortPlayerController::ServerDisassembleInventoryItems
+	virtual void ServerDisassembleInventoryItems_Implementation(TArray<FGuid> const& ItemGuids, TArray<int32> const& ItemCounts);  // slot 472 (+0xEC0), UFunction AFortPlayerController::ServerDisassembleInventoryItems
 	virtual bool ServerRemoveInventoryItem_Validate(FGuid ItemGuid, int32 Count, bool bForceRemoveFromQuickBars);  // slot 473 (+0xEC8), UFunction AFortPlayerController::ServerRemoveInventoryItem
 	virtual void ServerRemoveInventoryItem_Implementation(FGuid ItemGuid, int32 Count, bool bForceRemoveFromQuickBars);  // slot 474 (+0xED0), UFunction AFortPlayerController::ServerRemoveInventoryItem
 	virtual bool ServerReleaseInventoryItemKey_Validate(EFortQuickBars InQuickBar, int32 Slot);  // slot 475 (+0xED8), UFunction AFortPlayerController::ServerReleaseInventoryItemKey
@@ -11723,12 +11724,12 @@ public:
 	virtual bool ServerSetAutoEquipBetterItems_Validate(bool bAutoEquip);  // slot 481 (+0xF08), UFunction AFortPlayerController::ServerSetAutoEquipBetterItems
 	virtual void ServerSetAutoEquipBetterItems_Implementation(bool bAutoEquip);  // slot 482 (+0xF10), UFunction AFortPlayerController::ServerSetAutoEquipBetterItems
 	virtual void ClientCancelCrafting_Implementation();  // slot 483 (+0xF18), UFunction AFortPlayerController::ClientCancelCrafting
-	virtual void FNGC_VSlot_0xF20();  // slot 484: AFortPlayerController::ServerCraftSchematic_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0xF28();  // slot 485: AFortPlayerController::ServerCraftSchematic_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0xF30();  // slot 486: AFortPlayerController::ServerAttemptUnpinSchematic_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0xF38();  // slot 487: AFortPlayerController::ServerAttemptUnpinSchematic_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0xF40();  // slot 488: AFortPlayerController::ServerAttemptPinSchematic_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0xF48();  // slot 489: AFortPlayerController::ServerAttemptPinSchematic_Implementation (signature not recovered)
+	virtual bool ServerCraftSchematic_Validate(const FString& ItemId, int32 PostCraftSlot, bool bIsQuickCrafted);  // slot 484 (+0xF20), UFunction AFortPlayerController::ServerCraftSchematic
+	virtual void ServerCraftSchematic_Implementation(const FString& ItemId, int32 PostCraftSlot, bool bIsQuickCrafted);  // slot 485 (+0xF28), UFunction AFortPlayerController::ServerCraftSchematic
+	virtual bool ServerAttemptUnpinSchematic_Validate(const FString& ItemId, bool bSave);  // slot 486 (+0xF30), UFunction AFortPlayerController::ServerAttemptUnpinSchematic
+	virtual void ServerAttemptUnpinSchematic_Implementation(const FString& ItemId, bool bSave);  // slot 487 (+0xF38), UFunction AFortPlayerController::ServerAttemptUnpinSchematic
+	virtual bool ServerAttemptPinSchematic_Validate(const FString& ItemId, bool bSave);  // slot 488 (+0xF40), UFunction AFortPlayerController::ServerAttemptPinSchematic
+	virtual void ServerAttemptPinSchematic_Implementation(const FString& ItemId, bool bSave);  // slot 489 (+0xF48), UFunction AFortPlayerController::ServerAttemptPinSchematic
 	virtual bool ServerItemWillBeDestroyed_Validate(FGuid DestroyedItemGuid, int32 Count);  // slot 490 (+0xF50), UFunction AFortPlayerController::ServerItemWillBeDestroyed
 	virtual void ServerItemWillBeDestroyed_Implementation(FGuid DestroyedItemGuid, int32 Count);  // slot 491 (+0xF58), UFunction AFortPlayerController::ServerItemWillBeDestroyed
 	virtual void ClientGivePlayerLocalAccountItem_Implementation(UFortAccountItemDefinition* ItemDefinition, int32 Count);  // slot 492 (+0xF60), UFunction AFortPlayerController::ClientGivePlayerLocalAccountItem
@@ -11738,8 +11739,8 @@ public:
 	virtual void ServerSpawnInventoryDrop_Implementation(FGuid ItemGuid, int32 Count);  // slot 496 (+0xF80), UFunction AFortPlayerController::ServerSpawnInventoryDrop
 	virtual bool ServerRemoveDefender_Validate(ABuildingTrapDefender* DefenderTrap);  // slot 497 (+0xF88), UFunction AFortPlayerController::ServerRemoveDefender
 	virtual void ServerRemoveDefender_Implementation(ABuildingTrapDefender* DefenderTrap);  // slot 498 (+0xF90), UFunction AFortPlayerController::ServerRemoveDefender
-	virtual void FNGC_VSlot_0xF98();  // slot 499: AFortPlayerController::ServerDeployDefender_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0xFA0();  // slot 500: AFortPlayerController::ServerDeployDefender_Implementation (signature not recovered)
+	virtual bool ServerDeployDefender_Validate(ABuildingTrapDefender* DefenderTrap, const FString& SelectedItemInstanceId, FName const& DefenderSquadId, const FGuid WeaponToGiveGuid, const int32 AmmoQuantity);  // slot 499 (+0xF98), UFunction AFortPlayerController::ServerDeployDefender
+	virtual void ServerDeployDefender_Implementation(ABuildingTrapDefender* DefenderTrap, const FString& SelectedItemInstanceId, FName const& DefenderSquadId, const FGuid WeaponToGiveGuid, const int32 AmmoQuantity);  // slot 500 (+0xFA0), UFunction AFortPlayerController::ServerDeployDefender
 	virtual bool ServerRepairBuildingActor_Validate(ABuildingSMActor* BuildingActorToRepair);  // slot 501 (+0xFA8), UFunction AFortPlayerController::ServerRepairBuildingActor
 	virtual void ServerRepairBuildingActor_Implementation(ABuildingSMActor* BuildingActorToRepair);  // slot 502 (+0xFB0), UFunction AFortPlayerController::ServerRepairBuildingActor
 	virtual bool ServerUpgradeBuildingActor_Validate(ABuildingActor* BuildingActorToUpgrade, int32 NewUpgradeLevel);  // slot 503 (+0xFB8), UFunction AFortPlayerController::ServerUpgradeBuildingActor
@@ -11785,8 +11786,8 @@ public:
 	virtual void FNGC_VSlot_0x10F8();  // slot 543: AFortPlayerController::ServerRequestAttributeSources_Implementation (signature not recovered)
 	virtual bool ServerAnnouncementStoppedOnClient_Validate(FGuid AnnouncementID);  // slot 544 (+0x1100), UFunction AFortPlayerController::ServerAnnouncementStoppedOnClient
 	virtual void ServerAnnouncementStoppedOnClient_Implementation(FGuid AnnouncementID);  // slot 545 (+0x1108), UFunction AFortPlayerController::ServerAnnouncementStoppedOnClient
-	virtual void FNGC_VSlot_0x1110();  // slot 546: AFortPlayerController::ServerSetMarkText_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x1118();  // slot 547: AFortPlayerController::ServerSetMarkText_Implementation (signature not recovered)
+	virtual bool ServerSetMarkText_Validate(AFortMarkActor* MarkActor, const FString& MarkText);  // slot 546 (+0x1110), UFunction AFortPlayerController::ServerSetMarkText
+	virtual void ServerSetMarkText_Implementation(AFortMarkActor* MarkActor, const FString& MarkText);  // slot 547 (+0x1118), UFunction AFortPlayerController::ServerSetMarkText
 	virtual bool ServerPingMinimap_Validate(FVector WorldLocation, FLinearColor PingColor, EFortTeam::Type RequiredTeam);  // slot 548 (+0x1120), UFunction AFortPlayerController::ServerPingMinimap
 	virtual void ServerPingMinimap_Implementation(FVector WorldLocation, FLinearColor PingColor, EFortTeam::Type RequiredTeam);  // slot 549 (+0x1128), UFunction AFortPlayerController::ServerPingMinimap
 	virtual void ClientPingMinimap_Implementation(FVector WorldLocation, FLinearColor PingColor);  // slot 550 (+0x1130), UFunction AFortPlayerController::ClientPingMinimap
@@ -11818,14 +11819,14 @@ public:
 	virtual void ClientSetSpectatorCamera_Implementation(FVector CameraLocation, FRotator CameraRotation);  // slot 576 (+0x1200), UFunction AFortPlayerController::ClientSetSpectatorCamera
 	virtual bool ServerSuicide_Validate();  // slot 577 (+0x1208), UFunction AFortPlayerController::ServerSuicide
 	virtual void ServerSuicide_Implementation();  // slot 578 (+0x1210), UFunction AFortPlayerController::ServerSuicide
-	virtual void FNGC_VSlot_0x1218();  // slot 579: AFortPlayerController::ClientJoinConsoleSession_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x1220();  // slot 580: AFortPlayerController::ClientJoinConsoleSession_Implementation (signature not recovered)
+	virtual bool ClientJoinConsoleSession_Validate(const FString& ConsoleSession);  // slot 579 (+0x1218), UFunction AFortPlayerController::ClientJoinConsoleSession
+	virtual void ClientJoinConsoleSession_Implementation(const FString& ConsoleSession);  // slot 580 (+0x1220), UFunction AFortPlayerController::ClientJoinConsoleSession
 	virtual void FNGC_VSlot_0x1228();  // slot 581: AFortPlayerController::ClientReceivePresetTeamChat_Implementation (signature not recovered)
 	virtual void FNGC_VSlot_0x1230();  // slot 582: AFortPlayerController::ServerExecutePresetTeamChat_Validate (signature not recovered)
 	virtual void FNGC_VSlot_0x1238();  // slot 583: AFortPlayerController::ServerExecutePresetTeamChat_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x1240();  // slot 584: AFortPlayerController::ClientCreateOrJoinChatRoom_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x1248();  // slot 585: AFortPlayerController::ServerTeamChatRoomReady_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x1250();  // slot 586: AFortPlayerController::ServerTeamChatRoomReady_Implementation (signature not recovered)
+	virtual void ClientCreateOrJoinChatRoom_Implementation(const FString& ChatRoomId);  // slot 584 (+0x1240), UFunction AFortPlayerController::ClientCreateOrJoinChatRoom
+	virtual bool ServerTeamChatRoomReady_Validate(const FString& ChatRoomId);  // slot 585 (+0x1248), UFunction AFortPlayerController::ServerTeamChatRoomReady
+	virtual void ServerTeamChatRoomReady_Implementation(const FString& ChatRoomId);  // slot 586 (+0x1250), UFunction AFortPlayerController::ServerTeamChatRoomReady
 	virtual bool ClientReadyCheckComplete_Validate(bool bPassed);  // slot 587 (+0x1258), UFunction AFortPlayerController::ClientReadyCheckComplete
 	virtual void ClientReadyCheckComplete_Implementation(bool bPassed);  // slot 588 (+0x1260), UFunction AFortPlayerController::ClientReadyCheckComplete
 	virtual bool ServerReplyToReadyCheck_Validate(bool bReady);  // slot 589 (+0x1268), UFunction AFortPlayerController::ServerReplyToReadyCheck
@@ -12232,9 +12233,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	virtual void FNGC_VSlot_0x1820();  // slot 772: AFortPlayerControllerZone::ClientOnZoneEndScoreReports_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x1828();  // slot 773: AFortPlayerControllerZone::ServerSendLoadoutConfig_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x1830();  // slot 774: AFortPlayerControllerZone::ServerSendLoadoutConfig_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x1838();  // slot 775: AFortPlayerControllerZone::ClientSendPartyJoinInfoToPlayer_Implementation (signature not recovered)
+	virtual bool ServerSendLoadoutConfig_Validate(int32 LoadoutSeed, TArray<uint8> const& Loadout);  // slot 773 (+0x1828), UFunction AFortPlayerControllerZone::ServerSendLoadoutConfig
+	virtual void ServerSendLoadoutConfig_Implementation(int32 LoadoutSeed, TArray<uint8> const& Loadout);  // slot 774 (+0x1830), UFunction AFortPlayerControllerZone::ServerSendLoadoutConfig
+	virtual void ClientSendPartyJoinInfoToPlayer_Implementation(const FString& JoinInfoStr);  // slot 775 (+0x1838), UFunction AFortPlayerControllerZone::ClientSendPartyJoinInfoToPlayer
 	virtual bool ServerSubmitGameplayVote_Validate(int32 VoteDecision);  // slot 776 (+0x1840), UFunction AFortPlayerControllerZone::ServerSubmitGameplayVote
 	virtual void ServerSubmitGameplayVote_Implementation(int32 VoteDecision);  // slot 777 (+0x1848), UFunction AFortPlayerControllerZone::ServerSubmitGameplayVote
 	virtual void FNGC_VSlot_0x1850();  // slot 778: AFortPlayerControllerZone::ServerSendPartyJoinInfoToPlayer_Validate (signature not recovered)
@@ -12334,9 +12335,9 @@ public:
 	virtual void FNGC_VSlot_0x19C8();  // slot 825: AFortPlayerControllerAthena::ClientReceiveSquadQuickChatMessage_Implementation (signature not recovered)
 	virtual void FNGC_VSlot_0x19D0();  // slot 826: AFortPlayerControllerAthena::ServerPlaySquadQuickChatMessage_Validate (signature not recovered)
 	virtual void FNGC_VSlot_0x19D8();  // slot 827: AFortPlayerControllerAthena::ServerPlaySquadQuickChatMessage_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x19E0();  // slot 828: AFortPlayerControllerAthena::ClientVoiceChatChannelJoin_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x19E8();  // slot 829: AFortPlayerControllerAthena::ClientVoiceChat3DChannelJoin_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x19F0();  // slot 830: AFortPlayerControllerAthena::ClientVoiceChatLogin_Implementation (signature not recovered)
+	virtual void ClientVoiceChatChannelJoin_Implementation(const FString& InVoiceChatPlayerName, const FString& InVoiceChatChannel, const FString& JoinToken);  // slot 828 (+0x19E0), UFunction AFortPlayerControllerAthena::ClientVoiceChatChannelJoin
+	virtual void ClientVoiceChat3DChannelJoin_Implementation(const FString& InVoiceChatPlayerName, const FString& InVoiceChatChannel, const FString& JoinToken);  // slot 829 (+0x19E8), UFunction AFortPlayerControllerAthena::ClientVoiceChat3DChannelJoin
+	virtual void ClientVoiceChatLogin_Implementation(const FString& InVoiceChatPlayerName, const FString& LoginToken);  // slot 830 (+0x19F0), UFunction AFortPlayerControllerAthena::ClientVoiceChatLogin
 	virtual bool ServerVoiceChatReconnected_Validate();  // slot 831 (+0x19F8), UFunction AFortPlayerControllerAthena::ServerVoiceChatReconnected
 	virtual void ServerVoiceChatReconnected_Implementation();  // slot 832 (+0x1A00), UFunction AFortPlayerControllerAthena::ServerVoiceChatReconnected
 	virtual bool ServerVoiceChatRejoinChannel_Validate();  // slot 833 (+0x1A08), UFunction AFortPlayerControllerAthena::ServerVoiceChatRejoinChannel
@@ -12810,8 +12811,8 @@ public:
 	virtual void ServerCyclePart_Implementation(EFortCustomPartType::Type Part, bool bNextPart);  // slot 384 (+0xC00), UFunction AFortPlayerPawn::ServerCyclePart
 	virtual bool ServerHandlePickup_Validate(AFortPickup* Pickup, float InFlyTime, const FVector InStartDirection, bool bPlayPickupSound);  // slot 385 (+0xC08), UFunction AFortPlayerPawn::ServerHandlePickup
 	virtual void ServerHandlePickup_Implementation(AFortPickup* Pickup, float InFlyTime, const FVector InStartDirection, bool bPlayPickupSound);  // slot 386 (+0xC10), UFunction AFortPlayerPawn::ServerHandlePickup
-	virtual void FNGC_VSlot_0xC18();  // slot 387: AFortPlayerPawn::ServerSendAimbotDetectionStatus_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0xC20();  // slot 388: AFortPlayerPawn::ServerSendAimbotDetectionStatus_Implementation (signature not recovered)
+	virtual bool ServerSendAimbotDetectionStatus_Validate(TArray<uint8> const& Payload);  // slot 387 (+0xC18), UFunction AFortPlayerPawn::ServerSendAimbotDetectionStatus
+	virtual void ServerSendAimbotDetectionStatus_Implementation(TArray<uint8> const& Payload);  // slot 388 (+0xC20), UFunction AFortPlayerPawn::ServerSendAimbotDetectionStatus
 	virtual bool ServerSetAimbotDetection_Validate(bool bEnableDetection);  // slot 389 (+0xC28), UFunction AFortPlayerPawn::ServerSetAimbotDetection
 	virtual void ServerSetAimbotDetection_Implementation(bool bEnableDetection);  // slot 390 (+0xC30), UFunction AFortPlayerPawn::ServerSetAimbotDetection
 	virtual bool InternalServerSetTargeting_Validate(bool bNewTargeting);  // slot 391 (+0xC38), UFunction AFortPlayerPawn::InternalServerSetTargeting
@@ -15925,8 +15926,8 @@ public:
 	virtual void FNGC_VSlot_0x610();
 	virtual void FNGC_VSlot_0x618();
 	virtual void ClientQosResponse_Implementation(EQosResponseType Response);  // slot 196 (+0x620), UFunction AQosBeaconClient::ClientQosResponse
-	virtual void FNGC_VSlot_0x628();  // slot 197: AQosBeaconClient::ServerQosRequest_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x630();  // slot 198: AQosBeaconClient::ServerQosRequest_Implementation (signature not recovered)
+	virtual bool ServerQosRequest_Validate(const FString& InSessionId);  // slot 197 (+0x628), UFunction AQosBeaconClient::ServerQosRequest
+	virtual void ServerQosRequest_Implementation(const FString& InSessionId);  // slot 198 (+0x630), UFunction AQosBeaconClient::ServerQosRequest
 	static void StaticRegisterNativesAQosBeaconClient();
 	static void execClientQosResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execServerQosRequest(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -19870,7 +19871,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
-	virtual void FNGC_VSlot_0x238();  // slot 71: UAnimNotify::GetNotifyName_Implementation (signature not recovered)
+	virtual FString GetNotifyName_Implementation() const;  // slot 71 (+0x238), UFunction UAnimNotify::GetNotifyName
 	static void StaticRegisterNativesUAnimNotify();
 	static void execGetNotifyName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -19889,7 +19890,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/Engine"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
-	virtual void FNGC_VSlot_0x238();  // slot 71: UAnimNotifyState::GetNotifyName_Implementation (signature not recovered)
+	virtual FString GetNotifyName_Implementation() const;  // slot 71 (+0x238), UFunction UAnimNotifyState::GetNotifyName
 	static void StaticRegisterNativesUAnimNotifyState();
 	static void execGetNotifyName(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 private:
@@ -20803,7 +20804,7 @@ public:
 	virtual void FNGC_VSlot_0x348();
 	virtual void FNGC_VSlot_0x350();
 	virtual void FNGC_VSlot_0x358();
-	virtual void FNGC_VSlot_0x360();  // slot 108: UFortItemDefinition::GetPersistentName (signature not recovered)
+	virtual FString GetPersistentName() const;  // slot 108 (+0x360), UFunction UFortItemDefinition::GetPersistentName
 	virtual void FNGC_VSlot_0x368();
 	virtual void FNGC_VSlot_0x370();
 	virtual void FNGC_VSlot_0x378();
@@ -23934,7 +23935,7 @@ public:
 	inline static const TCHAR* StaticPackage() { return TEXT("/Script/MediaAssets"); }
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
-	virtual void FNGC_VSlot_0x238();  // slot 71: UMediaSource::GetUrl (signature not recovered)
+	virtual FString GetUrl() const;  // slot 71 (+0x238), UFunction UMediaSource::GetUrl
 	virtual bool Validate() const;  // slot 72 (+0x240), UFunction UMediaSource::Validate
 	static void StaticRegisterNativesUMediaSource();
 	static void execGetUrl(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -24025,7 +24026,7 @@ public:
 	virtual void FNGC_VSlot_0x3A8();
 	virtual void FNGC_VSlot_0x3B0();
 	virtual void RestartLogic();  // slot 119 (+0x3B8), UFunction UBrainComponent::RestartLogic
-	virtual void FNGC_VSlot_0x3C0();  // slot 120: UBrainComponent::StopLogic (signature not recovered)
+	virtual void StopLogic(const FString& Reason);  // slot 120 (+0x3C0), UFunction UBrainComponent::StopLogic
 	virtual void FNGC_VSlot_0x3C8();
 	virtual void FNGC_VSlot_0x3D0();
 	virtual void FNGC_VSlot_0x3D8();
@@ -24918,9 +24919,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	virtual void FNGC_VSlot_0x7F8();
-	virtual void FNGC_VSlot_0x800();  // slot 256: UMeshComponent::GetMaterials (signature not recovered)
+	virtual TArray<UMaterialInterface*> GetMaterials() const;  // slot 256 (+0x800), UFunction UMeshComponent::GetMaterials
 	virtual int32 GetMaterialIndex(FName MaterialSlotName) const;  // slot 257 (+0x808), UFunction UMeshComponent::GetMaterialIndex
-	virtual void FNGC_VSlot_0x810();  // slot 258: UMeshComponent::GetMaterialSlotNames (signature not recovered)
+	virtual TArray<FName> GetMaterialSlotNames() const;  // slot 258 (+0x810), UFunction UMeshComponent::GetMaterialSlotNames
 	virtual bool IsMaterialSlotNameValid(FName MaterialSlotName) const;  // slot 259 (+0x818), UFunction UMeshComponent::IsMaterialSlotNameValid
 	virtual void FNGC_VSlot_0x820();
 	virtual void FNGC_VSlot_0x828();
@@ -24966,7 +24967,7 @@ public:
 	virtual void FNGC_VSlot_0x8A0();  // slot 276: UInstancedStaticMeshComponent::UpdateInstanceTransform (signature not recovered)
 	virtual bool RemoveInstance(int32 InstanceIndex);  // slot 277 (+0x8A8), UFunction UInstancedStaticMeshComponent::RemoveInstance
 	virtual void ClearInstances();  // slot 278 (+0x8B0), UFunction UInstancedStaticMeshComponent::ClearInstances
-	virtual void FNGC_VSlot_0x8B8();  // slot 279: UInstancedStaticMeshComponent::GetInstancesOverlappingSphere (signature not recovered)
+	virtual TArray<int32> GetInstancesOverlappingSphere(FVector const& Center, float Radius, bool bSphereInWorldSpace) const;  // slot 279 (+0x8B8), UFunction UInstancedStaticMeshComponent::GetInstancesOverlappingSphere
 	virtual void FNGC_VSlot_0x8C0();  // slot 280: UInstancedStaticMeshComponent::GetInstancesOverlappingBox (signature not recovered)
 	static void StaticRegisterNativesUStaticMeshComponent();
 	static void execGetLocalBounds(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -25375,7 +25376,7 @@ public:
 	virtual void OnPerformTargetValidation();  // slot 124 (+0x3E0), UFunction UBuildingTurretComponent::OnPerformTargetValidation
 	virtual void OnFiringTimer();  // slot 125 (+0x3E8), UFunction UBuildingTurretComponent::OnFiringTimer
 	virtual void FNGC_VSlot_0x3F0();
-	virtual void FNGC_VSlot_0x3F8();  // slot 127: UBuildingTurretComponent::ChooseBestTarget_Implementation (signature not recovered)
+	virtual AActor* ChooseBestTarget_Implementation(TArray<AActor*>& InOutPotentialTargets) const;  // slot 127 (+0x3F8), UFunction UBuildingTurretComponent::ChooseBestTarget
 	static void StaticRegisterNativesUBuildingTurretComponent();
 	static void execAttemptSetCurrentTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execChooseBestTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -26238,10 +26239,10 @@ public:
 	virtual void FNGC_VSlot_0x298();  // slot 83: UCheatManager::DestroyAll (signature not recovered)
 	virtual void DestroyAllPawnsExceptTarget();  // slot 84 (+0x2A0), UFunction UCheatManager::DestroyAllPawnsExceptTarget
 	virtual void FNGC_VSlot_0x2A8();  // slot 85: UCheatManager::DestroyPawns (signature not recovered)
-	virtual void FNGC_VSlot_0x2B0();  // slot 86: UCheatManager::Summon (signature not recovered)
+	virtual void Summon(const FString& ClassName);  // slot 86 (+0x2B0), UFunction UCheatManager::Summon
 	virtual void PlayersOnly();  // slot 87 (+0x2B8), UFunction UCheatManager::PlayersOnly
 	virtual void ViewSelf();  // slot 88 (+0x2C0), UFunction UCheatManager::ViewSelf
-	virtual void FNGC_VSlot_0x2C8();  // slot 89: UCheatManager::ViewPlayer (signature not recovered)
+	virtual void ViewPlayer(const FString& S);  // slot 89 (+0x2C8), UFunction UCheatManager::ViewPlayer
 	virtual void ViewActor(FName ActorName);  // slot 90 (+0x2D0), UFunction UCheatManager::ViewActor
 	virtual void FNGC_VSlot_0x2D8();  // slot 91: UCheatManager::ViewClass (signature not recovered)
 	virtual void StreamLevelIn(FName PackageName);  // slot 92 (+0x2E0), UFunction UCheatManager::StreamLevelIn
@@ -26265,8 +26266,8 @@ public:
 	virtual void DumpVoiceMutingState();  // slot 110 (+0x370), UFunction UCheatManager::DumpVoiceMutingState
 	virtual void BugItGo(float X, float Y, float Z, float Pitch, float Yaw, float Roll);  // slot 111 (+0x378), UFunction UCheatManager::BugItGo
 	virtual void FNGC_VSlot_0x380();
-	virtual void FNGC_VSlot_0x388();  // slot 113: UCheatManager::BugIt (signature not recovered)
-	virtual void FNGC_VSlot_0x390();  // slot 114: UCheatManager::BugItStringCreator (signature not recovered)
+	virtual void BugIt(const FString& ScreenShotDescription);  // slot 113 (+0x388), UFunction UCheatManager::BugIt
+	virtual void BugItStringCreator(FVector ViewLocation, FRotator ViewRotation, FString& GoString, FString& LocString);  // slot 114 (+0x390), UFunction UCheatManager::BugItStringCreator
 	virtual void FlushLog();  // slot 115 (+0x398), UFunction UCheatManager::FlushLog
 	virtual void LogLoc();  // slot 116 (+0x3A0), UFunction UCheatManager::LogLoc
 	virtual void FNGC_VSlot_0x3A8();
@@ -27345,7 +27346,7 @@ public:
 	virtual void FNGC_VSlot_0x268();
 	virtual void FNGC_VSlot_0x270();
 	virtual void FNGC_VSlot_0x278();
-	virtual void FNGC_VSlot_0x280();  // slot 80: UCommonListView::SetDataProvider (signature not recovered)
+	virtual void SetDataProvider(TArray<UObject*> const& InDataProvider);  // slot 80 (+0x280), UFunction UCommonListView::SetDataProvider
 	virtual void FNGC_VSlot_0x288();
 	virtual void FNGC_VSlot_0x290();
 	virtual void DynamicHandleItemClickedCommonButton(UCommonButton* Button);  // slot 83 (+0x298), UFunction UCommonListView::DynamicHandleItemClickedCommonButton
@@ -36193,13 +36194,13 @@ public:
 	static const TCHAR* StaticConfigName() { return TEXT("Game"); }
 	virtual void FNGC_VSlot_0x3E0();
 	virtual void ForceServerShutdown(int32 ExitCode);  // slot 125 (+0x3E8), UFunction UFortCheatManager::ForceServerShutdown
-	virtual void FNGC_VSlot_0x3F0();  // slot 126: UFortCheatManager::SpawnPawn (signature not recovered)
-	virtual void FNGC_VSlot_0x3F8();  // slot 127: UFortCheatManager::SpawnScriptedPawn (signature not recovered)
+	virtual AFortPawn* SpawnPawn(const FString& PawnType);  // slot 126 (+0x3F0), UFunction UFortCheatManager::SpawnPawn
+	virtual AFortPlayerPawn* SpawnScriptedPawn(const FString& ProfileName, float Distance);  // slot 127 (+0x3F8), UFunction UFortCheatManager::SpawnScriptedPawn
 	virtual void DebugThisAI();  // slot 128 (+0x400), UFunction UFortCheatManager::DebugThisAI
 	virtual void DebugStructuralSupport();  // slot 129 (+0x408), UFunction UFortCheatManager::DebugStructuralSupport
 	virtual void DebugAbilityTags();  // slot 130 (+0x410), UFunction UFortCheatManager::DebugAbilityTags
 	virtual void DebugAttributeModifiers();  // slot 131 (+0x418), UFunction UFortCheatManager::DebugAttributeModifiers
-	virtual void FNGC_VSlot_0x420();  // slot 132: UFortCheatManager::DebugAttribute (signature not recovered)
+	virtual void DebugAttribute(FString& Attribute);  // slot 132 (+0x420), UFunction UFortCheatManager::DebugAttribute
 	virtual void DebugAttributeClear();  // slot 133 (+0x428), UFunction UFortCheatManager::DebugAttributeClear
 	virtual void DumpAppliedHomebaseEffectsWithCoreAttributes();  // slot 134 (+0x430), UFunction UFortCheatManager::DumpAppliedHomebaseEffectsWithCoreAttributes
 	virtual void DBNO();  // slot 135 (+0x438), UFunction UFortCheatManager::DBNO
@@ -37210,7 +37211,7 @@ public:
 	virtual void FNGC_VSlot_0x408();
 	virtual void OnDeactivated_Implementation();  // slot 130 (+0x410), UFunction UFortCollectionBookOverviewWidget::OnDeactivated
 	virtual void OnActivated_Implementation();  // slot 131 (+0x418), UFunction UFortCollectionBookOverviewWidget::OnActivated
-	virtual void FNGC_VSlot_0x420();  // slot 132: UFortCollectionBookOverviewWidget::OnGetChildrenForPageCategory (signature not recovered)
+	virtual TArray<UObject*> OnGetChildrenForPageCategory(UObject* CategoryObject);  // slot 132 (+0x420), UFunction UFortCollectionBookOverviewWidget::OnGetChildrenForPageCategory
 	virtual void OnPageItemSelected(UObject* Item, bool bSelected);  // slot 133 (+0x428), UFunction UFortCollectionBookOverviewWidget::OnPageItemSelected
 	virtual void OnPageItemClicked(UObject* Item);  // slot 134 (+0x430), UFunction UFortCollectionBookOverviewWidget::OnPageItemClicked
 	static void StaticRegisterNativesUFortCollectionBookOverviewWidget();
@@ -42289,7 +42290,7 @@ public:
 	virtual void FNGC_VSlot_0x288();
 	virtual void FNGC_VSlot_0x290();
 	virtual void FNGC_VSlot_0x298();
-	virtual void FNGC_VSlot_0x2A0();  // slot 84: UFortGridWidgetBase::GetTiles (signature not recovered)
+	virtual TArray<UFortGridPickerTile*> GetTiles();  // slot 84 (+0x2A0), UFunction UFortGridWidgetBase::GetTiles
 	virtual UFortGridPickerTile* GetTileForObject(const UObject* Object);  // slot 85 (+0x2A8), UFunction UFortGridWidgetBase::GetTileForObject
 	static void StaticRegisterNativesUFortGridWidgetBase();
 	static void execGetTileForObject(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -44036,7 +44037,7 @@ public:
 	virtual void FNGC_VSlot_0x400();
 	virtual void FNGC_VSlot_0x408();
 	virtual void OnItemCollectorChanged_Implementation(ABuildingItemCollectorActor* OutItemCollector);  // slot 130 (+0x410), UFunction UFortItemCollectorWidget::OnItemCollectorChanged
-	virtual void FNGC_VSlot_0x418();  // slot 131: UFortItemCollectorWidget::OnItemCollectorValuesChanged_Implementation (signature not recovered)
+	virtual void OnItemCollectorValuesChanged_Implementation(TArray<int32>& DepositAmounts, TArray<int32>& DepositGoals);  // slot 131 (+0x418), UFunction UFortItemCollectorWidget::OnItemCollectorValuesChanged
 	virtual void OnItemCollectorStateChanged_Implementation(EFortItemCollectorState ItemCollectorState);  // slot 132 (+0x420), UFunction UFortItemCollectorWidget::OnItemCollectorStateChanged
 	static void StaticRegisterNativesUFortItemCollectorWidget();
 	static void execOnItemCollectorChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -69587,8 +69588,8 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000000000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	virtual int32 GetNumHeaders();  // slot 71 (+0x238), UFunction UPlatformInterfaceWebResponse::GetNumHeaders
-	virtual void FNGC_VSlot_0x240();  // slot 72: UPlatformInterfaceWebResponse::GetHeader (signature not recovered)
-	virtual void FNGC_VSlot_0x248();  // slot 73: UPlatformInterfaceWebResponse::GetHeaderValue (signature not recovered)
+	virtual void GetHeader(int32 HeaderIndex, FString& Header, FString& Value);  // slot 72 (+0x240), UFunction UPlatformInterfaceWebResponse::GetHeader
+	virtual FString GetHeaderValue(const FString& HeaderName);  // slot 73 (+0x248), UFunction UPlatformInterfaceWebResponse::GetHeaderValue
 	static void StaticRegisterNativesUPlatformInterfaceWebResponse();
 	static void execGetHeader(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execGetHeaderValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -72399,6 +72400,9 @@ public:
 	inline static EClassCastFlags StaticClassCastFlags() { return (EClassCastFlags)0x0000000000004000ull; }
 	static const TCHAR* StaticConfigName() { return TEXT("Engine"); }
 	static void StaticRegisterNativesUStrProperty();
+#ifdef FNGC_EXTRA_MEMBERS_UStrProperty
+	FNGC_EXTRA_MEMBERS_UStrProperty
+#endif
 };
 
 class UStreamMediaSource : public UBaseMediaSource
@@ -73069,10 +73073,10 @@ public:
 	virtual void FNGC_VSlot_0x240();
 	virtual void Init();  // slot 73 (+0x248), UFunction UTwitterIntegrationBase::Init
 	virtual bool CanShowTweetUI();  // slot 74 (+0x250), UFunction UTwitterIntegrationBase::CanShowTweetUI
-	virtual void FNGC_VSlot_0x258();  // slot 75: UTwitterIntegrationBase::ShowTweetUI (signature not recovered)
+	virtual bool ShowTweetUI(const FString& InitialMessage, const FString& URL, const FString& Picture);  // slot 75 (+0x258), UFunction UTwitterIntegrationBase::ShowTweetUI
 	virtual bool AuthorizeAccounts();  // slot 76 (+0x260), UFunction UTwitterIntegrationBase::AuthorizeAccounts
 	virtual int32 GetNumAccounts();  // slot 77 (+0x268), UFunction UTwitterIntegrationBase::GetNumAccounts
-	virtual void FNGC_VSlot_0x270();  // slot 78: UTwitterIntegrationBase::GetAccountName (signature not recovered)
+	virtual FString GetAccountName(int32 AccountIndex);  // slot 78 (+0x270), UFunction UTwitterIntegrationBase::GetAccountName
 	virtual void FNGC_VSlot_0x278();  // slot 79: UTwitterIntegrationBase::TwitterRequest (signature not recovered)
 	static void StaticRegisterNativesUTwitterIntegrationBase();
 	static void execAuthorizeAccounts(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -73099,9 +73103,9 @@ public:
 	virtual void FNGC_VSlot_0x3A0();
 	virtual void FNGC_VSlot_0x3A8();
 	virtual void SendClientHello_Implementation();  // slot 118 (+0x3B0), UFunction UUACNetComponent::SendClientHello
-	virtual void FNGC_VSlot_0x3B8();  // slot 119: UUACNetComponent::SendPacketToClient_Implementation (signature not recovered)
-	virtual void FNGC_VSlot_0x3C0();  // slot 120: UUACNetComponent::SendPacketToServer_Validate (signature not recovered)
-	virtual void FNGC_VSlot_0x3C8();  // slot 121: UUACNetComponent::SendPacketToServer_Implementation (signature not recovered)
+	virtual void SendPacketToClient_Implementation(uint8 Type, TArray<uint8> const& Packet);  // slot 119 (+0x3B8), UFunction UUACNetComponent::SendPacketToClient
+	virtual bool SendPacketToServer_Validate(uint8 Type, TArray<uint8> const& Packet);  // slot 120 (+0x3C0), UFunction UUACNetComponent::SendPacketToServer
+	virtual void SendPacketToServer_Implementation(uint8 Type, TArray<uint8> const& Packet);  // slot 121 (+0x3C8), UFunction UUACNetComponent::SendPacketToServer
 	static void StaticRegisterNativesUUACNetComponent();
 	static void execSendClientHello(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
 	static void execSendPacketToClient(UObject* Context, FFrame& Stack, void* const Z_Param__Result);
@@ -73832,7 +73836,7 @@ public:
 	virtual void FNGC_VSlot_0x4F0();  // slot 158: UWidgetInteractionComponent::PressKey (signature not recovered)
 	virtual void FNGC_VSlot_0x4F8();  // slot 159: UWidgetInteractionComponent::ReleaseKey (signature not recovered)
 	virtual void FNGC_VSlot_0x500();  // slot 160: UWidgetInteractionComponent::PressAndReleaseKey (signature not recovered)
-	virtual void FNGC_VSlot_0x508();  // slot 161: UWidgetInteractionComponent::SendKeyChar (signature not recovered)
+	virtual bool SendKeyChar(FString Characters, bool bRepeat);  // slot 161 (+0x508), UFunction UWidgetInteractionComponent::SendKeyChar
 	virtual void ScrollWheel(float ScrollDelta);  // slot 162 (+0x510), UFunction UWidgetInteractionComponent::ScrollWheel
 	static void StaticRegisterNativesUWidgetInteractionComponent();
 	static void execGet2DHitLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result);

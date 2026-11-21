@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F8E10 (end 0x023F8EAA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBugIt) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execBugIt(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_ScreenShotDescription);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BugIt(Z_Param_ScreenShotDescription);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F8EB0 (end 0x023F907A)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execBugItGo) | Matching: see analysis/functions-uht-exec.json
 void UCheatManager::execBugItGo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -17,6 +27,19 @@ void UCheatManager::execBugItGo(UObject* Context, FFrame& Stack, void* const Z_P
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->BugItGo(Z_Param_X,Z_Param_Y,Z_Param_Z,Z_Param_Pitch,Z_Param_Yaw,Z_Param_Roll);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9080 (end 0x023F9238)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBugItStringCreator) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execBugItStringCreator(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_ViewLocation);
+	P_GET_STRUCT(FRotator,Z_Param_ViewRotation);
+	P_GET_PROPERTY_REF(UStrProperty,Z_Param_Out_GoString);
+	P_GET_PROPERTY_REF(UStrProperty,Z_Param_Out_LocString);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BugItStringCreator(Z_Param_ViewLocation,Z_Param_ViewRotation,Z_Param_Out_GoString,Z_Param_Out_LocString);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9270 (end 0x023F92EF)
@@ -305,6 +328,16 @@ void UCheatManager::execStreamLevelOut(UObject* Context, FFrame& Stack, void* co
 	P_THIS->StreamLevelOut(Z_Param_PackageName);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA4F0 (end 0x023FA58A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSummon) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execSummon(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_ClassName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Summon(Z_Param_ClassName);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA590 (end 0x023FA5AF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execTeleport) | Matching: see analysis/functions-uht-exec.json
 void UCheatManager::execTeleport(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -349,6 +382,16 @@ void UCheatManager::execViewActor(UObject* Context, FFrame& Stack, void* const Z
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->ViewActor(Z_Param_ActorName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA700 (end 0x023FA79A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execViewPlayer) | Matching: see analysis/functions-uht-exec.json
+void UCheatManager::execViewPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_S);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ViewPlayer(Z_Param_S);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA7A0 (end 0x023FA7BF), leaf (no .pdata)

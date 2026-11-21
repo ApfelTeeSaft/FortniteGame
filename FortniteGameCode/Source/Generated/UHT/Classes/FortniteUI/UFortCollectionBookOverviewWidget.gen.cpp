@@ -22,6 +22,16 @@ void UFortCollectionBookOverviewWidget::execOnDeactivated(UObject* Context, FFra
 	P_THIS->OnDeactivated_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02897220 (end 0x028972F5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnGetChildrenForPageCategory) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookOverviewWidget::execOnGetChildrenForPageCategory(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UObject,Z_Param_CategoryObject);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TArray<UObject*>*)Z_Param__Result=P_THIS->OnGetChildrenForPageCategory(Z_Param_CategoryObject);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028974F0 (end 0x02897574)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnPageItemClicked) | Matching: see analysis/functions-uht-exec.json
 void UFortCollectionBookOverviewWidget::execOnPageItemClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

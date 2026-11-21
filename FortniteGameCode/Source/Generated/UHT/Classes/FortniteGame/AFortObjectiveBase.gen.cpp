@@ -13,6 +13,18 @@ void AFortObjectiveBase::execStartPlayingObjective(UObject* Context, FFrame& Sta
 	*(bool*)Z_Param__Result=P_THIS->StartPlayingObjective();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01053440 (end 0x01053559)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStopObjective) | Matching: see analysis/functions-uht-exec.json
+void AFortObjectiveBase::execStopObjective(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortObjectiveStatus,Z_Param_Status);
+	P_GET_PROPERTY(UStrProperty,Z_Param_Description);
+	P_GET_OBJECT(UFortBadgeItemDefinition,Z_Param_ExtraBadgeToGrant);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopObjective(EFortObjectiveStatus(Z_Param_Status),Z_Param_Description,Z_Param_ExtraBadgeToGrant);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortObjectiveBase, 4125122753u)
 // Original dynamic initializer: RVA 0x00105A10 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortObjectiveBase> AutoInitializeAFortObjectiveBase(TEXT("AFortObjectiveBase"), sizeof(AFortObjectiveBase), 4125122753u);

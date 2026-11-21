@@ -160,6 +160,18 @@ void APlayerController::execClientIgnoreMoveInput(UObject* Context, FFrame& Stac
 	P_THIS->ClientIgnoreMoveInput_Implementation(Z_Param_bIgnore);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024ACED0 (end 0x024ACFED)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientMessage) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_S);
+	P_GET_PROPERTY(UNameProperty,Z_Param_Type);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_MsgLifeTime);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientMessage_Implementation(Z_Param_S,Z_Param_Type,Z_Param_MsgLifeTime);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AD120 (end 0x024AD3B8)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientPlayCameraAnim) | Matching: see analysis/functions-uht-exec.json
 void APlayerController::execClientPlayCameraAnim(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -280,6 +292,16 @@ void APlayerController::execClientRetryClientRestart(UObject* Context, FFrame& S
 	P_THIS->ClientRetryClientRestart_Implementation(Z_Param_NewPawn);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024ADE80 (end 0x024ADF1A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientReturnToMainMenu) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientReturnToMainMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_ReturnReason);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientReturnToMainMenu_Implementation(Z_Param_ReturnReason);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024ADFE0 (end 0x024ADFFF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSetBlockOnAsyncLoading) | Matching: see analysis/functions-uht-exec.json
 void APlayerController::execClientSetBlockOnAsyncLoading(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -364,6 +386,32 @@ void APlayerController::execClientStopForceFeedback(UObject* Context, FFrame& St
 	P_THIS->ClientStopForceFeedback_Implementation(Z_Param_ForceFeedbackEffect,Z_Param_Tag);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AE9B0 (end 0x024AEB09)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientTeamMessage) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientTeamMessage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(APlayerState,Z_Param_SenderPlayerState);
+	P_GET_PROPERTY(UStrProperty,Z_Param_S);
+	P_GET_PROPERTY(UNameProperty,Z_Param_Type);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_MsgLifeTime);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientTeamMessage_Implementation(Z_Param_SenderPlayerState,Z_Param_S,Z_Param_Type,Z_Param_MsgLifeTime);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AEC80 (end 0x024AEDE9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientTravelInternal) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execClientTravelInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_URL);
+	P_GET_PROPERTY(UByteProperty,Z_Param_TravelType);
+	P_GET_UBOOL(Z_Param_bSeamless);
+	P_GET_STRUCT(FGuid,Z_Param_MapPackageGuid);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientTravelInternal_Implementation(Z_Param_URL,ETravelType(Z_Param_TravelType),Z_Param_bSeamless,Z_Param_MapPackageGuid);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AEF20 (end 0x024AF0C7)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientUpdateLevelStreamingStatus) | Matching: see analysis/functions-uht-exec.json
 void APlayerController::execClientUpdateLevelStreamingStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -415,6 +463,16 @@ void APlayerController::execGetFocalLocation(UObject* Context, FFrame& Stack, vo
 	*(FVector*)Z_Param__Result=P_THIS->GetFocalLocation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B14B0 (end 0x024B154A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execLocalTravel) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execLocalTravel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_URL);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->LocalTravel(Z_Param_URL);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B15E0 (end 0x024B1666)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnServerStartedVisualLogger) | Matching: see analysis/functions-uht-exec.json
 void APlayerController::execOnServerStartedVisualLogger(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -441,6 +499,16 @@ void APlayerController::execRestartLevel(UObject* Context, FFrame& Stack, void* 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->RestartLevel();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2220 (end 0x024B22BA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSendToConsole) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execSendToConsole(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_Command);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SendToConsole(Z_Param_Command);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B22C0 (end 0x024B2375)
@@ -471,6 +539,21 @@ void APlayerController::execServerCamera(UObject* Context, FFrame& Stack, void* 
 		return;
 	}
 	P_THIS->ServerCamera_Implementation(Z_Param_NewMode);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2440 (end 0x024B24FD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerChangeName) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execServerChangeName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_S);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerChangeName_Validate(Z_Param_S))
+	{
+		RPC_ValidateFailed(TEXT("ServerChangeName_Validate"));
+		return;
+	}
+	P_THIS->ServerChangeName_Implementation(Z_Param_S);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B2500 (end 0x024B254E)
@@ -644,6 +727,16 @@ void APlayerController::execSetCinematicMode(UObject* Context, FFrame& Stack, vo
 	P_THIS->SetCinematicMode(Z_Param_bInCinematicMode,Z_Param_bHidePlayer,Z_Param_bAffectsHUD,Z_Param_bAffectsMovement,Z_Param_bAffectsTurning);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B3B90 (end 0x024B3C2A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetName) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execSetName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_S);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetName(Z_Param_S);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B3E30 (end 0x024B3FAF)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetViewTargetWithBlend) | Matching: see analysis/functions-uht-exec.json
 void APlayerController::execSetViewTargetWithBlend(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -676,6 +769,16 @@ void APlayerController::execStartFire(UObject* Context, FFrame& Stack, void* con
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->StartFire(Z_Param_FireModeNum);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B47C0 (end 0x024B485A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSwitchLevel) | Matching: see analysis/functions-uht-exec.json
+void APlayerController::execSwitchLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_URL);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SwitchLevel(Z_Param_URL);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B4860 (end 0x024B48E6)

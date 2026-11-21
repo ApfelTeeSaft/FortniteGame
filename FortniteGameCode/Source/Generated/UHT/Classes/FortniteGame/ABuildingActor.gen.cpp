@@ -22,6 +22,15 @@ void ABuildingActor::execGetCurrentBuildingLevel(UObject* Context, FFrame& Stack
 	*(int32*)Z_Param__Result=P_THIS->GetCurrentBuildingLevel();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62790 (end 0x00F6280E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCustomState) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execGetCustomState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FString*)Z_Param__Result=P_THIS->GetCustomState();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F628D0 (end 0x00F62901)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHealth) | Matching: see analysis/functions-uht-exec.json
 void ABuildingActor::execGetHealth(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -108,6 +117,16 @@ void ABuildingActor::execPlacedByPlacementTool(UObject* Context, FFrame& Stack, 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->PlacedByPlacementTool_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63210 (end 0x00F632F5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCustomState) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execSetCustomState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_NewState);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCustomState(Z_Param_NewState);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63420 (end 0x00F6352A)

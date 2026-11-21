@@ -174,7 +174,21 @@ def test_uht_parameters() -> None:
     assert (t["decl"], t["arg"]) == ("ERes::Type Result", "ERes::Type(Z_Param_Result)"), t
     t = P.parameter(rec("Byte", "Result", out | P.CPF_RETURNPARM, 0x300), names, base)
     assert (t["ret"], t["store"]) == ("ERes::Type", "TEnumAsByte<ERes::Type>"), t
-    assert P.parameter(rec("Str", "Text", 0), names, base) is None                  # not modelled
+    t = P.parameter(rec("Str", "Text", 0), names, base)                              # by value
+    assert (t["decl"], t["line"]) == ("FString Text", "P_GET_PROPERTY(UStrProperty,Z_Param_Text);"), t
+    t = P.parameter(rec("Str", "Out", out), names, base)
+    assert (t["decl"], t["line"]) == ("FString& Out", "P_GET_PROPERTY_REF(UStrProperty,Z_Param_Out_Out);"), t
+
+    def arr(name, flags, inner):
+        r = rec("Array", name, flags)
+        r["inner"] = [dict(inner, dim=1)]
+        return r
+    t = P.parameter(arr("Actors", out, {"type": "Object", "flags": 0, "func": base + 0x100}), names, base)
+    assert (t["decl"], t["line"]) == ("TArray<AActor*>& Actors", "P_GET_TARRAY_REF(AActor*,Z_Param_Out_Actors);"), t
+    t = P.parameter(arr("Locs", const | out | ref, {"type": "Struct", "flags": 0, "func": base + 0x400}), names, base)
+    assert t["decl"] == "TArray<FVector> const& Locs", t
+    assert P.parameter(arr("Names", 0, {"type": "Str", "flags": 0, "func": 0}), names, base) is None  # FString elements: not modelled
+    assert P.parameter(rec("Text", "Label", 0), names, base) is None                # not modelled
     assert P.enum_declarations(names) == ["enum class EMode : uint8 {};", "namespace ERes { enum Type {}; }"]
     print("uht parameters: ok")
 

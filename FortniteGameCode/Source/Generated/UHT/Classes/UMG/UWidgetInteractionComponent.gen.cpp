@@ -14,6 +14,17 @@ void UWidgetInteractionComponent::execScrollWheel(UObject* Context, FFrame& Stac
 	P_THIS->ScrollWheel(Z_Param_ScrollDelta);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C05E50 (end 0x01C05F8D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSendKeyChar) | Matching: see analysis/functions-uht-exec.json
+void UWidgetInteractionComponent::execSendKeyChar(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_Characters);
+	P_GET_UBOOL(Z_Param_bRepeat);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->SendKeyChar(Z_Param_Characters,Z_Param_bRepeat);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UWidgetInteractionComponent, 2757948634u)
 // Original dynamic initializer: RVA 0x001B4D60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UWidgetInteractionComponent> AutoInitializeUWidgetInteractionComponent(TEXT("UWidgetInteractionComponent"), sizeof(UWidgetInteractionComponent), 2757948634u);

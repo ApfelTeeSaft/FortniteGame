@@ -19,7 +19,14 @@ CPF_ReferenceParm. Only types whose C++ form the generated headers model are sup
 bool, the integer and floating-point types, uint8 without an enum, FName, and pointers to
 reflected classes (UClass* for class properties without TSubclassOf), the core structs
 ScriptRecovered.h defines (FVector, FRotator, FVector2D, FLinearColor, FGuid, FGameplayTag,
-FGameplayAbilitySpecHandle; P_GET_STRUCT), and enums. An enum is
+FGameplayAbilitySpecHandle; P_GET_STRUCT), enums, FString, and TArrays of trivially
+copyable elements (ContainersRecovered.h).
+
+FString parameters. HeaderParser drops CPF_ConstParm from 'const FString&' parameters (only
+UHT's own data keeps the reference), so a by-value FString and a const reference carry the
+same flags (none). The caller decides: RPC parameters must be const references (UHT
+reports an error otherwise); for other functions the form is read from the reference
+thunk (tools/codegen/uht_exec.py). An enum is
 a raw parameter when passed by value or returned, TEnumAsByte<E>& (E& for an enum class)
 when an out parameter, as UByteProperty/UEnumProperty::GetCPPType export them.
 """
@@ -114,7 +121,7 @@ def _with_qualifiers(p: dict, ctype: str, name: str) -> str:
     return f"{ctype}{'&' if ref else ''} {name}"
 
 
-def parameter(p: dict, names: Names, base: int) -> dict | None:
+def parameter(p: dict, names: Names, base: int, strings_by_ref: bool = False) -> dict | None:
     """UHT 4.20 text for a supported property: decl (native declaration), line (P_GET macro),
     arg (argument), ret (declared return type) and store (Z_Param__Result cast type)."""
     if p["dim"] != 1:
@@ -144,6 +151,17 @@ def parameter(p: dict, names: Names, base: int) -> dict | None:
         ctype = store = e["cpp"]
         line = f"P_GET_ENUM{ref}({e['name']},{pname});"
         arg = f"({e['cpp']}&)({pname})" if out else f"{e['cpp']}({pname})"
+    elif t == "Str":
+        ctype, line = "FString", f"P_GET_PROPERTY{ref}(UStrProperty,{pname});"
+        if strings_by_ref and not p["flags"] & (CPF_OUTPARM | CPF_REFERENCEPARM | CPF_CONSTPARM | CPF_RETURNPARM):
+            # 'const FString&' parameters carry no flags (HeaderParser drops CPF_ConstParm).
+            return {"decl": f"const FString& {p['name']}", "line": line, "arg": pname, "ret": ctype, "store": ctype}
+    elif t == "Array":
+        elem = element_type(p["inner"][0], names, base) if p["inner"] else None
+        if elem is None:
+            return None
+        ctype = f"TArray<{elem}>"
+        line = f"P_GET_TARRAY{ref}({elem},{pname});"
     elif t == "Struct":
         info = names.structs.get(p["func"] - base) if p["func"] else None
         if info is None or MODELLED_STRUCTS.get(info[0]) != info[1:]:
@@ -165,7 +183,40 @@ def parameter(p: dict, names: Names, base: int) -> dict | None:
             "ret": ctype, "store": store or ctype}
 
 
-def function_signature(dimg, base: int, rec: int, names: Names) -> dict | None:
+def element_type(inner: dict, names: Names, base: int) -> str | None:
+    """C++ type of a TArray element (UArrayProperty::GetCPPMacroType: Inner->GetCPPType()), for
+    the trivially copyable and destructible types ContainersRecovered.h's TArray supports."""
+    if inner["dim"] != 1:
+        return None
+    t = inner["type"]
+    if t == "Bool":
+        return "bool" if inner["bool"] == (1, 1) else None
+    if t in NUMERIC and not (t == "Byte" and inner["func"]):
+        return NUMERIC[t][0]
+    if t == "Object":
+        c = names.classes.get(inner["func"] - base) if inner["func"] else None
+        return f"{c}*" if c else None
+    if t == "Class" and not inner["flags"] & CPF_UOBJECTWRAPPER:
+        return "UClass*"
+    if t == "Struct":
+        info = names.structs.get(inner["func"] - base) if inner["func"] else None
+        return f"F{info[0]}" if info and MODELLED_STRUCTS.get(info[0]) == info[1:] else None
+    return None
+
+
+def plain_strings(dimg, base: int, rec: int) -> int:
+    """Number of FString parameters without flags: passed by value or by const reference."""
+    nprops, props = _props(dimg, rec)
+    return sum(1 for p in (decode(dimg, base, props, nprops) if nprops else [])
+               if p["type"] == "Str" and not p["flags"] & (CPF_OUTPARM | CPF_REFERENCEPARM | CPF_CONSTPARM | CPF_RETURNPARM))
+
+
+def _props(dimg, rec: int) -> tuple[int, int]:
+    props, nprops = struct.unpack("<Qi", dimg.read(rec + 0x30, 0xC))
+    return nprops, props
+
+
+def function_signature(dimg, base: int, rec: int, names: Names, strings_by_ref: bool = False) -> dict | None:
     """Parameters and return of a UFunction (FFunctionParams at rec), or None if a type is not
     supported. Keys: flags, params [(declaration, P_GET line, argument)], ret (declared C++
     return type), store (the type UHT casts Z_Param__Result to)."""
@@ -174,13 +225,14 @@ def function_signature(dimg, base: int, rec: int, names: Names) -> dict | None:
     ret = store = None
     params = []
     for p in ps:
-        t = parameter(p, names, base)
+        t = parameter(p, names, base, strings_by_ref)
         if t is None:
             return None
         if p["flags"] & CPF_RETURNPARM:
             r = t["ret"]
             if ret is not None or not (r in REGISTER_RETURN or r.endswith("*") or r == "FName"
-                                       or r in names.used_enums or r[1:] in MODELLED_STRUCTS):
+                                       or r in names.used_enums or r[1:] in MODELLED_STRUCTS
+                                       or r == "FString" or r.startswith("TArray<")):
                 return None
             ret, store = r, t["store"]
             continue

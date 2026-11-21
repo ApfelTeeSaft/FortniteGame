@@ -74,7 +74,7 @@ UNITY_ORDER = ROOT / "analysis" / "unity-order.json"
 # Classes whose extra (non-DECLARE_CLASS) members come from the shim headers.
 EXTRA_MEMBERS = ("UClass", "UScriptStruct", "UEnum", "UByteProperty", "UInt8Property", "UInt16Property",
                  "UIntProperty", "UInt64Property", "UUInt16Property", "UUInt32Property", "UUInt64Property",
-                 "UFloatProperty", "UDoubleProperty", "UNameProperty")
+                 "UFloatProperty", "UDoubleProperty", "UNameProperty", "UStrProperty")
 # Intrinsic classes whose GetPrivateStaticClass is not decoded, with what the thunks need:
 # UField (Class.h) is UObject plus `UField* Next`; FFrame::StepCompiledIn reads Next at +0x28
 # in the reference's thunks, right after UObject's 0x28 bytes.

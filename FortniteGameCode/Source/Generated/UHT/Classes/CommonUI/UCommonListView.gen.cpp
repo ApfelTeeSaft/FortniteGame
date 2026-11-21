@@ -44,6 +44,16 @@ void UCommonListView::execDynamicHandleItemUnhoveredCommonButton(UObject* Contex
 	P_THIS->DynamicHandleItemUnhoveredCommonButton(Z_Param_Button);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CDF40 (end 0x002CDFE7)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetDataProvider) | Matching: see analysis/functions-uht-exec.json
+void UCommonListView::execSetDataProvider(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY_REF(UObject*,Z_Param_Out_InDataProvider);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetDataProvider(Z_Param_Out_InDataProvider);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonListView, 3731617275u)
 // Original dynamic initializer: RVA 0x00095FE0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonListView> AutoInitializeUCommonListView(TEXT("UCommonListView"), sizeof(UCommonListView), 3731617275u);

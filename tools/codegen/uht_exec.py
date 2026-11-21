@@ -33,10 +33,19 @@ from __future__ import annotations
 
 import json
 import struct
+import sys
 from collections import defaultdict
 from pathlib import Path
 
+import capstone
+
 import uht_props
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "analysis"))
+import natives  # noqa: E402  (tools/analysis/natives.py: the exec thunk walker)
+
+_MD = capstone.Cs(capstone.CS_ARCH_X86, capstone.CS_MODE_64)
+_MD.detail = True
 
 ROOT = Path(__file__).resolve().parents[2]
 VTABLES = ROOT / "analysis" / "vtables.json"
@@ -45,7 +54,7 @@ CREATOR_SYMBOLS = ROOT / "analysis" / "uht-creator-symbols.json"
 ENUM_MANIFEST = ROOT / "analysis" / "functions-uht-enums.json"
 ENUM_SYMBOLS = ROOT / "analysis" / "uht-enum-symbols.json"
 
-FUNC_NETVALIDATE, FUNC_CONST = 0x80000000, 0x40000000
+FUNC_NET, FUNC_NETVALIDATE, FUNC_CONST = 0x40, 0x80000000, 0x40000000
 CONSTRUCT_USCRIPTSTRUCT = 0x0138FA20    # UE4CodeGen_Private::ConstructUScriptStruct (see docs/STATUS.md)
 LEAF_LIMIT = 64
 
@@ -55,12 +64,38 @@ def funcparams(syms: dict, cls: str, ufunction: str) -> int | None:
     return int(rec[0], 16) if rec else None
 
 
-def signature(dimg, base: int, syms: dict, names, cls: str, ufunction: str) -> dict | None:
+def strings_by_reference(dimg, base: int, rec: int, exec_rva: int, rfs: dict) -> bool | None:
+    """Whether the UFunction's flagless FString parameters are 'const FString&' (True) or
+    by value (False); None if the reference does not decide it.
+
+    RPC parameters must be const references (HeaderParser). Otherwise the reference thunk
+    shows it: a by-value FString is copy-constructed before the native call, TArray's
+    CopyToEmpty calling ResizeForCopy and memcpy, while a const reference passes the local's
+    address. So the direct calls between P_FINISH and the first virtual native call number
+    two per by-value string, none for references."""
+    n = uht_props.plain_strings(dimg, base, rec)
+    if n == 0:
+        return False
+    fflags = struct.unpack("<I", dimg.read(rec + 0x20, 4))[0]
+    if fflags & FUNC_NET:
+        return True
+    t = natives.Thunk(_MD, dimg, exec_rva, rfs[exec_rva].end if exec_rva in rfs else None)
+    native = next((c["at"] for c in t.calls if c["post"] and c["kind"] == "virtual"), None)
+    if native is None:
+        return None
+    copies = sum(1 for c in t.calls if c["post"] and c["kind"] == "direct" and c["at"] < native)
+    return True if copies == 0 else False if copies == 2 * n else None
+
+
+def signature(dimg, base: int, syms: dict, names, cls: str, ufunction: str, exec_rva: int, rfs: dict) -> dict | None:
     """The UFunction's parameters (uht_props.function_signature) and constness, or None."""
     rec = funcparams(syms, cls, ufunction)
     if rec is None:
         return None
-    sig = uht_props.function_signature(dimg, base, rec, names)
+    by_ref = strings_by_reference(dimg, base, rec, exec_rva, rfs)
+    if by_ref is None:
+        return None
+    sig = uht_props.function_signature(dimg, base, rec, names, by_ref)
     if sig is not None:
         sig["const"] = bool(sig["flags"] & FUNC_CONST)
     return sig
@@ -142,7 +177,7 @@ def build(dimg, base: int, classes: dict, out_order: list[str], rfs: dict, md) -
         if e is None:
             continue
         intro[s["class"]][s["slot"]] = (s["name"], s["ufunction_class"], e["ufunction"])
-        sig = signature(dimg, base, syms, typenames, e["class"], e["ufunction"])
+        sig = signature(dimg, base, syms, typenames, e["class"], e["ufunction"], int(e["exec_rva"], 16), rfs)
         if sig is not None:
             if s["name"].endswith("_Validate"):
                 sig = dict(sig, ret="bool")

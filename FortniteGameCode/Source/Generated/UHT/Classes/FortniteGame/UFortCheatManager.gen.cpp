@@ -31,6 +31,16 @@ void UFortCheatManager::execDebugAbilityTags(UObject* Context, FFrame& Stack, vo
 	P_THIS->DebugAbilityTags();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB5840 (end 0x00FB58E9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugAttribute) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execDebugAttribute(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY_REF(UStrProperty,Z_Param_Out_Attribute);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DebugAttribute(Z_Param_Out_Attribute);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02907370 (end 0x0290738F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugAttributeClear) | Matching: see analysis/functions-uht-exec.json
 void UFortCheatManager::execDebugAttributeClear(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -113,6 +123,27 @@ void UFortCheatManager::execSetEncounterGraphsHistoryLength(UObject* Context, FF
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->SetEncounterGraphsHistoryLength(Z_Param_Seconds);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBB550 (end 0x00FBB5FC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSpawnPawn) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execSpawnPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_PawnType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AFortPawn**)Z_Param__Result=P_THIS->SpawnPawn(Z_Param_PawnType);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBB600 (end 0x00FBB6F0)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSpawnScriptedPawn) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execSpawnScriptedPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_ProfileName);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Distance);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AFortPlayerPawn**)Z_Param__Result=P_THIS->SpawnScriptedPawn(Z_Param_ProfileName,Z_Param_Distance);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A9D30 (end 0x028A9D4F), leaf (no .pdata)

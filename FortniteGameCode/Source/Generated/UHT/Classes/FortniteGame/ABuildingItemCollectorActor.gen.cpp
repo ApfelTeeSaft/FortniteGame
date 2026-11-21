@@ -24,6 +24,17 @@ void ABuildingItemCollectorActor::execOnTeamReachedDepositGoal(UObject* Context,
 	P_THIS->OnTeamReachedDepositGoal_Implementation(EFortTeam::Type(Z_Param_InControllingTeam));
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6FBE0 (end 0x00F6FCF8)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUpdateTeamDepositValues) | Matching: see analysis/functions-uht-exec.json
+void ABuildingItemCollectorActor::execUpdateTeamDepositValues(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY_REF(int32,Z_Param_Out_DepositAmounts);
+	P_GET_TARRAY_REF(int32,Z_Param_Out_DepositGoals);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateTeamDepositValues_Implementation(Z_Param_Out_DepositAmounts,Z_Param_Out_DepositGoals);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingItemCollectorActor, 2023708068u)
 // Original dynamic initializer: RVA 0x000DAED0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingItemCollectorActor> AutoInitializeABuildingItemCollectorActor(TEXT("ABuildingItemCollectorActor"), sizeof(ABuildingItemCollectorActor), 2023708068u);

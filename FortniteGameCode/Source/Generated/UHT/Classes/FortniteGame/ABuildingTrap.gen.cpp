@@ -24,6 +24,16 @@ void ABuildingTrap::execAttemptRetrigger(UObject* Context, FFrame& Stack, void* 
 	P_THIS->AttemptRetrigger(Z_Param_Seconds);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73630 (end 0x00F736E9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBP_ShouldTrigger) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execBP_ShouldTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_TARRAY_REF(AActor*,Z_Param_Out_TouchingActors);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->BP_ShouldTrigger_Implementation(Z_Param_Out_TouchingActors);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73A60 (end 0x00F73A7F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execFinishTrigger) | Matching: see analysis/functions-uht-exec.json
 void ABuildingTrap::execFinishTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -31,6 +41,15 @@ void ABuildingTrap::execFinishTrigger(UObject* Context, FFrame& Stack, void* con
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->FinishTrigger();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73E40 (end 0x00F73EBE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAlterations) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execGetAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TArray<UFortAlterationItemDefinition*>*)Z_Param__Result=P_THIS->GetAlterations();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F740B0 (end 0x00F740F0)

@@ -22,6 +22,21 @@ void ALobbyBeaconClient::execClientJoinGame(UObject* Context, FFrame& Stack, voi
 	P_THIS->ClientJoinGame_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005C2BF0 (end 0x005C2CAD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerCheat) | Matching: see analysis/functions-uht-exec.json
+void ALobbyBeaconClient::execServerCheat(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_Msg);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerCheat_Validate(Z_Param_Msg))
+	{
+		RPC_ValidateFailed(TEXT("ServerCheat_Validate"));
+		return;
+	}
+	P_THIS->ServerCheat_Implementation(Z_Param_Msg);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005C2CB0 (end 0x005C2CFE)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerDisconnectFromLobby) | Matching: see analysis/functions-uht-exec.json
 void ALobbyBeaconClient::execServerDisconnectFromLobby(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

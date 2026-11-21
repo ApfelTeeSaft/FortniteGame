@@ -4,6 +4,31 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0101FAF0 (end 0x0101FB8A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientCreateOrJoinChatRoom) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClient::execClientCreateOrJoinChatRoom(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_ChatRoomId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientCreateOrJoinChatRoom_Implementation(Z_Param_ChatRoomId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01020FD0 (end 0x0102108D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerTeamChatRoomReady) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClient::execServerTeamChatRoomReady(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_ChatRoomId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerTeamChatRoomReady_Validate(Z_Param_ChatRoomId))
+	{
+		RPC_ValidateFailed(TEXT("ServerTeamChatRoomReady_Validate"));
+		return;
+	}
+	P_THIS->ServerTeamChatRoomReady_Implementation(Z_Param_ChatRoomId);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortLobbyBeaconClient, 440925139u)
 // Original dynamic initializer: RVA 0x000FCE10 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortLobbyBeaconClient> AutoInitializeAFortLobbyBeaconClient(TEXT("AFortLobbyBeaconClient"), sizeof(AFortLobbyBeaconClient), 440925139u);

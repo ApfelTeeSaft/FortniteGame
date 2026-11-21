@@ -23,6 +23,16 @@ void AFortPlayerControllerZone::execClientOnPawnSpawned(UObject* Context, FFrame
 	P_THIS->ClientOnPawnSpawned_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01081DD0 (end 0x01081E6A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSendPartyJoinInfoToPlayer) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerZone::execClientSendPartyJoinInfoToPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_JoinInfoStr);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientSendPartyJoinInfoToPlayer_Implementation(Z_Param_JoinInfoStr);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010843F0 (end 0x0108440F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execPushDeathInputComponent) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerZone::execPushDeathInputComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -30,6 +40,22 @@ void AFortPlayerControllerZone::execPushDeathInputComponent(UObject* Context, FF
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->PushDeathInputComponent();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01084F00 (end 0x01084FFC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSendLoadoutConfig) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerZone::execServerSendLoadoutConfig(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_LoadoutSeed);
+	P_GET_TARRAY(uint8,Z_Param_Loadout);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSendLoadoutConfig_Validate(Z_Param_LoadoutSeed,Z_Param_Loadout))
+	{
+		RPC_ValidateFailed(TEXT("ServerSendLoadoutConfig_Validate"));
+		return;
+	}
+	P_THIS->ServerSendLoadoutConfig_Implementation(Z_Param_LoadoutSeed,Z_Param_Loadout);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010852F0 (end 0x0108533E)

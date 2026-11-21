@@ -25,6 +25,15 @@ void AFortWeapon::execClientReportShotFlags(UObject* Context, FFrame& Stack, voi
 	P_THIS->ClientReportShotFlags_Implementation(Z_Param_ShotFlags,Z_Param_ShotIndex);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6720 (end 0x010D679E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAlterations) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetAlterations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TArray<UFortAlterationItemDefinition*>*)Z_Param__Result=P_THIS->GetAlterations();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6870 (end 0x010D6920)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDamageStartLocation) | Matching: see analysis/functions-uht-exec.json
 void AFortWeapon::execGetDamageStartLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

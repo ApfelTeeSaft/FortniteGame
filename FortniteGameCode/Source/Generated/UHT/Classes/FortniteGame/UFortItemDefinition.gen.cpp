@@ -24,6 +24,15 @@ void UFortItemDefinition::execCustomizePreviewPrefab(UObject* Context, FFrame& S
 	P_THIS->CustomizePreviewPrefab(Z_Param_PrefabInstance);
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01013080 (end 0x010130FE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPersistentName) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execGetPersistentName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FString*)Z_Param__Result=P_THIS->GetPersistentName();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01013B10 (end 0x01013B3F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRarity) | Matching: see analysis/functions-uht-exec.json
 void UFortItemDefinition::execGetRarity(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x025E1010 (end 0x025E108E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNotifyName) | Matching: see analysis/functions-uht-exec.json
+void UAnimNotifyState::execGetNotifyName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FString*)Z_Param__Result=P_THIS->GetNotifyName_Implementation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAnimNotifyState, 1905589001u)
 // Original dynamic initializer: RVA 0x001EF900 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAnimNotifyState> AutoInitializeUAnimNotifyState(TEXT("UAnimNotifyState"), sizeof(UAnimNotifyState), 1905589001u);

@@ -41,6 +41,41 @@ void AFortPlayerControllerAthena::execClientNotifyWon(UObject* Context, FFrame& 
 	P_THIS->ClientNotifyWon_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107A0C0 (end 0x0107A200)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientVoiceChat3DChannelJoin) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execClientVoiceChat3DChannelJoin(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_InVoiceChatPlayerName);
+	P_GET_PROPERTY(UStrProperty,Z_Param_InVoiceChatChannel);
+	P_GET_PROPERTY(UStrProperty,Z_Param_JoinToken);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientVoiceChat3DChannelJoin_Implementation(Z_Param_InVoiceChatPlayerName,Z_Param_InVoiceChatChannel,Z_Param_JoinToken);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107A200 (end 0x0107A340)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientVoiceChatChannelJoin) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execClientVoiceChatChannelJoin(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_InVoiceChatPlayerName);
+	P_GET_PROPERTY(UStrProperty,Z_Param_InVoiceChatChannel);
+	P_GET_PROPERTY(UStrProperty,Z_Param_JoinToken);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientVoiceChatChannelJoin_Implementation(Z_Param_InVoiceChatPlayerName,Z_Param_InVoiceChatChannel,Z_Param_JoinToken);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107A340 (end 0x0107A42F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientVoiceChatLogin) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execClientVoiceChatLogin(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_InVoiceChatPlayerName);
+	P_GET_PROPERTY(UStrProperty,Z_Param_LoginToken);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientVoiceChatLogin_Implementation(Z_Param_InVoiceChatPlayerName,Z_Param_LoginToken);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107B910 (end 0x0107B9D9)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerAttemptAircraftJump) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerAthena::execServerAttemptAircraftJump(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

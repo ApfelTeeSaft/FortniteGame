@@ -31,6 +31,16 @@ void UBrainComponent::execRestartLogic(UObject* Context, FFrame& Stack, void* co
 	P_THIS->RestartLogic();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D25C10 (end 0x01D25CAA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStopLogic) | Matching: see analysis/functions-uht-exec.json
+void UBrainComponent::execStopLogic(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UStrProperty,Z_Param_Reason);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopLogic(Z_Param_Reason);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UBrainComponent, 2415957345u)
 // Original dynamic initializer: RVA 0x001BA970 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBrainComponent> AutoInitializeUBrainComponent(TEXT("UBrainComponent"), sizeof(UBrainComponent), 2415957345u);
