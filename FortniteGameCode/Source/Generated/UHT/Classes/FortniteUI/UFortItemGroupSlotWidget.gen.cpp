@@ -7,6 +7,9 @@
 void UFortItemGroupSlotWidget::StaticRegisterNativesUFortItemGroupSlotWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortItemGroupSlotWidget, 843475536u)
+// Original dynamic initializer: RVA 0x002655C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemGroupSlotWidget> AutoInitializeUFortItemGroupSlotWidget(TEXT("UFortItemGroupSlotWidget"), sizeof(UFortItemGroupSlotWidget), 843475536u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029173C0 (end 0x02917462)
 // Original VA: 0x00000001429173C0 | File offset: 0x029169C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemGroupSlotWidget, 843475536u); reached from UFortItemGroupSlotWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortItemGroupSlotWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemGroupSlotWidget();
+// Original dynamic initializer: RVA 0x00267050
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemGroupSlotWidget(Z_Construct_UClass_UFortItemGroupSlotWidget, &UFortItemGroupSlotWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemGroupSlotWidget"), false, nullptr, nullptr, nullptr);

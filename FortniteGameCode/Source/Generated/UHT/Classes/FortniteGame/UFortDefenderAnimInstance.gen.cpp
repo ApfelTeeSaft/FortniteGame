@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDefenderAnimInstance()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDefenderAnimInstance, 3136528394u)
+// Original dynamic initializer: RVA 0x000EFB20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDefenderAnimInstance> AutoInitializeUFortDefenderAnimInstance(TEXT("UFortDefenderAnimInstance"), sizeof(UFortDefenderAnimInstance), 3136528394u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCEEA0 (end 0x00FCEF42)
 // Original VA: 0x0000000140FCEEA0 | File offset: 0x00FCE4A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDefenderAnimInstance, 3136528394u); reached from UFortDefenderAnimInstance::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDefenderAnimInstance::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDefenderAnimInstance();
+// Original dynamic initializer: RVA 0x000F0740
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDefenderAnimInstance(Z_Construct_UClass_UFortDefenderAnimInstance, &UFortDefenderAnimInstance::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDefenderAnimInstance"), false, nullptr, nullptr, nullptr);

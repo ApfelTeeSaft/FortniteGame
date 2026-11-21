@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USpinBoxWidgetStyle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USpinBoxWidgetStyle, 2388105092u)
+// Original dynamic initializer: RVA 0x0013E290 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USpinBoxWidgetStyle> AutoInitializeUSpinBoxWidgetStyle(TEXT("USpinBoxWidgetStyle"), sizeof(USpinBoxWidgetStyle), 2388105092u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x015A2340 (end 0x015A23E2)
 // Original VA: 0x00000001415A2340 | File offset: 0x015A1940
 // Recovery: confirmed (IMPLEMENT_CLASS(USpinBoxWidgetStyle, 2388105092u); reached from USpinBoxWidgetStyle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USpinBoxWidgetStyle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USpinBoxWidgetStyle();
+// Original dynamic initializer: RVA 0x0013EA70
+static FCompiledInDefer Z_CompiledInDefer_UClass_USpinBoxWidgetStyle(Z_Construct_UClass_USpinBoxWidgetStyle, &USpinBoxWidgetStyle::StaticClass, TEXT("/Script/Slate"), TEXT("USpinBoxWidgetStyle"), false, nullptr, nullptr, nullptr);

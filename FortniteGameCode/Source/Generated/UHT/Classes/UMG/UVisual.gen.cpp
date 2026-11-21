@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UVisual()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UVisual, 4237548410u)
+// Original dynamic initializer: RVA 0x001B42F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UVisual> AutoInitializeUVisual(TEXT("UVisual"), sizeof(UVisual), 4237548410u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF8090 (end 0x01BF8127)
 // Original VA: 0x0000000141BF8090 | File offset: 0x01BF7690
 // Recovery: confirmed (IMPLEMENT_CLASS(UVisual, 4237548410u); reached from UVisual::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UVisual::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UVisual();
+// Original dynamic initializer: RVA 0x001B4C40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UVisual(Z_Construct_UClass_UVisual, &UVisual::StaticClass, TEXT("/Script/UMG"), TEXT("UVisual"), false, nullptr, nullptr, nullptr);

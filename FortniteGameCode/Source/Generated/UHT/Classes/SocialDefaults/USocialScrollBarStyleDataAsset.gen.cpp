@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USocialScrollBarStyleDataAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USocialScrollBarStyleDataAsset, 3868350571u)
+// Original dynamic initializer: RVA 0x002255F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USocialScrollBarStyleDataAsset> AutoInitializeUSocialScrollBarStyleDataAsset(TEXT("USocialScrollBarStyleDataAsset"), sizeof(USocialScrollBarStyleDataAsset), 3868350571u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025A2700 (end 0x025A27A2)
 // Original VA: 0x00000001425A2700 | File offset: 0x025A1D00
 // Recovery: confirmed (IMPLEMENT_CLASS(USocialScrollBarStyleDataAsset, 3868350571u); reached from USocialScrollBarStyleDataAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USocialScrollBarStyleDataAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USocialScrollBarStyleDataAsset();
+// Original dynamic initializer: RVA 0x002259E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USocialScrollBarStyleDataAsset(Z_Construct_UClass_USocialScrollBarStyleDataAsset, &USocialScrollBarStyleDataAsset::StaticClass, TEXT("/Script/SocialDefaults"), TEXT("USocialScrollBarStyleDataAsset"), false, nullptr, nullptr, nullptr);

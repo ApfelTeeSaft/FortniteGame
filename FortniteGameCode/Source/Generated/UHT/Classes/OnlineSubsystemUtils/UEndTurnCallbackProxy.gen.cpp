@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UEndTurnCallbackProxy, 3254985054u)
+// Original dynamic initializer: RVA 0x00099380 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEndTurnCallbackProxy> AutoInitializeUEndTurnCallbackProxy(TEXT("UEndTurnCallbackProxy"), sizeof(UEndTurnCallbackProxy), 3254985054u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032CC80 (end 0x0032CD22)
 // Original VA: 0x000000014032CC80 | File offset: 0x0032C280
 // Recovery: confirmed (IMPLEMENT_CLASS(UEndTurnCallbackProxy, 3254985054u); reached from UEndTurnCallbackProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UEndTurnCallbackProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEndTurnCallbackProxy();
+// Original dynamic initializer: RVA 0x00099F20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEndTurnCallbackProxy(Z_Construct_UClass_UEndTurnCallbackProxy, &UEndTurnCallbackProxy::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UEndTurnCallbackProxy"), false, nullptr, nullptr, nullptr);

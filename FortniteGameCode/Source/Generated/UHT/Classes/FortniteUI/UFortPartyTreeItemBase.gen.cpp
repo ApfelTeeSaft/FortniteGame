@@ -7,6 +7,9 @@
 void UFortPartyTreeItemBase::StaticRegisterNativesUFortPartyTreeItemBase()
 {
 }
+// IMPLEMENT_CLASS(UFortPartyTreeItemBase, 4057810304u)
+// Original dynamic initializer: RVA 0x00255B20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPartyTreeItemBase> AutoInitializeUFortPartyTreeItemBase(TEXT("UFortPartyTreeItemBase"), sizeof(UFortPartyTreeItemBase), 4057810304u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E4DA0 (end 0x028E4E42)
 // Original VA: 0x00000001428E4DA0 | File offset: 0x028E43A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPartyTreeItemBase, 4057810304u); reached from UFortPartyTreeItemBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortPartyTreeItemBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPartyTreeItemBase();
+// Original dynamic initializer: RVA 0x00257D80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPartyTreeItemBase(Z_Construct_UClass_UFortPartyTreeItemBase, &UFortPartyTreeItemBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortPartyTreeItemBase"), false, nullptr, nullptr, nullptr);

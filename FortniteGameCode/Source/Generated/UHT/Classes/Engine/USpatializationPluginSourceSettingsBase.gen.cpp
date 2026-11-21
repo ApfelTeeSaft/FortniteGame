@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_USpatializationPluginSourceSettingsBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USpatializationPluginSourceSettingsBase, 365369325u)
+// Original dynamic initializer: RVA 0x00200E80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USpatializationPluginSourceSettingsBase> AutoInitializeUSpatializationPluginSourceSettingsBase(TEXT("USpatializationPluginSourceSettingsBase"), sizeof(USpatializationPluginSourceSettingsBase), 365369325u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02426D40 (end 0x02426DD7)
 // Original VA: 0x0000000142426D40 | File offset: 0x02426340
 // Recovery: confirmed (IMPLEMENT_CLASS(USpatializationPluginSourceSettingsBase, 365369325u); reached from USpatializationPluginSourceSettingsBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* USpatializationPluginSourceSettingsBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USpatializationPluginSourceSettingsBase();
+// Original dynamic initializer: RVA 0x00202480
+static FCompiledInDefer Z_CompiledInDefer_UClass_USpatializationPluginSourceSettingsBase(Z_Construct_UClass_USpatializationPluginSourceSettingsBase, &USpatializationPluginSourceSettingsBase::StaticClass, TEXT("/Script/Engine"), TEXT("USpatializationPluginSourceSettingsBase"), false, nullptr, nullptr, nullptr);

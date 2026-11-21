@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortMissionWeightedRewards()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortMissionWeightedRewards, 673957994u)
+// Original dynamic initializer: RVA 0x00104100 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMissionWeightedRewards> AutoInitializeUFortMissionWeightedRewards(TEXT("UFortMissionWeightedRewards"), sizeof(UFortMissionWeightedRewards), 673957994u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01048500 (end 0x010485A2)
 // Original VA: 0x0000000141048500 | File offset: 0x01047B00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMissionWeightedRewards, 673957994u); reached from UFortMissionWeightedRewards::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortMissionWeightedRewards::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMissionWeightedRewards();
+// Original dynamic initializer: RVA 0x00105190
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMissionWeightedRewards(Z_Construct_UClass_UFortMissionWeightedRewards, &UFortMissionWeightedRewards::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMissionWeightedRewards"), false, nullptr, nullptr, nullptr);

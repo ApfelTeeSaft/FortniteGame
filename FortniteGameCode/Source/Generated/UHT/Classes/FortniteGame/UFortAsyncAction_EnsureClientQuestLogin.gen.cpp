@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_EnsureClientQuestLogin, 3716870704u)
+// Original dynamic initializer: RVA 0x000E6930 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_EnsureClientQuestLogin> AutoInitializeUFortAsyncAction_EnsureClientQuestLogin(TEXT("UFortAsyncAction_EnsureClientQuestLogin"), sizeof(UFortAsyncAction_EnsureClientQuestLogin), 3716870704u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9D230 (end 0x00F9D2D2)
 // Original VA: 0x0000000140F9D230 | File offset: 0x00F9C830
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_EnsureClientQuestLogin, 3716870704u); reached from UFortAsyncAction_EnsureClientQuestLogin::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_EnsureClientQuestLogin::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_EnsureClientQuestLogin();
+// Original dynamic initializer: RVA 0x000E7C90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_EnsureClientQuestLogin(Z_Construct_UClass_UFortAsyncAction_EnsureClientQuestLogin, &UFortAsyncAction_EnsureClientQuestLogin::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAsyncAction_EnsureClientQuestLogin"), false, nullptr, nullptr, nullptr);

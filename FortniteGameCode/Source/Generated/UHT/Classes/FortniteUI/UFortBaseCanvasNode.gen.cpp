@@ -7,6 +7,9 @@
 void UFortBaseCanvasNode::StaticRegisterNativesUFortBaseCanvasNode()
 {
 }
+// IMPLEMENT_CLASS(UFortBaseCanvasNode, 1301522709u)
+// Original dynamic initializer: RVA 0x00253A70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBaseCanvasNode> AutoInitializeUFortBaseCanvasNode(TEXT("UFortBaseCanvasNode"), sizeof(UFortBaseCanvasNode), 1301522709u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DD140 (end 0x028DD1E2)
 // Original VA: 0x00000001428DD140 | File offset: 0x028DC740
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBaseCanvasNode, 1301522709u); reached from UFortBaseCanvasNode::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortBaseCanvasNode::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBaseCanvasNode();
+// Original dynamic initializer: RVA 0x002555C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBaseCanvasNode(Z_Construct_UClass_UFortBaseCanvasNode, &UFortBaseCanvasNode::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortBaseCanvasNode"), false, nullptr, nullptr, nullptr);

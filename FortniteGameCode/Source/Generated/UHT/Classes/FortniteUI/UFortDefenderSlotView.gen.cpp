@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortDefenderSlotView()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDefenderSlotView, 3448888397u)
+// Original dynamic initializer: RVA 0x002427F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDefenderSlotView> AutoInitializeUFortDefenderSlotView(TEXT("UFortDefenderSlotView"), sizeof(UFortDefenderSlotView), 3448888397u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289A310 (end 0x0289A3B2)
 // Original VA: 0x000000014289A310 | File offset: 0x02899910
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDefenderSlotView, 3448888397u); reached from UFortDefenderSlotView::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortDefenderSlotView::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDefenderSlotView();
+// Original dynamic initializer: RVA 0x002446E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDefenderSlotView(Z_Construct_UClass_UFortDefenderSlotView, &UFortDefenderSlotView::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortDefenderSlotView"), false, nullptr, nullptr, nullptr);

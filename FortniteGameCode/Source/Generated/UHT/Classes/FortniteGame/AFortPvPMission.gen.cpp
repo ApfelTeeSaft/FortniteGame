@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortPvPMission()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortPvPMission, 875966383u)
+// Original dynamic initializer: RVA 0x0010E6D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPvPMission> AutoInitializeAFortPvPMission(TEXT("AFortPvPMission"), sizeof(AFortPvPMission), 875966383u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108FAB0 (end 0x0108FB52)
 // Original VA: 0x000000014108FAB0 | File offset: 0x0108F0B0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPvPMission, 875966383u); reached from AFortPvPMission::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortPvPMission::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPvPMission();
+// Original dynamic initializer: RVA 0x0010F420
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPvPMission(Z_Construct_UClass_AFortPvPMission, &AFortPvPMission::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPvPMission"), false, nullptr, nullptr, nullptr);

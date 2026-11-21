@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMeshSimplificationSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMeshSimplificationSettings, 3438029338u)
+// Original dynamic initializer: RVA 0x0020C590 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMeshSimplificationSettings> AutoInitializeUMeshSimplificationSettings(TEXT("UMeshSimplificationSettings"), sizeof(UMeshSimplificationSettings), 3438029338u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02489990 (end 0x02489A32)
 // Original VA: 0x0000000142489990 | File offset: 0x02488F90
 // Recovery: confirmed (IMPLEMENT_CLASS(UMeshSimplificationSettings, 3438029338u); reached from UMeshSimplificationSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMeshSimplificationSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMeshSimplificationSettings();
+// Original dynamic initializer: RVA 0x0020D5F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMeshSimplificationSettings(Z_Construct_UClass_UMeshSimplificationSettings, &UMeshSimplificationSettings::StaticClass, TEXT("/Script/Engine"), TEXT("UMeshSimplificationSettings"), false, nullptr, nullptr, nullptr);

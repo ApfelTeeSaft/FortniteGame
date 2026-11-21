@@ -102,12 +102,15 @@ def test_literal_elimination() -> None:
              symbol=lambda name: sym if name == "$SG1" else None, data_layout=lambda: {})
     r = Resolver.__new__(Resolver)
     r.functions, r.known, r.data_cache, r.data_notes, r._literal_copies, r._groups = {}, {}, {}, {}, {}, {}
+    r._unobserved, r._literal_copy_sets, r.entry_addrs = {}, {}, {}
     r.hay_rva, r.hay = 0x1000, b"\0\0" + lit + b"\0\0" + lit + b"\0\0" + lit
     copies = [0x1002, 0x1010, 0x101E]
     r.entry_names, r.observations = {1: "A", 2: "B", 3: "T"}, {}
     r.by_addr = {copies[0]: {"$SGx": {1}}}
     assert r.resolve(obj, "o", "$SG1", exclude=3) == []                  # two copies still free
     r.by_addr[copies[2]] = {"??_C@lit": {2}}
+    r.entry_addrs = {1: {copies[0]}, 2: {copies[2]}}
+    r._unobserved = {}   # observations changed: a new pass
     got = r.resolve(obj, "o", "$SG1", exclude=3)
     assert [g[0] for g in got] == [copies[1]] and "elimination" in got[0][1], got
     assert r.resolve(obj, "o", "$SG1", exclude=2) == []                  # B's own copy is not evidence for B
@@ -136,6 +139,7 @@ def test_section_relative_runs() -> None:
              symbol=lambda n: syms.get(n), data_layout=lambda: {".bss": [(n, 8 * i, 3) for i, n in enumerate(names)]})
     r = Resolver.__new__(Resolver)
     r.functions, r.known, r.data_cache, r.data_notes, r._literal_copies, r._groups = {}, {}, {}, {}, {}, {}
+    r._unobserved, r._literal_copy_sets, r.entry_addrs = {}, {}, {}
     r.hay_rva, r.hay, r.by_addr = 0, b"", {}
     r.entry_names = {10 + i: f"F{i}" for i in range(7)}
     # Symbol s<i> is observed only by entry 10+i: s0..s2 in block A (base 0x1000), s4..s5 in

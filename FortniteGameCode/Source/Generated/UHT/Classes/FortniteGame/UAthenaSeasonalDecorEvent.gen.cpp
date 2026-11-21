@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAthenaSeasonalDecorEvent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaSeasonalDecorEvent, 718155971u)
+// Original dynamic initializer: RVA 0x000D87B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaSeasonalDecorEvent> AutoInitializeUAthenaSeasonalDecorEvent(TEXT("UAthenaSeasonalDecorEvent"), sizeof(UAthenaSeasonalDecorEvent), 718155971u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5EFE0 (end 0x00F5F082)
 // Original VA: 0x0000000140F5EFE0 | File offset: 0x00F5E5E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaSeasonalDecorEvent, 718155971u); reached from UAthenaSeasonalDecorEvent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAthenaSeasonalDecorEvent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaSeasonalDecorEvent();
+// Original dynamic initializer: RVA 0x000D9690
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaSeasonalDecorEvent(Z_Construct_UClass_UAthenaSeasonalDecorEvent, &UAthenaSeasonalDecorEvent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaSeasonalDecorEvent"), false, nullptr, nullptr, nullptr);

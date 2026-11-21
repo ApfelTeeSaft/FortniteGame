@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortInstancedStaticMeshActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortInstancedStaticMeshActor, 1528674743u)
+// Original dynamic initializer: RVA 0x000FAF40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortInstancedStaticMeshActor> AutoInitializeAFortInstancedStaticMeshActor(TEXT("AFortInstancedStaticMeshActor"), sizeof(AFortInstancedStaticMeshActor), 1528674743u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01002FE0 (end 0x01003082)
 // Original VA: 0x0000000141002FE0 | File offset: 0x010025E0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortInstancedStaticMeshActor, 1528674743u); reached from AFortInstancedStaticMeshActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortInstancedStaticMeshActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortInstancedStaticMeshActor();
+// Original dynamic initializer: RVA 0x000FBCB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortInstancedStaticMeshActor(Z_Construct_UClass_AFortInstancedStaticMeshActor, &AFortInstancedStaticMeshActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortInstancedStaticMeshActor"), false, nullptr, nullptr, nullptr);

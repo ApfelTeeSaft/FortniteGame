@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortFastLoadConfig()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortFastLoadConfig, 504017558u)
+// Original dynamic initializer: RVA 0x000F26B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortFastLoadConfig> AutoInitializeUFortFastLoadConfig(TEXT("UFortFastLoadConfig"), sizeof(UFortFastLoadConfig), 504017558u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD9FA0 (end 0x00FDA037)
 // Original VA: 0x0000000140FD9FA0 | File offset: 0x00FD95A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortFastLoadConfig, 504017558u); reached from UFortFastLoadConfig::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortFastLoadConfig::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortFastLoadConfig();
+// Original dynamic initializer: RVA 0x000F4510
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortFastLoadConfig(Z_Construct_UClass_UFortFastLoadConfig, &UFortFastLoadConfig::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortFastLoadConfig"), false, nullptr, nullptr, nullptr);

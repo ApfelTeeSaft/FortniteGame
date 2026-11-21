@@ -7,6 +7,9 @@
 void USphereComponent::StaticRegisterNativesUSphereComponent()
 {
 }
+// IMPLEMENT_CLASS(USphereComponent, 3768231627u)
+// Original dynamic initializer: RVA 0x0021C8D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USphereComponent> AutoInitializeUSphereComponent(TEXT("USphereComponent"), sizeof(USphereComponent), 3768231627u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DAD00 (end 0x024DADA2)
 // Original VA: 0x00000001424DAD00 | File offset: 0x024DA300
 // Recovery: confirmed (IMPLEMENT_CLASS(USphereComponent, 3768231627u); reached from USphereComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* USphereComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USphereComponent();
+// Original dynamic initializer: RVA 0x0021E0F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USphereComponent(Z_Construct_UClass_USphereComponent, &USphereComponent::StaticClass, TEXT("/Script/Engine"), TEXT("USphereComponent"), false, nullptr, nullptr, nullptr);

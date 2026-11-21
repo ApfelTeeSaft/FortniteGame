@@ -7,6 +7,9 @@
 void USeasonPassLevelWidget::StaticRegisterNativesUSeasonPassLevelWidget()
 {
 }
+// IMPLEMENT_CLASS(USeasonPassLevelWidget, 3208600952u)
+// Original dynamic initializer: RVA 0x00265780 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USeasonPassLevelWidget> AutoInitializeUSeasonPassLevelWidget(TEXT("USeasonPassLevelWidget"), sizeof(USeasonPassLevelWidget), 3208600952u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02917D40 (end 0x02917DE2)
 // Original VA: 0x0000000142917D40 | File offset: 0x02917340
 // Recovery: confirmed (IMPLEMENT_CLASS(USeasonPassLevelWidget, 3208600952u); reached from USeasonPassLevelWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* USeasonPassLevelWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USeasonPassLevelWidget();
+// Original dynamic initializer: RVA 0x002673D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USeasonPassLevelWidget(Z_Construct_UClass_USeasonPassLevelWidget, &USeasonPassLevelWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("USeasonPassLevelWidget"), false, nullptr, nullptr, nullptr);

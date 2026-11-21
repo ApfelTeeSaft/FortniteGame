@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortCrowdManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCrowdManager, 1404694443u)
+// Original dynamic initializer: RVA 0x000EE4D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCrowdManager> AutoInitializeUFortCrowdManager(TEXT("UFortCrowdManager"), sizeof(UFortCrowdManager), 1404694443u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC9FC0 (end 0x00FCA062)
 // Original VA: 0x0000000140FC9FC0 | File offset: 0x00FC95C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCrowdManager, 1404694443u); reached from UFortCrowdManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortCrowdManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCrowdManager();
+// Original dynamic initializer: RVA 0x000EF700
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCrowdManager(Z_Construct_UClass_UFortCrowdManager, &UFortCrowdManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCrowdManager"), false, nullptr, nullptr, nullptr);

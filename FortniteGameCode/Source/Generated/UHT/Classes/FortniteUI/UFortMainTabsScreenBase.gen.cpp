@@ -7,6 +7,9 @@
 void UFortMainTabsScreenBase::StaticRegisterNativesUFortMainTabsScreenBase()
 {
 }
+// IMPLEMENT_CLASS(UFortMainTabsScreenBase, 942391440u)
+// Original dynamic initializer: RVA 0x00251490 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMainTabsScreenBase> AutoInitializeUFortMainTabsScreenBase(TEXT("UFortMainTabsScreenBase"), sizeof(UFortMainTabsScreenBase), 942391440u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D5B50 (end 0x028D5BF2)
 // Original VA: 0x00000001428D5B50 | File offset: 0x028D5150
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMainTabsScreenBase, 942391440u); reached from UFortMainTabsScreenBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortMainTabsScreenBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMainTabsScreenBase();
+// Original dynamic initializer: RVA 0x00253530
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMainTabsScreenBase(Z_Construct_UClass_UFortMainTabsScreenBase, &UFortMainTabsScreenBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortMainTabsScreenBase"), false, nullptr, nullptr, nullptr);

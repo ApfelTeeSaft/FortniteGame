@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAthenaHoverCarMovementComponent, 3002001164u)
+// Original dynamic initializer: RVA 0x000E7EF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAthenaHoverCarMovementComponent> AutoInitializeUFortAthenaHoverCarMovementComponent(TEXT("UFortAthenaHoverCarMovementComponent"), sizeof(UFortAthenaHoverCarMovementComponent), 3002001164u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA1F00 (end 0x00FA1FA2)
 // Original VA: 0x0000000140FA1F00 | File offset: 0x00FA1500
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAthenaHoverCarMovementComponent, 3002001164u); reached from UFortAthenaHoverCarMovementComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAthenaHoverCarMovementComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAthenaHoverCarMovementComponent();
+// Original dynamic initializer: RVA 0x000E8950
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAthenaHoverCarMovementComponent(Z_Construct_UClass_UFortAthenaHoverCarMovementComponent, &UFortAthenaHoverCarMovementComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAthenaHoverCarMovementComponent"), false, nullptr, nullptr, nullptr);

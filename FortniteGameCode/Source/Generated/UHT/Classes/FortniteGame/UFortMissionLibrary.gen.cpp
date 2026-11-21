@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortMissionLibrary, 395406192u)
+// Original dynamic initializer: RVA 0x00102D40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMissionLibrary> AutoInitializeUFortMissionLibrary(TEXT("UFortMissionLibrary"), sizeof(UFortMissionLibrary), 395406192u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01040390 (end 0x01040432)
 // Original VA: 0x0000000141040390 | File offset: 0x0103F990
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMissionLibrary, 395406192u); reached from UFortMissionLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortMissionLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMissionLibrary();
+// Original dynamic initializer: RVA 0x00103F40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMissionLibrary(Z_Construct_UClass_UFortMissionLibrary, &UFortMissionLibrary::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMissionLibrary"), false, nullptr, nullptr, nullptr);

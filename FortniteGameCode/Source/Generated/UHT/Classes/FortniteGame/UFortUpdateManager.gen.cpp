@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortUpdateManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortUpdateManager, 2085526863u)
+// Original dynamic initializer: RVA 0x0011C050 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUpdateManager> AutoInitializeUFortUpdateManager(TEXT("UFortUpdateManager"), sizeof(UFortUpdateManager), 2085526863u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D3290 (end 0x010D3332)
 // Original VA: 0x00000001410D3290 | File offset: 0x010D2890
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUpdateManager, 2085526863u); reached from UFortUpdateManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortUpdateManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUpdateManager();
+// Original dynamic initializer: RVA 0x0011D1E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUpdateManager(Z_Construct_UClass_UFortUpdateManager, &UFortUpdateManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortUpdateManager"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAsyncTaskDownloadImage, 2513780610u)
+// Original dynamic initializer: RVA 0x001B1C00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAsyncTaskDownloadImage> AutoInitializeUAsyncTaskDownloadImage(TEXT("UAsyncTaskDownloadImage"), sizeof(UAsyncTaskDownloadImage), 2513780610u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE48E0 (end 0x01BE4982)
 // Original VA: 0x0000000141BE48E0 | File offset: 0x01BE3EE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAsyncTaskDownloadImage, 2513780610u); reached from UAsyncTaskDownloadImage::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAsyncTaskDownloadImage::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAsyncTaskDownloadImage();
+// Original dynamic initializer: RVA 0x001B2160
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAsyncTaskDownloadImage(Z_Construct_UClass_UAsyncTaskDownloadImage, &UAsyncTaskDownloadImage::StaticClass, TEXT("/Script/UMG"), TEXT("UAsyncTaskDownloadImage"), false, nullptr, nullptr, nullptr);

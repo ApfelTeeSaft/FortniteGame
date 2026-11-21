@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USoundNodeOscillator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundNodeOscillator, 1061429286u)
+// Original dynamic initializer: RVA 0x0021C730 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundNodeOscillator> AutoInitializeUSoundNodeOscillator(TEXT("USoundNodeOscillator"), sizeof(USoundNodeOscillator), 1061429286u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DA420 (end 0x024DA4C2)
 // Original VA: 0x00000001424DA420 | File offset: 0x024D9A20
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundNodeOscillator, 1061429286u); reached from USoundNodeOscillator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USoundNodeOscillator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundNodeOscillator();
+// Original dynamic initializer: RVA 0x0021DDB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundNodeOscillator(Z_Construct_UClass_USoundNodeOscillator, &USoundNodeOscillator::StaticClass, TEXT("/Script/Engine"), TEXT("USoundNodeOscillator"), false, nullptr, nullptr, nullptr);

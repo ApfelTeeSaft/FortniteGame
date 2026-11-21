@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAthenaHUDTeamIndicatorBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaHUDTeamIndicatorBase, 1855851253u)
+// Original dynamic initializer: RVA 0x002391E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaHUDTeamIndicatorBase> AutoInitializeUAthenaHUDTeamIndicatorBase(TEXT("UAthenaHUDTeamIndicatorBase"), sizeof(UAthenaHUDTeamIndicatorBase), 1855851253u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287DFE0 (end 0x0287E082)
 // Original VA: 0x000000014287DFE0 | File offset: 0x0287D5E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaHUDTeamIndicatorBase, 1855851253u); reached from UAthenaHUDTeamIndicatorBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAthenaHUDTeamIndicatorBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaHUDTeamIndicatorBase();
+// Original dynamic initializer: RVA 0x0023B100
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaHUDTeamIndicatorBase(Z_Construct_UClass_UAthenaHUDTeamIndicatorBase, &UAthenaHUDTeamIndicatorBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaHUDTeamIndicatorBase"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void AFortAthenaPlaylistBase::StaticRegisterNativesAFortAthenaPlaylistBase()
 {
 }
+// IMPLEMENT_CLASS(AFortAthenaPlaylistBase, 2135923574u)
+// Original dynamic initializer: RVA 0x0010D350 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortAthenaPlaylistBase> AutoInitializeAFortAthenaPlaylistBase(TEXT("AFortAthenaPlaylistBase"), sizeof(AFortAthenaPlaylistBase), 2135923574u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010890F0 (end 0x01089192)
 // Original VA: 0x00000001410890F0 | File offset: 0x010886F0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortAthenaPlaylistBase, 2135923574u); reached from AFortAthenaPlaylistBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortAthenaPlaylistBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortAthenaPlaylistBase();
+// Original dynamic initializer: RVA 0x0010E090
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortAthenaPlaylistBase(Z_Construct_UClass_AFortAthenaPlaylistBase, &AFortAthenaPlaylistBase::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortAthenaPlaylistBase"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortDamageableActorInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDamageableActorInterface, 2739409495u)
+// Original dynamic initializer: RVA 0x000EE5F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDamageableActorInterface> AutoInitializeUFortDamageableActorInterface(TEXT("UFortDamageableActorInterface"), sizeof(UFortDamageableActorInterface), 2739409495u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCA5F0 (end 0x00FCA692)
 // Original VA: 0x0000000140FCA5F0 | File offset: 0x00FC9BF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDamageableActorInterface, 2739409495u); reached from UFortDamageableActorInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortDamageableActorInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDamageableActorInterface();
+// Original dynamic initializer: RVA 0x000EF940
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDamageableActorInterface(Z_Construct_UClass_UFortDamageableActorInterface, &UFortDamageableActorInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDamageableActorInterface"), false, nullptr, nullptr, nullptr);

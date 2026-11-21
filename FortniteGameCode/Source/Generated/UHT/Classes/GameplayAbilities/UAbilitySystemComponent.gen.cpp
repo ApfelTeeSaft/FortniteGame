@@ -7,6 +7,9 @@
 void UAbilitySystemComponent::StaticRegisterNativesUAbilitySystemComponent()
 {
 }
+// IMPLEMENT_CLASS(UAbilitySystemComponent, 219976785u)
+// Original dynamic initializer: RVA 0x0009CD80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilitySystemComponent> AutoInitializeUAbilitySystemComponent(TEXT("UAbilitySystemComponent"), sizeof(UAbilitySystemComponent), 219976785u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00537090 (end 0x00537132)
 // Original VA: 0x0000000140537090 | File offset: 0x00536690
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilitySystemComponent, 219976785u); reached from UAbilitySystemComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAbilitySystemComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilitySystemComponent();
+// Original dynamic initializer: RVA 0x0009D2A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilitySystemComponent(Z_Construct_UClass_UAbilitySystemComponent, &UAbilitySystemComponent::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilitySystemComponent"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UEditableGameplayTagQueryExpression_AllExprMatch()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEditableGameplayTagQueryExpression_AllExprMatch, 254344206u)
+// Original dynamic initializer: RVA 0x001B70E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEditableGameplayTagQueryExpression_AllExprMatch> AutoInitializeUEditableGameplayTagQueryExpression_AllExprMatch(TEXT("UEditableGameplayTagQueryExpression_AllExprMatch"), sizeof(UEditableGameplayTagQueryExpression_AllExprMatch), 254344206u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C92660 (end 0x01C92702)
 // Original VA: 0x0000000141C92660 | File offset: 0x01C91C60
 // Recovery: confirmed (IMPLEMENT_CLASS(UEditableGameplayTagQueryExpression_AllExprMatch, 254344206u); reached from UEditableGameplayTagQueryExpression_AllExprMatch::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UEditableGameplayTagQueryExpression_AllExprMatch::GetPrivateStaticClass(
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEditableGameplayTagQueryExpression_AllExprMatch();
+// Original dynamic initializer: RVA 0x001B7B20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEditableGameplayTagQueryExpression_AllExprMatch(Z_Construct_UClass_UEditableGameplayTagQueryExpression_AllExprMatch, &UEditableGameplayTagQueryExpression_AllExprMatch::StaticClass, TEXT("/Script/GameplayTags"), TEXT("UEditableGameplayTagQueryExpression_AllExprMatch"), false, nullptr, nullptr, nullptr);

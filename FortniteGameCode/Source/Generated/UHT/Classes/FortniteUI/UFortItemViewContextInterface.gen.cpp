@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortItemViewContextInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortItemViewContextInterface, 3298186106u)
+// Original dynamic initializer: RVA 0x0024F3D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemViewContextInterface> AutoInitializeUFortItemViewContextInterface(TEXT("UFortItemViewContextInterface"), sizeof(UFortItemViewContextInterface), 3298186106u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CE730 (end 0x028CE7D2)
 // Original VA: 0x00000001428CE730 | File offset: 0x028CDD30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemViewContextInterface, 3298186106u); reached from UFortItemViewContextInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortItemViewContextInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemViewContextInterface();
+// Original dynamic initializer: RVA 0x00251010
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemViewContextInterface(Z_Construct_UClass_UFortItemViewContextInterface, &UFortItemViewContextInterface::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemViewContextInterface"), false, nullptr, nullptr, nullptr);

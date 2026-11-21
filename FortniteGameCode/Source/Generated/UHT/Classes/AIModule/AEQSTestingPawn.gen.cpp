@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_AEQSTestingPawn()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AEQSTestingPawn, 4153241987u)
+// Original dynamic initializer: RVA 0x001BD440 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AEQSTestingPawn> AutoInitializeAEQSTestingPawn(TEXT("AEQSTestingPawn"), sizeof(AEQSTestingPawn), 4153241987u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2CC20 (end 0x01D2CCC2)
 // Original VA: 0x0000000141D2CC20 | File offset: 0x01D2C220
 // Recovery: confirmed (IMPLEMENT_CLASS(AEQSTestingPawn, 4153241987u); reached from AEQSTestingPawn::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* AEQSTestingPawn::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AEQSTestingPawn();
+// Original dynamic initializer: RVA 0x001BE920
+static FCompiledInDefer Z_CompiledInDefer_UClass_AEQSTestingPawn(Z_Construct_UClass_AEQSTestingPawn, &AEQSTestingPawn::StaticClass, TEXT("/Script/AIModule"), TEXT("AEQSTestingPawn"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(USpacer, 1039252664u)
+// Original dynamic initializer: RVA 0x001B3750 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USpacer> AutoInitializeUSpacer(TEXT("USpacer"), sizeof(USpacer), 1039252664u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF21C0 (end 0x01BF2262)
 // Original VA: 0x0000000141BF21C0 | File offset: 0x01BF17C0
 // Recovery: confirmed (IMPLEMENT_CLASS(USpacer, 1039252664u); reached from USpacer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* USpacer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USpacer();
+// Original dynamic initializer: RVA 0x001B4010
+static FCompiledInDefer Z_CompiledInDefer_UClass_USpacer(Z_Construct_UClass_USpacer, &USpacer::StaticClass, TEXT("/Script/UMG"), TEXT("USpacer"), false, nullptr, nullptr, nullptr);

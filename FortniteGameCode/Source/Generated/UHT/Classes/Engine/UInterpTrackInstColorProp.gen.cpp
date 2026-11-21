@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UInterpTrackInstColorProp()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInterpTrackInstColorProp, 4259013857u)
+// Original dynamic initializer: RVA 0x002027C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInterpTrackInstColorProp> AutoInitializeUInterpTrackInstColorProp(TEXT("UInterpTrackInstColorProp"), sizeof(UInterpTrackInstColorProp), 4259013857u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0242D360 (end 0x0242D402)
 // Original VA: 0x000000014242D360 | File offset: 0x0242C960
 // Recovery: confirmed (IMPLEMENT_CLASS(UInterpTrackInstColorProp, 4259013857u); reached from UInterpTrackInstColorProp::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UInterpTrackInstColorProp::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInterpTrackInstColorProp();
+// Original dynamic initializer: RVA 0x00203D70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInterpTrackInstColorProp(Z_Construct_UClass_UInterpTrackInstColorProp, &UInterpTrackInstColorProp::StaticClass, TEXT("/Script/Engine"), TEXT("UInterpTrackInstColorProp"), false, nullptr, nullptr, nullptr);

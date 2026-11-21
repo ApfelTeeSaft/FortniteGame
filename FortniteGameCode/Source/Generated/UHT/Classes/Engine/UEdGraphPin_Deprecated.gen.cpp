@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UEdGraphPin_Deprecated()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEdGraphPin_Deprecated, 3368632065u)
+// Original dynamic initializer: RVA 0x001F9F40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEdGraphPin_Deprecated> AutoInitializeUEdGraphPin_Deprecated(TEXT("UEdGraphPin_Deprecated"), sizeof(UEdGraphPin_Deprecated), 3368632065u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02403840 (end 0x024038D7)
 // Original VA: 0x0000000142403840 | File offset: 0x02402E40
 // Recovery: confirmed (IMPLEMENT_CLASS(UEdGraphPin_Deprecated, 3368632065u); reached from UEdGraphPin_Deprecated::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UEdGraphPin_Deprecated::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEdGraphPin_Deprecated();
+// Original dynamic initializer: RVA 0x001FB830
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEdGraphPin_Deprecated(Z_Construct_UClass_UEdGraphPin_Deprecated, &UEdGraphPin_Deprecated::StaticClass, TEXT("/Script/Engine"), TEXT("UEdGraphPin_Deprecated"), false, nullptr, nullptr, nullptr);

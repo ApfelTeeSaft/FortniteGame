@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFontProviderInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFontProviderInterface, 4271563057u)
+// Original dynamic initializer: RVA 0x0013A620 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFontProviderInterface> AutoInitializeUFontProviderInterface(TEXT("UFontProviderInterface"), sizeof(UFontProviderInterface), 4271563057u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x014599C0 (end 0x01459A62)
 // Original VA: 0x00000001414599C0 | File offset: 0x01458FC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFontProviderInterface, 4271563057u); reached from UFontProviderInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFontProviderInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFontProviderInterface();
+// Original dynamic initializer: RVA 0x0013D0A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFontProviderInterface(Z_Construct_UClass_UFontProviderInterface, &UFontProviderInterface::StaticClass, TEXT("/Script/SlateCore"), TEXT("UFontProviderInterface"), false, nullptr, nullptr, nullptr);

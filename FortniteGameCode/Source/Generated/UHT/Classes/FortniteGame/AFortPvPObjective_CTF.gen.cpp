@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortPvPObjective_CTF()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortPvPObjective_CTF, 2493626568u)
+// Original dynamic initializer: RVA 0x0010E7B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPvPObjective_CTF> AutoInitializeAFortPvPObjective_CTF(TEXT("AFortPvPObjective_CTF"), sizeof(AFortPvPObjective_CTF), 2493626568u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108FF80 (end 0x01090022)
 // Original VA: 0x000000014108FF80 | File offset: 0x0108F580
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPvPObjective_CTF, 2493626568u); reached from AFortPvPObjective_CTF::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortPvPObjective_CTF::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPvPObjective_CTF();
+// Original dynamic initializer: RVA 0x0010F5E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPvPObjective_CTF(Z_Construct_UClass_AFortPvPObjective_CTF, &AFortPvPObjective_CTF::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPvPObjective_CTF"), false, nullptr, nullptr, nullptr);

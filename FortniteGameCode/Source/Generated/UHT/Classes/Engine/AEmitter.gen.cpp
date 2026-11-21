@@ -7,6 +7,9 @@
 void AEmitter::StaticRegisterNativesAEmitter()
 {
 }
+// IMPLEMENT_CLASS(AEmitter, 1782085140u)
+// Original dynamic initializer: RVA 0x001F9CA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AEmitter> AutoInitializeAEmitter(TEXT("AEmitter"), sizeof(AEmitter), 1782085140u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02402A10 (end 0x02402AB2)
 // Original VA: 0x0000000142402A10 | File offset: 0x02402010
 // Recovery: confirmed (IMPLEMENT_CLASS(AEmitter, 1782085140u); reached from AEmitter::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AEmitter::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AEmitter();
+// Original dynamic initializer: RVA 0x001FB2F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AEmitter(Z_Construct_UClass_AEmitter, &AEmitter::StaticClass, TEXT("/Script/Engine"), TEXT("AEmitter"), false, nullptr, nullptr, nullptr);

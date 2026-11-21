@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ULandscapeComponent, 1858363829u)
+// Original dynamic initializer: RVA 0x001A2B50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULandscapeComponent> AutoInitializeULandscapeComponent(TEXT("ULandscapeComponent"), sizeof(ULandscapeComponent), 1858363829u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A73BB0 (end 0x01A73C52)
 // Original VA: 0x0000000141A73BB0 | File offset: 0x01A731B0
 // Recovery: confirmed (IMPLEMENT_CLASS(ULandscapeComponent, 1858363829u); reached from ULandscapeComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ULandscapeComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULandscapeComponent();
+// Original dynamic initializer: RVA 0x001A3FA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULandscapeComponent(Z_Construct_UClass_ULandscapeComponent, &ULandscapeComponent::StaticClass, TEXT("/Script/Landscape"), TEXT("ULandscapeComponent"), false, nullptr, nullptr, nullptr);

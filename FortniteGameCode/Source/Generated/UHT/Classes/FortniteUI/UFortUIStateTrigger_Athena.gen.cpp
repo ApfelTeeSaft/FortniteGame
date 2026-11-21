@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortUIStateTrigger_Athena()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortUIStateTrigger_Athena, 2802403663u)
+// Original dynamic initializer: RVA 0x002629A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUIStateTrigger_Athena> AutoInitializeUFortUIStateTrigger_Athena(TEXT("UFortUIStateTrigger_Athena"), sizeof(UFortUIStateTrigger_Athena), 2802403663u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029105B0 (end 0x02910652)
 // Original VA: 0x00000001429105B0 | File offset: 0x0290FBB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUIStateTrigger_Athena, 2802403663u); reached from UFortUIStateTrigger_Athena::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortUIStateTrigger_Athena::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUIStateTrigger_Athena();
+// Original dynamic initializer: RVA 0x00265180
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUIStateTrigger_Athena(Z_Construct_UClass_UFortUIStateTrigger_Athena, &UFortUIStateTrigger_Athena::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortUIStateTrigger_Athena"), false, nullptr, nullptr, nullptr);

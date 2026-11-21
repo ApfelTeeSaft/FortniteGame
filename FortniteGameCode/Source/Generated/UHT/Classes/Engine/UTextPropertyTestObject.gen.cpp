@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UTextPropertyTestObject()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTextPropertyTestObject, 680077190u)
+// Original dynamic initializer: RVA 0x0021E850 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTextPropertyTestObject> AutoInitializeUTextPropertyTestObject(TEXT("UTextPropertyTestObject"), sizeof(UTextPropertyTestObject), 680077190u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024E64D0 (end 0x024E6567)
 // Original VA: 0x00000001424E64D0 | File offset: 0x024E5AD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UTextPropertyTestObject, 680077190u); reached from UTextPropertyTestObject::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UTextPropertyTestObject::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTextPropertyTestObject();
+// Original dynamic initializer: RVA 0x0021FE40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTextPropertyTestObject(Z_Construct_UClass_UTextPropertyTestObject, &UTextPropertyTestObject::StaticClass, TEXT("/Script/Engine"), TEXT("UTextPropertyTestObject"), false, nullptr, nullptr, nullptr);

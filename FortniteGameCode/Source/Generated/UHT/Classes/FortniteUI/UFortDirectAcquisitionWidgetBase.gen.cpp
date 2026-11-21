@@ -7,6 +7,9 @@
 void UFortDirectAcquisitionWidgetBase::StaticRegisterNativesUFortDirectAcquisitionWidgetBase()
 {
 }
+// IMPLEMENT_CLASS(UFortDirectAcquisitionWidgetBase, 3983292448u)
+// Original dynamic initializer: RVA 0x002449A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDirectAcquisitionWidgetBase> AutoInitializeUFortDirectAcquisitionWidgetBase(TEXT("UFortDirectAcquisitionWidgetBase"), sizeof(UFortDirectAcquisitionWidgetBase), 3983292448u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A1960 (end 0x028A1A02)
 // Original VA: 0x00000001428A1960 | File offset: 0x028A0F60
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDirectAcquisitionWidgetBase, 3983292448u); reached from UFortDirectAcquisitionWidgetBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortDirectAcquisitionWidgetBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDirectAcquisitionWidgetBase();
+// Original dynamic initializer: RVA 0x002455D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDirectAcquisitionWidgetBase(Z_Construct_UClass_UFortDirectAcquisitionWidgetBase, &UFortDirectAcquisitionWidgetBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortDirectAcquisitionWidgetBase"), false, nullptr, nullptr, nullptr);

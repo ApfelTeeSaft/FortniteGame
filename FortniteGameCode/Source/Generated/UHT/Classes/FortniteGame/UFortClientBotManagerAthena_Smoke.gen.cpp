@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortClientBotManagerAthena_Smoke()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortClientBotManagerAthena_Smoke, 3065906577u)
+// Original dynamic initializer: RVA 0x000EB2D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortClientBotManagerAthena_Smoke> AutoInitializeUFortClientBotManagerAthena_Smoke(TEXT("UFortClientBotManagerAthena_Smoke"), sizeof(UFortClientBotManagerAthena_Smoke), 3065906577u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBEDD0 (end 0x00FBEE72)
 // Original VA: 0x0000000140FBEDD0 | File offset: 0x00FBE3D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortClientBotManagerAthena_Smoke, 3065906577u); reached from UFortClientBotManagerAthena_Smoke::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortClientBotManagerAthena_Smoke::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortClientBotManagerAthena_Smoke();
+// Original dynamic initializer: RVA 0x000EC3C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortClientBotManagerAthena_Smoke(Z_Construct_UClass_UFortClientBotManagerAthena_Smoke, &UFortClientBotManagerAthena_Smoke::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortClientBotManagerAthena_Smoke"), false, nullptr, nullptr, nullptr);

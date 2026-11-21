@@ -7,6 +7,9 @@
 void UEmergencyNoticeBase::StaticRegisterNativesUEmergencyNoticeBase()
 {
 }
+// IMPLEMENT_CLASS(UEmergencyNoticeBase, 311889583u)
+// Original dynamic initializer: RVA 0x0023B700 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEmergencyNoticeBase> AutoInitializeUEmergencyNoticeBase(TEXT("UEmergencyNoticeBase"), sizeof(UEmergencyNoticeBase), 311889583u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02885420 (end 0x028854C2)
 // Original VA: 0x0000000142885420 | File offset: 0x02884A20
 // Recovery: confirmed (IMPLEMENT_CLASS(UEmergencyNoticeBase, 311889583u); reached from UEmergencyNoticeBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UEmergencyNoticeBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEmergencyNoticeBase();
+// Original dynamic initializer: RVA 0x0023DB60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEmergencyNoticeBase(Z_Construct_UClass_UEmergencyNoticeBase, &UEmergencyNoticeBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UEmergencyNoticeBase"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortClientDynamicBuilder()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortClientDynamicBuilder, 4071458061u)
+// Original dynamic initializer: RVA 0x000EB190 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortClientDynamicBuilder> AutoInitializeAFortClientDynamicBuilder(TEXT("AFortClientDynamicBuilder"), sizeof(AFortClientDynamicBuilder), 4071458061u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBE700 (end 0x00FBE7A2)
 // Original VA: 0x0000000140FBE700 | File offset: 0x00FBDD00
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortClientDynamicBuilder, 4071458061u); reached from AFortClientDynamicBuilder::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortClientDynamicBuilder::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortClientDynamicBuilder();
+// Original dynamic initializer: RVA 0x000EC140
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortClientDynamicBuilder(Z_Construct_UClass_AFortClientDynamicBuilder, &AFortClientDynamicBuilder::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortClientDynamicBuilder"), false, nullptr, nullptr, nullptr);

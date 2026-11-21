@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UWrapBox, 3201636160u)
+// Original dynamic initializer: RVA 0x001B54C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWrapBox> AutoInitializeUWrapBox(TEXT("UWrapBox"), sizeof(UWrapBox), 3201636160u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07970 (end 0x01C07A12)
 // Original VA: 0x0000000141C07970 | File offset: 0x01C06F70
 // Recovery: confirmed (IMPLEMENT_CLASS(UWrapBox, 3201636160u); reached from UWrapBox::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UWrapBox::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWrapBox();
+// Original dynamic initializer: RVA 0x001B56F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWrapBox(Z_Construct_UClass_UWrapBox, &UWrapBox::StaticClass, TEXT("/Script/UMG"), TEXT("UWrapBox"), false, nullptr, nullptr, nullptr);

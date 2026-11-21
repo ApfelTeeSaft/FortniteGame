@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortItemMulchModeActivatablePanel()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortItemMulchModeActivatablePanel, 2149753777u)
+// Original dynamic initializer: RVA 0x0024CF40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemMulchModeActivatablePanel> AutoInitializeUFortItemMulchModeActivatablePanel(TEXT("UFortItemMulchModeActivatablePanel"), sizeof(UFortItemMulchModeActivatablePanel), 2149753777u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C8990 (end 0x028C8A32)
 // Original VA: 0x00000001428C8990 | File offset: 0x028C7F90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemMulchModeActivatablePanel, 2149753777u); reached from UFortItemMulchModeActivatablePanel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortItemMulchModeActivatablePanel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemMulchModeActivatablePanel();
+// Original dynamic initializer: RVA 0x0024F090
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemMulchModeActivatablePanel(Z_Construct_UClass_UFortItemMulchModeActivatablePanel, &UFortItemMulchModeActivatablePanel::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemMulchModeActivatablePanel"), false, nullptr, nullptr, nullptr);

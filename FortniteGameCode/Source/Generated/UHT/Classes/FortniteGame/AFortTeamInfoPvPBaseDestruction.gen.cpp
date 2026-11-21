@@ -7,6 +7,9 @@
 void AFortTeamInfoPvPBaseDestruction::StaticRegisterNativesAFortTeamInfoPvPBaseDestruction()
 {
 }
+// IMPLEMENT_CLASS(AFortTeamInfoPvPBaseDestruction, 3785139558u)
+// Original dynamic initializer: RVA 0x00114690 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortTeamInfoPvPBaseDestruction> AutoInitializeAFortTeamInfoPvPBaseDestruction(TEXT("AFortTeamInfoPvPBaseDestruction"), sizeof(AFortTeamInfoPvPBaseDestruction), 3785139558u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B1390 (end 0x010B1432)
 // Original VA: 0x00000001410B1390 | File offset: 0x010B0990
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortTeamInfoPvPBaseDestruction, 3785139558u); reached from AFortTeamInfoPvPBaseDestruction::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortTeamInfoPvPBaseDestruction::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortTeamInfoPvPBaseDestruction();
+// Original dynamic initializer: RVA 0x00115EC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortTeamInfoPvPBaseDestruction(Z_Construct_UClass_AFortTeamInfoPvPBaseDestruction, &AFortTeamInfoPvPBaseDestruction::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortTeamInfoPvPBaseDestruction"), false, nullptr, nullptr, nullptr);

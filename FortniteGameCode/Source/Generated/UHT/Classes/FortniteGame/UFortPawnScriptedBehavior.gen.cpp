@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortPawnScriptedBehavior()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortPawnScriptedBehavior, 802800160u)
+// Original dynamic initializer: RVA 0x00108DE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPawnScriptedBehavior> AutoInitializeUFortPawnScriptedBehavior(TEXT("UFortPawnScriptedBehavior"), sizeof(UFortPawnScriptedBehavior), 802800160u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010641C0 (end 0x01064262)
 // Original VA: 0x00000001410641C0 | File offset: 0x010637C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPawnScriptedBehavior, 802800160u); reached from UFortPawnScriptedBehavior::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortPawnScriptedBehavior::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPawnScriptedBehavior();
+// Original dynamic initializer: RVA 0x0010A1C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPawnScriptedBehavior(Z_Construct_UClass_UFortPawnScriptedBehavior, &UFortPawnScriptedBehavior::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPawnScriptedBehavior"), false, nullptr, nullptr, nullptr);

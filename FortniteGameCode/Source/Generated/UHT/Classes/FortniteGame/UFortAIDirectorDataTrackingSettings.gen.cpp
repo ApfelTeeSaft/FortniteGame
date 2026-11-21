@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAIDirectorDataTrackingSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAIDirectorDataTrackingSettings, 445264372u)
+// Original dynamic initializer: RVA 0x000E22C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAIDirectorDataTrackingSettings> AutoInitializeUFortAIDirectorDataTrackingSettings(TEXT("UFortAIDirectorDataTrackingSettings"), sizeof(UFortAIDirectorDataTrackingSettings), 445264372u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8B2C0 (end 0x00F8B362)
 // Original VA: 0x0000000140F8B2C0 | File offset: 0x00F8A8C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAIDirectorDataTrackingSettings, 445264372u); reached from UFortAIDirectorDataTrackingSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAIDirectorDataTrackingSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAIDirectorDataTrackingSettings();
+// Original dynamic initializer: RVA 0x000E3270
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAIDirectorDataTrackingSettings(Z_Construct_UClass_UFortAIDirectorDataTrackingSettings, &UFortAIDirectorDataTrackingSettings::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAIDirectorDataTrackingSettings"), false, nullptr, nullptr, nullptr);

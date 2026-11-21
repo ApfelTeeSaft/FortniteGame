@@ -7,6 +7,9 @@
 void UCommonListView::StaticRegisterNativesUCommonListView()
 {
 }
+// IMPLEMENT_CLASS(UCommonListView, 3731617275u)
+// Original dynamic initializer: RVA 0x00095FE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonListView> AutoInitializeUCommonListView(TEXT("UCommonListView"), sizeof(UCommonListView), 3731617275u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C9330 (end 0x002C93D2)
 // Original VA: 0x00000001402C9330 | File offset: 0x002C8930
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonListView, 3731617275u); reached from UCommonListView::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonListView::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonListView();
+// Original dynamic initializer: RVA 0x00096790
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonListView(Z_Construct_UClass_UCommonListView, &UCommonListView::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonListView"), false, nullptr, nullptr, nullptr);

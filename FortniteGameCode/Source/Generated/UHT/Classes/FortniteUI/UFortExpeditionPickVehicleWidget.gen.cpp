@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortExpeditionPickVehicleWidget, 990008422u)
+// Original dynamic initializer: RVA 0x00244B20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortExpeditionPickVehicleWidget> AutoInitializeUFortExpeditionPickVehicleWidget(TEXT("UFortExpeditionPickVehicleWidget"), sizeof(UFortExpeditionPickVehicleWidget), 990008422u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A21A0 (end 0x028A2242)
 // Original VA: 0x00000001428A21A0 | File offset: 0x028A17A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortExpeditionPickVehicleWidget, 990008422u); reached from UFortExpeditionPickVehicleWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortExpeditionPickVehicleWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortExpeditionPickVehicleWidget();
+// Original dynamic initializer: RVA 0x002458D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortExpeditionPickVehicleWidget(Z_Construct_UClass_UFortExpeditionPickVehicleWidget, &UFortExpeditionPickVehicleWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortExpeditionPickVehicleWidget"), false, nullptr, nullptr, nullptr);

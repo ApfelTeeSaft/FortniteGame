@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortEmoteItemDefinition, 1000188506u)
+// Original dynamic initializer: RVA 0x000F1020 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortEmoteItemDefinition> AutoInitializeUFortEmoteItemDefinition(TEXT("UFortEmoteItemDefinition"), sizeof(UFortEmoteItemDefinition), 1000188506u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6570 (end 0x00FD6612)
 // Original VA: 0x0000000140FD6570 | File offset: 0x00FD5B70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortEmoteItemDefinition, 1000188506u); reached from UFortEmoteItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortEmoteItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortEmoteItemDefinition();
+// Original dynamic initializer: RVA 0x000F2490
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortEmoteItemDefinition(Z_Construct_UClass_UFortEmoteItemDefinition, &UFortEmoteItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortEmoteItemDefinition"), false, nullptr, nullptr, nullptr);

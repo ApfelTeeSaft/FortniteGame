@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UNavigationInvokerComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNavigationInvokerComponent, 1349985598u)
+// Original dynamic initializer: RVA 0x0020C7D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavigationInvokerComponent> AutoInitializeUNavigationInvokerComponent(TEXT("UNavigationInvokerComponent"), sizeof(UNavigationInvokerComponent), 1349985598u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248A5B0 (end 0x0248A652)
 // Original VA: 0x000000014248A5B0 | File offset: 0x02489BB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavigationInvokerComponent, 1349985598u); reached from UNavigationInvokerComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UNavigationInvokerComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavigationInvokerComponent();
+// Original dynamic initializer: RVA 0x0020DA70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavigationInvokerComponent(Z_Construct_UClass_UNavigationInvokerComponent, &UNavigationInvokerComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UNavigationInvokerComponent"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCrowdFollowingComponent, 3805722127u)
+// Original dynamic initializer: RVA 0x001BC520 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCrowdFollowingComponent> AutoInitializeUCrowdFollowingComponent(TEXT("UCrowdFollowingComponent"), sizeof(UCrowdFollowingComponent), 3805722127u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D28020 (end 0x01D280C2)
 // Original VA: 0x0000000141D28020 | File offset: 0x01D27620
 // Recovery: confirmed (IMPLEMENT_CLASS(UCrowdFollowingComponent, 3805722127u); reached from UCrowdFollowingComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCrowdFollowingComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCrowdFollowingComponent();
+// Original dynamic initializer: RVA 0x001BD3A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCrowdFollowingComponent(Z_Construct_UClass_UCrowdFollowingComponent, &UCrowdFollowingComponent::StaticClass, TEXT("/Script/AIModule"), TEXT("UCrowdFollowingComponent"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortMissionOutpostQuestConfigData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortMissionOutpostQuestConfigData, 2034594238u)
+// Original dynamic initializer: RVA 0x00104080 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMissionOutpostQuestConfigData> AutoInitializeUFortMissionOutpostQuestConfigData(TEXT("UFortMissionOutpostQuestConfigData"), sizeof(UFortMissionOutpostQuestConfigData), 2034594238u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01048240 (end 0x010482E2)
 // Original VA: 0x0000000141048240 | File offset: 0x01047840
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMissionOutpostQuestConfigData, 2034594238u); reached from UFortMissionOutpostQuestConfigData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortMissionOutpostQuestConfigData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMissionOutpostQuestConfigData();
+// Original dynamic initializer: RVA 0x00105090
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMissionOutpostQuestConfigData(Z_Construct_UClass_UFortMissionOutpostQuestConfigData, &UFortMissionOutpostQuestConfigData::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMissionOutpostQuestConfigData"), false, nullptr, nullptr, nullptr);

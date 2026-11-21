@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAutomationTestSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAutomationTestSettings, 4047913689u)
+// Original dynamic initializer: RVA 0x001F1BB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAutomationTestSettings> AutoInitializeUAutomationTestSettings(TEXT("UAutomationTestSettings"), sizeof(UAutomationTestSettings), 4047913689u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D9C90 (end 0x023D9D27)
 // Original VA: 0x00000001423D9C90 | File offset: 0x023D9290
 // Recovery: confirmed (IMPLEMENT_CLASS(UAutomationTestSettings, 4047913689u); reached from UAutomationTestSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAutomationTestSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAutomationTestSettings();
+// Original dynamic initializer: RVA 0x001F32D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAutomationTestSettings(Z_Construct_UClass_UAutomationTestSettings, &UAutomationTestSettings::StaticClass, TEXT("/Script/Engine"), TEXT("UAutomationTestSettings"), false, nullptr, nullptr, nullptr);

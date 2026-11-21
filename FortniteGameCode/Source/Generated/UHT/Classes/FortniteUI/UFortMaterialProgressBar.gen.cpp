@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortMaterialProgressBar, 1992811032u)
+// Original dynamic initializer: RVA 0x002514B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMaterialProgressBar> AutoInitializeUFortMaterialProgressBar(TEXT("UFortMaterialProgressBar"), sizeof(UFortMaterialProgressBar), 1992811032u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D5C00 (end 0x028D5CA2)
 // Original VA: 0x00000001428D5C00 | File offset: 0x028D5200
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMaterialProgressBar, 1992811032u); reached from UFortMaterialProgressBar::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortMaterialProgressBar::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMaterialProgressBar();
+// Original dynamic initializer: RVA 0x00253570
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMaterialProgressBar(Z_Construct_UClass_UFortMaterialProgressBar, &UFortMaterialProgressBar::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortMaterialProgressBar"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortTakerRift()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortTakerRift, 4076325680u)
+// Original dynamic initializer: RVA 0x00114630 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortTakerRift> AutoInitializeAFortTakerRift(TEXT("AFortTakerRift"), sizeof(AFortTakerRift), 4076325680u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B1180 (end 0x010B1222)
 // Original VA: 0x00000001410B1180 | File offset: 0x010B0780
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortTakerRift, 4076325680u); reached from AFortTakerRift::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortTakerRift::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortTakerRift();
+// Original dynamic initializer: RVA 0x00115E00
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortTakerRift(Z_Construct_UClass_AFortTakerRift, &AFortTakerRift::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortTakerRift"), false, nullptr, nullptr, nullptr);

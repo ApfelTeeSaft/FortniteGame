@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAIPerceptionComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAIPerceptionComponent, 2764409384u)
+// Original dynamic initializer: RVA 0x000E4820 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAIPerceptionComponent> AutoInitializeUFortAIPerceptionComponent(TEXT("UFortAIPerceptionComponent"), sizeof(UFortAIPerceptionComponent), 2764409384u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F96E10 (end 0x00F96EB2)
 // Original VA: 0x0000000140F96E10 | File offset: 0x00F96410
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAIPerceptionComponent, 2764409384u); reached from UFortAIPerceptionComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAIPerceptionComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAIPerceptionComponent();
+// Original dynamic initializer: RVA 0x000E5F70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAIPerceptionComponent(Z_Construct_UClass_UFortAIPerceptionComponent, &UFortAIPerceptionComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAIPerceptionComponent"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortReplaySpectator, 2803052199u)
+// Original dynamic initializer: RVA 0x00111360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortReplaySpectator> AutoInitializeAFortReplaySpectator(TEXT("AFortReplaySpectator"), sizeof(AFortReplaySpectator), 2803052199u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109BD00 (end 0x0109BDA2)
 // Original VA: 0x000000014109BD00 | File offset: 0x0109B300
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortReplaySpectator, 2803052199u); reached from AFortReplaySpectator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortReplaySpectator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortReplaySpectator();
+// Original dynamic initializer: RVA 0x00112630
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortReplaySpectator(Z_Construct_UClass_AFortReplaySpectator, &AFortReplaySpectator::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortReplaySpectator"), false, nullptr, nullptr, nullptr);

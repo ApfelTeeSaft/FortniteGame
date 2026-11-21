@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortUIStateTrigger_InGame()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortUIStateTrigger_InGame, 3135226656u)
+// Original dynamic initializer: RVA 0x002629E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUIStateTrigger_InGame> AutoInitializeUFortUIStateTrigger_InGame(TEXT("UFortUIStateTrigger_InGame"), sizeof(UFortUIStateTrigger_InGame), 3135226656u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02910710 (end 0x029107B2)
 // Original VA: 0x0000000142910710 | File offset: 0x0290FD10
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUIStateTrigger_InGame, 3135226656u); reached from UFortUIStateTrigger_InGame::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortUIStateTrigger_InGame::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUIStateTrigger_InGame();
+// Original dynamic initializer: RVA 0x00265200
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUIStateTrigger_InGame(Z_Construct_UClass_UFortUIStateTrigger_InGame, &UFortUIStateTrigger_InGame::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortUIStateTrigger_InGame"), false, nullptr, nullptr, nullptr);

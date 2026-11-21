@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortBTContext_MoveUrgency()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTContext_MoveUrgency, 1705461389u)
+// Original dynamic initializer: RVA 0x000E9010 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTContext_MoveUrgency> AutoInitializeUFortBTContext_MoveUrgency(TEXT("UFortBTContext_MoveUrgency"), sizeof(UFortBTContext_MoveUrgency), 1705461389u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAA9A0 (end 0x00FAAA42)
 // Original VA: 0x0000000140FAA9A0 | File offset: 0x00FA9FA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTContext_MoveUrgency, 1705461389u); reached from UFortBTContext_MoveUrgency::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortBTContext_MoveUrgency::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTContext_MoveUrgency();
+// Original dynamic initializer: RVA 0x000E9D00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTContext_MoveUrgency(Z_Construct_UClass_UFortBTContext_MoveUrgency, &UFortBTContext_MoveUrgency::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTContext_MoveUrgency"), false, nullptr, nullptr, nullptr);

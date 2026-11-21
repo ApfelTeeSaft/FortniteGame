@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionFontSample()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionFontSample, 4206953335u)
+// Original dynamic initializer: RVA 0x002074C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionFontSample> AutoInitializeUMaterialExpressionFontSample(TEXT("UMaterialExpressionFontSample"), sizeof(UMaterialExpressionFontSample), 4206953335u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247C1E0 (end 0x0247C282)
 // Original VA: 0x000000014247C1E0 | File offset: 0x0247B7E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionFontSample, 4206953335u); reached from UMaterialExpressionFontSample::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionFontSample::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionFontSample();
+// Original dynamic initializer: RVA 0x00208680
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionFontSample(Z_Construct_UClass_UMaterialExpressionFontSample, &UMaterialExpressionFontSample::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionFontSample"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ACameraRig_Rail()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ACameraRig_Rail, 966641710u)
+// Original dynamic initializer: RVA 0x001B5820 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ACameraRig_Rail> AutoInitializeACameraRig_Rail(TEXT("ACameraRig_Rail"), sizeof(ACameraRig_Rail), 966641710u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0A800 (end 0x01C0A8A2)
 // Original VA: 0x0000000141C0A800 | File offset: 0x01C09E00
 // Recovery: confirmed (IMPLEMENT_CLASS(ACameraRig_Rail, 966641710u); reached from ACameraRig_Rail::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ACameraRig_Rail::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ACameraRig_Rail();
+// Original dynamic initializer: RVA 0x001B5E00
+static FCompiledInDefer Z_CompiledInDefer_UClass_ACameraRig_Rail(Z_Construct_UClass_ACameraRig_Rail, &ACameraRig_Rail::StaticClass, TEXT("/Script/CinematicCamera"), TEXT("ACameraRig_Rail"), false, nullptr, nullptr, nullptr);

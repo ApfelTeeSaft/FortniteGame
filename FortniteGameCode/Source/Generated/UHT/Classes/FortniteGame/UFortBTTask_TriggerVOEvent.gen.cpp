@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortBTTask_TriggerVOEvent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTTask_TriggerVOEvent, 3087825263u)
+// Original dynamic initializer: RVA 0x000E9390 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTTask_TriggerVOEvent> AutoInitializeUFortBTTask_TriggerVOEvent(TEXT("UFortBTTask_TriggerVOEvent"), sizeof(UFortBTTask_TriggerVOEvent), 3087825263u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FABCE0 (end 0x00FABD82)
 // Original VA: 0x0000000140FABCE0 | File offset: 0x00FAB2E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTTask_TriggerVOEvent, 3087825263u); reached from UFortBTTask_TriggerVOEvent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortBTTask_TriggerVOEvent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTTask_TriggerVOEvent();
+// Original dynamic initializer: RVA 0x000EA400
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTTask_TriggerVOEvent(Z_Construct_UClass_UFortBTTask_TriggerVOEvent, &UFortBTTask_TriggerVOEvent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTTask_TriggerVOEvent"), false, nullptr, nullptr, nullptr);

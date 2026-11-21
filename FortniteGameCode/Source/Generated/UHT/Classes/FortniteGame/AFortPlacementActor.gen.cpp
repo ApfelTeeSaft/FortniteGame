@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortPlacementActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortPlacementActor, 594322909u)
+// Original dynamic initializer: RVA 0x00108DA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPlacementActor> AutoInitializeAFortPlacementActor(TEXT("AFortPlacementActor"), sizeof(AFortPlacementActor), 594322909u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01064060 (end 0x01064102)
 // Original VA: 0x0000000141064060 | File offset: 0x01063660
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPlacementActor, 594322909u); reached from AFortPlacementActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortPlacementActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPlacementActor();
+// Original dynamic initializer: RVA 0x0010A140
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPlacementActor(Z_Construct_UClass_AFortPlacementActor, &AFortPlacementActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPlacementActor"), false, nullptr, nullptr, nullptr);

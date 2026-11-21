@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UInGameAdManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInGameAdManager, 1935602251u)
+// Original dynamic initializer: RVA 0x00200BA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInGameAdManager> AutoInitializeUInGameAdManager(TEXT("UInGameAdManager"), sizeof(UInGameAdManager), 1935602251u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02425DF0 (end 0x02425E92)
 // Original VA: 0x0000000142425DF0 | File offset: 0x024253F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UInGameAdManager, 1935602251u); reached from UInGameAdManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UInGameAdManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInGameAdManager();
+// Original dynamic initializer: RVA 0x00201EC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInGameAdManager(Z_Construct_UClass_UInGameAdManager, &UInGameAdManager::StaticClass, TEXT("/Script/Engine"), TEXT("UInGameAdManager"), false, nullptr, nullptr, nullptr);

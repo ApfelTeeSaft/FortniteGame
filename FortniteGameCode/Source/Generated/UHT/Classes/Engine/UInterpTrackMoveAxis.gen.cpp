@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UInterpTrackMoveAxis()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInterpTrackMoveAxis, 1693316944u)
+// Original dynamic initializer: RVA 0x00202A80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInterpTrackMoveAxis> AutoInitializeUInterpTrackMoveAxis(TEXT("UInterpTrackMoveAxis"), sizeof(UInterpTrackMoveAxis), 1693316944u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0242E280 (end 0x0242E322)
 // Original VA: 0x000000014242E280 | File offset: 0x0242D880
 // Recovery: confirmed (IMPLEMENT_CLASS(UInterpTrackMoveAxis, 1693316944u); reached from UInterpTrackMoveAxis::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UInterpTrackMoveAxis::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInterpTrackMoveAxis();
+// Original dynamic initializer: RVA 0x002042F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInterpTrackMoveAxis(Z_Construct_UClass_UInterpTrackMoveAxis, &UInterpTrackMoveAxis::StaticClass, TEXT("/Script/Engine"), TEXT("UInterpTrackMoveAxis"), false, nullptr, nullptr, nullptr);

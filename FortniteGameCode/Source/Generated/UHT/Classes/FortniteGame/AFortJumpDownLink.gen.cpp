@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortJumpDownLink()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortJumpDownLink, 3692304480u)
+// Original dynamic initializer: RVA 0x000FC410 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortJumpDownLink> AutoInitializeAFortJumpDownLink(TEXT("AFortJumpDownLink"), sizeof(AFortJumpDownLink), 3692304480u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0100B190 (end 0x0100B232)
 // Original VA: 0x000000014100B190 | File offset: 0x0100A790
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortJumpDownLink, 3692304480u); reached from AFortJumpDownLink::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortJumpDownLink::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortJumpDownLink();
+// Original dynamic initializer: RVA 0x000FCB30
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortJumpDownLink(Z_Construct_UClass_AFortJumpDownLink, &AFortJumpDownLink::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortJumpDownLink"), false, nullptr, nullptr, nullptr);

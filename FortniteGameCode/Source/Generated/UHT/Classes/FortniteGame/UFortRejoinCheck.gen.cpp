@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortRejoinCheck()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortRejoinCheck, 3262026553u)
+// Original dynamic initializer: RVA 0x00111520 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortRejoinCheck> AutoInitializeUFortRejoinCheck(TEXT("UFortRejoinCheck"), sizeof(UFortRejoinCheck), 3262026553u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109C680 (end 0x0109C722)
 // Original VA: 0x000000014109C680 | File offset: 0x0109BC80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortRejoinCheck, 3262026553u); reached from UFortRejoinCheck::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortRejoinCheck::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortRejoinCheck();
+// Original dynamic initializer: RVA 0x001129B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortRejoinCheck(Z_Construct_UClass_UFortRejoinCheck, &UFortRejoinCheck::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortRejoinCheck"), false, nullptr, nullptr, nullptr);

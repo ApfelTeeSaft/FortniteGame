@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ABuildingFoundation3x3()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingFoundation3x3, 2820960662u)
+// Original dynamic initializer: RVA 0x000DAE10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingFoundation3x3> AutoInitializeABuildingFoundation3x3(TEXT("ABuildingFoundation3x3"), sizeof(ABuildingFoundation3x3), 2820960662u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6A380 (end 0x00F6A422)
 // Original VA: 0x0000000140F6A380 | File offset: 0x00F69980
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingFoundation3x3, 2820960662u); reached from ABuildingFoundation3x3::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ABuildingFoundation3x3::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingFoundation3x3();
+// Original dynamic initializer: RVA 0x000DB900
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingFoundation3x3(Z_Construct_UClass_ABuildingFoundation3x3, &ABuildingFoundation3x3::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingFoundation3x3"), false, nullptr, nullptr, nullptr);

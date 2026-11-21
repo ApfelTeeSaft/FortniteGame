@@ -7,6 +7,9 @@
 void ABuildingLayoutRequirement::StaticRegisterNativesABuildingLayoutRequirement()
 {
 }
+// IMPLEMENT_CLASS(ABuildingLayoutRequirement, 891639280u)
+// Original dynamic initializer: RVA 0x000DAEF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingLayoutRequirement> AutoInitializeABuildingLayoutRequirement(TEXT("ABuildingLayoutRequirement"), sizeof(ABuildingLayoutRequirement), 891639280u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6A850 (end 0x00F6A8F2)
 // Original VA: 0x0000000140F6A850 | File offset: 0x00F69E50
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingLayoutRequirement, 891639280u); reached from ABuildingLayoutRequirement::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ABuildingLayoutRequirement::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingLayoutRequirement();
+// Original dynamic initializer: RVA 0x000DBAC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingLayoutRequirement(Z_Construct_UClass_ABuildingLayoutRequirement, &ABuildingLayoutRequirement::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingLayoutRequirement"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ACullDistanceVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ACullDistanceVolume, 2501838278u)
+// Original dynamic initializer: RVA 0x001F81E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ACullDistanceVolume> AutoInitializeACullDistanceVolume(TEXT("ACullDistanceVolume"), sizeof(ACullDistanceVolume), 2501838278u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FBA10 (end 0x023FBAB2)
 // Original VA: 0x00000001423FBA10 | File offset: 0x023FB010
 // Recovery: confirmed (IMPLEMENT_CLASS(ACullDistanceVolume, 2501838278u); reached from ACullDistanceVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ACullDistanceVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ACullDistanceVolume();
+// Original dynamic initializer: RVA 0x001F9380
+static FCompiledInDefer Z_CompiledInDefer_UClass_ACullDistanceVolume(Z_Construct_UClass_ACullDistanceVolume, &ACullDistanceVolume::StaticClass, TEXT("/Script/Engine"), TEXT("ACullDistanceVolume"), false, nullptr, nullptr, nullptr);

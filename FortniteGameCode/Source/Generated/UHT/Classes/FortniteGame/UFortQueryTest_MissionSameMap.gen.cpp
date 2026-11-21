@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryTest_MissionSameMap()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryTest_MissionSameMap, 1264538902u)
+// Original dynamic initializer: RVA 0x001105E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryTest_MissionSameMap> AutoInitializeUFortQueryTest_MissionSameMap(TEXT("UFortQueryTest_MissionSameMap"), sizeof(UFortQueryTest_MissionSameMap), 1264538902u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010950E0 (end 0x01095182)
 // Original VA: 0x00000001410950E0 | File offset: 0x010946E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryTest_MissionSameMap, 1264538902u); reached from UFortQueryTest_MissionSameMap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryTest_MissionSameMap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryTest_MissionSameMap();
+// Original dynamic initializer: RVA 0x00110FC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryTest_MissionSameMap(Z_Construct_UClass_UFortQueryTest_MissionSameMap, &UFortQueryTest_MissionSameMap::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryTest_MissionSameMap"), false, nullptr, nullptr, nullptr);

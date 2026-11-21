@@ -7,6 +7,9 @@
 void UFortUIMessagesPageBase::StaticRegisterNativesUFortUIMessagesPageBase()
 {
 }
+// IMPLEMENT_CLASS(UFortUIMessagesPageBase, 367426404u)
+// Original dynamic initializer: RVA 0x002628E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUIMessagesPageBase> AutoInitializeUFortUIMessagesPageBase(TEXT("UFortUIMessagesPageBase"), sizeof(UFortUIMessagesPageBase), 367426404u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029101D0 (end 0x02910272)
 // Original VA: 0x00000001429101D0 | File offset: 0x0290F7D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUIMessagesPageBase, 367426404u); reached from UFortUIMessagesPageBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortUIMessagesPageBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUIMessagesPageBase();
+// Original dynamic initializer: RVA 0x00265000
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUIMessagesPageBase(Z_Construct_UClass_UFortUIMessagesPageBase, &UFortUIMessagesPageBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortUIMessagesPageBase"), false, nullptr, nullptr, nullptr);

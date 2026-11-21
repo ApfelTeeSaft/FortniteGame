@@ -7,6 +7,9 @@
 void UFortPrivacyBase::StaticRegisterNativesUFortPrivacyBase()
 {
 }
+// IMPLEMENT_CLASS(UFortPrivacyBase, 1703911946u)
+// Original dynamic initializer: RVA 0x00255D00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPrivacyBase> AutoInitializeUFortPrivacyBase(TEXT("UFortPrivacyBase"), sizeof(UFortPrivacyBase), 1703911946u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E57F0 (end 0x028E5892)
 // Original VA: 0x00000001428E57F0 | File offset: 0x028E4DF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPrivacyBase, 1703911946u); reached from UFortPrivacyBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortPrivacyBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPrivacyBase();
+// Original dynamic initializer: RVA 0x00258140
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPrivacyBase(Z_Construct_UClass_UFortPrivacyBase, &UFortPrivacyBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortPrivacyBase"), false, nullptr, nullptr, nullptr);

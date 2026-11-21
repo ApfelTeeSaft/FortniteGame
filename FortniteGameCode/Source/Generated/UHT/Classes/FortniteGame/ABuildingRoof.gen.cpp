@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ABuildingRoof()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingRoof, 1296215050u)
+// Original dynamic initializer: RVA 0x000DBE40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingRoof> AutoInitializeABuildingRoof(TEXT("ABuildingRoof"), sizeof(ABuildingRoof), 1296215050u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F70BA0 (end 0x00F70C42)
 // Original VA: 0x0000000140F70BA0 | File offset: 0x00F701A0
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingRoof, 1296215050u); reached from ABuildingRoof::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ABuildingRoof::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingRoof();
+// Original dynamic initializer: RVA 0x000DCA80
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingRoof(Z_Construct_UClass_ABuildingRoof, &ABuildingRoof::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingRoof"), false, nullptr, nullptr, nullptr);

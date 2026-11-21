@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionDecalMipmapLevel()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionDecalMipmapLevel, 755176445u)
+// Original dynamic initializer: RVA 0x002072C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionDecalMipmapLevel> AutoInitializeUMaterialExpressionDecalMipmapLevel(TEXT("UMaterialExpressionDecalMipmapLevel"), sizeof(UMaterialExpressionDecalMipmapLevel), 755176445u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247B6E0 (end 0x0247B782)
 // Original VA: 0x000000014247B6E0 | File offset: 0x0247ACE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionDecalMipmapLevel, 755176445u); reached from UMaterialExpressionDecalMipmapLevel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionDecalMipmapLevel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionDecalMipmapLevel();
+// Original dynamic initializer: RVA 0x00208280
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionDecalMipmapLevel(Z_Construct_UClass_UMaterialExpressionDecalMipmapLevel, &UMaterialExpressionDecalMipmapLevel::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionDecalMipmapLevel"), false, nullptr, nullptr, nullptr);

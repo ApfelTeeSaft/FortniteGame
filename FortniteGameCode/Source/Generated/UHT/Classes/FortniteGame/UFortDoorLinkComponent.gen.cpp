@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortDoorLinkComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDoorLinkComponent, 2126191787u)
+// Original dynamic initializer: RVA 0x000F0FC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDoorLinkComponent> AutoInitializeUFortDoorLinkComponent(TEXT("UFortDoorLinkComponent"), sizeof(UFortDoorLinkComponent), 2126191787u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6360 (end 0x00FD6402)
 // Original VA: 0x0000000140FD6360 | File offset: 0x00FD5960
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDoorLinkComponent, 2126191787u); reached from UFortDoorLinkComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortDoorLinkComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDoorLinkComponent();
+// Original dynamic initializer: RVA 0x000F23D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDoorLinkComponent(Z_Construct_UClass_UFortDoorLinkComponent, &UFortDoorLinkComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDoorLinkComponent"), false, nullptr, nullptr, nullptr);

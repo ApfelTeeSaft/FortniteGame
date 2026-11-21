@@ -7,6 +7,9 @@
 void UBTTask_BlueprintBase::StaticRegisterNativesUBTTask_BlueprintBase()
 {
 }
+// IMPLEMENT_CLASS(UBTTask_BlueprintBase, 296585807u)
+// Original dynamic initializer: RVA 0x001BC300 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTTask_BlueprintBase> AutoInitializeUBTTask_BlueprintBase(TEXT("UBTTask_BlueprintBase"), sizeof(UBTTask_BlueprintBase), 296585807u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D27470 (end 0x01D27512)
 // Original VA: 0x0000000141D27470 | File offset: 0x01D26A70
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTTask_BlueprintBase, 296585807u); reached from UBTTask_BlueprintBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UBTTask_BlueprintBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTTask_BlueprintBase();
+// Original dynamic initializer: RVA 0x001BCF60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTTask_BlueprintBase(Z_Construct_UClass_UBTTask_BlueprintBase, &UBTTask_BlueprintBase::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTTask_BlueprintBase"), false, nullptr, nullptr, nullptr);

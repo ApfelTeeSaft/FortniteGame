@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCommonButtonStyle, 559593226u)
+// Original dynamic initializer: RVA 0x00095690 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonButtonStyle> AutoInitializeUCommonButtonStyle(TEXT("UCommonButtonStyle"), sizeof(UCommonButtonStyle), 559593226u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C1E80 (end 0x002C1F17)
 // Original VA: 0x00000001402C1E80 | File offset: 0x002C1480
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonButtonStyle, 559593226u); reached from UCommonButtonStyle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCommonButtonStyle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonButtonStyle();
+// Original dynamic initializer: RVA 0x00095E00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonButtonStyle(Z_Construct_UClass_UCommonButtonStyle, &UCommonButtonStyle::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonButtonStyle"), false, nullptr, nullptr, nullptr);

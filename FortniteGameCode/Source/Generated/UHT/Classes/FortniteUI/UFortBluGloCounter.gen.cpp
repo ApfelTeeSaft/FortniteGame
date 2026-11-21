@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortBluGloCounter, 3372144181u)
+// Original dynamic initializer: RVA 0x00240280 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBluGloCounter> AutoInitializeUFortBluGloCounter(TEXT("UFortBluGloCounter"), sizeof(UFortBluGloCounter), 3372144181u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02892960 (end 0x02892A02)
 // Original VA: 0x0000000142892960 | File offset: 0x02891F60
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBluGloCounter, 3372144181u); reached from UFortBluGloCounter::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortBluGloCounter::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBluGloCounter();
+// Original dynamic initializer: RVA 0x00241E50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBluGloCounter(Z_Construct_UClass_UFortBluGloCounter, &UFortBluGloCounter::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortBluGloCounter"), false, nullptr, nullptr, nullptr);

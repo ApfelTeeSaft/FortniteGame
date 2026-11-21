@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ULandscapeMeshCollisionComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULandscapeMeshCollisionComponent, 3248326898u)
+// Original dynamic initializer: RVA 0x001A2C50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULandscapeMeshCollisionComponent> AutoInitializeULandscapeMeshCollisionComponent(TEXT("ULandscapeMeshCollisionComponent"), sizeof(ULandscapeMeshCollisionComponent), 3248326898u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A740F0 (end 0x01A74192)
 // Original VA: 0x0000000141A740F0 | File offset: 0x01A736F0
 // Recovery: confirmed (IMPLEMENT_CLASS(ULandscapeMeshCollisionComponent, 3248326898u); reached from ULandscapeMeshCollisionComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ULandscapeMeshCollisionComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULandscapeMeshCollisionComponent();
+// Original dynamic initializer: RVA 0x001A41A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULandscapeMeshCollisionComponent(Z_Construct_UClass_ULandscapeMeshCollisionComponent, &ULandscapeMeshCollisionComponent::StaticClass, TEXT("/Script/Landscape"), TEXT("ULandscapeMeshCollisionComponent"), false, nullptr, nullptr, nullptr);

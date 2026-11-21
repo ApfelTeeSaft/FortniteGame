@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortEmitterCameraLensEffectDirectional()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortEmitterCameraLensEffectDirectional, 3902420451u)
+// Original dynamic initializer: RVA 0x000F0920 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortEmitterCameraLensEffectDirectional> AutoInitializeAFortEmitterCameraLensEffectDirectional(TEXT("AFortEmitterCameraLensEffectDirectional"), sizeof(AFortEmitterCameraLensEffectDirectional), 3902420451u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD3F00 (end 0x00FD3FA2)
 // Original VA: 0x0000000140FD3F00 | File offset: 0x00FD3500
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortEmitterCameraLensEffectDirectional, 3902420451u); reached from AFortEmitterCameraLensEffectDirectional::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortEmitterCameraLensEffectDirectional::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortEmitterCameraLensEffectDirectional();
+// Original dynamic initializer: RVA 0x000F1690
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortEmitterCameraLensEffectDirectional(Z_Construct_UClass_AFortEmitterCameraLensEffectDirectional, &AFortEmitterCameraLensEffectDirectional::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortEmitterCameraLensEffectDirectional"), false, nullptr, nullptr, nullptr);

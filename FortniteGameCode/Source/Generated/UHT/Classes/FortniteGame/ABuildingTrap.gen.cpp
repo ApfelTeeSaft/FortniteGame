@@ -7,6 +7,9 @@
 void ABuildingTrap::StaticRegisterNativesABuildingTrap()
 {
 }
+// IMPLEMENT_CLASS(ABuildingTrap, 883784336u)
+// Original dynamic initializer: RVA 0x000DBEC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingTrap> AutoInitializeABuildingTrap(TEXT("ABuildingTrap"), sizeof(ABuildingTrap), 883784336u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F70E60 (end 0x00F70F02)
 // Original VA: 0x0000000140F70E60 | File offset: 0x00F70460
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingTrap, 883784336u); reached from ABuildingTrap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ABuildingTrap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingTrap();
+// Original dynamic initializer: RVA 0x000DCB80
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingTrap(Z_Construct_UClass_ABuildingTrap, &ABuildingTrap::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingTrap"), false, nullptr, nullptr, nullptr);

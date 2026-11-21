@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ARecastNavMesh()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ARecastNavMesh, 3691545097u)
+// Original dynamic initializer: RVA 0x002173B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ARecastNavMesh> AutoInitializeARecastNavMesh(TEXT("ARecastNavMesh"), sizeof(ARecastNavMesh), 3691545097u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C0FD0 (end 0x024C1072)
 // Original VA: 0x00000001424C0FD0 | File offset: 0x024C05D0
 // Recovery: confirmed (IMPLEMENT_CLASS(ARecastNavMesh, 3691545097u); reached from ARecastNavMesh::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ARecastNavMesh::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ARecastNavMesh();
+// Original dynamic initializer: RVA 0x00218800
+static FCompiledInDefer Z_CompiledInDefer_UClass_ARecastNavMesh(Z_Construct_UClass_ARecastNavMesh, &ARecastNavMesh::StaticClass, TEXT("/Script/Engine"), TEXT("ARecastNavMesh"), false, nullptr, nullptr, nullptr);

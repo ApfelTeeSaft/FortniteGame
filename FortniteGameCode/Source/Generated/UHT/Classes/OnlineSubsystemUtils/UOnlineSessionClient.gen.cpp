@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UOnlineSessionClient()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UOnlineSessionClient, 2470745710u)
+// Original dynamic initializer: RVA 0x00099560 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UOnlineSessionClient> AutoInitializeUOnlineSessionClient(TEXT("UOnlineSessionClient"), sizeof(UOnlineSessionClient), 2470745710u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032D680 (end 0x0032D722)
 // Original VA: 0x000000014032D680 | File offset: 0x0032CC80
 // Recovery: confirmed (IMPLEMENT_CLASS(UOnlineSessionClient, 2470745710u); reached from UOnlineSessionClient::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UOnlineSessionClient::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UOnlineSessionClient();
+// Original dynamic initializer: RVA 0x0009A2E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UOnlineSessionClient(Z_Construct_UClass_UOnlineSessionClient, &UOnlineSessionClient::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UOnlineSessionClient"), false, nullptr, nullptr, nullptr);

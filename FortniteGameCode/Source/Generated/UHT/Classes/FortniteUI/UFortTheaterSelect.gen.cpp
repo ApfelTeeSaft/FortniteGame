@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortTheaterSelect, 4189074055u)
+// Original dynamic initializer: RVA 0x0025E490 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTheaterSelect> AutoInitializeUFortTheaterSelect(TEXT("UFortTheaterSelect"), sizeof(UFortTheaterSelect), 4189074055u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02903320 (end 0x029033C2)
 // Original VA: 0x0000000142903320 | File offset: 0x02902920
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTheaterSelect, 4189074055u); reached from UFortTheaterSelect::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortTheaterSelect::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTheaterSelect();
+// Original dynamic initializer: RVA 0x002606D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTheaterSelect(Z_Construct_UClass_UFortTheaterSelect, &UFortTheaterSelect::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTheaterSelect"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortBTDecorator_GameplayAbility_CanHitTarget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTDecorator_GameplayAbility_CanHitTarget, 2859836105u)
+// Original dynamic initializer: RVA 0x000E90B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTDecorator_GameplayAbility_CanHitTarget> AutoInitializeUFortBTDecorator_GameplayAbility_CanHitTarget(TEXT("UFortBTDecorator_GameplayAbility_CanHitTarget"), sizeof(UFortBTDecorator_GameplayAbility_CanHitTarget), 2859836105u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAAD10 (end 0x00FAADB2)
 // Original VA: 0x0000000140FAAD10 | File offset: 0x00FAA310
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTDecorator_GameplayAbility_CanHitTarget, 2859836105u); reached from UFortBTDecorator_GameplayAbility_CanHitTarget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortBTDecorator_GameplayAbility_CanHitTarget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTDecorator_GameplayAbility_CanHitTarget();
+// Original dynamic initializer: RVA 0x000E9E40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTDecorator_GameplayAbility_CanHitTarget(Z_Construct_UClass_UFortBTDecorator_GameplayAbility_CanHitTarget, &UFortBTDecorator_GameplayAbility_CanHitTarget::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTDecorator_GameplayAbility_CanHitTarget"), false, nullptr, nullptr, nullptr);

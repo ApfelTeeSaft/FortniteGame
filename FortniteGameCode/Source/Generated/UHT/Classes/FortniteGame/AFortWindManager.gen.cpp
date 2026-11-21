@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortWindManager, 2882904891u)
+// Original dynamic initializer: RVA 0x0011D950 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortWindManager> AutoInitializeAFortWindManager(TEXT("AFortWindManager"), sizeof(AFortWindManager), 2882904891u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DB0F0 (end 0x010DB192)
 // Original VA: 0x00000001410DB0F0 | File offset: 0x010DA6F0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortWindManager, 2882904891u); reached from AFortWindManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortWindManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortWindManager();
+// Original dynamic initializer: RVA 0x0011E5A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortWindManager(Z_Construct_UClass_AFortWindManager, &AFortWindManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortWindManager"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USoundSubmix()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundSubmix, 3344529794u)
+// Original dynamic initializer: RVA 0x0021C850 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundSubmix> AutoInitializeUSoundSubmix(TEXT("USoundSubmix"), sizeof(USoundSubmix), 3344529794u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DAA50 (end 0x024DAAE7)
 // Original VA: 0x00000001424DAA50 | File offset: 0x024DA050
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundSubmix, 3344529794u); reached from USoundSubmix::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USoundSubmix::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundSubmix();
+// Original dynamic initializer: RVA 0x0021DFF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundSubmix(Z_Construct_UClass_USoundSubmix, &USoundSubmix::StaticClass, TEXT("/Script/Engine"), TEXT("USoundSubmix"), false, nullptr, nullptr, nullptr);

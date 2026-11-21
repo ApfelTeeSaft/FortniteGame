@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMovieSceneLevelVisibilityTrack()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMovieSceneLevelVisibilityTrack, 548802195u)
+// Original dynamic initializer: RVA 0x001AC890 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovieSceneLevelVisibilityTrack> AutoInitializeUMovieSceneLevelVisibilityTrack(TEXT("UMovieSceneLevelVisibilityTrack"), sizeof(UMovieSceneLevelVisibilityTrack), 548802195u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4E2D0 (end 0x01B4E372)
 // Original VA: 0x0000000141B4E2D0 | File offset: 0x01B4D8D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovieSceneLevelVisibilityTrack, 548802195u); reached from UMovieSceneLevelVisibilityTrack::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMovieSceneLevelVisibilityTrack::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovieSceneLevelVisibilityTrack();
+// Original dynamic initializer: RVA 0x001AFA00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovieSceneLevelVisibilityTrack(Z_Construct_UClass_UMovieSceneLevelVisibilityTrack, &UMovieSceneLevelVisibilityTrack::StaticClass, TEXT("/Script/MovieSceneTracks"), TEXT("UMovieSceneLevelVisibilityTrack"), false, nullptr, nullptr, nullptr);

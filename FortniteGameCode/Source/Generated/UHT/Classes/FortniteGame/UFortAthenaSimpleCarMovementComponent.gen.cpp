@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortAthenaSimpleCarMovementComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAthenaSimpleCarMovementComponent, 4003759728u)
+// Original dynamic initializer: RVA 0x000E7F10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAthenaSimpleCarMovementComponent> AutoInitializeUFortAthenaSimpleCarMovementComponent(TEXT("UFortAthenaSimpleCarMovementComponent"), sizeof(UFortAthenaSimpleCarMovementComponent), 4003759728u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA1FB0 (end 0x00FA2052)
 // Original VA: 0x0000000140FA1FB0 | File offset: 0x00FA15B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAthenaSimpleCarMovementComponent, 4003759728u); reached from UFortAthenaSimpleCarMovementComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortAthenaSimpleCarMovementComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAthenaSimpleCarMovementComponent();
+// Original dynamic initializer: RVA 0x000E8990
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAthenaSimpleCarMovementComponent(Z_Construct_UClass_UFortAthenaSimpleCarMovementComponent, &UFortAthenaSimpleCarMovementComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAthenaSimpleCarMovementComponent"), false, nullptr, nullptr, nullptr);

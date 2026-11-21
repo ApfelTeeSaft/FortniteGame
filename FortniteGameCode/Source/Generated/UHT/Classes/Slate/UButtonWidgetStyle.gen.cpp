@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UButtonWidgetStyle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UButtonWidgetStyle, 1139783200u)
+// Original dynamic initializer: RVA 0x0013E150 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UButtonWidgetStyle> AutoInitializeUButtonWidgetStyle(TEXT("UButtonWidgetStyle"), sizeof(UButtonWidgetStyle), 1139783200u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x015A1C70 (end 0x015A1D12)
 // Original VA: 0x00000001415A1C70 | File offset: 0x015A1270
 // Recovery: confirmed (IMPLEMENT_CLASS(UButtonWidgetStyle, 1139783200u); reached from UButtonWidgetStyle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UButtonWidgetStyle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UButtonWidgetStyle();
+// Original dynamic initializer: RVA 0x0013E7F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UButtonWidgetStyle(Z_Construct_UClass_UButtonWidgetStyle, &UButtonWidgetStyle::StaticClass, TEXT("/Script/Slate"), TEXT("UButtonWidgetStyle"), false, nullptr, nullptr, nullptr);

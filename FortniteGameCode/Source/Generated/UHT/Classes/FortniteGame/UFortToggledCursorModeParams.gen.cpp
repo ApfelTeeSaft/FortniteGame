@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortToggledCursorModeParams, 1635705438u)
+// Original dynamic initializer: RVA 0x00120340 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortToggledCursorModeParams> AutoInitializeUFortToggledCursorModeParams(TEXT("UFortToggledCursorModeParams"), sizeof(UFortToggledCursorModeParams), 1635705438u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E8120 (end 0x010E81C2)
 // Original VA: 0x00000001410E8120 | File offset: 0x010E7720
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortToggledCursorModeParams, 1635705438u); reached from UFortToggledCursorModeParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortToggledCursorModeParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortToggledCursorModeParams();
+// Original dynamic initializer: RVA 0x001221F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortToggledCursorModeParams(Z_Construct_UClass_UFortToggledCursorModeParams, &UFortToggledCursorModeParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortToggledCursorModeParams"), false, nullptr, nullptr, nullptr);

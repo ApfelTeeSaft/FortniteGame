@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UInt32Binding, 1500773910u)
+// Original dynamic initializer: RVA 0x001B27A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInt32Binding> AutoInitializeUInt32Binding(TEXT("UInt32Binding"), sizeof(UInt32Binding), 1500773910u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEBAD0 (end 0x01BEBB72)
 // Original VA: 0x0000000141BEBAD0 | File offset: 0x01BEB0D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UInt32Binding, 1500773910u); reached from UInt32Binding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UInt32Binding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInt32Binding();
+// Original dynamic initializer: RVA 0x001B2F90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInt32Binding(Z_Construct_UClass_UInt32Binding, &UInt32Binding::StaticClass, TEXT("/Script/UMG"), TEXT("UInt32Binding"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UInterpTrackDirector()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInterpTrackDirector, 1486464957u)
+// Original dynamic initializer: RVA 0x00202640 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInterpTrackDirector> AutoInitializeUInterpTrackDirector(TEXT("UInterpTrackDirector"), sizeof(UInterpTrackDirector), 1486464957u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0242CB30 (end 0x0242CBD2)
 // Original VA: 0x000000014242CB30 | File offset: 0x0242C130
 // Recovery: confirmed (IMPLEMENT_CLASS(UInterpTrackDirector, 1486464957u); reached from UInterpTrackDirector::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UInterpTrackDirector::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInterpTrackDirector();
+// Original dynamic initializer: RVA 0x00203A70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInterpTrackDirector(Z_Construct_UClass_UInterpTrackDirector, &UInterpTrackDirector::StaticClass, TEXT("/Script/Engine"), TEXT("UInterpTrackDirector"), false, nullptr, nullptr, nullptr);

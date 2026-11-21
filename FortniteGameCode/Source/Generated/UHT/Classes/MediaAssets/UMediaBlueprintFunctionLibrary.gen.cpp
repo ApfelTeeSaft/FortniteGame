@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UMediaBlueprintFunctionLibrary, 1698505760u)
+// Original dynamic initializer: RVA 0x00225EF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMediaBlueprintFunctionLibrary> AutoInitializeUMediaBlueprintFunctionLibrary(TEXT("UMediaBlueprintFunctionLibrary"), sizeof(UMediaBlueprintFunctionLibrary), 1698505760u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025DDFD0 (end 0x025DE072)
 // Original VA: 0x00000001425DDFD0 | File offset: 0x025DD5D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMediaBlueprintFunctionLibrary, 1698505760u); reached from UMediaBlueprintFunctionLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UMediaBlueprintFunctionLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMediaBlueprintFunctionLibrary();
+// Original dynamic initializer: RVA 0x002262D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMediaBlueprintFunctionLibrary(Z_Construct_UClass_UMediaBlueprintFunctionLibrary, &UMediaBlueprintFunctionLibrary::StaticClass, TEXT("/Script/MediaAssets"), TEXT("UMediaBlueprintFunctionLibrary"), false, nullptr, nullptr, nullptr);

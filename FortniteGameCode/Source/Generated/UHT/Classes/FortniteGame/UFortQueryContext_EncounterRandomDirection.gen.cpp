@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortQueryContext_EncounterRandomDirection()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryContext_EncounterRandomDirection, 2483016493u)
+// Original dynamic initializer: RVA 0x0010E910 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryContext_EncounterRandomDirection> AutoInitializeUFortQueryContext_EncounterRandomDirection(TEXT("UFortQueryContext_EncounterRandomDirection"), sizeof(UFortQueryContext_EncounterRandomDirection), 2483016493u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01090710 (end 0x010907B2)
 // Original VA: 0x0000000141090710 | File offset: 0x0108FD10
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryContext_EncounterRandomDirection, 2483016493u); reached from UFortQueryContext_EncounterRandomDirection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortQueryContext_EncounterRandomDirection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryContext_EncounterRandomDirection();
+// Original dynamic initializer: RVA 0x0010F8A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryContext_EncounterRandomDirection(Z_Construct_UClass_UFortQueryContext_EncounterRandomDirection, &UFortQueryContext_EncounterRandomDirection::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryContext_EncounterRandomDirection"), false, nullptr, nullptr, nullptr);

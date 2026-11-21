@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UProxyLODMeshSimplificationSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UProxyLODMeshSimplificationSettings, 1963752469u)
+// Original dynamic initializer: RVA 0x00217430 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UProxyLODMeshSimplificationSettings> AutoInitializeUProxyLODMeshSimplificationSettings(TEXT("UProxyLODMeshSimplificationSettings"), sizeof(UProxyLODMeshSimplificationSettings), 1963752469u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C1290 (end 0x024C1332)
 // Original VA: 0x00000001424C1290 | File offset: 0x024C0890
 // Recovery: confirmed (IMPLEMENT_CLASS(UProxyLODMeshSimplificationSettings, 1963752469u); reached from UProxyLODMeshSimplificationSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UProxyLODMeshSimplificationSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UProxyLODMeshSimplificationSettings();
+// Original dynamic initializer: RVA 0x00218900
+static FCompiledInDefer Z_CompiledInDefer_UClass_UProxyLODMeshSimplificationSettings(Z_Construct_UClass_UProxyLODMeshSimplificationSettings, &UProxyLODMeshSimplificationSettings::StaticClass, TEXT("/Script/Engine"), TEXT("UProxyLODMeshSimplificationSettings"), false, nullptr, nullptr, nullptr);

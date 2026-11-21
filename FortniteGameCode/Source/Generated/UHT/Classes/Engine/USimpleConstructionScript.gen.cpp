@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USimpleConstructionScript()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USimpleConstructionScript, 3035208253u)
+// Original dynamic initializer: RVA 0x002198B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USimpleConstructionScript> AutoInitializeUSimpleConstructionScript(TEXT("USimpleConstructionScript"), sizeof(USimpleConstructionScript), 3035208253u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6800 (end 0x024C6897)
 // Original VA: 0x00000001424C6800 | File offset: 0x024C5E00
 // Recovery: confirmed (IMPLEMENT_CLASS(USimpleConstructionScript, 3035208253u); reached from USimpleConstructionScript::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USimpleConstructionScript::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USimpleConstructionScript();
+// Original dynamic initializer: RVA 0x00219F70
+static FCompiledInDefer Z_CompiledInDefer_UClass_USimpleConstructionScript(Z_Construct_UClass_USimpleConstructionScript, &USimpleConstructionScript::StaticClass, TEXT("/Script/Engine"), TEXT("USimpleConstructionScript"), false, nullptr, nullptr, nullptr);

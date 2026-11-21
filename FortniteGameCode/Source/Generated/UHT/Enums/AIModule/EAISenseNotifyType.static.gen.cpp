@@ -18,4 +18,5 @@
 		}
 		return Singleton;
 	}
+	// Original dynamic initializer: RVA 0x001B98B0
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EAISenseNotifyType(EAISenseNotifyType_StaticEnum, TEXT("/Script/AIModule"), TEXT("EAISenseNotifyType"), false, nullptr, nullptr);

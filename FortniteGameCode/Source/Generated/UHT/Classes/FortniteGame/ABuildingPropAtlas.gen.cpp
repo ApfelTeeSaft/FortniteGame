@@ -7,6 +7,9 @@
 void ABuildingPropAtlas::StaticRegisterNativesABuildingPropAtlas()
 {
 }
+// IMPLEMENT_CLASS(ABuildingPropAtlas, 1598448763u)
+// Original dynamic initializer: RVA 0x000DB010 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingPropAtlas> AutoInitializeABuildingPropAtlas(TEXT("ABuildingPropAtlas"), sizeof(ABuildingPropAtlas), 1598448763u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6AE80 (end 0x00F6AF22)
 // Original VA: 0x0000000140F6AE80 | File offset: 0x00F6A480
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingPropAtlas, 1598448763u); reached from ABuildingPropAtlas::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ABuildingPropAtlas::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingPropAtlas();
+// Original dynamic initializer: RVA 0x000DBD00
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingPropAtlas(Z_Construct_UClass_ABuildingPropAtlas, &ABuildingPropAtlas::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingPropAtlas"), false, nullptr, nullptr, nullptr);

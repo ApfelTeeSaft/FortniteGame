@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortGameplayAbility_RangedWeapon()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortGameplayAbility_RangedWeapon, 2077290680u)
+// Original dynamic initializer: RVA 0x000F66E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGameplayAbility_RangedWeapon> AutoInitializeUFortGameplayAbility_RangedWeapon(TEXT("UFortGameplayAbility_RangedWeapon"), sizeof(UFortGameplayAbility_RangedWeapon), 2077290680u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE64F0 (end 0x00FE6592)
 // Original VA: 0x0000000140FE64F0 | File offset: 0x00FE5AF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGameplayAbility_RangedWeapon, 2077290680u); reached from UFortGameplayAbility_RangedWeapon::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortGameplayAbility_RangedWeapon::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGameplayAbility_RangedWeapon();
+// Original dynamic initializer: RVA 0x000F73B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGameplayAbility_RangedWeapon(Z_Construct_UClass_UFortGameplayAbility_RangedWeapon, &UFortGameplayAbility_RangedWeapon::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortGameplayAbility_RangedWeapon"), false, nullptr, nullptr, nullptr);

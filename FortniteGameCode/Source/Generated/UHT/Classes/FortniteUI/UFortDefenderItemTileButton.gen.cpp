@@ -7,6 +7,9 @@
 void UFortDefenderItemTileButton::StaticRegisterNativesUFortDefenderItemTileButton()
 {
 }
+// IMPLEMENT_CLASS(UFortDefenderItemTileButton, 3562094895u)
+// Original dynamic initializer: RVA 0x00242770 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDefenderItemTileButton> AutoInitializeUFortDefenderItemTileButton(TEXT("UFortDefenderItemTileButton"), sizeof(UFortDefenderItemTileButton), 3562094895u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289A050 (end 0x0289A0F2)
 // Original VA: 0x000000014289A050 | File offset: 0x02899650
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDefenderItemTileButton, 3562094895u); reached from UFortDefenderItemTileButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortDefenderItemTileButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDefenderItemTileButton();
+// Original dynamic initializer: RVA 0x002445E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDefenderItemTileButton(Z_Construct_UClass_UFortDefenderItemTileButton, &UFortDefenderItemTileButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortDefenderItemTileButton"), false, nullptr, nullptr, nullptr);

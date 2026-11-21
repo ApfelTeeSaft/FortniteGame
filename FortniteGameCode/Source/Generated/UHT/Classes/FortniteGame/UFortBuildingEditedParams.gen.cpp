@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortBuildingEditedParams, 3775458930u)
+// Original dynamic initializer: RVA 0x0011FFE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBuildingEditedParams> AutoInitializeUFortBuildingEditedParams(TEXT("UFortBuildingEditedParams"), sizeof(UFortBuildingEditedParams), 3775458930u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E6EA0 (end 0x010E6F42)
 // Original VA: 0x00000001410E6EA0 | File offset: 0x010E64A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBuildingEditedParams, 3775458930u); reached from UFortBuildingEditedParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortBuildingEditedParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBuildingEditedParams();
+// Original dynamic initializer: RVA 0x00121B30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBuildingEditedParams(Z_Construct_UClass_UFortBuildingEditedParams, &UFortBuildingEditedParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBuildingEditedParams"), false, nullptr, nullptr, nullptr);

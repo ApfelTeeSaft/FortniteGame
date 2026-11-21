@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortMissionForceSuccessParams, 2521308603u)
+// Original dynamic initializer: RVA 0x00120100 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMissionForceSuccessParams> AutoInitializeUFortMissionForceSuccessParams(TEXT("UFortMissionForceSuccessParams"), sizeof(UFortMissionForceSuccessParams), 2521308603u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E74C0 (end 0x010E7562)
 // Original VA: 0x00000001410E74C0 | File offset: 0x010E6AC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMissionForceSuccessParams, 2521308603u); reached from UFortMissionForceSuccessParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortMissionForceSuccessParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMissionForceSuccessParams();
+// Original dynamic initializer: RVA 0x00121D70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMissionForceSuccessParams(Z_Construct_UClass_UFortMissionForceSuccessParams, &UFortMissionForceSuccessParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMissionForceSuccessParams"), false, nullptr, nullptr, nullptr);

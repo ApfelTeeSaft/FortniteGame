@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortBTDecorator_GameplayAbility_DoesTargetHaveProhib
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags, 3864443233u)
+// Original dynamic initializer: RVA 0x000E90F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags> AutoInitializeUFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags(TEXT("UFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags"), sizeof(UFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags), 3864443233u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAAE70 (end 0x00FAAF12)
 // Original VA: 0x0000000140FAAE70 | File offset: 0x00FAA470
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags, 3864443233u); reached from UFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags::GetPrivat
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags();
+// Original dynamic initializer: RVA 0x000E9EC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags(Z_Construct_UClass_UFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags, &UFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTDecorator_GameplayAbility_DoesTargetHaveProhibitedTags"), false, nullptr, nullptr, nullptr);

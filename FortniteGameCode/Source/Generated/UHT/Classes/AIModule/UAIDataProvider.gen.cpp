@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAIDataProvider()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAIDataProvider, 53485516u)
+// Original dynamic initializer: RVA 0x001B8EF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAIDataProvider> AutoInitializeUAIDataProvider(TEXT("UAIDataProvider"), sizeof(UAIDataProvider), 53485516u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D19860 (end 0x01D198F7)
 // Original VA: 0x0000000141D19860 | File offset: 0x01D18E60
 // Recovery: confirmed (IMPLEMENT_CLASS(UAIDataProvider, 53485516u); reached from UAIDataProvider::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAIDataProvider::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAIDataProvider();
+// Original dynamic initializer: RVA 0x001B9E70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAIDataProvider(Z_Construct_UClass_UAIDataProvider, &UAIDataProvider::StaticClass, TEXT("/Script/AIModule"), TEXT("UAIDataProvider"), false, nullptr, nullptr, nullptr);

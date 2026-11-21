@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_AbandonSession, 580735804u)
+// Original dynamic initializer: RVA 0x000E6910 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_AbandonSession> AutoInitializeUFortAsyncAction_AbandonSession(TEXT("UFortAsyncAction_AbandonSession"), sizeof(UFortAsyncAction_AbandonSession), 580735804u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9D180 (end 0x00F9D222)
 // Original VA: 0x0000000140F9D180 | File offset: 0x00F9C780
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_AbandonSession, 580735804u); reached from UFortAsyncAction_AbandonSession::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_AbandonSession::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_AbandonSession();
+// Original dynamic initializer: RVA 0x000E7C50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_AbandonSession(Z_Construct_UClass_UFortAsyncAction_AbandonSession, &UFortAsyncAction_AbandonSession::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAsyncAction_AbandonSession"), false, nullptr, nullptr, nullptr);

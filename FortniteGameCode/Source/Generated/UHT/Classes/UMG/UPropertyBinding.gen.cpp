@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UPropertyBinding()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPropertyBinding, 2575617341u)
+// Original dynamic initializer: RVA 0x001B2A20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPropertyBinding> AutoInitializeUPropertyBinding(TEXT("UPropertyBinding"), sizeof(UPropertyBinding), 2575617341u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEC890 (end 0x01BEC927)
 // Original VA: 0x0000000141BEC890 | File offset: 0x01BEBE90
 // Recovery: confirmed (IMPLEMENT_CLASS(UPropertyBinding, 2575617341u); reached from UPropertyBinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UPropertyBinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPropertyBinding();
+// Original dynamic initializer: RVA 0x001B3490
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPropertyBinding(Z_Construct_UClass_UPropertyBinding, &UPropertyBinding::StaticClass, TEXT("/Script/UMG"), TEXT("UPropertyBinding"), false, nullptr, nullptr, nullptr);

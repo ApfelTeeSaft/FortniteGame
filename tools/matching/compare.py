@@ -45,7 +45,7 @@ EXTRA_MANIFESTS = "functions-*.json"
 SYMBOLS = REPO_ROOT / "analysis" / "symbols.json"
 # Generated symbol evidence: {symbol: {rva, evidence}} files written by analysis/codegen tools.
 # Literal elimination needs every copy enumerated; content with this many copies is skipped.
-ELIMINATION_LIMIT = 64
+ELIMINATION_LIMIT = 4096
 GENERATED_SYMBOLS = ("uht-creator-symbols.json", "uht-struct-symbols.json", "uht-enum-symbols.json",
                      "uht-class-symbols.json", "uht-package-symbols.json")
 SOLUTION = REPO_ROOT / "FortniteGameCode" / "FortniteGameCode.sln"
@@ -101,6 +101,11 @@ class Resolver:
         self.by_addr: dict = {}
         self._literal_copies: dict[bytes, list[int]] = {}
         self._groups: dict = {}
+        # Per pass (reset with the observations): literal copies nobody observes, and the
+        # addresses each entry observed.
+        self._unobserved: dict = {}
+        self._literal_copy_sets: dict = {}
+        self.entry_addrs: dict = {}
         self.entry_names: dict[int, str] = {}
 
     @staticmethod
@@ -156,18 +161,28 @@ class Resolver:
                 hits = self._literal_copies[lit] = symbols_auto.literal_hits(
                     lit, self.hay, self.hay_rva, limit=ELIMINATION_LIMIT)
             if 1 < len(hits) < ELIMINATION_LIMIT:
-                free, users = [], []
-                for h in hits:
-                    others = [k for k, ents in self.by_addr.get(h, {}).items()
-                              if k != mykey and ents - {exclude}]
-                    if others:
-                        users.extend(self.entry_names.get(i, str(i)) for k in others
-                                     for i in sorted(self.by_addr[h][k] - {exclude})[:1])
-                    else:
-                        free.append(h)
+                # A copy is free for this symbol unless a different symbol is observed there by an
+                # entry other than the one under test. Copies nobody observes are free for every
+                # query and are cached per pass; only copies observed under this symbol's key or by
+                # the entry under test need checking per query.
+                unobserved = self._unobserved.get(lit)
+                if unobserved is None:
+                    unobserved = self._unobserved[lit] = [h for h in hits if not self.by_addr.get(h)]
+                free = list(unobserved)
+                if len(free) <= 1:   # with two or more unobserved copies elimination cannot conclude
+                    hitset = self._literal_copy_sets.setdefault(lit, set(hits))
+                    check = set(self.observations.get(mykey, {})) | self.entry_addrs.get(exclude, set())
+                    for h in sorted(check & hitset):
+                        if h in unobserved:
+                            continue
+                        if not any(k != mykey and ents - {exclude} for k, ents in self.by_addr.get(h, {}).items()):
+                            free.append(h)
                 if len(free) == 1:
+                    users = [self.entry_names.get(i, str(i)) for h in hits[:4] if h != free[0]
+                             for k, ents in self.by_addr.get(h, {}).items() if k != mykey
+                             for i in sorted(ents - {exclude})[:1]]
                     return [(free[0], f"literal elimination: {len(hits)} copies, the others used by "
-                                      + ", ".join(users[:2]) + (f" and {len(users) - 2} more" if len(users) > 2 else ""))]
+                                      + ", ".join(users[:2]) + (f" and {len(hits) - 3} more" if len(hits) > 3 else ""))]
         # Section-relative: neighbours in the object's data layout (same section name, sections
         # in object order), observed by other functions. Local first: the nearest observed
         # neighbour on each side gives that side's prediction. If the two sides agree, or only
@@ -261,6 +276,7 @@ class Resolver:
             key = self.key(obj, objpath, r.symbol)
             self.observations.setdefault(key, {}).setdefault(target, set()).add(idx)
             self.by_addr.setdefault(target, {}).setdefault(key, set()).add(idx)
+            self.entry_addrs.setdefault(idx, set()).add(target)
 
 
 def local_prediction(mine: int, neighbours: list[tuple[int, int, str]]) -> tuple[int, list[str]] | None:
@@ -639,6 +655,8 @@ def main() -> int:
         before = snapshot()
         resolver.observations = {}
         resolver.by_addr = {}
+        resolver.entry_addrs = {}
+        resolver._unobserved = {}
         for i, res in results.items():
             for obj, objpath, relocs, cand_raw, ref, start in res.pop("_observe", []):
                 resolver.observe(i, obj, objpath, relocs, cand_raw, ref, start, img.image_base)

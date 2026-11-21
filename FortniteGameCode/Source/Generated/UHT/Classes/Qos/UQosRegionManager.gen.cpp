@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UQosRegionManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UQosRegionManager, 1142496164u)
+// Original dynamic initializer: RVA 0x000A79A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UQosRegionManager> AutoInitializeUQosRegionManager(TEXT("UQosRegionManager"), sizeof(UQosRegionManager), 1142496164u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005A1C30 (end 0x005A1CC7)
 // Original VA: 0x00000001405A1C30 | File offset: 0x005A1230
 // Recovery: confirmed (IMPLEMENT_CLASS(UQosRegionManager, 1142496164u); reached from UQosRegionManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UQosRegionManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UQosRegionManager();
+// Original dynamic initializer: RVA 0x000A7E70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UQosRegionManager(Z_Construct_UClass_UQosRegionManager, &UQosRegionManager::StaticClass, TEXT("/Script/Qos"), TEXT("UQosRegionManager"), false, nullptr, nullptr, nullptr);

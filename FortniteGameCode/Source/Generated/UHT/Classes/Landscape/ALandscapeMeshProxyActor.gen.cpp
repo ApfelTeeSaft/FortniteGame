@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ALandscapeMeshProxyActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ALandscapeMeshProxyActor, 1642285840u)
+// Original dynamic initializer: RVA 0x001A2AD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALandscapeMeshProxyActor> AutoInitializeALandscapeMeshProxyActor(TEXT("ALandscapeMeshProxyActor"), sizeof(ALandscapeMeshProxyActor), 1642285840u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A738F0 (end 0x01A73992)
 // Original VA: 0x0000000141A738F0 | File offset: 0x01A72EF0
 // Recovery: confirmed (IMPLEMENT_CLASS(ALandscapeMeshProxyActor, 1642285840u); reached from ALandscapeMeshProxyActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ALandscapeMeshProxyActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALandscapeMeshProxyActor();
+// Original dynamic initializer: RVA 0x001A3EA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALandscapeMeshProxyActor(Z_Construct_UClass_ALandscapeMeshProxyActor, &ALandscapeMeshProxyActor::StaticClass, TEXT("/Script/Landscape"), TEXT("ALandscapeMeshProxyActor"), false, nullptr, nullptr, nullptr);

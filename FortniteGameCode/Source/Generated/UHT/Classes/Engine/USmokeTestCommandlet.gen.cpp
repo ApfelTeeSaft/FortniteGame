@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_USmokeTestCommandlet()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USmokeTestCommandlet, 3251692436u)
+// Original dynamic initializer: RVA 0x0021AA10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USmokeTestCommandlet> AutoInitializeUSmokeTestCommandlet(TEXT("USmokeTestCommandlet"), sizeof(USmokeTestCommandlet), 3251692436u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D38B0 (end 0x024D3952)
 // Original VA: 0x00000001424D38B0 | File offset: 0x024D2EB0
 // Recovery: confirmed (IMPLEMENT_CLASS(USmokeTestCommandlet, 3251692436u); reached from USmokeTestCommandlet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* USmokeTestCommandlet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USmokeTestCommandlet();
+// Original dynamic initializer: RVA 0x0021C330
+static FCompiledInDefer Z_CompiledInDefer_UClass_USmokeTestCommandlet(Z_Construct_UClass_USmokeTestCommandlet, &USmokeTestCommandlet::StaticClass, TEXT("/Script/Engine"), TEXT("USmokeTestCommandlet"), false, nullptr, nullptr, nullptr);

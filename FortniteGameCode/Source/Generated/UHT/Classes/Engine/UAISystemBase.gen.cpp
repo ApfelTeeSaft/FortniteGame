@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAISystemBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAISystemBase, 2570323108u)
+// Original dynamic initializer: RVA 0x001EBF60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAISystemBase> AutoInitializeUAISystemBase(TEXT("UAISystemBase"), sizeof(UAISystemBase), 2570323108u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C5E30 (end 0x023C5EC7)
 // Original VA: 0x00000001423C5E30 | File offset: 0x023C5430
 // Recovery: confirmed (IMPLEMENT_CLASS(UAISystemBase, 2570323108u); reached from UAISystemBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAISystemBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAISystemBase();
+// Original dynamic initializer: RVA 0x001ED900
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAISystemBase(Z_Construct_UClass_UAISystemBase, &UAISystemBase::StaticClass, TEXT("/Script/Engine"), TEXT("UAISystemBase"), false, nullptr, nullptr, nullptr);

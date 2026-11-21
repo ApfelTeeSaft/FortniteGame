@@ -74,7 +74,7 @@ same import, and the manifest records which.
     apart from a wide suffix, so both count; over-counting only turns a unique result into
     an ambiguous one;
   - **literal elimination (leave-one-out):** without `/GF` each use of a literal has its own
-    copy. All copies of the content are enumerated (fewer than 64). If every copy but one is
+    copy. All copies of the content are enumerated (fewer than 4,096). If every copy but one is
     the observed target of a *different* symbol, in *other* relocation-equivalent-or-better
     functions, the remaining copy is this symbol's;
   - an already-exact function, iterated to a fixpoint;
@@ -507,6 +507,37 @@ unmodelled items: creators of function tables not attributed to a class, and the
 intrinsic classes. One enum registration initializer is `partial`. Its name literal shares a
 copy with another use in this build, so literal elimination predicted the wrong copy, and
 the byte comparison reports it.
+
+**Registration initializers.** Each class fragment also holds `IMPLEMENT_CLASS`'s
+`TClassCompiledInDefer<C> AutoInitialize<C>` and UHT's `FCompiledInDefer` object, as the
+initializer table lists them. Their initializers compile to the reference shapes:
+- the 58-byte `FCompiledInDefer` one, in the denominator;
+- the 31-byte leaf `AutoInitialize` one, outside it.
+
+The `AutoInitialize` object is statically initialized in `.data`. Its initializer only
+tail-calls `UClassCompiledInDefer`.
+
+Every registration initializer (class, struct, enum) passes `TEXT("/Script/<Package>")`, one
+copy per use. Every `GetPrivateStaticClass` shares one more, pooled through the inline
+`StaticPackage()`. For 67 of 86 packages, the copies number exactly the registration objects
+plus that pooled copy. Once every registrar of a package is reconstructed, elimination
+assigns each its copy. Enum registrars are therefore taken from the initializer table for
+all 1,094 enums, whatever form their `StaticEnum` takes; a missing one blocked a whole
+package.
+
+Results:
+- class registrars: 923 of 3,283 exact;
+- struct registrars: 1,253 of 2,110;
+- enum registrars: 248 of 1,094;
+- class auto-initializers (outside the denominator): 1,248 of 3,283.
+
+What remains:
+- In Engine (7 extra copies), CoreUObject (4), MovieScene and others, hand-written code uses
+  the package-name literal too.
+- A class registrar also needs `&C::StaticClass`. That address resolves only where the thunk
+  matches or a subclass's `GetPrivateStaticClass` refers to it.
+- `AutoInitialize` objects are not predicted: MSVC emits these vtable-bearing `.data` objects
+  out of source order.
 
 The 3,283 `GetPrivateStaticClass` bodies are relocation-equivalent. Fields not yet resolved
 include `InternalConstructor<C>`, `InternalVTableHelperCtorCaller<C>`, the package and

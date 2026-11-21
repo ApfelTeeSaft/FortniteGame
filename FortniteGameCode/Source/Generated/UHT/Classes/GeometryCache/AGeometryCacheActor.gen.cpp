@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AGeometryCacheActor, 3630377527u)
+// Original dynamic initializer: RVA 0x001C0480 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AGeometryCacheActor> AutoInitializeAGeometryCacheActor(TEXT("AGeometryCacheActor"), sizeof(AGeometryCacheActor), 3630377527u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3F790 (end 0x01D3F832)
 // Original VA: 0x0000000141D3F790 | File offset: 0x01D3ED90
 // Recovery: confirmed (IMPLEMENT_CLASS(AGeometryCacheActor, 3630377527u); reached from AGeometryCacheActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AGeometryCacheActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AGeometryCacheActor();
+// Original dynamic initializer: RVA 0x001C07B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AGeometryCacheActor(Z_Construct_UClass_AGeometryCacheActor, &AGeometryCacheActor::StaticClass, TEXT("/Script/GeometryCache"), TEXT("AGeometryCacheActor"), false, nullptr, nullptr, nullptr);

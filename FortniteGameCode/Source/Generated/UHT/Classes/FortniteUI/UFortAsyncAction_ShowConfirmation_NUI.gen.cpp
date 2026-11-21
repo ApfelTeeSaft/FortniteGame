@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_ShowConfirmation_NUI, 1488246408u)
+// Original dynamic initializer: RVA 0x0023E240 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_ShowConfirmation_NUI> AutoInitializeUFortAsyncAction_ShowConfirmation_NUI(TEXT("UFortAsyncAction_ShowConfirmation_NUI"), sizeof(UFortAsyncAction_ShowConfirmation_NUI), 1488246408u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288B630 (end 0x0288B6D2)
 // Original VA: 0x000000014288B630 | File offset: 0x0288AC30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_ShowConfirmation_NUI, 1488246408u); reached from UFortAsyncAction_ShowConfirmation_NUI::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_ShowConfirmation_NUI::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI();
+// Original dynamic initializer: RVA 0x0023FDA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_ShowConfirmation_NUI(Z_Construct_UClass_UFortAsyncAction_ShowConfirmation_NUI, &UFortAsyncAction_ShowConfirmation_NUI::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAsyncAction_ShowConfirmation_NUI"), false, nullptr, nullptr, nullptr);

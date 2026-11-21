@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDeathCameraMode()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDeathCameraMode, 3119905431u)
+// Original dynamic initializer: RVA 0x000EE630 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDeathCameraMode> AutoInitializeUFortDeathCameraMode(TEXT("UFortDeathCameraMode"), sizeof(UFortDeathCameraMode), 3119905431u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCA750 (end 0x00FCA7F2)
 // Original VA: 0x0000000140FCA750 | File offset: 0x00FC9D50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDeathCameraMode, 3119905431u); reached from UFortDeathCameraMode::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDeathCameraMode::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDeathCameraMode();
+// Original dynamic initializer: RVA 0x000EF9C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDeathCameraMode(Z_Construct_UClass_UFortDeathCameraMode, &UFortDeathCameraMode::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDeathCameraMode"), false, nullptr, nullptr, nullptr);

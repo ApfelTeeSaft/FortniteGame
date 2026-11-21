@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UTextureRenderTarget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTextureRenderTarget, 2890720046u)
+// Original dynamic initializer: RVA 0x00220060 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTextureRenderTarget> AutoInitializeUTextureRenderTarget(TEXT("UTextureRenderTarget"), sizeof(UTextureRenderTarget), 2890720046u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EB4F0 (end 0x024EB592)
 // Original VA: 0x00000001424EB4F0 | File offset: 0x024EAAF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UTextureRenderTarget, 2890720046u); reached from UTextureRenderTarget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UTextureRenderTarget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTextureRenderTarget();
+// Original dynamic initializer: RVA 0x00221580
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTextureRenderTarget(Z_Construct_UClass_UTextureRenderTarget, &UTextureRenderTarget::StaticClass, TEXT("/Script/Engine"), TEXT("UTextureRenderTarget"), false, nullptr, nullptr, nullptr);

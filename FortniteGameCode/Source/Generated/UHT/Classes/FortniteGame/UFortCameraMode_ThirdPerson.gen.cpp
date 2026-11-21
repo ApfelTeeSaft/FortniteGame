@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortCameraMode_ThirdPerson()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCameraMode_ThirdPerson, 1341890182u)
+// Original dynamic initializer: RVA 0x000E94D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCameraMode_ThirdPerson> AutoInitializeUFortCameraMode_ThirdPerson(TEXT("UFortCameraMode_ThirdPerson"), sizeof(UFortCameraMode_ThirdPerson), 1341890182u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAC390 (end 0x00FAC432)
 // Original VA: 0x0000000140FAC390 | File offset: 0x00FAB990
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCameraMode_ThirdPerson, 1341890182u); reached from UFortCameraMode_ThirdPerson::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortCameraMode_ThirdPerson::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCameraMode_ThirdPerson();
+// Original dynamic initializer: RVA 0x000EA680
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCameraMode_ThirdPerson(Z_Construct_UClass_UFortCameraMode_ThirdPerson, &UFortCameraMode_ThirdPerson::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCameraMode_ThirdPerson"), false, nullptr, nullptr, nullptr);

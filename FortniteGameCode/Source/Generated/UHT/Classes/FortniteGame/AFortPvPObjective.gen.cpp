@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortPvPObjective()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortPvPObjective, 3231489649u)
+// Original dynamic initializer: RVA 0x0010E770 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPvPObjective> AutoInitializeAFortPvPObjective(TEXT("AFortPvPObjective"), sizeof(AFortPvPObjective), 3231489649u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108FE20 (end 0x0108FEC2)
 // Original VA: 0x000000014108FE20 | File offset: 0x0108F420
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPvPObjective, 3231489649u); reached from AFortPvPObjective::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortPvPObjective::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPvPObjective();
+// Original dynamic initializer: RVA 0x0010F560
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPvPObjective(Z_Construct_UClass_AFortPvPObjective, &AFortPvPObjective::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPvPObjective"), false, nullptr, nullptr, nullptr);

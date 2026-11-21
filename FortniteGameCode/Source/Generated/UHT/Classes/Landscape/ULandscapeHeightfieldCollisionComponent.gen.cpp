@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ULandscapeHeightfieldCollisionComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULandscapeHeightfieldCollisionComponent, 1525313669u)
+// Original dynamic initializer: RVA 0x001A2BB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULandscapeHeightfieldCollisionComponent> AutoInitializeULandscapeHeightfieldCollisionComponent(TEXT("ULandscapeHeightfieldCollisionComponent"), sizeof(ULandscapeHeightfieldCollisionComponent), 1525313669u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A73DB0 (end 0x01A73E52)
 // Original VA: 0x0000000141A73DB0 | File offset: 0x01A733B0
 // Recovery: confirmed (IMPLEMENT_CLASS(ULandscapeHeightfieldCollisionComponent, 1525313669u); reached from ULandscapeHeightfieldCollisionComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ULandscapeHeightfieldCollisionComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULandscapeHeightfieldCollisionComponent();
+// Original dynamic initializer: RVA 0x001A4060
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULandscapeHeightfieldCollisionComponent(Z_Construct_UClass_ULandscapeHeightfieldCollisionComponent, &ULandscapeHeightfieldCollisionComponent::StaticClass, TEXT("/Script/Landscape"), TEXT("ULandscapeHeightfieldCollisionComponent"), false, nullptr, nullptr, nullptr);

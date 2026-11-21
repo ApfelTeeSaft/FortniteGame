@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBTService_DefaultFocus()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBTService_DefaultFocus, 449243583u)
+// Original dynamic initializer: RVA 0x001BC280 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTService_DefaultFocus> AutoInitializeUBTService_DefaultFocus(TEXT("UBTService_DefaultFocus"), sizeof(UBTService_DefaultFocus), 449243583u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D271B0 (end 0x01D27252)
 // Original VA: 0x0000000141D271B0 | File offset: 0x01D267B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTService_DefaultFocus, 449243583u); reached from UBTService_DefaultFocus::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBTService_DefaultFocus::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTService_DefaultFocus();
+// Original dynamic initializer: RVA 0x001BCE60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTService_DefaultFocus(Z_Construct_UClass_UBTService_DefaultFocus, &UBTService_DefaultFocus::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTService_DefaultFocus"), false, nullptr, nullptr, nullptr);

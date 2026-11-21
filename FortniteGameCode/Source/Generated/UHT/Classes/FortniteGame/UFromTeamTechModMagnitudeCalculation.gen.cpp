@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFromTeamTechModMagnitudeCalculation()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFromTeamTechModMagnitudeCalculation, 1644056413u)
+// Original dynamic initializer: RVA 0x0011EA00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFromTeamTechModMagnitudeCalculation> AutoInitializeUFromTeamTechModMagnitudeCalculation(TEXT("UFromTeamTechModMagnitudeCalculation"), sizeof(UFromTeamTechModMagnitudeCalculation), 1644056413u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E1BE0 (end 0x010E1C82)
 // Original VA: 0x00000001410E1BE0 | File offset: 0x010E11E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFromTeamTechModMagnitudeCalculation, 1644056413u); reached from UFromTeamTechModMagnitudeCalculation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFromTeamTechModMagnitudeCalculation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFromTeamTechModMagnitudeCalculation();
+// Original dynamic initializer: RVA 0x0011FD80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFromTeamTechModMagnitudeCalculation(Z_Construct_UClass_UFromTeamTechModMagnitudeCalculation, &UFromTeamTechModMagnitudeCalculation::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFromTeamTechModMagnitudeCalculation"), false, nullptr, nullptr, nullptr);

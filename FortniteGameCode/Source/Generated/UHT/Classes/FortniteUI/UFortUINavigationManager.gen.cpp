@@ -7,6 +7,9 @@
 void UFortUINavigationManager::StaticRegisterNativesUFortUINavigationManager()
 {
 }
+// IMPLEMENT_CLASS(UFortUINavigationManager, 2612846695u)
+// Original dynamic initializer: RVA 0x00262900 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUINavigationManager> AutoInitializeUFortUINavigationManager(TEXT("UFortUINavigationManager"), sizeof(UFortUINavigationManager), 2612846695u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02910280 (end 0x02910322)
 // Original VA: 0x0000000142910280 | File offset: 0x0290F880
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUINavigationManager, 2612846695u); reached from UFortUINavigationManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortUINavigationManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUINavigationManager();
+// Original dynamic initializer: RVA 0x00265040
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUINavigationManager(Z_Construct_UClass_UFortUINavigationManager, &UFortUINavigationManager::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortUINavigationManager"), false, nullptr, nullptr, nullptr);

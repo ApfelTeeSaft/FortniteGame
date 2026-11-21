@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionGIReplace()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionGIReplace, 1059552917u)
+// Original dynamic initializer: RVA 0x00207580 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionGIReplace> AutoInitializeUMaterialExpressionGIReplace(TEXT("UMaterialExpressionGIReplace"), sizeof(UMaterialExpressionGIReplace), 1059552917u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247C600 (end 0x0247C6A2)
 // Original VA: 0x000000014247C600 | File offset: 0x0247BC00
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionGIReplace, 1059552917u); reached from UMaterialExpressionGIReplace::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionGIReplace::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionGIReplace();
+// Original dynamic initializer: RVA 0x00208800
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionGIReplace(Z_Construct_UClass_UMaterialExpressionGIReplace, &UMaterialExpressionGIReplace::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionGIReplace"), false, nullptr, nullptr, nullptr);

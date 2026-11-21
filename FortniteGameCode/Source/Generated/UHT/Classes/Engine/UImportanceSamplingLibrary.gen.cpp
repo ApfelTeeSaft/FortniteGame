@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UImportanceSamplingLibrary, 1556478320u)
+// Original dynamic initializer: RVA 0x00200B60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UImportanceSamplingLibrary> AutoInitializeUImportanceSamplingLibrary(TEXT("UImportanceSamplingLibrary"), sizeof(UImportanceSamplingLibrary), 1556478320u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02425C90 (end 0x02425D32)
 // Original VA: 0x0000000142425C90 | File offset: 0x02425290
 // Recovery: confirmed (IMPLEMENT_CLASS(UImportanceSamplingLibrary, 1556478320u); reached from UImportanceSamplingLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UImportanceSamplingLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UImportanceSamplingLibrary();
+// Original dynamic initializer: RVA 0x00201E40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UImportanceSamplingLibrary(Z_Construct_UClass_UImportanceSamplingLibrary, &UImportanceSamplingLibrary::StaticClass, TEXT("/Script/Engine"), TEXT("UImportanceSamplingLibrary"), false, nullptr, nullptr, nullptr);

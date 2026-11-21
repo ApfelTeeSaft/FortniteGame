@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UPlatformMediaSource()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPlatformMediaSource, 383861955u)
+// Original dynamic initializer: RVA 0x00225FB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPlatformMediaSource> AutoInitializeUPlatformMediaSource(TEXT("UPlatformMediaSource"), sizeof(UPlatformMediaSource), 383861955u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE3C0 (end 0x025DE462)
 // Original VA: 0x00000001425DE3C0 | File offset: 0x025DD9C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UPlatformMediaSource, 383861955u); reached from UPlatformMediaSource::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UPlatformMediaSource::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPlatformMediaSource();
+// Original dynamic initializer: RVA 0x00226450
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPlatformMediaSource(Z_Construct_UClass_UPlatformMediaSource, &UPlatformMediaSource::StaticClass, TEXT("/Script/MediaAssets"), TEXT("UPlatformMediaSource"), false, nullptr, nullptr, nullptr);

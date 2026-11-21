@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAmbisonicsSubmixSettingsBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAmbisonicsSubmixSettingsBase, 2956864976u)
+// Original dynamic initializer: RVA 0x00200B40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAmbisonicsSubmixSettingsBase> AutoInitializeUAmbisonicsSubmixSettingsBase(TEXT("UAmbisonicsSubmixSettingsBase"), sizeof(UAmbisonicsSubmixSettingsBase), 2956864976u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02425BF0 (end 0x02425C87)
 // Original VA: 0x0000000142425BF0 | File offset: 0x024251F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAmbisonicsSubmixSettingsBase, 2956864976u); reached from UAmbisonicsSubmixSettingsBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAmbisonicsSubmixSettingsBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAmbisonicsSubmixSettingsBase();
+// Original dynamic initializer: RVA 0x00201E00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAmbisonicsSubmixSettingsBase(Z_Construct_UClass_UAmbisonicsSubmixSettingsBase, &UAmbisonicsSubmixSettingsBase::StaticClass, TEXT("/Script/Engine"), TEXT("UAmbisonicsSubmixSettingsBase"), false, nullptr, nullptr, nullptr);

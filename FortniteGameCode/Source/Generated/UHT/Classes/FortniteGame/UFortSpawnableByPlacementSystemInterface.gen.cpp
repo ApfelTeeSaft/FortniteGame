@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSpawnableByPlacementSystemInterface, 3938877270u)
+// Original dynamic initializer: RVA 0x00112CD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSpawnableByPlacementSystemInterface> AutoInitializeUFortSpawnableByPlacementSystemInterface(TEXT("UFortSpawnableByPlacementSystemInterface"), sizeof(UFortSpawnableByPlacementSystemInterface), 3938877270u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A3DA0 (end 0x010A3E42)
 // Original VA: 0x00000001410A3DA0 | File offset: 0x010A33A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSpawnableByPlacementSystemInterface, 3938877270u); reached from UFortSpawnableByPlacementSystemInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSpawnableByPlacementSystemInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSpawnableByPlacementSystemInterface();
+// Original dynamic initializer: RVA 0x001144F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSpawnableByPlacementSystemInterface(Z_Construct_UClass_UFortSpawnableByPlacementSystemInterface, &UFortSpawnableByPlacementSystemInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortSpawnableByPlacementSystemInterface"), false, nullptr, nullptr, nullptr);

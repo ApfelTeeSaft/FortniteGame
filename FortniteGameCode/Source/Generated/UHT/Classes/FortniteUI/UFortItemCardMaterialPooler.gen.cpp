@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortItemCardMaterialPooler()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortItemCardMaterialPooler, 1858433610u)
+// Original dynamic initializer: RVA 0x0024CC80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemCardMaterialPooler> AutoInitializeUFortItemCardMaterialPooler(TEXT("UFortItemCardMaterialPooler"), sizeof(UFortItemCardMaterialPooler), 1858433610u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C7A80 (end 0x028C7B17)
 // Original VA: 0x00000001428C7A80 | File offset: 0x028C7080
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemCardMaterialPooler, 1858433610u); reached from UFortItemCardMaterialPooler::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortItemCardMaterialPooler::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemCardMaterialPooler();
+// Original dynamic initializer: RVA 0x0024EB10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemCardMaterialPooler(Z_Construct_UClass_UFortItemCardMaterialPooler, &UFortItemCardMaterialPooler::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemCardMaterialPooler"), false, nullptr, nullptr, nullptr);

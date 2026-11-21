@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionLandscapeLayerSwitch()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionLandscapeLayerSwitch, 2890292099u)
+// Original dynamic initializer: RVA 0x001A2D70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionLandscapeLayerSwitch> AutoInitializeUMaterialExpressionLandscapeLayerSwitch(TEXT("UMaterialExpressionLandscapeLayerSwitch"), sizeof(UMaterialExpressionLandscapeLayerSwitch), 2890292099u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A74720 (end 0x01A747C2)
 // Original VA: 0x0000000141A74720 | File offset: 0x01A73D20
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionLandscapeLayerSwitch, 2890292099u); reached from UMaterialExpressionLandscapeLayerSwitch::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionLandscapeLayerSwitch::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionLandscapeLayerSwitch();
+// Original dynamic initializer: RVA 0x001A43E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionLandscapeLayerSwitch(Z_Construct_UClass_UMaterialExpressionLandscapeLayerSwitch, &UMaterialExpressionLandscapeLayerSwitch::StaticClass, TEXT("/Script/Landscape"), TEXT("UMaterialExpressionLandscapeLayerSwitch"), false, nullptr, nullptr, nullptr);

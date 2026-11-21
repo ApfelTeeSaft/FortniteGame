@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionPerInstanceFadeAmount()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionPerInstanceFadeAmount, 609591053u)
+// Original dynamic initializer: RVA 0x00208EE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionPerInstanceFadeAmount> AutoInitializeUMaterialExpressionPerInstanceFadeAmount(TEXT("UMaterialExpressionPerInstanceFadeAmount"), sizeof(UMaterialExpressionPerInstanceFadeAmount), 609591053u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247FE10 (end 0x0247FEB2)
 // Original VA: 0x000000014247FE10 | File offset: 0x0247F410
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionPerInstanceFadeAmount, 609591053u); reached from UMaterialExpressionPerInstanceFadeAmount::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMaterialExpressionPerInstanceFadeAmount::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionPerInstanceFadeAmount();
+// Original dynamic initializer: RVA 0x00209E30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionPerInstanceFadeAmount(Z_Construct_UClass_UMaterialExpressionPerInstanceFadeAmount, &UMaterialExpressionPerInstanceFadeAmount::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionPerInstanceFadeAmount"), false, nullptr, nullptr, nullptr);

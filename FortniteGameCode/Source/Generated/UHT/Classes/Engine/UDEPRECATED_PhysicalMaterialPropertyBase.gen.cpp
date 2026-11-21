@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UDEPRECATED_PhysicalMaterialPropertyBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDEPRECATED_PhysicalMaterialPropertyBase, 2122570305u)
+// Original dynamic initializer: RVA 0x00213C50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDEPRECATED_PhysicalMaterialPropertyBase> AutoInitializeUDEPRECATED_PhysicalMaterialPropertyBase(TEXT("UDEPRECATED_PhysicalMaterialPropertyBase"), sizeof(UDEPRECATED_PhysicalMaterialPropertyBase), 2122570305u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249F6D0 (end 0x0249F767)
 // Original VA: 0x000000014249F6D0 | File offset: 0x0249ECD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UDEPRECATED_PhysicalMaterialPropertyBase, 2122570305u); reached from UDEPRECATED_PhysicalMaterialPropertyBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UDEPRECATED_PhysicalMaterialPropertyBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDEPRECATED_PhysicalMaterialPropertyBase();
+// Original dynamic initializer: RVA 0x00214570
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDEPRECATED_PhysicalMaterialPropertyBase(Z_Construct_UClass_UDEPRECATED_PhysicalMaterialPropertyBase, &UDEPRECATED_PhysicalMaterialPropertyBase::StaticClass, TEXT("/Script/Engine"), TEXT("UDEPRECATED_PhysicalMaterialPropertyBase"), false, nullptr, nullptr, nullptr);

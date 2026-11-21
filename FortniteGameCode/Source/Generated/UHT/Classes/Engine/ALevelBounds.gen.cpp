@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ALevelBounds()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ALevelBounds, 4242270582u)
+// Original dynamic initializer: RVA 0x00205090 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALevelBounds> AutoInitializeALevelBounds(TEXT("ALevelBounds"), sizeof(ALevelBounds), 4242270582u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0246F080 (end 0x0246F122)
 // Original VA: 0x000000014246F080 | File offset: 0x0246E680
 // Recovery: confirmed (IMPLEMENT_CLASS(ALevelBounds, 4242270582u); reached from ALevelBounds::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ALevelBounds::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALevelBounds();
+// Original dynamic initializer: RVA 0x002058F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALevelBounds(Z_Construct_UClass_ALevelBounds, &ALevelBounds::StaticClass, TEXT("/Script/Engine"), TEXT("ALevelBounds"), false, nullptr, nullptr, nullptr);

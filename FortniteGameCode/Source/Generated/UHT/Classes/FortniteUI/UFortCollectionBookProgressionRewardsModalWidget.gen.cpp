@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortCollectionBookProgressionRewardsModalWidget, 1922027690u)
+// Original dynamic initializer: RVA 0x002404E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCollectionBookProgressionRewardsModalWidget> AutoInitializeUFortCollectionBookProgressionRewardsModalWidget(TEXT("UFortCollectionBookProgressionRewardsModalWidget"), sizeof(UFortCollectionBookProgressionRewardsModalWidget), 1922027690u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02893650 (end 0x028936F2)
 // Original VA: 0x0000000142893650 | File offset: 0x02892C50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCollectionBookProgressionRewardsModalWidget, 1922027690u); reached from UFortCollectionBookProgressionRewardsModalWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortCollectionBookProgressionRewardsModalWidget::GetPrivateStaticClass(
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget();
+// Original dynamic initializer: RVA 0x00242310
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCollectionBookProgressionRewardsModalWidget(Z_Construct_UClass_UFortCollectionBookProgressionRewardsModalWidget, &UFortCollectionBookProgressionRewardsModalWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCollectionBookProgressionRewardsModalWidget"), false, nullptr, nullptr, nullptr);

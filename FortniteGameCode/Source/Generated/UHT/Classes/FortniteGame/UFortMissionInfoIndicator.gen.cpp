@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortMissionInfoIndicator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortMissionInfoIndicator, 1220244447u)
+// Original dynamic initializer: RVA 0x00102CE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMissionInfoIndicator> AutoInitializeUFortMissionInfoIndicator(TEXT("UFortMissionInfoIndicator"), sizeof(UFortMissionInfoIndicator), 1220244447u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01040180 (end 0x01040222)
 // Original VA: 0x0000000141040180 | File offset: 0x0103F780
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMissionInfoIndicator, 1220244447u); reached from UFortMissionInfoIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortMissionInfoIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMissionInfoIndicator();
+// Original dynamic initializer: RVA 0x00103E80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMissionInfoIndicator(Z_Construct_UClass_UFortMissionInfoIndicator, &UFortMissionInfoIndicator::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMissionInfoIndicator"), false, nullptr, nullptr, nullptr);

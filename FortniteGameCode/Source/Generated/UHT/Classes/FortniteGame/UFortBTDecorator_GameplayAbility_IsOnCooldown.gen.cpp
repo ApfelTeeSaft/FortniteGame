@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortBTDecorator_GameplayAbility_IsOnCooldown()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTDecorator_GameplayAbility_IsOnCooldown, 3191749520u)
+// Original dynamic initializer: RVA 0x000E9130 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTDecorator_GameplayAbility_IsOnCooldown> AutoInitializeUFortBTDecorator_GameplayAbility_IsOnCooldown(TEXT("UFortBTDecorator_GameplayAbility_IsOnCooldown"), sizeof(UFortBTDecorator_GameplayAbility_IsOnCooldown), 3191749520u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAAFD0 (end 0x00FAB072)
 // Original VA: 0x0000000140FAAFD0 | File offset: 0x00FAA5D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTDecorator_GameplayAbility_IsOnCooldown, 3191749520u); reached from UFortBTDecorator_GameplayAbility_IsOnCooldown::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortBTDecorator_GameplayAbility_IsOnCooldown::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTDecorator_GameplayAbility_IsOnCooldown();
+// Original dynamic initializer: RVA 0x000E9F40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTDecorator_GameplayAbility_IsOnCooldown(Z_Construct_UClass_UFortBTDecorator_GameplayAbility_IsOnCooldown, &UFortBTDecorator_GameplayAbility_IsOnCooldown::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTDecorator_GameplayAbility_IsOnCooldown"), false, nullptr, nullptr, nullptr);

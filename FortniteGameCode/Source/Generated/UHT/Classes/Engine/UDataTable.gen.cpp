@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UDataTable()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDataTable, 4223427110u)
+// Original dynamic initializer: RVA 0x001F8400 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDataTable> AutoInitializeUDataTable(TEXT("UDataTable"), sizeof(UDataTable), 4223427110u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FC560 (end 0x023FC5F7)
 // Original VA: 0x00000001423FC560 | File offset: 0x023FBB60
 // Recovery: confirmed (IMPLEMENT_CLASS(UDataTable, 4223427110u); reached from UDataTable::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UDataTable::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDataTable();
+// Original dynamic initializer: RVA 0x001F97C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDataTable(Z_Construct_UClass_UDataTable, &UDataTable::StaticClass, TEXT("/Script/Engine"), TEXT("UDataTable"), false, nullptr, nullptr, nullptr);

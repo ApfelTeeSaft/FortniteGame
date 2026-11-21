@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(USkeletalMeshSocket, 649356905u)
+// Original dynamic initializer: RVA 0x0021A950 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USkeletalMeshSocket> AutoInitializeUSkeletalMeshSocket(TEXT("USkeletalMeshSocket"), sizeof(USkeletalMeshSocket), 649356905u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D34C0 (end 0x024D3557)
 // Original VA: 0x00000001424D34C0 | File offset: 0x024D2AC0
 // Recovery: confirmed (IMPLEMENT_CLASS(USkeletalMeshSocket, 649356905u); reached from USkeletalMeshSocket::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* USkeletalMeshSocket::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USkeletalMeshSocket();
+// Original dynamic initializer: RVA 0x0021C1B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USkeletalMeshSocket(Z_Construct_UClass_USkeletalMeshSocket, &USkeletalMeshSocket::StaticClass, TEXT("/Script/Engine"), TEXT("USkeletalMeshSocket"), false, nullptr, nullptr, nullptr);

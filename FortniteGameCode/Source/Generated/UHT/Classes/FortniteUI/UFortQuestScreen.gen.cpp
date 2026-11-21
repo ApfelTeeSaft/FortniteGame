@@ -7,6 +7,9 @@
 void UFortQuestScreen::StaticRegisterNativesUFortQuestScreen()
 {
 }
+// IMPLEMENT_CLASS(UFortQuestScreen, 1778329815u)
+// Original dynamic initializer: RVA 0x00265600 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQuestScreen> AutoInitializeUFortQuestScreen(TEXT("UFortQuestScreen"), sizeof(UFortQuestScreen), 1778329815u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02917520 (end 0x029175C2)
 // Original VA: 0x0000000142917520 | File offset: 0x02916B20
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQuestScreen, 1778329815u); reached from UFortQuestScreen::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortQuestScreen::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQuestScreen();
+// Original dynamic initializer: RVA 0x002670D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQuestScreen(Z_Construct_UClass_UFortQuestScreen, &UFortQuestScreen::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortQuestScreen"), false, nullptr, nullptr, nullptr);

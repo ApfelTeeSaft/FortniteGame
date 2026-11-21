@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAnimNotifyState_RootMotionInterrupt()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAnimNotifyState_RootMotionInterrupt, 3484797552u)
+// Original dynamic initializer: RVA 0x000E6770 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAnimNotifyState_RootMotionInterrupt> AutoInitializeUFortAnimNotifyState_RootMotionInterrupt(TEXT("UFortAnimNotifyState_RootMotionInterrupt"), sizeof(UFortAnimNotifyState_RootMotionInterrupt), 3484797552u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9C890 (end 0x00F9C932)
 // Original VA: 0x0000000140F9C890 | File offset: 0x00F9BE90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAnimNotifyState_RootMotionInterrupt, 3484797552u); reached from UFortAnimNotifyState_RootMotionInterrupt::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAnimNotifyState_RootMotionInterrupt::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAnimNotifyState_RootMotionInterrupt();
+// Original dynamic initializer: RVA 0x000E7910
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAnimNotifyState_RootMotionInterrupt(Z_Construct_UClass_UFortAnimNotifyState_RootMotionInterrupt, &UFortAnimNotifyState_RootMotionInterrupt::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAnimNotifyState_RootMotionInterrupt"), false, nullptr, nullptr, nullptr);

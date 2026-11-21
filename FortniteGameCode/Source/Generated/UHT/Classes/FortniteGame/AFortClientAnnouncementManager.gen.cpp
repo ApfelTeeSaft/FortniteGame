@@ -7,6 +7,9 @@
 void AFortClientAnnouncementManager::StaticRegisterNativesAFortClientAnnouncementManager()
 {
 }
+// IMPLEMENT_CLASS(AFortClientAnnouncementManager, 3408113561u)
+// Original dynamic initializer: RVA 0x000EB0B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortClientAnnouncementManager> AutoInitializeAFortClientAnnouncementManager(TEXT("AFortClientAnnouncementManager"), sizeof(AFortClientAnnouncementManager), 3408113561u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBE230 (end 0x00FBE2D2)
 // Original VA: 0x0000000140FBE230 | File offset: 0x00FBD830
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortClientAnnouncementManager, 3408113561u); reached from AFortClientAnnouncementManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortClientAnnouncementManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortClientAnnouncementManager();
+// Original dynamic initializer: RVA 0x000EBF80
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortClientAnnouncementManager(Z_Construct_UClass_AFortClientAnnouncementManager, &AFortClientAnnouncementManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortClientAnnouncementManager"), false, nullptr, nullptr, nullptr);

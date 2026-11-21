@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAssetRegistryHelpers, 3184646488u)
+// Original dynamic initializer: RVA 0x001B6090 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAssetRegistryHelpers> AutoInitializeUAssetRegistryHelpers(TEXT("UAssetRegistryHelpers"), sizeof(UAssetRegistryHelpers), 3184646488u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C7F9D0 (end 0x01C7FA67)
 // Original VA: 0x0000000141C7F9D0 | File offset: 0x01C7EFD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAssetRegistryHelpers, 3184646488u); reached from UAssetRegistryHelpers::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAssetRegistryHelpers::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAssetRegistryHelpers();
+// Original dynamic initializer: RVA 0x001B6480
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAssetRegistryHelpers(Z_Construct_UClass_UAssetRegistryHelpers, &UAssetRegistryHelpers::StaticClass, TEXT("/Script/AssetRegistry"), TEXT("UAssetRegistryHelpers"), false, nullptr, nullptr, nullptr);

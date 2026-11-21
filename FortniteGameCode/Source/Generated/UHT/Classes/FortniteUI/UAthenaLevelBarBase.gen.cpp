@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAthenaLevelBarBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaLevelBarBase, 2178245538u)
+// Original dynamic initializer: RVA 0x0023B420 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaLevelBarBase> AutoInitializeUAthenaLevelBarBase(TEXT("UAthenaLevelBarBase"), sizeof(UAthenaLevelBarBase), 2178245538u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02884450 (end 0x028844F2)
 // Original VA: 0x0000000142884450 | File offset: 0x02883A50
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaLevelBarBase, 2178245538u); reached from UAthenaLevelBarBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAthenaLevelBarBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaLevelBarBase();
+// Original dynamic initializer: RVA 0x0023D5A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaLevelBarBase(Z_Construct_UClass_UAthenaLevelBarBase, &UAthenaLevelBarBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaLevelBarBase"), false, nullptr, nullptr, nullptr);

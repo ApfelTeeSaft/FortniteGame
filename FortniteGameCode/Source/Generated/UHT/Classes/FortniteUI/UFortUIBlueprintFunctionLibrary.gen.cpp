@@ -7,6 +7,9 @@
 void UFortUIBlueprintFunctionLibrary::StaticRegisterNativesUFortUIBlueprintFunctionLibrary()
 {
 }
+// IMPLEMENT_CLASS(UFortUIBlueprintFunctionLibrary, 2243853632u)
+// Original dynamic initializer: RVA 0x00260C10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUIBlueprintFunctionLibrary> AutoInitializeUFortUIBlueprintFunctionLibrary(TEXT("UFortUIBlueprintFunctionLibrary"), sizeof(UFortUIBlueprintFunctionLibrary), 2243853632u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02909C00 (end 0x02909CA2)
 // Original VA: 0x0000000142909C00 | File offset: 0x02909200
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUIBlueprintFunctionLibrary, 2243853632u); reached from UFortUIBlueprintFunctionLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortUIBlueprintFunctionLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUIBlueprintFunctionLibrary();
+// Original dynamic initializer: RVA 0x002625C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUIBlueprintFunctionLibrary(Z_Construct_UClass_UFortUIBlueprintFunctionLibrary, &UFortUIBlueprintFunctionLibrary::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortUIBlueprintFunctionLibrary"), false, nullptr, nullptr, nullptr);

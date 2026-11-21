@@ -7,6 +7,9 @@
 void UFortConstructionSet::StaticRegisterNativesUFortConstructionSet()
 {
 }
+// IMPLEMENT_CLASS(UFortConstructionSet, 1751068620u)
+// Original dynamic initializer: RVA 0x000EC780 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortConstructionSet> AutoInitializeUFortConstructionSet(TEXT("UFortConstructionSet"), sizeof(UFortConstructionSet), 1751068620u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC4BC0 (end 0x00FC4C62)
 // Original VA: 0x0000000140FC4BC0 | File offset: 0x00FC41C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortConstructionSet, 1751068620u); reached from UFortConstructionSet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortConstructionSet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortConstructionSet();
+// Original dynamic initializer: RVA 0x000EE2F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortConstructionSet(Z_Construct_UClass_UFortConstructionSet, &UFortConstructionSet::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortConstructionSet"), false, nullptr, nullptr, nullptr);

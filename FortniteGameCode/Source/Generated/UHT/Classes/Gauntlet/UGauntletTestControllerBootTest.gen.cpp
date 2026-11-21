@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UGauntletTestControllerBootTest()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UGauntletTestControllerBootTest, 1082768907u)
+// Original dynamic initializer: RVA 0x00226F00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGauntletTestControllerBootTest> AutoInitializeUGauntletTestControllerBootTest(TEXT("UGauntletTestControllerBootTest"), sizeof(UGauntletTestControllerBootTest), 1082768907u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0264DC70 (end 0x0264DD12)
 // Original VA: 0x000000014264DC70 | File offset: 0x0264D270
 // Recovery: confirmed (IMPLEMENT_CLASS(UGauntletTestControllerBootTest, 1082768907u); reached from UGauntletTestControllerBootTest::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UGauntletTestControllerBootTest::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGauntletTestControllerBootTest();
+// Original dynamic initializer: RVA 0x00226F80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGauntletTestControllerBootTest(Z_Construct_UClass_UGauntletTestControllerBootTest, &UGauntletTestControllerBootTest::StaticClass, TEXT("/Script/Gauntlet"), TEXT("UGauntletTestControllerBootTest"), false, nullptr, nullptr, nullptr);

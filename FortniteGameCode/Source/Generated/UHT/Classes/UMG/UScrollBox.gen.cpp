@@ -7,6 +7,9 @@
 void UScrollBox::StaticRegisterNativesUScrollBox()
 {
 }
+// IMPLEMENT_CLASS(UScrollBox, 3433332713u)
+// Original dynamic initializer: RVA 0x001B3650 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UScrollBox> AutoInitializeUScrollBox(TEXT("UScrollBox"), sizeof(UScrollBox), 3433332713u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF1C60 (end 0x01BF1D02)
 // Original VA: 0x0000000141BF1C60 | File offset: 0x01BF1260
 // Recovery: confirmed (IMPLEMENT_CLASS(UScrollBox, 3433332713u); reached from UScrollBox::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UScrollBox::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UScrollBox();
+// Original dynamic initializer: RVA 0x001B3E10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UScrollBox(Z_Construct_UClass_UScrollBox, &UScrollBox::StaticClass, TEXT("/Script/UMG"), TEXT("UScrollBox"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAthenaPickingLayer()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaPickingLayer, 3609463797u)
+// Original dynamic initializer: RVA 0x0023B4E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaPickingLayer> AutoInitializeUAthenaPickingLayer(TEXT("UAthenaPickingLayer"), sizeof(UAthenaPickingLayer), 3609463797u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02884870 (end 0x02884912)
 // Original VA: 0x0000000142884870 | File offset: 0x02883E70
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaPickingLayer, 3609463797u); reached from UAthenaPickingLayer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAthenaPickingLayer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaPickingLayer();
+// Original dynamic initializer: RVA 0x0023D720
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaPickingLayer(Z_Construct_UClass_UAthenaPickingLayer, &UAthenaPickingLayer::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaPickingLayer"), false, nullptr, nullptr, nullptr);

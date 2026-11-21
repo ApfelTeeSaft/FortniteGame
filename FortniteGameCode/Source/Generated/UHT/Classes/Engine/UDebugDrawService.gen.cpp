@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UDebugDrawService()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDebugDrawService, 760446297u)
+// Original dynamic initializer: RVA 0x001F8440 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDebugDrawService> AutoInitializeUDebugDrawService(TEXT("UDebugDrawService"), sizeof(UDebugDrawService), 760446297u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FC6B0 (end 0x023FC752)
 // Original VA: 0x00000001423FC6B0 | File offset: 0x023FBCB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UDebugDrawService, 760446297u); reached from UDebugDrawService::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UDebugDrawService::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDebugDrawService();
+// Original dynamic initializer: RVA 0x001F9840
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDebugDrawService(Z_Construct_UClass_UDebugDrawService, &UDebugDrawService::StaticClass, TEXT("/Script/Engine"), TEXT("UDebugDrawService"), false, nullptr, nullptr, nullptr);

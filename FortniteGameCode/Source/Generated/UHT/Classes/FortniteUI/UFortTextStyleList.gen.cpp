@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortTextStyleList, 1232630502u)
+// Original dynamic initializer: RVA 0x0025E470 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTextStyleList> AutoInitializeUFortTextStyleList(TEXT("UFortTextStyleList"), sizeof(UFortTextStyleList), 1232630502u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02903270 (end 0x02903312)
 // Original VA: 0x0000000142903270 | File offset: 0x02902870
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTextStyleList, 1232630502u); reached from UFortTextStyleList::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortTextStyleList::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTextStyleList();
+// Original dynamic initializer: RVA 0x00260690
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTextStyleList(Z_Construct_UClass_UFortTextStyleList, &UFortTextStyleList::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTextStyleList"), false, nullptr, nullptr, nullptr);

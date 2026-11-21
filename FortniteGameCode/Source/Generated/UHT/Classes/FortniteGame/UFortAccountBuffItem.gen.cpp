@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAccountBuffItem, 1229090959u)
+// Original dynamic initializer: RVA 0x000DFEC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAccountBuffItem> AutoInitializeUFortAccountBuffItem(TEXT("UFortAccountBuffItem"), sizeof(UFortAccountBuffItem), 1229090959u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F80B60 (end 0x00F80C02)
 // Original VA: 0x0000000140F80B60 | File offset: 0x00F80160
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAccountBuffItem, 1229090959u); reached from UFortAccountBuffItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAccountBuffItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAccountBuffItem();
+// Original dynamic initializer: RVA 0x000E0B60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAccountBuffItem(Z_Construct_UClass_UFortAccountBuffItem, &UFortAccountBuffItem::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAccountBuffItem"), false, nullptr, nullptr, nullptr);

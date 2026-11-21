@@ -7,6 +7,9 @@
 void AExponentialHeightFog::StaticRegisterNativesAExponentialHeightFog()
 {
 }
+// IMPLEMENT_CLASS(AExponentialHeightFog, 1734555960u)
+// Original dynamic initializer: RVA 0x001FF2C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AExponentialHeightFog> AutoInitializeAExponentialHeightFog(TEXT("AExponentialHeightFog"), sizeof(AExponentialHeightFog), 1734555960u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240E460 (end 0x0240E502)
 // Original VA: 0x000000014240E460 | File offset: 0x0240DA60
 // Recovery: confirmed (IMPLEMENT_CLASS(AExponentialHeightFog, 1734555960u); reached from AExponentialHeightFog::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AExponentialHeightFog::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AExponentialHeightFog();
+// Original dynamic initializer: RVA 0x001FFC70
+static FCompiledInDefer Z_CompiledInDefer_UClass_AExponentialHeightFog(Z_Construct_UClass_AExponentialHeightFog, &AExponentialHeightFog::StaticClass, TEXT("/Script/Engine"), TEXT("AExponentialHeightFog"), false, nullptr, nullptr, nullptr);

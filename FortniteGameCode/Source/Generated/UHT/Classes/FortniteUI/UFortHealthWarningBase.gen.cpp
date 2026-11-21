@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortHealthWarningBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortHealthWarningBase, 1996226625u)
+// Original dynamic initializer: RVA 0x00247760 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHealthWarningBase> AutoInitializeUFortHealthWarningBase(TEXT("UFortHealthWarningBase"), sizeof(UFortHealthWarningBase), 1996226625u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B2C90 (end 0x028B2D32)
 // Original VA: 0x00000001428B2C90 | File offset: 0x028B2290
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHealthWarningBase, 1996226625u); reached from UFortHealthWarningBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortHealthWarningBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHealthWarningBase();
+// Original dynamic initializer: RVA 0x00247FE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHealthWarningBase(Z_Construct_UClass_UFortHealthWarningBase, &UFortHealthWarningBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortHealthWarningBase"), false, nullptr, nullptr, nullptr);

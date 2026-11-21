@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAudioMixerBlueprintLibrary, 551851121u)
+// Original dynamic initializer: RVA 0x00224660 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAudioMixerBlueprintLibrary> AutoInitializeUAudioMixerBlueprintLibrary(TEXT("UAudioMixerBlueprintLibrary"), sizeof(UAudioMixerBlueprintLibrary), 551851121u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02559760 (end 0x02559802)
 // Original VA: 0x0000000142559760 | File offset: 0x02558D60
 // Recovery: confirmed (IMPLEMENT_CLASS(UAudioMixerBlueprintLibrary, 551851121u); reached from UAudioMixerBlueprintLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAudioMixerBlueprintLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAudioMixerBlueprintLibrary();
+// Original dynamic initializer: RVA 0x00224AD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAudioMixerBlueprintLibrary(Z_Construct_UClass_UAudioMixerBlueprintLibrary, &UAudioMixerBlueprintLibrary::StaticClass, TEXT("/Script/AudioMixer"), TEXT("UAudioMixerBlueprintLibrary"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UGameplayCueInterface::StaticRegisterNativesUGameplayCueInterface()
 {
 }
+// IMPLEMENT_CLASS(UGameplayCueInterface, 1242886516u)
+// Original dynamic initializer: RVA 0x0009ECA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayCueInterface> AutoInitializeUGameplayCueInterface(TEXT("UGameplayCueInterface"), sizeof(UGameplayCueInterface), 1242886516u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00559C50 (end 0x00559CF2)
 // Original VA: 0x0000000140559C50 | File offset: 0x00559250
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayCueInterface, 1242886516u); reached from UGameplayCueInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UGameplayCueInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayCueInterface();
+// Original dynamic initializer: RVA 0x000A0B40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayCueInterface(Z_Construct_UClass_UGameplayCueInterface, &UGameplayCueInterface::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UGameplayCueInterface"), false, nullptr, nullptr, nullptr);

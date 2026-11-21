@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortWeaponRangedTooltip, 96322984u)
+// Original dynamic initializer: RVA 0x0011D970 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortWeaponRangedTooltip> AutoInitializeUFortWeaponRangedTooltip(TEXT("UFortWeaponRangedTooltip"), sizeof(UFortWeaponRangedTooltip), 96322984u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DB1A0 (end 0x010DB242)
 // Original VA: 0x00000001410DB1A0 | File offset: 0x010DA7A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortWeaponRangedTooltip, 96322984u); reached from UFortWeaponRangedTooltip::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortWeaponRangedTooltip::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortWeaponRangedTooltip();
+// Original dynamic initializer: RVA 0x0011E5E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortWeaponRangedTooltip(Z_Construct_UClass_UFortWeaponRangedTooltip, &UFortWeaponRangedTooltip::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortWeaponRangedTooltip"), false, nullptr, nullptr, nullptr);

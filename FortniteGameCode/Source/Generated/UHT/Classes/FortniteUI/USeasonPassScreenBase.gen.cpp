@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(USeasonPassScreenBase, 3770768432u)
+// Original dynamic initializer: RVA 0x002657C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USeasonPassScreenBase> AutoInitializeUSeasonPassScreenBase(TEXT("USeasonPassScreenBase"), sizeof(USeasonPassScreenBase), 3770768432u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02917EA0 (end 0x02917F42)
 // Original VA: 0x0000000142917EA0 | File offset: 0x029174A0
 // Recovery: confirmed (IMPLEMENT_CLASS(USeasonPassScreenBase, 3770768432u); reached from USeasonPassScreenBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* USeasonPassScreenBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USeasonPassScreenBase();
+// Original dynamic initializer: RVA 0x00267450
+static FCompiledInDefer Z_CompiledInDefer_UClass_USeasonPassScreenBase(Z_Construct_UClass_USeasonPassScreenBase, &USeasonPassScreenBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("USeasonPassScreenBase"), false, nullptr, nullptr, nullptr);

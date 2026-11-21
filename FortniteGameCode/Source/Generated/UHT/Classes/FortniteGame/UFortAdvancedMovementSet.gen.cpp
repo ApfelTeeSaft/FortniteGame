@@ -7,6 +7,9 @@
 void UFortAdvancedMovementSet::StaticRegisterNativesUFortAdvancedMovementSet()
 {
 }
+// IMPLEMENT_CLASS(UFortAdvancedMovementSet, 2461745396u)
+// Original dynamic initializer: RVA 0x000DFFC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAdvancedMovementSet> AutoInitializeUFortAdvancedMovementSet(TEXT("UFortAdvancedMovementSet"), sizeof(UFortAdvancedMovementSet), 2461745396u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F810D0 (end 0x00F81172)
 // Original VA: 0x0000000140F810D0 | File offset: 0x00F806D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAdvancedMovementSet, 2461745396u); reached from UFortAdvancedMovementSet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortAdvancedMovementSet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAdvancedMovementSet();
+// Original dynamic initializer: RVA 0x000E0D60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAdvancedMovementSet(Z_Construct_UClass_UFortAdvancedMovementSet, &UFortAdvancedMovementSet::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAdvancedMovementSet"), false, nullptr, nullptr, nullptr);

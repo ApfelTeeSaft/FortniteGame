@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UBuildingEditModeSupport_Floor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBuildingEditModeSupport_Floor, 135234046u)
+// Original dynamic initializer: RVA 0x000D9B10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBuildingEditModeSupport_Floor> AutoInitializeUBuildingEditModeSupport_Floor(TEXT("UBuildingEditModeSupport_Floor"), sizeof(UBuildingEditModeSupport_Floor), 135234046u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F653B0 (end 0x00F65452)
 // Original VA: 0x0000000140F653B0 | File offset: 0x00F649B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBuildingEditModeSupport_Floor, 135234046u); reached from UBuildingEditModeSupport_Floor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UBuildingEditModeSupport_Floor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBuildingEditModeSupport_Floor();
+// Original dynamic initializer: RVA 0x000DACD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBuildingEditModeSupport_Floor(Z_Construct_UClass_UBuildingEditModeSupport_Floor, &UBuildingEditModeSupport_Floor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UBuildingEditModeSupport_Floor"), false, nullptr, nullptr, nullptr);

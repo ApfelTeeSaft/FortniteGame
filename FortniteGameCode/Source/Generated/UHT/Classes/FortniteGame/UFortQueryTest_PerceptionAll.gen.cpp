@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryTest_PerceptionAll()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryTest_PerceptionAll, 2188533976u)
+// Original dynamic initializer: RVA 0x00110660 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryTest_PerceptionAll> AutoInitializeUFortQueryTest_PerceptionAll(TEXT("UFortQueryTest_PerceptionAll"), sizeof(UFortQueryTest_PerceptionAll), 2188533976u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010953A0 (end 0x01095442)
 // Original VA: 0x00000001410953A0 | File offset: 0x010949A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryTest_PerceptionAll, 2188533976u); reached from UFortQueryTest_PerceptionAll::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryTest_PerceptionAll::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryTest_PerceptionAll();
+// Original dynamic initializer: RVA 0x001110C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryTest_PerceptionAll(Z_Construct_UClass_UFortQueryTest_PerceptionAll, &UFortQueryTest_PerceptionAll::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryTest_PerceptionAll"), false, nullptr, nullptr, nullptr);

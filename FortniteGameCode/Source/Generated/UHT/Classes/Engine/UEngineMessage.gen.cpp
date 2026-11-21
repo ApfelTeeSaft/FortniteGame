@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UEngineMessage()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEngineMessage, 2275631473u)
+// Original dynamic initializer: RVA 0x001FB970 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEngineMessage> AutoInitializeUEngineMessage(TEXT("UEngineMessage"), sizeof(UEngineMessage), 2275631473u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024094B0 (end 0x02409552)
 // Original VA: 0x00000001424094B0 | File offset: 0x02408AB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UEngineMessage, 2275631473u); reached from UEngineMessage::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UEngineMessage::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEngineMessage();
+// Original dynamic initializer: RVA 0x001FF240
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEngineMessage(Z_Construct_UClass_UEngineMessage, &UEngineMessage::StaticClass, TEXT("/Script/Engine"), TEXT("UEngineMessage"), false, nullptr, nullptr, nullptr);

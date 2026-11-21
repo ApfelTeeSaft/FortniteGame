@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UOnlineEngineInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UOnlineEngineInterface, 874500876u)
+// Original dynamic initializer: RVA 0x0020EE50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UOnlineEngineInterface> AutoInitializeUOnlineEngineInterface(TEXT("UOnlineEngineInterface"), sizeof(UOnlineEngineInterface), 874500876u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02493B30 (end 0x02493BC7)
 // Original VA: 0x0000000142493B30 | File offset: 0x02493130
 // Recovery: confirmed (IMPLEMENT_CLASS(UOnlineEngineInterface, 874500876u); reached from UOnlineEngineInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UOnlineEngineInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UOnlineEngineInterface();
+// Original dynamic initializer: RVA 0x00210170
+static FCompiledInDefer Z_CompiledInDefer_UClass_UOnlineEngineInterface(Z_Construct_UClass_UOnlineEngineInterface, &UOnlineEngineInterface::StaticClass, TEXT("/Script/Engine"), TEXT("UOnlineEngineInterface"), false, nullptr, nullptr, nullptr);

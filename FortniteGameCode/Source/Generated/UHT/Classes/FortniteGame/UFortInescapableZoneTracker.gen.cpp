@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortInescapableZoneTracker()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortInescapableZoneTracker, 516534088u)
+// Original dynamic initializer: RVA 0x000FB140 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortInescapableZoneTracker> AutoInitializeUFortInescapableZoneTracker(TEXT("UFortInescapableZoneTracker"), sizeof(UFortInescapableZoneTracker), 516534088u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01003AC0 (end 0x01003B57)
 // Original VA: 0x0000000141003AC0 | File offset: 0x010030C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortInescapableZoneTracker, 516534088u); reached from UFortInescapableZoneTracker::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortInescapableZoneTracker::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortInescapableZoneTracker();
+// Original dynamic initializer: RVA 0x000FC0B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortInescapableZoneTracker(Z_Construct_UClass_UFortInescapableZoneTracker, &UFortInescapableZoneTracker::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortInescapableZoneTracker"), false, nullptr, nullptr, nullptr);

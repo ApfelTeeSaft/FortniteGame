@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UClothingSimulationFactory()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UClothingSimulationFactory, 3023032873u)
+// Original dynamic initializer: RVA 0x001C0030 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UClothingSimulationFactory> AutoInitializeUClothingSimulationFactory(TEXT("UClothingSimulationFactory"), sizeof(UClothingSimulationFactory), 3023032873u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3B170 (end 0x01D3B207)
 // Original VA: 0x0000000141D3B170 | File offset: 0x01D3A770
 // Recovery: confirmed (IMPLEMENT_CLASS(UClothingSimulationFactory, 3023032873u); reached from UClothingSimulationFactory::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UClothingSimulationFactory::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UClothingSimulationFactory();
+// Original dynamic initializer: RVA 0x001C0370
+static FCompiledInDefer Z_CompiledInDefer_UClass_UClothingSimulationFactory(Z_Construct_UClass_UClothingSimulationFactory, &UClothingSimulationFactory::StaticClass, TEXT("/Script/ClothingSystemRuntimeInterface"), TEXT("UClothingSimulationFactory"), false, nullptr, nullptr, nullptr);

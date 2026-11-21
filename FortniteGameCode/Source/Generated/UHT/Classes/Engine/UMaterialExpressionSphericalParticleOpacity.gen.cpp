@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionSphericalParticleOpacity()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionSphericalParticleOpacity, 3005730809u)
+// Original dynamic initializer: RVA 0x00209280 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionSphericalParticleOpacity> AutoInitializeUMaterialExpressionSphericalParticleOpacity(TEXT("UMaterialExpressionSphericalParticleOpacity"), sizeof(UMaterialExpressionSphericalParticleOpacity), 3005730809u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02481200 (end 0x024812A2)
 // Original VA: 0x0000000142481200 | File offset: 0x02480800
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionSphericalParticleOpacity, 3005730809u); reached from UMaterialExpressionSphericalParticleOpacity::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionSphericalParticleOpacity::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionSphericalParticleOpacity();
+// Original dynamic initializer: RVA 0x0020A570
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionSphericalParticleOpacity(Z_Construct_UClass_UMaterialExpressionSphericalParticleOpacity, &UMaterialExpressionSphericalParticleOpacity::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionSphericalParticleOpacity"), false, nullptr, nullptr, nullptr);

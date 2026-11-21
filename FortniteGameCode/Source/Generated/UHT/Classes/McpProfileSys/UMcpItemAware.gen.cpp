@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMcpItemAware()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMcpItemAware, 3304566100u)
+// Original dynamic initializer: RVA 0x000B0E10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMcpItemAware> AutoInitializeUMcpItemAware(TEXT("UMcpItemAware"), sizeof(UMcpItemAware), 3304566100u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007AE260 (end 0x007AE302)
 // Original VA: 0x00000001407AE260 | File offset: 0x007AD860
 // Recovery: confirmed (IMPLEMENT_CLASS(UMcpItemAware, 3304566100u); reached from UMcpItemAware::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMcpItemAware::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMcpItemAware();
+// Original dynamic initializer: RVA 0x000B2110
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMcpItemAware(Z_Construct_UClass_UMcpItemAware, &UMcpItemAware::StaticClass, TEXT("/Script/McpProfileSys"), TEXT("UMcpItemAware"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void AFortWeapon::StaticRegisterNativesAFortWeapon()
 {
 }
+// IMPLEMENT_CLASS(AFortWeapon, 236114432u)
+// Original dynamic initializer: RVA 0x0011BF70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortWeapon> AutoInitializeAFortWeapon(TEXT("AFortWeapon"), sizeof(AFortWeapon), 236114432u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D2DE0 (end 0x010D2E82)
 // Original VA: 0x00000001410D2DE0 | File offset: 0x010D23E0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortWeapon, 236114432u); reached from AFortWeapon::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortWeapon::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortWeapon();
+// Original dynamic initializer: RVA 0x0011D020
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortWeapon(Z_Construct_UClass_AFortWeapon, &AFortWeapon::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortWeapon"), false, nullptr, nullptr, nullptr);

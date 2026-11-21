@@ -7,6 +7,9 @@
 void UFortSquadSlotDetailsPanel::StaticRegisterNativesUFortSquadSlotDetailsPanel()
 {
 }
+// IMPLEMENT_CLASS(UFortSquadSlotDetailsPanel, 577048738u)
+// Original dynamic initializer: RVA 0x0025C0C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSquadSlotDetailsPanel> AutoInitializeUFortSquadSlotDetailsPanel(TEXT("UFortSquadSlotDetailsPanel"), sizeof(UFortSquadSlotDetailsPanel), 577048738u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FA010 (end 0x028FA0B2)
 // Original VA: 0x00000001428FA010 | File offset: 0x028F9610
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSquadSlotDetailsPanel, 577048738u); reached from UFortSquadSlotDetailsPanel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSquadSlotDetailsPanel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSquadSlotDetailsPanel();
+// Original dynamic initializer: RVA 0x0025DD30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSquadSlotDetailsPanel(Z_Construct_UClass_UFortSquadSlotDetailsPanel, &UFortSquadSlotDetailsPanel::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSquadSlotDetailsPanel"), false, nullptr, nullptr, nullptr);

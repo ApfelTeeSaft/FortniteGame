@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UDistributionFloatParameterBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDistributionFloatParameterBase, 3334715683u)
+// Original dynamic initializer: RVA 0x001F9D20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDistributionFloatParameterBase> AutoInitializeUDistributionFloatParameterBase(TEXT("UDistributionFloatParameterBase"), sizeof(UDistributionFloatParameterBase), 3334715683u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02402CC0 (end 0x02402D62)
 // Original VA: 0x0000000142402CC0 | File offset: 0x024022C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UDistributionFloatParameterBase, 3334715683u); reached from UDistributionFloatParameterBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UDistributionFloatParameterBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDistributionFloatParameterBase();
+// Original dynamic initializer: RVA 0x001FB3F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDistributionFloatParameterBase(Z_Construct_UClass_UDistributionFloatParameterBase, &UDistributionFloatParameterBase::StaticClass, TEXT("/Script/Engine"), TEXT("UDistributionFloatParameterBase"), false, nullptr, nullptr, nullptr);

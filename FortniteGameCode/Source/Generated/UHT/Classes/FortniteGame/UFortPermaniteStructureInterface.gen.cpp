@@ -7,6 +7,9 @@
 void UFortPermaniteStructureInterface::StaticRegisterNativesUFortPermaniteStructureInterface()
 {
 }
+// IMPLEMENT_CLASS(UFortPermaniteStructureInterface, 1599991825u)
+// Original dynamic initializer: RVA 0x00108E00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPermaniteStructureInterface> AutoInitializeUFortPermaniteStructureInterface(TEXT("UFortPermaniteStructureInterface"), sizeof(UFortPermaniteStructureInterface), 1599991825u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01064270 (end 0x01064312)
 // Original VA: 0x0000000141064270 | File offset: 0x01063870
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPermaniteStructureInterface, 1599991825u); reached from UFortPermaniteStructureInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortPermaniteStructureInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPermaniteStructureInterface();
+// Original dynamic initializer: RVA 0x0010A200
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPermaniteStructureInterface(Z_Construct_UClass_UFortPermaniteStructureInterface, &UFortPermaniteStructureInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPermaniteStructureInterface"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UBuildingConnectivityComponent::StaticRegisterNativesUBuildingConnectivityComponent()
 {
 }
+// IMPLEMENT_CLASS(UBuildingConnectivityComponent, 1671748314u)
+// Original dynamic initializer: RVA 0x000D99B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBuildingConnectivityComponent> AutoInitializeUBuildingConnectivityComponent(TEXT("UBuildingConnectivityComponent"), sizeof(UBuildingConnectivityComponent), 1671748314u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F64C20 (end 0x00F64CC2)
 // Original VA: 0x0000000140F64C20 | File offset: 0x00F64220
 // Recovery: confirmed (IMPLEMENT_CLASS(UBuildingConnectivityComponent, 1671748314u); reached from UBuildingConnectivityComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UBuildingConnectivityComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBuildingConnectivityComponent();
+// Original dynamic initializer: RVA 0x000DAA10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBuildingConnectivityComponent(Z_Construct_UClass_UBuildingConnectivityComponent, &UBuildingConnectivityComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UBuildingConnectivityComponent"), false, nullptr, nullptr, nullptr);

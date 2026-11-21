@@ -7,6 +7,9 @@
 void UFortKeybindWidget::StaticRegisterNativesUFortKeybindWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortKeybindWidget, 3866733346u)
+// Original dynamic initializer: RVA 0x0024F470 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortKeybindWidget> AutoInitializeUFortKeybindWidget(TEXT("UFortKeybindWidget"), sizeof(UFortKeybindWidget), 3866733346u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CEAA0 (end 0x028CEB42)
 // Original VA: 0x00000001428CEAA0 | File offset: 0x028CE0A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortKeybindWidget, 3866733346u); reached from UFortKeybindWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortKeybindWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortKeybindWidget();
+// Original dynamic initializer: RVA 0x00251150
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortKeybindWidget(Z_Construct_UClass_UFortKeybindWidget, &UFortKeybindWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortKeybindWidget"), false, nullptr, nullptr, nullptr);

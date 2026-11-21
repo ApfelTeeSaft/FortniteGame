@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortBTContext_SuppressGoalUpdate()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTContext_SuppressGoalUpdate, 1793599550u)
+// Original dynamic initializer: RVA 0x000E9050 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTContext_SuppressGoalUpdate> AutoInitializeUFortBTContext_SuppressGoalUpdate(TEXT("UFortBTContext_SuppressGoalUpdate"), sizeof(UFortBTContext_SuppressGoalUpdate), 1793599550u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAAB00 (end 0x00FAABA2)
 // Original VA: 0x0000000140FAAB00 | File offset: 0x00FAA100
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTContext_SuppressGoalUpdate, 1793599550u); reached from UFortBTContext_SuppressGoalUpdate::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortBTContext_SuppressGoalUpdate::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTContext_SuppressGoalUpdate();
+// Original dynamic initializer: RVA 0x000E9D80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTContext_SuppressGoalUpdate(Z_Construct_UClass_UFortBTContext_SuppressGoalUpdate, &UFortBTContext_SuppressGoalUpdate::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTContext_SuppressGoalUpdate"), false, nullptr, nullptr, nullptr);

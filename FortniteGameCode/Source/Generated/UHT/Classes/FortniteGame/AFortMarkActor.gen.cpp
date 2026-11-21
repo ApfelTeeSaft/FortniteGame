@@ -7,6 +7,9 @@
 void AFortMarkActor::StaticRegisterNativesAFortMarkActor()
 {
 }
+// IMPLEMENT_CLASS(AFortMarkActor, 2364630529u)
+// Original dynamic initializer: RVA 0x000FD050 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortMarkActor> AutoInitializeAFortMarkActor(TEXT("AFortMarkActor"), sizeof(AFortMarkActor), 2364630529u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101C440 (end 0x0101C4E2)
 // Original VA: 0x000000014101C440 | File offset: 0x0101BA40
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortMarkActor, 2364630529u); reached from AFortMarkActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortMarkActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortMarkActor();
+// Original dynamic initializer: RVA 0x000FDFC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortMarkActor(Z_Construct_UClass_AFortMarkActor, &AFortMarkActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortMarkActor"), false, nullptr, nullptr, nullptr);

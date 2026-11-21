@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionLogarithm10()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionLogarithm10, 14580331u)
+// Original dynamic initializer: RVA 0x00207680 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionLogarithm10> AutoInitializeUMaterialExpressionLogarithm10(TEXT("UMaterialExpressionLogarithm10"), sizeof(UMaterialExpressionLogarithm10), 14580331u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247CB80 (end 0x0247CC22)
 // Original VA: 0x000000014247CB80 | File offset: 0x0247C180
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionLogarithm10, 14580331u); reached from UMaterialExpressionLogarithm10::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionLogarithm10::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionLogarithm10();
+// Original dynamic initializer: RVA 0x00208A00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionLogarithm10(Z_Construct_UClass_UMaterialExpressionLogarithm10, &UMaterialExpressionLogarithm10::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionLogarithm10"), false, nullptr, nullptr, nullptr);

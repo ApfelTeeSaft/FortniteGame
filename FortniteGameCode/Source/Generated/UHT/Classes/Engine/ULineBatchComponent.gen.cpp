@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ULineBatchComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULineBatchComponent, 1379455679u)
+// Original dynamic initializer: RVA 0x00205D90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULineBatchComponent> AutoInitializeULineBatchComponent(TEXT("ULineBatchComponent"), sizeof(ULineBatchComponent), 1379455679u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024770C0 (end 0x02477162)
 // Original VA: 0x00000001424770C0 | File offset: 0x024766C0
 // Recovery: confirmed (IMPLEMENT_CLASS(ULineBatchComponent, 1379455679u); reached from ULineBatchComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ULineBatchComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULineBatchComponent();
+// Original dynamic initializer: RVA 0x00206980
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULineBatchComponent(Z_Construct_UClass_ULineBatchComponent, &ULineBatchComponent::StaticClass, TEXT("/Script/Engine"), TEXT("ULineBatchComponent"), false, nullptr, nullptr, nullptr);

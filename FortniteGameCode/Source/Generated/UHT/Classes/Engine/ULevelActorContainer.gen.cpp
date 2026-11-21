@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ULevelActorContainer()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULevelActorContainer, 1573496107u)
+// Original dynamic initializer: RVA 0x00205170 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULevelActorContainer> AutoInitializeULevelActorContainer(TEXT("ULevelActorContainer"), sizeof(ULevelActorContainer), 1573496107u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0246F540 (end 0x0246F5D7)
 // Original VA: 0x000000014246F540 | File offset: 0x0246EB40
 // Recovery: confirmed (IMPLEMENT_CLASS(ULevelActorContainer, 1573496107u); reached from ULevelActorContainer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ULevelActorContainer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULevelActorContainer();
+// Original dynamic initializer: RVA 0x00205AB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULevelActorContainer(Z_Construct_UClass_ULevelActorContainer, &ULevelActorContainer::StaticClass, TEXT("/Script/Engine"), TEXT("ULevelActorContainer"), false, nullptr, nullptr, nullptr);

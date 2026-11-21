@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBoneMaskFilter()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBoneMaskFilter, 4080435360u)
+// Original dynamic initializer: RVA 0x001F4BB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBoneMaskFilter> AutoInitializeUBoneMaskFilter(TEXT("UBoneMaskFilter"), sizeof(UBoneMaskFilter), 4080435360u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E8B80 (end 0x023E8C17)
 // Original VA: 0x00000001423E8B80 | File offset: 0x023E8180
 // Recovery: confirmed (IMPLEMENT_CLASS(UBoneMaskFilter, 4080435360u); reached from UBoneMaskFilter::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBoneMaskFilter::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBoneMaskFilter();
+// Original dynamic initializer: RVA 0x001F6010
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBoneMaskFilter(Z_Construct_UClass_UBoneMaskFilter, &UBoneMaskFilter::StaticClass, TEXT("/Script/Engine"), TEXT("UBoneMaskFilter"), false, nullptr, nullptr, nullptr);

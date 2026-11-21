@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UPhysicsSpringComponent, 1265824079u)
+// Original dynamic initializer: RVA 0x002149B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPhysicsSpringComponent> AutoInitializeUPhysicsSpringComponent(TEXT("UPhysicsSpringComponent"), sizeof(UPhysicsSpringComponent), 1265824079u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A86D0 (end 0x024A8772)
 // Original VA: 0x00000001424A86D0 | File offset: 0x024A7CD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UPhysicsSpringComponent, 1265824079u); reached from UPhysicsSpringComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UPhysicsSpringComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPhysicsSpringComponent();
+// Original dynamic initializer: RVA 0x00215FE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPhysicsSpringComponent(Z_Construct_UClass_UPhysicsSpringComponent, &UPhysicsSpringComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UPhysicsSpringComponent"), false, nullptr, nullptr, nullptr);

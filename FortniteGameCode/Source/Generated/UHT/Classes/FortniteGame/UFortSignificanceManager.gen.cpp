@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortSignificanceManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortSignificanceManager, 1372079873u)
+// Original dynamic initializer: RVA 0x00112C10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSignificanceManager> AutoInitializeUFortSignificanceManager(TEXT("UFortSignificanceManager"), sizeof(UFortSignificanceManager), 1372079873u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A3980 (end 0x010A3A22)
 // Original VA: 0x00000001410A3980 | File offset: 0x010A2F80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSignificanceManager, 1372079873u); reached from UFortSignificanceManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortSignificanceManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSignificanceManager();
+// Original dynamic initializer: RVA 0x00114370
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSignificanceManager(Z_Construct_UClass_UFortSignificanceManager, &UFortSignificanceManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortSignificanceManager"), false, nullptr, nullptr, nullptr);

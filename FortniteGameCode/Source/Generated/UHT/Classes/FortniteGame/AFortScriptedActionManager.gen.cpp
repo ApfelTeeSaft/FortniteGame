@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortScriptedActionManager, 3716760081u)
+// Original dynamic initializer: RVA 0x00112AF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortScriptedActionManager> AutoInitializeAFortScriptedActionManager(TEXT("AFortScriptedActionManager"), sizeof(AFortScriptedActionManager), 3716760081u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A3380 (end 0x010A3422)
 // Original VA: 0x00000001410A3380 | File offset: 0x010A2980
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortScriptedActionManager, 3716760081u); reached from AFortScriptedActionManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortScriptedActionManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortScriptedActionManager();
+// Original dynamic initializer: RVA 0x00114130
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortScriptedActionManager(Z_Construct_UClass_AFortScriptedActionManager, &AFortScriptedActionManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortScriptedActionManager"), false, nullptr, nullptr, nullptr);

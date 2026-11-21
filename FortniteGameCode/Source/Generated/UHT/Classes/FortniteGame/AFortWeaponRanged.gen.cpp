@@ -7,6 +7,9 @@
 void AFortWeaponRanged::StaticRegisterNativesAFortWeaponRanged()
 {
 }
+// IMPLEMENT_CLASS(AFortWeaponRanged, 2532238662u)
+// Original dynamic initializer: RVA 0x0011D320 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortWeaponRanged> AutoInitializeAFortWeaponRanged(TEXT("AFortWeaponRanged"), sizeof(AFortWeaponRanged), 2532238662u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D7FE0 (end 0x010D8082)
 // Original VA: 0x00000001410D7FE0 | File offset: 0x010D75E0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortWeaponRanged, 2532238662u); reached from AFortWeaponRanged::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortWeaponRanged::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortWeaponRanged();
+// Original dynamic initializer: RVA 0x0011D730
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortWeaponRanged(Z_Construct_UClass_AFortWeaponRanged, &AFortWeaponRanged::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortWeaponRanged"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UWidgetLayoutLibrary, 2722905025u)
+// Original dynamic initializer: RVA 0x001B4D80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWidgetLayoutLibrary> AutoInitializeUWidgetLayoutLibrary(TEXT("UWidgetLayoutLibrary"), sizeof(UWidgetLayoutLibrary), 2722905025u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00720 (end 0x01C007C2)
 // Original VA: 0x0000000141C00720 | File offset: 0x01BFFD20
 // Recovery: confirmed (IMPLEMENT_CLASS(UWidgetLayoutLibrary, 2722905025u); reached from UWidgetLayoutLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UWidgetLayoutLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWidgetLayoutLibrary();
+// Original dynamic initializer: RVA 0x001B53A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWidgetLayoutLibrary(Z_Construct_UClass_UWidgetLayoutLibrary, &UWidgetLayoutLibrary::StaticClass, TEXT("/Script/UMG"), TEXT("UWidgetLayoutLibrary"), false, nullptr, nullptr, nullptr);

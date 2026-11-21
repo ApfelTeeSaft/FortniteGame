@@ -7,6 +7,9 @@
 void UFortMovieWidget::StaticRegisterNativesUFortMovieWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortMovieWidget, 1168684143u)
+// Original dynamic initializer: RVA 0x002515F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMovieWidget> AutoInitializeUFortMovieWidget(TEXT("UFortMovieWidget"), sizeof(UFortMovieWidget), 1168684143u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D62D0 (end 0x028D6372)
 // Original VA: 0x00000001428D62D0 | File offset: 0x028D58D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMovieWidget, 1168684143u); reached from UFortMovieWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortMovieWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMovieWidget();
+// Original dynamic initializer: RVA 0x002537F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMovieWidget(Z_Construct_UClass_UFortMovieWidget, &UFortMovieWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortMovieWidget"), false, nullptr, nullptr, nullptr);

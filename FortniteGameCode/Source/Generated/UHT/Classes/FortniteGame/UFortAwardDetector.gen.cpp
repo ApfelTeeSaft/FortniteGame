@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAwardDetector()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAwardDetector, 1297568712u)
+// Original dynamic initializer: RVA 0x000E7FD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAwardDetector> AutoInitializeUFortAwardDetector(TEXT("UFortAwardDetector"), sizeof(UFortAwardDetector), 1297568712u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA23D0 (end 0x00FA2467)
 // Original VA: 0x0000000140FA23D0 | File offset: 0x00FA19D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAwardDetector, 1297568712u); reached from UFortAwardDetector::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAwardDetector::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAwardDetector();
+// Original dynamic initializer: RVA 0x000E8B10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAwardDetector(Z_Construct_UClass_UFortAwardDetector, &UFortAwardDetector::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAwardDetector"), false, nullptr, nullptr, nullptr);

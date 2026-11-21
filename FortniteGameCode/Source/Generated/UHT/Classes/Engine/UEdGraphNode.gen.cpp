@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UEdGraphNode()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEdGraphNode, 3582429972u)
+// Original dynamic initializer: RVA 0x001F9F00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEdGraphNode> AutoInitializeUEdGraphNode(TEXT("UEdGraphNode"), sizeof(UEdGraphNode), 3582429972u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024036F0 (end 0x02403787)
 // Original VA: 0x00000001424036F0 | File offset: 0x02402CF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UEdGraphNode, 3582429972u); reached from UEdGraphNode::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UEdGraphNode::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEdGraphNode();
+// Original dynamic initializer: RVA 0x001FB7B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEdGraphNode(Z_Construct_UClass_UEdGraphNode, &UEdGraphNode::StaticClass, TEXT("/Script/Engine"), TEXT("UEdGraphNode"), false, nullptr, nullptr, nullptr);

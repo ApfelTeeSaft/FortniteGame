@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAssetRegistryImpl()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAssetRegistryImpl, 3793456378u)
+// Original dynamic initializer: RVA 0x001B60B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAssetRegistryImpl> AutoInitializeUAssetRegistryImpl(TEXT("UAssetRegistryImpl"), sizeof(UAssetRegistryImpl), 3793456378u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C7FA70 (end 0x01C7FB07)
 // Original VA: 0x0000000141C7FA70 | File offset: 0x01C7F070
 // Recovery: confirmed (IMPLEMENT_CLASS(UAssetRegistryImpl, 3793456378u); reached from UAssetRegistryImpl::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAssetRegistryImpl::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAssetRegistryImpl();
+// Original dynamic initializer: RVA 0x001B64C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAssetRegistryImpl(Z_Construct_UClass_UAssetRegistryImpl, &UAssetRegistryImpl::StaticClass, TEXT("/Script/AssetRegistry"), TEXT("UAssetRegistryImpl"), false, nullptr, nullptr, nullptr);

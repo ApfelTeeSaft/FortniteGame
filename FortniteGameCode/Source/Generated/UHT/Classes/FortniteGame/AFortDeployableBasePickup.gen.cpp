@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortDeployableBasePickup()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortDeployableBasePickup, 2428749784u)
+// Original dynamic initializer: RVA 0x000F08C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortDeployableBasePickup> AutoInitializeAFortDeployableBasePickup(TEXT("AFortDeployableBasePickup"), sizeof(AFortDeployableBasePickup), 2428749784u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD3CF0 (end 0x00FD3D92)
 // Original VA: 0x0000000140FD3CF0 | File offset: 0x00FD32F0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortDeployableBasePickup, 2428749784u); reached from AFortDeployableBasePickup::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortDeployableBasePickup::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortDeployableBasePickup();
+// Original dynamic initializer: RVA 0x000F15D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortDeployableBasePickup(Z_Construct_UClass_AFortDeployableBasePickup, &AFortDeployableBasePickup::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortDeployableBasePickup"), false, nullptr, nullptr, nullptr);

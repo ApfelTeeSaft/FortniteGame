@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAthenaQuickChatBank()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaQuickChatBank, 459482322u)
+// Original dynamic initializer: RVA 0x000D8750 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaQuickChatBank> AutoInitializeUAthenaQuickChatBank(TEXT("UAthenaQuickChatBank"), sizeof(UAthenaQuickChatBank), 459482322u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5EDD0 (end 0x00F5EE72)
 // Original VA: 0x0000000140F5EDD0 | File offset: 0x00F5E3D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaQuickChatBank, 459482322u); reached from UAthenaQuickChatBank::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAthenaQuickChatBank::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaQuickChatBank();
+// Original dynamic initializer: RVA 0x000D95D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaQuickChatBank(Z_Construct_UClass_UAthenaQuickChatBank, &UAthenaQuickChatBank::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaQuickChatBank"), false, nullptr, nullptr, nullptr);

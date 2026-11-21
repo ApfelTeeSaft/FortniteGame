@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(USlider, 1878181542u)
+// Original dynamic initializer: RVA 0x001B3730 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USlider> AutoInitializeUSlider(TEXT("USlider"), sizeof(USlider), 1878181542u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2110 (end 0x01BF21B2)
 // Original VA: 0x0000000141BF2110 | File offset: 0x01BF1710
 // Recovery: confirmed (IMPLEMENT_CLASS(USlider, 1878181542u); reached from USlider::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* USlider::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USlider();
+// Original dynamic initializer: RVA 0x001B3FD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USlider(Z_Construct_UClass_USlider, &USlider::StaticClass, TEXT("/Script/UMG"), TEXT("USlider"), false, nullptr, nullptr, nullptr);

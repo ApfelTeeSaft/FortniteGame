@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortPlayerStartWarmup()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortPlayerStartWarmup, 3881407385u)
+// Original dynamic initializer: RVA 0x0010D3B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPlayerStartWarmup> AutoInitializeAFortPlayerStartWarmup(TEXT("AFortPlayerStartWarmup"), sizeof(AFortPlayerStartWarmup), 3881407385u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01089300 (end 0x010893A2)
 // Original VA: 0x0000000141089300 | File offset: 0x01088900
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPlayerStartWarmup, 3881407385u); reached from AFortPlayerStartWarmup::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortPlayerStartWarmup::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPlayerStartWarmup();
+// Original dynamic initializer: RVA 0x0010E150
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPlayerStartWarmup(Z_Construct_UClass_AFortPlayerStartWarmup, &AFortPlayerStartWarmup::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPlayerStartWarmup"), false, nullptr, nullptr, nullptr);

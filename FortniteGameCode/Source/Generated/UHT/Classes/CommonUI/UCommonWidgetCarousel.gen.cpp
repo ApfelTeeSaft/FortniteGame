@@ -7,6 +7,9 @@
 void UCommonWidgetCarousel::StaticRegisterNativesUCommonWidgetCarousel()
 {
 }
+// IMPLEMENT_CLASS(UCommonWidgetCarousel, 4248239053u)
+// Original dynamic initializer: RVA 0x00096BB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonWidgetCarousel> AutoInitializeUCommonWidgetCarousel(TEXT("UCommonWidgetCarousel"), sizeof(UCommonWidgetCarousel), 4248239053u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CFD80 (end 0x002CFE22)
 // Original VA: 0x00000001402CFD80 | File offset: 0x002CF380
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonWidgetCarousel, 4248239053u); reached from UCommonWidgetCarousel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonWidgetCarousel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonWidgetCarousel();
+// Original dynamic initializer: RVA 0x00097160
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonWidgetCarousel(Z_Construct_UClass_UCommonWidgetCarousel, &UCommonWidgetCarousel::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonWidgetCarousel"), false, nullptr, nullptr, nullptr);

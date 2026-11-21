@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortButtonInternalWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortButtonInternalWidget, 1490718479u)
+// Original dynamic initializer: RVA 0x002402C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortButtonInternalWidget> AutoInitializeUFortButtonInternalWidget(TEXT("UFortButtonInternalWidget"), sizeof(UFortButtonInternalWidget), 1490718479u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02892AC0 (end 0x02892B62)
 // Original VA: 0x0000000142892AC0 | File offset: 0x028920C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortButtonInternalWidget, 1490718479u); reached from UFortButtonInternalWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortButtonInternalWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortButtonInternalWidget();
+// Original dynamic initializer: RVA 0x00241ED0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortButtonInternalWidget(Z_Construct_UClass_UFortButtonInternalWidget, &UFortButtonInternalWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortButtonInternalWidget"), false, nullptr, nullptr, nullptr);

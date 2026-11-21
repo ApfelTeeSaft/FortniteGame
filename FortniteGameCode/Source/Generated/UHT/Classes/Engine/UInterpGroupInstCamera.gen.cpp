@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UInterpGroupInstCamera()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInterpGroupInstCamera, 3978904770u)
+// Original dynamic initializer: RVA 0x00202520 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInterpGroupInstCamera> AutoInitializeUInterpGroupInstCamera(TEXT("UInterpGroupInstCamera"), sizeof(UInterpGroupInstCamera), 3978904770u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0242C510 (end 0x0242C5B2)
 // Original VA: 0x000000014242C510 | File offset: 0x0242BB10
 // Recovery: confirmed (IMPLEMENT_CLASS(UInterpGroupInstCamera, 3978904770u); reached from UInterpGroupInstCamera::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UInterpGroupInstCamera::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInterpGroupInstCamera();
+// Original dynamic initializer: RVA 0x00203830
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInterpGroupInstCamera(Z_Construct_UClass_UInterpGroupInstCamera, &UInterpGroupInstCamera::StaticClass, TEXT("/Script/Engine"), TEXT("UInterpGroupInstCamera"), false, nullptr, nullptr, nullptr);

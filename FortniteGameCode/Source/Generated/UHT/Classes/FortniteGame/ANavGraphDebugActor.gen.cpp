@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ANavGraphDebugActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ANavGraphDebugActor, 2869743444u)
+// Original dynamic initializer: RVA 0x00122330 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ANavGraphDebugActor> AutoInitializeANavGraphDebugActor(TEXT("ANavGraphDebugActor"), sizeof(ANavGraphDebugActor), 2869743444u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EF7C0 (end 0x010EF862)
 // Original VA: 0x00000001410EF7C0 | File offset: 0x010EEDC0
 // Recovery: confirmed (IMPLEMENT_CLASS(ANavGraphDebugActor, 2869743444u); reached from ANavGraphDebugActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ANavGraphDebugActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ANavGraphDebugActor();
+// Original dynamic initializer: RVA 0x00123420
+static FCompiledInDefer Z_CompiledInDefer_UClass_ANavGraphDebugActor(Z_Construct_UClass_ANavGraphDebugActor, &ANavGraphDebugActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ANavGraphDebugActor"), false, nullptr, nullptr, nullptr);

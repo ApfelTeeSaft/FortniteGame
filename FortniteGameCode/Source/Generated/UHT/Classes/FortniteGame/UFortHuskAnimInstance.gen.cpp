@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortHuskAnimInstance, 3442168866u)
+// Original dynamic initializer: RVA 0x000FB0E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHuskAnimInstance> AutoInitializeUFortHuskAnimInstance(TEXT("UFortHuskAnimInstance"), sizeof(UFortHuskAnimInstance), 3442168866u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010038D0 (end 0x01003972)
 // Original VA: 0x00000001410038D0 | File offset: 0x01002ED0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHuskAnimInstance, 3442168866u); reached from UFortHuskAnimInstance::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortHuskAnimInstance::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHuskAnimInstance();
+// Original dynamic initializer: RVA 0x000FBFF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHuskAnimInstance(Z_Construct_UClass_UFortHuskAnimInstance, &UFortHuskAnimInstance::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortHuskAnimInstance"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAmmoItemDefinition()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAmmoItemDefinition, 955474791u)
+// Original dynamic initializer: RVA 0x000E4B00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAmmoItemDefinition> AutoInitializeUFortAmmoItemDefinition(TEXT("UFortAmmoItemDefinition"), sizeof(UFortAmmoItemDefinition), 955474791u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F97DB0 (end 0x00F97E52)
 // Original VA: 0x0000000140F97DB0 | File offset: 0x00F973B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAmmoItemDefinition, 955474791u); reached from UFortAmmoItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAmmoItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAmmoItemDefinition();
+// Original dynamic initializer: RVA 0x000E6530
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAmmoItemDefinition(Z_Construct_UClass_UFortAmmoItemDefinition, &UFortAmmoItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAmmoItemDefinition"), false, nullptr, nullptr, nullptr);

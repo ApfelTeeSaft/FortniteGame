@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCheckBox, 2350443457u)
+// Original dynamic initializer: RVA 0x001B1D60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCheckBox> AutoInitializeUCheckBox(TEXT("UCheckBox"), sizeof(UCheckBox), 2350443457u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5070 (end 0x01BE5112)
 // Original VA: 0x0000000141BE5070 | File offset: 0x01BE4670
 // Recovery: confirmed (IMPLEMENT_CLASS(UCheckBox, 2350443457u); reached from UCheckBox::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCheckBox::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCheckBox();
+// Original dynamic initializer: RVA 0x001B2420
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCheckBox(Z_Construct_UClass_UCheckBox, &UCheckBox::StaticClass, TEXT("/Script/UMG"), TEXT("UCheckBox"), false, nullptr, nullptr, nullptr);

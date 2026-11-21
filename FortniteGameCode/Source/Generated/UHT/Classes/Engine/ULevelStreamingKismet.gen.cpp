@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ULevelStreamingKismet, 3564991402u)
+// Original dynamic initializer: RVA 0x002051F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULevelStreamingKismet> AutoInitializeULevelStreamingKismet(TEXT("ULevelStreamingKismet"), sizeof(ULevelStreamingKismet), 3564991402u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0246F7F0 (end 0x0246F892)
 // Original VA: 0x000000014246F7F0 | File offset: 0x0246EDF0
 // Recovery: confirmed (IMPLEMENT_CLASS(ULevelStreamingKismet, 3564991402u); reached from ULevelStreamingKismet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ULevelStreamingKismet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULevelStreamingKismet();
+// Original dynamic initializer: RVA 0x00205BB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULevelStreamingKismet(Z_Construct_UClass_ULevelStreamingKismet, &ULevelStreamingKismet::StaticClass, TEXT("/Script/Engine"), TEXT("ULevelStreamingKismet"), false, nullptr, nullptr, nullptr);

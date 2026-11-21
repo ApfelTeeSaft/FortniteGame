@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortCharacterCosmeticItem()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCharacterCosmeticItem, 2556563057u)
+// Original dynamic initializer: RVA 0x000EA840 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCharacterCosmeticItem> AutoInitializeUFortCharacterCosmeticItem(TEXT("UFortCharacterCosmeticItem"), sizeof(UFortCharacterCosmeticItem), 2556563057u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAF6A0 (end 0x00FAF742)
 // Original VA: 0x0000000140FAF6A0 | File offset: 0x00FAECA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCharacterCosmeticItem, 2556563057u); reached from UFortCharacterCosmeticItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortCharacterCosmeticItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCharacterCosmeticItem();
+// Original dynamic initializer: RVA 0x000EAF10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCharacterCosmeticItem(Z_Construct_UClass_UFortCharacterCosmeticItem, &UFortCharacterCosmeticItem::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCharacterCosmeticItem"), false, nullptr, nullptr, nullptr);

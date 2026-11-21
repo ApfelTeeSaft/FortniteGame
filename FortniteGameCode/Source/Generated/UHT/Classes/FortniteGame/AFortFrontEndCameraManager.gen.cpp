@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortFrontEndCameraManager, 3411633446u)
+// Original dynamic initializer: RVA 0x000F25B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortFrontEndCameraManager> AutoInitializeAFortFrontEndCameraManager(TEXT("AFortFrontEndCameraManager"), sizeof(AFortFrontEndCameraManager), 3411633446u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD9A30 (end 0x00FD9AD2)
 // Original VA: 0x0000000140FD9A30 | File offset: 0x00FD9030
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortFrontEndCameraManager, 3411633446u); reached from AFortFrontEndCameraManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortFrontEndCameraManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortFrontEndCameraManager();
+// Original dynamic initializer: RVA 0x000F4310
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortFrontEndCameraManager(Z_Construct_UClass_AFortFrontEndCameraManager, &AFortFrontEndCameraManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortFrontEndCameraManager"), false, nullptr, nullptr, nullptr);

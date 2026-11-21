@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UStoreCardObject()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UStoreCardObject, 3896067226u)
+// Original dynamic initializer: RVA 0x0025E5F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UStoreCardObject> AutoInitializeUStoreCardObject(TEXT("UStoreCardObject"), sizeof(UStoreCardObject), 3896067226u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02903AB0 (end 0x02903B47)
 // Original VA: 0x0000000142903AB0 | File offset: 0x029030B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UStoreCardObject, 3896067226u); reached from UStoreCardObject::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UStoreCardObject::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UStoreCardObject();
+// Original dynamic initializer: RVA 0x00260990
+static FCompiledInDefer Z_CompiledInDefer_UClass_UStoreCardObject(Z_Construct_UClass_UStoreCardObject, &UStoreCardObject::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UStoreCardObject"), false, nullptr, nullptr, nullptr);

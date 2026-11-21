@@ -7,6 +7,9 @@
 void UFortAthenaMatchmakingWidget::StaticRegisterNativesUFortAthenaMatchmakingWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortAthenaMatchmakingWidget, 3045069455u)
+// Original dynamic initializer: RVA 0x0023E280 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAthenaMatchmakingWidget> AutoInitializeUFortAthenaMatchmakingWidget(TEXT("UFortAthenaMatchmakingWidget"), sizeof(UFortAthenaMatchmakingWidget), 3045069455u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288B790 (end 0x0288B832)
 // Original VA: 0x000000014288B790 | File offset: 0x0288AD90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAthenaMatchmakingWidget, 3045069455u); reached from UFortAthenaMatchmakingWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortAthenaMatchmakingWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAthenaMatchmakingWidget();
+// Original dynamic initializer: RVA 0x0023FE20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAthenaMatchmakingWidget(Z_Construct_UClass_UFortAthenaMatchmakingWidget, &UFortAthenaMatchmakingWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAthenaMatchmakingWidget"), false, nullptr, nullptr, nullptr);

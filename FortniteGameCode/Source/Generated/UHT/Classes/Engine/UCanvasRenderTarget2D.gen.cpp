@@ -7,6 +7,9 @@
 void UCanvasRenderTarget2D::StaticRegisterNativesUCanvasRenderTarget2D()
 {
 }
+// IMPLEMENT_CLASS(UCanvasRenderTarget2D, 731889106u)
+// Original dynamic initializer: RVA 0x001F6410 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCanvasRenderTarget2D> AutoInitializeUCanvasRenderTarget2D(TEXT("UCanvasRenderTarget2D"), sizeof(UCanvasRenderTarget2D), 731889106u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023ECB50 (end 0x023ECBF2)
 // Original VA: 0x00000001423ECB50 | File offset: 0x023EC150
 // Recovery: confirmed (IMPLEMENT_CLASS(UCanvasRenderTarget2D, 731889106u); reached from UCanvasRenderTarget2D::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCanvasRenderTarget2D::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCanvasRenderTarget2D();
+// Original dynamic initializer: RVA 0x001F6E20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCanvasRenderTarget2D(Z_Construct_UClass_UCanvasRenderTarget2D, &UCanvasRenderTarget2D::StaticClass, TEXT("/Script/Engine"), TEXT("UCanvasRenderTarget2D"), false, nullptr, nullptr, nullptr);

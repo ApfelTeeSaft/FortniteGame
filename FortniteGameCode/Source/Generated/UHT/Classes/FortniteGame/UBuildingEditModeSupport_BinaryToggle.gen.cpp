@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBuildingEditModeSupport_BinaryToggle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBuildingEditModeSupport_BinaryToggle, 2106594002u)
+// Original dynamic initializer: RVA 0x000D9AF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBuildingEditModeSupport_BinaryToggle> AutoInitializeUBuildingEditModeSupport_BinaryToggle(TEXT("UBuildingEditModeSupport_BinaryToggle"), sizeof(UBuildingEditModeSupport_BinaryToggle), 2106594002u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F65300 (end 0x00F653A2)
 // Original VA: 0x0000000140F65300 | File offset: 0x00F64900
 // Recovery: confirmed (IMPLEMENT_CLASS(UBuildingEditModeSupport_BinaryToggle, 2106594002u); reached from UBuildingEditModeSupport_BinaryToggle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBuildingEditModeSupport_BinaryToggle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBuildingEditModeSupport_BinaryToggle();
+// Original dynamic initializer: RVA 0x000DAC90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBuildingEditModeSupport_BinaryToggle(Z_Construct_UClass_UBuildingEditModeSupport_BinaryToggle, &UBuildingEditModeSupport_BinaryToggle::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UBuildingEditModeSupport_BinaryToggle"), false, nullptr, nullptr, nullptr);

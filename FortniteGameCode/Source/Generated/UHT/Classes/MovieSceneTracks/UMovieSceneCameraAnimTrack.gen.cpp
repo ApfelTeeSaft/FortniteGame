@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMovieSceneCameraAnimTrack()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMovieSceneCameraAnimTrack, 4148045795u)
+// Original dynamic initializer: RVA 0x001AC5F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovieSceneCameraAnimTrack> AutoInitializeUMovieSceneCameraAnimTrack(TEXT("UMovieSceneCameraAnimTrack"), sizeof(UMovieSceneCameraAnimTrack), 4148045795u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4D460 (end 0x01B4D502)
 // Original VA: 0x0000000141B4D460 | File offset: 0x01B4CA60
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovieSceneCameraAnimTrack, 4148045795u); reached from UMovieSceneCameraAnimTrack::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMovieSceneCameraAnimTrack::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovieSceneCameraAnimTrack();
+// Original dynamic initializer: RVA 0x001AF4C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovieSceneCameraAnimTrack(Z_Construct_UClass_UMovieSceneCameraAnimTrack, &UMovieSceneCameraAnimTrack::StaticClass, TEXT("/Script/MovieSceneTracks"), TEXT("UMovieSceneCameraAnimTrack"), false, nullptr, nullptr, nullptr);

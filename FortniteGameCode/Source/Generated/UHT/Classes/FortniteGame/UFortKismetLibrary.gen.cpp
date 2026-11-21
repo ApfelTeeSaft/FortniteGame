@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortKismetLibrary, 2318136329u)
+// Original dynamic initializer: RVA 0x000FC530 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortKismetLibrary> AutoInitializeUFortKismetLibrary(TEXT("UFortKismetLibrary"), sizeof(UFortKismetLibrary), 2318136329u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0100B7B0 (end 0x0100B852)
 // Original VA: 0x000000014100B7B0 | File offset: 0x0100ADB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortKismetLibrary, 2318136329u); reached from UFortKismetLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortKismetLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortKismetLibrary();
+// Original dynamic initializer: RVA 0x000FCD70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortKismetLibrary(Z_Construct_UClass_UFortKismetLibrary, &UFortKismetLibrary::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortKismetLibrary"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USlateWidgetStyleAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USlateWidgetStyleAsset, 4177203411u)
+// Original dynamic initializer: RVA 0x0013A660 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USlateWidgetStyleAsset> AutoInitializeUSlateWidgetStyleAsset(TEXT("USlateWidgetStyleAsset"), sizeof(USlateWidgetStyleAsset), 4177203411u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01459B10 (end 0x01459BA7)
 // Original VA: 0x0000000141459B10 | File offset: 0x01459110
 // Recovery: confirmed (IMPLEMENT_CLASS(USlateWidgetStyleAsset, 4177203411u); reached from USlateWidgetStyleAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USlateWidgetStyleAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USlateWidgetStyleAsset();
+// Original dynamic initializer: RVA 0x0013D120
+static FCompiledInDefer Z_CompiledInDefer_UClass_USlateWidgetStyleAsset(Z_Construct_UClass_USlateWidgetStyleAsset, &USlateWidgetStyleAsset::StaticClass, TEXT("/Script/SlateCore"), TEXT("USlateWidgetStyleAsset"), false, nullptr, nullptr, nullptr);

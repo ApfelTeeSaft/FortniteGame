@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryTest_IsCloseToHotspotSlot()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryTest_IsCloseToHotspotSlot, 907935022u)
+// Original dynamic initializer: RVA 0x00110560 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryTest_IsCloseToHotspotSlot> AutoInitializeUFortQueryTest_IsCloseToHotspotSlot(TEXT("UFortQueryTest_IsCloseToHotspotSlot"), sizeof(UFortQueryTest_IsCloseToHotspotSlot), 907935022u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01094E20 (end 0x01094EC2)
 // Original VA: 0x0000000141094E20 | File offset: 0x01094420
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryTest_IsCloseToHotspotSlot, 907935022u); reached from UFortQueryTest_IsCloseToHotspotSlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryTest_IsCloseToHotspotSlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryTest_IsCloseToHotspotSlot();
+// Original dynamic initializer: RVA 0x00110EC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryTest_IsCloseToHotspotSlot(Z_Construct_UClass_UFortQueryTest_IsCloseToHotspotSlot, &UFortQueryTest_IsCloseToHotspotSlot::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryTest_IsCloseToHotspotSlot"), false, nullptr, nullptr, nullptr);

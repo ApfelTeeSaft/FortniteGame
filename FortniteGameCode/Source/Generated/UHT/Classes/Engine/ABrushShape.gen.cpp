@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ABrushShape()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABrushShape, 784546271u)
+// Original dynamic initializer: RVA 0x001F4B30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABrushShape> AutoInitializeABrushShape(TEXT("ABrushShape"), sizeof(ABrushShape), 784546271u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E88D0 (end 0x023E8972)
 // Original VA: 0x00000001423E88D0 | File offset: 0x023E7ED0
 // Recovery: confirmed (IMPLEMENT_CLASS(ABrushShape, 784546271u); reached from ABrushShape::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ABrushShape::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABrushShape();
+// Original dynamic initializer: RVA 0x001F5F10
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABrushShape(Z_Construct_UClass_ABrushShape, &ABrushShape::StaticClass, TEXT("/Script/Engine"), TEXT("ABrushShape"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMcpItemDefinitionBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMcpItemDefinitionBase, 2588223284u)
+// Original dynamic initializer: RVA 0x000B0E30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMcpItemDefinitionBase> AutoInitializeUMcpItemDefinitionBase(TEXT("UMcpItemDefinitionBase"), sizeof(UMcpItemDefinitionBase), 2588223284u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007AE310 (end 0x007AE3B2)
 // Original VA: 0x00000001407AE310 | File offset: 0x007AD910
 // Recovery: confirmed (IMPLEMENT_CLASS(UMcpItemDefinitionBase, 2588223284u); reached from UMcpItemDefinitionBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMcpItemDefinitionBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMcpItemDefinitionBase();
+// Original dynamic initializer: RVA 0x000B2150
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMcpItemDefinitionBase(Z_Construct_UClass_UMcpItemDefinitionBase, &UMcpItemDefinitionBase::StaticClass, TEXT("/Script/McpProfileSys"), TEXT("UMcpItemDefinitionBase"), false, nullptr, nullptr, nullptr);

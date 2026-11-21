@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UInputAxisKeyDelegateBinding()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInputAxisKeyDelegateBinding, 3070086779u)
+// Original dynamic initializer: RVA 0x00200C20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInputAxisKeyDelegateBinding> AutoInitializeUInputAxisKeyDelegateBinding(TEXT("UInputAxisKeyDelegateBinding"), sizeof(UInputAxisKeyDelegateBinding), 3070086779u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024260A0 (end 0x02426142)
 // Original VA: 0x00000001424260A0 | File offset: 0x024256A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UInputAxisKeyDelegateBinding, 3070086779u); reached from UInputAxisKeyDelegateBinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UInputAxisKeyDelegateBinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInputAxisKeyDelegateBinding();
+// Original dynamic initializer: RVA 0x00201FC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInputAxisKeyDelegateBinding(Z_Construct_UClass_UInputAxisKeyDelegateBinding, &UInputAxisKeyDelegateBinding::StaticClass, TEXT("/Script/Engine"), TEXT("UInputAxisKeyDelegateBinding"), false, nullptr, nullptr, nullptr);

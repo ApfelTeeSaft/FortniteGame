@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UPlaneReflectionCaptureComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPlaneReflectionCaptureComponent, 383976574u)
+// Original dynamic initializer: RVA 0x00214A10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPlaneReflectionCaptureComponent> AutoInitializeUPlaneReflectionCaptureComponent(TEXT("UPlaneReflectionCaptureComponent"), sizeof(UPlaneReflectionCaptureComponent), 383976574u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A88E0 (end 0x024A8982)
 // Original VA: 0x00000001424A88E0 | File offset: 0x024A7EE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UPlaneReflectionCaptureComponent, 383976574u); reached from UPlaneReflectionCaptureComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UPlaneReflectionCaptureComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPlaneReflectionCaptureComponent();
+// Original dynamic initializer: RVA 0x002160A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPlaneReflectionCaptureComponent(Z_Construct_UClass_UPlaneReflectionCaptureComponent, &UPlaneReflectionCaptureComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UPlaneReflectionCaptureComponent"), false, nullptr, nullptr, nullptr);

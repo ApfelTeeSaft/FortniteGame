@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryGenerator_TerrainDonut()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryGenerator_TerrainDonut, 2041702375u)
+// Original dynamic initializer: RVA 0x0010EBD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryGenerator_TerrainDonut> AutoInitializeUFortQueryGenerator_TerrainDonut(TEXT("UFortQueryGenerator_TerrainDonut"), sizeof(UFortQueryGenerator_TerrainDonut), 2041702375u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01091630 (end 0x010916D2)
 // Original VA: 0x0000000141091630 | File offset: 0x01090C30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryGenerator_TerrainDonut, 2041702375u); reached from UFortQueryGenerator_TerrainDonut::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryGenerator_TerrainDonut::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryGenerator_TerrainDonut();
+// Original dynamic initializer: RVA 0x0010FE20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryGenerator_TerrainDonut(Z_Construct_UClass_UFortQueryGenerator_TerrainDonut, &UFortQueryGenerator_TerrainDonut::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryGenerator_TerrainDonut"), false, nullptr, nullptr, nullptr);

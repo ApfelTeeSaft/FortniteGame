@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAnimSequencerInstance()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnimSequencerInstance, 1297360368u)
+// Original dynamic initializer: RVA 0x001A89E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimSequencerInstance> AutoInitializeUAnimSequencerInstance(TEXT("UAnimSequencerInstance"), sizeof(UAnimSequencerInstance), 1297360368u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0A540 (end 0x01B0A5E2)
 // Original VA: 0x0000000141B0A540 | File offset: 0x01B09B40
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimSequencerInstance, 1297360368u); reached from UAnimSequencerInstance::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAnimSequencerInstance::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimSequencerInstance();
+// Original dynamic initializer: RVA 0x001AC120
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimSequencerInstance(Z_Construct_UClass_UAnimSequencerInstance, &UAnimSequencerInstance::StaticClass, TEXT("/Script/AnimGraphRuntime"), TEXT("UAnimSequencerInstance"), false, nullptr, nullptr, nullptr);

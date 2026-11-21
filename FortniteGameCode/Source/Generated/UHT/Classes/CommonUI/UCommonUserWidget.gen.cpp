@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCommonUserWidget, 2907812852u)
+// Original dynamic initializer: RVA 0x00096B70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonUserWidget> AutoInitializeUCommonUserWidget(TEXT("UCommonUserWidget"), sizeof(UCommonUserWidget), 2907812852u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CFC20 (end 0x002CFCC2)
 // Original VA: 0x00000001402CFC20 | File offset: 0x002CF220
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonUserWidget, 2907812852u); reached from UCommonUserWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCommonUserWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonUserWidget();
+// Original dynamic initializer: RVA 0x000970E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonUserWidget(Z_Construct_UClass_UCommonUserWidget, &UCommonUserWidget::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonUserWidget"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UVOIPStatics, 753519050u)
+// Original dynamic initializer: RVA 0x00221980 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UVOIPStatics> AutoInitializeUVOIPStatics(TEXT("UVOIPStatics"), sizeof(UVOIPStatics), 753519050u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EFA30 (end 0x024EFAD2)
 // Original VA: 0x00000001424EFA30 | File offset: 0x024EF030
 // Recovery: confirmed (IMPLEMENT_CLASS(UVOIPStatics, 753519050u); reached from UVOIPStatics::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UVOIPStatics::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UVOIPStatics();
+// Original dynamic initializer: RVA 0x00222430
+static FCompiledInDefer Z_CompiledInDefer_UClass_UVOIPStatics(Z_Construct_UClass_UVOIPStatics, &UVOIPStatics::StaticClass, TEXT("/Script/Engine"), TEXT("UVOIPStatics"), false, nullptr, nullptr, nullptr);

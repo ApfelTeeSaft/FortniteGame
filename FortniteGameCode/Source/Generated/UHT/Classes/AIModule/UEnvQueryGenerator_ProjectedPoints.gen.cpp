@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UEnvQueryGenerator_ProjectedPoints()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEnvQueryGenerator_ProjectedPoints, 460006434u)
+// Original dynamic initializer: RVA 0x001BD680 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEnvQueryGenerator_ProjectedPoints> AutoInitializeUEnvQueryGenerator_ProjectedPoints(TEXT("UEnvQueryGenerator_ProjectedPoints"), sizeof(UEnvQueryGenerator_ProjectedPoints), 460006434u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2D860 (end 0x01D2D902)
 // Original VA: 0x0000000141D2D860 | File offset: 0x01D2CE60
 // Recovery: confirmed (IMPLEMENT_CLASS(UEnvQueryGenerator_ProjectedPoints, 460006434u); reached from UEnvQueryGenerator_ProjectedPoints::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UEnvQueryGenerator_ProjectedPoints::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEnvQueryGenerator_ProjectedPoints();
+// Original dynamic initializer: RVA 0x001BEDA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEnvQueryGenerator_ProjectedPoints(Z_Construct_UClass_UEnvQueryGenerator_ProjectedPoints, &UEnvQueryGenerator_ProjectedPoints::StaticClass, TEXT("/Script/AIModule"), TEXT("UEnvQueryGenerator_ProjectedPoints"), false, nullptr, nullptr, nullptr);

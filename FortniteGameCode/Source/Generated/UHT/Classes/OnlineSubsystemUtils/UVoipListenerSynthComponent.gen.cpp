@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UVoipListenerSynthComponent, 581797107u)
+// Original dynamic initializer: RVA 0x00099600 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UVoipListenerSynthComponent> AutoInitializeUVoipListenerSynthComponent(TEXT("UVoipListenerSynthComponent"), sizeof(UVoipListenerSynthComponent), 581797107u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032D9E0 (end 0x0032DA82)
 // Original VA: 0x000000014032D9E0 | File offset: 0x0032CFE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UVoipListenerSynthComponent, 581797107u); reached from UVoipListenerSynthComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UVoipListenerSynthComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UVoipListenerSynthComponent();
+// Original dynamic initializer: RVA 0x0009A420
+static FCompiledInDefer Z_CompiledInDefer_UClass_UVoipListenerSynthComponent(Z_Construct_UClass_UVoipListenerSynthComponent, &UVoipListenerSynthComponent::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UVoipListenerSynthComponent"), false, nullptr, nullptr, nullptr);

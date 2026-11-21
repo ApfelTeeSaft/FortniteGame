@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAvfMediaSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAvfMediaSettings, 2288928715u)
+// Original dynamic initializer: RVA 0x000B3BF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAvfMediaSettings> AutoInitializeUAvfMediaSettings(TEXT("UAvfMediaSettings"), sizeof(UAvfMediaSettings), 2288928715u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007DEEC0 (end 0x007DEF57)
 // Original VA: 0x00000001407DEEC0 | File offset: 0x007DE4C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAvfMediaSettings, 2288928715u); reached from UAvfMediaSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAvfMediaSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAvfMediaSettings();
+// Original dynamic initializer: RVA 0x000B3C10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAvfMediaSettings(Z_Construct_UClass_UAvfMediaSettings, &UAvfMediaSettings::StaticClass, TEXT("/Script/AvfMediaFactory"), TEXT("UAvfMediaSettings"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ULevelStreamingAlwaysLoaded()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULevelStreamingAlwaysLoaded, 3199461973u)
+// Original dynamic initializer: RVA 0x002051D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULevelStreamingAlwaysLoaded> AutoInitializeULevelStreamingAlwaysLoaded(TEXT("ULevelStreamingAlwaysLoaded"), sizeof(ULevelStreamingAlwaysLoaded), 3199461973u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0246F740 (end 0x0246F7E2)
 // Original VA: 0x000000014246F740 | File offset: 0x0246ED40
 // Recovery: confirmed (IMPLEMENT_CLASS(ULevelStreamingAlwaysLoaded, 3199461973u); reached from ULevelStreamingAlwaysLoaded::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ULevelStreamingAlwaysLoaded::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULevelStreamingAlwaysLoaded();
+// Original dynamic initializer: RVA 0x00205B70
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULevelStreamingAlwaysLoaded(Z_Construct_UClass_ULevelStreamingAlwaysLoaded, &ULevelStreamingAlwaysLoaded::StaticClass, TEXT("/Script/Engine"), TEXT("ULevelStreamingAlwaysLoaded"), false, nullptr, nullptr, nullptr);

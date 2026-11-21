@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ULightmappedSurfaceCollection()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULightmappedSurfaceCollection, 2307763200u)
+// Original dynamic initializer: RVA 0x00205D30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULightmappedSurfaceCollection> AutoInitializeULightmappedSurfaceCollection(TEXT("ULightmappedSurfaceCollection"), sizeof(ULightmappedSurfaceCollection), 2307763200u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02476ED0 (end 0x02476F67)
 // Original VA: 0x0000000142476ED0 | File offset: 0x024764D0
 // Recovery: confirmed (IMPLEMENT_CLASS(ULightmappedSurfaceCollection, 2307763200u); reached from ULightmappedSurfaceCollection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ULightmappedSurfaceCollection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULightmappedSurfaceCollection();
+// Original dynamic initializer: RVA 0x002068C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULightmappedSurfaceCollection(Z_Construct_UClass_ULightmappedSurfaceCollection, &ULightmappedSurfaceCollection::StaticClass, TEXT("/Script/Engine"), TEXT("ULightmappedSurfaceCollection"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UFortNumericTextBlock::StaticRegisterNativesUFortNumericTextBlock()
 {
 }
+// IMPLEMENT_CLASS(UFortNumericTextBlock, 431756938u)
+// Original dynamic initializer: RVA 0x00253BB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNumericTextBlock> AutoInitializeUFortNumericTextBlock(TEXT("UFortNumericTextBlock"), sizeof(UFortNumericTextBlock), 431756938u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DD820 (end 0x028DD8C2)
 // Original VA: 0x00000001428DD820 | File offset: 0x028DCE20
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNumericTextBlock, 431756938u); reached from UFortNumericTextBlock::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortNumericTextBlock::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNumericTextBlock();
+// Original dynamic initializer: RVA 0x00255840
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNumericTextBlock(Z_Construct_UClass_UFortNumericTextBlock, &UFortNumericTextBlock::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortNumericTextBlock"), false, nullptr, nullptr, nullptr);

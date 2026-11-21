@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortQueryContext_TwoPointSolverRotationA()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryContext_TwoPointSolverRotationA, 1677299342u)
+// Original dynamic initializer: RVA 0x0010E9D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryContext_TwoPointSolverRotationA> AutoInitializeUFortQueryContext_TwoPointSolverRotationA(TEXT("UFortQueryContext_TwoPointSolverRotationA"), sizeof(UFortQueryContext_TwoPointSolverRotationA), 1677299342u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01090B30 (end 0x01090BD2)
 // Original VA: 0x0000000141090B30 | File offset: 0x01090130
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryContext_TwoPointSolverRotationA, 1677299342u); reached from UFortQueryContext_TwoPointSolverRotationA::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortQueryContext_TwoPointSolverRotationA::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryContext_TwoPointSolverRotationA();
+// Original dynamic initializer: RVA 0x0010FA20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryContext_TwoPointSolverRotationA(Z_Construct_UClass_UFortQueryContext_TwoPointSolverRotationA, &UFortQueryContext_TwoPointSolverRotationA::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryContext_TwoPointSolverRotationA"), false, nullptr, nullptr, nullptr);

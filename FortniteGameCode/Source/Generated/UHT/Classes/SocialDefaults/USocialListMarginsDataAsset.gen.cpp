@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USocialListMarginsDataAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USocialListMarginsDataAsset, 3061081910u)
+// Original dynamic initializer: RVA 0x00225570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USocialListMarginsDataAsset> AutoInitializeUSocialListMarginsDataAsset(TEXT("USocialListMarginsDataAsset"), sizeof(USocialListMarginsDataAsset), 3061081910u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025A2440 (end 0x025A24E2)
 // Original VA: 0x00000001425A2440 | File offset: 0x025A1A40
 // Recovery: confirmed (IMPLEMENT_CLASS(USocialListMarginsDataAsset, 3061081910u); reached from USocialListMarginsDataAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USocialListMarginsDataAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USocialListMarginsDataAsset();
+// Original dynamic initializer: RVA 0x002258E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USocialListMarginsDataAsset(Z_Construct_UClass_USocialListMarginsDataAsset, &USocialListMarginsDataAsset::StaticClass, TEXT("/Script/SocialDefaults"), TEXT("USocialListMarginsDataAsset"), false, nullptr, nullptr, nullptr);

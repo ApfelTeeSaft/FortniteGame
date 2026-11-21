@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortEnemyKilledParams, 2025428612u)
+// Original dynamic initializer: RVA 0x00120040 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortEnemyKilledParams> AutoInitializeUFortEnemyKilledParams(TEXT("UFortEnemyKilledParams"), sizeof(UFortEnemyKilledParams), 2025428612u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E70B0 (end 0x010E7152)
 // Original VA: 0x00000001410E70B0 | File offset: 0x010E66B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortEnemyKilledParams, 2025428612u); reached from UFortEnemyKilledParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortEnemyKilledParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortEnemyKilledParams();
+// Original dynamic initializer: RVA 0x00121BF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortEnemyKilledParams(Z_Construct_UClass_UFortEnemyKilledParams, &UFortEnemyKilledParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortEnemyKilledParams"), false, nullptr, nullptr, nullptr);

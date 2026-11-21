@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ALightmassPortal()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ALightmassPortal, 1183699060u)
+// Original dynamic initializer: RVA 0x00205CD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALightmassPortal> AutoInitializeALightmassPortal(TEXT("ALightmassPortal"), sizeof(ALightmassPortal), 1183699060u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02476CC0 (end 0x02476D62)
 // Original VA: 0x0000000142476CC0 | File offset: 0x024762C0
 // Recovery: confirmed (IMPLEMENT_CLASS(ALightmassPortal, 1183699060u); reached from ALightmassPortal::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ALightmassPortal::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALightmassPortal();
+// Original dynamic initializer: RVA 0x00206800
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALightmassPortal(Z_Construct_UClass_ALightmassPortal, &ALightmassPortal::StaticClass, TEXT("/Script/Engine"), TEXT("ALightmassPortal"), false, nullptr, nullptr, nullptr);

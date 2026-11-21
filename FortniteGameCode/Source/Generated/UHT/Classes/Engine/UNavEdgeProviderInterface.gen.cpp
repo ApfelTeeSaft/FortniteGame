@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UNavEdgeProviderInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNavEdgeProviderInterface, 1694906925u)
+// Original dynamic initializer: RVA 0x0020C770 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavEdgeProviderInterface> AutoInitializeUNavEdgeProviderInterface(TEXT("UNavEdgeProviderInterface"), sizeof(UNavEdgeProviderInterface), 1694906925u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248A3B0 (end 0x0248A452)
 // Original VA: 0x000000014248A3B0 | File offset: 0x024899B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavEdgeProviderInterface, 1694906925u); reached from UNavEdgeProviderInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UNavEdgeProviderInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavEdgeProviderInterface();
+// Original dynamic initializer: RVA 0x0020D9B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavEdgeProviderInterface(Z_Construct_UClass_UNavEdgeProviderInterface, &UNavEdgeProviderInterface::StaticClass, TEXT("/Script/Engine"), TEXT("UNavEdgeProviderInterface"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAthenaGliderItem()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaGliderItem, 4193843346u)
+// Original dynamic initializer: RVA 0x000D7510 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaGliderItem> AutoInitializeUAthenaGliderItem(TEXT("UAthenaGliderItem"), sizeof(UAthenaGliderItem), 4193843346u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F584F0 (end 0x00F58592)
 // Original VA: 0x0000000140F584F0 | File offset: 0x00F57AF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaGliderItem, 4193843346u); reached from UAthenaGliderItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAthenaGliderItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaGliderItem();
+// Original dynamic initializer: RVA 0x000D8550
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaGliderItem(Z_Construct_UClass_UAthenaGliderItem, &UAthenaGliderItem::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaGliderItem"), false, nullptr, nullptr, nullptr);

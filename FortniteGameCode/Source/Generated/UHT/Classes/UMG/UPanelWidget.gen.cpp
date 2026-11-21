@@ -7,6 +7,9 @@
 void UPanelWidget::StaticRegisterNativesUPanelWidget()
 {
 }
+// IMPLEMENT_CLASS(UPanelWidget, 2177386227u)
+// Original dynamic initializer: RVA 0x001B29E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPanelWidget> AutoInitializeUPanelWidget(TEXT("UPanelWidget"), sizeof(UPanelWidget), 2177386227u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEC730 (end 0x01BEC7D2)
 // Original VA: 0x0000000141BEC730 | File offset: 0x01BEBD30
 // Recovery: confirmed (IMPLEMENT_CLASS(UPanelWidget, 2177386227u); reached from UPanelWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UPanelWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPanelWidget();
+// Original dynamic initializer: RVA 0x001B3410
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPanelWidget(Z_Construct_UClass_UPanelWidget, &UPanelWidget::StaticClass, TEXT("/Script/UMG"), TEXT("UPanelWidget"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_SpawnGroupProg
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionCategoryEncounter_SpawnGroupProgression, 1035924680u)
+// Original dynamic initializer: RVA 0x000F0B40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionCategoryEncounter_SpawnGroupProgression> AutoInitializeUFortDifficultyOptionCategoryEncounter_SpawnGroupProgression(TEXT("UFortDifficultyOptionCategoryEncounter_SpawnGroupProgression"), sizeof(UFortDifficultyOptionCategoryEncounter_SpawnGroupProgression), 1035924680u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD4AA0 (end 0x00FD4B42)
 // Original VA: 0x0000000140FD4AA0 | File offset: 0x00FD40A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionCategoryEncounter_SpawnGroupProgression, 1035924680u); reached from UFortDifficultyOptionCategoryEncounter_SpawnGroupProgression::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionCategoryEncounter_SpawnGroupProgression::GetPrivate
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_SpawnGroupProgression();
+// Original dynamic initializer: RVA 0x000F1AD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionCategoryEncounter_SpawnGroupProgression(Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_SpawnGroupProgression, &UFortDifficultyOptionCategoryEncounter_SpawnGroupProgression::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionCategoryEncounter_SpawnGroupProgression"), false, nullptr, nullptr, nullptr);

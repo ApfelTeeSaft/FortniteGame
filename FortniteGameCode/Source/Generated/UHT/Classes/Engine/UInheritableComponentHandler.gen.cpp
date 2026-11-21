@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UInheritableComponentHandler()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInheritableComponentHandler, 3386977230u)
+// Original dynamic initializer: RVA 0x00200BC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInheritableComponentHandler> AutoInitializeUInheritableComponentHandler(TEXT("UInheritableComponentHandler"), sizeof(UInheritableComponentHandler), 3386977230u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02425EA0 (end 0x02425F37)
 // Original VA: 0x0000000142425EA0 | File offset: 0x024254A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UInheritableComponentHandler, 3386977230u); reached from UInheritableComponentHandler::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UInheritableComponentHandler::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInheritableComponentHandler();
+// Original dynamic initializer: RVA 0x00201F00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInheritableComponentHandler(Z_Construct_UClass_UInheritableComponentHandler, &UInheritableComponentHandler::StaticClass, TEXT("/Script/Engine"), TEXT("UInheritableComponentHandler"), false, nullptr, nullptr, nullptr);

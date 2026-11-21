@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryGenerator_PointsOnBuildingGrid()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryGenerator_PointsOnBuildingGrid, 929720056u)
+// Original dynamic initializer: RVA 0x0010EB90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryGenerator_PointsOnBuildingGrid> AutoInitializeUFortQueryGenerator_PointsOnBuildingGrid(TEXT("UFortQueryGenerator_PointsOnBuildingGrid"), sizeof(UFortQueryGenerator_PointsOnBuildingGrid), 929720056u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010914D0 (end 0x01091572)
 // Original VA: 0x00000001410914D0 | File offset: 0x01090AD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryGenerator_PointsOnBuildingGrid, 929720056u); reached from UFortQueryGenerator_PointsOnBuildingGrid::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryGenerator_PointsOnBuildingGrid::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryGenerator_PointsOnBuildingGrid();
+// Original dynamic initializer: RVA 0x0010FDA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryGenerator_PointsOnBuildingGrid(Z_Construct_UClass_UFortQueryGenerator_PointsOnBuildingGrid, &UFortQueryGenerator_PointsOnBuildingGrid::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryGenerator_PointsOnBuildingGrid"), false, nullptr, nullptr, nullptr);

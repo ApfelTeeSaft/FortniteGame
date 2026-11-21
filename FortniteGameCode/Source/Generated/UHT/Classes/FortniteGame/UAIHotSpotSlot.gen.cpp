@@ -7,6 +7,9 @@
 void UAIHotSpotSlot::StaticRegisterNativesUAIHotSpotSlot()
 {
 }
+// IMPLEMENT_CLASS(UAIHotSpotSlot, 4233074455u)
+// Original dynamic initializer: RVA 0x000D7330 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAIHotSpotSlot> AutoInitializeUAIHotSpotSlot(TEXT("UAIHotSpotSlot"), sizeof(UAIHotSpotSlot), 4233074455u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F57AC0 (end 0x00F57B57)
 // Original VA: 0x0000000140F57AC0 | File offset: 0x00F570C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAIHotSpotSlot, 4233074455u); reached from UAIHotSpotSlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAIHotSpotSlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAIHotSpotSlot();
+// Original dynamic initializer: RVA 0x000D8190
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAIHotSpotSlot(Z_Construct_UClass_UAIHotSpotSlot, &UAIHotSpotSlot::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAIHotSpotSlot"), false, nullptr, nullptr, nullptr);

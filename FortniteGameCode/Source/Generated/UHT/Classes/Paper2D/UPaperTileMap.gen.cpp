@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UPaperTileMap()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPaperTileMap, 519251792u)
+// Original dynamic initializer: RVA 0x000AB6B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPaperTileMap> AutoInitializeUPaperTileMap(TEXT("UPaperTileMap"), sizeof(UPaperTileMap), 519251792u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00666550 (end 0x006665E7)
 // Original VA: 0x0000000140666550 | File offset: 0x00665B50
 // Recovery: confirmed (IMPLEMENT_CLASS(UPaperTileMap, 519251792u); reached from UPaperTileMap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UPaperTileMap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPaperTileMap();
+// Original dynamic initializer: RVA 0x000AC780
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPaperTileMap(Z_Construct_UClass_UPaperTileMap, &UPaperTileMap::StaticClass, TEXT("/Script/Paper2D"), TEXT("UPaperTileMap"), false, nullptr, nullptr, nullptr);

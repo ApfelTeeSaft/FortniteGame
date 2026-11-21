@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionAtmosphericLightVector()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionAtmosphericLightVector, 3465486403u)
+// Original dynamic initializer: RVA 0x00206050 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionAtmosphericLightVector> AutoInitializeUMaterialExpressionAtmosphericLightVector(TEXT("UMaterialExpressionAtmosphericLightVector"), sizeof(UMaterialExpressionAtmosphericLightVector), 3465486403u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02477FB0 (end 0x02478052)
 // Original VA: 0x0000000142477FB0 | File offset: 0x024775B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionAtmosphericLightVector, 3465486403u); reached from UMaterialExpressionAtmosphericLightVector::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMaterialExpressionAtmosphericLightVector::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionAtmosphericLightVector();
+// Original dynamic initializer: RVA 0x00206F00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionAtmosphericLightVector(Z_Construct_UClass_UMaterialExpressionAtmosphericLightVector, &UMaterialExpressionAtmosphericLightVector::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionAtmosphericLightVector"), false, nullptr, nullptr, nullptr);

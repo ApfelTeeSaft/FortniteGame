@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortMicIndicatorWidget, 7161501u)
+// Original dynamic initializer: RVA 0x002514F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMicIndicatorWidget> AutoInitializeUFortMicIndicatorWidget(TEXT("UFortMicIndicatorWidget"), sizeof(UFortMicIndicatorWidget), 7161501u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D5D50 (end 0x028D5DF2)
 // Original VA: 0x00000001428D5D50 | File offset: 0x028D5350
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMicIndicatorWidget, 7161501u); reached from UFortMicIndicatorWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortMicIndicatorWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMicIndicatorWidget();
+// Original dynamic initializer: RVA 0x002535F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMicIndicatorWidget(Z_Construct_UClass_UFortMicIndicatorWidget, &UFortMicIndicatorWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortMicIndicatorWidget"), false, nullptr, nullptr, nullptr);

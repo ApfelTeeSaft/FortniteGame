@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UCommonGlobalInputHandler()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCommonGlobalInputHandler, 2316809885u)
+// Original dynamic initializer: RVA 0x00095710 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonGlobalInputHandler> AutoInitializeUCommonGlobalInputHandler(TEXT("UCommonGlobalInputHandler"), sizeof(UCommonGlobalInputHandler), 2316809885u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2130 (end 0x002C21C7)
 // Original VA: 0x00000001402C2130 | File offset: 0x002C1730
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonGlobalInputHandler, 2316809885u); reached from UCommonGlobalInputHandler::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UCommonGlobalInputHandler::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonGlobalInputHandler();
+// Original dynamic initializer: RVA 0x00095F00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonGlobalInputHandler(Z_Construct_UClass_UCommonGlobalInputHandler, &UCommonGlobalInputHandler::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonGlobalInputHandler"), false, nullptr, nullptr, nullptr);

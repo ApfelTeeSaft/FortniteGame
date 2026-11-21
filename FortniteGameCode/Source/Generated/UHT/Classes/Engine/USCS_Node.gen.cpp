@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USCS_Node()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USCS_Node, 849496038u)
+// Original dynamic initializer: RVA 0x00219790 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USCS_Node> AutoInitializeUSCS_Node(TEXT("USCS_Node"), sizeof(USCS_Node), 849496038u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6200 (end 0x024C6297)
 // Original VA: 0x00000001424C6200 | File offset: 0x024C5800
 // Recovery: confirmed (IMPLEMENT_CLASS(USCS_Node, 849496038u); reached from USCS_Node::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USCS_Node::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USCS_Node();
+// Original dynamic initializer: RVA 0x00219D30
+static FCompiledInDefer Z_CompiledInDefer_UClass_USCS_Node(Z_Construct_UClass_USCS_Node, &USCS_Node::StaticClass, TEXT("/Script/Engine"), TEXT("USCS_Node"), false, nullptr, nullptr, nullptr);

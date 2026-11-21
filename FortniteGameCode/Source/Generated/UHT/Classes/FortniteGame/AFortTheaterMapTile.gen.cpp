@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortTheaterMapTile, 3713613856u)
+// Original dynamic initializer: RVA 0x00116480 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortTheaterMapTile> AutoInitializeAFortTheaterMapTile(TEXT("AFortTheaterMapTile"), sizeof(AFortTheaterMapTile), 3713613856u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC0B0 (end 0x010BC152)
 // Original VA: 0x00000001410BC0B0 | File offset: 0x010BB6B0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortTheaterMapTile, 3713613856u); reached from AFortTheaterMapTile::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortTheaterMapTile::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortTheaterMapTile();
+// Original dynamic initializer: RVA 0x00117BE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortTheaterMapTile(Z_Construct_UClass_AFortTheaterMapTile, &AFortTheaterMapTile::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortTheaterMapTile"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ABuildingCorner()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingCorner, 868596474u)
+// Original dynamic initializer: RVA 0x000D98B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingCorner> AutoInitializeABuildingCorner(TEXT("ABuildingCorner"), sizeof(ABuildingCorner), 868596474u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F646A0 (end 0x00F64742)
 // Original VA: 0x0000000140F646A0 | File offset: 0x00F63CA0
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingCorner, 868596474u); reached from ABuildingCorner::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ABuildingCorner::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingCorner();
+// Original dynamic initializer: RVA 0x000DA810
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingCorner(Z_Construct_UClass_ABuildingCorner, &ABuildingCorner::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingCorner"), false, nullptr, nullptr, nullptr);

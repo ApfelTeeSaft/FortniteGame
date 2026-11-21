@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UGameplayTagReponseTable, 797302834u)
+// Original dynamic initializer: RVA 0x000A2F50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayTagReponseTable> AutoInitializeUGameplayTagReponseTable(TEXT("UGameplayTagReponseTable"), sizeof(UGameplayTagReponseTable), 797302834u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00565A30 (end 0x00565AD2)
 // Original VA: 0x0000000140565A30 | File offset: 0x00565030
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayTagReponseTable, 797302834u); reached from UGameplayTagReponseTable::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UGameplayTagReponseTable::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayTagReponseTable();
+// Original dynamic initializer: RVA 0x000A3300
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayTagReponseTable(Z_Construct_UClass_UGameplayTagReponseTable, &UGameplayTagReponseTable::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UGameplayTagReponseTable"), false, nullptr, nullptr, nullptr);

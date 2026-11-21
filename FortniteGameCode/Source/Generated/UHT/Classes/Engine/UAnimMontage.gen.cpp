@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAnimMontage()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnimMontage, 4101928246u)
+// Original dynamic initializer: RVA 0x001EDE80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimMontage> AutoInitializeUAnimMontage(TEXT("UAnimMontage"), sizeof(UAnimMontage), 4101928246u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023CCF10 (end 0x023CCFB2)
 // Original VA: 0x00000001423CCF10 | File offset: 0x023CC510
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimMontage, 4101928246u); reached from UAnimMontage::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAnimMontage::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimMontage();
+// Original dynamic initializer: RVA 0x001EF8A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimMontage(Z_Construct_UClass_UAnimMontage, &UAnimMontage::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimMontage"), false, nullptr, nullptr, nullptr);

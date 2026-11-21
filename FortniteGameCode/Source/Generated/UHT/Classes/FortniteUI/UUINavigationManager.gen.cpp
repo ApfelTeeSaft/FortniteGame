@@ -7,6 +7,9 @@
 void UUINavigationManager::StaticRegisterNativesUUINavigationManager()
 {
 }
+// IMPLEMENT_CLASS(UUINavigationManager, 607718443u)
+// Original dynamic initializer: RVA 0x00262AC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UUINavigationManager> AutoInitializeUUINavigationManager(TEXT("UUINavigationManager"), sizeof(UUINavigationManager), 607718443u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02910BE0 (end 0x02910C77)
 // Original VA: 0x0000000142910BE0 | File offset: 0x029101E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UUINavigationManager, 607718443u); reached from UUINavigationManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UUINavigationManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UUINavigationManager();
+// Original dynamic initializer: RVA 0x002653C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UUINavigationManager(Z_Construct_UClass_UUINavigationManager, &UUINavigationManager::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UUINavigationManager"), false, nullptr, nullptr, nullptr);

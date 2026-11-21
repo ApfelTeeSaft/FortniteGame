@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UBackgroundBlur, 1273417273u)
+// Original dynamic initializer: RVA 0x001B1C20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBackgroundBlur> AutoInitializeUBackgroundBlur(TEXT("UBackgroundBlur"), sizeof(UBackgroundBlur), 1273417273u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE4990 (end 0x01BE4A32)
 // Original VA: 0x0000000141BE4990 | File offset: 0x01BE3F90
 // Recovery: confirmed (IMPLEMENT_CLASS(UBackgroundBlur, 1273417273u); reached from UBackgroundBlur::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UBackgroundBlur::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBackgroundBlur();
+// Original dynamic initializer: RVA 0x001B21A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBackgroundBlur(Z_Construct_UClass_UBackgroundBlur, &UBackgroundBlur::StaticClass, TEXT("/Script/UMG"), TEXT("UBackgroundBlur"), false, nullptr, nullptr, nullptr);

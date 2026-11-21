@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AWorldMapPin, 1181330055u)
+// Original dynamic initializer: RVA 0x00122450 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AWorldMapPin> AutoInitializeAWorldMapPin(TEXT("AWorldMapPin"), sizeof(AWorldMapPin), 1181330055u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EFDF0 (end 0x010EFE92)
 // Original VA: 0x00000001410EFDF0 | File offset: 0x010EF3F0
 // Recovery: confirmed (IMPLEMENT_CLASS(AWorldMapPin, 1181330055u); reached from AWorldMapPin::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AWorldMapPin::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AWorldMapPin();
+// Original dynamic initializer: RVA 0x00123660
+static FCompiledInDefer Z_CompiledInDefer_UClass_AWorldMapPin(Z_Construct_UClass_AWorldMapPin, &AWorldMapPin::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AWorldMapPin"), false, nullptr, nullptr, nullptr);

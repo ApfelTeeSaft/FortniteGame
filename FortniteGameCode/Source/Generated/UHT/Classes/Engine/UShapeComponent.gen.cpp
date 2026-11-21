@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UShapeComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UShapeComponent, 697375752u)
+// Original dynamic initializer: RVA 0x00219890 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UShapeComponent> AutoInitializeUShapeComponent(TEXT("UShapeComponent"), sizeof(UShapeComponent), 697375752u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6750 (end 0x024C67F2)
 // Original VA: 0x00000001424C6750 | File offset: 0x024C5D50
 // Recovery: confirmed (IMPLEMENT_CLASS(UShapeComponent, 697375752u); reached from UShapeComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UShapeComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UShapeComponent();
+// Original dynamic initializer: RVA 0x00219F30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UShapeComponent(Z_Construct_UClass_UShapeComponent, &UShapeComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UShapeComponent"), false, nullptr, nullptr, nullptr);

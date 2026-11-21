@@ -7,6 +7,9 @@
 void UFortAITetheringBoxBoundsInterface::StaticRegisterNativesUFortAITetheringBoxBoundsInterface()
 {
 }
+// IMPLEMENT_CLASS(UFortAITetheringBoxBoundsInterface, 4023938426u)
+// Original dynamic initializer: RVA 0x000E4A40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAITetheringBoxBoundsInterface> AutoInitializeUFortAITetheringBoxBoundsInterface(TEXT("UFortAITetheringBoxBoundsInterface"), sizeof(UFortAITetheringBoxBoundsInterface), 4023938426u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F97990 (end 0x00F97A32)
 // Original VA: 0x0000000140F97990 | File offset: 0x00F96F90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAITetheringBoxBoundsInterface, 4023938426u); reached from UFortAITetheringBoxBoundsInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortAITetheringBoxBoundsInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAITetheringBoxBoundsInterface();
+// Original dynamic initializer: RVA 0x000E63B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAITetheringBoxBoundsInterface(Z_Construct_UClass_UFortAITetheringBoxBoundsInterface, &UFortAITetheringBoxBoundsInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAITetheringBoxBoundsInterface"), false, nullptr, nullptr, nullptr);

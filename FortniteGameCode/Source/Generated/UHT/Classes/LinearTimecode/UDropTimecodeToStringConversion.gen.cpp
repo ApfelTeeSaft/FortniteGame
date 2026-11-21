@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UDropTimecodeToStringConversion, 4006252745u)
+// Original dynamic initializer: RVA 0x000B3C90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDropTimecodeToStringConversion> AutoInitializeUDropTimecodeToStringConversion(TEXT("UDropTimecodeToStringConversion"), sizeof(UDropTimecodeToStringConversion), 4006252745u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007DFFE0 (end 0x007E0082)
 // Original VA: 0x00000001407DFFE0 | File offset: 0x007DF5E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UDropTimecodeToStringConversion, 4006252745u); reached from UDropTimecodeToStringConversion::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UDropTimecodeToStringConversion::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDropTimecodeToStringConversion();
+// Original dynamic initializer: RVA 0x000B3DA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDropTimecodeToStringConversion(Z_Construct_UClass_UDropTimecodeToStringConversion, &UDropTimecodeToStringConversion::StaticClass, TEXT("/Script/LinearTimecode"), TEXT("UDropTimecodeToStringConversion"), false, nullptr, nullptr, nullptr);

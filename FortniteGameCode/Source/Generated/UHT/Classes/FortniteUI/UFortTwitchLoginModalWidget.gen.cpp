@@ -7,6 +7,9 @@
 void UFortTwitchLoginModalWidget::StaticRegisterNativesUFortTwitchLoginModalWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortTwitchLoginModalWidget, 4021523392u)
+// Original dynamic initializer: RVA 0x00260BF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTwitchLoginModalWidget> AutoInitializeUFortTwitchLoginModalWidget(TEXT("UFortTwitchLoginModalWidget"), sizeof(UFortTwitchLoginModalWidget), 4021523392u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02909B50 (end 0x02909BF2)
 // Original VA: 0x0000000142909B50 | File offset: 0x02909150
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTwitchLoginModalWidget, 4021523392u); reached from UFortTwitchLoginModalWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortTwitchLoginModalWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTwitchLoginModalWidget();
+// Original dynamic initializer: RVA 0x00262580
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTwitchLoginModalWidget(Z_Construct_UClass_UFortTwitchLoginModalWidget, &UFortTwitchLoginModalWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTwitchLoginModalWidget"), false, nullptr, nullptr, nullptr);

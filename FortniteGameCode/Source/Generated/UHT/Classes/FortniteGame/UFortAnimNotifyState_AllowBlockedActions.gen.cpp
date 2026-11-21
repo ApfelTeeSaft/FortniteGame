@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortAnimNotifyState_AllowBlockedActions()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAnimNotifyState_AllowBlockedActions, 1139330024u)
+// Original dynamic initializer: RVA 0x000E6710 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAnimNotifyState_AllowBlockedActions> AutoInitializeUFortAnimNotifyState_AllowBlockedActions(TEXT("UFortAnimNotifyState_AllowBlockedActions"), sizeof(UFortAnimNotifyState_AllowBlockedActions), 1139330024u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9C680 (end 0x00F9C722)
 // Original VA: 0x0000000140F9C680 | File offset: 0x00F9BC80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAnimNotifyState_AllowBlockedActions, 1139330024u); reached from UFortAnimNotifyState_AllowBlockedActions::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortAnimNotifyState_AllowBlockedActions::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAnimNotifyState_AllowBlockedActions();
+// Original dynamic initializer: RVA 0x000E7850
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAnimNotifyState_AllowBlockedActions(Z_Construct_UClass_UFortAnimNotifyState_AllowBlockedActions, &UFortAnimNotifyState_AllowBlockedActions::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAnimNotifyState_AllowBlockedActions"), false, nullptr, nullptr, nullptr);

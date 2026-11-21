@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UCrowdManagerBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCrowdManagerBase, 3176157185u)
+// Original dynamic initializer: RVA 0x001F82C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCrowdManagerBase> AutoInitializeUCrowdManagerBase(TEXT("UCrowdManagerBase"), sizeof(UCrowdManagerBase), 3176157185u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FBEE0 (end 0x023FBF77)
 // Original VA: 0x00000001423FBEE0 | File offset: 0x023FB4E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCrowdManagerBase, 3176157185u); reached from UCrowdManagerBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UCrowdManagerBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCrowdManagerBase();
+// Original dynamic initializer: RVA 0x001F9540
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCrowdManagerBase(Z_Construct_UClass_UCrowdManagerBase, &UCrowdManagerBase::StaticClass, TEXT("/Script/Engine"), TEXT("UCrowdManagerBase"), false, nullptr, nullptr, nullptr);

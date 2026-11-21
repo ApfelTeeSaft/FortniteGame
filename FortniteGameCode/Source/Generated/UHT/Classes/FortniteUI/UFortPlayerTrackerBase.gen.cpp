@@ -7,6 +7,9 @@
 void UFortPlayerTrackerBase::StaticRegisterNativesUFortPlayerTrackerBase()
 {
 }
+// IMPLEMENT_CLASS(UFortPlayerTrackerBase, 1275022735u)
+// Original dynamic initializer: RVA 0x00255CC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPlayerTrackerBase> AutoInitializeUFortPlayerTrackerBase(TEXT("UFortPlayerTrackerBase"), sizeof(UFortPlayerTrackerBase), 1275022735u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E5690 (end 0x028E5732)
 // Original VA: 0x00000001428E5690 | File offset: 0x028E4C90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPlayerTrackerBase, 1275022735u); reached from UFortPlayerTrackerBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortPlayerTrackerBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPlayerTrackerBase();
+// Original dynamic initializer: RVA 0x002580C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPlayerTrackerBase(Z_Construct_UClass_UFortPlayerTrackerBase, &UFortPlayerTrackerBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortPlayerTrackerBase"), false, nullptr, nullptr, nullptr);

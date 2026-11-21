@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UEpicCMSLayoutBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEpicCMSLayoutBase, 1830916065u)
+// Original dynamic initializer: RVA 0x00097820 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEpicCMSLayoutBase> AutoInitializeUEpicCMSLayoutBase(TEXT("UEpicCMSLayoutBase"), sizeof(UEpicCMSLayoutBase), 1830916065u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002E33C0 (end 0x002E3462)
 // Original VA: 0x00000001402E33C0 | File offset: 0x002E29C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UEpicCMSLayoutBase, 1830916065u); reached from UEpicCMSLayoutBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UEpicCMSLayoutBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEpicCMSLayoutBase();
+// Original dynamic initializer: RVA 0x00097CC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEpicCMSLayoutBase(Z_Construct_UClass_UEpicCMSLayoutBase, &UEpicCMSLayoutBase::StaticClass, TEXT("/Script/EpicCMSUIFramework"), TEXT("UEpicCMSLayoutBase"), false, nullptr, nullptr, nullptr);

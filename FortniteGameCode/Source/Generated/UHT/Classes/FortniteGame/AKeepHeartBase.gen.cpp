@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AKeepHeartBase, 1756389998u)
+// Original dynamic initializer: RVA 0x0011E8C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AKeepHeartBase> AutoInitializeAKeepHeartBase(TEXT("AKeepHeartBase"), sizeof(AKeepHeartBase), 1756389998u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E1500 (end 0x010E15A2)
 // Original VA: 0x00000001410E1500 | File offset: 0x010E0B00
 // Recovery: confirmed (IMPLEMENT_CLASS(AKeepHeartBase, 1756389998u); reached from AKeepHeartBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AKeepHeartBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AKeepHeartBase();
+// Original dynamic initializer: RVA 0x0011FB00
+static FCompiledInDefer Z_CompiledInDefer_UClass_AKeepHeartBase(Z_Construct_UClass_AKeepHeartBase, &AKeepHeartBase::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AKeepHeartBase"), false, nullptr, nullptr, nullptr);

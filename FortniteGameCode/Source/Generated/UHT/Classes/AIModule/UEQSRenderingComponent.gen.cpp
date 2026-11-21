@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UEQSRenderingComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEQSRenderingComponent, 724983796u)
+// Original dynamic initializer: RVA 0x001BD480 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEQSRenderingComponent> AutoInitializeUEQSRenderingComponent(TEXT("UEQSRenderingComponent"), sizeof(UEQSRenderingComponent), 724983796u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2CD80 (end 0x01D2CE22)
 // Original VA: 0x0000000141D2CD80 | File offset: 0x01D2C380
 // Recovery: confirmed (IMPLEMENT_CLASS(UEQSRenderingComponent, 724983796u); reached from UEQSRenderingComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UEQSRenderingComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEQSRenderingComponent();
+// Original dynamic initializer: RVA 0x001BE9A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEQSRenderingComponent(Z_Construct_UClass_UEQSRenderingComponent, &UEQSRenderingComponent::StaticClass, TEXT("/Script/AIModule"), TEXT("UEQSRenderingComponent"), false, nullptr, nullptr, nullptr);

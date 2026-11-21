@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(USubtitleDisplay, 24925773u)
+// Original dynamic initializer: RVA 0x000AF5C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USubtitleDisplay> AutoInitializeUSubtitleDisplay(TEXT("USubtitleDisplay"), sizeof(USubtitleDisplay), 24925773u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007815F0 (end 0x00781692)
 // Original VA: 0x00000001407815F0 | File offset: 0x00780BF0
 // Recovery: confirmed (IMPLEMENT_CLASS(USubtitleDisplay, 24925773u); reached from USubtitleDisplay::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* USubtitleDisplay::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USubtitleDisplay();
+// Original dynamic initializer: RVA 0x000AF620
+static FCompiledInDefer Z_CompiledInDefer_UClass_USubtitleDisplay(Z_Construct_UClass_USubtitleDisplay, &USubtitleDisplay::StaticClass, TEXT("/Script/SubtitlesWidgets"), TEXT("USubtitleDisplay"), false, nullptr, nullptr, nullptr);

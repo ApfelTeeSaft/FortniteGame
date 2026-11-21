@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UHapticFeedbackEffect_SoundWave()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UHapticFeedbackEffect_SoundWave, 983995023u)
+// Original dynamic initializer: RVA 0x002001B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UHapticFeedbackEffect_SoundWave> AutoInitializeUHapticFeedbackEffect_SoundWave(TEXT("UHapticFeedbackEffect_SoundWave"), sizeof(UHapticFeedbackEffect_SoundWave), 983995023u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0241E6C0 (end 0x0241E762)
 // Original VA: 0x000000014241E6C0 | File offset: 0x0241DCC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UHapticFeedbackEffect_SoundWave, 983995023u); reached from UHapticFeedbackEffect_SoundWave::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UHapticFeedbackEffect_SoundWave::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UHapticFeedbackEffect_SoundWave();
+// Original dynamic initializer: RVA 0x00200AA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UHapticFeedbackEffect_SoundWave(Z_Construct_UClass_UHapticFeedbackEffect_SoundWave, &UHapticFeedbackEffect_SoundWave::StaticClass, TEXT("/Script/Engine"), TEXT("UHapticFeedbackEffect_SoundWave"), false, nullptr, nullptr, nullptr);

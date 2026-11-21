@@ -7,6 +7,9 @@
 void AGameplayCueNotify_Actor::StaticRegisterNativesAGameplayCueNotify_Actor()
 {
 }
+// IMPLEMENT_CLASS(AGameplayCueNotify_Actor, 3672328890u)
+// Original dynamic initializer: RVA 0x0009EC00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AGameplayCueNotify_Actor> AutoInitializeAGameplayCueNotify_Actor(TEXT("AGameplayCueNotify_Actor"), sizeof(AGameplayCueNotify_Actor), 3672328890u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005598E0 (end 0x00559982)
 // Original VA: 0x00000001405598E0 | File offset: 0x00558EE0
 // Recovery: confirmed (IMPLEMENT_CLASS(AGameplayCueNotify_Actor, 3672328890u); reached from AGameplayCueNotify_Actor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AGameplayCueNotify_Actor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AGameplayCueNotify_Actor();
+// Original dynamic initializer: RVA 0x000A0A00
+static FCompiledInDefer Z_CompiledInDefer_UClass_AGameplayCueNotify_Actor(Z_Construct_UClass_AGameplayCueNotify_Actor, &AGameplayCueNotify_Actor::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("AGameplayCueNotify_Actor"), false, nullptr, nullptr, nullptr);

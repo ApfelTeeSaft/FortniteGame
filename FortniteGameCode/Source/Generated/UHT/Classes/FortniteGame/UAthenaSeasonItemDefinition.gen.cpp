@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAthenaSeasonItemDefinition()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaSeasonItemDefinition, 2626326714u)
+// Original dynamic initializer: RVA 0x000D8770 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaSeasonItemDefinition> AutoInitializeUAthenaSeasonItemDefinition(TEXT("UAthenaSeasonItemDefinition"), sizeof(UAthenaSeasonItemDefinition), 2626326714u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5EE80 (end 0x00F5EF22)
 // Original VA: 0x0000000140F5EE80 | File offset: 0x00F5E480
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaSeasonItemDefinition, 2626326714u); reached from UAthenaSeasonItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAthenaSeasonItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaSeasonItemDefinition();
+// Original dynamic initializer: RVA 0x000D9610
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaSeasonItemDefinition(Z_Construct_UClass_UAthenaSeasonItemDefinition, &UAthenaSeasonItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaSeasonItemDefinition"), false, nullptr, nullptr, nullptr);

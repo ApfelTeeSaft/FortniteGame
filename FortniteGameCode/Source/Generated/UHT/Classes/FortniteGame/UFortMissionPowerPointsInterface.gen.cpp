@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortMissionPowerPointsInterface, 2377959387u)
+// Original dynamic initializer: RVA 0x001040A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMissionPowerPointsInterface> AutoInitializeUFortMissionPowerPointsInterface(TEXT("UFortMissionPowerPointsInterface"), sizeof(UFortMissionPowerPointsInterface), 2377959387u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010482F0 (end 0x01048392)
 // Original VA: 0x00000001410482F0 | File offset: 0x010478F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMissionPowerPointsInterface, 2377959387u); reached from UFortMissionPowerPointsInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortMissionPowerPointsInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMissionPowerPointsInterface();
+// Original dynamic initializer: RVA 0x001050D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMissionPowerPointsInterface(Z_Construct_UClass_UFortMissionPowerPointsInterface, &UFortMissionPowerPointsInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMissionPowerPointsInterface"), false, nullptr, nullptr, nullptr);

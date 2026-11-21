@@ -7,6 +7,9 @@
 void UNetDebugWidget::StaticRegisterNativesUNetDebugWidget()
 {
 }
+// IMPLEMENT_CLASS(UNetDebugWidget, 2283032612u)
+// Original dynamic initializer: RVA 0x000A6300 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNetDebugWidget> AutoInitializeUNetDebugWidget(TEXT("UNetDebugWidget"), sizeof(UNetDebugWidget), 2283032612u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00589540 (end 0x005895E2)
 // Original VA: 0x0000000140589540 | File offset: 0x00588B40
 // Recovery: confirmed (IMPLEMENT_CLASS(UNetDebugWidget, 2283032612u); reached from UNetDebugWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UNetDebugWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNetDebugWidget();
+// Original dynamic initializer: RVA 0x000A6320
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNetDebugWidget(Z_Construct_UClass_UNetDebugWidget, &UNetDebugWidget::StaticClass, TEXT("/Script/NetUI"), TEXT("UNetDebugWidget"), false, nullptr, nullptr, nullptr);

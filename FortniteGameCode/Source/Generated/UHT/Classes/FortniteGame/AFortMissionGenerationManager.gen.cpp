@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortMissionGenerationManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortMissionGenerationManager, 1685311603u)
+// Original dynamic initializer: RVA 0x00102C40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortMissionGenerationManager> AutoInitializeAFortMissionGenerationManager(TEXT("AFortMissionGenerationManager"), sizeof(AFortMissionGenerationManager), 1685311603u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0103FE20 (end 0x0103FEC2)
 // Original VA: 0x000000014103FE20 | File offset: 0x0103F420
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortMissionGenerationManager, 1685311603u); reached from AFortMissionGenerationManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortMissionGenerationManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortMissionGenerationManager();
+// Original dynamic initializer: RVA 0x00103D40
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortMissionGenerationManager(Z_Construct_UClass_AFortMissionGenerationManager, &AFortMissionGenerationManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortMissionGenerationManager"), false, nullptr, nullptr, nullptr);

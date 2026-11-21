@@ -7,6 +7,9 @@
 void ABuildingConnectivityEffect::StaticRegisterNativesABuildingConnectivityEffect()
 {
 }
+// IMPLEMENT_CLASS(ABuildingConnectivityEffect, 1503784552u)
+// Original dynamic initializer: RVA 0x000D9850 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingConnectivityEffect> AutoInitializeABuildingConnectivityEffect(TEXT("ABuildingConnectivityEffect"), sizeof(ABuildingConnectivityEffect), 1503784552u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F64490 (end 0x00F64532)
 // Original VA: 0x0000000140F64490 | File offset: 0x00F63A90
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingConnectivityEffect, 1503784552u); reached from ABuildingConnectivityEffect::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ABuildingConnectivityEffect::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingConnectivityEffect();
+// Original dynamic initializer: RVA 0x000DA750
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingConnectivityEffect(Z_Construct_UClass_ABuildingConnectivityEffect, &ABuildingConnectivityEffect::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingConnectivityEffect"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionFresnel()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionFresnel, 4175671980u)
+// Original dynamic initializer: RVA 0x00207520 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionFresnel> AutoInitializeUMaterialExpressionFresnel(TEXT("UMaterialExpressionFresnel"), sizeof(UMaterialExpressionFresnel), 4175671980u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247C3F0 (end 0x0247C492)
 // Original VA: 0x000000014247C3F0 | File offset: 0x0247B9F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionFresnel, 4175671980u); reached from UMaterialExpressionFresnel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionFresnel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionFresnel();
+// Original dynamic initializer: RVA 0x00208740
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionFresnel(Z_Construct_UClass_UMaterialExpressionFresnel, &UMaterialExpressionFresnel::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionFresnel"), false, nullptr, nullptr, nullptr);

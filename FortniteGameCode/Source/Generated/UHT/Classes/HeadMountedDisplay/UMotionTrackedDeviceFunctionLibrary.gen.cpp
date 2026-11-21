@@ -7,6 +7,9 @@
 void UMotionTrackedDeviceFunctionLibrary::StaticRegisterNativesUMotionTrackedDeviceFunctionLibrary()
 {
 }
+// IMPLEMENT_CLASS(UMotionTrackedDeviceFunctionLibrary, 1843160161u)
+// Original dynamic initializer: RVA 0x0019BC90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMotionTrackedDeviceFunctionLibrary> AutoInitializeUMotionTrackedDeviceFunctionLibrary(TEXT("UMotionTrackedDeviceFunctionLibrary"), sizeof(UMotionTrackedDeviceFunctionLibrary), 1843160161u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0199CFE0 (end 0x0199D082)
 // Original VA: 0x000000014199CFE0 | File offset: 0x0199C5E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMotionTrackedDeviceFunctionLibrary, 1843160161u); reached from UMotionTrackedDeviceFunctionLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UMotionTrackedDeviceFunctionLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMotionTrackedDeviceFunctionLibrary();
+// Original dynamic initializer: RVA 0x0019C070
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMotionTrackedDeviceFunctionLibrary(Z_Construct_UClass_UMotionTrackedDeviceFunctionLibrary, &UMotionTrackedDeviceFunctionLibrary::StaticClass, TEXT("/Script/HeadMountedDisplay"), TEXT("UMotionTrackedDeviceFunctionLibrary"), false, nullptr, nullptr, nullptr);

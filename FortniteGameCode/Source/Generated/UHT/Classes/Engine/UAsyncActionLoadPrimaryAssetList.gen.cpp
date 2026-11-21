@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAsyncActionLoadPrimaryAssetList, 3717451859u)
+// Original dynamic initializer: RVA 0x001F1B30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAsyncActionLoadPrimaryAssetList> AutoInitializeUAsyncActionLoadPrimaryAssetList(TEXT("UAsyncActionLoadPrimaryAssetList"), sizeof(UAsyncActionLoadPrimaryAssetList), 3717451859u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D99D0 (end 0x023D9A72)
 // Original VA: 0x00000001423D99D0 | File offset: 0x023D8FD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAsyncActionLoadPrimaryAssetList, 3717451859u); reached from UAsyncActionLoadPrimaryAssetList::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAsyncActionLoadPrimaryAssetList::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAsyncActionLoadPrimaryAssetList();
+// Original dynamic initializer: RVA 0x001F31D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAsyncActionLoadPrimaryAssetList(Z_Construct_UClass_UAsyncActionLoadPrimaryAssetList, &UAsyncActionLoadPrimaryAssetList::StaticClass, TEXT("/Script/Engine"), TEXT("UAsyncActionLoadPrimaryAssetList"), false, nullptr, nullptr, nullptr);

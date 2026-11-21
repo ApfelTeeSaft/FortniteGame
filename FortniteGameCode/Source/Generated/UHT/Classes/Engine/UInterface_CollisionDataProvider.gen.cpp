@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UInterface_CollisionDataProvider()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInterface_CollisionDataProvider, 3833532299u)
+// Original dynamic initializer: RVA 0x00200D40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInterface_CollisionDataProvider> AutoInitializeUInterface_CollisionDataProvider(TEXT("UInterface_CollisionDataProvider"), sizeof(UInterface_CollisionDataProvider), 3833532299u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024266C0 (end 0x02426762)
 // Original VA: 0x00000001424266C0 | File offset: 0x02425CC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UInterface_CollisionDataProvider, 3833532299u); reached from UInterface_CollisionDataProvider::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UInterface_CollisionDataProvider::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInterface_CollisionDataProvider();
+// Original dynamic initializer: RVA 0x00202200
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInterface_CollisionDataProvider(Z_Construct_UClass_UInterface_CollisionDataProvider, &UInterface_CollisionDataProvider::StaticClass, TEXT("/Script/Engine"), TEXT("UInterface_CollisionDataProvider"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UCheckBoxStyleAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCheckBoxStyleAsset, 3153228964u)
+// Original dynamic initializer: RVA 0x001F6F60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCheckBoxStyleAsset> AutoInitializeUCheckBoxStyleAsset(TEXT("UCheckBoxStyleAsset"), sizeof(UCheckBoxStyleAsset), 3153228964u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F6150 (end 0x023F61E7)
 // Original VA: 0x00000001423F6150 | File offset: 0x023F5750
 // Recovery: confirmed (IMPLEMENT_CLASS(UCheckBoxStyleAsset, 3153228964u); reached from UCheckBoxStyleAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UCheckBoxStyleAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCheckBoxStyleAsset();
+// Original dynamic initializer: RVA 0x001F7EE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCheckBoxStyleAsset(Z_Construct_UClass_UCheckBoxStyleAsset, &UCheckBoxStyleAsset::StaticClass, TEXT("/Script/Engine"), TEXT("UCheckBoxStyleAsset"), false, nullptr, nullptr, nullptr);

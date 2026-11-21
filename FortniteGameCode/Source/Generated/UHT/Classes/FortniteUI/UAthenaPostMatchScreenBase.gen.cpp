@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAthenaPostMatchScreenBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaPostMatchScreenBase, 3478933697u)
+// Original dynamic initializer: RVA 0x0023B5E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaPostMatchScreenBase> AutoInitializeUAthenaPostMatchScreenBase(TEXT("UAthenaPostMatchScreenBase"), sizeof(UAthenaPostMatchScreenBase), 3478933697u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02884DF0 (end 0x02884E92)
 // Original VA: 0x0000000142884DF0 | File offset: 0x028843F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaPostMatchScreenBase, 3478933697u); reached from UAthenaPostMatchScreenBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAthenaPostMatchScreenBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaPostMatchScreenBase();
+// Original dynamic initializer: RVA 0x0023D920
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaPostMatchScreenBase(Z_Construct_UClass_UAthenaPostMatchScreenBase, &UAthenaPostMatchScreenBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaPostMatchScreenBase"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortNavigationFilter_TetherZone()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNavigationFilter_TetherZone, 4012633612u)
+// Original dynamic initializer: RVA 0x00104500 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNavigationFilter_TetherZone> AutoInitializeUFortNavigationFilter_TetherZone(TEXT("UFortNavigationFilter_TetherZone"), sizeof(UFortNavigationFilter_TetherZone), 4012633612u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01049B00 (end 0x01049BA2)
 // Original VA: 0x0000000141049B00 | File offset: 0x01049100
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNavigationFilter_TetherZone, 4012633612u); reached from UFortNavigationFilter_TetherZone::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortNavigationFilter_TetherZone::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNavigationFilter_TetherZone();
+// Original dynamic initializer: RVA 0x00105990
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNavigationFilter_TetherZone(Z_Construct_UClass_UFortNavigationFilter_TetherZone, &UFortNavigationFilter_TetherZone::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNavigationFilter_TetherZone"), false, nullptr, nullptr, nullptr);

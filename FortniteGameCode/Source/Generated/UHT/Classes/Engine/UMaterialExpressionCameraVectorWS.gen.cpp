@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionCameraVectorWS()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionCameraVectorWS, 188611141u)
+// Original dynamic initializer: RVA 0x00207020 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionCameraVectorWS> AutoInitializeUMaterialExpressionCameraVectorWS(TEXT("UMaterialExpressionCameraVectorWS"), sizeof(UMaterialExpressionCameraVectorWS), 188611141u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247A870 (end 0x0247A912)
 // Original VA: 0x000000014247A870 | File offset: 0x02479E70
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionCameraVectorWS, 188611141u); reached from UMaterialExpressionCameraVectorWS::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMaterialExpressionCameraVectorWS::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionCameraVectorWS();
+// Original dynamic initializer: RVA 0x00207D40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionCameraVectorWS(Z_Construct_UClass_UMaterialExpressionCameraVectorWS, &UMaterialExpressionCameraVectorWS::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionCameraVectorWS"), false, nullptr, nullptr, nullptr);

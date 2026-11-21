@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortTestControllerMemoryReport()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortTestControllerMemoryReport, 526952237u)
+// Original dynamic initializer: RVA 0x001148B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTestControllerMemoryReport> AutoInitializeUFortTestControllerMemoryReport(TEXT("UFortTestControllerMemoryReport"), sizeof(UFortTestControllerMemoryReport), 526952237u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B1F10 (end 0x010B1FB2)
 // Original VA: 0x00000001410B1F10 | File offset: 0x010B1510
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTestControllerMemoryReport, 526952237u); reached from UFortTestControllerMemoryReport::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortTestControllerMemoryReport::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTestControllerMemoryReport();
+// Original dynamic initializer: RVA 0x00116300
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTestControllerMemoryReport(Z_Construct_UClass_UFortTestControllerMemoryReport, &UFortTestControllerMemoryReport::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTestControllerMemoryReport"), false, nullptr, nullptr, nullptr);

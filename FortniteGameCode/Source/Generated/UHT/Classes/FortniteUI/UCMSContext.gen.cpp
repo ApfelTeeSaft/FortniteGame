@@ -7,6 +7,9 @@
 void UCMSContext::StaticRegisterNativesUCMSContext()
 {
 }
+// IMPLEMENT_CLASS(UCMSContext, 546558783u)
+// Original dynamic initializer: RVA 0x0023B6C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCMSContext> AutoInitializeUCMSContext(TEXT("UCMSContext"), sizeof(UCMSContext), 546558783u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028852C0 (end 0x02885362)
 // Original VA: 0x00000001428852C0 | File offset: 0x028848C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCMSContext, 546558783u); reached from UCMSContext::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCMSContext::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCMSContext();
+// Original dynamic initializer: RVA 0x0023DAE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCMSContext(Z_Construct_UClass_UCMSContext, &UCMSContext::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UCMSContext"), false, nullptr, nullptr, nullptr);

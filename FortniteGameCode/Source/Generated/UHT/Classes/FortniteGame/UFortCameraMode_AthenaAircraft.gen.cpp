@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortCameraMode_AthenaAircraft()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCameraMode_AthenaAircraft, 2383055420u)
+// Original dynamic initializer: RVA 0x000E9490 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCameraMode_AthenaAircraft> AutoInitializeUFortCameraMode_AthenaAircraft(TEXT("UFortCameraMode_AthenaAircraft"), sizeof(UFortCameraMode_AthenaAircraft), 2383055420u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAC230 (end 0x00FAC2D2)
 // Original VA: 0x0000000140FAC230 | File offset: 0x00FAB830
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCameraMode_AthenaAircraft, 2383055420u); reached from UFortCameraMode_AthenaAircraft::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortCameraMode_AthenaAircraft::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCameraMode_AthenaAircraft();
+// Original dynamic initializer: RVA 0x000EA600
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCameraMode_AthenaAircraft(Z_Construct_UClass_UFortCameraMode_AthenaAircraft, &UFortCameraMode_AthenaAircraft::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCameraMode_AthenaAircraft"), false, nullptr, nullptr, nullptr);

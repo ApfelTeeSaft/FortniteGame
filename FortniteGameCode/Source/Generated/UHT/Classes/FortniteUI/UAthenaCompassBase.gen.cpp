@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAthenaCompassBase, 3521414028u)
+// Original dynamic initializer: RVA 0x00239040 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaCompassBase> AutoInitializeUAthenaCompassBase(TEXT("UAthenaCompassBase"), sizeof(UAthenaCompassBase), 3521414028u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287D6F0 (end 0x0287D792)
 // Original VA: 0x000000014287D6F0 | File offset: 0x0287CCF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaCompassBase, 3521414028u); reached from UAthenaCompassBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAthenaCompassBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaCompassBase();
+// Original dynamic initializer: RVA 0x0023ADC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaCompassBase(Z_Construct_UClass_UAthenaCompassBase, &UAthenaCompassBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaCompassBase"), false, nullptr, nullptr, nullptr);

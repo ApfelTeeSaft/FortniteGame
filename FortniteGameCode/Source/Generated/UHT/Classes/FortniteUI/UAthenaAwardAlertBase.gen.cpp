@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAthenaAwardAlertBase, 4283626449u)
+// Original dynamic initializer: RVA 0x00239000 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaAwardAlertBase> AutoInitializeUAthenaAwardAlertBase(TEXT("UAthenaAwardAlertBase"), sizeof(UAthenaAwardAlertBase), 4283626449u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287D590 (end 0x0287D632)
 // Original VA: 0x000000014287D590 | File offset: 0x0287CB90
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaAwardAlertBase, 4283626449u); reached from UAthenaAwardAlertBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAthenaAwardAlertBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaAwardAlertBase();
+// Original dynamic initializer: RVA 0x0023AD40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaAwardAlertBase(Z_Construct_UClass_UAthenaAwardAlertBase, &UAthenaAwardAlertBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaAwardAlertBase"), false, nullptr, nullptr, nullptr);

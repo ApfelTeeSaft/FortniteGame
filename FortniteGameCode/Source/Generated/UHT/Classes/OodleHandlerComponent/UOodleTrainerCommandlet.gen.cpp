@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UOodleTrainerCommandlet()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UOodleTrainerCommandlet, 3402909461u)
+// Original dynamic initializer: RVA 0x000AAB00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UOodleTrainerCommandlet> AutoInitializeUOodleTrainerCommandlet(TEXT("UOodleTrainerCommandlet"), sizeof(UOodleTrainerCommandlet), 3402909461u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00645F10 (end 0x00645FB2)
 // Original VA: 0x0000000140645F10 | File offset: 0x00645510
 // Recovery: confirmed (IMPLEMENT_CLASS(UOodleTrainerCommandlet, 3402909461u); reached from UOodleTrainerCommandlet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UOodleTrainerCommandlet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UOodleTrainerCommandlet();
+// Original dynamic initializer: RVA 0x000AAB20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UOodleTrainerCommandlet(Z_Construct_UClass_UOodleTrainerCommandlet, &UOodleTrainerCommandlet::StaticClass, TEXT("/Script/OodleHandlerComponent"), TEXT("UOodleTrainerCommandlet"), false, nullptr, nullptr, nullptr);

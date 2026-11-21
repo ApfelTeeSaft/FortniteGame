@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortMiniMapPingIndicator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortMiniMapPingIndicator, 2974215474u)
+// Original dynamic initializer: RVA 0x001010B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMiniMapPingIndicator> AutoInitializeUFortMiniMapPingIndicator(TEXT("UFortMiniMapPingIndicator"), sizeof(UFortMiniMapPingIndicator), 2974215474u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010365B0 (end 0x01036652)
 // Original VA: 0x00000001410365B0 | File offset: 0x01035BB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMiniMapPingIndicator, 2974215474u); reached from UFortMiniMapPingIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortMiniMapPingIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMiniMapPingIndicator();
+// Original dynamic initializer: RVA 0x00102C00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMiniMapPingIndicator(Z_Construct_UClass_UFortMiniMapPingIndicator, &UFortMiniMapPingIndicator::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMiniMapPingIndicator"), false, nullptr, nullptr, nullptr);

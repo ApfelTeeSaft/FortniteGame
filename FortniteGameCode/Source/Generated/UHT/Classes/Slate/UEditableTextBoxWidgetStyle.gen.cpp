@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UEditableTextBoxWidgetStyle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEditableTextBoxWidgetStyle, 3099105800u)
+// Original dynamic initializer: RVA 0x0013E1D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEditableTextBoxWidgetStyle> AutoInitializeUEditableTextBoxWidgetStyle(TEXT("UEditableTextBoxWidgetStyle"), sizeof(UEditableTextBoxWidgetStyle), 3099105800u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x015A1F30 (end 0x015A1FD2)
 // Original VA: 0x00000001415A1F30 | File offset: 0x015A1530
 // Recovery: confirmed (IMPLEMENT_CLASS(UEditableTextBoxWidgetStyle, 3099105800u); reached from UEditableTextBoxWidgetStyle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UEditableTextBoxWidgetStyle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEditableTextBoxWidgetStyle();
+// Original dynamic initializer: RVA 0x0013E8F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEditableTextBoxWidgetStyle(Z_Construct_UClass_UEditableTextBoxWidgetStyle, &UEditableTextBoxWidgetStyle::StaticClass, TEXT("/Script/Slate"), TEXT("UEditableTextBoxWidgetStyle"), false, nullptr, nullptr, nullptr);

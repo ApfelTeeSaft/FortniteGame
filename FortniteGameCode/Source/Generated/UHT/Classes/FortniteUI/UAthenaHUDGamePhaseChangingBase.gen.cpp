@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAthenaHUDGamePhaseChangingBase, 358668204u)
+// Original dynamic initializer: RVA 0x00239180 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaHUDGamePhaseChangingBase> AutoInitializeUAthenaHUDGamePhaseChangingBase(TEXT("UAthenaHUDGamePhaseChangingBase"), sizeof(UAthenaHUDGamePhaseChangingBase), 358668204u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287DDD0 (end 0x0287DE72)
 // Original VA: 0x000000014287DDD0 | File offset: 0x0287D3D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaHUDGamePhaseChangingBase, 358668204u); reached from UAthenaHUDGamePhaseChangingBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAthenaHUDGamePhaseChangingBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase();
+// Original dynamic initializer: RVA 0x0023B040
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaHUDGamePhaseChangingBase(Z_Construct_UClass_UAthenaHUDGamePhaseChangingBase, &UAthenaHUDGamePhaseChangingBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaHUDGamePhaseChangingBase"), false, nullptr, nullptr, nullptr);

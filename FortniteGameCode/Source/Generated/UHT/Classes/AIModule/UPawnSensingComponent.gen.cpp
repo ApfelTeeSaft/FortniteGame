@@ -7,6 +7,9 @@
 void UPawnSensingComponent::StaticRegisterNativesUPawnSensingComponent()
 {
 }
+// IMPLEMENT_CLASS(UPawnSensingComponent, 3028804600u)
+// Original dynamic initializer: RVA 0x001BF520 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPawnSensingComponent> AutoInitializeUPawnSensingComponent(TEXT("UPawnSensingComponent"), sizeof(UPawnSensingComponent), 3028804600u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31840 (end 0x01D318E2)
 // Original VA: 0x0000000141D31840 | File offset: 0x01D30E40
 // Recovery: confirmed (IMPLEMENT_CLASS(UPawnSensingComponent, 3028804600u); reached from UPawnSensingComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UPawnSensingComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPawnSensingComponent();
+// Original dynamic initializer: RVA 0x001BFCF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPawnSensingComponent(Z_Construct_UClass_UPawnSensingComponent, &UPawnSensingComponent::StaticClass, TEXT("/Script/AIModule"), TEXT("UPawnSensingComponent"), false, nullptr, nullptr, nullptr);

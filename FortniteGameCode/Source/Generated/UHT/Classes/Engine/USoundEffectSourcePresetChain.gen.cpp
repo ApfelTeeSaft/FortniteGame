@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USoundEffectSourcePresetChain()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundEffectSourcePresetChain, 2093987826u)
+// Original dynamic initializer: RVA 0x0021C4B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundEffectSourcePresetChain> AutoInitializeUSoundEffectSourcePresetChain(TEXT("USoundEffectSourcePresetChain"), sizeof(USoundEffectSourcePresetChain), 2093987826u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D96A0 (end 0x024D9737)
 // Original VA: 0x00000001424D96A0 | File offset: 0x024D8CA0
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundEffectSourcePresetChain, 2093987826u); reached from USoundEffectSourcePresetChain::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USoundEffectSourcePresetChain::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundEffectSourcePresetChain();
+// Original dynamic initializer: RVA 0x0021D8B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundEffectSourcePresetChain(Z_Construct_UClass_USoundEffectSourcePresetChain, &USoundEffectSourcePresetChain::StaticClass, TEXT("/Script/Engine"), TEXT("USoundEffectSourcePresetChain"), false, nullptr, nullptr, nullptr);

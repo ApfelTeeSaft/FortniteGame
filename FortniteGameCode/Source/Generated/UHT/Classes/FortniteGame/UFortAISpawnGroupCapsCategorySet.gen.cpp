@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAISpawnGroupCapsCategorySet()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAISpawnGroupCapsCategorySet, 3534749563u)
+// Original dynamic initializer: RVA 0x000E48A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAISpawnGroupCapsCategorySet> AutoInitializeUFortAISpawnGroupCapsCategorySet(TEXT("UFortAISpawnGroupCapsCategorySet"), sizeof(UFortAISpawnGroupCapsCategorySet), 3534749563u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F970D0 (end 0x00F97167)
 // Original VA: 0x0000000140F970D0 | File offset: 0x00F966D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAISpawnGroupCapsCategorySet, 3534749563u); reached from UFortAISpawnGroupCapsCategorySet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAISpawnGroupCapsCategorySet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAISpawnGroupCapsCategorySet();
+// Original dynamic initializer: RVA 0x000E6070
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAISpawnGroupCapsCategorySet(Z_Construct_UClass_UFortAISpawnGroupCapsCategorySet, &UFortAISpawnGroupCapsCategorySet::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAISpawnGroupCapsCategorySet"), false, nullptr, nullptr, nullptr);

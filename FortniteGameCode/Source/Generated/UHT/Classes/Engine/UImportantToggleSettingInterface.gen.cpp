@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UImportantToggleSettingInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UImportantToggleSettingInterface, 2358299929u)
+// Original dynamic initializer: RVA 0x00200B80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UImportantToggleSettingInterface> AutoInitializeUImportantToggleSettingInterface(TEXT("UImportantToggleSettingInterface"), sizeof(UImportantToggleSettingInterface), 2358299929u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02425D40 (end 0x02425DE2)
 // Original VA: 0x0000000142425D40 | File offset: 0x02425340
 // Recovery: confirmed (IMPLEMENT_CLASS(UImportantToggleSettingInterface, 2358299929u); reached from UImportantToggleSettingInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UImportantToggleSettingInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UImportantToggleSettingInterface();
+// Original dynamic initializer: RVA 0x00201E80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UImportantToggleSettingInterface(Z_Construct_UClass_UImportantToggleSettingInterface, &UImportantToggleSettingInterface::StaticClass, TEXT("/Script/Engine"), TEXT("UImportantToggleSettingInterface"), false, nullptr, nullptr, nullptr);

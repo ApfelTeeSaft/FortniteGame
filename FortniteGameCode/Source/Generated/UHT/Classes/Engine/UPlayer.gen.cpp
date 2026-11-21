@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UPlayer()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPlayer, 4145198090u)
+// Original dynamic initializer: RVA 0x00214A90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPlayer> AutoInitializeUPlayer(TEXT("UPlayer"), sizeof(UPlayer), 4145198090u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A8B80 (end 0x024A8C17)
 // Original VA: 0x00000001424A8B80 | File offset: 0x024A8180
 // Recovery: confirmed (IMPLEMENT_CLASS(UPlayer, 4145198090u); reached from UPlayer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UPlayer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPlayer();
+// Original dynamic initializer: RVA 0x002161A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPlayer(Z_Construct_UClass_UPlayer, &UPlayer::StaticClass, TEXT("/Script/Engine"), TEXT("UPlayer"), false, nullptr, nullptr, nullptr);

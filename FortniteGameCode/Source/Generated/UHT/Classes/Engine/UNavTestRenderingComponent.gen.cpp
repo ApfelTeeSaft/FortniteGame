@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UNavTestRenderingComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNavTestRenderingComponent, 3678458317u)
+// Original dynamic initializer: RVA 0x0020DD30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavTestRenderingComponent> AutoInitializeUNavTestRenderingComponent(TEXT("UNavTestRenderingComponent"), sizeof(UNavTestRenderingComponent), 3678458317u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248E8F0 (end 0x0248E992)
 // Original VA: 0x000000014248E8F0 | File offset: 0x0248DEF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavTestRenderingComponent, 3678458317u); reached from UNavTestRenderingComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UNavTestRenderingComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavTestRenderingComponent();
+// Original dynamic initializer: RVA 0x0020EB90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavTestRenderingComponent(Z_Construct_UClass_UNavTestRenderingComponent, &UNavTestRenderingComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UNavTestRenderingComponent"), false, nullptr, nullptr, nullptr);

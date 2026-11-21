@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAISenseConfig()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAISenseConfig, 2793215974u)
+// Original dynamic initializer: RVA 0x001B9090 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAISenseConfig> AutoInitializeUAISenseConfig(TEXT("UAISenseConfig"), sizeof(UAISenseConfig), 2793215974u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1A110 (end 0x01D1A1A7)
 // Original VA: 0x0000000141D1A110 | File offset: 0x01D19710
 // Recovery: confirmed (IMPLEMENT_CLASS(UAISenseConfig, 2793215974u); reached from UAISenseConfig::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAISenseConfig::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAISenseConfig();
+// Original dynamic initializer: RVA 0x001BA1B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAISenseConfig(Z_Construct_UClass_UAISenseConfig, &UAISenseConfig::StaticClass, TEXT("/Script/AIModule"), TEXT("UAISenseConfig"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBrushBuilder()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBrushBuilder, 2861865075u)
+// Original dynamic initializer: RVA 0x001F4C70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBrushBuilder> AutoInitializeUBrushBuilder(TEXT("UBrushBuilder"), sizeof(UBrushBuilder), 2861865075u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E8F60 (end 0x023E8FF7)
 // Original VA: 0x00000001423E8F60 | File offset: 0x023E8560
 // Recovery: confirmed (IMPLEMENT_CLASS(UBrushBuilder, 2861865075u); reached from UBrushBuilder::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBrushBuilder::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBrushBuilder();
+// Original dynamic initializer: RVA 0x001F6190
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBrushBuilder(Z_Construct_UClass_UBrushBuilder, &UBrushBuilder::StaticClass, TEXT("/Script/Engine"), TEXT("UBrushBuilder"), false, nullptr, nullptr, nullptr);

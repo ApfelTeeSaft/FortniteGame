@@ -7,6 +7,9 @@
 void UCommonObjectListItem::StaticRegisterNativesUCommonObjectListItem()
 {
 }
+// IMPLEMENT_CLASS(UCommonObjectListItem, 3756189935u)
+// Original dynamic initializer: RVA 0x00096060 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonObjectListItem> AutoInitializeUCommonObjectListItem(TEXT("UCommonObjectListItem"), sizeof(UCommonObjectListItem), 3756189935u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C95E0 (end 0x002C9682)
 // Original VA: 0x00000001402C95E0 | File offset: 0x002C8BE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonObjectListItem, 3756189935u); reached from UCommonObjectListItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonObjectListItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonObjectListItem();
+// Original dynamic initializer: RVA 0x00096890
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonObjectListItem(Z_Construct_UClass_UCommonObjectListItem, &UCommonObjectListItem::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonObjectListItem"), false, nullptr, nullptr, nullptr);

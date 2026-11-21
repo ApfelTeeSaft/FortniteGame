@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UWorldTheme()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UWorldTheme, 1632127502u)
+// Original dynamic initializer: RVA 0x00122570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWorldTheme> AutoInitializeUWorldTheme(TEXT("UWorldTheme"), sizeof(UWorldTheme), 1632127502u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010F0400 (end 0x010F04A2)
 // Original VA: 0x00000001410F0400 | File offset: 0x010EFA00
 // Recovery: confirmed (IMPLEMENT_CLASS(UWorldTheme, 1632127502u); reached from UWorldTheme::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UWorldTheme::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWorldTheme();
+// Original dynamic initializer: RVA 0x001238A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWorldTheme(Z_Construct_UClass_UWorldTheme, &UWorldTheme::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UWorldTheme"), false, nullptr, nullptr, nullptr);

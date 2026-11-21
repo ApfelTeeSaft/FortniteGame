@@ -7,6 +7,9 @@
 void UCommonTagVisibilityWidget::StaticRegisterNativesUCommonTagVisibilityWidget()
 {
 }
+// IMPLEMENT_CLASS(UCommonTagVisibilityWidget, 2042612066u)
+// Original dynamic initializer: RVA 0x0023B6E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonTagVisibilityWidget> AutoInitializeUCommonTagVisibilityWidget(TEXT("UCommonTagVisibilityWidget"), sizeof(UCommonTagVisibilityWidget), 2042612066u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02885370 (end 0x02885412)
 // Original VA: 0x0000000142885370 | File offset: 0x02884970
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonTagVisibilityWidget, 2042612066u); reached from UCommonTagVisibilityWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonTagVisibilityWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonTagVisibilityWidget();
+// Original dynamic initializer: RVA 0x0023DB20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonTagVisibilityWidget(Z_Construct_UClass_UCommonTagVisibilityWidget, &UCommonTagVisibilityWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UCommonTagVisibilityWidget"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionEncounter_SpawnPointsMultiplier(
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionEncounter_SpawnPointsMultiplier, 4129102871u)
+// Original dynamic initializer: RVA 0x000F0E80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionEncounter_SpawnPointsMultiplier> AutoInitializeUFortDifficultyOptionEncounter_SpawnPointsMultiplier(TEXT("UFortDifficultyOptionEncounter_SpawnPointsMultiplier"), sizeof(UFortDifficultyOptionEncounter_SpawnPointsMultiplier), 4129102871u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD5C80 (end 0x00FD5D22)
 // Original VA: 0x0000000140FD5C80 | File offset: 0x00FD5280
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionEncounter_SpawnPointsMultiplier, 4129102871u); reached from UFortDifficultyOptionEncounter_SpawnPointsMultiplier::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionEncounter_SpawnPointsMultiplier::GetPrivateStaticCl
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionEncounter_SpawnPointsMultiplier();
+// Original dynamic initializer: RVA 0x000F2150
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionEncounter_SpawnPointsMultiplier(Z_Construct_UClass_UFortDifficultyOptionEncounter_SpawnPointsMultiplier, &UFortDifficultyOptionEncounter_SpawnPointsMultiplier::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionEncounter_SpawnPointsMultiplier"), false, nullptr, nullptr, nullptr);

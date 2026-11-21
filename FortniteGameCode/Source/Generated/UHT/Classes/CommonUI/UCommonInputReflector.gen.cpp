@@ -7,6 +7,9 @@
 void UCommonInputReflector::StaticRegisterNativesUCommonInputReflector()
 {
 }
+// IMPLEMENT_CLASS(UCommonInputReflector, 139822752u)
+// Original dynamic initializer: RVA 0x00095F80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonInputReflector> AutoInitializeUCommonInputReflector(TEXT("UCommonInputReflector"), sizeof(UCommonInputReflector), 139822752u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C9120 (end 0x002C91C2)
 // Original VA: 0x00000001402C9120 | File offset: 0x002C8720
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonInputReflector, 139822752u); reached from UCommonInputReflector::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonInputReflector::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonInputReflector();
+// Original dynamic initializer: RVA 0x000966D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonInputReflector(Z_Construct_UClass_UCommonInputReflector, &UCommonInputReflector::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonInputReflector"), false, nullptr, nullptr, nullptr);

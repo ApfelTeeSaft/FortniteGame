@@ -7,6 +7,9 @@
 void UPlayerInput::StaticRegisterNativesUPlayerInput()
 {
 }
+// IMPLEMENT_CLASS(UPlayerInput, 2179435459u)
+// Original dynamic initializer: RVA 0x002162C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPlayerInput> AutoInitializeUPlayerInput(TEXT("UPlayerInput"), sizeof(UPlayerInput), 2179435459u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B6560 (end 0x024B6602)
 // Original VA: 0x00000001424B6560 | File offset: 0x024B5B60
 // Recovery: confirmed (IMPLEMENT_CLASS(UPlayerInput, 2179435459u); reached from UPlayerInput::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UPlayerInput::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPlayerInput();
+// Original dynamic initializer: RVA 0x00217090
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPlayerInput(Z_Construct_UClass_UPlayerInput, &UPlayerInput::StaticClass, TEXT("/Script/Engine"), TEXT("UPlayerInput"), false, nullptr, nullptr, nullptr);

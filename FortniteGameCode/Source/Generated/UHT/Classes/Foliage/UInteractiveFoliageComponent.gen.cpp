@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UInteractiveFoliageComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInteractiveFoliageComponent, 174038258u)
+// Original dynamic initializer: RVA 0x001A0920 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInteractiveFoliageComponent> AutoInitializeUInteractiveFoliageComponent(TEXT("UInteractiveFoliageComponent"), sizeof(UInteractiveFoliageComponent), 174038258u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A481F0 (end 0x01A48292)
 // Original VA: 0x0000000141A481F0 | File offset: 0x01A477F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UInteractiveFoliageComponent, 174038258u); reached from UInteractiveFoliageComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UInteractiveFoliageComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInteractiveFoliageComponent();
+// Original dynamic initializer: RVA 0x001A0FE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInteractiveFoliageComponent(Z_Construct_UClass_UInteractiveFoliageComponent, &UInteractiveFoliageComponent::StaticClass, TEXT("/Script/Foliage"), TEXT("UInteractiveFoliageComponent"), false, nullptr, nullptr, nullptr);

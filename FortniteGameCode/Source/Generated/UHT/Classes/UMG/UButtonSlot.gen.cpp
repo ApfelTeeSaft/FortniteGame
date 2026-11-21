@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UButtonSlot, 3924487824u)
+// Original dynamic initializer: RVA 0x001B1D00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UButtonSlot> AutoInitializeUButtonSlot(TEXT("UButtonSlot"), sizeof(UButtonSlot), 3924487824u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE4E60 (end 0x01BE4F02)
 // Original VA: 0x0000000141BE4E60 | File offset: 0x01BE4460
 // Recovery: confirmed (IMPLEMENT_CLASS(UButtonSlot, 3924487824u); reached from UButtonSlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UButtonSlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UButtonSlot();
+// Original dynamic initializer: RVA 0x001B2360
+static FCompiledInDefer Z_CompiledInDefer_UClass_UButtonSlot(Z_Construct_UClass_UButtonSlot, &UButtonSlot::StaticClass, TEXT("/Script/UMG"), TEXT("UButtonSlot"), false, nullptr, nullptr, nullptr);

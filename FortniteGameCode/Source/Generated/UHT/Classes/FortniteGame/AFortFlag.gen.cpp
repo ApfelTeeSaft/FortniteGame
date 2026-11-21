@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortFlag()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortFlag, 1820329380u)
+// Original dynamic initializer: RVA 0x000F2570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortFlag> AutoInitializeAFortFlag(TEXT("AFortFlag"), sizeof(AFortFlag), 1820329380u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD98D0 (end 0x00FD9972)
 // Original VA: 0x0000000140FD98D0 | File offset: 0x00FD8ED0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortFlag, 1820329380u); reached from AFortFlag::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortFlag::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortFlag();
+// Original dynamic initializer: RVA 0x000F4290
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortFlag(Z_Construct_UClass_AFortFlag, &AFortFlag::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortFlag"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UARBlueprintLibrary::StaticRegisterNativesUARBlueprintLibrary()
 {
 }
+// IMPLEMENT_CLASS(UARBlueprintLibrary, 565927587u)
+// Original dynamic initializer: RVA 0x00267BD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UARBlueprintLibrary> AutoInitializeUARBlueprintLibrary(TEXT("UARBlueprintLibrary"), sizeof(UARBlueprintLibrary), 565927587u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029213C0 (end 0x02921462)
 // Original VA: 0x00000001429213C0 | File offset: 0x029209C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UARBlueprintLibrary, 565927587u); reached from UARBlueprintLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UARBlueprintLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UARBlueprintLibrary();
+// Original dynamic initializer: RVA 0x00267E10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UARBlueprintLibrary(Z_Construct_UClass_UARBlueprintLibrary, &UARBlueprintLibrary::StaticClass, TEXT("/Script/AugmentedReality"), TEXT("UARBlueprintLibrary"), false, nullptr, nullptr, nullptr);

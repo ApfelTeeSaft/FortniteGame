@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_RejoinSession, 3612320408u)
+// Original dynamic initializer: RVA 0x000E69B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_RejoinSession> AutoInitializeUFortAsyncAction_RejoinSession(TEXT("UFortAsyncAction_RejoinSession"), sizeof(UFortAsyncAction_RejoinSession), 3612320408u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9D4F0 (end 0x00F9D592)
 // Original VA: 0x0000000140F9D4F0 | File offset: 0x00F9CAF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_RejoinSession, 3612320408u); reached from UFortAsyncAction_RejoinSession::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_RejoinSession::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_RejoinSession();
+// Original dynamic initializer: RVA 0x000E7D90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_RejoinSession(Z_Construct_UClass_UFortAsyncAction_RejoinSession, &UFortAsyncAction_RejoinSession::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAsyncAction_RejoinSession"), false, nullptr, nullptr, nullptr);

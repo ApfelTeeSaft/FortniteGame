@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMovieScene3DPathSection()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMovieScene3DPathSection, 4068854265u)
+// Original dynamic initializer: RVA 0x001AC450 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovieScene3DPathSection> AutoInitializeUMovieScene3DPathSection(TEXT("UMovieScene3DPathSection"), sizeof(UMovieScene3DPathSection), 4068854265u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4CB70 (end 0x01B4CC12)
 // Original VA: 0x0000000141B4CB70 | File offset: 0x01B4C170
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovieScene3DPathSection, 4068854265u); reached from UMovieScene3DPathSection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMovieScene3DPathSection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovieScene3DPathSection();
+// Original dynamic initializer: RVA 0x001AF180
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovieScene3DPathSection(Z_Construct_UClass_UMovieScene3DPathSection, &UMovieScene3DPathSection::StaticClass, TEXT("/Script/MovieSceneTracks"), TEXT("UMovieScene3DPathSection"), false, nullptr, nullptr, nullptr);

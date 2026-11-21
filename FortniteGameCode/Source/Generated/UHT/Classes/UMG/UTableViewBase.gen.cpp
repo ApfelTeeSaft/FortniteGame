@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UTableViewBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTableViewBase, 3432416577u)
+// Original dynamic initializer: RVA 0x001B3790 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTableViewBase> AutoInitializeUTableViewBase(TEXT("UTableViewBase"), sizeof(UTableViewBase), 3432416577u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2320 (end 0x01BF23C2)
 // Original VA: 0x0000000141BF2320 | File offset: 0x01BF1920
 // Recovery: confirmed (IMPLEMENT_CLASS(UTableViewBase, 3432416577u); reached from UTableViewBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UTableViewBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTableViewBase();
+// Original dynamic initializer: RVA 0x001B4090
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTableViewBase(Z_Construct_UClass_UTableViewBase, &UTableViewBase::StaticClass, TEXT("/Script/UMG"), TEXT("UTableViewBase"), false, nullptr, nullptr, nullptr);

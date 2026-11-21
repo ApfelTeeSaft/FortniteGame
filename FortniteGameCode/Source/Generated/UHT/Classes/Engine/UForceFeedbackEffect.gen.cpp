@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UForceFeedbackEffect()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UForceFeedbackEffect, 2410931828u)
+// Original dynamic initializer: RVA 0x001FF440 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UForceFeedbackEffect> AutoInitializeUForceFeedbackEffect(TEXT("UForceFeedbackEffect"), sizeof(UForceFeedbackEffect), 2410931828u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240EC50 (end 0x0240ECE7)
 // Original VA: 0x000000014240EC50 | File offset: 0x0240E250
 // Recovery: confirmed (IMPLEMENT_CLASS(UForceFeedbackEffect, 2410931828u); reached from UForceFeedbackEffect::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UForceFeedbackEffect::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UForceFeedbackEffect();
+// Original dynamic initializer: RVA 0x001FFF70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UForceFeedbackEffect(Z_Construct_UClass_UForceFeedbackEffect, &UForceFeedbackEffect::StaticClass, TEXT("/Script/Engine"), TEXT("UForceFeedbackEffect"), false, nullptr, nullptr, nullptr);

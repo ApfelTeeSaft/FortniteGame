@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortGameplayAbility_Reload()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortGameplayAbility_Reload, 4051917747u)
+// Original dynamic initializer: RVA 0x000F6700 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGameplayAbility_Reload> AutoInitializeUFortGameplayAbility_Reload(TEXT("UFortGameplayAbility_Reload"), sizeof(UFortGameplayAbility_Reload), 4051917747u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE65A0 (end 0x00FE6642)
 // Original VA: 0x0000000140FE65A0 | File offset: 0x00FE5BA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGameplayAbility_Reload, 4051917747u); reached from UFortGameplayAbility_Reload::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortGameplayAbility_Reload::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGameplayAbility_Reload();
+// Original dynamic initializer: RVA 0x000F73F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGameplayAbility_Reload(Z_Construct_UClass_UFortGameplayAbility_Reload, &UFortGameplayAbility_Reload::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortGameplayAbility_Reload"), false, nullptr, nullptr, nullptr);

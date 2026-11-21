@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAISenseEvent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAISenseEvent, 1726879381u)
+// Original dynamic initializer: RVA 0x001BA4F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAISenseEvent> AutoInitializeUAISenseEvent(TEXT("UAISenseEvent"), sizeof(UAISenseEvent), 1726879381u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D20930 (end 0x01D209C7)
 // Original VA: 0x0000000141D20930 | File offset: 0x01D1FF30
 // Recovery: confirmed (IMPLEMENT_CLASS(UAISenseEvent, 1726879381u); reached from UAISenseEvent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAISenseEvent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAISenseEvent();
+// Original dynamic initializer: RVA 0x001BB6C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAISenseEvent(Z_Construct_UClass_UAISenseEvent, &UAISenseEvent::StaticClass, TEXT("/Script/AIModule"), TEXT("UAISenseEvent"), false, nullptr, nullptr, nullptr);

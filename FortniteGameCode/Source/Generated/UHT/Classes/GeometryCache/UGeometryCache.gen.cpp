@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_UGeometryCache()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UGeometryCache, 4004608356u)
+// Original dynamic initializer: RVA 0x001C04A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGeometryCache> AutoInitializeUGeometryCache(TEXT("UGeometryCache"), sizeof(UGeometryCache), 4004608356u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3F840 (end 0x01D3F8D7)
 // Original VA: 0x0000000141D3F840 | File offset: 0x01D3EE40
 // Recovery: confirmed (IMPLEMENT_CLASS(UGeometryCache, 4004608356u); reached from UGeometryCache::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* UGeometryCache::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGeometryCache();
+// Original dynamic initializer: RVA 0x001C07F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGeometryCache(Z_Construct_UClass_UGeometryCache, &UGeometryCache::StaticClass, TEXT("/Script/GeometryCache"), TEXT("UGeometryCache"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UScaleBox, 2425434908u)
+// Original dynamic initializer: RVA 0x001B35F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UScaleBox> AutoInitializeUScaleBox(TEXT("UScaleBox"), sizeof(UScaleBox), 2425434908u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF1A50 (end 0x01BF1AF2)
 // Original VA: 0x0000000141BF1A50 | File offset: 0x01BF1050
 // Recovery: confirmed (IMPLEMENT_CLASS(UScaleBox, 2425434908u); reached from UScaleBox::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UScaleBox::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UScaleBox();
+// Original dynamic initializer: RVA 0x001B3D50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UScaleBox(Z_Construct_UClass_UScaleBox, &UScaleBox::StaticClass, TEXT("/Script/UMG"), TEXT("UScaleBox"), false, nullptr, nullptr, nullptr);

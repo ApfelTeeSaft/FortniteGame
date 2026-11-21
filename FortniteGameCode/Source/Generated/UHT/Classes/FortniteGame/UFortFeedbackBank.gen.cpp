@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortFeedbackBank()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortFeedbackBank, 4241049774u)
+// Original dynamic initializer: RVA 0x000F26D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortFeedbackBank> AutoInitializeUFortFeedbackBank(TEXT("UFortFeedbackBank"), sizeof(UFortFeedbackBank), 4241049774u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDA040 (end 0x00FDA0E2)
 // Original VA: 0x0000000140FDA040 | File offset: 0x00FD9640
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortFeedbackBank, 4241049774u); reached from UFortFeedbackBank::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortFeedbackBank::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortFeedbackBank();
+// Original dynamic initializer: RVA 0x000F4550
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortFeedbackBank(Z_Construct_UClass_UFortFeedbackBank, &UFortFeedbackBank::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortFeedbackBank"), false, nullptr, nullptr, nullptr);

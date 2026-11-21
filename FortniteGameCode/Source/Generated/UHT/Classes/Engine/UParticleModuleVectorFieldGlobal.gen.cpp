@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleVectorFieldGlobal()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleVectorFieldGlobal, 2512196957u)
+// Original dynamic initializer: RVA 0x002126E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleVectorFieldGlobal> AutoInitializeUParticleModuleVectorFieldGlobal(TEXT("UParticleModuleVectorFieldGlobal"), sizeof(UParticleModuleVectorFieldGlobal), 2512196957u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249D2D0 (end 0x0249D372)
 // Original VA: 0x000000014249D2D0 | File offset: 0x0249C8D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleVectorFieldGlobal, 2512196957u); reached from UParticleModuleVectorFieldGlobal::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleVectorFieldGlobal::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleVectorFieldGlobal();
+// Original dynamic initializer: RVA 0x00213890
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleVectorFieldGlobal(Z_Construct_UClass_UParticleModuleVectorFieldGlobal, &UParticleModuleVectorFieldGlobal::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleVectorFieldGlobal"), false, nullptr, nullptr, nullptr);

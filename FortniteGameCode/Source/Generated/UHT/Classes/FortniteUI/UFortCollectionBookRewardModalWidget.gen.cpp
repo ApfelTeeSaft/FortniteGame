@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortCollectionBookRewardModalWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCollectionBookRewardModalWidget, 2386458906u)
+// Original dynamic initializer: RVA 0x00242570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCollectionBookRewardModalWidget> AutoInitializeUFortCollectionBookRewardModalWidget(TEXT("UFortCollectionBookRewardModalWidget"), sizeof(UFortCollectionBookRewardModalWidget), 2386458906u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02899550 (end 0x028995F2)
 // Original VA: 0x0000000142899550 | File offset: 0x02898B50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCollectionBookRewardModalWidget, 2386458906u); reached from UFortCollectionBookRewardModalWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortCollectionBookRewardModalWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCollectionBookRewardModalWidget();
+// Original dynamic initializer: RVA 0x002441E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCollectionBookRewardModalWidget(Z_Construct_UClass_UFortCollectionBookRewardModalWidget, &UFortCollectionBookRewardModalWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCollectionBookRewardModalWidget"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAIDataProvider_Random()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAIDataProvider_Random, 71254074u)
+// Original dynamic initializer: RVA 0x001B8F30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAIDataProvider_Random> AutoInitializeUAIDataProvider_Random(TEXT("UAIDataProvider_Random"), sizeof(UAIDataProvider_Random), 71254074u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D199B0 (end 0x01D19A52)
 // Original VA: 0x0000000141D199B0 | File offset: 0x01D18FB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAIDataProvider_Random, 71254074u); reached from UAIDataProvider_Random::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAIDataProvider_Random::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAIDataProvider_Random();
+// Original dynamic initializer: RVA 0x001B9EF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAIDataProvider_Random(Z_Construct_UClass_UAIDataProvider_Random, &UAIDataProvider_Random::StaticClass, TEXT("/Script/AIModule"), TEXT("UAIDataProvider_Random"), false, nullptr, nullptr, nullptr);

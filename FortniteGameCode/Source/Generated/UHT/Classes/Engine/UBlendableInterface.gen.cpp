@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UBlendableInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBlendableInterface, 477610228u)
+// Original dynamic initializer: RVA 0x001F33F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBlendableInterface> AutoInitializeUBlendableInterface(TEXT("UBlendableInterface"), sizeof(UBlendableInterface), 477610228u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E17E0 (end 0x023E1882)
 // Original VA: 0x00000001423E17E0 | File offset: 0x023E0DE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBlendableInterface, 477610228u); reached from UBlendableInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UBlendableInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBlendableInterface();
+// Original dynamic initializer: RVA 0x001F4870
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBlendableInterface(Z_Construct_UClass_UBlendableInterface, &UBlendableInterface::StaticClass, TEXT("/Script/Engine"), TEXT("UBlendableInterface"), false, nullptr, nullptr, nullptr);

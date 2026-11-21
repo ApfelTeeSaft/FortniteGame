@@ -7,6 +7,9 @@
 void UOnlineHotfixManager::StaticRegisterNativesUOnlineHotfixManager()
 {
 }
+// IMPLEMENT_CLASS(UOnlineHotfixManager, 2737238916u)
+// Original dynamic initializer: RVA 0x000A94A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UOnlineHotfixManager> AutoInitializeUOnlineHotfixManager(TEXT("UOnlineHotfixManager"), sizeof(UOnlineHotfixManager), 2737238916u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005D3250 (end 0x005D32E7)
 // Original VA: 0x00000001405D3250 | File offset: 0x005D2850
 // Recovery: confirmed (IMPLEMENT_CLASS(UOnlineHotfixManager, 2737238916u); reached from UOnlineHotfixManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UOnlineHotfixManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UOnlineHotfixManager();
+// Original dynamic initializer: RVA 0x000A9620
+static FCompiledInDefer Z_CompiledInDefer_UClass_UOnlineHotfixManager(Z_Construct_UClass_UOnlineHotfixManager, &UOnlineHotfixManager::StaticClass, TEXT("/Script/Hotfix"), TEXT("UOnlineHotfixManager"), false, nullptr, nullptr, nullptr);

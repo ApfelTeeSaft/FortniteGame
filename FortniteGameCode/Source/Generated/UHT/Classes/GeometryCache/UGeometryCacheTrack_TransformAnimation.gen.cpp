@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UGeometryCacheTrack_TransformAnimation, 655704081u)
+// Original dynamic initializer: RVA 0x001C0520 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGeometryCacheTrack_TransformAnimation> AutoInitializeUGeometryCacheTrack_TransformAnimation(TEXT("UGeometryCacheTrack_TransformAnimation"), sizeof(UGeometryCacheTrack_TransformAnimation), 655704081u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3FAE0 (end 0x01D3FB82)
 // Original VA: 0x0000000141D3FAE0 | File offset: 0x01D3F0E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UGeometryCacheTrack_TransformAnimation, 655704081u); reached from UGeometryCacheTrack_TransformAnimation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UGeometryCacheTrack_TransformAnimation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGeometryCacheTrack_TransformAnimation();
+// Original dynamic initializer: RVA 0x001C08F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGeometryCacheTrack_TransformAnimation(Z_Construct_UClass_UGeometryCacheTrack_TransformAnimation, &UGeometryCacheTrack_TransformAnimation::StaticClass, TEXT("/Script/GeometryCache"), TEXT("UGeometryCacheTrack_TransformAnimation"), false, nullptr, nullptr, nullptr);

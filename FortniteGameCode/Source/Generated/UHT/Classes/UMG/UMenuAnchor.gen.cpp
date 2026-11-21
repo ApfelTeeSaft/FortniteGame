@@ -7,6 +7,9 @@
 void UMenuAnchor::StaticRegisterNativesUMenuAnchor()
 {
 }
+// IMPLEMENT_CLASS(UMenuAnchor, 1697996854u)
+// Original dynamic initializer: RVA 0x001B2800 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMenuAnchor> AutoInitializeUMenuAnchor(TEXT("UMenuAnchor"), sizeof(UMenuAnchor), 1697996854u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEBCE0 (end 0x01BEBD82)
 // Original VA: 0x0000000141BEBCE0 | File offset: 0x01BEB2E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMenuAnchor, 1697996854u); reached from UMenuAnchor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UMenuAnchor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMenuAnchor();
+// Original dynamic initializer: RVA 0x001B3050
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMenuAnchor(Z_Construct_UClass_UMenuAnchor, &UMenuAnchor::StaticClass, TEXT("/Script/UMG"), TEXT("UMenuAnchor"), false, nullptr, nullptr, nullptr);

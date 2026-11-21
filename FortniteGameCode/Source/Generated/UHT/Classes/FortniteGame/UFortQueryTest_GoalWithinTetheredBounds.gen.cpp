@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortQueryTest_GoalWithinTetheredBounds()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryTest_GoalWithinTetheredBounds, 3755551398u)
+// Original dynamic initializer: RVA 0x0010EE90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryTest_GoalWithinTetheredBounds> AutoInitializeUFortQueryTest_GoalWithinTetheredBounds(TEXT("UFortQueryTest_GoalWithinTetheredBounds"), sizeof(UFortQueryTest_GoalWithinTetheredBounds), 3755551398u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01092550 (end 0x010925F2)
 // Original VA: 0x0000000141092550 | File offset: 0x01091B50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryTest_GoalWithinTetheredBounds, 3755551398u); reached from UFortQueryTest_GoalWithinTetheredBounds::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortQueryTest_GoalWithinTetheredBounds::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryTest_GoalWithinTetheredBounds();
+// Original dynamic initializer: RVA 0x001103A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryTest_GoalWithinTetheredBounds(Z_Construct_UClass_UFortQueryTest_GoalWithinTetheredBounds, &UFortQueryTest_GoalWithinTetheredBounds::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryTest_GoalWithinTetheredBounds"), false, nullptr, nullptr, nullptr);

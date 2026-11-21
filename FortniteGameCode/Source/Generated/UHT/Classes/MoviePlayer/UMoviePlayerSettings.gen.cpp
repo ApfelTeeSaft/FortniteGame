@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMoviePlayerSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMoviePlayerSettings, 2896668429u)
+// Original dynamic initializer: RVA 0x001C2040 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMoviePlayerSettings> AutoInitializeUMoviePlayerSettings(TEXT("UMoviePlayerSettings"), sizeof(UMoviePlayerSettings), 2896668429u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D65940 (end 0x01D659D7)
 // Original VA: 0x0000000141D65940 | File offset: 0x01D64F40
 // Recovery: confirmed (IMPLEMENT_CLASS(UMoviePlayerSettings, 2896668429u); reached from UMoviePlayerSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMoviePlayerSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMoviePlayerSettings();
+// Original dynamic initializer: RVA 0x001C20B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMoviePlayerSettings(Z_Construct_UClass_UMoviePlayerSettings, &UMoviePlayerSettings::StaticClass, TEXT("/Script/MoviePlayer"), TEXT("UMoviePlayerSettings"), false, nullptr, nullptr, nullptr);

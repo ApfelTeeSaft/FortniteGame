@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UViewport, 2894438469u)
+// Original dynamic initializer: RVA 0x001B42B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UViewport> AutoInitializeUViewport(TEXT("UViewport"), sizeof(UViewport), 2894438469u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF7F30 (end 0x01BF7FD2)
 // Original VA: 0x0000000141BF7F30 | File offset: 0x01BF7530
 // Recovery: confirmed (IMPLEMENT_CLASS(UViewport, 2894438469u); reached from UViewport::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UViewport::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UViewport();
+// Original dynamic initializer: RVA 0x001B4BC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UViewport(Z_Construct_UClass_UViewport, &UViewport::StaticClass, TEXT("/Script/UMG"), TEXT("UViewport"), false, nullptr, nullptr, nullptr);

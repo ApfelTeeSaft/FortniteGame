@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortTransformKeyPicker, 2836525u)
+// Original dynamic initializer: RVA 0x0025E590 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTransformKeyPicker> AutoInitializeUFortTransformKeyPicker(TEXT("UFortTransformKeyPicker"), sizeof(UFortTransformKeyPicker), 2836525u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029038A0 (end 0x02903942)
 // Original VA: 0x00000001429038A0 | File offset: 0x02902EA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTransformKeyPicker, 2836525u); reached from UFortTransformKeyPicker::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortTransformKeyPicker::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTransformKeyPicker();
+// Original dynamic initializer: RVA 0x002608D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTransformKeyPicker(Z_Construct_UClass_UFortTransformKeyPicker, &UFortTransformKeyPicker::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTransformKeyPicker"), false, nullptr, nullptr, nullptr);

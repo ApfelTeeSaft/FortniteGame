@@ -7,6 +7,9 @@
 void UFortGridPickerButton::StaticRegisterNativesUFortGridPickerButton()
 {
 }
+// IMPLEMENT_CLASS(UFortGridPickerButton, 3525987524u)
+// Original dynamic initializer: RVA 0x00245B90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGridPickerButton> AutoInitializeUFortGridPickerButton(TEXT("UFortGridPickerButton"), sizeof(UFortGridPickerButton), 3525987524u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ABF70 (end 0x028AC012)
 // Original VA: 0x00000001428ABF70 | File offset: 0x028AB570
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGridPickerButton, 3525987524u); reached from UFortGridPickerButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortGridPickerButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGridPickerButton();
+// Original dynamic initializer: RVA 0x00247560
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGridPickerButton(Z_Construct_UClass_UFortGridPickerButton, &UFortGridPickerButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortGridPickerButton"), false, nullptr, nullptr, nullptr);

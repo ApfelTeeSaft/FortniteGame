@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionArctangent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionArctangent, 3908234389u)
+// Original dynamic initializer: RVA 0x00205FD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionArctangent> AutoInitializeUMaterialExpressionArctangent(TEXT("UMaterialExpressionArctangent"), sizeof(UMaterialExpressionArctangent), 3908234389u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02477CF0 (end 0x02477D92)
 // Original VA: 0x0000000142477CF0 | File offset: 0x024772F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionArctangent, 3908234389u); reached from UMaterialExpressionArctangent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionArctangent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionArctangent();
+// Original dynamic initializer: RVA 0x00206E00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionArctangent(Z_Construct_UClass_UMaterialExpressionArctangent, &UMaterialExpressionArctangent::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionArctangent"), false, nullptr, nullptr, nullptr);

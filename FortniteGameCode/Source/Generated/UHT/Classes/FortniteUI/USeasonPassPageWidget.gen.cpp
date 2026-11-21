@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(USeasonPassPageWidget, 2291464595u)
+// Original dynamic initializer: RVA 0x002657A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USeasonPassPageWidget> AutoInitializeUSeasonPassPageWidget(TEXT("USeasonPassPageWidget"), sizeof(USeasonPassPageWidget), 2291464595u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02917DF0 (end 0x02917E92)
 // Original VA: 0x0000000142917DF0 | File offset: 0x029173F0
 // Recovery: confirmed (IMPLEMENT_CLASS(USeasonPassPageWidget, 2291464595u); reached from USeasonPassPageWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* USeasonPassPageWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USeasonPassPageWidget();
+// Original dynamic initializer: RVA 0x00267410
+static FCompiledInDefer Z_CompiledInDefer_UClass_USeasonPassPageWidget(Z_Construct_UClass_USeasonPassPageWidget, &USeasonPassPageWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("USeasonPassPageWidget"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortTaggedActorsManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortTaggedActorsManager, 2388821946u)
+// Original dynamic initializer: RVA 0x001147D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTaggedActorsManager> AutoInitializeUFortTaggedActorsManager(TEXT("UFortTaggedActorsManager"), sizeof(UFortTaggedActorsManager), 2388821946u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B1A60 (end 0x010B1AF7)
 // Original VA: 0x00000001410B1A60 | File offset: 0x010B1060
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTaggedActorsManager, 2388821946u); reached from UFortTaggedActorsManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortTaggedActorsManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTaggedActorsManager();
+// Original dynamic initializer: RVA 0x00116140
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTaggedActorsManager(Z_Construct_UClass_UFortTaggedActorsManager, &UFortTaggedActorsManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTaggedActorsManager"), false, nullptr, nullptr, nullptr);

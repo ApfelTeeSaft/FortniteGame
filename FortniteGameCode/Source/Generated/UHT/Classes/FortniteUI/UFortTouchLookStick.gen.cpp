@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortTouchLookStick, 1439943400u)
+// Original dynamic initializer: RVA 0x0025E530 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTouchLookStick> AutoInitializeUFortTouchLookStick(TEXT("UFortTouchLookStick"), sizeof(UFortTouchLookStick), 1439943400u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02903690 (end 0x02903732)
 // Original VA: 0x0000000142903690 | File offset: 0x02902C90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTouchLookStick, 1439943400u); reached from UFortTouchLookStick::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortTouchLookStick::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTouchLookStick();
+// Original dynamic initializer: RVA 0x00260810
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTouchLookStick(Z_Construct_UClass_UFortTouchLookStick, &UFortTouchLookStick::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTouchLookStick"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UInterpTrackInstFade()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInterpTrackInstFade, 1108311374u)
+// Original dynamic initializer: RVA 0x00202840 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInterpTrackInstFade> AutoInitializeUInterpTrackInstFade(TEXT("UInterpTrackInstFade"), sizeof(UInterpTrackInstFade), 1108311374u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0242D620 (end 0x0242D6C2)
 // Original VA: 0x000000014242D620 | File offset: 0x0242CC20
 // Recovery: confirmed (IMPLEMENT_CLASS(UInterpTrackInstFade, 1108311374u); reached from UInterpTrackInstFade::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UInterpTrackInstFade::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInterpTrackInstFade();
+// Original dynamic initializer: RVA 0x00203E70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInterpTrackInstFade(Z_Construct_UClass_UInterpTrackInstFade, &UInterpTrackInstFade::StaticClass, TEXT("/Script/Engine"), TEXT("UInterpTrackInstFade"), false, nullptr, nullptr, nullptr);

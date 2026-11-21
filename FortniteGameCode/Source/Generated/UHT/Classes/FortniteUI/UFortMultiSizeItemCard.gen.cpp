@@ -7,6 +7,9 @@
 void UFortMultiSizeItemCard::StaticRegisterNativesUFortMultiSizeItemCard()
 {
 }
+// IMPLEMENT_CLASS(UFortMultiSizeItemCard, 489051845u)
+// Original dynamic initializer: RVA 0x00253AF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMultiSizeItemCard> AutoInitializeUFortMultiSizeItemCard(TEXT("UFortMultiSizeItemCard"), sizeof(UFortMultiSizeItemCard), 489051845u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DD400 (end 0x028DD4A2)
 // Original VA: 0x00000001428DD400 | File offset: 0x028DCA00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMultiSizeItemCard, 489051845u); reached from UFortMultiSizeItemCard::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortMultiSizeItemCard::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMultiSizeItemCard();
+// Original dynamic initializer: RVA 0x002556C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMultiSizeItemCard(Z_Construct_UClass_UFortMultiSizeItemCard, &UFortMultiSizeItemCard::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortMultiSizeItemCard"), false, nullptr, nullptr, nullptr);

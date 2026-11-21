@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USoundCue()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundCue, 3912753863u)
+// Original dynamic initializer: RVA 0x0021C450 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundCue> AutoInitializeUSoundCue(TEXT("USoundCue"), sizeof(USoundCue), 3912753863u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D94A0 (end 0x024D9542)
 // Original VA: 0x00000001424D94A0 | File offset: 0x024D8AA0
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundCue, 3912753863u); reached from USoundCue::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USoundCue::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundCue();
+// Original dynamic initializer: RVA 0x0021D7F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundCue(Z_Construct_UClass_USoundCue, &USoundCue::StaticClass, TEXT("/Script/Engine"), TEXT("USoundCue"), false, nullptr, nullptr, nullptr);

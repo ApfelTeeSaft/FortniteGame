@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AGameplayAbilityWorldReticle_ActorVisualization()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AGameplayAbilityWorldReticle_ActorVisualization, 3909263363u)
+// Original dynamic initializer: RVA 0x0009EBE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AGameplayAbilityWorldReticle_ActorVisualization> AutoInitializeAGameplayAbilityWorldReticle_ActorVisualization(TEXT("AGameplayAbilityWorldReticle_ActorVisualization"), sizeof(AGameplayAbilityWorldReticle_ActorVisualization), 3909263363u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00559830 (end 0x005598D2)
 // Original VA: 0x0000000140559830 | File offset: 0x00558E30
 // Recovery: confirmed (IMPLEMENT_CLASS(AGameplayAbilityWorldReticle_ActorVisualization, 3909263363u); reached from AGameplayAbilityWorldReticle_ActorVisualization::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AGameplayAbilityWorldReticle_ActorVisualization::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AGameplayAbilityWorldReticle_ActorVisualization();
+// Original dynamic initializer: RVA 0x000A09C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AGameplayAbilityWorldReticle_ActorVisualization(Z_Construct_UClass_AGameplayAbilityWorldReticle_ActorVisualization, &AGameplayAbilityWorldReticle_ActorVisualization::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("AGameplayAbilityWorldReticle_ActorVisualization"), false, nullptr, nullptr, nullptr);

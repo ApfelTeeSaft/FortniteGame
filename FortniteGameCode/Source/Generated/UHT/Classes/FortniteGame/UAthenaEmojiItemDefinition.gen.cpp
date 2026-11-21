@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAthenaEmojiItemDefinition, 2483830733u)
+// Original dynamic initializer: RVA 0x000D7490 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaEmojiItemDefinition> AutoInitializeUAthenaEmojiItemDefinition(TEXT("UAthenaEmojiItemDefinition"), sizeof(UAthenaEmojiItemDefinition), 2483830733u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F58230 (end 0x00F582D2)
 // Original VA: 0x0000000140F58230 | File offset: 0x00F57830
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaEmojiItemDefinition, 2483830733u); reached from UAthenaEmojiItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAthenaEmojiItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaEmojiItemDefinition();
+// Original dynamic initializer: RVA 0x000D8450
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaEmojiItemDefinition(Z_Construct_UClass_UAthenaEmojiItemDefinition, &UAthenaEmojiItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaEmojiItemDefinition"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UIntSerialization()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UIntSerialization, 3015599297u)
+// Original dynamic initializer: RVA 0x00204550 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UIntSerialization> AutoInitializeUIntSerialization(TEXT("UIntSerialization"), sizeof(UIntSerialization), 3015599297u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02430EE0 (end 0x02430F77)
 // Original VA: 0x0000000142430EE0 | File offset: 0x024304E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UIntSerialization, 3015599297u); reached from UIntSerialization::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UIntSerialization::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UIntSerialization();
+// Original dynamic initializer: RVA 0x00204A70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UIntSerialization(Z_Construct_UClass_UIntSerialization, &UIntSerialization::StaticClass, TEXT("/Script/Engine"), TEXT("UIntSerialization"), false, nullptr, nullptr, nullptr);

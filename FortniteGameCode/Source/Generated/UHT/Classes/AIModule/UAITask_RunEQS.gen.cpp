@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAITask_RunEQS, 2415534334u)
+// Original dynamic initializer: RVA 0x001BA5F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAITask_RunEQS> AutoInitializeUAITask_RunEQS(TEXT("UAITask_RunEQS"), sizeof(UAITask_RunEQS), 2415534334u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D20EA0 (end 0x01D20F42)
 // Original VA: 0x0000000141D20EA0 | File offset: 0x01D204A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAITask_RunEQS, 2415534334u); reached from UAITask_RunEQS::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAITask_RunEQS::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAITask_RunEQS();
+// Original dynamic initializer: RVA 0x001BB8C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAITask_RunEQS(Z_Construct_UClass_UAITask_RunEQS, &UAITask_RunEQS::StaticClass, TEXT("/Script/AIModule"), TEXT("UAITask_RunEQS"), false, nullptr, nullptr, nullptr);

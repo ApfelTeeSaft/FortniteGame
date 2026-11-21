@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortAIDirectorEventManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortAIDirectorEventManager, 2870781788u)
+// Original dynamic initializer: RVA 0x000E22A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortAIDirectorEventManager> AutoInitializeAFortAIDirectorEventManager(TEXT("AFortAIDirectorEventManager"), sizeof(AFortAIDirectorEventManager), 2870781788u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8B210 (end 0x00F8B2B2)
 // Original VA: 0x0000000140F8B210 | File offset: 0x00F8A810
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortAIDirectorEventManager, 2870781788u); reached from AFortAIDirectorEventManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortAIDirectorEventManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortAIDirectorEventManager();
+// Original dynamic initializer: RVA 0x000E3230
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortAIDirectorEventManager(Z_Construct_UClass_AFortAIDirectorEventManager, &AFortAIDirectorEventManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortAIDirectorEventManager"), false, nullptr, nullptr, nullptr);

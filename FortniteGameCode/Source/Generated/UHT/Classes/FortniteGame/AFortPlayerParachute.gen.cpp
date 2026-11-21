@@ -7,6 +7,9 @@
 void AFortPlayerParachute::StaticRegisterNativesAFortPlayerParachute()
 {
 }
+// IMPLEMENT_CLASS(AFortPlayerParachute, 1315811257u)
+// Original dynamic initializer: RVA 0x0010C4A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPlayerParachute> AutoInitializeAFortPlayerParachute(TEXT("AFortPlayerParachute"), sizeof(AFortPlayerParachute), 1315811257u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107E010 (end 0x0107E0B2)
 // Original VA: 0x000000014107E010 | File offset: 0x0107D610
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPlayerParachute, 1315811257u); reached from AFortPlayerParachute::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortPlayerParachute::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPlayerParachute();
+// Original dynamic initializer: RVA 0x0010D1D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPlayerParachute(Z_Construct_UClass_AFortPlayerParachute, &AFortPlayerParachute::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPlayerParachute"), false, nullptr, nullptr, nullptr);

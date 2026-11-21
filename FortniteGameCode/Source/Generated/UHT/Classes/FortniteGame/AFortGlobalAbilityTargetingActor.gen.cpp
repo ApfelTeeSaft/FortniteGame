@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortGlobalAbilityTargetingActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortGlobalAbilityTargetingActor, 1425391288u)
+// Original dynamic initializer: RVA 0x000F8790 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortGlobalAbilityTargetingActor> AutoInitializeAFortGlobalAbilityTargetingActor(TEXT("AFortGlobalAbilityTargetingActor"), sizeof(AFortGlobalAbilityTargetingActor), 1425391288u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF1F90 (end 0x00FF2032)
 // Original VA: 0x0000000140FF1F90 | File offset: 0x00FF1590
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortGlobalAbilityTargetingActor, 1425391288u); reached from AFortGlobalAbilityTargetingActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortGlobalAbilityTargetingActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortGlobalAbilityTargetingActor();
+// Original dynamic initializer: RVA 0x000F92D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortGlobalAbilityTargetingActor(Z_Construct_UClass_AFortGlobalAbilityTargetingActor, &AFortGlobalAbilityTargetingActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortGlobalAbilityTargetingActor"), false, nullptr, nullptr, nullptr);

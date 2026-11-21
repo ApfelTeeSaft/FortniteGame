@@ -7,6 +7,9 @@
 void UFortItemGroupSlotPicker::StaticRegisterNativesUFortItemGroupSlotPicker()
 {
 }
+// IMPLEMENT_CLASS(UFortItemGroupSlotPicker, 2678600207u)
+// Original dynamic initializer: RVA 0x002655A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemGroupSlotPicker> AutoInitializeUFortItemGroupSlotPicker(TEXT("UFortItemGroupSlotPicker"), sizeof(UFortItemGroupSlotPicker), 2678600207u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02917310 (end 0x029173B2)
 // Original VA: 0x0000000142917310 | File offset: 0x02916910
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemGroupSlotPicker, 2678600207u); reached from UFortItemGroupSlotPicker::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortItemGroupSlotPicker::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemGroupSlotPicker();
+// Original dynamic initializer: RVA 0x00267010
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemGroupSlotPicker(Z_Construct_UClass_UFortItemGroupSlotPicker, &UFortItemGroupSlotPicker::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemGroupSlotPicker"), false, nullptr, nullptr, nullptr);

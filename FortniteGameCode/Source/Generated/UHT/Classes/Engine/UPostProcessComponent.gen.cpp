@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UPostProcessComponent, 357663620u)
+// Original dynamic initializer: RVA 0x002163A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPostProcessComponent> AutoInitializeUPostProcessComponent(TEXT("UPostProcessComponent"), sizeof(UPostProcessComponent), 357663620u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B6A10 (end 0x024B6AB2)
 // Original VA: 0x00000001424B6A10 | File offset: 0x024B6010
 // Recovery: confirmed (IMPLEMENT_CLASS(UPostProcessComponent, 357663620u); reached from UPostProcessComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UPostProcessComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPostProcessComponent();
+// Original dynamic initializer: RVA 0x00217250
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPostProcessComponent(Z_Construct_UClass_UPostProcessComponent, &UPostProcessComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UPostProcessComponent"), false, nullptr, nullptr, nullptr);

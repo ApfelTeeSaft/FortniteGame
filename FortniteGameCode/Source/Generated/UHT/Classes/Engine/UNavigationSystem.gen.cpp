@@ -7,6 +7,9 @@
 void UNavigationSystem::StaticRegisterNativesUNavigationSystem()
 {
 }
+// IMPLEMENT_CLASS(UNavigationSystem, 2064042095u)
+// Original dynamic initializer: RVA 0x0020DD90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavigationSystem> AutoInitializeUNavigationSystem(TEXT("UNavigationSystem"), sizeof(UNavigationSystem), 2064042095u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248EAF0 (end 0x0248EB92)
 // Original VA: 0x000000014248EAF0 | File offset: 0x0248E0F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavigationSystem, 2064042095u); reached from UNavigationSystem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UNavigationSystem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavigationSystem();
+// Original dynamic initializer: RVA 0x0020EC50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavigationSystem(Z_Construct_UClass_UNavigationSystem, &UNavigationSystem::StaticClass, TEXT("/Script/Engine"), TEXT("UNavigationSystem"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortBorderStyleList, 2023936735u)
+// Original dynamic initializer: RVA 0x002402A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBorderStyleList> AutoInitializeUFortBorderStyleList(TEXT("UFortBorderStyleList"), sizeof(UFortBorderStyleList), 2023936735u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02892A10 (end 0x02892AB2)
 // Original VA: 0x0000000142892A10 | File offset: 0x02892010
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBorderStyleList, 2023936735u); reached from UFortBorderStyleList::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortBorderStyleList::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBorderStyleList();
+// Original dynamic initializer: RVA 0x00241E90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBorderStyleList(Z_Construct_UClass_UFortBorderStyleList, &UFortBorderStyleList::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortBorderStyleList"), false, nullptr, nullptr, nullptr);

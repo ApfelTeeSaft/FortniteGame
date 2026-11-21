@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionParticleMotionBlurFade()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionParticleMotionBlurFade, 571850378u)
+// Original dynamic initializer: RVA 0x00208DE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionParticleMotionBlurFade> AutoInitializeUMaterialExpressionParticleMotionBlurFade(TEXT("UMaterialExpressionParticleMotionBlurFade"), sizeof(UMaterialExpressionParticleMotionBlurFade), 571850378u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247F890 (end 0x0247F932)
 // Original VA: 0x000000014247F890 | File offset: 0x0247EE90
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionParticleMotionBlurFade, 571850378u); reached from UMaterialExpressionParticleMotionBlurFade::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMaterialExpressionParticleMotionBlurFade::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionParticleMotionBlurFade();
+// Original dynamic initializer: RVA 0x00209C30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionParticleMotionBlurFade(Z_Construct_UClass_UMaterialExpressionParticleMotionBlurFade, &UMaterialExpressionParticleMotionBlurFade::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionParticleMotionBlurFade"), false, nullptr, nullptr, nullptr);

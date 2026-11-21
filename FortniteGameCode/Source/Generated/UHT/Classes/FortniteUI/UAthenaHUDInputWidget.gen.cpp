@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAthenaHUDInputWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaHUDInputWidget, 3174662578u)
+// Original dynamic initializer: RVA 0x002391A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaHUDInputWidget> AutoInitializeUAthenaHUDInputWidget(TEXT("UAthenaHUDInputWidget"), sizeof(UAthenaHUDInputWidget), 3174662578u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287DE80 (end 0x0287DF22)
 // Original VA: 0x000000014287DE80 | File offset: 0x0287D480
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaHUDInputWidget, 3174662578u); reached from UAthenaHUDInputWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAthenaHUDInputWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaHUDInputWidget();
+// Original dynamic initializer: RVA 0x0023B080
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaHUDInputWidget(Z_Construct_UClass_UAthenaHUDInputWidget, &UAthenaHUDInputWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaHUDInputWidget"), false, nullptr, nullptr, nullptr);

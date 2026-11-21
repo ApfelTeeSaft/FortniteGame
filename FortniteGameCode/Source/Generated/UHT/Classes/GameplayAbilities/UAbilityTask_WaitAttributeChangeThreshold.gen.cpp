@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAbilityTask_WaitAttributeChangeThreshold, 3800713541u)
+// Original dynamic initializer: RVA 0x0009DD10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_WaitAttributeChangeThreshold> AutoInitializeUAbilityTask_WaitAttributeChangeThreshold(TEXT("UAbilityTask_WaitAttributeChangeThreshold"), sizeof(UAbilityTask_WaitAttributeChangeThreshold), 3800713541u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054B520 (end 0x0054B5C2)
 // Original VA: 0x000000014054B520 | File offset: 0x0054AB20
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_WaitAttributeChangeThreshold, 3800713541u); reached from UAbilityTask_WaitAttributeChangeThreshold::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAbilityTask_WaitAttributeChangeThreshold::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold();
+// Original dynamic initializer: RVA 0x0009E540
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_WaitAttributeChangeThreshold(Z_Construct_UClass_UAbilityTask_WaitAttributeChangeThreshold, &UAbilityTask_WaitAttributeChangeThreshold::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_WaitAttributeChangeThreshold"), false, nullptr, nullptr, nullptr);

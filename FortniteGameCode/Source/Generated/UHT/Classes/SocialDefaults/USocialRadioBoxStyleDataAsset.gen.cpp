@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USocialRadioBoxStyleDataAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USocialRadioBoxStyleDataAsset, 2239555202u)
+// Original dynamic initializer: RVA 0x002255D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USocialRadioBoxStyleDataAsset> AutoInitializeUSocialRadioBoxStyleDataAsset(TEXT("USocialRadioBoxStyleDataAsset"), sizeof(USocialRadioBoxStyleDataAsset), 2239555202u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025A2650 (end 0x025A26F2)
 // Original VA: 0x00000001425A2650 | File offset: 0x025A1C50
 // Recovery: confirmed (IMPLEMENT_CLASS(USocialRadioBoxStyleDataAsset, 2239555202u); reached from USocialRadioBoxStyleDataAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USocialRadioBoxStyleDataAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USocialRadioBoxStyleDataAsset();
+// Original dynamic initializer: RVA 0x002259A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USocialRadioBoxStyleDataAsset(Z_Construct_UClass_USocialRadioBoxStyleDataAsset, &USocialRadioBoxStyleDataAsset::StaticClass, TEXT("/Script/SocialDefaults"), TEXT("USocialRadioBoxStyleDataAsset"), false, nullptr, nullptr, nullptr);

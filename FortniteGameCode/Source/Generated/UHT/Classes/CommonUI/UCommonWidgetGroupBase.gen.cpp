@@ -7,6 +7,9 @@
 void UCommonWidgetGroupBase::StaticRegisterNativesUCommonWidgetGroupBase()
 {
 }
+// IMPLEMENT_CLASS(UCommonWidgetGroupBase, 332465333u)
+// Original dynamic initializer: RVA 0x00096BD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonWidgetGroupBase> AutoInitializeUCommonWidgetGroupBase(TEXT("UCommonWidgetGroupBase"), sizeof(UCommonWidgetGroupBase), 332465333u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CFE30 (end 0x002CFEC7)
 // Original VA: 0x00000001402CFE30 | File offset: 0x002CF430
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonWidgetGroupBase, 332465333u); reached from UCommonWidgetGroupBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonWidgetGroupBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonWidgetGroupBase();
+// Original dynamic initializer: RVA 0x000971A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonWidgetGroupBase(Z_Construct_UClass_UCommonWidgetGroupBase, &UCommonWidgetGroupBase::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonWidgetGroupBase"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UDistributionFloatConstant()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDistributionFloatConstant, 1564049696u)
+// Original dynamic initializer: RVA 0x001F8620 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDistributionFloatConstant> AutoInitializeUDistributionFloatConstant(TEXT("UDistributionFloatConstant"), sizeof(UDistributionFloatConstant), 1564049696u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FD0B0 (end 0x023FD152)
 // Original VA: 0x00000001423FD0B0 | File offset: 0x023FC6B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UDistributionFloatConstant, 1564049696u); reached from UDistributionFloatConstant::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UDistributionFloatConstant::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDistributionFloatConstant();
+// Original dynamic initializer: RVA 0x001F9C00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDistributionFloatConstant(Z_Construct_UClass_UDistributionFloatConstant, &UDistributionFloatConstant::StaticClass, TEXT("/Script/Engine"), TEXT("UDistributionFloatConstant"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAITask()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAITask, 1187515388u)
+// Original dynamic initializer: RVA 0x001BA590 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAITask> AutoInitializeUAITask(TEXT("UAITask"), sizeof(UAITask), 1187515388u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D20C90 (end 0x01D20D32)
 // Original VA: 0x0000000141D20C90 | File offset: 0x01D20290
 // Recovery: confirmed (IMPLEMENT_CLASS(UAITask, 1187515388u); reached from UAITask::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAITask::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAITask();
+// Original dynamic initializer: RVA 0x001BB800
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAITask(Z_Construct_UClass_UAITask, &UAITask::StaticClass, TEXT("/Script/AIModule"), TEXT("UAITask"), false, nullptr, nullptr, nullptr);

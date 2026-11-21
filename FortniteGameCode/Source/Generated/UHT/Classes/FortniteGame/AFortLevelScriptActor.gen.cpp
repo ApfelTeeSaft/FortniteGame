@@ -7,6 +7,9 @@
 void AFortLevelScriptActor::StaticRegisterNativesAFortLevelScriptActor()
 {
 }
+// IMPLEMENT_CLASS(AFortLevelScriptActor, 1025338909u)
+// Original dynamic initializer: RVA 0x000FCDD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortLevelScriptActor> AutoInitializeAFortLevelScriptActor(TEXT("AFortLevelScriptActor"), sizeof(AFortLevelScriptActor), 1025338909u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101B680 (end 0x0101B722)
 // Original VA: 0x000000014101B680 | File offset: 0x0101AC80
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortLevelScriptActor, 1025338909u); reached from AFortLevelScriptActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortLevelScriptActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortLevelScriptActor();
+// Original dynamic initializer: RVA 0x000FDAC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortLevelScriptActor(Z_Construct_UClass_AFortLevelScriptActor, &AFortLevelScriptActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortLevelScriptActor"), false, nullptr, nullptr, nullptr);

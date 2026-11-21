@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFoliageType_InstancedStaticMesh()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFoliageType_InstancedStaticMesh, 3759384102u)
+// Original dynamic initializer: RVA 0x001A0900 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFoliageType_InstancedStaticMesh> AutoInitializeUFoliageType_InstancedStaticMesh(TEXT("UFoliageType_InstancedStaticMesh"), sizeof(UFoliageType_InstancedStaticMesh), 3759384102u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A48140 (end 0x01A481E2)
 // Original VA: 0x0000000141A48140 | File offset: 0x01A47740
 // Recovery: confirmed (IMPLEMENT_CLASS(UFoliageType_InstancedStaticMesh, 3759384102u); reached from UFoliageType_InstancedStaticMesh::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFoliageType_InstancedStaticMesh::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFoliageType_InstancedStaticMesh();
+// Original dynamic initializer: RVA 0x001A0FA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFoliageType_InstancedStaticMesh(Z_Construct_UClass_UFoliageType_InstancedStaticMesh, &UFoliageType_InstancedStaticMesh::StaticClass, TEXT("/Script/Foliage"), TEXT("UFoliageType_InstancedStaticMesh"), false, nullptr, nullptr, nullptr);

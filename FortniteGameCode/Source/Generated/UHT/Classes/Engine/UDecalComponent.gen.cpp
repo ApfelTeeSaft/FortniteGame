@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UDecalComponent, 2973718226u)
+// Original dynamic initializer: RVA 0x001F8460 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDecalComponent> AutoInitializeUDecalComponent(TEXT("UDecalComponent"), sizeof(UDecalComponent), 2973718226u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FC760 (end 0x023FC802)
 // Original VA: 0x00000001423FC760 | File offset: 0x023FBD60
 // Recovery: confirmed (IMPLEMENT_CLASS(UDecalComponent, 2973718226u); reached from UDecalComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UDecalComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDecalComponent();
+// Original dynamic initializer: RVA 0x001F9880
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDecalComponent(Z_Construct_UClass_UDecalComponent, &UDecalComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UDecalComponent"), false, nullptr, nullptr, nullptr);

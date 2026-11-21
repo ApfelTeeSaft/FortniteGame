@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortWorldSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortWorldSettings, 3525248173u)
+// Original dynamic initializer: RVA 0x0011E840 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortWorldSettings> AutoInitializeAFortWorldSettings(TEXT("AFortWorldSettings"), sizeof(AFortWorldSettings), 3525248173u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E1240 (end 0x010E12E2)
 // Original VA: 0x00000001410E1240 | File offset: 0x010E0840
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortWorldSettings, 3525248173u); reached from AFortWorldSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortWorldSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortWorldSettings();
+// Original dynamic initializer: RVA 0x0011FA00
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortWorldSettings(Z_Construct_UClass_AFortWorldSettings, &AFortWorldSettings::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortWorldSettings"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortDecoTool_ContextTrap()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortDecoTool_ContextTrap, 2066582925u)
+// Original dynamic initializer: RVA 0x000EFAC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortDecoTool_ContextTrap> AutoInitializeAFortDecoTool_ContextTrap(TEXT("AFortDecoTool_ContextTrap"), sizeof(AFortDecoTool_ContextTrap), 2066582925u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCEC90 (end 0x00FCED32)
 // Original VA: 0x0000000140FCEC90 | File offset: 0x00FCE290
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortDecoTool_ContextTrap, 2066582925u); reached from AFortDecoTool_ContextTrap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortDecoTool_ContextTrap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortDecoTool_ContextTrap();
+// Original dynamic initializer: RVA 0x000F0680
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortDecoTool_ContextTrap(Z_Construct_UClass_AFortDecoTool_ContextTrap, &AFortDecoTool_ContextTrap::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortDecoTool_ContextTrap"), false, nullptr, nullptr, nullptr);

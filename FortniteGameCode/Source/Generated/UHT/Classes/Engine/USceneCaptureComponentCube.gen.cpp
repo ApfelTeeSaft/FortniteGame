@@ -7,6 +7,9 @@
 void USceneCaptureComponentCube::StaticRegisterNativesUSceneCaptureComponentCube()
 {
 }
+// IMPLEMENT_CLASS(USceneCaptureComponentCube, 2844973158u)
+// Original dynamic initializer: RVA 0x002197F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USceneCaptureComponentCube> AutoInitializeUSceneCaptureComponentCube(TEXT("USceneCaptureComponentCube"), sizeof(USceneCaptureComponentCube), 2844973158u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6400 (end 0x024C64A2)
 // Original VA: 0x00000001424C6400 | File offset: 0x024C5A00
 // Recovery: confirmed (IMPLEMENT_CLASS(USceneCaptureComponentCube, 2844973158u); reached from USceneCaptureComponentCube::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* USceneCaptureComponentCube::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USceneCaptureComponentCube();
+// Original dynamic initializer: RVA 0x00219DF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USceneCaptureComponentCube(Z_Construct_UClass_USceneCaptureComponentCube, &USceneCaptureComponentCube::StaticClass, TEXT("/Script/Engine"), TEXT("USceneCaptureComponentCube"), false, nullptr, nullptr, nullptr);

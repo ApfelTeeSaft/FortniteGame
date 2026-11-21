@@ -7,6 +7,9 @@
 void UFortLobby::StaticRegisterNativesUFortLobby()
 {
 }
+// IMPLEMENT_CLASS(UFortLobby, 2319390564u)
+// Original dynamic initializer: RVA 0x00251410 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortLobby> AutoInitializeUFortLobby(TEXT("UFortLobby"), sizeof(UFortLobby), 2319390564u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D5890 (end 0x028D5932)
 // Original VA: 0x00000001428D5890 | File offset: 0x028D4E90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortLobby, 2319390564u); reached from UFortLobby::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortLobby::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortLobby();
+// Original dynamic initializer: RVA 0x00253430
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortLobby(Z_Construct_UClass_UFortLobby, &UFortLobby::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortLobby"), false, nullptr, nullptr, nullptr);

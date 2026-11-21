@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortAnimNotify_MeleeAnimTrails_On()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAnimNotify_MeleeAnimTrails_On, 497552979u)
+// Original dynamic initializer: RVA 0x000E67F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAnimNotify_MeleeAnimTrails_On> AutoInitializeUFortAnimNotify_MeleeAnimTrails_On(TEXT("UFortAnimNotify_MeleeAnimTrails_On"), sizeof(UFortAnimNotify_MeleeAnimTrails_On), 497552979u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9CB50 (end 0x00F9CBF2)
 // Original VA: 0x0000000140F9CB50 | File offset: 0x00F9C150
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAnimNotify_MeleeAnimTrails_On, 497552979u); reached from UFortAnimNotify_MeleeAnimTrails_On::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortAnimNotify_MeleeAnimTrails_On::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAnimNotify_MeleeAnimTrails_On();
+// Original dynamic initializer: RVA 0x000E7A10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAnimNotify_MeleeAnimTrails_On(Z_Construct_UClass_UFortAnimNotify_MeleeAnimTrails_On, &UFortAnimNotify_MeleeAnimTrails_On::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAnimNotify_MeleeAnimTrails_On"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void USpinBox::StaticRegisterNativesUSpinBox()
 {
 }
+// IMPLEMENT_CLASS(USpinBox, 1582862689u)
+// Original dynamic initializer: RVA 0x001B3770 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USpinBox> AutoInitializeUSpinBox(TEXT("USpinBox"), sizeof(USpinBox), 1582862689u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2270 (end 0x01BF2312)
 // Original VA: 0x0000000141BF2270 | File offset: 0x01BF1870
 // Recovery: confirmed (IMPLEMENT_CLASS(USpinBox, 1582862689u); reached from USpinBox::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* USpinBox::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USpinBox();
+// Original dynamic initializer: RVA 0x001B4050
+static FCompiledInDefer Z_CompiledInDefer_UClass_USpinBox(Z_Construct_UClass_USpinBox, &USpinBox::StaticClass, TEXT("/Script/UMG"), TEXT("USpinBox"), false, nullptr, nullptr, nullptr);

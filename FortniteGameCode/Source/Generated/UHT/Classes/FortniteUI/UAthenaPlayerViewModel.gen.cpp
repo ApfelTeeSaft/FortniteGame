@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAthenaPlayerViewModel()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaPlayerViewModel, 2160565734u)
+// Original dynamic initializer: RVA 0x0023B580 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaPlayerViewModel> AutoInitializeUAthenaPlayerViewModel(TEXT("UAthenaPlayerViewModel"), sizeof(UAthenaPlayerViewModel), 2160565734u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02884BE0 (end 0x02884C82)
 // Original VA: 0x0000000142884BE0 | File offset: 0x028841E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaPlayerViewModel, 2160565734u); reached from UAthenaPlayerViewModel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAthenaPlayerViewModel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaPlayerViewModel();
+// Original dynamic initializer: RVA 0x0023D860
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaPlayerViewModel(Z_Construct_UClass_UAthenaPlayerViewModel, &UAthenaPlayerViewModel::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaPlayerViewModel"), false, nullptr, nullptr, nullptr);

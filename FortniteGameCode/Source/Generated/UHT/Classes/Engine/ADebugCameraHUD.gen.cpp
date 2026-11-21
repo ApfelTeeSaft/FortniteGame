@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ADebugCameraHUD()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ADebugCameraHUD, 513086523u)
+// Original dynamic initializer: RVA 0x001F8220 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ADebugCameraHUD> AutoInitializeADebugCameraHUD(TEXT("ADebugCameraHUD"), sizeof(ADebugCameraHUD), 513086523u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FBB70 (end 0x023FBC12)
 // Original VA: 0x00000001423FBB70 | File offset: 0x023FB170
 // Recovery: confirmed (IMPLEMENT_CLASS(ADebugCameraHUD, 513086523u); reached from ADebugCameraHUD::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ADebugCameraHUD::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ADebugCameraHUD();
+// Original dynamic initializer: RVA 0x001F9400
+static FCompiledInDefer Z_CompiledInDefer_UClass_ADebugCameraHUD(Z_Construct_UClass_ADebugCameraHUD, &ADebugCameraHUD::StaticClass, TEXT("/Script/Engine"), TEXT("ADebugCameraHUD"), false, nullptr, nullptr, nullptr);

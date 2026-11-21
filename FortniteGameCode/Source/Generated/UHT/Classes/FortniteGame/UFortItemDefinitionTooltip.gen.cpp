@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortItemDefinitionTooltip, 2674891667u)
+// Original dynamic initializer: RVA 0x000FC490 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemDefinitionTooltip> AutoInitializeUFortItemDefinitionTooltip(TEXT("UFortItemDefinitionTooltip"), sizeof(UFortItemDefinitionTooltip), 2674891667u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0100B450 (end 0x0100B4F2)
 // Original VA: 0x000000014100B450 | File offset: 0x0100AA50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemDefinitionTooltip, 2674891667u); reached from UFortItemDefinitionTooltip::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortItemDefinitionTooltip::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemDefinitionTooltip();
+// Original dynamic initializer: RVA 0x000FCC30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemDefinitionTooltip(Z_Construct_UClass_UFortItemDefinitionTooltip, &UFortItemDefinitionTooltip::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortItemDefinitionTooltip"), false, nullptr, nullptr, nullptr);

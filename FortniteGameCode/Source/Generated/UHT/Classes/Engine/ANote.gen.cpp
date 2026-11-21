@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ANote()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ANote, 423634185u)
+// Original dynamic initializer: RVA 0x0020ECD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ANote> AutoInitializeANote(TEXT("ANote"), sizeof(ANote), 423634185u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02493340 (end 0x024933E2)
 // Original VA: 0x0000000142493340 | File offset: 0x02492940
 // Recovery: confirmed (IMPLEMENT_CLASS(ANote, 423634185u); reached from ANote::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ANote::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ANote();
+// Original dynamic initializer: RVA 0x0020FE70
+static FCompiledInDefer Z_CompiledInDefer_UClass_ANote(Z_Construct_UClass_ANote, &ANote::StaticClass, TEXT("/Script/Engine"), TEXT("ANote"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBlendSpace1D()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBlendSpace1D, 2741006555u)
+// Original dynamic initializer: RVA 0x001F3390 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBlendSpace1D> AutoInitializeUBlendSpace1D(TEXT("UBlendSpace1D"), sizeof(UBlendSpace1D), 2741006555u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E15D0 (end 0x023E1672)
 // Original VA: 0x00000001423E15D0 | File offset: 0x023E0BD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBlendSpace1D, 2741006555u); reached from UBlendSpace1D::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBlendSpace1D::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBlendSpace1D();
+// Original dynamic initializer: RVA 0x001F47B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBlendSpace1D(Z_Construct_UClass_UBlendSpace1D, &UBlendSpace1D::StaticClass, TEXT("/Script/Engine"), TEXT("UBlendSpace1D"), false, nullptr, nullptr, nullptr);

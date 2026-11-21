@@ -7,6 +7,9 @@
 void UFortRewardNotificationWidget::StaticRegisterNativesUFortRewardNotificationWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortRewardNotificationWidget, 4143371414u)
+// Original dynamic initializer: RVA 0x002586C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortRewardNotificationWidget> AutoInitializeUFortRewardNotificationWidget(TEXT("UFortRewardNotificationWidget"), sizeof(UFortRewardNotificationWidget), 4143371414u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EC110 (end 0x028EC1B2)
 // Original VA: 0x00000001428EC110 | File offset: 0x028EB710
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortRewardNotificationWidget, 4143371414u); reached from UFortRewardNotificationWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortRewardNotificationWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortRewardNotificationWidget();
+// Original dynamic initializer: RVA 0x0025A8A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortRewardNotificationWidget(Z_Construct_UClass_UFortRewardNotificationWidget, &UFortRewardNotificationWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortRewardNotificationWidget"), false, nullptr, nullptr, nullptr);

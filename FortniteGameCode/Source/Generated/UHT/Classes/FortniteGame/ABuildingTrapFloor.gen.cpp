@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ABuildingTrapFloor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingTrapFloor, 1325461905u)
+// Original dynamic initializer: RVA 0x000DCCA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingTrapFloor> AutoInitializeABuildingTrapFloor(TEXT("ABuildingTrapFloor"), sizeof(ABuildingTrapFloor), 1325461905u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F76660 (end 0x00F76702)
 // Original VA: 0x0000000140F76660 | File offset: 0x00F75C60
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingTrapFloor, 1325461905u); reached from ABuildingTrapFloor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ABuildingTrapFloor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingTrapFloor();
+// Original dynamic initializer: RVA 0x000DE080
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingTrapFloor(Z_Construct_UClass_ABuildingTrapFloor, &ABuildingTrapFloor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingTrapFloor"), false, nullptr, nullptr, nullptr);

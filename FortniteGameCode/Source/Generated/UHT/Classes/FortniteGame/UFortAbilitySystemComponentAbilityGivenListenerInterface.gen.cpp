@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortAbilitySystemComponentAbilityGivenListenerInterf
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAbilitySystemComponentAbilityGivenListenerInterface, 885325394u)
+// Original dynamic initializer: RVA 0x000DE8A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAbilitySystemComponentAbilityGivenListenerInterface> AutoInitializeUFortAbilitySystemComponentAbilityGivenListenerInterface(TEXT("UFortAbilitySystemComponentAbilityGivenListenerInterface"), sizeof(UFortAbilitySystemComponentAbilityGivenListenerInterface), 885325394u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7BD20 (end 0x00F7BDC2)
 // Original VA: 0x0000000140F7BD20 | File offset: 0x00F7B320
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAbilitySystemComponentAbilityGivenListenerInterface, 885325394u); reached from UFortAbilitySystemComponentAbilityGivenListenerInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortAbilitySystemComponentAbilityGivenListenerInterface::GetPrivateStat
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAbilitySystemComponentAbilityGivenListenerInterface();
+// Original dynamic initializer: RVA 0x000DFB00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAbilitySystemComponentAbilityGivenListenerInterface(Z_Construct_UClass_UFortAbilitySystemComponentAbilityGivenListenerInterface, &UFortAbilitySystemComponentAbilityGivenListenerInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAbilitySystemComponentAbilityGivenListenerInterface"), false, nullptr, nullptr, nullptr);

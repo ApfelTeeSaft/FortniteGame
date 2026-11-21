@@ -7,6 +7,9 @@
 void UFortLeaderboardEntryWidget::StaticRegisterNativesUFortLeaderboardEntryWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortLeaderboardEntryWidget, 3489146653u)
+// Original dynamic initializer: RVA 0x00251350 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortLeaderboardEntryWidget> AutoInitializeUFortLeaderboardEntryWidget(TEXT("UFortLeaderboardEntryWidget"), sizeof(UFortLeaderboardEntryWidget), 3489146653u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D5470 (end 0x028D5512)
 // Original VA: 0x00000001428D5470 | File offset: 0x028D4A70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortLeaderboardEntryWidget, 3489146653u); reached from UFortLeaderboardEntryWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortLeaderboardEntryWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortLeaderboardEntryWidget();
+// Original dynamic initializer: RVA 0x002532B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortLeaderboardEntryWidget(Z_Construct_UClass_UFortLeaderboardEntryWidget, &UFortLeaderboardEntryWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortLeaderboardEntryWidget"), false, nullptr, nullptr, nullptr);

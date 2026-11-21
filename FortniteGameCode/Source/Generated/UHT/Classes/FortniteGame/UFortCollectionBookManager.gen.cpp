@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortCollectionBookManager, 130113446u)
+// Original dynamic initializer: RVA 0x000EC700 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCollectionBookManager> AutoInitializeUFortCollectionBookManager(TEXT("UFortCollectionBookManager"), sizeof(UFortCollectionBookManager), 130113446u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC4930 (end 0x00FC49C7)
 // Original VA: 0x0000000140FC4930 | File offset: 0x00FC3F30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCollectionBookManager, 130113446u); reached from UFortCollectionBookManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortCollectionBookManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCollectionBookManager();
+// Original dynamic initializer: RVA 0x000EE1F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCollectionBookManager(Z_Construct_UClass_UFortCollectionBookManager, &UFortCollectionBookManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCollectionBookManager"), false, nullptr, nullptr, nullptr);

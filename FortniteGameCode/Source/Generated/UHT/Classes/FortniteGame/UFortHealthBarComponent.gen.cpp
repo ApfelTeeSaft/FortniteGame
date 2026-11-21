@@ -7,6 +7,9 @@
 void UFortHealthBarComponent::StaticRegisterNativesUFortHealthBarComponent()
 {
 }
+// IMPLEMENT_CLASS(UFortHealthBarComponent, 2475699798u)
+// Original dynamic initializer: RVA 0x000F9570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHealthBarComponent> AutoInitializeUFortHealthBarComponent(TEXT("UFortHealthBarComponent"), sizeof(UFortHealthBarComponent), 2475699798u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF92A0 (end 0x00FF9342)
 // Original VA: 0x0000000140FF92A0 | File offset: 0x00FF88A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHealthBarComponent, 2475699798u); reached from UFortHealthBarComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortHealthBarComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHealthBarComponent();
+// Original dynamic initializer: RVA 0x000FAB80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHealthBarComponent(Z_Construct_UClass_UFortHealthBarComponent, &UFortHealthBarComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortHealthBarComponent"), false, nullptr, nullptr, nullptr);

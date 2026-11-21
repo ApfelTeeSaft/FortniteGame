@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAISense_Blueprint, 385361380u)
+// Original dynamic initializer: RVA 0x001B9110 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAISense_Blueprint> AutoInitializeUAISense_Blueprint(TEXT("UAISense_Blueprint"), sizeof(UAISense_Blueprint), 385361380u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1A3C0 (end 0x01D1A462)
 // Original VA: 0x0000000141D1A3C0 | File offset: 0x01D199C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAISense_Blueprint, 385361380u); reached from UAISense_Blueprint::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAISense_Blueprint::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAISense_Blueprint();
+// Original dynamic initializer: RVA 0x001BA2B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAISense_Blueprint(Z_Construct_UClass_UAISense_Blueprint, &UAISense_Blueprint::StaticClass, TEXT("/Script/AIModule"), TEXT("UAISense_Blueprint"), false, nullptr, nullptr, nullptr);

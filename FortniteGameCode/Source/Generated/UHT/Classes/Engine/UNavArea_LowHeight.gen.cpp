@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UNavArea_LowHeight()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNavArea_LowHeight, 315668636u)
+// Original dynamic initializer: RVA 0x0020C6F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavArea_LowHeight> AutoInitializeUNavArea_LowHeight(TEXT("UNavArea_LowHeight"), sizeof(UNavArea_LowHeight), 315668636u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248A100 (end 0x0248A1A2)
 // Original VA: 0x000000014248A100 | File offset: 0x02489700
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavArea_LowHeight, 315668636u); reached from UNavArea_LowHeight::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UNavArea_LowHeight::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavArea_LowHeight();
+// Original dynamic initializer: RVA 0x0020D8B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavArea_LowHeight(Z_Construct_UClass_UNavArea_LowHeight, &UNavArea_LowHeight::StaticClass, TEXT("/Script/Engine"), TEXT("UNavArea_LowHeight"), false, nullptr, nullptr, nullptr);

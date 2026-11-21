@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortStaticMeshUserData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortStaticMeshUserData, 2025263344u)
+// Original dynamic initializer: RVA 0x00114770 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortStaticMeshUserData> AutoInitializeUFortStaticMeshUserData(TEXT("UFortStaticMeshUserData"), sizeof(UFortStaticMeshUserData), 2025263344u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B1850 (end 0x010B18F2)
 // Original VA: 0x00000001410B1850 | File offset: 0x010B0E50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortStaticMeshUserData, 2025263344u); reached from UFortStaticMeshUserData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortStaticMeshUserData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortStaticMeshUserData();
+// Original dynamic initializer: RVA 0x00116080
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortStaticMeshUserData(Z_Construct_UClass_UFortStaticMeshUserData, &UFortStaticMeshUserData::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortStaticMeshUserData"), false, nullptr, nullptr, nullptr);

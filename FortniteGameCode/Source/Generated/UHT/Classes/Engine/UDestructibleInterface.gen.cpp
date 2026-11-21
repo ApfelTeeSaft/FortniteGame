@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UDestructibleInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDestructibleInterface, 452224801u)
+// Original dynamic initializer: RVA 0x001F84E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDestructibleInterface> AutoInitializeUDestructibleInterface(TEXT("UDestructibleInterface"), sizeof(UDestructibleInterface), 452224801u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FCA20 (end 0x023FCAC2)
 // Original VA: 0x00000001423FCA20 | File offset: 0x023FC020
 // Recovery: confirmed (IMPLEMENT_CLASS(UDestructibleInterface, 452224801u); reached from UDestructibleInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UDestructibleInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDestructibleInterface();
+// Original dynamic initializer: RVA 0x001F9980
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDestructibleInterface(Z_Construct_UClass_UDestructibleInterface, &UDestructibleInterface::StaticClass, TEXT("/Script/Engine"), TEXT("UDestructibleInterface"), false, nullptr, nullptr, nullptr);

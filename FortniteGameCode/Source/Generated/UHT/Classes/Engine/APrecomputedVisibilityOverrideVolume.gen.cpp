@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_APrecomputedVisibilityOverrideVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(APrecomputedVisibilityOverrideVolume, 2481756897u)
+// Original dynamic initializer: RVA 0x00216280 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<APrecomputedVisibilityOverrideVolume> AutoInitializeAPrecomputedVisibilityOverrideVolume(TEXT("APrecomputedVisibilityOverrideVolume"), sizeof(APrecomputedVisibilityOverrideVolume), 2481756897u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B6400 (end 0x024B64A2)
 // Original VA: 0x00000001424B6400 | File offset: 0x024B5A00
 // Recovery: confirmed (IMPLEMENT_CLASS(APrecomputedVisibilityOverrideVolume, 2481756897u); reached from APrecomputedVisibilityOverrideVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* APrecomputedVisibilityOverrideVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_APrecomputedVisibilityOverrideVolume();
+// Original dynamic initializer: RVA 0x00217010
+static FCompiledInDefer Z_CompiledInDefer_UClass_APrecomputedVisibilityOverrideVolume(Z_Construct_UClass_APrecomputedVisibilityOverrideVolume, &APrecomputedVisibilityOverrideVolume::StaticClass, TEXT("/Script/Engine"), TEXT("APrecomputedVisibilityOverrideVolume"), false, nullptr, nullptr, nullptr);

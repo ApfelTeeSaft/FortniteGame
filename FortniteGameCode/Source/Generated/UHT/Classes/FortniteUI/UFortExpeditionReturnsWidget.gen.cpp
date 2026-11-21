@@ -7,6 +7,9 @@
 void UFortExpeditionReturnsWidget::StaticRegisterNativesUFortExpeditionReturnsWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortExpeditionReturnsWidget, 1569059714u)
+// Original dynamic initializer: RVA 0x00244B40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortExpeditionReturnsWidget> AutoInitializeUFortExpeditionReturnsWidget(TEXT("UFortExpeditionReturnsWidget"), sizeof(UFortExpeditionReturnsWidget), 1569059714u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A2250 (end 0x028A22F2)
 // Original VA: 0x00000001428A2250 | File offset: 0x028A1850
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortExpeditionReturnsWidget, 1569059714u); reached from UFortExpeditionReturnsWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortExpeditionReturnsWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortExpeditionReturnsWidget();
+// Original dynamic initializer: RVA 0x00245910
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortExpeditionReturnsWidget(Z_Construct_UClass_UFortExpeditionReturnsWidget, &UFortExpeditionReturnsWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortExpeditionReturnsWidget"), false, nullptr, nullptr, nullptr);

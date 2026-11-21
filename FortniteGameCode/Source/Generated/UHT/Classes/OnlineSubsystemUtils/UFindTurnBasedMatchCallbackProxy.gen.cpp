@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFindTurnBasedMatchCallbackProxy, 222321002u)
+// Original dynamic initializer: RVA 0x000993C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFindTurnBasedMatchCallbackProxy> AutoInitializeUFindTurnBasedMatchCallbackProxy(TEXT("UFindTurnBasedMatchCallbackProxy"), sizeof(UFindTurnBasedMatchCallbackProxy), 222321002u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032CDE0 (end 0x0032CE82)
 // Original VA: 0x000000014032CDE0 | File offset: 0x0032C3E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFindTurnBasedMatchCallbackProxy, 222321002u); reached from UFindTurnBasedMatchCallbackProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFindTurnBasedMatchCallbackProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy();
+// Original dynamic initializer: RVA 0x00099FA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFindTurnBasedMatchCallbackProxy(Z_Construct_UClass_UFindTurnBasedMatchCallbackProxy, &UFindTurnBasedMatchCallbackProxy::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UFindTurnBasedMatchCallbackProxy"), false, nullptr, nullptr, nullptr);

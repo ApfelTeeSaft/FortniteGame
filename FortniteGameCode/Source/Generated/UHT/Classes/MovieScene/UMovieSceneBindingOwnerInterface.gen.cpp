@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMovieSceneBindingOwnerInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMovieSceneBindingOwnerInterface, 2898976090u)
+// Original dynamic initializer: RVA 0x001A4910 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovieSceneBindingOwnerInterface> AutoInitializeUMovieSceneBindingOwnerInterface(TEXT("UMovieSceneBindingOwnerInterface"), sizeof(UMovieSceneBindingOwnerInterface), 2898976090u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC1020 (end 0x01AC10C2)
 // Original VA: 0x0000000141AC1020 | File offset: 0x01AC0620
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovieSceneBindingOwnerInterface, 2898976090u); reached from UMovieSceneBindingOwnerInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMovieSceneBindingOwnerInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovieSceneBindingOwnerInterface();
+// Original dynamic initializer: RVA 0x001A7290
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovieSceneBindingOwnerInterface(Z_Construct_UClass_UMovieSceneBindingOwnerInterface, &UMovieSceneBindingOwnerInterface::StaticClass, TEXT("/Script/MovieScene"), TEXT("UMovieSceneBindingOwnerInterface"), false, nullptr, nullptr, nullptr);

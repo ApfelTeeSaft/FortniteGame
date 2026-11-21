@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UIpConnection()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UIpConnection, 1321578079u)
+// Original dynamic initializer: RVA 0x00099440 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UIpConnection> AutoInitializeUIpConnection(TEXT("UIpConnection"), sizeof(UIpConnection), 1321578079u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032D070 (end 0x0032D112)
 // Original VA: 0x000000014032D070 | File offset: 0x0032C670
 // Recovery: confirmed (IMPLEMENT_CLASS(UIpConnection, 1321578079u); reached from UIpConnection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UIpConnection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UIpConnection();
+// Original dynamic initializer: RVA 0x0009A0A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UIpConnection(Z_Construct_UClass_UIpConnection, &UIpConnection::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UIpConnection"), false, nullptr, nullptr, nullptr);

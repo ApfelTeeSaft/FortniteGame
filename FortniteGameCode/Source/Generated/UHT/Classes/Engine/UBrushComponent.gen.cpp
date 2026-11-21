@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBrushComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBrushComponent, 916813407u)
+// Original dynamic initializer: RVA 0x001F4C90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBrushComponent> AutoInitializeUBrushComponent(TEXT("UBrushComponent"), sizeof(UBrushComponent), 916813407u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9000 (end 0x023E90A2)
 // Original VA: 0x00000001423E9000 | File offset: 0x023E8600
 // Recovery: confirmed (IMPLEMENT_CLASS(UBrushComponent, 916813407u); reached from UBrushComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBrushComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBrushComponent();
+// Original dynamic initializer: RVA 0x001F61D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBrushComponent(Z_Construct_UClass_UBrushComponent, &UBrushComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UBrushComponent"), false, nullptr, nullptr, nullptr);

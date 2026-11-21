@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortItemQuantityListBase, 3100389660u)
+// Original dynamic initializer: RVA 0x0024F2F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemQuantityListBase> AutoInitializeUFortItemQuantityListBase(TEXT("UFortItemQuantityListBase"), sizeof(UFortItemQuantityListBase), 3100389660u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CE260 (end 0x028CE302)
 // Original VA: 0x00000001428CE260 | File offset: 0x028CD860
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemQuantityListBase, 3100389660u); reached from UFortItemQuantityListBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortItemQuantityListBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemQuantityListBase();
+// Original dynamic initializer: RVA 0x00250E50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemQuantityListBase(Z_Construct_UClass_UFortItemQuantityListBase, &UFortItemQuantityListBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemQuantityListBase"), false, nullptr, nullptr, nullptr);

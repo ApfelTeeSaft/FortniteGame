@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UDEPRECATED_CurveEdPresetCurve()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDEPRECATED_CurveEdPresetCurve, 1145034309u)
+// Original dynamic initializer: RVA 0x001F83A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDEPRECATED_CurveEdPresetCurve> AutoInitializeUDEPRECATED_CurveEdPresetCurve(TEXT("UDEPRECATED_CurveEdPresetCurve"), sizeof(UDEPRECATED_CurveEdPresetCurve), 1145034309u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FC380 (end 0x023FC417)
 // Original VA: 0x00000001423FC380 | File offset: 0x023FB980
 // Recovery: confirmed (IMPLEMENT_CLASS(UDEPRECATED_CurveEdPresetCurve, 1145034309u); reached from UDEPRECATED_CurveEdPresetCurve::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UDEPRECATED_CurveEdPresetCurve::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDEPRECATED_CurveEdPresetCurve();
+// Original dynamic initializer: RVA 0x001F9700
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDEPRECATED_CurveEdPresetCurve(Z_Construct_UClass_UDEPRECATED_CurveEdPresetCurve, &UDEPRECATED_CurveEdPresetCurve::StaticClass, TEXT("/Script/Engine"), TEXT("UDEPRECATED_CurveEdPresetCurve"), false, nullptr, nullptr, nullptr);

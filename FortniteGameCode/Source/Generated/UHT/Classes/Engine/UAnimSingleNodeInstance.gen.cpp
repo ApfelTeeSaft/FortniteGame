@@ -7,6 +7,9 @@
 void UAnimSingleNodeInstance::StaticRegisterNativesUAnimSingleNodeInstance()
 {
 }
+// IMPLEMENT_CLASS(UAnimSingleNodeInstance, 4186500650u)
+// Original dynamic initializer: RVA 0x001EFA40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimSingleNodeInstance> AutoInitializeUAnimSingleNodeInstance(TEXT("UAnimSingleNodeInstance"), sizeof(UAnimSingleNodeInstance), 4186500650u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D4B10 (end 0x023D4BB2)
 // Original VA: 0x00000001423D4B10 | File offset: 0x023D4110
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimSingleNodeInstance, 4186500650u); reached from UAnimSingleNodeInstance::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAnimSingleNodeInstance::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimSingleNodeInstance();
+// Original dynamic initializer: RVA 0x001F18B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimSingleNodeInstance(Z_Construct_UClass_UAnimSingleNodeInstance, &UAnimSingleNodeInstance::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimSingleNodeInstance"), false, nullptr, nullptr, nullptr);

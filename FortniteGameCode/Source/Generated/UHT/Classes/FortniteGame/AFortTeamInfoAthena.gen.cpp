@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortTeamInfoAthena()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortTeamInfoAthena, 1851776776u)
+// Original dynamic initializer: RVA 0x00114670 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortTeamInfoAthena> AutoInitializeAFortTeamInfoAthena(TEXT("AFortTeamInfoAthena"), sizeof(AFortTeamInfoAthena), 1851776776u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B12E0 (end 0x010B1382)
 // Original VA: 0x00000001410B12E0 | File offset: 0x010B08E0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortTeamInfoAthena, 1851776776u); reached from AFortTeamInfoAthena::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortTeamInfoAthena::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortTeamInfoAthena();
+// Original dynamic initializer: RVA 0x00115E80
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortTeamInfoAthena(Z_Construct_UClass_AFortTeamInfoAthena, &AFortTeamInfoAthena::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortTeamInfoAthena"), false, nullptr, nullptr, nullptr);

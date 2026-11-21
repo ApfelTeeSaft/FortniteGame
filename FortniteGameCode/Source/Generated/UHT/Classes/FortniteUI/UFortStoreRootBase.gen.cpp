@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortStoreRootBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortStoreRootBase, 3465344550u)
+// Original dynamic initializer: RVA 0x0025E2F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortStoreRootBase> AutoInitializeUFortStoreRootBase(TEXT("UFortStoreRootBase"), sizeof(UFortStoreRootBase), 3465344550u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02902A30 (end 0x02902AD2)
 // Original VA: 0x0000000142902A30 | File offset: 0x02902030
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortStoreRootBase, 3465344550u); reached from UFortStoreRootBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortStoreRootBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortStoreRootBase();
+// Original dynamic initializer: RVA 0x00260390
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortStoreRootBase(Z_Construct_UClass_UFortStoreRootBase, &UFortStoreRootBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortStoreRootBase"), false, nullptr, nullptr, nullptr);

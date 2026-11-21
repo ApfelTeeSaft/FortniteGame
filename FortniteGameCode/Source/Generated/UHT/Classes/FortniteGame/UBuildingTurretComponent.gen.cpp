@@ -7,6 +7,9 @@
 void UBuildingTurretComponent::StaticRegisterNativesUBuildingTurretComponent()
 {
 }
+// IMPLEMENT_CLASS(UBuildingTurretComponent, 742700684u)
+// Original dynamic initializer: RVA 0x000DCD60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBuildingTurretComponent> AutoInitializeUBuildingTurretComponent(TEXT("UBuildingTurretComponent"), sizeof(UBuildingTurretComponent), 742700684u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F76A80 (end 0x00F76B22)
 // Original VA: 0x0000000140F76A80 | File offset: 0x00F76080
 // Recovery: confirmed (IMPLEMENT_CLASS(UBuildingTurretComponent, 742700684u); reached from UBuildingTurretComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UBuildingTurretComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBuildingTurretComponent();
+// Original dynamic initializer: RVA 0x000DE200
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBuildingTurretComponent(Z_Construct_UClass_UBuildingTurretComponent, &UBuildingTurretComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UBuildingTurretComponent"), false, nullptr, nullptr, nullptr);

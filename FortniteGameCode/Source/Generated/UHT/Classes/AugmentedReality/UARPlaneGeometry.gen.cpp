@@ -7,6 +7,9 @@
 void UARPlaneGeometry::StaticRegisterNativesUARPlaneGeometry()
 {
 }
+// IMPLEMENT_CLASS(UARPlaneGeometry, 3306592616u)
+// Original dynamic initializer: RVA 0x00267BF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UARPlaneGeometry> AutoInitializeUARPlaneGeometry(TEXT("UARPlaneGeometry"), sizeof(UARPlaneGeometry), 3306592616u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02921470 (end 0x02921512)
 // Original VA: 0x0000000142921470 | File offset: 0x02920A70
 // Recovery: confirmed (IMPLEMENT_CLASS(UARPlaneGeometry, 3306592616u); reached from UARPlaneGeometry::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UARPlaneGeometry::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UARPlaneGeometry();
+// Original dynamic initializer: RVA 0x00267E50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UARPlaneGeometry(Z_Construct_UClass_UARPlaneGeometry, &UARPlaneGeometry::StaticClass, TEXT("/Script/AugmentedReality"), TEXT("UARPlaneGeometry"), false, nullptr, nullptr, nullptr);

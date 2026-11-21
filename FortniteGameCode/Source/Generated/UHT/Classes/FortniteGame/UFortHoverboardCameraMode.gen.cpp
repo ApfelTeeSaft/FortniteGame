@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortHoverboardCameraMode()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortHoverboardCameraMode, 1150696540u)
+// Original dynamic initializer: RVA 0x000FB0C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHoverboardCameraMode> AutoInitializeUFortHoverboardCameraMode(TEXT("UFortHoverboardCameraMode"), sizeof(UFortHoverboardCameraMode), 1150696540u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01003820 (end 0x010038C2)
 // Original VA: 0x0000000141003820 | File offset: 0x01002E20
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHoverboardCameraMode, 1150696540u); reached from UFortHoverboardCameraMode::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortHoverboardCameraMode::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHoverboardCameraMode();
+// Original dynamic initializer: RVA 0x000FBFB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHoverboardCameraMode(Z_Construct_UClass_UFortHoverboardCameraMode, &UFortHoverboardCameraMode::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortHoverboardCameraMode"), false, nullptr, nullptr, nullptr);

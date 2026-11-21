@@ -7,6 +7,9 @@
 void UFortTouchMoveStick::StaticRegisterNativesUFortTouchMoveStick()
 {
 }
+// IMPLEMENT_CLASS(UFortTouchMoveStick, 848341596u)
+// Original dynamic initializer: RVA 0x0025E550 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTouchMoveStick> AutoInitializeUFortTouchMoveStick(TEXT("UFortTouchMoveStick"), sizeof(UFortTouchMoveStick), 848341596u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02903740 (end 0x029037E2)
 // Original VA: 0x0000000142903740 | File offset: 0x02902D40
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTouchMoveStick, 848341596u); reached from UFortTouchMoveStick::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortTouchMoveStick::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTouchMoveStick();
+// Original dynamic initializer: RVA 0x00260850
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTouchMoveStick(Z_Construct_UClass_UFortTouchMoveStick, &UFortTouchMoveStick::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTouchMoveStick"), false, nullptr, nullptr, nullptr);

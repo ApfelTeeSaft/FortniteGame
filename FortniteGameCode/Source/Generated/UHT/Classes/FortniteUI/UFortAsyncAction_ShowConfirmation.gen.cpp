@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_ShowConfirmation, 774542945u)
+// Original dynamic initializer: RVA 0x0023E220 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_ShowConfirmation> AutoInitializeUFortAsyncAction_ShowConfirmation(TEXT("UFortAsyncAction_ShowConfirmation"), sizeof(UFortAsyncAction_ShowConfirmation), 774542945u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288B580 (end 0x0288B622)
 // Original VA: 0x000000014288B580 | File offset: 0x0288AB80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_ShowConfirmation, 774542945u); reached from UFortAsyncAction_ShowConfirmation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_ShowConfirmation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_ShowConfirmation();
+// Original dynamic initializer: RVA 0x0023FD60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_ShowConfirmation(Z_Construct_UClass_UFortAsyncAction_ShowConfirmation, &UFortAsyncAction_ShowConfirmation::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAsyncAction_ShowConfirmation"), false, nullptr, nullptr, nullptr);

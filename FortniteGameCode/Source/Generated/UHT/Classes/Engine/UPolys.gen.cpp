@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UPolys()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPolys, 3478806747u)
+// Original dynamic initializer: RVA 0x00216320 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPolys> AutoInitializeUPolys(TEXT("UPolys"), sizeof(UPolys), 3478806747u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B6770 (end 0x024B6807)
 // Original VA: 0x00000001424B6770 | File offset: 0x024B5D70
 // Recovery: confirmed (IMPLEMENT_CLASS(UPolys, 3478806747u); reached from UPolys::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UPolys::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPolys();
+// Original dynamic initializer: RVA 0x00217150
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPolys(Z_Construct_UClass_UPolys, &UPolys::StaticClass, TEXT("/Script/Engine"), TEXT("UPolys"), false, nullptr, nullptr, nullptr);

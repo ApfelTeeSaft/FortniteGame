@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBuildingTextureData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBuildingTextureData, 1443697653u)
+// Original dynamic initializer: RVA 0x000DBF00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBuildingTextureData> AutoInitializeUBuildingTextureData(TEXT("UBuildingTextureData"), sizeof(UBuildingTextureData), 1443697653u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F70FB0 (end 0x00F71052)
 // Original VA: 0x0000000140F70FB0 | File offset: 0x00F705B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBuildingTextureData, 1443697653u); reached from UBuildingTextureData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBuildingTextureData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBuildingTextureData();
+// Original dynamic initializer: RVA 0x000DCC00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBuildingTextureData(Z_Construct_UClass_UBuildingTextureData, &UBuildingTextureData::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UBuildingTextureData"), false, nullptr, nullptr, nullptr);

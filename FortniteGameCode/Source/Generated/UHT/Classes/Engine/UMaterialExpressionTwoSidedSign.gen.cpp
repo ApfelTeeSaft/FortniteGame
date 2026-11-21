@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionTwoSidedSign()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionTwoSidedSign, 3127224645u)
+// Original dynamic initializer: RVA 0x002095A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionTwoSidedSign> AutoInitializeUMaterialExpressionTwoSidedSign(TEXT("UMaterialExpressionTwoSidedSign"), sizeof(UMaterialExpressionTwoSidedSign), 3127224645u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02482330 (end 0x024823D2)
 // Original VA: 0x0000000142482330 | File offset: 0x02481930
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionTwoSidedSign, 3127224645u); reached from UMaterialExpressionTwoSidedSign::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMaterialExpressionTwoSidedSign::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionTwoSidedSign();
+// Original dynamic initializer: RVA 0x0020ABB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionTwoSidedSign(Z_Construct_UClass_UMaterialExpressionTwoSidedSign, &UMaterialExpressionTwoSidedSign::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionTwoSidedSign"), false, nullptr, nullptr, nullptr);

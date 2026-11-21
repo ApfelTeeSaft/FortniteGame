@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionSetMission()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionSetMission, 1145010530u)
+// Original dynamic initializer: RVA 0x000F0FA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionSetMission> AutoInitializeUFortDifficultyOptionSetMission(TEXT("UFortDifficultyOptionSetMission"), sizeof(UFortDifficultyOptionSetMission), 1145010530u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD62B0 (end 0x00FD6352)
 // Original VA: 0x0000000140FD62B0 | File offset: 0x00FD58B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionSetMission, 1145010530u); reached from UFortDifficultyOptionSetMission::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionSetMission::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionSetMission();
+// Original dynamic initializer: RVA 0x000F2390
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionSetMission(Z_Construct_UClass_UFortDifficultyOptionSetMission, &UFortDifficultyOptionSetMission::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionSetMission"), false, nullptr, nullptr, nullptr);

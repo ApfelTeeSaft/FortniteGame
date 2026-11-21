@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortLobbyBeaconHost()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortLobbyBeaconHost, 3196802209u)
+// Original dynamic initializer: RVA 0x000FCE90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortLobbyBeaconHost> AutoInitializeAFortLobbyBeaconHost(TEXT("AFortLobbyBeaconHost"), sizeof(AFortLobbyBeaconHost), 3196802209u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101BAA0 (end 0x0101BB42)
 // Original VA: 0x000000014101BAA0 | File offset: 0x0101B0A0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortLobbyBeaconHost, 3196802209u); reached from AFortLobbyBeaconHost::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortLobbyBeaconHost::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortLobbyBeaconHost();
+// Original dynamic initializer: RVA 0x000FDC40
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortLobbyBeaconHost(Z_Construct_UClass_AFortLobbyBeaconHost, &AFortLobbyBeaconHost::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortLobbyBeaconHost"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UGameplayTask_SpawnActor, 3044457605u)
+// Original dynamic initializer: RVA 0x001B7EB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayTask_SpawnActor> AutoInitializeUGameplayTask_SpawnActor(TEXT("UGameplayTask_SpawnActor"), sizeof(UGameplayTask_SpawnActor), 3044457605u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9A650 (end 0x01C9A6F2)
 // Original VA: 0x0000000141C9A650 | File offset: 0x01C99C50
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayTask_SpawnActor, 3044457605u); reached from UGameplayTask_SpawnActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UGameplayTask_SpawnActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayTask_SpawnActor();
+// Original dynamic initializer: RVA 0x001B81D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayTask_SpawnActor(Z_Construct_UClass_UGameplayTask_SpawnActor, &UGameplayTask_SpawnActor::StaticClass, TEXT("/Script/GameplayTasks"), TEXT("UGameplayTask_SpawnActor"), false, nullptr, nullptr, nullptr);

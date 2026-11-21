@@ -7,6 +7,9 @@
 void UFortSurvivorSquadSummaryStatItem::StaticRegisterNativesUFortSurvivorSquadSummaryStatItem()
 {
 }
+// IMPLEMENT_CLASS(UFortSurvivorSquadSummaryStatItem, 1992999396u)
+// Original dynamic initializer: RVA 0x0025E410 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSurvivorSquadSummaryStatItem> AutoInitializeUFortSurvivorSquadSummaryStatItem(TEXT("UFortSurvivorSquadSummaryStatItem"), sizeof(UFortSurvivorSquadSummaryStatItem), 1992999396u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02903060 (end 0x02903102)
 // Original VA: 0x0000000142903060 | File offset: 0x02902660
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSurvivorSquadSummaryStatItem, 1992999396u); reached from UFortSurvivorSquadSummaryStatItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSurvivorSquadSummaryStatItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSurvivorSquadSummaryStatItem();
+// Original dynamic initializer: RVA 0x002605D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSurvivorSquadSummaryStatItem(Z_Construct_UClass_UFortSurvivorSquadSummaryStatItem, &UFortSurvivorSquadSummaryStatItem::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSurvivorSquadSummaryStatItem"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UProgressWidgetStyle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UProgressWidgetStyle, 3818585715u)
+// Original dynamic initializer: RVA 0x0013E210 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UProgressWidgetStyle> AutoInitializeUProgressWidgetStyle(TEXT("UProgressWidgetStyle"), sizeof(UProgressWidgetStyle), 3818585715u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x015A2090 (end 0x015A2132)
 // Original VA: 0x00000001415A2090 | File offset: 0x015A1690
 // Recovery: confirmed (IMPLEMENT_CLASS(UProgressWidgetStyle, 3818585715u); reached from UProgressWidgetStyle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UProgressWidgetStyle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UProgressWidgetStyle();
+// Original dynamic initializer: RVA 0x0013E970
+static FCompiledInDefer Z_CompiledInDefer_UClass_UProgressWidgetStyle(Z_Construct_UClass_UProgressWidgetStyle, &UProgressWidgetStyle::StaticClass, TEXT("/Script/Slate"), TEXT("UProgressWidgetStyle"), false, nullptr, nullptr, nullptr);

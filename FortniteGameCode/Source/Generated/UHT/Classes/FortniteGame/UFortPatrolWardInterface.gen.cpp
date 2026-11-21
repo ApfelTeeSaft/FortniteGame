@@ -7,6 +7,9 @@
 void UFortPatrolWardInterface::StaticRegisterNativesUFortPatrolWardInterface()
 {
 }
+// IMPLEMENT_CLASS(UFortPatrolWardInterface, 2413813361u)
+// Original dynamic initializer: RVA 0x001080D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPatrolWardInterface> AutoInitializeUFortPatrolWardInterface(TEXT("UFortPatrolWardInterface"), sizeof(UFortPatrolWardInterface), 2413813361u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0105C670 (end 0x0105C712)
 // Original VA: 0x000000014105C670 | File offset: 0x0105BC70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPatrolWardInterface, 2413813361u); reached from UFortPatrolWardInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortPatrolWardInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPatrolWardInterface();
+// Original dynamic initializer: RVA 0x00108C40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPatrolWardInterface(Z_Construct_UClass_UFortPatrolWardInterface, &UFortPatrolWardInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPatrolWardInterface"), false, nullptr, nullptr, nullptr);

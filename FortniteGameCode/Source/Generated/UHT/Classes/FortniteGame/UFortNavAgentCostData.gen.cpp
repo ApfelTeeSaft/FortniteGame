@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortNavAgentCostData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNavAgentCostData, 4040598338u)
+// Original dynamic initializer: RVA 0x001041C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNavAgentCostData> AutoInitializeUFortNavAgentCostData(TEXT("UFortNavAgentCostData"), sizeof(UFortNavAgentCostData), 4040598338u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01048920 (end 0x010489C2)
 // Original VA: 0x0000000141048920 | File offset: 0x01047F20
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNavAgentCostData, 4040598338u); reached from UFortNavAgentCostData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortNavAgentCostData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNavAgentCostData();
+// Original dynamic initializer: RVA 0x00105310
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNavAgentCostData(Z_Construct_UClass_UFortNavAgentCostData, &UFortNavAgentCostData::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNavAgentCostData"), false, nullptr, nullptr, nullptr);

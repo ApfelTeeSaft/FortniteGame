@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortHomeCMSScreenBase, 2752299243u)
+// Original dynamic initializer: RVA 0x00248320 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHomeCMSScreenBase> AutoInitializeUFortHomeCMSScreenBase(TEXT("UFortHomeCMSScreenBase"), sizeof(UFortHomeCMSScreenBase), 2752299243u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BB370 (end 0x028BB412)
 // Original VA: 0x00000001428BB370 | File offset: 0x028BA970
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHomeCMSScreenBase, 2752299243u); reached from UFortHomeCMSScreenBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortHomeCMSScreenBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHomeCMSScreenBase();
+// Original dynamic initializer: RVA 0x00249E50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHomeCMSScreenBase(Z_Construct_UClass_UFortHomeCMSScreenBase, &UFortHomeCMSScreenBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortHomeCMSScreenBase"), false, nullptr, nullptr, nullptr);

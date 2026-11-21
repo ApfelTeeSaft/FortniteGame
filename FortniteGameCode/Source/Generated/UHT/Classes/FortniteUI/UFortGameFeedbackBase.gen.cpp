@@ -7,6 +7,9 @@
 void UFortGameFeedbackBase::StaticRegisterNativesUFortGameFeedbackBase()
 {
 }
+// IMPLEMENT_CLASS(UFortGameFeedbackBase, 3545280654u)
+// Original dynamic initializer: RVA 0x00245B30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGameFeedbackBase> AutoInitializeUFortGameFeedbackBase(TEXT("UFortGameFeedbackBase"), sizeof(UFortGameFeedbackBase), 3545280654u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ABD60 (end 0x028ABE02)
 // Original VA: 0x00000001428ABD60 | File offset: 0x028AB360
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGameFeedbackBase, 3545280654u); reached from UFortGameFeedbackBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortGameFeedbackBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGameFeedbackBase();
+// Original dynamic initializer: RVA 0x002474A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGameFeedbackBase(Z_Construct_UClass_UFortGameFeedbackBase, &UFortGameFeedbackBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortGameFeedbackBase"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UComboButtonWidgetStyle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UComboButtonWidgetStyle, 3501855356u)
+// Original dynamic initializer: RVA 0x0013E1B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UComboButtonWidgetStyle> AutoInitializeUComboButtonWidgetStyle(TEXT("UComboButtonWidgetStyle"), sizeof(UComboButtonWidgetStyle), 3501855356u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x015A1E80 (end 0x015A1F22)
 // Original VA: 0x00000001415A1E80 | File offset: 0x015A1480
 // Recovery: confirmed (IMPLEMENT_CLASS(UComboButtonWidgetStyle, 3501855356u); reached from UComboButtonWidgetStyle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UComboButtonWidgetStyle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UComboButtonWidgetStyle();
+// Original dynamic initializer: RVA 0x0013E8B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UComboButtonWidgetStyle(Z_Construct_UClass_UComboButtonWidgetStyle, &UComboButtonWidgetStyle::StaticClass, TEXT("/Script/Slate"), TEXT("UComboButtonWidgetStyle"), false, nullptr, nullptr, nullptr);

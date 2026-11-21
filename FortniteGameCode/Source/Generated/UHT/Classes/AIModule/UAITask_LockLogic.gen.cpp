@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAITask_LockLogic()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAITask_LockLogic, 2477438983u)
+// Original dynamic initializer: RVA 0x001BA5B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAITask_LockLogic> AutoInitializeUAITask_LockLogic(TEXT("UAITask_LockLogic"), sizeof(UAITask_LockLogic), 2477438983u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D20D40 (end 0x01D20DE2)
 // Original VA: 0x0000000141D20D40 | File offset: 0x01D20340
 // Recovery: confirmed (IMPLEMENT_CLASS(UAITask_LockLogic, 2477438983u); reached from UAITask_LockLogic::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAITask_LockLogic::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAITask_LockLogic();
+// Original dynamic initializer: RVA 0x001BB840
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAITask_LockLogic(Z_Construct_UClass_UAITask_LockLogic, &UAITask_LockLogic::StaticClass, TEXT("/Script/AIModule"), TEXT("UAITask_LockLogic"), false, nullptr, nullptr, nullptr);

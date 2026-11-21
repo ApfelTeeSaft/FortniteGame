@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AGridPathAIController()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AGridPathAIController, 3873733079u)
+// Original dynamic initializer: RVA 0x001BF3A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AGridPathAIController> AutoInitializeAGridPathAIController(TEXT("AGridPathAIController"), sizeof(AGridPathAIController), 3873733079u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31020 (end 0x01D310C2)
 // Original VA: 0x0000000141D31020 | File offset: 0x01D30620
 // Recovery: confirmed (IMPLEMENT_CLASS(AGridPathAIController, 3873733079u); reached from AGridPathAIController::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AGridPathAIController::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AGridPathAIController();
+// Original dynamic initializer: RVA 0x001BF9F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AGridPathAIController(Z_Construct_UClass_AGridPathAIController, &AGridPathAIController::StaticClass, TEXT("/Script/AIModule"), TEXT("AGridPathAIController"), false, nullptr, nullptr, nullptr);

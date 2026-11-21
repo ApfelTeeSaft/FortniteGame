@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFloatingPawnMovement()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFloatingPawnMovement, 3316477282u)
+// Original dynamic initializer: RVA 0x001FF380 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFloatingPawnMovement> AutoInitializeUFloatingPawnMovement(TEXT("UFloatingPawnMovement"), sizeof(UFloatingPawnMovement), 3316477282u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240E870 (end 0x0240E912)
 // Original VA: 0x000000014240E870 | File offset: 0x0240DE70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFloatingPawnMovement, 3316477282u); reached from UFloatingPawnMovement::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFloatingPawnMovement::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFloatingPawnMovement();
+// Original dynamic initializer: RVA 0x001FFDF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFloatingPawnMovement(Z_Construct_UClass_UFloatingPawnMovement, &UFloatingPawnMovement::StaticClass, TEXT("/Script/Engine"), TEXT("UFloatingPawnMovement"), false, nullptr, nullptr, nullptr);

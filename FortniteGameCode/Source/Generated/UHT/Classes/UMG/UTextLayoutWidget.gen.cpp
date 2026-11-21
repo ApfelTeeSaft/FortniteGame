@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UTextLayoutWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTextLayoutWidget, 3190741538u)
+// Original dynamic initializer: RVA 0x001B37F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTextLayoutWidget> AutoInitializeUTextLayoutWidget(TEXT("UTextLayoutWidget"), sizeof(UTextLayoutWidget), 3190741538u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2530 (end 0x01BF25D2)
 // Original VA: 0x0000000141BF2530 | File offset: 0x01BF1B30
 // Recovery: confirmed (IMPLEMENT_CLASS(UTextLayoutWidget, 3190741538u); reached from UTextLayoutWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UTextLayoutWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTextLayoutWidget();
+// Original dynamic initializer: RVA 0x001B4150
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTextLayoutWidget(Z_Construct_UClass_UTextLayoutWidget, &UTextLayoutWidget::StaticClass, TEXT("/Script/UMG"), TEXT("UTextLayoutWidget"), false, nullptr, nullptr, nullptr);

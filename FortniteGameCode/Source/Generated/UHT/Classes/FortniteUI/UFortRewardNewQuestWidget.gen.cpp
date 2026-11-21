@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortRewardNewQuestWidget, 2503887471u)
+// Original dynamic initializer: RVA 0x00258660 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortRewardNewQuestWidget> AutoInitializeUFortRewardNewQuestWidget(TEXT("UFortRewardNewQuestWidget"), sizeof(UFortRewardNewQuestWidget), 2503887471u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EBF10 (end 0x028EBFB2)
 // Original VA: 0x00000001428EBF10 | File offset: 0x028EB510
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortRewardNewQuestWidget, 2503887471u); reached from UFortRewardNewQuestWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortRewardNewQuestWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortRewardNewQuestWidget();
+// Original dynamic initializer: RVA 0x0025A7E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortRewardNewQuestWidget(Z_Construct_UClass_UFortRewardNewQuestWidget, &UFortRewardNewQuestWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortRewardNewQuestWidget"), false, nullptr, nullptr, nullptr);

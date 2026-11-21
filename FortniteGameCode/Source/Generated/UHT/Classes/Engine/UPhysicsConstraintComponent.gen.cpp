@@ -7,6 +7,9 @@
 void UPhysicsConstraintComponent::StaticRegisterNativesUPhysicsConstraintComponent()
 {
 }
+// IMPLEMENT_CLASS(UPhysicsConstraintComponent, 1397978175u)
+// Original dynamic initializer: RVA 0x00213D90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPhysicsConstraintComponent> AutoInitializeUPhysicsConstraintComponent(TEXT("UPhysicsConstraintComponent"), sizeof(UPhysicsConstraintComponent), 1397978175u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249FD50 (end 0x0249FDF2)
 // Original VA: 0x000000014249FD50 | File offset: 0x0249F350
 // Recovery: confirmed (IMPLEMENT_CLASS(UPhysicsConstraintComponent, 1397978175u); reached from UPhysicsConstraintComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UPhysicsConstraintComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPhysicsConstraintComponent();
+// Original dynamic initializer: RVA 0x002147F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPhysicsConstraintComponent(Z_Construct_UClass_UPhysicsConstraintComponent, &UPhysicsConstraintComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UPhysicsConstraintComponent"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(USpotLightComponent, 1940278547u)
+// Original dynamic initializer: RVA 0x0021E1F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USpotLightComponent> AutoInitializeUSpotLightComponent(TEXT("USpotLightComponent"), sizeof(USpotLightComponent), 1940278547u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DD150 (end 0x024DD1F2)
 // Original VA: 0x00000001424DD150 | File offset: 0x024DC750
 // Recovery: confirmed (IMPLEMENT_CLASS(USpotLightComponent, 1940278547u); reached from USpotLightComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* USpotLightComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USpotLightComponent();
+// Original dynamic initializer: RVA 0x0021E670
+static FCompiledInDefer Z_CompiledInDefer_UClass_USpotLightComponent(Z_Construct_UClass_USpotLightComponent, &USpotLightComponent::StaticClass, TEXT("/Script/Engine"), TEXT("USpotLightComponent"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UCompositionGraphCaptureSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCompositionGraphCaptureSettings, 1247523886u)
+// Original dynamic initializer: RVA 0x001C1630 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCompositionGraphCaptureSettings> AutoInitializeUCompositionGraphCaptureSettings(TEXT("UCompositionGraphCaptureSettings"), sizeof(UCompositionGraphCaptureSettings), 1247523886u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D59910 (end 0x01D599B2)
 // Original VA: 0x0000000141D59910 | File offset: 0x01D58F10
 // Recovery: confirmed (IMPLEMENT_CLASS(UCompositionGraphCaptureSettings, 1247523886u); reached from UCompositionGraphCaptureSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UCompositionGraphCaptureSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCompositionGraphCaptureSettings();
+// Original dynamic initializer: RVA 0x001C1B10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCompositionGraphCaptureSettings(Z_Construct_UClass_UCompositionGraphCaptureSettings, &UCompositionGraphCaptureSettings::StaticClass, TEXT("/Script/MovieSceneCapture"), TEXT("UCompositionGraphCaptureSettings"), false, nullptr, nullptr, nullptr);

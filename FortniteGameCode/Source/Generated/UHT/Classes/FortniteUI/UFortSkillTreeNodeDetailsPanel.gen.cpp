@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSkillTreeNodeDetailsPanel, 280020823u)
+// Original dynamic initializer: RVA 0x0025AC20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSkillTreeNodeDetailsPanel> AutoInitializeUFortSkillTreeNodeDetailsPanel(TEXT("UFortSkillTreeNodeDetailsPanel"), sizeof(UFortSkillTreeNodeDetailsPanel), 280020823u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F34E0 (end 0x028F3582)
 // Original VA: 0x00000001428F34E0 | File offset: 0x028F2AE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSkillTreeNodeDetailsPanel, 280020823u); reached from UFortSkillTreeNodeDetailsPanel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSkillTreeNodeDetailsPanel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel();
+// Original dynamic initializer: RVA 0x0025BB20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSkillTreeNodeDetailsPanel(Z_Construct_UClass_UFortSkillTreeNodeDetailsPanel, &UFortSkillTreeNodeDetailsPanel::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSkillTreeNodeDetailsPanel"), false, nullptr, nullptr, nullptr);

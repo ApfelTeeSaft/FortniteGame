@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UMediaSource, 461768156u)
+// Original dynamic initializer: RVA 0x00225F70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMediaSource> AutoInitializeUMediaSource(TEXT("UMediaSource"), sizeof(UMediaSource), 461768156u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE270 (end 0x025DE307)
 // Original VA: 0x00000001425DE270 | File offset: 0x025DD870
 // Recovery: confirmed (IMPLEMENT_CLASS(UMediaSource, 461768156u); reached from UMediaSource::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UMediaSource::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMediaSource();
+// Original dynamic initializer: RVA 0x002263D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMediaSource(Z_Construct_UClass_UMediaSource, &UMediaSource::StaticClass, TEXT("/Script/MediaAssets"), TEXT("UMediaSource"), false, nullptr, nullptr, nullptr);

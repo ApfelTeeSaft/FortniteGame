@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ULandscapeSplineSegment()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULandscapeSplineSegment, 3573666441u)
+// Original dynamic initializer: RVA 0x001A2CB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULandscapeSplineSegment> AutoInitializeULandscapeSplineSegment(TEXT("ULandscapeSplineSegment"), sizeof(ULandscapeSplineSegment), 3573666441u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A74300 (end 0x01A743A2)
 // Original VA: 0x0000000141A74300 | File offset: 0x01A73900
 // Recovery: confirmed (IMPLEMENT_CLASS(ULandscapeSplineSegment, 3573666441u); reached from ULandscapeSplineSegment::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ULandscapeSplineSegment::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULandscapeSplineSegment();
+// Original dynamic initializer: RVA 0x001A4260
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULandscapeSplineSegment(Z_Construct_UClass_ULandscapeSplineSegment, &ULandscapeSplineSegment::StaticClass, TEXT("/Script/Landscape"), TEXT("ULandscapeSplineSegment"), false, nullptr, nullptr, nullptr);

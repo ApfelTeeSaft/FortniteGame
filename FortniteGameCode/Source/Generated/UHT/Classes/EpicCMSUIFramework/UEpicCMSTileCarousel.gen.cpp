@@ -7,6 +7,9 @@
 void UEpicCMSTileCarousel::StaticRegisterNativesUEpicCMSTileCarousel()
 {
 }
+// IMPLEMENT_CLASS(UEpicCMSTileCarousel, 3767257918u)
+// Original dynamic initializer: RVA 0x000978A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEpicCMSTileCarousel> AutoInitializeUEpicCMSTileCarousel(TEXT("UEpicCMSTileCarousel"), sizeof(UEpicCMSTileCarousel), 3767257918u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3670 (end 0x002E3712)
 // Original VA: 0x00000001402E3670 | File offset: 0x002E2C70
 // Recovery: confirmed (IMPLEMENT_CLASS(UEpicCMSTileCarousel, 3767257918u); reached from UEpicCMSTileCarousel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UEpicCMSTileCarousel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEpicCMSTileCarousel();
+// Original dynamic initializer: RVA 0x00097DC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEpicCMSTileCarousel(Z_Construct_UClass_UEpicCMSTileCarousel, &UEpicCMSTileCarousel::StaticClass, TEXT("/Script/EpicCMSUIFramework"), TEXT("UEpicCMSTileCarousel"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleLODLevel()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleLODLevel, 882325393u)
+// Original dynamic initializer: RVA 0x0020EED0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleLODLevel> AutoInitializeUParticleLODLevel(TEXT("UParticleLODLevel"), sizeof(UParticleLODLevel), 882325393u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02493DC0 (end 0x02493E57)
 // Original VA: 0x0000000142493DC0 | File offset: 0x024933C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleLODLevel, 882325393u); reached from UParticleLODLevel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleLODLevel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleLODLevel();
+// Original dynamic initializer: RVA 0x00210270
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleLODLevel(Z_Construct_UClass_UParticleLODLevel, &UParticleLODLevel::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleLODLevel"), false, nullptr, nullptr, nullptr);

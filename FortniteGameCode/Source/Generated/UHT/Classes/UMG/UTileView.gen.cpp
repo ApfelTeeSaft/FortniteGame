@@ -7,6 +7,9 @@
 void UTileView::StaticRegisterNativesUTileView()
 {
 }
+// IMPLEMENT_CLASS(UTileView, 3298561936u)
+// Original dynamic initializer: RVA 0x001B41D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTileView> AutoInitializeUTileView(TEXT("UTileView"), sizeof(UTileView), 3298561936u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF7A70 (end 0x01BF7B12)
 // Original VA: 0x0000000141BF7A70 | File offset: 0x01BF7070
 // Recovery: confirmed (IMPLEMENT_CLASS(UTileView, 3298561936u); reached from UTileView::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UTileView::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTileView();
+// Original dynamic initializer: RVA 0x001B4A00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTileView(Z_Construct_UClass_UTileView, &UTileView::StaticClass, TEXT("/Script/UMG"), TEXT("UTileView"), false, nullptr, nullptr, nullptr);

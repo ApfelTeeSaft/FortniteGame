@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortAITask_ExecuteAbility()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAITask_ExecuteAbility, 4040650179u)
+// Original dynamic initializer: RVA 0x000E4980 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAITask_ExecuteAbility> AutoInitializeUFortAITask_ExecuteAbility(TEXT("UFortAITask_ExecuteAbility"), sizeof(UFortAITask_ExecuteAbility), 4040650179u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F97570 (end 0x00F97612)
 // Original VA: 0x0000000140F97570 | File offset: 0x00F96B70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAITask_ExecuteAbility, 4040650179u); reached from UFortAITask_ExecuteAbility::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortAITask_ExecuteAbility::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAITask_ExecuteAbility();
+// Original dynamic initializer: RVA 0x000E6230
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAITask_ExecuteAbility(Z_Construct_UClass_UFortAITask_ExecuteAbility, &UFortAITask_ExecuteAbility::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAITask_ExecuteAbility"), false, nullptr, nullptr, nullptr);

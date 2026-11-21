@@ -7,6 +7,9 @@
 void ALobbyBeaconClient::StaticRegisterNativesALobbyBeaconClient()
 {
 }
+// IMPLEMENT_CLASS(ALobbyBeaconClient, 387611509u)
+// Original dynamic initializer: RVA 0x000A8B20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALobbyBeaconClient> AutoInitializeALobbyBeaconClient(TEXT("ALobbyBeaconClient"), sizeof(ALobbyBeaconClient), 387611509u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005C1730 (end 0x005C17D2)
 // Original VA: 0x00000001405C1730 | File offset: 0x005C0D30
 // Recovery: confirmed (IMPLEMENT_CLASS(ALobbyBeaconClient, 387611509u); reached from ALobbyBeaconClient::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ALobbyBeaconClient::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALobbyBeaconClient();
+// Original dynamic initializer: RVA 0x000A8EF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALobbyBeaconClient(Z_Construct_UClass_ALobbyBeaconClient, &ALobbyBeaconClient::StaticClass, TEXT("/Script/Lobby"), TEXT("ALobbyBeaconClient"), false, nullptr, nullptr, nullptr);

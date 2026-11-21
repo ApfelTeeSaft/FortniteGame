@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_APhysicsConstraintActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(APhysicsConstraintActor, 3045855660u)
+// Original dynamic initializer: RVA 0x00213C30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<APhysicsConstraintActor> AutoInitializeAPhysicsConstraintActor(TEXT("APhysicsConstraintActor"), sizeof(APhysicsConstraintActor), 3045855660u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249F620 (end 0x0249F6C2)
 // Original VA: 0x000000014249F620 | File offset: 0x0249EC20
 // Recovery: confirmed (IMPLEMENT_CLASS(APhysicsConstraintActor, 3045855660u); reached from APhysicsConstraintActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* APhysicsConstraintActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_APhysicsConstraintActor();
+// Original dynamic initializer: RVA 0x00214530
+static FCompiledInDefer Z_CompiledInDefer_UClass_APhysicsConstraintActor(Z_Construct_UClass_APhysicsConstraintActor, &APhysicsConstraintActor::StaticClass, TEXT("/Script/Engine"), TEXT("APhysicsConstraintActor"), false, nullptr, nullptr, nullptr);

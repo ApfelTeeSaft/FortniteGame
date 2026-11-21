@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCommonBorder, 3879059917u)
+// Original dynamic initializer: RVA 0x000955F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonBorder> AutoInitializeUCommonBorder(TEXT("UCommonBorder"), sizeof(UCommonBorder), 3879059917u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C1B20 (end 0x002C1BC2)
 // Original VA: 0x00000001402C1B20 | File offset: 0x002C1120
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonBorder, 3879059917u); reached from UCommonBorder::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCommonBorder::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonBorder();
+// Original dynamic initializer: RVA 0x00095CC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonBorder(Z_Construct_UClass_UCommonBorder, &UCommonBorder::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonBorder"), false, nullptr, nullptr, nullptr);

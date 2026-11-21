@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionConstantBiasScale()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionConstantBiasScale, 2863754001u)
+// Original dynamic initializer: RVA 0x002071A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionConstantBiasScale> AutoInitializeUMaterialExpressionConstantBiasScale(TEXT("UMaterialExpressionConstantBiasScale"), sizeof(UMaterialExpressionConstantBiasScale), 2863754001u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247B0B0 (end 0x0247B152)
 // Original VA: 0x000000014247B0B0 | File offset: 0x0247A6B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionConstantBiasScale, 2863754001u); reached from UMaterialExpressionConstantBiasScale::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionConstantBiasScale::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionConstantBiasScale();
+// Original dynamic initializer: RVA 0x00208040
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionConstantBiasScale(Z_Construct_UClass_UMaterialExpressionConstantBiasScale, &UMaterialExpressionConstantBiasScale::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionConstantBiasScale"), false, nullptr, nullptr, nullptr);

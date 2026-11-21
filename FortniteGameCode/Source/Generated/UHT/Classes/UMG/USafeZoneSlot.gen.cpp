@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USafeZoneSlot()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USafeZoneSlot, 3783542900u)
+// Original dynamic initializer: RVA 0x001B35D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USafeZoneSlot> AutoInitializeUSafeZoneSlot(TEXT("USafeZoneSlot"), sizeof(USafeZoneSlot), 3783542900u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF19A0 (end 0x01BF1A42)
 // Original VA: 0x0000000141BF19A0 | File offset: 0x01BF0FA0
 // Recovery: confirmed (IMPLEMENT_CLASS(USafeZoneSlot, 3783542900u); reached from USafeZoneSlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USafeZoneSlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USafeZoneSlot();
+// Original dynamic initializer: RVA 0x001B3D10
+static FCompiledInDefer Z_CompiledInDefer_UClass_USafeZoneSlot(Z_Construct_UClass_USafeZoneSlot, &USafeZoneSlot::StaticClass, TEXT("/Script/UMG"), TEXT("USafeZoneSlot"), false, nullptr, nullptr, nullptr);

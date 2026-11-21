@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortBTDecorator_IsGoalPawn()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTDecorator_IsGoalPawn, 1310013031u)
+// Original dynamic initializer: RVA 0x000E9190 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTDecorator_IsGoalPawn> AutoInitializeUFortBTDecorator_IsGoalPawn(TEXT("UFortBTDecorator_IsGoalPawn"), sizeof(UFortBTDecorator_IsGoalPawn), 1310013031u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAB1E0 (end 0x00FAB282)
 // Original VA: 0x0000000140FAB1E0 | File offset: 0x00FAA7E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTDecorator_IsGoalPawn, 1310013031u); reached from UFortBTDecorator_IsGoalPawn::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortBTDecorator_IsGoalPawn::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTDecorator_IsGoalPawn();
+// Original dynamic initializer: RVA 0x000EA000
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTDecorator_IsGoalPawn(Z_Construct_UClass_UFortBTDecorator_IsGoalPawn, &UFortBTDecorator_IsGoalPawn::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTDecorator_IsGoalPawn"), false, nullptr, nullptr, nullptr);

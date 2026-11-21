@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryGenerator_ValidSpawnRiftActors()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryGenerator_ValidSpawnRiftActors, 2452886115u)
+// Original dynamic initializer: RVA 0x0010EBF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryGenerator_ValidSpawnRiftActors> AutoInitializeUFortQueryGenerator_ValidSpawnRiftActors(TEXT("UFortQueryGenerator_ValidSpawnRiftActors"), sizeof(UFortQueryGenerator_ValidSpawnRiftActors), 2452886115u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010916E0 (end 0x01091782)
 // Original VA: 0x00000001410916E0 | File offset: 0x01090CE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryGenerator_ValidSpawnRiftActors, 2452886115u); reached from UFortQueryGenerator_ValidSpawnRiftActors::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryGenerator_ValidSpawnRiftActors::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryGenerator_ValidSpawnRiftActors();
+// Original dynamic initializer: RVA 0x0010FE60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryGenerator_ValidSpawnRiftActors(Z_Construct_UClass_UFortQueryGenerator_ValidSpawnRiftActors, &UFortQueryGenerator_ValidSpawnRiftActors::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryGenerator_ValidSpawnRiftActors"), false, nullptr, nullptr, nullptr);

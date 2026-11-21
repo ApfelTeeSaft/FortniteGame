@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ALandscapeProxy, 3372119462u)
+// Original dynamic initializer: RVA 0x001A2AF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALandscapeProxy> AutoInitializeALandscapeProxy(TEXT("ALandscapeProxy"), sizeof(ALandscapeProxy), 3372119462u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A739A0 (end 0x01A73A42)
 // Original VA: 0x0000000141A739A0 | File offset: 0x01A72FA0
 // Recovery: confirmed (IMPLEMENT_CLASS(ALandscapeProxy, 3372119462u); reached from ALandscapeProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ALandscapeProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALandscapeProxy();
+// Original dynamic initializer: RVA 0x001A3EE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALandscapeProxy(Z_Construct_UClass_ALandscapeProxy, &ALandscapeProxy::StaticClass, TEXT("/Script/Landscape"), TEXT("ALandscapeProxy"), false, nullptr, nullptr, nullptr);

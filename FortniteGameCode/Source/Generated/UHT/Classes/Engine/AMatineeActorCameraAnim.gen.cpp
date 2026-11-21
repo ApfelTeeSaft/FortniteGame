@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AMatineeActorCameraAnim()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AMatineeActorCameraAnim, 1355757942u)
+// Original dynamic initializer: RVA 0x0020ACB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AMatineeActorCameraAnim> AutoInitializeAMatineeActorCameraAnim(TEXT("AMatineeActorCameraAnim"), sizeof(AMatineeActorCameraAnim), 1355757942u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024847A0 (end 0x02484842)
 // Original VA: 0x00000001424847A0 | File offset: 0x02483DA0
 // Recovery: confirmed (IMPLEMENT_CLASS(AMatineeActorCameraAnim, 1355757942u); reached from AMatineeActorCameraAnim::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AMatineeActorCameraAnim::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AMatineeActorCameraAnim();
+// Original dynamic initializer: RVA 0x0020BEF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AMatineeActorCameraAnim(Z_Construct_UClass_AMatineeActorCameraAnim, &AMatineeActorCameraAnim::StaticClass, TEXT("/Script/Engine"), TEXT("AMatineeActorCameraAnim"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UFortMovementSet::StaticRegisterNativesUFortMovementSet()
 {
 }
+// IMPLEMENT_CLASS(UFortMovementSet, 2454668371u)
+// Original dynamic initializer: RVA 0x001041A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMovementSet> AutoInitializeUFortMovementSet(TEXT("UFortMovementSet"), sizeof(UFortMovementSet), 2454668371u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01048870 (end 0x01048912)
 // Original VA: 0x0000000141048870 | File offset: 0x01047E70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMovementSet, 2454668371u); reached from UFortMovementSet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortMovementSet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMovementSet();
+// Original dynamic initializer: RVA 0x001052D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMovementSet(Z_Construct_UClass_UFortMovementSet, &UFortMovementSet::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMovementSet"), false, nullptr, nullptr, nullptr);

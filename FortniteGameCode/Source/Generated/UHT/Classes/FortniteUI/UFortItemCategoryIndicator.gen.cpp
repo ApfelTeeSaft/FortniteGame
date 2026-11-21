@@ -7,6 +7,9 @@
 void UFortItemCategoryIndicator::StaticRegisterNativesUFortItemCategoryIndicator()
 {
 }
+// IMPLEMENT_CLASS(UFortItemCategoryIndicator, 3177564788u)
+// Original dynamic initializer: RVA 0x0024CCC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemCategoryIndicator> AutoInitializeUFortItemCategoryIndicator(TEXT("UFortItemCategoryIndicator"), sizeof(UFortItemCategoryIndicator), 3177564788u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C7BD0 (end 0x028C7C72)
 // Original VA: 0x00000001428C7BD0 | File offset: 0x028C71D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemCategoryIndicator, 3177564788u); reached from UFortItemCategoryIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortItemCategoryIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemCategoryIndicator();
+// Original dynamic initializer: RVA 0x0024EB90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemCategoryIndicator(Z_Construct_UClass_UFortItemCategoryIndicator, &UFortItemCategoryIndicator::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemCategoryIndicator"), false, nullptr, nullptr, nullptr);

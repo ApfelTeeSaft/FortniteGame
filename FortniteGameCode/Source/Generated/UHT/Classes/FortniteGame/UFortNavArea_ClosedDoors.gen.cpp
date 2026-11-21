@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortNavArea_ClosedDoors()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNavArea_ClosedDoors, 3676910354u)
+// Original dynamic initializer: RVA 0x00104240 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNavArea_ClosedDoors> AutoInitializeUFortNavArea_ClosedDoors(TEXT("UFortNavArea_ClosedDoors"), sizeof(UFortNavArea_ClosedDoors), 3676910354u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01048BE0 (end 0x01048C82)
 // Original VA: 0x0000000141048BE0 | File offset: 0x010481E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNavArea_ClosedDoors, 3676910354u); reached from UFortNavArea_ClosedDoors::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortNavArea_ClosedDoors::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNavArea_ClosedDoors();
+// Original dynamic initializer: RVA 0x00105410
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNavArea_ClosedDoors(Z_Construct_UClass_UFortNavArea_ClosedDoors, &UFortNavArea_ClosedDoors::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNavArea_ClosedDoors"), false, nullptr, nullptr, nullptr);

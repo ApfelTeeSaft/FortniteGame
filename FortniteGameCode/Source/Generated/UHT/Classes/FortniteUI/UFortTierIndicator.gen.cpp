@@ -7,6 +7,9 @@
 void UFortTierIndicator::StaticRegisterNativesUFortTierIndicator()
 {
 }
+// IMPLEMENT_CLASS(UFortTierIndicator, 2925394518u)
+// Original dynamic initializer: RVA 0x0025E4B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTierIndicator> AutoInitializeUFortTierIndicator(TEXT("UFortTierIndicator"), sizeof(UFortTierIndicator), 2925394518u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029033D0 (end 0x02903472)
 // Original VA: 0x00000001429033D0 | File offset: 0x029029D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTierIndicator, 2925394518u); reached from UFortTierIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortTierIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTierIndicator();
+// Original dynamic initializer: RVA 0x00260710
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTierIndicator(Z_Construct_UClass_UFortTierIndicator, &UFortTierIndicator::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTierIndicator"), false, nullptr, nullptr, nullptr);

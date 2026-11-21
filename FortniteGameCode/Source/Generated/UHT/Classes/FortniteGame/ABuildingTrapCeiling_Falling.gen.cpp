@@ -7,6 +7,9 @@
 void ABuildingTrapCeiling_Falling::StaticRegisterNativesABuildingTrapCeiling_Falling()
 {
 }
+// IMPLEMENT_CLASS(ABuildingTrapCeiling_Falling, 3563623611u)
+// Original dynamic initializer: RVA 0x000DCC60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingTrapCeiling_Falling> AutoInitializeABuildingTrapCeiling_Falling(TEXT("ABuildingTrapCeiling_Falling"), sizeof(ABuildingTrapCeiling_Falling), 3563623611u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F76500 (end 0x00F765A2)
 // Original VA: 0x0000000140F76500 | File offset: 0x00F75B00
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingTrapCeiling_Falling, 3563623611u); reached from ABuildingTrapCeiling_Falling::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ABuildingTrapCeiling_Falling::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingTrapCeiling_Falling();
+// Original dynamic initializer: RVA 0x000DE000
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingTrapCeiling_Falling(Z_Construct_UClass_ABuildingTrapCeiling_Falling, &ABuildingTrapCeiling_Falling::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingTrapCeiling_Falling"), false, nullptr, nullptr, nullptr);

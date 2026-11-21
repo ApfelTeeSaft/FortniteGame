@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AEmitterCameraLensEffectBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AEmitterCameraLensEffectBase, 2535938541u)
+// Original dynamic initializer: RVA 0x001F9CC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AEmitterCameraLensEffectBase> AutoInitializeAEmitterCameraLensEffectBase(TEXT("AEmitterCameraLensEffectBase"), sizeof(AEmitterCameraLensEffectBase), 2535938541u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02402AC0 (end 0x02402B62)
 // Original VA: 0x0000000142402AC0 | File offset: 0x024020C0
 // Recovery: confirmed (IMPLEMENT_CLASS(AEmitterCameraLensEffectBase, 2535938541u); reached from AEmitterCameraLensEffectBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AEmitterCameraLensEffectBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AEmitterCameraLensEffectBase();
+// Original dynamic initializer: RVA 0x001FB330
+static FCompiledInDefer Z_CompiledInDefer_UClass_AEmitterCameraLensEffectBase(Z_Construct_UClass_AEmitterCameraLensEffectBase, &AEmitterCameraLensEffectBase::StaticClass, TEXT("/Script/Engine"), TEXT("AEmitterCameraLensEffectBase"), false, nullptr, nullptr, nullptr);

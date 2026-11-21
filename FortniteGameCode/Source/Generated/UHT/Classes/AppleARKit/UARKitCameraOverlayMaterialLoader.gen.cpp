@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UARKitCameraOverlayMaterialLoader()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UARKitCameraOverlayMaterialLoader, 569941086u)
+// Original dynamic initializer: RVA 0x000B4360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UARKitCameraOverlayMaterialLoader> AutoInitializeUARKitCameraOverlayMaterialLoader(TEXT("UARKitCameraOverlayMaterialLoader"), sizeof(UARKitCameraOverlayMaterialLoader), 569941086u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00805C60 (end 0x00805CF7)
 // Original VA: 0x0000000140805C60 | File offset: 0x00805260
 // Recovery: confirmed (IMPLEMENT_CLASS(UARKitCameraOverlayMaterialLoader, 569941086u); reached from UARKitCameraOverlayMaterialLoader::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UARKitCameraOverlayMaterialLoader::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UARKitCameraOverlayMaterialLoader();
+// Original dynamic initializer: RVA 0x000B4790
+static FCompiledInDefer Z_CompiledInDefer_UClass_UARKitCameraOverlayMaterialLoader(Z_Construct_UClass_UARKitCameraOverlayMaterialLoader, &UARKitCameraOverlayMaterialLoader::StaticClass, TEXT("/Script/AppleARKit"), TEXT("UARKitCameraOverlayMaterialLoader"), false, nullptr, nullptr, nullptr);

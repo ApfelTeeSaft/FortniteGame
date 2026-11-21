@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionDistanceFieldGradient()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionDistanceFieldGradient, 1186814470u)
+// Original dynamic initializer: RVA 0x002073A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionDistanceFieldGradient> AutoInitializeUMaterialExpressionDistanceFieldGradient(TEXT("UMaterialExpressionDistanceFieldGradient"), sizeof(UMaterialExpressionDistanceFieldGradient), 1186814470u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247BBB0 (end 0x0247BC52)
 // Original VA: 0x000000014247BBB0 | File offset: 0x0247B1B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionDistanceFieldGradient, 1186814470u); reached from UMaterialExpressionDistanceFieldGradient::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionDistanceFieldGradient::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionDistanceFieldGradient();
+// Original dynamic initializer: RVA 0x00208440
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionDistanceFieldGradient(Z_Construct_UClass_UMaterialExpressionDistanceFieldGradient, &UMaterialExpressionDistanceFieldGradient::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionDistanceFieldGradient"), false, nullptr, nullptr, nullptr);

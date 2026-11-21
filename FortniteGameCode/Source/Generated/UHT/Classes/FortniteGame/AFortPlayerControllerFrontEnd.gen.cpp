@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortPlayerControllerFrontEnd, 2319105167u)
+// Original dynamic initializer: RVA 0x0010B860 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPlayerControllerFrontEnd> AutoInitializeAFortPlayerControllerFrontEnd(TEXT("AFortPlayerControllerFrontEnd"), sizeof(AFortPlayerControllerFrontEnd), 2319105167u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01076490 (end 0x01076532)
 // Original VA: 0x0000000141076490 | File offset: 0x01075A90
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPlayerControllerFrontEnd, 2319105167u); reached from AFortPlayerControllerFrontEnd::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortPlayerControllerFrontEnd::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPlayerControllerFrontEnd();
+// Original dynamic initializer: RVA 0x0010C260
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPlayerControllerFrontEnd(Z_Construct_UClass_AFortPlayerControllerFrontEnd, &AFortPlayerControllerFrontEnd::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPlayerControllerFrontEnd"), false, nullptr, nullptr, nullptr);

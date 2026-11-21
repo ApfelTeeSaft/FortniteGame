@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMaterialFunctionMaterialLayerBlendInstance()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialFunctionMaterialLayerBlendInstance, 1025859339u)
+// Original dynamic initializer: RVA 0x0020AE30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialFunctionMaterialLayerBlendInstance> AutoInitializeUMaterialFunctionMaterialLayerBlendInstance(TEXT("UMaterialFunctionMaterialLayerBlendInstance"), sizeof(UMaterialFunctionMaterialLayerBlendInstance), 1025859339u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02484FD0 (end 0x02485072)
 // Original VA: 0x0000000142484FD0 | File offset: 0x024845D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialFunctionMaterialLayerBlendInstance, 1025859339u); reached from UMaterialFunctionMaterialLayerBlendInstance::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMaterialFunctionMaterialLayerBlendInstance::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialFunctionMaterialLayerBlendInstance();
+// Original dynamic initializer: RVA 0x0020C1F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialFunctionMaterialLayerBlendInstance(Z_Construct_UClass_UMaterialFunctionMaterialLayerBlendInstance, &UMaterialFunctionMaterialLayerBlendInstance::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialFunctionMaterialLayerBlendInstance"), false, nullptr, nullptr, nullptr);

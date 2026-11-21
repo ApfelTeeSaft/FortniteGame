@@ -7,6 +7,9 @@
 void AHUD::StaticRegisterNativesAHUD()
 {
 }
+// IMPLEMENT_CLASS(AHUD, 1175314171u)
+// Original dynamic initializer: RVA 0x002000F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AHUD> AutoInitializeAHUD(TEXT("AHUD"), sizeof(AHUD), 1175314171u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0241E2C0 (end 0x0241E362)
 // Original VA: 0x000000014241E2C0 | File offset: 0x0241D8C0
 // Recovery: confirmed (IMPLEMENT_CLASS(AHUD, 1175314171u); reached from AHUD::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AHUD::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AHUD();
+// Original dynamic initializer: RVA 0x00200920
+static FCompiledInDefer Z_CompiledInDefer_UClass_AHUD(Z_Construct_UClass_AHUD, &AHUD::StaticClass, TEXT("/Script/Engine"), TEXT("AHUD"), false, nullptr, nullptr, nullptr);

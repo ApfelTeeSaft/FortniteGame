@@ -7,6 +7,9 @@
 void AFortTimeOfDayManager::StaticRegisterNativesAFortTimeOfDayManager()
 {
 }
+// IMPLEMENT_CLASS(AFortTimeOfDayManager, 4162399111u)
+// Original dynamic initializer: RVA 0x00116500 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortTimeOfDayManager> AutoInitializeAFortTimeOfDayManager(TEXT("AFortTimeOfDayManager"), sizeof(AFortTimeOfDayManager), 4162399111u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC370 (end 0x010BC412)
 // Original VA: 0x00000001410BC370 | File offset: 0x010BB970
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortTimeOfDayManager, 4162399111u); reached from AFortTimeOfDayManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortTimeOfDayManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortTimeOfDayManager();
+// Original dynamic initializer: RVA 0x00117CE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortTimeOfDayManager(Z_Construct_UClass_AFortTimeOfDayManager, &AFortTimeOfDayManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortTimeOfDayManager"), false, nullptr, nullptr, nullptr);

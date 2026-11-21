@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBuildingActorEditorComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBuildingActorEditorComponent, 1720237540u)
+// Original dynamic initializer: RVA 0x000D9950 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBuildingActorEditorComponent> AutoInitializeUBuildingActorEditorComponent(TEXT("UBuildingActorEditorComponent"), sizeof(UBuildingActorEditorComponent), 1720237540u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F64A10 (end 0x00F64AB2)
 // Original VA: 0x0000000140F64A10 | File offset: 0x00F64010
 // Recovery: confirmed (IMPLEMENT_CLASS(UBuildingActorEditorComponent, 1720237540u); reached from UBuildingActorEditorComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBuildingActorEditorComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBuildingActorEditorComponent();
+// Original dynamic initializer: RVA 0x000DA950
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBuildingActorEditorComponent(Z_Construct_UClass_UBuildingActorEditorComponent, &UBuildingActorEditorComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UBuildingActorEditorComponent"), false, nullptr, nullptr, nullptr);

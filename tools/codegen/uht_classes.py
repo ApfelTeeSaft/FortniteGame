@@ -29,7 +29,10 @@ Outputs:
 * analysis/functions-uht-gpsc.json, analysis/functions-uht-classes-nofunc.json and
   analysis/uht-class-symbols.json.
 
-The TClassCompiledInDefer object and the FCompiledInDefer object are not emitted yet.
+Each fragment also holds IMPLEMENT_CLASS's TClassCompiledInDefer object (AutoInitialize<Class>)
+and UHT's FCompiledInDefer object, whose dynamic initializers go to
+analysis/functions-uht-class-autoinit.json (leaf, outside the denominator) and
+analysis/functions-uht-class-defer.json.
 
 Usage: python tools/codegen/uht_classes.py   (after tools/analysis/unity_order.py)
 """
@@ -59,6 +62,10 @@ HEADER = GEN / "Classes.gen.h"
 FRAG_DIR = GEN / "Classes"
 GPSC_MANIFEST = ROOT / "analysis" / "functions-uht-gpsc.json"
 NOFUNC_MANIFEST = ROOT / "analysis" / "functions-uht-classes-nofunc.json"
+DEFER_MANIFEST = ROOT / "analysis" / "functions-uht-class-defer.json"
+AUTO_MANIFEST = ROOT / "analysis" / "functions-uht-class-autoinit.json"
+# mov r9d, CRC; lea rdx, TEXT; mov r8d, sizeof; lea rcx, object; jmp UClassCompiledInDefer
+AUTO_INITIALIZER_SIZE = 31
 SYMBOLS = ROOT / "analysis" / "uht-class-symbols.json"
 UNITY_ORDER = ROOT / "analysis" / "unity-order.json"
 # Classes whose extra (non-DECLARE_CLASS) members come from the shim headers.
@@ -339,6 +346,7 @@ def main() -> int:
         return b
 
     outputs, gpsc_entries, nofunc_entries, symbols = {}, [], [], {}
+    defer_entries, auto_entries = [], []
     for n in out_order:
         c = classes[n]
         if not c.get("decoded") or "auto_initialize" not in c:
@@ -367,6 +375,11 @@ def main() -> int:
             else:
                 stats["nofunc_classparams_not_unique"] += 1
         f = c["decoded"]
+        auto = int(c["auto_initialize"], 16)
+        parts.append(
+            f"// IMPLEMENT_CLASS({n}, {c.get('crc', 0)}u)\n"
+            f"// Original dynamic initializer: RVA 0x{auto:08X} (leaf; CRC and sizeof are its arguments)\n"
+            f"static TClassCompiledInDefer<{n}> AutoInitialize{n}(TEXT(\"{n}\"), sizeof({n}), {c.get('crc', 0)}u);\n")
         parts.append(
             f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{c['gpsc']:08X} (end 0x{c['gpsc_end']:08X})\n"
             f"// Original VA: 0x{base + c['gpsc']:016X} | File offset: 0x{img.rva_to_off(c['gpsc']):08X}\n"
@@ -390,12 +403,24 @@ def main() -> int:
             f"\t\t\t&{n}::Super::StaticClass,\n"
             f"\t\t\t&{n}::WithinClass::StaticClass\n"
             "\t\t);\n\t}\n\treturn PrivateStaticClass;\n}\n")
+        cid = int(c["compiled_in_defer"], 16)
+        parts.append(
+            f"UClass* Z_Construct_UClass_{n}();\n"
+            f"// Original dynamic initializer: RVA 0x{cid:08X}\n"
+            f"static FCompiledInDefer Z_CompiledInDefer_UClass_{n}(Z_Construct_UClass_{n}, &{n}::StaticClass, "
+            f"TEXT(\"{c['package']}\"), TEXT(\"{n}\"), false, nullptr, nullptr, nullptr);\n")
         if c.get("config_text") is None or not c.get("within"):
             stats["gpsc_skipped_incomplete_declaration"] += 1
             continue
         outputs[FRAG_DIR / short / f"{n}.gen.cpp"] = "".join(parts)
         gpsc_entries.append({"start_rva": f"0x{c['gpsc']:08X}", "end_rva": f"0x{c['gpsc_end']:08X}",
                              "name": f"{n}::GetPrivateStaticClass", "class": n, "package": short})
+        if cid in allrf:
+            defer_entries.append({"start_rva": f"0x{cid:08X}", "end_rva": f"0x{allrf[cid].end:08X}",
+                                  "name": f"dynamic initializer for Z_CompiledInDefer_UClass_{n}", "class": n,
+                                  "package": short})
+        auto_entries.append({"start_rva": f"0x{auto:08X}", "end_rva": f"0x{auto + AUTO_INITIALIZER_SIZE:08X}",
+                             "name": f"dynamic initializer for AutoInitialize{n}", "class": n, "package": short})
         stats["gpsc_emitted"] += 1
 
     HEADER.write_text(header, encoding="utf-8") if not HEADER.exists() or HEADER.read_text(encoding="utf-8") != header else None
@@ -404,7 +429,7 @@ def main() -> int:
     src_tpl = "FortniteGameCode/Source/Generated/UHT/Classes/{package}/{class}.gen.cpp"
     obj_tpl = UNIT_OBJECT
     units = unit_of()
-    for e in gpsc_entries + nofunc_entries:
+    for e in gpsc_entries + nofunc_entries + defer_entries + auto_entries:
         e["unit"] = units[("class", e["class"])]
     dump_compact(GPSC_MANIFEST, {**head,
         "evidence": ("<Class>::GetPrivateStaticClass (IMPLEMENT_CLASS): the jmp target of <Class>::StaticClass, which "
@@ -413,6 +438,21 @@ def main() -> int:
                            "symbol": "?GetPrivateStaticClass@{class}@@CAPEAVUClass@@XZ", "name_confidence": "confirmed",
                            "compact": True},
         "functions": gpsc_entries})
+    dump_compact(DEFER_MANIFEST, {**head,
+        "evidence": ("Dynamic initializer of Z_CompiledInDefer_UClass_<Class>: the 58-byte .CRT$XCU entry registering "
+                     "Z_Construct_UClass_<Class> and <Class>::StaticClass (analysis/unity-order.json)."),
+        "entry_defaults": {"category": "uht-class-compiledindefer", "source": src_tpl, "object": obj_tpl,
+                           "symbol": "??__EZ_CompiledInDefer_UClass_{class}@@YAXXZ", "name_confidence": "confirmed",
+                           "compact": True},
+        "functions": defer_entries})
+    dump_compact(AUTO_MANIFEST, {**head,
+        "evidence": ("Dynamic initializer of AutoInitialize<Class> (IMPLEMENT_CLASS's TClassCompiledInDefer): the leaf "
+                     ".CRT$XCU entry passing TEXT(\"<Class>\"), sizeof and the CRC to UClassCompiledInDefer. No .pdata "
+                     "entry, so outside the denominator."),
+        "entry_defaults": {"category": "uht-class-autoinitialize", "source": src_tpl, "object": obj_tpl,
+                           "symbol": "??__EAutoInitialize{class}@@YAXXZ", "name_confidence": "confirmed",
+                           "compact": True},
+        "functions": auto_entries})
     dump_compact(NOFUNC_MANIFEST, {**head,
         "evidence": ("Z_Construct_UClass_<Class> of a class without UFunctions: the constructor its FCompiledInDefer "
                      "initializer registers; ClassParams is the only FClassParams naming <Class>::StaticClass."),

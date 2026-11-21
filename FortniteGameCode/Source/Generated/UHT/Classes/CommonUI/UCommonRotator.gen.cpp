@@ -7,6 +7,9 @@
 void UCommonRotator::StaticRegisterNativesUCommonRotator()
 {
 }
+// IMPLEMENT_CLASS(UCommonRotator, 3290760359u)
+// Original dynamic initializer: RVA 0x000960C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonRotator> AutoInitializeUCommonRotator(TEXT("UCommonRotator"), sizeof(UCommonRotator), 3290760359u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C97F0 (end 0x002C9892)
 // Original VA: 0x00000001402C97F0 | File offset: 0x002C8DF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonRotator, 3290760359u); reached from UCommonRotator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonRotator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonRotator();
+// Original dynamic initializer: RVA 0x00096950
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonRotator(Z_Construct_UClass_UCommonRotator, &UCommonRotator::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonRotator"), false, nullptr, nullptr, nullptr);

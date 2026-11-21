@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UDistributionVectorParameterBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDistributionVectorParameterBase, 692838335u)
+// Original dynamic initializer: RVA 0x001F9E00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDistributionVectorParameterBase> AutoInitializeUDistributionVectorParameterBase(TEXT("UDistributionVectorParameterBase"), sizeof(UDistributionVectorParameterBase), 692838335u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02403190 (end 0x02403232)
 // Original VA: 0x0000000142403190 | File offset: 0x02402790
 // Recovery: confirmed (IMPLEMENT_CLASS(UDistributionVectorParameterBase, 692838335u); reached from UDistributionVectorParameterBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UDistributionVectorParameterBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDistributionVectorParameterBase();
+// Original dynamic initializer: RVA 0x001FB5B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDistributionVectorParameterBase(Z_Construct_UClass_UDistributionVectorParameterBase, &UDistributionVectorParameterBase::StaticClass, TEXT("/Script/Engine"), TEXT("UDistributionVectorParameterBase"), false, nullptr, nullptr, nullptr);

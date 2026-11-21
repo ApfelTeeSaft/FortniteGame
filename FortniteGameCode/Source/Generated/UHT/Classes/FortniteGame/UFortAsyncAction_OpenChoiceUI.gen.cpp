@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_OpenChoiceUI, 825116541u)
+// Original dynamic initializer: RVA 0x000E6970 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_OpenChoiceUI> AutoInitializeUFortAsyncAction_OpenChoiceUI(TEXT("UFortAsyncAction_OpenChoiceUI"), sizeof(UFortAsyncAction_OpenChoiceUI), 825116541u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9D390 (end 0x00F9D432)
 // Original VA: 0x0000000140F9D390 | File offset: 0x00F9C990
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_OpenChoiceUI, 825116541u); reached from UFortAsyncAction_OpenChoiceUI::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_OpenChoiceUI::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_OpenChoiceUI();
+// Original dynamic initializer: RVA 0x000E7D10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_OpenChoiceUI(Z_Construct_UClass_UFortAsyncAction_OpenChoiceUI, &UFortAsyncAction_OpenChoiceUI::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAsyncAction_OpenChoiceUI"), false, nullptr, nullptr, nullptr);

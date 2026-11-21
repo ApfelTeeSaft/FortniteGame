@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAIBlueprintHelperLibrary, 3546732508u)
+// Original dynamic initializer: RVA 0x001B8ED0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAIBlueprintHelperLibrary> AutoInitializeUAIBlueprintHelperLibrary(TEXT("UAIBlueprintHelperLibrary"), sizeof(UAIBlueprintHelperLibrary), 3546732508u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D197B0 (end 0x01D19852)
 // Original VA: 0x0000000141D197B0 | File offset: 0x01D18DB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAIBlueprintHelperLibrary, 3546732508u); reached from UAIBlueprintHelperLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAIBlueprintHelperLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAIBlueprintHelperLibrary();
+// Original dynamic initializer: RVA 0x001B9E30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAIBlueprintHelperLibrary(Z_Construct_UClass_UAIBlueprintHelperLibrary, &UAIBlueprintHelperLibrary::StaticClass, TEXT("/Script/AIModule"), TEXT("UAIBlueprintHelperLibrary"), false, nullptr, nullptr, nullptr);

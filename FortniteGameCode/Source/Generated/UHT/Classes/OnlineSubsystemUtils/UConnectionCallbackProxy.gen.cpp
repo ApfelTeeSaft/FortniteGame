@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UConnectionCallbackProxy, 23791033u)
+// Original dynamic initializer: RVA 0x00099300 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UConnectionCallbackProxy> AutoInitializeUConnectionCallbackProxy(TEXT("UConnectionCallbackProxy"), sizeof(UConnectionCallbackProxy), 23791033u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032C9C0 (end 0x0032CA62)
 // Original VA: 0x000000014032C9C0 | File offset: 0x0032BFC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UConnectionCallbackProxy, 23791033u); reached from UConnectionCallbackProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UConnectionCallbackProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UConnectionCallbackProxy();
+// Original dynamic initializer: RVA 0x00099E20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UConnectionCallbackProxy(Z_Construct_UClass_UConnectionCallbackProxy, &UConnectionCallbackProxy::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UConnectionCallbackProxy"), false, nullptr, nullptr, nullptr);

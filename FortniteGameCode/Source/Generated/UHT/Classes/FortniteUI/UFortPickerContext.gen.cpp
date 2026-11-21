@@ -7,6 +7,9 @@
 void UFortPickerContext::StaticRegisterNativesUFortPickerContext()
 {
 }
+// IMPLEMENT_CLASS(UFortPickerContext, 2917326488u)
+// Original dynamic initializer: RVA 0x00255C00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPickerContext> AutoInitializeUFortPickerContext(TEXT("UFortPickerContext"), sizeof(UFortPickerContext), 2917326488u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E5270 (end 0x028E5312)
 // Original VA: 0x00000001428E5270 | File offset: 0x028E4870
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPickerContext, 2917326488u); reached from UFortPickerContext::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortPickerContext::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPickerContext();
+// Original dynamic initializer: RVA 0x00257F40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPickerContext(Z_Construct_UClass_UFortPickerContext, &UFortPickerContext::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortPickerContext"), false, nullptr, nullptr, nullptr);

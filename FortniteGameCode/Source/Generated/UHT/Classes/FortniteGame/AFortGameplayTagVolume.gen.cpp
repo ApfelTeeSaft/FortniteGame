@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_AFortGameplayTagVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortGameplayTagVolume, 1709220192u)
+// Original dynamic initializer: RVA 0x000F7730 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortGameplayTagVolume> AutoInitializeAFortGameplayTagVolume(TEXT("AFortGameplayTagVolume"), sizeof(AFortGameplayTagVolume), 1709220192u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FED730 (end 0x00FED7D2)
 // Original VA: 0x0000000140FED730 | File offset: 0x00FECD30
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortGameplayTagVolume, 1709220192u); reached from AFortGameplayTagVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* AFortGameplayTagVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortGameplayTagVolume();
+// Original dynamic initializer: RVA 0x000F85D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortGameplayTagVolume(Z_Construct_UClass_AFortGameplayTagVolume, &AFortGameplayTagVolume::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortGameplayTagVolume"), false, nullptr, nullptr, nullptr);

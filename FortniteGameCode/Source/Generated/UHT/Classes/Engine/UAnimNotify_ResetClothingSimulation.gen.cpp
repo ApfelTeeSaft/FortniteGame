@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAnimNotify_ResetClothingSimulation()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnimNotify_ResetClothingSimulation, 1293467378u)
+// Original dynamic initializer: RVA 0x001EF9C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimNotify_ResetClothingSimulation> AutoInitializeUAnimNotify_ResetClothingSimulation(TEXT("UAnimNotify_ResetClothingSimulation"), sizeof(UAnimNotify_ResetClothingSimulation), 1293467378u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D4860 (end 0x023D4902)
 // Original VA: 0x00000001423D4860 | File offset: 0x023D3E60
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimNotify_ResetClothingSimulation, 1293467378u); reached from UAnimNotify_ResetClothingSimulation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAnimNotify_ResetClothingSimulation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimNotify_ResetClothingSimulation();
+// Original dynamic initializer: RVA 0x001F17B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimNotify_ResetClothingSimulation(Z_Construct_UClass_UAnimNotify_ResetClothingSimulation, &UAnimNotify_ResetClothingSimulation::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimNotify_ResetClothingSimulation"), false, nullptr, nullptr, nullptr);

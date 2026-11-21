@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionVertexInterpolator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionVertexInterpolator, 3048787477u)
+// Original dynamic initializer: RVA 0x0020ACF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionVertexInterpolator> AutoInitializeUMaterialExpressionVertexInterpolator(TEXT("UMaterialExpressionVertexInterpolator"), sizeof(UMaterialExpressionVertexInterpolator), 3048787477u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02484900 (end 0x024849A2)
 // Original VA: 0x0000000142484900 | File offset: 0x02483F00
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionVertexInterpolator, 3048787477u); reached from UMaterialExpressionVertexInterpolator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionVertexInterpolator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionVertexInterpolator();
+// Original dynamic initializer: RVA 0x0020BF70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionVertexInterpolator(Z_Construct_UClass_UMaterialExpressionVertexInterpolator, &UMaterialExpressionVertexInterpolator::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionVertexInterpolator"), false, nullptr, nullptr, nullptr);

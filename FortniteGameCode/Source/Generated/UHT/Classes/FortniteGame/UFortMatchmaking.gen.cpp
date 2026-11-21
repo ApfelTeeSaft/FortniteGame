@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortMatchmaking()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortMatchmaking, 1451515551u)
+// Original dynamic initializer: RVA 0x000FD130 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMatchmaking> AutoInitializeUFortMatchmaking(TEXT("UFortMatchmaking"), sizeof(UFortMatchmaking), 1451515551u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101C8E0 (end 0x0101C977)
 // Original VA: 0x000000014101C8E0 | File offset: 0x0101BEE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMatchmaking, 1451515551u); reached from UFortMatchmaking::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortMatchmaking::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMatchmaking();
+// Original dynamic initializer: RVA 0x000FE180
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMatchmaking(Z_Construct_UClass_UFortMatchmaking, &UFortMatchmaking::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMatchmaking"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UCustomCharacterHatData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCustomCharacterHatData, 3271143826u)
+// Original dynamic initializer: RVA 0x000DCE60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCustomCharacterHatData> AutoInitializeUCustomCharacterHatData(TEXT("UCustomCharacterHatData"), sizeof(UCustomCharacterHatData), 3271143826u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F77000 (end 0x00F770A2)
 // Original VA: 0x0000000140F77000 | File offset: 0x00F76600
 // Recovery: confirmed (IMPLEMENT_CLASS(UCustomCharacterHatData, 3271143826u); reached from UCustomCharacterHatData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UCustomCharacterHatData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCustomCharacterHatData();
+// Original dynamic initializer: RVA 0x000DE400
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCustomCharacterHatData(Z_Construct_UClass_UCustomCharacterHatData, &UCustomCharacterHatData::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UCustomCharacterHatData"), false, nullptr, nullptr, nullptr);

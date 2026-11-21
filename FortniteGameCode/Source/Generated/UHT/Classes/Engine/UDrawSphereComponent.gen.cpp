@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UDrawSphereComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDrawSphereComponent, 3112567908u)
+// Original dynamic initializer: RVA 0x001F9EA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDrawSphereComponent> AutoInitializeUDrawSphereComponent(TEXT("UDrawSphereComponent"), sizeof(UDrawSphereComponent), 3112567908u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02403500 (end 0x024035A2)
 // Original VA: 0x0000000142403500 | File offset: 0x02402B00
 // Recovery: confirmed (IMPLEMENT_CLASS(UDrawSphereComponent, 3112567908u); reached from UDrawSphereComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UDrawSphereComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDrawSphereComponent();
+// Original dynamic initializer: RVA 0x001FB6F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDrawSphereComponent(Z_Construct_UClass_UDrawSphereComponent, &UDrawSphereComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UDrawSphereComponent"), false, nullptr, nullptr, nullptr);

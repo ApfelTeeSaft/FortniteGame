@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAISightTargetInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAISightTargetInterface, 2311081387u)
+// Original dynamic initializer: RVA 0x001BA550 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAISightTargetInterface> AutoInitializeUAISightTargetInterface(TEXT("UAISightTargetInterface"), sizeof(UAISightTargetInterface), 2311081387u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D20B30 (end 0x01D20BD2)
 // Original VA: 0x0000000141D20B30 | File offset: 0x01D20130
 // Recovery: confirmed (IMPLEMENT_CLASS(UAISightTargetInterface, 2311081387u); reached from UAISightTargetInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAISightTargetInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAISightTargetInterface();
+// Original dynamic initializer: RVA 0x001BB780
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAISightTargetInterface(Z_Construct_UClass_UAISightTargetInterface, &UAISightTargetInterface::StaticClass, TEXT("/Script/AIModule"), TEXT("UAISightTargetInterface"), false, nullptr, nullptr, nullptr);

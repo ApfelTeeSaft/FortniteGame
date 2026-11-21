@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UVisibilityBinding, 2043686676u)
+// Original dynamic initializer: RVA 0x001B42D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UVisibilityBinding> AutoInitializeUVisibilityBinding(TEXT("UVisibilityBinding"), sizeof(UVisibilityBinding), 2043686676u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF7FE0 (end 0x01BF8082)
 // Original VA: 0x0000000141BF7FE0 | File offset: 0x01BF75E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UVisibilityBinding, 2043686676u); reached from UVisibilityBinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UVisibilityBinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UVisibilityBinding();
+// Original dynamic initializer: RVA 0x001B4C00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UVisibilityBinding(Z_Construct_UClass_UVisibilityBinding, &UVisibilityBinding::StaticClass, TEXT("/Script/UMG"), TEXT("UVisibilityBinding"), false, nullptr, nullptr, nullptr);

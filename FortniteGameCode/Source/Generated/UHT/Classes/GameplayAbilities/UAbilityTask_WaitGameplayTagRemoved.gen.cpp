@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAbilityTask_WaitGameplayTagRemoved, 257504404u)
+// Original dynamic initializer: RVA 0x0009DED0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_WaitGameplayTagRemoved> AutoInitializeUAbilityTask_WaitGameplayTagRemoved(TEXT("UAbilityTask_WaitGameplayTagRemoved"), sizeof(UAbilityTask_WaitGameplayTagRemoved), 257504404u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054BEC0 (end 0x0054BF62)
 // Original VA: 0x000000014054BEC0 | File offset: 0x0054B4C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_WaitGameplayTagRemoved, 257504404u); reached from UAbilityTask_WaitGameplayTagRemoved::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAbilityTask_WaitGameplayTagRemoved::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayTagRemoved();
+// Original dynamic initializer: RVA 0x0009E8C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_WaitGameplayTagRemoved(Z_Construct_UClass_UAbilityTask_WaitGameplayTagRemoved, &UAbilityTask_WaitGameplayTagRemoved::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_WaitGameplayTagRemoved"), false, nullptr, nullptr, nullptr);

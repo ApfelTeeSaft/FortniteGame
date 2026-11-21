@@ -7,6 +7,9 @@
 void UFortGameplayTagVolumeInterface::StaticRegisterNativesUFortGameplayTagVolumeInterface()
 {
 }
+// IMPLEMENT_CLASS(UFortGameplayTagVolumeInterface, 2316809786u)
+// Original dynamic initializer: RVA 0x000F77D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGameplayTagVolumeInterface> AutoInitializeUFortGameplayTagVolumeInterface(TEXT("UFortGameplayTagVolumeInterface"), sizeof(UFortGameplayTagVolumeInterface), 2316809786u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEDAA0 (end 0x00FEDB42)
 // Original VA: 0x0000000140FEDAA0 | File offset: 0x00FED0A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGameplayTagVolumeInterface, 2316809786u); reached from UFortGameplayTagVolumeInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortGameplayTagVolumeInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGameplayTagVolumeInterface();
+// Original dynamic initializer: RVA 0x000F8710
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGameplayTagVolumeInterface(Z_Construct_UClass_UFortGameplayTagVolumeInterface, &UFortGameplayTagVolumeInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortGameplayTagVolumeInterface"), false, nullptr, nullptr, nullptr);

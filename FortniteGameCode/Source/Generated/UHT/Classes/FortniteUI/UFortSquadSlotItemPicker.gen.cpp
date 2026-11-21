@@ -7,6 +7,9 @@
 void UFortSquadSlotItemPicker::StaticRegisterNativesUFortSquadSlotItemPicker()
 {
 }
+// IMPLEMENT_CLASS(UFortSquadSlotItemPicker, 2997734919u)
+// Original dynamic initializer: RVA 0x0025C120 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSquadSlotItemPicker> AutoInitializeUFortSquadSlotItemPicker(TEXT("UFortSquadSlotItemPicker"), sizeof(UFortSquadSlotItemPicker), 2997734919u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FA220 (end 0x028FA2C2)
 // Original VA: 0x00000001428FA220 | File offset: 0x028F9820
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSquadSlotItemPicker, 2997734919u); reached from UFortSquadSlotItemPicker::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSquadSlotItemPicker::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSquadSlotItemPicker();
+// Original dynamic initializer: RVA 0x0025DDF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSquadSlotItemPicker(Z_Construct_UClass_UFortSquadSlotItemPicker, &UFortSquadSlotItemPicker::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSquadSlotItemPicker"), false, nullptr, nullptr, nullptr);

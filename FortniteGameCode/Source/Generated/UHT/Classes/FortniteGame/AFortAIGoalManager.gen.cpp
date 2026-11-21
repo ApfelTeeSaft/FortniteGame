@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortAIGoalManager, 4025971881u)
+// Original dynamic initializer: RVA 0x000E33B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortAIGoalManager> AutoInitializeAFortAIGoalManager(TEXT("AFortAIGoalManager"), sizeof(AFortAIGoalManager), 4025971881u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8F6B0 (end 0x00F8F752)
 // Original VA: 0x0000000140F8F6B0 | File offset: 0x00F8ECB0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortAIGoalManager, 4025971881u); reached from AFortAIGoalManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortAIGoalManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortAIGoalManager();
+// Original dynamic initializer: RVA 0x000E4360
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortAIGoalManager(Z_Construct_UClass_AFortAIGoalManager, &AFortAIGoalManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortAIGoalManager"), false, nullptr, nullptr, nullptr);

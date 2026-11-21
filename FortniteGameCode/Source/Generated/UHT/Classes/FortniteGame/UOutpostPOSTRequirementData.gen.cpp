@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UOutpostPOSTRequirementData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UOutpostPOSTRequirementData, 3947564860u)
+// Original dynamic initializer: RVA 0x00105BF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UOutpostPOSTRequirementData> AutoInitializeUOutpostPOSTRequirementData(TEXT("UOutpostPOSTRequirementData"), sizeof(UOutpostPOSTRequirementData), 3947564860u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104F820 (end 0x0104F8B7)
 // Original VA: 0x000000014104F820 | File offset: 0x0104EE20
 // Recovery: confirmed (IMPLEMENT_CLASS(UOutpostPOSTRequirementData, 3947564860u); reached from UOutpostPOSTRequirementData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UOutpostPOSTRequirementData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UOutpostPOSTRequirementData();
+// Original dynamic initializer: RVA 0x001072B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UOutpostPOSTRequirementData(Z_Construct_UClass_UOutpostPOSTRequirementData, &UOutpostPOSTRequirementData::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UOutpostPOSTRequirementData"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_URotatingMovementComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(URotatingMovementComponent, 4011868756u)
+// Original dynamic initializer: RVA 0x00218BE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<URotatingMovementComponent> AutoInitializeURotatingMovementComponent(TEXT("URotatingMovementComponent"), sizeof(URotatingMovementComponent), 4011868756u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C45B0 (end 0x024C4652)
 // Original VA: 0x00000001424C45B0 | File offset: 0x024C3BB0
 // Recovery: confirmed (IMPLEMENT_CLASS(URotatingMovementComponent, 4011868756u); reached from URotatingMovementComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* URotatingMovementComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_URotatingMovementComponent();
+// Original dynamic initializer: RVA 0x00219650
+static FCompiledInDefer Z_CompiledInDefer_UClass_URotatingMovementComponent(Z_Construct_UClass_URotatingMovementComponent, &URotatingMovementComponent::StaticClass, TEXT("/Script/Engine"), TEXT("URotatingMovementComponent"), false, nullptr, nullptr, nullptr);

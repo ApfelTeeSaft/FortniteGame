@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortNavArea_DefenderNull()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNavArea_DefenderNull, 1993711298u)
+// Original dynamic initializer: RVA 0x00104280 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNavArea_DefenderNull> AutoInitializeUFortNavArea_DefenderNull(TEXT("UFortNavArea_DefenderNull"), sizeof(UFortNavArea_DefenderNull), 1993711298u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01048D40 (end 0x01048DE2)
 // Original VA: 0x0000000141048D40 | File offset: 0x01048340
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNavArea_DefenderNull, 1993711298u); reached from UFortNavArea_DefenderNull::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortNavArea_DefenderNull::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNavArea_DefenderNull();
+// Original dynamic initializer: RVA 0x00105490
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNavArea_DefenderNull(Z_Construct_UClass_UFortNavArea_DefenderNull, &UFortNavArea_DefenderNull::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNavArea_DefenderNull"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UWidgetAnimation, 1563225803u)
+// Original dynamic initializer: RVA 0x001B4CC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWidgetAnimation> AutoInitializeUWidgetAnimation(TEXT("UWidgetAnimation"), sizeof(UWidgetAnimation), 1563225803u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00300 (end 0x01C003A2)
 // Original VA: 0x0000000141C00300 | File offset: 0x01BFF900
 // Recovery: confirmed (IMPLEMENT_CLASS(UWidgetAnimation, 1563225803u); reached from UWidgetAnimation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UWidgetAnimation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWidgetAnimation();
+// Original dynamic initializer: RVA 0x001B5220
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWidgetAnimation(Z_Construct_UClass_UWidgetAnimation, &UWidgetAnimation::StaticClass, TEXT("/Script/UMG"), TEXT("UWidgetAnimation"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UJsonUtilitiesDummyObject()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UJsonUtilitiesDummyObject, 2844260287u)
+// Original dynamic initializer: RVA 0x001C0A10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UJsonUtilitiesDummyObject> AutoInitializeUJsonUtilitiesDummyObject(TEXT("UJsonUtilitiesDummyObject"), sizeof(UJsonUtilitiesDummyObject), 2844260287u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D45BA0 (end 0x01D45C37)
 // Original VA: 0x0000000141D45BA0 | File offset: 0x01D451A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UJsonUtilitiesDummyObject, 2844260287u); reached from UJsonUtilitiesDummyObject::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UJsonUtilitiesDummyObject::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UJsonUtilitiesDummyObject();
+// Original dynamic initializer: RVA 0x001C0AE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UJsonUtilitiesDummyObject(Z_Construct_UClass_UJsonUtilitiesDummyObject, &UJsonUtilitiesDummyObject::StaticClass, TEXT("/Script/JsonUtilities"), TEXT("UJsonUtilitiesDummyObject"), false, nullptr, nullptr, nullptr);

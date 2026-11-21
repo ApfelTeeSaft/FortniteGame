@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortEnemySpawn()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortEnemySpawn, 3314702173u)
+// Original dynamic initializer: RVA 0x000F0960 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortEnemySpawn> AutoInitializeAFortEnemySpawn(TEXT("AFortEnemySpawn"), sizeof(AFortEnemySpawn), 3314702173u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD4060 (end 0x00FD4102)
 // Original VA: 0x0000000140FD4060 | File offset: 0x00FD3660
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortEnemySpawn, 3314702173u); reached from AFortEnemySpawn::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortEnemySpawn::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortEnemySpawn();
+// Original dynamic initializer: RVA 0x000F1710
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortEnemySpawn(Z_Construct_UClass_AFortEnemySpawn, &AFortEnemySpawn::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortEnemySpawn"), false, nullptr, nullptr, nullptr);

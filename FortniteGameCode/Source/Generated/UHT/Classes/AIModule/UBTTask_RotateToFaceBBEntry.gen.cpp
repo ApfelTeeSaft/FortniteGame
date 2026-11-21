@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBTTask_RotateToFaceBBEntry()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBTTask_RotateToFaceBBEntry, 2214815849u)
+// Original dynamic initializer: RVA 0x001BC420 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTTask_RotateToFaceBBEntry> AutoInitializeUBTTask_RotateToFaceBBEntry(TEXT("UBTTask_RotateToFaceBBEntry"), sizeof(UBTTask_RotateToFaceBBEntry), 2214815849u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D27AA0 (end 0x01D27B42)
 // Original VA: 0x0000000141D27AA0 | File offset: 0x01D270A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTTask_RotateToFaceBBEntry, 2214815849u); reached from UBTTask_RotateToFaceBBEntry::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBTTask_RotateToFaceBBEntry::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTTask_RotateToFaceBBEntry();
+// Original dynamic initializer: RVA 0x001BD1A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTTask_RotateToFaceBBEntry(Z_Construct_UClass_UBTTask_RotateToFaceBBEntry, &UBTTask_RotateToFaceBBEntry::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTTask_RotateToFaceBBEntry"), false, nullptr, nullptr, nullptr);

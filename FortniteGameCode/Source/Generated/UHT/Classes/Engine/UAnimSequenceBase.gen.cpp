@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAnimSequenceBase, 3508993448u)
+// Original dynamic initializer: RVA 0x001EFA00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimSequenceBase> AutoInitializeUAnimSequenceBase(TEXT("UAnimSequenceBase"), sizeof(UAnimSequenceBase), 3508993448u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D49C0 (end 0x023D4A62)
 // Original VA: 0x00000001423D49C0 | File offset: 0x023D3FC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimSequenceBase, 3508993448u); reached from UAnimSequenceBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAnimSequenceBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimSequenceBase();
+// Original dynamic initializer: RVA 0x001F1830
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimSequenceBase(Z_Construct_UClass_UAnimSequenceBase, &UAnimSequenceBase::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimSequenceBase"), false, nullptr, nullptr, nullptr);

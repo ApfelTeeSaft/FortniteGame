@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UDPICustomScalingRule()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDPICustomScalingRule, 2686034788u)
+// Original dynamic initializer: RVA 0x001F9CE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDPICustomScalingRule> AutoInitializeUDPICustomScalingRule(TEXT("UDPICustomScalingRule"), sizeof(UDPICustomScalingRule), 2686034788u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02402B70 (end 0x02402C07)
 // Original VA: 0x0000000142402B70 | File offset: 0x02402170
 // Recovery: confirmed (IMPLEMENT_CLASS(UDPICustomScalingRule, 2686034788u); reached from UDPICustomScalingRule::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UDPICustomScalingRule::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDPICustomScalingRule();
+// Original dynamic initializer: RVA 0x001FB370
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDPICustomScalingRule(Z_Construct_UClass_UDPICustomScalingRule, &UDPICustomScalingRule::StaticClass, TEXT("/Script/Engine"), TEXT("UDPICustomScalingRule"), false, nullptr, nullptr, nullptr);

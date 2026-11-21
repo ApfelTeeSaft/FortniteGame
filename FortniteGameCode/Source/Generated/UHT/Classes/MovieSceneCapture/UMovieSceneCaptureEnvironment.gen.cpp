@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UMovieSceneCaptureEnvironment, 1897432700u)
+// Original dynamic initializer: RVA 0x001C16D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovieSceneCaptureEnvironment> AutoInitializeUMovieSceneCaptureEnvironment(TEXT("UMovieSceneCaptureEnvironment"), sizeof(UMovieSceneCaptureEnvironment), 1897432700u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D59C70 (end 0x01D59D07)
 // Original VA: 0x0000000141D59C70 | File offset: 0x01D59270
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovieSceneCaptureEnvironment, 1897432700u); reached from UMovieSceneCaptureEnvironment::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UMovieSceneCaptureEnvironment::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovieSceneCaptureEnvironment();
+// Original dynamic initializer: RVA 0x001C1C50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovieSceneCaptureEnvironment(Z_Construct_UClass_UMovieSceneCaptureEnvironment, &UMovieSceneCaptureEnvironment::StaticClass, TEXT("/Script/MovieSceneCapture"), TEXT("UMovieSceneCaptureEnvironment"), false, nullptr, nullptr, nullptr);

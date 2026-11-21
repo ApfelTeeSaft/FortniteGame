@@ -7,6 +7,9 @@
 void UStereoLayerComponent::StaticRegisterNativesUStereoLayerComponent()
 {
 }
+// IMPLEMENT_CLASS(UStereoLayerComponent, 4067627262u)
+// Original dynamic initializer: RVA 0x0021E7B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UStereoLayerComponent> AutoInitializeUStereoLayerComponent(TEXT("UStereoLayerComponent"), sizeof(UStereoLayerComponent), 4067627262u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024E6190 (end 0x024E6232)
 // Original VA: 0x00000001424E6190 | File offset: 0x024E5790
 // Recovery: confirmed (IMPLEMENT_CLASS(UStereoLayerComponent, 4067627262u); reached from UStereoLayerComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UStereoLayerComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UStereoLayerComponent();
+// Original dynamic initializer: RVA 0x0021FD00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UStereoLayerComponent(Z_Construct_UClass_UStereoLayerComponent, &UStereoLayerComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UStereoLayerComponent"), false, nullptr, nullptr, nullptr);

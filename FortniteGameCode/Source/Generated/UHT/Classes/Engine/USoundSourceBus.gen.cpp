@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USoundSourceBus()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundSourceBus, 3893883044u)
+// Original dynamic initializer: RVA 0x0021C830 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundSourceBus> AutoInitializeUSoundSourceBus(TEXT("USoundSourceBus"), sizeof(USoundSourceBus), 3893883044u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DA9A0 (end 0x024DAA42)
 // Original VA: 0x00000001424DA9A0 | File offset: 0x024D9FA0
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundSourceBus, 3893883044u); reached from USoundSourceBus::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USoundSourceBus::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundSourceBus();
+// Original dynamic initializer: RVA 0x0021DFB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundSourceBus(Z_Construct_UClass_USoundSourceBus, &USoundSourceBus::StaticClass, TEXT("/Script/Engine"), TEXT("USoundSourceBus"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMatineeAnimInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMatineeAnimInterface, 4108120473u)
+// Original dynamic initializer: RVA 0x0020AF50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMatineeAnimInterface> AutoInitializeUMatineeAnimInterface(TEXT("UMatineeAnimInterface"), sizeof(UMatineeAnimInterface), 4108120473u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024855C0 (end 0x02485662)
 // Original VA: 0x00000001424855C0 | File offset: 0x02484BC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMatineeAnimInterface, 4108120473u); reached from UMatineeAnimInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMatineeAnimInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMatineeAnimInterface();
+// Original dynamic initializer: RVA 0x0020C430
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMatineeAnimInterface(Z_Construct_UClass_UMatineeAnimInterface, &UMatineeAnimInterface::StaticClass, TEXT("/Script/Engine"), TEXT("UMatineeAnimInterface"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UDataTableFunctionLibrary, 1903820479u)
+// Original dynamic initializer: RVA 0x001F8420 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDataTableFunctionLibrary> AutoInitializeUDataTableFunctionLibrary(TEXT("UDataTableFunctionLibrary"), sizeof(UDataTableFunctionLibrary), 1903820479u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FC600 (end 0x023FC6A2)
 // Original VA: 0x00000001423FC600 | File offset: 0x023FBC00
 // Recovery: confirmed (IMPLEMENT_CLASS(UDataTableFunctionLibrary, 1903820479u); reached from UDataTableFunctionLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UDataTableFunctionLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDataTableFunctionLibrary();
+// Original dynamic initializer: RVA 0x001F9800
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDataTableFunctionLibrary(Z_Construct_UClass_UDataTableFunctionLibrary, &UDataTableFunctionLibrary::StaticClass, TEXT("/Script/Engine"), TEXT("UDataTableFunctionLibrary"), false, nullptr, nullptr, nullptr);

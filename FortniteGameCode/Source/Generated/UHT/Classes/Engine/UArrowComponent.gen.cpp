@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UArrowComponent, 4194756287u)
+// Original dynamic initializer: RVA 0x001EFAA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UArrowComponent> AutoInitializeUArrowComponent(TEXT("UArrowComponent"), sizeof(UArrowComponent), 4194756287u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D4D10 (end 0x023D4DB2)
 // Original VA: 0x00000001423D4D10 | File offset: 0x023D4310
 // Recovery: confirmed (IMPLEMENT_CLASS(UArrowComponent, 4194756287u); reached from UArrowComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UArrowComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UArrowComponent();
+// Original dynamic initializer: RVA 0x001F1970
+static FCompiledInDefer Z_CompiledInDefer_UClass_UArrowComponent(Z_Construct_UClass_UArrowComponent, &UArrowComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UArrowComponent"), false, nullptr, nullptr, nullptr);

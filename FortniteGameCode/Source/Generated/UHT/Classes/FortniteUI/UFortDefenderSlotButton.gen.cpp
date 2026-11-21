@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortDefenderSlotButton()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDefenderSlotButton, 3340913542u)
+// Original dynamic initializer: RVA 0x002427B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDefenderSlotButton> AutoInitializeUFortDefenderSlotButton(TEXT("UFortDefenderSlotButton"), sizeof(UFortDefenderSlotButton), 3340913542u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289A1B0 (end 0x0289A252)
 // Original VA: 0x000000014289A1B0 | File offset: 0x028997B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDefenderSlotButton, 3340913542u); reached from UFortDefenderSlotButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortDefenderSlotButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDefenderSlotButton();
+// Original dynamic initializer: RVA 0x00244660
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDefenderSlotButton(Z_Construct_UClass_UFortDefenderSlotButton, &UFortDefenderSlotButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortDefenderSlotButton"), false, nullptr, nullptr, nullptr);

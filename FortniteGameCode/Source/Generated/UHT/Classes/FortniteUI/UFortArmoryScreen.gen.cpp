@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortArmoryScreen()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortArmoryScreen, 2640314084u)
+// Original dynamic initializer: RVA 0x0023E1A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortArmoryScreen> AutoInitializeUFortArmoryScreen(TEXT("UFortArmoryScreen"), sizeof(UFortArmoryScreen), 2640314084u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288B2C0 (end 0x0288B362)
 // Original VA: 0x000000014288B2C0 | File offset: 0x0288A8C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortArmoryScreen, 2640314084u); reached from UFortArmoryScreen::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortArmoryScreen::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortArmoryScreen();
+// Original dynamic initializer: RVA 0x0023FC60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortArmoryScreen(Z_Construct_UClass_UFortArmoryScreen, &UFortArmoryScreen::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortArmoryScreen"), false, nullptr, nullptr, nullptr);

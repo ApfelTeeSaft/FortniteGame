@@ -7,6 +7,9 @@
 void AFortCrackEffect::StaticRegisterNativesAFortCrackEffect()
 {
 }
+// IMPLEMENT_CLASS(AFortCrackEffect, 631551421u)
+// Original dynamic initializer: RVA 0x000EE330 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortCrackEffect> AutoInitializeAFortCrackEffect(TEXT("AFortCrackEffect"), sizeof(AFortCrackEffect), 631551421u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC96D0 (end 0x00FC9772)
 // Original VA: 0x0000000140FC96D0 | File offset: 0x00FC8CD0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortCrackEffect, 631551421u); reached from AFortCrackEffect::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortCrackEffect::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortCrackEffect();
+// Original dynamic initializer: RVA 0x000EF3C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortCrackEffect(Z_Construct_UClass_AFortCrackEffect, &AFortCrackEffect::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortCrackEffect"), false, nullptr, nullptr, nullptr);

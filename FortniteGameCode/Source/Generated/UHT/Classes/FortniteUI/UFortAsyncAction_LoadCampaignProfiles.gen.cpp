@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_LoadCampaignProfiles, 3971080407u)
+// Original dynamic initializer: RVA 0x0023E1C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_LoadCampaignProfiles> AutoInitializeUFortAsyncAction_LoadCampaignProfiles(TEXT("UFortAsyncAction_LoadCampaignProfiles"), sizeof(UFortAsyncAction_LoadCampaignProfiles), 3971080407u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288B370 (end 0x0288B412)
 // Original VA: 0x000000014288B370 | File offset: 0x0288A970
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_LoadCampaignProfiles, 3971080407u); reached from UFortAsyncAction_LoadCampaignProfiles::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_LoadCampaignProfiles::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles();
+// Original dynamic initializer: RVA 0x0023FCA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_LoadCampaignProfiles(Z_Construct_UClass_UFortAsyncAction_LoadCampaignProfiles, &UFortAsyncAction_LoadCampaignProfiles::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAsyncAction_LoadCampaignProfiles"), false, nullptr, nullptr, nullptr);

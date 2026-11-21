@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortMusicManager, 3152651992u)
+// Original dynamic initializer: RVA 0x00103FC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortMusicManager> AutoInitializeAFortMusicManager(TEXT("AFortMusicManager"), sizeof(AFortMusicManager), 3152651992u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01047E20 (end 0x01047EC2)
 // Original VA: 0x0000000141047E20 | File offset: 0x01047420
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortMusicManager, 3152651992u); reached from AFortMusicManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortMusicManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortMusicManager();
+// Original dynamic initializer: RVA 0x00104F10
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortMusicManager(Z_Construct_UClass_AFortMusicManager, &AFortMusicManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortMusicManager"), false, nullptr, nullptr, nullptr);

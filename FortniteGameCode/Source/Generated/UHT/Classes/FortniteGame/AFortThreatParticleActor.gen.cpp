@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortThreatParticleActor, 629831030u)
+// Original dynamic initializer: RVA 0x001164C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortThreatParticleActor> AutoInitializeAFortThreatParticleActor(TEXT("AFortThreatParticleActor"), sizeof(AFortThreatParticleActor), 629831030u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC210 (end 0x010BC2B2)
 // Original VA: 0x00000001410BC210 | File offset: 0x010BB810
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortThreatParticleActor, 629831030u); reached from AFortThreatParticleActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortThreatParticleActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortThreatParticleActor();
+// Original dynamic initializer: RVA 0x00117C60
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortThreatParticleActor(Z_Construct_UClass_AFortThreatParticleActor, &AFortThreatParticleActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortThreatParticleActor"), false, nullptr, nullptr, nullptr);

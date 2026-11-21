@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAbilityTask_StartAbilityState, 1940022670u)
+// Original dynamic initializer: RVA 0x0009D520 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_StartAbilityState> AutoInitializeUAbilityTask_StartAbilityState(TEXT("UAbilityTask_StartAbilityState"), sizeof(UAbilityTask_StartAbilityState), 1940022670u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00545E80 (end 0x00545F22)
 // Original VA: 0x0000000140545E80 | File offset: 0x00545480
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_StartAbilityState, 1940022670u); reached from UAbilityTask_StartAbilityState::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAbilityTask_StartAbilityState::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_StartAbilityState();
+// Original dynamic initializer: RVA 0x0009DBB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_StartAbilityState(Z_Construct_UClass_UAbilityTask_StartAbilityState, &UAbilityTask_StartAbilityState::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_StartAbilityState"), false, nullptr, nullptr, nullptr);

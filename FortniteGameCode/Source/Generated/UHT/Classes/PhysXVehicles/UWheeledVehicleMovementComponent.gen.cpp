@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UWheeledVehicleMovementComponent, 2625243964u)
+// Original dynamic initializer: RVA 0x000ACAD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWheeledVehicleMovementComponent> AutoInitializeUWheeledVehicleMovementComponent(TEXT("UWheeledVehicleMovementComponent"), sizeof(UWheeledVehicleMovementComponent), 2625243964u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0067AD30 (end 0x0067ADD2)
 // Original VA: 0x000000014067AD30 | File offset: 0x0067A330
 // Recovery: confirmed (IMPLEMENT_CLASS(UWheeledVehicleMovementComponent, 2625243964u); reached from UWheeledVehicleMovementComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UWheeledVehicleMovementComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWheeledVehicleMovementComponent();
+// Original dynamic initializer: RVA 0x000AD440
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWheeledVehicleMovementComponent(Z_Construct_UClass_UWheeledVehicleMovementComponent, &UWheeledVehicleMovementComponent::StaticClass, TEXT("/Script/PhysXVehicles"), TEXT("UWheeledVehicleMovementComponent"), false, nullptr, nullptr, nullptr);

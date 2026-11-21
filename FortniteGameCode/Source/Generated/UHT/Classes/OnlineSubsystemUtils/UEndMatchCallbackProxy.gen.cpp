@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UEndMatchCallbackProxy, 782899422u)
+// Original dynamic initializer: RVA 0x00099360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEndMatchCallbackProxy> AutoInitializeUEndMatchCallbackProxy(TEXT("UEndMatchCallbackProxy"), sizeof(UEndMatchCallbackProxy), 782899422u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032CBD0 (end 0x0032CC72)
 // Original VA: 0x000000014032CBD0 | File offset: 0x0032C1D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UEndMatchCallbackProxy, 782899422u); reached from UEndMatchCallbackProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UEndMatchCallbackProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEndMatchCallbackProxy();
+// Original dynamic initializer: RVA 0x00099EE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEndMatchCallbackProxy(Z_Construct_UClass_UEndMatchCallbackProxy, &UEndMatchCallbackProxy::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UEndMatchCallbackProxy"), false, nullptr, nullptr, nullptr);

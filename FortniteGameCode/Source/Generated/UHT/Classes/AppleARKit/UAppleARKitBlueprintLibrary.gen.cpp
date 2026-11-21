@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAppleARKitBlueprintLibrary, 1274351299u)
+// Original dynamic initializer: RVA 0x000B43A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAppleARKitBlueprintLibrary> AutoInitializeUAppleARKitBlueprintLibrary(TEXT("UAppleARKitBlueprintLibrary"), sizeof(UAppleARKitBlueprintLibrary), 1274351299u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00805DA0 (end 0x00805E42)
 // Original VA: 0x0000000140805DA0 | File offset: 0x008053A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAppleARKitBlueprintLibrary, 1274351299u); reached from UAppleARKitBlueprintLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAppleARKitBlueprintLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAppleARKitBlueprintLibrary();
+// Original dynamic initializer: RVA 0x000B4810
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAppleARKitBlueprintLibrary(Z_Construct_UClass_UAppleARKitBlueprintLibrary, &UAppleARKitBlueprintLibrary::StaticClass, TEXT("/Script/AppleARKit"), TEXT("UAppleARKitBlueprintLibrary"), false, nullptr, nullptr, nullptr);

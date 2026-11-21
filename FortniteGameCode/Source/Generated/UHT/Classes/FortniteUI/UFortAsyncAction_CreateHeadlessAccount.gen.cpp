@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_CreateHeadlessAccount, 2338673106u)
+// Original dynamic initializer: RVA 0x0023B880 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_CreateHeadlessAccount> AutoInitializeUFortAsyncAction_CreateHeadlessAccount(TEXT("UFortAsyncAction_CreateHeadlessAccount"), sizeof(UFortAsyncAction_CreateHeadlessAccount), 2338673106u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02885C60 (end 0x02885D02)
 // Original VA: 0x0000000142885C60 | File offset: 0x02885260
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_CreateHeadlessAccount, 2338673106u); reached from UFortAsyncAction_CreateHeadlessAccount::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_CreateHeadlessAccount::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_CreateHeadlessAccount();
+// Original dynamic initializer: RVA 0x0023DE60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_CreateHeadlessAccount(Z_Construct_UClass_UFortAsyncAction_CreateHeadlessAccount, &UFortAsyncAction_CreateHeadlessAccount::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAsyncAction_CreateHeadlessAccount"), false, nullptr, nullptr, nullptr);

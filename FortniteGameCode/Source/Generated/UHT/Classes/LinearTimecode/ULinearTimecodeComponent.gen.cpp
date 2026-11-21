@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ULinearTimecodeComponent, 488856787u)
+// Original dynamic initializer: RVA 0x000B3CB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULinearTimecodeComponent> AutoInitializeULinearTimecodeComponent(TEXT("ULinearTimecodeComponent"), sizeof(ULinearTimecodeComponent), 488856787u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007E0090 (end 0x007E0132)
 // Original VA: 0x00000001407E0090 | File offset: 0x007DF690
 // Recovery: confirmed (IMPLEMENT_CLASS(ULinearTimecodeComponent, 488856787u); reached from ULinearTimecodeComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ULinearTimecodeComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULinearTimecodeComponent();
+// Original dynamic initializer: RVA 0x000B3DE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULinearTimecodeComponent(Z_Construct_UClass_ULinearTimecodeComponent, &ULinearTimecodeComponent::StaticClass, TEXT("/Script/LinearTimecode"), TEXT("ULinearTimecodeComponent"), false, nullptr, nullptr, nullptr);

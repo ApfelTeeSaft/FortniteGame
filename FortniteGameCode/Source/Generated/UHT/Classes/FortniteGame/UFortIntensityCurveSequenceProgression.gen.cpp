@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortIntensityCurveSequenceProgression()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortIntensityCurveSequenceProgression, 234841099u)
+// Original dynamic initializer: RVA 0x000FB200 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortIntensityCurveSequenceProgression> AutoInitializeUFortIntensityCurveSequenceProgression(TEXT("UFortIntensityCurveSequenceProgression"), sizeof(UFortIntensityCurveSequenceProgression), 234841099u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01003EC0 (end 0x01003F62)
 // Original VA: 0x0000000141003EC0 | File offset: 0x010034C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortIntensityCurveSequenceProgression, 234841099u); reached from UFortIntensityCurveSequenceProgression::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortIntensityCurveSequenceProgression::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortIntensityCurveSequenceProgression();
+// Original dynamic initializer: RVA 0x000FC230
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortIntensityCurveSequenceProgression(Z_Construct_UClass_UFortIntensityCurveSequenceProgression, &UFortIntensityCurveSequenceProgression::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortIntensityCurveSequenceProgression"), false, nullptr, nullptr, nullptr);

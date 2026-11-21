@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USoundNodeRandom()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundNodeRandom, 1854327066u)
+// Original dynamic initializer: RVA 0x0021C790 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundNodeRandom> AutoInitializeUSoundNodeRandom(TEXT("USoundNodeRandom"), sizeof(USoundNodeRandom), 1854327066u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DA630 (end 0x024DA6D2)
 // Original VA: 0x00000001424DA630 | File offset: 0x024D9C30
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundNodeRandom, 1854327066u); reached from USoundNodeRandom::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USoundNodeRandom::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundNodeRandom();
+// Original dynamic initializer: RVA 0x0021DE70
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundNodeRandom(Z_Construct_UClass_USoundNodeRandom, &USoundNodeRandom::StaticClass, TEXT("/Script/Engine"), TEXT("USoundNodeRandom"), false, nullptr, nullptr, nullptr);

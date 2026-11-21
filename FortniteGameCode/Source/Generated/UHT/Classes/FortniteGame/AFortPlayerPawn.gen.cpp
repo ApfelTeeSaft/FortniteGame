@@ -7,6 +7,9 @@
 void AFortPlayerPawn::StaticRegisterNativesAFortPlayerPawn()
 {
 }
+// IMPLEMENT_CLASS(AFortPlayerPawn, 1353206455u)
+// Original dynamic initializer: RVA 0x0010C4C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPlayerPawn> AutoInitializeAFortPlayerPawn(TEXT("AFortPlayerPawn"), sizeof(AFortPlayerPawn), 1353206455u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107E0C0 (end 0x0107E162)
 // Original VA: 0x000000014107E0C0 | File offset: 0x0107D6C0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPlayerPawn, 1353206455u); reached from AFortPlayerPawn::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortPlayerPawn::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPlayerPawn();
+// Original dynamic initializer: RVA 0x0010D210
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPlayerPawn(Z_Construct_UClass_AFortPlayerPawn, &AFortPlayerPawn::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPlayerPawn"), false, nullptr, nullptr, nullptr);

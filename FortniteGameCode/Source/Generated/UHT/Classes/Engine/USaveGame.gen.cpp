@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_USaveGame()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USaveGame, 1589346702u)
+// Original dynamic initializer: RVA 0x00218C00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USaveGame> AutoInitializeUSaveGame(TEXT("USaveGame"), sizeof(USaveGame), 1589346702u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C4660 (end 0x024C46F7)
 // Original VA: 0x00000001424C4660 | File offset: 0x024C3C60
 // Recovery: confirmed (IMPLEMENT_CLASS(USaveGame, 1589346702u); reached from USaveGame::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* USaveGame::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USaveGame();
+// Original dynamic initializer: RVA 0x00219690
+static FCompiledInDefer Z_CompiledInDefer_UClass_USaveGame(Z_Construct_UClass_USaveGame, &USaveGame::StaticClass, TEXT("/Script/Engine"), TEXT("USaveGame"), false, nullptr, nullptr, nullptr);

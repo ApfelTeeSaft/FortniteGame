@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AWheeledVehicle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AWheeledVehicle, 2207532288u)
+// Original dynamic initializer: RVA 0x000ACA10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AWheeledVehicle> AutoInitializeAWheeledVehicle(TEXT("AWheeledVehicle"), sizeof(AWheeledVehicle), 2207532288u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0067A920 (end 0x0067A9C2)
 // Original VA: 0x000000014067A920 | File offset: 0x00679F20
 // Recovery: confirmed (IMPLEMENT_CLASS(AWheeledVehicle, 2207532288u); reached from AWheeledVehicle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AWheeledVehicle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AWheeledVehicle();
+// Original dynamic initializer: RVA 0x000AD2C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AWheeledVehicle(Z_Construct_UClass_AWheeledVehicle, &AWheeledVehicle::StaticClass, TEXT("/Script/PhysXVehicles"), TEXT("AWheeledVehicle"), false, nullptr, nullptr, nullptr);

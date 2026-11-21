@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionRotateAboutAxis()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionRotateAboutAxis, 2565403614u)
+// Original dynamic initializer: RVA 0x00209060 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionRotateAboutAxis> AutoInitializeUMaterialExpressionRotateAboutAxis(TEXT("UMaterialExpressionRotateAboutAxis"), sizeof(UMaterialExpressionRotateAboutAxis), 2565403614u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02480650 (end 0x024806F2)
 // Original VA: 0x0000000142480650 | File offset: 0x0247FC50
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionRotateAboutAxis, 2565403614u); reached from UMaterialExpressionRotateAboutAxis::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionRotateAboutAxis::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionRotateAboutAxis();
+// Original dynamic initializer: RVA 0x0020A130
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionRotateAboutAxis(Z_Construct_UClass_UMaterialExpressionRotateAboutAxis, &UMaterialExpressionRotateAboutAxis::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionRotateAboutAxis"), false, nullptr, nullptr, nullptr);

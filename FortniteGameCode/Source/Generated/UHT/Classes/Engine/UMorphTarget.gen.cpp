@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMorphTarget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMorphTarget, 1110961643u)
+// Original dynamic initializer: RVA 0x0020C610 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMorphTarget> AutoInitializeUMorphTarget(TEXT("UMorphTarget"), sizeof(UMorphTarget), 1110961643u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02489C50 (end 0x02489CE7)
 // Original VA: 0x0000000142489C50 | File offset: 0x02489250
 // Recovery: confirmed (IMPLEMENT_CLASS(UMorphTarget, 1110961643u); reached from UMorphTarget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMorphTarget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMorphTarget();
+// Original dynamic initializer: RVA 0x0020D6F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMorphTarget(Z_Construct_UClass_UMorphTarget, &UMorphTarget::StaticClass, TEXT("/Script/Engine"), TEXT("UMorphTarget"), false, nullptr, nullptr, nullptr);

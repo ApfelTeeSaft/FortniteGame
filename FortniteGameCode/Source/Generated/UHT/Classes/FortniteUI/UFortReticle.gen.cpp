@@ -7,6 +7,9 @@
 void UFortReticle::StaticRegisterNativesUFortReticle()
 {
 }
+// IMPLEMENT_CLASS(UFortReticle, 1305009826u)
+// Original dynamic initializer: RVA 0x00258500 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortReticle> AutoInitializeUFortReticle(TEXT("UFortReticle"), sizeof(UFortReticle), 1305009826u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EB780 (end 0x028EB822)
 // Original VA: 0x00000001428EB780 | File offset: 0x028EAD80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortReticle, 1305009826u); reached from UFortReticle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortReticle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortReticle();
+// Original dynamic initializer: RVA 0x0025A520
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortReticle(Z_Construct_UClass_UFortReticle, &UFortReticle::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortReticle"), false, nullptr, nullptr, nullptr);

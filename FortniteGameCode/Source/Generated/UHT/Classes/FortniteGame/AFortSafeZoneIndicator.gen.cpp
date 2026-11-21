@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortSafeZoneIndicator, 2324706876u)
+// Original dynamic initializer: RVA 0x001113C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortSafeZoneIndicator> AutoInitializeAFortSafeZoneIndicator(TEXT("AFortSafeZoneIndicator"), sizeof(AFortSafeZoneIndicator), 2324706876u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109BF10 (end 0x0109BFB2)
 // Original VA: 0x000000014109BF10 | File offset: 0x0109B510
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortSafeZoneIndicator, 2324706876u); reached from AFortSafeZoneIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortSafeZoneIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortSafeZoneIndicator();
+// Original dynamic initializer: RVA 0x001126F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortSafeZoneIndicator(Z_Construct_UClass_AFortSafeZoneIndicator, &AFortSafeZoneIndicator::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortSafeZoneIndicator"), false, nullptr, nullptr, nullptr);

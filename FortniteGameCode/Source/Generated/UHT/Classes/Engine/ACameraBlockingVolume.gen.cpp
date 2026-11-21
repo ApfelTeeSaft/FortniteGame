@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ACameraBlockingVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ACameraBlockingVolume, 3649390592u)
+// Original dynamic initializer: RVA 0x001F4B70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ACameraBlockingVolume> AutoInitializeACameraBlockingVolume(TEXT("ACameraBlockingVolume"), sizeof(ACameraBlockingVolume), 3649390592u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E8A30 (end 0x023E8AD2)
 // Original VA: 0x00000001423E8A30 | File offset: 0x023E8030
 // Recovery: confirmed (IMPLEMENT_CLASS(ACameraBlockingVolume, 3649390592u); reached from ACameraBlockingVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ACameraBlockingVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ACameraBlockingVolume();
+// Original dynamic initializer: RVA 0x001F5F90
+static FCompiledInDefer Z_CompiledInDefer_UClass_ACameraBlockingVolume(Z_Construct_UClass_ACameraBlockingVolume, &ACameraBlockingVolume::StaticClass, TEXT("/Script/Engine"), TEXT("ACameraBlockingVolume"), false, nullptr, nullptr, nullptr);

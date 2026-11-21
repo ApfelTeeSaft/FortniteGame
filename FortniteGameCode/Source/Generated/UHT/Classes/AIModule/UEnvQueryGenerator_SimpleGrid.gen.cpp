@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UEnvQueryGenerator_SimpleGrid()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEnvQueryGenerator_SimpleGrid, 1086411494u)
+// Original dynamic initializer: RVA 0x001BD6A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEnvQueryGenerator_SimpleGrid> AutoInitializeUEnvQueryGenerator_SimpleGrid(TEXT("UEnvQueryGenerator_SimpleGrid"), sizeof(UEnvQueryGenerator_SimpleGrid), 1086411494u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2D910 (end 0x01D2D9B2)
 // Original VA: 0x0000000141D2D910 | File offset: 0x01D2CF10
 // Recovery: confirmed (IMPLEMENT_CLASS(UEnvQueryGenerator_SimpleGrid, 1086411494u); reached from UEnvQueryGenerator_SimpleGrid::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UEnvQueryGenerator_SimpleGrid::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEnvQueryGenerator_SimpleGrid();
+// Original dynamic initializer: RVA 0x001BEDE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEnvQueryGenerator_SimpleGrid(Z_Construct_UClass_UEnvQueryGenerator_SimpleGrid, &UEnvQueryGenerator_SimpleGrid::StaticClass, TEXT("/Script/AIModule"), TEXT("UEnvQueryGenerator_SimpleGrid"), false, nullptr, nullptr, nullptr);

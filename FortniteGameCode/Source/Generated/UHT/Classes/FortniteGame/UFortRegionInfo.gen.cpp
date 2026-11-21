@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortRegionInfo()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortRegionInfo, 3773487159u)
+// Original dynamic initializer: RVA 0x001114C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortRegionInfo> AutoInitializeUFortRegionInfo(TEXT("UFortRegionInfo"), sizeof(UFortRegionInfo), 3773487159u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109C480 (end 0x0109C522)
 // Original VA: 0x000000014109C480 | File offset: 0x0109BA80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortRegionInfo, 3773487159u); reached from UFortRegionInfo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortRegionInfo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortRegionInfo();
+// Original dynamic initializer: RVA 0x001128F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortRegionInfo(Z_Construct_UClass_UFortRegionInfo, &UFortRegionInfo::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortRegionInfo"), false, nullptr, nullptr, nullptr);

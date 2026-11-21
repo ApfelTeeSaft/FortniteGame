@@ -7,6 +7,9 @@
 void AFortProjectileBase::StaticRegisterNativesAFortProjectileBase()
 {
 }
+// IMPLEMENT_CLASS(AFortProjectileBase, 1197337080u)
+// Original dynamic initializer: RVA 0x0010D510 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortProjectileBase> AutoInitializeAFortProjectileBase(TEXT("AFortProjectileBase"), sizeof(AFortProjectileBase), 1197337080u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01089A90 (end 0x01089B32)
 // Original VA: 0x0000000141089A90 | File offset: 0x01089090
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortProjectileBase, 1197337080u); reached from AFortProjectileBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortProjectileBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortProjectileBase();
+// Original dynamic initializer: RVA 0x0010E410
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortProjectileBase(Z_Construct_UClass_AFortProjectileBase, &AFortProjectileBase::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortProjectileBase"), false, nullptr, nullptr, nullptr);

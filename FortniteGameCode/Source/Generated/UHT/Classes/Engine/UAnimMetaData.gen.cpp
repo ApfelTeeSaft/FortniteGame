@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAnimMetaData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnimMetaData, 2261245865u)
+// Original dynamic initializer: RVA 0x001EDE60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimMetaData> AutoInitializeUAnimMetaData(TEXT("UAnimMetaData"), sizeof(UAnimMetaData), 2261245865u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023CCE70 (end 0x023CCF07)
 // Original VA: 0x00000001423CCE70 | File offset: 0x023CC470
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimMetaData, 2261245865u); reached from UAnimMetaData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAnimMetaData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimMetaData();
+// Original dynamic initializer: RVA 0x001EF860
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimMetaData(Z_Construct_UClass_UAnimMetaData, &UAnimMetaData::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimMetaData"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ALevelStreamingVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ALevelStreamingVolume, 2645379517u)
+// Original dynamic initializer: RVA 0x002050D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALevelStreamingVolume> AutoInitializeALevelStreamingVolume(TEXT("ALevelStreamingVolume"), sizeof(ALevelStreamingVolume), 2645379517u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0246F1E0 (end 0x0246F282)
 // Original VA: 0x000000014246F1E0 | File offset: 0x0246E7E0
 // Recovery: confirmed (IMPLEMENT_CLASS(ALevelStreamingVolume, 2645379517u); reached from ALevelStreamingVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ALevelStreamingVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALevelStreamingVolume();
+// Original dynamic initializer: RVA 0x00205970
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALevelStreamingVolume(Z_Construct_UClass_ALevelStreamingVolume, &ALevelStreamingVolume::StaticClass, TEXT("/Script/Engine"), TEXT("ALevelStreamingVolume"), false, nullptr, nullptr, nullptr);

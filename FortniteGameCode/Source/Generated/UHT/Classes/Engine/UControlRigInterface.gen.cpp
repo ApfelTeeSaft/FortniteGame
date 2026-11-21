@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UControlRigInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UControlRigInterface, 110163466u)
+// Original dynamic initializer: RVA 0x001F7080 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UControlRigInterface> AutoInitializeUControlRigInterface(TEXT("UControlRigInterface"), sizeof(UControlRigInterface), 110163466u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F6760 (end 0x023F6802)
 // Original VA: 0x00000001423F6760 | File offset: 0x023F5D60
 // Recovery: confirmed (IMPLEMENT_CLASS(UControlRigInterface, 110163466u); reached from UControlRigInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UControlRigInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UControlRigInterface();
+// Original dynamic initializer: RVA 0x001F8120
+static FCompiledInDefer Z_CompiledInDefer_UClass_UControlRigInterface(Z_Construct_UClass_UControlRigInterface, &UControlRigInterface::StaticClass, TEXT("/Script/Engine"), TEXT("UControlRigInterface"), false, nullptr, nullptr, nullptr);

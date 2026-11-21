@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionFeatureLevelSwitch()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionFeatureLevelSwitch, 3156293007u)
+// Original dynamic initializer: RVA 0x00207460 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionFeatureLevelSwitch> AutoInitializeUMaterialExpressionFeatureLevelSwitch(TEXT("UMaterialExpressionFeatureLevelSwitch"), sizeof(UMaterialExpressionFeatureLevelSwitch), 3156293007u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247BFD0 (end 0x0247C072)
 // Original VA: 0x000000014247BFD0 | File offset: 0x0247B5D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionFeatureLevelSwitch, 3156293007u); reached from UMaterialExpressionFeatureLevelSwitch::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionFeatureLevelSwitch::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionFeatureLevelSwitch();
+// Original dynamic initializer: RVA 0x002085C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionFeatureLevelSwitch(Z_Construct_UClass_UMaterialExpressionFeatureLevelSwitch, &UMaterialExpressionFeatureLevelSwitch::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionFeatureLevelSwitch"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UExponentialHeightFogComponent, 1152405385u)
+// Original dynamic initializer: RVA 0x001FF340 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UExponentialHeightFogComponent> AutoInitializeUExponentialHeightFogComponent(TEXT("UExponentialHeightFogComponent"), sizeof(UExponentialHeightFogComponent), 1152405385u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240E720 (end 0x0240E7C2)
 // Original VA: 0x000000014240E720 | File offset: 0x0240DD20
 // Recovery: confirmed (IMPLEMENT_CLASS(UExponentialHeightFogComponent, 1152405385u); reached from UExponentialHeightFogComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UExponentialHeightFogComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UExponentialHeightFogComponent();
+// Original dynamic initializer: RVA 0x001FFD70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UExponentialHeightFogComponent(Z_Construct_UClass_UExponentialHeightFogComponent, &UExponentialHeightFogComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UExponentialHeightFogComponent"), false, nullptr, nullptr, nullptr);

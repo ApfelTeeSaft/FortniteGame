@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAthenaPlayerKillsBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaPlayerKillsBase, 4110633986u)
+// Original dynamic initializer: RVA 0x0023B560 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaPlayerKillsBase> AutoInitializeUAthenaPlayerKillsBase(TEXT("UAthenaPlayerKillsBase"), sizeof(UAthenaPlayerKillsBase), 4110633986u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02884B30 (end 0x02884BD2)
 // Original VA: 0x0000000142884B30 | File offset: 0x02884130
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaPlayerKillsBase, 4110633986u); reached from UAthenaPlayerKillsBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAthenaPlayerKillsBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaPlayerKillsBase();
+// Original dynamic initializer: RVA 0x0023D820
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaPlayerKillsBase(Z_Construct_UClass_UAthenaPlayerKillsBase, &UAthenaPlayerKillsBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaPlayerKillsBase"), false, nullptr, nullptr, nullptr);

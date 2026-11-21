@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAnimNotify_TriggerGameplayAbility()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAnimNotify_TriggerGameplayAbility, 3475043184u)
+// Original dynamic initializer: RVA 0x000E68D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAnimNotify_TriggerGameplayAbility> AutoInitializeUFortAnimNotify_TriggerGameplayAbility(TEXT("UFortAnimNotify_TriggerGameplayAbility"), sizeof(UFortAnimNotify_TriggerGameplayAbility), 3475043184u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9D020 (end 0x00F9D0C2)
 // Original VA: 0x0000000140F9D020 | File offset: 0x00F9C620
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAnimNotify_TriggerGameplayAbility, 3475043184u); reached from UFortAnimNotify_TriggerGameplayAbility::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAnimNotify_TriggerGameplayAbility::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAnimNotify_TriggerGameplayAbility();
+// Original dynamic initializer: RVA 0x000E7BD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAnimNotify_TriggerGameplayAbility(Z_Construct_UClass_UFortAnimNotify_TriggerGameplayAbility, &UFortAnimNotify_TriggerGameplayAbility::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAnimNotify_TriggerGameplayAbility"), false, nullptr, nullptr, nullptr);

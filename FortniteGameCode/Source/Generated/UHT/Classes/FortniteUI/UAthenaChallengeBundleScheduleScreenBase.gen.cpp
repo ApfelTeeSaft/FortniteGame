@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAthenaChallengeBundleScheduleScreenBase, 2638533523u)
+// Original dynamic initializer: RVA 0x00239020 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaChallengeBundleScheduleScreenBase> AutoInitializeUAthenaChallengeBundleScheduleScreenBase(TEXT("UAthenaChallengeBundleScheduleScreenBase"), sizeof(UAthenaChallengeBundleScheduleScreenBase), 2638533523u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287D640 (end 0x0287D6E2)
 // Original VA: 0x000000014287D640 | File offset: 0x0287CC40
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaChallengeBundleScheduleScreenBase, 2638533523u); reached from UAthenaChallengeBundleScheduleScreenBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAthenaChallengeBundleScheduleScreenBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase();
+// Original dynamic initializer: RVA 0x0023AD80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaChallengeBundleScheduleScreenBase(Z_Construct_UClass_UAthenaChallengeBundleScheduleScreenBase, &UAthenaChallengeBundleScheduleScreenBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaChallengeBundleScheduleScreenBase"), false, nullptr, nullptr, nullptr);

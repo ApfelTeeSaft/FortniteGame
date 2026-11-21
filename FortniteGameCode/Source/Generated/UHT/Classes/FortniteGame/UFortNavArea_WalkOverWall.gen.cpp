@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortNavArea_WalkOverWall()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNavArea_WalkOverWall, 2668028377u)
+// Original dynamic initializer: RVA 0x001043E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNavArea_WalkOverWall> AutoInitializeUFortNavArea_WalkOverWall(TEXT("UFortNavArea_WalkOverWall"), sizeof(UFortNavArea_WalkOverWall), 2668028377u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010494D0 (end 0x01049572)
 // Original VA: 0x00000001410494D0 | File offset: 0x01048AD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNavArea_WalkOverWall, 2668028377u); reached from UFortNavArea_WalkOverWall::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortNavArea_WalkOverWall::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNavArea_WalkOverWall();
+// Original dynamic initializer: RVA 0x00105750
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNavArea_WalkOverWall(Z_Construct_UClass_UFortNavArea_WalkOverWall, &UFortNavArea_WalkOverWall::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNavArea_WalkOverWall"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAIDataProvider_AIDirector()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAIDataProvider_AIDirector, 1065962377u)
+// Original dynamic initializer: RVA 0x000E0E20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAIDataProvider_AIDirector> AutoInitializeUFortAIDataProvider_AIDirector(TEXT("UFortAIDataProvider_AIDirector"), sizeof(UFortAIDataProvider_AIDirector), 1065962377u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F865E0 (end 0x00F86682)
 // Original VA: 0x0000000140F865E0 | File offset: 0x00F85BE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAIDataProvider_AIDirector, 1065962377u); reached from UFortAIDataProvider_AIDirector::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAIDataProvider_AIDirector::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAIDataProvider_AIDirector();
+// Original dynamic initializer: RVA 0x000E21A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAIDataProvider_AIDirector(Z_Construct_UClass_UFortAIDataProvider_AIDirector, &UFortAIDataProvider_AIDirector::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAIDataProvider_AIDirector"), false, nullptr, nullptr, nullptr);

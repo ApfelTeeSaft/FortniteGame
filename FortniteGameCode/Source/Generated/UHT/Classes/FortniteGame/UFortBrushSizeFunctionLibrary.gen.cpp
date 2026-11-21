@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortBrushSizeFunctionLibrary, 565450160u)
+// Original dynamic initializer: RVA 0x00117E40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBrushSizeFunctionLibrary> AutoInitializeUFortBrushSizeFunctionLibrary(TEXT("UFortBrushSizeFunctionLibrary"), sizeof(UFortBrushSizeFunctionLibrary), 565450160u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C7410 (end 0x010C74B2)
 // Original VA: 0x00000001410C7410 | File offset: 0x010C6A10
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBrushSizeFunctionLibrary, 565450160u); reached from UFortBrushSizeFunctionLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortBrushSizeFunctionLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBrushSizeFunctionLibrary();
+// Original dynamic initializer: RVA 0x0011B970
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBrushSizeFunctionLibrary(Z_Construct_UClass_UFortBrushSizeFunctionLibrary, &UFortBrushSizeFunctionLibrary::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBrushSizeFunctionLibrary"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortChallengeBundleScheduleItem, 528243568u)
+// Original dynamic initializer: RVA 0x000EA7E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortChallengeBundleScheduleItem> AutoInitializeUFortChallengeBundleScheduleItem(TEXT("UFortChallengeBundleScheduleItem"), sizeof(UFortChallengeBundleScheduleItem), 528243568u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAF490 (end 0x00FAF532)
 // Original VA: 0x0000000140FAF490 | File offset: 0x00FAEA90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortChallengeBundleScheduleItem, 528243568u); reached from UFortChallengeBundleScheduleItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortChallengeBundleScheduleItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortChallengeBundleScheduleItem();
+// Original dynamic initializer: RVA 0x000EAE50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortChallengeBundleScheduleItem(Z_Construct_UClass_UFortChallengeBundleScheduleItem, &UFortChallengeBundleScheduleItem::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortChallengeBundleScheduleItem"), false, nullptr, nullptr, nullptr);

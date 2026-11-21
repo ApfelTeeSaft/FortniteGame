@@ -7,6 +7,9 @@
 void UFortHeroSquadManagementScreen::StaticRegisterNativesUFortHeroSquadManagementScreen()
 {
 }
+// IMPLEMENT_CLASS(UFortHeroSquadManagementScreen, 2529373672u)
+// Original dynamic initializer: RVA 0x002477C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHeroSquadManagementScreen> AutoInitializeUFortHeroSquadManagementScreen(TEXT("UFortHeroSquadManagementScreen"), sizeof(UFortHeroSquadManagementScreen), 2529373672u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B2EA0 (end 0x028B2F42)
 // Original VA: 0x00000001428B2EA0 | File offset: 0x028B24A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHeroSquadManagementScreen, 2529373672u); reached from UFortHeroSquadManagementScreen::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortHeroSquadManagementScreen::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHeroSquadManagementScreen();
+// Original dynamic initializer: RVA 0x002480A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHeroSquadManagementScreen(Z_Construct_UClass_UFortHeroSquadManagementScreen, &UFortHeroSquadManagementScreen::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortHeroSquadManagementScreen"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UCommonWidgetSwitcher::StaticRegisterNativesUCommonWidgetSwitcher()
 {
 }
+// IMPLEMENT_CLASS(UCommonWidgetSwitcher, 2074739543u)
+// Original dynamic initializer: RVA 0x00096C10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonWidgetSwitcher> AutoInitializeUCommonWidgetSwitcher(TEXT("UCommonWidgetSwitcher"), sizeof(UCommonWidgetSwitcher), 2074739543u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CFF80 (end 0x002D0022)
 // Original VA: 0x00000001402CFF80 | File offset: 0x002CF580
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonWidgetSwitcher, 2074739543u); reached from UCommonWidgetSwitcher::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonWidgetSwitcher::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonWidgetSwitcher();
+// Original dynamic initializer: RVA 0x00097220
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonWidgetSwitcher(Z_Construct_UClass_UCommonWidgetSwitcher, &UCommonWidgetSwitcher::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonWidgetSwitcher"), false, nullptr, nullptr, nullptr);

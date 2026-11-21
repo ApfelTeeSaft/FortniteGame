@@ -7,6 +7,9 @@
 void ACharacter::StaticRegisterNativesACharacter()
 {
 }
+// IMPLEMENT_CLASS(ACharacter, 161091864u)
+// Original dynamic initializer: RVA 0x001F63D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ACharacter> AutoInitializeACharacter(TEXT("ACharacter"), sizeof(ACharacter), 161091864u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023ECA00 (end 0x023ECAA2)
 // Original VA: 0x00000001423ECA00 | File offset: 0x023EC000
 // Recovery: confirmed (IMPLEMENT_CLASS(ACharacter, 161091864u); reached from ACharacter::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ACharacter::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ACharacter();
+// Original dynamic initializer: RVA 0x001F6DA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ACharacter(Z_Construct_UClass_ACharacter, &ACharacter::StaticClass, TEXT("/Script/Engine"), TEXT("ACharacter"), false, nullptr, nullptr, nullptr);

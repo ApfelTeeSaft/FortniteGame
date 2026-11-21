@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSquadSlotItemPickerTileButton, 1056638070u)
+// Original dynamic initializer: RVA 0x0025C140 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSquadSlotItemPickerTileButton> AutoInitializeUFortSquadSlotItemPickerTileButton(TEXT("UFortSquadSlotItemPickerTileButton"), sizeof(UFortSquadSlotItemPickerTileButton), 1056638070u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FA2D0 (end 0x028FA372)
 // Original VA: 0x00000001428FA2D0 | File offset: 0x028F98D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSquadSlotItemPickerTileButton, 1056638070u); reached from UFortSquadSlotItemPickerTileButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSquadSlotItemPickerTileButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSquadSlotItemPickerTileButton();
+// Original dynamic initializer: RVA 0x0025DE30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSquadSlotItemPickerTileButton(Z_Construct_UClass_UFortSquadSlotItemPickerTileButton, &UFortSquadSlotItemPickerTileButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSquadSlotItemPickerTileButton"), false, nullptr, nullptr, nullptr);

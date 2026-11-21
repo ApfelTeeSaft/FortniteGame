@@ -7,6 +7,9 @@
 void UFortStatIcon::StaticRegisterNativesUFortStatIcon()
 {
 }
+// IMPLEMENT_CLASS(UFortStatIcon, 3928113097u)
+// Original dynamic initializer: RVA 0x0025C280 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortStatIcon> AutoInitializeUFortStatIcon(TEXT("UFortStatIcon"), sizeof(UFortStatIcon), 3928113097u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FA9B0 (end 0x028FAA52)
 // Original VA: 0x00000001428FA9B0 | File offset: 0x028F9FB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortStatIcon, 3928113097u); reached from UFortStatIcon::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortStatIcon::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortStatIcon();
+// Original dynamic initializer: RVA 0x0025E0B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortStatIcon(Z_Construct_UClass_UFortStatIcon, &UFortStatIcon::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortStatIcon"), false, nullptr, nullptr, nullptr);

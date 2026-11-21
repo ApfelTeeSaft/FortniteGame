@@ -7,6 +7,9 @@
 void UFortSquadStatValueWithIcon::StaticRegisterNativesUFortSquadStatValueWithIcon()
 {
 }
+// IMPLEMENT_CLASS(UFortSquadStatValueWithIcon, 768880490u)
+// Original dynamic initializer: RVA 0x0025C220 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSquadStatValueWithIcon> AutoInitializeUFortSquadStatValueWithIcon(TEXT("UFortSquadStatValueWithIcon"), sizeof(UFortSquadStatValueWithIcon), 768880490u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FA7A0 (end 0x028FA842)
 // Original VA: 0x00000001428FA7A0 | File offset: 0x028F9DA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSquadStatValueWithIcon, 768880490u); reached from UFortSquadStatValueWithIcon::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSquadStatValueWithIcon::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSquadStatValueWithIcon();
+// Original dynamic initializer: RVA 0x0025DFF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSquadStatValueWithIcon(Z_Construct_UClass_UFortSquadStatValueWithIcon, &UFortSquadStatValueWithIcon::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSquadStatValueWithIcon"), false, nullptr, nullptr, nullptr);

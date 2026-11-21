@@ -7,6 +7,9 @@
 void UFortHUDCenterPopupMessageWidget::StaticRegisterNativesUFortHUDCenterPopupMessageWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortHUDCenterPopupMessageWidget, 2373493009u)
+// Original dynamic initializer: RVA 0x00248240 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHUDCenterPopupMessageWidget> AutoInitializeUFortHUDCenterPopupMessageWidget(TEXT("UFortHUDCenterPopupMessageWidget"), sizeof(UFortHUDCenterPopupMessageWidget), 2373493009u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BAEA0 (end 0x028BAF42)
 // Original VA: 0x00000001428BAEA0 | File offset: 0x028BA4A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHUDCenterPopupMessageWidget, 2373493009u); reached from UFortHUDCenterPopupMessageWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortHUDCenterPopupMessageWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHUDCenterPopupMessageWidget();
+// Original dynamic initializer: RVA 0x00249C90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHUDCenterPopupMessageWidget(Z_Construct_UClass_UFortHUDCenterPopupMessageWidget, &UFortHUDCenterPopupMessageWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortHUDCenterPopupMessageWidget"), false, nullptr, nullptr, nullptr);

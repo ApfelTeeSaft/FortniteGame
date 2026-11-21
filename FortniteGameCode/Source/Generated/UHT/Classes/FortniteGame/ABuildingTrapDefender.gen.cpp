@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ABuildingTrapDefender, 3503165777u)
+// Original dynamic initializer: RVA 0x000DCC80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingTrapDefender> AutoInitializeABuildingTrapDefender(TEXT("ABuildingTrapDefender"), sizeof(ABuildingTrapDefender), 3503165777u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F765B0 (end 0x00F76652)
 // Original VA: 0x0000000140F765B0 | File offset: 0x00F75BB0
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingTrapDefender, 3503165777u); reached from ABuildingTrapDefender::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ABuildingTrapDefender::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingTrapDefender();
+// Original dynamic initializer: RVA 0x000DE040
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingTrapDefender(Z_Construct_UClass_ABuildingTrapDefender, &ABuildingTrapDefender::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingTrapDefender"), false, nullptr, nullptr, nullptr);

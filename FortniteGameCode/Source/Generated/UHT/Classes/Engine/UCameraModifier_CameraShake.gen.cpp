@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UCameraModifier_CameraShake()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCameraModifier_CameraShake, 1088060896u)
+// Original dynamic initializer: RVA 0x001F4D50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCameraModifier_CameraShake> AutoInitializeUCameraModifier_CameraShake(TEXT("UCameraModifier_CameraShake"), sizeof(UCameraModifier_CameraShake), 1088060896u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E93E0 (end 0x023E9482)
 // Original VA: 0x00000001423E93E0 | File offset: 0x023E89E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCameraModifier_CameraShake, 1088060896u); reached from UCameraModifier_CameraShake::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UCameraModifier_CameraShake::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCameraModifier_CameraShake();
+// Original dynamic initializer: RVA 0x001F6350
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCameraModifier_CameraShake(Z_Construct_UClass_UCameraModifier_CameraShake, &UCameraModifier_CameraShake::StaticClass, TEXT("/Script/Engine"), TEXT("UCameraModifier_CameraShake"), false, nullptr, nullptr, nullptr);

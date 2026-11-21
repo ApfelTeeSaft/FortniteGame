@@ -7,6 +7,9 @@
 void UFortCollectionBookPage::StaticRegisterNativesUFortCollectionBookPage()
 {
 }
+// IMPLEMENT_CLASS(UFortCollectionBookPage, 3121207599u)
+// Original dynamic initializer: RVA 0x000EC720 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCollectionBookPage> AutoInitializeUFortCollectionBookPage(TEXT("UFortCollectionBookPage"), sizeof(UFortCollectionBookPage), 3121207599u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC49D0 (end 0x00FC4A67)
 // Original VA: 0x0000000140FC49D0 | File offset: 0x00FC3FD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCollectionBookPage, 3121207599u); reached from UFortCollectionBookPage::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortCollectionBookPage::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCollectionBookPage();
+// Original dynamic initializer: RVA 0x000EE230
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCollectionBookPage(Z_Construct_UClass_UFortCollectionBookPage, &UFortCollectionBookPage::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCollectionBookPage"), false, nullptr, nullptr, nullptr);

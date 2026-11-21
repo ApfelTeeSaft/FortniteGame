@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionLandscapeVisibilityMask()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionLandscapeVisibilityMask, 866591030u)
+// Original dynamic initializer: RVA 0x001A2DB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionLandscapeVisibilityMask> AutoInitializeUMaterialExpressionLandscapeVisibilityMask(TEXT("UMaterialExpressionLandscapeVisibilityMask"), sizeof(UMaterialExpressionLandscapeVisibilityMask), 866591030u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A74880 (end 0x01A74922)
 // Original VA: 0x0000000141A74880 | File offset: 0x01A73E80
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionLandscapeVisibilityMask, 866591030u); reached from UMaterialExpressionLandscapeVisibilityMask::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionLandscapeVisibilityMask::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionLandscapeVisibilityMask();
+// Original dynamic initializer: RVA 0x001A4460
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionLandscapeVisibilityMask(Z_Construct_UClass_UMaterialExpressionLandscapeVisibilityMask, &UMaterialExpressionLandscapeVisibilityMask::StaticClass, TEXT("/Script/Landscape"), TEXT("UMaterialExpressionLandscapeVisibilityMask"), false, nullptr, nullptr, nullptr);

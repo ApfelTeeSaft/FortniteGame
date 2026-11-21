@@ -7,6 +7,9 @@
 void ABuildingFlagSpawn::StaticRegisterNativesABuildingFlagSpawn()
 {
 }
+// IMPLEMENT_CLASS(ABuildingFlagSpawn, 619976150u)
+// Original dynamic initializer: RVA 0x000D9910 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingFlagSpawn> AutoInitializeABuildingFlagSpawn(TEXT("ABuildingFlagSpawn"), sizeof(ABuildingFlagSpawn), 619976150u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F648B0 (end 0x00F64952)
 // Original VA: 0x0000000140F648B0 | File offset: 0x00F63EB0
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingFlagSpawn, 619976150u); reached from ABuildingFlagSpawn::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ABuildingFlagSpawn::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingFlagSpawn();
+// Original dynamic initializer: RVA 0x000DA8D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingFlagSpawn(Z_Construct_UClass_ABuildingFlagSpawn, &ABuildingFlagSpawn::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingFlagSpawn"), false, nullptr, nullptr, nullptr);

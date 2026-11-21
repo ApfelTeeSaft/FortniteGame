@@ -7,6 +7,9 @@
 void UEditableTextBox::StaticRegisterNativesUEditableTextBox()
 {
 }
+// IMPLEMENT_CLASS(UEditableTextBox, 3168398233u)
+// Original dynamic initializer: RVA 0x001B1E80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEditableTextBox> AutoInitializeUEditableTextBox(TEXT("UEditableTextBox"), sizeof(UEditableTextBox), 3168398233u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5690 (end 0x01BE5732)
 // Original VA: 0x0000000141BE5690 | File offset: 0x01BE4C90
 // Recovery: confirmed (IMPLEMENT_CLASS(UEditableTextBox, 3168398233u); reached from UEditableTextBox::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UEditableTextBox::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEditableTextBox();
+// Original dynamic initializer: RVA 0x001B2660
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEditableTextBox(Z_Construct_UClass_UEditableTextBox, &UEditableTextBox::StaticClass, TEXT("/Script/UMG"), TEXT("UEditableTextBox"), false, nullptr, nullptr, nullptr);

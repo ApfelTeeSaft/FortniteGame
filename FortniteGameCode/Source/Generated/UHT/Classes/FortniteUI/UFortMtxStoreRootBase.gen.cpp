@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortMtxStoreRootBase, 645471015u)
+// Original dynamic initializer: RVA 0x00253AB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMtxStoreRootBase> AutoInitializeUFortMtxStoreRootBase(TEXT("UFortMtxStoreRootBase"), sizeof(UFortMtxStoreRootBase), 645471015u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DD2A0 (end 0x028DD342)
 // Original VA: 0x00000001428DD2A0 | File offset: 0x028DC8A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMtxStoreRootBase, 645471015u); reached from UFortMtxStoreRootBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortMtxStoreRootBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMtxStoreRootBase();
+// Original dynamic initializer: RVA 0x00255640
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMtxStoreRootBase(Z_Construct_UClass_UFortMtxStoreRootBase, &UFortMtxStoreRootBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortMtxStoreRootBase"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionEncounter_SpawnLimitPawns()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionEncounter_SpawnLimitPawns, 2973719990u)
+// Original dynamic initializer: RVA 0x000F0E00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionEncounter_SpawnLimitPawns> AutoInitializeUFortDifficultyOptionEncounter_SpawnLimitPawns(TEXT("UFortDifficultyOptionEncounter_SpawnLimitPawns"), sizeof(UFortDifficultyOptionEncounter_SpawnLimitPawns), 2973719990u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD59C0 (end 0x00FD5A62)
 // Original VA: 0x0000000140FD59C0 | File offset: 0x00FD4FC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionEncounter_SpawnLimitPawns, 2973719990u); reached from UFortDifficultyOptionEncounter_SpawnLimitPawns::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionEncounter_SpawnLimitPawns::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionEncounter_SpawnLimitPawns();
+// Original dynamic initializer: RVA 0x000F2050
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionEncounter_SpawnLimitPawns(Z_Construct_UClass_UFortDifficultyOptionEncounter_SpawnLimitPawns, &UFortDifficultyOptionEncounter_SpawnLimitPawns::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionEncounter_SpawnLimitPawns"), false, nullptr, nullptr, nullptr);

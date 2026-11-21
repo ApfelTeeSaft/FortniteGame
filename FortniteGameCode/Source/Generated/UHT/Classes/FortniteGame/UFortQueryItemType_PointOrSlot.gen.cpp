@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortQueryItemType_PointOrSlot()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryItemType_PointOrSlot, 1848781409u)
+// Original dynamic initializer: RVA 0x0010EC30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryItemType_PointOrSlot> AutoInitializeUFortQueryItemType_PointOrSlot(TEXT("UFortQueryItemType_PointOrSlot"), sizeof(UFortQueryItemType_PointOrSlot), 1848781409u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01091840 (end 0x010918E2)
 // Original VA: 0x0000000141091840 | File offset: 0x01090E40
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryItemType_PointOrSlot, 1848781409u); reached from UFortQueryItemType_PointOrSlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortQueryItemType_PointOrSlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryItemType_PointOrSlot();
+// Original dynamic initializer: RVA 0x0010FEE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryItemType_PointOrSlot(Z_Construct_UClass_UFortQueryItemType_PointOrSlot, &UFortQueryItemType_PointOrSlot::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryItemType_PointOrSlot"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void AFortGameplayEffectDeliveryActor::StaticRegisterNativesAFortGameplayEffectDeliveryActor()
 {
 }
+// IMPLEMENT_CLASS(AFortGameplayEffectDeliveryActor, 4235147503u)
+// Original dynamic initializer: RVA 0x000F6580 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortGameplayEffectDeliveryActor> AutoInitializeAFortGameplayEffectDeliveryActor(TEXT("AFortGameplayEffectDeliveryActor"), sizeof(AFortGameplayEffectDeliveryActor), 4235147503u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE5D60 (end 0x00FE5E02)
 // Original VA: 0x0000000140FE5D60 | File offset: 0x00FE5360
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortGameplayEffectDeliveryActor, 4235147503u); reached from AFortGameplayEffectDeliveryActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortGameplayEffectDeliveryActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortGameplayEffectDeliveryActor();
+// Original dynamic initializer: RVA 0x000F70F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortGameplayEffectDeliveryActor(Z_Construct_UClass_AFortGameplayEffectDeliveryActor, &AFortGameplayEffectDeliveryActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortGameplayEffectDeliveryActor"), false, nullptr, nullptr, nullptr);

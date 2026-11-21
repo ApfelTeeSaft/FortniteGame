@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ADefaultPhysicsVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ADefaultPhysicsVolume, 2025922140u)
+// Original dynamic initializer: RVA 0x001F8280 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ADefaultPhysicsVolume> AutoInitializeADefaultPhysicsVolume(TEXT("ADefaultPhysicsVolume"), sizeof(ADefaultPhysicsVolume), 2025922140u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FBD80 (end 0x023FBE22)
 // Original VA: 0x00000001423FBD80 | File offset: 0x023FB380
 // Recovery: confirmed (IMPLEMENT_CLASS(ADefaultPhysicsVolume, 2025922140u); reached from ADefaultPhysicsVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ADefaultPhysicsVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ADefaultPhysicsVolume();
+// Original dynamic initializer: RVA 0x001F94C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ADefaultPhysicsVolume(Z_Construct_UClass_ADefaultPhysicsVolume, &ADefaultPhysicsVolume::StaticClass, TEXT("/Script/Engine"), TEXT("ADefaultPhysicsVolume"), false, nullptr, nullptr, nullptr);

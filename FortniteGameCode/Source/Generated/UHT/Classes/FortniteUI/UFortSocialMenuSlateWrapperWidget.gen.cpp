@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortSocialMenuSlateWrapperWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortSocialMenuSlateWrapperWidget, 2843288509u)
+// Original dynamic initializer: RVA 0x0025AD80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSocialMenuSlateWrapperWidget> AutoInitializeUFortSocialMenuSlateWrapperWidget(TEXT("UFortSocialMenuSlateWrapperWidget"), sizeof(UFortSocialMenuSlateWrapperWidget), 2843288509u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F3C70 (end 0x028F3D12)
 // Original VA: 0x00000001428F3C70 | File offset: 0x028F3270
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSocialMenuSlateWrapperWidget, 2843288509u); reached from UFortSocialMenuSlateWrapperWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortSocialMenuSlateWrapperWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSocialMenuSlateWrapperWidget();
+// Original dynamic initializer: RVA 0x0025BDE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSocialMenuSlateWrapperWidget(Z_Construct_UClass_UFortSocialMenuSlateWrapperWidget, &UFortSocialMenuSlateWrapperWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSocialMenuSlateWrapperWidget"), false, nullptr, nullptr, nullptr);

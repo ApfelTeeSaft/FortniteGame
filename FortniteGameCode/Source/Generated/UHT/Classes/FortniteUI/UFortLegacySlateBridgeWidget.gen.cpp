@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortLegacySlateBridgeWidget, 398447062u)
+// Original dynamic initializer: RVA 0x00251370 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortLegacySlateBridgeWidget> AutoInitializeUFortLegacySlateBridgeWidget(TEXT("UFortLegacySlateBridgeWidget"), sizeof(UFortLegacySlateBridgeWidget), 398447062u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D5520 (end 0x028D55C2)
 // Original VA: 0x00000001428D5520 | File offset: 0x028D4B20
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortLegacySlateBridgeWidget, 398447062u); reached from UFortLegacySlateBridgeWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortLegacySlateBridgeWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortLegacySlateBridgeWidget();
+// Original dynamic initializer: RVA 0x002532F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortLegacySlateBridgeWidget(Z_Construct_UClass_UFortLegacySlateBridgeWidget, &UFortLegacySlateBridgeWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortLegacySlateBridgeWidget"), false, nullptr, nullptr, nullptr);

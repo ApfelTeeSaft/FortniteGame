@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortCollectionBookRecycleSlotResultsWidget, 3653908195u)
+// Original dynamic initializer: RVA 0x00242530 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCollectionBookRecycleSlotResultsWidget> AutoInitializeUFortCollectionBookRecycleSlotResultsWidget(TEXT("UFortCollectionBookRecycleSlotResultsWidget"), sizeof(UFortCollectionBookRecycleSlotResultsWidget), 3653908195u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028993F0 (end 0x02899492)
 // Original VA: 0x00000001428993F0 | File offset: 0x028989F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCollectionBookRecycleSlotResultsWidget, 3653908195u); reached from UFortCollectionBookRecycleSlotResultsWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortCollectionBookRecycleSlotResultsWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCollectionBookRecycleSlotResultsWidget();
+// Original dynamic initializer: RVA 0x00244160
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCollectionBookRecycleSlotResultsWidget(Z_Construct_UClass_UFortCollectionBookRecycleSlotResultsWidget, &UFortCollectionBookRecycleSlotResultsWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCollectionBookRecycleSlotResultsWidget"), false, nullptr, nullptr, nullptr);

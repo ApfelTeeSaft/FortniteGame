@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortEmotePreviewActor, 1349517667u)
+// Original dynamic initializer: RVA 0x000F0940 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortEmotePreviewActor> AutoInitializeAFortEmotePreviewActor(TEXT("AFortEmotePreviewActor"), sizeof(AFortEmotePreviewActor), 1349517667u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD3FB0 (end 0x00FD4052)
 // Original VA: 0x0000000140FD3FB0 | File offset: 0x00FD35B0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortEmotePreviewActor, 1349517667u); reached from AFortEmotePreviewActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortEmotePreviewActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortEmotePreviewActor();
+// Original dynamic initializer: RVA 0x000F16D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortEmotePreviewActor(Z_Construct_UClass_AFortEmotePreviewActor, &AFortEmotePreviewActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortEmotePreviewActor"), false, nullptr, nullptr, nullptr);

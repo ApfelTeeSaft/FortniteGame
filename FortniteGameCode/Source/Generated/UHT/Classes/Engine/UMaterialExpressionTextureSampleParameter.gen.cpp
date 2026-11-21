@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionTextureSampleParameter()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionTextureSampleParameter, 1726848604u)
+// Original dynamic initializer: RVA 0x002094C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionTextureSampleParameter> AutoInitializeUMaterialExpressionTextureSampleParameter(TEXT("UMaterialExpressionTextureSampleParameter"), sizeof(UMaterialExpressionTextureSampleParameter), 1726848604u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02481E60 (end 0x02481F02)
 // Original VA: 0x0000000142481E60 | File offset: 0x02481460
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionTextureSampleParameter, 1726848604u); reached from UMaterialExpressionTextureSampleParameter::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionTextureSampleParameter::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionTextureSampleParameter();
+// Original dynamic initializer: RVA 0x0020A9F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionTextureSampleParameter(Z_Construct_UClass_UMaterialExpressionTextureSampleParameter, &UMaterialExpressionTextureSampleParameter::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionTextureSampleParameter"), false, nullptr, nullptr, nullptr);

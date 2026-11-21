@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAvoidanceManager, 1532619850u)
+// Original dynamic initializer: RVA 0x001F3330 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAvoidanceManager> AutoInitializeUAvoidanceManager(TEXT("UAvoidanceManager"), sizeof(UAvoidanceManager), 1532619850u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E13D0 (end 0x023E1467)
 // Original VA: 0x00000001423E13D0 | File offset: 0x023E09D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAvoidanceManager, 1532619850u); reached from UAvoidanceManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAvoidanceManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAvoidanceManager();
+// Original dynamic initializer: RVA 0x001F46F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAvoidanceManager(Z_Construct_UClass_UAvoidanceManager, &UAvoidanceManager::StaticClass, TEXT("/Script/Engine"), TEXT("UAvoidanceManager"), false, nullptr, nullptr, nullptr);

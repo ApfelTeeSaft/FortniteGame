@@ -7,6 +7,9 @@
 void UAnalyticsBlueprintLibrary::StaticRegisterNativesUAnalyticsBlueprintLibrary()
 {
 }
+// IMPLEMENT_CLASS(UAnalyticsBlueprintLibrary, 2954254372u)
+// Original dynamic initializer: RVA 0x00228940 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnalyticsBlueprintLibrary> AutoInitializeUAnalyticsBlueprintLibrary(TEXT("UAnalyticsBlueprintLibrary"), sizeof(UAnalyticsBlueprintLibrary), 2954254372u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02681630 (end 0x026816D2)
 // Original VA: 0x0000000142681630 | File offset: 0x02680C30
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnalyticsBlueprintLibrary, 2954254372u); reached from UAnalyticsBlueprintLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAnalyticsBlueprintLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnalyticsBlueprintLibrary();
+// Original dynamic initializer: RVA 0x00228A10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnalyticsBlueprintLibrary(Z_Construct_UClass_UAnalyticsBlueprintLibrary, &UAnalyticsBlueprintLibrary::StaticClass, TEXT("/Script/AnalyticsBlueprintLibrary"), TEXT("UAnalyticsBlueprintLibrary"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionCameraPositionWS()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionCameraPositionWS, 953586776u)
+// Original dynamic initializer: RVA 0x00207000 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionCameraPositionWS> AutoInitializeUMaterialExpressionCameraPositionWS(TEXT("UMaterialExpressionCameraPositionWS"), sizeof(UMaterialExpressionCameraPositionWS), 953586776u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247A7C0 (end 0x0247A862)
 // Original VA: 0x000000014247A7C0 | File offset: 0x02479DC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionCameraPositionWS, 953586776u); reached from UMaterialExpressionCameraPositionWS::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMaterialExpressionCameraPositionWS::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionCameraPositionWS();
+// Original dynamic initializer: RVA 0x00207D00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionCameraPositionWS(Z_Construct_UClass_UMaterialExpressionCameraPositionWS, &UMaterialExpressionCameraPositionWS::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionCameraPositionWS"), false, nullptr, nullptr, nullptr);

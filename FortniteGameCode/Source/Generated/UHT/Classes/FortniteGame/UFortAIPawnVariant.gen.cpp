@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAIPawnVariant()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAIPawnVariant, 1609105285u)
+// Original dynamic initializer: RVA 0x000E4800 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAIPawnVariant> AutoInitializeUFortAIPawnVariant(TEXT("UFortAIPawnVariant"), sizeof(UFortAIPawnVariant), 1609105285u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F96D70 (end 0x00F96E07)
 // Original VA: 0x0000000140F96D70 | File offset: 0x00F96370
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAIPawnVariant, 1609105285u); reached from UFortAIPawnVariant::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAIPawnVariant::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAIPawnVariant();
+// Original dynamic initializer: RVA 0x000E5F30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAIPawnVariant(Z_Construct_UClass_UFortAIPawnVariant, &UFortAIPawnVariant::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAIPawnVariant"), false, nullptr, nullptr, nullptr);

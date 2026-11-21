@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAsyncActionLoadPrimaryAssetBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAsyncActionLoadPrimaryAssetBase, 3186760728u)
+// Original dynamic initializer: RVA 0x001F1AD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAsyncActionLoadPrimaryAssetBase> AutoInitializeUAsyncActionLoadPrimaryAssetBase(TEXT("UAsyncActionLoadPrimaryAssetBase"), sizeof(UAsyncActionLoadPrimaryAssetBase), 3186760728u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D97C0 (end 0x023D9862)
 // Original VA: 0x00000001423D97C0 | File offset: 0x023D8DC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAsyncActionLoadPrimaryAssetBase, 3186760728u); reached from UAsyncActionLoadPrimaryAssetBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAsyncActionLoadPrimaryAssetBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAsyncActionLoadPrimaryAssetBase();
+// Original dynamic initializer: RVA 0x001F3110
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAsyncActionLoadPrimaryAssetBase(Z_Construct_UClass_UAsyncActionLoadPrimaryAssetBase, &UAsyncActionLoadPrimaryAssetBase::StaticClass, TEXT("/Script/Engine"), TEXT("UAsyncActionLoadPrimaryAssetBase"), false, nullptr, nullptr, nullptr);

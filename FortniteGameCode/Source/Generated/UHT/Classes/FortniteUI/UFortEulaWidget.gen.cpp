@@ -7,6 +7,9 @@
 void UFortEulaWidget::StaticRegisterNativesUFortEulaWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortEulaWidget, 3417969582u)
+// Original dynamic initializer: RVA 0x00244A00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortEulaWidget> AutoInitializeUFortEulaWidget(TEXT("UFortEulaWidget"), sizeof(UFortEulaWidget), 3417969582u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A1B70 (end 0x028A1C12)
 // Original VA: 0x00000001428A1B70 | File offset: 0x028A1170
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortEulaWidget, 3417969582u); reached from UFortEulaWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortEulaWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortEulaWidget();
+// Original dynamic initializer: RVA 0x00245690
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortEulaWidget(Z_Construct_UClass_UFortEulaWidget, &UFortEulaWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortEulaWidget"), false, nullptr, nullptr, nullptr);

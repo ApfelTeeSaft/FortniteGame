@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortBluGloManager, 2765573790u)
+// Original dynamic initializer: RVA 0x000E7ED0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortBluGloManager> AutoInitializeAFortBluGloManager(TEXT("AFortBluGloManager"), sizeof(AFortBluGloManager), 2765573790u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA1E50 (end 0x00FA1EF2)
 // Original VA: 0x0000000140FA1E50 | File offset: 0x00FA1450
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortBluGloManager, 2765573790u); reached from AFortBluGloManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortBluGloManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortBluGloManager();
+// Original dynamic initializer: RVA 0x000E8910
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortBluGloManager(Z_Construct_UClass_AFortBluGloManager, &AFortBluGloManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortBluGloManager"), false, nullptr, nullptr, nullptr);

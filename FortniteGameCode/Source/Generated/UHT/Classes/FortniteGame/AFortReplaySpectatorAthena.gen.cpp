@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortReplaySpectatorAthena()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortReplaySpectatorAthena, 2911240816u)
+// Original dynamic initializer: RVA 0x00111380 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortReplaySpectatorAthena> AutoInitializeAFortReplaySpectatorAthena(TEXT("AFortReplaySpectatorAthena"), sizeof(AFortReplaySpectatorAthena), 2911240816u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109BDB0 (end 0x0109BE52)
 // Original VA: 0x000000014109BDB0 | File offset: 0x0109B3B0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortReplaySpectatorAthena, 2911240816u); reached from AFortReplaySpectatorAthena::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortReplaySpectatorAthena::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortReplaySpectatorAthena();
+// Original dynamic initializer: RVA 0x00112670
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortReplaySpectatorAthena(Z_Construct_UClass_AFortReplaySpectatorAthena, &AFortReplaySpectatorAthena::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortReplaySpectatorAthena"), false, nullptr, nullptr, nullptr);

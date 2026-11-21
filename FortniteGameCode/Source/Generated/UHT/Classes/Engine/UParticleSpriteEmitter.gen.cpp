@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UParticleSpriteEmitter()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleSpriteEmitter, 102519725u)
+// Original dynamic initializer: RVA 0x00212860 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleSpriteEmitter> AutoInitializeUParticleSpriteEmitter(TEXT("UParticleSpriteEmitter"), sizeof(UParticleSpriteEmitter), 102519725u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249DB10 (end 0x0249DBB2)
 // Original VA: 0x000000014249DB10 | File offset: 0x0249D110
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleSpriteEmitter, 102519725u); reached from UParticleSpriteEmitter::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UParticleSpriteEmitter::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleSpriteEmitter();
+// Original dynamic initializer: RVA 0x00213B90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleSpriteEmitter(Z_Construct_UClass_UParticleSpriteEmitter, &UParticleSpriteEmitter::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleSpriteEmitter"), false, nullptr, nullptr, nullptr);

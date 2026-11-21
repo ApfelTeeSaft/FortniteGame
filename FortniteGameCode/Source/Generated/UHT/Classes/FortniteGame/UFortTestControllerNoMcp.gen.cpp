@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortTestControllerNoMcp()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortTestControllerNoMcp, 3599440428u)
+// Original dynamic initializer: RVA 0x001148D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTestControllerNoMcp> AutoInitializeUFortTestControllerNoMcp(TEXT("UFortTestControllerNoMcp"), sizeof(UFortTestControllerNoMcp), 3599440428u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B1FC0 (end 0x010B2062)
 // Original VA: 0x00000001410B1FC0 | File offset: 0x010B15C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTestControllerNoMcp, 3599440428u); reached from UFortTestControllerNoMcp::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortTestControllerNoMcp::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTestControllerNoMcp();
+// Original dynamic initializer: RVA 0x00116340
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTestControllerNoMcp(Z_Construct_UClass_UFortTestControllerNoMcp, &UFortTestControllerNoMcp::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTestControllerNoMcp"), false, nullptr, nullptr, nullptr);

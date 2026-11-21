@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFort3PCam_Targeting()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFort3PCam_Targeting, 1737919069u)
+// Original dynamic initializer: RVA 0x000DE7C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFort3PCam_Targeting> AutoInitializeUFort3PCam_Targeting(TEXT("UFort3PCam_Targeting"), sizeof(UFort3PCam_Targeting), 1737919069u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7B850 (end 0x00F7B8F2)
 // Original VA: 0x0000000140F7B850 | File offset: 0x00F7AE50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFort3PCam_Targeting, 1737919069u); reached from UFort3PCam_Targeting::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFort3PCam_Targeting::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFort3PCam_Targeting();
+// Original dynamic initializer: RVA 0x000DF940
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFort3PCam_Targeting(Z_Construct_UClass_UFort3PCam_Targeting, &UFort3PCam_Targeting::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFort3PCam_Targeting"), false, nullptr, nullptr, nullptr);

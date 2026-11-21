@@ -7,6 +7,9 @@
 void UFortMcpProfileAccount::StaticRegisterNativesUFortMcpProfileAccount()
 {
 }
+// IMPLEMENT_CLASS(UFortMcpProfileAccount, 1486679981u)
+// Original dynamic initializer: RVA 0x000FF0F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMcpProfileAccount> AutoInitializeUFortMcpProfileAccount(TEXT("UFortMcpProfileAccount"), sizeof(UFortMcpProfileAccount), 1486679981u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0102CF40 (end 0x0102CFE2)
 // Original VA: 0x000000014102CF40 | File offset: 0x0102C540
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMcpProfileAccount, 1486679981u); reached from UFortMcpProfileAccount::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortMcpProfileAccount::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMcpProfileAccount();
+// Original dynamic initializer: RVA 0x00100DF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMcpProfileAccount(Z_Construct_UClass_UFortMcpProfileAccount, &UFortMcpProfileAccount::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMcpProfileAccount"), false, nullptr, nullptr, nullptr);

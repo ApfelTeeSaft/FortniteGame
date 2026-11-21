@@ -7,6 +7,9 @@
 void UAbilityTask_WaitInputPress::StaticRegisterNativesUAbilityTask_WaitInputPress()
 {
 }
+// IMPLEMENT_CLASS(UAbilityTask_WaitInputPress, 3599827587u)
+// Original dynamic initializer: RVA 0x0009DEF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_WaitInputPress> AutoInitializeUAbilityTask_WaitInputPress(TEXT("UAbilityTask_WaitInputPress"), sizeof(UAbilityTask_WaitInputPress), 3599827587u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054BF70 (end 0x0054C012)
 // Original VA: 0x000000014054BF70 | File offset: 0x0054B570
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_WaitInputPress, 3599827587u); reached from UAbilityTask_WaitInputPress::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAbilityTask_WaitInputPress::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_WaitInputPress();
+// Original dynamic initializer: RVA 0x0009E900
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_WaitInputPress(Z_Construct_UClass_UAbilityTask_WaitInputPress, &UAbilityTask_WaitInputPress::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_WaitInputPress"), false, nullptr, nullptr, nullptr);

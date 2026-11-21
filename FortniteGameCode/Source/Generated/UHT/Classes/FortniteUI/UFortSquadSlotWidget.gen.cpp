@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSquadSlotWidget, 2928856349u)
+// Original dynamic initializer: RVA 0x0025C1C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSquadSlotWidget> AutoInitializeUFortSquadSlotWidget(TEXT("UFortSquadSlotWidget"), sizeof(UFortSquadSlotWidget), 2928856349u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FA590 (end 0x028FA632)
 // Original VA: 0x00000001428FA590 | File offset: 0x028F9B90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSquadSlotWidget, 2928856349u); reached from UFortSquadSlotWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSquadSlotWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSquadSlotWidget();
+// Original dynamic initializer: RVA 0x0025DF30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSquadSlotWidget(Z_Construct_UClass_UFortSquadSlotWidget, &UFortSquadSlotWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSquadSlotWidget"), false, nullptr, nullptr, nullptr);

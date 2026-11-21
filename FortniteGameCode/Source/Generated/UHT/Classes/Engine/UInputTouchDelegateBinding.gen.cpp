@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UInputTouchDelegateBinding()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInputTouchDelegateBinding, 1662379146u)
+// Original dynamic initializer: RVA 0x00200CC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInputTouchDelegateBinding> AutoInitializeUInputTouchDelegateBinding(TEXT("UInputTouchDelegateBinding"), sizeof(UInputTouchDelegateBinding), 1662379146u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02426400 (end 0x024264A2)
 // Original VA: 0x0000000142426400 | File offset: 0x02425A00
 // Recovery: confirmed (IMPLEMENT_CLASS(UInputTouchDelegateBinding, 1662379146u); reached from UInputTouchDelegateBinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UInputTouchDelegateBinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInputTouchDelegateBinding();
+// Original dynamic initializer: RVA 0x00202100
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInputTouchDelegateBinding(Z_Construct_UClass_UInputTouchDelegateBinding, &UInputTouchDelegateBinding::StaticClass, TEXT("/Script/Engine"), TEXT("UInputTouchDelegateBinding"), false, nullptr, nullptr, nullptr);

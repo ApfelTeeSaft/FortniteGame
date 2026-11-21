@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_SpawnPointsCur
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionCategoryEncounter_SpawnPointsCurve, 2745024236u)
+// Original dynamic initializer: RVA 0x000F0BC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionCategoryEncounter_SpawnPointsCurve> AutoInitializeUFortDifficultyOptionCategoryEncounter_SpawnPointsCurve(TEXT("UFortDifficultyOptionCategoryEncounter_SpawnPointsCurve"), sizeof(UFortDifficultyOptionCategoryEncounter_SpawnPointsCurve), 2745024236u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD4D60 (end 0x00FD4E02)
 // Original VA: 0x0000000140FD4D60 | File offset: 0x00FD4360
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionCategoryEncounter_SpawnPointsCurve, 2745024236u); reached from UFortDifficultyOptionCategoryEncounter_SpawnPointsCurve::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionCategoryEncounter_SpawnPointsCurve::GetPrivateStati
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_SpawnPointsCurve();
+// Original dynamic initializer: RVA 0x000F1BD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionCategoryEncounter_SpawnPointsCurve(Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_SpawnPointsCurve, &UFortDifficultyOptionCategoryEncounter_SpawnPointsCurve::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionCategoryEncounter_SpawnPointsCurve"), false, nullptr, nullptr, nullptr);

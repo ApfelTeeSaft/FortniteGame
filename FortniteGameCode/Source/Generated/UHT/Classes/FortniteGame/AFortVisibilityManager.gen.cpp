@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortVisibilityManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortVisibilityManager, 3032037395u)
+// Original dynamic initializer: RVA 0x0011BED0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortVisibilityManager> AutoInitializeAFortVisibilityManager(TEXT("AFortVisibilityManager"), sizeof(AFortVisibilityManager), 3032037395u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D2A70 (end 0x010D2B12)
 // Original VA: 0x00000001410D2A70 | File offset: 0x010D2070
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortVisibilityManager, 3032037395u); reached from AFortVisibilityManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortVisibilityManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortVisibilityManager();
+// Original dynamic initializer: RVA 0x0011CEE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortVisibilityManager(Z_Construct_UClass_AFortVisibilityManager, &AFortVisibilityManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortVisibilityManager"), false, nullptr, nullptr, nullptr);

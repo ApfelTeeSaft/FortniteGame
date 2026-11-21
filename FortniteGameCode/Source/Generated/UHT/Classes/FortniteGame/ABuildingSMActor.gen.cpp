@@ -7,6 +7,9 @@
 void ABuildingSMActor::StaticRegisterNativesABuildingSMActor()
 {
 }
+// IMPLEMENT_CLASS(ABuildingSMActor, 4124908678u)
+// Original dynamic initializer: RVA 0x000DBE60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingSMActor> AutoInitializeABuildingSMActor(TEXT("ABuildingSMActor"), sizeof(ABuildingSMActor), 4124908678u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F70C50 (end 0x00F70CF2)
 // Original VA: 0x0000000140F70C50 | File offset: 0x00F70250
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingSMActor, 4124908678u); reached from ABuildingSMActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ABuildingSMActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingSMActor();
+// Original dynamic initializer: RVA 0x000DCAC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingSMActor(Z_Construct_UClass_ABuildingSMActor, &ABuildingSMActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingSMActor"), false, nullptr, nullptr, nullptr);

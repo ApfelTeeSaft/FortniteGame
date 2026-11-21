@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortHomebaseNodeGameplayEffectDataTable()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortHomebaseNodeGameplayEffectDataTable, 286326549u)
+// Original dynamic initializer: RVA 0x000FAFE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHomebaseNodeGameplayEffectDataTable> AutoInitializeUFortHomebaseNodeGameplayEffectDataTable(TEXT("UFortHomebaseNodeGameplayEffectDataTable"), sizeof(UFortHomebaseNodeGameplayEffectDataTable), 286326549u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01003350 (end 0x010033F2)
 // Original VA: 0x0000000141003350 | File offset: 0x01002950
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHomebaseNodeGameplayEffectDataTable, 286326549u); reached from UFortHomebaseNodeGameplayEffectDataTable::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortHomebaseNodeGameplayEffectDataTable::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHomebaseNodeGameplayEffectDataTable();
+// Original dynamic initializer: RVA 0x000FBDF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHomebaseNodeGameplayEffectDataTable(Z_Construct_UClass_UFortHomebaseNodeGameplayEffectDataTable, &UFortHomebaseNodeGameplayEffectDataTable::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortHomebaseNodeGameplayEffectDataTable"), false, nullptr, nullptr, nullptr);

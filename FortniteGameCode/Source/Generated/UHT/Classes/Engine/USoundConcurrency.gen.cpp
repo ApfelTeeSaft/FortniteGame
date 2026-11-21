@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USoundConcurrency()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundConcurrency, 1850499851u)
+// Original dynamic initializer: RVA 0x0021C430 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundConcurrency> AutoInitializeUSoundConcurrency(TEXT("USoundConcurrency"), sizeof(USoundConcurrency), 1850499851u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D9400 (end 0x024D9497)
 // Original VA: 0x00000001424D9400 | File offset: 0x024D8A00
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundConcurrency, 1850499851u); reached from USoundConcurrency::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USoundConcurrency::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundConcurrency();
+// Original dynamic initializer: RVA 0x0021D7B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundConcurrency(Z_Construct_UClass_USoundConcurrency, &USoundConcurrency::StaticClass, TEXT("/Script/Engine"), TEXT("USoundConcurrency"), false, nullptr, nullptr, nullptr);

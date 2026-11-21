@@ -7,6 +7,9 @@
 void UFortRejoinWindowBase::StaticRegisterNativesUFortRejoinWindowBase()
 {
 }
+// IMPLEMENT_CLASS(UFortRejoinWindowBase, 2527501086u)
+// Original dynamic initializer: RVA 0x00258480 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortRejoinWindowBase> AutoInitializeUFortRejoinWindowBase(TEXT("UFortRejoinWindowBase"), sizeof(UFortRejoinWindowBase), 2527501086u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EB4C0 (end 0x028EB562)
 // Original VA: 0x00000001428EB4C0 | File offset: 0x028EAAC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortRejoinWindowBase, 2527501086u); reached from UFortRejoinWindowBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortRejoinWindowBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortRejoinWindowBase();
+// Original dynamic initializer: RVA 0x0025A420
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortRejoinWindowBase(Z_Construct_UClass_UFortRejoinWindowBase, &UFortRejoinWindowBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortRejoinWindowBase"), false, nullptr, nullptr, nullptr);

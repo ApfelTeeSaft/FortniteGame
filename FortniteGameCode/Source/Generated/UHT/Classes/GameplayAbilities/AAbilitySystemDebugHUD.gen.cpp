@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AAbilitySystemDebugHUD()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AAbilitySystemDebugHUD, 3958640909u)
+// Original dynamic initializer: RVA 0x0009D2E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AAbilitySystemDebugHUD> AutoInitializeAAbilitySystemDebugHUD(TEXT("AAbilitySystemDebugHUD"), sizeof(AAbilitySystemDebugHUD), 3958640909u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00545230 (end 0x005452D2)
 // Original VA: 0x0000000140545230 | File offset: 0x00544830
 // Recovery: confirmed (IMPLEMENT_CLASS(AAbilitySystemDebugHUD, 3958640909u); reached from AAbilitySystemDebugHUD::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AAbilitySystemDebugHUD::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AAbilitySystemDebugHUD();
+// Original dynamic initializer: RVA 0x0009D730
+static FCompiledInDefer Z_CompiledInDefer_UClass_AAbilitySystemDebugHUD(Z_Construct_UClass_AAbilitySystemDebugHUD, &AAbilitySystemDebugHUD::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("AAbilitySystemDebugHUD"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBTTaskNode()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBTTaskNode, 1218528299u)
+// Original dynamic initializer: RVA 0x001BC2C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTTaskNode> AutoInitializeUBTTaskNode(TEXT("UBTTaskNode"), sizeof(UBTTaskNode), 1218528299u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D27310 (end 0x01D273B2)
 // Original VA: 0x0000000141D27310 | File offset: 0x01D26910
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTTaskNode, 1218528299u); reached from UBTTaskNode::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBTTaskNode::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTTaskNode();
+// Original dynamic initializer: RVA 0x001BCEE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTTaskNode(Z_Construct_UClass_UBTTaskNode, &UBTTaskNode::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTTaskNode"), false, nullptr, nullptr, nullptr);

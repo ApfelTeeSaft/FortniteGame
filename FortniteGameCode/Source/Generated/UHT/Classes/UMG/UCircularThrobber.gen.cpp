@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCircularThrobber, 1464677588u)
+// Original dynamic initializer: RVA 0x001B1DA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCircularThrobber> AutoInitializeUCircularThrobber(TEXT("UCircularThrobber"), sizeof(UCircularThrobber), 1464677588u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE51D0 (end 0x01BE5272)
 // Original VA: 0x0000000141BE51D0 | File offset: 0x01BE47D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCircularThrobber, 1464677588u); reached from UCircularThrobber::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCircularThrobber::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCircularThrobber();
+// Original dynamic initializer: RVA 0x001B24A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCircularThrobber(Z_Construct_UClass_UCircularThrobber, &UCircularThrobber::StaticClass, TEXT("/Script/UMG"), TEXT("UCircularThrobber"), false, nullptr, nullptr, nullptr);

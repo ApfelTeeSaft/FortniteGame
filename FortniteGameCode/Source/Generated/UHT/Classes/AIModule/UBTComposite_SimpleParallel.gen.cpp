@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBTComposite_SimpleParallel()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBTComposite_SimpleParallel, 14404899u)
+// Original dynamic initializer: RVA 0x001BA690 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTComposite_SimpleParallel> AutoInitializeUBTComposite_SimpleParallel(TEXT("UBTComposite_SimpleParallel"), sizeof(UBTComposite_SimpleParallel), 14404899u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D21210 (end 0x01D212B2)
 // Original VA: 0x0000000141D21210 | File offset: 0x01D20810
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTComposite_SimpleParallel, 14404899u); reached from UBTComposite_SimpleParallel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBTComposite_SimpleParallel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTComposite_SimpleParallel();
+// Original dynamic initializer: RVA 0x001BBA00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTComposite_SimpleParallel(Z_Construct_UClass_UBTComposite_SimpleParallel, &UBTComposite_SimpleParallel::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTComposite_SimpleParallel"), false, nullptr, nullptr, nullptr);

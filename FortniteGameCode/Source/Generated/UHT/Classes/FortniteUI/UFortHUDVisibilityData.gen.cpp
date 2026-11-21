@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortHUDVisibilityData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortHUDVisibilityData, 3736785297u)
+// Original dynamic initializer: RVA 0x00248300 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHUDVisibilityData> AutoInitializeUFortHUDVisibilityData(TEXT("UFortHUDVisibilityData"), sizeof(UFortHUDVisibilityData), 3736785297u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BB2C0 (end 0x028BB362)
 // Original VA: 0x00000001428BB2C0 | File offset: 0x028BA8C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHUDVisibilityData, 3736785297u); reached from UFortHUDVisibilityData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortHUDVisibilityData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHUDVisibilityData();
+// Original dynamic initializer: RVA 0x00249E10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHUDVisibilityData(Z_Construct_UClass_UFortHUDVisibilityData, &UFortHUDVisibilityData::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortHUDVisibilityData"), false, nullptr, nullptr, nullptr);

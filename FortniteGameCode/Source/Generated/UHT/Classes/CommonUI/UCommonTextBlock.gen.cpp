@@ -7,6 +7,9 @@
 void UCommonTextBlock::StaticRegisterNativesUCommonTextBlock()
 {
 }
+// IMPLEMENT_CLASS(UCommonTextBlock, 3562800132u)
+// Original dynamic initializer: RVA 0x00096100 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonTextBlock> AutoInitializeUCommonTextBlock(TEXT("UCommonTextBlock"), sizeof(UCommonTextBlock), 3562800132u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C9950 (end 0x002C99F2)
 // Original VA: 0x00000001402C9950 | File offset: 0x002C8F50
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonTextBlock, 3562800132u); reached from UCommonTextBlock::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonTextBlock::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonTextBlock();
+// Original dynamic initializer: RVA 0x000969D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonTextBlock(Z_Construct_UClass_UCommonTextBlock, &UCommonTextBlock::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonTextBlock"), false, nullptr, nullptr, nullptr);

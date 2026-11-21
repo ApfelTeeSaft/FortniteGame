@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UComponentDelegateBinding()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UComponentDelegateBinding, 2537464048u)
+// Original dynamic initializer: RVA 0x001F7020 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UComponentDelegateBinding> AutoInitializeUComponentDelegateBinding(TEXT("UComponentDelegateBinding"), sizeof(UComponentDelegateBinding), 2537464048u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F6550 (end 0x023F65F2)
 // Original VA: 0x00000001423F6550 | File offset: 0x023F5B50
 // Recovery: confirmed (IMPLEMENT_CLASS(UComponentDelegateBinding, 2537464048u); reached from UComponentDelegateBinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UComponentDelegateBinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UComponentDelegateBinding();
+// Original dynamic initializer: RVA 0x001F8060
+static FCompiledInDefer Z_CompiledInDefer_UClass_UComponentDelegateBinding(Z_Construct_UClass_UComponentDelegateBinding, &UComponentDelegateBinding::StaticClass, TEXT("/Script/Engine"), TEXT("UComponentDelegateBinding"), false, nullptr, nullptr, nullptr);

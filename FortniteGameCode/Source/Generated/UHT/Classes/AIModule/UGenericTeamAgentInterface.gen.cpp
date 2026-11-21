@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UGenericTeamAgentInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UGenericTeamAgentInterface, 3468961198u)
+// Original dynamic initializer: RVA 0x001BD960 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGenericTeamAgentInterface> AutoInitializeUGenericTeamAgentInterface(TEXT("UGenericTeamAgentInterface"), sizeof(UGenericTeamAgentInterface), 3468961198u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2E7D0 (end 0x01D2E872)
 // Original VA: 0x0000000141D2E7D0 | File offset: 0x01D2DDD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UGenericTeamAgentInterface, 3468961198u); reached from UGenericTeamAgentInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UGenericTeamAgentInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGenericTeamAgentInterface();
+// Original dynamic initializer: RVA 0x001BF360
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGenericTeamAgentInterface(Z_Construct_UClass_UGenericTeamAgentInterface, &UGenericTeamAgentInterface::StaticClass, TEXT("/Script/AIModule"), TEXT("UGenericTeamAgentInterface"), false, nullptr, nullptr, nullptr);

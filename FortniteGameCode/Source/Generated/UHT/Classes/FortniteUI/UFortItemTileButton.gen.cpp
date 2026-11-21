@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_UFortItemTileButton()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortItemTileButton, 2019913973u)
+// Original dynamic initializer: RVA 0x0024F350 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemTileButton> AutoInitializeUFortItemTileButton(TEXT("UFortItemTileButton"), sizeof(UFortItemTileButton), 2019913973u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CE470 (end 0x028CE512)
 // Original VA: 0x00000001428CE470 | File offset: 0x028CDA70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemTileButton, 2019913973u); reached from UFortItemTileButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* UFortItemTileButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemTileButton();
+// Original dynamic initializer: RVA 0x00250F10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemTileButton(Z_Construct_UClass_UFortItemTileButton, &UFortItemTileButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemTileButton"), false, nullptr, nullptr, nullptr);

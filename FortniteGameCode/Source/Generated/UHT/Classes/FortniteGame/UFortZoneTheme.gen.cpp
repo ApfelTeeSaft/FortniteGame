@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortZoneTheme()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortZoneTheme, 3158181588u)
+// Original dynamic initializer: RVA 0x0011E920 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortZoneTheme> AutoInitializeUFortZoneTheme(TEXT("UFortZoneTheme"), sizeof(UFortZoneTheme), 3158181588u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E1710 (end 0x010E17B2)
 // Original VA: 0x00000001410E1710 | File offset: 0x010E0D10
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortZoneTheme, 3158181588u); reached from UFortZoneTheme::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortZoneTheme::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortZoneTheme();
+// Original dynamic initializer: RVA 0x0011FBC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortZoneTheme(Z_Construct_UClass_UFortZoneTheme, &UFortZoneTheme::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortZoneTheme"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UGameMapsSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UGameMapsSettings, 2941305603u)
+// Original dynamic initializer: RVA 0x001B6A30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameMapsSettings> AutoInitializeUGameMapsSettings(TEXT("UGameMapsSettings"), sizeof(UGameMapsSettings), 2941305603u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C841E0 (end 0x01C84277)
 // Original VA: 0x0000000141C841E0 | File offset: 0x01C837E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameMapsSettings, 2941305603u); reached from UGameMapsSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UGameMapsSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameMapsSettings();
+// Original dynamic initializer: RVA 0x001B6D30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameMapsSettings(Z_Construct_UClass_UGameMapsSettings, &UGameMapsSettings::StaticClass, TEXT("/Script/EngineSettings"), TEXT("UGameMapsSettings"), false, nullptr, nullptr, nullptr);

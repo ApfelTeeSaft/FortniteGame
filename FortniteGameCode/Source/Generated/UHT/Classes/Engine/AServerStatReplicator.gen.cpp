@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AServerStatReplicator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AServerStatReplicator, 2339325370u)
+// Original dynamic initializer: RVA 0x00219770 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AServerStatReplicator> AutoInitializeAServerStatReplicator(TEXT("AServerStatReplicator"), sizeof(AServerStatReplicator), 2339325370u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6150 (end 0x024C61F2)
 // Original VA: 0x00000001424C6150 | File offset: 0x024C5750
 // Recovery: confirmed (IMPLEMENT_CLASS(AServerStatReplicator, 2339325370u); reached from AServerStatReplicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AServerStatReplicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AServerStatReplicator();
+// Original dynamic initializer: RVA 0x00219CF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AServerStatReplicator(Z_Construct_UClass_AServerStatReplicator, &AServerStatReplicator::StaticClass, TEXT("/Script/Engine"), TEXT("AServerStatReplicator"), false, nullptr, nullptr, nullptr);

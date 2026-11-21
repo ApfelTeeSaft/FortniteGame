@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UEnvQueryGenerator_BlueprintBase, 1660568308u)
+// Original dynamic initializer: RVA 0x001BD5A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEnvQueryGenerator_BlueprintBase> AutoInitializeUEnvQueryGenerator_BlueprintBase(TEXT("UEnvQueryGenerator_BlueprintBase"), sizeof(UEnvQueryGenerator_BlueprintBase), 1660568308u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2D390 (end 0x01D2D432)
 // Original VA: 0x0000000141D2D390 | File offset: 0x01D2C990
 // Recovery: confirmed (IMPLEMENT_CLASS(UEnvQueryGenerator_BlueprintBase, 1660568308u); reached from UEnvQueryGenerator_BlueprintBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UEnvQueryGenerator_BlueprintBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase();
+// Original dynamic initializer: RVA 0x001BEBE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEnvQueryGenerator_BlueprintBase(Z_Construct_UClass_UEnvQueryGenerator_BlueprintBase, &UEnvQueryGenerator_BlueprintBase::StaticClass, TEXT("/Script/AIModule"), TEXT("UEnvQueryGenerator_BlueprintBase"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UFortLoginResultWidget::StaticRegisterNativesUFortLoginResultWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortLoginResultWidget, 2458514029u)
+// Original dynamic initializer: RVA 0x00251450 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortLoginResultWidget> AutoInitializeUFortLoginResultWidget(TEXT("UFortLoginResultWidget"), sizeof(UFortLoginResultWidget), 2458514029u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D59F0 (end 0x028D5A92)
 // Original VA: 0x00000001428D59F0 | File offset: 0x028D4FF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortLoginResultWidget, 2458514029u); reached from UFortLoginResultWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortLoginResultWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortLoginResultWidget();
+// Original dynamic initializer: RVA 0x002534B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortLoginResultWidget(Z_Construct_UClass_UFortLoginResultWidget, &UFortLoginResultWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortLoginResultWidget"), false, nullptr, nullptr, nullptr);

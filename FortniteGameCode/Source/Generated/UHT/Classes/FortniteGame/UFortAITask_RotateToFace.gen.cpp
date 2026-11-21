@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAITask_RotateToFace()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAITask_RotateToFace, 3279074721u)
+// Original dynamic initializer: RVA 0x000E4A00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAITask_RotateToFace> AutoInitializeUFortAITask_RotateToFace(TEXT("UFortAITask_RotateToFace"), sizeof(UFortAITask_RotateToFace), 3279074721u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F97830 (end 0x00F978D2)
 // Original VA: 0x0000000140F97830 | File offset: 0x00F96E30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAITask_RotateToFace, 3279074721u); reached from UFortAITask_RotateToFace::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAITask_RotateToFace::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAITask_RotateToFace();
+// Original dynamic initializer: RVA 0x000E6330
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAITask_RotateToFace(Z_Construct_UClass_UFortAITask_RotateToFace, &UFortAITask_RotateToFace::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAITask_RotateToFace"), false, nullptr, nullptr, nullptr);

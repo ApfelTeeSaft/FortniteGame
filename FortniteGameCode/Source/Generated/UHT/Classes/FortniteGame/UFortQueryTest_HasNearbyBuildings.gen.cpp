@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryTest_HasNearbyBuildings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryTest_HasNearbyBuildings, 4052759068u)
+// Original dynamic initializer: RVA 0x0010EEB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryTest_HasNearbyBuildings> AutoInitializeUFortQueryTest_HasNearbyBuildings(TEXT("UFortQueryTest_HasNearbyBuildings"), sizeof(UFortQueryTest_HasNearbyBuildings), 4052759068u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01092600 (end 0x010926A2)
 // Original VA: 0x0000000141092600 | File offset: 0x01091C00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryTest_HasNearbyBuildings, 4052759068u); reached from UFortQueryTest_HasNearbyBuildings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryTest_HasNearbyBuildings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryTest_HasNearbyBuildings();
+// Original dynamic initializer: RVA 0x001103E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryTest_HasNearbyBuildings(Z_Construct_UClass_UFortQueryTest_HasNearbyBuildings, &UFortQueryTest_HasNearbyBuildings::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryTest_HasNearbyBuildings"), false, nullptr, nullptr, nullptr);

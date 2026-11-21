@@ -7,6 +7,9 @@
 void UAthenaHUDPlayerActionAlertBase::StaticRegisterNativesUAthenaHUDPlayerActionAlertBase()
 {
 }
+// IMPLEMENT_CLASS(UAthenaHUDPlayerActionAlertBase, 3219962577u)
+// Original dynamic initializer: RVA 0x002391C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaHUDPlayerActionAlertBase> AutoInitializeUAthenaHUDPlayerActionAlertBase(TEXT("UAthenaHUDPlayerActionAlertBase"), sizeof(UAthenaHUDPlayerActionAlertBase), 3219962577u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287DF30 (end 0x0287DFD2)
 // Original VA: 0x000000014287DF30 | File offset: 0x0287D530
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaHUDPlayerActionAlertBase, 3219962577u); reached from UAthenaHUDPlayerActionAlertBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAthenaHUDPlayerActionAlertBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase();
+// Original dynamic initializer: RVA 0x0023B0C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaHUDPlayerActionAlertBase(Z_Construct_UClass_UAthenaHUDPlayerActionAlertBase, &UAthenaHUDPlayerActionAlertBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaHUDPlayerActionAlertBase"), false, nullptr, nullptr, nullptr);

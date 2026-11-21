@@ -7,6 +7,9 @@
 void AFortWorldManager::StaticRegisterNativesAFortWorldManager()
 {
 }
+// IMPLEMENT_CLASS(AFortWorldManager, 3939852103u)
+// Original dynamic initializer: RVA 0x0011E820 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortWorldManager> AutoInitializeAFortWorldManager(TEXT("AFortWorldManager"), sizeof(AFortWorldManager), 3939852103u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E1190 (end 0x010E1232)
 // Original VA: 0x00000001410E1190 | File offset: 0x010E0790
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortWorldManager, 3939852103u); reached from AFortWorldManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortWorldManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortWorldManager();
+// Original dynamic initializer: RVA 0x0011F9C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortWorldManager(Z_Construct_UClass_AFortWorldManager, &AFortWorldManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortWorldManager"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void AFortInGameMapManager::StaticRegisterNativesAFortInGameMapManager()
 {
 }
+// IMPLEMENT_CLASS(AFortInGameMapManager, 4232071167u)
+// Original dynamic initializer: RVA 0x000FAF00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortInGameMapManager> AutoInitializeAFortInGameMapManager(TEXT("AFortInGameMapManager"), sizeof(AFortInGameMapManager), 4232071167u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01002E80 (end 0x01002F22)
 // Original VA: 0x0000000141002E80 | File offset: 0x01002480
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortInGameMapManager, 4232071167u); reached from AFortInGameMapManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortInGameMapManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortInGameMapManager();
+// Original dynamic initializer: RVA 0x000FBC30
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortInGameMapManager(Z_Construct_UClass_AFortInGameMapManager, &AFortInGameMapManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortInGameMapManager"), false, nullptr, nullptr, nullptr);

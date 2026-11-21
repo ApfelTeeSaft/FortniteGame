@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortDirectAcquisitionOfferInfo, 2066992578u)
+// Original dynamic initializer: RVA 0x00242870 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDirectAcquisitionOfferInfo> AutoInitializeUFortDirectAcquisitionOfferInfo(TEXT("UFortDirectAcquisitionOfferInfo"), sizeof(UFortDirectAcquisitionOfferInfo), 2066992578u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289A5D0 (end 0x0289A667)
 // Original VA: 0x000000014289A5D0 | File offset: 0x02899BD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDirectAcquisitionOfferInfo, 2066992578u); reached from UFortDirectAcquisitionOfferInfo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortDirectAcquisitionOfferInfo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDirectAcquisitionOfferInfo();
+// Original dynamic initializer: RVA 0x002447E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDirectAcquisitionOfferInfo(Z_Construct_UClass_UFortDirectAcquisitionOfferInfo, &UFortDirectAcquisitionOfferInfo::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortDirectAcquisitionOfferInfo"), false, nullptr, nullptr, nullptr);

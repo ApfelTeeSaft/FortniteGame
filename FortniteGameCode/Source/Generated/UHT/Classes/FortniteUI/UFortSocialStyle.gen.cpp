@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortSocialStyle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortSocialStyle, 3748430294u)
+// Original dynamic initializer: RVA 0x0025ADA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSocialStyle> AutoInitializeUFortSocialStyle(TEXT("UFortSocialStyle"), sizeof(UFortSocialStyle), 3748430294u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F3D20 (end 0x028F3DC2)
 // Original VA: 0x00000001428F3D20 | File offset: 0x028F3320
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSocialStyle, 3748430294u); reached from UFortSocialStyle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortSocialStyle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSocialStyle();
+// Original dynamic initializer: RVA 0x0025BE20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSocialStyle(Z_Construct_UClass_UFortSocialStyle, &UFortSocialStyle::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSocialStyle"), false, nullptr, nullptr, nullptr);

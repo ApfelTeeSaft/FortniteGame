@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortTransformKeyPickerTileButton()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortTransformKeyPickerTileButton, 197670717u)
+// Original dynamic initializer: RVA 0x0025E5B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTransformKeyPickerTileButton> AutoInitializeUFortTransformKeyPickerTileButton(TEXT("UFortTransformKeyPickerTileButton"), sizeof(UFortTransformKeyPickerTileButton), 197670717u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02903950 (end 0x029039F2)
 // Original VA: 0x0000000142903950 | File offset: 0x02902F50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTransformKeyPickerTileButton, 197670717u); reached from UFortTransformKeyPickerTileButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortTransformKeyPickerTileButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTransformKeyPickerTileButton();
+// Original dynamic initializer: RVA 0x00260910
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTransformKeyPickerTileButton(Z_Construct_UClass_UFortTransformKeyPickerTileButton, &UFortTransformKeyPickerTileButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTransformKeyPickerTileButton"), false, nullptr, nullptr, nullptr);

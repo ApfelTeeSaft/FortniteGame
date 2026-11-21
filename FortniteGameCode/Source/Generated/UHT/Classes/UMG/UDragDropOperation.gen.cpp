@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UDragDropOperation, 1032841043u)
+// Original dynamic initializer: RVA 0x001B1E40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDragDropOperation> AutoInitializeUDragDropOperation(TEXT("UDragDropOperation"), sizeof(UDragDropOperation), 1032841043u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5540 (end 0x01BE55D7)
 // Original VA: 0x0000000141BE5540 | File offset: 0x01BE4B40
 // Recovery: confirmed (IMPLEMENT_CLASS(UDragDropOperation, 1032841043u); reached from UDragDropOperation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UDragDropOperation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDragDropOperation();
+// Original dynamic initializer: RVA 0x001B25E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDragDropOperation(Z_Construct_UClass_UDragDropOperation, &UDragDropOperation::StaticClass, TEXT("/Script/UMG"), TEXT("UDragDropOperation"), false, nullptr, nullptr, nullptr);

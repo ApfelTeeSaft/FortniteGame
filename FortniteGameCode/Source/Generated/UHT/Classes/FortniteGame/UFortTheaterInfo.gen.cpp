@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortTheaterInfo()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortTheaterInfo, 2432803640u)
+// Original dynamic initializer: RVA 0x00114930 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTheaterInfo> AutoInitializeUFortTheaterInfo(TEXT("UFortTheaterInfo"), sizeof(UFortTheaterInfo), 2432803640u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B21D0 (end 0x010B2272)
 // Original VA: 0x00000001410B21D0 | File offset: 0x010B17D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTheaterInfo, 2432803640u); reached from UFortTheaterInfo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortTheaterInfo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTheaterInfo();
+// Original dynamic initializer: RVA 0x00116400
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTheaterInfo(Z_Construct_UClass_UFortTheaterInfo, &UFortTheaterInfo::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTheaterInfo"), false, nullptr, nullptr, nullptr);

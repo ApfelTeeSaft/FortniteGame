@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortPlayerProfileModalWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortPlayerProfileModalWidget, 665822209u)
+// Original dynamic initializer: RVA 0x00255CA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPlayerProfileModalWidget> AutoInitializeUFortPlayerProfileModalWidget(TEXT("UFortPlayerProfileModalWidget"), sizeof(UFortPlayerProfileModalWidget), 665822209u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E55E0 (end 0x028E5682)
 // Original VA: 0x00000001428E55E0 | File offset: 0x028E4BE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPlayerProfileModalWidget, 665822209u); reached from UFortPlayerProfileModalWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortPlayerProfileModalWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPlayerProfileModalWidget();
+// Original dynamic initializer: RVA 0x00258080
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPlayerProfileModalWidget(Z_Construct_UClass_UFortPlayerProfileModalWidget, &UFortPlayerProfileModalWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortPlayerProfileModalWidget"), false, nullptr, nullptr, nullptr);

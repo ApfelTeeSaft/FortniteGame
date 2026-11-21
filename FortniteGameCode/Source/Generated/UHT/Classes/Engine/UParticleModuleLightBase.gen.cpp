@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UParticleModuleLightBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleLightBase, 2929916548u)
+// Original dynamic initializer: RVA 0x00210A30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleLightBase> AutoInitializeUParticleModuleLightBase(TEXT("UParticleModuleLightBase"), sizeof(UParticleModuleLightBase), 2929916548u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024980B0 (end 0x02498152)
 // Original VA: 0x00000001424980B0 | File offset: 0x024976B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleLightBase, 2929916548u); reached from UParticleModuleLightBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UParticleModuleLightBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleLightBase();
+// Original dynamic initializer: RVA 0x00211A60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleLightBase(Z_Construct_UClass_UParticleModuleLightBase, &UParticleModuleLightBase::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleLightBase"), false, nullptr, nullptr, nullptr);

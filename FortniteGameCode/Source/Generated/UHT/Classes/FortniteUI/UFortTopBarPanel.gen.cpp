@@ -7,6 +7,9 @@
 void UFortTopBarPanel::StaticRegisterNativesUFortTopBarPanel()
 {
 }
+// IMPLEMENT_CLASS(UFortTopBarPanel, 2163675952u)
+// Original dynamic initializer: RVA 0x0025E4F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTopBarPanel> AutoInitializeUFortTopBarPanel(TEXT("UFortTopBarPanel"), sizeof(UFortTopBarPanel), 2163675952u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02903530 (end 0x029035D2)
 // Original VA: 0x0000000142903530 | File offset: 0x02902B30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTopBarPanel, 2163675952u); reached from UFortTopBarPanel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortTopBarPanel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTopBarPanel();
+// Original dynamic initializer: RVA 0x00260790
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTopBarPanel(Z_Construct_UClass_UFortTopBarPanel, &UFortTopBarPanel::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTopBarPanel"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UNamedInterfaces()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNamedInterfaces, 3050284449u)
+// Original dynamic initializer: RVA 0x000986E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNamedInterfaces> AutoInitializeUNamedInterfaces(TEXT("UNamedInterfaces"), sizeof(UNamedInterfaces), 3050284449u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002FC180 (end 0x002FC217)
 // Original VA: 0x00000001402FC180 | File offset: 0x002FB780
 // Recovery: confirmed (IMPLEMENT_CLASS(UNamedInterfaces, 3050284449u); reached from UNamedInterfaces::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UNamedInterfaces::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNamedInterfaces();
+// Original dynamic initializer: RVA 0x00098B70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNamedInterfaces(Z_Construct_UClass_UNamedInterfaces, &UNamedInterfaces::StaticClass, TEXT("/Script/OnlineSubsystem"), TEXT("UNamedInterfaces"), false, nullptr, nullptr, nullptr);

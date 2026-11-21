@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UDamageType()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDamageType, 155358205u)
+// Original dynamic initializer: RVA 0x001F83C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDamageType> AutoInitializeUDamageType(TEXT("UDamageType"), sizeof(UDamageType), 155358205u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FC420 (end 0x023FC4B7)
 // Original VA: 0x00000001423FC420 | File offset: 0x023FBA20
 // Recovery: confirmed (IMPLEMENT_CLASS(UDamageType, 155358205u); reached from UDamageType::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UDamageType::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDamageType();
+// Original dynamic initializer: RVA 0x001F9740
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDamageType(Z_Construct_UClass_UDamageType, &UDamageType::StaticClass, TEXT("/Script/Engine"), TEXT("UDamageType"), false, nullptr, nullptr, nullptr);

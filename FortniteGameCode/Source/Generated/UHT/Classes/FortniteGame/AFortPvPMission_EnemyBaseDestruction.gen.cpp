@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortPvPMission_EnemyBaseDestruction, 1419217247u)
+// Original dynamic initializer: RVA 0x0010E750 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPvPMission_EnemyBaseDestruction> AutoInitializeAFortPvPMission_EnemyBaseDestruction(TEXT("AFortPvPMission_EnemyBaseDestruction"), sizeof(AFortPvPMission_EnemyBaseDestruction), 1419217247u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108FD70 (end 0x0108FE12)
 // Original VA: 0x000000014108FD70 | File offset: 0x0108F370
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPvPMission_EnemyBaseDestruction, 1419217247u); reached from AFortPvPMission_EnemyBaseDestruction::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortPvPMission_EnemyBaseDestruction::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction();
+// Original dynamic initializer: RVA 0x0010F520
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPvPMission_EnemyBaseDestruction(Z_Construct_UClass_AFortPvPMission_EnemyBaseDestruction, &AFortPvPMission_EnemyBaseDestruction::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPvPMission_EnemyBaseDestruction"), false, nullptr, nullptr, nullptr);

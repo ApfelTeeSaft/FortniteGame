@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortRedeemCodeBase, 2374128149u)
+// Original dynamic initializer: RVA 0x00258440 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortRedeemCodeBase> AutoInitializeUFortRedeemCodeBase(TEXT("UFortRedeemCodeBase"), sizeof(UFortRedeemCodeBase), 2374128149u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EB360 (end 0x028EB402)
 // Original VA: 0x00000001428EB360 | File offset: 0x028EA960
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortRedeemCodeBase, 2374128149u); reached from UFortRedeemCodeBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortRedeemCodeBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortRedeemCodeBase();
+// Original dynamic initializer: RVA 0x0025A3A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortRedeemCodeBase(Z_Construct_UClass_UFortRedeemCodeBase, &UFortRedeemCodeBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortRedeemCodeBase"), false, nullptr, nullptr, nullptr);

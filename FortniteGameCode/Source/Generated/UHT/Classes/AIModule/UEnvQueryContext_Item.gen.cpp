@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UEnvQueryContext_Item()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEnvQueryContext_Item, 2105274037u)
+// Original dynamic initializer: RVA 0x001BD500 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEnvQueryContext_Item> AutoInitializeUEnvQueryContext_Item(TEXT("UEnvQueryContext_Item"), sizeof(UEnvQueryContext_Item), 2105274037u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2D030 (end 0x01D2D0D2)
 // Original VA: 0x0000000141D2D030 | File offset: 0x01D2C630
 // Recovery: confirmed (IMPLEMENT_CLASS(UEnvQueryContext_Item, 2105274037u); reached from UEnvQueryContext_Item::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UEnvQueryContext_Item::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEnvQueryContext_Item();
+// Original dynamic initializer: RVA 0x001BEAA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEnvQueryContext_Item(Z_Construct_UClass_UEnvQueryContext_Item, &UEnvQueryContext_Item::StaticClass, TEXT("/Script/AIModule"), TEXT("UEnvQueryContext_Item"), false, nullptr, nullptr, nullptr);

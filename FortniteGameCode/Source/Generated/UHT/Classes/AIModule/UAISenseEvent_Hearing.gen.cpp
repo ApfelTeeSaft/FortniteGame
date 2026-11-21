@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAISenseEvent_Hearing()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAISenseEvent_Hearing, 1405856009u)
+// Original dynamic initializer: RVA 0x001BA530 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAISenseEvent_Hearing> AutoInitializeUAISenseEvent_Hearing(TEXT("UAISenseEvent_Hearing"), sizeof(UAISenseEvent_Hearing), 1405856009u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D20A80 (end 0x01D20B22)
 // Original VA: 0x0000000141D20A80 | File offset: 0x01D20080
 // Recovery: confirmed (IMPLEMENT_CLASS(UAISenseEvent_Hearing, 1405856009u); reached from UAISenseEvent_Hearing::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAISenseEvent_Hearing::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAISenseEvent_Hearing();
+// Original dynamic initializer: RVA 0x001BB740
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAISenseEvent_Hearing(Z_Construct_UClass_UAISenseEvent_Hearing, &UAISenseEvent_Hearing::StaticClass, TEXT("/Script/AIModule"), TEXT("UAISenseEvent_Hearing"), false, nullptr, nullptr, nullptr);

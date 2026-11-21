@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UBTComposite_Sequence()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBTComposite_Sequence, 1783907704u)
+// Original dynamic initializer: RVA 0x001BA670 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTComposite_Sequence> AutoInitializeUBTComposite_Sequence(TEXT("UBTComposite_Sequence"), sizeof(UBTComposite_Sequence), 1783907704u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D21160 (end 0x01D21202)
 // Original VA: 0x0000000141D21160 | File offset: 0x01D20760
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTComposite_Sequence, 1783907704u); reached from UBTComposite_Sequence::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UBTComposite_Sequence::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTComposite_Sequence();
+// Original dynamic initializer: RVA 0x001BB9C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTComposite_Sequence(Z_Construct_UClass_UBTComposite_Sequence, &UBTComposite_Sequence::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTComposite_Sequence"), false, nullptr, nullptr, nullptr);

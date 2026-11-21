@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortPlayerControllerManor, 490954573u)
+// Original dynamic initializer: RVA 0x0010B8C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPlayerControllerManor> AutoInitializeAFortPlayerControllerManor(TEXT("AFortPlayerControllerManor"), sizeof(AFortPlayerControllerManor), 490954573u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010766A0 (end 0x01076742)
 // Original VA: 0x00000001410766A0 | File offset: 0x01075CA0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPlayerControllerManor, 490954573u); reached from AFortPlayerControllerManor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortPlayerControllerManor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPlayerControllerManor();
+// Original dynamic initializer: RVA 0x0010C320
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPlayerControllerManor(Z_Construct_UClass_AFortPlayerControllerManor, &AFortPlayerControllerManor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPlayerControllerManor"), false, nullptr, nullptr, nullptr);

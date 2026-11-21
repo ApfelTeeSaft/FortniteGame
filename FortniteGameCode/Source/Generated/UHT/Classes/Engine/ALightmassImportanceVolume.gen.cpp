@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ALightmassImportanceVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ALightmassImportanceVolume, 3192900482u)
+// Original dynamic initializer: RVA 0x00205CB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALightmassImportanceVolume> AutoInitializeALightmassImportanceVolume(TEXT("ALightmassImportanceVolume"), sizeof(ALightmassImportanceVolume), 3192900482u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02476C10 (end 0x02476CB2)
 // Original VA: 0x0000000142476C10 | File offset: 0x02476210
 // Recovery: confirmed (IMPLEMENT_CLASS(ALightmassImportanceVolume, 3192900482u); reached from ALightmassImportanceVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ALightmassImportanceVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALightmassImportanceVolume();
+// Original dynamic initializer: RVA 0x002067C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALightmassImportanceVolume(Z_Construct_UClass_ALightmassImportanceVolume, &ALightmassImportanceVolume::StaticClass, TEXT("/Script/Engine"), TEXT("ALightmassImportanceVolume"), false, nullptr, nullptr, nullptr);

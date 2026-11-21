@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortBTTask_BotMissionInteract()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTTask_BotMissionInteract, 3855520260u)
+// Original dynamic initializer: RVA 0x000E9290 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTTask_BotMissionInteract> AutoInitializeUFortBTTask_BotMissionInteract(TEXT("UFortBTTask_BotMissionInteract"), sizeof(UFortBTTask_BotMissionInteract), 3855520260u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAB760 (end 0x00FAB802)
 // Original VA: 0x0000000140FAB760 | File offset: 0x00FAAD60
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTTask_BotMissionInteract, 3855520260u); reached from UFortBTTask_BotMissionInteract::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortBTTask_BotMissionInteract::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTTask_BotMissionInteract();
+// Original dynamic initializer: RVA 0x000EA200
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTTask_BotMissionInteract(Z_Construct_UClass_UFortBTTask_BotMissionInteract, &UFortBTTask_BotMissionInteract::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTTask_BotMissionInteract"), false, nullptr, nullptr, nullptr);

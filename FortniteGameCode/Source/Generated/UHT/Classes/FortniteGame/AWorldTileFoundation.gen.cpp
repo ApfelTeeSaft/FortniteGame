@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AWorldTileFoundation()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AWorldTileFoundation, 1284187239u)
+// Original dynamic initializer: RVA 0x00122490 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AWorldTileFoundation> AutoInitializeAWorldTileFoundation(TEXT("AWorldTileFoundation"), sizeof(AWorldTileFoundation), 1284187239u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EFF50 (end 0x010EFFF2)
 // Original VA: 0x00000001410EFF50 | File offset: 0x010EF550
 // Recovery: confirmed (IMPLEMENT_CLASS(AWorldTileFoundation, 1284187239u); reached from AWorldTileFoundation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AWorldTileFoundation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AWorldTileFoundation();
+// Original dynamic initializer: RVA 0x001236E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AWorldTileFoundation(Z_Construct_UClass_AWorldTileFoundation, &AWorldTileFoundation::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AWorldTileFoundation"), false, nullptr, nullptr, nullptr);

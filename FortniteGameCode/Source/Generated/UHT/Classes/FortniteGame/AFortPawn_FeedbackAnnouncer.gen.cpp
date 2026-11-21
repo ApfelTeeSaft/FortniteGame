@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortPawn_FeedbackAnnouncer()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortPawn_FeedbackAnnouncer, 2868746499u)
+// Original dynamic initializer: RVA 0x00108C80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPawn_FeedbackAnnouncer> AutoInitializeAFortPawn_FeedbackAnnouncer(TEXT("AFortPawn_FeedbackAnnouncer"), sizeof(AFortPawn_FeedbackAnnouncer), 2868746499u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01063A30 (end 0x01063AD2)
 // Original VA: 0x0000000141063A30 | File offset: 0x01063030
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPawn_FeedbackAnnouncer, 2868746499u); reached from AFortPawn_FeedbackAnnouncer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortPawn_FeedbackAnnouncer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPawn_FeedbackAnnouncer();
+// Original dynamic initializer: RVA 0x00109F00
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPawn_FeedbackAnnouncer(Z_Construct_UClass_AFortPawn_FeedbackAnnouncer, &AFortPawn_FeedbackAnnouncer::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPawn_FeedbackAnnouncer"), false, nullptr, nullptr, nullptr);

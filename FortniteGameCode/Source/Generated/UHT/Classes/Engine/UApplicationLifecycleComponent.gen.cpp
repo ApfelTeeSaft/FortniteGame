@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UApplicationLifecycleComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UApplicationLifecycleComponent, 2039827927u)
+// Original dynamic initializer: RVA 0x001EFA80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UApplicationLifecycleComponent> AutoInitializeUApplicationLifecycleComponent(TEXT("UApplicationLifecycleComponent"), sizeof(UApplicationLifecycleComponent), 2039827927u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D4C60 (end 0x023D4D02)
 // Original VA: 0x00000001423D4C60 | File offset: 0x023D4260
 // Recovery: confirmed (IMPLEMENT_CLASS(UApplicationLifecycleComponent, 2039827927u); reached from UApplicationLifecycleComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UApplicationLifecycleComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UApplicationLifecycleComponent();
+// Original dynamic initializer: RVA 0x001F1930
+static FCompiledInDefer Z_CompiledInDefer_UClass_UApplicationLifecycleComponent(Z_Construct_UClass_UApplicationLifecycleComponent, &UApplicationLifecycleComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UApplicationLifecycleComponent"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UInAppPurchaseQueryCallbackProxy, 2139150199u)
+// Original dynamic initializer: RVA 0x00099400 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInAppPurchaseQueryCallbackProxy> AutoInitializeUInAppPurchaseQueryCallbackProxy(TEXT("UInAppPurchaseQueryCallbackProxy"), sizeof(UInAppPurchaseQueryCallbackProxy), 2139150199u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032CF30 (end 0x0032CFC7)
 // Original VA: 0x000000014032CF30 | File offset: 0x0032C530
 // Recovery: confirmed (IMPLEMENT_CLASS(UInAppPurchaseQueryCallbackProxy, 2139150199u); reached from UInAppPurchaseQueryCallbackProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UInAppPurchaseQueryCallbackProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy();
+// Original dynamic initializer: RVA 0x0009A020
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInAppPurchaseQueryCallbackProxy(Z_Construct_UClass_UInAppPurchaseQueryCallbackProxy, &UInAppPurchaseQueryCallbackProxy::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UInAppPurchaseQueryCallbackProxy"), false, nullptr, nullptr, nullptr);

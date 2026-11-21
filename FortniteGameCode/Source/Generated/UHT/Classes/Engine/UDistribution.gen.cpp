@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UDistribution()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDistribution, 1754782155u)
+// Original dynamic initializer: RVA 0x001F85E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDistribution> AutoInitializeUDistribution(TEXT("UDistribution"), sizeof(UDistribution), 1754782155u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FCF60 (end 0x023FCFF7)
 // Original VA: 0x00000001423FCF60 | File offset: 0x023FC560
 // Recovery: confirmed (IMPLEMENT_CLASS(UDistribution, 1754782155u); reached from UDistribution::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UDistribution::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDistribution();
+// Original dynamic initializer: RVA 0x001F9B80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDistribution(Z_Construct_UClass_UDistribution, &UDistribution::StaticClass, TEXT("/Script/Engine"), TEXT("UDistribution"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAbilityTask_VisualizeTargeting, 872703648u)
+// Original dynamic initializer: RVA 0x0009D540 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_VisualizeTargeting> AutoInitializeUAbilityTask_VisualizeTargeting(TEXT("UAbilityTask_VisualizeTargeting"), sizeof(UAbilityTask_VisualizeTargeting), 872703648u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00545F30 (end 0x00545FD2)
 // Original VA: 0x0000000140545F30 | File offset: 0x00545530
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_VisualizeTargeting, 872703648u); reached from UAbilityTask_VisualizeTargeting::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAbilityTask_VisualizeTargeting::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_VisualizeTargeting();
+// Original dynamic initializer: RVA 0x0009DBF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_VisualizeTargeting(Z_Construct_UClass_UAbilityTask_VisualizeTargeting, &UAbilityTask_VisualizeTargeting::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_VisualizeTargeting"), false, nullptr, nullptr, nullptr);

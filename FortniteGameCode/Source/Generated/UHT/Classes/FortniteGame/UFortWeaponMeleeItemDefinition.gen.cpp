@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortWeaponMeleeItemDefinition()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortWeaponMeleeItemDefinition, 4292437153u)
+// Original dynamic initializer: RVA 0x0011D3A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortWeaponMeleeItemDefinition> AutoInitializeUFortWeaponMeleeItemDefinition(TEXT("UFortWeaponMeleeItemDefinition"), sizeof(UFortWeaponMeleeItemDefinition), 4292437153u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D82A0 (end 0x010D8342)
 // Original VA: 0x00000001410D82A0 | File offset: 0x010D78A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortWeaponMeleeItemDefinition, 4292437153u); reached from UFortWeaponMeleeItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortWeaponMeleeItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortWeaponMeleeItemDefinition();
+// Original dynamic initializer: RVA 0x0011D830
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortWeaponMeleeItemDefinition(Z_Construct_UClass_UFortWeaponMeleeItemDefinition, &UFortWeaponMeleeItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortWeaponMeleeItemDefinition"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBreakpoint()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBreakpoint, 1767428434u)
+// Original dynamic initializer: RVA 0x001F4C50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBreakpoint> AutoInitializeUBreakpoint(TEXT("UBreakpoint"), sizeof(UBreakpoint), 1767428434u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E8EC0 (end 0x023E8F57)
 // Original VA: 0x00000001423E8EC0 | File offset: 0x023E84C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBreakpoint, 1767428434u); reached from UBreakpoint::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBreakpoint::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBreakpoint();
+// Original dynamic initializer: RVA 0x001F6150
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBreakpoint(Z_Construct_UClass_UBreakpoint, &UBreakpoint::StaticClass, TEXT("/Script/Engine"), TEXT("UBreakpoint"), false, nullptr, nullptr, nullptr);

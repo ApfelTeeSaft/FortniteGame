@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UWheeledVehicleMovementComponent4W()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UWheeledVehicleMovementComponent4W, 1852402520u)
+// Original dynamic initializer: RVA 0x000ACAB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWheeledVehicleMovementComponent4W> AutoInitializeUWheeledVehicleMovementComponent4W(TEXT("UWheeledVehicleMovementComponent4W"), sizeof(UWheeledVehicleMovementComponent4W), 1852402520u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0067AC80 (end 0x0067AD22)
 // Original VA: 0x000000014067AC80 | File offset: 0x0067A280
 // Recovery: confirmed (IMPLEMENT_CLASS(UWheeledVehicleMovementComponent4W, 1852402520u); reached from UWheeledVehicleMovementComponent4W::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UWheeledVehicleMovementComponent4W::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWheeledVehicleMovementComponent4W();
+// Original dynamic initializer: RVA 0x000AD400
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWheeledVehicleMovementComponent4W(Z_Construct_UClass_UWheeledVehicleMovementComponent4W, &UWheeledVehicleMovementComponent4W::StaticClass, TEXT("/Script/PhysXVehicles"), TEXT("UWheeledVehicleMovementComponent4W"), false, nullptr, nullptr, nullptr);

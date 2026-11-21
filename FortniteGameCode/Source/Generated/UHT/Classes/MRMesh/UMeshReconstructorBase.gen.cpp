@@ -7,6 +7,9 @@
 void UMeshReconstructorBase::StaticRegisterNativesUMeshReconstructorBase()
 {
 }
+// IMPLEMENT_CLASS(UMeshReconstructorBase, 2435645244u)
+// Original dynamic initializer: RVA 0x001C1E10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMeshReconstructorBase> AutoInitializeUMeshReconstructorBase(TEXT("UMeshReconstructorBase"), sizeof(UMeshReconstructorBase), 2435645244u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5EBB0 (end 0x01D5EC47)
 // Original VA: 0x0000000141D5EBB0 | File offset: 0x01D5E1B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMeshReconstructorBase, 2435645244u); reached from UMeshReconstructorBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UMeshReconstructorBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMeshReconstructorBase();
+// Original dynamic initializer: RVA 0x001C1F60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMeshReconstructorBase(Z_Construct_UClass_UMeshReconstructorBase, &UMeshReconstructorBase::StaticClass, TEXT("/Script/MRMesh"), TEXT("UMeshReconstructorBase"), false, nullptr, nullptr, nullptr);

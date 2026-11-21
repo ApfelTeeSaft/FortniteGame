@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAthenaConsumableEmoteItemDefinition()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaConsumableEmoteItemDefinition, 3300978406u)
+// Original dynamic initializer: RVA 0x000D7410 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaConsumableEmoteItemDefinition> AutoInitializeUAthenaConsumableEmoteItemDefinition(TEXT("UAthenaConsumableEmoteItemDefinition"), sizeof(UAthenaConsumableEmoteItemDefinition), 3300978406u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F57F70 (end 0x00F58012)
 // Original VA: 0x0000000140F57F70 | File offset: 0x00F57570
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaConsumableEmoteItemDefinition, 3300978406u); reached from UAthenaConsumableEmoteItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAthenaConsumableEmoteItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaConsumableEmoteItemDefinition();
+// Original dynamic initializer: RVA 0x000D8350
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaConsumableEmoteItemDefinition(Z_Construct_UClass_UAthenaConsumableEmoteItemDefinition, &UAthenaConsumableEmoteItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaConsumableEmoteItemDefinition"), false, nullptr, nullptr, nullptr);

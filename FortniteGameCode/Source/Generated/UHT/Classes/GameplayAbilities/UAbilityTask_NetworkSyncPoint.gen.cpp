@@ -7,6 +7,9 @@
 void UAbilityTask_NetworkSyncPoint::StaticRegisterNativesUAbilityTask_NetworkSyncPoint()
 {
 }
+// IMPLEMENT_CLASS(UAbilityTask_NetworkSyncPoint, 1999078126u)
+// Original dynamic initializer: RVA 0x0009D4A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_NetworkSyncPoint> AutoInitializeUAbilityTask_NetworkSyncPoint(TEXT("UAbilityTask_NetworkSyncPoint"), sizeof(UAbilityTask_NetworkSyncPoint), 1999078126u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00545BC0 (end 0x00545C62)
 // Original VA: 0x0000000140545BC0 | File offset: 0x005451C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_NetworkSyncPoint, 1999078126u); reached from UAbilityTask_NetworkSyncPoint::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAbilityTask_NetworkSyncPoint::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_NetworkSyncPoint();
+// Original dynamic initializer: RVA 0x0009DAB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_NetworkSyncPoint(Z_Construct_UClass_UAbilityTask_NetworkSyncPoint, &UAbilityTask_NetworkSyncPoint::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_NetworkSyncPoint"), false, nullptr, nullptr, nullptr);

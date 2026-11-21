@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_WebCreateEpicAccountAndLink, 1183234414u)
+// Original dynamic initializer: RVA 0x0023B8E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_WebCreateEpicAccountAndLink> AutoInitializeUFortAsyncAction_WebCreateEpicAccountAndLink(TEXT("UFortAsyncAction_WebCreateEpicAccountAndLink"), sizeof(UFortAsyncAction_WebCreateEpicAccountAndLink), 1183234414u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02885E70 (end 0x02885F12)
 // Original VA: 0x0000000142885E70 | File offset: 0x02885470
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_WebCreateEpicAccountAndLink, 1183234414u); reached from UFortAsyncAction_WebCreateEpicAccountAndLink::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_WebCreateEpicAccountAndLink::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_WebCreateEpicAccountAndLink();
+// Original dynamic initializer: RVA 0x0023DF20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_WebCreateEpicAccountAndLink(Z_Construct_UClass_UFortAsyncAction_WebCreateEpicAccountAndLink, &UFortAsyncAction_WebCreateEpicAccountAndLink::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAsyncAction_WebCreateEpicAccountAndLink"), false, nullptr, nullptr, nullptr);

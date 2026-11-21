@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortOutpostStorageItemPicker, 3857274452u)
+// Original dynamic initializer: RVA 0x00255B00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortOutpostStorageItemPicker> AutoInitializeUFortOutpostStorageItemPicker(TEXT("UFortOutpostStorageItemPicker"), sizeof(UFortOutpostStorageItemPicker), 3857274452u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E4CF0 (end 0x028E4D92)
 // Original VA: 0x00000001428E4CF0 | File offset: 0x028E42F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortOutpostStorageItemPicker, 3857274452u); reached from UFortOutpostStorageItemPicker::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortOutpostStorageItemPicker::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortOutpostStorageItemPicker();
+// Original dynamic initializer: RVA 0x00257D40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortOutpostStorageItemPicker(Z_Construct_UClass_UFortOutpostStorageItemPicker, &UFortOutpostStorageItemPicker::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortOutpostStorageItemPicker"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCommonUILibrary, 4155989360u)
+// Original dynamic initializer: RVA 0x00096B30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonUILibrary> AutoInitializeUCommonUILibrary(TEXT("UCommonUILibrary"), sizeof(UCommonUILibrary), 4155989360u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CFAD0 (end 0x002CFB72)
 // Original VA: 0x00000001402CFAD0 | File offset: 0x002CF0D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonUILibrary, 4155989360u); reached from UCommonUILibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCommonUILibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonUILibrary();
+// Original dynamic initializer: RVA 0x00097060
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonUILibrary(Z_Construct_UClass_UCommonUILibrary, &UCommonUILibrary::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonUILibrary"), false, nullptr, nullptr, nullptr);

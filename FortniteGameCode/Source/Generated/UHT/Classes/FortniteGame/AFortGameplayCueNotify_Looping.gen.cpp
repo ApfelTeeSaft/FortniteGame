@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortGameplayCueNotify_Looping, 1398309923u)
+// Original dynamic initializer: RVA 0x000F6560 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortGameplayCueNotify_Looping> AutoInitializeAFortGameplayCueNotify_Looping(TEXT("AFortGameplayCueNotify_Looping"), sizeof(AFortGameplayCueNotify_Looping), 1398309923u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE5CB0 (end 0x00FE5D52)
 // Original VA: 0x0000000140FE5CB0 | File offset: 0x00FE52B0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortGameplayCueNotify_Looping, 1398309923u); reached from AFortGameplayCueNotify_Looping::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortGameplayCueNotify_Looping::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortGameplayCueNotify_Looping();
+// Original dynamic initializer: RVA 0x000F70B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortGameplayCueNotify_Looping(Z_Construct_UClass_AFortGameplayCueNotify_Looping, &AFortGameplayCueNotify_Looping::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortGameplayCueNotify_Looping"), false, nullptr, nullptr, nullptr);

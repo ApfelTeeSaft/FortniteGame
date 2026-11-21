@@ -7,6 +7,9 @@
 void UFortMiniMapComponent::StaticRegisterNativesUFortMiniMapComponent()
 {
 }
+// IMPLEMENT_CLASS(UFortMiniMapComponent, 3832814101u)
+// Original dynamic initializer: RVA 0x00101070 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMiniMapComponent> AutoInitializeUFortMiniMapComponent(TEXT("UFortMiniMapComponent"), sizeof(UFortMiniMapComponent), 3832814101u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01036450 (end 0x010364F2)
 // Original VA: 0x0000000141036450 | File offset: 0x01035A50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMiniMapComponent, 3832814101u); reached from UFortMiniMapComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortMiniMapComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMiniMapComponent();
+// Original dynamic initializer: RVA 0x00102B80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMiniMapComponent(Z_Construct_UClass_UFortMiniMapComponent, &UFortMiniMapComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMiniMapComponent"), false, nullptr, nullptr, nullptr);

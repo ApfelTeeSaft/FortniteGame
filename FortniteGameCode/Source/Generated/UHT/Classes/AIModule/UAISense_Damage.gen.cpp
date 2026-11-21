@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAISense_Damage, 3824299064u)
+// Original dynamic initializer: RVA 0x001B9130 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAISense_Damage> AutoInitializeUAISense_Damage(TEXT("UAISense_Damage"), sizeof(UAISense_Damage), 3824299064u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1A470 (end 0x01D1A512)
 // Original VA: 0x0000000141D1A470 | File offset: 0x01D19A70
 // Recovery: confirmed (IMPLEMENT_CLASS(UAISense_Damage, 3824299064u); reached from UAISense_Damage::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAISense_Damage::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAISense_Damage();
+// Original dynamic initializer: RVA 0x001BA2F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAISense_Damage(Z_Construct_UClass_UAISense_Damage, &UAISense_Damage::StaticClass, TEXT("/Script/AIModule"), TEXT("UAISense_Damage"), false, nullptr, nullptr, nullptr);

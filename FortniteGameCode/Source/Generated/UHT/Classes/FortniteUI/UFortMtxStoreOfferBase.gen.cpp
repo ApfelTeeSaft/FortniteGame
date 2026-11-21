@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortMtxStoreOfferBase, 432187438u)
+// Original dynamic initializer: RVA 0x00253A90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMtxStoreOfferBase> AutoInitializeUFortMtxStoreOfferBase(TEXT("UFortMtxStoreOfferBase"), sizeof(UFortMtxStoreOfferBase), 432187438u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DD1F0 (end 0x028DD292)
 // Original VA: 0x00000001428DD1F0 | File offset: 0x028DC7F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMtxStoreOfferBase, 432187438u); reached from UFortMtxStoreOfferBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortMtxStoreOfferBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMtxStoreOfferBase();
+// Original dynamic initializer: RVA 0x00255600
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMtxStoreOfferBase(Z_Construct_UClass_UFortMtxStoreOfferBase, &UFortMtxStoreOfferBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortMtxStoreOfferBase"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAccountStatProxyInstance()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAccountStatProxyInstance, 391759172u)
+// Original dynamic initializer: RVA 0x000DFF60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAccountStatProxyInstance> AutoInitializeUFortAccountStatProxyInstance(TEXT("UFortAccountStatProxyInstance"), sizeof(UFortAccountStatProxyInstance), 391759172u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F80ED0 (end 0x00F80F67)
 // Original VA: 0x0000000140F80ED0 | File offset: 0x00F804D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAccountStatProxyInstance, 391759172u); reached from UFortAccountStatProxyInstance::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAccountStatProxyInstance::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAccountStatProxyInstance();
+// Original dynamic initializer: RVA 0x000E0CA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAccountStatProxyInstance(Z_Construct_UClass_UFortAccountStatProxyInstance, &UFortAccountStatProxyInstance::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAccountStatProxyInstance"), false, nullptr, nullptr, nullptr);

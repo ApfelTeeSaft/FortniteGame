@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_UFortHomebaseNodeItem()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortHomebaseNodeItem, 1389432197u)
+// Original dynamic initializer: RVA 0x000FB000 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHomebaseNodeItem> AutoInitializeUFortHomebaseNodeItem(TEXT("UFortHomebaseNodeItem"), sizeof(UFortHomebaseNodeItem), 1389432197u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01003400 (end 0x010034A2)
 // Original VA: 0x0000000141003400 | File offset: 0x01002A00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHomebaseNodeItem, 1389432197u); reached from UFortHomebaseNodeItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* UFortHomebaseNodeItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHomebaseNodeItem();
+// Original dynamic initializer: RVA 0x000FBE30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHomebaseNodeItem(Z_Construct_UClass_UFortHomebaseNodeItem, &UFortHomebaseNodeItem::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortHomebaseNodeItem"), false, nullptr, nullptr, nullptr);

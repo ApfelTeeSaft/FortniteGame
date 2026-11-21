@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ATriggerSphere()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ATriggerSphere, 1664519960u)
+// Original dynamic initializer: RVA 0x0021FF60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ATriggerSphere> AutoInitializeATriggerSphere(TEXT("ATriggerSphere"), sizeof(ATriggerSphere), 1664519960u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EAF80 (end 0x024EB022)
 // Original VA: 0x00000001424EAF80 | File offset: 0x024EA580
 // Recovery: confirmed (IMPLEMENT_CLASS(ATriggerSphere, 1664519960u); reached from ATriggerSphere::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ATriggerSphere::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ATriggerSphere();
+// Original dynamic initializer: RVA 0x00221380
+static FCompiledInDefer Z_CompiledInDefer_UClass_ATriggerSphere(Z_Construct_UClass_ATriggerSphere, &ATriggerSphere::StaticClass, TEXT("/Script/Engine"), TEXT("ATriggerSphere"), false, nullptr, nullptr, nullptr);

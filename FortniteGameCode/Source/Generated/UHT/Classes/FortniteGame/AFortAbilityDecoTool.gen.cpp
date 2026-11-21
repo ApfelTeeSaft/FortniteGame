@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortAbilityDecoTool, 4227163455u)
+// Original dynamic initializer: RVA 0x000DE780 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortAbilityDecoTool> AutoInitializeAFortAbilityDecoTool(TEXT("AFortAbilityDecoTool"), sizeof(AFortAbilityDecoTool), 4227163455u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7B6F0 (end 0x00F7B792)
 // Original VA: 0x0000000140F7B6F0 | File offset: 0x00F7ACF0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortAbilityDecoTool, 4227163455u); reached from AFortAbilityDecoTool::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortAbilityDecoTool::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortAbilityDecoTool();
+// Original dynamic initializer: RVA 0x000DF8C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortAbilityDecoTool(Z_Construct_UClass_AFortAbilityDecoTool, &AFortAbilityDecoTool::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortAbilityDecoTool"), false, nullptr, nullptr, nullptr);

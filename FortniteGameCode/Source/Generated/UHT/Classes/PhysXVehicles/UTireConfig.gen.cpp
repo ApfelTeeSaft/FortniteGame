@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UTireConfig()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTireConfig, 260507486u)
+// Original dynamic initializer: RVA 0x000ACA50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTireConfig> AutoInitializeUTireConfig(TEXT("UTireConfig"), sizeof(UTireConfig), 260507486u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0067AA80 (end 0x0067AB22)
 // Original VA: 0x000000014067AA80 | File offset: 0x0067A080
 // Recovery: confirmed (IMPLEMENT_CLASS(UTireConfig, 260507486u); reached from UTireConfig::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UTireConfig::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTireConfig();
+// Original dynamic initializer: RVA 0x000AD340
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTireConfig(Z_Construct_UClass_UTireConfig, &UTireConfig::StaticClass, TEXT("/Script/PhysXVehicles"), TEXT("UTireConfig"), false, nullptr, nullptr, nullptr);

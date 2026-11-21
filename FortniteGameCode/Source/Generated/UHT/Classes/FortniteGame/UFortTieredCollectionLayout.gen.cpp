@@ -7,6 +7,9 @@
 void UFortTieredCollectionLayout::StaticRegisterNativesUFortTieredCollectionLayout()
 {
 }
+// IMPLEMENT_CLASS(UFortTieredCollectionLayout, 2312175541u)
+// Original dynamic initializer: RVA 0x00116520 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTieredCollectionLayout> AutoInitializeUFortTieredCollectionLayout(TEXT("UFortTieredCollectionLayout"), sizeof(UFortTieredCollectionLayout), 2312175541u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC420 (end 0x010BC4C2)
 // Original VA: 0x00000001410BC420 | File offset: 0x010BBA20
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTieredCollectionLayout, 2312175541u); reached from UFortTieredCollectionLayout::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortTieredCollectionLayout::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTieredCollectionLayout();
+// Original dynamic initializer: RVA 0x00117D20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTieredCollectionLayout(Z_Construct_UClass_UFortTieredCollectionLayout, &UFortTieredCollectionLayout::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTieredCollectionLayout"), false, nullptr, nullptr, nullptr);

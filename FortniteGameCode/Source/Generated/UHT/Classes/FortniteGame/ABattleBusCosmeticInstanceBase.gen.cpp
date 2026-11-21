@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ABattleBusCosmeticInstanceBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABattleBusCosmeticInstanceBase, 2704983612u)
+// Original dynamic initializer: RVA 0x000D86F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABattleBusCosmeticInstanceBase> AutoInitializeABattleBusCosmeticInstanceBase(TEXT("ABattleBusCosmeticInstanceBase"), sizeof(ABattleBusCosmeticInstanceBase), 2704983612u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5EBC0 (end 0x00F5EC62)
 // Original VA: 0x0000000140F5EBC0 | File offset: 0x00F5E1C0
 // Recovery: confirmed (IMPLEMENT_CLASS(ABattleBusCosmeticInstanceBase, 2704983612u); reached from ABattleBusCosmeticInstanceBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ABattleBusCosmeticInstanceBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABattleBusCosmeticInstanceBase();
+// Original dynamic initializer: RVA 0x000D9510
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABattleBusCosmeticInstanceBase(Z_Construct_UClass_ABattleBusCosmeticInstanceBase, &ABattleBusCosmeticInstanceBase::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABattleBusCosmeticInstanceBase"), false, nullptr, nullptr, nullptr);

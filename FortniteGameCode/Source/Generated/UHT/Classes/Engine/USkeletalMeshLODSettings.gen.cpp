@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USkeletalMeshLODSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USkeletalMeshLODSettings, 3525441031u)
+// Original dynamic initializer: RVA 0x0021A930 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USkeletalMeshLODSettings> AutoInitializeUSkeletalMeshLODSettings(TEXT("USkeletalMeshLODSettings"), sizeof(USkeletalMeshLODSettings), 3525441031u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D3410 (end 0x024D34B2)
 // Original VA: 0x00000001424D3410 | File offset: 0x024D2A10
 // Recovery: confirmed (IMPLEMENT_CLASS(USkeletalMeshLODSettings, 3525441031u); reached from USkeletalMeshLODSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USkeletalMeshLODSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USkeletalMeshLODSettings();
+// Original dynamic initializer: RVA 0x0021C170
+static FCompiledInDefer Z_CompiledInDefer_UClass_USkeletalMeshLODSettings(Z_Construct_UClass_USkeletalMeshLODSettings, &USkeletalMeshLODSettings::StaticClass, TEXT("/Script/Engine"), TEXT("USkeletalMeshLODSettings"), false, nullptr, nullptr, nullptr);

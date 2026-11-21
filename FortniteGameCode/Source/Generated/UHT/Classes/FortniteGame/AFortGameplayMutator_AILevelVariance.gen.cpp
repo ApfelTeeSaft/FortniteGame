@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortGameplayMutator_AILevelVariance()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortGameplayMutator_AILevelVariance, 518545424u)
+// Original dynamic initializer: RVA 0x000F76F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortGameplayMutator_AILevelVariance> AutoInitializeAFortGameplayMutator_AILevelVariance(TEXT("AFortGameplayMutator_AILevelVariance"), sizeof(AFortGameplayMutator_AILevelVariance), 518545424u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FED5D0 (end 0x00FED672)
 // Original VA: 0x0000000140FED5D0 | File offset: 0x00FECBD0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortGameplayMutator_AILevelVariance, 518545424u); reached from AFortGameplayMutator_AILevelVariance::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortGameplayMutator_AILevelVariance::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortGameplayMutator_AILevelVariance();
+// Original dynamic initializer: RVA 0x000F8550
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortGameplayMutator_AILevelVariance(Z_Construct_UClass_AFortGameplayMutator_AILevelVariance, &AFortGameplayMutator_AILevelVariance::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortGameplayMutator_AILevelVariance"), false, nullptr, nullptr, nullptr);

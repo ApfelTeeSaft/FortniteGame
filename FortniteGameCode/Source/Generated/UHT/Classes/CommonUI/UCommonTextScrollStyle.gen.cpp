@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UCommonTextScrollStyle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCommonTextScrollStyle, 2648317315u)
+// Original dynamic initializer: RVA 0x00096120 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonTextScrollStyle> AutoInitializeUCommonTextScrollStyle(TEXT("UCommonTextScrollStyle"), sizeof(UCommonTextScrollStyle), 2648317315u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C9A00 (end 0x002C9A97)
 // Original VA: 0x00000001402C9A00 | File offset: 0x002C9000
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonTextScrollStyle, 2648317315u); reached from UCommonTextScrollStyle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UCommonTextScrollStyle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonTextScrollStyle();
+// Original dynamic initializer: RVA 0x00096A10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonTextScrollStyle(Z_Construct_UClass_UCommonTextScrollStyle, &UCommonTextScrollStyle::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonTextScrollStyle"), false, nullptr, nullptr, nullptr);

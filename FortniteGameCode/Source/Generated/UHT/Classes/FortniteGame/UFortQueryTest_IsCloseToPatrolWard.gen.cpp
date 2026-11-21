@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryTest_IsCloseToPatrolWard()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryTest_IsCloseToPatrolWard, 1089356375u)
+// Original dynamic initializer: RVA 0x00110580 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryTest_IsCloseToPatrolWard> AutoInitializeUFortQueryTest_IsCloseToPatrolWard(TEXT("UFortQueryTest_IsCloseToPatrolWard"), sizeof(UFortQueryTest_IsCloseToPatrolWard), 1089356375u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01094ED0 (end 0x01094F72)
 // Original VA: 0x0000000141094ED0 | File offset: 0x010944D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryTest_IsCloseToPatrolWard, 1089356375u); reached from UFortQueryTest_IsCloseToPatrolWard::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryTest_IsCloseToPatrolWard::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryTest_IsCloseToPatrolWard();
+// Original dynamic initializer: RVA 0x00110F00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryTest_IsCloseToPatrolWard(Z_Construct_UClass_UFortQueryTest_IsCloseToPatrolWard, &UFortQueryTest_IsCloseToPatrolWard::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryTest_IsCloseToPatrolWard"), false, nullptr, nullptr, nullptr);

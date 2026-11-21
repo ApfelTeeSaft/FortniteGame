@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ULocalMessage()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULocalMessage, 1673924880u)
+// Original dynamic initializer: RVA 0x00205DB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULocalMessage> AutoInitializeULocalMessage(TEXT("ULocalMessage"), sizeof(ULocalMessage), 1673924880u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02477170 (end 0x02477207)
 // Original VA: 0x0000000142477170 | File offset: 0x02476770
 // Recovery: confirmed (IMPLEMENT_CLASS(ULocalMessage, 1673924880u); reached from ULocalMessage::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ULocalMessage::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULocalMessage();
+// Original dynamic initializer: RVA 0x002069C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULocalMessage(Z_Construct_UClass_ULocalMessage, &ULocalMessage::StaticClass, TEXT("/Script/Engine"), TEXT("ULocalMessage"), false, nullptr, nullptr, nullptr);

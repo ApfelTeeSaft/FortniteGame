@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UDistributionFloatUniformCurve()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDistributionFloatUniformCurve, 1441897472u)
+// Original dynamic initializer: RVA 0x001F9D80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDistributionFloatUniformCurve> AutoInitializeUDistributionFloatUniformCurve(TEXT("UDistributionFloatUniformCurve"), sizeof(UDistributionFloatUniformCurve), 1441897472u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02402ED0 (end 0x02402F72)
 // Original VA: 0x0000000142402ED0 | File offset: 0x024024D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UDistributionFloatUniformCurve, 1441897472u); reached from UDistributionFloatUniformCurve::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UDistributionFloatUniformCurve::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDistributionFloatUniformCurve();
+// Original dynamic initializer: RVA 0x001FB4B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDistributionFloatUniformCurve(Z_Construct_UClass_UDistributionFloatUniformCurve, &UDistributionFloatUniformCurve::StaticClass, TEXT("/Script/Engine"), TEXT("UDistributionFloatUniformCurve"), false, nullptr, nullptr, nullptr);

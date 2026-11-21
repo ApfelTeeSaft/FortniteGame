@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UARTrackedGeometry()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UARTrackedGeometry, 2350831795u)
+// Original dynamic initializer: RVA 0x00267C10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UARTrackedGeometry> AutoInitializeUARTrackedGeometry(TEXT("UARTrackedGeometry"), sizeof(UARTrackedGeometry), 2350831795u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02921520 (end 0x029215B7)
 // Original VA: 0x0000000142921520 | File offset: 0x02920B20
 // Recovery: confirmed (IMPLEMENT_CLASS(UARTrackedGeometry, 2350831795u); reached from UARTrackedGeometry::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UARTrackedGeometry::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UARTrackedGeometry();
+// Original dynamic initializer: RVA 0x00267E90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UARTrackedGeometry(Z_Construct_UClass_UARTrackedGeometry, &UARTrackedGeometry::StaticClass, TEXT("/Script/AugmentedReality"), TEXT("UARTrackedGeometry"), false, nullptr, nullptr, nullptr);

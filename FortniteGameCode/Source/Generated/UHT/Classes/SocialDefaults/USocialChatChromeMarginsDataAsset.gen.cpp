@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USocialChatChromeMarginsDataAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USocialChatChromeMarginsDataAsset, 1346850357u)
+// Original dynamic initializer: RVA 0x002254B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USocialChatChromeMarginsDataAsset> AutoInitializeUSocialChatChromeMarginsDataAsset(TEXT("USocialChatChromeMarginsDataAsset"), sizeof(USocialChatChromeMarginsDataAsset), 1346850357u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025A2020 (end 0x025A20C2)
 // Original VA: 0x00000001425A2020 | File offset: 0x025A1620
 // Recovery: confirmed (IMPLEMENT_CLASS(USocialChatChromeMarginsDataAsset, 1346850357u); reached from USocialChatChromeMarginsDataAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USocialChatChromeMarginsDataAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USocialChatChromeMarginsDataAsset();
+// Original dynamic initializer: RVA 0x00225760
+static FCompiledInDefer Z_CompiledInDefer_UClass_USocialChatChromeMarginsDataAsset(Z_Construct_UClass_USocialChatChromeMarginsDataAsset, &USocialChatChromeMarginsDataAsset::StaticClass, TEXT("/Script/SocialDefaults"), TEXT("USocialChatChromeMarginsDataAsset"), false, nullptr, nullptr, nullptr);

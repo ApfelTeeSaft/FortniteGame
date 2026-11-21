@@ -7,6 +7,9 @@
 void UFortBangWrapper_NUI::StaticRegisterNativesUFortBangWrapper_NUI()
 {
 }
+// IMPLEMENT_CLASS(UFortBangWrapper_NUI, 3111058323u)
+// Original dynamic initializer: RVA 0x0023E3A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBangWrapper_NUI> AutoInitializeUFortBangWrapper_NUI(TEXT("UFortBangWrapper_NUI"), sizeof(UFortBangWrapper_NUI), 3111058323u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288BDC0 (end 0x0288BE62)
 // Original VA: 0x000000014288BDC0 | File offset: 0x0288B3C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBangWrapper_NUI, 3111058323u); reached from UFortBangWrapper_NUI::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortBangWrapper_NUI::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBangWrapper_NUI();
+// Original dynamic initializer: RVA 0x00240060
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBangWrapper_NUI(Z_Construct_UClass_UFortBangWrapper_NUI, &UFortBangWrapper_NUI::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortBangWrapper_NUI"), false, nullptr, nullptr, nullptr);

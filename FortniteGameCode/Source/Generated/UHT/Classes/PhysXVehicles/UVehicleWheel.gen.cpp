@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UVehicleWheel, 2631352376u)
+// Original dynamic initializer: RVA 0x000ACA90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UVehicleWheel> AutoInitializeUVehicleWheel(TEXT("UVehicleWheel"), sizeof(UVehicleWheel), 2631352376u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0067ABE0 (end 0x0067AC77)
 // Original VA: 0x000000014067ABE0 | File offset: 0x0067A1E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UVehicleWheel, 2631352376u); reached from UVehicleWheel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UVehicleWheel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UVehicleWheel();
+// Original dynamic initializer: RVA 0x000AD3C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UVehicleWheel(Z_Construct_UClass_UVehicleWheel, &UVehicleWheel::StaticClass, TEXT("/Script/PhysXVehicles"), TEXT("UVehicleWheel"), false, nullptr, nullptr, nullptr);

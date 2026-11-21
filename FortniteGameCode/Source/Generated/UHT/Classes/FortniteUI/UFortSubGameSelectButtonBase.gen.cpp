@@ -7,6 +7,9 @@
 void UFortSubGameSelectButtonBase::StaticRegisterNativesUFortSubGameSelectButtonBase()
 {
 }
+// IMPLEMENT_CLASS(UFortSubGameSelectButtonBase, 1230238132u)
+// Original dynamic initializer: RVA 0x0025E370 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSubGameSelectButtonBase> AutoInitializeUFortSubGameSelectButtonBase(TEXT("UFortSubGameSelectButtonBase"), sizeof(UFortSubGameSelectButtonBase), 1230238132u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02902CF0 (end 0x02902D92)
 // Original VA: 0x0000000142902CF0 | File offset: 0x029022F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSubGameSelectButtonBase, 1230238132u); reached from UFortSubGameSelectButtonBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSubGameSelectButtonBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSubGameSelectButtonBase();
+// Original dynamic initializer: RVA 0x00260490
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSubGameSelectButtonBase(Z_Construct_UClass_UFortSubGameSelectButtonBase, &UFortSubGameSelectButtonBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSubGameSelectButtonBase"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void USizeBox::StaticRegisterNativesUSizeBox()
 {
 }
+// IMPLEMENT_CLASS(USizeBox, 3990908133u)
+// Original dynamic initializer: RVA 0x001B3690 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USizeBox> AutoInitializeUSizeBox(TEXT("USizeBox"), sizeof(USizeBox), 3990908133u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF1DC0 (end 0x01BF1E62)
 // Original VA: 0x0000000141BF1DC0 | File offset: 0x01BF13C0
 // Recovery: confirmed (IMPLEMENT_CLASS(USizeBox, 3990908133u); reached from USizeBox::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* USizeBox::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USizeBox();
+// Original dynamic initializer: RVA 0x001B3E90
+static FCompiledInDefer Z_CompiledInDefer_UClass_USizeBox(Z_Construct_UClass_USizeBox, &USizeBox::StaticClass, TEXT("/Script/UMG"), TEXT("USizeBox"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UWidgetComponent::StaticRegisterNativesUWidgetComponent()
 {
 }
+// IMPLEMENT_CLASS(UWidgetComponent, 2179871610u)
+// Original dynamic initializer: RVA 0x001B4D40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWidgetComponent> AutoInitializeUWidgetComponent(TEXT("UWidgetComponent"), sizeof(UWidgetComponent), 2179871610u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C005C0 (end 0x01C00662)
 // Original VA: 0x0000000141C005C0 | File offset: 0x01BFFBC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UWidgetComponent, 2179871610u); reached from UWidgetComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UWidgetComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWidgetComponent();
+// Original dynamic initializer: RVA 0x001B5320
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWidgetComponent(Z_Construct_UClass_UWidgetComponent, &UWidgetComponent::StaticClass, TEXT("/Script/UMG"), TEXT("UWidgetComponent"), false, nullptr, nullptr, nullptr);

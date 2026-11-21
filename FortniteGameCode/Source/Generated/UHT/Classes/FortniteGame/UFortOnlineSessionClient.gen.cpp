@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortOnlineSessionClient()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortOnlineSessionClient, 1411046887u)
+// Original dynamic initializer: RVA 0x00105B70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortOnlineSessionClient> AutoInitializeUFortOnlineSessionClient(TEXT("UFortOnlineSessionClient"), sizeof(UFortOnlineSessionClient), 1411046887u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104F560 (end 0x0104F602)
 // Original VA: 0x000000014104F560 | File offset: 0x0104EB60
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortOnlineSessionClient, 1411046887u); reached from UFortOnlineSessionClient::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortOnlineSessionClient::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortOnlineSessionClient();
+// Original dynamic initializer: RVA 0x001071B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortOnlineSessionClient(Z_Construct_UClass_UFortOnlineSessionClient, &UFortOnlineSessionClient::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortOnlineSessionClient"), false, nullptr, nullptr, nullptr);

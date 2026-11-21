@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AWaterVolume_Athena()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AWaterVolume_Athena, 1235205028u)
+// Original dynamic initializer: RVA 0x001223F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AWaterVolume_Athena> AutoInitializeAWaterVolume_Athena(TEXT("AWaterVolume_Athena"), sizeof(AWaterVolume_Athena), 1235205028u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EFBE0 (end 0x010EFC82)
 // Original VA: 0x00000001410EFBE0 | File offset: 0x010EF1E0
 // Recovery: confirmed (IMPLEMENT_CLASS(AWaterVolume_Athena, 1235205028u); reached from AWaterVolume_Athena::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AWaterVolume_Athena::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AWaterVolume_Athena();
+// Original dynamic initializer: RVA 0x001235A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AWaterVolume_Athena(Z_Construct_UClass_AWaterVolume_Athena, &AWaterVolume_Athena::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AWaterVolume_Athena"), false, nullptr, nullptr, nullptr);

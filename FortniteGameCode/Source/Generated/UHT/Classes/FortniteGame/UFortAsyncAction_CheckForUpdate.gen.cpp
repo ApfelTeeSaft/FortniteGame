@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_CheckForUpdate, 4063822037u)
+// Original dynamic initializer: RVA 0x0011BF90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_CheckForUpdate> AutoInitializeUFortAsyncAction_CheckForUpdate(TEXT("UFortAsyncAction_CheckForUpdate"), sizeof(UFortAsyncAction_CheckForUpdate), 4063822037u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D2E90 (end 0x010D2F32)
 // Original VA: 0x00000001410D2E90 | File offset: 0x010D2490
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_CheckForUpdate, 4063822037u); reached from UFortAsyncAction_CheckForUpdate::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_CheckForUpdate::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_CheckForUpdate();
+// Original dynamic initializer: RVA 0x0011D060
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_CheckForUpdate(Z_Construct_UClass_UFortAsyncAction_CheckForUpdate, &UFortAsyncAction_CheckForUpdate::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAsyncAction_CheckForUpdate"), false, nullptr, nullptr, nullptr);

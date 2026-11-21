@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBlackboardKeyType_Object()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBlackboardKeyType_Object, 1890034052u)
+// Original dynamic initializer: RVA 0x001BA8F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBlackboardKeyType_Object> AutoInitializeUBlackboardKeyType_Object(TEXT("UBlackboardKeyType_Object"), sizeof(UBlackboardKeyType_Object), 1890034052u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D21EE0 (end 0x01D21F82)
 // Original VA: 0x0000000141D21EE0 | File offset: 0x01D214E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBlackboardKeyType_Object, 1890034052u); reached from UBlackboardKeyType_Object::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBlackboardKeyType_Object::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBlackboardKeyType_Object();
+// Original dynamic initializer: RVA 0x001BBEC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBlackboardKeyType_Object(Z_Construct_UClass_UBlackboardKeyType_Object, &UBlackboardKeyType_Object::StaticClass, TEXT("/Script/AIModule"), TEXT("UBlackboardKeyType_Object"), false, nullptr, nullptr, nullptr);

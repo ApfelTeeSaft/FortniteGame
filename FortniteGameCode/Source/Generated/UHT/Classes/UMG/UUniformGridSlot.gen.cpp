@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UUniformGridSlot, 2996654628u)
+// Original dynamic initializer: RVA 0x001B4230 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UUniformGridSlot> AutoInitializeUUniformGridSlot(TEXT("UUniformGridSlot"), sizeof(UUniformGridSlot), 2996654628u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF7C70 (end 0x01BF7D12)
 // Original VA: 0x0000000141BF7C70 | File offset: 0x01BF7270
 // Recovery: confirmed (IMPLEMENT_CLASS(UUniformGridSlot, 2996654628u); reached from UUniformGridSlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UUniformGridSlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UUniformGridSlot();
+// Original dynamic initializer: RVA 0x001B4AC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UUniformGridSlot(Z_Construct_UClass_UUniformGridSlot, &UUniformGridSlot::StaticClass, TEXT("/Script/UMG"), TEXT("UUniformGridSlot"), false, nullptr, nullptr, nullptr);

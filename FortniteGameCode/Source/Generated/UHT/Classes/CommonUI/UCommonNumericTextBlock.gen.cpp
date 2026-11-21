@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCommonNumericTextBlock, 379771123u)
+// Original dynamic initializer: RVA 0x00096040 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonNumericTextBlock> AutoInitializeUCommonNumericTextBlock(TEXT("UCommonNumericTextBlock"), sizeof(UCommonNumericTextBlock), 379771123u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C9530 (end 0x002C95D2)
 // Original VA: 0x00000001402C9530 | File offset: 0x002C8B30
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonNumericTextBlock, 379771123u); reached from UCommonNumericTextBlock::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCommonNumericTextBlock::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonNumericTextBlock();
+// Original dynamic initializer: RVA 0x00096850
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonNumericTextBlock(Z_Construct_UClass_UCommonNumericTextBlock, &UCommonNumericTextBlock::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonNumericTextBlock"), false, nullptr, nullptr, nullptr);

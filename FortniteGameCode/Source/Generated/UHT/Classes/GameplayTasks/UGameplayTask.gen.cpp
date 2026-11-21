@@ -7,6 +7,9 @@
 void UGameplayTask::StaticRegisterNativesUGameplayTask()
 {
 }
+// IMPLEMENT_CLASS(UGameplayTask, 2821753190u)
+// Original dynamic initializer: RVA 0x001B7E30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayTask> AutoInitializeUGameplayTask(TEXT("UGameplayTask"), sizeof(UGameplayTask), 2821753190u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9A3B0 (end 0x01C9A447)
 // Original VA: 0x0000000141C9A3B0 | File offset: 0x01C999B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayTask, 2821753190u); reached from UGameplayTask::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UGameplayTask::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayTask();
+// Original dynamic initializer: RVA 0x001B80D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayTask(Z_Construct_UClass_UGameplayTask, &UGameplayTask::StaticClass, TEXT("/Script/GameplayTasks"), TEXT("UGameplayTask"), false, nullptr, nullptr, nullptr);

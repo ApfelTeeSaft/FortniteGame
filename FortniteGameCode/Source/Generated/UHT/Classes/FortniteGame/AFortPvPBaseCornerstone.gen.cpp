@@ -7,6 +7,9 @@
 void AFortPvPBaseCornerstone::StaticRegisterNativesAFortPvPBaseCornerstone()
 {
 }
+// IMPLEMENT_CLASS(AFortPvPBaseCornerstone, 832562157u)
+// Original dynamic initializer: RVA 0x0010D570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPvPBaseCornerstone> AutoInitializeAFortPvPBaseCornerstone(TEXT("AFortPvPBaseCornerstone"), sizeof(AFortPvPBaseCornerstone), 832562157u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01089CA0 (end 0x01089D42)
 // Original VA: 0x0000000141089CA0 | File offset: 0x010892A0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPvPBaseCornerstone, 832562157u); reached from AFortPvPBaseCornerstone::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortPvPBaseCornerstone::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPvPBaseCornerstone();
+// Original dynamic initializer: RVA 0x0010E4D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPvPBaseCornerstone(Z_Construct_UClass_AFortPvPBaseCornerstone, &AFortPvPBaseCornerstone::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPvPBaseCornerstone"), false, nullptr, nullptr, nullptr);

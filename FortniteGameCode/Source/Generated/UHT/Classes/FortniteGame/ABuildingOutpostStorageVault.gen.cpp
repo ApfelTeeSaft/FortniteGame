@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ABuildingOutpostStorageVault()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingOutpostStorageVault, 690046998u)
+// Original dynamic initializer: RVA 0x000DAF50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingOutpostStorageVault> AutoInitializeABuildingOutpostStorageVault(TEXT("ABuildingOutpostStorageVault"), sizeof(ABuildingOutpostStorageVault), 690046998u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6AA60 (end 0x00F6AB02)
 // Original VA: 0x0000000140F6AA60 | File offset: 0x00F6A060
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingOutpostStorageVault, 690046998u); reached from ABuildingOutpostStorageVault::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ABuildingOutpostStorageVault::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingOutpostStorageVault();
+// Original dynamic initializer: RVA 0x000DBB80
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingOutpostStorageVault(Z_Construct_UClass_ABuildingOutpostStorageVault, &ABuildingOutpostStorageVault::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingOutpostStorageVault"), false, nullptr, nullptr, nullptr);

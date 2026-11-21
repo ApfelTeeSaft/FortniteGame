@@ -7,6 +7,9 @@
 void UFortDisplayNameWidget::StaticRegisterNativesUFortDisplayNameWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortDisplayNameWidget, 2173051810u)
+// Original dynamic initializer: RVA 0x002449C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDisplayNameWidget> AutoInitializeUFortDisplayNameWidget(TEXT("UFortDisplayNameWidget"), sizeof(UFortDisplayNameWidget), 2173051810u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A1A10 (end 0x028A1AB2)
 // Original VA: 0x00000001428A1A10 | File offset: 0x028A1010
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDisplayNameWidget, 2173051810u); reached from UFortDisplayNameWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortDisplayNameWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDisplayNameWidget();
+// Original dynamic initializer: RVA 0x00245610
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDisplayNameWidget(Z_Construct_UClass_UFortDisplayNameWidget, &UFortDisplayNameWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortDisplayNameWidget"), false, nullptr, nullptr, nullptr);

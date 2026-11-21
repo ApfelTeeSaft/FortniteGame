@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UNavLocalGridManager, 3917790789u)
+// Original dynamic initializer: RVA 0x001BF400 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavLocalGridManager> AutoInitializeUNavLocalGridManager(TEXT("UNavLocalGridManager"), sizeof(UNavLocalGridManager), 3917790789u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31230 (end 0x01D312C7)
 // Original VA: 0x0000000141D31230 | File offset: 0x01D30830
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavLocalGridManager, 3917790789u); reached from UNavLocalGridManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UNavLocalGridManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavLocalGridManager();
+// Original dynamic initializer: RVA 0x001BFAB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavLocalGridManager(Z_Construct_UClass_UNavLocalGridManager, &UNavLocalGridManager::StaticClass, TEXT("/Script/AIModule"), TEXT("UNavLocalGridManager"), false, nullptr, nullptr, nullptr);

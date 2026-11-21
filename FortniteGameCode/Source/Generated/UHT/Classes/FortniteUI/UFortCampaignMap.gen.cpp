@@ -7,6 +7,9 @@
 void UFortCampaignMap::StaticRegisterNativesUFortCampaignMap()
 {
 }
+// IMPLEMENT_CLASS(UFortCampaignMap, 3829562103u)
+// Original dynamic initializer: RVA 0x00240300 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCampaignMap> AutoInitializeUFortCampaignMap(TEXT("UFortCampaignMap"), sizeof(UFortCampaignMap), 3829562103u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02892C10 (end 0x02892CB2)
 // Original VA: 0x0000000142892C10 | File offset: 0x02892210
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCampaignMap, 3829562103u); reached from UFortCampaignMap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortCampaignMap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCampaignMap();
+// Original dynamic initializer: RVA 0x00241F50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCampaignMap(Z_Construct_UClass_UFortCampaignMap, &UFortCampaignMap::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCampaignMap"), false, nullptr, nullptr, nullptr);

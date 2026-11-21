@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortMaterialProgressBarStyle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortMaterialProgressBarStyle, 2815353871u)
+// Original dynamic initializer: RVA 0x002514D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMaterialProgressBarStyle> AutoInitializeUFortMaterialProgressBarStyle(TEXT("UFortMaterialProgressBarStyle"), sizeof(UFortMaterialProgressBarStyle), 2815353871u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D5CB0 (end 0x028D5D47)
 // Original VA: 0x00000001428D5CB0 | File offset: 0x028D52B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMaterialProgressBarStyle, 2815353871u); reached from UFortMaterialProgressBarStyle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortMaterialProgressBarStyle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMaterialProgressBarStyle();
+// Original dynamic initializer: RVA 0x002535B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMaterialProgressBarStyle(Z_Construct_UClass_UFortMaterialProgressBarStyle, &UFortMaterialProgressBarStyle::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortMaterialProgressBarStyle"), false, nullptr, nullptr, nullptr);

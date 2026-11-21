@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortHUDObjectiveSizeInterface, 649444425u)
+// Original dynamic initializer: RVA 0x002482C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHUDObjectiveSizeInterface> AutoInitializeUFortHUDObjectiveSizeInterface(TEXT("UFortHUDObjectiveSizeInterface"), sizeof(UFortHUDObjectiveSizeInterface), 649444425u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BB160 (end 0x028BB202)
 // Original VA: 0x00000001428BB160 | File offset: 0x028BA760
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHUDObjectiveSizeInterface, 649444425u); reached from UFortHUDObjectiveSizeInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortHUDObjectiveSizeInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHUDObjectiveSizeInterface();
+// Original dynamic initializer: RVA 0x00249D90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHUDObjectiveSizeInterface(Z_Construct_UClass_UFortHUDObjectiveSizeInterface, &UFortHUDObjectiveSizeInterface::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortHUDObjectiveSizeInterface"), false, nullptr, nullptr, nullptr);

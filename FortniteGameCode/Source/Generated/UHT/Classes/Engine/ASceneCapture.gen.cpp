@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ASceneCapture()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ASceneCapture, 1880158707u)
+// Original dynamic initializer: RVA 0x00219730 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ASceneCapture> AutoInitializeASceneCapture(TEXT("ASceneCapture"), sizeof(ASceneCapture), 1880158707u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C5FF0 (end 0x024C6092)
 // Original VA: 0x00000001424C5FF0 | File offset: 0x024C55F0
 // Recovery: confirmed (IMPLEMENT_CLASS(ASceneCapture, 1880158707u); reached from ASceneCapture::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ASceneCapture::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ASceneCapture();
+// Original dynamic initializer: RVA 0x00219C70
+static FCompiledInDefer Z_CompiledInDefer_UClass_ASceneCapture(Z_Construct_UClass_ASceneCapture, &ASceneCapture::StaticClass, TEXT("/Script/Engine"), TEXT("ASceneCapture"), false, nullptr, nullptr, nullptr);

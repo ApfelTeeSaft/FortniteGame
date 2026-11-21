@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ULeaderboardBlueprintLibrary, 2731958565u)
+// Original dynamic initializer: RVA 0x000994A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULeaderboardBlueprintLibrary> AutoInitializeULeaderboardBlueprintLibrary(TEXT("ULeaderboardBlueprintLibrary"), sizeof(ULeaderboardBlueprintLibrary), 2731958565u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032D280 (end 0x0032D322)
 // Original VA: 0x000000014032D280 | File offset: 0x0032C880
 // Recovery: confirmed (IMPLEMENT_CLASS(ULeaderboardBlueprintLibrary, 2731958565u); reached from ULeaderboardBlueprintLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ULeaderboardBlueprintLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULeaderboardBlueprintLibrary();
+// Original dynamic initializer: RVA 0x0009A160
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULeaderboardBlueprintLibrary(Z_Construct_UClass_ULeaderboardBlueprintLibrary, &ULeaderboardBlueprintLibrary::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("ULeaderboardBlueprintLibrary"), false, nullptr, nullptr, nullptr);

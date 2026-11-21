@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortDecoPreview_ComponentHarvester()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortDecoPreview_ComponentHarvester, 3111665351u)
+// Original dynamic initializer: RVA 0x000EFA20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortDecoPreview_ComponentHarvester> AutoInitializeAFortDecoPreview_ComponentHarvester(TEXT("AFortDecoPreview_ComponentHarvester"), sizeof(AFortDecoPreview_ComponentHarvester), 3111665351u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCE920 (end 0x00FCE9C2)
 // Original VA: 0x0000000140FCE920 | File offset: 0x00FCDF20
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortDecoPreview_ComponentHarvester, 3111665351u); reached from AFortDecoPreview_ComponentHarvester::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortDecoPreview_ComponentHarvester::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortDecoPreview_ComponentHarvester();
+// Original dynamic initializer: RVA 0x000F0540
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortDecoPreview_ComponentHarvester(Z_Construct_UClass_AFortDecoPreview_ComponentHarvester, &AFortDecoPreview_ComponentHarvester::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortDecoPreview_ComponentHarvester"), false, nullptr, nullptr, nullptr);

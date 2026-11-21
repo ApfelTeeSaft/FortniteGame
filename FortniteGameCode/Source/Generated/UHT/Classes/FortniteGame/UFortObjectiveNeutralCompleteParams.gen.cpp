@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortObjectiveNeutralCompleteParams, 3085535087u)
+// Original dynamic initializer: RVA 0x001201A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortObjectiveNeutralCompleteParams> AutoInitializeUFortObjectiveNeutralCompleteParams(TEXT("UFortObjectiveNeutralCompleteParams"), sizeof(UFortObjectiveNeutralCompleteParams), 3085535087u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E7830 (end 0x010E78D2)
 // Original VA: 0x00000001410E7830 | File offset: 0x010E6E30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortObjectiveNeutralCompleteParams, 3085535087u); reached from UFortObjectiveNeutralCompleteParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortObjectiveNeutralCompleteParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortObjectiveNeutralCompleteParams();
+// Original dynamic initializer: RVA 0x00121EB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortObjectiveNeutralCompleteParams(Z_Construct_UClass_UFortObjectiveNeutralCompleteParams, &UFortObjectiveNeutralCompleteParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortObjectiveNeutralCompleteParams"), false, nullptr, nullptr, nullptr);

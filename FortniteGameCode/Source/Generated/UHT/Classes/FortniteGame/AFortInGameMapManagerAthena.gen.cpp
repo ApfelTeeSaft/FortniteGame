@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortInGameMapManagerAthena()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortInGameMapManagerAthena, 49083007u)
+// Original dynamic initializer: RVA 0x000FAF20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortInGameMapManagerAthena> AutoInitializeAFortInGameMapManagerAthena(TEXT("AFortInGameMapManagerAthena"), sizeof(AFortInGameMapManagerAthena), 49083007u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01002F30 (end 0x01002FD2)
 // Original VA: 0x0000000141002F30 | File offset: 0x01002530
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortInGameMapManagerAthena, 49083007u); reached from AFortInGameMapManagerAthena::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortInGameMapManagerAthena::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortInGameMapManagerAthena();
+// Original dynamic initializer: RVA 0x000FBC70
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortInGameMapManagerAthena(Z_Construct_UClass_AFortInGameMapManagerAthena, &AFortInGameMapManagerAthena::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortInGameMapManagerAthena"), false, nullptr, nullptr, nullptr);

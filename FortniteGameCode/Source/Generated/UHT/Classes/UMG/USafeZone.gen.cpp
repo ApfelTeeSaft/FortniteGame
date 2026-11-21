@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(USafeZone, 1100404293u)
+// Original dynamic initializer: RVA 0x001B35B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USafeZone> AutoInitializeUSafeZone(TEXT("USafeZone"), sizeof(USafeZone), 1100404293u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF18F0 (end 0x01BF1992)
 // Original VA: 0x0000000141BF18F0 | File offset: 0x01BF0EF0
 // Recovery: confirmed (IMPLEMENT_CLASS(USafeZone, 1100404293u); reached from USafeZone::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* USafeZone::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USafeZone();
+// Original dynamic initializer: RVA 0x001B3CD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USafeZone(Z_Construct_UClass_USafeZone, &USafeZone::StaticClass, TEXT("/Script/UMG"), TEXT("USafeZone"), false, nullptr, nullptr, nullptr);

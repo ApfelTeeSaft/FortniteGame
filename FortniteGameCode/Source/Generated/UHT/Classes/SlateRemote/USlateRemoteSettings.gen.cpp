@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USlateRemoteSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USlateRemoteSettings, 802551502u)
+// Original dynamic initializer: RVA 0x000AE2B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USlateRemoteSettings> AutoInitializeUSlateRemoteSettings(TEXT("USlateRemoteSettings"), sizeof(USlateRemoteSettings), 802551502u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x006B1720 (end 0x006B17B7)
 // Original VA: 0x00000001406B1720 | File offset: 0x006B0D20
 // Recovery: confirmed (IMPLEMENT_CLASS(USlateRemoteSettings, 802551502u); reached from USlateRemoteSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USlateRemoteSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USlateRemoteSettings();
+// Original dynamic initializer: RVA 0x000AE2D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USlateRemoteSettings(Z_Construct_UClass_USlateRemoteSettings, &USlateRemoteSettings::StaticClass, TEXT("/Script/SlateRemote"), TEXT("USlateRemoteSettings"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UInterpFilter_Custom()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInterpFilter_Custom, 744849380u)
+// Original dynamic initializer: RVA 0x00200E00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInterpFilter_Custom> AutoInitializeUInterpFilter_Custom(TEXT("UInterpFilter_Custom"), sizeof(UInterpFilter_Custom), 744849380u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02426AB0 (end 0x02426B52)
 // Original VA: 0x0000000142426AB0 | File offset: 0x024260B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UInterpFilter_Custom, 744849380u); reached from UInterpFilter_Custom::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UInterpFilter_Custom::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInterpFilter_Custom();
+// Original dynamic initializer: RVA 0x00202380
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInterpFilter_Custom(Z_Construct_UClass_UInterpFilter_Custom, &UInterpFilter_Custom::StaticClass, TEXT("/Script/Engine"), TEXT("UInterpFilter_Custom"), false, nullptr, nullptr, nullptr);

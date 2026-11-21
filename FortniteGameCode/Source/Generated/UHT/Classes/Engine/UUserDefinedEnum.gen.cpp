@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UUserDefinedEnum()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UUserDefinedEnum, 2293855603u)
+// Original dynamic initializer: RVA 0x00220160 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UUserDefinedEnum> AutoInitializeUUserDefinedEnum(TEXT("UUserDefinedEnum"), sizeof(UUserDefinedEnum), 2293855603u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EBA40 (end 0x024EBAE2)
 // Original VA: 0x00000001424EBA40 | File offset: 0x024EB040
 // Recovery: confirmed (IMPLEMENT_CLASS(UUserDefinedEnum, 2293855603u); reached from UUserDefinedEnum::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UUserDefinedEnum::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UUserDefinedEnum();
+// Original dynamic initializer: RVA 0x00221780
+static FCompiledInDefer Z_CompiledInDefer_UClass_UUserDefinedEnum(Z_Construct_UClass_UUserDefinedEnum, &UUserDefinedEnum::StaticClass, TEXT("/Script/Engine"), TEXT("UUserDefinedEnum"), false, nullptr, nullptr, nullptr);

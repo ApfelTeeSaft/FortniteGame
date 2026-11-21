@@ -7,6 +7,9 @@
 void ARadialForceActor::StaticRegisterNativesARadialForceActor()
 {
 }
+// IMPLEMENT_CLASS(ARadialForceActor, 3418971873u)
+// Original dynamic initializer: RVA 0x00217390 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ARadialForceActor> AutoInitializeARadialForceActor(TEXT("ARadialForceActor"), sizeof(ARadialForceActor), 3418971873u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C0F20 (end 0x024C0FC2)
 // Original VA: 0x00000001424C0F20 | File offset: 0x024C0520
 // Recovery: confirmed (IMPLEMENT_CLASS(ARadialForceActor, 3418971873u); reached from ARadialForceActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ARadialForceActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ARadialForceActor();
+// Original dynamic initializer: RVA 0x002187C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ARadialForceActor(Z_Construct_UClass_ARadialForceActor, &ARadialForceActor::StaticClass, TEXT("/Script/Engine"), TEXT("ARadialForceActor"), false, nullptr, nullptr, nullptr);

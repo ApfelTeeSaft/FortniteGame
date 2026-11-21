@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortCollectionBookAnalytics()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCollectionBookAnalytics, 3275554996u)
+// Original dynamic initializer: RVA 0x000E8110 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCollectionBookAnalytics> AutoInitializeUFortCollectionBookAnalytics(TEXT("UFortCollectionBookAnalytics"), sizeof(UFortCollectionBookAnalytics), 3275554996u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA2A90 (end 0x00FA2B32)
 // Original VA: 0x0000000140FA2A90 | File offset: 0x00FA2090
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCollectionBookAnalytics, 3275554996u); reached from UFortCollectionBookAnalytics::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortCollectionBookAnalytics::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCollectionBookAnalytics();
+// Original dynamic initializer: RVA 0x000E8D90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCollectionBookAnalytics(Z_Construct_UClass_UFortCollectionBookAnalytics, &UFortCollectionBookAnalytics::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCollectionBookAnalytics"), false, nullptr, nullptr, nullptr);

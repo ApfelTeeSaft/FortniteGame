@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UPhysicsSerializer()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPhysicsSerializer, 1876506881u)
+// Original dynamic initializer: RVA 0x00214970 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPhysicsSerializer> AutoInitializeUPhysicsSerializer(TEXT("UPhysicsSerializer"), sizeof(UPhysicsSerializer), 1876506881u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A8580 (end 0x024A8617)
 // Original VA: 0x00000001424A8580 | File offset: 0x024A7B80
 // Recovery: confirmed (IMPLEMENT_CLASS(UPhysicsSerializer, 1876506881u); reached from UPhysicsSerializer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UPhysicsSerializer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPhysicsSerializer();
+// Original dynamic initializer: RVA 0x00215F60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPhysicsSerializer(Z_Construct_UClass_UPhysicsSerializer, &UPhysicsSerializer::StaticClass, TEXT("/Script/Engine"), TEXT("UPhysicsSerializer"), false, nullptr, nullptr, nullptr);

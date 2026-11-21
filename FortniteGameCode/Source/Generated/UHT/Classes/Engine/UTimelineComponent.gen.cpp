@@ -7,6 +7,9 @@
 void UTimelineComponent::StaticRegisterNativesUTimelineComponent()
 {
 }
+// IMPLEMENT_CLASS(UTimelineComponent, 3869473079u)
+// Original dynamic initializer: RVA 0x002200C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTimelineComponent> AutoInitializeUTimelineComponent(TEXT("UTimelineComponent"), sizeof(UTimelineComponent), 3869473079u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EB6F0 (end 0x024EB792)
 // Original VA: 0x00000001424EB6F0 | File offset: 0x024EACF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UTimelineComponent, 3869473079u); reached from UTimelineComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UTimelineComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTimelineComponent();
+// Original dynamic initializer: RVA 0x00221640
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTimelineComponent(Z_Construct_UClass_UTimelineComponent, &UTimelineComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UTimelineComponent"), false, nullptr, nullptr, nullptr);

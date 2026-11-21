@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAISpawnGroup, 2973254055u)
+// Original dynamic initializer: RVA 0x000E4880 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAISpawnGroup> AutoInitializeUFortAISpawnGroup(TEXT("UFortAISpawnGroup"), sizeof(UFortAISpawnGroup), 2973254055u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F97020 (end 0x00F970C2)
 // Original VA: 0x0000000140F97020 | File offset: 0x00F96620
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAISpawnGroup, 2973254055u); reached from UFortAISpawnGroup::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAISpawnGroup::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAISpawnGroup();
+// Original dynamic initializer: RVA 0x000E6030
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAISpawnGroup(Z_Construct_UClass_UFortAISpawnGroup, &UFortAISpawnGroup::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAISpawnGroup"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortPvPVictoryParams()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortPvPVictoryParams, 1365703757u)
+// Original dynamic initializer: RVA 0x001202C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPvPVictoryParams> AutoInitializeUFortPvPVictoryParams(TEXT("UFortPvPVictoryParams"), sizeof(UFortPvPVictoryParams), 1365703757u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E7E60 (end 0x010E7F02)
 // Original VA: 0x00000001410E7E60 | File offset: 0x010E7460
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPvPVictoryParams, 1365703757u); reached from UFortPvPVictoryParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortPvPVictoryParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPvPVictoryParams();
+// Original dynamic initializer: RVA 0x001220F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPvPVictoryParams(Z_Construct_UClass_UFortPvPVictoryParams, &UFortPvPVictoryParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPvPVictoryParams"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UComboBox()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UComboBox, 3491609768u)
+// Original dynamic initializer: RVA 0x001B1DE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UComboBox> AutoInitializeUComboBox(TEXT("UComboBox"), sizeof(UComboBox), 3491609768u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5330 (end 0x01BE53D2)
 // Original VA: 0x0000000141BE5330 | File offset: 0x01BE4930
 // Recovery: confirmed (IMPLEMENT_CLASS(UComboBox, 3491609768u); reached from UComboBox::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UComboBox::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UComboBox();
+// Original dynamic initializer: RVA 0x001B2520
+static FCompiledInDefer Z_CompiledInDefer_UClass_UComboBox(Z_Construct_UClass_UComboBox, &UComboBox::StaticClass, TEXT("/Script/UMG"), TEXT("UComboBox"), false, nullptr, nullptr, nullptr);

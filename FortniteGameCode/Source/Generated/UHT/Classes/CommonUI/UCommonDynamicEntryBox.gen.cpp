@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCommonDynamicEntryBox, 259951127u)
+// Original dynamic initializer: RVA 0x000956F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonDynamicEntryBox> AutoInitializeUCommonDynamicEntryBox(TEXT("UCommonDynamicEntryBox"), sizeof(UCommonDynamicEntryBox), 259951127u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C2080 (end 0x002C2122)
 // Original VA: 0x00000001402C2080 | File offset: 0x002C1680
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonDynamicEntryBox, 259951127u); reached from UCommonDynamicEntryBox::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCommonDynamicEntryBox::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonDynamicEntryBox();
+// Original dynamic initializer: RVA 0x00095EC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonDynamicEntryBox(Z_Construct_UClass_UCommonDynamicEntryBox, &UCommonDynamicEntryBox::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonDynamicEntryBox"), false, nullptr, nullptr, nullptr);

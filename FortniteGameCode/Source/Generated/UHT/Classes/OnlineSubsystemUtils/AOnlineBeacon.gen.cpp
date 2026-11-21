@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AOnlineBeacon()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AOnlineBeacon, 1831379162u)
+// Original dynamic initializer: RVA 0x000991A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AOnlineBeacon> AutoInitializeAOnlineBeacon(TEXT("AOnlineBeacon"), sizeof(AOnlineBeacon), 1831379162u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032C230 (end 0x0032C2D2)
 // Original VA: 0x000000014032C230 | File offset: 0x0032B830
 // Recovery: confirmed (IMPLEMENT_CLASS(AOnlineBeacon, 1831379162u); reached from AOnlineBeacon::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AOnlineBeacon::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AOnlineBeacon();
+// Original dynamic initializer: RVA 0x00099B60
+static FCompiledInDefer Z_CompiledInDefer_UClass_AOnlineBeacon(Z_Construct_UClass_AOnlineBeacon, &AOnlineBeacon::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("AOnlineBeacon"), false, nullptr, nullptr, nullptr);

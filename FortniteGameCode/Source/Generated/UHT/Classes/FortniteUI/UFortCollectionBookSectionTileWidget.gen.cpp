@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortCollectionBookSectionTileWidget, 150738247u)
+// Original dynamic initializer: RVA 0x002425D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCollectionBookSectionTileWidget> AutoInitializeUFortCollectionBookSectionTileWidget(TEXT("UFortCollectionBookSectionTileWidget"), sizeof(UFortCollectionBookSectionTileWidget), 150738247u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02899760 (end 0x02899802)
 // Original VA: 0x0000000142899760 | File offset: 0x02898D60
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCollectionBookSectionTileWidget, 150738247u); reached from UFortCollectionBookSectionTileWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortCollectionBookSectionTileWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCollectionBookSectionTileWidget();
+// Original dynamic initializer: RVA 0x002442A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCollectionBookSectionTileWidget(Z_Construct_UClass_UFortCollectionBookSectionTileWidget, &UFortCollectionBookSectionTileWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCollectionBookSectionTileWidget"), false, nullptr, nullptr, nullptr);

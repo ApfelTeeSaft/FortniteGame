@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UNavigationDataChunk()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNavigationDataChunk, 960235091u)
+// Original dynamic initializer: RVA 0x0020C790 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavigationDataChunk> AutoInitializeUNavigationDataChunk(TEXT("UNavigationDataChunk"), sizeof(UNavigationDataChunk), 960235091u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248A460 (end 0x0248A4F7)
 // Original VA: 0x000000014248A460 | File offset: 0x02489A60
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavigationDataChunk, 960235091u); reached from UNavigationDataChunk::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UNavigationDataChunk::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavigationDataChunk();
+// Original dynamic initializer: RVA 0x0020D9F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavigationDataChunk(Z_Construct_UClass_UNavigationDataChunk, &UNavigationDataChunk::StaticClass, TEXT("/Script/Engine"), TEXT("UNavigationDataChunk"), false, nullptr, nullptr, nullptr);

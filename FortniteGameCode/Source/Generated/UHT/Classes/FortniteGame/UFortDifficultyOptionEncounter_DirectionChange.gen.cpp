@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionEncounter_DirectionChange()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionEncounter_DirectionChange, 3539206359u)
+// Original dynamic initializer: RVA 0x000F0D20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionEncounter_DirectionChange> AutoInitializeUFortDifficultyOptionEncounter_DirectionChange(TEXT("UFortDifficultyOptionEncounter_DirectionChange"), sizeof(UFortDifficultyOptionEncounter_DirectionChange), 3539206359u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD54F0 (end 0x00FD5592)
 // Original VA: 0x0000000140FD54F0 | File offset: 0x00FD4AF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionEncounter_DirectionChange, 3539206359u); reached from UFortDifficultyOptionEncounter_DirectionChange::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionEncounter_DirectionChange::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionEncounter_DirectionChange();
+// Original dynamic initializer: RVA 0x000F1E90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionEncounter_DirectionChange(Z_Construct_UClass_UFortDifficultyOptionEncounter_DirectionChange, &UFortDifficultyOptionEncounter_DirectionChange::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionEncounter_DirectionChange"), false, nullptr, nullptr, nullptr);

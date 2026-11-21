@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortRewardDifficultyIncrease()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortRewardDifficultyIncrease, 1534907424u)
+// Original dynamic initializer: RVA 0x00258560 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortRewardDifficultyIncrease> AutoInitializeUFortRewardDifficultyIncrease(TEXT("UFortRewardDifficultyIncrease"), sizeof(UFortRewardDifficultyIncrease), 1534907424u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EB990 (end 0x028EBA32)
 // Original VA: 0x00000001428EB990 | File offset: 0x028EAF90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortRewardDifficultyIncrease, 1534907424u); reached from UFortRewardDifficultyIncrease::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortRewardDifficultyIncrease::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortRewardDifficultyIncrease();
+// Original dynamic initializer: RVA 0x0025A5E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortRewardDifficultyIncrease(Z_Construct_UClass_UFortRewardDifficultyIncrease, &UFortRewardDifficultyIncrease::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortRewardDifficultyIncrease"), false, nullptr, nullptr, nullptr);

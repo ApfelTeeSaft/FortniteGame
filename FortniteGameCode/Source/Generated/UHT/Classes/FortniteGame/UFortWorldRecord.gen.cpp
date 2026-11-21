@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortWorldRecord()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortWorldRecord, 1038416337u)
+// Original dynamic initializer: RVA 0x0011E8E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortWorldRecord> AutoInitializeUFortWorldRecord(TEXT("UFortWorldRecord"), sizeof(UFortWorldRecord), 1038416337u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E15B0 (end 0x010E1652)
 // Original VA: 0x00000001410E15B0 | File offset: 0x010E0BB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortWorldRecord, 1038416337u); reached from UFortWorldRecord::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortWorldRecord::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortWorldRecord();
+// Original dynamic initializer: RVA 0x0011FB40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortWorldRecord(Z_Construct_UClass_UFortWorldRecord, &UFortWorldRecord::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortWorldRecord"), false, nullptr, nullptr, nullptr);

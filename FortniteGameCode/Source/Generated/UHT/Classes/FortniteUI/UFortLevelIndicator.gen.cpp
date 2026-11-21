@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortLevelIndicator, 384916434u)
+// Original dynamic initializer: RVA 0x00251390 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortLevelIndicator> AutoInitializeUFortLevelIndicator(TEXT("UFortLevelIndicator"), sizeof(UFortLevelIndicator), 384916434u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D55D0 (end 0x028D5672)
 // Original VA: 0x00000001428D55D0 | File offset: 0x028D4BD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortLevelIndicator, 384916434u); reached from UFortLevelIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortLevelIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortLevelIndicator();
+// Original dynamic initializer: RVA 0x00253330
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortLevelIndicator(Z_Construct_UClass_UFortLevelIndicator, &UFortLevelIndicator::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortLevelIndicator"), false, nullptr, nullptr, nullptr);

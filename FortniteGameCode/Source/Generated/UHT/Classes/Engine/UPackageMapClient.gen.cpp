@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UPackageMapClient()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPackageMapClient, 661767372u)
+// Original dynamic initializer: RVA 0x0020EE90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPackageMapClient> AutoInitializeUPackageMapClient(TEXT("UPackageMapClient"), sizeof(UPackageMapClient), 661767372u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02493C70 (end 0x02493D12)
 // Original VA: 0x0000000142493C70 | File offset: 0x02493270
 // Recovery: confirmed (IMPLEMENT_CLASS(UPackageMapClient, 661767372u); reached from UPackageMapClient::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UPackageMapClient::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPackageMapClient();
+// Original dynamic initializer: RVA 0x002101F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPackageMapClient(Z_Construct_UClass_UPackageMapClient, &UPackageMapClient::StaticClass, TEXT("/Script/Engine"), TEXT("UPackageMapClient"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAthenaNewsWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAthenaNewsWidget, 4215014376u)
+// Original dynamic initializer: RVA 0x0023E2A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAthenaNewsWidget> AutoInitializeUFortAthenaNewsWidget(TEXT("UFortAthenaNewsWidget"), sizeof(UFortAthenaNewsWidget), 4215014376u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288B840 (end 0x0288B8E2)
 // Original VA: 0x000000014288B840 | File offset: 0x0288AE40
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAthenaNewsWidget, 4215014376u); reached from UFortAthenaNewsWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAthenaNewsWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAthenaNewsWidget();
+// Original dynamic initializer: RVA 0x0023FE60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAthenaNewsWidget(Z_Construct_UClass_UFortAthenaNewsWidget, &UFortAthenaNewsWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAthenaNewsWidget"), false, nullptr, nullptr, nullptr);

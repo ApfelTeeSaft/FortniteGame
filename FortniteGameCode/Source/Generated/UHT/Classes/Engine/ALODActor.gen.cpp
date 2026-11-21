@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ALODActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ALODActor, 3302869084u)
+// Original dynamic initializer: RVA 0x00205C70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALODActor> AutoInitializeALODActor(TEXT("ALODActor"), sizeof(ALODActor), 3302869084u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02476AB0 (end 0x02476B52)
 // Original VA: 0x0000000142476AB0 | File offset: 0x024760B0
 // Recovery: confirmed (IMPLEMENT_CLASS(ALODActor, 3302869084u); reached from ALODActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ALODActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALODActor();
+// Original dynamic initializer: RVA 0x00206740
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALODActor(Z_Construct_UClass_ALODActor, &ALODActor::StaticClass, TEXT("/Script/Engine"), TEXT("ALODActor"), false, nullptr, nullptr, nullptr);

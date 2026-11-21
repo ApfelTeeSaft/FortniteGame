@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UProjectileMovementComponent, 3937442299u)
+// Original dynamic initializer: RVA 0x00217410 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UProjectileMovementComponent> AutoInitializeUProjectileMovementComponent(TEXT("UProjectileMovementComponent"), sizeof(UProjectileMovementComponent), 3937442299u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C11E0 (end 0x024C1282)
 // Original VA: 0x00000001424C11E0 | File offset: 0x024C07E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UProjectileMovementComponent, 3937442299u); reached from UProjectileMovementComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UProjectileMovementComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UProjectileMovementComponent();
+// Original dynamic initializer: RVA 0x002188C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UProjectileMovementComponent(Z_Construct_UClass_UProjectileMovementComponent, &UProjectileMovementComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UProjectileMovementComponent"), false, nullptr, nullptr, nullptr);

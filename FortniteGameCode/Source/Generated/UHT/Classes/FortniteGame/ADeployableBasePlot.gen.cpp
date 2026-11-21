@@ -7,6 +7,9 @@
 void ADeployableBasePlot::StaticRegisterNativesADeployableBasePlot()
 {
 }
+// IMPLEMENT_CLASS(ADeployableBasePlot, 2814553429u)
+// Original dynamic initializer: RVA 0x000DE740 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ADeployableBasePlot> AutoInitializeADeployableBasePlot(TEXT("ADeployableBasePlot"), sizeof(ADeployableBasePlot), 2814553429u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7B590 (end 0x00F7B632)
 // Original VA: 0x0000000140F7B590 | File offset: 0x00F7AB90
 // Recovery: confirmed (IMPLEMENT_CLASS(ADeployableBasePlot, 2814553429u); reached from ADeployableBasePlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ADeployableBasePlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ADeployableBasePlot();
+// Original dynamic initializer: RVA 0x000DF840
+static FCompiledInDefer Z_CompiledInDefer_UClass_ADeployableBasePlot(Z_Construct_UClass_ADeployableBasePlot, &ADeployableBasePlot::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ADeployableBasePlot"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortRewardInfoButton, 355932523u)
+// Original dynamic initializer: RVA 0x002585E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortRewardInfoButton> AutoInitializeUFortRewardInfoButton(TEXT("UFortRewardInfoButton"), sizeof(UFortRewardInfoButton), 355932523u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EBC50 (end 0x028EBCF2)
 // Original VA: 0x00000001428EBC50 | File offset: 0x028EB250
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortRewardInfoButton, 355932523u); reached from UFortRewardInfoButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortRewardInfoButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortRewardInfoButton();
+// Original dynamic initializer: RVA 0x0025A6E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortRewardInfoButton(Z_Construct_UClass_UFortRewardInfoButton, &UFortRewardInfoButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortRewardInfoButton"), false, nullptr, nullptr, nullptr);

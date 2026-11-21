@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UIpNetDriver()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UIpNetDriver, 1423952468u)
+// Original dynamic initializer: RVA 0x00099460 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UIpNetDriver> AutoInitializeUIpNetDriver(TEXT("UIpNetDriver"), sizeof(UIpNetDriver), 1423952468u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032D120 (end 0x0032D1C2)
 // Original VA: 0x000000014032D120 | File offset: 0x0032C720
 // Recovery: confirmed (IMPLEMENT_CLASS(UIpNetDriver, 1423952468u); reached from UIpNetDriver::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UIpNetDriver::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UIpNetDriver();
+// Original dynamic initializer: RVA 0x0009A0E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UIpNetDriver(Z_Construct_UClass_UIpNetDriver, &UIpNetDriver::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UIpNetDriver"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UFortPlayerProfileBannerEditor::StaticRegisterNativesUFortPlayerProfileBannerEditor()
 {
 }
+// IMPLEMENT_CLASS(UFortPlayerProfileBannerEditor, 3313958003u)
+// Original dynamic initializer: RVA 0x00255C60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPlayerProfileBannerEditor> AutoInitializeUFortPlayerProfileBannerEditor(TEXT("UFortPlayerProfileBannerEditor"), sizeof(UFortPlayerProfileBannerEditor), 3313958003u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E5480 (end 0x028E5522)
 // Original VA: 0x00000001428E5480 | File offset: 0x028E4A80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPlayerProfileBannerEditor, 3313958003u); reached from UFortPlayerProfileBannerEditor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortPlayerProfileBannerEditor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPlayerProfileBannerEditor();
+// Original dynamic initializer: RVA 0x00258000
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPlayerProfileBannerEditor(Z_Construct_UClass_UFortPlayerProfileBannerEditor, &UFortPlayerProfileBannerEditor::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortPlayerProfileBannerEditor"), false, nullptr, nullptr, nullptr);

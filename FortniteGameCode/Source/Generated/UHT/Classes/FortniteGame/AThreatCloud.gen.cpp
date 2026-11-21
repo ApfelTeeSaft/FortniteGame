@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AThreatCloud, 4113472572u)
+// Original dynamic initializer: RVA 0x001223D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AThreatCloud> AutoInitializeAThreatCloud(TEXT("AThreatCloud"), sizeof(AThreatCloud), 4113472572u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EFB30 (end 0x010EFBD2)
 // Original VA: 0x00000001410EFB30 | File offset: 0x010EF130
 // Recovery: confirmed (IMPLEMENT_CLASS(AThreatCloud, 4113472572u); reached from AThreatCloud::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AThreatCloud::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AThreatCloud();
+// Original dynamic initializer: RVA 0x00123560
+static FCompiledInDefer Z_CompiledInDefer_UClass_AThreatCloud(Z_Construct_UClass_AThreatCloud, &AThreatCloud::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AThreatCloud"), false, nullptr, nullptr, nullptr);

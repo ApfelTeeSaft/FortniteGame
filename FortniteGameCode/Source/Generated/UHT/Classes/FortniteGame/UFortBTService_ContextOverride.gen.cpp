@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortBTService_ContextOverride()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTService_ContextOverride, 2080219131u)
+// Original dynamic initializer: RVA 0x000E9210 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTService_ContextOverride> AutoInitializeUFortBTService_ContextOverride(TEXT("UFortBTService_ContextOverride"), sizeof(UFortBTService_ContextOverride), 2080219131u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAB4A0 (end 0x00FAB542)
 // Original VA: 0x0000000140FAB4A0 | File offset: 0x00FAAAA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTService_ContextOverride, 2080219131u); reached from UFortBTService_ContextOverride::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortBTService_ContextOverride::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTService_ContextOverride();
+// Original dynamic initializer: RVA 0x000EA100
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTService_ContextOverride(Z_Construct_UClass_UFortBTService_ContextOverride, &UFortBTService_ContextOverride::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTService_ContextOverride"), false, nullptr, nullptr, nullptr);

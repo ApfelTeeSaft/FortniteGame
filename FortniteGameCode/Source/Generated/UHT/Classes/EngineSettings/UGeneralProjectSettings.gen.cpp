@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UGeneralProjectSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UGeneralProjectSettings, 96442606u)
+// Original dynamic initializer: RVA 0x001B6AB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGeneralProjectSettings> AutoInitializeUGeneralProjectSettings(TEXT("UGeneralProjectSettings"), sizeof(UGeneralProjectSettings), 96442606u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C84460 (end 0x01C844F7)
 // Original VA: 0x0000000141C84460 | File offset: 0x01C83A60
 // Recovery: confirmed (IMPLEMENT_CLASS(UGeneralProjectSettings, 96442606u); reached from UGeneralProjectSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UGeneralProjectSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGeneralProjectSettings();
+// Original dynamic initializer: RVA 0x001B6E30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGeneralProjectSettings(Z_Construct_UClass_UGeneralProjectSettings, &UGeneralProjectSettings::StaticClass, TEXT("/Script/EngineSettings"), TEXT("UGeneralProjectSettings"), false, nullptr, nullptr, nullptr);

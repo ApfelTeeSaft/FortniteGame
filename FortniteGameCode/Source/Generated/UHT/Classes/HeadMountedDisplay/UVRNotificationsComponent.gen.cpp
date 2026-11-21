@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UVRNotificationsComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UVRNotificationsComponent, 3032520210u)
+// Original dynamic initializer: RVA 0x0019BCB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UVRNotificationsComponent> AutoInitializeUVRNotificationsComponent(TEXT("UVRNotificationsComponent"), sizeof(UVRNotificationsComponent), 3032520210u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0199D090 (end 0x0199D132)
 // Original VA: 0x000000014199D090 | File offset: 0x0199C690
 // Recovery: confirmed (IMPLEMENT_CLASS(UVRNotificationsComponent, 3032520210u); reached from UVRNotificationsComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UVRNotificationsComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UVRNotificationsComponent();
+// Original dynamic initializer: RVA 0x0019C0B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UVRNotificationsComponent(Z_Construct_UClass_UVRNotificationsComponent, &UVRNotificationsComponent::StaticClass, TEXT("/Script/HeadMountedDisplay"), TEXT("UVRNotificationsComponent"), false, nullptr, nullptr, nullptr);

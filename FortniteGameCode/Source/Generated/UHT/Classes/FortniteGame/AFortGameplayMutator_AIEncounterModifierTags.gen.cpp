@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortGameplayMutator_AIEncounterModifierTags()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortGameplayMutator_AIEncounterModifierTags, 2249000271u)
+// Original dynamic initializer: RVA 0x000F76D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortGameplayMutator_AIEncounterModifierTags> AutoInitializeAFortGameplayMutator_AIEncounterModifierTags(TEXT("AFortGameplayMutator_AIEncounterModifierTags"), sizeof(AFortGameplayMutator_AIEncounterModifierTags), 2249000271u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FED520 (end 0x00FED5C2)
 // Original VA: 0x0000000140FED520 | File offset: 0x00FECB20
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortGameplayMutator_AIEncounterModifierTags, 2249000271u); reached from AFortGameplayMutator_AIEncounterModifierTags::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortGameplayMutator_AIEncounterModifierTags::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortGameplayMutator_AIEncounterModifierTags();
+// Original dynamic initializer: RVA 0x000F8510
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortGameplayMutator_AIEncounterModifierTags(Z_Construct_UClass_AFortGameplayMutator_AIEncounterModifierTags, &AFortGameplayMutator_AIEncounterModifierTags::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortGameplayMutator_AIEncounterModifierTags"), false, nullptr, nullptr, nullptr);

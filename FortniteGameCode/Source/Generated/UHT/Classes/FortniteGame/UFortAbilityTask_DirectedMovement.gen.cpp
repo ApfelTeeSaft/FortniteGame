@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAbilityTask_DirectedMovement, 1188744249u)
+// Original dynamic initializer: RVA 0x000DFDA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAbilityTask_DirectedMovement> AutoInitializeUFortAbilityTask_DirectedMovement(TEXT("UFortAbilityTask_DirectedMovement"), sizeof(UFortAbilityTask_DirectedMovement), 1188744249u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F80530 (end 0x00F805D2)
 // Original VA: 0x0000000140F80530 | File offset: 0x00F7FB30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAbilityTask_DirectedMovement, 1188744249u); reached from UFortAbilityTask_DirectedMovement::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAbilityTask_DirectedMovement::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAbilityTask_DirectedMovement();
+// Original dynamic initializer: RVA 0x000E0920
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAbilityTask_DirectedMovement(Z_Construct_UClass_UFortAbilityTask_DirectedMovement, &UFortAbilityTask_DirectedMovement::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAbilityTask_DirectedMovement"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortAITask_FuzzyQueue()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAITask_FuzzyQueue, 4090905645u)
+// Original dynamic initializer: RVA 0x000E49A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAITask_FuzzyQueue> AutoInitializeUFortAITask_FuzzyQueue(TEXT("UFortAITask_FuzzyQueue"), sizeof(UFortAITask_FuzzyQueue), 4090905645u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F97620 (end 0x00F976C2)
 // Original VA: 0x0000000140F97620 | File offset: 0x00F96C20
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAITask_FuzzyQueue, 4090905645u); reached from UFortAITask_FuzzyQueue::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortAITask_FuzzyQueue::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAITask_FuzzyQueue();
+// Original dynamic initializer: RVA 0x000E6270
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAITask_FuzzyQueue(Z_Construct_UClass_UFortAITask_FuzzyQueue, &UFortAITask_FuzzyQueue::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAITask_FuzzyQueue"), false, nullptr, nullptr, nullptr);

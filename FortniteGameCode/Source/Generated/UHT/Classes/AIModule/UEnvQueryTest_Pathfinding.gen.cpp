@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UEnvQueryTest_Pathfinding()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEnvQueryTest_Pathfinding, 2636636780u)
+// Original dynamic initializer: RVA 0x001BD8A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEnvQueryTest_Pathfinding> AutoInitializeUEnvQueryTest_Pathfinding(TEXT("UEnvQueryTest_Pathfinding"), sizeof(UEnvQueryTest_Pathfinding), 2636636780u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2E3C0 (end 0x01D2E462)
 // Original VA: 0x0000000141D2E3C0 | File offset: 0x01D2D9C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UEnvQueryTest_Pathfinding, 2636636780u); reached from UEnvQueryTest_Pathfinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UEnvQueryTest_Pathfinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEnvQueryTest_Pathfinding();
+// Original dynamic initializer: RVA 0x001BF1E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEnvQueryTest_Pathfinding(Z_Construct_UClass_UEnvQueryTest_Pathfinding, &UEnvQueryTest_Pathfinding::StaticClass, TEXT("/Script/AIModule"), TEXT("UEnvQueryTest_Pathfinding"), false, nullptr, nullptr, nullptr);

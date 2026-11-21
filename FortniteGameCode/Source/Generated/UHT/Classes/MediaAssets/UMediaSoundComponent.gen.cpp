@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UMediaSoundComponent, 2417345875u)
+// Original dynamic initializer: RVA 0x00225F50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMediaSoundComponent> AutoInitializeUMediaSoundComponent(TEXT("UMediaSoundComponent"), sizeof(UMediaSoundComponent), 2417345875u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE1C0 (end 0x025DE262)
 // Original VA: 0x00000001425DE1C0 | File offset: 0x025DD7C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMediaSoundComponent, 2417345875u); reached from UMediaSoundComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UMediaSoundComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMediaSoundComponent();
+// Original dynamic initializer: RVA 0x00226390
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMediaSoundComponent(Z_Construct_UClass_UMediaSoundComponent, &UMediaSoundComponent::StaticClass, TEXT("/Script/MediaAssets"), TEXT("UMediaSoundComponent"), false, nullptr, nullptr, nullptr);

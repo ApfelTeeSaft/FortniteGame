@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortGamePvPBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortGamePvPBase, 511089233u)
+// Original dynamic initializer: RVA 0x000F74F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortGamePvPBase> AutoInitializeAFortGamePvPBase(TEXT("AFortGamePvPBase"), sizeof(AFortGamePvPBase), 511089233u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FECAD0 (end 0x00FECB72)
 // Original VA: 0x0000000140FECAD0 | File offset: 0x00FEC0D0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortGamePvPBase, 511089233u); reached from AFortGamePvPBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortGamePvPBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortGamePvPBase();
+// Original dynamic initializer: RVA 0x000F8150
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortGamePvPBase(Z_Construct_UClass_AFortGamePvPBase, &AFortGamePvPBase::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortGamePvPBase"), false, nullptr, nullptr, nullptr);

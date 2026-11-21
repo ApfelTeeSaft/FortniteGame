@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionDepthFade()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionDepthFade, 619548777u)
+// Original dynamic initializer: RVA 0x002072E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionDepthFade> AutoInitializeUMaterialExpressionDepthFade(TEXT("UMaterialExpressionDepthFade"), sizeof(UMaterialExpressionDepthFade), 619548777u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247B790 (end 0x0247B832)
 // Original VA: 0x000000014247B790 | File offset: 0x0247AD90
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionDepthFade, 619548777u); reached from UMaterialExpressionDepthFade::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionDepthFade::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionDepthFade();
+// Original dynamic initializer: RVA 0x002082C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionDepthFade(Z_Construct_UClass_UMaterialExpressionDepthFade, &UMaterialExpressionDepthFade::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionDepthFade"), false, nullptr, nullptr, nullptr);

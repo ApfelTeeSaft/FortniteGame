@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortBodyPartOverridePreviewActor, 708598910u)
+// Original dynamic initializer: RVA 0x000E8F50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortBodyPartOverridePreviewActor> AutoInitializeAFortBodyPartOverridePreviewActor(TEXT("AFortBodyPartOverridePreviewActor"), sizeof(AFortBodyPartOverridePreviewActor), 708598910u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAA580 (end 0x00FAA622)
 // Original VA: 0x0000000140FAA580 | File offset: 0x00FA9B80
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortBodyPartOverridePreviewActor, 708598910u); reached from AFortBodyPartOverridePreviewActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortBodyPartOverridePreviewActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortBodyPartOverridePreviewActor();
+// Original dynamic initializer: RVA 0x000E9B80
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortBodyPartOverridePreviewActor(Z_Construct_UClass_AFortBodyPartOverridePreviewActor, &AFortBodyPartOverridePreviewActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortBodyPartOverridePreviewActor"), false, nullptr, nullptr, nullptr);

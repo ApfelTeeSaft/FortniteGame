@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryTest_GameplayTagsPerDifficulty()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryTest_GameplayTagsPerDifficulty, 3268298324u)
+// Original dynamic initializer: RVA 0x0010ED10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryTest_GameplayTagsPerDifficulty> AutoInitializeUFortQueryTest_GameplayTagsPerDifficulty(TEXT("UFortQueryTest_GameplayTagsPerDifficulty"), sizeof(UFortQueryTest_GameplayTagsPerDifficulty), 3268298324u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01091D10 (end 0x01091DB2)
 // Original VA: 0x0000000141091D10 | File offset: 0x01091310
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryTest_GameplayTagsPerDifficulty, 3268298324u); reached from UFortQueryTest_GameplayTagsPerDifficulty::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryTest_GameplayTagsPerDifficulty::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryTest_GameplayTagsPerDifficulty();
+// Original dynamic initializer: RVA 0x001100A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryTest_GameplayTagsPerDifficulty(Z_Construct_UClass_UFortQueryTest_GameplayTagsPerDifficulty, &UFortQueryTest_GameplayTagsPerDifficulty::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryTest_GameplayTagsPerDifficulty"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void AFortPlayerSpawnPad::StaticRegisterNativesAFortPlayerSpawnPad()
 {
 }
+// IMPLEMENT_CLASS(AFortPlayerSpawnPad, 2189359071u)
+// Original dynamic initializer: RVA 0x0010D370 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPlayerSpawnPad> AutoInitializeAFortPlayerSpawnPad(TEXT("AFortPlayerSpawnPad"), sizeof(AFortPlayerSpawnPad), 2189359071u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010891A0 (end 0x01089242)
 // Original VA: 0x00000001410891A0 | File offset: 0x010887A0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPlayerSpawnPad, 2189359071u); reached from AFortPlayerSpawnPad::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortPlayerSpawnPad::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPlayerSpawnPad();
+// Original dynamic initializer: RVA 0x0010E0D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPlayerSpawnPad(Z_Construct_UClass_AFortPlayerSpawnPad, &AFortPlayerSpawnPad::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPlayerSpawnPad"), false, nullptr, nullptr, nullptr);

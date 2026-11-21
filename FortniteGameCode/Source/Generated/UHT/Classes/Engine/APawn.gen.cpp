@@ -7,6 +7,9 @@
 void APawn::StaticRegisterNativesAPawn()
 {
 }
+// IMPLEMENT_CLASS(APawn, 916832613u)
+// Original dynamic initializer: RVA 0x00213C10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<APawn> AutoInitializeAPawn(TEXT("APawn"), sizeof(APawn), 916832613u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249F570 (end 0x0249F618)
 // Original VA: 0x000000014249F570 | File offset: 0x0249EB70
 // Recovery: confirmed (IMPLEMENT_CLASS(APawn, 916832613u); reached from APawn::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* APawn::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_APawn();
+// Original dynamic initializer: RVA 0x002144F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_APawn(Z_Construct_UClass_APawn, &APawn::StaticClass, TEXT("/Script/Engine"), TEXT("APawn"), false, nullptr, nullptr, nullptr);

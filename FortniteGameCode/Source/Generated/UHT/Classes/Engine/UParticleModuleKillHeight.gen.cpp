@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleKillHeight()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleKillHeight, 2778812521u)
+// Original dynamic initializer: RVA 0x00210990 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleKillHeight> AutoInitializeUParticleModuleKillHeight(TEXT("UParticleModuleKillHeight"), sizeof(UParticleModuleKillHeight), 2778812521u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02497D40 (end 0x02497DE2)
 // Original VA: 0x0000000142497D40 | File offset: 0x02497340
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleKillHeight, 2778812521u); reached from UParticleModuleKillHeight::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleKillHeight::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleKillHeight();
+// Original dynamic initializer: RVA 0x00211920
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleKillHeight(Z_Construct_UClass_UParticleModuleKillHeight, &UParticleModuleKillHeight::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleKillHeight"), false, nullptr, nullptr, nullptr);

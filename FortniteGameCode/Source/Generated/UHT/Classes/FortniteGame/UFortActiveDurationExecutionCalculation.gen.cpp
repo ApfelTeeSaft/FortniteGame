@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortActiveDurationExecutionCalculation()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortActiveDurationExecutionCalculation, 2570590288u)
+// Original dynamic initializer: RVA 0x000DFF80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortActiveDurationExecutionCalculation> AutoInitializeUFortActiveDurationExecutionCalculation(TEXT("UFortActiveDurationExecutionCalculation"), sizeof(UFortActiveDurationExecutionCalculation), 2570590288u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F80F70 (end 0x00F81012)
 // Original VA: 0x0000000140F80F70 | File offset: 0x00F80570
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortActiveDurationExecutionCalculation, 2570590288u); reached from UFortActiveDurationExecutionCalculation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortActiveDurationExecutionCalculation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortActiveDurationExecutionCalculation();
+// Original dynamic initializer: RVA 0x000E0CE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortActiveDurationExecutionCalculation(Z_Construct_UClass_UFortActiveDurationExecutionCalculation, &UFortActiveDurationExecutionCalculation::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortActiveDurationExecutionCalculation"), false, nullptr, nullptr, nullptr);

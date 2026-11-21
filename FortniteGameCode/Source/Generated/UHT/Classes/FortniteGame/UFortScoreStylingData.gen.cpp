@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortScoreStylingData, 3157136497u)
+// Original dynamic initializer: RVA 0x00112B70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortScoreStylingData> AutoInitializeUFortScoreStylingData(TEXT("UFortScoreStylingData"), sizeof(UFortScoreStylingData), 3157136497u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A3640 (end 0x010A36E2)
 // Original VA: 0x00000001410A3640 | File offset: 0x010A2C40
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortScoreStylingData, 3157136497u); reached from UFortScoreStylingData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortScoreStylingData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortScoreStylingData();
+// Original dynamic initializer: RVA 0x00114230
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortScoreStylingData(Z_Construct_UClass_UFortScoreStylingData, &UFortScoreStylingData::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortScoreStylingData"), false, nullptr, nullptr, nullptr);

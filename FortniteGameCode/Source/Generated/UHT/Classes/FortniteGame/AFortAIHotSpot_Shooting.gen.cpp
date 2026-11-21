@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortAIHotSpot_Shooting()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortAIHotSpot_Shooting, 2236280380u)
+// Original dynamic initializer: RVA 0x000E3430 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortAIHotSpot_Shooting> AutoInitializeAFortAIHotSpot_Shooting(TEXT("AFortAIHotSpot_Shooting"), sizeof(AFortAIHotSpot_Shooting), 2236280380u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8F970 (end 0x00F8FA12)
 // Original VA: 0x0000000140F8F970 | File offset: 0x00F8EF70
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortAIHotSpot_Shooting, 2236280380u); reached from AFortAIHotSpot_Shooting::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortAIHotSpot_Shooting::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortAIHotSpot_Shooting();
+// Original dynamic initializer: RVA 0x000E4460
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortAIHotSpot_Shooting(Z_Construct_UClass_AFortAIHotSpot_Shooting, &AFortAIHotSpot_Shooting::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortAIHotSpot_Shooting"), false, nullptr, nullptr, nullptr);

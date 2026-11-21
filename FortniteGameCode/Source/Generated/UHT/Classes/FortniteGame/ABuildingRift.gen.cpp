@@ -7,6 +7,9 @@
 void ABuildingRift::StaticRegisterNativesABuildingRift()
 {
 }
+// IMPLEMENT_CLASS(ABuildingRift, 1147470807u)
+// Original dynamic initializer: RVA 0x000DB070 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingRift> AutoInitializeABuildingRift(TEXT("ABuildingRift"), sizeof(ABuildingRift), 1147470807u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6B090 (end 0x00F6B132)
 // Original VA: 0x0000000140F6B090 | File offset: 0x00F6A690
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingRift, 1147470807u); reached from ABuildingRift::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ABuildingRift::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingRift();
+// Original dynamic initializer: RVA 0x000DBDC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingRift(Z_Construct_UClass_ABuildingRift, &ABuildingRift::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingRift"), false, nullptr, nullptr, nullptr);

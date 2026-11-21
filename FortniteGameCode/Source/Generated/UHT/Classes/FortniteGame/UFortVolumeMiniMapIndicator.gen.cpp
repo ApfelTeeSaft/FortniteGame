@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortVolumeMiniMapIndicator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortVolumeMiniMapIndicator, 2276630869u)
+// Original dynamic initializer: RVA 0x0011C0D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortVolumeMiniMapIndicator> AutoInitializeUFortVolumeMiniMapIndicator(TEXT("UFortVolumeMiniMapIndicator"), sizeof(UFortVolumeMiniMapIndicator), 2276630869u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D3550 (end 0x010D35F2)
 // Original VA: 0x00000001410D3550 | File offset: 0x010D2B50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortVolumeMiniMapIndicator, 2276630869u); reached from UFortVolumeMiniMapIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortVolumeMiniMapIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortVolumeMiniMapIndicator();
+// Original dynamic initializer: RVA 0x0011D2E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortVolumeMiniMapIndicator(Z_Construct_UClass_UFortVolumeMiniMapIndicator, &UFortVolumeMiniMapIndicator::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortVolumeMiniMapIndicator"), false, nullptr, nullptr, nullptr);

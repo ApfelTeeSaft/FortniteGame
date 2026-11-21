@@ -7,6 +7,9 @@
 void AFortPvPMission_3PtDomination::StaticRegisterNativesAFortPvPMission_3PtDomination()
 {
 }
+// IMPLEMENT_CLASS(AFortPvPMission_3PtDomination, 3001989432u)
+// Original dynamic initializer: RVA 0x0010E710 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPvPMission_3PtDomination> AutoInitializeAFortPvPMission_3PtDomination(TEXT("AFortPvPMission_3PtDomination"), sizeof(AFortPvPMission_3PtDomination), 3001989432u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108FC10 (end 0x0108FCB2)
 // Original VA: 0x000000014108FC10 | File offset: 0x0108F210
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPvPMission_3PtDomination, 3001989432u); reached from AFortPvPMission_3PtDomination::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortPvPMission_3PtDomination::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPvPMission_3PtDomination();
+// Original dynamic initializer: RVA 0x0010F4A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPvPMission_3PtDomination(Z_Construct_UClass_AFortPvPMission_3PtDomination, &AFortPvPMission_3PtDomination::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPvPMission_3PtDomination"), false, nullptr, nullptr, nullptr);

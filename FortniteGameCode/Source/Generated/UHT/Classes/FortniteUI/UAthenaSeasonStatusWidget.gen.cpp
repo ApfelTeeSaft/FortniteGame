@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAthenaSeasonStatusWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaSeasonStatusWidget, 1005214482u)
+// Original dynamic initializer: RVA 0x0023B640 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaSeasonStatusWidget> AutoInitializeUAthenaSeasonStatusWidget(TEXT("UAthenaSeasonStatusWidget"), sizeof(UAthenaSeasonStatusWidget), 1005214482u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02885000 (end 0x028850A2)
 // Original VA: 0x0000000142885000 | File offset: 0x02884600
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaSeasonStatusWidget, 1005214482u); reached from UAthenaSeasonStatusWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAthenaSeasonStatusWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaSeasonStatusWidget();
+// Original dynamic initializer: RVA 0x0023D9E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaSeasonStatusWidget(Z_Construct_UClass_UAthenaSeasonStatusWidget, &UAthenaSeasonStatusWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaSeasonStatusWidget"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortQueryItemType_Goal()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryItemType_Goal, 1481293381u)
+// Original dynamic initializer: RVA 0x0010EC10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryItemType_Goal> AutoInitializeUFortQueryItemType_Goal(TEXT("UFortQueryItemType_Goal"), sizeof(UFortQueryItemType_Goal), 1481293381u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01091790 (end 0x01091832)
 // Original VA: 0x0000000141091790 | File offset: 0x01090D90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryItemType_Goal, 1481293381u); reached from UFortQueryItemType_Goal::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortQueryItemType_Goal::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryItemType_Goal();
+// Original dynamic initializer: RVA 0x0010FEA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryItemType_Goal(Z_Construct_UClass_UFortQueryItemType_Goal, &UFortQueryItemType_Goal::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryItemType_Goal"), false, nullptr, nullptr, nullptr);

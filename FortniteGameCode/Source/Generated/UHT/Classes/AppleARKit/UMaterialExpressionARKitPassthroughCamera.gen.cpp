@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionARKitPassthroughCamera()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionARKitPassthroughCamera, 3750004464u)
+// Original dynamic initializer: RVA 0x000B43E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionARKitPassthroughCamera> AutoInitializeUMaterialExpressionARKitPassthroughCamera(TEXT("UMaterialExpressionARKitPassthroughCamera"), sizeof(UMaterialExpressionARKitPassthroughCamera), 3750004464u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00805F00 (end 0x00805FA2)
 // Original VA: 0x0000000140805F00 | File offset: 0x00805500
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionARKitPassthroughCamera, 3750004464u); reached from UMaterialExpressionARKitPassthroughCamera::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionARKitPassthroughCamera::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionARKitPassthroughCamera();
+// Original dynamic initializer: RVA 0x000B4890
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionARKitPassthroughCamera(Z_Construct_UClass_UMaterialExpressionARKitPassthroughCamera, &UMaterialExpressionARKitPassthroughCamera::StaticClass, TEXT("/Script/AppleARKit"), TEXT("UMaterialExpressionARKitPassthroughCamera"), false, nullptr, nullptr, nullptr);

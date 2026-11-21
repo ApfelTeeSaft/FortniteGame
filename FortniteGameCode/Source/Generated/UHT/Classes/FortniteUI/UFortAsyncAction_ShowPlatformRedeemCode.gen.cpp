@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_ShowPlatformRedeemCode, 1144535932u)
+// Original dynamic initializer: RVA 0x0023B8A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_ShowPlatformRedeemCode> AutoInitializeUFortAsyncAction_ShowPlatformRedeemCode(TEXT("UFortAsyncAction_ShowPlatformRedeemCode"), sizeof(UFortAsyncAction_ShowPlatformRedeemCode), 1144535932u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02885D10 (end 0x02885DB2)
 // Original VA: 0x0000000142885D10 | File offset: 0x02885310
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_ShowPlatformRedeemCode, 1144535932u); reached from UFortAsyncAction_ShowPlatformRedeemCode::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_ShowPlatformRedeemCode::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode();
+// Original dynamic initializer: RVA 0x0023DEA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_ShowPlatformRedeemCode(Z_Construct_UClass_UFortAsyncAction_ShowPlatformRedeemCode, &UFortAsyncAction_ShowPlatformRedeemCode::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAsyncAction_ShowPlatformRedeemCode"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCurveLinearColor, 1302429215u)
+// Original dynamic initializer: RVA 0x001F8320 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCurveLinearColor> AutoInitializeUCurveLinearColor(TEXT("UCurveLinearColor"), sizeof(UCurveLinearColor), 1302429215u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FC0D0 (end 0x023FC172)
 // Original VA: 0x00000001423FC0D0 | File offset: 0x023FB6D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCurveLinearColor, 1302429215u); reached from UCurveLinearColor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCurveLinearColor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCurveLinearColor();
+// Original dynamic initializer: RVA 0x001F9600
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCurveLinearColor(Z_Construct_UClass_UCurveLinearColor, &UCurveLinearColor::StaticClass, TEXT("/Script/Engine"), TEXT("UCurveLinearColor"), false, nullptr, nullptr, nullptr);

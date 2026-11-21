@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortNavArea_WoodenWall()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNavArea_WoodenWall, 1910667710u)
+// Original dynamic initializer: RVA 0x00104420 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNavArea_WoodenWall> AutoInitializeUFortNavArea_WoodenWall(TEXT("UFortNavArea_WoodenWall"), sizeof(UFortNavArea_WoodenWall), 1910667710u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01049630 (end 0x010496D2)
 // Original VA: 0x0000000141049630 | File offset: 0x01048C30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNavArea_WoodenWall, 1910667710u); reached from UFortNavArea_WoodenWall::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortNavArea_WoodenWall::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNavArea_WoodenWall();
+// Original dynamic initializer: RVA 0x001057D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNavArea_WoodenWall(Z_Construct_UClass_UFortNavArea_WoodenWall, &UFortNavArea_WoodenWall::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNavArea_WoodenWall"), false, nullptr, nullptr, nullptr);

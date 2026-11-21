@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortBTTask_GameMoveTo()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTTask_GameMoveTo, 3839388912u)
+// Original dynamic initializer: RVA 0x000E92F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTTask_GameMoveTo> AutoInitializeUFortBTTask_GameMoveTo(TEXT("UFortBTTask_GameMoveTo"), sizeof(UFortBTTask_GameMoveTo), 3839388912u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAB970 (end 0x00FABA12)
 // Original VA: 0x0000000140FAB970 | File offset: 0x00FAAF70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTTask_GameMoveTo, 3839388912u); reached from UFortBTTask_GameMoveTo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortBTTask_GameMoveTo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTTask_GameMoveTo();
+// Original dynamic initializer: RVA 0x000EA2C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTTask_GameMoveTo(Z_Construct_UClass_UFortBTTask_GameMoveTo, &UFortBTTask_GameMoveTo::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTTask_GameMoveTo"), false, nullptr, nullptr, nullptr);

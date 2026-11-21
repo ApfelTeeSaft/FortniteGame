@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USoundNodeDistanceCrossFade()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundNodeDistanceCrossFade, 506197887u)
+// Original dynamic initializer: RVA 0x0021C610 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundNodeDistanceCrossFade> AutoInitializeUSoundNodeDistanceCrossFade(TEXT("USoundNodeDistanceCrossFade"), sizeof(USoundNodeDistanceCrossFade), 506197887u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D9DF0 (end 0x024D9E92)
 // Original VA: 0x00000001424D9DF0 | File offset: 0x024D93F0
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundNodeDistanceCrossFade, 506197887u); reached from USoundNodeDistanceCrossFade::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USoundNodeDistanceCrossFade::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundNodeDistanceCrossFade();
+// Original dynamic initializer: RVA 0x0021DB70
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundNodeDistanceCrossFade(Z_Construct_UClass_USoundNodeDistanceCrossFade, &USoundNodeDistanceCrossFade::StaticClass, TEXT("/Script/Engine"), TEXT("USoundNodeDistanceCrossFade"), false, nullptr, nullptr, nullptr);

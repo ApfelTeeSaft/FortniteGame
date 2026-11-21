@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortQueryContext_EncounterGoalsOnGround()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryContext_EncounterGoalsOnGround, 3375157154u)
+// Original dynamic initializer: RVA 0x0010E8B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryContext_EncounterGoalsOnGround> AutoInitializeUFortQueryContext_EncounterGoalsOnGround(TEXT("UFortQueryContext_EncounterGoalsOnGround"), sizeof(UFortQueryContext_EncounterGoalsOnGround), 3375157154u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01090500 (end 0x010905A2)
 // Original VA: 0x0000000141090500 | File offset: 0x0108FB00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryContext_EncounterGoalsOnGround, 3375157154u); reached from UFortQueryContext_EncounterGoalsOnGround::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortQueryContext_EncounterGoalsOnGround::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryContext_EncounterGoalsOnGround();
+// Original dynamic initializer: RVA 0x0010F7E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryContext_EncounterGoalsOnGround(Z_Construct_UClass_UFortQueryContext_EncounterGoalsOnGround, &UFortQueryContext_EncounterGoalsOnGround::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryContext_EncounterGoalsOnGround"), false, nullptr, nullptr, nullptr);

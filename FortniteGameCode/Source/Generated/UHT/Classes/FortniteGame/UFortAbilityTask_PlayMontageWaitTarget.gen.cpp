@@ -7,6 +7,9 @@
 void UFortAbilityTask_PlayMontageWaitTarget::StaticRegisterNativesUFortAbilityTask_PlayMontageWaitTarget()
 {
 }
+// IMPLEMENT_CLASS(UFortAbilityTask_PlayMontageWaitTarget, 3230121747u)
+// Original dynamic initializer: RVA 0x000DFDE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAbilityTask_PlayMontageWaitTarget> AutoInitializeUFortAbilityTask_PlayMontageWaitTarget(TEXT("UFortAbilityTask_PlayMontageWaitTarget"), sizeof(UFortAbilityTask_PlayMontageWaitTarget), 3230121747u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F80690 (end 0x00F80732)
 // Original VA: 0x0000000140F80690 | File offset: 0x00F7FC90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAbilityTask_PlayMontageWaitTarget, 3230121747u); reached from UFortAbilityTask_PlayMontageWaitTarget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortAbilityTask_PlayMontageWaitTarget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget();
+// Original dynamic initializer: RVA 0x000E09A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAbilityTask_PlayMontageWaitTarget(Z_Construct_UClass_UFortAbilityTask_PlayMontageWaitTarget, &UFortAbilityTask_PlayMontageWaitTarget::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAbilityTask_PlayMontageWaitTarget"), false, nullptr, nullptr, nullptr);

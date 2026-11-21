@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBlackboardKeyType_Enum()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBlackboardKeyType_Enum, 3783061680u)
+// Original dynamic initializer: RVA 0x001BA850 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBlackboardKeyType_Enum> AutoInitializeUBlackboardKeyType_Enum(TEXT("UBlackboardKeyType_Enum"), sizeof(UBlackboardKeyType_Enum), 3783061680u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D21B70 (end 0x01D21C12)
 // Original VA: 0x0000000141D21B70 | File offset: 0x01D21170
 // Recovery: confirmed (IMPLEMENT_CLASS(UBlackboardKeyType_Enum, 3783061680u); reached from UBlackboardKeyType_Enum::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBlackboardKeyType_Enum::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBlackboardKeyType_Enum();
+// Original dynamic initializer: RVA 0x001BBD80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBlackboardKeyType_Enum(Z_Construct_UClass_UBlackboardKeyType_Enum, &UBlackboardKeyType_Enum::StaticClass, TEXT("/Script/AIModule"), TEXT("UBlackboardKeyType_Enum"), false, nullptr, nullptr, nullptr);

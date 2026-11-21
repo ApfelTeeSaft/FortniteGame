@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAIAsyncTaskBlueprintProxy, 4031108827u)
+// Original dynamic initializer: RVA 0x001B8EB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAIAsyncTaskBlueprintProxy> AutoInitializeUAIAsyncTaskBlueprintProxy(TEXT("UAIAsyncTaskBlueprintProxy"), sizeof(UAIAsyncTaskBlueprintProxy), 4031108827u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D19710 (end 0x01D197A7)
 // Original VA: 0x0000000141D19710 | File offset: 0x01D18D10
 // Recovery: confirmed (IMPLEMENT_CLASS(UAIAsyncTaskBlueprintProxy, 4031108827u); reached from UAIAsyncTaskBlueprintProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAIAsyncTaskBlueprintProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAIAsyncTaskBlueprintProxy();
+// Original dynamic initializer: RVA 0x001B9DF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAIAsyncTaskBlueprintProxy(Z_Construct_UClass_UAIAsyncTaskBlueprintProxy, &UAIAsyncTaskBlueprintProxy::StaticClass, TEXT("/Script/AIModule"), TEXT("UAIAsyncTaskBlueprintProxy"), false, nullptr, nullptr, nullptr);

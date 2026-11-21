@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UScene()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UScene, 2764750885u)
+// Original dynamic initializer: RVA 0x00218C20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UScene> AutoInitializeUScene(TEXT("UScene"), sizeof(UScene), 2764750885u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C4700 (end 0x024C4797)
 // Original VA: 0x00000001424C4700 | File offset: 0x024C3D00
 // Recovery: confirmed (IMPLEMENT_CLASS(UScene, 2764750885u); reached from UScene::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UScene::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UScene();
+// Original dynamic initializer: RVA 0x002196D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UScene(Z_Construct_UClass_UScene, &UScene::StaticClass, TEXT("/Script/Engine"), TEXT("UScene"), false, nullptr, nullptr, nullptr);

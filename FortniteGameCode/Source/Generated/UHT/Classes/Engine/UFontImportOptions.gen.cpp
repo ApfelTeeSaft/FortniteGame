@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFontImportOptions()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFontImportOptions, 1954823524u)
+// Original dynamic initializer: RVA 0x001FF3E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFontImportOptions> AutoInitializeUFontImportOptions(TEXT("UFontImportOptions"), sizeof(UFontImportOptions), 1954823524u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240EA60 (end 0x0240EAF7)
 // Original VA: 0x000000014240EA60 | File offset: 0x0240E060
 // Recovery: confirmed (IMPLEMENT_CLASS(UFontImportOptions, 1954823524u); reached from UFontImportOptions::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFontImportOptions::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFontImportOptions();
+// Original dynamic initializer: RVA 0x001FFEB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFontImportOptions(Z_Construct_UClass_UFontImportOptions, &UFontImportOptions::StaticClass, TEXT("/Script/Engine"), TEXT("UFontImportOptions"), false, nullptr, nullptr, nullptr);

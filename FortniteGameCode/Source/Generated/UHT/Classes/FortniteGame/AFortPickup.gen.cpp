@@ -7,6 +7,9 @@
 void AFortPickup::StaticRegisterNativesAFortPickup()
 {
 }
+// IMPLEMENT_CLASS(AFortPickup, 3577192923u)
+// Original dynamic initializer: RVA 0x00108D00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPickup> AutoInitializeAFortPickup(TEXT("AFortPickup"), sizeof(AFortPickup), 3577192923u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01063CF0 (end 0x01063D92)
 // Original VA: 0x0000000141063CF0 | File offset: 0x010632F0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPickup, 3577192923u); reached from AFortPickup::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortPickup::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPickup();
+// Original dynamic initializer: RVA 0x0010A000
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPickup(Z_Construct_UClass_AFortPickup, &AFortPickup::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPickup"), false, nullptr, nullptr, nullptr);

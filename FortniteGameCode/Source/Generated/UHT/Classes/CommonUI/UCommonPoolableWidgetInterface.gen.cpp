@@ -7,6 +7,9 @@
 void UCommonPoolableWidgetInterface::StaticRegisterNativesUCommonPoolableWidgetInterface()
 {
 }
+// IMPLEMENT_CLASS(UCommonPoolableWidgetInterface, 462215900u)
+// Original dynamic initializer: RVA 0x00096080 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonPoolableWidgetInterface> AutoInitializeUCommonPoolableWidgetInterface(TEXT("UCommonPoolableWidgetInterface"), sizeof(UCommonPoolableWidgetInterface), 462215900u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C9690 (end 0x002C9732)
 // Original VA: 0x00000001402C9690 | File offset: 0x002C8C90
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonPoolableWidgetInterface, 462215900u); reached from UCommonPoolableWidgetInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonPoolableWidgetInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonPoolableWidgetInterface();
+// Original dynamic initializer: RVA 0x000968D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonPoolableWidgetInterface(Z_Construct_UClass_UCommonPoolableWidgetInterface, &UCommonPoolableWidgetInterface::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonPoolableWidgetInterface"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryData_CurvesAroundLine()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryData_CurvesAroundLine, 3684185516u)
+// Original dynamic initializer: RVA 0x0010E9F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryData_CurvesAroundLine> AutoInitializeUFortQueryData_CurvesAroundLine(TEXT("UFortQueryData_CurvesAroundLine"), sizeof(UFortQueryData_CurvesAroundLine), 3684185516u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01090BE0 (end 0x01090C82)
 // Original VA: 0x0000000141090BE0 | File offset: 0x010901E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryData_CurvesAroundLine, 3684185516u); reached from UFortQueryData_CurvesAroundLine::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryData_CurvesAroundLine::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryData_CurvesAroundLine();
+// Original dynamic initializer: RVA 0x0010FA60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryData_CurvesAroundLine(Z_Construct_UClass_UFortQueryData_CurvesAroundLine, &UFortQueryData_CurvesAroundLine::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryData_CurvesAroundLine"), false, nullptr, nullptr, nullptr);

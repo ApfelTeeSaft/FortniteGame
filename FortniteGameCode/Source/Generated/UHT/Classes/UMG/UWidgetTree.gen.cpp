@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UWidgetTree()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UWidgetTree, 1603586167u)
+// Original dynamic initializer: RVA 0x001B5460 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWidgetTree> AutoInitializeUWidgetTree(TEXT("UWidgetTree"), sizeof(UWidgetTree), 1603586167u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07770 (end 0x01C07807)
 // Original VA: 0x0000000141C07770 | File offset: 0x01C06D70
 // Recovery: confirmed (IMPLEMENT_CLASS(UWidgetTree, 1603586167u); reached from UWidgetTree::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UWidgetTree::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWidgetTree();
+// Original dynamic initializer: RVA 0x001B5630
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWidgetTree(Z_Construct_UClass_UWidgetTree, &UWidgetTree::StaticClass, TEXT("/Script/UMG"), TEXT("UWidgetTree"), false, nullptr, nullptr, nullptr);

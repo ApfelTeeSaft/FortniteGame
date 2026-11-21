@@ -7,6 +7,9 @@
 void AFortQuickBars::StaticRegisterNativesAFortQuickBars()
 {
 }
+// IMPLEMENT_CLASS(AFortQuickBars, 3802736932u)
+// Original dynamic initializer: RVA 0x00111340 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortQuickBars> AutoInitializeAFortQuickBars(TEXT("AFortQuickBars"), sizeof(AFortQuickBars), 3802736932u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109BC50 (end 0x0109BCF2)
 // Original VA: 0x000000014109BC50 | File offset: 0x0109B250
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortQuickBars, 3802736932u); reached from AFortQuickBars::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortQuickBars::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortQuickBars();
+// Original dynamic initializer: RVA 0x001125F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortQuickBars(Z_Construct_UClass_AFortQuickBars, &AFortQuickBars::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortQuickBars"), false, nullptr, nullptr, nullptr);

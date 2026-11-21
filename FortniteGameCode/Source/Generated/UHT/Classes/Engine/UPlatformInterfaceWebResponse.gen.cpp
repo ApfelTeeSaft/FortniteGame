@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UPlatformInterfaceWebResponse, 2140534516u)
+// Original dynamic initializer: RVA 0x00214A70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPlatformInterfaceWebResponse> AutoInitializeUPlatformInterfaceWebResponse(TEXT("UPlatformInterfaceWebResponse"), sizeof(UPlatformInterfaceWebResponse), 2140534516u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A8AE0 (end 0x024A8B77)
 // Original VA: 0x00000001424A8AE0 | File offset: 0x024A80E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UPlatformInterfaceWebResponse, 2140534516u); reached from UPlatformInterfaceWebResponse::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UPlatformInterfaceWebResponse::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPlatformInterfaceWebResponse();
+// Original dynamic initializer: RVA 0x00216160
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPlatformInterfaceWebResponse(Z_Construct_UClass_UPlatformInterfaceWebResponse, &UPlatformInterfaceWebResponse::StaticClass, TEXT("/Script/Engine"), TEXT("UPlatformInterfaceWebResponse"), false, nullptr, nullptr, nullptr);

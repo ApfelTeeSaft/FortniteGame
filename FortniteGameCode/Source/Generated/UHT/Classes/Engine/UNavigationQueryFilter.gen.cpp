@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UNavigationQueryFilter()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNavigationQueryFilter, 165835678u)
+// Original dynamic initializer: RVA 0x0020DD70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavigationQueryFilter> AutoInitializeUNavigationQueryFilter(TEXT("UNavigationQueryFilter"), sizeof(UNavigationQueryFilter), 165835678u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248EA50 (end 0x0248EAE7)
 // Original VA: 0x000000014248EA50 | File offset: 0x0248E050
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavigationQueryFilter, 165835678u); reached from UNavigationQueryFilter::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UNavigationQueryFilter::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavigationQueryFilter();
+// Original dynamic initializer: RVA 0x0020EC10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavigationQueryFilter(Z_Construct_UClass_UNavigationQueryFilter, &UNavigationQueryFilter::StaticClass, TEXT("/Script/Engine"), TEXT("UNavigationQueryFilter"), false, nullptr, nullptr, nullptr);

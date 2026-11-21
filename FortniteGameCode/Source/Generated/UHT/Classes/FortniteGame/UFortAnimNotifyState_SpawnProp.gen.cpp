@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAnimNotifyState_SpawnProp()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAnimNotifyState_SpawnProp, 730572089u)
+// Original dynamic initializer: RVA 0x000E6790 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAnimNotifyState_SpawnProp> AutoInitializeUFortAnimNotifyState_SpawnProp(TEXT("UFortAnimNotifyState_SpawnProp"), sizeof(UFortAnimNotifyState_SpawnProp), 730572089u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9C940 (end 0x00F9C9E2)
 // Original VA: 0x0000000140F9C940 | File offset: 0x00F9BF40
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAnimNotifyState_SpawnProp, 730572089u); reached from UFortAnimNotifyState_SpawnProp::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAnimNotifyState_SpawnProp::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAnimNotifyState_SpawnProp();
+// Original dynamic initializer: RVA 0x000E7950
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAnimNotifyState_SpawnProp(Z_Construct_UClass_UFortAnimNotifyState_SpawnProp, &UFortAnimNotifyState_SpawnProp::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAnimNotifyState_SpawnProp"), false, nullptr, nullptr, nullptr);

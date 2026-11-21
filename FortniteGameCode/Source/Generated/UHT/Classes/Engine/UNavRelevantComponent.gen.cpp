@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UNavRelevantComponent, 2297301448u)
+// Original dynamic initializer: RVA 0x0020DCF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavRelevantComponent> AutoInitializeUNavRelevantComponent(TEXT("UNavRelevantComponent"), sizeof(UNavRelevantComponent), 2297301448u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248E790 (end 0x0248E832)
 // Original VA: 0x000000014248E790 | File offset: 0x0248DD90
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavRelevantComponent, 2297301448u); reached from UNavRelevantComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UNavRelevantComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavRelevantComponent();
+// Original dynamic initializer: RVA 0x0020EB10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavRelevantComponent(Z_Construct_UClass_UNavRelevantComponent, &UNavRelevantComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UNavRelevantComponent"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UEpicCMSTileBase::StaticRegisterNativesUEpicCMSTileBase()
 {
 }
+// IMPLEMENT_CLASS(UEpicCMSTileBase, 957572841u)
+// Original dynamic initializer: RVA 0x00097880 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEpicCMSTileBase> AutoInitializeUEpicCMSTileBase(TEXT("UEpicCMSTileBase"), sizeof(UEpicCMSTileBase), 957572841u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002E35C0 (end 0x002E3662)
 // Original VA: 0x00000001402E35C0 | File offset: 0x002E2BC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UEpicCMSTileBase, 957572841u); reached from UEpicCMSTileBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UEpicCMSTileBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEpicCMSTileBase();
+// Original dynamic initializer: RVA 0x00097D80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEpicCMSTileBase(Z_Construct_UClass_UEpicCMSTileBase, &UEpicCMSTileBase::StaticClass, TEXT("/Script/EpicCMSUIFramework"), TEXT("UEpicCMSTileBase"), false, nullptr, nullptr, nullptr);

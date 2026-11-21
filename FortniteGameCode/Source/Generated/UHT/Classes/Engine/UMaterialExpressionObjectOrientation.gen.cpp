@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionObjectOrientation()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionObjectOrientation, 2616936403u)
+// Original dynamic initializer: RVA 0x00208CC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionObjectOrientation> AutoInitializeUMaterialExpressionObjectOrientation(TEXT("UMaterialExpressionObjectOrientation"), sizeof(UMaterialExpressionObjectOrientation), 2616936403u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247F260 (end 0x0247F302)
 // Original VA: 0x000000014247F260 | File offset: 0x0247E860
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionObjectOrientation, 2616936403u); reached from UMaterialExpressionObjectOrientation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMaterialExpressionObjectOrientation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionObjectOrientation();
+// Original dynamic initializer: RVA 0x002099F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionObjectOrientation(Z_Construct_UClass_UMaterialExpressionObjectOrientation, &UMaterialExpressionObjectOrientation::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionObjectOrientation"), false, nullptr, nullptr, nullptr);

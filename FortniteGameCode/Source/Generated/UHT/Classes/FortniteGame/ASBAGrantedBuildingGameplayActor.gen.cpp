@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ASBAGrantedBuildingGameplayActor, 3706508696u)
+// Original dynamic initializer: RVA 0x00122390 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ASBAGrantedBuildingGameplayActor> AutoInitializeASBAGrantedBuildingGameplayActor(TEXT("ASBAGrantedBuildingGameplayActor"), sizeof(ASBAGrantedBuildingGameplayActor), 3706508696u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EF9D0 (end 0x010EFA72)
 // Original VA: 0x00000001410EF9D0 | File offset: 0x010EEFD0
 // Recovery: confirmed (IMPLEMENT_CLASS(ASBAGrantedBuildingGameplayActor, 3706508696u); reached from ASBAGrantedBuildingGameplayActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ASBAGrantedBuildingGameplayActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ASBAGrantedBuildingGameplayActor();
+// Original dynamic initializer: RVA 0x001234E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ASBAGrantedBuildingGameplayActor(Z_Construct_UClass_ASBAGrantedBuildingGameplayActor, &ASBAGrantedBuildingGameplayActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ASBAGrantedBuildingGameplayActor"), false, nullptr, nullptr, nullptr);

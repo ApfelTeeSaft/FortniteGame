@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortMissionSelect, 4271197469u)
+// Original dynamic initializer: RVA 0x00251510 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMissionSelect> AutoInitializeUFortMissionSelect(TEXT("UFortMissionSelect"), sizeof(UFortMissionSelect), 4271197469u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D5E00 (end 0x028D5EA2)
 // Original VA: 0x00000001428D5E00 | File offset: 0x028D5400
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMissionSelect, 4271197469u); reached from UFortMissionSelect::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortMissionSelect::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMissionSelect();
+// Original dynamic initializer: RVA 0x00253630
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMissionSelect(Z_Construct_UClass_UFortMissionSelect, &UFortMissionSelect::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortMissionSelect"), false, nullptr, nullptr, nullptr);

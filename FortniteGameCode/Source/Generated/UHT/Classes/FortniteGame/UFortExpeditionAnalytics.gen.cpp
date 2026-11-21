@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortExpeditionAnalytics()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortExpeditionAnalytics, 1575637071u)
+// Original dynamic initializer: RVA 0x000E8150 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortExpeditionAnalytics> AutoInitializeUFortExpeditionAnalytics(TEXT("UFortExpeditionAnalytics"), sizeof(UFortExpeditionAnalytics), 1575637071u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA2BF0 (end 0x00FA2C92)
 // Original VA: 0x0000000140FA2BF0 | File offset: 0x00FA21F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortExpeditionAnalytics, 1575637071u); reached from UFortExpeditionAnalytics::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortExpeditionAnalytics::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortExpeditionAnalytics();
+// Original dynamic initializer: RVA 0x000E8E10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortExpeditionAnalytics(Z_Construct_UClass_UFortExpeditionAnalytics, &UFortExpeditionAnalytics::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortExpeditionAnalytics"), false, nullptr, nullptr, nullptr);

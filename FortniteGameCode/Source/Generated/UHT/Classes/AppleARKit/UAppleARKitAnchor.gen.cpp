@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAppleARKitAnchor, 2045437985u)
+// Original dynamic initializer: RVA 0x000B4380 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAppleARKitAnchor> AutoInitializeUAppleARKitAnchor(TEXT("UAppleARKitAnchor"), sizeof(UAppleARKitAnchor), 2045437985u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00805D00 (end 0x00805D97)
 // Original VA: 0x0000000140805D00 | File offset: 0x00805300
 // Recovery: confirmed (IMPLEMENT_CLASS(UAppleARKitAnchor, 2045437985u); reached from UAppleARKitAnchor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAppleARKitAnchor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAppleARKitAnchor();
+// Original dynamic initializer: RVA 0x000B47D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAppleARKitAnchor(Z_Construct_UClass_UAppleARKitAnchor, &UAppleARKitAnchor::StaticClass, TEXT("/Script/AppleARKit"), TEXT("UAppleARKitAnchor"), false, nullptr, nullptr, nullptr);

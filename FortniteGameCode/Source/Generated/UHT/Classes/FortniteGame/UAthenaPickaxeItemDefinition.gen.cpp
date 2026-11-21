@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAthenaPickaxeItemDefinition()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaPickaxeItemDefinition, 360746060u)
+// Original dynamic initializer: RVA 0x000D7590 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaPickaxeItemDefinition> AutoInitializeUAthenaPickaxeItemDefinition(TEXT("UAthenaPickaxeItemDefinition"), sizeof(UAthenaPickaxeItemDefinition), 360746060u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F587B0 (end 0x00F58852)
 // Original VA: 0x0000000140F587B0 | File offset: 0x00F57DB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaPickaxeItemDefinition, 360746060u); reached from UAthenaPickaxeItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAthenaPickaxeItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaPickaxeItemDefinition();
+// Original dynamic initializer: RVA 0x000D8650
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaPickaxeItemDefinition(Z_Construct_UClass_UAthenaPickaxeItemDefinition, &UAthenaPickaxeItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaPickaxeItemDefinition"), false, nullptr, nullptr, nullptr);

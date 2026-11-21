@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_USelection()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USelection, 4190061484u)
+// Original dynamic initializer: RVA 0x00219850 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USelection> AutoInitializeUSelection(TEXT("USelection"), sizeof(USelection), 4190061484u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C6600 (end 0x024C6697)
 // Original VA: 0x00000001424C6600 | File offset: 0x024C5C00
 // Recovery: confirmed (IMPLEMENT_CLASS(USelection, 4190061484u); reached from USelection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* USelection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USelection();
+// Original dynamic initializer: RVA 0x00219EB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USelection(Z_Construct_UClass_USelection, &USelection::StaticClass, TEXT("/Script/Engine"), TEXT("USelection"), false, nullptr, nullptr, nullptr);

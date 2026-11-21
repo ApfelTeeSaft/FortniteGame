@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortReplaySpectatorPawnBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortReplaySpectatorPawnBase, 331508663u)
+// Original dynamic initializer: RVA 0x001113A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortReplaySpectatorPawnBase> AutoInitializeAFortReplaySpectatorPawnBase(TEXT("AFortReplaySpectatorPawnBase"), sizeof(AFortReplaySpectatorPawnBase), 331508663u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109BE60 (end 0x0109BF02)
 // Original VA: 0x000000014109BE60 | File offset: 0x0109B460
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortReplaySpectatorPawnBase, 331508663u); reached from AFortReplaySpectatorPawnBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortReplaySpectatorPawnBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortReplaySpectatorPawnBase();
+// Original dynamic initializer: RVA 0x001126B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortReplaySpectatorPawnBase(Z_Construct_UClass_AFortReplaySpectatorPawnBase, &AFortReplaySpectatorPawnBase::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortReplaySpectatorPawnBase"), false, nullptr, nullptr, nullptr);

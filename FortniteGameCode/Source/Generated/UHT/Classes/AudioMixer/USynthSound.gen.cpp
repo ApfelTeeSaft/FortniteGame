@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_USynthSound()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USynthSound, 4130363411u)
+// Original dynamic initializer: RVA 0x00224700 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USynthSound> AutoInitializeUSynthSound(TEXT("USynthSound"), sizeof(USynthSound), 4130363411u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02559AD0 (end 0x02559B72)
 // Original VA: 0x0000000142559AD0 | File offset: 0x025590D0
 // Recovery: confirmed (IMPLEMENT_CLASS(USynthSound, 4130363411u); reached from USynthSound::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* USynthSound::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USynthSound();
+// Original dynamic initializer: RVA 0x00224C10
+static FCompiledInDefer Z_CompiledInDefer_UClass_USynthSound(Z_Construct_UClass_USynthSound, &USynthSound::StaticClass, TEXT("/Script/AudioMixer"), TEXT("USynthSound"), false, nullptr, nullptr, nullptr);

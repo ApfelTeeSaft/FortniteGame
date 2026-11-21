@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ASpectatorPawn()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ASpectatorPawn, 981197978u)
+// Original dynamic initializer: RVA 0x0021C3B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ASpectatorPawn> AutoInitializeASpectatorPawn(TEXT("ASpectatorPawn"), sizeof(ASpectatorPawn), 981197978u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D9160 (end 0x024D9202)
 // Original VA: 0x00000001424D9160 | File offset: 0x024D8760
 // Recovery: confirmed (IMPLEMENT_CLASS(ASpectatorPawn, 981197978u); reached from ASpectatorPawn::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ASpectatorPawn::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ASpectatorPawn();
+// Original dynamic initializer: RVA 0x0021D6B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ASpectatorPawn(Z_Construct_UClass_ASpectatorPawn, &ASpectatorPawn::StaticClass, TEXT("/Script/Engine"), TEXT("ASpectatorPawn"), false, nullptr, nullptr, nullptr);

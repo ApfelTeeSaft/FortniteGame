@@ -7,6 +7,9 @@
 void UBacchusButton::StaticRegisterNativesUBacchusButton()
 {
 }
+// IMPLEMENT_CLASS(UBacchusButton, 4191731126u)
+// Original dynamic initializer: RVA 0x0023B680 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBacchusButton> AutoInitializeUBacchusButton(TEXT("UBacchusButton"), sizeof(UBacchusButton), 4191731126u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02885160 (end 0x02885202)
 // Original VA: 0x0000000142885160 | File offset: 0x02884760
 // Recovery: confirmed (IMPLEMENT_CLASS(UBacchusButton, 4191731126u); reached from UBacchusButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UBacchusButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBacchusButton();
+// Original dynamic initializer: RVA 0x0023DA60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBacchusButton(Z_Construct_UClass_UBacchusButton, &UBacchusButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UBacchusButton"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFort3PCameraMode()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFort3PCameraMode, 2152167764u)
+// Original dynamic initializer: RVA 0x000DE7E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFort3PCameraMode> AutoInitializeUFort3PCameraMode(TEXT("UFort3PCameraMode"), sizeof(UFort3PCameraMode), 2152167764u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7B900 (end 0x00F7B9A2)
 // Original VA: 0x0000000140F7B900 | File offset: 0x00F7AF00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFort3PCameraMode, 2152167764u); reached from UFort3PCameraMode::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFort3PCameraMode::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFort3PCameraMode();
+// Original dynamic initializer: RVA 0x000DF980
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFort3PCameraMode(Z_Construct_UClass_UFort3PCameraMode, &UFort3PCameraMode::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFort3PCameraMode"), false, nullptr, nullptr, nullptr);

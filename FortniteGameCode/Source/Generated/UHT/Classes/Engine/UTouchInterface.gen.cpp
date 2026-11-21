@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UTouchInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTouchInterface, 2987561776u)
+// Original dynamic initializer: RVA 0x00220120 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTouchInterface> AutoInitializeUTouchInterface(TEXT("UTouchInterface"), sizeof(UTouchInterface), 2987561776u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EB8F0 (end 0x024EB987)
 // Original VA: 0x00000001424EB8F0 | File offset: 0x024EAEF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UTouchInterface, 2987561776u); reached from UTouchInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UTouchInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTouchInterface();
+// Original dynamic initializer: RVA 0x00221700
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTouchInterface(Z_Construct_UClass_UTouchInterface, &UTouchInterface::StaticClass, TEXT("/Script/Engine"), TEXT("UTouchInterface"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAnimNotifyState_DisableRootMotion()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnimNotifyState_DisableRootMotion, 3607880272u)
+// Original dynamic initializer: RVA 0x001EF920 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimNotifyState_DisableRootMotion> AutoInitializeUAnimNotifyState_DisableRootMotion(TEXT("UAnimNotifyState_DisableRootMotion"), sizeof(UAnimNotifyState_DisableRootMotion), 3607880272u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D44F0 (end 0x023D4592)
 // Original VA: 0x00000001423D44F0 | File offset: 0x023D3AF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimNotifyState_DisableRootMotion, 3607880272u); reached from UAnimNotifyState_DisableRootMotion::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAnimNotifyState_DisableRootMotion::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimNotifyState_DisableRootMotion();
+// Original dynamic initializer: RVA 0x001F1670
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimNotifyState_DisableRootMotion(Z_Construct_UClass_UAnimNotifyState_DisableRootMotion, &UAnimNotifyState_DisableRootMotion::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimNotifyState_DisableRootMotion"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void AFortAbilityTestObserver::StaticRegisterNativesAFortAbilityTestObserver()
 {
 }
+// IMPLEMENT_CLASS(AFortAbilityTestObserver, 3952073883u)
+// Original dynamic initializer: RVA 0x000DFD00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortAbilityTestObserver> AutoInitializeAFortAbilityTestObserver(TEXT("AFortAbilityTestObserver"), sizeof(AFortAbilityTestObserver), 3952073883u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F801D0 (end 0x00F80272)
 // Original VA: 0x0000000140F801D0 | File offset: 0x00F7F7D0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortAbilityTestObserver, 3952073883u); reached from AFortAbilityTestObserver::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortAbilityTestObserver::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortAbilityTestObserver();
+// Original dynamic initializer: RVA 0x000E07E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortAbilityTestObserver(Z_Construct_UClass_AFortAbilityTestObserver, &AFortAbilityTestObserver::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortAbilityTestObserver"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAIHotSpotManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAIHotSpotManager, 697867184u)
+// Original dynamic initializer: RVA 0x001B8F50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAIHotSpotManager> AutoInitializeUAIHotSpotManager(TEXT("UAIHotSpotManager"), sizeof(UAIHotSpotManager), 697867184u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D19A60 (end 0x01D19AF7)
 // Original VA: 0x0000000141D19A60 | File offset: 0x01D19060
 // Recovery: confirmed (IMPLEMENT_CLASS(UAIHotSpotManager, 697867184u); reached from UAIHotSpotManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAIHotSpotManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAIHotSpotManager();
+// Original dynamic initializer: RVA 0x001B9F30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAIHotSpotManager(Z_Construct_UClass_UAIHotSpotManager, &UAIHotSpotManager::StaticClass, TEXT("/Script/AIModule"), TEXT("UAIHotSpotManager"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModulePivotOffset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModulePivotOffset, 2538406887u)
+// Original dynamic initializer: RVA 0x00210E50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModulePivotOffset> AutoInitializeUParticleModulePivotOffset(TEXT("UParticleModulePivotOffset"), sizeof(UParticleModulePivotOffset), 2538406887u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02499760 (end 0x02499802)
 // Original VA: 0x0000000142499760 | File offset: 0x02498D60
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModulePivotOffset, 2538406887u); reached from UParticleModulePivotOffset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModulePivotOffset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModulePivotOffset();
+// Original dynamic initializer: RVA 0x002122A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModulePivotOffset(Z_Construct_UClass_UParticleModulePivotOffset, &UParticleModulePivotOffset::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModulePivotOffset"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAnimNotifyState_ConsumeSound()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAnimNotifyState_ConsumeSound, 2214316826u)
+// Original dynamic initializer: RVA 0x000E6730 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAnimNotifyState_ConsumeSound> AutoInitializeUFortAnimNotifyState_ConsumeSound(TEXT("UFortAnimNotifyState_ConsumeSound"), sizeof(UFortAnimNotifyState_ConsumeSound), 2214316826u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9C730 (end 0x00F9C7D2)
 // Original VA: 0x0000000140F9C730 | File offset: 0x00F9BD30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAnimNotifyState_ConsumeSound, 2214316826u); reached from UFortAnimNotifyState_ConsumeSound::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAnimNotifyState_ConsumeSound::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAnimNotifyState_ConsumeSound();
+// Original dynamic initializer: RVA 0x000E7890
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAnimNotifyState_ConsumeSound(Z_Construct_UClass_UFortAnimNotifyState_ConsumeSound, &UFortAnimNotifyState_ConsumeSound::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAnimNotifyState_ConsumeSound"), false, nullptr, nullptr, nullptr);

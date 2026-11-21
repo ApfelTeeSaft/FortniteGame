@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleVelocityInheritParent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleVelocityInheritParent, 247018255u)
+// Original dynamic initializer: RVA 0x00212800 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleVelocityInheritParent> AutoInitializeUParticleModuleVelocityInheritParent(TEXT("UParticleModuleVelocityInheritParent"), sizeof(UParticleModuleVelocityInheritParent), 247018255u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249D900 (end 0x0249D9A2)
 // Original VA: 0x000000014249D900 | File offset: 0x0249CF00
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleVelocityInheritParent, 247018255u); reached from UParticleModuleVelocityInheritParent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleVelocityInheritParent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleVelocityInheritParent();
+// Original dynamic initializer: RVA 0x00213AD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleVelocityInheritParent(Z_Construct_UClass_UParticleModuleVelocityInheritParent, &UParticleModuleVelocityInheritParent::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleVelocityInheritParent"), false, nullptr, nullptr, nullptr);

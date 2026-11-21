@@ -7,6 +7,9 @@
 void UFortResultsTeleportScreenWidget::StaticRegisterNativesUFortResultsTeleportScreenWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortResultsTeleportScreenWidget, 2422792583u)
+// Original dynamic initializer: RVA 0x002584C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortResultsTeleportScreenWidget> AutoInitializeUFortResultsTeleportScreenWidget(TEXT("UFortResultsTeleportScreenWidget"), sizeof(UFortResultsTeleportScreenWidget), 2422792583u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EB620 (end 0x028EB6C2)
 // Original VA: 0x00000001428EB620 | File offset: 0x028EAC20
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortResultsTeleportScreenWidget, 2422792583u); reached from UFortResultsTeleportScreenWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortResultsTeleportScreenWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortResultsTeleportScreenWidget();
+// Original dynamic initializer: RVA 0x0025A4A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortResultsTeleportScreenWidget(Z_Construct_UClass_UFortResultsTeleportScreenWidget, &UFortResultsTeleportScreenWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortResultsTeleportScreenWidget"), false, nullptr, nullptr, nullptr);

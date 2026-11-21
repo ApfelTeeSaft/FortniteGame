@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UShadowMapTexture2D()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UShadowMapTexture2D, 685050412u)
+// Original dynamic initializer: RVA 0x00219870 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UShadowMapTexture2D> AutoInitializeUShadowMapTexture2D(TEXT("UShadowMapTexture2D"), sizeof(UShadowMapTexture2D), 685050412u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C66A0 (end 0x024C6742)
 // Original VA: 0x00000001424C66A0 | File offset: 0x024C5CA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UShadowMapTexture2D, 685050412u); reached from UShadowMapTexture2D::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UShadowMapTexture2D::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UShadowMapTexture2D();
+// Original dynamic initializer: RVA 0x00219EF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UShadowMapTexture2D(Z_Construct_UClass_UShadowMapTexture2D, &UShadowMapTexture2D::StaticClass, TEXT("/Script/Engine"), TEXT("UShadowMapTexture2D"), false, nullptr, nullptr, nullptr);

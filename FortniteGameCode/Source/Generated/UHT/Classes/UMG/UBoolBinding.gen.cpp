@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UBoolBinding, 801220699u)
+// Original dynamic initializer: RVA 0x001B1C60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBoolBinding> AutoInitializeUBoolBinding(TEXT("UBoolBinding"), sizeof(UBoolBinding), 801220699u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE4AF0 (end 0x01BE4B92)
 // Original VA: 0x0000000141BE4AF0 | File offset: 0x01BE40F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBoolBinding, 801220699u); reached from UBoolBinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UBoolBinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBoolBinding();
+// Original dynamic initializer: RVA 0x001B2220
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBoolBinding(Z_Construct_UClass_UBoolBinding, &UBoolBinding::StaticClass, TEXT("/Script/UMG"), TEXT("UBoolBinding"), false, nullptr, nullptr, nullptr);

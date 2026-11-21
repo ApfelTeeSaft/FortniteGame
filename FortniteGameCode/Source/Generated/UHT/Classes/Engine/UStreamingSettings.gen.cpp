@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UStreamingSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UStreamingSettings, 1624105763u)
+// Original dynamic initializer: RVA 0x001F70C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UStreamingSettings> AutoInitializeUStreamingSettings(TEXT("UStreamingSettings"), sizeof(UStreamingSettings), 1624105763u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F68C0 (end 0x023F6962)
 // Original VA: 0x00000001423F68C0 | File offset: 0x023F5EC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UStreamingSettings, 1624105763u); reached from UStreamingSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UStreamingSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UStreamingSettings();
+// Original dynamic initializer: RVA 0x001F81A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UStreamingSettings(Z_Construct_UClass_UStreamingSettings, &UStreamingSettings::StaticClass, TEXT("/Script/Engine"), TEXT("UStreamingSettings"), false, nullptr, nullptr, nullptr);

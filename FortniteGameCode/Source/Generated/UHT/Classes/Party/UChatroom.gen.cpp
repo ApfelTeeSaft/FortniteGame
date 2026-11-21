@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UChatroom()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UChatroom, 928604410u)
+// Original dynamic initializer: RVA 0x000A8390 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UChatroom> AutoInitializeUChatroom(TEXT("UChatroom"), sizeof(UChatroom), 928604410u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005B8A50 (end 0x005B8AE7)
 // Original VA: 0x00000001405B8A50 | File offset: 0x005B8050
 // Recovery: confirmed (IMPLEMENT_CLASS(UChatroom, 928604410u); reached from UChatroom::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UChatroom::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UChatroom();
+// Original dynamic initializer: RVA 0x000A8610
+static FCompiledInDefer Z_CompiledInDefer_UClass_UChatroom(Z_Construct_UClass_UChatroom, &UChatroom::StaticClass, TEXT("/Script/Party"), TEXT("UChatroom"), false, nullptr, nullptr, nullptr);

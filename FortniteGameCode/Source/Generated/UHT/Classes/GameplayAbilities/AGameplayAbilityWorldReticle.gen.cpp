@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AGameplayAbilityWorldReticle, 3723554824u)
+// Original dynamic initializer: RVA 0x0009EBC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AGameplayAbilityWorldReticle> AutoInitializeAGameplayAbilityWorldReticle(TEXT("AGameplayAbilityWorldReticle"), sizeof(AGameplayAbilityWorldReticle), 3723554824u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00559780 (end 0x00559822)
 // Original VA: 0x0000000140559780 | File offset: 0x00558D80
 // Recovery: confirmed (IMPLEMENT_CLASS(AGameplayAbilityWorldReticle, 3723554824u); reached from AGameplayAbilityWorldReticle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AGameplayAbilityWorldReticle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AGameplayAbilityWorldReticle();
+// Original dynamic initializer: RVA 0x000A0980
+static FCompiledInDefer Z_CompiledInDefer_UClass_AGameplayAbilityWorldReticle(Z_Construct_UClass_AGameplayAbilityWorldReticle, &AGameplayAbilityWorldReticle::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("AGameplayAbilityWorldReticle"), false, nullptr, nullptr, nullptr);

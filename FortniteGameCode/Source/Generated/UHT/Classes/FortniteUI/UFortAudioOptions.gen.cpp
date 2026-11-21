@@ -7,6 +7,9 @@
 void UFortAudioOptions::StaticRegisterNativesUFortAudioOptions()
 {
 }
+// IMPLEMENT_CLASS(UFortAudioOptions, 533954146u)
+// Original dynamic initializer: RVA 0x0023E360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAudioOptions> AutoInitializeUFortAudioOptions(TEXT("UFortAudioOptions"), sizeof(UFortAudioOptions), 533954146u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288BC60 (end 0x0288BD02)
 // Original VA: 0x000000014288BC60 | File offset: 0x0288B260
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAudioOptions, 533954146u); reached from UFortAudioOptions::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortAudioOptions::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAudioOptions();
+// Original dynamic initializer: RVA 0x0023FFE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAudioOptions(Z_Construct_UClass_UFortAudioOptions, &UFortAudioOptions::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAudioOptions"), false, nullptr, nullptr, nullptr);

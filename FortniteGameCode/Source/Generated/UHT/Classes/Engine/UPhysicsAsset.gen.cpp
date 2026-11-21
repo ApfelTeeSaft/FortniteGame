@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UPhysicsAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPhysicsAsset, 3223862376u)
+// Original dynamic initializer: RVA 0x00213D50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPhysicsAsset> AutoInitializeUPhysicsAsset(TEXT("UPhysicsAsset"), sizeof(UPhysicsAsset), 3223862376u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249FC10 (end 0x0249FCA7)
 // Original VA: 0x000000014249FC10 | File offset: 0x0249F210
 // Recovery: confirmed (IMPLEMENT_CLASS(UPhysicsAsset, 3223862376u); reached from UPhysicsAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UPhysicsAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPhysicsAsset();
+// Original dynamic initializer: RVA 0x00214770
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPhysicsAsset(Z_Construct_UClass_UPhysicsAsset, &UPhysicsAsset::StaticClass, TEXT("/Script/Engine"), TEXT("UPhysicsAsset"), false, nullptr, nullptr, nullptr);

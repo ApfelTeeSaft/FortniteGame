@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortInventorySortFunctionLibrary, 504796749u)
+// Original dynamic initializer: RVA 0x00117E60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortInventorySortFunctionLibrary> AutoInitializeUFortInventorySortFunctionLibrary(TEXT("UFortInventorySortFunctionLibrary"), sizeof(UFortInventorySortFunctionLibrary), 504796749u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C74C0 (end 0x010C7562)
 // Original VA: 0x00000001410C74C0 | File offset: 0x010C6AC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortInventorySortFunctionLibrary, 504796749u); reached from UFortInventorySortFunctionLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortInventorySortFunctionLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortInventorySortFunctionLibrary();
+// Original dynamic initializer: RVA 0x0011B9B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortInventorySortFunctionLibrary(Z_Construct_UClass_UFortInventorySortFunctionLibrary, &UFortInventorySortFunctionLibrary::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortInventorySortFunctionLibrary"), false, nullptr, nullptr, nullptr);

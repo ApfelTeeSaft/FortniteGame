@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortPlayerAbandonParams()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortPlayerAbandonParams, 558320609u)
+// Original dynamic initializer: RVA 0x001201E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPlayerAbandonParams> AutoInitializeUFortPlayerAbandonParams(TEXT("UFortPlayerAbandonParams"), sizeof(UFortPlayerAbandonParams), 558320609u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E7990 (end 0x010E7A32)
 // Original VA: 0x00000001410E7990 | File offset: 0x010E6F90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPlayerAbandonParams, 558320609u); reached from UFortPlayerAbandonParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortPlayerAbandonParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPlayerAbandonParams();
+// Original dynamic initializer: RVA 0x00121F30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPlayerAbandonParams(Z_Construct_UClass_UFortPlayerAbandonParams, &UFortPlayerAbandonParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPlayerAbandonParams"), false, nullptr, nullptr, nullptr);

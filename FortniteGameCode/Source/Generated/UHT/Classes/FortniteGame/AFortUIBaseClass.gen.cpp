@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortUIBaseClass()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortUIBaseClass, 1879782998u)
+// Original dynamic initializer: RVA 0x0011BE30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortUIBaseClass> AutoInitializeAFortUIBaseClass(TEXT("AFortUIBaseClass"), sizeof(AFortUIBaseClass), 1879782998u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D2700 (end 0x010D27A2)
 // Original VA: 0x00000001410D2700 | File offset: 0x010D1D00
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortUIBaseClass, 1879782998u); reached from AFortUIBaseClass::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortUIBaseClass::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortUIBaseClass();
+// Original dynamic initializer: RVA 0x0011CDA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortUIBaseClass(Z_Construct_UClass_AFortUIBaseClass, &AFortUIBaseClass::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortUIBaseClass"), false, nullptr, nullptr, nullptr);

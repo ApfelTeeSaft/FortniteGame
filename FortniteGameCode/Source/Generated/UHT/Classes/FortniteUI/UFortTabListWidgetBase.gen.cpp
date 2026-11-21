@@ -7,6 +7,9 @@
 void UFortTabListWidgetBase::StaticRegisterNativesUFortTabListWidgetBase()
 {
 }
+// IMPLEMENT_CLASS(UFortTabListWidgetBase, 3624956100u)
+// Original dynamic initializer: RVA 0x0025E450 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTabListWidgetBase> AutoInitializeUFortTabListWidgetBase(TEXT("UFortTabListWidgetBase"), sizeof(UFortTabListWidgetBase), 3624956100u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029031C0 (end 0x02903262)
 // Original VA: 0x00000001429031C0 | File offset: 0x029027C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTabListWidgetBase, 3624956100u); reached from UFortTabListWidgetBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortTabListWidgetBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTabListWidgetBase();
+// Original dynamic initializer: RVA 0x00260650
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTabListWidgetBase(Z_Construct_UClass_UFortTabListWidgetBase, &UFortTabListWidgetBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTabListWidgetBase"), false, nullptr, nullptr, nullptr);

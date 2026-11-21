@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAnimNotifyState, 1905589001u)
+// Original dynamic initializer: RVA 0x001EF900 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimNotifyState> AutoInitializeUAnimNotifyState(TEXT("UAnimNotifyState"), sizeof(UAnimNotifyState), 1905589001u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D4450 (end 0x023D44E7)
 // Original VA: 0x00000001423D4450 | File offset: 0x023D3A50
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimNotifyState, 1905589001u); reached from UAnimNotifyState::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAnimNotifyState::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimNotifyState();
+// Original dynamic initializer: RVA 0x001F1630
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimNotifyState(Z_Construct_UClass_UAnimNotifyState, &UAnimNotifyState::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimNotifyState"), false, nullptr, nullptr, nullptr);

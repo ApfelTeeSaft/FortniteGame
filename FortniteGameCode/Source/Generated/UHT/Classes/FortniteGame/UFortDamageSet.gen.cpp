@@ -7,6 +7,9 @@
 void UFortDamageSet::StaticRegisterNativesUFortDamageSet()
 {
 }
+// IMPLEMENT_CLASS(UFortDamageSet, 2571047835u)
+// Original dynamic initializer: RVA 0x000EE5B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDamageSet> AutoInitializeUFortDamageSet(TEXT("UFortDamageSet"), sizeof(UFortDamageSet), 2571047835u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCA490 (end 0x00FCA532)
 // Original VA: 0x0000000140FCA490 | File offset: 0x00FC9A90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDamageSet, 2571047835u); reached from UFortDamageSet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortDamageSet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDamageSet();
+// Original dynamic initializer: RVA 0x000EF8C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDamageSet(Z_Construct_UClass_UFortDamageSet, &UFortDamageSet::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDamageSet"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UTurnBasedBlueprintLibrary, 572984977u)
+// Original dynamic initializer: RVA 0x000995E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTurnBasedBlueprintLibrary> AutoInitializeUTurnBasedBlueprintLibrary(TEXT("UTurnBasedBlueprintLibrary"), sizeof(UTurnBasedBlueprintLibrary), 572984977u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032D930 (end 0x0032D9D2)
 // Original VA: 0x000000014032D930 | File offset: 0x0032CF30
 // Recovery: confirmed (IMPLEMENT_CLASS(UTurnBasedBlueprintLibrary, 572984977u); reached from UTurnBasedBlueprintLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UTurnBasedBlueprintLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTurnBasedBlueprintLibrary();
+// Original dynamic initializer: RVA 0x0009A3E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTurnBasedBlueprintLibrary(Z_Construct_UClass_UTurnBasedBlueprintLibrary, &UTurnBasedBlueprintLibrary::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UTurnBasedBlueprintLibrary"), false, nullptr, nullptr, nullptr);

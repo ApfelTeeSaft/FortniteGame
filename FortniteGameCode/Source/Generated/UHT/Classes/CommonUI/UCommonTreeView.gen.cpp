@@ -7,6 +7,9 @@
 void UCommonTreeView::StaticRegisterNativesUCommonTreeView()
 {
 }
+// IMPLEMENT_CLASS(UCommonTreeView, 95310353u)
+// Original dynamic initializer: RVA 0x00096180 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonTreeView> AutoInitializeUCommonTreeView(TEXT("UCommonTreeView"), sizeof(UCommonTreeView), 95310353u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C9BF0 (end 0x002C9C92)
 // Original VA: 0x00000001402C9BF0 | File offset: 0x002C91F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonTreeView, 95310353u); reached from UCommonTreeView::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonTreeView::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonTreeView();
+// Original dynamic initializer: RVA 0x00096AD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonTreeView(Z_Construct_UClass_UCommonTreeView, &UCommonTreeView::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonTreeView"), false, nullptr, nullptr, nullptr);

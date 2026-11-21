@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ABuildingOutpostCraftingTable()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingOutpostCraftingTable, 2669471014u)
+// Original dynamic initializer: RVA 0x000DAF10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingOutpostCraftingTable> AutoInitializeABuildingOutpostCraftingTable(TEXT("ABuildingOutpostCraftingTable"), sizeof(ABuildingOutpostCraftingTable), 2669471014u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6A900 (end 0x00F6A9A2)
 // Original VA: 0x0000000140F6A900 | File offset: 0x00F69F00
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingOutpostCraftingTable, 2669471014u); reached from ABuildingOutpostCraftingTable::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ABuildingOutpostCraftingTable::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingOutpostCraftingTable();
+// Original dynamic initializer: RVA 0x000DBB00
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingOutpostCraftingTable(Z_Construct_UClass_ABuildingOutpostCraftingTable, &ABuildingOutpostCraftingTable::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingOutpostCraftingTable"), false, nullptr, nullptr, nullptr);

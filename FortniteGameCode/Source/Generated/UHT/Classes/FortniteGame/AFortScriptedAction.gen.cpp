@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortScriptedAction, 473034142u)
+// Original dynamic initializer: RVA 0x00112AD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortScriptedAction> AutoInitializeAFortScriptedAction(TEXT("AFortScriptedAction"), sizeof(AFortScriptedAction), 473034142u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A32D0 (end 0x010A3372)
 // Original VA: 0x00000001410A32D0 | File offset: 0x010A28D0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortScriptedAction, 473034142u); reached from AFortScriptedAction::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortScriptedAction::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortScriptedAction();
+// Original dynamic initializer: RVA 0x001140F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortScriptedAction(Z_Construct_UClass_AFortScriptedAction, &AFortScriptedAction::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortScriptedAction"), false, nullptr, nullptr, nullptr);

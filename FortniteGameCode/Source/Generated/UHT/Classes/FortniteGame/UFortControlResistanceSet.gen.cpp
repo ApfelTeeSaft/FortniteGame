@@ -7,6 +7,9 @@
 void UFortControlResistanceSet::StaticRegisterNativesUFortControlResistanceSet()
 {
 }
+// IMPLEMENT_CLASS(UFortControlResistanceSet, 2056049519u)
+// Original dynamic initializer: RVA 0x000EE470 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortControlResistanceSet> AutoInitializeUFortControlResistanceSet(TEXT("UFortControlResistanceSet"), sizeof(UFortControlResistanceSet), 2056049519u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC9DB0 (end 0x00FC9E52)
 // Original VA: 0x0000000140FC9DB0 | File offset: 0x00FC93B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortControlResistanceSet, 2056049519u); reached from UFortControlResistanceSet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortControlResistanceSet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortControlResistanceSet();
+// Original dynamic initializer: RVA 0x000EF640
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortControlResistanceSet(Z_Construct_UClass_UFortControlResistanceSet, &UFortControlResistanceSet::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortControlResistanceSet"), false, nullptr, nullptr, nullptr);

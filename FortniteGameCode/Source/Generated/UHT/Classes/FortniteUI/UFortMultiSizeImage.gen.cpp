@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortMultiSizeImage, 3059830087u)
+// Original dynamic initializer: RVA 0x00253AD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMultiSizeImage> AutoInitializeUFortMultiSizeImage(TEXT("UFortMultiSizeImage"), sizeof(UFortMultiSizeImage), 3059830087u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DD350 (end 0x028DD3F2)
 // Original VA: 0x00000001428DD350 | File offset: 0x028DC950
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMultiSizeImage, 3059830087u); reached from UFortMultiSizeImage::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortMultiSizeImage::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMultiSizeImage();
+// Original dynamic initializer: RVA 0x00255680
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMultiSizeImage(Z_Construct_UClass_UFortMultiSizeImage, &UFortMultiSizeImage::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortMultiSizeImage"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USoundNodeBranch()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundNodeBranch, 2317600688u)
+// Original dynamic initializer: RVA 0x0021C590 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundNodeBranch> AutoInitializeUSoundNodeBranch(TEXT("USoundNodeBranch"), sizeof(USoundNodeBranch), 2317600688u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D9B30 (end 0x024D9BD2)
 // Original VA: 0x00000001424D9B30 | File offset: 0x024D9130
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundNodeBranch, 2317600688u); reached from USoundNodeBranch::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USoundNodeBranch::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundNodeBranch();
+// Original dynamic initializer: RVA 0x0021DA70
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundNodeBranch(Z_Construct_UClass_USoundNodeBranch, &USoundNodeBranch::StaticClass, TEXT("/Script/Engine"), TEXT("USoundNodeBranch"), false, nullptr, nullptr, nullptr);

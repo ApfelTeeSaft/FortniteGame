@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_URichTextBlockDecorator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(URichTextBlockDecorator, 1174005947u)
+// Original dynamic initializer: RVA 0x001B2A80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<URichTextBlockDecorator> AutoInitializeURichTextBlockDecorator(TEXT("URichTextBlockDecorator"), sizeof(URichTextBlockDecorator), 1174005947u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BECA90 (end 0x01BECB27)
 // Original VA: 0x0000000141BECA90 | File offset: 0x01BEC090
 // Recovery: confirmed (IMPLEMENT_CLASS(URichTextBlockDecorator, 1174005947u); reached from URichTextBlockDecorator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* URichTextBlockDecorator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_URichTextBlockDecorator();
+// Original dynamic initializer: RVA 0x001B3550
+static FCompiledInDefer Z_CompiledInDefer_UClass_URichTextBlockDecorator(Z_Construct_UClass_URichTextBlockDecorator, &URichTextBlockDecorator::StaticClass, TEXT("/Script/UMG"), TEXT("URichTextBlockDecorator"), false, nullptr, nullptr, nullptr);

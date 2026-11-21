@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionDepthOfFieldFunction()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionDepthOfFieldFunction, 1549331609u)
+// Original dynamic initializer: RVA 0x00207300 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionDepthOfFieldFunction> AutoInitializeUMaterialExpressionDepthOfFieldFunction(TEXT("UMaterialExpressionDepthOfFieldFunction"), sizeof(UMaterialExpressionDepthOfFieldFunction), 1549331609u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247B840 (end 0x0247B8E2)
 // Original VA: 0x000000014247B840 | File offset: 0x0247AE40
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionDepthOfFieldFunction, 1549331609u); reached from UMaterialExpressionDepthOfFieldFunction::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionDepthOfFieldFunction::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionDepthOfFieldFunction();
+// Original dynamic initializer: RVA 0x00208300
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionDepthOfFieldFunction(Z_Construct_UClass_UMaterialExpressionDepthOfFieldFunction, &UMaterialExpressionDepthOfFieldFunction::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionDepthOfFieldFunction"), false, nullptr, nullptr, nullptr);

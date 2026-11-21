@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortToggledEditModeParams, 3496952872u)
+// Original dynamic initializer: RVA 0x00120360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortToggledEditModeParams> AutoInitializeUFortToggledEditModeParams(TEXT("UFortToggledEditModeParams"), sizeof(UFortToggledEditModeParams), 3496952872u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E81D0 (end 0x010E8272)
 // Original VA: 0x00000001410E81D0 | File offset: 0x010E77D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortToggledEditModeParams, 3496952872u); reached from UFortToggledEditModeParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortToggledEditModeParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortToggledEditModeParams();
+// Original dynamic initializer: RVA 0x00122230
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortToggledEditModeParams(Z_Construct_UClass_UFortToggledEditModeParams, &UFortToggledEditModeParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortToggledEditModeParams"), false, nullptr, nullptr, nullptr);

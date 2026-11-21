@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UPurchaseFlowJSBridge, 1939776692u)
+// Original dynamic initializer: RVA 0x000ADD50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPurchaseFlowJSBridge> AutoInitializeUPurchaseFlowJSBridge(TEXT("UPurchaseFlowJSBridge"), sizeof(UPurchaseFlowJSBridge), 1939776692u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x006A7D50 (end 0x006A7DE7)
 // Original VA: 0x00000001406A7D50 | File offset: 0x006A7350
 // Recovery: confirmed (IMPLEMENT_CLASS(UPurchaseFlowJSBridge, 1939776692u); reached from UPurchaseFlowJSBridge::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UPurchaseFlowJSBridge::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPurchaseFlowJSBridge();
+// Original dynamic initializer: RVA 0x000ADF80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPurchaseFlowJSBridge(Z_Construct_UClass_UPurchaseFlowJSBridge, &UPurchaseFlowJSBridge::StaticClass, TEXT("/Script/PurchaseFlow"), TEXT("UPurchaseFlowJSBridge"), false, nullptr, nullptr, nullptr);

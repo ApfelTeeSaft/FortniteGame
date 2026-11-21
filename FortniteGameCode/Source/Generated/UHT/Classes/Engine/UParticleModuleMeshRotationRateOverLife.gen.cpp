@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleMeshRotationRateOverLife()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleMeshRotationRateOverLife, 3324995188u)
+// Original dynamic initializer: RVA 0x00210D10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleMeshRotationRateOverLife> AutoInitializeUParticleModuleMeshRotationRateOverLife(TEXT("UParticleModuleMeshRotationRateOverLife"), sizeof(UParticleModuleMeshRotationRateOverLife), 3324995188u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02499080 (end 0x02499122)
 // Original VA: 0x0000000142499080 | File offset: 0x02498680
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleMeshRotationRateOverLife, 3324995188u); reached from UParticleModuleMeshRotationRateOverLife::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleMeshRotationRateOverLife::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleMeshRotationRateOverLife();
+// Original dynamic initializer: RVA 0x00212020
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleMeshRotationRateOverLife(Z_Construct_UClass_UParticleModuleMeshRotationRateOverLife, &UParticleModuleMeshRotationRateOverLife::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleMeshRotationRateOverLife"), false, nullptr, nullptr, nullptr);

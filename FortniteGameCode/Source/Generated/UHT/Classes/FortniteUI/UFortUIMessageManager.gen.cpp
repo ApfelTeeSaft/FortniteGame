@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortUIMessageManager, 2279514304u)
+// Original dynamic initializer: RVA 0x002628C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUIMessageManager> AutoInitializeUFortUIMessageManager(TEXT("UFortUIMessageManager"), sizeof(UFortUIMessageManager), 2279514304u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02910130 (end 0x029101C7)
 // Original VA: 0x0000000142910130 | File offset: 0x0290F730
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUIMessageManager, 2279514304u); reached from UFortUIMessageManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortUIMessageManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUIMessageManager();
+// Original dynamic initializer: RVA 0x00264FC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUIMessageManager(Z_Construct_UClass_UFortUIMessageManager, &UFortUIMessageManager::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortUIMessageManager"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAbilityTask_SpawnProjectileAndWait, 1157207957u)
+// Original dynamic initializer: RVA 0x000DFE20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAbilityTask_SpawnProjectileAndWait> AutoInitializeUFortAbilityTask_SpawnProjectileAndWait(TEXT("UFortAbilityTask_SpawnProjectileAndWait"), sizeof(UFortAbilityTask_SpawnProjectileAndWait), 1157207957u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F807F0 (end 0x00F80892)
 // Original VA: 0x0000000140F807F0 | File offset: 0x00F7FDF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAbilityTask_SpawnProjectileAndWait, 1157207957u); reached from UFortAbilityTask_SpawnProjectileAndWait::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAbilityTask_SpawnProjectileAndWait::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait();
+// Original dynamic initializer: RVA 0x000E0A20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAbilityTask_SpawnProjectileAndWait(Z_Construct_UClass_UFortAbilityTask_SpawnProjectileAndWait, &UFortAbilityTask_SpawnProjectileAndWait::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAbilityTask_SpawnProjectileAndWait"), false, nullptr, nullptr, nullptr);

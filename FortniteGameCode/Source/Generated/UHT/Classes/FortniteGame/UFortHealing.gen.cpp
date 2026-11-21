@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortHealing()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortHealing, 271643536u)
+// Original dynamic initializer: RVA 0x000F9550 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHealing> AutoInitializeUFortHealing(TEXT("UFortHealing"), sizeof(UFortHealing), 271643536u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF91F0 (end 0x00FF9292)
 // Original VA: 0x0000000140FF91F0 | File offset: 0x00FF87F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHealing, 271643536u); reached from UFortHealing::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortHealing::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHealing();
+// Original dynamic initializer: RVA 0x000FAB40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHealing(Z_Construct_UClass_UFortHealing, &UFortHealing::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortHealing"), false, nullptr, nullptr, nullptr);

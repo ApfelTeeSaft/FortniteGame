@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UTcpMessagingSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTcpMessagingSettings, 3945337779u)
+// Original dynamic initializer: RVA 0x000B3FB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTcpMessagingSettings> AutoInitializeUTcpMessagingSettings(TEXT("UTcpMessagingSettings"), sizeof(UTcpMessagingSettings), 3945337779u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00803840 (end 0x008038D7)
 // Original VA: 0x0000000140803840 | File offset: 0x00802E40
 // Recovery: confirmed (IMPLEMENT_CLASS(UTcpMessagingSettings, 3945337779u); reached from UTcpMessagingSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UTcpMessagingSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTcpMessagingSettings();
+// Original dynamic initializer: RVA 0x000B3FD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTcpMessagingSettings(Z_Construct_UClass_UTcpMessagingSettings, &UTcpMessagingSettings::StaticClass, TEXT("/Script/TcpMessaging"), TEXT("UTcpMessagingSettings"), false, nullptr, nullptr, nullptr);

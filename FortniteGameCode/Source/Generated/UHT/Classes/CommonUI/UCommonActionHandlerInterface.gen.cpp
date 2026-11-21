@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UCommonActionHandlerInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCommonActionHandlerInterface, 2972747751u)
+// Original dynamic initializer: RVA 0x00095590 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonActionHandlerInterface> AutoInitializeUCommonActionHandlerInterface(TEXT("UCommonActionHandlerInterface"), sizeof(UCommonActionHandlerInterface), 2972747751u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C1910 (end 0x002C19B2)
 // Original VA: 0x00000001402C1910 | File offset: 0x002C0F10
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonActionHandlerInterface, 2972747751u); reached from UCommonActionHandlerInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UCommonActionHandlerInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonActionHandlerInterface();
+// Original dynamic initializer: RVA 0x00095C00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonActionHandlerInterface(Z_Construct_UClass_UCommonActionHandlerInterface, &UCommonActionHandlerInterface::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonActionHandlerInterface"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMicroTransactionBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMicroTransactionBase, 3696365136u)
+// Original dynamic initializer: RVA 0x0020C5D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMicroTransactionBase> AutoInitializeUMicroTransactionBase(TEXT("UMicroTransactionBase"), sizeof(UMicroTransactionBase), 3696365136u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02489AF0 (end 0x02489B92)
 // Original VA: 0x0000000142489AF0 | File offset: 0x024890F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMicroTransactionBase, 3696365136u); reached from UMicroTransactionBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMicroTransactionBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMicroTransactionBase();
+// Original dynamic initializer: RVA 0x0020D670
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMicroTransactionBase(Z_Construct_UClass_UMicroTransactionBase, &UMicroTransactionBase::StaticClass, TEXT("/Script/Engine"), TEXT("UMicroTransactionBase"), false, nullptr, nullptr, nullptr);

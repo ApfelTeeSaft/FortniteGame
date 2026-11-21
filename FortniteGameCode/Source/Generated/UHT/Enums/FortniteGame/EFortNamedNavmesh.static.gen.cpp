@@ -18,4 +18,5 @@
 		}
 		return Singleton;
 	}
+	// Original dynamic initializer: RVA 0x001066D0
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EFortNamedNavmesh(EFortNamedNavmesh_StaticEnum, TEXT("/Script/FortniteGame"), TEXT("EFortNamedNavmesh"), false, nullptr, nullptr);

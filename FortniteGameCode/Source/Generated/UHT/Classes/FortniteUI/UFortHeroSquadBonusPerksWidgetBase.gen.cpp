@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortHeroSquadBonusPerksWidgetBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortHeroSquadBonusPerksWidgetBase, 874833059u)
+// Original dynamic initializer: RVA 0x002477A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHeroSquadBonusPerksWidgetBase> AutoInitializeUFortHeroSquadBonusPerksWidgetBase(TEXT("UFortHeroSquadBonusPerksWidgetBase"), sizeof(UFortHeroSquadBonusPerksWidgetBase), 874833059u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B2DF0 (end 0x028B2E92)
 // Original VA: 0x00000001428B2DF0 | File offset: 0x028B23F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHeroSquadBonusPerksWidgetBase, 874833059u); reached from UFortHeroSquadBonusPerksWidgetBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortHeroSquadBonusPerksWidgetBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHeroSquadBonusPerksWidgetBase();
+// Original dynamic initializer: RVA 0x00248060
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHeroSquadBonusPerksWidgetBase(Z_Construct_UClass_UFortHeroSquadBonusPerksWidgetBase, &UFortHeroSquadBonusPerksWidgetBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortHeroSquadBonusPerksWidgetBase"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UQosEvaluator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UQosEvaluator, 2596255085u)
+// Original dynamic initializer: RVA 0x000A7980 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UQosEvaluator> AutoInitializeUQosEvaluator(TEXT("UQosEvaluator"), sizeof(UQosEvaluator), 2596255085u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005A1B90 (end 0x005A1C27)
 // Original VA: 0x00000001405A1B90 | File offset: 0x005A1190
 // Recovery: confirmed (IMPLEMENT_CLASS(UQosEvaluator, 2596255085u); reached from UQosEvaluator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UQosEvaluator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UQosEvaluator();
+// Original dynamic initializer: RVA 0x000A7E30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UQosEvaluator(Z_Construct_UClass_UQosEvaluator, &UQosEvaluator::StaticClass, TEXT("/Script/Qos"), TEXT("UQosEvaluator"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortTooltipManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortTooltipManager, 3174715560u)
+// Original dynamic initializer: RVA 0x00117FC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTooltipManager> AutoInitializeUFortTooltipManager(TEXT("UFortTooltipManager"), sizeof(UFortTooltipManager), 3174715560u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C7C40 (end 0x010C7CD7)
 // Original VA: 0x00000001410C7C40 | File offset: 0x010C7240
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTooltipManager, 3174715560u); reached from UFortTooltipManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortTooltipManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTooltipManager();
+// Original dynamic initializer: RVA 0x0011BC70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTooltipManager(Z_Construct_UClass_UFortTooltipManager, &UFortTooltipManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTooltipManager"), false, nullptr, nullptr, nullptr);

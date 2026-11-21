@@ -7,6 +7,9 @@
 void UFortNewAccountWarning::StaticRegisterNativesUFortNewAccountWarning()
 {
 }
+// IMPLEMENT_CLASS(UFortNewAccountWarning, 3612727379u)
+// Original dynamic initializer: RVA 0x00253B10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNewAccountWarning> AutoInitializeUFortNewAccountWarning(TEXT("UFortNewAccountWarning"), sizeof(UFortNewAccountWarning), 3612727379u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DD4B0 (end 0x028DD552)
 // Original VA: 0x00000001428DD4B0 | File offset: 0x028DCAB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNewAccountWarning, 3612727379u); reached from UFortNewAccountWarning::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortNewAccountWarning::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNewAccountWarning();
+// Original dynamic initializer: RVA 0x00255700
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNewAccountWarning(Z_Construct_UClass_UFortNewAccountWarning, &UFortNewAccountWarning::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortNewAccountWarning"), false, nullptr, nullptr, nullptr);

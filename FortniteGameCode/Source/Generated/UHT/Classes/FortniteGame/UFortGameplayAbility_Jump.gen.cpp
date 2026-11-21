@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortGameplayAbility_Jump()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortGameplayAbility_Jump, 2193361295u)
+// Original dynamic initializer: RVA 0x000F6680 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGameplayAbility_Jump> AutoInitializeUFortGameplayAbility_Jump(TEXT("UFortGameplayAbility_Jump"), sizeof(UFortGameplayAbility_Jump), 2193361295u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE62E0 (end 0x00FE6382)
 // Original VA: 0x0000000140FE62E0 | File offset: 0x00FE58E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGameplayAbility_Jump, 2193361295u); reached from UFortGameplayAbility_Jump::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortGameplayAbility_Jump::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGameplayAbility_Jump();
+// Original dynamic initializer: RVA 0x000F72F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGameplayAbility_Jump(Z_Construct_UClass_UFortGameplayAbility_Jump, &UFortGameplayAbility_Jump::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortGameplayAbility_Jump"), false, nullptr, nullptr, nullptr);

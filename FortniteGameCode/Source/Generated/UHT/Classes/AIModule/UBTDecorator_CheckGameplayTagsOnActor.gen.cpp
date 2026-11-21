@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBTDecorator_CheckGameplayTagsOnActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBTDecorator_CheckGameplayTagsOnActor, 1272411295u)
+// Original dynamic initializer: RVA 0x001BC000 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTDecorator_CheckGameplayTagsOnActor> AutoInitializeUBTDecorator_CheckGameplayTagsOnActor(TEXT("UBTDecorator_CheckGameplayTagsOnActor"), sizeof(UBTDecorator_CheckGameplayTagsOnActor), 1272411295u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D26400 (end 0x01D264A2)
 // Original VA: 0x0000000141D26400 | File offset: 0x01D25A00
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTDecorator_CheckGameplayTagsOnActor, 1272411295u); reached from UBTDecorator_CheckGameplayTagsOnActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBTDecorator_CheckGameplayTagsOnActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTDecorator_CheckGameplayTagsOnActor();
+// Original dynamic initializer: RVA 0x001BC960
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTDecorator_CheckGameplayTagsOnActor(Z_Construct_UClass_UBTDecorator_CheckGameplayTagsOnActor, &UBTDecorator_CheckGameplayTagsOnActor::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTDecorator_CheckGameplayTagsOnActor"), false, nullptr, nullptr, nullptr);

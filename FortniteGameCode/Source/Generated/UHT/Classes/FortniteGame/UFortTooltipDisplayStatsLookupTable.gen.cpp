@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortTooltipDisplayStatsLookupTable()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortTooltipDisplayStatsLookupTable, 1593641837u)
+// Original dynamic initializer: RVA 0x00117F60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTooltipDisplayStatsLookupTable> AutoInitializeUFortTooltipDisplayStatsLookupTable(TEXT("UFortTooltipDisplayStatsLookupTable"), sizeof(UFortTooltipDisplayStatsLookupTable), 1593641837u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C7A30 (end 0x010C7AD2)
 // Original VA: 0x00000001410C7A30 | File offset: 0x010C7030
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTooltipDisplayStatsLookupTable, 1593641837u); reached from UFortTooltipDisplayStatsLookupTable::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortTooltipDisplayStatsLookupTable::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTooltipDisplayStatsLookupTable();
+// Original dynamic initializer: RVA 0x0011BBB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTooltipDisplayStatsLookupTable(Z_Construct_UClass_UFortTooltipDisplayStatsLookupTable, &UFortTooltipDisplayStatsLookupTable::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTooltipDisplayStatsLookupTable"), false, nullptr, nullptr, nullptr);

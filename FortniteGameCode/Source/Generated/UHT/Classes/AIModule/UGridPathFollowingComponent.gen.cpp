@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UGridPathFollowingComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UGridPathFollowingComponent, 1101305223u)
+// Original dynamic initializer: RVA 0x001BF3C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGridPathFollowingComponent> AutoInitializeUGridPathFollowingComponent(TEXT("UGridPathFollowingComponent"), sizeof(UGridPathFollowingComponent), 1101305223u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D310D0 (end 0x01D31172)
 // Original VA: 0x0000000141D310D0 | File offset: 0x01D306D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UGridPathFollowingComponent, 1101305223u); reached from UGridPathFollowingComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UGridPathFollowingComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGridPathFollowingComponent();
+// Original dynamic initializer: RVA 0x001BFA30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGridPathFollowingComponent(Z_Construct_UClass_UGridPathFollowingComponent, &UGridPathFollowingComponent::StaticClass, TEXT("/Script/AIModule"), TEXT("UGridPathFollowingComponent"), false, nullptr, nullptr, nullptr);

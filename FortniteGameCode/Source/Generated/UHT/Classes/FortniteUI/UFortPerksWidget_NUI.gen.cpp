@@ -7,6 +7,9 @@
 void UFortPerksWidget_NUI::StaticRegisterNativesUFortPerksWidget_NUI()
 {
 }
+// IMPLEMENT_CLASS(UFortPerksWidget_NUI, 1573025147u)
+// Original dynamic initializer: RVA 0x00255BE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPerksWidget_NUI> AutoInitializeUFortPerksWidget_NUI(TEXT("UFortPerksWidget_NUI"), sizeof(UFortPerksWidget_NUI), 1573025147u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E51C0 (end 0x028E5262)
 // Original VA: 0x00000001428E51C0 | File offset: 0x028E47C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPerksWidget_NUI, 1573025147u); reached from UFortPerksWidget_NUI::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortPerksWidget_NUI::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPerksWidget_NUI();
+// Original dynamic initializer: RVA 0x00257F00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPerksWidget_NUI(Z_Construct_UClass_UFortPerksWidget_NUI, &UFortPerksWidget_NUI::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortPerksWidget_NUI"), false, nullptr, nullptr, nullptr);

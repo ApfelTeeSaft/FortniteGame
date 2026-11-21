@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortTrack_CustomSpline()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortTrack_CustomSpline, 1649569786u)
+// Original dynamic initializer: RVA 0x00117E00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortTrack_CustomSpline> AutoInitializeAFortTrack_CustomSpline(TEXT("AFortTrack_CustomSpline"), sizeof(AFortTrack_CustomSpline), 1649569786u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C72B0 (end 0x010C7352)
 // Original VA: 0x00000001410C72B0 | File offset: 0x010C68B0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortTrack_CustomSpline, 1649569786u); reached from AFortTrack_CustomSpline::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortTrack_CustomSpline::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortTrack_CustomSpline();
+// Original dynamic initializer: RVA 0x0011B8F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortTrack_CustomSpline(Z_Construct_UClass_AFortTrack_CustomSpline, &AFortTrack_CustomSpline::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortTrack_CustomSpline"), false, nullptr, nullptr, nullptr);

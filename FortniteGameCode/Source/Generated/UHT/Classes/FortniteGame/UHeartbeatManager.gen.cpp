@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UHeartbeatManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UHeartbeatManager, 2000785425u)
+// Original dynamic initializer: RVA 0x0011EA80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UHeartbeatManager> AutoInitializeUHeartbeatManager(TEXT("UHeartbeatManager"), sizeof(UHeartbeatManager), 2000785425u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E1EA0 (end 0x010E1F37)
 // Original VA: 0x00000001410E1EA0 | File offset: 0x010E14A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UHeartbeatManager, 2000785425u); reached from UHeartbeatManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UHeartbeatManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UHeartbeatManager();
+// Original dynamic initializer: RVA 0x0011FE80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UHeartbeatManager(Z_Construct_UClass_UHeartbeatManager, &UHeartbeatManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UHeartbeatManager"), false, nullptr, nullptr, nullptr);

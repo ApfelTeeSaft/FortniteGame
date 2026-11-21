@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ULevelSequenceBurnInOptions()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULevelSequenceBurnInOptions, 962914299u)
+// Original dynamic initializer: RVA 0x001C0CD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULevelSequenceBurnInOptions> AutoInitializeULevelSequenceBurnInOptions(TEXT("ULevelSequenceBurnInOptions"), sizeof(ULevelSequenceBurnInOptions), 962914299u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4DFC0 (end 0x01D4E057)
 // Original VA: 0x0000000141D4DFC0 | File offset: 0x01D4D5C0
 // Recovery: confirmed (IMPLEMENT_CLASS(ULevelSequenceBurnInOptions, 962914299u); reached from ULevelSequenceBurnInOptions::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ULevelSequenceBurnInOptions::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULevelSequenceBurnInOptions();
+// Original dynamic initializer: RVA 0x001C14F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULevelSequenceBurnInOptions(Z_Construct_UClass_ULevelSequenceBurnInOptions, &ULevelSequenceBurnInOptions::StaticClass, TEXT("/Script/LevelSequence"), TEXT("ULevelSequenceBurnInOptions"), false, nullptr, nullptr, nullptr);

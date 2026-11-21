@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionEncounter_SpawnPointsBurst()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionEncounter_SpawnPointsBurst, 3505837357u)
+// Original dynamic initializer: RVA 0x000F0E40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionEncounter_SpawnPointsBurst> AutoInitializeUFortDifficultyOptionEncounter_SpawnPointsBurst(TEXT("UFortDifficultyOptionEncounter_SpawnPointsBurst"), sizeof(UFortDifficultyOptionEncounter_SpawnPointsBurst), 3505837357u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD5B20 (end 0x00FD5BC2)
 // Original VA: 0x0000000140FD5B20 | File offset: 0x00FD5120
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionEncounter_SpawnPointsBurst, 3505837357u); reached from UFortDifficultyOptionEncounter_SpawnPointsBurst::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionEncounter_SpawnPointsBurst::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionEncounter_SpawnPointsBurst();
+// Original dynamic initializer: RVA 0x000F20D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionEncounter_SpawnPointsBurst(Z_Construct_UClass_UFortDifficultyOptionEncounter_SpawnPointsBurst, &UFortDifficultyOptionEncounter_SpawnPointsBurst::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionEncounter_SpawnPointsBurst"), false, nullptr, nullptr, nullptr);

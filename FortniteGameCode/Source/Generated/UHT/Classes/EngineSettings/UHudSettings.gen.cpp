@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UHudSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UHudSettings, 2885798714u)
+// Original dynamic initializer: RVA 0x001B6AD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UHudSettings> AutoInitializeUHudSettings(TEXT("UHudSettings"), sizeof(UHudSettings), 2885798714u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C84500 (end 0x01C84597)
 // Original VA: 0x0000000141C84500 | File offset: 0x01C83B00
 // Recovery: confirmed (IMPLEMENT_CLASS(UHudSettings, 2885798714u); reached from UHudSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UHudSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UHudSettings();
+// Original dynamic initializer: RVA 0x001B6E70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UHudSettings(Z_Construct_UClass_UHudSettings, &UHudSettings::StaticClass, TEXT("/Script/EngineSettings"), TEXT("UHudSettings"), false, nullptr, nullptr, nullptr);

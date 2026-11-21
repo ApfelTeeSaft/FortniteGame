@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSeasonPassLevelInfo, 87807659u)
+// Original dynamic initializer: RVA 0x00265620 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSeasonPassLevelInfo> AutoInitializeUFortSeasonPassLevelInfo(TEXT("UFortSeasonPassLevelInfo"), sizeof(UFortSeasonPassLevelInfo), 87807659u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029175D0 (end 0x02917667)
 // Original VA: 0x00000001429175D0 | File offset: 0x02916BD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSeasonPassLevelInfo, 87807659u); reached from UFortSeasonPassLevelInfo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSeasonPassLevelInfo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSeasonPassLevelInfo();
+// Original dynamic initializer: RVA 0x00267110
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSeasonPassLevelInfo(Z_Construct_UClass_UFortSeasonPassLevelInfo, &UFortSeasonPassLevelInfo::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSeasonPassLevelInfo"), false, nullptr, nullptr, nullptr);

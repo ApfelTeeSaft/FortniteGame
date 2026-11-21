@@ -7,6 +7,9 @@
 void USkyLightComponent::StaticRegisterNativesUSkyLightComponent()
 {
 }
+// IMPLEMENT_CLASS(USkyLightComponent, 2742132154u)
+// Original dynamic initializer: RVA 0x0021A9B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USkyLightComponent> AutoInitializeUSkyLightComponent(TEXT("USkyLightComponent"), sizeof(USkyLightComponent), 2742132154u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D36B0 (end 0x024D3752)
 // Original VA: 0x00000001424D36B0 | File offset: 0x024D2CB0
 // Recovery: confirmed (IMPLEMENT_CLASS(USkyLightComponent, 2742132154u); reached from USkyLightComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* USkyLightComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USkyLightComponent();
+// Original dynamic initializer: RVA 0x0021C270
+static FCompiledInDefer Z_CompiledInDefer_UClass_USkyLightComponent(Z_Construct_UClass_USkyLightComponent, &USkyLightComponent::StaticClass, TEXT("/Script/Engine"), TEXT("USkyLightComponent"), false, nullptr, nullptr, nullptr);

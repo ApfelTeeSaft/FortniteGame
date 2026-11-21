@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortNotificationQueue()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNotificationQueue, 1358368662u)
+// Original dynamic initializer: RVA 0x00105B10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNotificationQueue> AutoInitializeUFortNotificationQueue(TEXT("UFortNotificationQueue"), sizeof(UFortNotificationQueue), 1358368662u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104F360 (end 0x0104F3F7)
 // Original VA: 0x000000014104F360 | File offset: 0x0104E960
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNotificationQueue, 1358368662u); reached from UFortNotificationQueue::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortNotificationQueue::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNotificationQueue();
+// Original dynamic initializer: RVA 0x001070F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNotificationQueue(Z_Construct_UClass_UFortNotificationQueue, &UFortNotificationQueue::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNotificationQueue"), false, nullptr, nullptr, nullptr);

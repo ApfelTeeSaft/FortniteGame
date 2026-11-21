@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAthenaWeaponAlterationEvent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaWeaponAlterationEvent, 939042934u)
+// Original dynamic initializer: RVA 0x000D8810 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaWeaponAlterationEvent> AutoInitializeUAthenaWeaponAlterationEvent(TEXT("UAthenaWeaponAlterationEvent"), sizeof(UAthenaWeaponAlterationEvent), 939042934u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5F1F0 (end 0x00F5F292)
 // Original VA: 0x0000000140F5F1F0 | File offset: 0x00F5E7F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaWeaponAlterationEvent, 939042934u); reached from UAthenaWeaponAlterationEvent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAthenaWeaponAlterationEvent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaWeaponAlterationEvent();
+// Original dynamic initializer: RVA 0x000D9750
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaWeaponAlterationEvent(Z_Construct_UClass_UAthenaWeaponAlterationEvent, &UAthenaWeaponAlterationEvent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaWeaponAlterationEvent"), false, nullptr, nullptr, nullptr);

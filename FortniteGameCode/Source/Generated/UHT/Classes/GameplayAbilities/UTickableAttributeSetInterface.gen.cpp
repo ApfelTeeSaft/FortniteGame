@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UTickableAttributeSetInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTickableAttributeSetInterface, 2490108008u)
+// Original dynamic initializer: RVA 0x000A2F70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTickableAttributeSetInterface> AutoInitializeUTickableAttributeSetInterface(TEXT("UTickableAttributeSetInterface"), sizeof(UTickableAttributeSetInterface), 2490108008u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00565AE0 (end 0x00565B82)
 // Original VA: 0x0000000140565AE0 | File offset: 0x005650E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UTickableAttributeSetInterface, 2490108008u); reached from UTickableAttributeSetInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UTickableAttributeSetInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTickableAttributeSetInterface();
+// Original dynamic initializer: RVA 0x000A3340
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTickableAttributeSetInterface(Z_Construct_UClass_UTickableAttributeSetInterface, &UTickableAttributeSetInterface::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UTickableAttributeSetInterface"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMovementComp_Tracer()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMovementComp_Tracer, 2796305117u)
+// Original dynamic initializer: RVA 0x001224B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovementComp_Tracer> AutoInitializeUMovementComp_Tracer(TEXT("UMovementComp_Tracer"), sizeof(UMovementComp_Tracer), 2796305117u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010F0000 (end 0x010F00A2)
 // Original VA: 0x00000001410F0000 | File offset: 0x010EF600
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovementComp_Tracer, 2796305117u); reached from UMovementComp_Tracer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMovementComp_Tracer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovementComp_Tracer();
+// Original dynamic initializer: RVA 0x00123720
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovementComp_Tracer(Z_Construct_UClass_UMovementComp_Tracer, &UMovementComp_Tracer::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UMovementComp_Tracer"), false, nullptr, nullptr, nullptr);

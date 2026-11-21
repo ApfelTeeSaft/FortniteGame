@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortCarriedObjectHolderInterface, 3515379933u)
+// Original dynamic initializer: RVA 0x000EA740 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCarriedObjectHolderInterface> AutoInitializeUFortCarriedObjectHolderInterface(TEXT("UFortCarriedObjectHolderInterface"), sizeof(UFortCarriedObjectHolderInterface), 3515379933u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAF120 (end 0x00FAF1C2)
 // Original VA: 0x0000000140FAF120 | File offset: 0x00FAE720
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCarriedObjectHolderInterface, 3515379933u); reached from UFortCarriedObjectHolderInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortCarriedObjectHolderInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCarriedObjectHolderInterface();
+// Original dynamic initializer: RVA 0x000EAD10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCarriedObjectHolderInterface(Z_Construct_UClass_UFortCarriedObjectHolderInterface, &UFortCarriedObjectHolderInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCarriedObjectHolderInterface"), false, nullptr, nullptr, nullptr);

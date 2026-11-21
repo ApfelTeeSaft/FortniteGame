@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_TriggerNotification, 140819579u)
+// Original dynamic initializer: RVA 0x000E69F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_TriggerNotification> AutoInitializeUFortAsyncAction_TriggerNotification(TEXT("UFortAsyncAction_TriggerNotification"), sizeof(UFortAsyncAction_TriggerNotification), 140819579u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9D650 (end 0x00F9D6F2)
 // Original VA: 0x0000000140F9D650 | File offset: 0x00F9CC50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_TriggerNotification, 140819579u); reached from UFortAsyncAction_TriggerNotification::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_TriggerNotification::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_TriggerNotification();
+// Original dynamic initializer: RVA 0x000E7E10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_TriggerNotification(Z_Construct_UClass_UFortAsyncAction_TriggerNotification, &UFortAsyncAction_TriggerNotification::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAsyncAction_TriggerNotification"), false, nullptr, nullptr, nullptr);

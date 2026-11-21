@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UPhysicsCollisionHandler()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPhysicsCollisionHandler, 710628065u)
+// Original dynamic initializer: RVA 0x00213D70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPhysicsCollisionHandler> AutoInitializeUPhysicsCollisionHandler(TEXT("UPhysicsCollisionHandler"), sizeof(UPhysicsCollisionHandler), 710628065u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249FCB0 (end 0x0249FD47)
 // Original VA: 0x000000014249FCB0 | File offset: 0x0249F2B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UPhysicsCollisionHandler, 710628065u); reached from UPhysicsCollisionHandler::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UPhysicsCollisionHandler::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPhysicsCollisionHandler();
+// Original dynamic initializer: RVA 0x002147B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPhysicsCollisionHandler(Z_Construct_UClass_UPhysicsCollisionHandler, &UPhysicsCollisionHandler::StaticClass, TEXT("/Script/Engine"), TEXT("UPhysicsCollisionHandler"), false, nullptr, nullptr, nullptr);

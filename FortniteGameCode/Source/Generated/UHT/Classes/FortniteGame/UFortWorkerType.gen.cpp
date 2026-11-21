@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortWorkerType()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortWorkerType, 1619551211u)
+// Original dynamic initializer: RVA 0x0011D9F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortWorkerType> AutoInitializeUFortWorkerType(TEXT("UFortWorkerType"), sizeof(UFortWorkerType), 1619551211u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DB460 (end 0x010DB502)
 // Original VA: 0x00000001410DB460 | File offset: 0x010DAA60
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortWorkerType, 1619551211u); reached from UFortWorkerType::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortWorkerType::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortWorkerType();
+// Original dynamic initializer: RVA 0x0011E6E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortWorkerType(Z_Construct_UClass_UFortWorkerType, &UFortWorkerType::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortWorkerType"), false, nullptr, nullptr, nullptr);

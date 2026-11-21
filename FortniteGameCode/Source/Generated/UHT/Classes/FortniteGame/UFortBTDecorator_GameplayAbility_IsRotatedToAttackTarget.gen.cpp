@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortBTDecorator_GameplayAbility_IsRotatedToAttackTar
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget, 2076498027u)
+// Original dynamic initializer: RVA 0x000E9150 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget> AutoInitializeUFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget(TEXT("UFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget"), sizeof(UFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget), 2076498027u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAB080 (end 0x00FAB122)
 // Original VA: 0x0000000140FAB080 | File offset: 0x00FAA680
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget, 2076498027u); reached from UFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget::GetPrivateStat
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget();
+// Original dynamic initializer: RVA 0x000E9F80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget(Z_Construct_UClass_UFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget, &UFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTDecorator_GameplayAbility_IsRotatedToAttackTarget"), false, nullptr, nullptr, nullptr);

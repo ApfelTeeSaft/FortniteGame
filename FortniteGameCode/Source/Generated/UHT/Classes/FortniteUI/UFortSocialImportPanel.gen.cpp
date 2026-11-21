@@ -7,6 +7,9 @@
 void UFortSocialImportPanel::StaticRegisterNativesUFortSocialImportPanel()
 {
 }
+// IMPLEMENT_CLASS(UFortSocialImportPanel, 3992038725u)
+// Original dynamic initializer: RVA 0x0025AD00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSocialImportPanel> AutoInitializeUFortSocialImportPanel(TEXT("UFortSocialImportPanel"), sizeof(UFortSocialImportPanel), 3992038725u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F39B0 (end 0x028F3A52)
 // Original VA: 0x00000001428F39B0 | File offset: 0x028F2FB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSocialImportPanel, 3992038725u); reached from UFortSocialImportPanel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSocialImportPanel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSocialImportPanel();
+// Original dynamic initializer: RVA 0x0025BCE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSocialImportPanel(Z_Construct_UClass_UFortSocialImportPanel, &UFortSocialImportPanel::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSocialImportPanel"), false, nullptr, nullptr, nullptr);

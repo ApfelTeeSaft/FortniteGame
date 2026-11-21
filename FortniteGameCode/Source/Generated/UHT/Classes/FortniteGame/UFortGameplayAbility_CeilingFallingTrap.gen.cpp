@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortGameplayAbility_CeilingFallingTrap()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortGameplayAbility_CeilingFallingTrap, 1045375995u)
+// Original dynamic initializer: RVA 0x000F6640 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGameplayAbility_CeilingFallingTrap> AutoInitializeUFortGameplayAbility_CeilingFallingTrap(TEXT("UFortGameplayAbility_CeilingFallingTrap"), sizeof(UFortGameplayAbility_CeilingFallingTrap), 1045375995u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE6180 (end 0x00FE6222)
 // Original VA: 0x0000000140FE6180 | File offset: 0x00FE5780
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGameplayAbility_CeilingFallingTrap, 1045375995u); reached from UFortGameplayAbility_CeilingFallingTrap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortGameplayAbility_CeilingFallingTrap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGameplayAbility_CeilingFallingTrap();
+// Original dynamic initializer: RVA 0x000F7270
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGameplayAbility_CeilingFallingTrap(Z_Construct_UClass_UFortGameplayAbility_CeilingFallingTrap, &UFortGameplayAbility_CeilingFallingTrap::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortGameplayAbility_CeilingFallingTrap"), false, nullptr, nullptr, nullptr);

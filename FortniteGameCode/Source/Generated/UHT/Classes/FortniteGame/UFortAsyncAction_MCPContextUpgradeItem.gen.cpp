@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_MCPContextUpgradeItem, 3325129970u)
+// Original dynamic initializer: RVA 0x000FE280 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_MCPContextUpgradeItem> AutoInitializeUFortAsyncAction_MCPContextUpgradeItem(TEXT("UFortAsyncAction_MCPContextUpgradeItem"), sizeof(UFortAsyncAction_MCPContextUpgradeItem), 3325129970u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01022B70 (end 0x01022C12)
 // Original VA: 0x0000000141022B70 | File offset: 0x01022170
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_MCPContextUpgradeItem, 3325129970u); reached from UFortAsyncAction_MCPContextUpgradeItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_MCPContextUpgradeItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem();
+// Original dynamic initializer: RVA 0x000FEE50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_MCPContextUpgradeItem(Z_Construct_UClass_UFortAsyncAction_MCPContextUpgradeItem, &UFortAsyncAction_MCPContextUpgradeItem::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAsyncAction_MCPContextUpgradeItem"), false, nullptr, nullptr, nullptr);

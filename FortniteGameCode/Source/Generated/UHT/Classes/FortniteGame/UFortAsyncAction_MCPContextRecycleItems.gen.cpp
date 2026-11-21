@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_MCPContextRecycleItems, 2902072797u)
+// Original dynamic initializer: RVA 0x000FE260 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_MCPContextRecycleItems> AutoInitializeUFortAsyncAction_MCPContextRecycleItems(TEXT("UFortAsyncAction_MCPContextRecycleItems"), sizeof(UFortAsyncAction_MCPContextRecycleItems), 2902072797u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01022AC0 (end 0x01022B62)
 // Original VA: 0x0000000141022AC0 | File offset: 0x010220C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_MCPContextRecycleItems, 2902072797u); reached from UFortAsyncAction_MCPContextRecycleItems::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_MCPContextRecycleItems::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems();
+// Original dynamic initializer: RVA 0x000FEE10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_MCPContextRecycleItems(Z_Construct_UClass_UFortAsyncAction_MCPContextRecycleItems, &UFortAsyncAction_MCPContextRecycleItems::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAsyncAction_MCPContextRecycleItems"), false, nullptr, nullptr, nullptr);

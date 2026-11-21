@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UScrollBar, 4221922124u)
+// Original dynamic initializer: RVA 0x001B3630 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UScrollBar> AutoInitializeUScrollBar(TEXT("UScrollBar"), sizeof(UScrollBar), 4221922124u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF1BB0 (end 0x01BF1C52)
 // Original VA: 0x0000000141BF1BB0 | File offset: 0x01BF11B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UScrollBar, 4221922124u); reached from UScrollBar::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UScrollBar::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UScrollBar();
+// Original dynamic initializer: RVA 0x001B3DD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UScrollBar(Z_Construct_UClass_UScrollBar, &UScrollBar::StaticClass, TEXT("/Script/UMG"), TEXT("UScrollBar"), false, nullptr, nullptr, nullptr);

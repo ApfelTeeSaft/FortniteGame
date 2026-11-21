@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortBTContext_SkipNotPerceivedGoals()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTContext_SkipNotPerceivedGoals, 2412108945u)
+// Original dynamic initializer: RVA 0x000E9030 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTContext_SkipNotPerceivedGoals> AutoInitializeUFortBTContext_SkipNotPerceivedGoals(TEXT("UFortBTContext_SkipNotPerceivedGoals"), sizeof(UFortBTContext_SkipNotPerceivedGoals), 2412108945u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAAA50 (end 0x00FAAAF2)
 // Original VA: 0x0000000140FAAA50 | File offset: 0x00FAA050
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTContext_SkipNotPerceivedGoals, 2412108945u); reached from UFortBTContext_SkipNotPerceivedGoals::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortBTContext_SkipNotPerceivedGoals::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTContext_SkipNotPerceivedGoals();
+// Original dynamic initializer: RVA 0x000E9D40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTContext_SkipNotPerceivedGoals(Z_Construct_UClass_UFortBTContext_SkipNotPerceivedGoals, &UFortBTContext_SkipNotPerceivedGoals::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTContext_SkipNotPerceivedGoals"), false, nullptr, nullptr, nullptr);

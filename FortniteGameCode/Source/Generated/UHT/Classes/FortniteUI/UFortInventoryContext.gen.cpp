@@ -7,6 +7,9 @@
 void UFortInventoryContext::StaticRegisterNativesUFortInventoryContext()
 {
 }
+// IMPLEMENT_CLASS(UFortInventoryContext, 2065307808u)
+// Original dynamic initializer: RVA 0x0024A0F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortInventoryContext> AutoInitializeUFortInventoryContext(TEXT("UFortInventoryContext"), sizeof(UFortInventoryContext), 2065307808u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C05F0 (end 0x028C0692)
 // Original VA: 0x00000001428C05F0 | File offset: 0x028BFBF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortInventoryContext, 2065307808u); reached from UFortInventoryContext::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortInventoryContext::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortInventoryContext();
+// Original dynamic initializer: RVA 0x0024CA20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortInventoryContext(Z_Construct_UClass_UFortInventoryContext, &UFortInventoryContext::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortInventoryContext"), false, nullptr, nullptr, nullptr);

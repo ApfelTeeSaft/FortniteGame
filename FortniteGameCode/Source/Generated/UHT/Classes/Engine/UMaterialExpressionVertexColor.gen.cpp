@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionVertexColor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionVertexColor, 2011362576u)
+// Original dynamic initializer: RVA 0x0020ACD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionVertexColor> AutoInitializeUMaterialExpressionVertexColor(TEXT("UMaterialExpressionVertexColor"), sizeof(UMaterialExpressionVertexColor), 2011362576u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02484850 (end 0x024848F2)
 // Original VA: 0x0000000142484850 | File offset: 0x02483E50
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionVertexColor, 2011362576u); reached from UMaterialExpressionVertexColor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMaterialExpressionVertexColor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionVertexColor();
+// Original dynamic initializer: RVA 0x0020BF30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionVertexColor(Z_Construct_UClass_UMaterialExpressionVertexColor, &UMaterialExpressionVertexColor::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionVertexColor"), false, nullptr, nullptr, nullptr);

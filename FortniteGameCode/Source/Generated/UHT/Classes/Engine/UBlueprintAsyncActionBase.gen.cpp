@@ -7,6 +7,9 @@
 void UBlueprintAsyncActionBase::StaticRegisterNativesUBlueprintAsyncActionBase()
 {
 }
+// IMPLEMENT_CLASS(UBlueprintAsyncActionBase, 3543958695u)
+// Original dynamic initializer: RVA 0x001F3430 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBlueprintAsyncActionBase> AutoInitializeUBlueprintAsyncActionBase(TEXT("UBlueprintAsyncActionBase"), sizeof(UBlueprintAsyncActionBase), 3543958695u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E1940 (end 0x023E19D7)
 // Original VA: 0x00000001423E1940 | File offset: 0x023E0F40
 // Recovery: confirmed (IMPLEMENT_CLASS(UBlueprintAsyncActionBase, 3543958695u); reached from UBlueprintAsyncActionBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UBlueprintAsyncActionBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBlueprintAsyncActionBase();
+// Original dynamic initializer: RVA 0x001F48F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBlueprintAsyncActionBase(Z_Construct_UClass_UBlueprintAsyncActionBase, &UBlueprintAsyncActionBase::StaticClass, TEXT("/Script/Engine"), TEXT("UBlueprintAsyncActionBase"), false, nullptr, nullptr, nullptr);

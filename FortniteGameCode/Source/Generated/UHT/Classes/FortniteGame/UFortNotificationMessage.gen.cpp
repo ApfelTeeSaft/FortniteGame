@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortNotificationMessage()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNotificationMessage, 1803279339u)
+// Original dynamic initializer: RVA 0x00105AF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNotificationMessage> AutoInitializeUFortNotificationMessage(TEXT("UFortNotificationMessage"), sizeof(UFortNotificationMessage), 1803279339u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104F2B0 (end 0x0104F352)
 // Original VA: 0x000000014104F2B0 | File offset: 0x0104E8B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNotificationMessage, 1803279339u); reached from UFortNotificationMessage::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortNotificationMessage::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNotificationMessage();
+// Original dynamic initializer: RVA 0x001070B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNotificationMessage(Z_Construct_UClass_UFortNotificationMessage, &UFortNotificationMessage::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNotificationMessage"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UNavLinkTrivial()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNavLinkTrivial, 2435247393u)
+// Original dynamic initializer: RVA 0x0020DC30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavLinkTrivial> AutoInitializeUNavLinkTrivial(TEXT("UNavLinkTrivial"), sizeof(UNavLinkTrivial), 2435247393u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248E370 (end 0x0248E412)
 // Original VA: 0x000000014248E370 | File offset: 0x0248D970
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavLinkTrivial, 2435247393u); reached from UNavLinkTrivial::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UNavLinkTrivial::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavLinkTrivial();
+// Original dynamic initializer: RVA 0x0020E990
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavLinkTrivial(Z_Construct_UClass_UNavLinkTrivial, &UNavLinkTrivial::StaticClass, TEXT("/Script/Engine"), TEXT("UNavLinkTrivial"), false, nullptr, nullptr, nullptr);

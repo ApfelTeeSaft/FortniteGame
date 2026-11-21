@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleTypeDataAnimTrail()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleTypeDataAnimTrail, 2269728875u)
+// Original dynamic initializer: RVA 0x00212600 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleTypeDataAnimTrail> AutoInitializeUParticleModuleTypeDataAnimTrail(TEXT("UParticleModuleTypeDataAnimTrail"), sizeof(UParticleModuleTypeDataAnimTrail), 2269728875u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249CE00 (end 0x0249CEA2)
 // Original VA: 0x000000014249CE00 | File offset: 0x0249C400
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleTypeDataAnimTrail, 2269728875u); reached from UParticleModuleTypeDataAnimTrail::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleTypeDataAnimTrail::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleTypeDataAnimTrail();
+// Original dynamic initializer: RVA 0x002136D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleTypeDataAnimTrail(Z_Construct_UClass_UParticleModuleTypeDataAnimTrail, &UParticleModuleTypeDataAnimTrail::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleTypeDataAnimTrail"), false, nullptr, nullptr, nullptr);

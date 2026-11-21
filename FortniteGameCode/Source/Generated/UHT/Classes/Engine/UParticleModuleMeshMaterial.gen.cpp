@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleMeshMaterial()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleMeshMaterial, 1659646202u)
+// Original dynamic initializer: RVA 0x00210C90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleMeshMaterial> AutoInitializeUParticleModuleMeshMaterial(TEXT("UParticleModuleMeshMaterial"), sizeof(UParticleModuleMeshMaterial), 1659646202u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02498DC0 (end 0x02498E62)
 // Original VA: 0x0000000142498DC0 | File offset: 0x024983C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleMeshMaterial, 1659646202u); reached from UParticleModuleMeshMaterial::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleMeshMaterial::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleMeshMaterial();
+// Original dynamic initializer: RVA 0x00211F20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleMeshMaterial(Z_Construct_UClass_UParticleModuleMeshMaterial, &UParticleModuleMeshMaterial::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleMeshMaterial"), false, nullptr, nullptr, nullptr);

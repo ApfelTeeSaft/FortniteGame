@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_Breathers()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionCategoryEncounter_Breathers, 1899910864u)
+// Original dynamic initializer: RVA 0x000F0A60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionCategoryEncounter_Breathers> AutoInitializeUFortDifficultyOptionCategoryEncounter_Breathers(TEXT("UFortDifficultyOptionCategoryEncounter_Breathers"), sizeof(UFortDifficultyOptionCategoryEncounter_Breathers), 1899910864u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD45D0 (end 0x00FD4672)
 // Original VA: 0x0000000140FD45D0 | File offset: 0x00FD3BD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionCategoryEncounter_Breathers, 1899910864u); reached from UFortDifficultyOptionCategoryEncounter_Breathers::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionCategoryEncounter_Breathers::GetPrivateStaticClass(
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_Breathers();
+// Original dynamic initializer: RVA 0x000F1910
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionCategoryEncounter_Breathers(Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_Breathers, &UFortDifficultyOptionCategoryEncounter_Breathers::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionCategoryEncounter_Breathers"), false, nullptr, nullptr, nullptr);

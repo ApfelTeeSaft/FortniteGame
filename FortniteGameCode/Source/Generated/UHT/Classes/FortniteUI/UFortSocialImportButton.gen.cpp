@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSocialImportButton, 46840327u)
+// Original dynamic initializer: RVA 0x0025ACE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSocialImportButton> AutoInitializeUFortSocialImportButton(TEXT("UFortSocialImportButton"), sizeof(UFortSocialImportButton), 46840327u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F3900 (end 0x028F39A2)
 // Original VA: 0x00000001428F3900 | File offset: 0x028F2F00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSocialImportButton, 46840327u); reached from UFortSocialImportButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSocialImportButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSocialImportButton();
+// Original dynamic initializer: RVA 0x0025BCA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSocialImportButton(Z_Construct_UClass_UFortSocialImportButton, &UFortSocialImportButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSocialImportButton"), false, nullptr, nullptr, nullptr);

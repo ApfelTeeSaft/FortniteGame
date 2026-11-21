@@ -7,6 +7,9 @@
 void UCheatManager::StaticRegisterNativesUCheatManager()
 {
 }
+// IMPLEMENT_CLASS(UCheatManager, 298652189u)
+// Original dynamic initializer: RVA 0x001F6F40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCheatManager> AutoInitializeUCheatManager(TEXT("UCheatManager"), sizeof(UCheatManager), 298652189u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F60A0 (end 0x023F6142)
 // Original VA: 0x00000001423F60A0 | File offset: 0x023F56A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCheatManager, 298652189u); reached from UCheatManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCheatManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCheatManager();
+// Original dynamic initializer: RVA 0x001F7EA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCheatManager(Z_Construct_UClass_UCheatManager, &UCheatManager::StaticClass, TEXT("/Script/Engine"), TEXT("UCheatManager"), false, nullptr, nullptr, nullptr);

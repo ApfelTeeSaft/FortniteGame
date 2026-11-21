@@ -7,6 +7,9 @@
 void UAthenaInventoryPanelBase::StaticRegisterNativesUAthenaInventoryPanelBase()
 {
 }
+// IMPLEMENT_CLASS(UAthenaInventoryPanelBase, 3987544481u)
+// Original dynamic initializer: RVA 0x00239260 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaInventoryPanelBase> AutoInitializeUAthenaInventoryPanelBase(TEXT("UAthenaInventoryPanelBase"), sizeof(UAthenaInventoryPanelBase), 3987544481u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287E2A0 (end 0x0287E342)
 // Original VA: 0x000000014287E2A0 | File offset: 0x0287D8A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaInventoryPanelBase, 3987544481u); reached from UAthenaInventoryPanelBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAthenaInventoryPanelBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaInventoryPanelBase();
+// Original dynamic initializer: RVA 0x0023B200
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaInventoryPanelBase(Z_Construct_UClass_UAthenaInventoryPanelBase, &UAthenaInventoryPanelBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaInventoryPanelBase"), false, nullptr, nullptr, nullptr);

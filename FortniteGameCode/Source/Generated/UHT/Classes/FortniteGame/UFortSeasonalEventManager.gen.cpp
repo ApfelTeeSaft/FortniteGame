@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSeasonalEventManager, 4267640118u)
+// Original dynamic initializer: RVA 0x00112BB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSeasonalEventManager> AutoInitializeUFortSeasonalEventManager(TEXT("UFortSeasonalEventManager"), sizeof(UFortSeasonalEventManager), 4267640118u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A3790 (end 0x010A3832)
 // Original VA: 0x00000001410A3790 | File offset: 0x010A2D90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSeasonalEventManager, 4267640118u); reached from UFortSeasonalEventManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSeasonalEventManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSeasonalEventManager();
+// Original dynamic initializer: RVA 0x001142B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSeasonalEventManager(Z_Construct_UClass_UFortSeasonalEventManager, &UFortSeasonalEventManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortSeasonalEventManager"), false, nullptr, nullptr, nullptr);

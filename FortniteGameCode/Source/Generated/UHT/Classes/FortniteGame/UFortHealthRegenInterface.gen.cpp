@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortHealthRegenInterface, 1140075569u)
+// Original dynamic initializer: RVA 0x001113E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHealthRegenInterface> AutoInitializeUFortHealthRegenInterface(TEXT("UFortHealthRegenInterface"), sizeof(UFortHealthRegenInterface), 1140075569u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109BFC0 (end 0x0109C062)
 // Original VA: 0x000000014109BFC0 | File offset: 0x0109B5C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHealthRegenInterface, 1140075569u); reached from UFortHealthRegenInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortHealthRegenInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHealthRegenInterface();
+// Original dynamic initializer: RVA 0x00112730
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHealthRegenInterface(Z_Construct_UClass_UFortHealthRegenInterface, &UFortHealthRegenInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortHealthRegenInterface"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UBlackboardKeyType_Rotator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBlackboardKeyType_Rotator, 186862379u)
+// Original dynamic initializer: RVA 0x001BA910 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBlackboardKeyType_Rotator> AutoInitializeUBlackboardKeyType_Rotator(TEXT("UBlackboardKeyType_Rotator"), sizeof(UBlackboardKeyType_Rotator), 186862379u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D21F90 (end 0x01D22032)
 // Original VA: 0x0000000141D21F90 | File offset: 0x01D21590
 // Recovery: confirmed (IMPLEMENT_CLASS(UBlackboardKeyType_Rotator, 186862379u); reached from UBlackboardKeyType_Rotator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UBlackboardKeyType_Rotator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBlackboardKeyType_Rotator();
+// Original dynamic initializer: RVA 0x001BBF00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBlackboardKeyType_Rotator(Z_Construct_UClass_UBlackboardKeyType_Rotator, &UBlackboardKeyType_Rotator::StaticClass, TEXT("/Script/AIModule"), TEXT("UBlackboardKeyType_Rotator"), false, nullptr, nullptr, nullptr);

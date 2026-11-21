@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAnimNotifyState_TimedParticleEffect()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnimNotifyState_TimedParticleEffect, 3185863373u)
+// Original dynamic initializer: RVA 0x001EF940 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimNotifyState_TimedParticleEffect> AutoInitializeUAnimNotifyState_TimedParticleEffect(TEXT("UAnimNotifyState_TimedParticleEffect"), sizeof(UAnimNotifyState_TimedParticleEffect), 3185863373u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D45A0 (end 0x023D4642)
 // Original VA: 0x00000001423D45A0 | File offset: 0x023D3BA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimNotifyState_TimedParticleEffect, 3185863373u); reached from UAnimNotifyState_TimedParticleEffect::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAnimNotifyState_TimedParticleEffect::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimNotifyState_TimedParticleEffect();
+// Original dynamic initializer: RVA 0x001F16B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimNotifyState_TimedParticleEffect(Z_Construct_UClass_UAnimNotifyState_TimedParticleEffect, &UAnimNotifyState_TimedParticleEffect::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimNotifyState_TimedParticleEffect"), false, nullptr, nullptr, nullptr);

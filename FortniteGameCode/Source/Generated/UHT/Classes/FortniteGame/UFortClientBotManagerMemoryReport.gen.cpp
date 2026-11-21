@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortClientBotManagerMemoryReport()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortClientBotManagerMemoryReport, 3962208489u)
+// Original dynamic initializer: RVA 0x000EB310 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortClientBotManagerMemoryReport> AutoInitializeUFortClientBotManagerMemoryReport(TEXT("UFortClientBotManagerMemoryReport"), sizeof(UFortClientBotManagerMemoryReport), 3962208489u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBEF30 (end 0x00FBEFD2)
 // Original VA: 0x0000000140FBEF30 | File offset: 0x00FBE530
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortClientBotManagerMemoryReport, 3962208489u); reached from UFortClientBotManagerMemoryReport::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortClientBotManagerMemoryReport::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortClientBotManagerMemoryReport();
+// Original dynamic initializer: RVA 0x000EC440
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortClientBotManagerMemoryReport(Z_Construct_UClass_UFortClientBotManagerMemoryReport, &UFortClientBotManagerMemoryReport::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortClientBotManagerMemoryReport"), false, nullptr, nullptr, nullptr);

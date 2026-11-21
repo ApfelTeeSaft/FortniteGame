@@ -7,6 +7,9 @@
 void UFortQuestExpiresWidget::StaticRegisterNativesUFortQuestExpiresWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortQuestExpiresWidget, 754071881u)
+// Original dynamic initializer: RVA 0x00258380 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQuestExpiresWidget> AutoInitializeUFortQuestExpiresWidget(TEXT("UFortQuestExpiresWidget"), sizeof(UFortQuestExpiresWidget), 754071881u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EAF40 (end 0x028EAFE2)
 // Original VA: 0x00000001428EAF40 | File offset: 0x028EA540
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQuestExpiresWidget, 754071881u); reached from UFortQuestExpiresWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortQuestExpiresWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQuestExpiresWidget();
+// Original dynamic initializer: RVA 0x0025A220
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQuestExpiresWidget(Z_Construct_UClass_UFortQuestExpiresWidget, &UFortQuestExpiresWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortQuestExpiresWidget"), false, nullptr, nullptr, nullptr);

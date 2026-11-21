@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UCustomCharacterPartData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCustomCharacterPartData, 2754157638u)
+// Original dynamic initializer: RVA 0x000DCEE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCustomCharacterPartData> AutoInitializeUCustomCharacterPartData(TEXT("UCustomCharacterPartData"), sizeof(UCustomCharacterPartData), 2754157638u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F772C0 (end 0x00F77357)
 // Original VA: 0x0000000140F772C0 | File offset: 0x00F768C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCustomCharacterPartData, 2754157638u); reached from UCustomCharacterPartData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UCustomCharacterPartData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCustomCharacterPartData();
+// Original dynamic initializer: RVA 0x000DE500
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCustomCharacterPartData(Z_Construct_UClass_UCustomCharacterPartData, &UCustomCharacterPartData::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UCustomCharacterPartData"), false, nullptr, nullptr, nullptr);

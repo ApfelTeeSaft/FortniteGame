@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortPlayerExitParams, 2842938111u)
+// Original dynamic initializer: RVA 0x00120280 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPlayerExitParams> AutoInitializeUFortPlayerExitParams(TEXT("UFortPlayerExitParams"), sizeof(UFortPlayerExitParams), 2842938111u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E7D00 (end 0x010E7DA2)
 // Original VA: 0x00000001410E7D00 | File offset: 0x010E7300
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPlayerExitParams, 2842938111u); reached from UFortPlayerExitParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortPlayerExitParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPlayerExitParams();
+// Original dynamic initializer: RVA 0x00122070
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPlayerExitParams(Z_Construct_UClass_UFortPlayerExitParams, &UFortPlayerExitParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPlayerExitParams"), false, nullptr, nullptr, nullptr);

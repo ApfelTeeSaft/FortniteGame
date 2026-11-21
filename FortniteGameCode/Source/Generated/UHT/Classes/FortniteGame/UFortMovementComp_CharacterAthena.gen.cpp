@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortMovementComp_CharacterAthena, 3058492385u)
+// Original dynamic initializer: RVA 0x00104180 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMovementComp_CharacterAthena> AutoInitializeUFortMovementComp_CharacterAthena(TEXT("UFortMovementComp_CharacterAthena"), sizeof(UFortMovementComp_CharacterAthena), 3058492385u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010487C0 (end 0x01048862)
 // Original VA: 0x00000001410487C0 | File offset: 0x01047DC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMovementComp_CharacterAthena, 3058492385u); reached from UFortMovementComp_CharacterAthena::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortMovementComp_CharacterAthena::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMovementComp_CharacterAthena();
+// Original dynamic initializer: RVA 0x00105290
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMovementComp_CharacterAthena(Z_Construct_UClass_UFortMovementComp_CharacterAthena, &UFortMovementComp_CharacterAthena::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMovementComp_CharacterAthena"), false, nullptr, nullptr, nullptr);

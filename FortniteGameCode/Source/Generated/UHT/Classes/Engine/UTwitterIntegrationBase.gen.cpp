@@ -7,6 +7,9 @@
 void UTwitterIntegrationBase::StaticRegisterNativesUTwitterIntegrationBase()
 {
 }
+// IMPLEMENT_CLASS(UTwitterIntegrationBase, 566021815u)
+// Original dynamic initializer: RVA 0x00220140 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTwitterIntegrationBase> AutoInitializeUTwitterIntegrationBase(TEXT("UTwitterIntegrationBase"), sizeof(UTwitterIntegrationBase), 566021815u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EB990 (end 0x024EBA32)
 // Original VA: 0x00000001424EB990 | File offset: 0x024EAF90
 // Recovery: confirmed (IMPLEMENT_CLASS(UTwitterIntegrationBase, 566021815u); reached from UTwitterIntegrationBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UTwitterIntegrationBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTwitterIntegrationBase();
+// Original dynamic initializer: RVA 0x00221740
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTwitterIntegrationBase(Z_Construct_UClass_UTwitterIntegrationBase, &UTwitterIntegrationBase::StaticClass, TEXT("/Script/Engine"), TEXT("UTwitterIntegrationBase"), false, nullptr, nullptr, nullptr);

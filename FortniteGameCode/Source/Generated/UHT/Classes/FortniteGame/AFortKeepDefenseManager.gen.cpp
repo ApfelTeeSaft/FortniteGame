@@ -7,6 +7,9 @@
 void AFortKeepDefenseManager::StaticRegisterNativesAFortKeepDefenseManager()
 {
 }
+// IMPLEMENT_CLASS(AFortKeepDefenseManager, 4255600340u)
+// Original dynamic initializer: RVA 0x000FC430 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortKeepDefenseManager> AutoInitializeAFortKeepDefenseManager(TEXT("AFortKeepDefenseManager"), sizeof(AFortKeepDefenseManager), 4255600340u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0100B240 (end 0x0100B2E2)
 // Original VA: 0x000000014100B240 | File offset: 0x0100A840
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortKeepDefenseManager, 4255600340u); reached from AFortKeepDefenseManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortKeepDefenseManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortKeepDefenseManager();
+// Original dynamic initializer: RVA 0x000FCB70
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortKeepDefenseManager(Z_Construct_UClass_AFortKeepDefenseManager, &AFortKeepDefenseManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortKeepDefenseManager"), false, nullptr, nullptr, nullptr);

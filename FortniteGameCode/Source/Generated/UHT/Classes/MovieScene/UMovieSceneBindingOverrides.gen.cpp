@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_UMovieSceneBindingOverrides()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMovieSceneBindingOverrides, 2649030702u)
+// Original dynamic initializer: RVA 0x001A48D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovieSceneBindingOverrides> AutoInitializeUMovieSceneBindingOverrides(TEXT("UMovieSceneBindingOverrides"), sizeof(UMovieSceneBindingOverrides), 2649030702u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC0ED0 (end 0x01AC0F67)
 // Original VA: 0x0000000141AC0ED0 | File offset: 0x01AC04D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovieSceneBindingOverrides, 2649030702u); reached from UMovieSceneBindingOverrides::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* UMovieSceneBindingOverrides::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovieSceneBindingOverrides();
+// Original dynamic initializer: RVA 0x001A7210
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovieSceneBindingOverrides(Z_Construct_UClass_UMovieSceneBindingOverrides, &UMovieSceneBindingOverrides::StaticClass, TEXT("/Script/MovieScene"), TEXT("UMovieSceneBindingOverrides"), false, nullptr, nullptr, nullptr);

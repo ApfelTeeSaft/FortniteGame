@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortItemViewContext_SquadSlotsView()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortItemViewContext_SquadSlotsView, 1628536304u)
+// Original dynamic initializer: RVA 0x0025AB00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemViewContext_SquadSlotsView> AutoInitializeUFortItemViewContext_SquadSlotsView(TEXT("UFortItemViewContext_SquadSlotsView"), sizeof(UFortItemViewContext_SquadSlotsView), 1628536304u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F2EB0 (end 0x028F2F52)
 // Original VA: 0x00000001428F2EB0 | File offset: 0x028F24B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemViewContext_SquadSlotsView, 1628536304u); reached from UFortItemViewContext_SquadSlotsView::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortItemViewContext_SquadSlotsView::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemViewContext_SquadSlotsView();
+// Original dynamic initializer: RVA 0x0025B8E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemViewContext_SquadSlotsView(Z_Construct_UClass_UFortItemViewContext_SquadSlotsView, &UFortItemViewContext_SquadSlotsView::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemViewContext_SquadSlotsView"), false, nullptr, nullptr, nullptr);

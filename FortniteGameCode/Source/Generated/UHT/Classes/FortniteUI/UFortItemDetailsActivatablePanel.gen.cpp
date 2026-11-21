@@ -7,6 +7,9 @@
 void UFortItemDetailsActivatablePanel::StaticRegisterNativesUFortItemDetailsActivatablePanel()
 {
 }
+// IMPLEMENT_CLASS(UFortItemDetailsActivatablePanel, 2764737537u)
+// Original dynamic initializer: RVA 0x0024CD80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemDetailsActivatablePanel> AutoInitializeUFortItemDetailsActivatablePanel(TEXT("UFortItemDetailsActivatablePanel"), sizeof(UFortItemDetailsActivatablePanel), 2764737537u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C7FF0 (end 0x028C8092)
 // Original VA: 0x00000001428C7FF0 | File offset: 0x028C75F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemDetailsActivatablePanel, 2764737537u); reached from UFortItemDetailsActivatablePanel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortItemDetailsActivatablePanel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemDetailsActivatablePanel();
+// Original dynamic initializer: RVA 0x0024ED10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemDetailsActivatablePanel(Z_Construct_UClass_UFortItemDetailsActivatablePanel, &UFortItemDetailsActivatablePanel::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemDetailsActivatablePanel"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UGameplayCueNotify_Static, 3860513165u)
+// Original dynamic initializer: RVA 0x0009ED00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayCueNotify_Static> AutoInitializeUGameplayCueNotify_Static(TEXT("UGameplayCueNotify_Static"), sizeof(UGameplayCueNotify_Static), 3860513165u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00559E60 (end 0x00559EF7)
 // Original VA: 0x0000000140559E60 | File offset: 0x00559460
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayCueNotify_Static, 3860513165u); reached from UGameplayCueNotify_Static::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UGameplayCueNotify_Static::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayCueNotify_Static();
+// Original dynamic initializer: RVA 0x000A0C00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayCueNotify_Static(Z_Construct_UClass_UGameplayCueNotify_Static, &UGameplayCueNotify_Static::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UGameplayCueNotify_Static"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UGameplayTask_WaitDelay, 3372722472u)
+// Original dynamic initializer: RVA 0x001B7EF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayTask_WaitDelay> AutoInitializeUGameplayTask_WaitDelay(TEXT("UGameplayTask_WaitDelay"), sizeof(UGameplayTask_WaitDelay), 3372722472u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9A7B0 (end 0x01C9A852)
 // Original VA: 0x0000000141C9A7B0 | File offset: 0x01C99DB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayTask_WaitDelay, 3372722472u); reached from UGameplayTask_WaitDelay::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UGameplayTask_WaitDelay::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayTask_WaitDelay();
+// Original dynamic initializer: RVA 0x001B8250
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayTask_WaitDelay(Z_Construct_UClass_UGameplayTask_WaitDelay, &UGameplayTask_WaitDelay::StaticClass, TEXT("/Script/GameplayTasks"), TEXT("UGameplayTask_WaitDelay"), false, nullptr, nullptr, nullptr);

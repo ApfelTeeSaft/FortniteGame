@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFort3PCam_Default()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFort3PCam_Default, 63266376u)
+// Original dynamic initializer: RVA 0x000DE7A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFort3PCam_Default> AutoInitializeUFort3PCam_Default(TEXT("UFort3PCam_Default"), sizeof(UFort3PCam_Default), 63266376u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7B7A0 (end 0x00F7B842)
 // Original VA: 0x0000000140F7B7A0 | File offset: 0x00F7ADA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFort3PCam_Default, 63266376u); reached from UFort3PCam_Default::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFort3PCam_Default::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFort3PCam_Default();
+// Original dynamic initializer: RVA 0x000DF900
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFort3PCam_Default(Z_Construct_UClass_UFort3PCam_Default, &UFort3PCam_Default::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFort3PCam_Default"), false, nullptr, nullptr, nullptr);

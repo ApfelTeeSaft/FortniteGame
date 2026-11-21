@@ -7,6 +7,9 @@
 void UFortSpline::StaticRegisterNativesUFortSpline()
 {
 }
+// IMPLEMENT_CLASS(UFortSpline, 1068650940u)
+// Original dynamic initializer: RVA 0x00112D30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSpline> AutoInitializeUFortSpline(TEXT("UFortSpline"), sizeof(UFortSpline), 1068650940u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A3FB0 (end 0x010A4047)
 // Original VA: 0x00000001410A3FB0 | File offset: 0x010A35B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSpline, 1068650940u); reached from UFortSpline::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSpline::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSpline();
+// Original dynamic initializer: RVA 0x001145B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSpline(Z_Construct_UClass_UFortSpline, &UFortSpline::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortSpline"), false, nullptr, nullptr, nullptr);

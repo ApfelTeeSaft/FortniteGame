@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UPathFollowingComponent, 1720310592u)
+// Original dynamic initializer: RVA 0x001BF420 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPathFollowingComponent> AutoInitializeUPathFollowingComponent(TEXT("UPathFollowingComponent"), sizeof(UPathFollowingComponent), 1720310592u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D312D0 (end 0x01D31372)
 // Original VA: 0x0000000141D312D0 | File offset: 0x01D308D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UPathFollowingComponent, 1720310592u); reached from UPathFollowingComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UPathFollowingComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPathFollowingComponent();
+// Original dynamic initializer: RVA 0x001BFAF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPathFollowingComponent(Z_Construct_UClass_UPathFollowingComponent, &UPathFollowingComponent::StaticClass, TEXT("/Script/AIModule"), TEXT("UPathFollowingComponent"), false, nullptr, nullptr, nullptr);

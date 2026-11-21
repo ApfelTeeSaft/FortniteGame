@@ -7,6 +7,9 @@
 void APlayerCameraManager::StaticRegisterNativesAPlayerCameraManager()
 {
 }
+// IMPLEMENT_CLASS(APlayerCameraManager, 4103175984u)
+// Original dynamic initializer: RVA 0x002148F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<APlayerCameraManager> AutoInitializeAPlayerCameraManager(TEXT("APlayerCameraManager"), sizeof(APlayerCameraManager), 4103175984u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A82D0 (end 0x024A8372)
 // Original VA: 0x00000001424A82D0 | File offset: 0x024A78D0
 // Recovery: confirmed (IMPLEMENT_CLASS(APlayerCameraManager, 4103175984u); reached from APlayerCameraManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* APlayerCameraManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_APlayerCameraManager();
+// Original dynamic initializer: RVA 0x00215E60
+static FCompiledInDefer Z_CompiledInDefer_UClass_APlayerCameraManager(Z_Construct_UClass_APlayerCameraManager, &APlayerCameraManager::StaticClass, TEXT("/Script/Engine"), TEXT("APlayerCameraManager"), false, nullptr, nullptr, nullptr);

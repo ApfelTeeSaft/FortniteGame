@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AReflectionCapture()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AReflectionCapture, 2305280659u)
+// Original dynamic initializer: RVA 0x002173D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AReflectionCapture> AutoInitializeAReflectionCapture(TEXT("AReflectionCapture"), sizeof(AReflectionCapture), 2305280659u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C1080 (end 0x024C1122)
 // Original VA: 0x00000001424C1080 | File offset: 0x024C0680
 // Recovery: confirmed (IMPLEMENT_CLASS(AReflectionCapture, 2305280659u); reached from AReflectionCapture::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AReflectionCapture::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AReflectionCapture();
+// Original dynamic initializer: RVA 0x00218840
+static FCompiledInDefer Z_CompiledInDefer_UClass_AReflectionCapture(Z_Construct_UClass_AReflectionCapture, &AReflectionCapture::StaticClass, TEXT("/Script/Engine"), TEXT("AReflectionCapture"), false, nullptr, nullptr, nullptr);

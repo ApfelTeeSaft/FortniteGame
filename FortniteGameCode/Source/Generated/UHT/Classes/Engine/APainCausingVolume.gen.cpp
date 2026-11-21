@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_APainCausingVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(APainCausingVolume, 220792363u)
+// Original dynamic initializer: RVA 0x0020ECF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<APainCausingVolume> AutoInitializeAPainCausingVolume(TEXT("APainCausingVolume"), sizeof(APainCausingVolume), 220792363u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024933F0 (end 0x02493492)
 // Original VA: 0x00000001424933F0 | File offset: 0x024929F0
 // Recovery: confirmed (IMPLEMENT_CLASS(APainCausingVolume, 220792363u); reached from APainCausingVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* APainCausingVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_APainCausingVolume();
+// Original dynamic initializer: RVA 0x0020FEB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_APainCausingVolume(Z_Construct_UClass_APainCausingVolume, &APainCausingVolume::StaticClass, TEXT("/Script/Engine"), TEXT("APainCausingVolume"), false, nullptr, nullptr, nullptr);

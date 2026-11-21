@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AMaterialInstanceActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AMaterialInstanceActor, 1368466777u)
+// Original dynamic initializer: RVA 0x0020AC70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AMaterialInstanceActor> AutoInitializeAMaterialInstanceActor(TEXT("AMaterialInstanceActor"), sizeof(AMaterialInstanceActor), 1368466777u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02484640 (end 0x024846E2)
 // Original VA: 0x0000000142484640 | File offset: 0x02483C40
 // Recovery: confirmed (IMPLEMENT_CLASS(AMaterialInstanceActor, 1368466777u); reached from AMaterialInstanceActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AMaterialInstanceActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AMaterialInstanceActor();
+// Original dynamic initializer: RVA 0x0020BE70
+static FCompiledInDefer Z_CompiledInDefer_UClass_AMaterialInstanceActor(Z_Construct_UClass_AMaterialInstanceActor, &AMaterialInstanceActor::StaticClass, TEXT("/Script/Engine"), TEXT("AMaterialInstanceActor"), false, nullptr, nullptr, nullptr);

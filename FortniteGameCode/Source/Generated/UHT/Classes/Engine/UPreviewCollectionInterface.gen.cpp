@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UPreviewCollectionInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPreviewCollectionInterface, 3352097659u)
+// Original dynamic initializer: RVA 0x002163C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPreviewCollectionInterface> AutoInitializeUPreviewCollectionInterface(TEXT("UPreviewCollectionInterface"), sizeof(UPreviewCollectionInterface), 3352097659u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B6AC0 (end 0x024B6B62)
 // Original VA: 0x00000001424B6AC0 | File offset: 0x024B60C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UPreviewCollectionInterface, 3352097659u); reached from UPreviewCollectionInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UPreviewCollectionInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPreviewCollectionInterface();
+// Original dynamic initializer: RVA 0x00217290
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPreviewCollectionInterface(Z_Construct_UClass_UPreviewCollectionInterface, &UPreviewCollectionInterface::StaticClass, TEXT("/Script/Engine"), TEXT("UPreviewCollectionInterface"), false, nullptr, nullptr, nullptr);

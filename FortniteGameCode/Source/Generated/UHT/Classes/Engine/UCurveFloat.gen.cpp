@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCurveFloat, 4059089072u)
+// Original dynamic initializer: RVA 0x001F8300 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCurveFloat> AutoInitializeUCurveFloat(TEXT("UCurveFloat"), sizeof(UCurveFloat), 4059089072u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FC020 (end 0x023FC0C2)
 // Original VA: 0x00000001423FC020 | File offset: 0x023FB620
 // Recovery: confirmed (IMPLEMENT_CLASS(UCurveFloat, 4059089072u); reached from UCurveFloat::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCurveFloat::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCurveFloat();
+// Original dynamic initializer: RVA 0x001F95C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCurveFloat(Z_Construct_UClass_UCurveFloat, &UCurveFloat::StaticClass, TEXT("/Script/Engine"), TEXT("UCurveFloat"), false, nullptr, nullptr, nullptr);

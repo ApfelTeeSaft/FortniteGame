@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UNavArea()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNavArea, 1330925404u)
+// Original dynamic initializer: RVA 0x0020C670 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavArea> AutoInitializeUNavArea(TEXT("UNavArea"), sizeof(UNavArea), 1330925404u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02489E50 (end 0x02489EE7)
 // Original VA: 0x0000000142489E50 | File offset: 0x02489450
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavArea, 1330925404u); reached from UNavArea::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UNavArea::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavArea();
+// Original dynamic initializer: RVA 0x0020D7B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavArea(Z_Construct_UClass_UNavArea, &UNavArea::StaticClass, TEXT("/Script/Engine"), TEXT("UNavArea"), false, nullptr, nullptr, nullptr);

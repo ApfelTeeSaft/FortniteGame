@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortLoginCredentialSelect, 647927185u)
+// Original dynamic initializer: RVA 0x00251430 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortLoginCredentialSelect> AutoInitializeUFortLoginCredentialSelect(TEXT("UFortLoginCredentialSelect"), sizeof(UFortLoginCredentialSelect), 647927185u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D5940 (end 0x028D59E2)
 // Original VA: 0x00000001428D5940 | File offset: 0x028D4F40
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortLoginCredentialSelect, 647927185u); reached from UFortLoginCredentialSelect::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortLoginCredentialSelect::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortLoginCredentialSelect();
+// Original dynamic initializer: RVA 0x00253470
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortLoginCredentialSelect(Z_Construct_UClass_UFortLoginCredentialSelect, &UFortLoginCredentialSelect::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortLoginCredentialSelect"), false, nullptr, nullptr, nullptr);

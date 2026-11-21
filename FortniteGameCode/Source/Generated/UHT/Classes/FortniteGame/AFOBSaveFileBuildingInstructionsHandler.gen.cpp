@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFOBSaveFileBuildingInstructionsHandler()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFOBSaveFileBuildingInstructionsHandler, 209750157u)
+// Original dynamic initializer: RVA 0x000DE760 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFOBSaveFileBuildingInstructionsHandler> AutoInitializeAFOBSaveFileBuildingInstructionsHandler(TEXT("AFOBSaveFileBuildingInstructionsHandler"), sizeof(AFOBSaveFileBuildingInstructionsHandler), 209750157u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7B640 (end 0x00F7B6E2)
 // Original VA: 0x0000000140F7B640 | File offset: 0x00F7AC40
 // Recovery: confirmed (IMPLEMENT_CLASS(AFOBSaveFileBuildingInstructionsHandler, 209750157u); reached from AFOBSaveFileBuildingInstructionsHandler::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFOBSaveFileBuildingInstructionsHandler::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFOBSaveFileBuildingInstructionsHandler();
+// Original dynamic initializer: RVA 0x000DF880
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFOBSaveFileBuildingInstructionsHandler(Z_Construct_UClass_AFOBSaveFileBuildingInstructionsHandler, &AFOBSaveFileBuildingInstructionsHandler::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFOBSaveFileBuildingInstructionsHandler"), false, nullptr, nullptr, nullptr);

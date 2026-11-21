@@ -7,6 +7,9 @@
 void UObject::StaticRegisterNativesUObject()
 {
 }
+// IMPLEMENT_CLASS(UObject, 3123755591u)
+// Original dynamic initializer: RVA 0x00135890 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UObject> AutoInitializeUObject(TEXT("UObject"), sizeof(UObject), 3123755591u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x013A7730 (end 0x013A77C7)
 // Original VA: 0x00000001413A7730 | File offset: 0x013A6D30
 // Recovery: confirmed (IMPLEMENT_CLASS(UObject, 3123755591u); reached from UObject::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UObject::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UObject();
+// Original dynamic initializer: RVA 0x00135C20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UObject(Z_Construct_UClass_UObject, &UObject::StaticClass, TEXT("/Script/CoreUObject"), TEXT("UObject"), false, nullptr, nullptr, nullptr);

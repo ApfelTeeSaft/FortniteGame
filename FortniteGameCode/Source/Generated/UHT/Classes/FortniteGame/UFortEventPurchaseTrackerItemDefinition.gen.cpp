@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortEventPurchaseTrackerItemDefinition()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortEventPurchaseTrackerItemDefinition, 379359350u)
+// Original dynamic initializer: RVA 0x000F2610 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortEventPurchaseTrackerItemDefinition> AutoInitializeUFortEventPurchaseTrackerItemDefinition(TEXT("UFortEventPurchaseTrackerItemDefinition"), sizeof(UFortEventPurchaseTrackerItemDefinition), 379359350u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD9C40 (end 0x00FD9CE2)
 // Original VA: 0x0000000140FD9C40 | File offset: 0x00FD9240
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortEventPurchaseTrackerItemDefinition, 379359350u); reached from UFortEventPurchaseTrackerItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortEventPurchaseTrackerItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortEventPurchaseTrackerItemDefinition();
+// Original dynamic initializer: RVA 0x000F43D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortEventPurchaseTrackerItemDefinition(Z_Construct_UClass_UFortEventPurchaseTrackerItemDefinition, &UFortEventPurchaseTrackerItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortEventPurchaseTrackerItemDefinition"), false, nullptr, nullptr, nullptr);

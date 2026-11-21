@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortHUDTargetUnderReticleInterface, 2188592350u)
+// Original dynamic initializer: RVA 0x000FAFA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHUDTargetUnderReticleInterface> AutoInitializeUFortHUDTargetUnderReticleInterface(TEXT("UFortHUDTargetUnderReticleInterface"), sizeof(UFortHUDTargetUnderReticleInterface), 2188592350u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010031F0 (end 0x01003292)
 // Original VA: 0x00000001410031F0 | File offset: 0x010027F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHUDTargetUnderReticleInterface, 2188592350u); reached from UFortHUDTargetUnderReticleInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortHUDTargetUnderReticleInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHUDTargetUnderReticleInterface();
+// Original dynamic initializer: RVA 0x000FBD70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHUDTargetUnderReticleInterface(Z_Construct_UClass_UFortHUDTargetUnderReticleInterface, &UFortHUDTargetUnderReticleInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortHUDTargetUnderReticleInterface"), false, nullptr, nullptr, nullptr);

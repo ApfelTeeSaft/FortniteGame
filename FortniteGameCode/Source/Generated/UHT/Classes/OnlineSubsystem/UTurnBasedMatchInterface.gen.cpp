@@ -7,6 +7,9 @@
 void UTurnBasedMatchInterface::StaticRegisterNativesUTurnBasedMatchInterface()
 {
 }
+// IMPLEMENT_CLASS(UTurnBasedMatchInterface, 32513302u)
+// Original dynamic initializer: RVA 0x00098700 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTurnBasedMatchInterface> AutoInitializeUTurnBasedMatchInterface(TEXT("UTurnBasedMatchInterface"), sizeof(UTurnBasedMatchInterface), 32513302u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002FC220 (end 0x002FC2C2)
 // Original VA: 0x00000001402FC220 | File offset: 0x002FB820
 // Recovery: confirmed (IMPLEMENT_CLASS(UTurnBasedMatchInterface, 32513302u); reached from UTurnBasedMatchInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UTurnBasedMatchInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTurnBasedMatchInterface();
+// Original dynamic initializer: RVA 0x00098BB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTurnBasedMatchInterface(Z_Construct_UClass_UTurnBasedMatchInterface, &UTurnBasedMatchInterface::StaticClass, TEXT("/Script/OnlineSubsystem"), TEXT("UTurnBasedMatchInterface"), false, nullptr, nullptr, nullptr);

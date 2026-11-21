@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAndroidPermissionFunctionLibrary, 873029748u)
+// Original dynamic initializer: RVA 0x000B4080 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAndroidPermissionFunctionLibrary> AutoInitializeUAndroidPermissionFunctionLibrary(TEXT("UAndroidPermissionFunctionLibrary"), sizeof(UAndroidPermissionFunctionLibrary), 873029748u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00803DF0 (end 0x00803E92)
 // Original VA: 0x0000000140803DF0 | File offset: 0x008033F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAndroidPermissionFunctionLibrary, 873029748u); reached from UAndroidPermissionFunctionLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAndroidPermissionFunctionLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAndroidPermissionFunctionLibrary();
+// Original dynamic initializer: RVA 0x000B40E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAndroidPermissionFunctionLibrary(Z_Construct_UClass_UAndroidPermissionFunctionLibrary, &UAndroidPermissionFunctionLibrary::StaticClass, TEXT("/Script/AndroidPermission"), TEXT("UAndroidPermissionFunctionLibrary"), false, nullptr, nullptr, nullptr);

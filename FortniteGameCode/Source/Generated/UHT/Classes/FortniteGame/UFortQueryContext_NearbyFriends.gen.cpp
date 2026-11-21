@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortQueryContext_NearbyFriends()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryContext_NearbyFriends, 1146819443u)
+// Original dynamic initializer: RVA 0x0010E990 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryContext_NearbyFriends> AutoInitializeUFortQueryContext_NearbyFriends(TEXT("UFortQueryContext_NearbyFriends"), sizeof(UFortQueryContext_NearbyFriends), 1146819443u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010909D0 (end 0x01090A72)
 // Original VA: 0x00000001410909D0 | File offset: 0x0108FFD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryContext_NearbyFriends, 1146819443u); reached from UFortQueryContext_NearbyFriends::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortQueryContext_NearbyFriends::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryContext_NearbyFriends();
+// Original dynamic initializer: RVA 0x0010F9A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryContext_NearbyFriends(Z_Construct_UClass_UFortQueryContext_NearbyFriends, &UFortQueryContext_NearbyFriends::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryContext_NearbyFriends"), false, nullptr, nullptr, nullptr);

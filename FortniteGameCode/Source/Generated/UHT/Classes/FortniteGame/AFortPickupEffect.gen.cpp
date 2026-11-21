@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortPickupEffect, 180763940u)
+// Original dynamic initializer: RVA 0x00108D60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPickupEffect> AutoInitializeAFortPickupEffect(TEXT("AFortPickupEffect"), sizeof(AFortPickupEffect), 180763940u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01063F00 (end 0x01063FA2)
 // Original VA: 0x0000000141063F00 | File offset: 0x01063500
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPickupEffect, 180763940u); reached from AFortPickupEffect::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortPickupEffect::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPickupEffect();
+// Original dynamic initializer: RVA 0x0010A0C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPickupEffect(Z_Construct_UClass_AFortPickupEffect, &AFortPickupEffect::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPickupEffect"), false, nullptr, nullptr, nullptr);

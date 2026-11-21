@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UNavFilter_AIControllerDefault()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNavFilter_AIControllerDefault, 476467672u)
+// Original dynamic initializer: RVA 0x001BF3E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavFilter_AIControllerDefault> AutoInitializeUNavFilter_AIControllerDefault(TEXT("UNavFilter_AIControllerDefault"), sizeof(UNavFilter_AIControllerDefault), 476467672u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31180 (end 0x01D31222)
 // Original VA: 0x0000000141D31180 | File offset: 0x01D30780
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavFilter_AIControllerDefault, 476467672u); reached from UNavFilter_AIControllerDefault::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UNavFilter_AIControllerDefault::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavFilter_AIControllerDefault();
+// Original dynamic initializer: RVA 0x001BFA70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavFilter_AIControllerDefault(Z_Construct_UClass_UNavFilter_AIControllerDefault, &UNavFilter_AIControllerDefault::StaticClass, TEXT("/Script/AIModule"), TEXT("UNavFilter_AIControllerDefault"), false, nullptr, nullptr, nullptr);

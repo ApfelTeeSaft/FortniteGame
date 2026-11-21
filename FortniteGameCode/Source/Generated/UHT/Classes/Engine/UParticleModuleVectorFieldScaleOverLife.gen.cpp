@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleVectorFieldScaleOverLife()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleVectorFieldScaleOverLife, 208230428u)
+// Original dynamic initializer: RVA 0x00212780 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleVectorFieldScaleOverLife> AutoInitializeUParticleModuleVectorFieldScaleOverLife(TEXT("UParticleModuleVectorFieldScaleOverLife"), sizeof(UParticleModuleVectorFieldScaleOverLife), 208230428u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249D640 (end 0x0249D6E2)
 // Original VA: 0x000000014249D640 | File offset: 0x0249CC40
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleVectorFieldScaleOverLife, 208230428u); reached from UParticleModuleVectorFieldScaleOverLife::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleVectorFieldScaleOverLife::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleVectorFieldScaleOverLife();
+// Original dynamic initializer: RVA 0x002139D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleVectorFieldScaleOverLife(Z_Construct_UClass_UParticleModuleVectorFieldScaleOverLife, &UParticleModuleVectorFieldScaleOverLife::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleVectorFieldScaleOverLife"), false, nullptr, nullptr, nullptr);

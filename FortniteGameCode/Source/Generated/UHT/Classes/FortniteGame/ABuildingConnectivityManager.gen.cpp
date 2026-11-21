@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ABuildingConnectivityManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingConnectivityManager, 2189902638u)
+// Original dynamic initializer: RVA 0x000D9870 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingConnectivityManager> AutoInitializeABuildingConnectivityManager(TEXT("ABuildingConnectivityManager"), sizeof(ABuildingConnectivityManager), 2189902638u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F64540 (end 0x00F645E2)
 // Original VA: 0x0000000140F64540 | File offset: 0x00F63B40
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingConnectivityManager, 2189902638u); reached from ABuildingConnectivityManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ABuildingConnectivityManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingConnectivityManager();
+// Original dynamic initializer: RVA 0x000DA790
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingConnectivityManager(Z_Construct_UClass_ABuildingConnectivityManager, &ABuildingConnectivityManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingConnectivityManager"), false, nullptr, nullptr, nullptr);

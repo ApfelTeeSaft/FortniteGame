@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortSpottableActorInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortSpottableActorInterface, 2576213355u)
+// Original dynamic initializer: RVA 0x001146F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSpottableActorInterface> AutoInitializeUFortSpottableActorInterface(TEXT("UFortSpottableActorInterface"), sizeof(UFortSpottableActorInterface), 2576213355u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B15A0 (end 0x010B1642)
 // Original VA: 0x00000001410B15A0 | File offset: 0x010B0BA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSpottableActorInterface, 2576213355u); reached from UFortSpottableActorInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortSpottableActorInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSpottableActorInterface();
+// Original dynamic initializer: RVA 0x00115F80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSpottableActorInterface(Z_Construct_UClass_UFortSpottableActorInterface, &UFortSpottableActorInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortSpottableActorInterface"), false, nullptr, nullptr, nullptr);

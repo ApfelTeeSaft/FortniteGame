@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionSetEncounter()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionSetEncounter, 4172121945u)
+// Original dynamic initializer: RVA 0x000F0F80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionSetEncounter> AutoInitializeUFortDifficultyOptionSetEncounter(TEXT("UFortDifficultyOptionSetEncounter"), sizeof(UFortDifficultyOptionSetEncounter), 4172121945u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD6200 (end 0x00FD62A2)
 // Original VA: 0x0000000140FD6200 | File offset: 0x00FD5800
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionSetEncounter, 4172121945u); reached from UFortDifficultyOptionSetEncounter::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionSetEncounter::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionSetEncounter();
+// Original dynamic initializer: RVA 0x000F2350
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionSetEncounter(Z_Construct_UClass_UFortDifficultyOptionSetEncounter, &UFortDifficultyOptionSetEncounter::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionSetEncounter"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UListView()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UListView, 3777252214u)
+// Original dynamic initializer: RVA 0x001B27E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UListView> AutoInitializeUListView(TEXT("UListView"), sizeof(UListView), 3777252214u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEBC30 (end 0x01BEBCD2)
 // Original VA: 0x0000000141BEBC30 | File offset: 0x01BEB230
 // Recovery: confirmed (IMPLEMENT_CLASS(UListView, 3777252214u); reached from UListView::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UListView::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UListView();
+// Original dynamic initializer: RVA 0x001B3010
+static FCompiledInDefer Z_CompiledInDefer_UClass_UListView(Z_Construct_UClass_UListView, &UListView::StaticClass, TEXT("/Script/UMG"), TEXT("UListView"), false, nullptr, nullptr, nullptr);

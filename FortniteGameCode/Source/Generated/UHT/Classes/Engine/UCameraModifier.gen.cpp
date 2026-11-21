@@ -7,6 +7,9 @@
 void UCameraModifier::StaticRegisterNativesUCameraModifier()
 {
 }
+// IMPLEMENT_CLASS(UCameraModifier, 4198297412u)
+// Original dynamic initializer: RVA 0x001F4D30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCameraModifier> AutoInitializeUCameraModifier(TEXT("UCameraModifier"), sizeof(UCameraModifier), 4198297412u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9340 (end 0x023E93D7)
 // Original VA: 0x00000001423E9340 | File offset: 0x023E8940
 // Recovery: confirmed (IMPLEMENT_CLASS(UCameraModifier, 4198297412u); reached from UCameraModifier::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCameraModifier::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCameraModifier();
+// Original dynamic initializer: RVA 0x001F6310
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCameraModifier(Z_Construct_UClass_UCameraModifier, &UCameraModifier::StaticClass, TEXT("/Script/Engine"), TEXT("UCameraModifier"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortBTDecorator_WeaponStatus()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTDecorator_WeaponStatus, 3259694606u)
+// Original dynamic initializer: RVA 0x000E91F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTDecorator_WeaponStatus> AutoInitializeUFortBTDecorator_WeaponStatus(TEXT("UFortBTDecorator_WeaponStatus"), sizeof(UFortBTDecorator_WeaponStatus), 3259694606u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAB3F0 (end 0x00FAB492)
 // Original VA: 0x0000000140FAB3F0 | File offset: 0x00FAA9F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTDecorator_WeaponStatus, 3259694606u); reached from UFortBTDecorator_WeaponStatus::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortBTDecorator_WeaponStatus::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTDecorator_WeaponStatus();
+// Original dynamic initializer: RVA 0x000EA0C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTDecorator_WeaponStatus(Z_Construct_UClass_UFortBTDecorator_WeaponStatus, &UFortBTDecorator_WeaponStatus::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTDecorator_WeaponStatus"), false, nullptr, nullptr, nullptr);

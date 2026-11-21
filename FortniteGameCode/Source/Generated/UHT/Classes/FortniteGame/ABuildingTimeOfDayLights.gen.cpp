@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ABuildingTimeOfDayLights, 229670973u)
+// Original dynamic initializer: RVA 0x000DBEA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingTimeOfDayLights> AutoInitializeABuildingTimeOfDayLights(TEXT("ABuildingTimeOfDayLights"), sizeof(ABuildingTimeOfDayLights), 229670973u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F70DB0 (end 0x00F70E52)
 // Original VA: 0x0000000140F70DB0 | File offset: 0x00F703B0
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingTimeOfDayLights, 229670973u); reached from ABuildingTimeOfDayLights::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ABuildingTimeOfDayLights::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingTimeOfDayLights();
+// Original dynamic initializer: RVA 0x000DCB40
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingTimeOfDayLights(Z_Construct_UClass_ABuildingTimeOfDayLights, &ABuildingTimeOfDayLights::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingTimeOfDayLights"), false, nullptr, nullptr, nullptr);

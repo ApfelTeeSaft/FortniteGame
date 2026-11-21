@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAchievementBlueprintLibrary, 3277068053u)
+// Original dynamic initializer: RVA 0x000992A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAchievementBlueprintLibrary> AutoInitializeUAchievementBlueprintLibrary(TEXT("UAchievementBlueprintLibrary"), sizeof(UAchievementBlueprintLibrary), 3277068053u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032C7B0 (end 0x0032C852)
 // Original VA: 0x000000014032C7B0 | File offset: 0x0032BDB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAchievementBlueprintLibrary, 3277068053u); reached from UAchievementBlueprintLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAchievementBlueprintLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAchievementBlueprintLibrary();
+// Original dynamic initializer: RVA 0x00099D60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAchievementBlueprintLibrary(Z_Construct_UClass_UAchievementBlueprintLibrary, &UAchievementBlueprintLibrary::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UAchievementBlueprintLibrary"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortCinematicCamera()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCinematicCamera, 97867547u)
+// Original dynamic initializer: RVA 0x000EB1F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCinematicCamera> AutoInitializeUFortCinematicCamera(TEXT("UFortCinematicCamera"), sizeof(UFortCinematicCamera), 97867547u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBE900 (end 0x00FBE9A2)
 // Original VA: 0x0000000140FBE900 | File offset: 0x00FBDF00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCinematicCamera, 97867547u); reached from UFortCinematicCamera::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortCinematicCamera::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCinematicCamera();
+// Original dynamic initializer: RVA 0x000EC200
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCinematicCamera(Z_Construct_UClass_UFortCinematicCamera, &UFortCinematicCamera::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCinematicCamera"), false, nullptr, nullptr, nullptr);

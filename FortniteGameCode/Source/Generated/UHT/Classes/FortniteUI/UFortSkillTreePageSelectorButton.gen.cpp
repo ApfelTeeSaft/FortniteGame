@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSkillTreePageSelectorButton, 2542521366u)
+// Original dynamic initializer: RVA 0x0025AC60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSkillTreePageSelectorButton> AutoInitializeUFortSkillTreePageSelectorButton(TEXT("UFortSkillTreePageSelectorButton"), sizeof(UFortSkillTreePageSelectorButton), 2542521366u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F3640 (end 0x028F36E2)
 // Original VA: 0x00000001428F3640 | File offset: 0x028F2C40
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSkillTreePageSelectorButton, 2542521366u); reached from UFortSkillTreePageSelectorButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSkillTreePageSelectorButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSkillTreePageSelectorButton();
+// Original dynamic initializer: RVA 0x0025BBA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSkillTreePageSelectorButton(Z_Construct_UClass_UFortSkillTreePageSelectorButton, &UFortSkillTreePageSelectorButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSkillTreePageSelectorButton"), false, nullptr, nullptr, nullptr);

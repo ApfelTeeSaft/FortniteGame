@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortBTTask_RequestUndermining()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTTask_RequestUndermining, 1178970975u)
+// Original dynamic initializer: RVA 0x000E9310 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTTask_RequestUndermining> AutoInitializeUFortBTTask_RequestUndermining(TEXT("UFortBTTask_RequestUndermining"), sizeof(UFortBTTask_RequestUndermining), 1178970975u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FABA20 (end 0x00FABAC2)
 // Original VA: 0x0000000140FABA20 | File offset: 0x00FAB020
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTTask_RequestUndermining, 1178970975u); reached from UFortBTTask_RequestUndermining::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortBTTask_RequestUndermining::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTTask_RequestUndermining();
+// Original dynamic initializer: RVA 0x000EA300
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTTask_RequestUndermining(Z_Construct_UClass_UFortBTTask_RequestUndermining, &UFortBTTask_RequestUndermining::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTTask_RequestUndermining"), false, nullptr, nullptr, nullptr);

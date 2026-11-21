@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UMeshVertexPainterKismetLibrary, 576274757u)
+// Original dynamic initializer: RVA 0x0020C5B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMeshVertexPainterKismetLibrary> AutoInitializeUMeshVertexPainterKismetLibrary(TEXT("UMeshVertexPainterKismetLibrary"), sizeof(UMeshVertexPainterKismetLibrary), 576274757u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02489A40 (end 0x02489AE2)
 // Original VA: 0x0000000142489A40 | File offset: 0x02489040
 // Recovery: confirmed (IMPLEMENT_CLASS(UMeshVertexPainterKismetLibrary, 576274757u); reached from UMeshVertexPainterKismetLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UMeshVertexPainterKismetLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMeshVertexPainterKismetLibrary();
+// Original dynamic initializer: RVA 0x0020D630
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMeshVertexPainterKismetLibrary(Z_Construct_UClass_UMeshVertexPainterKismetLibrary, &UMeshVertexPainterKismetLibrary::StaticClass, TEXT("/Script/Engine"), TEXT("UMeshVertexPainterKismetLibrary"), false, nullptr, nullptr, nullptr);

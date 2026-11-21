@@ -7,6 +7,9 @@
 void AKeepHeart::StaticRegisterNativesAKeepHeart()
 {
 }
+// IMPLEMENT_CLASS(AKeepHeart, 4063395517u)
+// Original dynamic initializer: RVA 0x0011E8A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AKeepHeart> AutoInitializeAKeepHeart(TEXT("AKeepHeart"), sizeof(AKeepHeart), 4063395517u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E1450 (end 0x010E14F2)
 // Original VA: 0x00000001410E1450 | File offset: 0x010E0A50
 // Recovery: confirmed (IMPLEMENT_CLASS(AKeepHeart, 4063395517u); reached from AKeepHeart::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AKeepHeart::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AKeepHeart();
+// Original dynamic initializer: RVA 0x0011FAC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AKeepHeart(Z_Construct_UClass_AKeepHeart, &AKeepHeart::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AKeepHeart"), false, nullptr, nullptr, nullptr);

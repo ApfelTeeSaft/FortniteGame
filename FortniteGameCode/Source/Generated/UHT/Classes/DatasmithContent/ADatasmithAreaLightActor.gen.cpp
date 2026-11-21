@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ADatasmithAreaLightActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ADatasmithAreaLightActor, 867749462u)
+// Original dynamic initializer: RVA 0x000B3AF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ADatasmithAreaLightActor> AutoInitializeADatasmithAreaLightActor(TEXT("ADatasmithAreaLightActor"), sizeof(ADatasmithAreaLightActor), 867749462u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007DD640 (end 0x007DD6E2)
 // Original VA: 0x00000001407DD640 | File offset: 0x007DCC40
 // Recovery: confirmed (IMPLEMENT_CLASS(ADatasmithAreaLightActor, 867749462u); reached from ADatasmithAreaLightActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ADatasmithAreaLightActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ADatasmithAreaLightActor();
+// Original dynamic initializer: RVA 0x000B3B60
+static FCompiledInDefer Z_CompiledInDefer_UClass_ADatasmithAreaLightActor(Z_Construct_UClass_ADatasmithAreaLightActor, &ADatasmithAreaLightActor::StaticClass, TEXT("/Script/DatasmithContent"), TEXT("ADatasmithAreaLightActor"), false, nullptr, nullptr, nullptr);

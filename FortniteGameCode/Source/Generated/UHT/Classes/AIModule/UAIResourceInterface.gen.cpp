@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAIResourceInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAIResourceInterface, 4142380817u)
+// Original dynamic initializer: RVA 0x001B8FF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAIResourceInterface> AutoInitializeUAIResourceInterface(TEXT("UAIResourceInterface"), sizeof(UAIResourceInterface), 4142380817u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D19DB0 (end 0x01D19E52)
 // Original VA: 0x0000000141D19DB0 | File offset: 0x01D193B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAIResourceInterface, 4142380817u); reached from UAIResourceInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAIResourceInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAIResourceInterface();
+// Original dynamic initializer: RVA 0x001BA070
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAIResourceInterface(Z_Construct_UClass_UAIResourceInterface, &UAIResourceInterface::StaticClass, TEXT("/Script/AIModule"), TEXT("UAIResourceInterface"), false, nullptr, nullptr, nullptr);

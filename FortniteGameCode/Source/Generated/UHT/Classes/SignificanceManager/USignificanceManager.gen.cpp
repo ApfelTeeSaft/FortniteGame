@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USignificanceManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USignificanceManager, 995293634u)
+// Original dynamic initializer: RVA 0x000AE0F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USignificanceManager> AutoInitializeUSignificanceManager(TEXT("USignificanceManager"), sizeof(USignificanceManager), 995293634u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x006AC6D0 (end 0x006AC767)
 // Original VA: 0x00000001406AC6D0 | File offset: 0x006ABCD0
 // Recovery: confirmed (IMPLEMENT_CLASS(USignificanceManager, 995293634u); reached from USignificanceManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USignificanceManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USignificanceManager();
+// Original dynamic initializer: RVA 0x000AE110
+static FCompiledInDefer Z_CompiledInDefer_UClass_USignificanceManager(Z_Construct_UClass_USignificanceManager, &USignificanceManager::StaticClass, TEXT("/Script/SignificanceManager"), TEXT("USignificanceManager"), false, nullptr, nullptr, nullptr);

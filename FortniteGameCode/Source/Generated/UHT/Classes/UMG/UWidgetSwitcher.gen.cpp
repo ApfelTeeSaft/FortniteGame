@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UWidgetSwitcher, 3837258387u)
+// Original dynamic initializer: RVA 0x001B5420 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWidgetSwitcher> AutoInitializeUWidgetSwitcher(TEXT("UWidgetSwitcher"), sizeof(UWidgetSwitcher), 3837258387u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07610 (end 0x01C076B2)
 // Original VA: 0x0000000141C07610 | File offset: 0x01C06C10
 // Recovery: confirmed (IMPLEMENT_CLASS(UWidgetSwitcher, 3837258387u); reached from UWidgetSwitcher::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UWidgetSwitcher::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWidgetSwitcher();
+// Original dynamic initializer: RVA 0x001B55B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWidgetSwitcher(Z_Construct_UClass_UWidgetSwitcher, &UWidgetSwitcher::StaticClass, TEXT("/Script/UMG"), TEXT("UWidgetSwitcher"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UTextureLightProfile()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTextureLightProfile, 2135643394u)
+// Original dynamic initializer: RVA 0x00220020 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTextureLightProfile> AutoInitializeUTextureLightProfile(TEXT("UTextureLightProfile"), sizeof(UTextureLightProfile), 2135643394u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EB390 (end 0x024EB432)
 // Original VA: 0x00000001424EB390 | File offset: 0x024EA990
 // Recovery: confirmed (IMPLEMENT_CLASS(UTextureLightProfile, 2135643394u); reached from UTextureLightProfile::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UTextureLightProfile::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTextureLightProfile();
+// Original dynamic initializer: RVA 0x00221500
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTextureLightProfile(Z_Construct_UClass_UTextureLightProfile, &UTextureLightProfile::StaticClass, TEXT("/Script/Engine"), TEXT("UTextureLightProfile"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortNavigationFilter_Hunting()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNavigationFilter_Hunting, 3807062632u)
+// Original dynamic initializer: RVA 0x00104480 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNavigationFilter_Hunting> AutoInitializeUFortNavigationFilter_Hunting(TEXT("UFortNavigationFilter_Hunting"), sizeof(UFortNavigationFilter_Hunting), 3807062632u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01049840 (end 0x010498E2)
 // Original VA: 0x0000000141049840 | File offset: 0x01048E40
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNavigationFilter_Hunting, 3807062632u); reached from UFortNavigationFilter_Hunting::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortNavigationFilter_Hunting::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNavigationFilter_Hunting();
+// Original dynamic initializer: RVA 0x00105890
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNavigationFilter_Hunting(Z_Construct_UClass_UFortNavigationFilter_Hunting, &UFortNavigationFilter_Hunting::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNavigationFilter_Hunting"), false, nullptr, nullptr, nullptr);

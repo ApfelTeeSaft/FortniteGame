@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UClothingAssetBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UClothingAssetBase, 1945671290u)
+// Original dynamic initializer: RVA 0x001C0010 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UClothingAssetBase> AutoInitializeUClothingAssetBase(TEXT("UClothingAssetBase"), sizeof(UClothingAssetBase), 1945671290u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3B0D0 (end 0x01D3B167)
 // Original VA: 0x0000000141D3B0D0 | File offset: 0x01D3A6D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UClothingAssetBase, 1945671290u); reached from UClothingAssetBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UClothingAssetBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UClothingAssetBase();
+// Original dynamic initializer: RVA 0x001C0330
+static FCompiledInDefer Z_CompiledInDefer_UClass_UClothingAssetBase(Z_Construct_UClass_UClothingAssetBase, &UClothingAssetBase::StaticClass, TEXT("/Script/ClothingSystemRuntimeInterface"), TEXT("UClothingAssetBase"), false, nullptr, nullptr, nullptr);

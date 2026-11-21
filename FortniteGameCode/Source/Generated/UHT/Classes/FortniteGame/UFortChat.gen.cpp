@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortChat()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortChat, 1380911414u)
+// Original dynamic initializer: RVA 0x000EA8C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortChat> AutoInitializeUFortChat(TEXT("UFortChat"), sizeof(UFortChat), 1380911414u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAF960 (end 0x00FAFA02)
 // Original VA: 0x0000000140FAF960 | File offset: 0x00FAEF60
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortChat, 1380911414u); reached from UFortChat::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortChat::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortChat();
+// Original dynamic initializer: RVA 0x000EB010
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortChat(Z_Construct_UClass_UFortChat, &UFortChat::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortChat"), false, nullptr, nullptr, nullptr);

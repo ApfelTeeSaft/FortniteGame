@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UWidgetInteractionComponent, 2757948634u)
+// Original dynamic initializer: RVA 0x001B4D60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWidgetInteractionComponent> AutoInitializeUWidgetInteractionComponent(TEXT("UWidgetInteractionComponent"), sizeof(UWidgetInteractionComponent), 2757948634u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C00670 (end 0x01C00712)
 // Original VA: 0x0000000141C00670 | File offset: 0x01BFFC70
 // Recovery: confirmed (IMPLEMENT_CLASS(UWidgetInteractionComponent, 2757948634u); reached from UWidgetInteractionComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UWidgetInteractionComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWidgetInteractionComponent();
+// Original dynamic initializer: RVA 0x001B5360
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWidgetInteractionComponent(Z_Construct_UClass_UWidgetInteractionComponent, &UWidgetInteractionComponent::StaticClass, TEXT("/Script/UMG"), TEXT("UWidgetInteractionComponent"), false, nullptr, nullptr, nullptr);

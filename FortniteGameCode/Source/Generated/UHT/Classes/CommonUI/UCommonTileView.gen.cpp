@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCommonTileView, 1008948899u)
+// Original dynamic initializer: RVA 0x00096160 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonTileView> AutoInitializeUCommonTileView(TEXT("UCommonTileView"), sizeof(UCommonTileView), 1008948899u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C9B40 (end 0x002C9BE2)
 // Original VA: 0x00000001402C9B40 | File offset: 0x002C9140
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonTileView, 1008948899u); reached from UCommonTileView::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCommonTileView::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonTileView();
+// Original dynamic initializer: RVA 0x00096A90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonTileView(Z_Construct_UClass_UCommonTileView, &UCommonTileView::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonTileView"), false, nullptr, nullptr, nullptr);

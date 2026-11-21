@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UPoseWatch()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPoseWatch, 2869454973u)
+// Original dynamic initializer: RVA 0x00216360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPoseWatch> AutoInitializeUPoseWatch(TEXT("UPoseWatch"), sizeof(UPoseWatch), 2869454973u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B68C0 (end 0x024B6957)
 // Original VA: 0x00000001424B68C0 | File offset: 0x024B5EC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UPoseWatch, 2869454973u); reached from UPoseWatch::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UPoseWatch::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPoseWatch();
+// Original dynamic initializer: RVA 0x002171D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPoseWatch(Z_Construct_UClass_UPoseWatch, &UPoseWatch::StaticClass, TEXT("/Script/Engine"), TEXT("UPoseWatch"), false, nullptr, nullptr, nullptr);

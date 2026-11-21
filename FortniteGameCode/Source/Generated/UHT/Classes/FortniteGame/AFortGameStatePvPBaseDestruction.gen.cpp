@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortGameStatePvPBaseDestruction, 1147978664u)
+// Original dynamic initializer: RVA 0x000F7690 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortGameStatePvPBaseDestruction> AutoInitializeAFortGameStatePvPBaseDestruction(TEXT("AFortGameStatePvPBaseDestruction"), sizeof(AFortGameStatePvPBaseDestruction), 1147978664u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FED3C0 (end 0x00FED462)
 // Original VA: 0x0000000140FED3C0 | File offset: 0x00FEC9C0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortGameStatePvPBaseDestruction, 1147978664u); reached from AFortGameStatePvPBaseDestruction::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortGameStatePvPBaseDestruction::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortGameStatePvPBaseDestruction();
+// Original dynamic initializer: RVA 0x000F8490
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortGameStatePvPBaseDestruction(Z_Construct_UClass_AFortGameStatePvPBaseDestruction, &AFortGameStatePvPBaseDestruction::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortGameStatePvPBaseDestruction"), false, nullptr, nullptr, nullptr);

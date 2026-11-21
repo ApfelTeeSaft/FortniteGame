@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortHomebaseBannerColorItem()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortHomebaseBannerColorItem, 825282456u)
+// Original dynamic initializer: RVA 0x000F9650 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHomebaseBannerColorItem> AutoInitializeUFortHomebaseBannerColorItem(TEXT("UFortHomebaseBannerColorItem"), sizeof(UFortHomebaseBannerColorItem), 825282456u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF9770 (end 0x00FF9812)
 // Original VA: 0x0000000140FF9770 | File offset: 0x00FF8D70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHomebaseBannerColorItem, 825282456u); reached from UFortHomebaseBannerColorItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortHomebaseBannerColorItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHomebaseBannerColorItem();
+// Original dynamic initializer: RVA 0x000FAD40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHomebaseBannerColorItem(Z_Construct_UClass_UFortHomebaseBannerColorItem, &UFortHomebaseBannerColorItem::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortHomebaseBannerColorItem"), false, nullptr, nullptr, nullptr);

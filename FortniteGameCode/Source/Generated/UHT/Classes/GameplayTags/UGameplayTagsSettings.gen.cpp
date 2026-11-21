@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UGameplayTagsSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UGameplayTagsSettings, 218797868u)
+// Original dynamic initializer: RVA 0x001B7220 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayTagsSettings> AutoInitializeUGameplayTagsSettings(TEXT("UGameplayTagsSettings"), sizeof(UGameplayTagsSettings), 218797868u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C92D10 (end 0x01C92DB2)
 // Original VA: 0x0000000141C92D10 | File offset: 0x01C92310
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayTagsSettings, 218797868u); reached from UGameplayTagsSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UGameplayTagsSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayTagsSettings();
+// Original dynamic initializer: RVA 0x001B7DA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayTagsSettings(Z_Construct_UClass_UGameplayTagsSettings, &UGameplayTagsSettings::StaticClass, TEXT("/Script/GameplayTags"), TEXT("UGameplayTagsSettings"), false, nullptr, nullptr, nullptr);

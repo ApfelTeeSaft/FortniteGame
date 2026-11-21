@@ -7,6 +7,9 @@
 void UHomeBaseContext::StaticRegisterNativesUHomeBaseContext()
 {
 }
+// IMPLEMENT_CLASS(UHomeBaseContext, 1749593939u)
+// Original dynamic initializer: RVA 0x000F9710 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UHomeBaseContext> AutoInitializeUHomeBaseContext(TEXT("UHomeBaseContext"), sizeof(UHomeBaseContext), 1749593939u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF9B90 (end 0x00FF9C32)
 // Original VA: 0x0000000140FF9B90 | File offset: 0x00FF9190
 // Recovery: confirmed (IMPLEMENT_CLASS(UHomeBaseContext, 1749593939u); reached from UHomeBaseContext::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UHomeBaseContext::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UHomeBaseContext();
+// Original dynamic initializer: RVA 0x000FAEC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UHomeBaseContext(Z_Construct_UClass_UHomeBaseContext, &UHomeBaseContext::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UHomeBaseContext"), false, nullptr, nullptr, nullptr);

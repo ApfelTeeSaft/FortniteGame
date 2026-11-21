@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortToggledOptionsMenuParams, 3139591882u)
+// Original dynamic initializer: RVA 0x00120380 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortToggledOptionsMenuParams> AutoInitializeUFortToggledOptionsMenuParams(TEXT("UFortToggledOptionsMenuParams"), sizeof(UFortToggledOptionsMenuParams), 3139591882u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E8280 (end 0x010E8322)
 // Original VA: 0x00000001410E8280 | File offset: 0x010E7880
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortToggledOptionsMenuParams, 3139591882u); reached from UFortToggledOptionsMenuParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortToggledOptionsMenuParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortToggledOptionsMenuParams();
+// Original dynamic initializer: RVA 0x00122270
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortToggledOptionsMenuParams(Z_Construct_UClass_UFortToggledOptionsMenuParams, &UFortToggledOptionsMenuParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortToggledOptionsMenuParams"), false, nullptr, nullptr, nullptr);

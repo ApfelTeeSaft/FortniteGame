@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortAIDataProvider_GoalProviderAbility()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAIDataProvider_GoalProviderAbility, 1792448339u)
+// Original dynamic initializer: RVA 0x000E0E60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAIDataProvider_GoalProviderAbility> AutoInitializeUFortAIDataProvider_GoalProviderAbility(TEXT("UFortAIDataProvider_GoalProviderAbility"), sizeof(UFortAIDataProvider_GoalProviderAbility), 1792448339u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F86740 (end 0x00F867E2)
 // Original VA: 0x0000000140F86740 | File offset: 0x00F85D40
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAIDataProvider_GoalProviderAbility, 1792448339u); reached from UFortAIDataProvider_GoalProviderAbility::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortAIDataProvider_GoalProviderAbility::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAIDataProvider_GoalProviderAbility();
+// Original dynamic initializer: RVA 0x000E2220
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAIDataProvider_GoalProviderAbility(Z_Construct_UClass_UFortAIDataProvider_GoalProviderAbility, &UFortAIDataProvider_GoalProviderAbility::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAIDataProvider_GoalProviderAbility"), false, nullptr, nullptr, nullptr);

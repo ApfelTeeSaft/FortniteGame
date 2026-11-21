@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSimpleItemConditionIconIndicator, 559180770u)
+// Original dynamic initializer: RVA 0x0025AB40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSimpleItemConditionIconIndicator> AutoInitializeUFortSimpleItemConditionIconIndicator(TEXT("UFortSimpleItemConditionIconIndicator"), sizeof(UFortSimpleItemConditionIconIndicator), 559180770u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F3010 (end 0x028F30B2)
 // Original VA: 0x00000001428F3010 | File offset: 0x028F2610
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSimpleItemConditionIconIndicator, 559180770u); reached from UFortSimpleItemConditionIconIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSimpleItemConditionIconIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSimpleItemConditionIconIndicator();
+// Original dynamic initializer: RVA 0x0025B960
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSimpleItemConditionIconIndicator(Z_Construct_UClass_UFortSimpleItemConditionIconIndicator, &UFortSimpleItemConditionIconIndicator::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSimpleItemConditionIconIndicator"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UBuildingActorHotSpotRenderingComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBuildingActorHotSpotRenderingComponent, 3729550256u)
+// Original dynamic initializer: RVA 0x000D9990 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBuildingActorHotSpotRenderingComponent> AutoInitializeUBuildingActorHotSpotRenderingComponent(TEXT("UBuildingActorHotSpotRenderingComponent"), sizeof(UBuildingActorHotSpotRenderingComponent), 3729550256u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F64B70 (end 0x00F64C12)
 // Original VA: 0x0000000140F64B70 | File offset: 0x00F64170
 // Recovery: confirmed (IMPLEMENT_CLASS(UBuildingActorHotSpotRenderingComponent, 3729550256u); reached from UBuildingActorHotSpotRenderingComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UBuildingActorHotSpotRenderingComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBuildingActorHotSpotRenderingComponent();
+// Original dynamic initializer: RVA 0x000DA9D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBuildingActorHotSpotRenderingComponent(Z_Construct_UClass_UBuildingActorHotSpotRenderingComponent, &UBuildingActorHotSpotRenderingComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UBuildingActorHotSpotRenderingComponent"), false, nullptr, nullptr, nullptr);

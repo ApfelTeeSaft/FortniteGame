@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UBuildingTurretComponent_MOBA, 4021530185u)
+// Original dynamic initializer: RVA 0x000DCD80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBuildingTurretComponent_MOBA> AutoInitializeUBuildingTurretComponent_MOBA(TEXT("UBuildingTurretComponent_MOBA"), sizeof(UBuildingTurretComponent_MOBA), 4021530185u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F76B30 (end 0x00F76BD2)
 // Original VA: 0x0000000140F76B30 | File offset: 0x00F76130
 // Recovery: confirmed (IMPLEMENT_CLASS(UBuildingTurretComponent_MOBA, 4021530185u); reached from UBuildingTurretComponent_MOBA::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UBuildingTurretComponent_MOBA::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBuildingTurretComponent_MOBA();
+// Original dynamic initializer: RVA 0x000DE240
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBuildingTurretComponent_MOBA(Z_Construct_UClass_UBuildingTurretComponent_MOBA, &UBuildingTurretComponent_MOBA::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UBuildingTurretComponent_MOBA"), false, nullptr, nullptr, nullptr);

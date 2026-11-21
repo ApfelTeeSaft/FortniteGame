@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ABuildingPlayerPrimitivePreview()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingPlayerPrimitivePreview, 2758215635u)
+// Original dynamic initializer: RVA 0x000DAFD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingPlayerPrimitivePreview> AutoInitializeABuildingPlayerPrimitivePreview(TEXT("ABuildingPlayerPrimitivePreview"), sizeof(ABuildingPlayerPrimitivePreview), 2758215635u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6AD20 (end 0x00F6ADC2)
 // Original VA: 0x0000000140F6AD20 | File offset: 0x00F6A320
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingPlayerPrimitivePreview, 2758215635u); reached from ABuildingPlayerPrimitivePreview::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ABuildingPlayerPrimitivePreview::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingPlayerPrimitivePreview();
+// Original dynamic initializer: RVA 0x000DBC80
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingPlayerPrimitivePreview(Z_Construct_UClass_ABuildingPlayerPrimitivePreview, &ABuildingPlayerPrimitivePreview::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingPlayerPrimitivePreview"), false, nullptr, nullptr, nullptr);

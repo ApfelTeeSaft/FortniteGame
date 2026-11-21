@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortTooltipMap()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortTooltipMap, 752964006u)
+// Original dynamic initializer: RVA 0x00117FE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTooltipMap> AutoInitializeUFortTooltipMap(TEXT("UFortTooltipMap"), sizeof(UFortTooltipMap), 752964006u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C7CE0 (end 0x010C7D82)
 // Original VA: 0x00000001410C7CE0 | File offset: 0x010C72E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTooltipMap, 752964006u); reached from UFortTooltipMap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortTooltipMap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTooltipMap();
+// Original dynamic initializer: RVA 0x0011BCB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTooltipMap(Z_Construct_UClass_UFortTooltipMap, &UFortTooltipMap::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTooltipMap"), false, nullptr, nullptr, nullptr);

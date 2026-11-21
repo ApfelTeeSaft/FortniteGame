@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSquadSelectorButton, 955028973u)
+// Original dynamic initializer: RVA 0x0025C0A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSquadSelectorButton> AutoInitializeUFortSquadSelectorButton(TEXT("UFortSquadSelectorButton"), sizeof(UFortSquadSelectorButton), 955028973u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F9F60 (end 0x028FA002)
 // Original VA: 0x00000001428F9F60 | File offset: 0x028F9560
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSquadSelectorButton, 955028973u); reached from UFortSquadSelectorButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSquadSelectorButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSquadSelectorButton();
+// Original dynamic initializer: RVA 0x0025DCF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSquadSelectorButton(Z_Construct_UClass_UFortSquadSelectorButton, &UFortSquadSelectorButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSquadSelectorButton"), false, nullptr, nullptr, nullptr);

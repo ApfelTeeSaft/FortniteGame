@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USocialProfanityDataAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USocialProfanityDataAsset, 1777949169u)
+// Original dynamic initializer: RVA 0x002255B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USocialProfanityDataAsset> AutoInitializeUSocialProfanityDataAsset(TEXT("USocialProfanityDataAsset"), sizeof(USocialProfanityDataAsset), 1777949169u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025A25A0 (end 0x025A2642)
 // Original VA: 0x00000001425A25A0 | File offset: 0x025A1BA0
 // Recovery: confirmed (IMPLEMENT_CLASS(USocialProfanityDataAsset, 1777949169u); reached from USocialProfanityDataAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USocialProfanityDataAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USocialProfanityDataAsset();
+// Original dynamic initializer: RVA 0x00225960
+static FCompiledInDefer Z_CompiledInDefer_UClass_USocialProfanityDataAsset(Z_Construct_UClass_USocialProfanityDataAsset, &USocialProfanityDataAsset::StaticClass, TEXT("/Script/SocialDefaults"), TEXT("USocialProfanityDataAsset"), false, nullptr, nullptr, nullptr);

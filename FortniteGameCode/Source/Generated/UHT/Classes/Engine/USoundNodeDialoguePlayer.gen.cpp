@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USoundNodeDialoguePlayer()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundNodeDialoguePlayer, 3522193391u)
+// Original dynamic initializer: RVA 0x0021C5F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundNodeDialoguePlayer> AutoInitializeUSoundNodeDialoguePlayer(TEXT("USoundNodeDialoguePlayer"), sizeof(USoundNodeDialoguePlayer), 3522193391u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D9D40 (end 0x024D9DE2)
 // Original VA: 0x00000001424D9D40 | File offset: 0x024D9340
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundNodeDialoguePlayer, 3522193391u); reached from USoundNodeDialoguePlayer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USoundNodeDialoguePlayer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundNodeDialoguePlayer();
+// Original dynamic initializer: RVA 0x0021DB30
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundNodeDialoguePlayer(Z_Construct_UClass_USoundNodeDialoguePlayer, &USoundNodeDialoguePlayer::StaticClass, TEXT("/Script/Engine"), TEXT("USoundNodeDialoguePlayer"), false, nullptr, nullptr, nullptr);

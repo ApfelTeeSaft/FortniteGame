@@ -7,6 +7,9 @@
 void AFortBotStructureBuilder::StaticRegisterNativesAFortBotStructureBuilder()
 {
 }
+// IMPLEMENT_CLASS(AFortBotStructureBuilder, 2368149513u)
+// Original dynamic initializer: RVA 0x000E8FB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortBotStructureBuilder> AutoInitializeAFortBotStructureBuilder(TEXT("AFortBotStructureBuilder"), sizeof(AFortBotStructureBuilder), 2368149513u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAA790 (end 0x00FAA832)
 // Original VA: 0x0000000140FAA790 | File offset: 0x00FA9D90
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortBotStructureBuilder, 2368149513u); reached from AFortBotStructureBuilder::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortBotStructureBuilder::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortBotStructureBuilder();
+// Original dynamic initializer: RVA 0x000E9C40
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortBotStructureBuilder(Z_Construct_UClass_AFortBotStructureBuilder, &AFortBotStructureBuilder::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortBotStructureBuilder"), false, nullptr, nullptr, nullptr);

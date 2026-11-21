@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortNavArea_TraceSmashable()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNavArea_TraceSmashable, 1537817616u)
+// Original dynamic initializer: RVA 0x001043A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNavArea_TraceSmashable> AutoInitializeUFortNavArea_TraceSmashable(TEXT("UFortNavArea_TraceSmashable"), sizeof(UFortNavArea_TraceSmashable), 1537817616u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01049370 (end 0x01049412)
 // Original VA: 0x0000000141049370 | File offset: 0x01048970
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNavArea_TraceSmashable, 1537817616u); reached from UFortNavArea_TraceSmashable::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortNavArea_TraceSmashable::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNavArea_TraceSmashable();
+// Original dynamic initializer: RVA 0x001056D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNavArea_TraceSmashable(Z_Construct_UClass_UFortNavArea_TraceSmashable, &UFortNavArea_TraceSmashable::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNavArea_TraceSmashable"), false, nullptr, nullptr, nullptr);

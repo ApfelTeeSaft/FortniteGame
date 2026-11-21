@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USocialCheckBoxStyleDataAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USocialCheckBoxStyleDataAsset, 1021041442u)
+// Original dynamic initializer: RVA 0x00225530 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USocialCheckBoxStyleDataAsset> AutoInitializeUSocialCheckBoxStyleDataAsset(TEXT("USocialCheckBoxStyleDataAsset"), sizeof(USocialCheckBoxStyleDataAsset), 1021041442u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025A22E0 (end 0x025A2382)
 // Original VA: 0x00000001425A22E0 | File offset: 0x025A18E0
 // Recovery: confirmed (IMPLEMENT_CLASS(USocialCheckBoxStyleDataAsset, 1021041442u); reached from USocialCheckBoxStyleDataAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USocialCheckBoxStyleDataAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USocialCheckBoxStyleDataAsset();
+// Original dynamic initializer: RVA 0x00225860
+static FCompiledInDefer Z_CompiledInDefer_UClass_USocialCheckBoxStyleDataAsset(Z_Construct_UClass_USocialCheckBoxStyleDataAsset, &USocialCheckBoxStyleDataAsset::StaticClass, TEXT("/Script/SocialDefaults"), TEXT("USocialCheckBoxStyleDataAsset"), false, nullptr, nullptr, nullptr);

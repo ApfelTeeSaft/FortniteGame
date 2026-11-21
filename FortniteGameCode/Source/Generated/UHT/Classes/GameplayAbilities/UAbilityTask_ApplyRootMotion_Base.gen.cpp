@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAbilityTask_ApplyRootMotion_Base()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAbilityTask_ApplyRootMotion_Base, 1963869537u)
+// Original dynamic initializer: RVA 0x0009D460 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_ApplyRootMotion_Base> AutoInitializeUAbilityTask_ApplyRootMotion_Base(TEXT("UAbilityTask_ApplyRootMotion_Base"), sizeof(UAbilityTask_ApplyRootMotion_Base), 1963869537u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00545A60 (end 0x00545B02)
 // Original VA: 0x0000000140545A60 | File offset: 0x00545060
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_ApplyRootMotion_Base, 1963869537u); reached from UAbilityTask_ApplyRootMotion_Base::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAbilityTask_ApplyRootMotion_Base::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_ApplyRootMotion_Base();
+// Original dynamic initializer: RVA 0x0009DA30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_ApplyRootMotion_Base(Z_Construct_UClass_UAbilityTask_ApplyRootMotion_Base, &UAbilityTask_ApplyRootMotion_Base::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_ApplyRootMotion_Base"), false, nullptr, nullptr, nullptr);

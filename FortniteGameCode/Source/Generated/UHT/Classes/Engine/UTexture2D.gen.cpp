@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UTexture2D, 73571534u)
+// Original dynamic initializer: RVA 0x0021FFA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTexture2D> AutoInitializeUTexture2D(TEXT("UTexture2D"), sizeof(UTexture2D), 73571534u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EB0E0 (end 0x024EB182)
 // Original VA: 0x00000001424EB0E0 | File offset: 0x024EA6E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UTexture2D, 73571534u); reached from UTexture2D::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UTexture2D::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTexture2D();
+// Original dynamic initializer: RVA 0x00221400
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTexture2D(Z_Construct_UClass_UTexture2D, &UTexture2D::StaticClass, TEXT("/Script/Engine"), TEXT("UTexture2D"), false, nullptr, nullptr, nullptr);

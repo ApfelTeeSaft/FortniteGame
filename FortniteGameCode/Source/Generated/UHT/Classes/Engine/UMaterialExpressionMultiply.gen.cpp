@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionMultiply()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionMultiply, 4102572847u)
+// Original dynamic initializer: RVA 0x00207780 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionMultiply> AutoInitializeUMaterialExpressionMultiply(TEXT("UMaterialExpressionMultiply"), sizeof(UMaterialExpressionMultiply), 4102572847u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247D100 (end 0x0247D1A2)
 // Original VA: 0x000000014247D100 | File offset: 0x0247C700
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionMultiply, 4102572847u); reached from UMaterialExpressionMultiply::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionMultiply::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionMultiply();
+// Original dynamic initializer: RVA 0x00208C00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionMultiply(Z_Construct_UClass_UMaterialExpressionMultiply, &UMaterialExpressionMultiply::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionMultiply"), false, nullptr, nullptr, nullptr);

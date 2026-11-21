@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_URejoinCheck()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(URejoinCheck, 1495724779u)
+// Original dynamic initializer: RVA 0x000A9AD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<URejoinCheck> AutoInitializeURejoinCheck(TEXT("URejoinCheck"), sizeof(URejoinCheck), 1495724779u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005D54E0 (end 0x005D5577)
 // Original VA: 0x00000001405D54E0 | File offset: 0x005D4AE0
 // Recovery: confirmed (IMPLEMENT_CLASS(URejoinCheck, 1495724779u); reached from URejoinCheck::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* URejoinCheck::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_URejoinCheck();
+// Original dynamic initializer: RVA 0x000A9B40
+static FCompiledInDefer Z_CompiledInDefer_UClass_URejoinCheck(Z_Construct_UClass_URejoinCheck, &URejoinCheck::StaticClass, TEXT("/Script/Rejoin"), TEXT("URejoinCheck"), false, nullptr, nullptr, nullptr);

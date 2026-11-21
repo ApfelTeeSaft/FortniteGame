@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAnimCompress_RemoveTrivialKeys()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnimCompress_RemoveTrivialKeys, 2521498191u)
+// Original dynamic initializer: RVA 0x001EC1A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimCompress_RemoveTrivialKeys> AutoInitializeUAnimCompress_RemoveTrivialKeys(TEXT("UAnimCompress_RemoveTrivialKeys"), sizeof(UAnimCompress_RemoveTrivialKeys), 2521498191u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C6A50 (end 0x023C6AF2)
 // Original VA: 0x00000001423C6A50 | File offset: 0x023C6050
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimCompress_RemoveTrivialKeys, 2521498191u); reached from UAnimCompress_RemoveTrivialKeys::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAnimCompress_RemoveTrivialKeys::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimCompress_RemoveTrivialKeys();
+// Original dynamic initializer: RVA 0x001EDD80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimCompress_RemoveTrivialKeys(Z_Construct_UClass_UAnimCompress_RemoveTrivialKeys, &UAnimCompress_RemoveTrivialKeys::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimCompress_RemoveTrivialKeys"), false, nullptr, nullptr, nullptr);

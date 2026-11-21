@@ -7,6 +7,9 @@
 void UFortQuestTrackerSubEntry::StaticRegisterNativesUFortQuestTrackerSubEntry()
 {
 }
+// IMPLEMENT_CLASS(UFortQuestTrackerSubEntry, 1205579581u)
+// Original dynamic initializer: RVA 0x00258400 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQuestTrackerSubEntry> AutoInitializeUFortQuestTrackerSubEntry(TEXT("UFortQuestTrackerSubEntry"), sizeof(UFortQuestTrackerSubEntry), 1205579581u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EB200 (end 0x028EB2A2)
 // Original VA: 0x00000001428EB200 | File offset: 0x028EA800
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQuestTrackerSubEntry, 1205579581u); reached from UFortQuestTrackerSubEntry::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortQuestTrackerSubEntry::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQuestTrackerSubEntry();
+// Original dynamic initializer: RVA 0x0025A320
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQuestTrackerSubEntry(Z_Construct_UClass_UFortQuestTrackerSubEntry, &UFortQuestTrackerSubEntry::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortQuestTrackerSubEntry"), false, nullptr, nullptr, nullptr);

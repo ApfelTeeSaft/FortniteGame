@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortMovementComp_Character()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortMovementComp_Character, 767982451u)
+// Original dynamic initializer: RVA 0x00104160 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMovementComp_Character> AutoInitializeUFortMovementComp_Character(TEXT("UFortMovementComp_Character"), sizeof(UFortMovementComp_Character), 767982451u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01048710 (end 0x010487B2)
 // Original VA: 0x0000000141048710 | File offset: 0x01047D10
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMovementComp_Character, 767982451u); reached from UFortMovementComp_Character::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortMovementComp_Character::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMovementComp_Character();
+// Original dynamic initializer: RVA 0x00105250
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMovementComp_Character(Z_Construct_UClass_UFortMovementComp_Character, &UFortMovementComp_Character::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMovementComp_Character"), false, nullptr, nullptr, nullptr);

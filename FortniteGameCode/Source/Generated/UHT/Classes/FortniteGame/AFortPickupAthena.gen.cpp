@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortPickupAthena()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortPickupAthena, 2782085574u)
+// Original dynamic initializer: RVA 0x00108D20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPickupAthena> AutoInitializeAFortPickupAthena(TEXT("AFortPickupAthena"), sizeof(AFortPickupAthena), 2782085574u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01063DA0 (end 0x01063E42)
 // Original VA: 0x0000000141063DA0 | File offset: 0x010633A0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPickupAthena, 2782085574u); reached from AFortPickupAthena::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortPickupAthena::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPickupAthena();
+// Original dynamic initializer: RVA 0x0010A040
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPickupAthena(Z_Construct_UClass_AFortPickupAthena, &AFortPickupAthena::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPickupAthena"), false, nullptr, nullptr, nullptr);

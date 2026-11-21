@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UMaterialInstanceDynamic, 661199575u)
+// Original dynamic initializer: RVA 0x0020AEB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialInstanceDynamic> AutoInitializeUMaterialInstanceDynamic(TEXT("UMaterialInstanceDynamic"), sizeof(UMaterialInstanceDynamic), 661199575u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02485290 (end 0x02485332)
 // Original VA: 0x0000000142485290 | File offset: 0x02484890
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialInstanceDynamic, 661199575u); reached from UMaterialInstanceDynamic::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UMaterialInstanceDynamic::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialInstanceDynamic();
+// Original dynamic initializer: RVA 0x0020C2F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialInstanceDynamic(Z_Construct_UClass_UMaterialInstanceDynamic, &UMaterialInstanceDynamic::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialInstanceDynamic"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAIHotSpotSlotGenerator_FromConfig()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAIHotSpotSlotGenerator_FromConfig, 346855086u)
+// Original dynamic initializer: RVA 0x000E3570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAIHotSpotSlotGenerator_FromConfig> AutoInitializeUFortAIHotSpotSlotGenerator_FromConfig(TEXT("UFortAIHotSpotSlotGenerator_FromConfig"), sizeof(UFortAIHotSpotSlotGenerator_FromConfig), 346855086u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F90040 (end 0x00F900E2)
 // Original VA: 0x0000000140F90040 | File offset: 0x00F8F640
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAIHotSpotSlotGenerator_FromConfig, 346855086u); reached from UFortAIHotSpotSlotGenerator_FromConfig::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAIHotSpotSlotGenerator_FromConfig::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAIHotSpotSlotGenerator_FromConfig();
+// Original dynamic initializer: RVA 0x000E46E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAIHotSpotSlotGenerator_FromConfig(Z_Construct_UClass_UFortAIHotSpotSlotGenerator_FromConfig, &UFortAIHotSpotSlotGenerator_FromConfig::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAIHotSpotSlotGenerator_FromConfig"), false, nullptr, nullptr, nullptr);

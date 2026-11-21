@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ABuildingOutpostStormshieldCore()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingOutpostStormshieldCore, 261053221u)
+// Original dynamic initializer: RVA 0x000DAF70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingOutpostStormshieldCore> AutoInitializeABuildingOutpostStormshieldCore(TEXT("ABuildingOutpostStormshieldCore"), sizeof(ABuildingOutpostStormshieldCore), 261053221u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6AB10 (end 0x00F6ABB2)
 // Original VA: 0x0000000140F6AB10 | File offset: 0x00F6A110
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingOutpostStormshieldCore, 261053221u); reached from ABuildingOutpostStormshieldCore::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ABuildingOutpostStormshieldCore::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingOutpostStormshieldCore();
+// Original dynamic initializer: RVA 0x000DBBC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingOutpostStormshieldCore(Z_Construct_UClass_ABuildingOutpostStormshieldCore, &ABuildingOutpostStormshieldCore::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingOutpostStormshieldCore"), false, nullptr, nullptr, nullptr);

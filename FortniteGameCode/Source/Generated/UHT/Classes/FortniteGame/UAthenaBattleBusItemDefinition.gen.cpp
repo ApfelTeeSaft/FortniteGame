@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAthenaBattleBusItemDefinition, 1591651681u)
+// Original dynamic initializer: RVA 0x000D73B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaBattleBusItemDefinition> AutoInitializeUAthenaBattleBusItemDefinition(TEXT("UAthenaBattleBusItemDefinition"), sizeof(UAthenaBattleBusItemDefinition), 1591651681u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F57D60 (end 0x00F57E02)
 // Original VA: 0x0000000140F57D60 | File offset: 0x00F57360
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaBattleBusItemDefinition, 1591651681u); reached from UAthenaBattleBusItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAthenaBattleBusItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaBattleBusItemDefinition();
+// Original dynamic initializer: RVA 0x000D8290
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaBattleBusItemDefinition(Z_Construct_UClass_UAthenaBattleBusItemDefinition, &UAthenaBattleBusItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaBattleBusItemDefinition"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void ABuildingFoundation::StaticRegisterNativesABuildingFoundation()
 {
 }
+// IMPLEMENT_CLASS(ABuildingFoundation, 1172186554u)
+// Original dynamic initializer: RVA 0x000DAE70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingFoundation> AutoInitializeABuildingFoundation(TEXT("ABuildingFoundation"), sizeof(ABuildingFoundation), 1172186554u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6A590 (end 0x00F6A632)
 // Original VA: 0x0000000140F6A590 | File offset: 0x00F69B90
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingFoundation, 1172186554u); reached from ABuildingFoundation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ABuildingFoundation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingFoundation();
+// Original dynamic initializer: RVA 0x000DB9C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingFoundation(Z_Construct_UClass_ABuildingFoundation, &ABuildingFoundation::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingFoundation"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UStaticMeshSocket()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UStaticMeshSocket, 2369425669u)
+// Original dynamic initializer: RVA 0x0021E790 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UStaticMeshSocket> AutoInitializeUStaticMeshSocket(TEXT("UStaticMeshSocket"), sizeof(UStaticMeshSocket), 2369425669u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024E60F0 (end 0x024E6187)
 // Original VA: 0x00000001424E60F0 | File offset: 0x024E56F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UStaticMeshSocket, 2369425669u); reached from UStaticMeshSocket::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UStaticMeshSocket::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UStaticMeshSocket();
+// Original dynamic initializer: RVA 0x0021FCC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UStaticMeshSocket(Z_Construct_UClass_UStaticMeshSocket, &UStaticMeshSocket::StaticClass, TEXT("/Script/Engine"), TEXT("UStaticMeshSocket"), false, nullptr, nullptr, nullptr);

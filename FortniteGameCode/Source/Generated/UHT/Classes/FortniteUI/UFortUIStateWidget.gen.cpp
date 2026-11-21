@@ -7,6 +7,9 @@
 void UFortUIStateWidget::StaticRegisterNativesUFortUIStateWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortUIStateWidget, 243530027u)
+// Original dynamic initializer: RVA 0x00262A40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUIStateWidget> AutoInitializeUFortUIStateWidget(TEXT("UFortUIStateWidget"), sizeof(UFortUIStateWidget), 243530027u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02910920 (end 0x029109C2)
 // Original VA: 0x0000000142910920 | File offset: 0x0290FF20
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUIStateWidget, 243530027u); reached from UFortUIStateWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortUIStateWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUIStateWidget();
+// Original dynamic initializer: RVA 0x002652C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUIStateWidget(Z_Construct_UClass_UFortUIStateWidget, &UFortUIStateWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortUIStateWidget"), false, nullptr, nullptr, nullptr);

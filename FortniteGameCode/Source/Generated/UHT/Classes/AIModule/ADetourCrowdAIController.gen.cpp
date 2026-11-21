@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ADetourCrowdAIController()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ADetourCrowdAIController, 1454644031u)
+// Original dynamic initializer: RVA 0x001BD420 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ADetourCrowdAIController> AutoInitializeADetourCrowdAIController(TEXT("ADetourCrowdAIController"), sizeof(ADetourCrowdAIController), 1454644031u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2CB70 (end 0x01D2CC12)
 // Original VA: 0x0000000141D2CB70 | File offset: 0x01D2C170
 // Recovery: confirmed (IMPLEMENT_CLASS(ADetourCrowdAIController, 1454644031u); reached from ADetourCrowdAIController::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ADetourCrowdAIController::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ADetourCrowdAIController();
+// Original dynamic initializer: RVA 0x001BE8E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ADetourCrowdAIController(Z_Construct_UClass_ADetourCrowdAIController, &ADetourCrowdAIController::StaticClass, TEXT("/Script/AIModule"), TEXT("ADetourCrowdAIController"), false, nullptr, nullptr, nullptr);

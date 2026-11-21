@@ -7,6 +7,9 @@
 void UFortSquadTypeLandingPageBase::StaticRegisterNativesUFortSquadTypeLandingPageBase()
 {
 }
+// IMPLEMENT_CLASS(UFortSquadTypeLandingPageBase, 3526718635u)
+// Original dynamic initializer: RVA 0x0025C260 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSquadTypeLandingPageBase> AutoInitializeUFortSquadTypeLandingPageBase(TEXT("UFortSquadTypeLandingPageBase"), sizeof(UFortSquadTypeLandingPageBase), 3526718635u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FA900 (end 0x028FA9A2)
 // Original VA: 0x00000001428FA900 | File offset: 0x028F9F00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSquadTypeLandingPageBase, 3526718635u); reached from UFortSquadTypeLandingPageBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSquadTypeLandingPageBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSquadTypeLandingPageBase();
+// Original dynamic initializer: RVA 0x0025E070
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSquadTypeLandingPageBase(Z_Construct_UClass_UFortSquadTypeLandingPageBase, &UFortSquadTypeLandingPageBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSquadTypeLandingPageBase"), false, nullptr, nullptr, nullptr);

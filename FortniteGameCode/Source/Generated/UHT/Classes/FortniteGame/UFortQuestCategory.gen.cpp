@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortQuestCategory, 988646945u)
+// Original dynamic initializer: RVA 0x00110700 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQuestCategory> AutoInitializeUFortQuestCategory(TEXT("UFortQuestCategory"), sizeof(UFortQuestCategory), 988646945u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01095700 (end 0x01095797)
 // Original VA: 0x0000000141095700 | File offset: 0x01094D00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQuestCategory, 988646945u); reached from UFortQuestCategory::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortQuestCategory::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQuestCategory();
+// Original dynamic initializer: RVA 0x00111200
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQuestCategory(Z_Construct_UClass_UFortQuestCategory, &UFortQuestCategory::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQuestCategory"), false, nullptr, nullptr, nullptr);

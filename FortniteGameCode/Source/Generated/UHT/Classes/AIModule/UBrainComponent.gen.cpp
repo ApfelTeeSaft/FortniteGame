@@ -7,6 +7,9 @@
 void UBrainComponent::StaticRegisterNativesUBrainComponent()
 {
 }
+// IMPLEMENT_CLASS(UBrainComponent, 2415957345u)
+// Original dynamic initializer: RVA 0x001BA970 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBrainComponent> AutoInitializeUBrainComponent(TEXT("UBrainComponent"), sizeof(UBrainComponent), 2415957345u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D221A0 (end 0x01D22242)
 // Original VA: 0x0000000141D221A0 | File offset: 0x01D217A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBrainComponent, 2415957345u); reached from UBrainComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UBrainComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBrainComponent();
+// Original dynamic initializer: RVA 0x001BBFC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBrainComponent(Z_Construct_UClass_UBrainComponent, &UBrainComponent::StaticClass, TEXT("/Script/AIModule"), TEXT("UBrainComponent"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAnimCompress_RemoveEverySecondKey()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnimCompress_RemoveEverySecondKey, 3245342130u)
+// Original dynamic initializer: RVA 0x001EC160 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimCompress_RemoveEverySecondKey> AutoInitializeUAnimCompress_RemoveEverySecondKey(TEXT("UAnimCompress_RemoveEverySecondKey"), sizeof(UAnimCompress_RemoveEverySecondKey), 3245342130u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C68F0 (end 0x023C6992)
 // Original VA: 0x00000001423C68F0 | File offset: 0x023C5EF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimCompress_RemoveEverySecondKey, 3245342130u); reached from UAnimCompress_RemoveEverySecondKey::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAnimCompress_RemoveEverySecondKey::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimCompress_RemoveEverySecondKey();
+// Original dynamic initializer: RVA 0x001EDD00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimCompress_RemoveEverySecondKey(Z_Construct_UClass_UAnimCompress_RemoveEverySecondKey, &UAnimCompress_RemoveEverySecondKey::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimCompress_RemoveEverySecondKey"), false, nullptr, nullptr, nullptr);

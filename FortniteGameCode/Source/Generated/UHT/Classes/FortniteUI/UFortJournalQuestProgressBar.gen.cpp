@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortJournalQuestProgressBar, 2127525659u)
+// Original dynamic initializer: RVA 0x0024F450 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortJournalQuestProgressBar> AutoInitializeUFortJournalQuestProgressBar(TEXT("UFortJournalQuestProgressBar"), sizeof(UFortJournalQuestProgressBar), 2127525659u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CE9F0 (end 0x028CEA92)
 // Original VA: 0x00000001428CE9F0 | File offset: 0x028CDFF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortJournalQuestProgressBar, 2127525659u); reached from UFortJournalQuestProgressBar::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortJournalQuestProgressBar::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortJournalQuestProgressBar();
+// Original dynamic initializer: RVA 0x00251110
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortJournalQuestProgressBar(Z_Construct_UClass_UFortJournalQuestProgressBar, &UFortJournalQuestProgressBar::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortJournalQuestProgressBar"), false, nullptr, nullptr, nullptr);

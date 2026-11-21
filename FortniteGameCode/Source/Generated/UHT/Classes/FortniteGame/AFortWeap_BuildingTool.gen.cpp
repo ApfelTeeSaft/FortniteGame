@@ -7,6 +7,9 @@
 void AFortWeap_BuildingTool::StaticRegisterNativesAFortWeap_BuildingTool()
 {
 }
+// IMPLEMENT_CLASS(AFortWeap_BuildingTool, 2346030110u)
+// Original dynamic initializer: RVA 0x0011BEF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortWeap_BuildingTool> AutoInitializeAFortWeap_BuildingTool(TEXT("AFortWeap_BuildingTool"), sizeof(AFortWeap_BuildingTool), 2346030110u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D2B20 (end 0x010D2BC2)
 // Original VA: 0x00000001410D2B20 | File offset: 0x010D2120
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortWeap_BuildingTool, 2346030110u); reached from AFortWeap_BuildingTool::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortWeap_BuildingTool::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortWeap_BuildingTool();
+// Original dynamic initializer: RVA 0x0011CF20
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortWeap_BuildingTool(Z_Construct_UClass_AFortWeap_BuildingTool, &AFortWeap_BuildingTool::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortWeap_BuildingTool"), false, nullptr, nullptr, nullptr);

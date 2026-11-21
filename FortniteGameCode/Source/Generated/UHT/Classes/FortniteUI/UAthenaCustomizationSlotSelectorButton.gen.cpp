@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAthenaCustomizationSlotSelectorButton, 1115059178u)
+// Original dynamic initializer: RVA 0x002390C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaCustomizationSlotSelectorButton> AutoInitializeUAthenaCustomizationSlotSelectorButton(TEXT("UAthenaCustomizationSlotSelectorButton"), sizeof(UAthenaCustomizationSlotSelectorButton), 1115059178u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287D9B0 (end 0x0287DA52)
 // Original VA: 0x000000014287D9B0 | File offset: 0x0287CFB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaCustomizationSlotSelectorButton, 1115059178u); reached from UAthenaCustomizationSlotSelectorButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAthenaCustomizationSlotSelectorButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaCustomizationSlotSelectorButton();
+// Original dynamic initializer: RVA 0x0023AEC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaCustomizationSlotSelectorButton(Z_Construct_UClass_UAthenaCustomizationSlotSelectorButton, &UAthenaCustomizationSlotSelectorButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaCustomizationSlotSelectorButton"), false, nullptr, nullptr, nullptr);

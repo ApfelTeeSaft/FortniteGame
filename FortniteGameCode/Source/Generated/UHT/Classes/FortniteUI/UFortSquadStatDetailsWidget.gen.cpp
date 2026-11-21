@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortSquadStatDetailsWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortSquadStatDetailsWidget, 223285218u)
+// Original dynamic initializer: RVA 0x0025C200 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSquadStatDetailsWidget> AutoInitializeUFortSquadStatDetailsWidget(TEXT("UFortSquadStatDetailsWidget"), sizeof(UFortSquadStatDetailsWidget), 223285218u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FA6F0 (end 0x028FA792)
 // Original VA: 0x00000001428FA6F0 | File offset: 0x028F9CF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSquadStatDetailsWidget, 223285218u); reached from UFortSquadStatDetailsWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortSquadStatDetailsWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSquadStatDetailsWidget();
+// Original dynamic initializer: RVA 0x0025DFB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSquadStatDetailsWidget(Z_Construct_UClass_UFortSquadStatDetailsWidget, &UFortSquadStatDetailsWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSquadStatDetailsWidget"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMyTownData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMyTownData, 3270456014u)
+// Original dynamic initializer: RVA 0x001224D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMyTownData> AutoInitializeUMyTownData(TEXT("UMyTownData"), sizeof(UMyTownData), 3270456014u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010F00B0 (end 0x010F0152)
 // Original VA: 0x00000001410F00B0 | File offset: 0x010EF6B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMyTownData, 3270456014u); reached from UMyTownData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMyTownData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMyTownData();
+// Original dynamic initializer: RVA 0x00123760
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMyTownData(Z_Construct_UClass_UMyTownData, &UMyTownData::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UMyTownData"), false, nullptr, nullptr, nullptr);

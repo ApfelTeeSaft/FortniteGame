@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortStartMissionParams()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortStartMissionParams, 88748103u)
+// Original dynamic initializer: RVA 0x00120320 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortStartMissionParams> AutoInitializeUFortStartMissionParams(TEXT("UFortStartMissionParams"), sizeof(UFortStartMissionParams), 88748103u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E8070 (end 0x010E8112)
 // Original VA: 0x00000001410E8070 | File offset: 0x010E7670
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortStartMissionParams, 88748103u); reached from UFortStartMissionParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortStartMissionParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortStartMissionParams();
+// Original dynamic initializer: RVA 0x001221B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortStartMissionParams(Z_Construct_UClass_UFortStartMissionParams, &UFortStartMissionParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortStartMissionParams"), false, nullptr, nullptr, nullptr);

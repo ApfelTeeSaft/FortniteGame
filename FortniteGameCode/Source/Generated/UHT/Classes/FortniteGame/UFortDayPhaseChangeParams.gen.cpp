@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortDayPhaseChangeParams, 1065284005u)
+// Original dynamic initializer: RVA 0x00120000 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDayPhaseChangeParams> AutoInitializeUFortDayPhaseChangeParams(TEXT("UFortDayPhaseChangeParams"), sizeof(UFortDayPhaseChangeParams), 1065284005u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E6F50 (end 0x010E6FF2)
 // Original VA: 0x00000001410E6F50 | File offset: 0x010E6550
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDayPhaseChangeParams, 1065284005u); reached from UFortDayPhaseChangeParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortDayPhaseChangeParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDayPhaseChangeParams();
+// Original dynamic initializer: RVA 0x00121B70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDayPhaseChangeParams(Z_Construct_UClass_UFortDayPhaseChangeParams, &UFortDayPhaseChangeParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDayPhaseChangeParams"), false, nullptr, nullptr, nullptr);

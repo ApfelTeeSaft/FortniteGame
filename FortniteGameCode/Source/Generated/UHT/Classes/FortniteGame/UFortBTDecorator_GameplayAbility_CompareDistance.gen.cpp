@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortBTDecorator_GameplayAbility_CompareDistance()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTDecorator_GameplayAbility_CompareDistance, 2449943978u)
+// Original dynamic initializer: RVA 0x000E90D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTDecorator_GameplayAbility_CompareDistance> AutoInitializeUFortBTDecorator_GameplayAbility_CompareDistance(TEXT("UFortBTDecorator_GameplayAbility_CompareDistance"), sizeof(UFortBTDecorator_GameplayAbility_CompareDistance), 2449943978u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAADC0 (end 0x00FAAE62)
 // Original VA: 0x0000000140FAADC0 | File offset: 0x00FAA3C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTDecorator_GameplayAbility_CompareDistance, 2449943978u); reached from UFortBTDecorator_GameplayAbility_CompareDistance::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortBTDecorator_GameplayAbility_CompareDistance::GetPrivateStaticClass(
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTDecorator_GameplayAbility_CompareDistance();
+// Original dynamic initializer: RVA 0x000E9E80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTDecorator_GameplayAbility_CompareDistance(Z_Construct_UClass_UFortBTDecorator_GameplayAbility_CompareDistance, &UFortBTDecorator_GameplayAbility_CompareDistance::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTDecorator_GameplayAbility_CompareDistance"), false, nullptr, nullptr, nullptr);

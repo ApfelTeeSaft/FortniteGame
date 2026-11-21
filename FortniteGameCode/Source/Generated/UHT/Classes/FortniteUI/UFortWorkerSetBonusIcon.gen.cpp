@@ -7,6 +7,9 @@
 void UFortWorkerSetBonusIcon::StaticRegisterNativesUFortWorkerSetBonusIcon()
 {
 }
+// IMPLEMENT_CLASS(UFortWorkerSetBonusIcon, 3535150662u)
+// Original dynamic initializer: RVA 0x00265700 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortWorkerSetBonusIcon> AutoInitializeUFortWorkerSetBonusIcon(TEXT("UFortWorkerSetBonusIcon"), sizeof(UFortWorkerSetBonusIcon), 3535150662u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02917A80 (end 0x02917B22)
 // Original VA: 0x0000000142917A80 | File offset: 0x02917080
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortWorkerSetBonusIcon, 3535150662u); reached from UFortWorkerSetBonusIcon::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortWorkerSetBonusIcon::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortWorkerSetBonusIcon();
+// Original dynamic initializer: RVA 0x002672D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortWorkerSetBonusIcon(Z_Construct_UClass_UFortWorkerSetBonusIcon, &UFortWorkerSetBonusIcon::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortWorkerSetBonusIcon"), false, nullptr, nullptr, nullptr);

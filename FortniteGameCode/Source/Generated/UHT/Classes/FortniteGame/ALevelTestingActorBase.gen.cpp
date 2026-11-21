@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ALevelTestingActorBase, 3929134526u)
+// Original dynamic initializer: RVA 0x0011FF40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALevelTestingActorBase> AutoInitializeALevelTestingActorBase(TEXT("ALevelTestingActorBase"), sizeof(ALevelTestingActorBase), 3929134526u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E6B30 (end 0x010E6BD2)
 // Original VA: 0x00000001410E6B30 | File offset: 0x010E6130
 // Recovery: confirmed (IMPLEMENT_CLASS(ALevelTestingActorBase, 3929134526u); reached from ALevelTestingActorBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ALevelTestingActorBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALevelTestingActorBase();
+// Original dynamic initializer: RVA 0x001219F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALevelTestingActorBase(Z_Construct_UClass_ALevelTestingActorBase, &ALevelTestingActorBase::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ALevelTestingActorBase"), false, nullptr, nullptr, nullptr);

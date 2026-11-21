@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryTest_MissionGameplayTagMatch()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryTest_MissionGameplayTagMatch, 3979514091u)
+// Original dynamic initializer: RVA 0x001105C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryTest_MissionGameplayTagMatch> AutoInitializeUFortQueryTest_MissionGameplayTagMatch(TEXT("UFortQueryTest_MissionGameplayTagMatch"), sizeof(UFortQueryTest_MissionGameplayTagMatch), 3979514091u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01095030 (end 0x010950D2)
 // Original VA: 0x0000000141095030 | File offset: 0x01094630
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryTest_MissionGameplayTagMatch, 3979514091u); reached from UFortQueryTest_MissionGameplayTagMatch::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryTest_MissionGameplayTagMatch::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryTest_MissionGameplayTagMatch();
+// Original dynamic initializer: RVA 0x00110F80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryTest_MissionGameplayTagMatch(Z_Construct_UClass_UFortQueryTest_MissionGameplayTagMatch, &UFortQueryTest_MissionGameplayTagMatch::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryTest_MissionGameplayTagMatch"), false, nullptr, nullptr, nullptr);

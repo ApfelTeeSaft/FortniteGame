@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFrameGrabberProtocolSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFrameGrabberProtocolSettings, 1907223955u)
+// Original dynamic initializer: RVA 0x001C1650 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFrameGrabberProtocolSettings> AutoInitializeUFrameGrabberProtocolSettings(TEXT("UFrameGrabberProtocolSettings"), sizeof(UFrameGrabberProtocolSettings), 1907223955u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D599C0 (end 0x01D59A62)
 // Original VA: 0x0000000141D599C0 | File offset: 0x01D58FC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFrameGrabberProtocolSettings, 1907223955u); reached from UFrameGrabberProtocolSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFrameGrabberProtocolSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFrameGrabberProtocolSettings();
+// Original dynamic initializer: RVA 0x001C1B50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFrameGrabberProtocolSettings(Z_Construct_UClass_UFrameGrabberProtocolSettings, &UFrameGrabberProtocolSettings::StaticClass, TEXT("/Script/MovieSceneCapture"), TEXT("UFrameGrabberProtocolSettings"), false, nullptr, nullptr, nullptr);

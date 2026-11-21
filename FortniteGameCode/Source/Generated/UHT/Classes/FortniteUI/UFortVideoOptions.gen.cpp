@@ -7,6 +7,9 @@
 void UFortVideoOptions::StaticRegisterNativesUFortVideoOptions()
 {
 }
+// IMPLEMENT_CLASS(UFortVideoOptions, 3173442927u)
+// Original dynamic initializer: RVA 0x002656C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortVideoOptions> AutoInitializeUFortVideoOptions(TEXT("UFortVideoOptions"), sizeof(UFortVideoOptions), 3173442927u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02917930 (end 0x029179D2)
 // Original VA: 0x0000000142917930 | File offset: 0x02916F30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortVideoOptions, 3173442927u); reached from UFortVideoOptions::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortVideoOptions::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortVideoOptions();
+// Original dynamic initializer: RVA 0x00267250
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortVideoOptions(Z_Construct_UClass_UFortVideoOptions, &UFortVideoOptions::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortVideoOptions"), false, nullptr, nullptr, nullptr);

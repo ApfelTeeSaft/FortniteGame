@@ -7,6 +7,9 @@
 void UFortPerkTierWidget::StaticRegisterNativesUFortPerkTierWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortPerkTierWidget, 928047173u)
+// Original dynamic initializer: RVA 0x00255B40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPerkTierWidget> AutoInitializeUFortPerkTierWidget(TEXT("UFortPerkTierWidget"), sizeof(UFortPerkTierWidget), 928047173u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E4E50 (end 0x028E4EF2)
 // Original VA: 0x00000001428E4E50 | File offset: 0x028E4450
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPerkTierWidget, 928047173u); reached from UFortPerkTierWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortPerkTierWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPerkTierWidget();
+// Original dynamic initializer: RVA 0x00257DC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPerkTierWidget(Z_Construct_UClass_UFortPerkTierWidget, &UFortPerkTierWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortPerkTierWidget"), false, nullptr, nullptr, nullptr);

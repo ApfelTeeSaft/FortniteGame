@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UEnvQueryTest_Overlap()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEnvQueryTest_Overlap, 1492745501u)
+// Original dynamic initializer: RVA 0x001BD880 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEnvQueryTest_Overlap> AutoInitializeUEnvQueryTest_Overlap(TEXT("UEnvQueryTest_Overlap"), sizeof(UEnvQueryTest_Overlap), 1492745501u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2E310 (end 0x01D2E3B2)
 // Original VA: 0x0000000141D2E310 | File offset: 0x01D2D910
 // Recovery: confirmed (IMPLEMENT_CLASS(UEnvQueryTest_Overlap, 1492745501u); reached from UEnvQueryTest_Overlap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UEnvQueryTest_Overlap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEnvQueryTest_Overlap();
+// Original dynamic initializer: RVA 0x001BF1A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEnvQueryTest_Overlap(Z_Construct_UClass_UEnvQueryTest_Overlap, &UEnvQueryTest_Overlap::StaticClass, TEXT("/Script/AIModule"), TEXT("UEnvQueryTest_Overlap"), false, nullptr, nullptr, nullptr);

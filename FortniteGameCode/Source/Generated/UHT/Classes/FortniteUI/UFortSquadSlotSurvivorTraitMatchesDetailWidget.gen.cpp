@@ -7,6 +7,9 @@
 void UFortSquadSlotSurvivorTraitMatchesDetailWidget::StaticRegisterNativesUFortSquadSlotSurvivorTraitMatchesDetailWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortSquadSlotSurvivorTraitMatchesDetailWidget, 2771909523u)
+// Original dynamic initializer: RVA 0x0025C1A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSquadSlotSurvivorTraitMatchesDetailWidget> AutoInitializeUFortSquadSlotSurvivorTraitMatchesDetailWidget(TEXT("UFortSquadSlotSurvivorTraitMatchesDetailWidget"), sizeof(UFortSquadSlotSurvivorTraitMatchesDetailWidget), 2771909523u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028FA4E0 (end 0x028FA582)
 // Original VA: 0x00000001428FA4E0 | File offset: 0x028F9AE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSquadSlotSurvivorTraitMatchesDetailWidget, 2771909523u); reached from UFortSquadSlotSurvivorTraitMatchesDetailWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSquadSlotSurvivorTraitMatchesDetailWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget();
+// Original dynamic initializer: RVA 0x0025DEF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget(Z_Construct_UClass_UFortSquadSlotSurvivorTraitMatchesDetailWidget, &UFortSquadSlotSurvivorTraitMatchesDetailWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSquadSlotSurvivorTraitMatchesDetailWidget"), false, nullptr, nullptr, nullptr);

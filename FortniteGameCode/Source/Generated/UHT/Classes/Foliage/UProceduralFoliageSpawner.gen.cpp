@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UProceduralFoliageSpawner, 1440532521u)
+// Original dynamic initializer: RVA 0x001A0960 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UProceduralFoliageSpawner> AutoInitializeUProceduralFoliageSpawner(TEXT("UProceduralFoliageSpawner"), sizeof(UProceduralFoliageSpawner), 1440532521u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A48350 (end 0x01A483E7)
 // Original VA: 0x0000000141A48350 | File offset: 0x01A47950
 // Recovery: confirmed (IMPLEMENT_CLASS(UProceduralFoliageSpawner, 1440532521u); reached from UProceduralFoliageSpawner::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UProceduralFoliageSpawner::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UProceduralFoliageSpawner();
+// Original dynamic initializer: RVA 0x001A1060
+static FCompiledInDefer Z_CompiledInDefer_UClass_UProceduralFoliageSpawner(Z_Construct_UClass_UProceduralFoliageSpawner, &UProceduralFoliageSpawner::StaticClass, TEXT("/Script/Foliage"), TEXT("UProceduralFoliageSpawner"), false, nullptr, nullptr, nullptr);

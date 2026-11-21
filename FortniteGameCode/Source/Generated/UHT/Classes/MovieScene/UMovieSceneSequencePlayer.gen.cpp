@@ -7,6 +7,9 @@
 void UMovieSceneSequencePlayer::StaticRegisterNativesUMovieSceneSequencePlayer()
 {
 }
+// IMPLEMENT_CLASS(UMovieSceneSequencePlayer, 1567386725u)
+// Original dynamic initializer: RVA 0x001A4A50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovieSceneSequencePlayer> AutoInitializeUMovieSceneSequencePlayer(TEXT("UMovieSceneSequencePlayer"), sizeof(UMovieSceneSequencePlayer), 1567386725u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01AC16D0 (end 0x01AC1767)
 // Original VA: 0x0000000141AC16D0 | File offset: 0x01AC0CD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovieSceneSequencePlayer, 1567386725u); reached from UMovieSceneSequencePlayer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UMovieSceneSequencePlayer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovieSceneSequencePlayer();
+// Original dynamic initializer: RVA 0x001A7510
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovieSceneSequencePlayer(Z_Construct_UClass_UMovieSceneSequencePlayer, &UMovieSceneSequencePlayer::StaticClass, TEXT("/Script/MovieScene"), TEXT("UMovieSceneSequencePlayer"), false, nullptr, nullptr, nullptr);

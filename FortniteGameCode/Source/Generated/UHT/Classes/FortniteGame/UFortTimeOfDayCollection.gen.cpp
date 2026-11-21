@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortTimeOfDayCollection()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortTimeOfDayCollection, 2365025462u)
+// Original dynamic initializer: RVA 0x00116540 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTimeOfDayCollection> AutoInitializeUFortTimeOfDayCollection(TEXT("UFortTimeOfDayCollection"), sizeof(UFortTimeOfDayCollection), 2365025462u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC4D0 (end 0x010BC572)
 // Original VA: 0x00000001410BC4D0 | File offset: 0x010BBAD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTimeOfDayCollection, 2365025462u); reached from UFortTimeOfDayCollection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortTimeOfDayCollection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTimeOfDayCollection();
+// Original dynamic initializer: RVA 0x00117D60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTimeOfDayCollection(Z_Construct_UClass_UFortTimeOfDayCollection, &UFortTimeOfDayCollection::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTimeOfDayCollection"), false, nullptr, nullptr, nullptr);

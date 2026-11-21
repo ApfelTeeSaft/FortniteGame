@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortBuildingInstructions()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBuildingInstructions, 1392949061u)
+// Original dynamic initializer: RVA 0x000E9410 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBuildingInstructions> AutoInitializeUFortBuildingInstructions(TEXT("UFortBuildingInstructions"), sizeof(UFortBuildingInstructions), 1392949061u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FABF80 (end 0x00FAC022)
 // Original VA: 0x0000000140FABF80 | File offset: 0x00FAB580
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBuildingInstructions, 1392949061u); reached from UFortBuildingInstructions::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortBuildingInstructions::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBuildingInstructions();
+// Original dynamic initializer: RVA 0x000EA500
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBuildingInstructions(Z_Construct_UClass_UFortBuildingInstructions, &UFortBuildingInstructions::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBuildingInstructions"), false, nullptr, nullptr, nullptr);

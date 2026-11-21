@@ -7,6 +7,9 @@
 void UFortQuestManager::StaticRegisterNativesUFortQuestManager()
 {
 }
+// IMPLEMENT_CLASS(UFortQuestManager, 190779916u)
+// Original dynamic initializer: RVA 0x00110780 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQuestManager> AutoInitializeUFortQuestManager(TEXT("UFortQuestManager"), sizeof(UFortQuestManager), 190779916u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010959B0 (end 0x01095A47)
 // Original VA: 0x00000001410959B0 | File offset: 0x01094FB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQuestManager, 190779916u); reached from UFortQuestManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortQuestManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQuestManager();
+// Original dynamic initializer: RVA 0x00111300
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQuestManager(Z_Construct_UClass_UFortQuestManager, &UFortQuestManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQuestManager"), false, nullptr, nullptr, nullptr);

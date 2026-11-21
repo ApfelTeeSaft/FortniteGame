@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(APartyDisplayManager, 1894739263u)
+// Original dynamic initializer: RVA 0x00122370 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<APartyDisplayManager> AutoInitializeAPartyDisplayManager(TEXT("APartyDisplayManager"), sizeof(APartyDisplayManager), 1894739263u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EF920 (end 0x010EF9C2)
 // Original VA: 0x00000001410EF920 | File offset: 0x010EEF20
 // Recovery: confirmed (IMPLEMENT_CLASS(APartyDisplayManager, 1894739263u); reached from APartyDisplayManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* APartyDisplayManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_APartyDisplayManager();
+// Original dynamic initializer: RVA 0x001234A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_APartyDisplayManager(Z_Construct_UClass_APartyDisplayManager, &APartyDisplayManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("APartyDisplayManager"), false, nullptr, nullptr, nullptr);

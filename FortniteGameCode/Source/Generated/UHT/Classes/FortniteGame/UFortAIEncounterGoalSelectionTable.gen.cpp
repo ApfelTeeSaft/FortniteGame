@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAIEncounterGoalSelectionTable()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAIEncounterGoalSelectionTable, 1139705545u)
+// Original dynamic initializer: RVA 0x000E3490 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAIEncounterGoalSelectionTable> AutoInitializeUFortAIEncounterGoalSelectionTable(TEXT("UFortAIEncounterGoalSelectionTable"), sizeof(UFortAIEncounterGoalSelectionTable), 1139705545u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8FB80 (end 0x00F8FC22)
 // Original VA: 0x0000000140F8FB80 | File offset: 0x00F8F180
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAIEncounterGoalSelectionTable, 1139705545u); reached from UFortAIEncounterGoalSelectionTable::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAIEncounterGoalSelectionTable::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAIEncounterGoalSelectionTable();
+// Original dynamic initializer: RVA 0x000E4520
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAIEncounterGoalSelectionTable(Z_Construct_UClass_UFortAIEncounterGoalSelectionTable, &UFortAIEncounterGoalSelectionTable::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAIEncounterGoalSelectionTable"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void ULevelSequenceBurnIn::StaticRegisterNativesULevelSequenceBurnIn()
 {
 }
+// IMPLEMENT_CLASS(ULevelSequenceBurnIn, 365866391u)
+// Original dynamic initializer: RVA 0x001C0C90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULevelSequenceBurnIn> AutoInitializeULevelSequenceBurnIn(TEXT("ULevelSequenceBurnIn"), sizeof(ULevelSequenceBurnIn), 365866391u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4DE70 (end 0x01D4DF12)
 // Original VA: 0x0000000141D4DE70 | File offset: 0x01D4D470
 // Recovery: confirmed (IMPLEMENT_CLASS(ULevelSequenceBurnIn, 365866391u); reached from ULevelSequenceBurnIn::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ULevelSequenceBurnIn::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULevelSequenceBurnIn();
+// Original dynamic initializer: RVA 0x001C1470
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULevelSequenceBurnIn(Z_Construct_UClass_ULevelSequenceBurnIn, &ULevelSequenceBurnIn::StaticClass, TEXT("/Script/LevelSequence"), TEXT("ULevelSequenceBurnIn"), false, nullptr, nullptr, nullptr);

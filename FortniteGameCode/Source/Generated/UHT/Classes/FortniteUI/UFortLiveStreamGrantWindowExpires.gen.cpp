@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortLiveStreamGrantWindowExpires()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortLiveStreamGrantWindowExpires, 2700203625u)
+// Original dynamic initializer: RVA 0x002513F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortLiveStreamGrantWindowExpires> AutoInitializeUFortLiveStreamGrantWindowExpires(TEXT("UFortLiveStreamGrantWindowExpires"), sizeof(UFortLiveStreamGrantWindowExpires), 2700203625u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D57E0 (end 0x028D5882)
 // Original VA: 0x00000001428D57E0 | File offset: 0x028D4DE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortLiveStreamGrantWindowExpires, 2700203625u); reached from UFortLiveStreamGrantWindowExpires::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortLiveStreamGrantWindowExpires::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortLiveStreamGrantWindowExpires();
+// Original dynamic initializer: RVA 0x002533F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortLiveStreamGrantWindowExpires(Z_Construct_UClass_UFortLiveStreamGrantWindowExpires, &UFortLiveStreamGrantWindowExpires::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortLiveStreamGrantWindowExpires"), false, nullptr, nullptr, nullptr);

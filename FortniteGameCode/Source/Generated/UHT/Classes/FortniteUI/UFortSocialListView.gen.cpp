@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSocialListView, 2637014597u)
+// Original dynamic initializer: RVA 0x0025AD40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSocialListView> AutoInitializeUFortSocialListView(TEXT("UFortSocialListView"), sizeof(UFortSocialListView), 2637014597u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F3B10 (end 0x028F3BB2)
 // Original VA: 0x00000001428F3B10 | File offset: 0x028F3110
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSocialListView, 2637014597u); reached from UFortSocialListView::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSocialListView::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSocialListView();
+// Original dynamic initializer: RVA 0x0025BD60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSocialListView(Z_Construct_UClass_UFortSocialListView, &UFortSocialListView::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSocialListView"), false, nullptr, nullptr, nullptr);

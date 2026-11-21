@@ -7,6 +7,9 @@
 void UFortOutpostContext::StaticRegisterNativesUFortOutpostContext()
 {
 }
+// IMPLEMENT_CLASS(UFortOutpostContext, 4184668191u)
+// Original dynamic initializer: RVA 0x00105BB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortOutpostContext> AutoInitializeUFortOutpostContext(TEXT("UFortOutpostContext"), sizeof(UFortOutpostContext), 4184668191u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104F6C0 (end 0x0104F762)
 // Original VA: 0x000000014104F6C0 | File offset: 0x0104ECC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortOutpostContext, 4184668191u); reached from UFortOutpostContext::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortOutpostContext::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortOutpostContext();
+// Original dynamic initializer: RVA 0x00107230
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortOutpostContext(Z_Construct_UClass_UFortOutpostContext, &UFortOutpostContext::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortOutpostContext"), false, nullptr, nullptr, nullptr);

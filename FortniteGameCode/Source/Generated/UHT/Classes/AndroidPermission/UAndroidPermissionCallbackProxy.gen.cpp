@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAndroidPermissionCallbackProxy()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAndroidPermissionCallbackProxy, 2855295675u)
+// Original dynamic initializer: RVA 0x000B4060 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAndroidPermissionCallbackProxy> AutoInitializeUAndroidPermissionCallbackProxy(TEXT("UAndroidPermissionCallbackProxy"), sizeof(UAndroidPermissionCallbackProxy), 2855295675u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00803D50 (end 0x00803DE7)
 // Original VA: 0x0000000140803D50 | File offset: 0x00803350
 // Recovery: confirmed (IMPLEMENT_CLASS(UAndroidPermissionCallbackProxy, 2855295675u); reached from UAndroidPermissionCallbackProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAndroidPermissionCallbackProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAndroidPermissionCallbackProxy();
+// Original dynamic initializer: RVA 0x000B40A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAndroidPermissionCallbackProxy(Z_Construct_UClass_UAndroidPermissionCallbackProxy, &UAndroidPermissionCallbackProxy::StaticClass, TEXT("/Script/AndroidPermission"), TEXT("UAndroidPermissionCallbackProxy"), false, nullptr, nullptr, nullptr);

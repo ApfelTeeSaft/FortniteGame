@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortItemCountTextBlock, 3540237018u)
+// Original dynamic initializer: RVA 0x0024CD40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemCountTextBlock> AutoInitializeUFortItemCountTextBlock(TEXT("UFortItemCountTextBlock"), sizeof(UFortItemCountTextBlock), 3540237018u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C7E90 (end 0x028C7F32)
 // Original VA: 0x00000001428C7E90 | File offset: 0x028C7490
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemCountTextBlock, 3540237018u); reached from UFortItemCountTextBlock::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortItemCountTextBlock::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemCountTextBlock();
+// Original dynamic initializer: RVA 0x0024EC90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemCountTextBlock(Z_Construct_UClass_UFortItemCountTextBlock, &UFortItemCountTextBlock::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemCountTextBlock"), false, nullptr, nullptr, nullptr);

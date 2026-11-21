@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ANavigationGraph()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ANavigationGraph, 611518552u)
+// Original dynamic initializer: RVA 0x0020C530 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ANavigationGraph> AutoInitializeANavigationGraph(TEXT("ANavigationGraph"), sizeof(ANavigationGraph), 611518552u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02489780 (end 0x02489822)
 // Original VA: 0x0000000142489780 | File offset: 0x02488D80
 // Recovery: confirmed (IMPLEMENT_CLASS(ANavigationGraph, 611518552u); reached from ANavigationGraph::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ANavigationGraph::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ANavigationGraph();
+// Original dynamic initializer: RVA 0x0020D530
+static FCompiledInDefer Z_CompiledInDefer_UClass_ANavigationGraph(Z_Construct_UClass_ANavigationGraph, &ANavigationGraph::StaticClass, TEXT("/Script/Engine"), TEXT("ANavigationGraph"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ABuildingFloor, 1743361045u)
+// Original dynamic initializer: RVA 0x000D9930 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingFloor> AutoInitializeABuildingFloor(TEXT("ABuildingFloor"), sizeof(ABuildingFloor), 1743361045u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F64960 (end 0x00F64A02)
 // Original VA: 0x0000000140F64960 | File offset: 0x00F63F60
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingFloor, 1743361045u); reached from ABuildingFloor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ABuildingFloor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingFloor();
+// Original dynamic initializer: RVA 0x000DA910
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingFloor(Z_Construct_UClass_ABuildingFloor, &ABuildingFloor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingFloor"), false, nullptr, nullptr, nullptr);

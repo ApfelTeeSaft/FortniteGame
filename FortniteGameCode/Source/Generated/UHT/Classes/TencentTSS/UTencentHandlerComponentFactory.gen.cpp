@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UTencentHandlerComponentFactory()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTencentHandlerComponentFactory, 3025712770u)
+// Original dynamic initializer: RVA 0x00267640 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTencentHandlerComponentFactory> AutoInitializeUTencentHandlerComponentFactory(TEXT("UTencentHandlerComponentFactory"), sizeof(UTencentHandlerComponentFactory), 3025712770u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0291DB70 (end 0x0291DC12)
 // Original VA: 0x000000014291DB70 | File offset: 0x0291D170
 // Recovery: confirmed (IMPLEMENT_CLASS(UTencentHandlerComponentFactory, 3025712770u); reached from UTencentHandlerComponentFactory::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UTencentHandlerComponentFactory::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTencentHandlerComponentFactory();
+// Original dynamic initializer: RVA 0x002676B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTencentHandlerComponentFactory(Z_Construct_UClass_UTencentHandlerComponentFactory, &UTencentHandlerComponentFactory::StaticClass, TEXT("/Script/TencentTSS"), TEXT("UTencentHandlerComponentFactory"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortTokenToTextTable()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortTokenToTextTable, 3462983892u)
+// Original dynamic initializer: RVA 0x00117EC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTokenToTextTable> AutoInitializeUFortTokenToTextTable(TEXT("UFortTokenToTextTable"), sizeof(UFortTokenToTextTable), 3462983892u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C76D0 (end 0x010C7772)
 // Original VA: 0x00000001410C76D0 | File offset: 0x010C6CD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTokenToTextTable, 3462983892u); reached from UFortTokenToTextTable::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortTokenToTextTable::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTokenToTextTable();
+// Original dynamic initializer: RVA 0x0011BA70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTokenToTextTable(Z_Construct_UClass_UFortTokenToTextTable, &UFortTokenToTextTable::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTokenToTextTable"), false, nullptr, nullptr, nullptr);

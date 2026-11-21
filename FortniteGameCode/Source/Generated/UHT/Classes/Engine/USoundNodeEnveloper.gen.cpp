@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USoundNodeEnveloper()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundNodeEnveloper, 2375781699u)
+// Original dynamic initializer: RVA 0x0021C650 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundNodeEnveloper> AutoInitializeUSoundNodeEnveloper(TEXT("USoundNodeEnveloper"), sizeof(USoundNodeEnveloper), 2375781699u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D9F50 (end 0x024D9FF2)
 // Original VA: 0x00000001424D9F50 | File offset: 0x024D9550
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundNodeEnveloper, 2375781699u); reached from USoundNodeEnveloper::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USoundNodeEnveloper::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundNodeEnveloper();
+// Original dynamic initializer: RVA 0x0021DBF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundNodeEnveloper(Z_Construct_UClass_USoundNodeEnveloper, &USoundNodeEnveloper::StaticClass, TEXT("/Script/Engine"), TEXT("USoundNodeEnveloper"), false, nullptr, nullptr, nullptr);

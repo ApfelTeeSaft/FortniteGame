@@ -7,6 +7,9 @@
 void USkeletalMeshComponent::StaticRegisterNativesUSkeletalMeshComponent()
 {
 }
+// IMPLEMENT_CLASS(USkeletalMeshComponent, 2528027780u)
+// Original dynamic initializer: RVA 0x00219FF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USkeletalMeshComponent> AutoInitializeUSkeletalMeshComponent(TEXT("USkeletalMeshComponent"), sizeof(USkeletalMeshComponent), 2528027780u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024CBF80 (end 0x024CC028)
 // Original VA: 0x00000001424CBF80 | File offset: 0x024CB580
 // Recovery: confirmed (IMPLEMENT_CLASS(USkeletalMeshComponent, 2528027780u); reached from USkeletalMeshComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* USkeletalMeshComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USkeletalMeshComponent();
+// Original dynamic initializer: RVA 0x0021A8D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USkeletalMeshComponent(Z_Construct_UClass_USkeletalMeshComponent, &USkeletalMeshComponent::StaticClass, TEXT("/Script/Engine"), TEXT("USkeletalMeshComponent"), false, nullptr, nullptr, nullptr);

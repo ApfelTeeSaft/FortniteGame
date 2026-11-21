@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortUIPvPBaseDestruction()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortUIPvPBaseDestruction, 283004967u)
+// Original dynamic initializer: RVA 0x0011BE90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortUIPvPBaseDestruction> AutoInitializeAFortUIPvPBaseDestruction(TEXT("AFortUIPvPBaseDestruction"), sizeof(AFortUIPvPBaseDestruction), 283004967u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D2910 (end 0x010D29B2)
 // Original VA: 0x00000001410D2910 | File offset: 0x010D1F10
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortUIPvPBaseDestruction, 283004967u); reached from AFortUIPvPBaseDestruction::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortUIPvPBaseDestruction::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortUIPvPBaseDestruction();
+// Original dynamic initializer: RVA 0x0011CE60
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortUIPvPBaseDestruction(Z_Construct_UClass_AFortUIPvPBaseDestruction, &AFortUIPvPBaseDestruction::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortUIPvPBaseDestruction"), false, nullptr, nullptr, nullptr);

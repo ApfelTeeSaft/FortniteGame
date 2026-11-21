@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_WaitForClientAnnouncement, 92571094u)
+// Original dynamic initializer: RVA 0x000E6A10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_WaitForClientAnnouncement> AutoInitializeUFortAsyncAction_WaitForClientAnnouncement(TEXT("UFortAsyncAction_WaitForClientAnnouncement"), sizeof(UFortAsyncAction_WaitForClientAnnouncement), 92571094u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9D700 (end 0x00F9D7A2)
 // Original VA: 0x0000000140F9D700 | File offset: 0x00F9CD00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_WaitForClientAnnouncement, 92571094u); reached from UFortAsyncAction_WaitForClientAnnouncement::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_WaitForClientAnnouncement::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_WaitForClientAnnouncement();
+// Original dynamic initializer: RVA 0x000E7E50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_WaitForClientAnnouncement(Z_Construct_UClass_UFortAsyncAction_WaitForClientAnnouncement, &UFortAsyncAction_WaitForClientAnnouncement::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAsyncAction_WaitForClientAnnouncement"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UExpandableArea, 480141811u)
+// Original dynamic initializer: RVA 0x001B26A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UExpandableArea> AutoInitializeUExpandableArea(TEXT("UExpandableArea"), sizeof(UExpandableArea), 480141811u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEB550 (end 0x01BEB5F2)
 // Original VA: 0x0000000141BEB550 | File offset: 0x01BEAB50
 // Recovery: confirmed (IMPLEMENT_CLASS(UExpandableArea, 480141811u); reached from UExpandableArea::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UExpandableArea::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UExpandableArea();
+// Original dynamic initializer: RVA 0x001B2D90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UExpandableArea(Z_Construct_UClass_UExpandableArea, &UExpandableArea::StaticClass, TEXT("/Script/UMG"), TEXT("UExpandableArea"), false, nullptr, nullptr, nullptr);

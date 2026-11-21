@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBTDecorator_Loop()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBTDecorator_Loop, 3669981585u)
+// Original dynamic initializer: RVA 0x001BC140 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTDecorator_Loop> AutoInitializeUBTDecorator_Loop(TEXT("UBTDecorator_Loop"), sizeof(UBTDecorator_Loop), 3669981585u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D26AE0 (end 0x01D26B82)
 // Original VA: 0x0000000141D26AE0 | File offset: 0x01D260E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTDecorator_Loop, 3669981585u); reached from UBTDecorator_Loop::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBTDecorator_Loop::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTDecorator_Loop();
+// Original dynamic initializer: RVA 0x001BCBE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTDecorator_Loop(Z_Construct_UClass_UBTDecorator_Loop, &UBTDecorator_Loop::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTDecorator_Loop"), false, nullptr, nullptr, nullptr);

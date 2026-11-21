@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UDemoPendingNetGame()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDemoPendingNetGame, 2397037564u)
+// Original dynamic initializer: RVA 0x001F84C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDemoPendingNetGame> AutoInitializeUDemoPendingNetGame(TEXT("UDemoPendingNetGame"), sizeof(UDemoPendingNetGame), 2397037564u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FC970 (end 0x023FCA12)
 // Original VA: 0x00000001423FC970 | File offset: 0x023FBF70
 // Recovery: confirmed (IMPLEMENT_CLASS(UDemoPendingNetGame, 2397037564u); reached from UDemoPendingNetGame::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UDemoPendingNetGame::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDemoPendingNetGame();
+// Original dynamic initializer: RVA 0x001F9940
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDemoPendingNetGame(Z_Construct_UClass_UDemoPendingNetGame, &UDemoPendingNetGame::StaticClass, TEXT("/Script/Engine"), TEXT("UDemoPendingNetGame"), false, nullptr, nullptr, nullptr);

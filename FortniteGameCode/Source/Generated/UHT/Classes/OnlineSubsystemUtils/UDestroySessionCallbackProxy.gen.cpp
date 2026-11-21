@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UDestroySessionCallbackProxy, 1668288964u)
+// Original dynamic initializer: RVA 0x00099340 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDestroySessionCallbackProxy> AutoInitializeUDestroySessionCallbackProxy(TEXT("UDestroySessionCallbackProxy"), sizeof(UDestroySessionCallbackProxy), 1668288964u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032CB20 (end 0x0032CBC2)
 // Original VA: 0x000000014032CB20 | File offset: 0x0032C120
 // Recovery: confirmed (IMPLEMENT_CLASS(UDestroySessionCallbackProxy, 1668288964u); reached from UDestroySessionCallbackProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UDestroySessionCallbackProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDestroySessionCallbackProxy();
+// Original dynamic initializer: RVA 0x00099EA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDestroySessionCallbackProxy(Z_Construct_UClass_UDestroySessionCallbackProxy, &UDestroySessionCallbackProxy::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UDestroySessionCallbackProxy"), false, nullptr, nullptr, nullptr);

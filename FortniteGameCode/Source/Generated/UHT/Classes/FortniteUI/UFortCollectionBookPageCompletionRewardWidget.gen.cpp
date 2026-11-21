@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortCollectionBookPageCompletionRewardWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCollectionBookPageCompletionRewardWidget, 2887161583u)
+// Original dynamic initializer: RVA 0x002403E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCollectionBookPageCompletionRewardWidget> AutoInitializeUFortCollectionBookPageCompletionRewardWidget(TEXT("UFortCollectionBookPageCompletionRewardWidget"), sizeof(UFortCollectionBookPageCompletionRewardWidget), 2887161583u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028930D0 (end 0x02893172)
 // Original VA: 0x00000001428930D0 | File offset: 0x028926D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCollectionBookPageCompletionRewardWidget, 2887161583u); reached from UFortCollectionBookPageCompletionRewardWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortCollectionBookPageCompletionRewardWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCollectionBookPageCompletionRewardWidget();
+// Original dynamic initializer: RVA 0x00242110
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCollectionBookPageCompletionRewardWidget(Z_Construct_UClass_UFortCollectionBookPageCompletionRewardWidget, &UFortCollectionBookPageCompletionRewardWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCollectionBookPageCompletionRewardWidget"), false, nullptr, nullptr, nullptr);

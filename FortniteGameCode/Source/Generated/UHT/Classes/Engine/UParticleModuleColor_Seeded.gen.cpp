@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleColor_Seeded()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleColor_Seeded, 1656480265u)
+// Original dynamic initializer: RVA 0x00210870 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleColor_Seeded> AutoInitializeUParticleModuleColor_Seeded(TEXT("UParticleModuleColor_Seeded"), sizeof(UParticleModuleColor_Seeded), 1656480265u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02497720 (end 0x024977C2)
 // Original VA: 0x0000000142497720 | File offset: 0x02496D20
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleColor_Seeded, 1656480265u); reached from UParticleModuleColor_Seeded::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleColor_Seeded::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleColor_Seeded();
+// Original dynamic initializer: RVA 0x002116E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleColor_Seeded(Z_Construct_UClass_UParticleModuleColor_Seeded, &UParticleModuleColor_Seeded::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleColor_Seeded"), false, nullptr, nullptr, nullptr);

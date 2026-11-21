@@ -7,6 +7,9 @@
 void UFortBannerSelectorBase::StaticRegisterNativesUFortBannerSelectorBase()
 {
 }
+// IMPLEMENT_CLASS(UFortBannerSelectorBase, 372999868u)
+// Original dynamic initializer: RVA 0x00240240 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBannerSelectorBase> AutoInitializeUFortBannerSelectorBase(TEXT("UFortBannerSelectorBase"), sizeof(UFortBannerSelectorBase), 372999868u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02892800 (end 0x028928A2)
 // Original VA: 0x0000000142892800 | File offset: 0x02891E00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBannerSelectorBase, 372999868u); reached from UFortBannerSelectorBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortBannerSelectorBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBannerSelectorBase();
+// Original dynamic initializer: RVA 0x00241DD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBannerSelectorBase(Z_Construct_UClass_UFortBannerSelectorBase, &UFortBannerSelectorBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortBannerSelectorBase"), false, nullptr, nullptr, nullptr);

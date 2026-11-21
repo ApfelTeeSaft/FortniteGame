@@ -7,6 +7,9 @@
 void UAnimNotifyState_Trail::StaticRegisterNativesUAnimNotifyState_Trail()
 {
 }
+// IMPLEMENT_CLASS(UAnimNotifyState_Trail, 1529929950u)
+// Original dynamic initializer: RVA 0x001EF960 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimNotifyState_Trail> AutoInitializeUAnimNotifyState_Trail(TEXT("UAnimNotifyState_Trail"), sizeof(UAnimNotifyState_Trail), 1529929950u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D4650 (end 0x023D46F2)
 // Original VA: 0x00000001423D4650 | File offset: 0x023D3C50
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimNotifyState_Trail, 1529929950u); reached from UAnimNotifyState_Trail::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAnimNotifyState_Trail::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimNotifyState_Trail();
+// Original dynamic initializer: RVA 0x001F16F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimNotifyState_Trail(Z_Construct_UClass_UAnimNotifyState_Trail, &UAnimNotifyState_Trail::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimNotifyState_Trail"), false, nullptr, nullptr, nullptr);

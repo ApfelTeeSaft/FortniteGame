@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortCurrencyItem()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCurrencyItem, 2499448875u)
+// Original dynamic initializer: RVA 0x000EE4F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCurrencyItem> AutoInitializeUFortCurrencyItem(TEXT("UFortCurrencyItem"), sizeof(UFortCurrencyItem), 2499448875u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCA070 (end 0x00FCA112)
 // Original VA: 0x0000000140FCA070 | File offset: 0x00FC9670
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCurrencyItem, 2499448875u); reached from UFortCurrencyItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortCurrencyItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCurrencyItem();
+// Original dynamic initializer: RVA 0x000EF740
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCurrencyItem(Z_Construct_UClass_UFortCurrencyItem, &UFortCurrencyItem::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCurrencyItem"), false, nullptr, nullptr, nullptr);

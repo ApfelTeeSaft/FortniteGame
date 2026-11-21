@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UBrushBinding, 3851799676u)
+// Original dynamic initializer: RVA 0x001B1CC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBrushBinding> AutoInitializeUBrushBinding(TEXT("UBrushBinding"), sizeof(UBrushBinding), 3851799676u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE4D00 (end 0x01BE4DA2)
 // Original VA: 0x0000000141BE4D00 | File offset: 0x01BE4300
 // Recovery: confirmed (IMPLEMENT_CLASS(UBrushBinding, 3851799676u); reached from UBrushBinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UBrushBinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBrushBinding();
+// Original dynamic initializer: RVA 0x001B22E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBrushBinding(Z_Construct_UClass_UBrushBinding, &UBrushBinding::StaticClass, TEXT("/Script/UMG"), TEXT("UBrushBinding"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortInventoryInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortInventoryInterface, 3389633588u)
+// Original dynamic initializer: RVA 0x000FB260 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortInventoryInterface> AutoInitializeUFortInventoryInterface(TEXT("UFortInventoryInterface"), sizeof(UFortInventoryInterface), 3389633588u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010040C0 (end 0x01004162)
 // Original VA: 0x00000001410040C0 | File offset: 0x010036C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortInventoryInterface, 3389633588u); reached from UFortInventoryInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortInventoryInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortInventoryInterface();
+// Original dynamic initializer: RVA 0x000FC2F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortInventoryInterface(Z_Construct_UClass_UFortInventoryInterface, &UFortInventoryInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortInventoryInterface"), false, nullptr, nullptr, nullptr);

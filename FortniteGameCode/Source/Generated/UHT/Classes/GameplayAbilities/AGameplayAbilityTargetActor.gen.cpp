@@ -7,6 +7,9 @@
 void AGameplayAbilityTargetActor::StaticRegisterNativesAGameplayAbilityTargetActor()
 {
 }
+// IMPLEMENT_CLASS(AGameplayAbilityTargetActor, 273863196u)
+// Original dynamic initializer: RVA 0x0009EB00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AGameplayAbilityTargetActor> AutoInitializeAGameplayAbilityTargetActor(TEXT("AGameplayAbilityTargetActor"), sizeof(AGameplayAbilityTargetActor), 273863196u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00559360 (end 0x00559402)
 // Original VA: 0x0000000140559360 | File offset: 0x00558960
 // Recovery: confirmed (IMPLEMENT_CLASS(AGameplayAbilityTargetActor, 273863196u); reached from AGameplayAbilityTargetActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AGameplayAbilityTargetActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AGameplayAbilityTargetActor();
+// Original dynamic initializer: RVA 0x000A0800
+static FCompiledInDefer Z_CompiledInDefer_UClass_AGameplayAbilityTargetActor(Z_Construct_UClass_AGameplayAbilityTargetActor, &AGameplayAbilityTargetActor::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("AGameplayAbilityTargetActor"), false, nullptr, nullptr, nullptr);

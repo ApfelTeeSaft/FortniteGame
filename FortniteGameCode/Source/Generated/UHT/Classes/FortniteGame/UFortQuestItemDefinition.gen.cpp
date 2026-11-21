@@ -7,6 +7,9 @@
 void UFortQuestItemDefinition::StaticRegisterNativesUFortQuestItemDefinition()
 {
 }
+// IMPLEMENT_CLASS(UFortQuestItemDefinition, 563161599u)
+// Original dynamic initializer: RVA 0x00110740 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQuestItemDefinition> AutoInitializeUFortQuestItemDefinition(TEXT("UFortQuestItemDefinition"), sizeof(UFortQuestItemDefinition), 563161599u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01095850 (end 0x010958F2)
 // Original VA: 0x0000000141095850 | File offset: 0x01094E50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQuestItemDefinition, 563161599u); reached from UFortQuestItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortQuestItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQuestItemDefinition();
+// Original dynamic initializer: RVA 0x00111280
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQuestItemDefinition(Z_Construct_UClass_UFortQuestItemDefinition, &UFortQuestItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQuestItemDefinition"), false, nullptr, nullptr, nullptr);

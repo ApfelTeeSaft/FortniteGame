@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAchievementWriteCallbackProxy, 1683269161u)
+// Original dynamic initializer: RVA 0x000992E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAchievementWriteCallbackProxy> AutoInitializeUAchievementWriteCallbackProxy(TEXT("UAchievementWriteCallbackProxy"), sizeof(UAchievementWriteCallbackProxy), 1683269161u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032C910 (end 0x0032C9B2)
 // Original VA: 0x000000014032C910 | File offset: 0x0032BF10
 // Recovery: confirmed (IMPLEMENT_CLASS(UAchievementWriteCallbackProxy, 1683269161u); reached from UAchievementWriteCallbackProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAchievementWriteCallbackProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAchievementWriteCallbackProxy();
+// Original dynamic initializer: RVA 0x00099DE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAchievementWriteCallbackProxy(Z_Construct_UClass_UAchievementWriteCallbackProxy, &UAchievementWriteCallbackProxy::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UAchievementWriteCallbackProxy"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortGameStateFrontEnd()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortGameStateFrontEnd, 548216025u)
+// Original dynamic initializer: RVA 0x000F75F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortGameStateFrontEnd> AutoInitializeAFortGameStateFrontEnd(TEXT("AFortGameStateFrontEnd"), sizeof(AFortGameStateFrontEnd), 548216025u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FED050 (end 0x00FED0F2)
 // Original VA: 0x0000000140FED050 | File offset: 0x00FEC650
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortGameStateFrontEnd, 548216025u); reached from AFortGameStateFrontEnd::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortGameStateFrontEnd::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortGameStateFrontEnd();
+// Original dynamic initializer: RVA 0x000F8350
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortGameStateFrontEnd(Z_Construct_UClass_AFortGameStateFrontEnd, &AFortGameStateFrontEnd::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortGameStateFrontEnd"), false, nullptr, nullptr, nullptr);

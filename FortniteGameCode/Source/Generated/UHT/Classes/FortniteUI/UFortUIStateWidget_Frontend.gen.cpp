@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortUIStateWidget_Frontend()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortUIStateWidget_Frontend, 3253900278u)
+// Original dynamic initializer: RVA 0x00262A60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUIStateWidget_Frontend> AutoInitializeUFortUIStateWidget_Frontend(TEXT("UFortUIStateWidget_Frontend"), sizeof(UFortUIStateWidget_Frontend), 3253900278u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029109D0 (end 0x02910A72)
 // Original VA: 0x00000001429109D0 | File offset: 0x0290FFD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUIStateWidget_Frontend, 3253900278u); reached from UFortUIStateWidget_Frontend::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortUIStateWidget_Frontend::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUIStateWidget_Frontend();
+// Original dynamic initializer: RVA 0x00265300
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUIStateWidget_Frontend(Z_Construct_UClass_UFortUIStateWidget_Frontend, &UFortUIStateWidget_Frontend::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortUIStateWidget_Frontend"), false, nullptr, nullptr, nullptr);

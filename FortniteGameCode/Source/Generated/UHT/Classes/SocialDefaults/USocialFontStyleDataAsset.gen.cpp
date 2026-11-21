@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USocialFontStyleDataAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USocialFontStyleDataAsset, 3092525209u)
+// Original dynamic initializer: RVA 0x00225550 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USocialFontStyleDataAsset> AutoInitializeUSocialFontStyleDataAsset(TEXT("USocialFontStyleDataAsset"), sizeof(USocialFontStyleDataAsset), 3092525209u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025A2390 (end 0x025A2432)
 // Original VA: 0x00000001425A2390 | File offset: 0x025A1990
 // Recovery: confirmed (IMPLEMENT_CLASS(USocialFontStyleDataAsset, 3092525209u); reached from USocialFontStyleDataAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USocialFontStyleDataAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USocialFontStyleDataAsset();
+// Original dynamic initializer: RVA 0x002258A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USocialFontStyleDataAsset(Z_Construct_UClass_USocialFontStyleDataAsset, &USocialFontStyleDataAsset::StaticClass, TEXT("/Script/SocialDefaults"), TEXT("USocialFontStyleDataAsset"), false, nullptr, nullptr, nullptr);

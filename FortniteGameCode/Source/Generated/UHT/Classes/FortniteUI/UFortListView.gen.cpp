@@ -7,6 +7,9 @@
 void UFortListView::StaticRegisterNativesUFortListView()
 {
 }
+// IMPLEMENT_CLASS(UFortListView, 453304344u)
+// Original dynamic initializer: RVA 0x002513D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortListView> AutoInitializeUFortListView(TEXT("UFortListView"), sizeof(UFortListView), 453304344u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D5730 (end 0x028D57D2)
 // Original VA: 0x00000001428D5730 | File offset: 0x028D4D30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortListView, 453304344u); reached from UFortListView::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortListView::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortListView();
+// Original dynamic initializer: RVA 0x002533B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortListView(Z_Construct_UClass_UFortListView, &UFortListView::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortListView"), false, nullptr, nullptr, nullptr);

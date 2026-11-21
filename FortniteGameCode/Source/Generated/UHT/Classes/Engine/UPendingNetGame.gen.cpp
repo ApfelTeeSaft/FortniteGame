@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UPendingNetGame()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPendingNetGame, 1918556997u)
+// Original dynamic initializer: RVA 0x00213CF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPendingNetGame> AutoInitializeUPendingNetGame(TEXT("UPendingNetGame"), sizeof(UPendingNetGame), 1918556997u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249FA20 (end 0x0249FAB7)
 // Original VA: 0x000000014249FA20 | File offset: 0x0249F020
 // Recovery: confirmed (IMPLEMENT_CLASS(UPendingNetGame, 1918556997u); reached from UPendingNetGame::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UPendingNetGame::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPendingNetGame();
+// Original dynamic initializer: RVA 0x002146B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPendingNetGame(Z_Construct_UClass_UPendingNetGame, &UPendingNetGame::StaticClass, TEXT("/Script/Engine"), TEXT("UPendingNetGame"), false, nullptr, nullptr, nullptr);

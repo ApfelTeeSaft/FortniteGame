@@ -7,6 +7,9 @@
 void UFortHealthSet::StaticRegisterNativesUFortHealthSet()
 {
 }
+// IMPLEMENT_CLASS(UFortHealthSet, 3929370752u)
+// Original dynamic initializer: RVA 0x000F95B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHealthSet> AutoInitializeUFortHealthSet(TEXT("UFortHealthSet"), sizeof(UFortHealthSet), 3929370752u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF9400 (end 0x00FF94A2)
 // Original VA: 0x0000000140FF9400 | File offset: 0x00FF8A00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHealthSet, 3929370752u); reached from UFortHealthSet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortHealthSet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHealthSet();
+// Original dynamic initializer: RVA 0x000FAC00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHealthSet(Z_Construct_UClass_UFortHealthSet, &UFortHealthSet::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortHealthSet"), false, nullptr, nullptr, nullptr);

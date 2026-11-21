@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortResultsSummaryScreenWidget, 1624501198u)
+// Original dynamic initializer: RVA 0x002584A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortResultsSummaryScreenWidget> AutoInitializeUFortResultsSummaryScreenWidget(TEXT("UFortResultsSummaryScreenWidget"), sizeof(UFortResultsSummaryScreenWidget), 1624501198u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EB570 (end 0x028EB612)
 // Original VA: 0x00000001428EB570 | File offset: 0x028EAB70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortResultsSummaryScreenWidget, 1624501198u); reached from UFortResultsSummaryScreenWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortResultsSummaryScreenWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortResultsSummaryScreenWidget();
+// Original dynamic initializer: RVA 0x0025A460
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortResultsSummaryScreenWidget(Z_Construct_UClass_UFortResultsSummaryScreenWidget, &UFortResultsSummaryScreenWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortResultsSummaryScreenWidget"), false, nullptr, nullptr, nullptr);

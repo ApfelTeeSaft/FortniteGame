@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_IntensityCurve
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionCategoryEncounter_IntensityCurveSequence, 2179147390u)
+// Original dynamic initializer: RVA 0x000F0AE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionCategoryEncounter_IntensityCurveSequence> AutoInitializeUFortDifficultyOptionCategoryEncounter_IntensityCurveSequence(TEXT("UFortDifficultyOptionCategoryEncounter_IntensityCurveSequence"), sizeof(UFortDifficultyOptionCategoryEncounter_IntensityCurveSequence), 2179147390u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD4890 (end 0x00FD4932)
 // Original VA: 0x0000000140FD4890 | File offset: 0x00FD3E90
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionCategoryEncounter_IntensityCurveSequence, 2179147390u); reached from UFortDifficultyOptionCategoryEncounter_IntensityCurveSequence::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionCategoryEncounter_IntensityCurveSequence::GetPrivat
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_IntensityCurveSequence();
+// Original dynamic initializer: RVA 0x000F1A10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionCategoryEncounter_IntensityCurveSequence(Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_IntensityCurveSequence, &UFortDifficultyOptionCategoryEncounter_IntensityCurveSequence::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionCategoryEncounter_IntensityCurveSequence"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ACustomCharacterPartModifier, 372077926u)
+// Original dynamic initializer: RVA 0x000DCD00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ACustomCharacterPartModifier> AutoInitializeACustomCharacterPartModifier(TEXT("ACustomCharacterPartModifier"), sizeof(ACustomCharacterPartModifier), 372077926u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F76870 (end 0x00F76912)
 // Original VA: 0x0000000140F76870 | File offset: 0x00F75E70
 // Recovery: confirmed (IMPLEMENT_CLASS(ACustomCharacterPartModifier, 372077926u); reached from ACustomCharacterPartModifier::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ACustomCharacterPartModifier::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ACustomCharacterPartModifier();
+// Original dynamic initializer: RVA 0x000DE140
+static FCompiledInDefer Z_CompiledInDefer_UClass_ACustomCharacterPartModifier(Z_Construct_UClass_ACustomCharacterPartModifier, &ACustomCharacterPartModifier::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ACustomCharacterPartModifier"), false, nullptr, nullptr, nullptr);

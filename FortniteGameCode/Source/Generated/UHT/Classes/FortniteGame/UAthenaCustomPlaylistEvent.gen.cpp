@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAthenaCustomPlaylistEvent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaCustomPlaylistEvent, 1651784959u)
+// Original dynamic initializer: RVA 0x000D7450 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaCustomPlaylistEvent> AutoInitializeUAthenaCustomPlaylistEvent(TEXT("UAthenaCustomPlaylistEvent"), sizeof(UAthenaCustomPlaylistEvent), 1651784959u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F580D0 (end 0x00F58172)
 // Original VA: 0x0000000140F580D0 | File offset: 0x00F576D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaCustomPlaylistEvent, 1651784959u); reached from UAthenaCustomPlaylistEvent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAthenaCustomPlaylistEvent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaCustomPlaylistEvent();
+// Original dynamic initializer: RVA 0x000D83D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaCustomPlaylistEvent(Z_Construct_UClass_UAthenaCustomPlaylistEvent, &UAthenaCustomPlaylistEvent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaCustomPlaylistEvent"), false, nullptr, nullptr, nullptr);

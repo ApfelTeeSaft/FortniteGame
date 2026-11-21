@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAthenaResourcesBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaResourcesBase, 1719291909u)
+// Original dynamic initializer: RVA 0x0023B620 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaResourcesBase> AutoInitializeUAthenaResourcesBase(TEXT("UAthenaResourcesBase"), sizeof(UAthenaResourcesBase), 1719291909u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02884F50 (end 0x02884FF2)
 // Original VA: 0x0000000142884F50 | File offset: 0x02884550
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaResourcesBase, 1719291909u); reached from UAthenaResourcesBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAthenaResourcesBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaResourcesBase();
+// Original dynamic initializer: RVA 0x0023D9A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaResourcesBase(Z_Construct_UClass_UAthenaResourcesBase, &UAthenaResourcesBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaResourcesBase"), false, nullptr, nullptr, nullptr);

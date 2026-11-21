@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_ShowPartyDialog, 2039712935u)
+// Original dynamic initializer: RVA 0x0023E260 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_ShowPartyDialog> AutoInitializeUFortAsyncAction_ShowPartyDialog(TEXT("UFortAsyncAction_ShowPartyDialog"), sizeof(UFortAsyncAction_ShowPartyDialog), 2039712935u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288B6E0 (end 0x0288B782)
 // Original VA: 0x000000014288B6E0 | File offset: 0x0288ACE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_ShowPartyDialog, 2039712935u); reached from UFortAsyncAction_ShowPartyDialog::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_ShowPartyDialog::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_ShowPartyDialog();
+// Original dynamic initializer: RVA 0x0023FDE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_ShowPartyDialog(Z_Construct_UClass_UFortAsyncAction_ShowPartyDialog, &UFortAsyncAction_ShowPartyDialog::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAsyncAction_ShowPartyDialog"), false, nullptr, nullptr, nullptr);

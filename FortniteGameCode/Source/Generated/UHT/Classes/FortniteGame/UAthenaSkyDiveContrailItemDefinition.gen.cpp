@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAthenaSkyDiveContrailItemDefinition()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaSkyDiveContrailItemDefinition, 1375736131u)
+// Original dynamic initializer: RVA 0x000D87D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaSkyDiveContrailItemDefinition> AutoInitializeUAthenaSkyDiveContrailItemDefinition(TEXT("UAthenaSkyDiveContrailItemDefinition"), sizeof(UAthenaSkyDiveContrailItemDefinition), 1375736131u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5F090 (end 0x00F5F132)
 // Original VA: 0x0000000140F5F090 | File offset: 0x00F5E690
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaSkyDiveContrailItemDefinition, 1375736131u); reached from UAthenaSkyDiveContrailItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAthenaSkyDiveContrailItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaSkyDiveContrailItemDefinition();
+// Original dynamic initializer: RVA 0x000D96D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaSkyDiveContrailItemDefinition(Z_Construct_UClass_UAthenaSkyDiveContrailItemDefinition, &UAthenaSkyDiveContrailItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaSkyDiveContrailItemDefinition"), false, nullptr, nullptr, nullptr);

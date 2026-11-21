@@ -7,6 +7,9 @@
 void UPrimitiveComponent::StaticRegisterNativesUPrimitiveComponent()
 {
 }
+// IMPLEMENT_CLASS(UPrimitiveComponent, 4111089980u)
+// Original dynamic initializer: RVA 0x00216420 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPrimitiveComponent> AutoInitializeUPrimitiveComponent(TEXT("UPrimitiveComponent"), sizeof(UPrimitiveComponent), 4111089980u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B6CD0 (end 0x024B6D78)
 // Original VA: 0x00000001424B6CD0 | File offset: 0x024B62D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UPrimitiveComponent, 4111089980u); reached from UPrimitiveComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UPrimitiveComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPrimitiveComponent();
+// Original dynamic initializer: RVA 0x00217350
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPrimitiveComponent(Z_Construct_UClass_UPrimitiveComponent, &UPrimitiveComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UPrimitiveComponent"), false, nullptr, nullptr, nullptr);

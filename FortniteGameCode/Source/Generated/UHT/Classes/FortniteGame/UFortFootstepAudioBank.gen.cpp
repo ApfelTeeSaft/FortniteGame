@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortFootstepAudioBank, 3037755267u)
+// Original dynamic initializer: RVA 0x000F2710 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortFootstepAudioBank> AutoInitializeUFortFootstepAudioBank(TEXT("UFortFootstepAudioBank"), sizeof(UFortFootstepAudioBank), 3037755267u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FDA1A0 (end 0x00FDA242)
 // Original VA: 0x0000000140FDA1A0 | File offset: 0x00FD97A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortFootstepAudioBank, 3037755267u); reached from UFortFootstepAudioBank::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortFootstepAudioBank::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortFootstepAudioBank();
+// Original dynamic initializer: RVA 0x000F45D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortFootstepAudioBank(Z_Construct_UClass_UFortFootstepAudioBank, &UFortFootstepAudioBank::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortFootstepAudioBank"), false, nullptr, nullptr, nullptr);

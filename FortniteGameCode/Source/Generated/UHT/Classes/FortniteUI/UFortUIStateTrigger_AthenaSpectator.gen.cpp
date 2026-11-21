@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortUIStateTrigger_AthenaSpectator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortUIStateTrigger_AthenaSpectator, 2326472846u)
+// Original dynamic initializer: RVA 0x002629C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUIStateTrigger_AthenaSpectator> AutoInitializeUFortUIStateTrigger_AthenaSpectator(TEXT("UFortUIStateTrigger_AthenaSpectator"), sizeof(UFortUIStateTrigger_AthenaSpectator), 2326472846u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02910660 (end 0x02910702)
 // Original VA: 0x0000000142910660 | File offset: 0x0290FC60
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUIStateTrigger_AthenaSpectator, 2326472846u); reached from UFortUIStateTrigger_AthenaSpectator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortUIStateTrigger_AthenaSpectator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUIStateTrigger_AthenaSpectator();
+// Original dynamic initializer: RVA 0x002651C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUIStateTrigger_AthenaSpectator(Z_Construct_UClass_UFortUIStateTrigger_AthenaSpectator, &UFortUIStateTrigger_AthenaSpectator::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortUIStateTrigger_AthenaSpectator"), false, nullptr, nullptr, nullptr);

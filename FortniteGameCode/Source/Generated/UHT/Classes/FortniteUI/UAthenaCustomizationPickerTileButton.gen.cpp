@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAthenaCustomizationPickerTileButton()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaCustomizationPickerTileButton, 1687823355u)
+// Original dynamic initializer: RVA 0x00239080 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaCustomizationPickerTileButton> AutoInitializeUAthenaCustomizationPickerTileButton(TEXT("UAthenaCustomizationPickerTileButton"), sizeof(UAthenaCustomizationPickerTileButton), 1687823355u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287D850 (end 0x0287D8F2)
 // Original VA: 0x000000014287D850 | File offset: 0x0287CE50
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaCustomizationPickerTileButton, 1687823355u); reached from UAthenaCustomizationPickerTileButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAthenaCustomizationPickerTileButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaCustomizationPickerTileButton();
+// Original dynamic initializer: RVA 0x0023AE40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaCustomizationPickerTileButton(Z_Construct_UClass_UAthenaCustomizationPickerTileButton, &UAthenaCustomizationPickerTileButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaCustomizationPickerTileButton"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UPawnAction::StaticRegisterNativesUPawnAction()
 {
 }
+// IMPLEMENT_CLASS(UPawnAction, 798319730u)
+// Original dynamic initializer: RVA 0x001BF440 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPawnAction> AutoInitializeUPawnAction(TEXT("UPawnAction"), sizeof(UPawnAction), 798319730u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D31380 (end 0x01D31417)
 // Original VA: 0x0000000141D31380 | File offset: 0x01D30980
 // Recovery: confirmed (IMPLEMENT_CLASS(UPawnAction, 798319730u); reached from UPawnAction::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UPawnAction::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPawnAction();
+// Original dynamic initializer: RVA 0x001BFB30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPawnAction(Z_Construct_UClass_UPawnAction, &UPawnAction::StaticClass, TEXT("/Script/AIModule"), TEXT("UPawnAction"), false, nullptr, nullptr, nullptr);

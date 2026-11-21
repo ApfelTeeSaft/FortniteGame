@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ATargetPoint()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ATargetPoint, 4262545770u)
+// Original dynamic initializer: RVA 0x0021E710 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ATargetPoint> AutoInitializeATargetPoint(TEXT("ATargetPoint"), sizeof(ATargetPoint), 4262545770u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024E5E40 (end 0x024E5EE2)
 // Original VA: 0x00000001424E5E40 | File offset: 0x024E5440
 // Recovery: confirmed (IMPLEMENT_CLASS(ATargetPoint, 4262545770u); reached from ATargetPoint::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ATargetPoint::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ATargetPoint();
+// Original dynamic initializer: RVA 0x0021FBC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ATargetPoint(Z_Construct_UClass_ATargetPoint, &ATargetPoint::StaticClass, TEXT("/Script/Engine"), TEXT("ATargetPoint"), false, nullptr, nullptr, nullptr);

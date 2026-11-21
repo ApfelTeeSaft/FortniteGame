@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UThumbnailInfo()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UThumbnailInfo, 4125141688u)
+// Original dynamic initializer: RVA 0x002200A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UThumbnailInfo> AutoInitializeUThumbnailInfo(TEXT("UThumbnailInfo"), sizeof(UThumbnailInfo), 4125141688u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EB650 (end 0x024EB6E7)
 // Original VA: 0x00000001424EB650 | File offset: 0x024EAC50
 // Recovery: confirmed (IMPLEMENT_CLASS(UThumbnailInfo, 4125141688u); reached from UThumbnailInfo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UThumbnailInfo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UThumbnailInfo();
+// Original dynamic initializer: RVA 0x00221600
+static FCompiledInDefer Z_CompiledInDefer_UClass_UThumbnailInfo(Z_Construct_UClass_UThumbnailInfo, &UThumbnailInfo::StaticClass, TEXT("/Script/Engine"), TEXT("UThumbnailInfo"), false, nullptr, nullptr, nullptr);

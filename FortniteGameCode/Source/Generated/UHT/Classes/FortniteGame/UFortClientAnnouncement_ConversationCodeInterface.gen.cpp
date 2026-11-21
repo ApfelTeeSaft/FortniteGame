@@ -7,6 +7,9 @@
 void UFortClientAnnouncement_ConversationCodeInterface::StaticRegisterNativesUFortClientAnnouncement_ConversationCodeInterface()
 {
 }
+// IMPLEMENT_CLASS(UFortClientAnnouncement_ConversationCodeInterface, 515559724u)
+// Original dynamic initializer: RVA 0x000EB210 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortClientAnnouncement_ConversationCodeInterface> AutoInitializeUFortClientAnnouncement_ConversationCodeInterface(TEXT("UFortClientAnnouncement_ConversationCodeInterface"), sizeof(UFortClientAnnouncement_ConversationCodeInterface), 515559724u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBE9B0 (end 0x00FBEA52)
 // Original VA: 0x0000000140FBE9B0 | File offset: 0x00FBDFB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortClientAnnouncement_ConversationCodeInterface, 515559724u); reached from UFortClientAnnouncement_ConversationCodeInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortClientAnnouncement_ConversationCodeInterface::GetPrivateStaticClass
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface();
+// Original dynamic initializer: RVA 0x000EC240
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortClientAnnouncement_ConversationCodeInterface(Z_Construct_UClass_UFortClientAnnouncement_ConversationCodeInterface, &UFortClientAnnouncement_ConversationCodeInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortClientAnnouncement_ConversationCodeInterface"), false, nullptr, nullptr, nullptr);

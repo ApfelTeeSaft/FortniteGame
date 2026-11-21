@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UKismetAnimationLibrary, 86440153u)
+// Original dynamic initializer: RVA 0x001A8A00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UKismetAnimationLibrary> AutoInitializeUKismetAnimationLibrary(TEXT("UKismetAnimationLibrary"), sizeof(UKismetAnimationLibrary), 86440153u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0A5F0 (end 0x01B0A692)
 // Original VA: 0x0000000141B0A5F0 | File offset: 0x01B09BF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UKismetAnimationLibrary, 86440153u); reached from UKismetAnimationLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UKismetAnimationLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UKismetAnimationLibrary();
+// Original dynamic initializer: RVA 0x001AC160
+static FCompiledInDefer Z_CompiledInDefer_UClass_UKismetAnimationLibrary(Z_Construct_UClass_UKismetAnimationLibrary, &UKismetAnimationLibrary::StaticClass, TEXT("/Script/AnimGraphRuntime"), TEXT("UKismetAnimationLibrary"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UPawnNoiseEmitterComponent, 1794828498u)
+// Original dynamic initializer: RVA 0x00213CD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPawnNoiseEmitterComponent> AutoInitializeUPawnNoiseEmitterComponent(TEXT("UPawnNoiseEmitterComponent"), sizeof(UPawnNoiseEmitterComponent), 1794828498u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249F970 (end 0x0249FA12)
 // Original VA: 0x000000014249F970 | File offset: 0x0249EF70
 // Recovery: confirmed (IMPLEMENT_CLASS(UPawnNoiseEmitterComponent, 1794828498u); reached from UPawnNoiseEmitterComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UPawnNoiseEmitterComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPawnNoiseEmitterComponent();
+// Original dynamic initializer: RVA 0x00214670
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPawnNoiseEmitterComponent(Z_Construct_UClass_UPawnNoiseEmitterComponent, &UPawnNoiseEmitterComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UPawnNoiseEmitterComponent"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UPanelSlot()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPanelSlot, 2663840563u)
+// Original dynamic initializer: RVA 0x001B29C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPanelSlot> AutoInitializeUPanelSlot(TEXT("UPanelSlot"), sizeof(UPanelSlot), 2663840563u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEC680 (end 0x01BEC722)
 // Original VA: 0x0000000141BEC680 | File offset: 0x01BEBC80
 // Recovery: confirmed (IMPLEMENT_CLASS(UPanelSlot, 2663840563u); reached from UPanelSlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UPanelSlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPanelSlot();
+// Original dynamic initializer: RVA 0x001B33D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPanelSlot(Z_Construct_UClass_UPanelSlot, &UPanelSlot::StaticClass, TEXT("/Script/UMG"), TEXT("UPanelSlot"), false, nullptr, nullptr, nullptr);

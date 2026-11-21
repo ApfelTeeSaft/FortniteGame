@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCameraShake, 1248482082u)
+// Original dynamic initializer: RVA 0x001F4D70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCameraShake> AutoInitializeUCameraShake(TEXT("UCameraShake"), sizeof(UCameraShake), 1248482082u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9490 (end 0x023E9527)
 // Original VA: 0x00000001423E9490 | File offset: 0x023E8A90
 // Recovery: confirmed (IMPLEMENT_CLASS(UCameraShake, 1248482082u); reached from UCameraShake::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCameraShake::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCameraShake();
+// Original dynamic initializer: RVA 0x001F6390
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCameraShake(Z_Construct_UClass_UCameraShake, &UCameraShake::StaticClass, TEXT("/Script/Engine"), TEXT("UCameraShake"), false, nullptr, nullptr, nullptr);

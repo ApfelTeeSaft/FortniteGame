@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UGameplayModMagnitudeCalculation, 1451877408u)
+// Original dynamic initializer: RVA 0x000A0D80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayModMagnitudeCalculation> AutoInitializeUGameplayModMagnitudeCalculation(TEXT("UGameplayModMagnitudeCalculation"), sizeof(UGameplayModMagnitudeCalculation), 1451877408u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00562100 (end 0x005621A2)
 // Original VA: 0x0000000140562100 | File offset: 0x00561700
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayModMagnitudeCalculation, 1451877408u); reached from UGameplayModMagnitudeCalculation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UGameplayModMagnitudeCalculation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayModMagnitudeCalculation();
+// Original dynamic initializer: RVA 0x000A2F10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayModMagnitudeCalculation(Z_Construct_UClass_UGameplayModMagnitudeCalculation, &UGameplayModMagnitudeCalculation::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UGameplayModMagnitudeCalculation"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void AGameMode::StaticRegisterNativesAGameMode()
 {
 }
+// IMPLEMENT_CLASS(AGameMode, 617590091u)
+// Original dynamic initializer: RVA 0x001FF2E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AGameMode> AutoInitializeAGameMode(TEXT("AGameMode"), sizeof(AGameMode), 617590091u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240E510 (end 0x0240E5B2)
 // Original VA: 0x000000014240E510 | File offset: 0x0240DB10
 // Recovery: confirmed (IMPLEMENT_CLASS(AGameMode, 617590091u); reached from AGameMode::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AGameMode::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AGameMode();
+// Original dynamic initializer: RVA 0x001FFCB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AGameMode(Z_Construct_UClass_AGameMode, &AGameMode::StaticClass, TEXT("/Script/Engine"), TEXT("AGameMode"), false, nullptr, nullptr, nullptr);

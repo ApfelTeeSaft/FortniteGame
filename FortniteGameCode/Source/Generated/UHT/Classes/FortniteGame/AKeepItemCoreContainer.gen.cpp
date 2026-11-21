@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AKeepItemCoreContainer()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AKeepItemCoreContainer, 3964827301u)
+// Original dynamic initializer: RVA 0x0011FF20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AKeepItemCoreContainer> AutoInitializeAKeepItemCoreContainer(TEXT("AKeepItemCoreContainer"), sizeof(AKeepItemCoreContainer), 3964827301u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E6A80 (end 0x010E6B22)
 // Original VA: 0x00000001410E6A80 | File offset: 0x010E6080
 // Recovery: confirmed (IMPLEMENT_CLASS(AKeepItemCoreContainer, 3964827301u); reached from AKeepItemCoreContainer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AKeepItemCoreContainer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AKeepItemCoreContainer();
+// Original dynamic initializer: RVA 0x001219B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AKeepItemCoreContainer(Z_Construct_UClass_AKeepItemCoreContainer, &AKeepItemCoreContainer::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AKeepItemCoreContainer"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UKismetInternationalizationLibrary, 1837438259u)
+// Original dynamic initializer: RVA 0x002045D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UKismetInternationalizationLibrary> AutoInitializeUKismetInternationalizationLibrary(TEXT("UKismetInternationalizationLibrary"), sizeof(UKismetInternationalizationLibrary), 1837438259u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02431190 (end 0x02431232)
 // Original VA: 0x0000000142431190 | File offset: 0x02430790
 // Recovery: confirmed (IMPLEMENT_CLASS(UKismetInternationalizationLibrary, 1837438259u); reached from UKismetInternationalizationLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UKismetInternationalizationLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UKismetInternationalizationLibrary();
+// Original dynamic initializer: RVA 0x00204B70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UKismetInternationalizationLibrary(Z_Construct_UClass_UKismetInternationalizationLibrary, &UKismetInternationalizationLibrary::StaticClass, TEXT("/Script/Engine"), TEXT("UKismetInternationalizationLibrary"), false, nullptr, nullptr, nullptr);

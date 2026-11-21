@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_APlayerStartPIE()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(APlayerStartPIE, 2507068876u)
+// Original dynamic initializer: RVA 0x00216200 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<APlayerStartPIE> AutoInitializeAPlayerStartPIE(TEXT("APlayerStartPIE"), sizeof(APlayerStartPIE), 2507068876u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B6140 (end 0x024B61E2)
 // Original VA: 0x00000001424B6140 | File offset: 0x024B5740
 // Recovery: confirmed (IMPLEMENT_CLASS(APlayerStartPIE, 2507068876u); reached from APlayerStartPIE::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* APlayerStartPIE::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_APlayerStartPIE();
+// Original dynamic initializer: RVA 0x00216F10
+static FCompiledInDefer Z_CompiledInDefer_UClass_APlayerStartPIE(Z_Construct_UClass_APlayerStartPIE, &APlayerStartPIE::StaticClass, TEXT("/Script/Engine"), TEXT("APlayerStartPIE"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortBehaviorTreeComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBehaviorTreeComponent, 2712365700u)
+// Original dynamic initializer: RVA 0x000E80D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBehaviorTreeComponent> AutoInitializeUFortBehaviorTreeComponent(TEXT("UFortBehaviorTreeComponent"), sizeof(UFortBehaviorTreeComponent), 2712365700u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA2930 (end 0x00FA29D2)
 // Original VA: 0x0000000140FA2930 | File offset: 0x00FA1F30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBehaviorTreeComponent, 2712365700u); reached from UFortBehaviorTreeComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortBehaviorTreeComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBehaviorTreeComponent();
+// Original dynamic initializer: RVA 0x000E8D10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBehaviorTreeComponent(Z_Construct_UClass_UFortBehaviorTreeComponent, &UFortBehaviorTreeComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBehaviorTreeComponent"), false, nullptr, nullptr, nullptr);

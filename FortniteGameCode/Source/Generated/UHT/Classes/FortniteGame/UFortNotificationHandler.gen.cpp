@@ -7,6 +7,9 @@
 void UFortNotificationHandler::StaticRegisterNativesUFortNotificationHandler()
 {
 }
+// IMPLEMENT_CLASS(UFortNotificationHandler, 3436822300u)
+// Original dynamic initializer: RVA 0x00105AD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNotificationHandler> AutoInitializeUFortNotificationHandler(TEXT("UFortNotificationHandler"), sizeof(UFortNotificationHandler), 3436822300u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0104F210 (end 0x0104F2A7)
 // Original VA: 0x000000014104F210 | File offset: 0x0104E810
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNotificationHandler, 3436822300u); reached from UFortNotificationHandler::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortNotificationHandler::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNotificationHandler();
+// Original dynamic initializer: RVA 0x00107070
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNotificationHandler(Z_Construct_UClass_UFortNotificationHandler, &UFortNotificationHandler::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNotificationHandler"), false, nullptr, nullptr, nullptr);

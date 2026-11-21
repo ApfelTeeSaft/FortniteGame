@@ -7,6 +7,9 @@
 void UFortSignInWidget::StaticRegisterNativesUFortSignInWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortSignInWidget, 2277914335u)
+// Original dynamic initializer: RVA 0x0025AB20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSignInWidget> AutoInitializeUFortSignInWidget(TEXT("UFortSignInWidget"), sizeof(UFortSignInWidget), 2277914335u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F2F60 (end 0x028F3002)
 // Original VA: 0x00000001428F2F60 | File offset: 0x028F2560
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSignInWidget, 2277914335u); reached from UFortSignInWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSignInWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSignInWidget();
+// Original dynamic initializer: RVA 0x0025B920
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSignInWidget(Z_Construct_UClass_UFortSignInWidget, &UFortSignInWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSignInWidget"), false, nullptr, nullptr, nullptr);

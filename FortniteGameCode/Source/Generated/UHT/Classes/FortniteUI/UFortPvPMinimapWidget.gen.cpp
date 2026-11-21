@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortPvPMinimapWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortPvPMinimapWidget, 787387769u)
+// Original dynamic initializer: RVA 0x00258360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPvPMinimapWidget> AutoInitializeUFortPvPMinimapWidget(TEXT("UFortPvPMinimapWidget"), sizeof(UFortPvPMinimapWidget), 787387769u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EAE90 (end 0x028EAF32)
 // Original VA: 0x00000001428EAE90 | File offset: 0x028EA490
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPvPMinimapWidget, 787387769u); reached from UFortPvPMinimapWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortPvPMinimapWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPvPMinimapWidget();
+// Original dynamic initializer: RVA 0x0025A1E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPvPMinimapWidget(Z_Construct_UClass_UFortPvPMinimapWidget, &UFortPvPMinimapWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortPvPMinimapWidget"), false, nullptr, nullptr, nullptr);

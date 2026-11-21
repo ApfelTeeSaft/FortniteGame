@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBookMark()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBookMark, 4104324247u)
+// Original dynamic initializer: RVA 0x001F4BF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBookMark> AutoInitializeUBookMark(TEXT("UBookMark"), sizeof(UBookMark), 4104324247u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E8CC0 (end 0x023E8D57)
 // Original VA: 0x00000001423E8CC0 | File offset: 0x023E82C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBookMark, 4104324247u); reached from UBookMark::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBookMark::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBookMark();
+// Original dynamic initializer: RVA 0x001F6090
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBookMark(Z_Construct_UClass_UBookMark, &UBookMark::StaticClass, TEXT("/Script/Engine"), TEXT("UBookMark"), false, nullptr, nullptr, nullptr);

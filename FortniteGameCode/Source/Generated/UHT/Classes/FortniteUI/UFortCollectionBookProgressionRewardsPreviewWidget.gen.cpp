@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortCollectionBookProgressionRewardsPreviewWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCollectionBookProgressionRewardsPreviewWidget, 49040716u)
+// Original dynamic initializer: RVA 0x00240500 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCollectionBookProgressionRewardsPreviewWidget> AutoInitializeUFortCollectionBookProgressionRewardsPreviewWidget(TEXT("UFortCollectionBookProgressionRewardsPreviewWidget"), sizeof(UFortCollectionBookProgressionRewardsPreviewWidget), 49040716u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02893700 (end 0x028937A2)
 // Original VA: 0x0000000142893700 | File offset: 0x02892D00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCollectionBookProgressionRewardsPreviewWidget, 49040716u); reached from UFortCollectionBookProgressionRewardsPreviewWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortCollectionBookProgressionRewardsPreviewWidget::GetPrivateStaticClas
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCollectionBookProgressionRewardsPreviewWidget();
+// Original dynamic initializer: RVA 0x00242350
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCollectionBookProgressionRewardsPreviewWidget(Z_Construct_UClass_UFortCollectionBookProgressionRewardsPreviewWidget, &UFortCollectionBookProgressionRewardsPreviewWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCollectionBookProgressionRewardsPreviewWidget"), false, nullptr, nullptr, nullptr);

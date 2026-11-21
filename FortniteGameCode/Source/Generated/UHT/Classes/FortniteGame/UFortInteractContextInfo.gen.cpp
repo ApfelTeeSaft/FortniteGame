@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortInteractContextInfo()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortInteractContextInfo, 3195955367u)
+// Original dynamic initializer: RVA 0x000FB220 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortInteractContextInfo> AutoInitializeUFortInteractContextInfo(TEXT("UFortInteractContextInfo"), sizeof(UFortInteractContextInfo), 3195955367u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01003F70 (end 0x01004007)
 // Original VA: 0x0000000141003F70 | File offset: 0x01003570
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortInteractContextInfo, 3195955367u); reached from UFortInteractContextInfo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortInteractContextInfo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortInteractContextInfo();
+// Original dynamic initializer: RVA 0x000FC270
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortInteractContextInfo(Z_Construct_UClass_UFortInteractContextInfo, &UFortInteractContextInfo::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortInteractContextInfo"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UGridPanel, 2271546503u)
+// Original dynamic initializer: RVA 0x001B26E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGridPanel> AutoInitializeUGridPanel(TEXT("UGridPanel"), sizeof(UGridPanel), 2271546503u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEB6B0 (end 0x01BEB752)
 // Original VA: 0x0000000141BEB6B0 | File offset: 0x01BEACB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UGridPanel, 2271546503u); reached from UGridPanel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UGridPanel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGridPanel();
+// Original dynamic initializer: RVA 0x001B2E10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGridPanel(Z_Construct_UClass_UGridPanel, &UGridPanel::StaticClass, TEXT("/Script/UMG"), TEXT("UGridPanel"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ULocalizedOverlays()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULocalizedOverlays, 3379512601u)
+// Original dynamic initializer: RVA 0x00223250 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULocalizedOverlays> AutoInitializeULocalizedOverlays(TEXT("ULocalizedOverlays"), sizeof(ULocalizedOverlays), 3379512601u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02516950 (end 0x025169F2)
 // Original VA: 0x0000000142516950 | File offset: 0x02515F50
 // Recovery: confirmed (IMPLEMENT_CLASS(ULocalizedOverlays, 3379512601u); reached from ULocalizedOverlays::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ULocalizedOverlays::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULocalizedOverlays();
+// Original dynamic initializer: RVA 0x00223380
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULocalizedOverlays(Z_Construct_UClass_ULocalizedOverlays, &ULocalizedOverlays::StaticClass, TEXT("/Script/Overlay"), TEXT("ULocalizedOverlays"), false, nullptr, nullptr, nullptr);

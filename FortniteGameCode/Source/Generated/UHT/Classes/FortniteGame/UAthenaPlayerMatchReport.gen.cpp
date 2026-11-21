@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAthenaPlayerMatchReport, 2198122351u)
+// Original dynamic initializer: RVA 0x000D75B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaPlayerMatchReport> AutoInitializeUAthenaPlayerMatchReport(TEXT("UAthenaPlayerMatchReport"), sizeof(UAthenaPlayerMatchReport), 2198122351u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F58860 (end 0x00F588F7)
 // Original VA: 0x0000000140F58860 | File offset: 0x00F57E60
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaPlayerMatchReport, 2198122351u); reached from UAthenaPlayerMatchReport::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAthenaPlayerMatchReport::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaPlayerMatchReport();
+// Original dynamic initializer: RVA 0x000D8690
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaPlayerMatchReport(Z_Construct_UClass_UAthenaPlayerMatchReport, &UAthenaPlayerMatchReport::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaPlayerMatchReport"), false, nullptr, nullptr, nullptr);

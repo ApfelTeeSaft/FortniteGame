@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AProceduralFoliageVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AProceduralFoliageVolume, 3193611987u)
+// Original dynamic initializer: RVA 0x001A0880 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AProceduralFoliageVolume> AutoInitializeAProceduralFoliageVolume(TEXT("AProceduralFoliageVolume"), sizeof(AProceduralFoliageVolume), 3193611987u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A47E90 (end 0x01A47F32)
 // Original VA: 0x0000000141A47E90 | File offset: 0x01A47490
 // Recovery: confirmed (IMPLEMENT_CLASS(AProceduralFoliageVolume, 3193611987u); reached from AProceduralFoliageVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AProceduralFoliageVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AProceduralFoliageVolume();
+// Original dynamic initializer: RVA 0x001A0EA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AProceduralFoliageVolume(Z_Construct_UClass_AProceduralFoliageVolume, &AProceduralFoliageVolume::StaticClass, TEXT("/Script/Foliage"), TEXT("AProceduralFoliageVolume"), false, nullptr, nullptr, nullptr);

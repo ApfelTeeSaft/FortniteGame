@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleAttractorPointGravity()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleAttractorPointGravity, 3396495099u)
+// Original dynamic initializer: RVA 0x0020F050 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleAttractorPointGravity> AutoInitializeUParticleModuleAttractorPointGravity(TEXT("UParticleModuleAttractorPointGravity"), sizeof(UParticleModuleAttractorPointGravity), 3396495099u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024945E0 (end 0x02494682)
 // Original VA: 0x00000001424945E0 | File offset: 0x02493BE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleAttractorPointGravity, 3396495099u); reached from UParticleModuleAttractorPointGravity::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleAttractorPointGravity::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleAttractorPointGravity();
+// Original dynamic initializer: RVA 0x00210570
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleAttractorPointGravity(Z_Construct_UClass_UParticleModuleAttractorPointGravity, &UParticleModuleAttractorPointGravity::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleAttractorPointGravity"), false, nullptr, nullptr, nullptr);

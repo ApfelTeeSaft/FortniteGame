@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortTargetSelectionInterface, 4182403756u)
+// Original dynamic initializer: RVA 0x001147F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTargetSelectionInterface> AutoInitializeUFortTargetSelectionInterface(TEXT("UFortTargetSelectionInterface"), sizeof(UFortTargetSelectionInterface), 4182403756u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B1B00 (end 0x010B1BA2)
 // Original VA: 0x00000001410B1B00 | File offset: 0x010B1100
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTargetSelectionInterface, 4182403756u); reached from UFortTargetSelectionInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortTargetSelectionInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTargetSelectionInterface();
+// Original dynamic initializer: RVA 0x00116180
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTargetSelectionInterface(Z_Construct_UClass_UFortTargetSelectionInterface, &UFortTargetSelectionInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTargetSelectionInterface"), false, nullptr, nullptr, nullptr);

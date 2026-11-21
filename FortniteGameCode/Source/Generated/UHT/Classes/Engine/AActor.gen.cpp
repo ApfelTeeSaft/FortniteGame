@@ -7,6 +7,9 @@
 void AActor::StaticRegisterNativesAActor()
 {
 }
+// IMPLEMENT_CLASS(AActor, 1269707568u)
+// Original dynamic initializer: RVA 0x001EBBB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AActor> AutoInitializeAActor(TEXT("AActor"), sizeof(AActor), 1269707568u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023BCE90 (end 0x023BCF31)
 // Original VA: 0x00000001423BCE90 | File offset: 0x023BC490
 // Recovery: confirmed (IMPLEMENT_CLASS(AActor, 1269707568u); reached from AActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AActor();
+// Original dynamic initializer: RVA 0x001EBF00
+static FCompiledInDefer Z_CompiledInDefer_UClass_AActor(Z_Construct_UClass_AActor, &AActor::StaticClass, TEXT("/Script/Engine"), TEXT("AActor"), false, nullptr, nullptr, nullptr);

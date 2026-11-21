@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USocialChatStyleDataAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USocialChatStyleDataAsset, 1273499972u)
+// Original dynamic initializer: RVA 0x00225510 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USocialChatStyleDataAsset> AutoInitializeUSocialChatStyleDataAsset(TEXT("USocialChatStyleDataAsset"), sizeof(USocialChatStyleDataAsset), 1273499972u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025A2230 (end 0x025A22D2)
 // Original VA: 0x00000001425A2230 | File offset: 0x025A1830
 // Recovery: confirmed (IMPLEMENT_CLASS(USocialChatStyleDataAsset, 1273499972u); reached from USocialChatStyleDataAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USocialChatStyleDataAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USocialChatStyleDataAsset();
+// Original dynamic initializer: RVA 0x00225820
+static FCompiledInDefer Z_CompiledInDefer_UClass_USocialChatStyleDataAsset(Z_Construct_UClass_USocialChatStyleDataAsset, &USocialChatStyleDataAsset::StaticClass, TEXT("/Script/SocialDefaults"), TEXT("USocialChatStyleDataAsset"), false, nullptr, nullptr, nullptr);

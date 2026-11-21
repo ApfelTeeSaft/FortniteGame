@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ABuildingDeco()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingDeco, 1307901481u)
+// Original dynamic initializer: RVA 0x000D98D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingDeco> AutoInitializeABuildingDeco(TEXT("ABuildingDeco"), sizeof(ABuildingDeco), 1307901481u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F64750 (end 0x00F647F2)
 // Original VA: 0x0000000140F64750 | File offset: 0x00F63D50
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingDeco, 1307901481u); reached from ABuildingDeco::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ABuildingDeco::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingDeco();
+// Original dynamic initializer: RVA 0x000DA850
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingDeco(Z_Construct_UClass_ABuildingDeco, &ABuildingDeco::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingDeco"), false, nullptr, nullptr, nullptr);

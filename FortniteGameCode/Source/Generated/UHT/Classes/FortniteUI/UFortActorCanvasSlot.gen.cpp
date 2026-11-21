@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortActorCanvasSlot, 2684731417u)
+// Original dynamic initializer: RVA 0x0023B820 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortActorCanvasSlot> AutoInitializeUFortActorCanvasSlot(TEXT("UFortActorCanvasSlot"), sizeof(UFortActorCanvasSlot), 2684731417u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02885A50 (end 0x02885AF2)
 // Original VA: 0x0000000142885A50 | File offset: 0x02885050
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortActorCanvasSlot, 2684731417u); reached from UFortActorCanvasSlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortActorCanvasSlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortActorCanvasSlot();
+// Original dynamic initializer: RVA 0x0023DDA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortActorCanvasSlot(Z_Construct_UClass_UFortActorCanvasSlot, &UFortActorCanvasSlot::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortActorCanvasSlot"), false, nullptr, nullptr, nullptr);

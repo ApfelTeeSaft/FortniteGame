@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ANavMeshBoundsVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ANavMeshBoundsVolume, 3111086490u)
+// Original dynamic initializer: RVA 0x0020DB10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ANavMeshBoundsVolume> AutoInitializeANavMeshBoundsVolume(TEXT("ANavMeshBoundsVolume"), sizeof(ANavMeshBoundsVolume), 3111086490u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248DD50 (end 0x0248DDF2)
 // Original VA: 0x000000014248DD50 | File offset: 0x0248D350
 // Recovery: confirmed (IMPLEMENT_CLASS(ANavMeshBoundsVolume, 3111086490u); reached from ANavMeshBoundsVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ANavMeshBoundsVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ANavMeshBoundsVolume();
+// Original dynamic initializer: RVA 0x0020E750
+static FCompiledInDefer Z_CompiledInDefer_UClass_ANavMeshBoundsVolume(Z_Construct_UClass_ANavMeshBoundsVolume, &ANavMeshBoundsVolume::StaticClass, TEXT("/Script/Engine"), TEXT("ANavMeshBoundsVolume"), false, nullptr, nullptr, nullptr);

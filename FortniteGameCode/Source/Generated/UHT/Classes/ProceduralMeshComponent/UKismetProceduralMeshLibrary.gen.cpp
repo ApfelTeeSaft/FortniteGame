@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UKismetProceduralMeshLibrary, 718867227u)
+// Original dynamic initializer: RVA 0x000AD960 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UKismetProceduralMeshLibrary> AutoInitializeUKismetProceduralMeshLibrary(TEXT("UKismetProceduralMeshLibrary"), sizeof(UKismetProceduralMeshLibrary), 718867227u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069B870 (end 0x0069B912)
 // Original VA: 0x000000014069B870 | File offset: 0x0069AE70
 // Recovery: confirmed (IMPLEMENT_CLASS(UKismetProceduralMeshLibrary, 718867227u); reached from UKismetProceduralMeshLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UKismetProceduralMeshLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UKismetProceduralMeshLibrary();
+// Original dynamic initializer: RVA 0x000ADC80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UKismetProceduralMeshLibrary(Z_Construct_UClass_UKismetProceduralMeshLibrary, &UKismetProceduralMeshLibrary::StaticClass, TEXT("/Script/ProceduralMeshComponent"), TEXT("UKismetProceduralMeshLibrary"), false, nullptr, nullptr, nullptr);

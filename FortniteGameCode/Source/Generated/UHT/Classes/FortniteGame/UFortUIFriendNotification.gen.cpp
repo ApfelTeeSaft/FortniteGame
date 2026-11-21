@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortUIFriendNotification()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortUIFriendNotification, 2716675755u)
+// Original dynamic initializer: RVA 0x0011BFD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUIFriendNotification> AutoInitializeUFortUIFriendNotification(TEXT("UFortUIFriendNotification"), sizeof(UFortUIFriendNotification), 2716675755u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D2FF0 (end 0x010D3092)
 // Original VA: 0x00000001410D2FF0 | File offset: 0x010D25F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUIFriendNotification, 2716675755u); reached from UFortUIFriendNotification::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortUIFriendNotification::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUIFriendNotification();
+// Original dynamic initializer: RVA 0x0011D0E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUIFriendNotification(Z_Construct_UClass_UFortUIFriendNotification, &UFortUIFriendNotification::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortUIFriendNotification"), false, nullptr, nullptr, nullptr);

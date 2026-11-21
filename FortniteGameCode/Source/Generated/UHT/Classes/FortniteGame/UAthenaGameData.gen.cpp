@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAthenaGameData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaGameData, 2183896010u)
+// Original dynamic initializer: RVA 0x000D74F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaGameData> AutoInitializeUAthenaGameData(TEXT("UAthenaGameData"), sizeof(UAthenaGameData), 2183896010u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F58440 (end 0x00F584E2)
 // Original VA: 0x0000000140F58440 | File offset: 0x00F57A40
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaGameData, 2183896010u); reached from UAthenaGameData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAthenaGameData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaGameData();
+// Original dynamic initializer: RVA 0x000D8510
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaGameData(Z_Construct_UClass_UAthenaGameData, &UAthenaGameData::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaGameData"), false, nullptr, nullptr, nullptr);

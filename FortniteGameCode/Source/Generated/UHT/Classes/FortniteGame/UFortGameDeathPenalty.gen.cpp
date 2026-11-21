@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortGameDeathPenalty()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortGameDeathPenalty, 3442206400u)
+// Original dynamic initializer: RVA 0x000F5960 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGameDeathPenalty> AutoInitializeUFortGameDeathPenalty(TEXT("UFortGameDeathPenalty"), sizeof(UFortGameDeathPenalty), 3442206400u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE3570 (end 0x00FE3612)
 // Original VA: 0x0000000140FE3570 | File offset: 0x00FE2B70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGameDeathPenalty, 3442206400u); reached from UFortGameDeathPenalty::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortGameDeathPenalty::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGameDeathPenalty();
+// Original dynamic initializer: RVA 0x000F64A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGameDeathPenalty(Z_Construct_UClass_UFortGameDeathPenalty, &UFortGameDeathPenalty::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortGameDeathPenalty"), false, nullptr, nullptr, nullptr);

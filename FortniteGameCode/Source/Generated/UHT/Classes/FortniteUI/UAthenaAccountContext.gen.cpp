@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAthenaAccountContext, 695749211u)
+// Original dynamic initializer: RVA 0x00238FE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaAccountContext> AutoInitializeUAthenaAccountContext(TEXT("UAthenaAccountContext"), sizeof(UAthenaAccountContext), 695749211u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287D4E0 (end 0x0287D582)
 // Original VA: 0x000000014287D4E0 | File offset: 0x0287CAE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaAccountContext, 695749211u); reached from UAthenaAccountContext::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAthenaAccountContext::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaAccountContext();
+// Original dynamic initializer: RVA 0x0023AD00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaAccountContext(Z_Construct_UClass_UAthenaAccountContext, &UAthenaAccountContext::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaAccountContext"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBehaviorTreeManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBehaviorTreeManager, 613095387u)
+// Original dynamic initializer: RVA 0x001BA770 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBehaviorTreeManager> AutoInitializeUBehaviorTreeManager(TEXT("UBehaviorTreeManager"), sizeof(UBehaviorTreeManager), 613095387u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D216D0 (end 0x01D21767)
 // Original VA: 0x0000000141D216D0 | File offset: 0x01D20CD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBehaviorTreeManager, 613095387u); reached from UBehaviorTreeManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBehaviorTreeManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBehaviorTreeManager();
+// Original dynamic initializer: RVA 0x001BBBC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBehaviorTreeManager(Z_Construct_UClass_UBehaviorTreeManager, &UBehaviorTreeManager::StaticClass, TEXT("/Script/AIModule"), TEXT("UBehaviorTreeManager"), false, nullptr, nullptr, nullptr);

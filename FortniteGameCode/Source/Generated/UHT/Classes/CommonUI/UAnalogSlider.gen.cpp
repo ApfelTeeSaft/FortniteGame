@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAnalogSlider()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnalogSlider, 2359185551u)
+// Original dynamic initializer: RVA 0x00095570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnalogSlider> AutoInitializeUAnalogSlider(TEXT("UAnalogSlider"), sizeof(UAnalogSlider), 2359185551u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C1860 (end 0x002C1902)
 // Original VA: 0x00000001402C1860 | File offset: 0x002C0E60
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnalogSlider, 2359185551u); reached from UAnalogSlider::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAnalogSlider::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnalogSlider();
+// Original dynamic initializer: RVA 0x00095BC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnalogSlider(Z_Construct_UClass_UAnalogSlider, &UAnalogSlider::StaticClass, TEXT("/Script/CommonUI"), TEXT("UAnalogSlider"), false, nullptr, nullptr, nullptr);

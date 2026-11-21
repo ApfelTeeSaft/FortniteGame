@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleVectorFieldRotation()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleVectorFieldRotation, 2370144203u)
+// Original dynamic initializer: RVA 0x00212720 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleVectorFieldRotation> AutoInitializeUParticleModuleVectorFieldRotation(TEXT("UParticleModuleVectorFieldRotation"), sizeof(UParticleModuleVectorFieldRotation), 2370144203u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249D430 (end 0x0249D4D2)
 // Original VA: 0x000000014249D430 | File offset: 0x0249CA30
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleVectorFieldRotation, 2370144203u); reached from UParticleModuleVectorFieldRotation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleVectorFieldRotation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleVectorFieldRotation();
+// Original dynamic initializer: RVA 0x00213910
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleVectorFieldRotation(Z_Construct_UClass_UParticleModuleVectorFieldRotation, &UParticleModuleVectorFieldRotation::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleVectorFieldRotation"), false, nullptr, nullptr, nullptr);

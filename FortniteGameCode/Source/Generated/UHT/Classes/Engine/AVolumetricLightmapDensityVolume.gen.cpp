@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AVolumetricLightmapDensityVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AVolumetricLightmapDensityVolume, 3410348792u)
+// Original dynamic initializer: RVA 0x00221900 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AVolumetricLightmapDensityVolume> AutoInitializeAVolumetricLightmapDensityVolume(TEXT("AVolumetricLightmapDensityVolume"), sizeof(AVolumetricLightmapDensityVolume), 3410348792u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EF780 (end 0x024EF822)
 // Original VA: 0x00000001424EF780 | File offset: 0x024EED80
 // Recovery: confirmed (IMPLEMENT_CLASS(AVolumetricLightmapDensityVolume, 3410348792u); reached from AVolumetricLightmapDensityVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AVolumetricLightmapDensityVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AVolumetricLightmapDensityVolume();
+// Original dynamic initializer: RVA 0x00222330
+static FCompiledInDefer Z_CompiledInDefer_UClass_AVolumetricLightmapDensityVolume(Z_Construct_UClass_AVolumetricLightmapDensityVolume, &AVolumetricLightmapDensityVolume::StaticClass, TEXT("/Script/Engine"), TEXT("AVolumetricLightmapDensityVolume"), false, nullptr, nullptr, nullptr);

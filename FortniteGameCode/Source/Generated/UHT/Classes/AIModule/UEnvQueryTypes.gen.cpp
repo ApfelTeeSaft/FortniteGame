@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UEnvQueryTypes()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEnvQueryTypes, 3481422839u)
+// Original dynamic initializer: RVA 0x001BD940 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEnvQueryTypes> AutoInitializeUEnvQueryTypes(TEXT("UEnvQueryTypes"), sizeof(UEnvQueryTypes), 3481422839u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D2E730 (end 0x01D2E7C7)
 // Original VA: 0x0000000141D2E730 | File offset: 0x01D2DD30
 // Recovery: confirmed (IMPLEMENT_CLASS(UEnvQueryTypes, 3481422839u); reached from UEnvQueryTypes::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UEnvQueryTypes::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEnvQueryTypes();
+// Original dynamic initializer: RVA 0x001BF320
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEnvQueryTypes(Z_Construct_UClass_UEnvQueryTypes, &UEnvQueryTypes::StaticClass, TEXT("/Script/AIModule"), TEXT("UEnvQueryTypes"), false, nullptr, nullptr, nullptr);

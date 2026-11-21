@@ -7,6 +7,9 @@
 void UMediaPlayer::StaticRegisterNativesUMediaPlayer()
 {
 }
+// IMPLEMENT_CLASS(UMediaPlayer, 3753575513u)
+// Original dynamic initializer: RVA 0x00225F10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMediaPlayer> AutoInitializeUMediaPlayer(TEXT("UMediaPlayer"), sizeof(UMediaPlayer), 3753575513u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE080 (end 0x025DE117)
 // Original VA: 0x00000001425DE080 | File offset: 0x025DD680
 // Recovery: confirmed (IMPLEMENT_CLASS(UMediaPlayer, 3753575513u); reached from UMediaPlayer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UMediaPlayer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMediaPlayer();
+// Original dynamic initializer: RVA 0x00226310
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMediaPlayer(Z_Construct_UClass_UMediaPlayer, &UMediaPlayer::StaticClass, TEXT("/Script/MediaAssets"), TEXT("UMediaPlayer"), false, nullptr, nullptr, nullptr);

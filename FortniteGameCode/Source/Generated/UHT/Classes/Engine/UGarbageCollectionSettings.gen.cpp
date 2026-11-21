@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UGarbageCollectionSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UGarbageCollectionSettings, 3831361334u)
+// Original dynamic initializer: RVA 0x001F70A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGarbageCollectionSettings> AutoInitializeUGarbageCollectionSettings(TEXT("UGarbageCollectionSettings"), sizeof(UGarbageCollectionSettings), 3831361334u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F6810 (end 0x023F68B2)
 // Original VA: 0x00000001423F6810 | File offset: 0x023F5E10
 // Recovery: confirmed (IMPLEMENT_CLASS(UGarbageCollectionSettings, 3831361334u); reached from UGarbageCollectionSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UGarbageCollectionSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGarbageCollectionSettings();
+// Original dynamic initializer: RVA 0x001F8160
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGarbageCollectionSettings(Z_Construct_UClass_UGarbageCollectionSettings, &UGarbageCollectionSettings::StaticClass, TEXT("/Script/Engine"), TEXT("UGarbageCollectionSettings"), false, nullptr, nullptr, nullptr);

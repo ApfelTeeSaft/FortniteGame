@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFloatBinding, 1611907968u)
+// Original dynamic initializer: RVA 0x001B26C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFloatBinding> AutoInitializeUFloatBinding(TEXT("UFloatBinding"), sizeof(UFloatBinding), 1611907968u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEB600 (end 0x01BEB6A2)
 // Original VA: 0x0000000141BEB600 | File offset: 0x01BEAC00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFloatBinding, 1611907968u); reached from UFloatBinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFloatBinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFloatBinding();
+// Original dynamic initializer: RVA 0x001B2DD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFloatBinding(Z_Construct_UClass_UFloatBinding, &UFloatBinding::StaticClass, TEXT("/Script/UMG"), TEXT("UFloatBinding"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(USubmixEffectReverbPreset, 1045821916u)
+// Original dynamic initializer: RVA 0x002246A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USubmixEffectReverbPreset> AutoInitializeUSubmixEffectReverbPreset(TEXT("USubmixEffectReverbPreset"), sizeof(USubmixEffectReverbPreset), 1045821916u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025598C0 (end 0x02559962)
 // Original VA: 0x00000001425598C0 | File offset: 0x02558EC0
 // Recovery: confirmed (IMPLEMENT_CLASS(USubmixEffectReverbPreset, 1045821916u); reached from USubmixEffectReverbPreset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* USubmixEffectReverbPreset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USubmixEffectReverbPreset();
+// Original dynamic initializer: RVA 0x00224B50
+static FCompiledInDefer Z_CompiledInDefer_UClass_USubmixEffectReverbPreset(Z_Construct_UClass_USubmixEffectReverbPreset, &USubmixEffectReverbPreset::StaticClass, TEXT("/Script/AudioMixer"), TEXT("USubmixEffectReverbPreset"), false, nullptr, nullptr, nullptr);

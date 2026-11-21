@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UVectorFieldStatic()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UVectorFieldStatic, 3303203334u)
+// Original dynamic initializer: RVA 0x002219E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UVectorFieldStatic> AutoInitializeUVectorFieldStatic(TEXT("UVectorFieldStatic"), sizeof(UVectorFieldStatic), 3303203334u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EFC40 (end 0x024EFCE2)
 // Original VA: 0x00000001424EFC40 | File offset: 0x024EF240
 // Recovery: confirmed (IMPLEMENT_CLASS(UVectorFieldStatic, 3303203334u); reached from UVectorFieldStatic::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UVectorFieldStatic::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UVectorFieldStatic();
+// Original dynamic initializer: RVA 0x002224F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UVectorFieldStatic(Z_Construct_UClass_UVectorFieldStatic, &UVectorFieldStatic::StaticClass, TEXT("/Script/Engine"), TEXT("UVectorFieldStatic"), false, nullptr, nullptr, nullptr);

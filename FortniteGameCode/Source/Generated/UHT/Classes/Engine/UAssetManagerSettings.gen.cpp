@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAssetManagerSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAssetManagerSettings, 3605054208u)
+// Original dynamic initializer: RVA 0x001F1A30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAssetManagerSettings> AutoInitializeUAssetManagerSettings(TEXT("UAssetManagerSettings"), sizeof(UAssetManagerSettings), 3605054208u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D9470 (end 0x023D9512)
 // Original VA: 0x00000001423D9470 | File offset: 0x023D8A70
 // Recovery: confirmed (IMPLEMENT_CLASS(UAssetManagerSettings, 3605054208u); reached from UAssetManagerSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAssetManagerSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAssetManagerSettings();
+// Original dynamic initializer: RVA 0x001F2FD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAssetManagerSettings(Z_Construct_UClass_UAssetManagerSettings, &UAssetManagerSettings::StaticClass, TEXT("/Script/Engine"), TEXT("UAssetManagerSettings"), false, nullptr, nullptr, nullptr);

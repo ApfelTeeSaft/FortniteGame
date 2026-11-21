@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortMcpProfileAthena, 3801385035u)
+// Original dynamic initializer: RVA 0x000FF110 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMcpProfileAthena> AutoInitializeUFortMcpProfileAthena(TEXT("UFortMcpProfileAthena"), sizeof(UFortMcpProfileAthena), 3801385035u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0102CFF0 (end 0x0102D092)
 // Original VA: 0x000000014102CFF0 | File offset: 0x0102C5F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMcpProfileAthena, 3801385035u); reached from UFortMcpProfileAthena::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortMcpProfileAthena::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMcpProfileAthena();
+// Original dynamic initializer: RVA 0x00100E30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMcpProfileAthena(Z_Construct_UClass_UFortMcpProfileAthena, &UFortMcpProfileAthena::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMcpProfileAthena"), false, nullptr, nullptr, nullptr);

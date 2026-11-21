@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UWeaponHitNotifyAudioBank()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UWeaponHitNotifyAudioBank, 4192613785u)
+// Original dynamic initializer: RVA 0x00122550 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWeaponHitNotifyAudioBank> AutoInitializeUWeaponHitNotifyAudioBank(TEXT("UWeaponHitNotifyAudioBank"), sizeof(UWeaponHitNotifyAudioBank), 4192613785u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010F0350 (end 0x010F03F2)
 // Original VA: 0x00000001410F0350 | File offset: 0x010EF950
 // Recovery: confirmed (IMPLEMENT_CLASS(UWeaponHitNotifyAudioBank, 4192613785u); reached from UWeaponHitNotifyAudioBank::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UWeaponHitNotifyAudioBank::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWeaponHitNotifyAudioBank();
+// Original dynamic initializer: RVA 0x00123860
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWeaponHitNotifyAudioBank(Z_Construct_UClass_UWeaponHitNotifyAudioBank, &UWeaponHitNotifyAudioBank::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UWeaponHitNotifyAudioBank"), false, nullptr, nullptr, nullptr);

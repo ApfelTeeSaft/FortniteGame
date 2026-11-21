@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortHoverDroneCameraComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortHoverDroneCameraComponent, 2716679919u)
+// Original dynamic initializer: RVA 0x000FB0A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHoverDroneCameraComponent> AutoInitializeUFortHoverDroneCameraComponent(TEXT("UFortHoverDroneCameraComponent"), sizeof(UFortHoverDroneCameraComponent), 2716679919u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01003770 (end 0x01003812)
 // Original VA: 0x0000000141003770 | File offset: 0x01002D70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHoverDroneCameraComponent, 2716679919u); reached from UFortHoverDroneCameraComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortHoverDroneCameraComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHoverDroneCameraComponent();
+// Original dynamic initializer: RVA 0x000FBF70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHoverDroneCameraComponent(Z_Construct_UClass_UFortHoverDroneCameraComponent, &UFortHoverDroneCameraComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortHoverDroneCameraComponent"), false, nullptr, nullptr, nullptr);

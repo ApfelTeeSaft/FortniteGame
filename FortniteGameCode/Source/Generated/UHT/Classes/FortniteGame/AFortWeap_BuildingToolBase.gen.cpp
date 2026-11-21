@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortWeap_BuildingToolBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortWeap_BuildingToolBase, 1645140903u)
+// Original dynamic initializer: RVA 0x0011BF10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortWeap_BuildingToolBase> AutoInitializeAFortWeap_BuildingToolBase(TEXT("AFortWeap_BuildingToolBase"), sizeof(AFortWeap_BuildingToolBase), 1645140903u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D2BD0 (end 0x010D2C72)
 // Original VA: 0x00000001410D2BD0 | File offset: 0x010D21D0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortWeap_BuildingToolBase, 1645140903u); reached from AFortWeap_BuildingToolBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortWeap_BuildingToolBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortWeap_BuildingToolBase();
+// Original dynamic initializer: RVA 0x0011CF60
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortWeap_BuildingToolBase(Z_Construct_UClass_AFortWeap_BuildingToolBase, &AFortWeap_BuildingToolBase::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortWeap_BuildingToolBase"), false, nullptr, nullptr, nullptr);

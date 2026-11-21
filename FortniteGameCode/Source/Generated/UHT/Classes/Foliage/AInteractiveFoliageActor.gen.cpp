@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AInteractiveFoliageActor, 1857503968u)
+// Original dynamic initializer: RVA 0x001A0840 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AInteractiveFoliageActor> AutoInitializeAInteractiveFoliageActor(TEXT("AInteractiveFoliageActor"), sizeof(AInteractiveFoliageActor), 1857503968u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A47D30 (end 0x01A47DD2)
 // Original VA: 0x0000000141A47D30 | File offset: 0x01A47330
 // Recovery: confirmed (IMPLEMENT_CLASS(AInteractiveFoliageActor, 1857503968u); reached from AInteractiveFoliageActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AInteractiveFoliageActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AInteractiveFoliageActor();
+// Original dynamic initializer: RVA 0x001A0E20
+static FCompiledInDefer Z_CompiledInDefer_UClass_AInteractiveFoliageActor(Z_Construct_UClass_AInteractiveFoliageActor, &AInteractiveFoliageActor::StaticClass, TEXT("/Script/Foliage"), TEXT("AInteractiveFoliageActor"), false, nullptr, nullptr, nullptr);

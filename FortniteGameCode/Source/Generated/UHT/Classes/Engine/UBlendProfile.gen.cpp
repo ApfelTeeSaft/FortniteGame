@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBlendProfile()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBlendProfile, 3336487163u)
+// Original dynamic initializer: RVA 0x001F3370 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBlendProfile> AutoInitializeUBlendProfile(TEXT("UBlendProfile"), sizeof(UBlendProfile), 3336487163u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E1520 (end 0x023E15C2)
 // Original VA: 0x00000001423E1520 | File offset: 0x023E0B20
 // Recovery: confirmed (IMPLEMENT_CLASS(UBlendProfile, 3336487163u); reached from UBlendProfile::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBlendProfile::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBlendProfile();
+// Original dynamic initializer: RVA 0x001F4770
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBlendProfile(Z_Construct_UClass_UBlendProfile, &UBlendProfile::StaticClass, TEXT("/Script/Engine"), TEXT("UBlendProfile"), false, nullptr, nullptr, nullptr);

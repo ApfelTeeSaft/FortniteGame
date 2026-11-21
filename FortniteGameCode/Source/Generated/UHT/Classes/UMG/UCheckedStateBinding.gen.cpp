@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCheckedStateBinding, 677911885u)
+// Original dynamic initializer: RVA 0x001B1D80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCheckedStateBinding> AutoInitializeUCheckedStateBinding(TEXT("UCheckedStateBinding"), sizeof(UCheckedStateBinding), 677911885u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5120 (end 0x01BE51C2)
 // Original VA: 0x0000000141BE5120 | File offset: 0x01BE4720
 // Recovery: confirmed (IMPLEMENT_CLASS(UCheckedStateBinding, 677911885u); reached from UCheckedStateBinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCheckedStateBinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCheckedStateBinding();
+// Original dynamic initializer: RVA 0x001B2460
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCheckedStateBinding(Z_Construct_UClass_UCheckedStateBinding, &UCheckedStateBinding::StaticClass, TEXT("/Script/UMG"), TEXT("UCheckedStateBinding"), false, nullptr, nullptr, nullptr);

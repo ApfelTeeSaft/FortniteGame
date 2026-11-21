@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortPerkWidget, 490450485u)
+// Original dynamic initializer: RVA 0x00255B80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPerkWidget> AutoInitializeUFortPerkWidget(TEXT("UFortPerkWidget"), sizeof(UFortPerkWidget), 490450485u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E4FB0 (end 0x028E5052)
 // Original VA: 0x00000001428E4FB0 | File offset: 0x028E45B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPerkWidget, 490450485u); reached from UFortPerkWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortPerkWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPerkWidget();
+// Original dynamic initializer: RVA 0x00257E40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPerkWidget(Z_Construct_UClass_UFortPerkWidget, &UFortPerkWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortPerkWidget"), false, nullptr, nullptr, nullptr);

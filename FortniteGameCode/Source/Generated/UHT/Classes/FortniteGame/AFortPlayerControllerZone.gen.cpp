@@ -7,6 +7,9 @@
 void AFortPlayerControllerZone::StaticRegisterNativesAFortPlayerControllerZone()
 {
 }
+// IMPLEMENT_CLASS(AFortPlayerControllerZone, 3700597210u)
+// Original dynamic initializer: RVA 0x0010C460 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPlayerControllerZone> AutoInitializeAFortPlayerControllerZone(TEXT("AFortPlayerControllerZone"), sizeof(AFortPlayerControllerZone), 3700597210u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107DEB0 (end 0x0107DF52)
 // Original VA: 0x000000014107DEB0 | File offset: 0x0107D4B0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPlayerControllerZone, 3700597210u); reached from AFortPlayerControllerZone::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortPlayerControllerZone::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPlayerControllerZone();
+// Original dynamic initializer: RVA 0x0010D150
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPlayerControllerZone(Z_Construct_UClass_AFortPlayerControllerZone, &AFortPlayerControllerZone::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPlayerControllerZone"), false, nullptr, nullptr, nullptr);

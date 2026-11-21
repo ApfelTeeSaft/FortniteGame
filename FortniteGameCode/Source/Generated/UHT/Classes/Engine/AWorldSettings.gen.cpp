@@ -7,6 +7,9 @@
 void AWorldSettings::StaticRegisterNativesAWorldSettings()
 {
 }
+// IMPLEMENT_CLASS(AWorldSettings, 1315617746u)
+// Original dynamic initializer: RVA 0x00221940 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AWorldSettings> AutoInitializeAWorldSettings(TEXT("AWorldSettings"), sizeof(AWorldSettings), 1315617746u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EF8E0 (end 0x024EF982)
 // Original VA: 0x00000001424EF8E0 | File offset: 0x024EEEE0
 // Recovery: confirmed (IMPLEMENT_CLASS(AWorldSettings, 1315617746u); reached from AWorldSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AWorldSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AWorldSettings();
+// Original dynamic initializer: RVA 0x002223B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AWorldSettings(Z_Construct_UClass_AWorldSettings, &AWorldSettings::StaticClass, TEXT("/Script/Engine"), TEXT("AWorldSettings"), false, nullptr, nullptr, nullptr);

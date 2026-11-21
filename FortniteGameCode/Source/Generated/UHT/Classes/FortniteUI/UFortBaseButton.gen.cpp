@@ -7,6 +7,9 @@
 void UFortBaseButton::StaticRegisterNativesUFortBaseButton()
 {
 }
+// IMPLEMENT_CLASS(UFortBaseButton, 671997873u)
+// Original dynamic initializer: RVA 0x00240260 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBaseButton> AutoInitializeUFortBaseButton(TEXT("UFortBaseButton"), sizeof(UFortBaseButton), 671997873u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028928B0 (end 0x02892952)
 // Original VA: 0x00000001428928B0 | File offset: 0x02891EB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBaseButton, 671997873u); reached from UFortBaseButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortBaseButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBaseButton();
+// Original dynamic initializer: RVA 0x00241E10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBaseButton(Z_Construct_UClass_UFortBaseButton, &UFortBaseButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortBaseButton"), false, nullptr, nullptr, nullptr);

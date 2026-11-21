@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UPlayMontageCallbackProxy, 3209176676u)
+// Original dynamic initializer: RVA 0x001A8A20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPlayMontageCallbackProxy> AutoInitializeUPlayMontageCallbackProxy(TEXT("UPlayMontageCallbackProxy"), sizeof(UPlayMontageCallbackProxy), 3209176676u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0A6A0 (end 0x01B0A737)
 // Original VA: 0x0000000141B0A6A0 | File offset: 0x01B09CA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UPlayMontageCallbackProxy, 3209176676u); reached from UPlayMontageCallbackProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UPlayMontageCallbackProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPlayMontageCallbackProxy();
+// Original dynamic initializer: RVA 0x001AC1A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPlayMontageCallbackProxy(Z_Construct_UClass_UPlayMontageCallbackProxy, &UPlayMontageCallbackProxy::StaticClass, TEXT("/Script/AnimGraphRuntime"), TEXT("UPlayMontageCallbackProxy"), false, nullptr, nullptr, nullptr);

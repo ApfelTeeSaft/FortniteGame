@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortNodeCanvasEntityInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNodeCanvasEntityInterface, 2810089504u)
+// Original dynamic initializer: RVA 0x00253B50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNodeCanvasEntityInterface> AutoInitializeUFortNodeCanvasEntityInterface(TEXT("UFortNodeCanvasEntityInterface"), sizeof(UFortNodeCanvasEntityInterface), 2810089504u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DD610 (end 0x028DD6B2)
 // Original VA: 0x00000001428DD610 | File offset: 0x028DCC10
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNodeCanvasEntityInterface, 2810089504u); reached from UFortNodeCanvasEntityInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortNodeCanvasEntityInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNodeCanvasEntityInterface();
+// Original dynamic initializer: RVA 0x00255780
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNodeCanvasEntityInterface(Z_Construct_UClass_UFortNodeCanvasEntityInterface, &UFortNodeCanvasEntityInterface::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortNodeCanvasEntityInterface"), false, nullptr, nullptr, nullptr);

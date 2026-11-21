@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ULandscapeMaterialInstanceConstant()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULandscapeMaterialInstanceConstant, 843970122u)
+// Original dynamic initializer: RVA 0x001A2C30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULandscapeMaterialInstanceConstant> AutoInitializeULandscapeMaterialInstanceConstant(TEXT("ULandscapeMaterialInstanceConstant"), sizeof(ULandscapeMaterialInstanceConstant), 843970122u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A74040 (end 0x01A740E2)
 // Original VA: 0x0000000141A74040 | File offset: 0x01A73640
 // Recovery: confirmed (IMPLEMENT_CLASS(ULandscapeMaterialInstanceConstant, 843970122u); reached from ULandscapeMaterialInstanceConstant::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ULandscapeMaterialInstanceConstant::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULandscapeMaterialInstanceConstant();
+// Original dynamic initializer: RVA 0x001A4160
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULandscapeMaterialInstanceConstant(Z_Construct_UClass_ULandscapeMaterialInstanceConstant, &ULandscapeMaterialInstanceConstant::StaticClass, TEXT("/Script/Landscape"), TEXT("ULandscapeMaterialInstanceConstant"), false, nullptr, nullptr, nullptr);

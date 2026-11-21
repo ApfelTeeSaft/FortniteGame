@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UHierarchicalLODSetup()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UHierarchicalLODSetup, 1646902540u)
+// Original dynamic initializer: RVA 0x00221960 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UHierarchicalLODSetup> AutoInitializeUHierarchicalLODSetup(TEXT("UHierarchicalLODSetup"), sizeof(UHierarchicalLODSetup), 1646902540u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EF990 (end 0x024EFA27)
 // Original VA: 0x00000001424EF990 | File offset: 0x024EEF90
 // Recovery: confirmed (IMPLEMENT_CLASS(UHierarchicalLODSetup, 1646902540u); reached from UHierarchicalLODSetup::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UHierarchicalLODSetup::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UHierarchicalLODSetup();
+// Original dynamic initializer: RVA 0x002223F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UHierarchicalLODSetup(Z_Construct_UClass_UHierarchicalLODSetup, &UHierarchicalLODSetup::StaticClass, TEXT("/Script/Engine"), TEXT("UHierarchicalLODSetup"), false, nullptr, nullptr, nullptr);

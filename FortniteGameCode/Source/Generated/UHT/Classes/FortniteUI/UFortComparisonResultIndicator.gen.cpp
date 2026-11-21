@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortComparisonResultIndicator, 2255105570u)
+// Original dynamic initializer: RVA 0x002426B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortComparisonResultIndicator> AutoInitializeUFortComparisonResultIndicator(TEXT("UFortComparisonResultIndicator"), sizeof(UFortComparisonResultIndicator), 2255105570u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02899C30 (end 0x02899CD2)
 // Original VA: 0x0000000142899C30 | File offset: 0x02899230
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortComparisonResultIndicator, 2255105570u); reached from UFortComparisonResultIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortComparisonResultIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortComparisonResultIndicator();
+// Original dynamic initializer: RVA 0x00244460
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortComparisonResultIndicator(Z_Construct_UClass_UFortComparisonResultIndicator, &UFortComparisonResultIndicator::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortComparisonResultIndicator"), false, nullptr, nullptr, nullptr);

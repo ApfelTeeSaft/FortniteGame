@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UNetworkPredictionInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNetworkPredictionInterface, 1216154414u)
+// Original dynamic initializer: RVA 0x0020ED70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNetworkPredictionInterface> AutoInitializeUNetworkPredictionInterface(TEXT("UNetworkPredictionInterface"), sizeof(UNetworkPredictionInterface), 1216154414u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024936A0 (end 0x02493742)
 // Original VA: 0x00000001424936A0 | File offset: 0x02492CA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UNetworkPredictionInterface, 1216154414u); reached from UNetworkPredictionInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UNetworkPredictionInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNetworkPredictionInterface();
+// Original dynamic initializer: RVA 0x0020FFB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNetworkPredictionInterface(Z_Construct_UClass_UNetworkPredictionInterface, &UNetworkPredictionInterface::StaticClass, TEXT("/Script/Engine"), TEXT("UNetworkPredictionInterface"), false, nullptr, nullptr, nullptr);

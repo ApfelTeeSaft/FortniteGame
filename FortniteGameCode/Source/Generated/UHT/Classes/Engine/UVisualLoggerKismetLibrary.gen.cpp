@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UVisualLoggerKismetLibrary, 1612184663u)
+// Original dynamic initializer: RVA 0x00221A40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UVisualLoggerKismetLibrary> AutoInitializeUVisualLoggerKismetLibrary(TEXT("UVisualLoggerKismetLibrary"), sizeof(UVisualLoggerKismetLibrary), 1612184663u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EFE40 (end 0x024EFEE2)
 // Original VA: 0x00000001424EFE40 | File offset: 0x024EF440
 // Recovery: confirmed (IMPLEMENT_CLASS(UVisualLoggerKismetLibrary, 1612184663u); reached from UVisualLoggerKismetLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UVisualLoggerKismetLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UVisualLoggerKismetLibrary();
+// Original dynamic initializer: RVA 0x002225B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UVisualLoggerKismetLibrary(Z_Construct_UClass_UVisualLoggerKismetLibrary, &UVisualLoggerKismetLibrary::StaticClass, TEXT("/Script/Engine"), TEXT("UVisualLoggerKismetLibrary"), false, nullptr, nullptr, nullptr);

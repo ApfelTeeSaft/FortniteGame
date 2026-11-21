@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortTabButtonInterface, 3773848177u)
+// Original dynamic initializer: RVA 0x0025E430 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTabButtonInterface> AutoInitializeUFortTabButtonInterface(TEXT("UFortTabButtonInterface"), sizeof(UFortTabButtonInterface), 3773848177u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02903110 (end 0x029031B2)
 // Original VA: 0x0000000142903110 | File offset: 0x02902710
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTabButtonInterface, 3773848177u); reached from UFortTabButtonInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortTabButtonInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTabButtonInterface();
+// Original dynamic initializer: RVA 0x00260610
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTabButtonInterface(Z_Construct_UClass_UFortTabButtonInterface, &UFortTabButtonInterface::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTabButtonInterface"), false, nullptr, nullptr, nullptr);

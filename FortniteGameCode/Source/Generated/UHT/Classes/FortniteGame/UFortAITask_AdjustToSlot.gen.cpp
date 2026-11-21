@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAITask_AdjustToSlot()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAITask_AdjustToSlot, 416969096u)
+// Original dynamic initializer: RVA 0x000E4960 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAITask_AdjustToSlot> AutoInitializeUFortAITask_AdjustToSlot(TEXT("UFortAITask_AdjustToSlot"), sizeof(UFortAITask_AdjustToSlot), 416969096u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F974C0 (end 0x00F97562)
 // Original VA: 0x0000000140F974C0 | File offset: 0x00F96AC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAITask_AdjustToSlot, 416969096u); reached from UFortAITask_AdjustToSlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAITask_AdjustToSlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAITask_AdjustToSlot();
+// Original dynamic initializer: RVA 0x000E61F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAITask_AdjustToSlot(Z_Construct_UClass_UFortAITask_AdjustToSlot, &UFortAITask_AdjustToSlot::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAITask_AdjustToSlot"), false, nullptr, nullptr, nullptr);

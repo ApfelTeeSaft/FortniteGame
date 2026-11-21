@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ABlockingVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABlockingVolume, 1710148540u)
+// Original dynamic initializer: RVA 0x001F3310 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABlockingVolume> AutoInitializeABlockingVolume(TEXT("ABlockingVolume"), sizeof(ABlockingVolume), 1710148540u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E1320 (end 0x023E13C2)
 // Original VA: 0x00000001423E1320 | File offset: 0x023E0920
 // Recovery: confirmed (IMPLEMENT_CLASS(ABlockingVolume, 1710148540u); reached from ABlockingVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ABlockingVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABlockingVolume();
+// Original dynamic initializer: RVA 0x001F46B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABlockingVolume(Z_Construct_UClass_ABlockingVolume, &ABlockingVolume::StaticClass, TEXT("/Script/Engine"), TEXT("ABlockingVolume"), false, nullptr, nullptr, nullptr);

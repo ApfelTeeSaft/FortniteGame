@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAnimCustomInstance()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnimCustomInstance, 3835139861u)
+// Original dynamic initializer: RVA 0x001A8980 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimCustomInstance> AutoInitializeUAnimCustomInstance(TEXT("UAnimCustomInstance"), sizeof(UAnimCustomInstance), 3835139861u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0A330 (end 0x01B0A3D2)
 // Original VA: 0x0000000141B0A330 | File offset: 0x01B09930
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimCustomInstance, 3835139861u); reached from UAnimCustomInstance::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAnimCustomInstance::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimCustomInstance();
+// Original dynamic initializer: RVA 0x001AC060
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimCustomInstance(Z_Construct_UClass_UAnimCustomInstance, &UAnimCustomInstance::StaticClass, TEXT("/Script/AnimGraphRuntime"), TEXT("UAnimCustomInstance"), false, nullptr, nullptr, nullptr);

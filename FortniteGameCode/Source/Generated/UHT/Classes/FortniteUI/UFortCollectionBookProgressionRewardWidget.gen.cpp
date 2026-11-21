@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortCollectionBookProgressionRewardWidget, 1580303087u)
+// Original dynamic initializer: RVA 0x002404C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCollectionBookProgressionRewardWidget> AutoInitializeUFortCollectionBookProgressionRewardWidget(TEXT("UFortCollectionBookProgressionRewardWidget"), sizeof(UFortCollectionBookProgressionRewardWidget), 1580303087u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028935A0 (end 0x02893642)
 // Original VA: 0x00000001428935A0 | File offset: 0x02892BA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCollectionBookProgressionRewardWidget, 1580303087u); reached from UFortCollectionBookProgressionRewardWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortCollectionBookProgressionRewardWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCollectionBookProgressionRewardWidget();
+// Original dynamic initializer: RVA 0x002422D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCollectionBookProgressionRewardWidget(Z_Construct_UClass_UFortCollectionBookProgressionRewardWidget, &UFortCollectionBookProgressionRewardWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCollectionBookProgressionRewardWidget"), false, nullptr, nullptr, nullptr);

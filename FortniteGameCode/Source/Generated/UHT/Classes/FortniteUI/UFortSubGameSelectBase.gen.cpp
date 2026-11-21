@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSubGameSelectBase, 2321752938u)
+// Original dynamic initializer: RVA 0x0025E350 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSubGameSelectBase> AutoInitializeUFortSubGameSelectBase(TEXT("UFortSubGameSelectBase"), sizeof(UFortSubGameSelectBase), 2321752938u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02902C40 (end 0x02902CE2)
 // Original VA: 0x0000000142902C40 | File offset: 0x02902240
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSubGameSelectBase, 2321752938u); reached from UFortSubGameSelectBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSubGameSelectBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSubGameSelectBase();
+// Original dynamic initializer: RVA 0x00260450
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSubGameSelectBase(Z_Construct_UClass_UFortSubGameSelectBase, &UFortSubGameSelectBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSubGameSelectBase"), false, nullptr, nullptr, nullptr);

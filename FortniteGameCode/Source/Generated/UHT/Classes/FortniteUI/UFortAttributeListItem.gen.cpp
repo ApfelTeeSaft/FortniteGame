@@ -7,6 +7,9 @@
 void UFortAttributeListItem::StaticRegisterNativesUFortAttributeListItem()
 {
 }
+// IMPLEMENT_CLASS(UFortAttributeListItem, 2830111273u)
+// Original dynamic initializer: RVA 0x0023E300 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAttributeListItem> AutoInitializeUFortAttributeListItem(TEXT("UFortAttributeListItem"), sizeof(UFortAttributeListItem), 2830111273u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288BA50 (end 0x0288BAF2)
 // Original VA: 0x000000014288BA50 | File offset: 0x0288B050
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAttributeListItem, 2830111273u); reached from UFortAttributeListItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortAttributeListItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAttributeListItem();
+// Original dynamic initializer: RVA 0x0023FF20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAttributeListItem(Z_Construct_UClass_UFortAttributeListItem, &UFortAttributeListItem::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAttributeListItem"), false, nullptr, nullptr, nullptr);

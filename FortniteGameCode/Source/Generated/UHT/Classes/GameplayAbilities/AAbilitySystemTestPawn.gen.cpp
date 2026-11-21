@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_AAbilitySystemTestPawn()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AAbilitySystemTestPawn, 631099021u)
+// Original dynamic initializer: RVA 0x0009D300 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AAbilitySystemTestPawn> AutoInitializeAAbilitySystemTestPawn(TEXT("AAbilitySystemTestPawn"), sizeof(AAbilitySystemTestPawn), 631099021u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005452E0 (end 0x00545382)
 // Original VA: 0x00000001405452E0 | File offset: 0x005448E0
 // Recovery: confirmed (IMPLEMENT_CLASS(AAbilitySystemTestPawn, 631099021u); reached from AAbilitySystemTestPawn::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* AAbilitySystemTestPawn::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AAbilitySystemTestPawn();
+// Original dynamic initializer: RVA 0x0009D770
+static FCompiledInDefer Z_CompiledInDefer_UClass_AAbilitySystemTestPawn(Z_Construct_UClass_AAbilitySystemTestPawn, &AAbilitySystemTestPawn::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("AAbilitySystemTestPawn"), false, nullptr, nullptr, nullptr);

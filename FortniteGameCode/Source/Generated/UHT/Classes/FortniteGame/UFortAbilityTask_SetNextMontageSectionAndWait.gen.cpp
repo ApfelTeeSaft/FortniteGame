@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAbilityTask_SetNextMontageSectionAndWait, 1787984083u)
+// Original dynamic initializer: RVA 0x000DFE00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAbilityTask_SetNextMontageSectionAndWait> AutoInitializeUFortAbilityTask_SetNextMontageSectionAndWait(TEXT("UFortAbilityTask_SetNextMontageSectionAndWait"), sizeof(UFortAbilityTask_SetNextMontageSectionAndWait), 1787984083u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F80740 (end 0x00F807E2)
 // Original VA: 0x0000000140F80740 | File offset: 0x00F7FD40
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAbilityTask_SetNextMontageSectionAndWait, 1787984083u); reached from UFortAbilityTask_SetNextMontageSectionAndWait::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAbilityTask_SetNextMontageSectionAndWait::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait();
+// Original dynamic initializer: RVA 0x000E09E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAbilityTask_SetNextMontageSectionAndWait(Z_Construct_UClass_UFortAbilityTask_SetNextMontageSectionAndWait, &UFortAbilityTask_SetNextMontageSectionAndWait::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAbilityTask_SetNextMontageSectionAndWait"), false, nullptr, nullptr, nullptr);

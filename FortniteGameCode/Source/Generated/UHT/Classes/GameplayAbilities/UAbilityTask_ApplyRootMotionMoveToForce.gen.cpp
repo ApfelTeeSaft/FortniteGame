@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAbilityTask_ApplyRootMotionMoveToForce, 2182014016u)
+// Original dynamic initializer: RVA 0x0009D420 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_ApplyRootMotionMoveToForce> AutoInitializeUAbilityTask_ApplyRootMotionMoveToForce(TEXT("UAbilityTask_ApplyRootMotionMoveToForce"), sizeof(UAbilityTask_ApplyRootMotionMoveToForce), 2182014016u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00545900 (end 0x005459A2)
 // Original VA: 0x0000000140545900 | File offset: 0x00544F00
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_ApplyRootMotionMoveToForce, 2182014016u); reached from UAbilityTask_ApplyRootMotionMoveToForce::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAbilityTask_ApplyRootMotionMoveToForce::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce();
+// Original dynamic initializer: RVA 0x0009D9B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_ApplyRootMotionMoveToForce(Z_Construct_UClass_UAbilityTask_ApplyRootMotionMoveToForce, &UAbilityTask_ApplyRootMotionMoveToForce::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_ApplyRootMotionMoveToForce"), false, nullptr, nullptr, nullptr);

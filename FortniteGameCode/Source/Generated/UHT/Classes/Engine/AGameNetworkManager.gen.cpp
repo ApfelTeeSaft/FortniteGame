@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AGameNetworkManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AGameNetworkManager, 103365607u)
+// Original dynamic initializer: RVA 0x001FF320 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AGameNetworkManager> AutoInitializeAGameNetworkManager(TEXT("AGameNetworkManager"), sizeof(AGameNetworkManager), 103365607u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240E670 (end 0x0240E712)
 // Original VA: 0x000000014240E670 | File offset: 0x0240DC70
 // Recovery: confirmed (IMPLEMENT_CLASS(AGameNetworkManager, 103365607u); reached from AGameNetworkManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AGameNetworkManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AGameNetworkManager();
+// Original dynamic initializer: RVA 0x001FFD30
+static FCompiledInDefer Z_CompiledInDefer_UClass_AGameNetworkManager(Z_Construct_UClass_AGameNetworkManager, &AGameNetworkManager::StaticClass, TEXT("/Script/Engine"), TEXT("AGameNetworkManager"), false, nullptr, nullptr, nullptr);

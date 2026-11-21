@@ -7,6 +7,9 @@
 void UFortSharedMissionLists::StaticRegisterNativesUFortSharedMissionLists()
 {
 }
+// IMPLEMENT_CLASS(UFortSharedMissionLists, 4036825966u)
+// Original dynamic initializer: RVA 0x00112BF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSharedMissionLists> AutoInitializeUFortSharedMissionLists(TEXT("UFortSharedMissionLists"), sizeof(UFortSharedMissionLists), 4036825966u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A38E0 (end 0x010A3977)
 // Original VA: 0x00000001410A38E0 | File offset: 0x010A2EE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSharedMissionLists, 4036825966u); reached from UFortSharedMissionLists::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSharedMissionLists::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSharedMissionLists();
+// Original dynamic initializer: RVA 0x00114330
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSharedMissionLists(Z_Construct_UClass_UFortSharedMissionLists, &UFortSharedMissionLists::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortSharedMissionLists"), false, nullptr, nullptr, nullptr);

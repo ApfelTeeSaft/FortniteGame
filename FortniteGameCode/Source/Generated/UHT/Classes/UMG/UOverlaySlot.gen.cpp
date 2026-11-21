@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UOverlaySlot, 3188129241u)
+// Original dynamic initializer: RVA 0x001B29A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UOverlaySlot> AutoInitializeUOverlaySlot(TEXT("UOverlaySlot"), sizeof(UOverlaySlot), 3188129241u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEC5D0 (end 0x01BEC672)
 // Original VA: 0x0000000141BEC5D0 | File offset: 0x01BEBBD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UOverlaySlot, 3188129241u); reached from UOverlaySlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UOverlaySlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UOverlaySlot();
+// Original dynamic initializer: RVA 0x001B3390
+static FCompiledInDefer Z_CompiledInDefer_UClass_UOverlaySlot(Z_Construct_UClass_UOverlaySlot, &UOverlaySlot::StaticClass, TEXT("/Script/UMG"), TEXT("UOverlaySlot"), false, nullptr, nullptr, nullptr);

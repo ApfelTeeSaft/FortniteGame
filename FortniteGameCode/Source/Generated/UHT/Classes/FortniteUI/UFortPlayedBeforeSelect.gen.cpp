@@ -7,6 +7,9 @@
 void UFortPlayedBeforeSelect::StaticRegisterNativesUFortPlayedBeforeSelect()
 {
 }
+// IMPLEMENT_CLASS(UFortPlayedBeforeSelect, 1544370267u)
+// Original dynamic initializer: RVA 0x00255C40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPlayedBeforeSelect> AutoInitializeUFortPlayedBeforeSelect(TEXT("UFortPlayedBeforeSelect"), sizeof(UFortPlayedBeforeSelect), 1544370267u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E53D0 (end 0x028E5472)
 // Original VA: 0x00000001428E53D0 | File offset: 0x028E49D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPlayedBeforeSelect, 1544370267u); reached from UFortPlayedBeforeSelect::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortPlayedBeforeSelect::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPlayedBeforeSelect();
+// Original dynamic initializer: RVA 0x00257FC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPlayedBeforeSelect(Z_Construct_UClass_UFortPlayedBeforeSelect, &UFortPlayedBeforeSelect::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortPlayedBeforeSelect"), false, nullptr, nullptr, nullptr);

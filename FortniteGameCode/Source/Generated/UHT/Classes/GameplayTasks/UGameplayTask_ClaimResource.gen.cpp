@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UGameplayTask_ClaimResource, 4250230436u)
+// Original dynamic initializer: RVA 0x001B7E90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayTask_ClaimResource> AutoInitializeUGameplayTask_ClaimResource(TEXT("UGameplayTask_ClaimResource"), sizeof(UGameplayTask_ClaimResource), 4250230436u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C9A5A0 (end 0x01C9A642)
 // Original VA: 0x0000000141C9A5A0 | File offset: 0x01C99BA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayTask_ClaimResource, 4250230436u); reached from UGameplayTask_ClaimResource::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UGameplayTask_ClaimResource::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayTask_ClaimResource();
+// Original dynamic initializer: RVA 0x001B8190
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayTask_ClaimResource(Z_Construct_UClass_UGameplayTask_ClaimResource, &UGameplayTask_ClaimResource::StaticClass, TEXT("/Script/GameplayTasks"), TEXT("UGameplayTask_ClaimResource"), false, nullptr, nullptr, nullptr);

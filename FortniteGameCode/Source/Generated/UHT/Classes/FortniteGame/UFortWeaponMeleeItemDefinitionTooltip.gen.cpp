@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortWeaponMeleeItemDefinitionTooltip, 3501513882u)
+// Original dynamic initializer: RVA 0x0011D3C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortWeaponMeleeItemDefinitionTooltip> AutoInitializeUFortWeaponMeleeItemDefinitionTooltip(TEXT("UFortWeaponMeleeItemDefinitionTooltip"), sizeof(UFortWeaponMeleeItemDefinitionTooltip), 3501513882u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8350 (end 0x010D83F2)
 // Original VA: 0x00000001410D8350 | File offset: 0x010D7950
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortWeaponMeleeItemDefinitionTooltip, 3501513882u); reached from UFortWeaponMeleeItemDefinitionTooltip::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortWeaponMeleeItemDefinitionTooltip::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortWeaponMeleeItemDefinitionTooltip();
+// Original dynamic initializer: RVA 0x0011D870
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortWeaponMeleeItemDefinitionTooltip(Z_Construct_UClass_UFortWeaponMeleeItemDefinitionTooltip, &UFortWeaponMeleeItemDefinitionTooltip::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortWeaponMeleeItemDefinitionTooltip"), false, nullptr, nullptr, nullptr);

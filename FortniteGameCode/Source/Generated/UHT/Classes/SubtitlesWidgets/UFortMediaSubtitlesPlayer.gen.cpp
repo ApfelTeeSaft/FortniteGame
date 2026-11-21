@@ -7,6 +7,9 @@
 void UFortMediaSubtitlesPlayer::StaticRegisterNativesUFortMediaSubtitlesPlayer()
 {
 }
+// IMPLEMENT_CLASS(UFortMediaSubtitlesPlayer, 2356009744u)
+// Original dynamic initializer: RVA 0x000AF5A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMediaSubtitlesPlayer> AutoInitializeUFortMediaSubtitlesPlayer(TEXT("UFortMediaSubtitlesPlayer"), sizeof(UFortMediaSubtitlesPlayer), 2356009744u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00781550 (end 0x007815E7)
 // Original VA: 0x0000000140781550 | File offset: 0x00780B50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMediaSubtitlesPlayer, 2356009744u); reached from UFortMediaSubtitlesPlayer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortMediaSubtitlesPlayer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMediaSubtitlesPlayer();
+// Original dynamic initializer: RVA 0x000AF5E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMediaSubtitlesPlayer(Z_Construct_UClass_UFortMediaSubtitlesPlayer, &UFortMediaSubtitlesPlayer::StaticClass, TEXT("/Script/SubtitlesWidgets"), TEXT("UFortMediaSubtitlesPlayer"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UIOSRuntimeSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UIOSRuntimeSettings, 765853907u)
+// Original dynamic initializer: RVA 0x00267850 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UIOSRuntimeSettings> AutoInitializeUIOSRuntimeSettings(TEXT("UIOSRuntimeSettings"), sizeof(UIOSRuntimeSettings), 765853907u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0291F670 (end 0x0291F707)
 // Original VA: 0x000000014291F670 | File offset: 0x0291EC70
 // Recovery: confirmed (IMPLEMENT_CLASS(UIOSRuntimeSettings, 765853907u); reached from UIOSRuntimeSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UIOSRuntimeSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UIOSRuntimeSettings();
+// Original dynamic initializer: RVA 0x00267AC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UIOSRuntimeSettings(Z_Construct_UClass_UIOSRuntimeSettings, &UIOSRuntimeSettings::StaticClass, TEXT("/Script/IOSRuntimeSettings"), TEXT("UIOSRuntimeSettings"), false, nullptr, nullptr, nullptr);

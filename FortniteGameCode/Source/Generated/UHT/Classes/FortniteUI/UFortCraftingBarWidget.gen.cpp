@@ -7,6 +7,9 @@
 void UFortCraftingBarWidget::StaticRegisterNativesUFortCraftingBarWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortCraftingBarWidget, 3978651790u)
+// Original dynamic initializer: RVA 0x002426D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCraftingBarWidget> AutoInitializeUFortCraftingBarWidget(TEXT("UFortCraftingBarWidget"), sizeof(UFortCraftingBarWidget), 3978651790u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02899CE0 (end 0x02899D82)
 // Original VA: 0x0000000142899CE0 | File offset: 0x028992E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCraftingBarWidget, 3978651790u); reached from UFortCraftingBarWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortCraftingBarWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCraftingBarWidget();
+// Original dynamic initializer: RVA 0x002444A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCraftingBarWidget(Z_Construct_UClass_UFortCraftingBarWidget, &UFortCraftingBarWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCraftingBarWidget"), false, nullptr, nullptr, nullptr);

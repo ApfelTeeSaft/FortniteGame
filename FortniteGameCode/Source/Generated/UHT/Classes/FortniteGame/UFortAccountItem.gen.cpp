@@ -7,6 +7,9 @@
 void UFortAccountItem::StaticRegisterNativesUFortAccountItem()
 {
 }
+// IMPLEMENT_CLASS(UFortAccountItem, 2179371204u)
+// Original dynamic initializer: RVA 0x000DFF00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAccountItem> AutoInitializeUFortAccountItem(TEXT("UFortAccountItem"), sizeof(UFortAccountItem), 2179371204u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F80CC0 (end 0x00F80D62)
 // Original VA: 0x0000000140F80CC0 | File offset: 0x00F802C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAccountItem, 2179371204u); reached from UFortAccountItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortAccountItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAccountItem();
+// Original dynamic initializer: RVA 0x000E0BE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAccountItem(Z_Construct_UClass_UFortAccountItem, &UFortAccountItem::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAccountItem"), false, nullptr, nullptr, nullptr);

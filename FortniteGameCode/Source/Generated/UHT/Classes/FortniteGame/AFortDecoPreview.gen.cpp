@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortDecoPreview, 998587598u)
+// Original dynamic initializer: RVA 0x000EFA00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortDecoPreview> AutoInitializeAFortDecoPreview(TEXT("AFortDecoPreview"), sizeof(AFortDecoPreview), 998587598u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCE870 (end 0x00FCE912)
 // Original VA: 0x0000000140FCE870 | File offset: 0x00FCDE70
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortDecoPreview, 998587598u); reached from AFortDecoPreview::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortDecoPreview::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortDecoPreview();
+// Original dynamic initializer: RVA 0x000F0500
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortDecoPreview(Z_Construct_UClass_AFortDecoPreview, &AFortDecoPreview::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortDecoPreview"), false, nullptr, nullptr, nullptr);

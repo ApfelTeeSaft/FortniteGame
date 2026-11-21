@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UReporterBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UReporterBase, 4134817887u)
+// Original dynamic initializer: RVA 0x00217510 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UReporterBase> AutoInitializeUReporterBase(TEXT("UReporterBase"), sizeof(UReporterBase), 4134817887u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C1760 (end 0x024C17F7)
 // Original VA: 0x00000001424C1760 | File offset: 0x024C0D60
 // Recovery: confirmed (IMPLEMENT_CLASS(UReporterBase, 4134817887u); reached from UReporterBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UReporterBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UReporterBase();
+// Original dynamic initializer: RVA 0x00218AC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UReporterBase(Z_Construct_UClass_UReporterBase, &UReporterBase::StaticClass, TEXT("/Script/Engine"), TEXT("UReporterBase"), false, nullptr, nullptr, nullptr);

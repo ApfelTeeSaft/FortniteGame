@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortAthenaSupplyDrop, 2329002431u)
+// Original dynamic initializer: RVA 0x000E7E90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortAthenaSupplyDrop> AutoInitializeAFortAthenaSupplyDrop(TEXT("AFortAthenaSupplyDrop"), sizeof(AFortAthenaSupplyDrop), 2329002431u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA1CF0 (end 0x00FA1D92)
 // Original VA: 0x0000000140FA1CF0 | File offset: 0x00FA12F0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortAthenaSupplyDrop, 2329002431u); reached from AFortAthenaSupplyDrop::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortAthenaSupplyDrop::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortAthenaSupplyDrop();
+// Original dynamic initializer: RVA 0x000E8890
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortAthenaSupplyDrop(Z_Construct_UClass_AFortAthenaSupplyDrop, &AFortAthenaSupplyDrop::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortAthenaSupplyDrop"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSel
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange, 3980143971u)
+// Original dynamic initializer: RVA 0x000E9170 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange> AutoInitializeUFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange(TEXT("UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange"), sizeof(UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange), 3980143971u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAB130 (end 0x00FAB1D2)
 // Original VA: 0x0000000140FAB130 | File offset: 0x00FAA730
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange, 3980143971u); reached from UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange::GetPri
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange();
+// Original dynamic initializer: RVA 0x000E9FC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange(Z_Construct_UClass_UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange, &UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTDecorator_GameplayAbility_IsWithinMaxTargetSelectionRange"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UCameraAnim()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCameraAnim, 2754890693u)
+// Original dynamic initializer: RVA 0x001F4CD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCameraAnim> AutoInitializeUCameraAnim(TEXT("UCameraAnim"), sizeof(UCameraAnim), 2754890693u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E9150 (end 0x023E91E7)
 // Original VA: 0x00000001423E9150 | File offset: 0x023E8750
 // Recovery: confirmed (IMPLEMENT_CLASS(UCameraAnim, 2754890693u); reached from UCameraAnim::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UCameraAnim::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCameraAnim();
+// Original dynamic initializer: RVA 0x001F6250
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCameraAnim(Z_Construct_UClass_UCameraAnim, &UCameraAnim::StaticClass, TEXT("/Script/Engine"), TEXT("UCameraAnim"), false, nullptr, nullptr, nullptr);

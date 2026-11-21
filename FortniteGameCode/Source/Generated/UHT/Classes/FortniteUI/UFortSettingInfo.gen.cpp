@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortSettingInfo()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortSettingInfo, 1639790146u)
+// Original dynamic initializer: RVA 0x00255D20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSettingInfo> AutoInitializeUFortSettingInfo(TEXT("UFortSettingInfo"), sizeof(UFortSettingInfo), 1639790146u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E58A0 (end 0x028E5937)
 // Original VA: 0x00000001428E58A0 | File offset: 0x028E4EA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSettingInfo, 1639790146u); reached from UFortSettingInfo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortSettingInfo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSettingInfo();
+// Original dynamic initializer: RVA 0x00258180
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSettingInfo(Z_Construct_UClass_UFortSettingInfo, &UFortSettingInfo::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSettingInfo"), false, nullptr, nullptr, nullptr);

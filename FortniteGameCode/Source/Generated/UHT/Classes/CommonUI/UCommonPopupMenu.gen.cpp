@@ -7,6 +7,9 @@
 void UCommonPopupMenu::StaticRegisterNativesUCommonPopupMenu()
 {
 }
+// IMPLEMENT_CLASS(UCommonPopupMenu, 1932755492u)
+// Original dynamic initializer: RVA 0x000960A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonPopupMenu> AutoInitializeUCommonPopupMenu(TEXT("UCommonPopupMenu"), sizeof(UCommonPopupMenu), 1932755492u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C9740 (end 0x002C97E2)
 // Original VA: 0x00000001402C9740 | File offset: 0x002C8D40
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonPopupMenu, 1932755492u); reached from UCommonPopupMenu::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonPopupMenu::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonPopupMenu();
+// Original dynamic initializer: RVA 0x00096910
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonPopupMenu(Z_Construct_UClass_UCommonPopupMenu, &UCommonPopupMenu::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonPopupMenu"), false, nullptr, nullptr, nullptr);

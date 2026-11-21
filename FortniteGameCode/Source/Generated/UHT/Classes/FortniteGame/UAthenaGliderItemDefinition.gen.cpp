@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAthenaGliderItemDefinition, 876673922u)
+// Original dynamic initializer: RVA 0x000D7530 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaGliderItemDefinition> AutoInitializeUAthenaGliderItemDefinition(TEXT("UAthenaGliderItemDefinition"), sizeof(UAthenaGliderItemDefinition), 876673922u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F585A0 (end 0x00F58642)
 // Original VA: 0x0000000140F585A0 | File offset: 0x00F57BA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaGliderItemDefinition, 876673922u); reached from UAthenaGliderItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAthenaGliderItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaGliderItemDefinition();
+// Original dynamic initializer: RVA 0x000D8590
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaGliderItemDefinition(Z_Construct_UClass_UAthenaGliderItemDefinition, &UAthenaGliderItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaGliderItemDefinition"), false, nullptr, nullptr, nullptr);

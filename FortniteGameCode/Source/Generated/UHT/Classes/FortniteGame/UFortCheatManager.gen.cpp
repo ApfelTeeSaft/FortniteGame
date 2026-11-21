@@ -7,6 +7,9 @@
 void UFortCheatManager::StaticRegisterNativesUFortCheatManager()
 {
 }
+// IMPLEMENT_CLASS(UFortCheatManager, 1437645853u)
+// Original dynamic initializer: RVA 0x000EA8E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCheatManager> AutoInitializeUFortCheatManager(TEXT("UFortCheatManager"), sizeof(UFortCheatManager), 1437645853u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAFA10 (end 0x00FAFAB2)
 // Original VA: 0x0000000140FAFA10 | File offset: 0x00FAF010
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCheatManager, 1437645853u); reached from UFortCheatManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortCheatManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCheatManager();
+// Original dynamic initializer: RVA 0x000EB050
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCheatManager(Z_Construct_UClass_UFortCheatManager, &UFortCheatManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCheatManager"), false, nullptr, nullptr, nullptr);

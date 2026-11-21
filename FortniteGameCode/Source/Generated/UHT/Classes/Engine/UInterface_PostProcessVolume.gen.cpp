@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UInterface_PostProcessVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInterface_PostProcessVolume, 1343874410u)
+// Original dynamic initializer: RVA 0x00200D60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInterface_PostProcessVolume> AutoInitializeUInterface_PostProcessVolume(TEXT("UInterface_PostProcessVolume"), sizeof(UInterface_PostProcessVolume), 1343874410u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02426770 (end 0x02426812)
 // Original VA: 0x0000000142426770 | File offset: 0x02425D70
 // Recovery: confirmed (IMPLEMENT_CLASS(UInterface_PostProcessVolume, 1343874410u); reached from UInterface_PostProcessVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UInterface_PostProcessVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInterface_PostProcessVolume();
+// Original dynamic initializer: RVA 0x00202240
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInterface_PostProcessVolume(Z_Construct_UClass_UInterface_PostProcessVolume, &UInterface_PostProcessVolume::StaticClass, TEXT("/Script/Engine"), TEXT("UInterface_PostProcessVolume"), false, nullptr, nullptr, nullptr);

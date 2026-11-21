@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UCustomPlayerComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCustomPlayerComponent, 2877511531u)
+// Original dynamic initializer: RVA 0x000DCFC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCustomPlayerComponent> AutoInitializeUCustomPlayerComponent(TEXT("UCustomPlayerComponent"), sizeof(UCustomPlayerComponent), 2877511531u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F77770 (end 0x00F77807)
 // Original VA: 0x0000000140F77770 | File offset: 0x00F76D70
 // Recovery: confirmed (IMPLEMENT_CLASS(UCustomPlayerComponent, 2877511531u); reached from UCustomPlayerComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UCustomPlayerComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCustomPlayerComponent();
+// Original dynamic initializer: RVA 0x000DE6C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCustomPlayerComponent(Z_Construct_UClass_UCustomPlayerComponent, &UCustomPlayerComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UCustomPlayerComponent"), false, nullptr, nullptr, nullptr);

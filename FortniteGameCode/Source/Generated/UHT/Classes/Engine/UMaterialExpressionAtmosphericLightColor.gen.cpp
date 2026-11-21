@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionAtmosphericLightColor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionAtmosphericLightColor, 3148573179u)
+// Original dynamic initializer: RVA 0x00206030 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionAtmosphericLightColor> AutoInitializeUMaterialExpressionAtmosphericLightColor(TEXT("UMaterialExpressionAtmosphericLightColor"), sizeof(UMaterialExpressionAtmosphericLightColor), 3148573179u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02477F00 (end 0x02477FA2)
 // Original VA: 0x0000000142477F00 | File offset: 0x02477500
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionAtmosphericLightColor, 3148573179u); reached from UMaterialExpressionAtmosphericLightColor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMaterialExpressionAtmosphericLightColor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionAtmosphericLightColor();
+// Original dynamic initializer: RVA 0x00206EC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionAtmosphericLightColor(Z_Construct_UClass_UMaterialExpressionAtmosphericLightColor, &UMaterialExpressionAtmosphericLightColor::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionAtmosphericLightColor"), false, nullptr, nullptr, nullptr);

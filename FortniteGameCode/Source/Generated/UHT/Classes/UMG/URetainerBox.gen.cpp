@@ -7,6 +7,9 @@
 void URetainerBox::StaticRegisterNativesURetainerBox()
 {
 }
+// IMPLEMENT_CLASS(URetainerBox, 3410626991u)
+// Original dynamic initializer: RVA 0x001B2A40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<URetainerBox> AutoInitializeURetainerBox(TEXT("URetainerBox"), sizeof(URetainerBox), 3410626991u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEC930 (end 0x01BEC9D2)
 // Original VA: 0x0000000141BEC930 | File offset: 0x01BEBF30
 // Recovery: confirmed (IMPLEMENT_CLASS(URetainerBox, 3410626991u); reached from URetainerBox::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* URetainerBox::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_URetainerBox();
+// Original dynamic initializer: RVA 0x001B34D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_URetainerBox(Z_Construct_UClass_URetainerBox, &URetainerBox::StaticClass, TEXT("/Script/UMG"), TEXT("URetainerBox"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortItemManagementItemTileButton, 3126833863u)
+// Original dynamic initializer: RVA 0x0024CEE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemManagementItemTileButton> AutoInitializeUFortItemManagementItemTileButton(TEXT("UFortItemManagementItemTileButton"), sizeof(UFortItemManagementItemTileButton), 3126833863u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C8780 (end 0x028C8822)
 // Original VA: 0x00000001428C8780 | File offset: 0x028C7D80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemManagementItemTileButton, 3126833863u); reached from UFortItemManagementItemTileButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortItemManagementItemTileButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemManagementItemTileButton();
+// Original dynamic initializer: RVA 0x0024EFD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemManagementItemTileButton(Z_Construct_UClass_UFortItemManagementItemTileButton, &UFortItemManagementItemTileButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemManagementItemTileButton"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_USlateTextureAtlasInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USlateTextureAtlasInterface, 3733399444u)
+// Original dynamic initializer: RVA 0x0021A9F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USlateTextureAtlasInterface> AutoInitializeUSlateTextureAtlasInterface(TEXT("USlateTextureAtlasInterface"), sizeof(USlateTextureAtlasInterface), 3733399444u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D3800 (end 0x024D38A2)
 // Original VA: 0x00000001424D3800 | File offset: 0x024D2E00
 // Recovery: confirmed (IMPLEMENT_CLASS(USlateTextureAtlasInterface, 3733399444u); reached from USlateTextureAtlasInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* USlateTextureAtlasInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USlateTextureAtlasInterface();
+// Original dynamic initializer: RVA 0x0021C2F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USlateTextureAtlasInterface(Z_Construct_UClass_USlateTextureAtlasInterface, &USlateTextureAtlasInterface::StaticClass, TEXT("/Script/Engine"), TEXT("USlateTextureAtlasInterface"), false, nullptr, nullptr, nullptr);

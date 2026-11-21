@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortStartLeavingZoneParams, 1877833816u)
+// Original dynamic initializer: RVA 0x00120300 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortStartLeavingZoneParams> AutoInitializeUFortStartLeavingZoneParams(TEXT("UFortStartLeavingZoneParams"), sizeof(UFortStartLeavingZoneParams), 1877833816u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E7FC0 (end 0x010E8062)
 // Original VA: 0x00000001410E7FC0 | File offset: 0x010E75C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortStartLeavingZoneParams, 1877833816u); reached from UFortStartLeavingZoneParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortStartLeavingZoneParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortStartLeavingZoneParams();
+// Original dynamic initializer: RVA 0x00122170
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortStartLeavingZoneParams(Z_Construct_UClass_UFortStartLeavingZoneParams, &UFortStartLeavingZoneParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortStartLeavingZoneParams"), false, nullptr, nullptr, nullptr);

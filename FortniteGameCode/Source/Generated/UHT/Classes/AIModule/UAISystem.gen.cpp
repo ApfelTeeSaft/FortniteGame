@@ -7,6 +7,9 @@
 void UAISystem::StaticRegisterNativesUAISystem()
 {
 }
+// IMPLEMENT_CLASS(UAISystem, 2156387114u)
+// Original dynamic initializer: RVA 0x001BA570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAISystem> AutoInitializeUAISystem(TEXT("UAISystem"), sizeof(UAISystem), 2156387114u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D20BE0 (end 0x01D20C82)
 // Original VA: 0x0000000141D20BE0 | File offset: 0x01D201E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAISystem, 2156387114u); reached from UAISystem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAISystem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAISystem();
+// Original dynamic initializer: RVA 0x001BB7C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAISystem(Z_Construct_UClass_UAISystem, &UAISystem::StaticClass, TEXT("/Script/AIModule"), TEXT("UAISystem"), false, nullptr, nullptr, nullptr);

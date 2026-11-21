@@ -7,6 +7,9 @@
 void AFortTheaterMapViewer::StaticRegisterNativesAFortTheaterMapViewer()
 {
 }
+// IMPLEMENT_CLASS(AFortTheaterMapViewer, 1829459545u)
+// Original dynamic initializer: RVA 0x001164A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortTheaterMapViewer> AutoInitializeAFortTheaterMapViewer(TEXT("AFortTheaterMapViewer"), sizeof(AFortTheaterMapViewer), 1829459545u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC160 (end 0x010BC202)
 // Original VA: 0x00000001410BC160 | File offset: 0x010BB760
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortTheaterMapViewer, 1829459545u); reached from AFortTheaterMapViewer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortTheaterMapViewer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortTheaterMapViewer();
+// Original dynamic initializer: RVA 0x00117C20
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortTheaterMapViewer(Z_Construct_UClass_AFortTheaterMapViewer, &AFortTheaterMapViewer::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortTheaterMapViewer"), false, nullptr, nullptr, nullptr);

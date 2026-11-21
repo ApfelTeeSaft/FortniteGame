@@ -7,6 +7,9 @@
 void UFortGameOptions::StaticRegisterNativesUFortGameOptions()
 {
 }
+// IMPLEMENT_CLASS(UFortGameOptions, 1143981059u)
+// Original dynamic initializer: RVA 0x00245B50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGameOptions> AutoInitializeUFortGameOptions(TEXT("UFortGameOptions"), sizeof(UFortGameOptions), 1143981059u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028ABE10 (end 0x028ABEB2)
 // Original VA: 0x00000001428ABE10 | File offset: 0x028AB410
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGameOptions, 1143981059u); reached from UFortGameOptions::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortGameOptions::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGameOptions();
+// Original dynamic initializer: RVA 0x002474E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGameOptions(Z_Construct_UClass_UFortGameOptions, &UFortGameOptions::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortGameOptions"), false, nullptr, nullptr, nullptr);

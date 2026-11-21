@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortPlayerCameraBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortPlayerCameraBase, 3726373602u)
+// Original dynamic initializer: RVA 0x0010A360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPlayerCameraBase> AutoInitializeAFortPlayerCameraBase(TEXT("AFortPlayerCameraBase"), sizeof(AFortPlayerCameraBase), 3726373602u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01068720 (end 0x010687C2)
 // Original VA: 0x0000000141068720 | File offset: 0x01067D20
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPlayerCameraBase, 3726373602u); reached from AFortPlayerCameraBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortPlayerCameraBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPlayerCameraBase();
+// Original dynamic initializer: RVA 0x0010B700
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPlayerCameraBase(Z_Construct_UClass_AFortPlayerCameraBase, &AFortPlayerCameraBase::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPlayerCameraBase"), false, nullptr, nullptr, nullptr);

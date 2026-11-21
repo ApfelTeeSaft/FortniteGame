@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortPackPersonality()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortPackPersonality, 2507718832u)
+// Original dynamic initializer: RVA 0x00107390 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPackPersonality> AutoInitializeUFortPackPersonality(TEXT("UFortPackPersonality"), sizeof(UFortPackPersonality), 2507718832u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010552C0 (end 0x01055362)
 // Original VA: 0x00000001410552C0 | File offset: 0x010548C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPackPersonality, 2507718832u); reached from UFortPackPersonality::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortPackPersonality::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPackPersonality();
+// Original dynamic initializer: RVA 0x00107F30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPackPersonality(Z_Construct_UClass_UFortPackPersonality, &UFortPackPersonality::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPackPersonality"), false, nullptr, nullptr, nullptr);

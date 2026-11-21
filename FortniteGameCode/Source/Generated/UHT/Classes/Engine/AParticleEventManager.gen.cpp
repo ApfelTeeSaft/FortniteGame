@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AParticleEventManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AParticleEventManager, 2231383592u)
+// Original dynamic initializer: RVA 0x0020ED10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AParticleEventManager> AutoInitializeAParticleEventManager(TEXT("AParticleEventManager"), sizeof(AParticleEventManager), 2231383592u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024934A0 (end 0x02493542)
 // Original VA: 0x00000001424934A0 | File offset: 0x02492AA0
 // Recovery: confirmed (IMPLEMENT_CLASS(AParticleEventManager, 2231383592u); reached from AParticleEventManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AParticleEventManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AParticleEventManager();
+// Original dynamic initializer: RVA 0x0020FEF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AParticleEventManager(Z_Construct_UClass_AParticleEventManager, &AParticleEventManager::StaticClass, TEXT("/Script/Engine"), TEXT("AParticleEventManager"), false, nullptr, nullptr, nullptr);

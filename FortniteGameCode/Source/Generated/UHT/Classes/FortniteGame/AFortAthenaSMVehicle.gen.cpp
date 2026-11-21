@@ -7,6 +7,9 @@
 void AFortAthenaSMVehicle::StaticRegisterNativesAFortAthenaSMVehicle()
 {
 }
+// IMPLEMENT_CLASS(AFortAthenaSMVehicle, 3102829223u)
+// Original dynamic initializer: RVA 0x000E66B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortAthenaSMVehicle> AutoInitializeAFortAthenaSMVehicle(TEXT("AFortAthenaSMVehicle"), sizeof(AFortAthenaSMVehicle), 3102829223u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9C470 (end 0x00F9C512)
 // Original VA: 0x0000000140F9C470 | File offset: 0x00F9BA70
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortAthenaSMVehicle, 3102829223u); reached from AFortAthenaSMVehicle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortAthenaSMVehicle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortAthenaSMVehicle();
+// Original dynamic initializer: RVA 0x000E7790
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortAthenaSMVehicle(Z_Construct_UClass_AFortAthenaSMVehicle, &AFortAthenaSMVehicle::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortAthenaSMVehicle"), false, nullptr, nullptr, nullptr);

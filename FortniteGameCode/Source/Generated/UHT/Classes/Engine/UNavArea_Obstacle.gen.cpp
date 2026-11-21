@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UNavArea_Obstacle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNavArea_Obstacle, 522367364u)
+// Original dynamic initializer: RVA 0x0020C730 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavArea_Obstacle> AutoInitializeUNavArea_Obstacle(TEXT("UNavArea_Obstacle"), sizeof(UNavArea_Obstacle), 522367364u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248A260 (end 0x0248A302)
 // Original VA: 0x000000014248A260 | File offset: 0x02489860
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavArea_Obstacle, 522367364u); reached from UNavArea_Obstacle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UNavArea_Obstacle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavArea_Obstacle();
+// Original dynamic initializer: RVA 0x0020D930
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavArea_Obstacle(Z_Construct_UClass_UNavArea_Obstacle, &UNavArea_Obstacle::StaticClass, TEXT("/Script/Engine"), TEXT("UNavArea_Obstacle"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UGameplayMutatorObserverInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UGameplayMutatorObserverInterface, 2279619720u)
+// Original dynamic initializer: RVA 0x0011EA60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayMutatorObserverInterface> AutoInitializeUGameplayMutatorObserverInterface(TEXT("UGameplayMutatorObserverInterface"), sizeof(UGameplayMutatorObserverInterface), 2279619720u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E1DF0 (end 0x010E1E92)
 // Original VA: 0x00000001410E1DF0 | File offset: 0x010E13F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayMutatorObserverInterface, 2279619720u); reached from UGameplayMutatorObserverInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UGameplayMutatorObserverInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayMutatorObserverInterface();
+// Original dynamic initializer: RVA 0x0011FE40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayMutatorObserverInterface(Z_Construct_UClass_UGameplayMutatorObserverInterface, &UGameplayMutatorObserverInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UGameplayMutatorObserverInterface"), false, nullptr, nullptr, nullptr);

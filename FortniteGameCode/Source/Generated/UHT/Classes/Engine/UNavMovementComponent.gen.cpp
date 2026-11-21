@@ -7,6 +7,9 @@
 void UNavMovementComponent::StaticRegisterNativesUNavMovementComponent()
 {
 }
+// IMPLEMENT_CLASS(UNavMovementComponent, 2355272650u)
+// Original dynamic initializer: RVA 0x0020DC90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavMovementComponent> AutoInitializeUNavMovementComponent(TEXT("UNavMovementComponent"), sizeof(UNavMovementComponent), 2355272650u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248E580 (end 0x0248E622)
 // Original VA: 0x000000014248E580 | File offset: 0x0248DB80
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavMovementComponent, 2355272650u); reached from UNavMovementComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UNavMovementComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavMovementComponent();
+// Original dynamic initializer: RVA 0x0020EA50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavMovementComponent(Z_Construct_UClass_UNavMovementComponent, &UNavMovementComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UNavMovementComponent"), false, nullptr, nullptr, nullptr);

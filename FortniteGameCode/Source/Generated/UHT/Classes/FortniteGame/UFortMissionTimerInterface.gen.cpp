@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortMissionTimerInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortMissionTimerInterface, 2715965649u)
+// Original dynamic initializer: RVA 0x001040E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMissionTimerInterface> AutoInitializeUFortMissionTimerInterface(TEXT("UFortMissionTimerInterface"), sizeof(UFortMissionTimerInterface), 2715965649u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01048450 (end 0x010484F2)
 // Original VA: 0x0000000141048450 | File offset: 0x01047A50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMissionTimerInterface, 2715965649u); reached from UFortMissionTimerInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortMissionTimerInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMissionTimerInterface();
+// Original dynamic initializer: RVA 0x00105150
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMissionTimerInterface(Z_Construct_UClass_UFortMissionTimerInterface, &UFortMissionTimerInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMissionTimerInterface"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_APhysicsThruster()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(APhysicsThruster, 4116663746u)
+// Original dynamic initializer: RVA 0x00214870 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<APhysicsThruster> AutoInitializeAPhysicsThruster(TEXT("APhysicsThruster"), sizeof(APhysicsThruster), 4116663746u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A8010 (end 0x024A80B2)
 // Original VA: 0x00000001424A8010 | File offset: 0x024A7610
 // Recovery: confirmed (IMPLEMENT_CLASS(APhysicsThruster, 4116663746u); reached from APhysicsThruster::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* APhysicsThruster::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_APhysicsThruster();
+// Original dynamic initializer: RVA 0x00215D60
+static FCompiledInDefer Z_CompiledInDefer_UClass_APhysicsThruster(Z_Construct_UClass_APhysicsThruster, &APhysicsThruster::StaticClass, TEXT("/Script/Engine"), TEXT("APhysicsThruster"), false, nullptr, nullptr, nullptr);

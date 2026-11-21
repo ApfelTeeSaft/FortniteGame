@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UTextureLODSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTextureLODSettings, 3959878148u)
+// Original dynamic initializer: RVA 0x00220000 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTextureLODSettings> AutoInitializeUTextureLODSettings(TEXT("UTextureLODSettings"), sizeof(UTextureLODSettings), 3959878148u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EB2F0 (end 0x024EB387)
 // Original VA: 0x00000001424EB2F0 | File offset: 0x024EA8F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UTextureLODSettings, 3959878148u); reached from UTextureLODSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UTextureLODSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTextureLODSettings();
+// Original dynamic initializer: RVA 0x002214C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTextureLODSettings(Z_Construct_UClass_UTextureLODSettings, &UTextureLODSettings::StaticClass, TEXT("/Script/Engine"), TEXT("UTextureLODSettings"), false, nullptr, nullptr, nullptr);

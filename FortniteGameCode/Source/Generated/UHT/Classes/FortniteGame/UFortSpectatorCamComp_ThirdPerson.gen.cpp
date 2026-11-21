@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSpectatorCamComp_ThirdPerson, 4161677077u)
+// Original dynamic initializer: RVA 0x00112CF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSpectatorCamComp_ThirdPerson> AutoInitializeUFortSpectatorCamComp_ThirdPerson(TEXT("UFortSpectatorCamComp_ThirdPerson"), sizeof(UFortSpectatorCamComp_ThirdPerson), 4161677077u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A3E50 (end 0x010A3EF2)
 // Original VA: 0x00000001410A3E50 | File offset: 0x010A3450
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSpectatorCamComp_ThirdPerson, 4161677077u); reached from UFortSpectatorCamComp_ThirdPerson::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSpectatorCamComp_ThirdPerson::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson();
+// Original dynamic initializer: RVA 0x00114530
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSpectatorCamComp_ThirdPerson(Z_Construct_UClass_UFortSpectatorCamComp_ThirdPerson, &UFortSpectatorCamComp_ThirdPerson::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortSpectatorCamComp_ThirdPerson"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortTheaterCamera, 3882907752u)
+// Original dynamic initializer: RVA 0x001146D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortTheaterCamera> AutoInitializeAFortTheaterCamera(TEXT("AFortTheaterCamera"), sizeof(AFortTheaterCamera), 3882907752u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B14F0 (end 0x010B1592)
 // Original VA: 0x00000001410B14F0 | File offset: 0x010B0AF0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortTheaterCamera, 3882907752u); reached from AFortTheaterCamera::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortTheaterCamera::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortTheaterCamera();
+// Original dynamic initializer: RVA 0x00115F40
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortTheaterCamera(Z_Construct_UClass_AFortTheaterCamera, &AFortTheaterCamera::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortTheaterCamera"), false, nullptr, nullptr, nullptr);

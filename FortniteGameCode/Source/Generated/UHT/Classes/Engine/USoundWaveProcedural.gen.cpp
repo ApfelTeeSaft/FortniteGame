@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_USoundWaveProcedural()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundWaveProcedural, 3956629873u)
+// Original dynamic initializer: RVA 0x0021C890 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundWaveProcedural> AutoInitializeUSoundWaveProcedural(TEXT("USoundWaveProcedural"), sizeof(USoundWaveProcedural), 3956629873u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DABA0 (end 0x024DAC42)
 // Original VA: 0x00000001424DABA0 | File offset: 0x024DA1A0
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundWaveProcedural, 3956629873u); reached from USoundWaveProcedural::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* USoundWaveProcedural::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundWaveProcedural();
+// Original dynamic initializer: RVA 0x0021E070
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundWaveProcedural(Z_Construct_UClass_USoundWaveProcedural, &USoundWaveProcedural::StaticClass, TEXT("/Script/Engine"), TEXT("USoundWaveProcedural"), false, nullptr, nullptr, nullptr);

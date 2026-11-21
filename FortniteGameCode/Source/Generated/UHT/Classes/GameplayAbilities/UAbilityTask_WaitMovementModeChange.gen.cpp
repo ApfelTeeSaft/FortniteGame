@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAbilityTask_WaitMovementModeChange, 456400395u)
+// Original dynamic initializer: RVA 0x0009DF30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_WaitMovementModeChange> AutoInitializeUAbilityTask_WaitMovementModeChange(TEXT("UAbilityTask_WaitMovementModeChange"), sizeof(UAbilityTask_WaitMovementModeChange), 456400395u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054C0D0 (end 0x0054C172)
 // Original VA: 0x000000014054C0D0 | File offset: 0x0054B6D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_WaitMovementModeChange, 456400395u); reached from UAbilityTask_WaitMovementModeChange::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAbilityTask_WaitMovementModeChange::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_WaitMovementModeChange();
+// Original dynamic initializer: RVA 0x0009E980
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_WaitMovementModeChange(Z_Construct_UClass_UAbilityTask_WaitMovementModeChange, &UAbilityTask_WaitMovementModeChange::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_WaitMovementModeChange"), false, nullptr, nullptr, nullptr);

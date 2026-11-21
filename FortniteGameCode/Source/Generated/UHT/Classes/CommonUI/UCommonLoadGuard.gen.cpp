@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCommonLoadGuard, 1247367717u)
+// Original dynamic initializer: RVA 0x00096020 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonLoadGuard> AutoInitializeUCommonLoadGuard(TEXT("UCommonLoadGuard"), sizeof(UCommonLoadGuard), 1247367717u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C9480 (end 0x002C9522)
 // Original VA: 0x00000001402C9480 | File offset: 0x002C8A80
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonLoadGuard, 1247367717u); reached from UCommonLoadGuard::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCommonLoadGuard::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonLoadGuard();
+// Original dynamic initializer: RVA 0x00096810
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonLoadGuard(Z_Construct_UClass_UCommonLoadGuard, &UCommonLoadGuard::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonLoadGuard"), false, nullptr, nullptr, nullptr);

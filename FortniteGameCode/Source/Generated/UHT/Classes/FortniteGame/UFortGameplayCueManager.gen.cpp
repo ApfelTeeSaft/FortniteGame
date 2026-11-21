@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortGameplayCueManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortGameplayCueManager, 582808496u)
+// Original dynamic initializer: RVA 0x000F6740 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGameplayCueManager> AutoInitializeUFortGameplayCueManager(TEXT("UFortGameplayCueManager"), sizeof(UFortGameplayCueManager), 582808496u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE6700 (end 0x00FE67A2)
 // Original VA: 0x0000000140FE6700 | File offset: 0x00FE5D00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGameplayCueManager, 582808496u); reached from UFortGameplayCueManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortGameplayCueManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGameplayCueManager();
+// Original dynamic initializer: RVA 0x000F7470
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGameplayCueManager(Z_Construct_UClass_UFortGameplayCueManager, &UFortGameplayCueManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortGameplayCueManager"), false, nullptr, nullptr, nullptr);

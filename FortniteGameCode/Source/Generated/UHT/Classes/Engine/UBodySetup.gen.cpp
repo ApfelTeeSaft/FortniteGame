@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBodySetup()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBodySetup, 3578893865u)
+// Original dynamic initializer: RVA 0x001F4B90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBodySetup> AutoInitializeUBodySetup(TEXT("UBodySetup"), sizeof(UBodySetup), 3578893865u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E8AE0 (end 0x023E8B77)
 // Original VA: 0x00000001423E8AE0 | File offset: 0x023E80E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBodySetup, 3578893865u); reached from UBodySetup::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBodySetup::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBodySetup();
+// Original dynamic initializer: RVA 0x001F5FD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBodySetup(Z_Construct_UClass_UBodySetup, &UBodySetup::StaticClass, TEXT("/Script/Engine"), TEXT("UBodySetup"), false, nullptr, nullptr, nullptr);

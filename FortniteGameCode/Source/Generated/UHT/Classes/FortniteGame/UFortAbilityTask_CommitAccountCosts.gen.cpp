@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAbilityTask_CommitAccountCosts, 261652933u)
+// Original dynamic initializer: RVA 0x000DFD80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAbilityTask_CommitAccountCosts> AutoInitializeUFortAbilityTask_CommitAccountCosts(TEXT("UFortAbilityTask_CommitAccountCosts"), sizeof(UFortAbilityTask_CommitAccountCosts), 261652933u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F80480 (end 0x00F80522)
 // Original VA: 0x0000000140F80480 | File offset: 0x00F7FA80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAbilityTask_CommitAccountCosts, 261652933u); reached from UFortAbilityTask_CommitAccountCosts::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAbilityTask_CommitAccountCosts::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAbilityTask_CommitAccountCosts();
+// Original dynamic initializer: RVA 0x000E08E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAbilityTask_CommitAccountCosts(Z_Construct_UClass_UFortAbilityTask_CommitAccountCosts, &UFortAbilityTask_CommitAccountCosts::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAbilityTask_CommitAccountCosts"), false, nullptr, nullptr, nullptr);

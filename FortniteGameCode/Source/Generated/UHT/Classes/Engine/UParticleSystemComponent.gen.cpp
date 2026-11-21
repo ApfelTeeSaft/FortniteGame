@@ -7,6 +7,9 @@
 void UParticleSystemComponent::StaticRegisterNativesUParticleSystemComponent()
 {
 }
+// IMPLEMENT_CLASS(UParticleSystemComponent, 1437480045u)
+// Original dynamic initializer: RVA 0x00213C70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleSystemComponent> AutoInitializeUParticleSystemComponent(TEXT("UParticleSystemComponent"), sizeof(UParticleSystemComponent), 1437480045u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249F770 (end 0x0249F812)
 // Original VA: 0x000000014249F770 | File offset: 0x0249ED70
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleSystemComponent, 1437480045u); reached from UParticleSystemComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UParticleSystemComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleSystemComponent();
+// Original dynamic initializer: RVA 0x002145B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleSystemComponent(Z_Construct_UClass_UParticleSystemComponent, &UParticleSystemComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleSystemComponent"), false, nullptr, nullptr, nullptr);

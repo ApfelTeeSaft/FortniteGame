@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMovieSceneAudioSection()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMovieSceneAudioSection, 1418033887u)
+// Original dynamic initializer: RVA 0x001AC510 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovieSceneAudioSection> AutoInitializeUMovieSceneAudioSection(TEXT("UMovieSceneAudioSection"), sizeof(UMovieSceneAudioSection), 1418033887u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4CF90 (end 0x01B4D032)
 // Original VA: 0x0000000141B4CF90 | File offset: 0x01B4C590
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovieSceneAudioSection, 1418033887u); reached from UMovieSceneAudioSection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMovieSceneAudioSection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovieSceneAudioSection();
+// Original dynamic initializer: RVA 0x001AF300
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovieSceneAudioSection(Z_Construct_UClass_UMovieSceneAudioSection, &UMovieSceneAudioSection::StaticClass, TEXT("/Script/MovieSceneTracks"), TEXT("UMovieSceneAudioSection"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UAbilityTask_WaitConfirmCancel::StaticRegisterNativesUAbilityTask_WaitConfirmCancel()
 {
 }
+// IMPLEMENT_CLASS(UAbilityTask_WaitConfirmCancel, 1371323098u)
+// Original dynamic initializer: RVA 0x0009DD70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_WaitConfirmCancel> AutoInitializeUAbilityTask_WaitConfirmCancel(TEXT("UAbilityTask_WaitConfirmCancel"), sizeof(UAbilityTask_WaitConfirmCancel), 1371323098u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054B730 (end 0x0054B7D2)
 // Original VA: 0x000000014054B730 | File offset: 0x0054AD30
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_WaitConfirmCancel, 1371323098u); reached from UAbilityTask_WaitConfirmCancel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAbilityTask_WaitConfirmCancel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_WaitConfirmCancel();
+// Original dynamic initializer: RVA 0x0009E600
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_WaitConfirmCancel(Z_Construct_UClass_UAbilityTask_WaitConfirmCancel, &UAbilityTask_WaitConfirmCancel::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_WaitConfirmCancel"), false, nullptr, nullptr, nullptr);

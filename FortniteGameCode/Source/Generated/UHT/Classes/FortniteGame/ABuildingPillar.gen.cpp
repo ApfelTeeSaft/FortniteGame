@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ABuildingPillar()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingPillar, 2505213940u)
+// Original dynamic initializer: RVA 0x000DAFB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingPillar> AutoInitializeABuildingPillar(TEXT("ABuildingPillar"), sizeof(ABuildingPillar), 2505213940u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6AC70 (end 0x00F6AD12)
 // Original VA: 0x0000000140F6AC70 | File offset: 0x00F6A270
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingPillar, 2505213940u); reached from ABuildingPillar::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ABuildingPillar::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingPillar();
+// Original dynamic initializer: RVA 0x000DBC40
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingPillar(Z_Construct_UClass_ABuildingPillar, &ABuildingPillar::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingPillar"), false, nullptr, nullptr, nullptr);

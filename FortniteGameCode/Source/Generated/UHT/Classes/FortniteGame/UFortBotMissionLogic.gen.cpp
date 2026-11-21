@@ -7,6 +7,9 @@
 void UFortBotMissionLogic::StaticRegisterNativesUFortBotMissionLogic()
 {
 }
+// IMPLEMENT_CLASS(UFortBotMissionLogic, 4056058346u)
+// Original dynamic initializer: RVA 0x000E93B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBotMissionLogic> AutoInitializeUFortBotMissionLogic(TEXT("UFortBotMissionLogic"), sizeof(UFortBotMissionLogic), 4056058346u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FABD90 (end 0x00FABE27)
 // Original VA: 0x0000000140FABD90 | File offset: 0x00FAB390
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBotMissionLogic, 4056058346u); reached from UFortBotMissionLogic::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortBotMissionLogic::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBotMissionLogic();
+// Original dynamic initializer: RVA 0x000EA440
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBotMissionLogic(Z_Construct_UClass_UFortBotMissionLogic, &UFortBotMissionLogic::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBotMissionLogic"), false, nullptr, nullptr, nullptr);

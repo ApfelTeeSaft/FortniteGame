@@ -7,6 +7,9 @@
 void UVOIPTalker::StaticRegisterNativesUVOIPTalker()
 {
 }
+// IMPLEMENT_CLASS(UVOIPTalker, 3369332169u)
+// Original dynamic initializer: RVA 0x002219A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UVOIPTalker> AutoInitializeUVOIPTalker(TEXT("UVOIPTalker"), sizeof(UVOIPTalker), 3369332169u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EFAE0 (end 0x024EFB82)
 // Original VA: 0x00000001424EFAE0 | File offset: 0x024EF0E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UVOIPTalker, 3369332169u); reached from UVOIPTalker::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UVOIPTalker::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UVOIPTalker();
+// Original dynamic initializer: RVA 0x00222470
+static FCompiledInDefer Z_CompiledInDefer_UClass_UVOIPTalker(Z_Construct_UClass_UVOIPTalker, &UVOIPTalker::StaticClass, TEXT("/Script/Engine"), TEXT("UVOIPTalker"), false, nullptr, nullptr, nullptr);

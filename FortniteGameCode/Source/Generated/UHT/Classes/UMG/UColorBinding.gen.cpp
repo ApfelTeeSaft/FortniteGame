@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UColorBinding, 3347152240u)
+// Original dynamic initializer: RVA 0x001B1DC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UColorBinding> AutoInitializeUColorBinding(TEXT("UColorBinding"), sizeof(UColorBinding), 3347152240u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE5280 (end 0x01BE5322)
 // Original VA: 0x0000000141BE5280 | File offset: 0x01BE4880
 // Recovery: confirmed (IMPLEMENT_CLASS(UColorBinding, 3347152240u); reached from UColorBinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UColorBinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UColorBinding();
+// Original dynamic initializer: RVA 0x001B24E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UColorBinding(Z_Construct_UClass_UColorBinding, &UColorBinding::StaticClass, TEXT("/Script/UMG"), TEXT("UColorBinding"), false, nullptr, nullptr, nullptr);

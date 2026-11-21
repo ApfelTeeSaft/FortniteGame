@@ -7,6 +7,9 @@
 void ATimeOfDayController_BlueprintBase::StaticRegisterNativesATimeOfDayController_BlueprintBase()
 {
 }
+// IMPLEMENT_CLASS(ATimeOfDayController_BlueprintBase, 127328991u)
+// Original dynamic initializer: RVA 0x000D8730 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ATimeOfDayController_BlueprintBase> AutoInitializeATimeOfDayController_BlueprintBase(TEXT("ATimeOfDayController_BlueprintBase"), sizeof(ATimeOfDayController_BlueprintBase), 127328991u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5ED20 (end 0x00F5EDC2)
 // Original VA: 0x0000000140F5ED20 | File offset: 0x00F5E320
 // Recovery: confirmed (IMPLEMENT_CLASS(ATimeOfDayController_BlueprintBase, 127328991u); reached from ATimeOfDayController_BlueprintBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ATimeOfDayController_BlueprintBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ATimeOfDayController_BlueprintBase();
+// Original dynamic initializer: RVA 0x000D9590
+static FCompiledInDefer Z_CompiledInDefer_UClass_ATimeOfDayController_BlueprintBase(Z_Construct_UClass_ATimeOfDayController_BlueprintBase, &ATimeOfDayController_BlueprintBase::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ATimeOfDayController_BlueprintBase"), false, nullptr, nullptr, nullptr);

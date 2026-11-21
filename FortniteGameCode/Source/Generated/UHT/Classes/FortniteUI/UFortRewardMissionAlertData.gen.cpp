@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortRewardMissionAlertData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortRewardMissionAlertData, 2601063013u)
+// Original dynamic initializer: RVA 0x00258620 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortRewardMissionAlertData> AutoInitializeUFortRewardMissionAlertData(TEXT("UFortRewardMissionAlertData"), sizeof(UFortRewardMissionAlertData), 2601063013u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EBDB0 (end 0x028EBE52)
 // Original VA: 0x00000001428EBDB0 | File offset: 0x028EB3B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortRewardMissionAlertData, 2601063013u); reached from UFortRewardMissionAlertData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortRewardMissionAlertData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortRewardMissionAlertData();
+// Original dynamic initializer: RVA 0x0025A760
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortRewardMissionAlertData(Z_Construct_UClass_UFortRewardMissionAlertData, &UFortRewardMissionAlertData::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortRewardMissionAlertData"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAnimNotify_PlayReloadFX, 3897724546u)
+// Original dynamic initializer: RVA 0x000E6870 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAnimNotify_PlayReloadFX> AutoInitializeUFortAnimNotify_PlayReloadFX(TEXT("UFortAnimNotify_PlayReloadFX"), sizeof(UFortAnimNotify_PlayReloadFX), 3897724546u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9CE10 (end 0x00F9CEB2)
 // Original VA: 0x0000000140F9CE10 | File offset: 0x00F9C410
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAnimNotify_PlayReloadFX, 3897724546u); reached from UFortAnimNotify_PlayReloadFX::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAnimNotify_PlayReloadFX::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAnimNotify_PlayReloadFX();
+// Original dynamic initializer: RVA 0x000E7B10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAnimNotify_PlayReloadFX(Z_Construct_UClass_UFortAnimNotify_PlayReloadFX, &UFortAnimNotify_PlayReloadFX::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAnimNotify_PlayReloadFX"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortLobbyBeaconClientPvP, 139101647u)
+// Original dynamic initializer: RVA 0x000FCE50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortLobbyBeaconClientPvP> AutoInitializeAFortLobbyBeaconClientPvP(TEXT("AFortLobbyBeaconClientPvP"), sizeof(AFortLobbyBeaconClientPvP), 139101647u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101B940 (end 0x0101B9E2)
 // Original VA: 0x000000014101B940 | File offset: 0x0101AF40
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortLobbyBeaconClientPvP, 139101647u); reached from AFortLobbyBeaconClientPvP::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortLobbyBeaconClientPvP::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortLobbyBeaconClientPvP();
+// Original dynamic initializer: RVA 0x000FDBC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortLobbyBeaconClientPvP(Z_Construct_UClass_AFortLobbyBeaconClientPvP, &AFortLobbyBeaconClientPvP::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortLobbyBeaconClientPvP"), false, nullptr, nullptr, nullptr);

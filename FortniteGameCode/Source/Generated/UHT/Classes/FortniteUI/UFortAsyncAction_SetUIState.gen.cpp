@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_SetUIState, 1432293823u)
+// Original dynamic initializer: RVA 0x0023E1E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_SetUIState> AutoInitializeUFortAsyncAction_SetUIState(TEXT("UFortAsyncAction_SetUIState"), sizeof(UFortAsyncAction_SetUIState), 1432293823u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288B420 (end 0x0288B4C2)
 // Original VA: 0x000000014288B420 | File offset: 0x0288AA20
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_SetUIState, 1432293823u); reached from UFortAsyncAction_SetUIState::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_SetUIState::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_SetUIState();
+// Original dynamic initializer: RVA 0x0023FCE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_SetUIState(Z_Construct_UClass_UFortAsyncAction_SetUIState, &UFortAsyncAction_SetUIState::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAsyncAction_SetUIState"), false, nullptr, nullptr, nullptr);

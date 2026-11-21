@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDeployableBaseSkillTreeUnlocks()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDeployableBaseSkillTreeUnlocks, 309321460u)
+// Original dynamic initializer: RVA 0x000F09A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDeployableBaseSkillTreeUnlocks> AutoInitializeUFortDeployableBaseSkillTreeUnlocks(TEXT("UFortDeployableBaseSkillTreeUnlocks"), sizeof(UFortDeployableBaseSkillTreeUnlocks), 309321460u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD41C0 (end 0x00FD4262)
 // Original VA: 0x0000000140FD41C0 | File offset: 0x00FD37C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDeployableBaseSkillTreeUnlocks, 309321460u); reached from UFortDeployableBaseSkillTreeUnlocks::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDeployableBaseSkillTreeUnlocks::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDeployableBaseSkillTreeUnlocks();
+// Original dynamic initializer: RVA 0x000F1790
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDeployableBaseSkillTreeUnlocks(Z_Construct_UClass_UFortDeployableBaseSkillTreeUnlocks, &UFortDeployableBaseSkillTreeUnlocks::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDeployableBaseSkillTreeUnlocks"), false, nullptr, nullptr, nullptr);

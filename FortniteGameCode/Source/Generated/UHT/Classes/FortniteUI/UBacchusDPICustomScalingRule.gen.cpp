@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UBacchusDPICustomScalingRule()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBacchusDPICustomScalingRule, 751885798u)
+// Original dynamic initializer: RVA 0x0023B6A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBacchusDPICustomScalingRule> AutoInitializeUBacchusDPICustomScalingRule(TEXT("UBacchusDPICustomScalingRule"), sizeof(UBacchusDPICustomScalingRule), 751885798u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02885210 (end 0x028852B2)
 // Original VA: 0x0000000142885210 | File offset: 0x02884810
 // Recovery: confirmed (IMPLEMENT_CLASS(UBacchusDPICustomScalingRule, 751885798u); reached from UBacchusDPICustomScalingRule::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UBacchusDPICustomScalingRule::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBacchusDPICustomScalingRule();
+// Original dynamic initializer: RVA 0x0023DAA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBacchusDPICustomScalingRule(Z_Construct_UClass_UBacchusDPICustomScalingRule, &UBacchusDPICustomScalingRule::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UBacchusDPICustomScalingRule"), false, nullptr, nullptr, nullptr);

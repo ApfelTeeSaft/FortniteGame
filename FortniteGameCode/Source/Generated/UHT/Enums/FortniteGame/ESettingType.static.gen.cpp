@@ -18,4 +18,5 @@
 		}
 		return Singleton;
 	}
+	// Original dynamic initializer: RVA 0x00106810
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_ESettingType(ESettingType_StaticEnum, TEXT("/Script/FortniteGame"), TEXT("ESettingType"), false, nullptr, nullptr);

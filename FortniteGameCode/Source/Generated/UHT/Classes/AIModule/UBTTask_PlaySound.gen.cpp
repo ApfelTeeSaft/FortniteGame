@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBTTask_PlaySound()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBTTask_PlaySound, 2010322315u)
+// Original dynamic initializer: RVA 0x001BC3E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTTask_PlaySound> AutoInitializeUBTTask_PlaySound(TEXT("UBTTask_PlaySound"), sizeof(UBTTask_PlaySound), 2010322315u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D27940 (end 0x01D279E2)
 // Original VA: 0x0000000141D27940 | File offset: 0x01D26F40
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTTask_PlaySound, 2010322315u); reached from UBTTask_PlaySound::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBTTask_PlaySound::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTTask_PlaySound();
+// Original dynamic initializer: RVA 0x001BD120
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTTask_PlaySound(Z_Construct_UClass_UBTTask_PlaySound, &UBTTask_PlaySound::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTTask_PlaySound"), false, nullptr, nullptr, nullptr);

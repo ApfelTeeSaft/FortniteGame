@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortTeamActorInterface, 3423767790u)
+// Original dynamic initializer: RVA 0x00114810 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTeamActorInterface> AutoInitializeUFortTeamActorInterface(TEXT("UFortTeamActorInterface"), sizeof(UFortTeamActorInterface), 3423767790u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B1BB0 (end 0x010B1C52)
 // Original VA: 0x00000001410B1BB0 | File offset: 0x010B11B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTeamActorInterface, 3423767790u); reached from UFortTeamActorInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortTeamActorInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTeamActorInterface();
+// Original dynamic initializer: RVA 0x001161C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTeamActorInterface(Z_Construct_UClass_UFortTeamActorInterface, &UFortTeamActorInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTeamActorInterface"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void AFortThreatVisualsManager::StaticRegisterNativesAFortThreatVisualsManager()
 {
 }
+// IMPLEMENT_CLASS(AFortThreatVisualsManager, 498712444u)
+// Original dynamic initializer: RVA 0x001164E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortThreatVisualsManager> AutoInitializeAFortThreatVisualsManager(TEXT("AFortThreatVisualsManager"), sizeof(AFortThreatVisualsManager), 498712444u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010BC2C0 (end 0x010BC362)
 // Original VA: 0x00000001410BC2C0 | File offset: 0x010BB8C0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortThreatVisualsManager, 498712444u); reached from AFortThreatVisualsManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortThreatVisualsManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortThreatVisualsManager();
+// Original dynamic initializer: RVA 0x00117CA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortThreatVisualsManager(Z_Construct_UClass_AFortThreatVisualsManager, &AFortThreatVisualsManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortThreatVisualsManager"), false, nullptr, nullptr, nullptr);

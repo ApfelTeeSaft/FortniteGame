@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UTimelineTemplate()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTimelineTemplate, 3622227579u)
+// Original dynamic initializer: RVA 0x002200E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTimelineTemplate> AutoInitializeUTimelineTemplate(TEXT("UTimelineTemplate"), sizeof(UTimelineTemplate), 3622227579u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EB7A0 (end 0x024EB837)
 // Original VA: 0x00000001424EB7A0 | File offset: 0x024EADA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UTimelineTemplate, 3622227579u); reached from UTimelineTemplate::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UTimelineTemplate::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTimelineTemplate();
+// Original dynamic initializer: RVA 0x00221680
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTimelineTemplate(Z_Construct_UClass_UTimelineTemplate, &UTimelineTemplate::StaticClass, TEXT("/Script/Engine"), TEXT("UTimelineTemplate"), false, nullptr, nullptr, nullptr);

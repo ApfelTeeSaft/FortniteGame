@@ -7,6 +7,9 @@
 void UOnlineBlueprintCallProxyBase::StaticRegisterNativesUOnlineBlueprintCallProxyBase()
 {
 }
+// IMPLEMENT_CLASS(UOnlineBlueprintCallProxyBase, 1899118183u)
+// Original dynamic initializer: RVA 0x0020EE30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UOnlineBlueprintCallProxyBase> AutoInitializeUOnlineBlueprintCallProxyBase(TEXT("UOnlineBlueprintCallProxyBase"), sizeof(UOnlineBlueprintCallProxyBase), 1899118183u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02493A90 (end 0x02493B27)
 // Original VA: 0x0000000142493A90 | File offset: 0x02493090
 // Recovery: confirmed (IMPLEMENT_CLASS(UOnlineBlueprintCallProxyBase, 1899118183u); reached from UOnlineBlueprintCallProxyBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UOnlineBlueprintCallProxyBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UOnlineBlueprintCallProxyBase();
+// Original dynamic initializer: RVA 0x00210130
+static FCompiledInDefer Z_CompiledInDefer_UClass_UOnlineBlueprintCallProxyBase(Z_Construct_UClass_UOnlineBlueprintCallProxyBase, &UOnlineBlueprintCallProxyBase::StaticClass, TEXT("/Script/Engine"), TEXT("UOnlineBlueprintCallProxyBase"), false, nullptr, nullptr, nullptr);

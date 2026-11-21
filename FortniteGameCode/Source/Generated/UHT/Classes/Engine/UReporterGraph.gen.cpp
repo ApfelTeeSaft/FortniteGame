@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UReporterGraph()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UReporterGraph, 1285942173u)
+// Original dynamic initializer: RVA 0x00217530 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UReporterGraph> AutoInitializeUReporterGraph(TEXT("UReporterGraph"), sizeof(UReporterGraph), 1285942173u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C1800 (end 0x024C18A2)
 // Original VA: 0x00000001424C1800 | File offset: 0x024C0E00
 // Recovery: confirmed (IMPLEMENT_CLASS(UReporterGraph, 1285942173u); reached from UReporterGraph::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UReporterGraph::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UReporterGraph();
+// Original dynamic initializer: RVA 0x00218B00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UReporterGraph(Z_Construct_UClass_UReporterGraph, &UReporterGraph::StaticClass, TEXT("/Script/Engine"), TEXT("UReporterGraph"), false, nullptr, nullptr, nullptr);

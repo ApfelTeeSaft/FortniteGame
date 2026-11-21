@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UWindowTitleBarArea, 2874462379u)
+// Original dynamic initializer: RVA 0x001B5480 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWindowTitleBarArea> AutoInitializeUWindowTitleBarArea(TEXT("UWindowTitleBarArea"), sizeof(UWindowTitleBarArea), 2874462379u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C07810 (end 0x01C078B2)
 // Original VA: 0x0000000141C07810 | File offset: 0x01C06E10
 // Recovery: confirmed (IMPLEMENT_CLASS(UWindowTitleBarArea, 2874462379u); reached from UWindowTitleBarArea::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UWindowTitleBarArea::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWindowTitleBarArea();
+// Original dynamic initializer: RVA 0x001B5670
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWindowTitleBarArea(Z_Construct_UClass_UWindowTitleBarArea, &UWindowTitleBarArea::StaticClass, TEXT("/Script/UMG"), TEXT("UWindowTitleBarArea"), false, nullptr, nullptr, nullptr);

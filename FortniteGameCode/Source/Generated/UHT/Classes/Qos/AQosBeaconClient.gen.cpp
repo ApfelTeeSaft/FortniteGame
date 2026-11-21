@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AQosBeaconClient, 2022778159u)
+// Original dynamic initializer: RVA 0x000A7940 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AQosBeaconClient> AutoInitializeAQosBeaconClient(TEXT("AQosBeaconClient"), sizeof(AQosBeaconClient), 2022778159u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005A1A30 (end 0x005A1AD2)
 // Original VA: 0x00000001405A1A30 | File offset: 0x005A1030
 // Recovery: confirmed (IMPLEMENT_CLASS(AQosBeaconClient, 2022778159u); reached from AQosBeaconClient::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AQosBeaconClient::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AQosBeaconClient();
+// Original dynamic initializer: RVA 0x000A7DB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AQosBeaconClient(Z_Construct_UClass_AQosBeaconClient, &AQosBeaconClient::StaticClass, TEXT("/Script/Qos"), TEXT("AQosBeaconClient"), false, nullptr, nullptr, nullptr);

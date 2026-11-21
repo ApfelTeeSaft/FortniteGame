@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ADecoyActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ADecoyActor, 3030561017u)
+// Original dynamic initializer: RVA 0x000DCD20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ADecoyActor> AutoInitializeADecoyActor(TEXT("ADecoyActor"), sizeof(ADecoyActor), 3030561017u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F76920 (end 0x00F769C2)
 // Original VA: 0x0000000140F76920 | File offset: 0x00F75F20
 // Recovery: confirmed (IMPLEMENT_CLASS(ADecoyActor, 3030561017u); reached from ADecoyActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ADecoyActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ADecoyActor();
+// Original dynamic initializer: RVA 0x000DE180
+static FCompiledInDefer Z_CompiledInDefer_UClass_ADecoyActor(Z_Construct_UClass_ADecoyActor, &ADecoyActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ADecoyActor"), false, nullptr, nullptr, nullptr);

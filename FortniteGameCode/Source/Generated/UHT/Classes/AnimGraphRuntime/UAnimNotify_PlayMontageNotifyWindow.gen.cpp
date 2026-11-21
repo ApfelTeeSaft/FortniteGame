@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAnimNotify_PlayMontageNotifyWindow()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnimNotify_PlayMontageNotifyWindow, 3179330894u)
+// Original dynamic initializer: RVA 0x001A89C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimNotify_PlayMontageNotifyWindow> AutoInitializeUAnimNotify_PlayMontageNotifyWindow(TEXT("UAnimNotify_PlayMontageNotifyWindow"), sizeof(UAnimNotify_PlayMontageNotifyWindow), 3179330894u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B0A490 (end 0x01B0A532)
 // Original VA: 0x0000000141B0A490 | File offset: 0x01B09A90
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimNotify_PlayMontageNotifyWindow, 3179330894u); reached from UAnimNotify_PlayMontageNotifyWindow::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAnimNotify_PlayMontageNotifyWindow::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimNotify_PlayMontageNotifyWindow();
+// Original dynamic initializer: RVA 0x001AC0E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimNotify_PlayMontageNotifyWindow(Z_Construct_UClass_UAnimNotify_PlayMontageNotifyWindow, &UAnimNotify_PlayMontageNotifyWindow::StaticClass, TEXT("/Script/AnimGraphRuntime"), TEXT("UAnimNotify_PlayMontageNotifyWindow"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USoundNodeLooping()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USoundNodeLooping, 4272744311u)
+// Original dynamic initializer: RVA 0x0021C690 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USoundNodeLooping> AutoInitializeUSoundNodeLooping(TEXT("USoundNodeLooping"), sizeof(USoundNodeLooping), 4272744311u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DA0B0 (end 0x024DA152)
 // Original VA: 0x00000001424DA0B0 | File offset: 0x024D96B0
 // Recovery: confirmed (IMPLEMENT_CLASS(USoundNodeLooping, 4272744311u); reached from USoundNodeLooping::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USoundNodeLooping::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USoundNodeLooping();
+// Original dynamic initializer: RVA 0x0021DC70
+static FCompiledInDefer Z_CompiledInDefer_UClass_USoundNodeLooping(Z_Construct_UClass_USoundNodeLooping, &USoundNodeLooping::StaticClass, TEXT("/Script/Engine"), TEXT("USoundNodeLooping"), false, nullptr, nullptr, nullptr);

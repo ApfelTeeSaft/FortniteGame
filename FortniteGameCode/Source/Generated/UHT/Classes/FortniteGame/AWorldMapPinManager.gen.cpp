@@ -7,6 +7,9 @@
 void AWorldMapPinManager::StaticRegisterNativesAWorldMapPinManager()
 {
 }
+// IMPLEMENT_CLASS(AWorldMapPinManager, 3533933858u)
+// Original dynamic initializer: RVA 0x00122470 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AWorldMapPinManager> AutoInitializeAWorldMapPinManager(TEXT("AWorldMapPinManager"), sizeof(AWorldMapPinManager), 3533933858u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EFEA0 (end 0x010EFF42)
 // Original VA: 0x00000001410EFEA0 | File offset: 0x010EF4A0
 // Recovery: confirmed (IMPLEMENT_CLASS(AWorldMapPinManager, 3533933858u); reached from AWorldMapPinManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AWorldMapPinManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AWorldMapPinManager();
+// Original dynamic initializer: RVA 0x001236A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AWorldMapPinManager(Z_Construct_UClass_AWorldMapPinManager, &AWorldMapPinManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AWorldMapPinManager"), false, nullptr, nullptr, nullptr);

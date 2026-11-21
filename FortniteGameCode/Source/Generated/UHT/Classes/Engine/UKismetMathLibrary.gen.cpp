@@ -7,6 +7,9 @@
 void UKismetMathLibrary::StaticRegisterNativesUKismetMathLibrary()
 {
 }
+// IMPLEMENT_CLASS(UKismetMathLibrary, 2084783982u)
+// Original dynamic initializer: RVA 0x00204610 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UKismetMathLibrary> AutoInitializeUKismetMathLibrary(TEXT("UKismetMathLibrary"), sizeof(UKismetMathLibrary), 2084783982u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024312F0 (end 0x02431392)
 // Original VA: 0x00000001424312F0 | File offset: 0x024308F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UKismetMathLibrary, 2084783982u); reached from UKismetMathLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UKismetMathLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UKismetMathLibrary();
+// Original dynamic initializer: RVA 0x00204BF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UKismetMathLibrary(Z_Construct_UClass_UKismetMathLibrary, &UKismetMathLibrary::StaticClass, TEXT("/Script/Engine"), TEXT("UKismetMathLibrary"), false, nullptr, nullptr, nullptr);

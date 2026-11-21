@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortPawn_Taker()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortPawn_Taker, 1081912558u)
+// Original dynamic initializer: RVA 0x00108CE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPawn_Taker> AutoInitializeAFortPawn_Taker(TEXT("AFortPawn_Taker"), sizeof(AFortPawn_Taker), 1081912558u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01063C40 (end 0x01063CE2)
 // Original VA: 0x0000000141063C40 | File offset: 0x01063240
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPawn_Taker, 1081912558u); reached from AFortPawn_Taker::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortPawn_Taker::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPawn_Taker();
+// Original dynamic initializer: RVA 0x00109FC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPawn_Taker(Z_Construct_UClass_AFortPawn_Taker, &AFortPawn_Taker::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPawn_Taker"), false, nullptr, nullptr, nullptr);

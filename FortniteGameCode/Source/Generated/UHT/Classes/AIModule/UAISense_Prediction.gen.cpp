@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAISense_Prediction, 2583100495u)
+// Original dynamic initializer: RVA 0x001B9170 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAISense_Prediction> AutoInitializeUAISense_Prediction(TEXT("UAISense_Prediction"), sizeof(UAISense_Prediction), 2583100495u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1A5D0 (end 0x01D1A672)
 // Original VA: 0x0000000141D1A5D0 | File offset: 0x01D19BD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAISense_Prediction, 2583100495u); reached from UAISense_Prediction::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAISense_Prediction::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAISense_Prediction();
+// Original dynamic initializer: RVA 0x001BA370
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAISense_Prediction(Z_Construct_UClass_UAISense_Prediction, &UAISense_Prediction::StaticClass, TEXT("/Script/AIModule"), TEXT("UAISense_Prediction"), false, nullptr, nullptr, nullptr);

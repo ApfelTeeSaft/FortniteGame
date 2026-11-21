@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UCurveTable()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCurveTable, 2960716248u)
+// Original dynamic initializer: RVA 0x001F8360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCurveTable> AutoInitializeUCurveTable(TEXT("UCurveTable"), sizeof(UCurveTable), 2960716248u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FC230 (end 0x023FC2C7)
 // Original VA: 0x00000001423FC230 | File offset: 0x023FB830
 // Recovery: confirmed (IMPLEMENT_CLASS(UCurveTable, 2960716248u); reached from UCurveTable::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UCurveTable::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCurveTable();
+// Original dynamic initializer: RVA 0x001F9680
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCurveTable(Z_Construct_UClass_UCurveTable, &UCurveTable::StaticClass, TEXT("/Script/Engine"), TEXT("UCurveTable"), false, nullptr, nullptr, nullptr);

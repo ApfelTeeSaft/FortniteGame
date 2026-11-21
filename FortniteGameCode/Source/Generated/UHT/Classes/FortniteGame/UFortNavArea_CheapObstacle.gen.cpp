@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortNavArea_CheapObstacle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNavArea_CheapObstacle, 2656267734u)
+// Original dynamic initializer: RVA 0x00104220 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNavArea_CheapObstacle> AutoInitializeUFortNavArea_CheapObstacle(TEXT("UFortNavArea_CheapObstacle"), sizeof(UFortNavArea_CheapObstacle), 2656267734u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01048B30 (end 0x01048BD2)
 // Original VA: 0x0000000141048B30 | File offset: 0x01048130
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNavArea_CheapObstacle, 2656267734u); reached from UFortNavArea_CheapObstacle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortNavArea_CheapObstacle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNavArea_CheapObstacle();
+// Original dynamic initializer: RVA 0x001053D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNavArea_CheapObstacle(Z_Construct_UClass_UFortNavArea_CheapObstacle, &UFortNavArea_CheapObstacle::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNavArea_CheapObstacle"), false, nullptr, nullptr, nullptr);

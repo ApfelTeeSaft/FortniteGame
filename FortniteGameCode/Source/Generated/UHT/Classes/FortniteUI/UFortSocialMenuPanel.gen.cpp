@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSocialMenuPanel, 3791936037u)
+// Original dynamic initializer: RVA 0x0025AD60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSocialMenuPanel> AutoInitializeUFortSocialMenuPanel(TEXT("UFortSocialMenuPanel"), sizeof(UFortSocialMenuPanel), 3791936037u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F3BC0 (end 0x028F3C62)
 // Original VA: 0x00000001428F3BC0 | File offset: 0x028F31C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSocialMenuPanel, 3791936037u); reached from UFortSocialMenuPanel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSocialMenuPanel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSocialMenuPanel();
+// Original dynamic initializer: RVA 0x0025BDA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSocialMenuPanel(Z_Construct_UClass_UFortSocialMenuPanel, &UFortSocialMenuPanel::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSocialMenuPanel"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortContextTrapItemDefinition()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortContextTrapItemDefinition, 3963966845u)
+// Original dynamic initializer: RVA 0x000EE450 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortContextTrapItemDefinition> AutoInitializeUFortContextTrapItemDefinition(TEXT("UFortContextTrapItemDefinition"), sizeof(UFortContextTrapItemDefinition), 3963966845u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC9D00 (end 0x00FC9DA2)
 // Original VA: 0x0000000140FC9D00 | File offset: 0x00FC9300
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortContextTrapItemDefinition, 3963966845u); reached from UFortContextTrapItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortContextTrapItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortContextTrapItemDefinition();
+// Original dynamic initializer: RVA 0x000EF600
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortContextTrapItemDefinition(Z_Construct_UClass_UFortContextTrapItemDefinition, &UFortContextTrapItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortContextTrapItemDefinition"), false, nullptr, nullptr, nullptr);

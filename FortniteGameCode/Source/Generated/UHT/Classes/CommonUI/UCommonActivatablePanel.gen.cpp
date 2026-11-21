@@ -7,6 +7,9 @@
 void UCommonActivatablePanel::StaticRegisterNativesUCommonActivatablePanel()
 {
 }
+// IMPLEMENT_CLASS(UCommonActivatablePanel, 3350225185u)
+// Original dynamic initializer: RVA 0x000955D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonActivatablePanel> AutoInitializeUCommonActivatablePanel(TEXT("UCommonActivatablePanel"), sizeof(UCommonActivatablePanel), 3350225185u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C1A70 (end 0x002C1B12)
 // Original VA: 0x00000001402C1A70 | File offset: 0x002C1070
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonActivatablePanel, 3350225185u); reached from UCommonActivatablePanel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonActivatablePanel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonActivatablePanel();
+// Original dynamic initializer: RVA 0x00095C80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonActivatablePanel(Z_Construct_UClass_UCommonActivatablePanel, &UCommonActivatablePanel::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonActivatablePanel"), false, nullptr, nullptr, nullptr);

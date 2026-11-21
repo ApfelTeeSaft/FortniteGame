@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortNavLinkBlockerComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNavLinkBlockerComponent, 2697688734u)
+// Original dynamic initializer: RVA 0x00104440 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNavLinkBlockerComponent> AutoInitializeUFortNavLinkBlockerComponent(TEXT("UFortNavLinkBlockerComponent"), sizeof(UFortNavLinkBlockerComponent), 2697688734u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010496E0 (end 0x01049782)
 // Original VA: 0x00000001410496E0 | File offset: 0x01048CE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNavLinkBlockerComponent, 2697688734u); reached from UFortNavLinkBlockerComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortNavLinkBlockerComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNavLinkBlockerComponent();
+// Original dynamic initializer: RVA 0x00105810
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNavLinkBlockerComponent(Z_Construct_UClass_UFortNavLinkBlockerComponent, &UFortNavLinkBlockerComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNavLinkBlockerComponent"), false, nullptr, nullptr, nullptr);

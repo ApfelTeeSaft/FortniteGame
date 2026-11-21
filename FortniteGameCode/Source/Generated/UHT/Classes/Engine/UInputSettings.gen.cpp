@@ -7,6 +7,9 @@
 void UInputSettings::StaticRegisterNativesUInputSettings()
 {
 }
+// IMPLEMENT_CLASS(UInputSettings, 3646492110u)
+// Original dynamic initializer: RVA 0x00200CA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInputSettings> AutoInitializeUInputSettings(TEXT("UInputSettings"), sizeof(UInputSettings), 3646492110u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02426360 (end 0x024263F7)
 // Original VA: 0x0000000142426360 | File offset: 0x02425960
 // Recovery: confirmed (IMPLEMENT_CLASS(UInputSettings, 3646492110u); reached from UInputSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UInputSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInputSettings();
+// Original dynamic initializer: RVA 0x002020C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInputSettings(Z_Construct_UClass_UInputSettings, &UInputSettings::StaticClass, TEXT("/Script/Engine"), TEXT("UInputSettings"), false, nullptr, nullptr, nullptr);

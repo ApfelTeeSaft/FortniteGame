@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UCloudStorageBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCloudStorageBase, 3377824977u)
+// Original dynamic initializer: RVA 0x001F6FC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCloudStorageBase> AutoInitializeUCloudStorageBase(TEXT("UCloudStorageBase"), sizeof(UCloudStorageBase), 3377824977u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F6350 (end 0x023F63F2)
 // Original VA: 0x00000001423F6350 | File offset: 0x023F5950
 // Recovery: confirmed (IMPLEMENT_CLASS(UCloudStorageBase, 3377824977u); reached from UCloudStorageBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UCloudStorageBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCloudStorageBase();
+// Original dynamic initializer: RVA 0x001F7FA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCloudStorageBase(Z_Construct_UClass_UCloudStorageBase, &UCloudStorageBase::StaticClass, TEXT("/Script/Engine"), TEXT("UCloudStorageBase"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void AFortTrack::StaticRegisterNativesAFortTrack()
 {
 }
+// IMPLEMENT_CLASS(AFortTrack, 3304805572u)
+// Original dynamic initializer: RVA 0x00117DC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortTrack> AutoInitializeAFortTrack(TEXT("AFortTrack"), sizeof(AFortTrack), 3304805572u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C7150 (end 0x010C71F2)
 // Original VA: 0x00000001410C7150 | File offset: 0x010C6750
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortTrack, 3304805572u); reached from AFortTrack::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortTrack::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortTrack();
+// Original dynamic initializer: RVA 0x0011B870
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortTrack(Z_Construct_UClass_AFortTrack, &AFortTrack::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortTrack"), false, nullptr, nullptr, nullptr);

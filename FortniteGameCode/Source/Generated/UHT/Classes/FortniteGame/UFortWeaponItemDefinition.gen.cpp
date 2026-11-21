@@ -7,6 +7,9 @@
 void UFortWeaponItemDefinition::StaticRegisterNativesUFortWeaponItemDefinition()
 {
 }
+// IMPLEMENT_CLASS(UFortWeaponItemDefinition, 107673333u)
+// Original dynamic initializer: RVA 0x0011D360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortWeaponItemDefinition> AutoInitializeUFortWeaponItemDefinition(TEXT("UFortWeaponItemDefinition"), sizeof(UFortWeaponItemDefinition), 107673333u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8140 (end 0x010D81E2)
 // Original VA: 0x00000001410D8140 | File offset: 0x010D7740
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortWeaponItemDefinition, 107673333u); reached from UFortWeaponItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortWeaponItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortWeaponItemDefinition();
+// Original dynamic initializer: RVA 0x0011D7B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortWeaponItemDefinition(Z_Construct_UClass_UFortWeaponItemDefinition, &UFortWeaponItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortWeaponItemDefinition"), false, nullptr, nullptr, nullptr);

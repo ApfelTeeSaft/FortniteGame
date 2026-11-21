@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ATextRenderActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ATextRenderActor, 1650598220u)
+// Original dynamic initializer: RVA 0x0021E730 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ATextRenderActor> AutoInitializeATextRenderActor(TEXT("ATextRenderActor"), sizeof(ATextRenderActor), 1650598220u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024E5EF0 (end 0x024E5F92)
 // Original VA: 0x00000001424E5EF0 | File offset: 0x024E54F0
 // Recovery: confirmed (IMPLEMENT_CLASS(ATextRenderActor, 1650598220u); reached from ATextRenderActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ATextRenderActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ATextRenderActor();
+// Original dynamic initializer: RVA 0x0021FC00
+static FCompiledInDefer Z_CompiledInDefer_UClass_ATextRenderActor(Z_Construct_UClass_ATextRenderActor, &ATextRenderActor::StaticClass, TEXT("/Script/Engine"), TEXT("ATextRenderActor"), false, nullptr, nullptr, nullptr);

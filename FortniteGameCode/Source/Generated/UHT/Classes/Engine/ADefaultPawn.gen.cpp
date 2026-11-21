@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ADefaultPawn, 1678617420u)
+// Original dynamic initializer: RVA 0x001F8260 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ADefaultPawn> AutoInitializeADefaultPawn(TEXT("ADefaultPawn"), sizeof(ADefaultPawn), 1678617420u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FBCD0 (end 0x023FBD72)
 // Original VA: 0x00000001423FBCD0 | File offset: 0x023FB2D0
 // Recovery: confirmed (IMPLEMENT_CLASS(ADefaultPawn, 1678617420u); reached from ADefaultPawn::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ADefaultPawn::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ADefaultPawn();
+// Original dynamic initializer: RVA 0x001F9480
+static FCompiledInDefer Z_CompiledInDefer_UClass_ADefaultPawn(Z_Construct_UClass_ADefaultPawn, &ADefaultPawn::StaticClass, TEXT("/Script/Engine"), TEXT("ADefaultPawn"), false, nullptr, nullptr, nullptr);

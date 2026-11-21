@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCameraAnimInst, 4124243351u)
+// Original dynamic initializer: RVA 0x001F4CF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCameraAnimInst> AutoInitializeUCameraAnimInst(TEXT("UCameraAnimInst"), sizeof(UCameraAnimInst), 4124243351u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E91F0 (end 0x023E9287)
 // Original VA: 0x00000001423E91F0 | File offset: 0x023E87F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCameraAnimInst, 4124243351u); reached from UCameraAnimInst::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCameraAnimInst::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCameraAnimInst();
+// Original dynamic initializer: RVA 0x001F6290
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCameraAnimInst(Z_Construct_UClass_UCameraAnimInst, &UCameraAnimInst::StaticClass, TEXT("/Script/Engine"), TEXT("UCameraAnimInst"), false, nullptr, nullptr, nullptr);

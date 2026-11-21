@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UTextRenderComponent, 3068273315u)
+// Original dynamic initializer: RVA 0x0021E870 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTextRenderComponent> AutoInitializeUTextRenderComponent(TEXT("UTextRenderComponent"), sizeof(UTextRenderComponent), 3068273315u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024E6570 (end 0x024E6612)
 // Original VA: 0x00000001424E6570 | File offset: 0x024E5B70
 // Recovery: confirmed (IMPLEMENT_CLASS(UTextRenderComponent, 3068273315u); reached from UTextRenderComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UTextRenderComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTextRenderComponent();
+// Original dynamic initializer: RVA 0x0021FE80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTextRenderComponent(Z_Construct_UClass_UTextRenderComponent, &UTextRenderComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UTextRenderComponent"), false, nullptr, nullptr, nullptr);

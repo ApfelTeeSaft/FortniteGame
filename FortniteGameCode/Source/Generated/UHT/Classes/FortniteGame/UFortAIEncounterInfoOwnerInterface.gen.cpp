@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAIEncounterInfoOwnerInterface, 1276506313u)
+// Original dynamic initializer: RVA 0x000E2300 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAIEncounterInfoOwnerInterface> AutoInitializeUFortAIEncounterInfoOwnerInterface(TEXT("UFortAIEncounterInfoOwnerInterface"), sizeof(UFortAIEncounterInfoOwnerInterface), 1276506313u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8B410 (end 0x00F8B4B2)
 // Original VA: 0x0000000140F8B410 | File offset: 0x00F8AA10
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAIEncounterInfoOwnerInterface, 1276506313u); reached from UFortAIEncounterInfoOwnerInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAIEncounterInfoOwnerInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAIEncounterInfoOwnerInterface();
+// Original dynamic initializer: RVA 0x000E32F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAIEncounterInfoOwnerInterface(Z_Construct_UClass_UFortAIEncounterInfoOwnerInterface, &UFortAIEncounterInfoOwnerInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAIEncounterInfoOwnerInterface"), false, nullptr, nullptr, nullptr);

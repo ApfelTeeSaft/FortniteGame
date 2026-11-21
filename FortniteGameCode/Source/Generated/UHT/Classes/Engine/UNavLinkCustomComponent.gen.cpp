@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_UNavLinkCustomComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNavLinkCustomComponent, 2237792799u)
+// Original dynamic initializer: RVA 0x0020DB90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavLinkCustomComponent> AutoInitializeUNavLinkCustomComponent(TEXT("UNavLinkCustomComponent"), sizeof(UNavLinkCustomComponent), 2237792799u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248E010 (end 0x0248E0B2)
 // Original VA: 0x000000014248E010 | File offset: 0x0248D610
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavLinkCustomComponent, 2237792799u); reached from UNavLinkCustomComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* UNavLinkCustomComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavLinkCustomComponent();
+// Original dynamic initializer: RVA 0x0020E850
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavLinkCustomComponent(Z_Construct_UClass_UNavLinkCustomComponent, &UNavLinkCustomComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UNavLinkCustomComponent"), false, nullptr, nullptr, nullptr);

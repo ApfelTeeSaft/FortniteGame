@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UTextureCube()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UTextureCube, 3516310002u)
+// Original dynamic initializer: RVA 0x0021FFE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTextureCube> AutoInitializeUTextureCube(TEXT("UTextureCube"), sizeof(UTextureCube), 3516310002u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EB240 (end 0x024EB2E2)
 // Original VA: 0x00000001424EB240 | File offset: 0x024EA840
 // Recovery: confirmed (IMPLEMENT_CLASS(UTextureCube, 3516310002u); reached from UTextureCube::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UTextureCube::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTextureCube();
+// Original dynamic initializer: RVA 0x00221480
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTextureCube(Z_Construct_UClass_UTextureCube, &UTextureCube::StaticClass, TEXT("/Script/Engine"), TEXT("UTextureCube"), false, nullptr, nullptr, nullptr);

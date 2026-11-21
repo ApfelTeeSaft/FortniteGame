@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UControlPointMeshComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UControlPointMeshComponent, 2064914959u)
+// Original dynamic initializer: RVA 0x001A2B30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UControlPointMeshComponent> AutoInitializeUControlPointMeshComponent(TEXT("UControlPointMeshComponent"), sizeof(UControlPointMeshComponent), 2064914959u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A73B00 (end 0x01A73BA2)
 // Original VA: 0x0000000141A73B00 | File offset: 0x01A73100
 // Recovery: confirmed (IMPLEMENT_CLASS(UControlPointMeshComponent, 2064914959u); reached from UControlPointMeshComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UControlPointMeshComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UControlPointMeshComponent();
+// Original dynamic initializer: RVA 0x001A3F60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UControlPointMeshComponent(Z_Construct_UClass_UControlPointMeshComponent, &UControlPointMeshComponent::StaticClass, TEXT("/Script/Landscape"), TEXT("UControlPointMeshComponent"), false, nullptr, nullptr, nullptr);

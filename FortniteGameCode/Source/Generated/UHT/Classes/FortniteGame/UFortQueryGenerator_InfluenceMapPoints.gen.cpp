@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryGenerator_InfluenceMapPoints()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryGenerator_InfluenceMapPoints, 157374176u)
+// Original dynamic initializer: RVA 0x0010EAF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryGenerator_InfluenceMapPoints> AutoInitializeUFortQueryGenerator_InfluenceMapPoints(TEXT("UFortQueryGenerator_InfluenceMapPoints"), sizeof(UFortQueryGenerator_InfluenceMapPoints), 157374176u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01091160 (end 0x01091202)
 // Original VA: 0x0000000141091160 | File offset: 0x01090760
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryGenerator_InfluenceMapPoints, 157374176u); reached from UFortQueryGenerator_InfluenceMapPoints::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryGenerator_InfluenceMapPoints::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryGenerator_InfluenceMapPoints();
+// Original dynamic initializer: RVA 0x0010FC60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryGenerator_InfluenceMapPoints(Z_Construct_UClass_UFortQueryGenerator_InfluenceMapPoints, &UFortQueryGenerator_InfluenceMapPoints::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryGenerator_InfluenceMapPoints"), false, nullptr, nullptr, nullptr);

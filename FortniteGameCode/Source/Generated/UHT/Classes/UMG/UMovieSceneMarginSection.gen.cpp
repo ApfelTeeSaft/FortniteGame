@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMovieSceneMarginSection()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMovieSceneMarginSection, 3944754378u)
+// Original dynamic initializer: RVA 0x001B2880 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovieSceneMarginSection> AutoInitializeUMovieSceneMarginSection(TEXT("UMovieSceneMarginSection"), sizeof(UMovieSceneMarginSection), 3944754378u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEBFA0 (end 0x01BEC042)
 // Original VA: 0x0000000141BEBFA0 | File offset: 0x01BEB5A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovieSceneMarginSection, 3944754378u); reached from UMovieSceneMarginSection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMovieSceneMarginSection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovieSceneMarginSection();
+// Original dynamic initializer: RVA 0x001B3150
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovieSceneMarginSection(Z_Construct_UClass_UMovieSceneMarginSection, &UMovieSceneMarginSection::StaticClass, TEXT("/Script/UMG"), TEXT("UMovieSceneMarginSection"), false, nullptr, nullptr, nullptr);

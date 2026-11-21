@@ -7,6 +7,9 @@
 void UFortQuestTreeItemWidget::StaticRegisterNativesUFortQuestTreeItemWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortQuestTreeItemWidget, 2532511481u)
+// Original dynamic initializer: RVA 0x00258420 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQuestTreeItemWidget> AutoInitializeUFortQuestTreeItemWidget(TEXT("UFortQuestTreeItemWidget"), sizeof(UFortQuestTreeItemWidget), 2532511481u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EB2B0 (end 0x028EB352)
 // Original VA: 0x00000001428EB2B0 | File offset: 0x028EA8B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQuestTreeItemWidget, 2532511481u); reached from UFortQuestTreeItemWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortQuestTreeItemWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQuestTreeItemWidget();
+// Original dynamic initializer: RVA 0x0025A360
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQuestTreeItemWidget(Z_Construct_UClass_UFortQuestTreeItemWidget, &UFortQuestTreeItemWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortQuestTreeItemWidget"), false, nullptr, nullptr, nullptr);

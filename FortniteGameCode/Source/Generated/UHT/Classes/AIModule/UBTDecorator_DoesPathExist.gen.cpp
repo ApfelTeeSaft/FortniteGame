@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBTDecorator_DoesPathExist()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBTDecorator_DoesPathExist, 482477190u)
+// Original dynamic initializer: RVA 0x001BC0A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTDecorator_DoesPathExist> AutoInitializeUBTDecorator_DoesPathExist(TEXT("UBTDecorator_DoesPathExist"), sizeof(UBTDecorator_DoesPathExist), 482477190u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D26770 (end 0x01D26812)
 // Original VA: 0x0000000141D26770 | File offset: 0x01D25D70
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTDecorator_DoesPathExist, 482477190u); reached from UBTDecorator_DoesPathExist::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBTDecorator_DoesPathExist::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTDecorator_DoesPathExist();
+// Original dynamic initializer: RVA 0x001BCAA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTDecorator_DoesPathExist(Z_Construct_UClass_UBTDecorator_DoesPathExist, &UBTDecorator_DoesPathExist::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTDecorator_DoesPathExist"), false, nullptr, nullptr, nullptr);

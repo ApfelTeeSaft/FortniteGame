@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UCustomDynamicColorSwatch()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCustomDynamicColorSwatch, 782106181u)
+// Original dynamic initializer: RVA 0x000DCF80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCustomDynamicColorSwatch> AutoInitializeUCustomDynamicColorSwatch(TEXT("UCustomDynamicColorSwatch"), sizeof(UCustomDynamicColorSwatch), 782106181u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F77610 (end 0x00F776B2)
 // Original VA: 0x0000000140F77610 | File offset: 0x00F76C10
 // Recovery: confirmed (IMPLEMENT_CLASS(UCustomDynamicColorSwatch, 782106181u); reached from UCustomDynamicColorSwatch::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UCustomDynamicColorSwatch::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCustomDynamicColorSwatch();
+// Original dynamic initializer: RVA 0x000DE640
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCustomDynamicColorSwatch(Z_Construct_UClass_UCustomDynamicColorSwatch, &UCustomDynamicColorSwatch::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UCustomDynamicColorSwatch"), false, nullptr, nullptr, nullptr);

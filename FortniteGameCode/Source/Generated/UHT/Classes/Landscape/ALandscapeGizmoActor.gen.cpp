@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ALandscapeGizmoActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ALandscapeGizmoActor, 4211992312u)
+// Original dynamic initializer: RVA 0x001A2AB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALandscapeGizmoActor> AutoInitializeALandscapeGizmoActor(TEXT("ALandscapeGizmoActor"), sizeof(ALandscapeGizmoActor), 4211992312u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A73840 (end 0x01A738E2)
 // Original VA: 0x0000000141A73840 | File offset: 0x01A72E40
 // Recovery: confirmed (IMPLEMENT_CLASS(ALandscapeGizmoActor, 4211992312u); reached from ALandscapeGizmoActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ALandscapeGizmoActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALandscapeGizmoActor();
+// Original dynamic initializer: RVA 0x001A3E60
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALandscapeGizmoActor(Z_Construct_UClass_ALandscapeGizmoActor, &ALandscapeGizmoActor::StaticClass, TEXT("/Script/Landscape"), TEXT("ALandscapeGizmoActor"), false, nullptr, nullptr, nullptr);

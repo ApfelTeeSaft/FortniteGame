@@ -7,6 +7,9 @@
 void UFortLoginStatus::StaticRegisterNativesUFortLoginStatus()
 {
 }
+// IMPLEMENT_CLASS(UFortLoginStatus, 1018427907u)
+// Original dynamic initializer: RVA 0x00251470 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortLoginStatus> AutoInitializeUFortLoginStatus(TEXT("UFortLoginStatus"), sizeof(UFortLoginStatus), 1018427907u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D5AA0 (end 0x028D5B42)
 // Original VA: 0x00000001428D5AA0 | File offset: 0x028D50A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortLoginStatus, 1018427907u); reached from UFortLoginStatus::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortLoginStatus::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortLoginStatus();
+// Original dynamic initializer: RVA 0x002534F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortLoginStatus(Z_Construct_UClass_UFortLoginStatus, &UFortLoginStatus::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortLoginStatus"), false, nullptr, nullptr, nullptr);

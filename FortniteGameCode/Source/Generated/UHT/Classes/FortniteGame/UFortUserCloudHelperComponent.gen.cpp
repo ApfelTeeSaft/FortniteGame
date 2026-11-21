@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortUserCloudHelperComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortUserCloudHelperComponent, 3616929084u)
+// Original dynamic initializer: RVA 0x0011C070 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUserCloudHelperComponent> AutoInitializeUFortUserCloudHelperComponent(TEXT("UFortUserCloudHelperComponent"), sizeof(UFortUserCloudHelperComponent), 3616929084u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D3340 (end 0x010D33E2)
 // Original VA: 0x00000001410D3340 | File offset: 0x010D2940
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUserCloudHelperComponent, 3616929084u); reached from UFortUserCloudHelperComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortUserCloudHelperComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUserCloudHelperComponent();
+// Original dynamic initializer: RVA 0x0011D220
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUserCloudHelperComponent(Z_Construct_UClass_UFortUserCloudHelperComponent, &UFortUserCloudHelperComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortUserCloudHelperComponent"), false, nullptr, nullptr, nullptr);

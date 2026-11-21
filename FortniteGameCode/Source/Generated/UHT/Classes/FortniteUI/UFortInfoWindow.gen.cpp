@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortInfoWindow, 1913258043u)
+// Original dynamic initializer: RVA 0x00248360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortInfoWindow> AutoInitializeUFortInfoWindow(TEXT("UFortInfoWindow"), sizeof(UFortInfoWindow), 1913258043u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BB4D0 (end 0x028BB572)
 // Original VA: 0x00000001428BB4D0 | File offset: 0x028BAAD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortInfoWindow, 1913258043u); reached from UFortInfoWindow::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortInfoWindow::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortInfoWindow();
+// Original dynamic initializer: RVA 0x00249ED0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortInfoWindow(Z_Construct_UClass_UFortInfoWindow, &UFortInfoWindow::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortInfoWindow"), false, nullptr, nullptr, nullptr);

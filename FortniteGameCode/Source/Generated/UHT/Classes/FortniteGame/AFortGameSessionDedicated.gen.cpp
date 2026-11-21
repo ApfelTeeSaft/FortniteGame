@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortGameSessionDedicated()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortGameSessionDedicated, 2783018787u)
+// Original dynamic initializer: RVA 0x000F7550 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortGameSessionDedicated> AutoInitializeAFortGameSessionDedicated(TEXT("AFortGameSessionDedicated"), sizeof(AFortGameSessionDedicated), 2783018787u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FECCE0 (end 0x00FECD82)
 // Original VA: 0x0000000140FECCE0 | File offset: 0x00FEC2E0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortGameSessionDedicated, 2783018787u); reached from AFortGameSessionDedicated::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortGameSessionDedicated::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortGameSessionDedicated();
+// Original dynamic initializer: RVA 0x000F8210
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortGameSessionDedicated(Z_Construct_UClass_AFortGameSessionDedicated, &AFortGameSessionDedicated::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortGameSessionDedicated"), false, nullptr, nullptr, nullptr);

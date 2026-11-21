@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UCustomHairColorSwatch()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCustomHairColorSwatch, 1076553905u)
+// Original dynamic initializer: RVA 0x000DCFA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCustomHairColorSwatch> AutoInitializeUCustomHairColorSwatch(TEXT("UCustomHairColorSwatch"), sizeof(UCustomHairColorSwatch), 1076553905u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F776C0 (end 0x00F77762)
 // Original VA: 0x0000000140F776C0 | File offset: 0x00F76CC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCustomHairColorSwatch, 1076553905u); reached from UCustomHairColorSwatch::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UCustomHairColorSwatch::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCustomHairColorSwatch();
+// Original dynamic initializer: RVA 0x000DE680
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCustomHairColorSwatch(Z_Construct_UClass_UCustomHairColorSwatch, &UCustomHairColorSwatch::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UCustomHairColorSwatch"), false, nullptr, nullptr, nullptr);

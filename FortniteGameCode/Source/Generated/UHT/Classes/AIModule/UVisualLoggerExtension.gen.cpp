@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UVisualLoggerExtension()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UVisualLoggerExtension, 3385831252u)
+// Original dynamic initializer: RVA 0x001BF540 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UVisualLoggerExtension> AutoInitializeUVisualLoggerExtension(TEXT("UVisualLoggerExtension"), sizeof(UVisualLoggerExtension), 3385831252u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D318F0 (end 0x01D31987)
 // Original VA: 0x0000000141D318F0 | File offset: 0x01D30EF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UVisualLoggerExtension, 3385831252u); reached from UVisualLoggerExtension::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UVisualLoggerExtension::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UVisualLoggerExtension();
+// Original dynamic initializer: RVA 0x001BFD30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UVisualLoggerExtension(Z_Construct_UClass_UVisualLoggerExtension, &UVisualLoggerExtension::StaticClass, TEXT("/Script/AIModule"), TEXT("UVisualLoggerExtension"), false, nullptr, nullptr, nullptr);

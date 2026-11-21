@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortActivatablePanel, 3053507773u)
+// Original dynamic initializer: RVA 0x0023B7E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortActivatablePanel> AutoInitializeUFortActivatablePanel(TEXT("UFortActivatablePanel"), sizeof(UFortActivatablePanel), 3053507773u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028858F0 (end 0x02885992)
 // Original VA: 0x00000001428858F0 | File offset: 0x02884EF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortActivatablePanel, 3053507773u); reached from UFortActivatablePanel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortActivatablePanel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortActivatablePanel();
+// Original dynamic initializer: RVA 0x0023DD20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortActivatablePanel(Z_Construct_UClass_UFortActivatablePanel, &UFortActivatablePanel::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortActivatablePanel"), false, nullptr, nullptr, nullptr);

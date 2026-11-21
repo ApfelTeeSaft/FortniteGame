@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortNavArea_PortalOrSmash()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortNavArea_PortalOrSmash, 3238071464u)
+// Original dynamic initializer: RVA 0x00104320 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNavArea_PortalOrSmash> AutoInitializeUFortNavArea_PortalOrSmash(TEXT("UFortNavArea_PortalOrSmash"), sizeof(UFortNavArea_PortalOrSmash), 3238071464u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010490B0 (end 0x01049152)
 // Original VA: 0x00000001410490B0 | File offset: 0x010486B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNavArea_PortalOrSmash, 3238071464u); reached from UFortNavArea_PortalOrSmash::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortNavArea_PortalOrSmash::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNavArea_PortalOrSmash();
+// Original dynamic initializer: RVA 0x001055D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNavArea_PortalOrSmash(Z_Construct_UClass_UFortNavArea_PortalOrSmash, &UFortNavArea_PortalOrSmash::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortNavArea_PortalOrSmash"), false, nullptr, nullptr, nullptr);

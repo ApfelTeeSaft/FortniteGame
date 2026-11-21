@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ASceneCaptureCube, 2018566732u)
+// Original dynamic initializer: RVA 0x00219750 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ASceneCaptureCube> AutoInitializeASceneCaptureCube(TEXT("ASceneCaptureCube"), sizeof(ASceneCaptureCube), 2018566732u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C60A0 (end 0x024C6142)
 // Original VA: 0x00000001424C60A0 | File offset: 0x024C56A0
 // Recovery: confirmed (IMPLEMENT_CLASS(ASceneCaptureCube, 2018566732u); reached from ASceneCaptureCube::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ASceneCaptureCube::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ASceneCaptureCube();
+// Original dynamic initializer: RVA 0x00219CB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ASceneCaptureCube(Z_Construct_UClass_ASceneCaptureCube, &ASceneCaptureCube::StaticClass, TEXT("/Script/Engine"), TEXT("ASceneCaptureCube"), false, nullptr, nullptr, nullptr);

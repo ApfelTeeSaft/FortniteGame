@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_MakeTieredWaveEncounterSettings, 1500946582u)
+// Original dynamic initializer: RVA 0x000E6950 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_MakeTieredWaveEncounterSettings> AutoInitializeUFortAsyncAction_MakeTieredWaveEncounterSettings(TEXT("UFortAsyncAction_MakeTieredWaveEncounterSettings"), sizeof(UFortAsyncAction_MakeTieredWaveEncounterSettings), 1500946582u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9D2E0 (end 0x00F9D382)
 // Original VA: 0x0000000140F9D2E0 | File offset: 0x00F9C8E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_MakeTieredWaveEncounterSettings, 1500946582u); reached from UFortAsyncAction_MakeTieredWaveEncounterSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_MakeTieredWaveEncounterSettings::GetPrivateStaticClass(
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings();
+// Original dynamic initializer: RVA 0x000E7CD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings(Z_Construct_UClass_UFortAsyncAction_MakeTieredWaveEncounterSettings, &UFortAsyncAction_MakeTieredWaveEncounterSettings::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAsyncAction_MakeTieredWaveEncounterSettings"), false, nullptr, nullptr, nullptr);

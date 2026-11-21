@@ -7,6 +7,9 @@
 void UFortBuildingTrapSet::StaticRegisterNativesUFortBuildingTrapSet()
 {
 }
+// IMPLEMENT_CLASS(UFortBuildingTrapSet, 1040329666u)
+// Original dynamic initializer: RVA 0x000E9450 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBuildingTrapSet> AutoInitializeUFortBuildingTrapSet(TEXT("UFortBuildingTrapSet"), sizeof(UFortBuildingTrapSet), 1040329666u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAC0E0 (end 0x00FAC182)
 // Original VA: 0x0000000140FAC0E0 | File offset: 0x00FAB6E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBuildingTrapSet, 1040329666u); reached from UFortBuildingTrapSet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortBuildingTrapSet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBuildingTrapSet();
+// Original dynamic initializer: RVA 0x000EA580
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBuildingTrapSet(Z_Construct_UClass_UFortBuildingTrapSet, &UFortBuildingTrapSet::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBuildingTrapSet"), false, nullptr, nullptr, nullptr);

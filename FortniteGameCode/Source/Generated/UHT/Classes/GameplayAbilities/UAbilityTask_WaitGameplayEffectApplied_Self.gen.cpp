@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAbilityTask_WaitGameplayEffectApplied_Self, 3279438846u)
+// Original dynamic initializer: RVA 0x0009DDD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_WaitGameplayEffectApplied_Self> AutoInitializeUAbilityTask_WaitGameplayEffectApplied_Self(TEXT("UAbilityTask_WaitGameplayEffectApplied_Self"), sizeof(UAbilityTask_WaitGameplayEffectApplied_Self), 3279438846u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054B940 (end 0x0054B9E2)
 // Original VA: 0x000000014054B940 | File offset: 0x0054AF40
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_WaitGameplayEffectApplied_Self, 3279438846u); reached from UAbilityTask_WaitGameplayEffectApplied_Self::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAbilityTask_WaitGameplayEffectApplied_Self::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self();
+// Original dynamic initializer: RVA 0x0009E6C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_WaitGameplayEffectApplied_Self(Z_Construct_UClass_UAbilityTask_WaitGameplayEffectApplied_Self, &UAbilityTask_WaitGameplayEffectApplied_Self::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_WaitGameplayEffectApplied_Self"), false, nullptr, nullptr, nullptr);

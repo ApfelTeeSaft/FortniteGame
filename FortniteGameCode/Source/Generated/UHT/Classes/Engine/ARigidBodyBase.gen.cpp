@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ARigidBodyBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ARigidBodyBase, 3358220376u)
+// Original dynamic initializer: RVA 0x002173F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ARigidBodyBase> AutoInitializeARigidBodyBase(TEXT("ARigidBodyBase"), sizeof(ARigidBodyBase), 3358220376u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C1130 (end 0x024C11D2)
 // Original VA: 0x00000001424C1130 | File offset: 0x024C0730
 // Recovery: confirmed (IMPLEMENT_CLASS(ARigidBodyBase, 3358220376u); reached from ARigidBodyBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ARigidBodyBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ARigidBodyBase();
+// Original dynamic initializer: RVA 0x00218880
+static FCompiledInDefer Z_CompiledInDefer_UClass_ARigidBodyBase(Z_Construct_UClass_ARigidBodyBase, &ARigidBodyBase::StaticClass, TEXT("/Script/Engine"), TEXT("ARigidBodyBase"), false, nullptr, nullptr, nullptr);

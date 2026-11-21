@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UGameSessionSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UGameSessionSettings, 1203900177u)
+// Original dynamic initializer: RVA 0x001B6A70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameSessionSettings> AutoInitializeUGameSessionSettings(TEXT("UGameSessionSettings"), sizeof(UGameSessionSettings), 1203900177u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C84320 (end 0x01C843B7)
 // Original VA: 0x0000000141C84320 | File offset: 0x01C83920
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameSessionSettings, 1203900177u); reached from UGameSessionSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UGameSessionSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameSessionSettings();
+// Original dynamic initializer: RVA 0x001B6DB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameSessionSettings(Z_Construct_UClass_UGameSessionSettings, &UGameSessionSettings::StaticClass, TEXT("/Script/EngineSettings"), TEXT("UGameSessionSettings"), false, nullptr, nullptr, nullptr);

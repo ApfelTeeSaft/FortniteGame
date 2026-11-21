@@ -7,6 +7,9 @@
 void UAthenaCustomizationPicker::StaticRegisterNativesUAthenaCustomizationPicker()
 {
 }
+// IMPLEMENT_CLASS(UAthenaCustomizationPicker, 993514603u)
+// Original dynamic initializer: RVA 0x00239060 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaCustomizationPicker> AutoInitializeUAthenaCustomizationPicker(TEXT("UAthenaCustomizationPicker"), sizeof(UAthenaCustomizationPicker), 993514603u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287D7A0 (end 0x0287D842)
 // Original VA: 0x000000014287D7A0 | File offset: 0x0287CDA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaCustomizationPicker, 993514603u); reached from UAthenaCustomizationPicker::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAthenaCustomizationPicker::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaCustomizationPicker();
+// Original dynamic initializer: RVA 0x0023AE00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaCustomizationPicker(Z_Construct_UClass_UAthenaCustomizationPicker, &UAthenaCustomizationPicker::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaCustomizationPicker"), false, nullptr, nullptr, nullptr);

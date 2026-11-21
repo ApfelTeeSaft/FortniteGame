@@ -7,6 +7,9 @@
 void UFortItemCooldownWidget::StaticRegisterNativesUFortItemCooldownWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortItemCooldownWidget, 1549322706u)
+// Original dynamic initializer: RVA 0x0024CD20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemCooldownWidget> AutoInitializeUFortItemCooldownWidget(TEXT("UFortItemCooldownWidget"), sizeof(UFortItemCooldownWidget), 1549322706u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C7DE0 (end 0x028C7E82)
 // Original VA: 0x00000001428C7DE0 | File offset: 0x028C73E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemCooldownWidget, 1549322706u); reached from UFortItemCooldownWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortItemCooldownWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemCooldownWidget();
+// Original dynamic initializer: RVA 0x0024EC50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemCooldownWidget(Z_Construct_UClass_UFortItemCooldownWidget, &UFortItemCooldownWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemCooldownWidget"), false, nullptr, nullptr, nullptr);

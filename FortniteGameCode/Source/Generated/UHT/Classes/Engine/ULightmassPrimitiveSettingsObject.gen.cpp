@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ULightmassPrimitiveSettingsObject()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULightmassPrimitiveSettingsObject, 364817019u)
+// Original dynamic initializer: RVA 0x00205D70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULightmassPrimitiveSettingsObject> AutoInitializeULightmassPrimitiveSettingsObject(TEXT("ULightmassPrimitiveSettingsObject"), sizeof(ULightmassPrimitiveSettingsObject), 364817019u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02477020 (end 0x024770B7)
 // Original VA: 0x0000000142477020 | File offset: 0x02476620
 // Recovery: confirmed (IMPLEMENT_CLASS(ULightmassPrimitiveSettingsObject, 364817019u); reached from ULightmassPrimitiveSettingsObject::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ULightmassPrimitiveSettingsObject::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULightmassPrimitiveSettingsObject();
+// Original dynamic initializer: RVA 0x00206940
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULightmassPrimitiveSettingsObject(Z_Construct_UClass_ULightmassPrimitiveSettingsObject, &ULightmassPrimitiveSettingsObject::StaticClass, TEXT("/Script/Engine"), TEXT("ULightmassPrimitiveSettingsObject"), false, nullptr, nullptr, nullptr);

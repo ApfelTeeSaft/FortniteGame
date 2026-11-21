@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMovieScene2DTransformSection()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMovieScene2DTransformSection, 4184418801u)
+// Original dynamic initializer: RVA 0x001B2840 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovieScene2DTransformSection> AutoInitializeUMovieScene2DTransformSection(TEXT("UMovieScene2DTransformSection"), sizeof(UMovieScene2DTransformSection), 4184418801u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEBE40 (end 0x01BEBEE2)
 // Original VA: 0x0000000141BEBE40 | File offset: 0x01BEB440
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovieScene2DTransformSection, 4184418801u); reached from UMovieScene2DTransformSection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMovieScene2DTransformSection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovieScene2DTransformSection();
+// Original dynamic initializer: RVA 0x001B30D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovieScene2DTransformSection(Z_Construct_UClass_UMovieScene2DTransformSection, &UMovieScene2DTransformSection::StaticClass, TEXT("/Script/UMG"), TEXT("UMovieScene2DTransformSection"), false, nullptr, nullptr, nullptr);

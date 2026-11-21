@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryTest_HasNearbyEncounterGoals()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryTest_HasNearbyEncounterGoals, 4048780707u)
+// Original dynamic initializer: RVA 0x0010EED0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryTest_HasNearbyEncounterGoals> AutoInitializeUFortQueryTest_HasNearbyEncounterGoals(TEXT("UFortQueryTest_HasNearbyEncounterGoals"), sizeof(UFortQueryTest_HasNearbyEncounterGoals), 4048780707u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010926B0 (end 0x01092752)
 // Original VA: 0x00000001410926B0 | File offset: 0x01091CB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryTest_HasNearbyEncounterGoals, 4048780707u); reached from UFortQueryTest_HasNearbyEncounterGoals::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryTest_HasNearbyEncounterGoals::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryTest_HasNearbyEncounterGoals();
+// Original dynamic initializer: RVA 0x00110420
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryTest_HasNearbyEncounterGoals(Z_Construct_UClass_UFortQueryTest_HasNearbyEncounterGoals, &UFortQueryTest_HasNearbyEncounterGoals::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryTest_HasNearbyEncounterGoals"), false, nullptr, nullptr, nullptr);

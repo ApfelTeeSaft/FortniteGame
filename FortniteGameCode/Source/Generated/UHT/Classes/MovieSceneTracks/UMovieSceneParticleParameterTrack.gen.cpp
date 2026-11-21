@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMovieSceneParticleParameterTrack()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMovieSceneParticleParameterTrack, 3874825996u)
+// Original dynamic initializer: RVA 0x001AC910 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovieSceneParticleParameterTrack> AutoInitializeUMovieSceneParticleParameterTrack(TEXT("UMovieSceneParticleParameterTrack"), sizeof(UMovieSceneParticleParameterTrack), 3874825996u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4E590 (end 0x01B4E632)
 // Original VA: 0x0000000141B4E590 | File offset: 0x01B4DB90
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovieSceneParticleParameterTrack, 3874825996u); reached from UMovieSceneParticleParameterTrack::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMovieSceneParticleParameterTrack::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovieSceneParticleParameterTrack();
+// Original dynamic initializer: RVA 0x001AFB00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovieSceneParticleParameterTrack(Z_Construct_UClass_UMovieSceneParticleParameterTrack, &UMovieSceneParticleParameterTrack::StaticClass, TEXT("/Script/MovieSceneTracks"), TEXT("UMovieSceneParticleParameterTrack"), false, nullptr, nullptr, nullptr);

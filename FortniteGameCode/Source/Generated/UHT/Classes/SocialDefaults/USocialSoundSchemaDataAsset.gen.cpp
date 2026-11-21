@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USocialSoundSchemaDataAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USocialSoundSchemaDataAsset, 2877658421u)
+// Original dynamic initializer: RVA 0x00225610 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USocialSoundSchemaDataAsset> AutoInitializeUSocialSoundSchemaDataAsset(TEXT("USocialSoundSchemaDataAsset"), sizeof(USocialSoundSchemaDataAsset), 2877658421u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025A27B0 (end 0x025A2852)
 // Original VA: 0x00000001425A27B0 | File offset: 0x025A1DB0
 // Recovery: confirmed (IMPLEMENT_CLASS(USocialSoundSchemaDataAsset, 2877658421u); reached from USocialSoundSchemaDataAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USocialSoundSchemaDataAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USocialSoundSchemaDataAsset();
+// Original dynamic initializer: RVA 0x00225A20
+static FCompiledInDefer Z_CompiledInDefer_UClass_USocialSoundSchemaDataAsset(Z_Construct_UClass_USocialSoundSchemaDataAsset, &USocialSoundSchemaDataAsset::StaticClass, TEXT("/Script/SocialDefaults"), TEXT("USocialSoundSchemaDataAsset"), false, nullptr, nullptr, nullptr);

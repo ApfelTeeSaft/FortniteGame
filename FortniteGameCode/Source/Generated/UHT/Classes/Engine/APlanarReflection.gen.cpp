@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(APlanarReflection, 3860952304u)
+// Original dynamic initializer: RVA 0x002148B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<APlanarReflection> AutoInitializeAPlanarReflection(TEXT("APlanarReflection"), sizeof(APlanarReflection), 3860952304u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A8170 (end 0x024A8212)
 // Original VA: 0x00000001424A8170 | File offset: 0x024A7770
 // Recovery: confirmed (IMPLEMENT_CLASS(APlanarReflection, 3860952304u); reached from APlanarReflection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* APlanarReflection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_APlanarReflection();
+// Original dynamic initializer: RVA 0x00215DE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_APlanarReflection(Z_Construct_UClass_APlanarReflection, &APlanarReflection::StaticClass, TEXT("/Script/Engine"), TEXT("APlanarReflection"), false, nullptr, nullptr, nullptr);

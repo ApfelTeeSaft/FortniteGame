@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AWaterVolume_Deep()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AWaterVolume_Deep, 2043973290u)
+// Original dynamic initializer: RVA 0x00122410 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AWaterVolume_Deep> AutoInitializeAWaterVolume_Deep(TEXT("AWaterVolume_Deep"), sizeof(AWaterVolume_Deep), 2043973290u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010EFC90 (end 0x010EFD32)
 // Original VA: 0x00000001410EFC90 | File offset: 0x010EF290
 // Recovery: confirmed (IMPLEMENT_CLASS(AWaterVolume_Deep, 2043973290u); reached from AWaterVolume_Deep::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AWaterVolume_Deep::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AWaterVolume_Deep();
+// Original dynamic initializer: RVA 0x001235E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AWaterVolume_Deep(Z_Construct_UClass_AWaterVolume_Deep, &AWaterVolume_Deep::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AWaterVolume_Deep"), false, nullptr, nullptr, nullptr);

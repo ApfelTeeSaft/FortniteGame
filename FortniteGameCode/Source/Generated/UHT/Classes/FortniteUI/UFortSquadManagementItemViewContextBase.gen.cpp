@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortSquadManagementItemViewContextBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortSquadManagementItemViewContextBase, 328531872u)
+// Original dynamic initializer: RVA 0x0025AE80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSquadManagementItemViewContextBase> AutoInitializeUFortSquadManagementItemViewContextBase(TEXT("UFortSquadManagementItemViewContextBase"), sizeof(UFortSquadManagementItemViewContextBase), 328531872u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F41F0 (end 0x028F4287)
 // Original VA: 0x00000001428F41F0 | File offset: 0x028F37F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSquadManagementItemViewContextBase, 328531872u); reached from UFortSquadManagementItemViewContextBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortSquadManagementItemViewContextBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSquadManagementItemViewContextBase();
+// Original dynamic initializer: RVA 0x0025BFE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSquadManagementItemViewContextBase(Z_Construct_UClass_UFortSquadManagementItemViewContextBase, &UFortSquadManagementItemViewContextBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSquadManagementItemViewContextBase"), false, nullptr, nullptr, nullptr);

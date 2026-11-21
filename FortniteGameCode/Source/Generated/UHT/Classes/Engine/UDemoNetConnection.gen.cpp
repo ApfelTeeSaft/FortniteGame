@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UDemoNetConnection()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDemoNetConnection, 1374043933u)
+// Original dynamic initializer: RVA 0x001F8480 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDemoNetConnection> AutoInitializeUDemoNetConnection(TEXT("UDemoNetConnection"), sizeof(UDemoNetConnection), 1374043933u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FC810 (end 0x023FC8B2)
 // Original VA: 0x00000001423FC810 | File offset: 0x023FBE10
 // Recovery: confirmed (IMPLEMENT_CLASS(UDemoNetConnection, 1374043933u); reached from UDemoNetConnection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UDemoNetConnection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDemoNetConnection();
+// Original dynamic initializer: RVA 0x001F98C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDemoNetConnection(Z_Construct_UClass_UDemoNetConnection, &UDemoNetConnection::StaticClass, TEXT("/Script/Engine"), TEXT("UDemoNetConnection"), false, nullptr, nullptr, nullptr);

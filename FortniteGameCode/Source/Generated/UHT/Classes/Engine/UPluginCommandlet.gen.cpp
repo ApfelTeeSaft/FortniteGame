@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UPluginCommandlet()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPluginCommandlet, 794119799u)
+// Original dynamic initializer: RVA 0x002162E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPluginCommandlet> AutoInitializeUPluginCommandlet(TEXT("UPluginCommandlet"), sizeof(UPluginCommandlet), 794119799u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B6610 (end 0x024B66B2)
 // Original VA: 0x00000001424B6610 | File offset: 0x024B5C10
 // Recovery: confirmed (IMPLEMENT_CLASS(UPluginCommandlet, 794119799u); reached from UPluginCommandlet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UPluginCommandlet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPluginCommandlet();
+// Original dynamic initializer: RVA 0x002170D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPluginCommandlet(Z_Construct_UClass_UPluginCommandlet, &UPluginCommandlet::StaticClass, TEXT("/Script/Engine"), TEXT("UPluginCommandlet"), false, nullptr, nullptr, nullptr);

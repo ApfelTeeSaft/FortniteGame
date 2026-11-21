@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UDistributionFloatParticleParameter()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDistributionFloatParticleParameter, 3387592599u)
+// Original dynamic initializer: RVA 0x001F9D40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDistributionFloatParticleParameter> AutoInitializeUDistributionFloatParticleParameter(TEXT("UDistributionFloatParticleParameter"), sizeof(UDistributionFloatParticleParameter), 3387592599u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02402D70 (end 0x02402E12)
 // Original VA: 0x0000000142402D70 | File offset: 0x02402370
 // Recovery: confirmed (IMPLEMENT_CLASS(UDistributionFloatParticleParameter, 3387592599u); reached from UDistributionFloatParticleParameter::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UDistributionFloatParticleParameter::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDistributionFloatParticleParameter();
+// Original dynamic initializer: RVA 0x001FB430
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDistributionFloatParticleParameter(Z_Construct_UClass_UDistributionFloatParticleParameter, &UDistributionFloatParticleParameter::StaticClass, TEXT("/Script/Engine"), TEXT("UDistributionFloatParticleParameter"), false, nullptr, nullptr, nullptr);

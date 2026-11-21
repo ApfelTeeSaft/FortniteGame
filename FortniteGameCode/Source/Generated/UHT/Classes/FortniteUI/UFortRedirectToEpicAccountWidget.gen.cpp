@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortRedirectToEpicAccountWidget, 3221334249u)
+// Original dynamic initializer: RVA 0x00258460 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortRedirectToEpicAccountWidget> AutoInitializeUFortRedirectToEpicAccountWidget(TEXT("UFortRedirectToEpicAccountWidget"), sizeof(UFortRedirectToEpicAccountWidget), 3221334249u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EB410 (end 0x028EB4B2)
 // Original VA: 0x00000001428EB410 | File offset: 0x028EAA10
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortRedirectToEpicAccountWidget, 3221334249u); reached from UFortRedirectToEpicAccountWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortRedirectToEpicAccountWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortRedirectToEpicAccountWidget();
+// Original dynamic initializer: RVA 0x0025A3E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortRedirectToEpicAccountWidget(Z_Construct_UClass_UFortRedirectToEpicAccountWidget, &UFortRedirectToEpicAccountWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortRedirectToEpicAccountWidget"), false, nullptr, nullptr, nullptr);

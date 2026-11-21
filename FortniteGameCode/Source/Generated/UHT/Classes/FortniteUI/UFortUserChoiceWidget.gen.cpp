@@ -7,6 +7,9 @@
 void UFortUserChoiceWidget::StaticRegisterNativesUFortUserChoiceWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortUserChoiceWidget, 1204583810u)
+// Original dynamic initializer: RVA 0x00265680 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUserChoiceWidget> AutoInitializeUFortUserChoiceWidget(TEXT("UFortUserChoiceWidget"), sizeof(UFortUserChoiceWidget), 1204583810u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029177D0 (end 0x02917872)
 // Original VA: 0x00000001429177D0 | File offset: 0x02916DD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUserChoiceWidget, 1204583810u); reached from UFortUserChoiceWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortUserChoiceWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUserChoiceWidget();
+// Original dynamic initializer: RVA 0x002671D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUserChoiceWidget(Z_Construct_UClass_UFortUserChoiceWidget, &UFortUserChoiceWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortUserChoiceWidget"), false, nullptr, nullptr, nullptr);

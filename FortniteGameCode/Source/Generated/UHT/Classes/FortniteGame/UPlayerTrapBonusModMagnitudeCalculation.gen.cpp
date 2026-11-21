@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UPlayerTrapBonusModMagnitudeCalculation()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPlayerTrapBonusModMagnitudeCalculation, 848662831u)
+// Original dynamic initializer: RVA 0x001224F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPlayerTrapBonusModMagnitudeCalculation> AutoInitializeUPlayerTrapBonusModMagnitudeCalculation(TEXT("UPlayerTrapBonusModMagnitudeCalculation"), sizeof(UPlayerTrapBonusModMagnitudeCalculation), 848662831u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010F0160 (end 0x010F0202)
 // Original VA: 0x00000001410F0160 | File offset: 0x010EF760
 // Recovery: confirmed (IMPLEMENT_CLASS(UPlayerTrapBonusModMagnitudeCalculation, 848662831u); reached from UPlayerTrapBonusModMagnitudeCalculation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UPlayerTrapBonusModMagnitudeCalculation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPlayerTrapBonusModMagnitudeCalculation();
+// Original dynamic initializer: RVA 0x001237A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPlayerTrapBonusModMagnitudeCalculation(Z_Construct_UClass_UPlayerTrapBonusModMagnitudeCalculation, &UPlayerTrapBonusModMagnitudeCalculation::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UPlayerTrapBonusModMagnitudeCalculation"), false, nullptr, nullptr, nullptr);

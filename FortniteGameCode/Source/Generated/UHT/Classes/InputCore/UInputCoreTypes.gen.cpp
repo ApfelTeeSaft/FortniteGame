@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UInputCoreTypes()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInputCoreTypes, 3607624644u)
+// Original dynamic initializer: RVA 0x00139700 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInputCoreTypes> AutoInitializeUInputCoreTypes(TEXT("UInputCoreTypes"), sizeof(UInputCoreTypes), 3607624644u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x013C24E0 (end 0x013C2577)
 // Original VA: 0x00000001413C24E0 | File offset: 0x013C1AE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UInputCoreTypes, 3607624644u); reached from UInputCoreTypes::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UInputCoreTypes::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInputCoreTypes();
+// Original dynamic initializer: RVA 0x00139910
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInputCoreTypes(Z_Construct_UClass_UInputCoreTypes, &UInputCoreTypes::StaticClass, TEXT("/Script/InputCore"), TEXT("UInputCoreTypes"), false, nullptr, nullptr, nullptr);

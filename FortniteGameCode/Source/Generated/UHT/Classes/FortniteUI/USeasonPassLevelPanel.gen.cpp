@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(USeasonPassLevelPanel, 1478093585u)
+// Original dynamic initializer: RVA 0x00265760 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USeasonPassLevelPanel> AutoInitializeUSeasonPassLevelPanel(TEXT("USeasonPassLevelPanel"), sizeof(USeasonPassLevelPanel), 1478093585u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02917C90 (end 0x02917D32)
 // Original VA: 0x0000000142917C90 | File offset: 0x02917290
 // Recovery: confirmed (IMPLEMENT_CLASS(USeasonPassLevelPanel, 1478093585u); reached from USeasonPassLevelPanel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* USeasonPassLevelPanel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USeasonPassLevelPanel();
+// Original dynamic initializer: RVA 0x00267390
+static FCompiledInDefer Z_CompiledInDefer_UClass_USeasonPassLevelPanel(Z_Construct_UClass_USeasonPassLevelPanel, &USeasonPassLevelPanel::StaticClass, TEXT("/Script/FortniteUI"), TEXT("USeasonPassLevelPanel"), false, nullptr, nullptr, nullptr);

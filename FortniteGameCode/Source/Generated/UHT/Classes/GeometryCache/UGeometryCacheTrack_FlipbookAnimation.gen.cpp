@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UGeometryCacheTrack_FlipbookAnimation, 1008242741u)
+// Original dynamic initializer: RVA 0x001C0500 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGeometryCacheTrack_FlipbookAnimation> AutoInitializeUGeometryCacheTrack_FlipbookAnimation(TEXT("UGeometryCacheTrack_FlipbookAnimation"), sizeof(UGeometryCacheTrack_FlipbookAnimation), 1008242741u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D3FA30 (end 0x01D3FAD2)
 // Original VA: 0x0000000141D3FA30 | File offset: 0x01D3F030
 // Recovery: confirmed (IMPLEMENT_CLASS(UGeometryCacheTrack_FlipbookAnimation, 1008242741u); reached from UGeometryCacheTrack_FlipbookAnimation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UGeometryCacheTrack_FlipbookAnimation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGeometryCacheTrack_FlipbookAnimation();
+// Original dynamic initializer: RVA 0x001C08B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGeometryCacheTrack_FlipbookAnimation(Z_Construct_UClass_UGeometryCacheTrack_FlipbookAnimation, &UGeometryCacheTrack_FlipbookAnimation::StaticClass, TEXT("/Script/GeometryCache"), TEXT("UGeometryCacheTrack_FlipbookAnimation"), false, nullptr, nullptr, nullptr);

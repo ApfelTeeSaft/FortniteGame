@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortCapturePointWidget, 2894992346u)
+// Original dynamic initializer: RVA 0x00240320 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCapturePointWidget> AutoInitializeUFortCapturePointWidget(TEXT("UFortCapturePointWidget"), sizeof(UFortCapturePointWidget), 2894992346u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02892CC0 (end 0x02892D62)
 // Original VA: 0x0000000142892CC0 | File offset: 0x028922C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCapturePointWidget, 2894992346u); reached from UFortCapturePointWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortCapturePointWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCapturePointWidget();
+// Original dynamic initializer: RVA 0x00241F90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCapturePointWidget(Z_Construct_UClass_UFortCapturePointWidget, &UFortCapturePointWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCapturePointWidget"), false, nullptr, nullptr, nullptr);

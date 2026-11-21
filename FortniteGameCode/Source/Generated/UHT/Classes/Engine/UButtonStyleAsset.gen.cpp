@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UButtonStyleAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UButtonStyleAsset, 7263203u)
+// Original dynamic initializer: RVA 0x001F4CB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UButtonStyleAsset> AutoInitializeUButtonStyleAsset(TEXT("UButtonStyleAsset"), sizeof(UButtonStyleAsset), 7263203u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E90B0 (end 0x023E9147)
 // Original VA: 0x00000001423E90B0 | File offset: 0x023E86B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UButtonStyleAsset, 7263203u); reached from UButtonStyleAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UButtonStyleAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UButtonStyleAsset();
+// Original dynamic initializer: RVA 0x001F6210
+static FCompiledInDefer Z_CompiledInDefer_UClass_UButtonStyleAsset(Z_Construct_UClass_UButtonStyleAsset, &UButtonStyleAsset::StaticClass, TEXT("/Script/Engine"), TEXT("UButtonStyleAsset"), false, nullptr, nullptr, nullptr);

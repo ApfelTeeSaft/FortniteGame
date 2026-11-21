@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_UFortExpeditionVehicleTileItemWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortExpeditionVehicleTileItemWidget, 3434448298u)
+// Original dynamic initializer: RVA 0x00244BC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortExpeditionVehicleTileItemWidget> AutoInitializeUFortExpeditionVehicleTileItemWidget(TEXT("UFortExpeditionVehicleTileItemWidget"), sizeof(UFortExpeditionVehicleTileItemWidget), 3434448298u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A2510 (end 0x028A25B2)
 // Original VA: 0x00000001428A2510 | File offset: 0x028A1B10
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortExpeditionVehicleTileItemWidget, 3434448298u); reached from UFortExpeditionVehicleTileItemWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* UFortExpeditionVehicleTileItemWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortExpeditionVehicleTileItemWidget();
+// Original dynamic initializer: RVA 0x00245A10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortExpeditionVehicleTileItemWidget(Z_Construct_UClass_UFortExpeditionVehicleTileItemWidget, &UFortExpeditionVehicleTileItemWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortExpeditionVehicleTileItemWidget"), false, nullptr, nullptr, nullptr);

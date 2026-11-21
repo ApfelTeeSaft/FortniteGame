@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UExporter()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UExporter, 51380675u)
+// Original dynamic initializer: RVA 0x001FF360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UExporter> AutoInitializeUExporter(TEXT("UExporter"), sizeof(UExporter), 51380675u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240E7D0 (end 0x0240E867)
 // Original VA: 0x000000014240E7D0 | File offset: 0x0240DDD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UExporter, 51380675u); reached from UExporter::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UExporter::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UExporter();
+// Original dynamic initializer: RVA 0x001FFDB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UExporter(Z_Construct_UClass_UExporter, &UExporter::StaticClass, TEXT("/Script/Engine"), TEXT("UExporter"), false, nullptr, nullptr, nullptr);

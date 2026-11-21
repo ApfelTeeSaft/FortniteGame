@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortGlobals, 124046630u)
+// Original dynamic initializer: RVA 0x000F8870 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGlobals> AutoInitializeUFortGlobals(TEXT("UFortGlobals"), sizeof(UFortGlobals), 124046630u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF2450 (end 0x00FF24E7)
 // Original VA: 0x0000000140FF2450 | File offset: 0x00FF1A50
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGlobals, 124046630u); reached from UFortGlobals::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortGlobals::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGlobals();
+// Original dynamic initializer: RVA 0x000F9490
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGlobals(Z_Construct_UClass_UFortGlobals, &UFortGlobals::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortGlobals"), false, nullptr, nullptr, nullptr);

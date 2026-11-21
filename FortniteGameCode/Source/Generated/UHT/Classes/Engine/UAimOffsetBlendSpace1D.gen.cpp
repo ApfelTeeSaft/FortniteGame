@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAimOffsetBlendSpace1D()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAimOffsetBlendSpace1D, 4145379596u)
+// Original dynamic initializer: RVA 0x001EBFC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAimOffsetBlendSpace1D> AutoInitializeUAimOffsetBlendSpace1D(TEXT("UAimOffsetBlendSpace1D"), sizeof(UAimOffsetBlendSpace1D), 4145379596u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C6020 (end 0x023C60C2)
 // Original VA: 0x00000001423C6020 | File offset: 0x023C5620
 // Recovery: confirmed (IMPLEMENT_CLASS(UAimOffsetBlendSpace1D, 4145379596u); reached from UAimOffsetBlendSpace1D::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAimOffsetBlendSpace1D::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAimOffsetBlendSpace1D();
+// Original dynamic initializer: RVA 0x001ED9C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAimOffsetBlendSpace1D(Z_Construct_UClass_UAimOffsetBlendSpace1D, &UAimOffsetBlendSpace1D::StaticClass, TEXT("/Script/Engine"), TEXT("UAimOffsetBlendSpace1D"), false, nullptr, nullptr, nullptr);

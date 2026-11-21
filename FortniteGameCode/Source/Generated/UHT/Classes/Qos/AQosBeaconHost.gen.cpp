@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AQosBeaconHost()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AQosBeaconHost, 897354149u)
+// Original dynamic initializer: RVA 0x000A7960 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AQosBeaconHost> AutoInitializeAQosBeaconHost(TEXT("AQosBeaconHost"), sizeof(AQosBeaconHost), 897354149u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005A1AE0 (end 0x005A1B82)
 // Original VA: 0x00000001405A1AE0 | File offset: 0x005A10E0
 // Recovery: confirmed (IMPLEMENT_CLASS(AQosBeaconHost, 897354149u); reached from AQosBeaconHost::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AQosBeaconHost::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AQosBeaconHost();
+// Original dynamic initializer: RVA 0x000A7DF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AQosBeaconHost(Z_Construct_UClass_AQosBeaconHost, &AQosBeaconHost::StaticClass, TEXT("/Script/Qos"), TEXT("AQosBeaconHost"), false, nullptr, nullptr, nullptr);

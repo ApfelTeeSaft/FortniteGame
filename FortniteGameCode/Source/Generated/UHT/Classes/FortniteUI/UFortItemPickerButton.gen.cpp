@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortItemPickerButton()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortItemPickerButton, 3302378884u)
+// Original dynamic initializer: RVA 0x0024F2D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemPickerButton> AutoInitializeUFortItemPickerButton(TEXT("UFortItemPickerButton"), sizeof(UFortItemPickerButton), 3302378884u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CE1B0 (end 0x028CE252)
 // Original VA: 0x00000001428CE1B0 | File offset: 0x028CD7B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemPickerButton, 3302378884u); reached from UFortItemPickerButton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortItemPickerButton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemPickerButton();
+// Original dynamic initializer: RVA 0x00250E10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemPickerButton(Z_Construct_UClass_UFortItemPickerButton, &UFortItemPickerButton::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemPickerButton"), false, nullptr, nullptr, nullptr);

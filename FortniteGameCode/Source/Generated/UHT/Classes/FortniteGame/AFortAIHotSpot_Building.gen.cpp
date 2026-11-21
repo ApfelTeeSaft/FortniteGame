@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortAIHotSpot_Building()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortAIHotSpot_Building, 58169225u)
+// Original dynamic initializer: RVA 0x000E33F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortAIHotSpot_Building> AutoInitializeAFortAIHotSpot_Building(TEXT("AFortAIHotSpot_Building"), sizeof(AFortAIHotSpot_Building), 58169225u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8F810 (end 0x00F8F8B2)
 // Original VA: 0x0000000140F8F810 | File offset: 0x00F8EE10
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortAIHotSpot_Building, 58169225u); reached from AFortAIHotSpot_Building::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortAIHotSpot_Building::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortAIHotSpot_Building();
+// Original dynamic initializer: RVA 0x000E43E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortAIHotSpot_Building(Z_Construct_UClass_AFortAIHotSpot_Building, &AFortAIHotSpot_Building::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortAIHotSpot_Building"), false, nullptr, nullptr, nullptr);

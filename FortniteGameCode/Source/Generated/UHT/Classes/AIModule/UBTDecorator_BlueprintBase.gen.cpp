@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UBTDecorator_BlueprintBase, 3406844815u)
+// Original dynamic initializer: RVA 0x001BA710 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTDecorator_BlueprintBase> AutoInitializeUBTDecorator_BlueprintBase(TEXT("UBTDecorator_BlueprintBase"), sizeof(UBTDecorator_BlueprintBase), 3406844815u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D214D0 (end 0x01D21572)
 // Original VA: 0x0000000141D214D0 | File offset: 0x01D20AD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTDecorator_BlueprintBase, 3406844815u); reached from UBTDecorator_BlueprintBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UBTDecorator_BlueprintBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTDecorator_BlueprintBase();
+// Original dynamic initializer: RVA 0x001BBB00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTDecorator_BlueprintBase(Z_Construct_UClass_UBTDecorator_BlueprintBase, &UBTDecorator_BlueprintBase::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTDecorator_BlueprintBase"), false, nullptr, nullptr, nullptr);

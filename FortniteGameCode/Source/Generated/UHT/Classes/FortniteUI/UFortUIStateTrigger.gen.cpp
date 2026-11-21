@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortUIStateTrigger, 61700566u)
+// Original dynamic initializer: RVA 0x00262980 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortUIStateTrigger> AutoInitializeUFortUIStateTrigger(TEXT("UFortUIStateTrigger"), sizeof(UFortUIStateTrigger), 61700566u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02910510 (end 0x029105A7)
 // Original VA: 0x0000000142910510 | File offset: 0x0290FB10
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortUIStateTrigger, 61700566u); reached from UFortUIStateTrigger::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortUIStateTrigger::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortUIStateTrigger();
+// Original dynamic initializer: RVA 0x00265140
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortUIStateTrigger(Z_Construct_UClass_UFortUIStateTrigger, &UFortUIStateTrigger::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortUIStateTrigger"), false, nullptr, nullptr, nullptr);

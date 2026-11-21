@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_ShowPlatformStoreForPurchase, 1635585917u)
+// Original dynamic initializer: RVA 0x0023B8C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_ShowPlatformStoreForPurchase> AutoInitializeUFortAsyncAction_ShowPlatformStoreForPurchase(TEXT("UFortAsyncAction_ShowPlatformStoreForPurchase"), sizeof(UFortAsyncAction_ShowPlatformStoreForPurchase), 1635585917u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02885DC0 (end 0x02885E62)
 // Original VA: 0x0000000142885DC0 | File offset: 0x028853C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_ShowPlatformStoreForPurchase, 1635585917u); reached from UFortAsyncAction_ShowPlatformStoreForPurchase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_ShowPlatformStoreForPurchase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_ShowPlatformStoreForPurchase();
+// Original dynamic initializer: RVA 0x0023DEE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_ShowPlatformStoreForPurchase(Z_Construct_UClass_UFortAsyncAction_ShowPlatformStoreForPurchase, &UFortAsyncAction_ShowPlatformStoreForPurchase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAsyncAction_ShowPlatformStoreForPurchase"), false, nullptr, nullptr, nullptr);

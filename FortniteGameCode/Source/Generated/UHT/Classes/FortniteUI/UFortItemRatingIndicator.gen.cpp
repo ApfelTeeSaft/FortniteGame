@@ -7,6 +7,9 @@
 void UFortItemRatingIndicator::StaticRegisterNativesUFortItemRatingIndicator()
 {
 }
+// IMPLEMENT_CLASS(UFortItemRatingIndicator, 3531150890u)
+// Original dynamic initializer: RVA 0x0024F330 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemRatingIndicator> AutoInitializeUFortItemRatingIndicator(TEXT("UFortItemRatingIndicator"), sizeof(UFortItemRatingIndicator), 3531150890u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CE3C0 (end 0x028CE462)
 // Original VA: 0x00000001428CE3C0 | File offset: 0x028CD9C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemRatingIndicator, 3531150890u); reached from UFortItemRatingIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortItemRatingIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemRatingIndicator();
+// Original dynamic initializer: RVA 0x00250ED0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemRatingIndicator(Z_Construct_UClass_UFortItemRatingIndicator, &UFortItemRatingIndicator::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemRatingIndicator"), false, nullptr, nullptr, nullptr);

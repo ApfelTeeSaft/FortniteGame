@@ -7,6 +7,9 @@
 void UKismetSystemLibrary::StaticRegisterNativesUKismetSystemLibrary()
 {
 }
+// IMPLEMENT_CLASS(UKismetSystemLibrary, 3670864701u)
+// Original dynamic initializer: RVA 0x00204CB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UKismetSystemLibrary> AutoInitializeUKismetSystemLibrary(TEXT("UKismetSystemLibrary"), sizeof(UKismetSystemLibrary), 3670864701u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02452940 (end 0x024529E2)
 // Original VA: 0x0000000142452940 | File offset: 0x02451F40
 // Recovery: confirmed (IMPLEMENT_CLASS(UKismetSystemLibrary, 3670864701u); reached from UKismetSystemLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UKismetSystemLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UKismetSystemLibrary();
+// Original dynamic initializer: RVA 0x00205050
+static FCompiledInDefer Z_CompiledInDefer_UClass_UKismetSystemLibrary(Z_Construct_UClass_UKismetSystemLibrary, &UKismetSystemLibrary::StaticClass, TEXT("/Script/Engine"), TEXT("UKismetSystemLibrary"), false, nullptr, nullptr, nullptr);

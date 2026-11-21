@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UNavigationPath, 2448220386u)
+// Original dynamic initializer: RVA 0x0020C7F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavigationPath> AutoInitializeUNavigationPath(TEXT("UNavigationPath"), sizeof(UNavigationPath), 2448220386u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248A660 (end 0x0248A6F7)
 // Original VA: 0x000000014248A660 | File offset: 0x02489C60
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavigationPath, 2448220386u); reached from UNavigationPath::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UNavigationPath::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavigationPath();
+// Original dynamic initializer: RVA 0x0020DAB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavigationPath(Z_Construct_UClass_UNavigationPath, &UNavigationPath::StaticClass, TEXT("/Script/Engine"), TEXT("UNavigationPath"), false, nullptr, nullptr, nullptr);

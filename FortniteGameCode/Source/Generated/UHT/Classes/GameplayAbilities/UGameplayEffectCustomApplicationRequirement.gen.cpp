@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UGameplayEffectCustomApplicationRequirement, 1992690809u)
+// Original dynamic initializer: RVA 0x000A0CE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayEffectCustomApplicationRequirement> AutoInitializeUGameplayEffectCustomApplicationRequirement(TEXT("UGameplayEffectCustomApplicationRequirement"), sizeof(UGameplayEffectCustomApplicationRequirement), 1992690809u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00561DB0 (end 0x00561E47)
 // Original VA: 0x0000000140561DB0 | File offset: 0x005613B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayEffectCustomApplicationRequirement, 1992690809u); reached from UGameplayEffectCustomApplicationRequirement::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UGameplayEffectCustomApplicationRequirement::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayEffectCustomApplicationRequirement();
+// Original dynamic initializer: RVA 0x000A2DD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayEffectCustomApplicationRequirement(Z_Construct_UClass_UGameplayEffectCustomApplicationRequirement, &UGameplayEffectCustomApplicationRequirement::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UGameplayEffectCustomApplicationRequirement"), false, nullptr, nullptr, nullptr);

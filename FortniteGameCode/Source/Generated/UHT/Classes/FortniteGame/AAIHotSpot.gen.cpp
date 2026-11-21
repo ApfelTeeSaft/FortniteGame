@@ -7,6 +7,9 @@
 void AAIHotSpot::StaticRegisterNativesAAIHotSpot()
 {
 }
+// IMPLEMENT_CLASS(AAIHotSpot, 2649241222u)
+// Original dynamic initializer: RVA 0x000D72B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AAIHotSpot> AutoInitializeAAIHotSpot(TEXT("AAIHotSpot"), sizeof(AAIHotSpot), 2649241222u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F57800 (end 0x00F578A2)
 // Original VA: 0x0000000140F57800 | File offset: 0x00F56E00
 // Recovery: confirmed (IMPLEMENT_CLASS(AAIHotSpot, 2649241222u); reached from AAIHotSpot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AAIHotSpot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AAIHotSpot();
+// Original dynamic initializer: RVA 0x000D8090
+static FCompiledInDefer Z_CompiledInDefer_UClass_AAIHotSpot(Z_Construct_UClass_AAIHotSpot, &AAIHotSpot::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AAIHotSpot"), false, nullptr, nullptr, nullptr);

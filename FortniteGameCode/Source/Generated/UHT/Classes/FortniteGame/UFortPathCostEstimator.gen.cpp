@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortPathCostEstimator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortPathCostEstimator, 2550751569u)
+// Original dynamic initializer: RVA 0x00108090 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPathCostEstimator> AutoInitializeUFortPathCostEstimator(TEXT("UFortPathCostEstimator"), sizeof(UFortPathCostEstimator), 2550751569u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0105C520 (end 0x0105C5B7)
 // Original VA: 0x000000014105C520 | File offset: 0x0105BB20
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPathCostEstimator, 2550751569u); reached from UFortPathCostEstimator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortPathCostEstimator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPathCostEstimator();
+// Original dynamic initializer: RVA 0x00108BC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPathCostEstimator(Z_Construct_UClass_UFortPathCostEstimator, &UFortPathCostEstimator::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPathCostEstimator"), false, nullptr, nullptr, nullptr);

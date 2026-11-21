@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDefenderItemTileView()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDefenderItemTileView, 518379211u)
+// Original dynamic initializer: RVA 0x00242790 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDefenderItemTileView> AutoInitializeUFortDefenderItemTileView(TEXT("UFortDefenderItemTileView"), sizeof(UFortDefenderItemTileView), 518379211u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0289A100 (end 0x0289A1A2)
 // Original VA: 0x000000014289A100 | File offset: 0x02899700
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDefenderItemTileView, 518379211u); reached from UFortDefenderItemTileView::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDefenderItemTileView::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDefenderItemTileView();
+// Original dynamic initializer: RVA 0x00244620
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDefenderItemTileView(Z_Construct_UClass_UFortDefenderItemTileView, &UFortDefenderItemTileView::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortDefenderItemTileView"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortAthenaMapInfo()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortAthenaMapInfo, 2618510473u)
+// Original dynamic initializer: RVA 0x000E6670 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortAthenaMapInfo> AutoInitializeAFortAthenaMapInfo(TEXT("AFortAthenaMapInfo"), sizeof(AFortAthenaMapInfo), 2618510473u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9C310 (end 0x00F9C3B2)
 // Original VA: 0x0000000140F9C310 | File offset: 0x00F9B910
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortAthenaMapInfo, 2618510473u); reached from AFortAthenaMapInfo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortAthenaMapInfo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortAthenaMapInfo();
+// Original dynamic initializer: RVA 0x000E7710
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortAthenaMapInfo(Z_Construct_UClass_AFortAthenaMapInfo, &AFortAthenaMapInfo::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortAthenaMapInfo"), false, nullptr, nullptr, nullptr);

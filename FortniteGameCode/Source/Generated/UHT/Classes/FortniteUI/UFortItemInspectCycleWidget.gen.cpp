@@ -7,6 +7,9 @@
 void UFortItemInspectCycleWidget::StaticRegisterNativesUFortItemInspectCycleWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortItemInspectCycleWidget, 2028262458u)
+// Original dynamic initializer: RVA 0x0024CE40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemInspectCycleWidget> AutoInitializeUFortItemInspectCycleWidget(TEXT("UFortItemInspectCycleWidget"), sizeof(UFortItemInspectCycleWidget), 2028262458u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C8410 (end 0x028C84B2)
 // Original VA: 0x00000001428C8410 | File offset: 0x028C7A10
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemInspectCycleWidget, 2028262458u); reached from UFortItemInspectCycleWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortItemInspectCycleWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemInspectCycleWidget();
+// Original dynamic initializer: RVA 0x0024EE90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemInspectCycleWidget(Z_Construct_UClass_UFortItemInspectCycleWidget, &UFortItemInspectCycleWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemInspectCycleWidget"), false, nullptr, nullptr, nullptr);

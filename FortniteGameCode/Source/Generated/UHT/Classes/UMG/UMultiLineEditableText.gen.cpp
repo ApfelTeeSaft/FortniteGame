@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UMultiLineEditableText, 1157632894u)
+// Original dynamic initializer: RVA 0x001B28E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMultiLineEditableText> AutoInitializeUMultiLineEditableText(TEXT("UMultiLineEditableText"), sizeof(UMultiLineEditableText), 1157632894u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEC1B0 (end 0x01BEC252)
 // Original VA: 0x0000000141BEC1B0 | File offset: 0x01BEB7B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMultiLineEditableText, 1157632894u); reached from UMultiLineEditableText::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UMultiLineEditableText::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMultiLineEditableText();
+// Original dynamic initializer: RVA 0x001B3210
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMultiLineEditableText(Z_Construct_UClass_UMultiLineEditableText, &UMultiLineEditableText::StaticClass, TEXT("/Script/UMG"), TEXT("UMultiLineEditableText"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCommonDateTimeTextBlock, 1668591825u)
+// Original dynamic initializer: RVA 0x000956D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonDateTimeTextBlock> AutoInitializeUCommonDateTimeTextBlock(TEXT("UCommonDateTimeTextBlock"), sizeof(UCommonDateTimeTextBlock), 1668591825u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C1FD0 (end 0x002C2072)
 // Original VA: 0x00000001402C1FD0 | File offset: 0x002C15D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonDateTimeTextBlock, 1668591825u); reached from UCommonDateTimeTextBlock::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCommonDateTimeTextBlock::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonDateTimeTextBlock();
+// Original dynamic initializer: RVA 0x00095E80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonDateTimeTextBlock(Z_Construct_UClass_UCommonDateTimeTextBlock, &UCommonDateTimeTextBlock::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonDateTimeTextBlock"), false, nullptr, nullptr, nullptr);

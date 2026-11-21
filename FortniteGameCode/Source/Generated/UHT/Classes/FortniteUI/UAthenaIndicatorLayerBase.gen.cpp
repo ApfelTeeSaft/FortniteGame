@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAthenaIndicatorLayerBase, 1325805880u)
+// Original dynamic initializer: RVA 0x00239200 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaIndicatorLayerBase> AutoInitializeUAthenaIndicatorLayerBase(TEXT("UAthenaIndicatorLayerBase"), sizeof(UAthenaIndicatorLayerBase), 1325805880u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287E090 (end 0x0287E132)
 // Original VA: 0x000000014287E090 | File offset: 0x0287D690
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaIndicatorLayerBase, 1325805880u); reached from UAthenaIndicatorLayerBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAthenaIndicatorLayerBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaIndicatorLayerBase();
+// Original dynamic initializer: RVA 0x0023B140
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaIndicatorLayerBase(Z_Construct_UClass_UAthenaIndicatorLayerBase, &UAthenaIndicatorLayerBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaIndicatorLayerBase"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortSplineAudioActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortSplineAudioActor, 3787543706u)
+// Original dynamic initializer: RVA 0x001145F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortSplineAudioActor> AutoInitializeAFortSplineAudioActor(TEXT("AFortSplineAudioActor"), sizeof(AFortSplineAudioActor), 3787543706u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010B1020 (end 0x010B10C2)
 // Original VA: 0x00000001410B1020 | File offset: 0x010B0620
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortSplineAudioActor, 3787543706u); reached from AFortSplineAudioActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortSplineAudioActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortSplineAudioActor();
+// Original dynamic initializer: RVA 0x00115D80
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortSplineAudioActor(Z_Construct_UClass_AFortSplineAudioActor, &AFortSplineAudioActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortSplineAudioActor"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UFortGridPickerTile::StaticRegisterNativesUFortGridPickerTile()
 {
 }
+// IMPLEMENT_CLASS(UFortGridPickerTile, 2081361764u)
+// Original dynamic initializer: RVA 0x00247700 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGridPickerTile> AutoInitializeUFortGridPickerTile(TEXT("UFortGridPickerTile"), sizeof(UFortGridPickerTile), 2081361764u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B2A80 (end 0x028B2B22)
 // Original VA: 0x00000001428B2A80 | File offset: 0x028B2080
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGridPickerTile, 2081361764u); reached from UFortGridPickerTile::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortGridPickerTile::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGridPickerTile();
+// Original dynamic initializer: RVA 0x00247F20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGridPickerTile(Z_Construct_UClass_UFortGridPickerTile, &UFortGridPickerTile::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortGridPickerTile"), false, nullptr, nullptr, nullptr);

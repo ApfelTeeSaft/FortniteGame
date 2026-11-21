@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortItemIconDefinition()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortItemIconDefinition, 1308837710u)
+// Original dynamic initializer: RVA 0x000FB2C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemIconDefinition> AutoInitializeUFortItemIconDefinition(TEXT("UFortItemIconDefinition"), sizeof(UFortItemIconDefinition), 1308837710u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010042C0 (end 0x01004362)
 // Original VA: 0x00000001410042C0 | File offset: 0x010038C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemIconDefinition, 1308837710u); reached from UFortItemIconDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortItemIconDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemIconDefinition();
+// Original dynamic initializer: RVA 0x000FC3B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemIconDefinition(Z_Construct_UClass_UFortItemIconDefinition, &UFortItemIconDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortItemIconDefinition"), false, nullptr, nullptr, nullptr);

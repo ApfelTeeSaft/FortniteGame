@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ANavLinkProxy, 2242518316u)
+// Original dynamic initializer: RVA 0x0020DAF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ANavLinkProxy> AutoInitializeANavLinkProxy(TEXT("ANavLinkProxy"), sizeof(ANavLinkProxy), 2242518316u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248DCA0 (end 0x0248DD42)
 // Original VA: 0x000000014248DCA0 | File offset: 0x0248D2A0
 // Recovery: confirmed (IMPLEMENT_CLASS(ANavLinkProxy, 2242518316u); reached from ANavLinkProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ANavLinkProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ANavLinkProxy();
+// Original dynamic initializer: RVA 0x0020E710
+static FCompiledInDefer Z_CompiledInDefer_UClass_ANavLinkProxy(Z_Construct_UClass_ANavLinkProxy, &ANavLinkProxy::StaticClass, TEXT("/Script/Engine"), TEXT("ANavLinkProxy"), false, nullptr, nullptr, nullptr);

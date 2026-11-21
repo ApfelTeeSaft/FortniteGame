@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UCommonVisibilityWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCommonVisibilityWidget, 1540638107u)
+// Original dynamic initializer: RVA 0x00096B90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonVisibilityWidget> AutoInitializeUCommonVisibilityWidget(TEXT("UCommonVisibilityWidget"), sizeof(UCommonVisibilityWidget), 1540638107u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002CFCD0 (end 0x002CFD72)
 // Original VA: 0x00000001402CFCD0 | File offset: 0x002CF2D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonVisibilityWidget, 1540638107u); reached from UCommonVisibilityWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UCommonVisibilityWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonVisibilityWidget();
+// Original dynamic initializer: RVA 0x00097120
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonVisibilityWidget(Z_Construct_UClass_UCommonVisibilityWidget, &UCommonVisibilityWidget::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonVisibilityWidget"), false, nullptr, nullptr, nullptr);

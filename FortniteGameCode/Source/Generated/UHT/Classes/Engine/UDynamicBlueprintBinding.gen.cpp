@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UDynamicBlueprintBinding()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDynamicBlueprintBinding, 3914542463u)
+// Original dynamic initializer: RVA 0x001F9EC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDynamicBlueprintBinding> AutoInitializeUDynamicBlueprintBinding(TEXT("UDynamicBlueprintBinding"), sizeof(UDynamicBlueprintBinding), 3914542463u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024035B0 (end 0x02403647)
 // Original VA: 0x00000001424035B0 | File offset: 0x02402BB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UDynamicBlueprintBinding, 3914542463u); reached from UDynamicBlueprintBinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UDynamicBlueprintBinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDynamicBlueprintBinding();
+// Original dynamic initializer: RVA 0x001FB730
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDynamicBlueprintBinding(Z_Construct_UClass_UDynamicBlueprintBinding, &UDynamicBlueprintBinding::StaticClass, TEXT("/Script/Engine"), TEXT("UDynamicBlueprintBinding"), false, nullptr, nullptr, nullptr);

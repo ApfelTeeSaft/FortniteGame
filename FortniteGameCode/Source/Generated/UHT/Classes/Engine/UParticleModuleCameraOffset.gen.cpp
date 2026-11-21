@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleCameraOffset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleCameraOffset, 61982182u)
+// Original dynamic initializer: RVA 0x0020F130 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleCameraOffset> AutoInitializeUParticleModuleCameraOffset(TEXT("UParticleModuleCameraOffset"), sizeof(UParticleModuleCameraOffset), 61982182u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02494AB0 (end 0x02494B52)
 // Original VA: 0x0000000142494AB0 | File offset: 0x024940B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleCameraOffset, 61982182u); reached from UParticleModuleCameraOffset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleCameraOffset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleCameraOffset();
+// Original dynamic initializer: RVA 0x00210730
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleCameraOffset(Z_Construct_UClass_UParticleModuleCameraOffset, &UParticleModuleCameraOffset::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleCameraOffset"), false, nullptr, nullptr, nullptr);

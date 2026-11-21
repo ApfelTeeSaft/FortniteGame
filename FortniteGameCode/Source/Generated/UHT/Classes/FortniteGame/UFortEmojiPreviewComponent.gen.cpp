@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortEmojiPreviewComponent, 1082156656u)
+// Original dynamic initializer: RVA 0x000F1000 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortEmojiPreviewComponent> AutoInitializeUFortEmojiPreviewComponent(TEXT("UFortEmojiPreviewComponent"), sizeof(UFortEmojiPreviewComponent), 1082156656u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD64C0 (end 0x00FD6562)
 // Original VA: 0x0000000140FD64C0 | File offset: 0x00FD5AC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortEmojiPreviewComponent, 1082156656u); reached from UFortEmojiPreviewComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortEmojiPreviewComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortEmojiPreviewComponent();
+// Original dynamic initializer: RVA 0x000F2450
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortEmojiPreviewComponent(Z_Construct_UClass_UFortEmojiPreviewComponent, &UFortEmojiPreviewComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortEmojiPreviewComponent"), false, nullptr, nullptr, nullptr);

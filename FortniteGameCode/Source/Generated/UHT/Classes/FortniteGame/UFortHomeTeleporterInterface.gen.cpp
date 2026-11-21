@@ -7,6 +7,9 @@
 void UFortHomeTeleporterInterface::StaticRegisterNativesUFortHomeTeleporterInterface()
 {
 }
+// IMPLEMENT_CLASS(UFortHomeTeleporterInterface, 1089827789u)
+// Original dynamic initializer: RVA 0x000FAFC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHomeTeleporterInterface> AutoInitializeUFortHomeTeleporterInterface(TEXT("UFortHomeTeleporterInterface"), sizeof(UFortHomeTeleporterInterface), 1089827789u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010032A0 (end 0x01003342)
 // Original VA: 0x00000001410032A0 | File offset: 0x010028A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHomeTeleporterInterface, 1089827789u); reached from UFortHomeTeleporterInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortHomeTeleporterInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHomeTeleporterInterface();
+// Original dynamic initializer: RVA 0x000FBDB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHomeTeleporterInterface(Z_Construct_UClass_UFortHomeTeleporterInterface, &UFortHomeTeleporterInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortHomeTeleporterInterface"), false, nullptr, nullptr, nullptr);

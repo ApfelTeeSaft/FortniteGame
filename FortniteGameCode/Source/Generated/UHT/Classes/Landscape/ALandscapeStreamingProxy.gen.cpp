@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ALandscapeStreamingProxy()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ALandscapeStreamingProxy, 145336657u)
+// Original dynamic initializer: RVA 0x001A2B10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALandscapeStreamingProxy> AutoInitializeALandscapeStreamingProxy(TEXT("ALandscapeStreamingProxy"), sizeof(ALandscapeStreamingProxy), 145336657u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A73A50 (end 0x01A73AF2)
 // Original VA: 0x0000000141A73A50 | File offset: 0x01A73050
 // Recovery: confirmed (IMPLEMENT_CLASS(ALandscapeStreamingProxy, 145336657u); reached from ALandscapeStreamingProxy::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ALandscapeStreamingProxy::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALandscapeStreamingProxy();
+// Original dynamic initializer: RVA 0x001A3F20
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALandscapeStreamingProxy(Z_Construct_UClass_ALandscapeStreamingProxy, &ALandscapeStreamingProxy::StaticClass, TEXT("/Script/Landscape"), TEXT("ALandscapeStreamingProxy"), false, nullptr, nullptr, nullptr);

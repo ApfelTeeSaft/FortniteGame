@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAnimCompress_BitwiseCompressOnly()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnimCompress_BitwiseCompressOnly, 2952233335u)
+// Original dynamic initializer: RVA 0x001EC100 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimCompress_BitwiseCompressOnly> AutoInitializeUAnimCompress_BitwiseCompressOnly(TEXT("UAnimCompress_BitwiseCompressOnly"), sizeof(UAnimCompress_BitwiseCompressOnly), 2952233335u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C66E0 (end 0x023C6782)
 // Original VA: 0x00000001423C66E0 | File offset: 0x023C5CE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimCompress_BitwiseCompressOnly, 2952233335u); reached from UAnimCompress_BitwiseCompressOnly::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAnimCompress_BitwiseCompressOnly::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimCompress_BitwiseCompressOnly();
+// Original dynamic initializer: RVA 0x001EDC40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimCompress_BitwiseCompressOnly(Z_Construct_UClass_UAnimCompress_BitwiseCompressOnly, &UAnimCompress_BitwiseCompressOnly::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimCompress_BitwiseCompressOnly"), false, nullptr, nullptr, nullptr);

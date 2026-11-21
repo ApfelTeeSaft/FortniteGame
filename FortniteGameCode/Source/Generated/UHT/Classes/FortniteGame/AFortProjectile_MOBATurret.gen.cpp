@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortProjectile_MOBATurret, 425521393u)
+// Original dynamic initializer: RVA 0x0010D550 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortProjectile_MOBATurret> AutoInitializeAFortProjectile_MOBATurret(TEXT("AFortProjectile_MOBATurret"), sizeof(AFortProjectile_MOBATurret), 425521393u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01089BF0 (end 0x01089C92)
 // Original VA: 0x0000000141089BF0 | File offset: 0x010891F0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortProjectile_MOBATurret, 425521393u); reached from AFortProjectile_MOBATurret::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortProjectile_MOBATurret::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortProjectile_MOBATurret();
+// Original dynamic initializer: RVA 0x0010E490
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortProjectile_MOBATurret(Z_Construct_UClass_AFortProjectile_MOBATurret, &AFortProjectile_MOBATurret::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortProjectile_MOBATurret"), false, nullptr, nullptr, nullptr);

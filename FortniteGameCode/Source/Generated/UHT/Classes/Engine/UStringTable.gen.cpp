@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UStringTable()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UStringTable, 768374842u)
+// Original dynamic initializer: RVA 0x0021E7F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UStringTable> AutoInitializeUStringTable(TEXT("UStringTable"), sizeof(UStringTable), 768374842u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024E62F0 (end 0x024E6387)
 // Original VA: 0x00000001424E62F0 | File offset: 0x024E58F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UStringTable, 768374842u); reached from UStringTable::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UStringTable::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UStringTable();
+// Original dynamic initializer: RVA 0x0021FD80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UStringTable(Z_Construct_UClass_UStringTable, &UStringTable::StaticClass, TEXT("/Script/Engine"), TEXT("UStringTable"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAbilityTask_MoveToLocation, 540252236u)
+// Original dynamic initializer: RVA 0x0009D480 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_MoveToLocation> AutoInitializeUAbilityTask_MoveToLocation(TEXT("UAbilityTask_MoveToLocation"), sizeof(UAbilityTask_MoveToLocation), 540252236u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00545B10 (end 0x00545BB2)
 // Original VA: 0x0000000140545B10 | File offset: 0x00545110
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_MoveToLocation, 540252236u); reached from UAbilityTask_MoveToLocation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAbilityTask_MoveToLocation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_MoveToLocation();
+// Original dynamic initializer: RVA 0x0009DA70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_MoveToLocation(Z_Construct_UClass_UAbilityTask_MoveToLocation, &UAbilityTask_MoveToLocation::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_MoveToLocation"), false, nullptr, nullptr, nullptr);

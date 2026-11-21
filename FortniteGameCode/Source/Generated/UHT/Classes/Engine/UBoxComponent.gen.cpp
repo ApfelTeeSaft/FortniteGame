@@ -7,6 +7,9 @@
 void UBoxComponent::StaticRegisterNativesUBoxComponent()
 {
 }
+// IMPLEMENT_CLASS(UBoxComponent, 2569318093u)
+// Original dynamic initializer: RVA 0x001F4C10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBoxComponent> AutoInitializeUBoxComponent(TEXT("UBoxComponent"), sizeof(UBoxComponent), 2569318093u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E8D60 (end 0x023E8E02)
 // Original VA: 0x00000001423E8D60 | File offset: 0x023E8360
 // Recovery: confirmed (IMPLEMENT_CLASS(UBoxComponent, 2569318093u); reached from UBoxComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UBoxComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBoxComponent();
+// Original dynamic initializer: RVA 0x001F60D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBoxComponent(Z_Construct_UClass_UBoxComponent, &UBoxComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UBoxComponent"), false, nullptr, nullptr, nullptr);

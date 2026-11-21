@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortPlayerControllerPvP, 3535872190u)
+// Original dynamic initializer: RVA 0x0010B900 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPlayerControllerPvP> AutoInitializeAFortPlayerControllerPvP(TEXT("AFortPlayerControllerPvP"), sizeof(AFortPlayerControllerPvP), 3535872190u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01076800 (end 0x010768A2)
 // Original VA: 0x0000000141076800 | File offset: 0x01075E00
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPlayerControllerPvP, 3535872190u); reached from AFortPlayerControllerPvP::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortPlayerControllerPvP::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPlayerControllerPvP();
+// Original dynamic initializer: RVA 0x0010C3A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPlayerControllerPvP(Z_Construct_UClass_AFortPlayerControllerPvP, &AFortPlayerControllerPvP::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPlayerControllerPvP"), false, nullptr, nullptr, nullptr);

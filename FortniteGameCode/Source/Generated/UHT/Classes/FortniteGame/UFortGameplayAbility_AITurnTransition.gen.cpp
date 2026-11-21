@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortGameplayAbility_AITurnTransition, 1166309826u)
+// Original dynamic initializer: RVA 0x000F6600 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGameplayAbility_AITurnTransition> AutoInitializeUFortGameplayAbility_AITurnTransition(TEXT("UFortGameplayAbility_AITurnTransition"), sizeof(UFortGameplayAbility_AITurnTransition), 1166309826u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE6020 (end 0x00FE60C2)
 // Original VA: 0x0000000140FE6020 | File offset: 0x00FE5620
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGameplayAbility_AITurnTransition, 1166309826u); reached from UFortGameplayAbility_AITurnTransition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortGameplayAbility_AITurnTransition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGameplayAbility_AITurnTransition();
+// Original dynamic initializer: RVA 0x000F71F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGameplayAbility_AITurnTransition(Z_Construct_UClass_UFortGameplayAbility_AITurnTransition, &UFortGameplayAbility_AITurnTransition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortGameplayAbility_AITurnTransition"), false, nullptr, nullptr, nullptr);

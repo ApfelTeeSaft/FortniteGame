@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortPlayerDBNOEnterParams, 150163196u)
+// Original dynamic initializer: RVA 0x00120220 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPlayerDBNOEnterParams> AutoInitializeUFortPlayerDBNOEnterParams(TEXT("UFortPlayerDBNOEnterParams"), sizeof(UFortPlayerDBNOEnterParams), 150163196u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E7AF0 (end 0x010E7B92)
 // Original VA: 0x00000001410E7AF0 | File offset: 0x010E70F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPlayerDBNOEnterParams, 150163196u); reached from UFortPlayerDBNOEnterParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortPlayerDBNOEnterParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPlayerDBNOEnterParams();
+// Original dynamic initializer: RVA 0x00121FB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPlayerDBNOEnterParams(Z_Construct_UClass_UFortPlayerDBNOEnterParams, &UFortPlayerDBNOEnterParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPlayerDBNOEnterParams"), false, nullptr, nullptr, nullptr);

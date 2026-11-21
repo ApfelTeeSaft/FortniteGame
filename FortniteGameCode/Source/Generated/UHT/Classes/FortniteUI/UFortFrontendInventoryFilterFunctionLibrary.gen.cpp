@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortFrontendInventoryFilterFunctionLibrary, 2866066344u)
+// Original dynamic initializer: RVA 0x0024F270 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortFrontendInventoryFilterFunctionLibrary> AutoInitializeUFortFrontendInventoryFilterFunctionLibrary(TEXT("UFortFrontendInventoryFilterFunctionLibrary"), sizeof(UFortFrontendInventoryFilterFunctionLibrary), 2866066344u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CDFA0 (end 0x028CE042)
 // Original VA: 0x00000001428CDFA0 | File offset: 0x028CD5A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortFrontendInventoryFilterFunctionLibrary, 2866066344u); reached from UFortFrontendInventoryFilterFunctionLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortFrontendInventoryFilterFunctionLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortFrontendInventoryFilterFunctionLibrary();
+// Original dynamic initializer: RVA 0x00250D50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortFrontendInventoryFilterFunctionLibrary(Z_Construct_UClass_UFortFrontendInventoryFilterFunctionLibrary, &UFortFrontendInventoryFilterFunctionLibrary::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortFrontendInventoryFilterFunctionLibrary"), false, nullptr, nullptr, nullptr);

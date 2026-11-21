@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortRiftBlockerComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortRiftBlockerComponent, 1364578256u)
+// Original dynamic initializer: RVA 0x00111560 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortRiftBlockerComponent> AutoInitializeUFortRiftBlockerComponent(TEXT("UFortRiftBlockerComponent"), sizeof(UFortRiftBlockerComponent), 1364578256u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0109C7E0 (end 0x0109C882)
 // Original VA: 0x000000014109C7E0 | File offset: 0x0109BDE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortRiftBlockerComponent, 1364578256u); reached from UFortRiftBlockerComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortRiftBlockerComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortRiftBlockerComponent();
+// Original dynamic initializer: RVA 0x00112A30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortRiftBlockerComponent(Z_Construct_UClass_UFortRiftBlockerComponent, &UFortRiftBlockerComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortRiftBlockerComponent"), false, nullptr, nullptr, nullptr);

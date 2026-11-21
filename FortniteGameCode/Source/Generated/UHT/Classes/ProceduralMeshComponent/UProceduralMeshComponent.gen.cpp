@@ -7,6 +7,9 @@
 void UProceduralMeshComponent::StaticRegisterNativesUProceduralMeshComponent()
 {
 }
+// IMPLEMENT_CLASS(UProceduralMeshComponent, 1073651143u)
+// Original dynamic initializer: RVA 0x000AD980 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UProceduralMeshComponent> AutoInitializeUProceduralMeshComponent(TEXT("UProceduralMeshComponent"), sizeof(UProceduralMeshComponent), 1073651143u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0069B920 (end 0x0069B9C2)
 // Original VA: 0x000000014069B920 | File offset: 0x0069AF20
 // Recovery: confirmed (IMPLEMENT_CLASS(UProceduralMeshComponent, 1073651143u); reached from UProceduralMeshComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UProceduralMeshComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UProceduralMeshComponent();
+// Original dynamic initializer: RVA 0x000ADCC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UProceduralMeshComponent(Z_Construct_UClass_UProceduralMeshComponent, &UProceduralMeshComponent::StaticClass, TEXT("/Script/ProceduralMeshComponent"), TEXT("UProceduralMeshComponent"), false, nullptr, nullptr, nullptr);

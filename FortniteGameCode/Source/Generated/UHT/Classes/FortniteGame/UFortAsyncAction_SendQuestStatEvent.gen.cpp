@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_SendQuestStatEvent, 4079439874u)
+// Original dynamic initializer: RVA 0x000E69D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_SendQuestStatEvent> AutoInitializeUFortAsyncAction_SendQuestStatEvent(TEXT("UFortAsyncAction_SendQuestStatEvent"), sizeof(UFortAsyncAction_SendQuestStatEvent), 4079439874u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9D5A0 (end 0x00F9D642)
 // Original VA: 0x0000000140F9D5A0 | File offset: 0x00F9CBA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_SendQuestStatEvent, 4079439874u); reached from UFortAsyncAction_SendQuestStatEvent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_SendQuestStatEvent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_SendQuestStatEvent();
+// Original dynamic initializer: RVA 0x000E7DD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_SendQuestStatEvent(Z_Construct_UClass_UFortAsyncAction_SendQuestStatEvent, &UFortAsyncAction_SendQuestStatEvent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAsyncAction_SendQuestStatEvent"), false, nullptr, nullptr, nullptr);

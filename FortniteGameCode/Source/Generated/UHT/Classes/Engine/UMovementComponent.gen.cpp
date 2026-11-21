@@ -7,6 +7,9 @@
 void UMovementComponent::StaticRegisterNativesUMovementComponent()
 {
 }
+// IMPLEMENT_CLASS(UMovementComponent, 373163136u)
+// Original dynamic initializer: RVA 0x0020C630 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovementComponent> AutoInitializeUMovementComponent(TEXT("UMovementComponent"), sizeof(UMovementComponent), 373163136u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02489CF0 (end 0x02489D92)
 // Original VA: 0x0000000142489CF0 | File offset: 0x024892F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovementComponent, 373163136u); reached from UMovementComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UMovementComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovementComponent();
+// Original dynamic initializer: RVA 0x0020D730
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovementComponent(Z_Construct_UClass_UMovementComponent, &UMovementComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UMovementComponent"), false, nullptr, nullptr, nullptr);

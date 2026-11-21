@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USocialActionButtonStyleDataAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USocialActionButtonStyleDataAsset, 3204960015u)
+// Original dynamic initializer: RVA 0x00225470 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USocialActionButtonStyleDataAsset> AutoInitializeUSocialActionButtonStyleDataAsset(TEXT("USocialActionButtonStyleDataAsset"), sizeof(USocialActionButtonStyleDataAsset), 3204960015u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025A1EC0 (end 0x025A1F62)
 // Original VA: 0x00000001425A1EC0 | File offset: 0x025A14C0
 // Recovery: confirmed (IMPLEMENT_CLASS(USocialActionButtonStyleDataAsset, 3204960015u); reached from USocialActionButtonStyleDataAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USocialActionButtonStyleDataAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USocialActionButtonStyleDataAsset();
+// Original dynamic initializer: RVA 0x002256E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USocialActionButtonStyleDataAsset(Z_Construct_UClass_USocialActionButtonStyleDataAsset, &USocialActionButtonStyleDataAsset::StaticClass, TEXT("/Script/SocialDefaults"), TEXT("USocialActionButtonStyleDataAsset"), false, nullptr, nullptr, nullptr);

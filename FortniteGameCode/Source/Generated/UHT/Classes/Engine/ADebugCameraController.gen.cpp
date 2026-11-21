@@ -7,6 +7,9 @@
 void ADebugCameraController::StaticRegisterNativesADebugCameraController()
 {
 }
+// IMPLEMENT_CLASS(ADebugCameraController, 1043388985u)
+// Original dynamic initializer: RVA 0x001F8200 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ADebugCameraController> AutoInitializeADebugCameraController(TEXT("ADebugCameraController"), sizeof(ADebugCameraController), 1043388985u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FBAC0 (end 0x023FBB62)
 // Original VA: 0x00000001423FBAC0 | File offset: 0x023FB0C0
 // Recovery: confirmed (IMPLEMENT_CLASS(ADebugCameraController, 1043388985u); reached from ADebugCameraController::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ADebugCameraController::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ADebugCameraController();
+// Original dynamic initializer: RVA 0x001F93C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ADebugCameraController(Z_Construct_UClass_ADebugCameraController, &ADebugCameraController::StaticClass, TEXT("/Script/Engine"), TEXT("ADebugCameraController"), false, nullptr, nullptr, nullptr);

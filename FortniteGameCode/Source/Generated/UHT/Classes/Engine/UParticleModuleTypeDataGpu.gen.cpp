@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleTypeDataGpu()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleTypeDataGpu, 1379189880u)
+// Original dynamic initializer: RVA 0x00212660 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleTypeDataGpu> AutoInitializeUParticleModuleTypeDataGpu(TEXT("UParticleModuleTypeDataGpu"), sizeof(UParticleModuleTypeDataGpu), 1379189880u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249D010 (end 0x0249D0B2)
 // Original VA: 0x000000014249D010 | File offset: 0x0249C610
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleTypeDataGpu, 1379189880u); reached from UParticleModuleTypeDataGpu::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleTypeDataGpu::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleTypeDataGpu();
+// Original dynamic initializer: RVA 0x00213790
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleTypeDataGpu(Z_Construct_UClass_UParticleModuleTypeDataGpu, &UParticleModuleTypeDataGpu::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleTypeDataGpu"), false, nullptr, nullptr, nullptr);

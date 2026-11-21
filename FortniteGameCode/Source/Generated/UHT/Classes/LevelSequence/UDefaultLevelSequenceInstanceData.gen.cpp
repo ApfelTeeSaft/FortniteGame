@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_UDefaultLevelSequenceInstanceData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDefaultLevelSequenceInstanceData, 3565782509u)
+// Original dynamic initializer: RVA 0x001C0C50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDefaultLevelSequenceInstanceData> AutoInitializeUDefaultLevelSequenceInstanceData(TEXT("UDefaultLevelSequenceInstanceData"), sizeof(UDefaultLevelSequenceInstanceData), 3565782509u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4DD20 (end 0x01D4DDB7)
 // Original VA: 0x0000000141D4DD20 | File offset: 0x01D4D320
 // Recovery: confirmed (IMPLEMENT_CLASS(UDefaultLevelSequenceInstanceData, 3565782509u); reached from UDefaultLevelSequenceInstanceData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* UDefaultLevelSequenceInstanceData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDefaultLevelSequenceInstanceData();
+// Original dynamic initializer: RVA 0x001C13F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDefaultLevelSequenceInstanceData(Z_Construct_UClass_UDefaultLevelSequenceInstanceData, &UDefaultLevelSequenceInstanceData::StaticClass, TEXT("/Script/LevelSequence"), TEXT("UDefaultLevelSequenceInstanceData"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ABuildingFOBCoreSpawnPad, 2323478586u)
+// Original dynamic initializer: RVA 0x000DADF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingFOBCoreSpawnPad> AutoInitializeABuildingFOBCoreSpawnPad(TEXT("ABuildingFOBCoreSpawnPad"), sizeof(ABuildingFOBCoreSpawnPad), 2323478586u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6A2D0 (end 0x00F6A372)
 // Original VA: 0x0000000140F6A2D0 | File offset: 0x00F698D0
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingFOBCoreSpawnPad, 2323478586u); reached from ABuildingFOBCoreSpawnPad::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ABuildingFOBCoreSpawnPad::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingFOBCoreSpawnPad();
+// Original dynamic initializer: RVA 0x000DB8C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingFOBCoreSpawnPad(Z_Construct_UClass_ABuildingFOBCoreSpawnPad, &ABuildingFOBCoreSpawnPad::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingFOBCoreSpawnPad"), false, nullptr, nullptr, nullptr);

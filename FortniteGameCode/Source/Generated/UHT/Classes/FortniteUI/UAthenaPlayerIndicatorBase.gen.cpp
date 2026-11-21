@@ -7,6 +7,9 @@
 void UAthenaPlayerIndicatorBase::StaticRegisterNativesUAthenaPlayerIndicatorBase()
 {
 }
+// IMPLEMENT_CLASS(UAthenaPlayerIndicatorBase, 1343327097u)
+// Original dynamic initializer: RVA 0x0023B520 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaPlayerIndicatorBase> AutoInitializeUAthenaPlayerIndicatorBase(TEXT("UAthenaPlayerIndicatorBase"), sizeof(UAthenaPlayerIndicatorBase), 1343327097u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028849D0 (end 0x02884A72)
 // Original VA: 0x00000001428849D0 | File offset: 0x02883FD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaPlayerIndicatorBase, 1343327097u); reached from UAthenaPlayerIndicatorBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAthenaPlayerIndicatorBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaPlayerIndicatorBase();
+// Original dynamic initializer: RVA 0x0023D7A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaPlayerIndicatorBase(Z_Construct_UClass_UAthenaPlayerIndicatorBase, &UAthenaPlayerIndicatorBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaPlayerIndicatorBase"), false, nullptr, nullptr, nullptr);

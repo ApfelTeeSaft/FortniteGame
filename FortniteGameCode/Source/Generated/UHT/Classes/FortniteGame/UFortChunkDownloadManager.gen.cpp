@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortChunkDownloadManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortChunkDownloadManager, 153249274u)
+// Original dynamic initializer: RVA 0x000EB1D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortChunkDownloadManager> AutoInitializeUFortChunkDownloadManager(TEXT("UFortChunkDownloadManager"), sizeof(UFortChunkDownloadManager), 153249274u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBE860 (end 0x00FBE8F7)
 // Original VA: 0x0000000140FBE860 | File offset: 0x00FBDE60
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortChunkDownloadManager, 153249274u); reached from UFortChunkDownloadManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortChunkDownloadManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortChunkDownloadManager();
+// Original dynamic initializer: RVA 0x000EC1C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortChunkDownloadManager(Z_Construct_UClass_UFortChunkDownloadManager, &UFortChunkDownloadManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortChunkDownloadManager"), false, nullptr, nullptr, nullptr);

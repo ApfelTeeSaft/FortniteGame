@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortGamepadSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortGamepadSettings, 1413606623u)
+// Original dynamic initializer: RVA 0x000F59A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGamepadSettings> AutoInitializeUFortGamepadSettings(TEXT("UFortGamepadSettings"), sizeof(UFortGamepadSettings), 1413606623u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE36D0 (end 0x00FE3772)
 // Original VA: 0x0000000140FE36D0 | File offset: 0x00FE2CD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGamepadSettings, 1413606623u); reached from UFortGamepadSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortGamepadSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGamepadSettings();
+// Original dynamic initializer: RVA 0x000F6520
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGamepadSettings(Z_Construct_UClass_UFortGamepadSettings, &UFortGamepadSettings::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortGamepadSettings"), false, nullptr, nullptr, nullptr);

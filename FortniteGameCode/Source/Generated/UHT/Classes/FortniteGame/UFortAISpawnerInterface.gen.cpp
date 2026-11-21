@@ -7,6 +7,9 @@
 void UFortAISpawnerInterface::StaticRegisterNativesUFortAISpawnerInterface()
 {
 }
+// IMPLEMENT_CLASS(UFortAISpawnerInterface, 1352885468u)
+// Original dynamic initializer: RVA 0x000E4920 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAISpawnerInterface> AutoInitializeUFortAISpawnerInterface(TEXT("UFortAISpawnerInterface"), sizeof(UFortAISpawnerInterface), 1352885468u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F97360 (end 0x00F97402)
 // Original VA: 0x0000000140F97360 | File offset: 0x00F96960
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAISpawnerInterface, 1352885468u); reached from UFortAISpawnerInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortAISpawnerInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAISpawnerInterface();
+// Original dynamic initializer: RVA 0x000E6170
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAISpawnerInterface(Z_Construct_UClass_UFortAISpawnerInterface, &UFortAISpawnerInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAISpawnerInterface"), false, nullptr, nullptr, nullptr);

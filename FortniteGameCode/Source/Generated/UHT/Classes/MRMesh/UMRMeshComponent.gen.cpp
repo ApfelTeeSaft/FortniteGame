@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UMRMeshComponent, 1139476300u)
+// Original dynamic initializer: RVA 0x001C1DF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMRMeshComponent> AutoInitializeUMRMeshComponent(TEXT("UMRMeshComponent"), sizeof(UMRMeshComponent), 1139476300u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5EB00 (end 0x01D5EBA2)
 // Original VA: 0x0000000141D5EB00 | File offset: 0x01D5E100
 // Recovery: confirmed (IMPLEMENT_CLASS(UMRMeshComponent, 1139476300u); reached from UMRMeshComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UMRMeshComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMRMeshComponent();
+// Original dynamic initializer: RVA 0x001C1F20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMRMeshComponent(Z_Construct_UClass_UMRMeshComponent, &UMRMeshComponent::StaticClass, TEXT("/Script/MRMesh"), TEXT("UMRMeshComponent"), false, nullptr, nullptr, nullptr);

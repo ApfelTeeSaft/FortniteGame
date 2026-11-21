@@ -7,6 +7,9 @@
 void AMatineeActor::StaticRegisterNativesAMatineeActor()
 {
 }
+// IMPLEMENT_CLASS(AMatineeActor, 514527181u)
+// Original dynamic initializer: RVA 0x0020AC90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AMatineeActor> AutoInitializeAMatineeActor(TEXT("AMatineeActor"), sizeof(AMatineeActor), 514527181u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024846F0 (end 0x02484792)
 // Original VA: 0x00000001424846F0 | File offset: 0x02483CF0
 // Recovery: confirmed (IMPLEMENT_CLASS(AMatineeActor, 514527181u); reached from AMatineeActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AMatineeActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AMatineeActor();
+// Original dynamic initializer: RVA 0x0020BEB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AMatineeActor(Z_Construct_UClass_AMatineeActor, &AMatineeActor::StaticClass, TEXT("/Script/Engine"), TEXT("AMatineeActor"), false, nullptr, nullptr, nullptr);

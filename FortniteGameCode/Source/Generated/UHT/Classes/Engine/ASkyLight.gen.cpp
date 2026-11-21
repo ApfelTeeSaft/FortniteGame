@@ -7,6 +7,9 @@
 void ASkyLight::StaticRegisterNativesASkyLight()
 {
 }
+// IMPLEMENT_CLASS(ASkyLight, 1249314479u)
+// Original dynamic initializer: RVA 0x0021A910 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ASkyLight> AutoInitializeASkyLight(TEXT("ASkyLight"), sizeof(ASkyLight), 1249314479u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D3360 (end 0x024D3402)
 // Original VA: 0x00000001424D3360 | File offset: 0x024D2960
 // Recovery: confirmed (IMPLEMENT_CLASS(ASkyLight, 1249314479u); reached from ASkyLight::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ASkyLight::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ASkyLight();
+// Original dynamic initializer: RVA 0x0021C130
+static FCompiledInDefer Z_CompiledInDefer_UClass_ASkyLight(Z_Construct_UClass_ASkyLight, &ASkyLight::StaticClass, TEXT("/Script/Engine"), TEXT("ASkyLight"), false, nullptr, nullptr, nullptr);

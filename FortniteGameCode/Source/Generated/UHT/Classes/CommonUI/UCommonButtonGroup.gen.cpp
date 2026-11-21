@@ -7,6 +7,9 @@
 void UCommonButtonGroup::StaticRegisterNativesUCommonButtonGroup()
 {
 }
+// IMPLEMENT_CLASS(UCommonButtonGroup, 4050680980u)
+// Original dynamic initializer: RVA 0x00095650 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonButtonGroup> AutoInitializeUCommonButtonGroup(TEXT("UCommonButtonGroup"), sizeof(UCommonButtonGroup), 4050680980u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C1D20 (end 0x002C1DC2)
 // Original VA: 0x00000001402C1D20 | File offset: 0x002C1320
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonButtonGroup, 4050680980u); reached from UCommonButtonGroup::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonButtonGroup::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonButtonGroup();
+// Original dynamic initializer: RVA 0x00095D80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonButtonGroup(Z_Construct_UClass_UCommonButtonGroup, &UCommonButtonGroup::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonButtonGroup"), false, nullptr, nullptr, nullptr);

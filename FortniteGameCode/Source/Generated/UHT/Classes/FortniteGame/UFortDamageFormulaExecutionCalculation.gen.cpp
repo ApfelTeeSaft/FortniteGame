@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortDamageFormulaExecutionCalculation()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDamageFormulaExecutionCalculation, 2736674294u)
+// Original dynamic initializer: RVA 0x000EE570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDamageFormulaExecutionCalculation> AutoInitializeUFortDamageFormulaExecutionCalculation(TEXT("UFortDamageFormulaExecutionCalculation"), sizeof(UFortDamageFormulaExecutionCalculation), 2736674294u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCA330 (end 0x00FCA3D2)
 // Original VA: 0x0000000140FCA330 | File offset: 0x00FC9930
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDamageFormulaExecutionCalculation, 2736674294u); reached from UFortDamageFormulaExecutionCalculation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortDamageFormulaExecutionCalculation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDamageFormulaExecutionCalculation();
+// Original dynamic initializer: RVA 0x000EF840
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDamageFormulaExecutionCalculation(Z_Construct_UClass_UFortDamageFormulaExecutionCalculation, &UFortDamageFormulaExecutionCalculation::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDamageFormulaExecutionCalculation"), false, nullptr, nullptr, nullptr);

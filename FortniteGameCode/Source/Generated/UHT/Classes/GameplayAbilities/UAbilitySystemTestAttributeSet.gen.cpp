@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAbilitySystemTestAttributeSet()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAbilitySystemTestAttributeSet, 4018775133u)
+// Original dynamic initializer: RVA 0x0009D380 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilitySystemTestAttributeSet> AutoInitializeUAbilitySystemTestAttributeSet(TEXT("UAbilitySystemTestAttributeSet"), sizeof(UAbilitySystemTestAttributeSet), 4018775133u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00545590 (end 0x00545632)
 // Original VA: 0x0000000140545590 | File offset: 0x00544B90
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilitySystemTestAttributeSet, 4018775133u); reached from UAbilitySystemTestAttributeSet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAbilitySystemTestAttributeSet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilitySystemTestAttributeSet();
+// Original dynamic initializer: RVA 0x0009D870
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilitySystemTestAttributeSet(Z_Construct_UClass_UAbilitySystemTestAttributeSet, &UAbilitySystemTestAttributeSet::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilitySystemTestAttributeSet"), false, nullptr, nullptr, nullptr);

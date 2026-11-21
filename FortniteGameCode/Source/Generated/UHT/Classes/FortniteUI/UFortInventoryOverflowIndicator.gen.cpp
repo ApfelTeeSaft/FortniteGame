@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortInventoryOverflowIndicator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortInventoryOverflowIndicator, 1068610030u)
+// Original dynamic initializer: RVA 0x0024A110 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortInventoryOverflowIndicator> AutoInitializeUFortInventoryOverflowIndicator(TEXT("UFortInventoryOverflowIndicator"), sizeof(UFortInventoryOverflowIndicator), 1068610030u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028C06A0 (end 0x028C0742)
 // Original VA: 0x00000001428C06A0 | File offset: 0x028BFCA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortInventoryOverflowIndicator, 1068610030u); reached from UFortInventoryOverflowIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortInventoryOverflowIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortInventoryOverflowIndicator();
+// Original dynamic initializer: RVA 0x0024CA60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortInventoryOverflowIndicator(Z_Construct_UClass_UFortInventoryOverflowIndicator, &UFortInventoryOverflowIndicator::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortInventoryOverflowIndicator"), false, nullptr, nullptr, nullptr);

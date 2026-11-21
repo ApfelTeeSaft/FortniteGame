@@ -7,6 +7,9 @@
 void UAthenaHUDBase::StaticRegisterNativesUAthenaHUDBase()
 {
 }
+// IMPLEMENT_CLASS(UAthenaHUDBase, 2479926285u)
+// Original dynamic initializer: RVA 0x00239140 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaHUDBase> AutoInitializeUAthenaHUDBase(TEXT("UAthenaHUDBase"), sizeof(UAthenaHUDBase), 2479926285u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287DC70 (end 0x0287DD12)
 // Original VA: 0x000000014287DC70 | File offset: 0x0287D270
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaHUDBase, 2479926285u); reached from UAthenaHUDBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAthenaHUDBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaHUDBase();
+// Original dynamic initializer: RVA 0x0023AFC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaHUDBase(Z_Construct_UClass_UAthenaHUDBase, &UAthenaHUDBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaHUDBase"), false, nullptr, nullptr, nullptr);

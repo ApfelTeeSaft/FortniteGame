@@ -7,6 +7,9 @@
 void USplineComponent::StaticRegisterNativesUSplineComponent()
 {
 }
+// IMPLEMENT_CLASS(USplineComponent, 1930139723u)
+// Original dynamic initializer: RVA 0x0021E1B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USplineComponent> AutoInitializeUSplineComponent(TEXT("USplineComponent"), sizeof(USplineComponent), 1930139723u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024DCFF0 (end 0x024DD092)
 // Original VA: 0x00000001424DCFF0 | File offset: 0x024DC5F0
 // Recovery: confirmed (IMPLEMENT_CLASS(USplineComponent, 1930139723u); reached from USplineComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* USplineComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USplineComponent();
+// Original dynamic initializer: RVA 0x0021E5F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USplineComponent(Z_Construct_UClass_USplineComponent, &USplineComponent::StaticClass, TEXT("/Script/Engine"), TEXT("USplineComponent"), false, nullptr, nullptr, nullptr);

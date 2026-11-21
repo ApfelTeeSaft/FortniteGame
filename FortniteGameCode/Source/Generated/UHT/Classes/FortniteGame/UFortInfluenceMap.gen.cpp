@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortInfluenceMap, 3706387161u)
+// Original dynamic initializer: RVA 0x000FB160 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortInfluenceMap> AutoInitializeUFortInfluenceMap(TEXT("UFortInfluenceMap"), sizeof(UFortInfluenceMap), 3706387161u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01003B60 (end 0x01003BF7)
 // Original VA: 0x0000000141003B60 | File offset: 0x01003160
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortInfluenceMap, 3706387161u); reached from UFortInfluenceMap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortInfluenceMap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortInfluenceMap();
+// Original dynamic initializer: RVA 0x000FC0F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortInfluenceMap(Z_Construct_UClass_UFortInfluenceMap, &UFortInfluenceMap::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortInfluenceMap"), false, nullptr, nullptr, nullptr);

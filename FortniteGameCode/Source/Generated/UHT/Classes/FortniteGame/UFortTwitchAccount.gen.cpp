@@ -7,6 +7,9 @@
 void UFortTwitchAccount::StaticRegisterNativesUFortTwitchAccount()
 {
 }
+// IMPLEMENT_CLASS(UFortTwitchAccount, 1489758626u)
+// Original dynamic initializer: RVA 0x00118080 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTwitchAccount> AutoInitializeUFortTwitchAccount(TEXT("UFortTwitchAccount"), sizeof(UFortTwitchAccount), 1489758626u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C8050 (end 0x010C80F2)
 // Original VA: 0x00000001410C8050 | File offset: 0x010C7650
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTwitchAccount, 1489758626u); reached from UFortTwitchAccount::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortTwitchAccount::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTwitchAccount();
+// Original dynamic initializer: RVA 0x0011BDF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTwitchAccount(Z_Construct_UClass_UFortTwitchAccount, &UFortTwitchAccount::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTwitchAccount"), false, nullptr, nullptr, nullptr);

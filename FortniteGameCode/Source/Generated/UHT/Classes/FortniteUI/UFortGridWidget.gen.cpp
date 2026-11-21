@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortGridWidget()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortGridWidget, 2650897053u)
+// Original dynamic initializer: RVA 0x00247720 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortGridWidget> AutoInitializeUFortGridWidget(TEXT("UFortGridWidget"), sizeof(UFortGridWidget), 2650897053u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B2B30 (end 0x028B2BD2)
 // Original VA: 0x00000001428B2B30 | File offset: 0x028B2130
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortGridWidget, 2650897053u); reached from UFortGridWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortGridWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortGridWidget();
+// Original dynamic initializer: RVA 0x00247F60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortGridWidget(Z_Construct_UClass_UFortGridWidget, &UFortGridWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortGridWidget"), false, nullptr, nullptr, nullptr);

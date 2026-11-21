@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryGenerator_Enemies()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryGenerator_Enemies, 3057075981u)
+// Original dynamic initializer: RVA 0x0010EA90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryGenerator_Enemies> AutoInitializeUFortQueryGenerator_Enemies(TEXT("UFortQueryGenerator_Enemies"), sizeof(UFortQueryGenerator_Enemies), 3057075981u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01090F50 (end 0x01090FF2)
 // Original VA: 0x0000000141090F50 | File offset: 0x01090550
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryGenerator_Enemies, 3057075981u); reached from UFortQueryGenerator_Enemies::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryGenerator_Enemies::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryGenerator_Enemies();
+// Original dynamic initializer: RVA 0x0010FBA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryGenerator_Enemies(Z_Construct_UClass_UFortQueryGenerator_Enemies, &UFortQueryGenerator_Enemies::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryGenerator_Enemies"), false, nullptr, nullptr, nullptr);

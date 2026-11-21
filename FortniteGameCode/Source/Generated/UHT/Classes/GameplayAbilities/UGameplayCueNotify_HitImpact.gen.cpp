@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UGameplayCueNotify_HitImpact()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UGameplayCueNotify_HitImpact, 716270207u)
+// Original dynamic initializer: RVA 0x0009ECE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayCueNotify_HitImpact> AutoInitializeUGameplayCueNotify_HitImpact(TEXT("UGameplayCueNotify_HitImpact"), sizeof(UGameplayCueNotify_HitImpact), 716270207u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00559DB0 (end 0x00559E52)
 // Original VA: 0x0000000140559DB0 | File offset: 0x005593B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayCueNotify_HitImpact, 716270207u); reached from UGameplayCueNotify_HitImpact::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UGameplayCueNotify_HitImpact::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayCueNotify_HitImpact();
+// Original dynamic initializer: RVA 0x000A0BC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayCueNotify_HitImpact(Z_Construct_UClass_UGameplayCueNotify_HitImpact, &UGameplayCueNotify_HitImpact::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UGameplayCueNotify_HitImpact"), false, nullptr, nullptr, nullptr);

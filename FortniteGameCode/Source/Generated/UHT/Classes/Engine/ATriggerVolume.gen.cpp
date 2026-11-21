@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ATriggerVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ATriggerVolume, 540632900u)
+// Original dynamic initializer: RVA 0x0021FF80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ATriggerVolume> AutoInitializeATriggerVolume(TEXT("ATriggerVolume"), sizeof(ATriggerVolume), 540632900u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EB030 (end 0x024EB0D2)
 // Original VA: 0x00000001424EB030 | File offset: 0x024EA630
 // Recovery: confirmed (IMPLEMENT_CLASS(ATriggerVolume, 540632900u); reached from ATriggerVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ATriggerVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ATriggerVolume();
+// Original dynamic initializer: RVA 0x002213C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ATriggerVolume(Z_Construct_UClass_ATriggerVolume, &ATriggerVolume::StaticClass, TEXT("/Script/Engine"), TEXT("ATriggerVolume"), false, nullptr, nullptr, nullptr);

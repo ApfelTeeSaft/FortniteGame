@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UOnlinePIESettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UOnlinePIESettings, 2321169238u)
+// Original dynamic initializer: RVA 0x00099540 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UOnlinePIESettings> AutoInitializeUOnlinePIESettings(TEXT("UOnlinePIESettings"), sizeof(UOnlinePIESettings), 2321169238u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032D5D0 (end 0x0032D672)
 // Original VA: 0x000000014032D5D0 | File offset: 0x0032CBD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UOnlinePIESettings, 2321169238u); reached from UOnlinePIESettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UOnlinePIESettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UOnlinePIESettings();
+// Original dynamic initializer: RVA 0x0009A2A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UOnlinePIESettings(Z_Construct_UClass_UOnlinePIESettings, &UOnlinePIESettings::StaticClass, TEXT("/Script/OnlineSubsystemUtils"), TEXT("UOnlinePIESettings"), false, nullptr, nullptr, nullptr);

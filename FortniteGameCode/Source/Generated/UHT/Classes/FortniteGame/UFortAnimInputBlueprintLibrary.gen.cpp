@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAnimInputBlueprintLibrary, 1972756555u)
+// Original dynamic initializer: RVA 0x000E4B40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAnimInputBlueprintLibrary> AutoInitializeUFortAnimInputBlueprintLibrary(TEXT("UFortAnimInputBlueprintLibrary"), sizeof(UFortAnimInputBlueprintLibrary), 1972756555u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F97F10 (end 0x00F97FA7)
 // Original VA: 0x0000000140F97F10 | File offset: 0x00F97510
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAnimInputBlueprintLibrary, 1972756555u); reached from UFortAnimInputBlueprintLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAnimInputBlueprintLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAnimInputBlueprintLibrary();
+// Original dynamic initializer: RVA 0x000E65B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAnimInputBlueprintLibrary(Z_Construct_UClass_UFortAnimInputBlueprintLibrary, &UFortAnimInputBlueprintLibrary::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAnimInputBlueprintLibrary"), false, nullptr, nullptr, nullptr);

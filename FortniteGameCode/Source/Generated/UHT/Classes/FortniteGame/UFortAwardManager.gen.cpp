@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAwardManager, 2594949429u)
+// Original dynamic initializer: RVA 0x000E8050 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAwardManager> AutoInitializeUFortAwardManager(TEXT("UFortAwardManager"), sizeof(UFortAwardManager), 2594949429u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA2680 (end 0x00FA2717)
 // Original VA: 0x0000000140FA2680 | File offset: 0x00FA1C80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAwardManager, 2594949429u); reached from UFortAwardManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAwardManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAwardManager();
+// Original dynamic initializer: RVA 0x000E8C10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAwardManager(Z_Construct_UClass_UFortAwardManager, &UFortAwardManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAwardManager"), false, nullptr, nullptr, nullptr);

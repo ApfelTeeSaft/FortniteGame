@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UComboBoxWidgetStyle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UComboBoxWidgetStyle, 2003803154u)
+// Original dynamic initializer: RVA 0x0013E190 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UComboBoxWidgetStyle> AutoInitializeUComboBoxWidgetStyle(TEXT("UComboBoxWidgetStyle"), sizeof(UComboBoxWidgetStyle), 2003803154u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x015A1DD0 (end 0x015A1E72)
 // Original VA: 0x00000001415A1DD0 | File offset: 0x015A13D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UComboBoxWidgetStyle, 2003803154u); reached from UComboBoxWidgetStyle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UComboBoxWidgetStyle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UComboBoxWidgetStyle();
+// Original dynamic initializer: RVA 0x0013E870
+static FCompiledInDefer Z_CompiledInDefer_UClass_UComboBoxWidgetStyle(Z_Construct_UClass_UComboBoxWidgetStyle, &UComboBoxWidgetStyle::StaticClass, TEXT("/Script/Slate"), TEXT("UComboBoxWidgetStyle"), false, nullptr, nullptr, nullptr);

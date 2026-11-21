@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortPlayerViewModel()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortPlayerViewModel, 4245024847u)
+// Original dynamic initializer: RVA 0x00255CE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPlayerViewModel> AutoInitializeUFortPlayerViewModel(TEXT("UFortPlayerViewModel"), sizeof(UFortPlayerViewModel), 4245024847u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028E5740 (end 0x028E57E2)
 // Original VA: 0x00000001428E5740 | File offset: 0x028E4D40
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPlayerViewModel, 4245024847u); reached from UFortPlayerViewModel::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortPlayerViewModel::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPlayerViewModel();
+// Original dynamic initializer: RVA 0x00258100
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPlayerViewModel(Z_Construct_UClass_UFortPlayerViewModel, &UFortPlayerViewModel::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortPlayerViewModel"), false, nullptr, nullptr, nullptr);

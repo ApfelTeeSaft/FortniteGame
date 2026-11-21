@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ULevelSequencePlayer, 1571229513u)
+// Original dynamic initializer: RVA 0x001C0CF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULevelSequencePlayer> AutoInitializeULevelSequencePlayer(TEXT("ULevelSequencePlayer"), sizeof(ULevelSequencePlayer), 1571229513u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D4E060 (end 0x01D4E102)
 // Original VA: 0x0000000141D4E060 | File offset: 0x01D4D660
 // Recovery: confirmed (IMPLEMENT_CLASS(ULevelSequencePlayer, 1571229513u); reached from ULevelSequencePlayer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ULevelSequencePlayer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULevelSequencePlayer();
+// Original dynamic initializer: RVA 0x001C1530
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULevelSequencePlayer(Z_Construct_UClass_ULevelSequencePlayer, &ULevelSequencePlayer::StaticClass, TEXT("/Script/LevelSequence"), TEXT("ULevelSequencePlayer"), false, nullptr, nullptr, nullptr);

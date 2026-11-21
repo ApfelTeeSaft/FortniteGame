@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UWindDirectionalSourceComponent, 3918425725u)
+// Original dynamic initializer: RVA 0x00221A80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWindDirectionalSourceComponent> AutoInitializeUWindDirectionalSourceComponent(TEXT("UWindDirectionalSourceComponent"), sizeof(UWindDirectionalSourceComponent), 3918425725u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EFFA0 (end 0x024F0042)
 // Original VA: 0x00000001424EFFA0 | File offset: 0x024EF5A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UWindDirectionalSourceComponent, 3918425725u); reached from UWindDirectionalSourceComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UWindDirectionalSourceComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWindDirectionalSourceComponent();
+// Original dynamic initializer: RVA 0x00222630
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWindDirectionalSourceComponent(Z_Construct_UClass_UWindDirectionalSourceComponent, &UWindDirectionalSourceComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UWindDirectionalSourceComponent"), false, nullptr, nullptr, nullptr);

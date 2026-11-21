@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAIEncounterRiftManager, 1989578364u)
+// Original dynamic initializer: RVA 0x000E2320 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAIEncounterRiftManager> AutoInitializeUFortAIEncounterRiftManager(TEXT("UFortAIEncounterRiftManager"), sizeof(UFortAIEncounterRiftManager), 1989578364u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F8B4C0 (end 0x00F8B557)
 // Original VA: 0x0000000140F8B4C0 | File offset: 0x00F8AAC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAIEncounterRiftManager, 1989578364u); reached from UFortAIEncounterRiftManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAIEncounterRiftManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAIEncounterRiftManager();
+// Original dynamic initializer: RVA 0x000E3330
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAIEncounterRiftManager(Z_Construct_UClass_UFortAIEncounterRiftManager, &UFortAIEncounterRiftManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAIEncounterRiftManager"), false, nullptr, nullptr, nullptr);

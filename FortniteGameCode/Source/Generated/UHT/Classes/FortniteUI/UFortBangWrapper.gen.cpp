@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortBangWrapper, 2291471942u)
+// Original dynamic initializer: RVA 0x0023E380 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBangWrapper> AutoInitializeUFortBangWrapper(TEXT("UFortBangWrapper"), sizeof(UFortBangWrapper), 2291471942u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0288BD10 (end 0x0288BDB2)
 // Original VA: 0x000000014288BD10 | File offset: 0x0288B310
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBangWrapper, 2291471942u); reached from UFortBangWrapper::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortBangWrapper::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBangWrapper();
+// Original dynamic initializer: RVA 0x00240020
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBangWrapper(Z_Construct_UClass_UFortBangWrapper, &UFortBangWrapper::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortBangWrapper"), false, nullptr, nullptr, nullptr);

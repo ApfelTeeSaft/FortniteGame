@@ -7,6 +7,9 @@
 void UFortTouchControlRegion::StaticRegisterNativesUFortTouchControlRegion()
 {
 }
+// IMPLEMENT_CLASS(UFortTouchControlRegion, 2128704415u)
+// Original dynamic initializer: RVA 0x0025E510 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTouchControlRegion> AutoInitializeUFortTouchControlRegion(TEXT("UFortTouchControlRegion"), sizeof(UFortTouchControlRegion), 2128704415u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029035E0 (end 0x02903682)
 // Original VA: 0x00000001429035E0 | File offset: 0x02902BE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTouchControlRegion, 2128704415u); reached from UFortTouchControlRegion::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortTouchControlRegion::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTouchControlRegion();
+// Original dynamic initializer: RVA 0x002607D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTouchControlRegion(Z_Construct_UClass_UFortTouchControlRegion, &UFortTouchControlRegion::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTouchControlRegion"), false, nullptr, nullptr, nullptr);

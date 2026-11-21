@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UHoverDroneMovementComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UHoverDroneMovementComponent, 1748074566u)
+// Original dynamic initializer: RVA 0x0011EAA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UHoverDroneMovementComponent> AutoInitializeUHoverDroneMovementComponent(TEXT("UHoverDroneMovementComponent"), sizeof(UHoverDroneMovementComponent), 1748074566u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E1F40 (end 0x010E1FE2)
 // Original VA: 0x00000001410E1F40 | File offset: 0x010E1540
 // Recovery: confirmed (IMPLEMENT_CLASS(UHoverDroneMovementComponent, 1748074566u); reached from UHoverDroneMovementComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UHoverDroneMovementComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UHoverDroneMovementComponent();
+// Original dynamic initializer: RVA 0x0011FEC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UHoverDroneMovementComponent(Z_Construct_UClass_UHoverDroneMovementComponent, &UHoverDroneMovementComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UHoverDroneMovementComponent"), false, nullptr, nullptr, nullptr);

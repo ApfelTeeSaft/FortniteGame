@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortSZAwareImage()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortSZAwareImage, 1761056106u)
+// Original dynamic initializer: RVA 0x0025E2D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSZAwareImage> AutoInitializeUFortSZAwareImage(TEXT("UFortSZAwareImage"), sizeof(UFortSZAwareImage), 1761056106u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02902980 (end 0x02902A22)
 // Original VA: 0x0000000142902980 | File offset: 0x02901F80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSZAwareImage, 1761056106u); reached from UFortSZAwareImage::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortSZAwareImage::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSZAwareImage();
+// Original dynamic initializer: RVA 0x00260350
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSZAwareImage(Z_Construct_UClass_UFortSZAwareImage, &UFortSZAwareImage::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSZAwareImage"), false, nullptr, nullptr, nullptr);

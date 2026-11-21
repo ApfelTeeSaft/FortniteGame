@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ANavModifierVolume, 1034641914u)
+// Original dynamic initializer: RVA 0x0020DB30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ANavModifierVolume> AutoInitializeANavModifierVolume(TEXT("ANavModifierVolume"), sizeof(ANavModifierVolume), 1034641914u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248DE00 (end 0x0248DEA2)
 // Original VA: 0x000000014248DE00 | File offset: 0x0248D400
 // Recovery: confirmed (IMPLEMENT_CLASS(ANavModifierVolume, 1034641914u); reached from ANavModifierVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ANavModifierVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ANavModifierVolume();
+// Original dynamic initializer: RVA 0x0020E790
+static FCompiledInDefer Z_CompiledInDefer_UClass_ANavModifierVolume(Z_Construct_UClass_ANavModifierVolume, &ANavModifierVolume::StaticClass, TEXT("/Script/Engine"), TEXT("ANavModifierVolume"), false, nullptr, nullptr, nullptr);

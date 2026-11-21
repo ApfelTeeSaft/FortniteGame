@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UProgressBar, 1433253684u)
+// Original dynamic initializer: RVA 0x001B2A00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UProgressBar> AutoInitializeUProgressBar(TEXT("UProgressBar"), sizeof(UProgressBar), 1433253684u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEC7E0 (end 0x01BEC882)
 // Original VA: 0x0000000141BEC7E0 | File offset: 0x01BEBDE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UProgressBar, 1433253684u); reached from UProgressBar::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UProgressBar::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UProgressBar();
+// Original dynamic initializer: RVA 0x001B3450
+static FCompiledInDefer Z_CompiledInDefer_UClass_UProgressBar(Z_Construct_UClass_UProgressBar, &UProgressBar::StaticClass, TEXT("/Script/UMG"), TEXT("UProgressBar"), false, nullptr, nullptr, nullptr);

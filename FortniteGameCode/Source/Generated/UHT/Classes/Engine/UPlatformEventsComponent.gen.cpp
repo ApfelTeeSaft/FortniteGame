@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UPlatformEventsComponent, 4035111498u)
+// Original dynamic initializer: RVA 0x00214A30 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPlatformEventsComponent> AutoInitializeUPlatformEventsComponent(TEXT("UPlatformEventsComponent"), sizeof(UPlatformEventsComponent), 4035111498u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A8990 (end 0x024A8A32)
 // Original VA: 0x00000001424A8990 | File offset: 0x024A7F90
 // Recovery: confirmed (IMPLEMENT_CLASS(UPlatformEventsComponent, 4035111498u); reached from UPlatformEventsComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UPlatformEventsComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPlatformEventsComponent();
+// Original dynamic initializer: RVA 0x002160E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPlatformEventsComponent(Z_Construct_UClass_UPlatformEventsComponent, &UPlatformEventsComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UPlatformEventsComponent"), false, nullptr, nullptr, nullptr);

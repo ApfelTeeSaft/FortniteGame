@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UShaderPlatformQualitySettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UShaderPlatformQualitySettings, 1671106105u)
+// Original dynamic initializer: RVA 0x00144FB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UShaderPlatformQualitySettings> AutoInitializeUShaderPlatformQualitySettings(TEXT("UShaderPlatformQualitySettings"), sizeof(UShaderPlatformQualitySettings), 1671106105u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01664110 (end 0x016641A7)
 // Original VA: 0x0000000141664110 | File offset: 0x01663710
 // Recovery: confirmed (IMPLEMENT_CLASS(UShaderPlatformQualitySettings, 1671106105u); reached from UShaderPlatformQualitySettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UShaderPlatformQualitySettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UShaderPlatformQualitySettings();
+// Original dynamic initializer: RVA 0x00145110
+static FCompiledInDefer Z_CompiledInDefer_UClass_UShaderPlatformQualitySettings(Z_Construct_UClass_UShaderPlatformQualitySettings, &UShaderPlatformQualitySettings::StaticClass, TEXT("/Script/MaterialShaderQualitySettings"), TEXT("UShaderPlatformQualitySettings"), false, nullptr, nullptr, nullptr);

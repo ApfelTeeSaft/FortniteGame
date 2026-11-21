@@ -7,6 +7,9 @@
 void UFortItemPickerBase::StaticRegisterNativesUFortItemPickerBase()
 {
 }
+// IMPLEMENT_CLASS(UFortItemPickerBase, 920175000u)
+// Original dynamic initializer: RVA 0x0024F2B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortItemPickerBase> AutoInitializeUFortItemPickerBase(TEXT("UFortItemPickerBase"), sizeof(UFortItemPickerBase), 920175000u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CE100 (end 0x028CE1A2)
 // Original VA: 0x00000001428CE100 | File offset: 0x028CD700
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortItemPickerBase, 920175000u); reached from UFortItemPickerBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortItemPickerBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortItemPickerBase();
+// Original dynamic initializer: RVA 0x00250DD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortItemPickerBase(Z_Construct_UClass_UFortItemPickerBase, &UFortItemPickerBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortItemPickerBase"), false, nullptr, nullptr, nullptr);

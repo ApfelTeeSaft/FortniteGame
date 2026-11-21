@@ -7,6 +7,9 @@
 void UFortWeaponAttrSet::StaticRegisterNativesUFortWeaponAttrSet()
 {
 }
+// IMPLEMENT_CLASS(UFortWeaponAttrSet, 2890296020u)
+// Original dynamic initializer: RVA 0x0011D340 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortWeaponAttrSet> AutoInitializeUFortWeaponAttrSet(TEXT("UFortWeaponAttrSet"), sizeof(UFortWeaponAttrSet), 2890296020u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D8090 (end 0x010D8132)
 // Original VA: 0x00000001410D8090 | File offset: 0x010D7690
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortWeaponAttrSet, 2890296020u); reached from UFortWeaponAttrSet::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortWeaponAttrSet::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortWeaponAttrSet();
+// Original dynamic initializer: RVA 0x0011D770
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortWeaponAttrSet(Z_Construct_UClass_UFortWeaponAttrSet, &UFortWeaponAttrSet::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortWeaponAttrSet"), false, nullptr, nullptr, nullptr);

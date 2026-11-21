@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortAnimNotify_PlayEmojiItem()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAnimNotify_PlayEmojiItem, 1824516847u)
+// Original dynamic initializer: RVA 0x000E6830 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAnimNotify_PlayEmojiItem> AutoInitializeUFortAnimNotify_PlayEmojiItem(TEXT("UFortAnimNotify_PlayEmojiItem"), sizeof(UFortAnimNotify_PlayEmojiItem), 1824516847u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9CCB0 (end 0x00F9CD52)
 // Original VA: 0x0000000140F9CCB0 | File offset: 0x00F9C2B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAnimNotify_PlayEmojiItem, 1824516847u); reached from UFortAnimNotify_PlayEmojiItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortAnimNotify_PlayEmojiItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAnimNotify_PlayEmojiItem();
+// Original dynamic initializer: RVA 0x000E7A90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAnimNotify_PlayEmojiItem(Z_Construct_UClass_UFortAnimNotify_PlayEmojiItem, &UFortAnimNotify_PlayEmojiItem::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAnimNotify_PlayEmojiItem"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortCollectionBookPicker, 2789015062u)
+// Original dynamic initializer: RVA 0x00240440 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCollectionBookPicker> AutoInitializeUFortCollectionBookPicker(TEXT("UFortCollectionBookPicker"), sizeof(UFortCollectionBookPicker), 2789015062u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028932E0 (end 0x02893382)
 // Original VA: 0x00000001428932E0 | File offset: 0x028928E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCollectionBookPicker, 2789015062u); reached from UFortCollectionBookPicker::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortCollectionBookPicker::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCollectionBookPicker();
+// Original dynamic initializer: RVA 0x002421D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCollectionBookPicker(Z_Construct_UClass_UFortCollectionBookPicker, &UFortCollectionBookPicker::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCollectionBookPicker"), false, nullptr, nullptr, nullptr);

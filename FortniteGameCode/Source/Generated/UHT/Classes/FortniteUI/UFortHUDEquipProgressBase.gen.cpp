@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortHUDEquipProgressBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortHUDEquipProgressBase, 1232150636u)
+// Original dynamic initializer: RVA 0x002482A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHUDEquipProgressBase> AutoInitializeUFortHUDEquipProgressBase(TEXT("UFortHUDEquipProgressBase"), sizeof(UFortHUDEquipProgressBase), 1232150636u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BB0B0 (end 0x028BB152)
 // Original VA: 0x00000001428BB0B0 | File offset: 0x028BA6B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHUDEquipProgressBase, 1232150636u); reached from UFortHUDEquipProgressBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortHUDEquipProgressBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHUDEquipProgressBase();
+// Original dynamic initializer: RVA 0x00249D50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHUDEquipProgressBase(Z_Construct_UClass_UFortHUDEquipProgressBase, &UFortHUDEquipProgressBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortHUDEquipProgressBase"), false, nullptr, nullptr, nullptr);

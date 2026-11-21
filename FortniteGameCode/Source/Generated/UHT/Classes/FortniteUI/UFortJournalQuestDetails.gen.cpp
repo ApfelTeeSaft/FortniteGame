@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortJournalQuestDetails, 1475754426u)
+// Original dynamic initializer: RVA 0x0024F430 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortJournalQuestDetails> AutoInitializeUFortJournalQuestDetails(TEXT("UFortJournalQuestDetails"), sizeof(UFortJournalQuestDetails), 1475754426u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028CE940 (end 0x028CE9E2)
 // Original VA: 0x00000001428CE940 | File offset: 0x028CDF40
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortJournalQuestDetails, 1475754426u); reached from UFortJournalQuestDetails::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortJournalQuestDetails::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortJournalQuestDetails();
+// Original dynamic initializer: RVA 0x002510D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortJournalQuestDetails(Z_Construct_UClass_UFortJournalQuestDetails, &UFortJournalQuestDetails::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortJournalQuestDetails"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMapBuildDataRegistry()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMapBuildDataRegistry, 1400263015u)
+// Original dynamic initializer: RVA 0x00205DF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMapBuildDataRegistry> AutoInitializeUMapBuildDataRegistry(TEXT("UMapBuildDataRegistry"), sizeof(UMapBuildDataRegistry), 1400263015u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024772C0 (end 0x02477357)
 // Original VA: 0x00000001424772C0 | File offset: 0x024768C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UMapBuildDataRegistry, 1400263015u); reached from UMapBuildDataRegistry::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMapBuildDataRegistry::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMapBuildDataRegistry();
+// Original dynamic initializer: RVA 0x00206A40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMapBuildDataRegistry(Z_Construct_UClass_UMapBuildDataRegistry, &UMapBuildDataRegistry::StaticClass, TEXT("/Script/Engine"), TEXT("UMapBuildDataRegistry"), false, nullptr, nullptr, nullptr);

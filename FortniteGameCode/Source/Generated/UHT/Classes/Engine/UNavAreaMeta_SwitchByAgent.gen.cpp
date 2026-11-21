@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UNavAreaMeta_SwitchByAgent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNavAreaMeta_SwitchByAgent, 279106354u)
+// Original dynamic initializer: RVA 0x0020C6B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNavAreaMeta_SwitchByAgent> AutoInitializeUNavAreaMeta_SwitchByAgent(TEXT("UNavAreaMeta_SwitchByAgent"), sizeof(UNavAreaMeta_SwitchByAgent), 279106354u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02489FA0 (end 0x0248A042)
 // Original VA: 0x0000000142489FA0 | File offset: 0x024895A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UNavAreaMeta_SwitchByAgent, 279106354u); reached from UNavAreaMeta_SwitchByAgent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UNavAreaMeta_SwitchByAgent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNavAreaMeta_SwitchByAgent();
+// Original dynamic initializer: RVA 0x0020D830
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNavAreaMeta_SwitchByAgent(Z_Construct_UClass_UNavAreaMeta_SwitchByAgent, &UNavAreaMeta_SwitchByAgent::StaticClass, TEXT("/Script/Engine"), TEXT("UNavAreaMeta_SwitchByAgent"), false, nullptr, nullptr, nullptr);

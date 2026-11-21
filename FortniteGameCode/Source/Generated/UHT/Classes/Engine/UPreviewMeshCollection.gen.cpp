@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_UPreviewMeshCollection()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UPreviewMeshCollection, 3475705740u)
+// Original dynamic initializer: RVA 0x002163E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPreviewMeshCollection> AutoInitializeUPreviewMeshCollection(TEXT("UPreviewMeshCollection"), sizeof(UPreviewMeshCollection), 3475705740u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B6B70 (end 0x024B6C12)
 // Original VA: 0x00000001424B6B70 | File offset: 0x024B6170
 // Recovery: confirmed (IMPLEMENT_CLASS(UPreviewMeshCollection, 3475705740u); reached from UPreviewMeshCollection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* UPreviewMeshCollection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPreviewMeshCollection();
+// Original dynamic initializer: RVA 0x002172D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPreviewMeshCollection(Z_Construct_UClass_UPreviewMeshCollection, &UPreviewMeshCollection::StaticClass, TEXT("/Script/Engine"), TEXT("UPreviewMeshCollection"), false, nullptr, nullptr, nullptr);

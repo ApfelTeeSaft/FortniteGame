@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortBTTask_TakerMoveToNavmesh()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTTask_TakerMoveToNavmesh, 2690173982u)
+// Original dynamic initializer: RVA 0x000E9370 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTTask_TakerMoveToNavmesh> AutoInitializeUFortBTTask_TakerMoveToNavmesh(TEXT("UFortBTTask_TakerMoveToNavmesh"), sizeof(UFortBTTask_TakerMoveToNavmesh), 2690173982u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FABC30 (end 0x00FABCD2)
 // Original VA: 0x0000000140FABC30 | File offset: 0x00FAB230
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTTask_TakerMoveToNavmesh, 2690173982u); reached from UFortBTTask_TakerMoveToNavmesh::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortBTTask_TakerMoveToNavmesh::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTTask_TakerMoveToNavmesh();
+// Original dynamic initializer: RVA 0x000EA3C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTTask_TakerMoveToNavmesh(Z_Construct_UClass_UFortBTTask_TakerMoveToNavmesh, &UFortBTTask_TakerMoveToNavmesh::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTTask_TakerMoveToNavmesh"), false, nullptr, nullptr, nullptr);

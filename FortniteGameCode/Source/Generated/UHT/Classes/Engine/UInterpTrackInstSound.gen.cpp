@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UInterpTrackInstSound()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInterpTrackInstSound, 529674505u)
+// Original dynamic initializer: RVA 0x00202980 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInterpTrackInstSound> AutoInitializeUInterpTrackInstSound(TEXT("UInterpTrackInstSound"), sizeof(UInterpTrackInstSound), 529674505u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0242DD00 (end 0x0242DDA2)
 // Original VA: 0x000000014242DD00 | File offset: 0x0242D300
 // Recovery: confirmed (IMPLEMENT_CLASS(UInterpTrackInstSound, 529674505u); reached from UInterpTrackInstSound::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UInterpTrackInstSound::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInterpTrackInstSound();
+// Original dynamic initializer: RVA 0x002040F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInterpTrackInstSound(Z_Construct_UClass_UInterpTrackInstSound, &UInterpTrackInstSound::StaticClass, TEXT("/Script/Engine"), TEXT("UInterpTrackInstSound"), false, nullptr, nullptr, nullptr);

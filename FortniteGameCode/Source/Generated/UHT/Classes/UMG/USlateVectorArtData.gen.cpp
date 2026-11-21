@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USlateVectorArtData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USlateVectorArtData, 2914255349u)
+// Original dynamic initializer: RVA 0x001B3710 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USlateVectorArtData> AutoInitializeUSlateVectorArtData(TEXT("USlateVectorArtData"), sizeof(USlateVectorArtData), 2914255349u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2070 (end 0x01BF2107)
 // Original VA: 0x0000000141BF2070 | File offset: 0x01BF1670
 // Recovery: confirmed (IMPLEMENT_CLASS(USlateVectorArtData, 2914255349u); reached from USlateVectorArtData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USlateVectorArtData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USlateVectorArtData();
+// Original dynamic initializer: RVA 0x001B3F90
+static FCompiledInDefer Z_CompiledInDefer_UClass_USlateVectorArtData(Z_Construct_UClass_USlateVectorArtData, &USlateVectorArtData::StaticClass, TEXT("/Script/UMG"), TEXT("USlateVectorArtData"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortBotController()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortBotController, 391661811u)
+// Original dynamic initializer: RVA 0x000E8F70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortBotController> AutoInitializeAFortBotController(TEXT("AFortBotController"), sizeof(AFortBotController), 391661811u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAA630 (end 0x00FAA6D2)
 // Original VA: 0x0000000140FAA630 | File offset: 0x00FA9C30
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortBotController, 391661811u); reached from AFortBotController::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortBotController::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortBotController();
+// Original dynamic initializer: RVA 0x000E9BC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortBotController(Z_Construct_UClass_AFortBotController, &AFortBotController::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortBotController"), false, nullptr, nullptr, nullptr);

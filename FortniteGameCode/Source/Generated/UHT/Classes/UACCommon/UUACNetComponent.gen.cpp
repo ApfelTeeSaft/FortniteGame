@@ -7,6 +7,9 @@
 void UUACNetComponent::StaticRegisterNativesUUACNetComponent()
 {
 }
+// IMPLEMENT_CLASS(UUACNetComponent, 118349215u)
+// Original dynamic initializer: RVA 0x000AD790 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UUACNetComponent> AutoInitializeUUACNetComponent(TEXT("UUACNetComponent"), sizeof(UUACNetComponent), 118349215u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0068EB30 (end 0x0068EBD2)
 // Original VA: 0x000000014068EB30 | File offset: 0x0068E130
 // Recovery: confirmed (IMPLEMENT_CLASS(UUACNetComponent, 118349215u); reached from UUACNetComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UUACNetComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UUACNetComponent();
+// Original dynamic initializer: RVA 0x000AD860
+static FCompiledInDefer Z_CompiledInDefer_UClass_UUACNetComponent(Z_Construct_UClass_UUACNetComponent, &UUACNetComponent::StaticClass, TEXT("/Script/UACCommon"), TEXT("UUACNetComponent"), false, nullptr, nullptr, nullptr);

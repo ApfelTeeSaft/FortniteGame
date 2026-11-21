@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortMtxOfferData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortMtxOfferData, 1432509925u)
+// Original dynamic initializer: RVA 0x00251610 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMtxOfferData> AutoInitializeUFortMtxOfferData(TEXT("UFortMtxOfferData"), sizeof(UFortMtxOfferData), 1432509925u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028D6380 (end 0x028D6422)
 // Original VA: 0x00000001428D6380 | File offset: 0x028D5980
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMtxOfferData, 1432509925u); reached from UFortMtxOfferData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortMtxOfferData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMtxOfferData();
+// Original dynamic initializer: RVA 0x00253830
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMtxOfferData(Z_Construct_UClass_UFortMtxOfferData, &UFortMtxOfferData::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortMtxOfferData"), false, nullptr, nullptr, nullptr);

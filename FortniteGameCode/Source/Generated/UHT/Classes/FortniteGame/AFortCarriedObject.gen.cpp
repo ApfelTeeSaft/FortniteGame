@@ -7,6 +7,9 @@
 void AFortCarriedObject::StaticRegisterNativesAFortCarriedObject()
 {
 }
+// IMPLEMENT_CLASS(AFortCarriedObject, 3882494349u)
+// Original dynamic initializer: RVA 0x000E8FF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortCarriedObject> AutoInitializeAFortCarriedObject(TEXT("AFortCarriedObject"), sizeof(AFortCarriedObject), 3882494349u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAA8F0 (end 0x00FAA992)
 // Original VA: 0x0000000140FAA8F0 | File offset: 0x00FA9EF0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortCarriedObject, 3882494349u); reached from AFortCarriedObject::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortCarriedObject::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortCarriedObject();
+// Original dynamic initializer: RVA 0x000E9CC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortCarriedObject(Z_Construct_UClass_AFortCarriedObject, &AFortCarriedObject::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortCarriedObject"), false, nullptr, nullptr, nullptr);

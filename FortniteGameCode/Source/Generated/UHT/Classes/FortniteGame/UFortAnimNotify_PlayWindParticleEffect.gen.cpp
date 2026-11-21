@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortAnimNotify_PlayWindParticleEffect()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAnimNotify_PlayWindParticleEffect, 1040167787u)
+// Original dynamic initializer: RVA 0x000E68B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAnimNotify_PlayWindParticleEffect> AutoInitializeUFortAnimNotify_PlayWindParticleEffect(TEXT("UFortAnimNotify_PlayWindParticleEffect"), sizeof(UFortAnimNotify_PlayWindParticleEffect), 1040167787u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9CF70 (end 0x00F9D012)
 // Original VA: 0x0000000140F9CF70 | File offset: 0x00F9C570
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAnimNotify_PlayWindParticleEffect, 1040167787u); reached from UFortAnimNotify_PlayWindParticleEffect::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortAnimNotify_PlayWindParticleEffect::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAnimNotify_PlayWindParticleEffect();
+// Original dynamic initializer: RVA 0x000E7B90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAnimNotify_PlayWindParticleEffect(Z_Construct_UClass_UFortAnimNotify_PlayWindParticleEffect, &UFortAnimNotify_PlayWindParticleEffect::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAnimNotify_PlayWindParticleEffect"), false, nullptr, nullptr, nullptr);

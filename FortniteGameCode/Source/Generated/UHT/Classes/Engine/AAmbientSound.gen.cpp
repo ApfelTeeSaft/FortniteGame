@@ -7,6 +7,9 @@
 void AAmbientSound::StaticRegisterNativesAAmbientSound()
 {
 }
+// IMPLEMENT_CLASS(AAmbientSound, 3952766051u)
+// Original dynamic initializer: RVA 0x001EBF40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AAmbientSound> AutoInitializeAAmbientSound(TEXT("AAmbientSound"), sizeof(AAmbientSound), 3952766051u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C5D80 (end 0x023C5E22)
 // Original VA: 0x00000001423C5D80 | File offset: 0x023C5380
 // Recovery: confirmed (IMPLEMENT_CLASS(AAmbientSound, 3952766051u); reached from AAmbientSound::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AAmbientSound::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AAmbientSound();
+// Original dynamic initializer: RVA 0x001ED8C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AAmbientSound(Z_Construct_UClass_AAmbientSound, &AAmbientSound::StaticClass, TEXT("/Script/Engine"), TEXT("AAmbientSound"), false, nullptr, nullptr, nullptr);

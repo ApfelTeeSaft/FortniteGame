@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBTDecorator_TimeLimit()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBTDecorator_TimeLimit, 695724824u)
+// Original dynamic initializer: RVA 0x001BC1C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTDecorator_TimeLimit> AutoInitializeUBTDecorator_TimeLimit(TEXT("UBTDecorator_TimeLimit"), sizeof(UBTDecorator_TimeLimit), 695724824u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D26DA0 (end 0x01D26E42)
 // Original VA: 0x0000000141D26DA0 | File offset: 0x01D263A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTDecorator_TimeLimit, 695724824u); reached from UBTDecorator_TimeLimit::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBTDecorator_TimeLimit::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTDecorator_TimeLimit();
+// Original dynamic initializer: RVA 0x001BCCE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTDecorator_TimeLimit(Z_Construct_UClass_UBTDecorator_TimeLimit, &UBTDecorator_TimeLimit::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTDecorator_TimeLimit"), false, nullptr, nullptr, nullptr);

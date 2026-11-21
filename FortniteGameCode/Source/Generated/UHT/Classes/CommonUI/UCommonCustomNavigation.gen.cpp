@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UCommonCustomNavigation()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCommonCustomNavigation, 537425187u)
+// Original dynamic initializer: RVA 0x000956B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonCustomNavigation> AutoInitializeUCommonCustomNavigation(TEXT("UCommonCustomNavigation"), sizeof(UCommonCustomNavigation), 537425187u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C1F20 (end 0x002C1FC2)
 // Original VA: 0x00000001402C1F20 | File offset: 0x002C1520
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonCustomNavigation, 537425187u); reached from UCommonCustomNavigation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UCommonCustomNavigation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonCustomNavigation();
+// Original dynamic initializer: RVA 0x00095E40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonCustomNavigation(Z_Construct_UClass_UCommonCustomNavigation, &UCommonCustomNavigation::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonCustomNavigation"), false, nullptr, nullptr, nullptr);

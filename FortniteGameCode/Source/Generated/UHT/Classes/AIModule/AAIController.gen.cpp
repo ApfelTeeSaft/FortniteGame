@@ -7,6 +7,9 @@
 void AAIController::StaticRegisterNativesAAIController()
 {
 }
+// IMPLEMENT_CLASS(AAIController, 585478183u)
+// Original dynamic initializer: RVA 0x001B8E90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AAIController> AutoInitializeAAIController(TEXT("AAIController"), sizeof(AAIController), 585478183u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D19660 (end 0x01D19702)
 // Original VA: 0x0000000141D19660 | File offset: 0x01D18C60
 // Recovery: confirmed (IMPLEMENT_CLASS(AAIController, 585478183u); reached from AAIController::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AAIController::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AAIController();
+// Original dynamic initializer: RVA 0x001B9DB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AAIController(Z_Construct_UClass_AAIController, &AAIController::StaticClass, TEXT("/Script/AIModule"), TEXT("AAIController"), false, nullptr, nullptr, nullptr);

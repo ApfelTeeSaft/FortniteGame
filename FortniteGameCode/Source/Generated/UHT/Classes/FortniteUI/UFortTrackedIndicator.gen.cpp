@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortTrackedIndicator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortTrackedIndicator, 1911268874u)
+// Original dynamic initializer: RVA 0x0025E570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTrackedIndicator> AutoInitializeUFortTrackedIndicator(TEXT("UFortTrackedIndicator"), sizeof(UFortTrackedIndicator), 1911268874u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x029037F0 (end 0x02903892)
 // Original VA: 0x00000001429037F0 | File offset: 0x02902DF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTrackedIndicator, 1911268874u); reached from UFortTrackedIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortTrackedIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTrackedIndicator();
+// Original dynamic initializer: RVA 0x00260890
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTrackedIndicator(Z_Construct_UClass_UFortTrackedIndicator, &UFortTrackedIndicator::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortTrackedIndicator"), false, nullptr, nullptr, nullptr);

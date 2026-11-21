@@ -7,6 +7,9 @@
 void UFortBaseCanvasEntity::StaticRegisterNativesUFortBaseCanvasEntity()
 {
 }
+// IMPLEMENT_CLASS(UFortBaseCanvasEntity, 1294876829u)
+// Original dynamic initializer: RVA 0x00253A50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBaseCanvasEntity> AutoInitializeUFortBaseCanvasEntity(TEXT("UFortBaseCanvasEntity"), sizeof(UFortBaseCanvasEntity), 1294876829u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DD090 (end 0x028DD132)
 // Original VA: 0x00000001428DD090 | File offset: 0x028DC690
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBaseCanvasEntity, 1294876829u); reached from UFortBaseCanvasEntity::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortBaseCanvasEntity::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBaseCanvasEntity();
+// Original dynamic initializer: RVA 0x00255580
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBaseCanvasEntity(Z_Construct_UClass_UFortBaseCanvasEntity, &UFortBaseCanvasEntity::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortBaseCanvasEntity"), false, nullptr, nullptr, nullptr);

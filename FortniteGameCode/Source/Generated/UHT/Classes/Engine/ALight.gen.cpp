@@ -7,6 +7,9 @@
 void ALight::StaticRegisterNativesALight()
 {
 }
+// IMPLEMENT_CLASS(ALight, 3227379487u)
+// Original dynamic initializer: RVA 0x002050F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALight> AutoInitializeALight(TEXT("ALight"), sizeof(ALight), 3227379487u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0246F290 (end 0x0246F332)
 // Original VA: 0x000000014246F290 | File offset: 0x0246E890
 // Recovery: confirmed (IMPLEMENT_CLASS(ALight, 3227379487u); reached from ALight::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ALight::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALight();
+// Original dynamic initializer: RVA 0x002059B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALight(Z_Construct_UClass_ALight, &ALight::StaticClass, TEXT("/Script/Engine"), TEXT("ALight"), false, nullptr, nullptr, nullptr);

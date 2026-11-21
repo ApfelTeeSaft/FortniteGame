@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAnimNotifyState_AbilityDecisionWindow()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAnimNotifyState_AbilityDecisionWindow, 575706564u)
+// Original dynamic initializer: RVA 0x000E66F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAnimNotifyState_AbilityDecisionWindow> AutoInitializeUFortAnimNotifyState_AbilityDecisionWindow(TEXT("UFortAnimNotifyState_AbilityDecisionWindow"), sizeof(UFortAnimNotifyState_AbilityDecisionWindow), 575706564u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9C5D0 (end 0x00F9C672)
 // Original VA: 0x0000000140F9C5D0 | File offset: 0x00F9BBD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAnimNotifyState_AbilityDecisionWindow, 575706564u); reached from UFortAnimNotifyState_AbilityDecisionWindow::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAnimNotifyState_AbilityDecisionWindow::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAnimNotifyState_AbilityDecisionWindow();
+// Original dynamic initializer: RVA 0x000E7810
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAnimNotifyState_AbilityDecisionWindow(Z_Construct_UClass_UFortAnimNotifyState_AbilityDecisionWindow, &UFortAnimNotifyState_AbilityDecisionWindow::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAnimNotifyState_AbilityDecisionWindow"), false, nullptr, nullptr, nullptr);

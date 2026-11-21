@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UBillboardComponent, 4072966403u)
+// Original dynamic initializer: RVA 0x001F3350 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBillboardComponent> AutoInitializeUBillboardComponent(TEXT("UBillboardComponent"), sizeof(UBillboardComponent), 4072966403u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E1470 (end 0x023E1512)
 // Original VA: 0x00000001423E1470 | File offset: 0x023E0A70
 // Recovery: confirmed (IMPLEMENT_CLASS(UBillboardComponent, 4072966403u); reached from UBillboardComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UBillboardComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBillboardComponent();
+// Original dynamic initializer: RVA 0x001F4730
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBillboardComponent(Z_Construct_UClass_UBillboardComponent, &UBillboardComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UBillboardComponent"), false, nullptr, nullptr, nullptr);

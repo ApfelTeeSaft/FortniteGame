@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortMultiSizeBrushAsset()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortMultiSizeBrushAsset, 2361853033u)
+// Original dynamic initializer: RVA 0x00117E80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortMultiSizeBrushAsset> AutoInitializeUFortMultiSizeBrushAsset(TEXT("UFortMultiSizeBrushAsset"), sizeof(UFortMultiSizeBrushAsset), 2361853033u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C7570 (end 0x010C7612)
 // Original VA: 0x00000001410C7570 | File offset: 0x010C6B70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortMultiSizeBrushAsset, 2361853033u); reached from UFortMultiSizeBrushAsset::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortMultiSizeBrushAsset::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortMultiSizeBrushAsset();
+// Original dynamic initializer: RVA 0x0011B9F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortMultiSizeBrushAsset(Z_Construct_UClass_UFortMultiSizeBrushAsset, &UFortMultiSizeBrushAsset::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortMultiSizeBrushAsset"), false, nullptr, nullptr, nullptr);

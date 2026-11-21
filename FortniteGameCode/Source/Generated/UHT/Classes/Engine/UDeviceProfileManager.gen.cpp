@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UDeviceProfileManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDeviceProfileManager, 295705879u)
+// Original dynamic initializer: RVA 0x001F8540 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDeviceProfileManager> AutoInitializeUDeviceProfileManager(TEXT("UDeviceProfileManager"), sizeof(UDeviceProfileManager), 295705879u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FCC20 (end 0x023FCCB7)
 // Original VA: 0x00000001423FCC20 | File offset: 0x023FC220
 // Recovery: confirmed (IMPLEMENT_CLASS(UDeviceProfileManager, 295705879u); reached from UDeviceProfileManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UDeviceProfileManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDeviceProfileManager();
+// Original dynamic initializer: RVA 0x001F9A40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDeviceProfileManager(Z_Construct_UClass_UDeviceProfileManager, &UDeviceProfileManager::StaticClass, TEXT("/Script/Engine"), TEXT("UDeviceProfileManager"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortTracerBase, 3082837214u)
+// Original dynamic initializer: RVA 0x00117DA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortTracerBase> AutoInitializeAFortTracerBase(TEXT("AFortTracerBase"), sizeof(AFortTracerBase), 3082837214u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010C70A0 (end 0x010C7142)
 // Original VA: 0x00000001410C70A0 | File offset: 0x010C66A0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortTracerBase, 3082837214u); reached from AFortTracerBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortTracerBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortTracerBase();
+// Original dynamic initializer: RVA 0x0011B830
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortTracerBase(Z_Construct_UClass_AFortTracerBase, &AFortTracerBase::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortTracerBase"), false, nullptr, nullptr, nullptr);

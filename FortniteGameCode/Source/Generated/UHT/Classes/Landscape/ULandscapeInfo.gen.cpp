@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ULandscapeInfo()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULandscapeInfo, 508205535u)
+// Original dynamic initializer: RVA 0x001A2BD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULandscapeInfo> AutoInitializeULandscapeInfo(TEXT("ULandscapeInfo"), sizeof(ULandscapeInfo), 508205535u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A73E60 (end 0x01A73EF7)
 // Original VA: 0x0000000141A73E60 | File offset: 0x01A73460
 // Recovery: confirmed (IMPLEMENT_CLASS(ULandscapeInfo, 508205535u); reached from ULandscapeInfo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ULandscapeInfo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULandscapeInfo();
+// Original dynamic initializer: RVA 0x001A40A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULandscapeInfo(Z_Construct_UClass_ULandscapeInfo, &ULandscapeInfo::StaticClass, TEXT("/Script/Landscape"), TEXT("ULandscapeInfo"), false, nullptr, nullptr, nullptr);

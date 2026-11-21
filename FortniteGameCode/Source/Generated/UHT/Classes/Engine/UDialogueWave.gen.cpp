@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UDialogueWave()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UDialogueWave, 1068046678u)
+// Original dynamic initializer: RVA 0x001F85A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UDialogueWave> AutoInitializeUDialogueWave(TEXT("UDialogueWave"), sizeof(UDialogueWave), 1068046678u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FCE10 (end 0x023FCEA7)
 // Original VA: 0x00000001423FCE10 | File offset: 0x023FC410
 // Recovery: confirmed (IMPLEMENT_CLASS(UDialogueWave, 1068046678u); reached from UDialogueWave::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UDialogueWave::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UDialogueWave();
+// Original dynamic initializer: RVA 0x001F9B00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UDialogueWave(Z_Construct_UClass_UDialogueWave, &UDialogueWave::StaticClass, TEXT("/Script/Engine"), TEXT("UDialogueWave"), false, nullptr, nullptr, nullptr);

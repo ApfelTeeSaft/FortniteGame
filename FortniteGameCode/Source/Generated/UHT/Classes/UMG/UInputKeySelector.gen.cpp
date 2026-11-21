@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UInputKeySelector, 1744317215u)
+// Original dynamic initializer: RVA 0x001B2780 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInputKeySelector> AutoInitializeUInputKeySelector(TEXT("UInputKeySelector"), sizeof(UInputKeySelector), 1744317215u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEBA20 (end 0x01BEBAC2)
 // Original VA: 0x0000000141BEBA20 | File offset: 0x01BEB020
 // Recovery: confirmed (IMPLEMENT_CLASS(UInputKeySelector, 1744317215u); reached from UInputKeySelector::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UInputKeySelector::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInputKeySelector();
+// Original dynamic initializer: RVA 0x001B2F50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInputKeySelector(Z_Construct_UClass_UInputKeySelector, &UInputKeySelector::StaticClass, TEXT("/Script/UMG"), TEXT("UInputKeySelector"), false, nullptr, nullptr, nullptr);

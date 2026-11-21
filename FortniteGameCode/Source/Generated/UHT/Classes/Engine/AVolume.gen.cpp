@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AVolume, 2423218007u)
+// Original dynamic initializer: RVA 0x002218E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AVolume> AutoInitializeAVolume(TEXT("AVolume"), sizeof(AVolume), 2423218007u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EF6D0 (end 0x024EF772)
 // Original VA: 0x00000001424EF6D0 | File offset: 0x024EECD0
 // Recovery: confirmed (IMPLEMENT_CLASS(AVolume, 2423218007u); reached from AVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AVolume();
+// Original dynamic initializer: RVA 0x002222F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AVolume(Z_Construct_UClass_AVolume, &AVolume::StaticClass, TEXT("/Script/Engine"), TEXT("AVolume"), false, nullptr, nullptr, nullptr);

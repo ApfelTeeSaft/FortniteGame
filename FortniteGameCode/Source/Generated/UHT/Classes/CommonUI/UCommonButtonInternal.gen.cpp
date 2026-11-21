@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UCommonButtonInternal()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UCommonButtonInternal, 939040360u)
+// Original dynamic initializer: RVA 0x00095670 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonButtonInternal> AutoInitializeUCommonButtonInternal(TEXT("UCommonButtonInternal"), sizeof(UCommonButtonInternal), 939040360u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C1DD0 (end 0x002C1E72)
 // Original VA: 0x00000001402C1DD0 | File offset: 0x002C13D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonButtonInternal, 939040360u); reached from UCommonButtonInternal::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UCommonButtonInternal::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonButtonInternal();
+// Original dynamic initializer: RVA 0x00095DC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonButtonInternal(Z_Construct_UClass_UCommonButtonInternal, &UCommonButtonInternal::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonButtonInternal"), false, nullptr, nullptr, nullptr);

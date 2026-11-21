@@ -7,6 +7,9 @@
 void UPaperGroupedSpriteComponent::StaticRegisterNativesUPaperGroupedSpriteComponent()
 {
 }
+// IMPLEMENT_CLASS(UPaperGroupedSpriteComponent, 2653628167u)
+// Original dynamic initializer: RVA 0x000AB570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPaperGroupedSpriteComponent> AutoInitializeUPaperGroupedSpriteComponent(TEXT("UPaperGroupedSpriteComponent"), sizeof(UPaperGroupedSpriteComponent), 2653628167u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00665EB0 (end 0x00665F52)
 // Original VA: 0x0000000140665EB0 | File offset: 0x006654B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UPaperGroupedSpriteComponent, 2653628167u); reached from UPaperGroupedSpriteComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UPaperGroupedSpriteComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPaperGroupedSpriteComponent();
+// Original dynamic initializer: RVA 0x000AC500
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPaperGroupedSpriteComponent(Z_Construct_UClass_UPaperGroupedSpriteComponent, &UPaperGroupedSpriteComponent::StaticClass, TEXT("/Script/Paper2D"), TEXT("UPaperGroupedSpriteComponent"), false, nullptr, nullptr, nullptr);

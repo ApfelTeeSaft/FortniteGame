@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFoliageStatistics, 4145647957u)
+// Original dynamic initializer: RVA 0x001A08C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFoliageStatistics> AutoInitializeUFoliageStatistics(TEXT("UFoliageStatistics"), sizeof(UFoliageStatistics), 4145647957u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01A47FF0 (end 0x01A48092)
 // Original VA: 0x0000000141A47FF0 | File offset: 0x01A475F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFoliageStatistics, 4145647957u); reached from UFoliageStatistics::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFoliageStatistics::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFoliageStatistics();
+// Original dynamic initializer: RVA 0x001A0F20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFoliageStatistics(Z_Construct_UClass_UFoliageStatistics, &UFoliageStatistics::StaticClass, TEXT("/Script/Foliage"), TEXT("UFoliageStatistics"), false, nullptr, nullptr, nullptr);

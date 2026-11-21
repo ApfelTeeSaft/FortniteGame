@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_CheckHasRedeemForAccess, 4024642161u)
+// Original dynamic initializer: RVA 0x0023B860 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_CheckHasRedeemForAccess> AutoInitializeUFortAsyncAction_CheckHasRedeemForAccess(TEXT("UFortAsyncAction_CheckHasRedeemForAccess"), sizeof(UFortAsyncAction_CheckHasRedeemForAccess), 4024642161u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02885BB0 (end 0x02885C52)
 // Original VA: 0x0000000142885BB0 | File offset: 0x028851B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_CheckHasRedeemForAccess, 4024642161u); reached from UFortAsyncAction_CheckHasRedeemForAccess::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_CheckHasRedeemForAccess::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_CheckHasRedeemForAccess();
+// Original dynamic initializer: RVA 0x0023DE20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_CheckHasRedeemForAccess(Z_Construct_UClass_UFortAsyncAction_CheckHasRedeemForAccess, &UFortAsyncAction_CheckHasRedeemForAccess::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAsyncAction_CheckHasRedeemForAccess"), false, nullptr, nullptr, nullptr);

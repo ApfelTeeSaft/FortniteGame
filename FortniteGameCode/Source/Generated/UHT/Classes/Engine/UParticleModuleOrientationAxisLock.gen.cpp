@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleOrientationAxisLock()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleOrientationAxisLock, 2077938673u)
+// Original dynamic initializer: RVA 0x00210DB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleOrientationAxisLock> AutoInitializeUParticleModuleOrientationAxisLock(TEXT("UParticleModuleOrientationAxisLock"), sizeof(UParticleModuleOrientationAxisLock), 2077938673u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024993F0 (end 0x02499492)
 // Original VA: 0x00000001424993F0 | File offset: 0x024989F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleOrientationAxisLock, 2077938673u); reached from UParticleModuleOrientationAxisLock::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleOrientationAxisLock::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleOrientationAxisLock();
+// Original dynamic initializer: RVA 0x00212160
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleOrientationAxisLock(Z_Construct_UClass_UParticleModuleOrientationAxisLock, &UParticleModuleOrientationAxisLock::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleOrientationAxisLock"), false, nullptr, nullptr, nullptr);

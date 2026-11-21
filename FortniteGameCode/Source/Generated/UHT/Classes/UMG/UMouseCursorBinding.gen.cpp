@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UMouseCursorBinding, 4065619974u)
+// Original dynamic initializer: RVA 0x001B2820 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMouseCursorBinding> AutoInitializeUMouseCursorBinding(TEXT("UMouseCursorBinding"), sizeof(UMouseCursorBinding), 4065619974u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEBD90 (end 0x01BEBE32)
 // Original VA: 0x0000000141BEBD90 | File offset: 0x01BEB390
 // Recovery: confirmed (IMPLEMENT_CLASS(UMouseCursorBinding, 4065619974u); reached from UMouseCursorBinding::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UMouseCursorBinding::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMouseCursorBinding();
+// Original dynamic initializer: RVA 0x001B3090
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMouseCursorBinding(Z_Construct_UClass_UMouseCursorBinding, &UMouseCursorBinding::StaticClass, TEXT("/Script/UMG"), TEXT("UMouseCursorBinding"), false, nullptr, nullptr, nullptr);

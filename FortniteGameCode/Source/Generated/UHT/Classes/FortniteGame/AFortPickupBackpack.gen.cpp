@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortPickupBackpack()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortPickupBackpack, 4233747599u)
+// Original dynamic initializer: RVA 0x00108D40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPickupBackpack> AutoInitializeAFortPickupBackpack(TEXT("AFortPickupBackpack"), sizeof(AFortPickupBackpack), 4233747599u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01063E50 (end 0x01063EF2)
 // Original VA: 0x0000000141063E50 | File offset: 0x01063450
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPickupBackpack, 4233747599u); reached from AFortPickupBackpack::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortPickupBackpack::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPickupBackpack();
+// Original dynamic initializer: RVA 0x0010A080
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPickupBackpack(Z_Construct_UClass_AFortPickupBackpack, &AFortPickupBackpack::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPickupBackpack"), false, nullptr, nullptr, nullptr);

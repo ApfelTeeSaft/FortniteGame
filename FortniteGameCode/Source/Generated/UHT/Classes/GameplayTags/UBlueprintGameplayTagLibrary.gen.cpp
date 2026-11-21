@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UBlueprintGameplayTagLibrary, 361980890u)
+// Original dynamic initializer: RVA 0x001B7080 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBlueprintGameplayTagLibrary> AutoInitializeUBlueprintGameplayTagLibrary(TEXT("UBlueprintGameplayTagLibrary"), sizeof(UBlueprintGameplayTagLibrary), 361980890u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C92470 (end 0x01C92512)
 // Original VA: 0x0000000141C92470 | File offset: 0x01C91A70
 // Recovery: confirmed (IMPLEMENT_CLASS(UBlueprintGameplayTagLibrary, 361980890u); reached from UBlueprintGameplayTagLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UBlueprintGameplayTagLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBlueprintGameplayTagLibrary();
+// Original dynamic initializer: RVA 0x001B7A60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBlueprintGameplayTagLibrary(Z_Construct_UClass_UBlueprintGameplayTagLibrary, &UBlueprintGameplayTagLibrary::StaticClass, TEXT("/Script/GameplayTags"), TEXT("UBlueprintGameplayTagLibrary"), false, nullptr, nullptr, nullptr);

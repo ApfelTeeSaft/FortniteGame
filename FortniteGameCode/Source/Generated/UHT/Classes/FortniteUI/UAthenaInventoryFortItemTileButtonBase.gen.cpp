@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAthenaInventoryFortItemTileButtonBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaInventoryFortItemTileButtonBase, 2137422880u)
+// Original dynamic initializer: RVA 0x00239240 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaInventoryFortItemTileButtonBase> AutoInitializeUAthenaInventoryFortItemTileButtonBase(TEXT("UAthenaInventoryFortItemTileButtonBase"), sizeof(UAthenaInventoryFortItemTileButtonBase), 2137422880u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287E1F0 (end 0x0287E292)
 // Original VA: 0x000000014287E1F0 | File offset: 0x0287D7F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaInventoryFortItemTileButtonBase, 2137422880u); reached from UAthenaInventoryFortItemTileButtonBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAthenaInventoryFortItemTileButtonBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaInventoryFortItemTileButtonBase();
+// Original dynamic initializer: RVA 0x0023B1C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaInventoryFortItemTileButtonBase(Z_Construct_UClass_UAthenaInventoryFortItemTileButtonBase, &UAthenaInventoryFortItemTileButtonBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaInventoryFortItemTileButtonBase"), false, nullptr, nullptr, nullptr);

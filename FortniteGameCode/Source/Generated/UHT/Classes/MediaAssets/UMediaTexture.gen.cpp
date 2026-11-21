@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UMediaTexture, 3490649006u)
+// Original dynamic initializer: RVA 0x00225F90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMediaTexture> AutoInitializeUMediaTexture(TEXT("UMediaTexture"), sizeof(UMediaTexture), 3490649006u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x025DE310 (end 0x025DE3B2)
 // Original VA: 0x00000001425DE310 | File offset: 0x025DD910
 // Recovery: confirmed (IMPLEMENT_CLASS(UMediaTexture, 3490649006u); reached from UMediaTexture::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UMediaTexture::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMediaTexture();
+// Original dynamic initializer: RVA 0x00226410
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMediaTexture(Z_Construct_UClass_UMediaTexture, &UMediaTexture::StaticClass, TEXT("/Script/MediaAssets"), TEXT("UMediaTexture"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortNavMesh()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortNavMesh, 3373497170u)
+// Original dynamic initializer: RVA 0x00104020 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortNavMesh> AutoInitializeAFortNavMesh(TEXT("AFortNavMesh"), sizeof(AFortNavMesh), 3373497170u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01048030 (end 0x010480D2)
 // Original VA: 0x0000000141048030 | File offset: 0x01047630
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortNavMesh, 3373497170u); reached from AFortNavMesh::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortNavMesh::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortNavMesh();
+// Original dynamic initializer: RVA 0x00104FD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortNavMesh(Z_Construct_UClass_AFortNavMesh, &AFortNavMesh::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortNavMesh"), false, nullptr, nullptr, nullptr);

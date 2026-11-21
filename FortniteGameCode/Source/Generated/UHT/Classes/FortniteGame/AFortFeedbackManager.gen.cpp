@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortFeedbackManager, 2864288003u)
+// Original dynamic initializer: RVA 0x000F2550 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortFeedbackManager> AutoInitializeAFortFeedbackManager(TEXT("AFortFeedbackManager"), sizeof(AFortFeedbackManager), 2864288003u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD9820 (end 0x00FD98C2)
 // Original VA: 0x0000000140FD9820 | File offset: 0x00FD8E20
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortFeedbackManager, 2864288003u); reached from AFortFeedbackManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortFeedbackManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortFeedbackManager();
+// Original dynamic initializer: RVA 0x000F4250
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortFeedbackManager(Z_Construct_UClass_AFortFeedbackManager, &AFortFeedbackManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortFeedbackManager"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBlackboardData()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBlackboardData, 4090923331u)
+// Original dynamic initializer: RVA 0x001BA7D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBlackboardData> AutoInitializeUBlackboardData(TEXT("UBlackboardData"), sizeof(UBlackboardData), 4090923331u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D218C0 (end 0x01D21962)
 // Original VA: 0x0000000141D218C0 | File offset: 0x01D20EC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UBlackboardData, 4090923331u); reached from UBlackboardData::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBlackboardData::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBlackboardData();
+// Original dynamic initializer: RVA 0x001BBC80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBlackboardData(Z_Construct_UClass_UBlackboardData, &UBlackboardData::StaticClass, TEXT("/Script/AIModule"), TEXT("UBlackboardData"), false, nullptr, nullptr, nullptr);

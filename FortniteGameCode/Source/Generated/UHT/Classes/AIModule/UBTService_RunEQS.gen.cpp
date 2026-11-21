@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBTService_RunEQS()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBTService_RunEQS, 321813383u)
+// Original dynamic initializer: RVA 0x001BC2A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTService_RunEQS> AutoInitializeUBTService_RunEQS(TEXT("UBTService_RunEQS"), sizeof(UBTService_RunEQS), 321813383u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D27260 (end 0x01D27302)
 // Original VA: 0x0000000141D27260 | File offset: 0x01D26860
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTService_RunEQS, 321813383u); reached from UBTService_RunEQS::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBTService_RunEQS::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTService_RunEQS();
+// Original dynamic initializer: RVA 0x001BCEA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTService_RunEQS(Z_Construct_UClass_UBTService_RunEQS, &UBTService_RunEQS::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTService_RunEQS"), false, nullptr, nullptr, nullptr);

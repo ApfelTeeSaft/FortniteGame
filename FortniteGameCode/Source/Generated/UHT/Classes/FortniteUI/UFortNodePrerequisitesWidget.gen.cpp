@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortNodePrerequisitesWidget, 1516282441u)
+// Original dynamic initializer: RVA 0x00253B90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortNodePrerequisitesWidget> AutoInitializeUFortNodePrerequisitesWidget(TEXT("UFortNodePrerequisitesWidget"), sizeof(UFortNodePrerequisitesWidget), 1516282441u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028DD770 (end 0x028DD812)
 // Original VA: 0x00000001428DD770 | File offset: 0x028DCD70
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortNodePrerequisitesWidget, 1516282441u); reached from UFortNodePrerequisitesWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortNodePrerequisitesWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortNodePrerequisitesWidget();
+// Original dynamic initializer: RVA 0x00255800
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortNodePrerequisitesWidget(Z_Construct_UClass_UFortNodePrerequisitesWidget, &UFortNodePrerequisitesWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortNodePrerequisitesWidget"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortBTTask_Sleep()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTTask_Sleep, 1527879363u)
+// Original dynamic initializer: RVA 0x000E9350 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTTask_Sleep> AutoInitializeUFortBTTask_Sleep(TEXT("UFortBTTask_Sleep"), sizeof(UFortBTTask_Sleep), 1527879363u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FABB80 (end 0x00FABC22)
 // Original VA: 0x0000000140FABB80 | File offset: 0x00FAB180
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTTask_Sleep, 1527879363u); reached from UFortBTTask_Sleep::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortBTTask_Sleep::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTTask_Sleep();
+// Original dynamic initializer: RVA 0x000EA380
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTTask_Sleep(Z_Construct_UClass_UFortBTTask_Sleep, &UFortBTTask_Sleep::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTTask_Sleep"), false, nullptr, nullptr, nullptr);

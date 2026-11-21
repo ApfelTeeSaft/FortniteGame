@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAIPerceptionSystem, 409900480u)
+// Original dynamic initializer: RVA 0x001B8FD0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAIPerceptionSystem> AutoInitializeUAIPerceptionSystem(TEXT("UAIPerceptionSystem"), sizeof(UAIPerceptionSystem), 409900480u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D19D10 (end 0x01D19DA7)
 // Original VA: 0x0000000141D19D10 | File offset: 0x01D19310
 // Recovery: confirmed (IMPLEMENT_CLASS(UAIPerceptionSystem, 409900480u); reached from UAIPerceptionSystem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAIPerceptionSystem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAIPerceptionSystem();
+// Original dynamic initializer: RVA 0x001BA030
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAIPerceptionSystem(Z_Construct_UClass_UAIPerceptionSystem, &UAIPerceptionSystem::StaticClass, TEXT("/Script/AIModule"), TEXT("UAIPerceptionSystem"), false, nullptr, nullptr, nullptr);

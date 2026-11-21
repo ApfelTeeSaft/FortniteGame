@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAITask_MoveTo, 1299712303u)
+// Original dynamic initializer: RVA 0x001BA5D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAITask_MoveTo> AutoInitializeUAITask_MoveTo(TEXT("UAITask_MoveTo"), sizeof(UAITask_MoveTo), 1299712303u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D20DF0 (end 0x01D20E92)
 // Original VA: 0x0000000141D20DF0 | File offset: 0x01D203F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAITask_MoveTo, 1299712303u); reached from UAITask_MoveTo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAITask_MoveTo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAITask_MoveTo();
+// Original dynamic initializer: RVA 0x001BB880
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAITask_MoveTo(Z_Construct_UClass_UAITask_MoveTo, &UAITask_MoveTo::StaticClass, TEXT("/Script/AIModule"), TEXT("UAITask_MoveTo"), false, nullptr, nullptr, nullptr);

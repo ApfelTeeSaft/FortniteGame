@@ -7,6 +7,9 @@
 void AFortInventory::StaticRegisterNativesAFortInventory()
 {
 }
+// IMPLEMENT_CLASS(AFortInventory, 1137148060u)
+// Original dynamic initializer: RVA 0x000FAF60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortInventory> AutoInitializeAFortInventory(TEXT("AFortInventory"), sizeof(AFortInventory), 1137148060u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01003090 (end 0x01003132)
 // Original VA: 0x0000000141003090 | File offset: 0x01002690
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortInventory, 1137148060u); reached from AFortInventory::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortInventory::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortInventory();
+// Original dynamic initializer: RVA 0x000FBCF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortInventory(Z_Construct_UClass_AFortInventory, &AFortInventory::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortInventory"), false, nullptr, nullptr, nullptr);

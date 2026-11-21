@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UWidgetNavigation()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UWidgetNavigation, 1807961057u)
+// Original dynamic initializer: RVA 0x001B4DA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UWidgetNavigation> AutoInitializeUWidgetNavigation(TEXT("UWidgetNavigation"), sizeof(UWidgetNavigation), 1807961057u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C007D0 (end 0x01C00867)
 // Original VA: 0x0000000141C007D0 | File offset: 0x01BFFDD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UWidgetNavigation, 1807961057u); reached from UWidgetNavigation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UWidgetNavigation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UWidgetNavigation();
+// Original dynamic initializer: RVA 0x001B53E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UWidgetNavigation(Z_Construct_UClass_UWidgetNavigation, &UWidgetNavigation::StaticClass, TEXT("/Script/UMG"), TEXT("UWidgetNavigation"), false, nullptr, nullptr, nullptr);

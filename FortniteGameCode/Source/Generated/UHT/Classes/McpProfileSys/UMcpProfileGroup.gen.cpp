@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMcpProfileGroup()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMcpProfileGroup, 1720802769u)
+// Original dynamic initializer: RVA 0x000B0E70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMcpProfileGroup> AutoInitializeUMcpProfileGroup(TEXT("UMcpProfileGroup"), sizeof(UMcpProfileGroup), 1720802769u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x007AE460 (end 0x007AE4F7)
 // Original VA: 0x00000001407AE460 | File offset: 0x007ADA60
 // Recovery: confirmed (IMPLEMENT_CLASS(UMcpProfileGroup, 1720802769u); reached from UMcpProfileGroup::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMcpProfileGroup::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMcpProfileGroup();
+// Original dynamic initializer: RVA 0x000B21D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMcpProfileGroup(Z_Construct_UClass_UMcpProfileGroup, &UMcpProfileGroup::StaticClass, TEXT("/Script/McpProfileSys"), TEXT("UMcpProfileGroup"), false, nullptr, nullptr, nullptr);

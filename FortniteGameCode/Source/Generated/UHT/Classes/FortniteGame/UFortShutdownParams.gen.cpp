@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortShutdownParams()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortShutdownParams, 663573077u)
+// Original dynamic initializer: RVA 0x001202E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortShutdownParams> AutoInitializeUFortShutdownParams(TEXT("UFortShutdownParams"), sizeof(UFortShutdownParams), 663573077u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E7F10 (end 0x010E7FB2)
 // Original VA: 0x00000001410E7F10 | File offset: 0x010E7510
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortShutdownParams, 663573077u); reached from UFortShutdownParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortShutdownParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortShutdownParams();
+// Original dynamic initializer: RVA 0x00122130
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortShutdownParams(Z_Construct_UClass_UFortShutdownParams, &UFortShutdownParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortShutdownParams"), false, nullptr, nullptr, nullptr);

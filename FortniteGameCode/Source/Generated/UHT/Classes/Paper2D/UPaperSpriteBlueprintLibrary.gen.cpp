@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UPaperSpriteBlueprintLibrary, 2345861743u)
+// Original dynamic initializer: RVA 0x000AB5F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPaperSpriteBlueprintLibrary> AutoInitializeUPaperSpriteBlueprintLibrary(TEXT("UPaperSpriteBlueprintLibrary"), sizeof(UPaperSpriteBlueprintLibrary), 2345861743u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00666140 (end 0x006661E2)
 // Original VA: 0x0000000140666140 | File offset: 0x00665740
 // Recovery: confirmed (IMPLEMENT_CLASS(UPaperSpriteBlueprintLibrary, 2345861743u); reached from UPaperSpriteBlueprintLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UPaperSpriteBlueprintLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPaperSpriteBlueprintLibrary();
+// Original dynamic initializer: RVA 0x000AC600
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPaperSpriteBlueprintLibrary(Z_Construct_UClass_UPaperSpriteBlueprintLibrary, &UPaperSpriteBlueprintLibrary::StaticClass, TEXT("/Script/Paper2D"), TEXT("UPaperSpriteBlueprintLibrary"), false, nullptr, nullptr, nullptr);

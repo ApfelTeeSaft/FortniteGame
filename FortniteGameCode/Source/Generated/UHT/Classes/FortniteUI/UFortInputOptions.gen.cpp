@@ -7,6 +7,9 @@
 void UFortInputOptions::StaticRegisterNativesUFortInputOptions()
 {
 }
+// IMPLEMENT_CLASS(UFortInputOptions, 3150393963u)
+// Original dynamic initializer: RVA 0x00248380 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortInputOptions> AutoInitializeUFortInputOptions(TEXT("UFortInputOptions"), sizeof(UFortInputOptions), 3150393963u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028BB580 (end 0x028BB622)
 // Original VA: 0x00000001428BB580 | File offset: 0x028BAB80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortInputOptions, 3150393963u); reached from UFortInputOptions::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortInputOptions::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortInputOptions();
+// Original dynamic initializer: RVA 0x00249F10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortInputOptions(Z_Construct_UClass_UFortInputOptions, &UFortInputOptions::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortInputOptions"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void ACineCameraActor::StaticRegisterNativesACineCameraActor()
 {
 }
+// IMPLEMENT_CLASS(ACineCameraActor, 4179635059u)
+// Original dynamic initializer: RVA 0x001B5840 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ACineCameraActor> AutoInitializeACineCameraActor(TEXT("ACineCameraActor"), sizeof(ACineCameraActor), 4179635059u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C0A8B0 (end 0x01C0A952)
 // Original VA: 0x0000000141C0A8B0 | File offset: 0x01C09EB0
 // Recovery: confirmed (IMPLEMENT_CLASS(ACineCameraActor, 4179635059u); reached from ACineCameraActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ACineCameraActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ACineCameraActor();
+// Original dynamic initializer: RVA 0x001B5E40
+static FCompiledInDefer Z_CompiledInDefer_UClass_ACineCameraActor(Z_Construct_UClass_ACineCameraActor, &ACineCameraActor::StaticClass, TEXT("/Script/CinematicCamera"), TEXT("ACineCameraActor"), false, nullptr, nullptr, nullptr);

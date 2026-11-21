@@ -7,6 +7,9 @@
 void AGameState::StaticRegisterNativesAGameState()
 {
 }
+// IMPLEMENT_CLASS(AGameState, 3230792950u)
+// Original dynamic initializer: RVA 0x00200090 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AGameState> AutoInitializeAGameState(TEXT("AGameState"), sizeof(AGameState), 3230792950u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0241E0B0 (end 0x0241E152)
 // Original VA: 0x000000014241E0B0 | File offset: 0x0241D6B0
 // Recovery: confirmed (IMPLEMENT_CLASS(AGameState, 3230792950u); reached from AGameState::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AGameState::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AGameState();
+// Original dynamic initializer: RVA 0x00200860
+static FCompiledInDefer Z_CompiledInDefer_UClass_AGameState(Z_Construct_UClass_AGameState, &AGameState::StaticClass, TEXT("/Script/Engine"), TEXT("AGameState"), false, nullptr, nullptr, nullptr);

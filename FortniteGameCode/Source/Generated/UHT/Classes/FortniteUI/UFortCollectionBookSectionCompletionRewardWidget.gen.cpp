@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortCollectionBookSectionCompletionRewardWidget, 3221324024u)
+// Original dynamic initializer: RVA 0x00242590 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCollectionBookSectionCompletionRewardWidget> AutoInitializeUFortCollectionBookSectionCompletionRewardWidget(TEXT("UFortCollectionBookSectionCompletionRewardWidget"), sizeof(UFortCollectionBookSectionCompletionRewardWidget), 3221324024u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02899600 (end 0x028996A2)
 // Original VA: 0x0000000142899600 | File offset: 0x02898C00
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCollectionBookSectionCompletionRewardWidget, 3221324024u); reached from UFortCollectionBookSectionCompletionRewardWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortCollectionBookSectionCompletionRewardWidget::GetPrivateStaticClass(
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget();
+// Original dynamic initializer: RVA 0x00244220
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCollectionBookSectionCompletionRewardWidget(Z_Construct_UClass_UFortCollectionBookSectionCompletionRewardWidget, &UFortCollectionBookSectionCompletionRewardWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCollectionBookSectionCompletionRewardWidget"), false, nullptr, nullptr, nullptr);

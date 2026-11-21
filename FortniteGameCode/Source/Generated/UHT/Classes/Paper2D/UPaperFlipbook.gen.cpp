@@ -7,6 +7,9 @@
 void UPaperFlipbook::StaticRegisterNativesUPaperFlipbook()
 {
 }
+// IMPLEMENT_CLASS(UPaperFlipbook, 948811139u)
+// Original dynamic initializer: RVA 0x000AB530 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPaperFlipbook> AutoInitializeUPaperFlipbook(TEXT("UPaperFlipbook"), sizeof(UPaperFlipbook), 948811139u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00665D60 (end 0x00665DF7)
 // Original VA: 0x0000000140665D60 | File offset: 0x00665360
 // Recovery: confirmed (IMPLEMENT_CLASS(UPaperFlipbook, 948811139u); reached from UPaperFlipbook::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UPaperFlipbook::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPaperFlipbook();
+// Original dynamic initializer: RVA 0x000AC480
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPaperFlipbook(Z_Construct_UClass_UPaperFlipbook, &UPaperFlipbook::StaticClass, TEXT("/Script/Paper2D"), TEXT("UPaperFlipbook"), false, nullptr, nullptr, nullptr);

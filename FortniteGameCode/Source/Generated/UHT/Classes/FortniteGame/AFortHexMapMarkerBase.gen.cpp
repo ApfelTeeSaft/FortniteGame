@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortHexMapMarkerBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortHexMapMarkerBase, 2896131689u)
+// Original dynamic initializer: RVA 0x000F9510 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortHexMapMarkerBase> AutoInitializeAFortHexMapMarkerBase(TEXT("AFortHexMapMarkerBase"), sizeof(AFortHexMapMarkerBase), 2896131689u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF9090 (end 0x00FF9132)
 // Original VA: 0x0000000140FF9090 | File offset: 0x00FF8690
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortHexMapMarkerBase, 2896131689u); reached from AFortHexMapMarkerBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortHexMapMarkerBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortHexMapMarkerBase();
+// Original dynamic initializer: RVA 0x000FAAC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortHexMapMarkerBase(Z_Construct_UClass_AFortHexMapMarkerBase, &AFortHexMapMarkerBase::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortHexMapMarkerBase"), false, nullptr, nullptr, nullptr);

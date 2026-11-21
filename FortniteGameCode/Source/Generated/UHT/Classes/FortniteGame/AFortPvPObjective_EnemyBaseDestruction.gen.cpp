@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortPvPObjective_EnemyBaseDestruction()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortPvPObjective_EnemyBaseDestruction, 3082427039u)
+// Original dynamic initializer: RVA 0x0010E7D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPvPObjective_EnemyBaseDestruction> AutoInitializeAFortPvPObjective_EnemyBaseDestruction(TEXT("AFortPvPObjective_EnemyBaseDestruction"), sizeof(AFortPvPObjective_EnemyBaseDestruction), 3082427039u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01090030 (end 0x010900D2)
 // Original VA: 0x0000000141090030 | File offset: 0x0108F630
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPvPObjective_EnemyBaseDestruction, 3082427039u); reached from AFortPvPObjective_EnemyBaseDestruction::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortPvPObjective_EnemyBaseDestruction::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPvPObjective_EnemyBaseDestruction();
+// Original dynamic initializer: RVA 0x0010F620
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPvPObjective_EnemyBaseDestruction(Z_Construct_UClass_AFortPvPObjective_EnemyBaseDestruction, &AFortPvPObjective_EnemyBaseDestruction::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPvPObjective_EnemyBaseDestruction"), false, nullptr, nullptr, nullptr);

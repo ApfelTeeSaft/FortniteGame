@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAnimNotify_PlayEmoteMusic()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAnimNotify_PlayEmoteMusic, 1460541269u)
+// Original dynamic initializer: RVA 0x000E6850 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAnimNotify_PlayEmoteMusic> AutoInitializeUFortAnimNotify_PlayEmoteMusic(TEXT("UFortAnimNotify_PlayEmoteMusic"), sizeof(UFortAnimNotify_PlayEmoteMusic), 1460541269u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9CD60 (end 0x00F9CE02)
 // Original VA: 0x0000000140F9CD60 | File offset: 0x00F9C360
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAnimNotify_PlayEmoteMusic, 1460541269u); reached from UFortAnimNotify_PlayEmoteMusic::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAnimNotify_PlayEmoteMusic::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAnimNotify_PlayEmoteMusic();
+// Original dynamic initializer: RVA 0x000E7AD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAnimNotify_PlayEmoteMusic(Z_Construct_UClass_UFortAnimNotify_PlayEmoteMusic, &UFortAnimNotify_PlayEmoteMusic::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAnimNotify_PlayEmoteMusic"), false, nullptr, nullptr, nullptr);

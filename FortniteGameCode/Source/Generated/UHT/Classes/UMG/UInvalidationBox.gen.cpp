@@ -7,6 +7,9 @@
 void UInvalidationBox::StaticRegisterNativesUInvalidationBox()
 {
 }
+// IMPLEMENT_CLASS(UInvalidationBox, 1062234183u)
+// Original dynamic initializer: RVA 0x001B27C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInvalidationBox> AutoInitializeUInvalidationBox(TEXT("UInvalidationBox"), sizeof(UInvalidationBox), 1062234183u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BEBB80 (end 0x01BEBC22)
 // Original VA: 0x0000000141BEBB80 | File offset: 0x01BEB180
 // Recovery: confirmed (IMPLEMENT_CLASS(UInvalidationBox, 1062234183u); reached from UInvalidationBox::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UInvalidationBox::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInvalidationBox();
+// Original dynamic initializer: RVA 0x001B2FD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInvalidationBox(Z_Construct_UClass_UInvalidationBox, &UInvalidationBox::StaticClass, TEXT("/Script/UMG"), TEXT("UInvalidationBox"), false, nullptr, nullptr, nullptr);

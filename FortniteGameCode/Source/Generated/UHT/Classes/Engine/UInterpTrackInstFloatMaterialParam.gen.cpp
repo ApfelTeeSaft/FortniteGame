@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UInterpTrackInstFloatMaterialParam()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UInterpTrackInstFloatMaterialParam, 3839202867u)
+// Original dynamic initializer: RVA 0x00202880 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInterpTrackInstFloatMaterialParam> AutoInitializeUInterpTrackInstFloatMaterialParam(TEXT("UInterpTrackInstFloatMaterialParam"), sizeof(UInterpTrackInstFloatMaterialParam), 3839202867u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0242D780 (end 0x0242D822)
 // Original VA: 0x000000014242D780 | File offset: 0x0242CD80
 // Recovery: confirmed (IMPLEMENT_CLASS(UInterpTrackInstFloatMaterialParam, 3839202867u); reached from UInterpTrackInstFloatMaterialParam::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UInterpTrackInstFloatMaterialParam::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInterpTrackInstFloatMaterialParam();
+// Original dynamic initializer: RVA 0x00203EF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInterpTrackInstFloatMaterialParam(Z_Construct_UClass_UInterpTrackInstFloatMaterialParam, &UInterpTrackInstFloatMaterialParam::StaticClass, TEXT("/Script/Engine"), TEXT("UInterpTrackInstFloatMaterialParam"), false, nullptr, nullptr, nullptr);

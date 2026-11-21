@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_APhysicsVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(APhysicsVolume, 3848774657u)
+// Original dynamic initializer: RVA 0x00214890 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<APhysicsVolume> AutoInitializeAPhysicsVolume(TEXT("APhysicsVolume"), sizeof(APhysicsVolume), 3848774657u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A80C0 (end 0x024A8162)
 // Original VA: 0x00000001424A80C0 | File offset: 0x024A76C0
 // Recovery: confirmed (IMPLEMENT_CLASS(APhysicsVolume, 3848774657u); reached from APhysicsVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* APhysicsVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_APhysicsVolume();
+// Original dynamic initializer: RVA 0x00215DA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_APhysicsVolume(Z_Construct_UClass_APhysicsVolume, &APhysicsVolume::StaticClass, TEXT("/Script/Engine"), TEXT("APhysicsVolume"), false, nullptr, nullptr, nullptr);

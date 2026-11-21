@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAbilitySystemReplicationProxyInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAbilitySystemReplicationProxyInterface, 2860272120u)
+// Original dynamic initializer: RVA 0x0009D360 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilitySystemReplicationProxyInterface> AutoInitializeUAbilitySystemReplicationProxyInterface(TEXT("UAbilitySystemReplicationProxyInterface"), sizeof(UAbilitySystemReplicationProxyInterface), 2860272120u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005454E0 (end 0x00545582)
 // Original VA: 0x00000001405454E0 | File offset: 0x00544AE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilitySystemReplicationProxyInterface, 2860272120u); reached from UAbilitySystemReplicationProxyInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAbilitySystemReplicationProxyInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilitySystemReplicationProxyInterface();
+// Original dynamic initializer: RVA 0x0009D830
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilitySystemReplicationProxyInterface(Z_Construct_UClass_UAbilitySystemReplicationProxyInterface, &UAbilitySystemReplicationProxyInterface::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilitySystemReplicationProxyInterface"), false, nullptr, nullptr, nullptr);

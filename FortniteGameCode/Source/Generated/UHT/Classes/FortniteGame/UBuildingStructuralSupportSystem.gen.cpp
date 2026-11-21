@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UBuildingStructuralSupportSystem, 461585110u)
+// Original dynamic initializer: RVA 0x000DBEE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBuildingStructuralSupportSystem> AutoInitializeUBuildingStructuralSupportSystem(TEXT("UBuildingStructuralSupportSystem"), sizeof(UBuildingStructuralSupportSystem), 461585110u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F70F10 (end 0x00F70FA7)
 // Original VA: 0x0000000140F70F10 | File offset: 0x00F70510
 // Recovery: confirmed (IMPLEMENT_CLASS(UBuildingStructuralSupportSystem, 461585110u); reached from UBuildingStructuralSupportSystem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UBuildingStructuralSupportSystem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBuildingStructuralSupportSystem();
+// Original dynamic initializer: RVA 0x000DCBC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBuildingStructuralSupportSystem(Z_Construct_UClass_UBuildingStructuralSupportSystem, &UBuildingStructuralSupportSystem::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UBuildingStructuralSupportSystem"), false, nullptr, nullptr, nullptr);

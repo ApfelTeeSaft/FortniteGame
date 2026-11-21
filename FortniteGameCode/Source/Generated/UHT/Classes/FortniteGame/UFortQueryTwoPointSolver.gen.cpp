@@ -7,6 +7,9 @@
 void UFortQueryTwoPointSolver::StaticRegisterNativesUFortQueryTwoPointSolver()
 {
 }
+// IMPLEMENT_CLASS(UFortQueryTwoPointSolver, 1063048689u)
+// Original dynamic initializer: RVA 0x001106E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryTwoPointSolver> AutoInitializeUFortQueryTwoPointSolver(TEXT("UFortQueryTwoPointSolver"), sizeof(UFortQueryTwoPointSolver), 1063048689u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01095660 (end 0x010956F7)
 // Original VA: 0x0000000141095660 | File offset: 0x01094C60
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryTwoPointSolver, 1063048689u); reached from UFortQueryTwoPointSolver::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortQueryTwoPointSolver::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryTwoPointSolver();
+// Original dynamic initializer: RVA 0x001111C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryTwoPointSolver(Z_Construct_UClass_UFortQueryTwoPointSolver, &UFortQueryTwoPointSolver::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryTwoPointSolver"), false, nullptr, nullptr, nullptr);

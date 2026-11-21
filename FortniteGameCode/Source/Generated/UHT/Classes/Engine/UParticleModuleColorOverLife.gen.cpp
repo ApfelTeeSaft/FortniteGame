@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleColorOverLife()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleColorOverLife, 2037759843u)
+// Original dynamic initializer: RVA 0x00210830 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleColorOverLife> AutoInitializeUParticleModuleColorOverLife(TEXT("UParticleModuleColorOverLife"), sizeof(UParticleModuleColorOverLife), 2037759843u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024975C0 (end 0x02497662)
 // Original VA: 0x00000001424975C0 | File offset: 0x02496BC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleColorOverLife, 2037759843u); reached from UParticleModuleColorOverLife::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleColorOverLife::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleColorOverLife();
+// Original dynamic initializer: RVA 0x00211660
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleColorOverLife(Z_Construct_UClass_UParticleModuleColorOverLife, &UParticleModuleColorOverLife::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleColorOverLife"), false, nullptr, nullptr, nullptr);

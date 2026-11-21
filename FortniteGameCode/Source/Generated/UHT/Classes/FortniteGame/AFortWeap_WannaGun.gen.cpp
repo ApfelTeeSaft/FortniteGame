@@ -7,6 +7,9 @@
 void AFortWeap_WannaGun::StaticRegisterNativesAFortWeap_WannaGun()
 {
 }
+// IMPLEMENT_CLASS(AFortWeap_WannaGun, 4240828767u)
+// Original dynamic initializer: RVA 0x0011BF50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortWeap_WannaGun> AutoInitializeAFortWeap_WannaGun(TEXT("AFortWeap_WannaGun"), sizeof(AFortWeap_WannaGun), 4240828767u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D2D30 (end 0x010D2DD2)
 // Original VA: 0x00000001410D2D30 | File offset: 0x010D2330
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortWeap_WannaGun, 4240828767u); reached from AFortWeap_WannaGun::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortWeap_WannaGun::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortWeap_WannaGun();
+// Original dynamic initializer: RVA 0x0011CFE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortWeap_WannaGun(Z_Construct_UClass_AFortWeap_WannaGun, &AFortWeap_WannaGun::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortWeap_WannaGun"), false, nullptr, nullptr, nullptr);

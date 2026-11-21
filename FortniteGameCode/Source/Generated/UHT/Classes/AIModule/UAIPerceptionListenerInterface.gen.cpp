@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAIPerceptionListenerInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAIPerceptionListenerInterface, 3270619427u)
+// Original dynamic initializer: RVA 0x001B8F90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAIPerceptionListenerInterface> AutoInitializeUAIPerceptionListenerInterface(TEXT("UAIPerceptionListenerInterface"), sizeof(UAIPerceptionListenerInterface), 3270619427u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D19BB0 (end 0x01D19C52)
 // Original VA: 0x0000000141D19BB0 | File offset: 0x01D191B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAIPerceptionListenerInterface, 3270619427u); reached from UAIPerceptionListenerInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAIPerceptionListenerInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAIPerceptionListenerInterface();
+// Original dynamic initializer: RVA 0x001B9FB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAIPerceptionListenerInterface(Z_Construct_UClass_UAIPerceptionListenerInterface, &UAIPerceptionListenerInterface::StaticClass, TEXT("/Script/AIModule"), TEXT("UAIPerceptionListenerInterface"), false, nullptr, nullptr, nullptr);

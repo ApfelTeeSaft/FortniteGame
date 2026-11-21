@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBTTask_PlayAnimation()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBTTask_PlayAnimation, 241171517u)
+// Original dynamic initializer: RVA 0x001BC3C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBTTask_PlayAnimation> AutoInitializeUBTTask_PlayAnimation(TEXT("UBTTask_PlayAnimation"), sizeof(UBTTask_PlayAnimation), 241171517u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D27890 (end 0x01D27932)
 // Original VA: 0x0000000141D27890 | File offset: 0x01D26E90
 // Recovery: confirmed (IMPLEMENT_CLASS(UBTTask_PlayAnimation, 241171517u); reached from UBTTask_PlayAnimation::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBTTask_PlayAnimation::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBTTask_PlayAnimation();
+// Original dynamic initializer: RVA 0x001BD0E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBTTask_PlayAnimation(Z_Construct_UClass_UBTTask_PlayAnimation, &UBTTask_PlayAnimation::StaticClass, TEXT("/Script/AIModule"), TEXT("UBTTask_PlayAnimation"), false, nullptr, nullptr, nullptr);

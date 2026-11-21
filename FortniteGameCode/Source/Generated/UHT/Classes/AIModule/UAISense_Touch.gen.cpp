@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAISense_Touch()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAISense_Touch, 436339845u)
+// Original dynamic initializer: RVA 0x001B91D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAISense_Touch> AutoInitializeUAISense_Touch(TEXT("UAISense_Touch"), sizeof(UAISense_Touch), 436339845u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1A7E0 (end 0x01D1A882)
 // Original VA: 0x0000000141D1A7E0 | File offset: 0x01D19DE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAISense_Touch, 436339845u); reached from UAISense_Touch::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAISense_Touch::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAISense_Touch();
+// Original dynamic initializer: RVA 0x001BA430
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAISense_Touch(Z_Construct_UClass_UAISense_Touch, &UAISense_Touch::StaticClass, TEXT("/Script/AIModule"), TEXT("UAISense_Touch"), false, nullptr, nullptr, nullptr);

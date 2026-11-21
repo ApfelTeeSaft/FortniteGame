@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AWindDirectionalSource()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AWindDirectionalSource, 2457865057u)
+// Original dynamic initializer: RVA 0x00221920 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AWindDirectionalSource> AutoInitializeAWindDirectionalSource(TEXT("AWindDirectionalSource"), sizeof(AWindDirectionalSource), 2457865057u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024EF830 (end 0x024EF8D2)
 // Original VA: 0x00000001424EF830 | File offset: 0x024EEE30
 // Recovery: confirmed (IMPLEMENT_CLASS(AWindDirectionalSource, 2457865057u); reached from AWindDirectionalSource::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AWindDirectionalSource::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AWindDirectionalSource();
+// Original dynamic initializer: RVA 0x00222370
+static FCompiledInDefer Z_CompiledInDefer_UClass_AWindDirectionalSource(Z_Construct_UClass_AWindDirectionalSource, &AWindDirectionalSource::StaticClass, TEXT("/Script/Engine"), TEXT("AWindDirectionalSource"), false, nullptr, nullptr, nullptr);

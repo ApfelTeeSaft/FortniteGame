@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UBorderSlot, 1813830769u)
+// Original dynamic initializer: RVA 0x001B1CA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBorderSlot> AutoInitializeUBorderSlot(TEXT("UBorderSlot"), sizeof(UBorderSlot), 1813830769u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE4C50 (end 0x01BE4CF2)
 // Original VA: 0x0000000141BE4C50 | File offset: 0x01BE4250
 // Recovery: confirmed (IMPLEMENT_CLASS(UBorderSlot, 1813830769u); reached from UBorderSlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UBorderSlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBorderSlot();
+// Original dynamic initializer: RVA 0x001B22A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBorderSlot(Z_Construct_UClass_UBorderSlot, &UBorderSlot::StaticClass, TEXT("/Script/UMG"), TEXT("UBorderSlot"), false, nullptr, nullptr, nullptr);

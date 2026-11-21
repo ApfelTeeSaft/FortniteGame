@@ -7,6 +7,9 @@
 void UCommonTabListWidget::StaticRegisterNativesUCommonTabListWidget()
 {
 }
+// IMPLEMENT_CLASS(UCommonTabListWidget, 4259496370u)
+// Original dynamic initializer: RVA 0x000960E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonTabListWidget> AutoInitializeUCommonTabListWidget(TEXT("UCommonTabListWidget"), sizeof(UCommonTabListWidget), 4259496370u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C98A0 (end 0x002C9942)
 // Original VA: 0x00000001402C98A0 | File offset: 0x002C8EA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonTabListWidget, 4259496370u); reached from UCommonTabListWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonTabListWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonTabListWidget();
+// Original dynamic initializer: RVA 0x00096990
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonTabListWidget(Z_Construct_UClass_UCommonTabListWidget, &UCommonTabListWidget::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonTabListWidget"), false, nullptr, nullptr, nullptr);

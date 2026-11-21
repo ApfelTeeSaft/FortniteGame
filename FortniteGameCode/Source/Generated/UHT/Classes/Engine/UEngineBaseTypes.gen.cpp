@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UEngineBaseTypes()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UEngineBaseTypes, 3914235278u)
+// Original dynamic initializer: RVA 0x001FB930 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UEngineBaseTypes> AutoInitializeUEngineBaseTypes(TEXT("UEngineBaseTypes"), sizeof(UEngineBaseTypes), 3914235278u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02409360 (end 0x024093F7)
 // Original VA: 0x0000000142409360 | File offset: 0x02408960
 // Recovery: confirmed (IMPLEMENT_CLASS(UEngineBaseTypes, 3914235278u); reached from UEngineBaseTypes::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UEngineBaseTypes::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UEngineBaseTypes();
+// Original dynamic initializer: RVA 0x001FF1C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UEngineBaseTypes(Z_Construct_UClass_UEngineBaseTypes, &UEngineBaseTypes::StaticClass, TEXT("/Script/Engine"), TEXT("UEngineBaseTypes"), false, nullptr, nullptr, nullptr);

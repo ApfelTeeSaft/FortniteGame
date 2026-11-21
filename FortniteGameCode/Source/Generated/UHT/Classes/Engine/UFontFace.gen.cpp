@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_UFontFace()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFontFace, 2360336434u)
+// Original dynamic initializer: RVA 0x001FF3C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFontFace> AutoInitializeUFontFace(TEXT("UFontFace"), sizeof(UFontFace), 2360336434u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0240E9C0 (end 0x0240EA57)
 // Original VA: 0x000000014240E9C0 | File offset: 0x0240DFC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFontFace, 2360336434u); reached from UFontFace::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* UFontFace::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFontFace();
+// Original dynamic initializer: RVA 0x001FFE70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFontFace(Z_Construct_UClass_UFontFace, &UFontFace::StaticClass, TEXT("/Script/Engine"), TEXT("UFontFace"), false, nullptr, nullptr, nullptr);

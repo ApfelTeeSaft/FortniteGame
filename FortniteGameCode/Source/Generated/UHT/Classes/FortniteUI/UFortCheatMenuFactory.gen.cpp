@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortCheatMenuFactory, 3610736499u)
+// Original dynamic initializer: RVA 0x00240380 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCheatMenuFactory> AutoInitializeUFortCheatMenuFactory(TEXT("UFortCheatMenuFactory"), sizeof(UFortCheatMenuFactory), 3610736499u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02892ED0 (end 0x02892F67)
 // Original VA: 0x0000000142892ED0 | File offset: 0x028924D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCheatMenuFactory, 3610736499u); reached from UFortCheatMenuFactory::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortCheatMenuFactory::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCheatMenuFactory();
+// Original dynamic initializer: RVA 0x00242050
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCheatMenuFactory(Z_Construct_UClass_UFortCheatMenuFactory, &UFortCheatMenuFactory::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCheatMenuFactory"), false, nullptr, nullptr, nullptr);

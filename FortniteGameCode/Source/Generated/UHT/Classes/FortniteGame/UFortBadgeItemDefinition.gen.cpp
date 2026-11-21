@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortBadgeItemDefinition, 2031824716u)
+// Original dynamic initializer: RVA 0x000E8090 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBadgeItemDefinition> AutoInitializeUFortBadgeItemDefinition(TEXT("UFortBadgeItemDefinition"), sizeof(UFortBadgeItemDefinition), 2031824716u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA27D0 (end 0x00FA2872)
 // Original VA: 0x0000000140FA27D0 | File offset: 0x00FA1DD0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBadgeItemDefinition, 2031824716u); reached from UFortBadgeItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortBadgeItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBadgeItemDefinition();
+// Original dynamic initializer: RVA 0x000E8C90
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBadgeItemDefinition(Z_Construct_UClass_UFortBadgeItemDefinition, &UFortBadgeItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBadgeItemDefinition"), false, nullptr, nullptr, nullptr);

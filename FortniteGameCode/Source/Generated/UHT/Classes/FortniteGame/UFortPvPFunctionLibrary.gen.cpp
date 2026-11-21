@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortPvPFunctionLibrary, 1943066361u)
+// Original dynamic initializer: RVA 0x0010D650 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPvPFunctionLibrary> AutoInitializeUFortPvPFunctionLibrary(TEXT("UFortPvPFunctionLibrary"), sizeof(UFortPvPFunctionLibrary), 1943066361u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108A150 (end 0x0108A1F2)
 // Original VA: 0x000000014108A150 | File offset: 0x01089750
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPvPFunctionLibrary, 1943066361u); reached from UFortPvPFunctionLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortPvPFunctionLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPvPFunctionLibrary();
+// Original dynamic initializer: RVA 0x0010E690
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPvPFunctionLibrary(Z_Construct_UClass_UFortPvPFunctionLibrary, &UFortPvPFunctionLibrary::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPvPFunctionLibrary"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSkillTreeCanvasSlot, 707863317u)
+// Original dynamic initializer: RVA 0x0025ABE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSkillTreeCanvasSlot> AutoInitializeUFortSkillTreeCanvasSlot(TEXT("UFortSkillTreeCanvasSlot"), sizeof(UFortSkillTreeCanvasSlot), 707863317u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F3380 (end 0x028F3422)
 // Original VA: 0x00000001428F3380 | File offset: 0x028F2980
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSkillTreeCanvasSlot, 707863317u); reached from UFortSkillTreeCanvasSlot::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSkillTreeCanvasSlot::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSkillTreeCanvasSlot();
+// Original dynamic initializer: RVA 0x0025BAA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSkillTreeCanvasSlot(Z_Construct_UClass_UFortSkillTreeCanvasSlot, &UFortSkillTreeCanvasSlot::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSkillTreeCanvasSlot"), false, nullptr, nullptr, nullptr);

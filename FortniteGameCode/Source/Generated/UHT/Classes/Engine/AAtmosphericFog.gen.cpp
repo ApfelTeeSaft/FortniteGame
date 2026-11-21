@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AAtmosphericFog()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AAtmosphericFog, 1528614995u)
+// Original dynamic initializer: RVA 0x001F19B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AAtmosphericFog> AutoInitializeAAtmosphericFog(TEXT("AAtmosphericFog"), sizeof(AAtmosphericFog), 1528614995u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D91D0 (end 0x023D9272)
 // Original VA: 0x00000001423D91D0 | File offset: 0x023D87D0
 // Recovery: confirmed (IMPLEMENT_CLASS(AAtmosphericFog, 1528614995u); reached from AAtmosphericFog::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AAtmosphericFog::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AAtmosphericFog();
+// Original dynamic initializer: RVA 0x001F2ED0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AAtmosphericFog(Z_Construct_UClass_AAtmosphericFog, &AAtmosphericFog::StaticClass, TEXT("/Script/Engine"), TEXT("AAtmosphericFog"), false, nullptr, nullptr, nullptr);

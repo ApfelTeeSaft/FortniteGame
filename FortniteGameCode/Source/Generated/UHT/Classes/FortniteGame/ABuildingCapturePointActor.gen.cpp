@@ -7,6 +7,9 @@
 void ABuildingCapturePointActor::StaticRegisterNativesABuildingCapturePointActor()
 {
 }
+// IMPLEMENT_CLASS(ABuildingCapturePointActor, 2507767466u)
+// Original dynamic initializer: RVA 0x000D9830 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingCapturePointActor> AutoInitializeABuildingCapturePointActor(TEXT("ABuildingCapturePointActor"), sizeof(ABuildingCapturePointActor), 2507767466u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F643E0 (end 0x00F64482)
 // Original VA: 0x0000000140F643E0 | File offset: 0x00F639E0
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingCapturePointActor, 2507767466u); reached from ABuildingCapturePointActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* ABuildingCapturePointActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingCapturePointActor();
+// Original dynamic initializer: RVA 0x000DA710
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingCapturePointActor(Z_Construct_UClass_ABuildingCapturePointActor, &ABuildingCapturePointActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingCapturePointActor"), false, nullptr, nullptr, nullptr);

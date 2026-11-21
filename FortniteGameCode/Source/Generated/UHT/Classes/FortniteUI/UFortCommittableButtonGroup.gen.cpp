@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortCommittableButtonGroup()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCommittableButtonGroup, 479103425u)
+// Original dynamic initializer: RVA 0x00242690 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCommittableButtonGroup> AutoInitializeUFortCommittableButtonGroup(TEXT("UFortCommittableButtonGroup"), sizeof(UFortCommittableButtonGroup), 479103425u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02899B80 (end 0x02899C22)
 // Original VA: 0x0000000142899B80 | File offset: 0x02899180
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCommittableButtonGroup, 479103425u); reached from UFortCommittableButtonGroup::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortCommittableButtonGroup::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCommittableButtonGroup();
+// Original dynamic initializer: RVA 0x00244420
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCommittableButtonGroup(Z_Construct_UClass_UFortCommittableButtonGroup, &UFortCommittableButtonGroup::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortCommittableButtonGroup"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMovieSceneColorSection()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMovieSceneColorSection, 2440267112u)
+// Original dynamic initializer: RVA 0x001AC6D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMovieSceneColorSection> AutoInitializeUMovieSceneColorSection(TEXT("UMovieSceneColorSection"), sizeof(UMovieSceneColorSection), 2440267112u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01B4D930 (end 0x01B4D9D2)
 // Original VA: 0x0000000141B4D930 | File offset: 0x01B4CF30
 // Recovery: confirmed (IMPLEMENT_CLASS(UMovieSceneColorSection, 2440267112u); reached from UMovieSceneColorSection::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMovieSceneColorSection::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMovieSceneColorSection();
+// Original dynamic initializer: RVA 0x001AF680
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMovieSceneColorSection(Z_Construct_UClass_UMovieSceneColorSection, &UMovieSceneColorSection::StaticClass, TEXT("/Script/MovieSceneTracks"), TEXT("UMovieSceneColorSection"), false, nullptr, nullptr, nullptr);

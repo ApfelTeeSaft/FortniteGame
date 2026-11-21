@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ULobbyBackgroundTakeoverEvent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULobbyBackgroundTakeoverEvent, 1090799858u)
+// Original dynamic initializer: RVA 0x001203A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULobbyBackgroundTakeoverEvent> AutoInitializeULobbyBackgroundTakeoverEvent(TEXT("ULobbyBackgroundTakeoverEvent"), sizeof(ULobbyBackgroundTakeoverEvent), 1090799858u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E8330 (end 0x010E83D2)
 // Original VA: 0x00000001410E8330 | File offset: 0x010E7930
 // Recovery: confirmed (IMPLEMENT_CLASS(ULobbyBackgroundTakeoverEvent, 1090799858u); reached from ULobbyBackgroundTakeoverEvent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ULobbyBackgroundTakeoverEvent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULobbyBackgroundTakeoverEvent();
+// Original dynamic initializer: RVA 0x001222B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULobbyBackgroundTakeoverEvent(Z_Construct_UClass_ULobbyBackgroundTakeoverEvent, &ULobbyBackgroundTakeoverEvent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ULobbyBackgroundTakeoverEvent"), false, nullptr, nullptr, nullptr);

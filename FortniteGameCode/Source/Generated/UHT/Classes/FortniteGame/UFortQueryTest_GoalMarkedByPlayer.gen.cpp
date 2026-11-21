@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortQueryTest_GoalMarkedByPlayer()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryTest_GoalMarkedByPlayer, 550323749u)
+// Original dynamic initializer: RVA 0x0010EDF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryTest_GoalMarkedByPlayer> AutoInitializeUFortQueryTest_GoalMarkedByPlayer(TEXT("UFortQueryTest_GoalMarkedByPlayer"), sizeof(UFortQueryTest_GoalMarkedByPlayer), 550323749u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010921E0 (end 0x01092282)
 // Original VA: 0x00000001410921E0 | File offset: 0x010917E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryTest_GoalMarkedByPlayer, 550323749u); reached from UFortQueryTest_GoalMarkedByPlayer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortQueryTest_GoalMarkedByPlayer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryTest_GoalMarkedByPlayer();
+// Original dynamic initializer: RVA 0x00110260
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryTest_GoalMarkedByPlayer(Z_Construct_UClass_UFortQueryTest_GoalMarkedByPlayer, &UFortQueryTest_GoalMarkedByPlayer::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryTest_GoalMarkedByPlayer"), false, nullptr, nullptr, nullptr);

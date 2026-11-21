@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAISenseBlueprintListener()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAISenseBlueprintListener, 3694749070u)
+// Original dynamic initializer: RVA 0x001B9070 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAISenseBlueprintListener> AutoInitializeUAISenseBlueprintListener(TEXT("UAISenseBlueprintListener"), sizeof(UAISenseBlueprintListener), 3694749070u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1A060 (end 0x01D1A102)
 // Original VA: 0x0000000141D1A060 | File offset: 0x01D19660
 // Recovery: confirmed (IMPLEMENT_CLASS(UAISenseBlueprintListener, 3694749070u); reached from UAISenseBlueprintListener::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAISenseBlueprintListener::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAISenseBlueprintListener();
+// Original dynamic initializer: RVA 0x001BA170
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAISenseBlueprintListener(Z_Construct_UClass_UAISenseBlueprintListener, &UAISenseBlueprintListener::StaticClass, TEXT("/Script/AIModule"), TEXT("UAISenseBlueprintListener"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleSizeScaleBySpeed()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleSizeScaleBySpeed, 2773119849u)
+// Original dynamic initializer: RVA 0x002124A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleSizeScaleBySpeed> AutoInitializeUParticleModuleSizeScaleBySpeed(TEXT("UParticleModuleSizeScaleBySpeed"), sizeof(UParticleModuleSizeScaleBySpeed), 2773119849u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249C670 (end 0x0249C712)
 // Original VA: 0x000000014249C670 | File offset: 0x0249BC70
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleSizeScaleBySpeed, 2773119849u); reached from UParticleModuleSizeScaleBySpeed::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleSizeScaleBySpeed::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleSizeScaleBySpeed();
+// Original dynamic initializer: RVA 0x00213410
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleSizeScaleBySpeed(Z_Construct_UClass_UParticleModuleSizeScaleBySpeed, &UParticleModuleSizeScaleBySpeed::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleSizeScaleBySpeed"), false, nullptr, nullptr, nullptr);

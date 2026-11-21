@@ -7,6 +7,9 @@
 void UGameViewportClient::StaticRegisterNativesUGameViewportClient()
 {
 }
+// IMPLEMENT_CLASS(UGameViewportClient, 3070892350u)
+// Original dynamic initializer: RVA 0x00200130 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameViewportClient> AutoInitializeUGameViewportClient(TEXT("UGameViewportClient"), sizeof(UGameViewportClient), 3070892350u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0241E410 (end 0x0241E4B2)
 // Original VA: 0x000000014241E410 | File offset: 0x0241DA10
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameViewportClient, 3070892350u); reached from UGameViewportClient::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UGameViewportClient::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameViewportClient();
+// Original dynamic initializer: RVA 0x002009A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameViewportClient(Z_Construct_UClass_UGameViewportClient, &UGameViewportClient::StaticClass, TEXT("/Script/Engine"), TEXT("UGameViewportClient"), false, nullptr, nullptr, nullptr);

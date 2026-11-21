@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UNetworkSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNetworkSettings, 2492108429u)
+// Original dynamic initializer: RVA 0x0020ED90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNetworkSettings> AutoInitializeUNetworkSettings(TEXT("UNetworkSettings"), sizeof(UNetworkSettings), 2492108429u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02493750 (end 0x024937F2)
 // Original VA: 0x0000000142493750 | File offset: 0x02492D50
 // Recovery: confirmed (IMPLEMENT_CLASS(UNetworkSettings, 2492108429u); reached from UNetworkSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UNetworkSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNetworkSettings();
+// Original dynamic initializer: RVA 0x0020FFF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNetworkSettings(Z_Construct_UClass_UNetworkSettings, &UNetworkSettings::StaticClass, TEXT("/Script/Engine"), TEXT("UNetworkSettings"), false, nullptr, nullptr, nullptr);

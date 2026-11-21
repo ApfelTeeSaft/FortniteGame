@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortPlacementActorTagTest, 2391305371u)
+// Original dynamic initializer: RVA 0x00108E60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPlacementActorTagTest> AutoInitializeUFortPlacementActorTagTest(TEXT("UFortPlacementActorTagTest"), sizeof(UFortPlacementActorTagTest), 2391305371u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01064480 (end 0x01064517)
 // Original VA: 0x0000000141064480 | File offset: 0x01063A80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPlacementActorTagTest, 2391305371u); reached from UFortPlacementActorTagTest::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortPlacementActorTagTest::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPlacementActorTagTest();
+// Original dynamic initializer: RVA 0x0010A2C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPlacementActorTagTest(Z_Construct_UClass_UFortPlacementActorTagTest, &UFortPlacementActorTagTest::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPlacementActorTagTest"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortBuildingDestroyedParams, 2020232563u)
+// Original dynamic initializer: RVA 0x0011FFC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBuildingDestroyedParams> AutoInitializeUFortBuildingDestroyedParams(TEXT("UFortBuildingDestroyedParams"), sizeof(UFortBuildingDestroyedParams), 2020232563u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E6DF0 (end 0x010E6E92)
 // Original VA: 0x00000001410E6DF0 | File offset: 0x010E63F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBuildingDestroyedParams, 2020232563u); reached from UFortBuildingDestroyedParams::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortBuildingDestroyedParams::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBuildingDestroyedParams();
+// Original dynamic initializer: RVA 0x00121AF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBuildingDestroyedParams(Z_Construct_UClass_UFortBuildingDestroyedParams, &UFortBuildingDestroyedParams::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBuildingDestroyedParams"), false, nullptr, nullptr, nullptr);

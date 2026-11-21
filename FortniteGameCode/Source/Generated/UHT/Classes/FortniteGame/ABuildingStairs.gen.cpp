@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ABuildingStairs()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingStairs, 638073095u)
+// Original dynamic initializer: RVA 0x000DBE80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingStairs> AutoInitializeABuildingStairs(TEXT("ABuildingStairs"), sizeof(ABuildingStairs), 638073095u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F70D00 (end 0x00F70DA2)
 // Original VA: 0x0000000140F70D00 | File offset: 0x00F70300
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingStairs, 638073095u); reached from ABuildingStairs::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ABuildingStairs::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingStairs();
+// Original dynamic initializer: RVA 0x000DCB00
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingStairs(Z_Construct_UClass_ABuildingStairs, &ABuildingStairs::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingStairs"), false, nullptr, nullptr, nullptr);

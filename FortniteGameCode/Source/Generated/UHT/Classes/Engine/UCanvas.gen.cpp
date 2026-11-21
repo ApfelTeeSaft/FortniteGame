@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UCanvas, 562754117u)
+// Original dynamic initializer: RVA 0x001F63F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCanvas> AutoInitializeUCanvas(TEXT("UCanvas"), sizeof(UCanvas), 562754117u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023ECAB0 (end 0x023ECB47)
 // Original VA: 0x00000001423ECAB0 | File offset: 0x023EC0B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCanvas, 562754117u); reached from UCanvas::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UCanvas::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCanvas();
+// Original dynamic initializer: RVA 0x001F6DE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCanvas(Z_Construct_UClass_UCanvas, &UCanvas::StaticClass, TEXT("/Script/Engine"), TEXT("UCanvas"), false, nullptr, nullptr, nullptr);

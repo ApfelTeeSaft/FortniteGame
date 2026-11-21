@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionEncounter_SpawnTiming()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionEncounter_SpawnTiming, 1086109179u)
+// Original dynamic initializer: RVA 0x000F0EA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionEncounter_SpawnTiming> AutoInitializeUFortDifficultyOptionEncounter_SpawnTiming(TEXT("UFortDifficultyOptionEncounter_SpawnTiming"), sizeof(UFortDifficultyOptionEncounter_SpawnTiming), 1086109179u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD5D30 (end 0x00FD5DD2)
 // Original VA: 0x0000000140FD5D30 | File offset: 0x00FD5330
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionEncounter_SpawnTiming, 1086109179u); reached from UFortDifficultyOptionEncounter_SpawnTiming::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionEncounter_SpawnTiming::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionEncounter_SpawnTiming();
+// Original dynamic initializer: RVA 0x000F2190
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionEncounter_SpawnTiming(Z_Construct_UClass_UFortDifficultyOptionEncounter_SpawnTiming, &UFortDifficultyOptionEncounter_SpawnTiming::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionEncounter_SpawnTiming"), false, nullptr, nullptr, nullptr);

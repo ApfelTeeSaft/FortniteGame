@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortDateTimeLibrary, 1149417124u)
+// Original dynamic initializer: RVA 0x000EE610 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDateTimeLibrary> AutoInitializeUFortDateTimeLibrary(TEXT("UFortDateTimeLibrary"), sizeof(UFortDateTimeLibrary), 1149417124u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCA6A0 (end 0x00FCA742)
 // Original VA: 0x0000000140FCA6A0 | File offset: 0x00FC9CA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDateTimeLibrary, 1149417124u); reached from UFortDateTimeLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortDateTimeLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDateTimeLibrary();
+// Original dynamic initializer: RVA 0x000EF980
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDateTimeLibrary(Z_Construct_UClass_UFortDateTimeLibrary, &UFortDateTimeLibrary::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDateTimeLibrary"), false, nullptr, nullptr, nullptr);

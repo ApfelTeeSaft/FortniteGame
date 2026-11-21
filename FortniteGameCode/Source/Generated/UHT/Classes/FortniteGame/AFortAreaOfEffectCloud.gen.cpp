@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortAreaOfEffectCloud()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortAreaOfEffectCloud, 2961043387u)
+// Original dynamic initializer: RVA 0x000E6630 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortAreaOfEffectCloud> AutoInitializeAFortAreaOfEffectCloud(TEXT("AFortAreaOfEffectCloud"), sizeof(AFortAreaOfEffectCloud), 2961043387u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F9C1B0 (end 0x00F9C252)
 // Original VA: 0x0000000140F9C1B0 | File offset: 0x00F9B7B0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortAreaOfEffectCloud, 2961043387u); reached from AFortAreaOfEffectCloud::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortAreaOfEffectCloud::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortAreaOfEffectCloud();
+// Original dynamic initializer: RVA 0x000E7690
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortAreaOfEffectCloud(Z_Construct_UClass_AFortAreaOfEffectCloud, &AFortAreaOfEffectCloud::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortAreaOfEffectCloud"), false, nullptr, nullptr, nullptr);

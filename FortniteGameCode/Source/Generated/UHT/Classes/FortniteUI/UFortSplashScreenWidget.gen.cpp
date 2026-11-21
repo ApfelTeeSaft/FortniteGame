@@ -7,6 +7,9 @@
 void UFortSplashScreenWidget::StaticRegisterNativesUFortSplashScreenWidget()
 {
 }
+// IMPLEMENT_CLASS(UFortSplashScreenWidget, 2026575214u)
+// Original dynamic initializer: RVA 0x0025ADC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSplashScreenWidget> AutoInitializeUFortSplashScreenWidget(TEXT("UFortSplashScreenWidget"), sizeof(UFortSplashScreenWidget), 2026575214u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F3DD0 (end 0x028F3E72)
 // Original VA: 0x00000001428F3DD0 | File offset: 0x028F33D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSplashScreenWidget, 2026575214u); reached from UFortSplashScreenWidget::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSplashScreenWidget::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSplashScreenWidget();
+// Original dynamic initializer: RVA 0x0025BE60
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSplashScreenWidget(Z_Construct_UClass_UFortSplashScreenWidget, &UFortSplashScreenWidget::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSplashScreenWidget"), false, nullptr, nullptr, nullptr);

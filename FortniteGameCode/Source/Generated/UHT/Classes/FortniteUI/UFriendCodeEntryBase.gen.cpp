@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFriendCodeEntryBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFriendCodeEntryBase, 2508449045u)
+// Original dynamic initializer: RVA 0x00265720 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFriendCodeEntryBase> AutoInitializeUFriendCodeEntryBase(TEXT("UFriendCodeEntryBase"), sizeof(UFriendCodeEntryBase), 2508449045u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02917B30 (end 0x02917BD2)
 // Original VA: 0x0000000142917B30 | File offset: 0x02917130
 // Recovery: confirmed (IMPLEMENT_CLASS(UFriendCodeEntryBase, 2508449045u); reached from UFriendCodeEntryBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFriendCodeEntryBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFriendCodeEntryBase();
+// Original dynamic initializer: RVA 0x00267310
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFriendCodeEntryBase(Z_Construct_UClass_UFriendCodeEntryBase, &UFriendCodeEntryBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFriendCodeEntryBase"), false, nullptr, nullptr, nullptr);

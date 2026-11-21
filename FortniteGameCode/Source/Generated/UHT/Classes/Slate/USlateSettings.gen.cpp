@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_USlateSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USlateSettings, 86175774u)
+// Original dynamic initializer: RVA 0x0013E270 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USlateSettings> AutoInitializeUSlateSettings(TEXT("USlateSettings"), sizeof(USlateSettings), 86175774u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x015A22A0 (end 0x015A2337)
 // Original VA: 0x00000001415A22A0 | File offset: 0x015A18A0
 // Recovery: confirmed (IMPLEMENT_CLASS(USlateSettings, 86175774u); reached from USlateSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* USlateSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USlateSettings();
+// Original dynamic initializer: RVA 0x0013EA30
+static FCompiledInDefer Z_CompiledInDefer_UClass_USlateSettings(Z_Construct_UClass_USlateSettings, &USlateSettings::StaticClass, TEXT("/Script/Slate"), TEXT("USlateSettings"), false, nullptr, nullptr, nullptr);

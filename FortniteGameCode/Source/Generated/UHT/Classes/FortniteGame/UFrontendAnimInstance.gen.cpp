@@ -7,6 +7,9 @@
 void UFrontendAnimInstance::StaticRegisterNativesUFrontendAnimInstance()
 {
 }
+// IMPLEMENT_CLASS(UFrontendAnimInstance, 3623441767u)
+// Original dynamic initializer: RVA 0x0011EA40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFrontendAnimInstance> AutoInitializeUFrontendAnimInstance(TEXT("UFrontendAnimInstance"), sizeof(UFrontendAnimInstance), 3623441767u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E1D40 (end 0x010E1DE2)
 // Original VA: 0x00000001410E1D40 | File offset: 0x010E1340
 // Recovery: confirmed (IMPLEMENT_CLASS(UFrontendAnimInstance, 3623441767u); reached from UFrontendAnimInstance::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFrontendAnimInstance::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFrontendAnimInstance();
+// Original dynamic initializer: RVA 0x0011FE00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFrontendAnimInstance(Z_Construct_UClass_UFrontendAnimInstance, &UFrontendAnimInstance::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFrontendAnimInstance"), false, nullptr, nullptr, nullptr);

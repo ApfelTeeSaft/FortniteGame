@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AGeneratedMeshAreaLight()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AGeneratedMeshAreaLight, 535363685u)
+// Original dynamic initializer: RVA 0x002000D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AGeneratedMeshAreaLight> AutoInitializeAGeneratedMeshAreaLight(TEXT("AGeneratedMeshAreaLight"), sizeof(AGeneratedMeshAreaLight), 535363685u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0241E210 (end 0x0241E2B2)
 // Original VA: 0x000000014241E210 | File offset: 0x0241D810
 // Recovery: confirmed (IMPLEMENT_CLASS(AGeneratedMeshAreaLight, 535363685u); reached from AGeneratedMeshAreaLight::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AGeneratedMeshAreaLight::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AGeneratedMeshAreaLight();
+// Original dynamic initializer: RVA 0x002008E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AGeneratedMeshAreaLight(Z_Construct_UClass_AGeneratedMeshAreaLight, &AGeneratedMeshAreaLight::StaticClass, TEXT("/Script/Engine"), TEXT("AGeneratedMeshAreaLight"), false, nullptr, nullptr, nullptr);

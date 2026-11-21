@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_USlateWidgetStyleContainerInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USlateWidgetStyleContainerInterface, 2654621773u)
+// Original dynamic initializer: RVA 0x0013A6A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USlateWidgetStyleContainerInterface> AutoInitializeUSlateWidgetStyleContainerInterface(TEXT("USlateWidgetStyleContainerInterface"), sizeof(USlateWidgetStyleContainerInterface), 2654621773u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01459C50 (end 0x01459CF2)
 // Original VA: 0x0000000141459C50 | File offset: 0x01459250
 // Recovery: confirmed (IMPLEMENT_CLASS(USlateWidgetStyleContainerInterface, 2654621773u); reached from USlateWidgetStyleContainerInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* USlateWidgetStyleContainerInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USlateWidgetStyleContainerInterface();
+// Original dynamic initializer: RVA 0x0013D1A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USlateWidgetStyleContainerInterface(Z_Construct_UClass_USlateWidgetStyleContainerInterface, &USlateWidgetStyleContainerInterface::StaticClass, TEXT("/Script/SlateCore"), TEXT("USlateWidgetStyleContainerInterface"), false, nullptr, nullptr, nullptr);

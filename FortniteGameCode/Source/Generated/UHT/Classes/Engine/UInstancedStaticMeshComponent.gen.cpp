@@ -7,6 +7,9 @@
 void UInstancedStaticMeshComponent::StaticRegisterNativesUInstancedStaticMeshComponent()
 {
 }
+// IMPLEMENT_CLASS(UInstancedStaticMeshComponent, 65592595u)
+// Original dynamic initializer: RVA 0x00200D00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UInstancedStaticMeshComponent> AutoInitializeUInstancedStaticMeshComponent(TEXT("UInstancedStaticMeshComponent"), sizeof(UInstancedStaticMeshComponent), 65592595u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02426560 (end 0x02426602)
 // Original VA: 0x0000000142426560 | File offset: 0x02425B60
 // Recovery: confirmed (IMPLEMENT_CLASS(UInstancedStaticMeshComponent, 65592595u); reached from UInstancedStaticMeshComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UInstancedStaticMeshComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UInstancedStaticMeshComponent();
+// Original dynamic initializer: RVA 0x00202180
+static FCompiledInDefer Z_CompiledInDefer_UClass_UInstancedStaticMeshComponent(Z_Construct_UClass_UInstancedStaticMeshComponent, &UInstancedStaticMeshComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UInstancedStaticMeshComponent"), false, nullptr, nullptr, nullptr);

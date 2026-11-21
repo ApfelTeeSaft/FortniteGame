@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAnimBlueprint()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAnimBlueprint, 2819678903u)
+// Original dynamic initializer: RVA 0x001EC000 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAnimBlueprint> AutoInitializeUAnimBlueprint(TEXT("UAnimBlueprint"), sizeof(UAnimBlueprint), 2819678903u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C6180 (end 0x023C6222)
 // Original VA: 0x00000001423C6180 | File offset: 0x023C5780
 // Recovery: confirmed (IMPLEMENT_CLASS(UAnimBlueprint, 2819678903u); reached from UAnimBlueprint::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAnimBlueprint::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAnimBlueprint();
+// Original dynamic initializer: RVA 0x001EDA40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAnimBlueprint(Z_Construct_UClass_UAnimBlueprint, &UAnimBlueprint::StaticClass, TEXT("/Script/Engine"), TEXT("UAnimBlueprint"), false, nullptr, nullptr, nullptr);

@@ -7,6 +7,9 @@
 void UCommonLazyImage::StaticRegisterNativesUCommonLazyImage()
 {
 }
+// IMPLEMENT_CLASS(UCommonLazyImage, 3021258143u)
+// Original dynamic initializer: RVA 0x00095FA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UCommonLazyImage> AutoInitializeUCommonLazyImage(TEXT("UCommonLazyImage"), sizeof(UCommonLazyImage), 3021258143u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x002C91D0 (end 0x002C9272)
 // Original VA: 0x00000001402C91D0 | File offset: 0x002C87D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UCommonLazyImage, 3021258143u); reached from UCommonLazyImage::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UCommonLazyImage::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UCommonLazyImage();
+// Original dynamic initializer: RVA 0x00096710
+static FCompiledInDefer Z_CompiledInDefer_UClass_UCommonLazyImage(Z_Construct_UClass_UCommonLazyImage, &UCommonLazyImage::StaticClass, TEXT("/Script/CommonUI"), TEXT("UCommonLazyImage"), false, nullptr, nullptr, nullptr);

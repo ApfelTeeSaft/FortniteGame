@@ -7,6 +7,9 @@
 void UAIPerceptionComponent::StaticRegisterNativesUAIPerceptionComponent()
 {
 }
+// IMPLEMENT_CLASS(UAIPerceptionComponent, 2578818525u)
+// Original dynamic initializer: RVA 0x001B8F70 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAIPerceptionComponent> AutoInitializeUAIPerceptionComponent(TEXT("UAIPerceptionComponent"), sizeof(UAIPerceptionComponent), 2578818525u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D19B00 (end 0x01D19BA2)
 // Original VA: 0x0000000141D19B00 | File offset: 0x01D19100
 // Recovery: confirmed (IMPLEMENT_CLASS(UAIPerceptionComponent, 2578818525u); reached from UAIPerceptionComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAIPerceptionComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAIPerceptionComponent();
+// Original dynamic initializer: RVA 0x001B9F70
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAIPerceptionComponent(Z_Construct_UClass_UAIPerceptionComponent, &UAIPerceptionComponent::StaticClass, TEXT("/Script/AIModule"), TEXT("UAIPerceptionComponent"), false, nullptr, nullptr, nullptr);

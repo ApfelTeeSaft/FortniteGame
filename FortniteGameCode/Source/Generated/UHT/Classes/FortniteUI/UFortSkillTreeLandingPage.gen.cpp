@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortSkillTreeLandingPage, 203437495u)
+// Original dynamic initializer: RVA 0x0025AC00 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSkillTreeLandingPage> AutoInitializeUFortSkillTreeLandingPage(TEXT("UFortSkillTreeLandingPage"), sizeof(UFortSkillTreeLandingPage), 203437495u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F3430 (end 0x028F34D2)
 // Original VA: 0x00000001428F3430 | File offset: 0x028F2A30
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSkillTreeLandingPage, 203437495u); reached from UFortSkillTreeLandingPage::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortSkillTreeLandingPage::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSkillTreeLandingPage();
+// Original dynamic initializer: RVA 0x0025BAE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSkillTreeLandingPage(Z_Construct_UClass_UFortSkillTreeLandingPage, &UFortSkillTreeLandingPage::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSkillTreeLandingPage"), false, nullptr, nullptr, nullptr);

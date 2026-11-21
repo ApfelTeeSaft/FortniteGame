@@ -7,6 +7,9 @@
 void UAthenaMatchReadyDesktopPopup::StaticRegisterNativesUAthenaMatchReadyDesktopPopup()
 {
 }
+// IMPLEMENT_CLASS(UAthenaMatchReadyDesktopPopup, 3723816202u)
+// Original dynamic initializer: RVA 0x0023B4A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaMatchReadyDesktopPopup> AutoInitializeUAthenaMatchReadyDesktopPopup(TEXT("UAthenaMatchReadyDesktopPopup"), sizeof(UAthenaMatchReadyDesktopPopup), 3723816202u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02884710 (end 0x028847B2)
 // Original VA: 0x0000000142884710 | File offset: 0x02883D10
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaMatchReadyDesktopPopup, 3723816202u); reached from UAthenaMatchReadyDesktopPopup::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAthenaMatchReadyDesktopPopup::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaMatchReadyDesktopPopup();
+// Original dynamic initializer: RVA 0x0023D6A0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaMatchReadyDesktopPopup(Z_Construct_UClass_UAthenaMatchReadyDesktopPopup, &UAthenaMatchReadyDesktopPopup::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaMatchReadyDesktopPopup"), false, nullptr, nullptr, nullptr);

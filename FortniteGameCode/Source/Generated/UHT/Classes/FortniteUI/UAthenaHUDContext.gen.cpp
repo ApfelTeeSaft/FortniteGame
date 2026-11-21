@@ -7,6 +7,9 @@
 void UAthenaHUDContext::StaticRegisterNativesUAthenaHUDContext()
 {
 }
+// IMPLEMENT_CLASS(UAthenaHUDContext, 3141754721u)
+// Original dynamic initializer: RVA 0x00239160 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaHUDContext> AutoInitializeUAthenaHUDContext(TEXT("UAthenaHUDContext"), sizeof(UAthenaHUDContext), 3141754721u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0287DD20 (end 0x0287DDC2)
 // Original VA: 0x000000014287DD20 | File offset: 0x0287D320
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaHUDContext, 3141754721u); reached from UAthenaHUDContext::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAthenaHUDContext::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaHUDContext();
+// Original dynamic initializer: RVA 0x0023B000
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaHUDContext(Z_Construct_UClass_UAthenaHUDContext, &UAthenaHUDContext::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaHUDContext"), false, nullptr, nullptr, nullptr);

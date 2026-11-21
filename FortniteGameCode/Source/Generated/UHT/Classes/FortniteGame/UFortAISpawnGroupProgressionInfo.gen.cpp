@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAISpawnGroupProgressionInfo()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAISpawnGroupProgressionInfo, 11516080u)
+// Original dynamic initializer: RVA 0x000E48C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAISpawnGroupProgressionInfo> AutoInitializeUFortAISpawnGroupProgressionInfo(TEXT("UFortAISpawnGroupProgressionInfo"), sizeof(UFortAISpawnGroupProgressionInfo), 11516080u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F97170 (end 0x00F97212)
 // Original VA: 0x0000000140F97170 | File offset: 0x00F96770
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAISpawnGroupProgressionInfo, 11516080u); reached from UFortAISpawnGroupProgressionInfo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAISpawnGroupProgressionInfo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAISpawnGroupProgressionInfo();
+// Original dynamic initializer: RVA 0x000E60B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAISpawnGroupProgressionInfo(Z_Construct_UClass_UFortAISpawnGroupProgressionInfo, &UFortAISpawnGroupProgressionInfo::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAISpawnGroupProgressionInfo"), false, nullptr, nullptr, nullptr);

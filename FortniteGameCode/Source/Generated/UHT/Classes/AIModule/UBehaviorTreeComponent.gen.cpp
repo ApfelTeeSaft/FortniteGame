@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UBehaviorTreeComponent, 3188839577u)
+// Original dynamic initializer: RVA 0x001BA750 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBehaviorTreeComponent> AutoInitializeUBehaviorTreeComponent(TEXT("UBehaviorTreeComponent"), sizeof(UBehaviorTreeComponent), 3188839577u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D21620 (end 0x01D216C2)
 // Original VA: 0x0000000141D21620 | File offset: 0x01D20C20
 // Recovery: confirmed (IMPLEMENT_CLASS(UBehaviorTreeComponent, 3188839577u); reached from UBehaviorTreeComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UBehaviorTreeComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBehaviorTreeComponent();
+// Original dynamic initializer: RVA 0x001BBB80
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBehaviorTreeComponent(Z_Construct_UClass_UBehaviorTreeComponent, &UBehaviorTreeComponent::StaticClass, TEXT("/Script/AIModule"), TEXT("UBehaviorTreeComponent"), false, nullptr, nullptr, nullptr);

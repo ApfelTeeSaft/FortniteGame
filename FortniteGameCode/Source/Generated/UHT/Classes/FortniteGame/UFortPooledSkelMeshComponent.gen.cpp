@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortPooledSkelMeshComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortPooledSkelMeshComponent, 3185286074u)
+// Original dynamic initializer: RVA 0x0010D5B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPooledSkelMeshComponent> AutoInitializeUFortPooledSkelMeshComponent(TEXT("UFortPooledSkelMeshComponent"), sizeof(UFortPooledSkelMeshComponent), 3185286074u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01089E00 (end 0x01089EA2)
 // Original VA: 0x0000000141089E00 | File offset: 0x01089400
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPooledSkelMeshComponent, 3185286074u); reached from UFortPooledSkelMeshComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortPooledSkelMeshComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPooledSkelMeshComponent();
+// Original dynamic initializer: RVA 0x0010E550
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPooledSkelMeshComponent(Z_Construct_UClass_UFortPooledSkelMeshComponent, &UFortPooledSkelMeshComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPooledSkelMeshComponent"), false, nullptr, nullptr, nullptr);

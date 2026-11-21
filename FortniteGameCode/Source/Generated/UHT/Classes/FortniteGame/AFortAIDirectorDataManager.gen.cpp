@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortAIDirectorDataManager, 2863850448u)
+// Original dynamic initializer: RVA 0x000E0DE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortAIDirectorDataManager> AutoInitializeAFortAIDirectorDataManager(TEXT("AFortAIDirectorDataManager"), sizeof(AFortAIDirectorDataManager), 2863850448u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F86480 (end 0x00F86522)
 // Original VA: 0x0000000140F86480 | File offset: 0x00F85A80
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortAIDirectorDataManager, 2863850448u); reached from AFortAIDirectorDataManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortAIDirectorDataManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortAIDirectorDataManager();
+// Original dynamic initializer: RVA 0x000E2120
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortAIDirectorDataManager(Z_Construct_UClass_AFortAIDirectorDataManager, &AFortAIDirectorDataManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortAIDirectorDataManager"), false, nullptr, nullptr, nullptr);

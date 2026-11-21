@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_TimedModifierT
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionCategoryEncounter_TimedModifierTags, 1633254361u)
+// Original dynamic initializer: RVA 0x000F0C40 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionCategoryEncounter_TimedModifierTags> AutoInitializeUFortDifficultyOptionCategoryEncounter_TimedModifierTags(TEXT("UFortDifficultyOptionCategoryEncounter_TimedModifierTags"), sizeof(UFortDifficultyOptionCategoryEncounter_TimedModifierTags), 1633254361u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD5020 (end 0x00FD50C2)
 // Original VA: 0x0000000140FD5020 | File offset: 0x00FD4620
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionCategoryEncounter_TimedModifierTags, 1633254361u); reached from UFortDifficultyOptionCategoryEncounter_TimedModifierTags::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionCategoryEncounter_TimedModifierTags::GetPrivateStat
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_TimedModifierTags();
+// Original dynamic initializer: RVA 0x000F1CD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionCategoryEncounter_TimedModifierTags(Z_Construct_UClass_UFortDifficultyOptionCategoryEncounter_TimedModifierTags, &UFortDifficultyOptionCategoryEncounter_TimedModifierTags::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionCategoryEncounter_TimedModifierTags"), false, nullptr, nullptr, nullptr);

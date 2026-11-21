@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortSearchPass()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortSearchPass, 488614025u)
+// Original dynamic initializer: RVA 0x00112B90 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSearchPass> AutoInitializeUFortSearchPass(TEXT("UFortSearchPass"), sizeof(UFortSearchPass), 488614025u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A36F0 (end 0x010A3787)
 // Original VA: 0x00000001410A36F0 | File offset: 0x010A2CF0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSearchPass, 488614025u); reached from UFortSearchPass::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortSearchPass::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSearchPass();
+// Original dynamic initializer: RVA 0x00114270
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSearchPass(Z_Construct_UClass_UFortSearchPass, &UFortSearchPass::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortSearchPass"), false, nullptr, nullptr, nullptr);

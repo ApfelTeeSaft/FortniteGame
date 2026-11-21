@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortFavoriteIndicator()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortFavoriteIndicator, 1898353814u)
+// Original dynamic initializer: RVA 0x00244BE0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortFavoriteIndicator> AutoInitializeUFortFavoriteIndicator(TEXT("UFortFavoriteIndicator"), sizeof(UFortFavoriteIndicator), 1898353814u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A25C0 (end 0x028A2662)
 // Original VA: 0x00000001428A25C0 | File offset: 0x028A1BC0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortFavoriteIndicator, 1898353814u); reached from UFortFavoriteIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortFavoriteIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortFavoriteIndicator();
+// Original dynamic initializer: RVA 0x00245A50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortFavoriteIndicator(Z_Construct_UClass_UFortFavoriteIndicator, &UFortFavoriteIndicator::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortFavoriteIndicator"), false, nullptr, nullptr, nullptr);

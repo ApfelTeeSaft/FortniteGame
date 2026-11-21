@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UBmpImageCaptureSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBmpImageCaptureSettings, 3949786146u)
+// Original dynamic initializer: RVA 0x001C1610 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBmpImageCaptureSettings> AutoInitializeUBmpImageCaptureSettings(TEXT("UBmpImageCaptureSettings"), sizeof(UBmpImageCaptureSettings), 3949786146u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D59860 (end 0x01D59902)
 // Original VA: 0x0000000141D59860 | File offset: 0x01D58E60
 // Recovery: confirmed (IMPLEMENT_CLASS(UBmpImageCaptureSettings, 3949786146u); reached from UBmpImageCaptureSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UBmpImageCaptureSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBmpImageCaptureSettings();
+// Original dynamic initializer: RVA 0x001C1AD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBmpImageCaptureSettings(Z_Construct_UClass_UBmpImageCaptureSettings, &UBmpImageCaptureSettings::StaticClass, TEXT("/Script/MovieSceneCapture"), TEXT("UBmpImageCaptureSettings"), false, nullptr, nullptr, nullptr);

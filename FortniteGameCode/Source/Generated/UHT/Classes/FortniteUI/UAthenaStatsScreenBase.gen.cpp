@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAthenaStatsScreenBase, 2743012371u)
+// Original dynamic initializer: RVA 0x0023B660 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaStatsScreenBase> AutoInitializeUAthenaStatsScreenBase(TEXT("UAthenaStatsScreenBase"), sizeof(UAthenaStatsScreenBase), 2743012371u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028850B0 (end 0x02885152)
 // Original VA: 0x00000001428850B0 | File offset: 0x028846B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaStatsScreenBase, 2743012371u); reached from UAthenaStatsScreenBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAthenaStatsScreenBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaStatsScreenBase();
+// Original dynamic initializer: RVA 0x0023DA20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaStatsScreenBase(Z_Construct_UClass_UAthenaStatsScreenBase, &UAthenaStatsScreenBase::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UAthenaStatsScreenBase"), false, nullptr, nullptr, nullptr);

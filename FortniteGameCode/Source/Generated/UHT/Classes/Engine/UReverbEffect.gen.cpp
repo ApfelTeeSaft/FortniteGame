@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UReverbEffect()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UReverbEffect, 2436210930u)
+// Original dynamic initializer: RVA 0x00217550 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UReverbEffect> AutoInitializeUReverbEffect(TEXT("UReverbEffect"), sizeof(UReverbEffect), 2436210930u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C18B0 (end 0x024C1947)
 // Original VA: 0x00000001424C18B0 | File offset: 0x024C0EB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UReverbEffect, 2436210930u); reached from UReverbEffect::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UReverbEffect::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UReverbEffect();
+// Original dynamic initializer: RVA 0x00218B40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UReverbEffect(Z_Construct_UClass_UReverbEffect, &UReverbEffect::StaticClass, TEXT("/Script/Engine"), TEXT("UReverbEffect"), false, nullptr, nullptr, nullptr);

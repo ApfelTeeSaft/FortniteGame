@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortDecoPreview_GenericTrap()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortDecoPreview_GenericTrap, 1129425785u)
+// Original dynamic initializer: RVA 0x000EFA60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortDecoPreview_GenericTrap> AutoInitializeAFortDecoPreview_GenericTrap(TEXT("AFortDecoPreview_GenericTrap"), sizeof(AFortDecoPreview_GenericTrap), 1129425785u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCEA80 (end 0x00FCEB22)
 // Original VA: 0x0000000140FCEA80 | File offset: 0x00FCE080
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortDecoPreview_GenericTrap, 1129425785u); reached from AFortDecoPreview_GenericTrap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortDecoPreview_GenericTrap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortDecoPreview_GenericTrap();
+// Original dynamic initializer: RVA 0x000F05C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortDecoPreview_GenericTrap(Z_Construct_UClass_AFortDecoPreview_GenericTrap, &AFortDecoPreview_GenericTrap::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortDecoPreview_GenericTrap"), false, nullptr, nullptr, nullptr);

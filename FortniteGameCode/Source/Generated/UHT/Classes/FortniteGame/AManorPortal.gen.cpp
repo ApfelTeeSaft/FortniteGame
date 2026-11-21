@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AManorPortal, 2961655284u)
+// Original dynamic initializer: RVA 0x0011FF80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AManorPortal> AutoInitializeAManorPortal(TEXT("AManorPortal"), sizeof(AManorPortal), 2961655284u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E6C90 (end 0x010E6D32)
 // Original VA: 0x00000001410E6C90 | File offset: 0x010E6290
 // Recovery: confirmed (IMPLEMENT_CLASS(AManorPortal, 2961655284u); reached from AManorPortal::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AManorPortal::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AManorPortal();
+// Original dynamic initializer: RVA 0x00121A70
+static FCompiledInDefer Z_CompiledInDefer_UClass_AManorPortal(Z_Construct_UClass_AManorPortal, &AManorPortal::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AManorPortal"), false, nullptr, nullptr, nullptr);

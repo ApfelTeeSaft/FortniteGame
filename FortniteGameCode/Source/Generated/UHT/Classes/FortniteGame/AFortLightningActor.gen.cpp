@@ -7,6 +7,9 @@
 void AFortLightningActor::StaticRegisterNativesAFortLightningActor()
 {
 }
+// IMPLEMENT_CLASS(AFortLightningActor, 118274684u)
+// Original dynamic initializer: RVA 0x000FCDF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortLightningActor> AutoInitializeAFortLightningActor(TEXT("AFortLightningActor"), sizeof(AFortLightningActor), 118274684u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0101B730 (end 0x0101B7D2)
 // Original VA: 0x000000014101B730 | File offset: 0x0101AD30
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortLightningActor, 118274684u); reached from AFortLightningActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AFortLightningActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortLightningActor();
+// Original dynamic initializer: RVA 0x000FDB00
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortLightningActor(Z_Construct_UClass_AFortLightningActor, &AFortLightningActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortLightningActor"), false, nullptr, nullptr, nullptr);

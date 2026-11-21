@@ -137,9 +137,12 @@ def main() -> int:
             if n:
                 records[(n, outer - base)].append(ds.rva + off)
 
+    registered_defer = {}
     inlined_static = {}
     for u in json.loads((ROOT / "analysis" / "unity-order.json").read_text(encoding="utf-8"))["units"]:
         for it in u["items"]:
+            if it["kind"] == "enum":
+                registered_defer[it["name"]] = int(it["compiled_in_defer"], 16)
             if it["kind"] == "enum" and static_in_unity(it):
                 p = int(it["static_enum"], 16)
                 try:
@@ -181,7 +184,10 @@ def main() -> int:
             se = None
         if se is not None and not se.get("inlined") and se["package"] != pkg:
             se = None
-        defer = defer_by_target.get(se["rva"], []) if se else []
+        # The FCompiledInDeferEnum initializer of every enum is in the CRT table (unity order),
+        # whatever form its StaticEnum takes.
+        defer = [registered_defer[name]] if name in registered_defer else (
+            defer_by_target.get(se["rva"], []) if se else [])
         enums.append(dict(ctor=ctor, ctor_end=allrf[ctor].end, rec=rec, name=name, pkg=pkg,
                           pkg_name=packages[pkg], oflags=oflags, disp=disp - base if disp else 0,
                           form=form, cpptype=cstr(img, cpptype - base), values=values,
@@ -263,7 +269,7 @@ def main() -> int:
         if cid:
             defer_entries.append({"start_rva": f"0x{cid:08X}", "end_rva": f"0x{cid + len(CID_TEMPLATE):08X}",
                                   "name": f"dynamic initializer for Z_CompiledInDeferEnum_UEnum_{name}", **common,
-                                  "unit": unit if se.get("inlined") else static_units[name]})
+                                  "unit": static_units.get(name, unit)})   # where the .static fragment compiles
             stats["defer_initializers"] += 1
         stats["enums_emitted"] += 1
 

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UBuildPatchManifest()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UBuildPatchManifest, 1572306266u)
+// Original dynamic initializer: RVA 0x00226A20 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBuildPatchManifest> AutoInitializeUBuildPatchManifest(TEXT("UBuildPatchManifest"), sizeof(UBuildPatchManifest), 1572306266u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0264B530 (end 0x0264B5C7)
 // Original VA: 0x000000014264B530 | File offset: 0x0264AB30
 // Recovery: confirmed (IMPLEMENT_CLASS(UBuildPatchManifest, 1572306266u); reached from UBuildPatchManifest::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UBuildPatchManifest::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBuildPatchManifest();
+// Original dynamic initializer: RVA 0x00226E00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBuildPatchManifest(Z_Construct_UClass_UBuildPatchManifest, &UBuildPatchManifest::StaticClass, TEXT("/Script/BuildPatchServices"), TEXT("UBuildPatchManifest"), false, nullptr, nullptr, nullptr);

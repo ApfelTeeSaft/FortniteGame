@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMaterialFunctionMaterialLayer()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialFunctionMaterialLayer, 2345572292u)
+// Original dynamic initializer: RVA 0x0020ADF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialFunctionMaterialLayer> AutoInitializeUMaterialFunctionMaterialLayer(TEXT("UMaterialFunctionMaterialLayer"), sizeof(UMaterialFunctionMaterialLayer), 2345572292u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02484E70 (end 0x02484F12)
 // Original VA: 0x0000000142484E70 | File offset: 0x02484470
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialFunctionMaterialLayer, 2345572292u); reached from UMaterialFunctionMaterialLayer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMaterialFunctionMaterialLayer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialFunctionMaterialLayer();
+// Original dynamic initializer: RVA 0x0020C170
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialFunctionMaterialLayer(Z_Construct_UClass_UMaterialFunctionMaterialLayer, &UMaterialFunctionMaterialLayer::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialFunctionMaterialLayer"), false, nullptr, nullptr, nullptr);

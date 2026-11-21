@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFrontEndSettings()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFrontEndSettings, 1708319743u)
+// Original dynamic initializer: RVA 0x0011E860 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFrontEndSettings> AutoInitializeAFrontEndSettings(TEXT("AFrontEndSettings"), sizeof(AFrontEndSettings), 1708319743u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E12F0 (end 0x010E1392)
 // Original VA: 0x00000001410E12F0 | File offset: 0x010E08F0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFrontEndSettings, 1708319743u); reached from AFrontEndSettings::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFrontEndSettings::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFrontEndSettings();
+// Original dynamic initializer: RVA 0x0011FA40
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFrontEndSettings(Z_Construct_UClass_AFrontEndSettings, &AFrontEndSettings::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFrontEndSettings"), false, nullptr, nullptr, nullptr);

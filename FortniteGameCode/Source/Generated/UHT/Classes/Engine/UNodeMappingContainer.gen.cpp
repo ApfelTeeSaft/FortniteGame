@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UNodeMappingContainer()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UNodeMappingContainer, 70830223u)
+// Original dynamic initializer: RVA 0x0020EDB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UNodeMappingContainer> AutoInitializeUNodeMappingContainer(TEXT("UNodeMappingContainer"), sizeof(UNodeMappingContainer), 70830223u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02493800 (end 0x02493897)
 // Original VA: 0x0000000142493800 | File offset: 0x02492E00
 // Recovery: confirmed (IMPLEMENT_CLASS(UNodeMappingContainer, 70830223u); reached from UNodeMappingContainer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UNodeMappingContainer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UNodeMappingContainer();
+// Original dynamic initializer: RVA 0x00210030
+static FCompiledInDefer Z_CompiledInDefer_UClass_UNodeMappingContainer(Z_Construct_UClass_UNodeMappingContainer, &UNodeMappingContainer::StaticClass, TEXT("/Script/Engine"), TEXT("UNodeMappingContainer"), false, nullptr, nullptr, nullptr);

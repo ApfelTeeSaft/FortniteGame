@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UGameplayTagAssetInterface, 2370529641u)
+// Original dynamic initializer: RVA 0x001B71A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayTagAssetInterface> AutoInitializeUGameplayTagAssetInterface(TEXT("UGameplayTagAssetInterface"), sizeof(UGameplayTagAssetInterface), 2370529641u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01C92A80 (end 0x01C92B22)
 // Original VA: 0x0000000141C92A80 | File offset: 0x01C92080
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayTagAssetInterface, 2370529641u); reached from UGameplayTagAssetInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UGameplayTagAssetInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayTagAssetInterface();
+// Original dynamic initializer: RVA 0x001B7CA0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayTagAssetInterface(Z_Construct_UClass_UGameplayTagAssetInterface, &UGameplayTagAssetInterface::StaticClass, TEXT("/Script/GameplayTags"), TEXT("UGameplayTagAssetInterface"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ABuildingProp()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABuildingProp, 2646194927u)
+// Original dynamic initializer: RVA 0x000DAFF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABuildingProp> AutoInitializeABuildingProp(TEXT("ABuildingProp"), sizeof(ABuildingProp), 2646194927u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6ADD0 (end 0x00F6AE72)
 // Original VA: 0x0000000140F6ADD0 | File offset: 0x00F6A3D0
 // Recovery: confirmed (IMPLEMENT_CLASS(ABuildingProp, 2646194927u); reached from ABuildingProp::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ABuildingProp::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABuildingProp();
+// Original dynamic initializer: RVA 0x000DBCC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABuildingProp(Z_Construct_UClass_ABuildingProp, &ABuildingProp::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABuildingProp"), false, nullptr, nullptr, nullptr);

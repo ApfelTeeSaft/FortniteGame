@@ -7,6 +7,9 @@
 void UAppleARKitPlaneAnchor::StaticRegisterNativesUAppleARKitPlaneAnchor()
 {
 }
+// IMPLEMENT_CLASS(UAppleARKitPlaneAnchor, 2182264559u)
+// Original dynamic initializer: RVA 0x000B43C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAppleARKitPlaneAnchor> AutoInitializeUAppleARKitPlaneAnchor(TEXT("UAppleARKitPlaneAnchor"), sizeof(UAppleARKitPlaneAnchor), 2182264559u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00805E50 (end 0x00805EF2)
 // Original VA: 0x0000000140805E50 | File offset: 0x00805450
 // Recovery: confirmed (IMPLEMENT_CLASS(UAppleARKitPlaneAnchor, 2182264559u); reached from UAppleARKitPlaneAnchor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAppleARKitPlaneAnchor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAppleARKitPlaneAnchor();
+// Original dynamic initializer: RVA 0x000B4850
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAppleARKitPlaneAnchor(Z_Construct_UClass_UAppleARKitPlaneAnchor, &UAppleARKitPlaneAnchor::StaticClass, TEXT("/Script/AppleARKit"), TEXT("UAppleARKitPlaneAnchor"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortSpawnPointsPercentageCurveSequence()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortSpawnPointsPercentageCurveSequence, 762345297u)
+// Original dynamic initializer: RVA 0x00112CB0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSpawnPointsPercentageCurveSequence> AutoInitializeUFortSpawnPointsPercentageCurveSequence(TEXT("UFortSpawnPointsPercentageCurveSequence"), sizeof(UFortSpawnPointsPercentageCurveSequence), 762345297u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010A3CF0 (end 0x010A3D92)
 // Original VA: 0x00000001410A3CF0 | File offset: 0x010A32F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSpawnPointsPercentageCurveSequence, 762345297u); reached from UFortSpawnPointsPercentageCurveSequence::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortSpawnPointsPercentageCurveSequence::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSpawnPointsPercentageCurveSequence();
+// Original dynamic initializer: RVA 0x001144B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSpawnPointsPercentageCurveSequence(Z_Construct_UClass_UFortSpawnPointsPercentageCurveSequence, &UFortSpawnPointsPercentageCurveSequence::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortSpawnPointsPercentageCurveSequence"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_ADirectionalLight()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ADirectionalLight, 166241700u)
+// Original dynamic initializer: RVA 0x001F82A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ADirectionalLight> AutoInitializeADirectionalLight(TEXT("ADirectionalLight"), sizeof(ADirectionalLight), 166241700u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FBE30 (end 0x023FBED2)
 // Original VA: 0x00000001423FBE30 | File offset: 0x023FB430
 // Recovery: confirmed (IMPLEMENT_CLASS(ADirectionalLight, 166241700u); reached from ADirectionalLight::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* ADirectionalLight::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ADirectionalLight();
+// Original dynamic initializer: RVA 0x001F9500
+static FCompiledInDefer Z_CompiledInDefer_UClass_ADirectionalLight(Z_Construct_UClass_ADirectionalLight, &ADirectionalLight::StaticClass, TEXT("/Script/Engine"), TEXT("ADirectionalLight"), false, nullptr, nullptr, nullptr);

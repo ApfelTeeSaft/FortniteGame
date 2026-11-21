@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UTextBlock, 221058762u)
+// Original dynamic initializer: RVA 0x001B37D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UTextBlock> AutoInitializeUTextBlock(TEXT("UTextBlock"), sizeof(UTextBlock), 221058762u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF2480 (end 0x01BF2522)
 // Original VA: 0x0000000141BF2480 | File offset: 0x01BF1A80
 // Recovery: confirmed (IMPLEMENT_CLASS(UTextBlock, 221058762u); reached from UTextBlock::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UTextBlock::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UTextBlock();
+// Original dynamic initializer: RVA 0x001B4110
+static FCompiledInDefer Z_CompiledInDefer_UClass_UTextBlock(Z_Construct_UClass_UTextBlock, &UTextBlock::StaticClass, TEXT("/Script/UMG"), TEXT("UTextBlock"), false, nullptr, nullptr, nullptr);

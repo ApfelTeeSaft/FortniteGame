@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AMeshMergeCullingVolume()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AMeshMergeCullingVolume, 3924910056u)
+// Original dynamic initializer: RVA 0x0020C4F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AMeshMergeCullingVolume> AutoInitializeAMeshMergeCullingVolume(TEXT("AMeshMergeCullingVolume"), sizeof(AMeshMergeCullingVolume), 3924910056u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02489620 (end 0x024896C2)
 // Original VA: 0x0000000142489620 | File offset: 0x02488C20
 // Recovery: confirmed (IMPLEMENT_CLASS(AMeshMergeCullingVolume, 3924910056u); reached from AMeshMergeCullingVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AMeshMergeCullingVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AMeshMergeCullingVolume();
+// Original dynamic initializer: RVA 0x0020D4B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AMeshMergeCullingVolume(Z_Construct_UClass_AMeshMergeCullingVolume, &AMeshMergeCullingVolume::StaticClass, TEXT("/Script/Engine"), TEXT("AMeshMergeCullingVolume"), false, nullptr, nullptr, nullptr);

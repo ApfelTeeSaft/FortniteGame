@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UScrollBarWidgetStyle()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UScrollBarWidgetStyle, 678280029u)
+// Original dynamic initializer: RVA 0x0013E230 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UScrollBarWidgetStyle> AutoInitializeUScrollBarWidgetStyle(TEXT("UScrollBarWidgetStyle"), sizeof(UScrollBarWidgetStyle), 678280029u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x015A2140 (end 0x015A21E2)
 // Original VA: 0x00000001415A2140 | File offset: 0x015A1740
 // Recovery: confirmed (IMPLEMENT_CLASS(UScrollBarWidgetStyle, 678280029u); reached from UScrollBarWidgetStyle::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UScrollBarWidgetStyle::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UScrollBarWidgetStyle();
+// Original dynamic initializer: RVA 0x0013E9B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UScrollBarWidgetStyle(Z_Construct_UClass_UScrollBarWidgetStyle, &UScrollBarWidgetStyle::StaticClass, TEXT("/Script/Slate"), TEXT("UScrollBarWidgetStyle"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AHoverDronePawn, 3871939242u)
+// Original dynamic initializer: RVA 0x0011E880 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AHoverDronePawn> AutoInitializeAHoverDronePawn(TEXT("AHoverDronePawn"), sizeof(AHoverDronePawn), 3871939242u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E13A0 (end 0x010E1442)
 // Original VA: 0x00000001410E13A0 | File offset: 0x010E09A0
 // Recovery: confirmed (IMPLEMENT_CLASS(AHoverDronePawn, 3871939242u); reached from AHoverDronePawn::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AHoverDronePawn::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AHoverDronePawn();
+// Original dynamic initializer: RVA 0x0011FA80
+static FCompiledInDefer Z_CompiledInDefer_UClass_AHoverDronePawn(Z_Construct_UClass_AHoverDronePawn, &AHoverDronePawn::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AHoverDronePawn"), false, nullptr, nullptr, nullptr);

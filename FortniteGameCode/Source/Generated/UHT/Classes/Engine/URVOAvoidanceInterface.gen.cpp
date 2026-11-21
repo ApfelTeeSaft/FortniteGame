@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_URVOAvoidanceInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(URVOAvoidanceInterface, 657084286u)
+// Original dynamic initializer: RVA 0x00218BC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<URVOAvoidanceInterface> AutoInitializeURVOAvoidanceInterface(TEXT("URVOAvoidanceInterface"), sizeof(URVOAvoidanceInterface), 657084286u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C4500 (end 0x024C45A2)
 // Original VA: 0x00000001424C4500 | File offset: 0x024C3B00
 // Recovery: confirmed (IMPLEMENT_CLASS(URVOAvoidanceInterface, 657084286u); reached from URVOAvoidanceInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* URVOAvoidanceInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_URVOAvoidanceInterface();
+// Original dynamic initializer: RVA 0x00219610
+static FCompiledInDefer Z_CompiledInDefer_UClass_URVOAvoidanceInterface(Z_Construct_UClass_URVOAvoidanceInterface, &URVOAvoidanceInterface::StaticClass, TEXT("/Script/Engine"), TEXT("URVOAvoidanceInterface"), false, nullptr, nullptr, nullptr);

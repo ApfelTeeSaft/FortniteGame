@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQuestNotificationHandler()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQuestNotificationHandler, 3884127296u)
+// Original dynamic initializer: RVA 0x002583A0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQuestNotificationHandler> AutoInitializeUFortQuestNotificationHandler(TEXT("UFortQuestNotificationHandler"), sizeof(UFortQuestNotificationHandler), 3884127296u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028EAFF0 (end 0x028EB092)
 // Original VA: 0x00000001428EAFF0 | File offset: 0x028EA5F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQuestNotificationHandler, 3884127296u); reached from UFortQuestNotificationHandler::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQuestNotificationHandler::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQuestNotificationHandler();
+// Original dynamic initializer: RVA 0x0025A260
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQuestNotificationHandler(Z_Construct_UClass_UFortQuestNotificationHandler, &UFortQuestNotificationHandler::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortQuestNotificationHandler"), false, nullptr, nullptr, nullptr);

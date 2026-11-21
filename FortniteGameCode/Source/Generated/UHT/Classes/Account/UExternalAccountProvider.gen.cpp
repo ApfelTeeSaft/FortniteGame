@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UExternalAccountProvider()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UExternalAccountProvider, 2182016597u)
+// Original dynamic initializer: RVA 0x00227C10 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UExternalAccountProvider> AutoInitializeUExternalAccountProvider(TEXT("UExternalAccountProvider"), sizeof(UExternalAccountProvider), 2182016597u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0267B530 (end 0x0267B5C7)
 // Original VA: 0x000000014267B530 | File offset: 0x0267AB30
 // Recovery: confirmed (IMPLEMENT_CLASS(UExternalAccountProvider, 2182016597u); reached from UExternalAccountProvider::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UExternalAccountProvider::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UExternalAccountProvider();
+// Original dynamic initializer: RVA 0x00228560
+static FCompiledInDefer Z_CompiledInDefer_UClass_UExternalAccountProvider(Z_Construct_UClass_UExternalAccountProvider, &UExternalAccountProvider::StaticClass, TEXT("/Script/Account"), TEXT("UExternalAccountProvider"), false, nullptr, nullptr, nullptr);

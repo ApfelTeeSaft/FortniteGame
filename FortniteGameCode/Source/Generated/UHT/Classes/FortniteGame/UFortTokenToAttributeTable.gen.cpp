@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortTokenToAttributeTable()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortTokenToAttributeTable, 1525941192u)
+// Original dynamic initializer: RVA 0x000DE980 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortTokenToAttributeTable> AutoInitializeUFortTokenToAttributeTable(TEXT("UFortTokenToAttributeTable"), sizeof(UFortTokenToAttributeTable), 1525941192u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7C1E0 (end 0x00F7C282)
 // Original VA: 0x0000000140F7C1E0 | File offset: 0x00F7B7E0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortTokenToAttributeTable, 1525941192u); reached from UFortTokenToAttributeTable::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortTokenToAttributeTable::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortTokenToAttributeTable();
+// Original dynamic initializer: RVA 0x000DFCC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortTokenToAttributeTable(Z_Construct_UClass_UFortTokenToAttributeTable, &UFortTokenToAttributeTable::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortTokenToAttributeTable"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAccountLinkingWindow, 4275845715u)
+// Original dynamic initializer: RVA 0x0023B740 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAccountLinkingWindow> AutoInitializeUFortAccountLinkingWindow(TEXT("UFortAccountLinkingWindow"), sizeof(UFortAccountLinkingWindow), 4275845715u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02885580 (end 0x02885622)
 // Original VA: 0x0000000142885580 | File offset: 0x02884B80
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAccountLinkingWindow, 4275845715u); reached from UFortAccountLinkingWindow::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAccountLinkingWindow::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAccountLinkingWindow();
+// Original dynamic initializer: RVA 0x0023DBE0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAccountLinkingWindow(Z_Construct_UClass_UFortAccountLinkingWindow, &UFortAccountLinkingWindow::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortAccountLinkingWindow"), false, nullptr, nullptr, nullptr);

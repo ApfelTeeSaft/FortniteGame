@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UAbilityTask_WaitOverlap, 2413590660u)
+// Original dynamic initializer: RVA 0x0009DF50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_WaitOverlap> AutoInitializeUAbilityTask_WaitOverlap(TEXT("UAbilityTask_WaitOverlap"), sizeof(UAbilityTask_WaitOverlap), 2413590660u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0054C180 (end 0x0054C222)
 // Original VA: 0x000000014054C180 | File offset: 0x0054B780
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_WaitOverlap, 2413590660u); reached from UAbilityTask_WaitOverlap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UAbilityTask_WaitOverlap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_WaitOverlap();
+// Original dynamic initializer: RVA 0x0009E9C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_WaitOverlap(Z_Construct_UClass_UAbilityTask_WaitOverlap, &UAbilityTask_WaitOverlap::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_WaitOverlap"), false, nullptr, nullptr, nullptr);

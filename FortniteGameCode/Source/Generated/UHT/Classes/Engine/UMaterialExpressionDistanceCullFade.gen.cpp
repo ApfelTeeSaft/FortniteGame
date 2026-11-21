@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionDistanceCullFade()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionDistanceCullFade, 3092548302u)
+// Original dynamic initializer: RVA 0x00207380 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionDistanceCullFade> AutoInitializeUMaterialExpressionDistanceCullFade(TEXT("UMaterialExpressionDistanceCullFade"), sizeof(UMaterialExpressionDistanceCullFade), 3092548302u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247BB00 (end 0x0247BBA2)
 // Original VA: 0x000000014247BB00 | File offset: 0x0247B100
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionDistanceCullFade, 3092548302u); reached from UMaterialExpressionDistanceCullFade::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UMaterialExpressionDistanceCullFade::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionDistanceCullFade();
+// Original dynamic initializer: RVA 0x00208400
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionDistanceCullFade(Z_Construct_UClass_UMaterialExpressionDistanceCullFade, &UMaterialExpressionDistanceCullFade::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionDistanceCullFade"), false, nullptr, nullptr, nullptr);

@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortCarriedObjectInterface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCarriedObjectInterface, 3600018386u)
+// Original dynamic initializer: RVA 0x000EA760 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCarriedObjectInterface> AutoInitializeUFortCarriedObjectInterface(TEXT("UFortCarriedObjectInterface"), sizeof(UFortCarriedObjectInterface), 3600018386u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAF1D0 (end 0x00FAF272)
 // Original VA: 0x0000000140FAF1D0 | File offset: 0x00FAE7D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCarriedObjectInterface, 3600018386u); reached from UFortCarriedObjectInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortCarriedObjectInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCarriedObjectInterface();
+// Original dynamic initializer: RVA 0x000EAD50
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCarriedObjectInterface(Z_Construct_UClass_UFortCarriedObjectInterface, &UFortCarriedObjectInterface::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCarriedObjectInterface"), false, nullptr, nullptr, nullptr);

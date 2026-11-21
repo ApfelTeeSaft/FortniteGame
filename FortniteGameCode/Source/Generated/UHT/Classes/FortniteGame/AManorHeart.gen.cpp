@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AManorHeart, 3859254686u)
+// Original dynamic initializer: RVA 0x0011FF60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AManorHeart> AutoInitializeAManorHeart(TEXT("AManorHeart"), sizeof(AManorHeart), 3859254686u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010E6BE0 (end 0x010E6C82)
 // Original VA: 0x00000001410E6BE0 | File offset: 0x010E61E0
 // Recovery: confirmed (IMPLEMENT_CLASS(AManorHeart, 3859254686u); reached from AManorHeart::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AManorHeart::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AManorHeart();
+// Original dynamic initializer: RVA 0x00121A30
+static FCompiledInDefer Z_CompiledInDefer_UClass_AManorHeart(Z_Construct_UClass_AManorHeart, &AManorHeart::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AManorHeart"), false, nullptr, nullptr, nullptr);

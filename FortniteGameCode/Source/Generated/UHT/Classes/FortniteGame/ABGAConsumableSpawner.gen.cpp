@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_ABGAConsumableSpawner()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ABGAConsumableSpawner, 2030371329u)
+// Original dynamic initializer: RVA 0x000D86D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ABGAConsumableSpawner> AutoInitializeABGAConsumableSpawner(TEXT("ABGAConsumableSpawner"), sizeof(ABGAConsumableSpawner), 2030371329u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5EB10 (end 0x00F5EBB2)
 // Original VA: 0x0000000140F5EB10 | File offset: 0x00F5E110
 // Recovery: confirmed (IMPLEMENT_CLASS(ABGAConsumableSpawner, 2030371329u); reached from ABGAConsumableSpawner::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* ABGAConsumableSpawner::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ABGAConsumableSpawner();
+// Original dynamic initializer: RVA 0x000D94D0
+static FCompiledInDefer Z_CompiledInDefer_UClass_ABGAConsumableSpawner(Z_Construct_UClass_ABGAConsumableSpawner, &ABGAConsumableSpawner::StaticClass, TEXT("/Script/FortniteGame"), TEXT("ABGAConsumableSpawner"), false, nullptr, nullptr, nullptr);

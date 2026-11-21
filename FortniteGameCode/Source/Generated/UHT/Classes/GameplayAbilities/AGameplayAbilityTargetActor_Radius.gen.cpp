@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AGameplayAbilityTargetActor_Radius()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AGameplayAbilityTargetActor_Radius, 2893307758u)
+// Original dynamic initializer: RVA 0x0009EB60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AGameplayAbilityTargetActor_Radius> AutoInitializeAGameplayAbilityTargetActor_Radius(TEXT("AGameplayAbilityTargetActor_Radius"), sizeof(AGameplayAbilityTargetActor_Radius), 2893307758u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00559570 (end 0x00559612)
 // Original VA: 0x0000000140559570 | File offset: 0x00558B70
 // Recovery: confirmed (IMPLEMENT_CLASS(AGameplayAbilityTargetActor_Radius, 2893307758u); reached from AGameplayAbilityTargetActor_Radius::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AGameplayAbilityTargetActor_Radius::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AGameplayAbilityTargetActor_Radius();
+// Original dynamic initializer: RVA 0x000A08C0
+static FCompiledInDefer Z_CompiledInDefer_UClass_AGameplayAbilityTargetActor_Radius(Z_Construct_UClass_AGameplayAbilityTargetActor_Radius, &AGameplayAbilityTargetActor_Radius::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("AGameplayAbilityTargetActor_Radius"), false, nullptr, nullptr, nullptr);

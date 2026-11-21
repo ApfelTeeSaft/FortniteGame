@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_AFortPlacedPawnMarker()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortPlacedPawnMarker, 1738283874u)
+// Original dynamic initializer: RVA 0x00108D80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortPlacedPawnMarker> AutoInitializeAFortPlacedPawnMarker(TEXT("AFortPlacedPawnMarker"), sizeof(AFortPlacedPawnMarker), 1738283874u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01063FB0 (end 0x01064052)
 // Original VA: 0x0000000141063FB0 | File offset: 0x010635B0
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortPlacedPawnMarker, 1738283874u); reached from AFortPlacedPawnMarker::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* AFortPlacedPawnMarker::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortPlacedPawnMarker();
+// Original dynamic initializer: RVA 0x0010A100
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortPlacedPawnMarker(Z_Construct_UClass_AFortPlacedPawnMarker, &AFortPlacedPawnMarker::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortPlacedPawnMarker"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UParticleModuleSizeMultiplyLife()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UParticleModuleSizeMultiplyLife, 401617388u)
+// Original dynamic initializer: RVA 0x00212460 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UParticleModuleSizeMultiplyLife> AutoInitializeUParticleModuleSizeMultiplyLife(TEXT("UParticleModuleSizeMultiplyLife"), sizeof(UParticleModuleSizeMultiplyLife), 401617388u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0249C510 (end 0x0249C5B2)
 // Original VA: 0x000000014249C510 | File offset: 0x0249BB10
 // Recovery: confirmed (IMPLEMENT_CLASS(UParticleModuleSizeMultiplyLife, 401617388u); reached from UParticleModuleSizeMultiplyLife::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UParticleModuleSizeMultiplyLife::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UParticleModuleSizeMultiplyLife();
+// Original dynamic initializer: RVA 0x00213390
+static FCompiledInDefer Z_CompiledInDefer_UClass_UParticleModuleSizeMultiplyLife(Z_Construct_UClass_UParticleModuleSizeMultiplyLife, &UParticleModuleSizeMultiplyLife::StaticClass, TEXT("/Script/Engine"), TEXT("UParticleModuleSizeMultiplyLife"), false, nullptr, nullptr, nullptr);

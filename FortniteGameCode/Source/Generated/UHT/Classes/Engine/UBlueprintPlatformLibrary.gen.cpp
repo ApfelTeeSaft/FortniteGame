@@ -7,6 +7,9 @@
 void UBlueprintPlatformLibrary::StaticRegisterNativesUBlueprintPlatformLibrary()
 {
 }
+// IMPLEMENT_CLASS(UBlueprintPlatformLibrary, 122748162u)
+// Original dynamic initializer: RVA 0x001F34D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UBlueprintPlatformLibrary> AutoInitializeUBlueprintPlatformLibrary(TEXT("UBlueprintPlatformLibrary"), sizeof(UBlueprintPlatformLibrary), 122748162u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023E1C80 (end 0x023E1D22)
 // Original VA: 0x00000001423E1C80 | File offset: 0x023E1280
 // Recovery: confirmed (IMPLEMENT_CLASS(UBlueprintPlatformLibrary, 122748162u); reached from UBlueprintPlatformLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UBlueprintPlatformLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UBlueprintPlatformLibrary();
+// Original dynamic initializer: RVA 0x001F4A30
+static FCompiledInDefer Z_CompiledInDefer_UClass_UBlueprintPlatformLibrary(Z_Construct_UClass_UBlueprintPlatformLibrary, &UBlueprintPlatformLibrary::StaticClass, TEXT("/Script/Engine"), TEXT("UBlueprintPlatformLibrary"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortBTDecorator_DistanceBetween()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortBTDecorator_DistanceBetween, 2482304157u)
+// Original dynamic initializer: RVA 0x000E9070 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortBTDecorator_DistanceBetween> AutoInitializeUFortBTDecorator_DistanceBetween(TEXT("UFortBTDecorator_DistanceBetween"), sizeof(UFortBTDecorator_DistanceBetween), 2482304157u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FAABB0 (end 0x00FAAC52)
 // Original VA: 0x0000000140FAABB0 | File offset: 0x00FAA1B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortBTDecorator_DistanceBetween, 2482304157u); reached from UFortBTDecorator_DistanceBetween::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortBTDecorator_DistanceBetween::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortBTDecorator_DistanceBetween();
+// Original dynamic initializer: RVA 0x000E9DC0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortBTDecorator_DistanceBetween(Z_Construct_UClass_UFortBTDecorator_DistanceBetween, &UFortBTDecorator_DistanceBetween::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortBTDecorator_DistanceBetween"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDailyRewardsItem()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDailyRewardsItem, 1151884152u)
+// Original dynamic initializer: RVA 0x00242710 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDailyRewardsItem> AutoInitializeUFortDailyRewardsItem(TEXT("UFortDailyRewardsItem"), sizeof(UFortDailyRewardsItem), 1151884152u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02899E40 (end 0x02899EE2)
 // Original VA: 0x0000000142899E40 | File offset: 0x02899440
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDailyRewardsItem, 1151884152u); reached from UFortDailyRewardsItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDailyRewardsItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDailyRewardsItem();
+// Original dynamic initializer: RVA 0x00244520
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDailyRewardsItem(Z_Construct_UClass_UFortDailyRewardsItem, &UFortDailyRewardsItem::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortDailyRewardsItem"), false, nullptr, nullptr, nullptr);

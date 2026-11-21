@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AStaticMeshActor()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AStaticMeshActor, 1299208192u)
+// Original dynamic initializer: RVA 0x0021E6F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AStaticMeshActor> AutoInitializeAStaticMeshActor(TEXT("AStaticMeshActor"), sizeof(AStaticMeshActor), 1299208192u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024E5D90 (end 0x024E5E32)
 // Original VA: 0x00000001424E5D90 | File offset: 0x024E5390
 // Recovery: confirmed (IMPLEMENT_CLASS(AStaticMeshActor, 1299208192u); reached from AStaticMeshActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AStaticMeshActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AStaticMeshActor();
+// Original dynamic initializer: RVA 0x0021FB80
+static FCompiledInDefer Z_CompiledInDefer_UClass_AStaticMeshActor(Z_Construct_UClass_AStaticMeshActor, &AStaticMeshActor::StaticClass, TEXT("/Script/Engine"), TEXT("AStaticMeshActor"), false, nullptr, nullptr, nullptr);

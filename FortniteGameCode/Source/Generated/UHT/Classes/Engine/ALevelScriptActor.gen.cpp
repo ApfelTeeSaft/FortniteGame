@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(ALevelScriptActor, 2885797934u)
+// Original dynamic initializer: RVA 0x002050B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ALevelScriptActor> AutoInitializeALevelScriptActor(TEXT("ALevelScriptActor"), sizeof(ALevelScriptActor), 2885797934u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0246F130 (end 0x0246F1D2)
 // Original VA: 0x000000014246F130 | File offset: 0x0246E730
 // Recovery: confirmed (IMPLEMENT_CLASS(ALevelScriptActor, 2885797934u); reached from ALevelScriptActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* ALevelScriptActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ALevelScriptActor();
+// Original dynamic initializer: RVA 0x00205930
+static FCompiledInDefer Z_CompiledInDefer_UClass_ALevelScriptActor(Z_Construct_UClass_ALevelScriptActor, &ALevelScriptActor::StaticClass, TEXT("/Script/Engine"), TEXT("ALevelScriptActor"), false, nullptr, nullptr, nullptr);

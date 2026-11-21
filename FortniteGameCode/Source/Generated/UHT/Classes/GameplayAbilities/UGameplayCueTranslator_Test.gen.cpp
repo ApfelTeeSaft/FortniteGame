@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UGameplayCueTranslator_Test()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UGameplayCueTranslator_Test, 3891102823u)
+// Original dynamic initializer: RVA 0x000A0C80 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UGameplayCueTranslator_Test> AutoInitializeUGameplayCueTranslator_Test(TEXT("UGameplayCueTranslator_Test"), sizeof(UGameplayCueTranslator_Test), 3891102823u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00561BC0 (end 0x00561C62)
 // Original VA: 0x0000000140561BC0 | File offset: 0x005611C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UGameplayCueTranslator_Test, 3891102823u); reached from UGameplayCueTranslator_Test::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UGameplayCueTranslator_Test::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UGameplayCueTranslator_Test();
+// Original dynamic initializer: RVA 0x000A2D10
+static FCompiledInDefer Z_CompiledInDefer_UClass_UGameplayCueTranslator_Test(Z_Construct_UClass_UGameplayCueTranslator_Test, &UGameplayCueTranslator_Test::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UGameplayCueTranslator_Test"), false, nullptr, nullptr, nullptr);

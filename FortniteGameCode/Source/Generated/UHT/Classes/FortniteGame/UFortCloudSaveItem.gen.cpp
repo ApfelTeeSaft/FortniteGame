@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortCloudSaveItem()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortCloudSaveItem, 3957649541u)
+// Original dynamic initializer: RVA 0x000EB390 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortCloudSaveItem> AutoInitializeUFortCloudSaveItem(TEXT("UFortCloudSaveItem"), sizeof(UFortCloudSaveItem), 3957649541u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBF1F0 (end 0x00FBF292)
 // Original VA: 0x0000000140FBF1F0 | File offset: 0x00FBE7F0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortCloudSaveItem, 3957649541u); reached from UFortCloudSaveItem::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortCloudSaveItem::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortCloudSaveItem();
+// Original dynamic initializer: RVA 0x000EC540
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortCloudSaveItem(Z_Construct_UClass_UFortCloudSaveItem, &UFortCloudSaveItem::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortCloudSaveItem"), false, nullptr, nullptr, nullptr);

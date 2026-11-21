@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UMaterialExpressionDistanceToNearestSurface()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UMaterialExpressionDistanceToNearestSurface, 2793050871u)
+// Original dynamic initializer: RVA 0x002073C0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UMaterialExpressionDistanceToNearestSurface> AutoInitializeUMaterialExpressionDistanceToNearestSurface(TEXT("UMaterialExpressionDistanceToNearestSurface"), sizeof(UMaterialExpressionDistanceToNearestSurface), 2793050871u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0247BC60 (end 0x0247BD02)
 // Original VA: 0x000000014247BC60 | File offset: 0x0247B260
 // Recovery: confirmed (IMPLEMENT_CLASS(UMaterialExpressionDistanceToNearestSurface, 2793050871u); reached from UMaterialExpressionDistanceToNearestSurface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UMaterialExpressionDistanceToNearestSurface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UMaterialExpressionDistanceToNearestSurface();
+// Original dynamic initializer: RVA 0x00208480
+static FCompiledInDefer Z_CompiledInDefer_UClass_UMaterialExpressionDistanceToNearestSurface(Z_Construct_UClass_UMaterialExpressionDistanceToNearestSurface, &UMaterialExpressionDistanceToNearestSurface::StaticClass, TEXT("/Script/Engine"), TEXT("UMaterialExpressionDistanceToNearestSurface"), false, nullptr, nullptr, nullptr);

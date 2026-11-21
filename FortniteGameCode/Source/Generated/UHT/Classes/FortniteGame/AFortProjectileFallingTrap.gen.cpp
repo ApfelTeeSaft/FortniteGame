@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_AFortProjectileFallingTrap()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(AFortProjectileFallingTrap, 3099448117u)
+// Original dynamic initializer: RVA 0x0010D530 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortProjectileFallingTrap> AutoInitializeAFortProjectileFallingTrap(TEXT("AFortProjectileFallingTrap"), sizeof(AFortProjectileFallingTrap), 3099448117u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01089B40 (end 0x01089BE2)
 // Original VA: 0x0000000141089B40 | File offset: 0x01089140
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortProjectileFallingTrap, 3099448117u); reached from AFortProjectileFallingTrap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* AFortProjectileFallingTrap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortProjectileFallingTrap();
+// Original dynamic initializer: RVA 0x0010E450
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortProjectileFallingTrap(Z_Construct_UClass_AFortProjectileFallingTrap, &AFortProjectileFallingTrap::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortProjectileFallingTrap"), false, nullptr, nullptr, nullptr);

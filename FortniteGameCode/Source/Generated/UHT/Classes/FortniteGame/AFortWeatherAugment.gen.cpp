@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortWeatherAugment, 40254058u)
+// Original dynamic initializer: RVA 0x0011D930 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortWeatherAugment> AutoInitializeAFortWeatherAugment(TEXT("AFortWeatherAugment"), sizeof(AFortWeatherAugment), 40254058u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DB040 (end 0x010DB0E2)
 // Original VA: 0x00000001410DB040 | File offset: 0x010DA640
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortWeatherAugment, 40254058u); reached from AFortWeatherAugment::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortWeatherAugment::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortWeatherAugment();
+// Original dynamic initializer: RVA 0x0011E560
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortWeatherAugment(Z_Construct_UClass_AFortWeatherAugment, &AFortWeatherAugment::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortWeatherAugment"), false, nullptr, nullptr, nullptr);

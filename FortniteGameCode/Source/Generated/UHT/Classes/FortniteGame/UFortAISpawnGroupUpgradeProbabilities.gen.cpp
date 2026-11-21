@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortAISpawnGroupUpgradeProbabilities()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortAISpawnGroupUpgradeProbabilities, 4007992612u)
+// Original dynamic initializer: RVA 0x000E4900 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAISpawnGroupUpgradeProbabilities> AutoInitializeUFortAISpawnGroupUpgradeProbabilities(TEXT("UFortAISpawnGroupUpgradeProbabilities"), sizeof(UFortAISpawnGroupUpgradeProbabilities), 4007992612u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F972C0 (end 0x00F97357)
 // Original VA: 0x0000000140F972C0 | File offset: 0x00F968C0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAISpawnGroupUpgradeProbabilities, 4007992612u); reached from UFortAISpawnGroupUpgradeProbabilities::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortAISpawnGroupUpgradeProbabilities::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAISpawnGroupUpgradeProbabilities();
+// Original dynamic initializer: RVA 0x000E6130
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAISpawnGroupUpgradeProbabilities(Z_Construct_UClass_UFortAISpawnGroupUpgradeProbabilities, &UFortAISpawnGroupUpgradeProbabilities::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAISpawnGroupUpgradeProbabilities"), false, nullptr, nullptr, nullptr);

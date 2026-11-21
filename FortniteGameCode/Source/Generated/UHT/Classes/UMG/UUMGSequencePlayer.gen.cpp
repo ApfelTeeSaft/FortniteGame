@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UUMGSequencePlayer()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UUMGSequencePlayer, 555620977u)
+// Original dynamic initializer: RVA 0x001B41F0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UUMGSequencePlayer> AutoInitializeUUMGSequencePlayer(TEXT("UUMGSequencePlayer"), sizeof(UUMGSequencePlayer), 555620977u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF7B20 (end 0x01BF7BB7)
 // Original VA: 0x0000000141BF7B20 | File offset: 0x01BF7120
 // Recovery: confirmed (IMPLEMENT_CLASS(UUMGSequencePlayer, 555620977u); reached from UUMGSequencePlayer::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UUMGSequencePlayer::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UUMGSequencePlayer();
+// Original dynamic initializer: RVA 0x001B4A40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UUMGSequencePlayer(Z_Construct_UClass_UUMGSequencePlayer, &UUMGSequencePlayer::StaticClass, TEXT("/Script/UMG"), TEXT("UUMGSequencePlayer"), false, nullptr, nullptr, nullptr);

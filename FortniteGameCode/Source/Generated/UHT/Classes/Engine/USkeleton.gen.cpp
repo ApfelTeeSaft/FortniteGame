@@ -30,6 +30,9 @@ UClass* Z_Construct_UClass_USkeleton()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(USkeleton, 2343881389u)
+// Original dynamic initializer: RVA 0x0021A970 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<USkeleton> AutoInitializeUSkeleton(TEXT("USkeleton"), sizeof(USkeleton), 2343881389u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024D3560 (end 0x024D35F7)
 // Original VA: 0x00000001424D3560 | File offset: 0x024D2B60
 // Recovery: confirmed (IMPLEMENT_CLASS(USkeleton, 2343881389u); reached from USkeleton::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -57,3 +60,6 @@ UClass* USkeleton::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_USkeleton();
+// Original dynamic initializer: RVA 0x0021C1F0
+static FCompiledInDefer Z_CompiledInDefer_UClass_USkeleton(Z_Construct_UClass_USkeleton, &USkeleton::StaticClass, TEXT("/Script/Engine"), TEXT("USkeleton"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(AFortDamageNumbersActor, 4164446412u)
+// Original dynamic initializer: RVA 0x000EE370 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AFortDamageNumbersActor> AutoInitializeAFortDamageNumbersActor(TEXT("AFortDamageNumbersActor"), sizeof(AFortDamageNumbersActor), 4164446412u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC9830 (end 0x00FC98D2)
 // Original VA: 0x0000000140FC9830 | File offset: 0x00FC8E30
 // Recovery: confirmed (IMPLEMENT_CLASS(AFortDamageNumbersActor, 4164446412u); reached from AFortDamageNumbersActor::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* AFortDamageNumbersActor::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AFortDamageNumbersActor();
+// Original dynamic initializer: RVA 0x000EF440
+static FCompiledInDefer Z_CompiledInDefer_UClass_AFortDamageNumbersActor(Z_Construct_UClass_AFortDamageNumbersActor, &AFortDamageNumbersActor::StaticClass, TEXT("/Script/FortniteGame"), TEXT("AFortDamageNumbersActor"), false, nullptr, nullptr, nullptr);

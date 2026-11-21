@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortPushNotificationManager()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortPushNotificationManager, 1082256579u)
+// Original dynamic initializer: RVA 0x0010D630 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortPushNotificationManager> AutoInitializeUFortPushNotificationManager(TEXT("UFortPushNotificationManager"), sizeof(UFortPushNotificationManager), 1082256579u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108A0B0 (end 0x0108A147)
 // Original VA: 0x000000014108A0B0 | File offset: 0x010896B0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortPushNotificationManager, 1082256579u); reached from UFortPushNotificationManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortPushNotificationManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortPushNotificationManager();
+// Original dynamic initializer: RVA 0x0010E650
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortPushNotificationManager(Z_Construct_UClass_UFortPushNotificationManager, &UFortPushNotificationManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortPushNotificationManager"), false, nullptr, nullptr, nullptr);

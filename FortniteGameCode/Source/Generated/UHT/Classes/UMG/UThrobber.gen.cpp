@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UThrobber, 4138950233u)
+// Original dynamic initializer: RVA 0x001B3810 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UThrobber> AutoInitializeUThrobber(TEXT("UThrobber"), sizeof(UThrobber), 4138950233u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF25E0 (end 0x01BF2682)
 // Original VA: 0x0000000141BF25E0 | File offset: 0x01BF1BE0
 // Recovery: confirmed (IMPLEMENT_CLASS(UThrobber, 4138950233u); reached from UThrobber::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UThrobber::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UThrobber();
+// Original dynamic initializer: RVA 0x001B4190
+static FCompiledInDefer Z_CompiledInDefer_UClass_UThrobber(Z_Construct_UClass_UThrobber, &UThrobber::StaticClass, TEXT("/Script/UMG"), TEXT("UThrobber"), false, nullptr, nullptr, nullptr);

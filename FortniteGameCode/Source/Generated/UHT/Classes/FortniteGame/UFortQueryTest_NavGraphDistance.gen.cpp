@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortQueryTest_NavGraphDistance()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortQueryTest_NavGraphDistance, 990373286u)
+// Original dynamic initializer: RVA 0x00110600 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortQueryTest_NavGraphDistance> AutoInitializeUFortQueryTest_NavGraphDistance(TEXT("UFortQueryTest_NavGraphDistance"), sizeof(UFortQueryTest_NavGraphDistance), 990373286u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01095190 (end 0x01095232)
 // Original VA: 0x0000000141095190 | File offset: 0x01094790
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortQueryTest_NavGraphDistance, 990373286u); reached from UFortQueryTest_NavGraphDistance::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortQueryTest_NavGraphDistance::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortQueryTest_NavGraphDistance();
+// Original dynamic initializer: RVA 0x00111000
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortQueryTest_NavGraphDistance(Z_Construct_UClass_UFortQueryTest_NavGraphDistance, &UFortQueryTest_NavGraphDistance::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortQueryTest_NavGraphDistance"), false, nullptr, nullptr, nullptr);

@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UObjectLibrary()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UObjectLibrary, 2841066635u)
+// Original dynamic initializer: RVA 0x0020EDF0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UObjectLibrary> AutoInitializeUObjectLibrary(TEXT("UObjectLibrary"), sizeof(UObjectLibrary), 2841066635u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02493950 (end 0x024939E7)
 // Original VA: 0x0000000142493950 | File offset: 0x02492F50
 // Recovery: confirmed (IMPLEMENT_CLASS(UObjectLibrary, 2841066635u); reached from UObjectLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UObjectLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UObjectLibrary();
+// Original dynamic initializer: RVA 0x002100B0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UObjectLibrary(Z_Construct_UClass_UObjectLibrary, &UObjectLibrary::StaticClass, TEXT("/Script/Engine"), TEXT("UObjectLibrary"), false, nullptr, nullptr, nullptr);

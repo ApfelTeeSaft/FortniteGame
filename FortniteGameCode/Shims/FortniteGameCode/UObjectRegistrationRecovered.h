@@ -49,6 +49,65 @@ struct FCompiledInDeferStruct
 	}
 };
 
+// UObjectBase.h: deferred class registration (IMPLEMENT_CLASS's TClassCompiledInDefer and UHT's
+// FCompiledInDefer). TMap<FName, FName> is only named by a function-pointer parameter that is
+// always null for compiled-in classes; FNGCNameMap stands in for it.
+struct FNGCNameMap;
+class UClass;
+
+struct FFieldCompiledInInfo
+{
+	FFieldCompiledInInfo(SIZE_T InClassSize, uint32 InCrc)
+		: Size(InClassSize)
+		, Crc(InCrc)
+		, OldClass(nullptr)
+		, bHasChanged(false)
+	{
+	}
+
+	virtual UClass* Register() const = 0;
+	virtual const TCHAR* ClassPackage() const = 0;
+
+	SIZE_T Size;
+	uint32 Crc;
+	UClass* OldClass;
+	bool bHasChanged;
+};
+
+void UClassCompiledInDefer(FFieldCompiledInInfo* Class, const TCHAR* Name, SIZE_T ClassSize, uint32 Crc);
+
+template <typename TClass>
+struct TClassCompiledInDefer : public FFieldCompiledInInfo
+{
+	TClassCompiledInDefer(const TCHAR* InName, SIZE_T InClassSize, uint32 InCrc)
+	: FFieldCompiledInInfo(InClassSize, InCrc)
+	{
+		UClassCompiledInDefer(this, InName, InClassSize, InCrc);
+	}
+	virtual UClass* Register() const override
+	{
+		return TClass::StaticClass();
+	}
+	virtual const TCHAR* ClassPackage() const override
+	{
+		return TClass::StaticPackage();
+	}
+};
+
+void UObjectCompiledInDefer(UClass* (*InRegister)(), UClass* (*InStaticClass)(), const TCHAR* Name, const TCHAR* PackageName, bool bDynamic, const TCHAR* DynamicPathName, void (*InInitSearchableValues)(FNGCNameMap&));
+
+struct FCompiledInDefer
+{
+	FCompiledInDefer(UClass* (*InRegister)(), UClass* (*InStaticClass)(), const TCHAR* PackageName, const TCHAR* Name, bool bDynamic, const TCHAR* DynamicPackageName = nullptr, const TCHAR* DynamicPathName = nullptr, void (*InInitSearchableValues)(FNGCNameMap&) = nullptr)
+	{
+		if (bDynamic)
+		{
+			GetConvertedDynamicPackageNameToTypeName().Add(FName(DynamicPackageName), FName(Name));
+		}
+		UObjectCompiledInDefer(InRegister, InStaticClass, Name, PackageName, bDynamic, DynamicPathName, InInitSearchableValues);
+	}
+};
+
 // UObjectBase.h: deferred enum registration. UEnum itself is declared in Classes.gen.h; its
 // ECppForm comes from FNGC_EXTRA_MEMBERS_UEnum below.
 class UEnum;

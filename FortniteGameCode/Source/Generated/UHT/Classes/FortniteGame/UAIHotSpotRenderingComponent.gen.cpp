@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UAIHotSpotRenderingComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAIHotSpotRenderingComponent, 4213727173u)
+// Original dynamic initializer: RVA 0x000D7310 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAIHotSpotRenderingComponent> AutoInitializeUAIHotSpotRenderingComponent(TEXT("UAIHotSpotRenderingComponent"), sizeof(UAIHotSpotRenderingComponent), 4213727173u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F57A10 (end 0x00F57AB2)
 // Original VA: 0x0000000140F57A10 | File offset: 0x00F57010
 // Recovery: confirmed (IMPLEMENT_CLASS(UAIHotSpotRenderingComponent, 4213727173u); reached from UAIHotSpotRenderingComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UAIHotSpotRenderingComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAIHotSpotRenderingComponent();
+// Original dynamic initializer: RVA 0x000D8150
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAIHotSpotRenderingComponent(Z_Construct_UClass_UAIHotSpotRenderingComponent, &UAIHotSpotRenderingComponent::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAIHotSpotRenderingComponent"), false, nullptr, nullptr, nullptr);

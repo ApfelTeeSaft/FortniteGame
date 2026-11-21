@@ -7,6 +7,9 @@
 void URadialForceComponent::StaticRegisterNativesURadialForceComponent()
 {
 }
+// IMPLEMENT_CLASS(URadialForceComponent, 2948086422u)
+// Original dynamic initializer: RVA 0x00217450 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<URadialForceComponent> AutoInitializeURadialForceComponent(TEXT("URadialForceComponent"), sizeof(URadialForceComponent), 2948086422u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C1340 (end 0x024C13E2)
 // Original VA: 0x00000001424C1340 | File offset: 0x024C0940
 // Recovery: confirmed (IMPLEMENT_CLASS(URadialForceComponent, 2948086422u); reached from URadialForceComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* URadialForceComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_URadialForceComponent();
+// Original dynamic initializer: RVA 0x00218940
+static FCompiledInDefer Z_CompiledInDefer_UClass_URadialForceComponent(Z_Construct_UClass_URadialForceComponent, &URadialForceComponent::StaticClass, TEXT("/Script/Engine"), TEXT("URadialForceComponent"), false, nullptr, nullptr, nullptr);

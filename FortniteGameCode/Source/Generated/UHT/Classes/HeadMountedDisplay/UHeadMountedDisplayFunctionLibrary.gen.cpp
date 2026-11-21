@@ -7,6 +7,9 @@
 void UHeadMountedDisplayFunctionLibrary::StaticRegisterNativesUHeadMountedDisplayFunctionLibrary()
 {
 }
+// IMPLEMENT_CLASS(UHeadMountedDisplayFunctionLibrary, 2837835737u)
+// Original dynamic initializer: RVA 0x0019BC50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UHeadMountedDisplayFunctionLibrary> AutoInitializeUHeadMountedDisplayFunctionLibrary(TEXT("UHeadMountedDisplayFunctionLibrary"), sizeof(UHeadMountedDisplayFunctionLibrary), 2837835737u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0199CE80 (end 0x0199CF22)
 // Original VA: 0x000000014199CE80 | File offset: 0x0199C480
 // Recovery: confirmed (IMPLEMENT_CLASS(UHeadMountedDisplayFunctionLibrary, 2837835737u); reached from UHeadMountedDisplayFunctionLibrary::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UHeadMountedDisplayFunctionLibrary::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary();
+// Original dynamic initializer: RVA 0x0019BFF0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UHeadMountedDisplayFunctionLibrary(Z_Construct_UClass_UHeadMountedDisplayFunctionLibrary, &UHeadMountedDisplayFunctionLibrary::StaticClass, TEXT("/Script/HeadMountedDisplay"), TEXT("UHeadMountedDisplayFunctionLibrary"), false, nullptr, nullptr, nullptr);

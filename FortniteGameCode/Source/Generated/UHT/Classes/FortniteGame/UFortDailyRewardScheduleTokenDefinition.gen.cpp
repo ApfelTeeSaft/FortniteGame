@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UFortDailyRewardScheduleTokenDefinition()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDailyRewardScheduleTokenDefinition, 4185085846u)
+// Original dynamic initializer: RVA 0x000EE550 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDailyRewardScheduleTokenDefinition> AutoInitializeUFortDailyRewardScheduleTokenDefinition(TEXT("UFortDailyRewardScheduleTokenDefinition"), sizeof(UFortDailyRewardScheduleTokenDefinition), 4185085846u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCA280 (end 0x00FCA322)
 // Original VA: 0x0000000140FCA280 | File offset: 0x00FC9880
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDailyRewardScheduleTokenDefinition, 4185085846u); reached from UFortDailyRewardScheduleTokenDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UFortDailyRewardScheduleTokenDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDailyRewardScheduleTokenDefinition();
+// Original dynamic initializer: RVA 0x000EF800
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDailyRewardScheduleTokenDefinition(Z_Construct_UClass_UFortDailyRewardScheduleTokenDefinition, &UFortDailyRewardScheduleTokenDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDailyRewardScheduleTokenDefinition"), false, nullptr, nullptr, nullptr);

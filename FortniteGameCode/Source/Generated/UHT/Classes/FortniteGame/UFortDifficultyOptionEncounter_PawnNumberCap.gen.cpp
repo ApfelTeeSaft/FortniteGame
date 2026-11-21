@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UFortDifficultyOptionEncounter_PawnNumberCap()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UFortDifficultyOptionEncounter_PawnNumberCap, 3772208900u)
+// Original dynamic initializer: RVA 0x000F0DC0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortDifficultyOptionEncounter_PawnNumberCap> AutoInitializeUFortDifficultyOptionEncounter_PawnNumberCap(TEXT("UFortDifficultyOptionEncounter_PawnNumberCap"), sizeof(UFortDifficultyOptionEncounter_PawnNumberCap), 3772208900u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD5860 (end 0x00FD5902)
 // Original VA: 0x0000000140FD5860 | File offset: 0x00FD4E60
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortDifficultyOptionEncounter_PawnNumberCap, 3772208900u); reached from UFortDifficultyOptionEncounter_PawnNumberCap::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UFortDifficultyOptionEncounter_PawnNumberCap::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortDifficultyOptionEncounter_PawnNumberCap();
+// Original dynamic initializer: RVA 0x000F1FD0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortDifficultyOptionEncounter_PawnNumberCap(Z_Construct_UClass_UFortDifficultyOptionEncounter_PawnNumberCap, &UFortDifficultyOptionEncounter_PawnNumberCap::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortDifficultyOptionEncounter_PawnNumberCap"), false, nullptr, nullptr, nullptr);

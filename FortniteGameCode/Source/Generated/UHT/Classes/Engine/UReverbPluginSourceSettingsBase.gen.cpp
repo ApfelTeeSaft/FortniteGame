@@ -28,6 +28,9 @@ UClass* Z_Construct_UClass_UReverbPluginSourceSettingsBase()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UReverbPluginSourceSettingsBase, 2880359342u)
+// Original dynamic initializer: RVA 0x00200E60 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UReverbPluginSourceSettingsBase> AutoInitializeUReverbPluginSourceSettingsBase(TEXT("UReverbPluginSourceSettingsBase"), sizeof(UReverbPluginSourceSettingsBase), 2880359342u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02426CA0 (end 0x02426D37)
 // Original VA: 0x0000000142426CA0 | File offset: 0x024262A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UReverbPluginSourceSettingsBase, 2880359342u); reached from UReverbPluginSourceSettingsBase::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -55,3 +58,6 @@ UClass* UReverbPluginSourceSettingsBase::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UReverbPluginSourceSettingsBase();
+// Original dynamic initializer: RVA 0x00202440
+static FCompiledInDefer Z_CompiledInDefer_UClass_UReverbPluginSourceSettingsBase(Z_Construct_UClass_UReverbPluginSourceSettingsBase, &UReverbPluginSourceSettingsBase::StaticClass, TEXT("/Script/Engine"), TEXT("UReverbPluginSourceSettingsBase"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortAsyncAction_HomebaseContextPurchaseNode, 1688804570u)
+// Original dynamic initializer: RVA 0x000F9530 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortAsyncAction_HomebaseContextPurchaseNode> AutoInitializeUFortAsyncAction_HomebaseContextPurchaseNode(TEXT("UFortAsyncAction_HomebaseContextPurchaseNode"), sizeof(UFortAsyncAction_HomebaseContextPurchaseNode), 1688804570u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF9140 (end 0x00FF91E2)
 // Original VA: 0x0000000140FF9140 | File offset: 0x00FF8740
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortAsyncAction_HomebaseContextPurchaseNode, 1688804570u); reached from UFortAsyncAction_HomebaseContextPurchaseNode::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortAsyncAction_HomebaseContextPurchaseNode::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode();
+// Original dynamic initializer: RVA 0x000FAB00
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortAsyncAction_HomebaseContextPurchaseNode(Z_Construct_UClass_UFortAsyncAction_HomebaseContextPurchaseNode, &UFortAsyncAction_HomebaseContextPurchaseNode::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortAsyncAction_HomebaseContextPurchaseNode"), false, nullptr, nullptr, nullptr);

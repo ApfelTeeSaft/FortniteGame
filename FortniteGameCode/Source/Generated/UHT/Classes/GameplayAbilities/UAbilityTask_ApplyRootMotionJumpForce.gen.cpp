@@ -7,6 +7,9 @@
 void UAbilityTask_ApplyRootMotionJumpForce::StaticRegisterNativesUAbilityTask_ApplyRootMotionJumpForce()
 {
 }
+// IMPLEMENT_CLASS(UAbilityTask_ApplyRootMotionJumpForce, 1056214053u)
+// Original dynamic initializer: RVA 0x0009D3E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAbilityTask_ApplyRootMotionJumpForce> AutoInitializeUAbilityTask_ApplyRootMotionJumpForce(TEXT("UAbilityTask_ApplyRootMotionJumpForce"), sizeof(UAbilityTask_ApplyRootMotionJumpForce), 1056214053u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005457A0 (end 0x00545842)
 // Original VA: 0x00000001405457A0 | File offset: 0x00544DA0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAbilityTask_ApplyRootMotionJumpForce, 1056214053u); reached from UAbilityTask_ApplyRootMotionJumpForce::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAbilityTask_ApplyRootMotionJumpForce::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAbilityTask_ApplyRootMotionJumpForce();
+// Original dynamic initializer: RVA 0x0009D930
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAbilityTask_ApplyRootMotionJumpForce(Z_Construct_UClass_UAbilityTask_ApplyRootMotionJumpForce, &UAbilityTask_ApplyRootMotionJumpForce::StaticClass, TEXT("/Script/GameplayAbilities"), TEXT("UAbilityTask_ApplyRootMotionJumpForce"), false, nullptr, nullptr, nullptr);

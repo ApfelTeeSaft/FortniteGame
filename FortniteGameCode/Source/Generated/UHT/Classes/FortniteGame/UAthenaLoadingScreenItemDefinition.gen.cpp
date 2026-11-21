@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAthenaLoadingScreenItemDefinition()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAthenaLoadingScreenItemDefinition, 171078446u)
+// Original dynamic initializer: RVA 0x000D7570 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAthenaLoadingScreenItemDefinition> AutoInitializeUAthenaLoadingScreenItemDefinition(TEXT("UAthenaLoadingScreenItemDefinition"), sizeof(UAthenaLoadingScreenItemDefinition), 171078446u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F58700 (end 0x00F587A2)
 // Original VA: 0x0000000140F58700 | File offset: 0x00F57D00
 // Recovery: confirmed (IMPLEMENT_CLASS(UAthenaLoadingScreenItemDefinition, 171078446u); reached from UAthenaLoadingScreenItemDefinition::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAthenaLoadingScreenItemDefinition::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAthenaLoadingScreenItemDefinition();
+// Original dynamic initializer: RVA 0x000D8610
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAthenaLoadingScreenItemDefinition(Z_Construct_UClass_UAthenaLoadingScreenItemDefinition, &UAthenaLoadingScreenItemDefinition::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAthenaLoadingScreenItemDefinition"), false, nullptr, nullptr, nullptr);

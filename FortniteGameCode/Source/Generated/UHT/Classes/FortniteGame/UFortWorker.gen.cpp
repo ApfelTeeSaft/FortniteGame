@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortWorker, 2154672309u)
+// Original dynamic initializer: RVA 0x0011D9B0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortWorker> AutoInitializeUFortWorker(TEXT("UFortWorker"), sizeof(UFortWorker), 2154672309u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010DB300 (end 0x010DB3A2)
 // Original VA: 0x00000001410DB300 | File offset: 0x010DA900
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortWorker, 2154672309u); reached from UFortWorker::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortWorker::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortWorker();
+// Original dynamic initializer: RVA 0x0011E660
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortWorker(Z_Construct_UClass_UFortWorker, &UFortWorker::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortWorker"), false, nullptr, nullptr, nullptr);

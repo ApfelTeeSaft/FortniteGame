@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_ULightmassPortalComponent()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(ULightmassPortalComponent, 572585449u)
+// Original dynamic initializer: RVA 0x00205D50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<ULightmassPortalComponent> AutoInitializeULightmassPortalComponent(TEXT("ULightmassPortalComponent"), sizeof(ULightmassPortalComponent), 572585449u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02476F70 (end 0x02477012)
 // Original VA: 0x0000000142476F70 | File offset: 0x02476570
 // Recovery: confirmed (IMPLEMENT_CLASS(ULightmassPortalComponent, 572585449u); reached from ULightmassPortalComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* ULightmassPortalComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_ULightmassPortalComponent();
+// Original dynamic initializer: RVA 0x00206900
+static FCompiledInDefer Z_CompiledInDefer_UClass_ULightmassPortalComponent(Z_Construct_UClass_ULightmassPortalComponent, &ULightmassPortalComponent::StaticClass, TEXT("/Script/Engine"), TEXT("ULightmassPortalComponent"), false, nullptr, nullptr, nullptr);

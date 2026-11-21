@@ -7,6 +7,9 @@
 void UFortSkillTreeCanvasEntityInterface::StaticRegisterNativesUFortSkillTreeCanvasEntityInterface()
 {
 }
+// IMPLEMENT_CLASS(UFortSkillTreeCanvasEntityInterface, 2928242824u)
+// Original dynamic initializer: RVA 0x0025ABA0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortSkillTreeCanvasEntityInterface> AutoInitializeUFortSkillTreeCanvasEntityInterface(TEXT("UFortSkillTreeCanvasEntityInterface"), sizeof(UFortSkillTreeCanvasEntityInterface), 2928242824u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028F3220 (end 0x028F32C2)
 // Original VA: 0x00000001428F3220 | File offset: 0x028F2820
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortSkillTreeCanvasEntityInterface, 2928242824u); reached from UFortSkillTreeCanvasEntityInterface::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UFortSkillTreeCanvasEntityInterface::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortSkillTreeCanvasEntityInterface();
+// Original dynamic initializer: RVA 0x0025BA20
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortSkillTreeCanvasEntityInterface(Z_Construct_UClass_UFortSkillTreeCanvasEntityInterface, &UFortSkillTreeCanvasEntityInterface::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortSkillTreeCanvasEntityInterface"), false, nullptr, nullptr, nullptr);

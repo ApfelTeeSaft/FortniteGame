@@ -29,6 +29,9 @@ UClass* Z_Construct_UClass_UAssetMappingTable()
 	}
 	return OuterClass;
 }
+// IMPLEMENT_CLASS(UAssetMappingTable, 1559935063u)
+// Original dynamic initializer: RVA 0x001F1A50 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAssetMappingTable> AutoInitializeUAssetMappingTable(TEXT("UAssetMappingTable"), sizeof(UAssetMappingTable), 1559935063u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D9520 (end 0x023D95B7)
 // Original VA: 0x00000001423D9520 | File offset: 0x023D8B20
 // Recovery: confirmed (IMPLEMENT_CLASS(UAssetMappingTable, 1559935063u); reached from UAssetMappingTable::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -56,3 +59,6 @@ UClass* UAssetMappingTable::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAssetMappingTable();
+// Original dynamic initializer: RVA 0x001F3010
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAssetMappingTable(Z_Construct_UClass_UAssetMappingTable, &UAssetMappingTable::StaticClass, TEXT("/Script/Engine"), TEXT("UAssetMappingTable"), false, nullptr, nullptr, nullptr);

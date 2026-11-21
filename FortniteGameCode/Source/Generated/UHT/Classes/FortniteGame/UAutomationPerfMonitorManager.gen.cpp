@@ -7,6 +7,9 @@
 void UAutomationPerfMonitorManager::StaticRegisterNativesUAutomationPerfMonitorManager()
 {
 }
+// IMPLEMENT_CLASS(UAutomationPerfMonitorManager, 1466068163u)
+// Original dynamic initializer: RVA 0x000D8830 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UAutomationPerfMonitorManager> AutoInitializeUAutomationPerfMonitorManager(TEXT("UAutomationPerfMonitorManager"), sizeof(UAutomationPerfMonitorManager), 1466068163u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5F2A0 (end 0x00F5F337)
 // Original VA: 0x0000000140F5F2A0 | File offset: 0x00F5E8A0
 // Recovery: confirmed (IMPLEMENT_CLASS(UAutomationPerfMonitorManager, 1466068163u); reached from UAutomationPerfMonitorManager::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* UAutomationPerfMonitorManager::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UAutomationPerfMonitorManager();
+// Original dynamic initializer: RVA 0x000D9790
+static FCompiledInDefer Z_CompiledInDefer_UClass_UAutomationPerfMonitorManager(Z_Construct_UClass_UAutomationPerfMonitorManager, &UAutomationPerfMonitorManager::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UAutomationPerfMonitorManager"), false, nullptr, nullptr, nullptr);

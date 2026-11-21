@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UVerticalBox, 1021222544u)
+// Original dynamic initializer: RVA 0x001B4270 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UVerticalBox> AutoInitializeUVerticalBox(TEXT("UVerticalBox"), sizeof(UVerticalBox), 1021222544u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01BF7DD0 (end 0x01BF7E72)
 // Original VA: 0x0000000141BF7DD0 | File offset: 0x01BF73D0
 // Recovery: confirmed (IMPLEMENT_CLASS(UVerticalBox, 1021222544u); reached from UVerticalBox::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UVerticalBox::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UVerticalBox();
+// Original dynamic initializer: RVA 0x001B4B40
+static FCompiledInDefer Z_CompiledInDefer_UClass_UVerticalBox(Z_Construct_UClass_UVerticalBox, &UVerticalBox::StaticClass, TEXT("/Script/UMG"), TEXT("UVerticalBox"), false, nullptr, nullptr, nullptr);

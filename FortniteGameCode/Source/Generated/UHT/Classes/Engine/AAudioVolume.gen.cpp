@@ -7,6 +7,9 @@
 void AAudioVolume::StaticRegisterNativesAAudioVolume()
 {
 }
+// IMPLEMENT_CLASS(AAudioVolume, 2884728146u)
+// Original dynamic initializer: RVA 0x001F19D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<AAudioVolume> AutoInitializeAAudioVolume(TEXT("AAudioVolume"), sizeof(AAudioVolume), 2884728146u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023D9280 (end 0x023D9322)
 // Original VA: 0x00000001423D9280 | File offset: 0x023D8880
 // Recovery: confirmed (IMPLEMENT_CLASS(AAudioVolume, 2884728146u); reached from AAudioVolume::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -34,3 +37,6 @@ UClass* AAudioVolume::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_AAudioVolume();
+// Original dynamic initializer: RVA 0x001F2F10
+static FCompiledInDefer Z_CompiledInDefer_UClass_AAudioVolume(Z_Construct_UClass_AAudioVolume, &AAudioVolume::StaticClass, TEXT("/Script/Engine"), TEXT("AAudioVolume"), false, nullptr, nullptr, nullptr);

@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortKeepEventInfo, 189588844u)
+// Original dynamic initializer: RVA 0x000FC4D0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortKeepEventInfo> AutoInitializeUFortKeepEventInfo(TEXT("UFortKeepEventInfo"), sizeof(UFortKeepEventInfo), 189588844u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0100B5B0 (end 0x0100B652)
 // Original VA: 0x000000014100B5B0 | File offset: 0x0100ABB0
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortKeepEventInfo, 189588844u); reached from UFortKeepEventInfo::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortKeepEventInfo::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortKeepEventInfo();
+// Original dynamic initializer: RVA 0x000FCCB0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortKeepEventInfo(Z_Construct_UClass_UFortKeepEventInfo, &UFortKeepEventInfo::StaticClass, TEXT("/Script/FortniteGame"), TEXT("UFortKeepEventInfo"), false, nullptr, nullptr, nullptr);

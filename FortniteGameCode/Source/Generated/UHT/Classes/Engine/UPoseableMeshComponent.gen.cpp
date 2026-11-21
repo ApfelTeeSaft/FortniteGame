@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UPoseableMeshComponent, 3086456786u)
+// Original dynamic initializer: RVA 0x00216380 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UPoseableMeshComponent> AutoInitializeUPoseableMeshComponent(TEXT("UPoseableMeshComponent"), sizeof(UPoseableMeshComponent), 3086456786u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024B6960 (end 0x024B6A02)
 // Original VA: 0x00000001424B6960 | File offset: 0x024B5F60
 // Recovery: confirmed (IMPLEMENT_CLASS(UPoseableMeshComponent, 3086456786u); reached from UPoseableMeshComponent::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UPoseableMeshComponent::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UPoseableMeshComponent();
+// Original dynamic initializer: RVA 0x00217210
+static FCompiledInDefer Z_CompiledInDefer_UClass_UPoseableMeshComponent(Z_Construct_UClass_UPoseableMeshComponent, &UPoseableMeshComponent::StaticClass, TEXT("/Script/Engine"), TEXT("UPoseableMeshComponent"), false, nullptr, nullptr, nullptr);

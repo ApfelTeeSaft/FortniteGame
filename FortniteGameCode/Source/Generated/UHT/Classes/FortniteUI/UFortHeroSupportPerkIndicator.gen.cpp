@@ -4,6 +4,9 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// IMPLEMENT_CLASS(UFortHeroSupportPerkIndicator, 913266918u)
+// Original dynamic initializer: RVA 0x002477E0 (leaf; CRC and sizeof are its arguments)
+static TClassCompiledInDefer<UFortHeroSupportPerkIndicator> AutoInitializeUFortHeroSupportPerkIndicator(TEXT("UFortHeroSupportPerkIndicator"), sizeof(UFortHeroSupportPerkIndicator), 913266918u);
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028B2F50 (end 0x028B2FF2)
 // Original VA: 0x00000001428B2F50 | File offset: 0x028B2550
 // Recovery: confirmed (IMPLEMENT_CLASS(UFortHeroSupportPerkIndicator, 913266918u); reached from UFortHeroSupportPerkIndicator::StaticClass) | Matching: see analysis/functions-uht-gpsc.json
@@ -31,3 +34,6 @@ UClass* UFortHeroSupportPerkIndicator::GetPrivateStaticClass()
 	}
 	return PrivateStaticClass;
 }
+UClass* Z_Construct_UClass_UFortHeroSupportPerkIndicator();
+// Original dynamic initializer: RVA 0x002480E0
+static FCompiledInDefer Z_CompiledInDefer_UClass_UFortHeroSupportPerkIndicator(Z_Construct_UClass_UFortHeroSupportPerkIndicator, &UFortHeroSupportPerkIndicator::StaticClass, TEXT("/Script/FortniteUI"), TEXT("UFortHeroSupportPerkIndicator"), false, nullptr, nullptr, nullptr);
