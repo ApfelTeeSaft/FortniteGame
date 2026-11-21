@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02896C30 (end 0x02896CB2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnBluGloQuantityChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortBluGloCounter::execOnBluGloQuantityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_Quantity);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnBluGloQuantityChanged_Implementation(Z_Param_Quantity);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortBluGloCounter, 3372144181u)
 // Original dynamic initializer: RVA 0x00240280 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortBluGloCounter> AutoInitializeUFortBluGloCounter(TEXT("UFortBluGloCounter"), sizeof(UFortBluGloCounter), 3372144181u);

@@ -4,6 +4,38 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02487850 (end 0x024878E6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaterialIndex) | Matching: see analysis/functions-uht-exec.json
+void UMeshComponent::execGetMaterialIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_MaterialSlotName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->GetMaterialIndex(Z_Param_MaterialSlotName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02487A20 (end 0x02487AB6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsMaterialSlotNameValid) | Matching: see analysis/functions-uht-exec.json
+void UMeshComponent::execIsMaterialSlotNameValid(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_MaterialSlotName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsMaterialSlotNameValid(Z_Param_MaterialSlotName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02487E70 (end 0x02487F79)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPrestreamTextures) | Matching: see analysis/functions-uht-exec.json
+void UMeshComponent::execPrestreamTextures(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Seconds);
+	P_GET_UBOOL(Z_Param_bPrioritizeCharacterTextures);
+	P_GET_PROPERTY(UIntProperty,Z_Param_CinematicTextureGroups);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PrestreamTextures(Z_Param_Seconds,Z_Param_bPrioritizeCharacterTextures,Z_Param_CinematicTextureGroups);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UMeshComponent, 3594676476u)
 // Original dynamic initializer: RVA 0x0020AF90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMeshComponent> AutoInitializeUMeshComponent(TEXT("UMeshComponent"), sizeof(UMeshComponent), 3594676476u);

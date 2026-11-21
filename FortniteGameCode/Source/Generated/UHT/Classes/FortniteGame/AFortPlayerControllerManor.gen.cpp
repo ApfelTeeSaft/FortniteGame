@@ -4,6 +4,31 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010799F0 (end 0x01079A74)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientOpenManorPortalUnlockMenu) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerManor::execClientOpenManorPortalUnlockMenu(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AManorPortal,Z_Param_ManorPortal);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientOpenManorPortalUnlockMenu_Implementation(Z_Param_ManorPortal);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C750 (end 0x0107C805)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerOnUnlockPortalComplete) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerManor::execServerOnUnlockPortalComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AManorPortal,Z_Param_ManorPortal);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerOnUnlockPortalComplete_Validate(Z_Param_ManorPortal))
+	{
+		RPC_ValidateFailed(TEXT("ServerOnUnlockPortalComplete_Validate"));
+		return;
+	}
+	P_THIS->ServerOnUnlockPortalComplete_Implementation(Z_Param_ManorPortal);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerControllerManor, 490954573u)
 // Original dynamic initializer: RVA 0x0010B8C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerManor> AutoInitializeAFortPlayerControllerManor(TEXT("AFortPlayerControllerManor"), sizeof(AFortPlayerControllerManor), 490954573u);

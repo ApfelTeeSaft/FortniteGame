@@ -4,6 +4,160 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BA030 (end 0x024BA145)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddAngularImpulse) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execAddAngularImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Impulse);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_GET_UBOOL(Z_Param_bVelChange);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddAngularImpulse(Z_Param_Impulse,Z_Param_BoneName,Z_Param_bVelChange);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BA2A0 (end 0x024BA3B5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddAngularImpulseInRadians) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execAddAngularImpulseInRadians(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Impulse);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_GET_UBOOL(Z_Param_bVelChange);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddAngularImpulseInRadians(Z_Param_Impulse,Z_Param_BoneName,Z_Param_bVelChange);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BA3C0 (end 0x024BA4D5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddForce) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execAddForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Force);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_GET_UBOOL(Z_Param_bAccelChange);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddForce(Z_Param_Force,Z_Param_BoneName,Z_Param_bAccelChange);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BA4E0 (end 0x024BA605)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddForceAtLocation) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execAddForceAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Force);
+	P_GET_STRUCT(FVector,Z_Param_Location);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddForceAtLocation(Z_Param_Force,Z_Param_Location,Z_Param_BoneName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BA610 (end 0x024BA735)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddForceAtLocationLocal) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execAddForceAtLocationLocal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Force);
+	P_GET_STRUCT(FVector,Z_Param_Location);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddForceAtLocationLocal(Z_Param_Force,Z_Param_Location,Z_Param_BoneName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BA740 (end 0x024BA855)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddImpulse) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execAddImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Impulse);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_GET_UBOOL(Z_Param_bVelChange);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddImpulse(Z_Param_Impulse,Z_Param_BoneName,Z_Param_bVelChange);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BA860 (end 0x024BA985)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddImpulseAtLocation) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execAddImpulseAtLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Impulse);
+	P_GET_STRUCT(FVector,Z_Param_Location);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddImpulseAtLocation(Z_Param_Impulse,Z_Param_Location,Z_Param_BoneName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BAB70 (end 0x024BACFF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddRadialForce) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execAddRadialForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Origin);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Radius);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Strength);
+	P_GET_PROPERTY(UByteProperty,Z_Param_Falloff);
+	P_GET_UBOOL(Z_Param_bAccelChange);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddRadialForce(Z_Param_Origin,Z_Param_Radius,Z_Param_Strength,ERadialImpulseFalloff(Z_Param_Falloff),Z_Param_bAccelChange);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BAD00 (end 0x024BAE8F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddRadialImpulse) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execAddRadialImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Origin);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Radius);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Strength);
+	P_GET_PROPERTY(UByteProperty,Z_Param_Falloff);
+	P_GET_UBOOL(Z_Param_bVelChange);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddRadialImpulse(Z_Param_Origin,Z_Param_Radius,Z_Param_Strength,ERadialImpulseFalloff(Z_Param_Falloff),Z_Param_bVelChange);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BB0F0 (end 0x024BB186)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCanCharacterStepUp) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execCanCharacterStepUp(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(APawn,Z_Param_Pawn);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->CanCharacterStepUp(Z_Param_Pawn);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BB380 (end 0x024BB414)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCreateAndSetMaterialInstanceDynamic) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execCreateAndSetMaterialInstanceDynamic(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ElementIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMaterialInstanceDynamic**)Z_Param__Result=P_THIS->CreateAndSetMaterialInstanceDynamic(Z_Param_ElementIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BB420 (end 0x024BB4E3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCreateAndSetMaterialInstanceDynamicFromMaterial) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execCreateAndSetMaterialInstanceDynamicFromMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ElementIndex);
+	P_GET_OBJECT(UMaterialInterface,Z_Param_Parent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMaterialInstanceDynamic**)Z_Param__Result=P_THIS->CreateAndSetMaterialInstanceDynamicFromMaterial(Z_Param_ElementIndex,Z_Param_Parent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BB4F0 (end 0x024BB5B3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCreateDynamicMaterialInstance) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execCreateDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ElementIndex);
+	P_GET_OBJECT(UMaterialInterface,Z_Param_SourceMaterial);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMaterialInstanceDynamic**)Z_Param__Result=P_THIS->CreateDynamicMaterialInstance(Z_Param_ElementIndex,Z_Param_SourceMaterial);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024BB5C0 (end 0x024BB5F1)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAngularDamping) | Matching: see analysis/functions-uht-exec.json
 void UPrimitiveComponent::execGetAngularDamping(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +165,35 @@ void UPrimitiveComponent::execGetAngularDamping(UObject* Context, FFrame& Stack,
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(float*)Z_Param__Result=P_THIS->GetAngularDamping();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BBB80 (end 0x024BBBAF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCollisionObjectType) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execGetCollisionObjectType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<ECollisionChannel>*)Z_Param__Result=P_THIS->GetCollisionObjectType();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BBBF0 (end 0x024BBC79)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCollisionResponseToChannel) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execGetCollisionResponseToChannel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_Channel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<ECollisionResponse>*)Z_Param__Result=P_THIS->GetCollisionResponseToChannel(ECollisionChannel(Z_Param_Channel));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BBCB0 (end 0x024BBD56)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetInertiaTensor) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execGetInertiaTensor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetInertiaTensor(Z_Param_BoneName);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F628D0 (end 0x00F62901)
@@ -29,6 +212,37 @@ void UPrimitiveComponent::execGetMass(UObject* Context, FFrame& Stack, void* con
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(float*)Z_Param__Result=P_THIS->GetMass();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BBDA0 (end 0x024BBE36)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMassScale) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execGetMassScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMassScale(Z_Param_BoneName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BBE40 (end 0x024BBED4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaterial) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execGetMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ElementIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMaterialInterface**)Z_Param__Result=P_THIS->GetMaterial(Z_Param_ElementIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BBEE0 (end 0x024BBFB1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaterialFromCollisionFaceIndex) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execGetMaterialFromCollisionFaceIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_FaceIndex);
+	P_GET_PROPERTY_REF(UIntProperty,Z_Param_Out_SectionIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMaterialInterface**)Z_Param__Result=P_THIS->GetMaterialFromCollisionFaceIndex(Z_Param_FaceIndex,Z_Param_Out_SectionIndex);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024BBFC0 (end 0x024BBFEF)
@@ -67,6 +281,257 @@ void UPrimitiveComponent::execK2_IsQueryCollisionEnabled(UObject* Context, FFram
 	*(bool*)Z_Param__Result=P_THIS->K2_IsQueryCollisionEnabled();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCFC0 (end 0x024BD0B5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execScaleByMomentOfInertia) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execScaleByMomentOfInertia(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_InputVector);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->ScaleByMomentOfInertia(Z_Param_InputVector,Z_Param_BoneName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BD0C0 (end 0x024BD13F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetAllMassScale) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetAllMassScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InMassScale);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetAllMassScale(Z_Param_InMassScale);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BD140 (end 0x024BD21F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetAllPhysicsAngularVelocity) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetAllPhysicsAngularVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_NewAngVel);
+	P_GET_UBOOL(Z_Param_bAddToCurrent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetAllPhysicsAngularVelocity(Z_Param_Out_NewAngVel,Z_Param_bAddToCurrent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BD340 (end 0x024BD41F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetAllPhysicsAngularVelocityInRadians) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetAllPhysicsAngularVelocityInRadians(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_NewAngVel);
+	P_GET_UBOOL(Z_Param_bAddToCurrent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetAllPhysicsAngularVelocityInRadians(Z_Param_Out_NewAngVel,Z_Param_bAddToCurrent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BD420 (end 0x024BD4F6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetAllPhysicsLinearVelocity) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetAllPhysicsLinearVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_NewVel);
+	P_GET_UBOOL(Z_Param_bAddToCurrent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetAllPhysicsLinearVelocity(Z_Param_NewVel,Z_Param_bAddToCurrent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BD500 (end 0x024BD586)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetAllUseCCD) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetAllUseCCD(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_InUseCCD);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetAllUseCCD(Z_Param_InUseCCD);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BD590 (end 0x024BD60F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetAngularDamping) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetAngularDamping(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InDamping);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetAngularDamping(Z_Param_InDamping);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BDDE0 (end 0x024BDE5A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCollisionEnabled) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetCollisionEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_NewType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCollisionEnabled(ECollisionEnabled::Type(Z_Param_NewType));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BDE60 (end 0x024BDEDA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCollisionObjectType) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetCollisionObjectType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_Channel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCollisionObjectType(ECollisionChannel(Z_Param_Channel));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BDEE0 (end 0x024BDF64)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCollisionProfileName) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetCollisionProfileName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_InCollisionProfileName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCollisionProfileName(Z_Param_InCollisionProfileName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BDF70 (end 0x024BDFEA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCollisionResponseToAllChannels) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetCollisionResponseToAllChannels(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_NewResponse);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCollisionResponseToAllChannels(ECollisionResponse(Z_Param_NewResponse));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BDFF0 (end 0x024BE0AB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCollisionResponseToChannel) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetCollisionResponseToChannel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_Channel);
+	P_GET_PROPERTY(UByteProperty,Z_Param_NewResponse);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCollisionResponseToChannel(ECollisionChannel(Z_Param_Channel),ECollisionResponse(Z_Param_NewResponse));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BE0B0 (end 0x024BE12A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetConstraintMode) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetConstraintMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_ConstraintMode);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetConstraintMode(EDOFMode::Type(Z_Param_ConstraintMode));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BE2B0 (end 0x024BE336)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetEnableGravity) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetEnableGravity(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bGravityEnabled);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetEnableGravity(Z_Param_bGravityEnabled);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BE4D0 (end 0x024BE54F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetLinearDamping) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetLinearDamping(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InDamping);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetLinearDamping(Z_Param_InDamping);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BE550 (end 0x024BE5CA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetLockedAxis) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetLockedAxis(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_LockedAxis);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetLockedAxis(EDOFMode::Type(Z_Param_LockedAxis));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BE5D0 (end 0x024BE6CB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetMassOverrideInKg) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetMassOverrideInKg(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_MassInKg);
+	P_GET_UBOOL(Z_Param_bOverrideMass);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetMassOverrideInKg(Z_Param_BoneName,Z_Param_MassInKg,Z_Param_bOverrideMass);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BE6D0 (end 0x024BE798)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetMassScale) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetMassScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InMassScale);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetMassScale(Z_Param_BoneName,Z_Param_InMassScale);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BE7A0 (end 0x024BE861)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetMaterial) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ElementIndex);
+	P_GET_OBJECT(UMaterialInterface,Z_Param_Material);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetMaterial(Z_Param_ElementIndex,Z_Param_Material);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BE870 (end 0x024BE933)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetMaterialByName) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetMaterialByName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_MaterialSlotName);
+	P_GET_OBJECT(UMaterialInterface,Z_Param_Material);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetMaterialByName(Z_Param_MaterialSlotName,Z_Param_Material);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BE9C0 (end 0x024BEA46)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetNotifyRigidBodyCollision) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetNotifyRigidBodyCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewNotifyRigidBodyCollision);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetNotifyRigidBodyCollision(Z_Param_bNewNotifyRigidBodyCollision);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BEB70 (end 0x024BEBF4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetPhysMaterialOverride) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetPhysMaterialOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPhysicalMaterial,Z_Param_NewPhysMaterial);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPhysMaterialOverride(Z_Param_NewPhysMaterial);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BF450 (end 0x024BF4D6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSimulatePhysics) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetSimulatePhysics(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bSimulate);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSimulatePhysics(Z_Param_bSimulate);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BF770 (end 0x024BF835)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetUseCCD) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execSetUseCCD(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_InUseCCD);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetUseCCD(Z_Param_InUseCCD,Z_Param_BoneName);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024BF8F0 (end 0x024BF90F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execWakeAllRigidBodies) | Matching: see analysis/functions-uht-exec.json
 void UPrimitiveComponent::execWakeAllRigidBodies(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -74,6 +539,16 @@ void UPrimitiveComponent::execWakeAllRigidBodies(UObject* Context, FFrame& Stack
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->WakeAllRigidBodies();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BF910 (end 0x024BF994)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execWakeRigidBody) | Matching: see analysis/functions-uht-exec.json
+void UPrimitiveComponent::execWakeRigidBody(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->WakeRigidBody(Z_Param_BoneName);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UPrimitiveComponent, 4111089980u)

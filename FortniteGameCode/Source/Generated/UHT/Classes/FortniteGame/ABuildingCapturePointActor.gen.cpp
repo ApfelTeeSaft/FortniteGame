@@ -4,6 +4,37 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67F40 (end 0x00F67FC6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCapturePointActiveStateChange) | Matching: see analysis/functions-uht-exec.json
+void ABuildingCapturePointActor::execOnCapturePointActiveStateChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bInActive);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCapturePointActiveStateChange_Implementation(Z_Param_bInActive);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67FD0 (end 0x00F68056)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCapturePointLockStateChange) | Matching: see analysis/functions-uht-exec.json
+void ABuildingCapturePointActor::execOnCapturePointLockStateChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bInLocked);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCapturePointLockStateChange_Implementation(Z_Param_bInLocked);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7F000 (end 0x00F7F0BB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCapturePointStateChange) | Matching: see analysis/functions-uht-exec.json
+void ABuildingCapturePointActor::execOnCapturePointStateChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_InState);
+	P_GET_PROPERTY(UByteProperty,Z_Param_InTeam);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCapturePointStateChange_Implementation(ECaptureState::Type(Z_Param_InState),EFortTeam::Type(Z_Param_InTeam));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingCapturePointActor, 2507767466u)
 // Original dynamic initializer: RVA 0x000D9830 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingCapturePointActor> AutoInitializeABuildingCapturePointActor(TEXT("ABuildingCapturePointActor"), sizeof(ABuildingCapturePointActor), 2507767466u);

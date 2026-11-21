@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6E860 (end 0x00F6E8DA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnItemCollectorStateChanged) | Matching: see analysis/functions-uht-exec.json
+void ABuildingItemCollectorActor::execOnItemCollectorStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortItemCollectorState,Z_Param_InItemCollectorState);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnItemCollectorStateChanged_Implementation(EFortItemCollectorState(Z_Param_InItemCollectorState));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6F020 (end 0x00F6F09A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnTeamReachedDepositGoal) | Matching: see analysis/functions-uht-exec.json
+void ABuildingItemCollectorActor::execOnTeamReachedDepositGoal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_InControllingTeam);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnTeamReachedDepositGoal_Implementation(EFortTeam::Type(Z_Param_InControllingTeam));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingItemCollectorActor, 2023708068u)
 // Original dynamic initializer: RVA 0x000DAED0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingItemCollectorActor> AutoInitializeABuildingItemCollectorActor(TEXT("ABuildingItemCollectorActor"), sizeof(ABuildingItemCollectorActor), 2023708068u);

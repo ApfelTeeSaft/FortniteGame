@@ -4,6 +4,71 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A767C0 (end 0x01A7683F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnBounceMotionUpdate) | Matching: see analysis/functions-uht-exec.json
+void AFortDecoPreview::execOnBounceMotionUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_VectorScale);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnBounceMotionUpdate_Implementation(Z_Param_VectorScale);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02417A70 (end 0x02417B33)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnInitializeDecoPreview) | Matching: see analysis/functions-uht-exec.json
+void AFortDecoPreview::execOnInitializeDecoPreview(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ABuildingActor,Z_Param_NewBuildingActor);
+	P_GET_OBJECT(UFortDecoItemDefinition,Z_Param_NewDecoItemDefinition);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnInitializeDecoPreview_Implementation(Z_Param_NewBuildingActor,Z_Param_NewDecoItemDefinition);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2720 (end 0x00FD27F3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnUpdateScale) | Matching: see analysis/functions-uht-exec.json
+void AFortDecoPreview::execOnUpdateScale(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Scale);
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_InWorldSpacePivot);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnUpdateScale_Implementation(Z_Param_Scale,Z_Param_Out_InWorldSpacePivot);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2800 (end 0x00FD28CC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnUpdateVisuals) | Matching: see analysis/functions-uht-exec.json
+void AFortDecoPreview::execOnUpdateVisuals(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_DeltaSeconds);
+	P_GET_UBOOL(Z_Param_bSafeToPlace);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnUpdateVisuals_Implementation(Z_Param_DeltaSeconds,Z_Param_bSafeToPlace);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2B50 (end 0x00FD2C18)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetScalarParameterValueOnAllPreviewMIDs) | Matching: see analysis/functions-uht-exec.json
+void AFortDecoPreview::execSetScalarParameterValueOnAllPreviewMIDs(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_ParamName);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_ParamValue);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetScalarParameterValueOnAllPreviewMIDs_Implementation(Z_Param_ParamName,Z_Param_ParamValue);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2C20 (end 0x00FD2CED)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetVectorParameterValueOnAllPreviewMIDs) | Matching: see analysis/functions-uht-exec.json
+void AFortDecoPreview::execSetVectorParameterValueOnAllPreviewMIDs(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_ParamName);
+	P_GET_STRUCT_REF(FLinearColor,Z_Param_Out_ParamValue);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetVectorParameterValueOnAllPreviewMIDs_Implementation(Z_Param_ParamName,Z_Param_Out_ParamValue);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortDecoPreview, 998587598u)
 // Original dynamic initializer: RVA 0x000EFA00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortDecoPreview> AutoInitializeAFortDecoPreview(TEXT("AFortDecoPreview"), sizeof(AFortDecoPreview), 998587598u);

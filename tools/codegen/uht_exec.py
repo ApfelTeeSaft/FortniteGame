@@ -8,9 +8,9 @@ slot compiles to `call [vtbl+offset]` as in the reference. The root class become
 (its destructor is slot 0, as UObjectBase's is) and its opaque member shrinks by the vptr.
 Only the slot indexes are modelled, not the functions' bodies or the classes' other virtuals.
 
-Signatures. A slot is declared by name only when its UFunction's full signature is known.
-That is the case with no properties, or with a single CPF_ReturnParm property returned in a
-register: bool, uint8, int32, float, double, or an object pointer whose class is known.
+Signatures. A slot is declared by name only when its UFunction's full signature is known:
+every parameter and the return value of a type tools/codegen/uht_props.py supports (bool,
+integers, floating point, uint8 without an enum, FName, pointers to reflected classes).
 <Name>_Validate returns bool. Other named slots are placeholders, with the name in a comment.
 
 Exec thunks. For a UFunction whose thunk only calls declared virtual slots, the thunk is
@@ -22,10 +22,11 @@ predictions that hold with no thunks or out-of-line ones. A body the linker fold
 several UFunctions is defined in each class and has one manifest entry, under the first
 class by name:
 
+    P_GET_<macro>(<type>,Z_Param_<Name>);   (per parameter, in declaration order)
     P_FINISH;
     P_NATIVE_BEGIN;
-    [if (!P_THIS->F_Validate()) { RPC_ValidateFailed(TEXT("F_Validate")); return; }]
-    [*(Ret*)Z_Param__Result=]P_THIS->CppImplName();
+    [if (!P_THIS->F_Validate(<args>)) { RPC_ValidateFailed(TEXT("F_Validate")); return; }]
+    [*(Ret*)Z_Param__Result=]P_THIS->CppImplName(<args>);
     P_NATIVE_END;
 """
 from __future__ import annotations
@@ -35,16 +36,17 @@ import struct
 from collections import defaultdict
 from pathlib import Path
 
+import uht_props
+
 ROOT = Path(__file__).resolve().parents[2]
 VTABLES = ROOT / "analysis" / "vtables.json"
 NATIVES = ROOT / "analysis" / "native-implementations.json"
 CREATOR_SYMBOLS = ROOT / "analysis" / "uht-creator-symbols.json"
+ENUM_MANIFEST = ROOT / "analysis" / "functions-uht-enums.json"
+ENUM_SYMBOLS = ROOT / "analysis" / "uht-enum-symbols.json"
 
 FUNC_NETVALIDATE, FUNC_CONST = 0x80000000, 0x40000000
-CPF_RETURNPARM, CPF_UOBJECTWRAPPER = 0x400, 0x0004000000000000
-# EPropertyClass (UObjectGlobals.h, UE4CodeGen_Private) -> C++ type returned in a register.
-PRIMITIVE = {0: "uint8", 3: "int32", 6: "uint32", 10: "float", 11: "double"}
-BYTE, BOOL, OBJECT = 0, 12, 14
+CONSTRUCT_USCRIPTSTRUCT = 0x0138FA20    # UE4CodeGen_Private::ConstructUScriptStruct (see docs/STATUS.md)
 LEAF_LIMIT = 64
 
 
@@ -53,33 +55,62 @@ def funcparams(syms: dict, cls: str, ufunction: str) -> int | None:
     return int(rec[0], 16) if rec else None
 
 
-def signature(dimg, base: int, syms: dict, ctor_class: dict, cls: str, ufunction: str) -> tuple | None:
-    """(return type or None, const, flags) of a UFunction without parameters, or None."""
+def signature(dimg, base: int, syms: dict, names, cls: str, ufunction: str) -> dict | None:
+    """The UFunction's parameters (uht_props.function_signature) and constness, or None."""
     rec = funcparams(syms, cls, ufunction)
     if rec is None:
         return None
-    fflags, props, nprops = struct.unpack("<I12xQi", dimg.read(rec + 0x20, 0x1C))
-    const = bool(fflags & FUNC_CONST)
-    if nprops == 0:
-        return None, const, fflags
-    if nprops != 1:
-        return None
-    p = struct.unpack("<Q", dimg.read(props - base, 8))[0] - base
-    ptype, pflags = struct.unpack("<I20xQ", dimg.read(p, 0x20))
-    if not pflags & CPF_RETURNPARM or pflags & CPF_UOBJECTWRAPPER:
-        return None
-    extra = dimg.read(p + 0x30, 0x10)
-    if ptype == BOOL:
-        size, native = struct.unpack_from("<IB", extra)
-        return ("bool", const, fflags) if (size, native) == (1, 1) else None
-    if ptype == BYTE and struct.unpack_from("<Q", extra, 8)[0]:
-        return None                    # enum: TEnumAsByte or an enum class, not decided here
-    if ptype in PRIMITIVE:
-        return PRIMITIVE[ptype], const, fflags
-    if ptype == OBJECT:
-        c = ctor_class.get(struct.unpack_from("<Q", extra, 8)[0] - base)
-        return (f"{c}*", const, fflags) if c else None
-    return None
+    sig = uht_props.function_signature(dimg, base, rec, names)
+    if sig is not None:
+        sig["const"] = bool(sig["flags"] & FUNC_CONST)
+    return sig
+
+
+def enum_info(dimg, base: int) -> dict[int, dict]:
+    """Z_Construct_UEnum_* RVA -> UEnum name, UEnum::ECppForm and C++ type, read from the enum's
+    FEnumParams (NameUTF8 +0x10, CppForm +0x28, CppTypeUTF8 +0x30)."""
+    ctors = json.loads(ENUM_MANIFEST.read_text(encoding="utf-8"))["functions"]
+    syms = json.loads(ENUM_SYMBOLS.read_text(encoding="utf-8"))["symbols"]
+    out = {}
+    for e in ctors:
+        rec = syms.get(f"?EnumParams@?4??{e['name']}@@YAPEAVUEnum@@XZ@4UFEnumParams@UE4CodeGen_Private@@B")
+        if rec is None:
+            continue
+        r = int(rec[0], 16)
+        name, form, cpp = struct.unpack("<16xQ16xB7xQ", dimg.read(r, 0x38))
+        out[int(e["start_rva"], 16)] = {"name": _cstr(dimg, base, name), "form": form, "cpp": _cstr(dimg, base, cpp)}
+    return out
+
+
+class StructInfo(dict):
+    """Z_Construct_UScriptStruct_* RVA -> (name, SizeOf, AlignOf) from the FStructParams its
+    `lea rdx` passes to ConstructUScriptStruct (NameUTF8 +0x18, SizeOf +0x28, AlignOf +0x30)."""
+
+    def __init__(self, dimg, base: int):
+        super().__init__()
+        self.dimg, self.base = dimg, base
+
+    def __missing__(self, rva: int):
+        val = None
+        code = self.dimg.read(rva, 0x40)
+        i = code.find(b"\x48\x8d\x15")                # lea rdx, [rip+FStructParams]
+        if i >= 0 and code.find(b"\xe8", i) > i:
+            rec = rva + i + 7 + struct.unpack_from("<i", code, i + 3)[0]
+            call = code.find(b"\xe8", i)
+            target = rva + call + 5 + struct.unpack_from("<i", code, call + 1)[0]
+            if target == CONSTRUCT_USCRIPTSTRUCT:
+                name, size, align = struct.unpack("<24xQ8xQQ", self.dimg.read(rec, 0x38))
+                val = (_cstr(self.dimg, self.base, name), size, align)
+        self[rva] = val
+        return val
+
+    def get(self, rva, default=None):
+        v = self[rva]
+        return default if v is None else v
+
+
+def _cstr(dimg, base: int, va: int) -> str:
+    return dimg.read(va - base, 256).split(b"\0")[0].decode()
 
 
 def leaf_end(md, dimg, rva: int) -> int | None:
@@ -95,9 +126,13 @@ def build(dimg, base: int, classes: dict, out_order: list[str], rfs: dict, md) -
     vtj = json.loads(VTABLES.read_text(encoding="utf-8"))
     nat = json.loads(NATIVES.read_text(encoding="utf-8"))
     syms = json.loads(CREATOR_SYMBOLS.read_text(encoding="utf-8"))["symbols"]
+    # Object properties' ClassFunc is Z_Construct_UClass_<C>_NoRegister, the same code as (folded
+    # with) <C>::StaticClass; class constructors name the class too.
     ctor_class = {int(c["constructor"], 16): n for n, c in classes.items() if c.get("constructor")}
+    ctor_class.update({int(c["static_class"], 16): n for n, c in classes.items() if c.get("static_class")})
+    typenames = uht_props.Names(ctor_class, enum_info(dimg, base), StructInfo(dimg, base))
 
-    sigs: dict[tuple[str, str], tuple] = {}
+    sigs: dict[tuple[str, str], dict] = {}
     intro = defaultdict(dict)          # introducing class -> slot -> (name, owner, ufunction)
     owner_of = {}
     for e in nat["virtual_natives"]:
@@ -107,16 +142,15 @@ def build(dimg, base: int, classes: dict, out_order: list[str], rfs: dict, md) -
         if e is None:
             continue
         intro[s["class"]][s["slot"]] = (s["name"], s["ufunction_class"], e["ufunction"])
-        sig = signature(dimg, base, syms, ctor_class, e["class"], e["ufunction"])
+        sig = signature(dimg, base, syms, typenames, e["class"], e["ufunction"])
         if sig is not None:
-            ret, const, fflags = sig
             if s["name"].endswith("_Validate"):
-                ret = "bool"
-            sigs[(s["ufunction_class"], s["name"])] = (ret, const, fflags)
+                sig = dict(sig, ret="bool")
+            sigs[(s["ufunction_class"], s["name"])] = sig
 
     def sup(n: str) -> str | None:
         c = classes[n]
-        s = c.get("super") if c.get("decoded") else None
+        s = c.get("super") if c.get("decoded") or c.get("intrinsic") else None
         return s if s and s != n and s in classes else None
 
     children = defaultdict(list)
@@ -157,8 +191,8 @@ def build(dimg, base: int, classes: dict, out_order: list[str], rfs: dict, md) -
                 name, owner, uf = mine[i]
                 sig = sigs.get((owner, name))
                 if sig is not None and name not in names:
-                    ret, const, _ = sig
-                    out.append(f"\tvirtual {ret or 'void'} {name}(){' const' if const else ''};  "
+                    decl = ", ".join(d for d, _, _ in sig["params"])
+                    out.append(f"\tvirtual {sig['ret'] or 'void'} {name}({decl}){' const' if sig['const'] else ''};  "
                                f"// slot {i} (+0x{8 * i:X}), UFunction {owner}::{uf}")
                     names[name] = i
                     named_ok.add((owner, name))
@@ -185,17 +219,19 @@ def build(dimg, base: int, classes: dict, out_order: list[str], rfs: dict, md) -
         names = [e["name"].split("::", 1)[1] for e in es]
         if not all((cls, nm) in named_ok and names.count(nm) == 1 for nm in names):
             continue
-        fflags = sigs[(cls, names[0])][2]
+        fflags = sigs[(cls, names[0])]["flags"]
         impl = next((nm for nm in names if not nm.endswith("_Validate")), None)
         val = next((nm for nm in names if nm.endswith("_Validate")), None)
         if impl is None or (val is not None) != bool(fflags & FUNC_NETVALIDATE) or len(names) != 1 + (val is not None):
             continue
-        ret = sigs[(cls, impl)][0]
-        body = ["\tP_FINISH;", "\tP_NATIVE_BEGIN;"]
+        sig = sigs[(cls, impl)]
+        ret, args = sig["store"], ",".join(a for _, _, a in sig["params"])
+        body = [f"\t{line}" for _, line, _ in sig["params"]] + ["\tP_FINISH;", "\tP_NATIVE_BEGIN;"]
         if val:
-            body += [f"\tif (!P_THIS->{val}())", "\t{", f"\t\tRPC_ValidateFailed(TEXT(\"{val}\"));",
+            body += [f"\tif (!P_THIS->{val}({args}))", "\t{", f"\t\tRPC_ValidateFailed(TEXT(\"{val}\"));",
                      "\t\treturn;", "\t}"]
-        body.append(f"\t{f'*({ret}*)Z_Param__Result=' if ret else ''}P_THIS->{impl}();")
+        body.append(f"\t{f'*({ret}*)Z_Param__Result=' if ret else ''}P_THIS->{impl}({args});")
+        stats["exec thunks with parameters"] += bool(sig["params"])
         body.append("\tP_NATIVE_END;")
         r = int(exec_rva, 16)
         end = rfs[r].end if r in rfs else leaf_end(md, dimg, r)
@@ -217,4 +253,5 @@ def build(dimg, base: int, classes: dict, out_order: list[str], rfs: dict, md) -
         stats["exec thunk addresses"] += 1
         stats["exec thunk addresses, leaf"] += r not in rfs
     return {"decls": decls, "thunks": thunks, "roots_with_vptr": roots_with_vptr, "entries": entries,
+            "enums": uht_props.enum_declarations(typenames),
             "stats": dict(stats)}

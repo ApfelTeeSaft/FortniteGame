@@ -4,6 +4,36 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02420DF0 (end 0x02420E76)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execActivate) | Matching: see analysis/functions-uht-exec.json
+void UActorComponent::execActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bReset);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Activate(Z_Param_bReset);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C9670 (end 0x023C96F4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddTickPrerequisiteActor) | Matching: see analysis/functions-uht-exec.json
+void UActorComponent::execAddTickPrerequisiteActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_PrerequisiteActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddTickPrerequisiteActor(Z_Param_PrerequisiteActor);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C9700 (end 0x023C9784)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddTickPrerequisiteComponent) | Matching: see analysis/functions-uht-exec.json
+void UActorComponent::execAddTickPrerequisiteComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UActorComponent,Z_Param_PrerequisiteComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddTickPrerequisiteComponent(Z_Param_PrerequisiteComponent);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execDeactivate) | Matching: see analysis/functions-uht-exec.json
 void UActorComponent::execDeactivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -20,6 +50,57 @@ void UActorComponent::execIsActive(UObject* Context, FFrame& Stack, void* const 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->IsActive();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C9C30 (end 0x023C9CB4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveTickPrerequisiteActor) | Matching: see analysis/functions-uht-exec.json
+void UActorComponent::execRemoveTickPrerequisiteActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_PrerequisiteActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RemoveTickPrerequisiteActor(Z_Param_PrerequisiteActor);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C9CC0 (end 0x023C9D44)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveTickPrerequisiteComponent) | Matching: see analysis/functions-uht-exec.json
+void UActorComponent::execRemoveTickPrerequisiteComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UActorComponent,Z_Param_PrerequisiteComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RemoveTickPrerequisiteComponent(Z_Param_PrerequisiteComponent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C9D50 (end 0x023C9E18)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetActive) | Matching: see analysis/functions-uht-exec.json
+void UActorComponent::execSetActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewActive);
+	P_GET_UBOOL(Z_Param_bReset);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetActive(Z_Param_bNewActive,Z_Param_bReset);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C9E20 (end 0x023C9EA6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetAutoActivate) | Matching: see analysis/functions-uht-exec.json
+void UActorComponent::execSetAutoActivate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewAutoActivate);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetAutoActivate(Z_Param_bNewAutoActivate);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C9EB0 (end 0x023C9F36)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetComponentTickEnabled) | Matching: see analysis/functions-uht-exec.json
+void UActorComponent::execSetComponentTickEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bEnabled);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetComponentTickEnabled(Z_Param_bEnabled);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA590 (end 0x023FA5AF), leaf (no .pdata)

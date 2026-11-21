@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x029073B0 (end 0x02907434)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsFireButtonUnderTouch) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchLookStick::execIsFireButtonUnderTouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector2D,Z_Param_TouchPosition);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsFireButtonUnderTouch_Implementation(Z_Param_TouchPosition);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6A70 (end 0x002C6AF6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetFiringState) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchLookStick::execSetFiringState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_IsFiring);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetFiringState_Implementation(Z_Param_IsFiring);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortTouchLookStick, 1439943400u)
 // Original dynamic initializer: RVA 0x0025E530 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTouchLookStick> AutoInitializeUFortTouchLookStick(TEXT("UFortTouchLookStick"), sizeof(UFortTouchLookStick), 1439943400u);

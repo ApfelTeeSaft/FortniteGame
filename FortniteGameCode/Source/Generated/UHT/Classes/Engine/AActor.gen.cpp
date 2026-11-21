@@ -4,6 +4,46 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA670 (end 0x023FA6F4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddTickPrerequisiteActor) | Matching: see analysis/functions-uht-exec.json
+void AActor::execAddTickPrerequisiteActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_PrerequisiteActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddTickPrerequisiteActor(Z_Param_PrerequisiteActor);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023BF9B0 (end 0x023BFA34)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddTickPrerequisiteComponent) | Matching: see analysis/functions-uht-exec.json
+void AActor::execAddTickPrerequisiteComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UActorComponent,Z_Param_PrerequisiteComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddTickPrerequisiteComponent(Z_Param_PrerequisiteComponent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CC360 (end 0x002CC3E4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDisableInput) | Matching: see analysis/functions-uht-exec.json
+void AActor::execDisableInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(APlayerController,Z_Param_PlayerController);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DisableInput(Z_Param_PlayerController);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CC2D0 (end 0x002CC354)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execEnableInput) | Matching: see analysis/functions-uht-exec.json
+void AActor::execEnableInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(APlayerController,Z_Param_PlayerController);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->EnableInput(Z_Param_PlayerController);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023BFAF0 (end 0x023BFB0F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execForceNetUpdate) | Matching: see analysis/functions-uht-exec.json
 void AActor::execForceNetUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -13,6 +53,17 @@ void AActor::execForceNetUpdate(UObject* Context, FFrame& Stack, void* const Z_P
 	P_THIS->ForceNetUpdate();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023BFC70 (end 0x023BFD56)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetActorEyesViewPoint) | Matching: see analysis/functions-uht-exec.json
+void AActor::execGetActorEyesViewPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_OutLocation);
+	P_GET_STRUCT_REF(FRotator,Z_Param_Out_OutRotation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetActorEyesViewPoint(Z_Param_Out_OutLocation,Z_Param_Out_OutRotation);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C09C0 (end 0x023C09F1)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLifeSpan) | Matching: see analysis/functions-uht-exec.json
 void AActor::execGetLifeSpan(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -20,6 +71,15 @@ void AActor::execGetLifeSpan(UObject* Context, FFrame& Stack, void* const Z_Para
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(float*)Z_Param__Result=P_THIS->GetLifeSpan();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C0D40 (end 0x023C0D80)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetVelocity) | Matching: see analysis/functions-uht-exec.json
+void AActor::execGetVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetVelocity();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023C2030 (end 0x023C204F), leaf (no .pdata)
@@ -74,6 +134,78 @@ void AActor::execOnRep_ReplicatedMovement(UObject* Context, FFrame& Stack, void*
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnRep_ReplicatedMovement();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C3170 (end 0x023C3279)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPrestreamTextures) | Matching: see analysis/functions-uht-exec.json
+void AActor::execPrestreamTextures(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Seconds);
+	P_GET_UBOOL(Z_Param_bEnableStreaming);
+	P_GET_PROPERTY(UIntProperty,Z_Param_CinematicTextureGroups);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PrestreamTextures(Z_Param_Seconds,Z_Param_bEnableStreaming,Z_Param_CinematicTextureGroups);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C3280 (end 0x023C3304)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveTickPrerequisiteActor) | Matching: see analysis/functions-uht-exec.json
+void AActor::execRemoveTickPrerequisiteActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_PrerequisiteActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RemoveTickPrerequisiteActor(Z_Param_PrerequisiteActor);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C3310 (end 0x023C3394)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveTickPrerequisiteComponent) | Matching: see analysis/functions-uht-exec.json
+void AActor::execRemoveTickPrerequisiteComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UActorComponent,Z_Param_PrerequisiteComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RemoveTickPrerequisiteComponent(Z_Param_PrerequisiteComponent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C3430 (end 0x023C34B6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetActorHiddenInGame) | Matching: see analysis/functions-uht-exec.json
+void AActor::execSetActorHiddenInGame(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewHidden);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetActorHiddenInGame(Z_Param_bNewHidden);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C36F0 (end 0x023C376F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetLifeSpan) | Matching: see analysis/functions-uht-exec.json
+void AActor::execSetLifeSpan(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InLifespan);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetLifeSpan(Z_Param_InLifespan);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C37F0 (end 0x023C3874)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetOwner) | Matching: see analysis/functions-uht-exec.json
+void AActor::execSetOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_NewOwner);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetOwner(Z_Param_NewOwner);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C3880 (end 0x023C3906)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetReplicateMovement) | Matching: see analysis/functions-uht-exec.json
+void AActor::execSetReplicateMovement(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bInReplicateMovement);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetReplicateMovement(Z_Param_bInReplicateMovement);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)

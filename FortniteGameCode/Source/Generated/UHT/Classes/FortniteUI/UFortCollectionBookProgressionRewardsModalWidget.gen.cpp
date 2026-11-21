@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02897420 (end 0x028974E6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnLevelProgressionSet) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookProgressionRewardsModalWidget::execOnLevelProgressionSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_CurrentLevel);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NextLvlPct);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnLevelProgressionSet_Implementation(Z_Param_CurrentLevel,Z_Param_NextLvlPct);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCollectionBookProgressionRewardsModalWidget, 1922027690u)
 // Original dynamic initializer: RVA 0x002404E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookProgressionRewardsModalWidget> AutoInitializeUFortCollectionBookProgressionRewardsModalWidget(TEXT("UFortCollectionBookProgressionRewardsModalWidget"), sizeof(UFortCollectionBookProgressionRewardsModalWidget), 1922027690u);

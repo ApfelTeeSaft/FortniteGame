@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C39D0 (end 0x024C3A59)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetVelocityInLocalSpace) | Matching: see analysis/functions-uht-exec.json
+void UProjectileMovementComponent::execSetVelocityInLocalSpace(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_NewVelocity);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetVelocityInLocalSpace(Z_Param_NewVelocity);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UProjectileMovementComponent, 3937442299u)
 // Original dynamic initializer: RVA 0x00217410 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UProjectileMovementComponent> AutoInitializeUProjectileMovementComponent(TEXT("UProjectileMovementComponent"), sizeof(UProjectileMovementComponent), 3937442299u);

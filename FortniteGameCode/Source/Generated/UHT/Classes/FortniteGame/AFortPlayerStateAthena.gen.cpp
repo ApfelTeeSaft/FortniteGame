@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108CE70 (end 0x0108CEF4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientReportDBNO) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerStateAthena::execClientReportDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPlayerStateAthena,Z_Param_Player);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientReportDBNO_Implementation(Z_Param_Player);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108CF00 (end 0x0108CF84)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientReportKill) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerStateAthena::execClientReportKill(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPlayerStateAthena,Z_Param_Player);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientReportKill_Implementation(Z_Param_Player);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerStateAthena, 1818457301u)
 // Original dynamic initializer: RVA 0x0010D3F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerStateAthena> AutoInitializeAFortPlayerStateAthena(TEXT("AFortPlayerStateAthena"), sizeof(AFortPlayerStateAthena), 1818457301u);

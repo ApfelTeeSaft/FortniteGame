@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290D530 (end 0x0290D5B4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnItemCollectorChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortItemCollectorWidget::execOnItemCollectorChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ABuildingItemCollectorActor,Z_Param_OutItemCollector);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnItemCollectorChanged_Implementation(Z_Param_OutItemCollector);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028CC940 (end 0x028CC9BA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnItemCollectorStateChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortItemCollectorWidget::execOnItemCollectorStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortItemCollectorState,Z_Param_ItemCollectorState);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnItemCollectorStateChanged_Implementation(EFortItemCollectorState(Z_Param_ItemCollectorState));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortItemCollectorWidget, 1250656903u)
 // Original dynamic initializer: RVA 0x0024CCE0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemCollectorWidget> AutoInitializeUFortItemCollectorWidget(TEXT("UFortItemCollectorWidget"), sizeof(UFortItemCollectorWidget), 1250656903u);

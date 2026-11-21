@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0103AA20 (end 0x0103AAB6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBlueprintCanPlayerParticipate) | Matching: see analysis/functions-uht-exec.json
+void AFortMission::execBlueprintCanPlayerParticipate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPlayerController,Z_Param_PlayerController);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->BlueprintCanPlayerParticipate_Implementation(Z_Param_PlayerController);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0103B3D0 (end 0x0103B3FF)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCurrentBluGloRewards) | Matching: see analysis/functions-uht-exec.json
 void AFortMission::execGetCurrentBluGloRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

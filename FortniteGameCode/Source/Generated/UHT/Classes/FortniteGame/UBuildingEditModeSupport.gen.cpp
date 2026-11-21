@@ -13,6 +13,16 @@ void UBuildingEditModeSupport::execOnSuccessfulMatchInteractComplete(UObject* Co
 	P_THIS->OnSuccessfulMatchInteractComplete();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F68660 (end 0x00F686DF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSuccessfulMatchInteractParamUpdate) | Matching: see analysis/functions-uht-exec.json
+void UBuildingEditModeSupport::execOnSuccessfulMatchInteractParamUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewInteractParamVal);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSuccessfulMatchInteractParamUpdate(Z_Param_NewInteractParamVal);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UBuildingEditModeSupport, 8314497u)
 // Original dynamic initializer: RVA 0x000D9AD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBuildingEditModeSupport> AutoInitializeUBuildingEditModeSupport(TEXT("UBuildingEditModeSupport"), sizeof(UBuildingEditModeSupport), 8314497u);

@@ -4,6 +4,19 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024B0FB0 (end 0x024B10FE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGrabComponent) | Matching: see analysis/functions-uht-exec.json
+void UPhysicsHandleComponent::execGrabComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_Component);
+	P_GET_PROPERTY(UNameProperty,Z_Param_InBoneName);
+	P_GET_STRUCT(FVector,Z_Param_GrabLocation);
+	P_GET_UBOOL(Z_Param_bConstrainRotation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GrabComponent(Z_Param_Component,Z_Param_InBoneName,Z_Param_GrabLocation,Z_Param_bConstrainRotation);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D25190 (end 0x01D251AF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execReleaseComponent) | Matching: see analysis/functions-uht-exec.json
 void UPhysicsHandleComponent::execReleaseComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

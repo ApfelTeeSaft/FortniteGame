@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C0980 (end 0x010C0A06)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnDeselectWrapper) | Matching: see analysis/functions-uht-exec.json
+void AFortTheaterMapTile::execOnDeselectWrapper(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bIsGameSessionOwner);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnDeselectWrapper(Z_Param_bIsGameSessionOwner);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010C0B10 (end 0x010C0B96)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSelectWrapper) | Matching: see analysis/functions-uht-exec.json
+void AFortTheaterMapTile::execOnSelectWrapper(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bIsGameSessionOwner);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSelectWrapper(Z_Param_bIsGameSessionOwner);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortTheaterMapTile, 3713613856u)
 // Original dynamic initializer: RVA 0x00116480 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortTheaterMapTile> AutoInitializeAFortTheaterMapTile(TEXT("AFortTheaterMapTile"), sizeof(AFortTheaterMapTile), 3713613856u);

@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EB8F0 (end 0x023EB920)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetOwningPlayer) | Matching: see analysis/functions-uht-exec.json
+void UWidget::execGetOwningPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(APlayerController**)Z_Param__Result=P_THIS->GetOwningPlayer();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA590 (end 0x023FA5AF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveFromParent) | Matching: see analysis/functions-uht-exec.json
 void UWidget::execRemoveFromParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +20,26 @@ void UWidget::execRemoveFromParent(UObject* Context, FFrame& Stack, void* const 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->RemoveFromParent();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFEB20 (end 0x01BFEBA6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetIsEnabled) | Matching: see analysis/functions-uht-exec.json
+void UWidget::execSetIsEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bInIsEnabled);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetIsEnabled(Z_Param_bInIsEnabled);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFFB80 (end 0x01BFFBFA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetVisibility) | Matching: see analysis/functions-uht-exec.json
+void UWidget::execSetVisibility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(ESlateVisibility,Z_Param_InVisibility);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetVisibility(ESlateVisibility(Z_Param_InVisibility));
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UWidget, 4287492281u)

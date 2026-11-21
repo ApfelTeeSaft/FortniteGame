@@ -4,6 +4,36 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02897110 (end 0x02897194)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCollectionBookPageClicked) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookWidget::execOnCollectionBookPageClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortCollectionBookPage,Z_Param_ClickedPage);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCollectionBookPageClicked_Implementation(Z_Param_ClickedPage);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AA4D0 (end 0x028AA554)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCollectionBookPageSelected) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookWidget::execOnCollectionBookPageSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortCollectionBookPage,Z_Param_SelectedPage);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCollectionBookPageSelected_Implementation(Z_Param_SelectedPage);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289EE40 (end 0x0289EEC4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCollectionBookSectionClicked) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookWidget::execOnCollectionBookSectionClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortCollectionBookSection,Z_Param_ClickedSection);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCollectionBookSectionClicked_Implementation(Z_Param_ClickedSection);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCollectionBookWidget, 2068175484u)
 // Original dynamic initializer: RVA 0x00242670 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookWidget> AutoInitializeUFortCollectionBookWidget(TEXT("UFortCollectionBookWidget"), sizeof(UFortCollectionBookWidget), 2068175484u);

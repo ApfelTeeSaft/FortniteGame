@@ -4,6 +4,28 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AA560 (end 0x028AA5E4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnDetailsPageChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookPageDetailsWidget::execOnDetailsPageChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortCollectionBookPage,Z_Param_InNewDetailsPage);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnDetailsPageChanged_Implementation(Z_Param_InNewDetailsPage);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02897650 (end 0x02897741)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnPageProgressionUpdated) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookPageDetailsWidget::execOnPageProgressionUpdated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_TotalFilledSlots);
+	P_GET_PROPERTY(UIntProperty,Z_Param_TotalSlots);
+	P_GET_ENUM(EFortCollectionBookState,Z_Param_State);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnPageProgressionUpdated_Implementation(Z_Param_TotalFilledSlots,Z_Param_TotalSlots,EFortCollectionBookState(Z_Param_State));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCollectionBookPageDetailsWidget, 1541908749u)
 // Original dynamic initializer: RVA 0x00240400 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookPageDetailsWidget> AutoInitializeUFortCollectionBookPageDetailsWidget(TEXT("UFortCollectionBookPageDetailsWidget"), sizeof(UFortCollectionBookPageDetailsWidget), 1541908749u);

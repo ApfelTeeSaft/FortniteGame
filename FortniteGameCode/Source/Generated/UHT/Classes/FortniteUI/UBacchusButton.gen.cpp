@@ -13,6 +13,16 @@ void UBacchusButton::execOnClicked(UObject* Context, FFrame& Stack, void* const 
 	P_THIS->OnClicked_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0288A290 (end 0x0288A314)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetButtonSprite) | Matching: see analysis/functions-uht-exec.json
+void UBacchusButton::execSetButtonSprite(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPaperSprite,Z_Param_NewSprite);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetButtonSprite_Implementation(Z_Param_NewSprite);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UBacchusButton, 4191731126u)
 // Original dynamic initializer: RVA 0x0023B680 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBacchusButton> AutoInitializeUBacchusButton(TEXT("UBacchusButton"), sizeof(UBacchusButton), 4191731126u);

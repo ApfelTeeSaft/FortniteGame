@@ -13,6 +13,16 @@ void UFortGameplayAbility::execK2_AbilityCompleted(UObject* Context, FFrame& Sta
 	P_THIS->K2_AbilityCompleted();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEB610 (end 0x00FEB694)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnGenericNotifyFromAnimation) | Matching: see analysis/functions-uht-exec.json
+void UFortGameplayAbility::execOnGenericNotifyFromAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_NotifyTag);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnGenericNotifyFromAnimation_Implementation(Z_Param_NotifyTag);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEBC50 (end 0x00FEBC7F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execSetupPreviewImageOverride) | Matching: see analysis/functions-uht-exec.json
 void UFortGameplayAbility::execSetupPreviewImageOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

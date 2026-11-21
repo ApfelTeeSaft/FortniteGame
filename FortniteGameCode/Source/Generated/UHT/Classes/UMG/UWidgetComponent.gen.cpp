@@ -13,6 +13,16 @@ void UWidgetComponent::execRequestRedraw(UObject* Context, FFrame& Stack, void* 
 	P_THIS->RequestRedraw();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01C06D50 (end 0x01C06DD4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetWidget) | Matching: see analysis/functions-uht-exec.json
+void UWidgetComponent::execSetWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UUserWidget,Z_Param_Widget);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetWidget(Z_Param_Widget);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UWidgetComponent, 2179871610u)
 // Original dynamic initializer: RVA 0x001B4D40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UWidgetComponent> AutoInitializeUWidgetComponent(TEXT("UWidgetComponent"), sizeof(UWidgetComponent), 2179871610u);

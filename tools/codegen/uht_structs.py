@@ -61,6 +61,7 @@ from manifest_io import dump_compact  # noqa: E402
 from pe import PEImage  # noqa: E402
 from unwind import UNW_FLAG_CHAININFO, parse_unwind  # noqa: E402
 from uht_creators import CREATOR_SIZE, MASK, TEMPLATE  # noqa: E402
+from uht_props import MODELLED_STRUCTS  # noqa: E402
 
 GEN_DIR = ROOT / "FortniteGameCode" / "Source" / "Generated" / "UHT" / "Structs"
 CTOR_MANIFEST = ROOT / "analysis" / "functions-uht-structs.json"
@@ -407,9 +408,11 @@ def main() -> int:
             f"\tUScriptStruct* {zc}();\n"
             f"\tUPackage* {pkg_fn}();  // RVA 0x{r['package']:08X}\n"
             f"{super_decl}"
-            f"struct alignas({r['align']}) {cpp}\n{{\n\tstatic class UScriptStruct* StaticStruct();\n"
-            f"\tunsigned char Opaque[0x{r['size']:X}];  // layout not reconstructed; sizeof/alignof from FStructParams\n}};\n"
-            f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{ss:08X} (end 0x{ss_end:08X}, chained .pdata fragments"
+            + (f"// {cpp} is defined in FortniteGameCode/ScriptRecovered.h (UE4.20 members; exec thunks pass it).\n"
+               if MODELLED_STRUCTS.get(cpp[1:]) == (r["size"], r["align"]) else
+               f"struct alignas({r['align']}) {cpp}\n{{\n\tstatic class UScriptStruct* StaticStruct();\n"
+               f"\tunsigned char Opaque[0x{r['size']:X}];  // layout not reconstructed; sizeof/alignof from FStructParams\n}};\n")
+            + f"// Original FortniteClient-Win64-Shipping.exe: RVA 0x{ss:08X} (end 0x{ss_end:08X}, chained .pdata fragments"
             + (")\n" if variant == "plain" else
                "; the reference inlines the package singleton, which this unit does not define yet)\n") +
             f"// Original VA: 0x{base + ss:016X} | File offset: 0x{img.rva_to_off(ss):08X}\n"

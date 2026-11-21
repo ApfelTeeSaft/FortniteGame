@@ -4,6 +4,139 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109EC80 (end 0x0109ED79)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDisableSlot) | Matching: see analysis/functions-uht-exec.json
+void AFortQuickBars::execDisableSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortQuickBars,Z_Param_InQuickBar);
+	P_GET_PROPERTY(UIntProperty,Z_Param_SlotIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->DisableSlot_Validate(EFortQuickBars(Z_Param_InQuickBar),Z_Param_SlotIndex))
+	{
+		RPC_ValidateFailed(TEXT("DisableSlot_Validate"));
+		return;
+	}
+	P_THIS->DisableSlot_Implementation(EFortQuickBars(Z_Param_InQuickBar),Z_Param_SlotIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109EDA0 (end 0x0109EE46)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execEmpty) | Matching: see analysis/functions-uht-exec.json
+void AFortQuickBars::execEmpty(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortQuickBars,Z_Param_InQuickBar);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->Empty_Validate(EFortQuickBars(Z_Param_InQuickBar)))
+	{
+		RPC_ValidateFailed(TEXT("Empty_Validate"));
+		return;
+	}
+	P_THIS->Empty_Implementation(EFortQuickBars(Z_Param_InQuickBar));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109EE50 (end 0x0109EF49)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execEmptySlot) | Matching: see analysis/functions-uht-exec.json
+void AFortQuickBars::execEmptySlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortQuickBars,Z_Param_InQuickBar);
+	P_GET_PROPERTY(UIntProperty,Z_Param_SlotIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->EmptySlot_Validate(EFortQuickBars(Z_Param_InQuickBar),Z_Param_SlotIndex))
+	{
+		RPC_ValidateFailed(TEXT("EmptySlot_Validate"));
+		return;
+	}
+	P_THIS->EmptySlot_Implementation(EFortQuickBars(Z_Param_InQuickBar),Z_Param_SlotIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109EF50 (end 0x0109F049)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execEnableSlot) | Matching: see analysis/functions-uht-exec.json
+void AFortQuickBars::execEnableSlot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortQuickBars,Z_Param_InQuickBar);
+	P_GET_PROPERTY(UIntProperty,Z_Param_SlotIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->EnableSlot_Validate(EFortQuickBars(Z_Param_InQuickBar),Z_Param_SlotIndex))
+	{
+		RPC_ValidateFailed(TEXT("EnableSlot_Validate"));
+		return;
+	}
+	P_THIS->EnableSlot_Implementation(EFortQuickBars(Z_Param_InQuickBar),Z_Param_SlotIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F870 (end 0x0109F9F5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerActivateSlotInternal) | Matching: see analysis/functions-uht-exec.json
+void AFortQuickBars::execServerActivateSlotInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortQuickBars,Z_Param_InQuickBar);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Slot);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_ActivateDelay);
+	P_GET_UBOOL(Z_Param_bUpdatePreviousFocusedSlot);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerActivateSlotInternal_Validate(EFortQuickBars(Z_Param_InQuickBar),Z_Param_Slot,Z_Param_ActivateDelay,Z_Param_bUpdatePreviousFocusedSlot))
+	{
+		RPC_ValidateFailed(TEXT("ServerActivateSlotInternal_Validate"));
+		return;
+	}
+	P_THIS->ServerActivateSlotInternal_Implementation(EFortQuickBars(Z_Param_InQuickBar),Z_Param_Slot,Z_Param_ActivateDelay,Z_Param_bUpdatePreviousFocusedSlot);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109FA00 (end 0x0109FB59)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerAddItemInternal) | Matching: see analysis/functions-uht-exec.json
+void AFortQuickBars::execServerAddItemInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGuid,Z_Param_Item);
+	P_GET_ENUM(EFortQuickBars,Z_Param_InQuickBar);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Slot);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerAddItemInternal_Validate(Z_Param_Item,EFortQuickBars(Z_Param_InQuickBar),Z_Param_Slot))
+	{
+		RPC_ValidateFailed(TEXT("ServerAddItemInternal_Validate"));
+		return;
+	}
+	P_THIS->ServerAddItemInternal_Implementation(Z_Param_Item,EFortQuickBars(Z_Param_InQuickBar),Z_Param_Slot);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109FB60 (end 0x0109FCBA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerRemoveItemInternal) | Matching: see analysis/functions-uht-exec.json
+void AFortQuickBars::execServerRemoveItemInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGuid,Z_Param_Item);
+	P_GET_UBOOL(Z_Param_bFindReplacement);
+	P_GET_UBOOL(Z_Param_bForce);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerRemoveItemInternal_Validate(Z_Param_Item,Z_Param_bFindReplacement,Z_Param_bForce))
+	{
+		RPC_ValidateFailed(TEXT("ServerRemoveItemInternal_Validate"));
+		return;
+	}
+	P_THIS->ServerRemoveItemInternal_Implementation(Z_Param_Item,Z_Param_bFindReplacement,Z_Param_bForce);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109FCC0 (end 0x0109FE33)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSwapItemsInternal) | Matching: see analysis/functions-uht-exec.json
+void AFortQuickBars::execServerSwapItemsInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortQuickBars,Z_Param_QuickBarA);
+	P_GET_PROPERTY(UIntProperty,Z_Param_SlotIndexA);
+	P_GET_ENUM(EFortQuickBars,Z_Param_QuickBarB);
+	P_GET_PROPERTY(UIntProperty,Z_Param_SlotIndexB);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSwapItemsInternal_Validate(EFortQuickBars(Z_Param_QuickBarA),Z_Param_SlotIndexA,EFortQuickBars(Z_Param_QuickBarB),Z_Param_SlotIndexB))
+	{
+		RPC_ValidateFailed(TEXT("ServerSwapItemsInternal_Validate"));
+		return;
+	}
+	P_THIS->ServerSwapItemsInternal_Implementation(EFortQuickBars(Z_Param_QuickBarA),Z_Param_SlotIndexA,EFortQuickBars(Z_Param_QuickBarB),Z_Param_SlotIndexB);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortQuickBars, 3802736932u)
 // Original dynamic initializer: RVA 0x00111340 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortQuickBars> AutoInitializeAFortQuickBars(TEXT("AFortQuickBars"), sizeof(AFortQuickBars), 3802736932u);

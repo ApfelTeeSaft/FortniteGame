@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028FEA10 (end 0x028FEA92)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleDifferentSquadSlotSelected) | Matching: see analysis/functions-uht-exec.json
+void UFortSquadManagementScreenBase::execHandleDifferentSquadSlotSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_SquadSlotIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleDifferentSquadSlotSelected(Z_Param_SquadSlotIndex);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortSquadManagementScreenBase, 2359611398u)
 // Original dynamic initializer: RVA 0x0025C080 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortSquadManagementScreenBase> AutoInitializeUFortSquadManagementScreenBase(TEXT("UFortSquadManagementScreenBase"), sizeof(UFortSquadManagementScreenBase), 2359611398u);

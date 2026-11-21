@@ -4,6 +4,35 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100FB40 (end 0x0100FBC4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCustomizePreviewMesh) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execCustomizePreviewMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UMeshComponent,Z_Param_Mesh);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->CustomizePreviewMesh(Z_Param_Mesh);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100FBD0 (end 0x0100FC54)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCustomizePreviewPrefab) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execCustomizePreviewPrefab(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_PrefabInstance);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->CustomizePreviewPrefab(Z_Param_PrefabInstance);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01013B10 (end 0x01013B3F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRarity) | Matching: see analysis/functions-uht-exec.json
+void UFortItemDefinition::execGetRarity(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(EFortRarity*)Z_Param__Result=P_THIS->GetRarity();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01018E50 (end 0x01018E7F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldShowPreviewOnCurrentHero) | Matching: see analysis/functions-uht-exec.json
 void UFortItemDefinition::execShouldShowPreviewOnCurrentHero(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

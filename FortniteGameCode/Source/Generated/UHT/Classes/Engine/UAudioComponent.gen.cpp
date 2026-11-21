@@ -4,6 +4,29 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DCD60 (end 0x023DCE66)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFadeIn) | Matching: see analysis/functions-uht-exec.json
+void UAudioComponent::execFadeIn(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_FadeInDuration);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_FadeVolumeLevel);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_StartTime);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FadeIn(Z_Param_FadeInDuration,Z_Param_FadeVolumeLevel,Z_Param_StartTime);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DCE70 (end 0x023DCF32)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFadeOut) | Matching: see analysis/functions-uht-exec.json
+void UAudioComponent::execFadeOut(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_FadeOutDuration);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_FadeVolumeLevel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->FadeOut(Z_Param_FadeOutDuration,Z_Param_FadeVolumeLevel);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023DCF40 (end 0x023DCF6F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsPlaying) | Matching: see analysis/functions-uht-exec.json
 void UAudioComponent::execIsPlaying(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +34,16 @@ void UAudioComponent::execIsPlaying(UObject* Context, FFrame& Stack, void* const
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->IsPlaying();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023DCF90 (end 0x023DD00F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlay) | Matching: see analysis/functions-uht-exec.json
+void UAudioComponent::execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_StartTime);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Play(Z_Param_StartTime);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F68620 (end 0x00F6863F), leaf (no .pdata)

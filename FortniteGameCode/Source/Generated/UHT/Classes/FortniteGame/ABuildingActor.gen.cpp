@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62720 (end 0x00F62760)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCentroid) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execGetCentroid(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetCentroid();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62760 (end 0x00F6278F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCurrentBuildingLevel) | Matching: see analysis/functions-uht-exec.json
 void ABuildingActor::execGetCurrentBuildingLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -40,6 +49,40 @@ void ABuildingActor::execHandleDestroyed(UObject* Context, FFrame& Stack, void* 
 	P_THIS->HandleDestroyed();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62B90 (end 0x00F62C53)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execInitializeKismetSpawnedBuildingActor) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execInitializeKismetSpawnedBuildingActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ABuildingActor,Z_Param_BuildingOwner);
+	P_GET_OBJECT(AFortPlayerController,Z_Param_SpawningController);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->InitializeKismetSpawnedBuildingActor(Z_Param_BuildingOwner,Z_Param_SpawningController);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62F00 (end 0x00F62FBB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnBuildingActorInitialized) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execOnBuildingActorInitialized(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_InitializationReason);
+	P_GET_PROPERTY(UByteProperty,Z_Param_BuildingPersistentState);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnBuildingActorInitialized_Implementation(EFortBuildingInitializationReason::Type(Z_Param_InitializationReason),EFortBuildingPersistentState::Type(Z_Param_BuildingPersistentState));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F62FC0 (end 0x00F630B9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnDayPhaseChanged) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execOnDayPhaseChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_CurrentDayPhase);
+	P_GET_PROPERTY(UByteProperty,Z_Param_PreviousDayPhase);
+	P_GET_UBOOL(Z_Param_bAtCreation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnDayPhaseChanged_Implementation(EFortDayPhase::Type(Z_Param_CurrentDayPhase),EFortDayPhase::Type(Z_Param_PreviousDayPhase),Z_Param_bAtCreation);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63100 (end 0x00F6311F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_CurrentBuildingLevel) | Matching: see analysis/functions-uht-exec.json
 void ABuildingActor::execOnRep_CurrentBuildingLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -65,6 +108,18 @@ void ABuildingActor::execPlacedByPlacementTool(UObject* Context, FFrame& Stack, 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->PlacedByPlacementTool_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63420 (end 0x00F6352A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldDie) | Matching: see analysis/functions-uht-exec.json
+void ABuildingActor::execShouldDie(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Damage);
+	P_GET_OBJECT(AController,Z_Param_EventInstigator);
+	P_GET_OBJECT(AActor,Z_Param_DamageCauser);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldDie_Implementation(Z_Param_Damage,Z_Param_EventInstigator,Z_Param_DamageCauser);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63530 (end 0x00F6354F), leaf (no .pdata)

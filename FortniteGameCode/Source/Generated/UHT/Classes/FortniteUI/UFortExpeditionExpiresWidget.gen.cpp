@@ -13,6 +13,16 @@ void UFortExpeditionExpiresWidget::execOnExpeditionExpirationUpdated(UObject* Co
 	P_THIS->OnExpeditionExpirationUpdated_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AA560 (end 0x028AA5E4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetData) | Matching: see analysis/functions-uht-exec.json
+void UFortExpeditionExpiresWidget::execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortExpeditionItem,Z_Param_InItem);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetData_Implementation(Z_Param_InItem);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortExpeditionExpiresWidget, 2016599900u)
 // Original dynamic initializer: RVA 0x00244A80 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortExpeditionExpiresWidget> AutoInitializeUFortExpeditionExpiresWidget(TEXT("UFortExpeditionExpiresWidget"), sizeof(UFortExpeditionExpiresWidget), 2016599900u);

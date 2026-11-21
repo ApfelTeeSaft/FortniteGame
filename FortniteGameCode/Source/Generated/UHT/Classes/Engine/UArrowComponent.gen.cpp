@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D76B0 (end 0x023D7730)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetArrowColor) | Matching: see analysis/functions-uht-exec.json
+void UArrowComponent::execSetArrowColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FLinearColor,Z_Param_NewColor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetArrowColor(Z_Param_NewColor);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UArrowComponent, 4194756287u)
 // Original dynamic initializer: RVA 0x001EFAA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UArrowComponent> AutoInitializeUArrowComponent(TEXT("UArrowComponent"), sizeof(UArrowComponent), 4194756287u);

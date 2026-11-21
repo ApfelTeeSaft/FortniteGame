@@ -18,6 +18,21 @@ void AFortLobbyBeaconClientRM::execServerUpdateNewlyJoinedPlayerInternal(UObject
 	P_THIS->ServerUpdateNewlyJoinedPlayerInternal_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010210E0 (end 0x01021196)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerUpdateReadyStatus) | Matching: see analysis/functions-uht-exec.json
+void AFortLobbyBeaconClientRM::execServerUpdateReadyStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bIsReady);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerUpdateReadyStatus_Validate(Z_Param_bIsReady))
+	{
+		RPC_ValidateFailed(TEXT("ServerUpdateReadyStatus_Validate"));
+		return;
+	}
+	P_THIS->ServerUpdateReadyStatus_Implementation(Z_Param_bIsReady);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortLobbyBeaconClientRM, 3572604396u)
 // Original dynamic initializer: RVA 0x000FCE70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortLobbyBeaconClientRM> AutoInitializeAFortLobbyBeaconClientRM(TEXT("AFortLobbyBeaconClientRM"), sizeof(AFortLobbyBeaconClientRM), 3572604396u);

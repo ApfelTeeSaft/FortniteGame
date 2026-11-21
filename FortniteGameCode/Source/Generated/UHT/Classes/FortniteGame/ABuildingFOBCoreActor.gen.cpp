@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6E7D0 (end 0x00F6E856)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnActiveStatusChanged) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBCoreActor::execOnActiveStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewActiveStatus);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnActiveStatusChanged_Implementation(Z_Param_bNewActiveStatus);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01060BF0 (end 0x01060C0F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bActive) | Matching: see analysis/functions-uht-exec.json
 void ABuildingFOBCoreActor::execOnRep_bActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -29,6 +39,26 @@ void ABuildingFOBCoreActor::execOnRep_bVulnerable(UObject* Context, FFrame& Stac
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnRep_bVulnerable();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6EF90 (end 0x00F6F016)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnTargetableStatusChanged) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBCoreActor::execOnTargetableStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewTargetableStatus);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnTargetableStatusChanged_Implementation(Z_Param_bNewTargetableStatus);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67F40 (end 0x00F67FC6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnVulnerableStatusChanged) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBCoreActor::execOnVulnerableStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewTargetableStatus);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnVulnerableStatusChanged_Implementation(Z_Param_bNewTargetableStatus);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(ABuildingFOBCoreActor, 2432188044u)

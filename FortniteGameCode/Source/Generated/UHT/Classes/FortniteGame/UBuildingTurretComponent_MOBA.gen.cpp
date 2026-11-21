@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79B70 (end 0x00F79C33)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnAllyHarmed) | Matching: see analysis/functions-uht-exec.json
+void UBuildingTurretComponent_MOBA::execOnAllyHarmed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_InAllyActor);
+	P_GET_OBJECT(AActor,Z_Param_InHarmingActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnAllyHarmed(Z_Param_InAllyActor,Z_Param_InHarmingActor);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UBuildingTurretComponent_MOBA, 4021530185u)
 // Original dynamic initializer: RVA 0x000DCD80 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBuildingTurretComponent_MOBA> AutoInitializeUBuildingTurretComponent_MOBA(TEXT("UBuildingTurretComponent_MOBA"), sizeof(UBuildingTurretComponent_MOBA), 4021530185u);

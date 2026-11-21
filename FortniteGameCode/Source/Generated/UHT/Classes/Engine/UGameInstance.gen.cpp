@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02415600 (end 0x02415682)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugCreatePlayer) | Matching: see analysis/functions-uht-exec.json
+void UGameInstance::execDebugCreatePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ControllerId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DebugCreatePlayer(Z_Param_ControllerId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02415690 (end 0x02415712)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDebugRemovePlayer) | Matching: see analysis/functions-uht-exec.json
+void UGameInstance::execDebugRemovePlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ControllerId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DebugRemovePlayer(Z_Param_ControllerId);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UGameInstance, 1630438852u)
 // Original dynamic initializer: RVA 0x001FF480 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UGameInstance> AutoInitializeUGameInstance(TEXT("UGameInstance"), sizeof(UGameInstance), 1630438852u);

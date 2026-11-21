@@ -4,6 +4,92 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5AFA0 (end 0x00F5B036)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAssignToHotspot) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execAssignToHotspot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->AssignToHotspot(Z_Param_AI);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5B040 (end 0x00F5B104)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAssignToSlotByIndex) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execAssignToSlotByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->AssignToSlotByIndex(Z_Param_AI,Z_Param_Index);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5B270 (end 0x00F5B306)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFindBestSlotIndex) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execFindBestSlotIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(int32*)Z_Param__Result=P_THIS->FindBestSlotIndex(Z_Param_AI);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C2B0 (end 0x00F5C346)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsAIAllowed) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execIsAIAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsAIAllowed_Implementation(Z_Param_AI);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C480 (end 0x00F5C514)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOccupySlotByIndex) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOccupySlotByIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->OccupySlotByIndex(Z_Param_Index);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C520 (end 0x00F5C65F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnAssignedClaimedBehavior) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnAssignedClaimedBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_GET_PROPERTY(UIntProperty,Z_Param_UserId);
+	P_GET_UBOOL(Z_Param_bWasOnWaitingList);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->OnAssignedClaimedBehavior_Implementation(Z_Param_AI,Z_Param_Index,Z_Param_UserId,Z_Param_bWasOnWaitingList);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C660 (end 0x00F5C762)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnAssignedOccupiedBehavior) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnAssignedOccupiedBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_GET_PROPERTY(UIntProperty,Z_Param_UserId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->OnAssignedOccupiedBehavior_Implementation(Z_Param_AI,Z_Param_Index,Z_Param_UserId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C770 (end 0x00F5C806)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnAssignedSlotlessBehavior) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnAssignedSlotlessBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->OnAssignedSlotlessBehavior_Implementation(Z_Param_AI);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C810 (end 0x00F5C82F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnHotSpotDisabled) | Matching: see analysis/functions-uht-exec.json
 void AAIHotSpot::execOnHotSpotDisabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -20,6 +106,135 @@ void AAIHotSpot::execOnHotSpotEnabled(UObject* Context, FFrame& Stack, void* con
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnHotSpotEnabled_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C830 (end 0x00F5C967)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnMoveToSlotFinished) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnMoveToSlotFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_GET_PROPERTY(UIntProperty,Z_Param_UserId);
+	P_GET_UBOOL(Z_Param_bResult);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnMoveToSlotFinished_Implementation(Z_Param_AI,Z_Param_Index,Z_Param_UserId,Z_Param_bResult);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C970 (end 0x00F5CAEA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRemovedBehavior) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnRemovedBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_GET_PROPERTY(UIntProperty,Z_Param_UserId);
+	P_GET_ENUM(EAIHotSpotSlot,Z_Param_PrevState);
+	P_GET_UBOOL(Z_Param_bWasOnWaitingList);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRemovedBehavior_Implementation(Z_Param_AI,Z_Param_Index,Z_Param_UserId,EAIHotSpotSlot(Z_Param_PrevState),Z_Param_bWasOnWaitingList);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5CAF0 (end 0x00F5CBB6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRemovedSlotlessBehavior) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnRemovedSlotlessBehavior(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_GET_UBOOL(Z_Param_bIsClamingSlot);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRemovedSlotlessBehavior_Implementation(Z_Param_AI,Z_Param_bIsClamingSlot);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5CBC0 (end 0x00F5CCB1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSlotBlocked) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnSlotBlocked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_GET_PROPERTY(UIntProperty,Z_Param_UserId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSlotBlocked_Implementation(Z_Param_AI,Z_Param_Index,Z_Param_UserId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5CCC0 (end 0x00F5CDB1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSlotClaimed) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnSlotClaimed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_GET_PROPERTY(UIntProperty,Z_Param_UserId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSlotClaimed_Implementation(Z_Param_AI,Z_Param_Index,Z_Param_UserId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5CDC0 (end 0x00F5CE80)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSlotDisabled) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnSlotDisabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_GET_PROPERTY(UIntProperty,Z_Param_UserId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSlotDisabled_Implementation(Z_Param_Index,Z_Param_UserId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5CE80 (end 0x00F5CF40)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSlotEnabled) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnSlotEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_GET_PROPERTY(UIntProperty,Z_Param_UserId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSlotEnabled_Implementation(Z_Param_Index,Z_Param_UserId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5CF40 (end 0x00F5D031)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSlotFreed) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnSlotFreed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_GET_PROPERTY(UIntProperty,Z_Param_UserId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSlotFreed_Implementation(Z_Param_AI,Z_Param_Index,Z_Param_UserId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5D040 (end 0x00F5D131)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSlotOccupied) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execOnSlotOccupied(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_GET_PROPERTY(UIntProperty,Z_Param_UserId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSlotOccupied_Implementation(Z_Param_AI,Z_Param_Index,Z_Param_UserId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5D140 (end 0x00F5D207)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveFromHotspot) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execRemoveFromHotspot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_GET_UBOOL(Z_Param_bAssignFromWaitingList);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->RemoveFromHotspot(Z_Param_AI,Z_Param_bAssignFromWaitingList);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5D310 (end 0x00F5D396)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetEnabled) | Matching: see analysis/functions-uht-exec.json
+void AAIHotSpot::execSetEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bEnabled);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetEnabled(Z_Param_bEnabled);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(AAIHotSpot, 2649241222u)

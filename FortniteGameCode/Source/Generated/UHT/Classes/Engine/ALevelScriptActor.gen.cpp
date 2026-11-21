@@ -4,6 +4,30 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02474690 (end 0x02474726)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoteEvent) | Matching: see analysis/functions-uht-exec.json
+void ALevelScriptActor::execRemoteEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_EventName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->RemoteEvent(Z_Param_EventName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02474B60 (end 0x02474D1E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCinematicMode) | Matching: see analysis/functions-uht-exec.json
+void ALevelScriptActor::execSetCinematicMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bCinematicMode);
+	P_GET_UBOOL(Z_Param_bHidePlayer);
+	P_GET_UBOOL(Z_Param_bAffectsHUD);
+	P_GET_UBOOL(Z_Param_bAffectsMovement);
+	P_GET_UBOOL(Z_Param_bAffectsTurning);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCinematicMode(Z_Param_bCinematicMode,Z_Param_bHidePlayer,Z_Param_bAffectsHUD,Z_Param_bAffectsMovement,Z_Param_bAffectsTurning);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ALevelScriptActor, 2885797934u)
 // Original dynamic initializer: RVA 0x002050B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ALevelScriptActor> AutoInitializeALevelScriptActor(TEXT("ALevelScriptActor"), sizeof(ALevelScriptActor), 2885797934u);

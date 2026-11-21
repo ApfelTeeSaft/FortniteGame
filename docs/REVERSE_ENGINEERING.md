@@ -314,37 +314,103 @@ come from the inlined-native error. This brings the named denominator functions 
 (17.56 %).
 
 **Generated declarations and thunks.** `Classes.gen.h` declares each class's new slots in
-order. An introduced slot is declared by name when its UFunction's signature is known:
-- no properties, or one `CPF_ReturnParm` returned in a register (bool, uint8, int32,
-  float, double, or a known class's pointer);
-- `_Validate` returns bool.
+order. An introduced slot is declared by name when its UFunction's whole signature is
+supported (see "Exec thunk parameters" below); `_Validate` returns bool. That gives 1,368
+named declarations.
 
-Other slots are placeholders (`virtual void FNGC_VSlot_0x<offset>()`; 4,053 gaps and 1,155
-named slots without a signature). MSVC lays out single-inheritance vtables in declaration
+Other slots are placeholders (`virtual void FNGC_VSlot_0x<offset>()`): 4,053 gaps and 404
+named slots whose signature uses a type not modelled yet. MSVC lays out single-inheritance vtables in declaration
 order. The root becomes polymorphic, its destructor in slot 0 as in `UObjectBase`, and its
 opaque member shrinks by the vptr, so every `sizeof` is unchanged.
 
 A thunk that only calls slots declared by name is written as UHT 4.20's `DECLARE_FUNCTION`:
-`P_FINISH`, the optional `_Validate` check with `RPC_ValidateFailed`, and the call. UHT
-defines thunks inline in the class body. Here they are defined out of line in the class's
+- the `P_GET_*` reads;
+- `P_FINISH`;
+- the optional `_Validate` check with `RPC_ValidateFailed`;
+- the call.
+
+UHT defines thunks inline in the class body. Here they are defined out of line in the class's
 `IMPLEMENT_CLASS` fragment: inline definitions of only some of a unit's thunks changed
 MSVC's emission order of other functions' static locals, breaking 57 `StaticEnum` layout
 predictions.
 
-Out of line, the effect is small but not zero. Even one definition in `Paper2D.1` moves one
-`StaticEnum` singleton to the front of the unit's `.bss`. Net, 6 `StaticEnum` and 4
-`FCompiledInDeferEnum` matches are lost and 4 + 4 gained in other units. The reference has
-all thunks, so this may settle as more are reconstructed; not verified.
+Out of line, the effect is small and changes as thunks are added. Even one definition in
+`Paper2D.1` moves one `StaticEnum` singleton to the front of the unit's `.bss`. With the
+first 379 thunk addresses, the net was 2 `StaticEnum` matches fewer than without thunks.
+With 979 it is 1 more (381; `FCompiledInDeferEnum` 252, 1 more), consistent with the
+reference, which contains every thunk. The individual units still differ.
 
 | Exec thunks generated | Count |
 | --- | --- |
-| UFunction thunks defined | 564, at 379 addresses (86 bodies shared by folded UFunctions; one manifest entry each) |
-| exact | 377: 175 in the denominator, 202 leaf (no `.pdata`) |
-| `partial` | 2: `AController::IsLocalPlayerController` and `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, whose real thunks inline their natives |
+| UFunction thunks defined | 1,219, at 979 addresses (128 bodies shared by folded UFunctions; one manifest entry each); 607 read parameters |
+| exact | 970: 768 in the denominator, 202 leaf (no `.pdata`) |
+| `partial` | 9: three natives inlined from headers (`AController::IsLocalPlayerController`, `UPrimitiveComponent::K2_IsQueryCollisionEnabled`, `ACharacter::GetBaseRotationOffsetRotator`) and six byte enums whose native is declared with `TEnumAsByte` (below) |
 
-The thunks call no address but `RPC_ValidateFailed` (corroborated by the other thunks) and
-`TEXT("<F>_Validate")` (literal content). So the bytes alone, with the vtable offsets, carry
-the evidence.
+The thunks call `RPC_ValidateFailed`, `FFrame::Step` and `FFrame::StepExplicitProperty`,
+each corroborated by the other thunks, and use `TEXT("<F>_Validate")` (literal content).
+So the bytes alone, with the vtable offsets, carry the evidence.
+
+## Exec thunk parameters (`tools/codegen/uht_props.py`)
+
+A UFunction's `FFunctionParams` points to its property records, which give each
+parameter's type, name, flags and offset (`UE4CodeGen_Private`, no metadata in shipping).
+`ConstructUProperties` builds them in array order and prepends each to the function's
+property chain, so the array lists parameters in reverse declaration order. Arrays and
+sets are followed by one inner record, maps by two, and enum properties by their
+underlying property. In all 969 parameterised virtual-native UFunctions, the `Offset` fields
+decrease along the array, which confirms the order.
+
+The thunk text follows `ExportFunctionThunk`:
+- one `P_GET_<GetCPPMacroType>` per parameter (`UBOOL`, `OBJECT`, `STRUCT`, `ENUM`,
+  `PROPERTY` with `U<Name>Property`);
+- `_REF` and `Z_Param_Out_<Name>` for `CPF_OutParm`;
+- an explicit conversion for enums.
+
+The native's declaration follows `ExportCppDeclaration`: `const` for `CPF_ConstParm` and
+`&` for `CPF_OutParm` or `CPF_ReferenceParm`. The header parser sets both for `const T&`.
+
+Supported types:
+- bool, the integer and floating-point types, `FName`;
+- pointers to reflected classes;
+- `UClass*` (not `TSubclassOf`);
+- enums in their `UEnum::ECppForm` from `FEnumParams`;
+- seven structs defined from the UE4.20 headers: `FVector`, `FRotator`, `FVector2D`,
+  `FLinearColor`, `FGuid`, `FGameplayTag` and `FGameplayAbilitySpecHandle`.
+
+A struct is used only when the reference's `FStructParams` give the same `SizeOf` and
+`AlignOf`. Enums are declared with their form and underlying type only, no enumerators.
+
+The shims follow the 4.20 headers where the thunks depend on them:
+- `FFrame` with its full layout (`Code` +0x20, `PropertyChainForCompiledIn` +0x80);
+- the `StepCompiledIn` / `StepCompiledInRef` templates;
+- the `P_GET_*` macros, `TCppType` and `GetDefaultPropertyValue()` of the property classes;
+- `TEnumAsByte`;
+- `UField : UObject` with `Next` at +0x28, where `StepCompiledIn` reads it in the
+  reference.
+
+`FName` became the 4.20 union with `uint64 CompositeComparisonValue`, which makes it
+8-aligned. The reference agrees: `FCollisionProfileName`, holding only an `FName`, has
+`AlignOf` 8. No existing match changed.
+
+Object properties' `ClassFunc` is `Z_Construct_UClass_<C>_NoRegister`, folded with
+`<C>::StaticClass` in all 456 cases. A first version mapped classes by constructor only,
+which left every object parameter unsupported.
+
+Limits:
+- A byte enum (`TEnumAsByte` property) may be declared by the programmer as the raw enum
+  or as `TEnumAsByte<E>`. The reflection data does not record which, and the thunk text is
+  the same. UHT's own form (raw for values and returns) is used. Six natives are declared
+  with `TEnumAsByte`, which MSVC passes through a temporary because of its copy
+  constructor; their thunks do not match. Recovering the form from the reference's
+  argument setup is a possible next step.
+- Of the 1,661 virtual-native UFunctions, 1,291 have a supported signature and 1,219 have
+  thunks (folded bodies counted per UFunction). For the other 72, a slot is not declared
+  by name (a name already declared higher in the hierarchy, or an incomplete validate
+  pair). The unsupported ones use, most often:
+  - `FString` (52), `TArray` (49), `FText` (37), `TSubclassOf` (17);
+  - structs not modelled: `FGameplayCueParameters` (18), `FUniqueNetIdRepl` (18),
+    `FHitResult` (12), `FTransform` (10);
+  - 60 use several such types.
 
 ## Third family: UHT UFunction creators (generated, `tools/codegen/uht_creators.py`)
 

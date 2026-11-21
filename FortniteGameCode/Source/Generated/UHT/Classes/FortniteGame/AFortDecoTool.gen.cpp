@@ -13,6 +13,23 @@ void AFortDecoTool::execClientDestroyDecoPreview(UObject* Context, FFrame& Stack
 	P_THIS->ClientDestroyDecoPreview_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FD2950 (end 0x00FD2AB8)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSpawnDeco) | Matching: see analysis/functions-uht-exec.json
+void AFortDecoTool::execServerSpawnDeco(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Location);
+	P_GET_STRUCT(FRotator,Z_Param_Rotation);
+	P_GET_OBJECT(ABuildingSMActor,Z_Param_AttachedActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSpawnDeco_Validate(Z_Param_Location,Z_Param_Rotation,Z_Param_AttachedActor))
+	{
+		RPC_ValidateFailed(TEXT("ServerSpawnDeco_Validate"));
+		return;
+	}
+	P_THIS->ServerSpawnDeco_Implementation(Z_Param_Location,Z_Param_Rotation,Z_Param_AttachedActor);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortDecoTool, 3453171697u)
 // Original dynamic initializer: RVA 0x000EFAA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortDecoTool> AutoInitializeAFortDecoTool(TEXT("AFortDecoTool"), sizeof(AFortDecoTool), 3453171697u);

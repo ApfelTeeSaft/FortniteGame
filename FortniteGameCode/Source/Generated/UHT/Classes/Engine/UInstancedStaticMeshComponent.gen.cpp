@@ -13,6 +13,16 @@ void UInstancedStaticMeshComponent::execClearInstances(UObject* Context, FFrame&
 	P_THIS->ClearInstances();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0242B180 (end 0x0242B214)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveInstance) | Matching: see analysis/functions-uht-exec.json
+void UInstancedStaticMeshComponent::execRemoveInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_InstanceIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->RemoveInstance(Z_Param_InstanceIndex);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UInstancedStaticMeshComponent, 65592595u)
 // Original dynamic initializer: RVA 0x00200D00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UInstancedStaticMeshComponent> AutoInitializeUInstancedStaticMeshComponent(TEXT("UInstancedStaticMeshComponent"), sizeof(UInstancedStaticMeshComponent), 65592595u);

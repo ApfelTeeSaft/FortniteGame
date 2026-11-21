@@ -144,6 +144,41 @@ def test_exec_thunks() -> None:
     print("exec thunks: ok")
 
 
+def test_uht_parameters() -> None:
+    """UHT 4.20 ExportFunctionThunk / ExportCppDeclaration text for synthetic property records."""
+    sys.path.insert(0, str(REPO_ROOT / "tools" / "codegen"))
+    import uht_props as P
+    base = 0x140000000
+    names = P.Names({0x100: "AActor"}, {0x200: {"name": "EMode", "form": P.ENUM_CLASS, "cpp": "EMode"},
+                                        0x300: {"name": "ERes", "form": P.ENUM_NAMESPACED, "cpp": "ERes::Type"}},
+                    {0x400: ("Vector", 12, 4)})
+
+    def rec(t, name, flags, func=0, inner=()):
+        return {"type": t, "name": name, "flags": flags | 0x80, "dim": 1, "func": base + func if func else 0,
+                "bool": (1, 1), "inner": [{"type": x} for x in inner]}
+
+    out, const, ref = P.CPF_OUTPARM, P.CPF_CONSTPARM, P.CPF_REFERENCEPARM
+    t = P.parameter(rec("Bool", "bEnable", 0), names, base)
+    assert (t["decl"], t["line"], t["arg"]) == ("bool bEnable", "P_GET_UBOOL(Z_Param_bEnable);", "Z_Param_bEnable"), t
+    t = P.parameter(rec("Int", "Count", out), names, base)
+    assert (t["decl"], t["line"], t["arg"]) == ("int32& Count", "P_GET_PROPERTY_REF(UIntProperty,Z_Param_Out_Count);",
+                                                "Z_Param_Out_Count"), t
+    t = P.parameter(rec("Object", "Target", const, 0x100), names, base)
+    assert (t["decl"], t["line"]) == ("const AActor* Target", "P_GET_OBJECT(AActor,Z_Param_Target);"), t
+    t = P.parameter(rec("Struct", "Loc", const | out | ref, 0x400), names, base)    # const FVector&
+    assert (t["decl"], t["line"]) == ("FVector const& Loc", "P_GET_STRUCT_REF(FVector,Z_Param_Out_Loc);"), t
+    t = P.parameter(rec("Enum", "Mode", out, 0x200, ("Byte",)), names, base)
+    assert (t["decl"], t["line"], t["arg"]) == ("EMode& Mode", "P_GET_ENUM_REF(EMode,Z_Param_Out_Mode);",
+                                                "(EMode&)(Z_Param_Out_Mode)"), t
+    t = P.parameter(rec("Byte", "Result", 0, 0x300), names, base)                 # by value: the raw enum
+    assert (t["decl"], t["arg"]) == ("ERes::Type Result", "ERes::Type(Z_Param_Result)"), t
+    t = P.parameter(rec("Byte", "Result", out | P.CPF_RETURNPARM, 0x300), names, base)
+    assert (t["ret"], t["store"]) == ("ERes::Type", "TEnumAsByte<ERes::Type>"), t
+    assert P.parameter(rec("Str", "Text", 0), names, base) is None                  # not modelled
+    assert P.enum_declarations(names) == ["enum class EMode : uint8 {};", "namespace ERes { enum Type {}; }"]
+    print("uht parameters: ok")
+
+
 def test_vtable_store() -> None:
     """InternalConstructor<C> -> (conditional tail jump) C::C -> super ctor, then [this] = vtable."""
     from types import SimpleNamespace as NS
@@ -210,6 +245,7 @@ def main() -> int:
     test_literal_elimination()
     test_exec_thunks()
     test_vtable_store()
+    test_uht_parameters()
     if not DEFAULT_REFERENCE.exists():
         print("reference EXE not present: skipping manifest verification")
         return 0

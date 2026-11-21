@@ -4,6 +4,43 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E6050 (end 0x023E60D4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSprite) | Matching: see analysis/functions-uht-exec.json
+void UBillboardComponent::execSetSprite(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UTexture2D,Z_Param_NewSprite);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSprite(Z_Param_NewSprite);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E60E0 (end 0x023E6254)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSpriteAndUV) | Matching: see analysis/functions-uht-exec.json
+void UBillboardComponent::execSetSpriteAndUV(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UTexture2D,Z_Param_NewSprite);
+	P_GET_PROPERTY(UIntProperty,Z_Param_NewU);
+	P_GET_PROPERTY(UIntProperty,Z_Param_NewUL);
+	P_GET_PROPERTY(UIntProperty,Z_Param_NewV);
+	P_GET_PROPERTY(UIntProperty,Z_Param_NewVL);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSpriteAndUV(Z_Param_NewSprite,Z_Param_NewU,Z_Param_NewUL,Z_Param_NewV,Z_Param_NewVL);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023E6260 (end 0x023E6391)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetUV) | Matching: see analysis/functions-uht-exec.json
+void UBillboardComponent::execSetUV(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_NewU);
+	P_GET_PROPERTY(UIntProperty,Z_Param_NewUL);
+	P_GET_PROPERTY(UIntProperty,Z_Param_NewV);
+	P_GET_PROPERTY(UIntProperty,Z_Param_NewVL);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetUV(Z_Param_NewU,Z_Param_NewUL,Z_Param_NewV,Z_Param_NewVL);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UBillboardComponent, 4072966403u)
 // Original dynamic initializer: RVA 0x001F3350 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBillboardComponent> AutoInitializeUBillboardComponent(TEXT("UBillboardComponent"), sizeof(UBillboardComponent), 4072966403u);

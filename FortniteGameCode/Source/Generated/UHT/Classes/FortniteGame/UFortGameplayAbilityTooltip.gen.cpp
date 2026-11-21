@@ -4,6 +4,42 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9820 (end 0x00FE9904)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetApplicationTag) | Matching: see analysis/functions-uht-exec.json
+void UFortGameplayAbilityTooltip::execGetApplicationTag(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UGameplayAbility,Z_Param_AbilityInstance);
+	P_GET_STRUCT_REF(FGameplayTag,Z_Param_Out_OutTag);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetApplicationTag_Implementation(Z_Param_AbilityInstance,Z_Param_Out_OutTag);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0109F3B0 (end 0x0109F597)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNumericValue) | Matching: see analysis/functions-uht-exec.json
+void UFortGameplayAbilityTooltip::execGetNumericValue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UObject,Z_Param_ObjectToDescribe);
+	P_GET_STRUCT_REF(FGameplayTag,Z_Param_Out_Tag);
+	P_GET_OBJECT(UFortTooltipContext,Z_Param_Context);
+	P_GET_STRUCT_REF(FGameplayTag,Z_Param_Out_Token);
+	P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_OutVal);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetNumericValue(Z_Param_ObjectToDescribe,Z_Param_Out_Tag,Z_Param_Context,Z_Param_Out_Token,Z_Param_Out_OutVal);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FEAF60 (end 0x00FEB023)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execInitializeAbilityInstanceInternal) | Matching: see analysis/functions-uht-exec.json
+void UFortGameplayAbilityTooltip::execInitializeAbilityInstanceInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UGameplayAbility,Z_Param_AbilityInstance);
+	P_GET_OBJECT(UFortTooltipContext,Z_Param_Context);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->InitializeAbilityInstanceInternal_Implementation(Z_Param_AbilityInstance,Z_Param_Context);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortGameplayAbilityTooltip, 1049122099u)
 // Original dynamic initializer: RVA 0x000F65C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortGameplayAbilityTooltip> AutoInitializeUFortGameplayAbilityTooltip(TEXT("UFortGameplayAbilityTooltip"), sizeof(UFortGameplayAbilityTooltip), 1049122099u);

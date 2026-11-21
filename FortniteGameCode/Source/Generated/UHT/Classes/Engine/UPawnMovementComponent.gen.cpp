@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A2310 (end 0x024A23E6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddInputVector) | Matching: see analysis/functions-uht-exec.json
+void UPawnMovementComponent::execAddInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_WorldVector);
+	P_GET_UBOOL(Z_Param_bForce);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddInputVector(Z_Param_WorldVector,Z_Param_bForce);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A29E0 (end 0x024A2A20)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execConsumeInputVector) | Matching: see analysis/functions-uht-exec.json
+void UPawnMovementComponent::execConsumeInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->ConsumeInputVector();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3A70 (end 0x024A3A9F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsMoveInputIgnored) | Matching: see analysis/functions-uht-exec.json
 void UPawnMovementComponent::execIsMoveInputIgnored(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -4,6 +4,56 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C8080 (end 0x024C8148)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDetachFromParent) | Matching: see analysis/functions-uht-exec.json
+void USceneComponent::execDetachFromParent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bMaintainWorldPosition);
+	P_GET_UBOOL(Z_Param_bCallModify);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DetachFromParent(Z_Param_bMaintainWorldPosition,Z_Param_bCallModify);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C8150 (end 0x024C81E6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDoesSocketExist) | Matching: see analysis/functions-uht-exec.json
+void USceneComponent::execDoesSocketExist(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_InSocketName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->DoesSocketExist(Z_Param_InSocketName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C8440 (end 0x024C8480)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetComponentVelocity) | Matching: see analysis/functions-uht-exec.json
+void USceneComponent::execGetComponentVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetComponentVelocity();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C86A0 (end 0x024C8746)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSocketLocation) | Matching: see analysis/functions-uht-exec.json
+void USceneComponent::execGetSocketLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_InSocketName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetSocketLocation(Z_Param_InSocketName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C87F0 (end 0x024C8896)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSocketRotation) | Matching: see analysis/functions-uht-exec.json
+void USceneComponent::execGetSocketRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_InSocketName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FRotator*)Z_Param__Result=P_THIS->GetSocketRotation(Z_Param_InSocketName);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C8AE0 (end 0x024C8B0F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsAnySimulatingPhysics) | Matching: see analysis/functions-uht-exec.json
 void USceneComponent::execIsAnySimulatingPhysics(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -13,6 +63,16 @@ void USceneComponent::execIsAnySimulatingPhysics(UObject* Context, FFrame& Stack
 	*(bool*)Z_Param__Result=P_THIS->IsAnySimulatingPhysics();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C8B10 (end 0x024C8BA6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsSimulatingPhysics) | Matching: see analysis/functions-uht-exec.json
+void USceneComponent::execIsSimulatingPhysics(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsSimulatingPhysics(Z_Param_BoneName);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C8BB0 (end 0x024C8BDF)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsVisible) | Matching: see analysis/functions-uht-exec.json
 void USceneComponent::execIsVisible(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -20,6 +80,16 @@ void USceneComponent::execIsVisible(UObject* Context, FFrame& Stack, void* const
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->IsVisible();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CB230 (end 0x024CB2B9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetRelativeScale3D) | Matching: see analysis/functions-uht-exec.json
+void USceneComponent::execSetRelativeScale3D(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_NewScale3D);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetRelativeScale3D(Z_Param_NewScale3D);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(USceneComponent, 3383923364u)

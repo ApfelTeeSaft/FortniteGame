@@ -4,6 +4,29 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289EB50 (end 0x0289EC13)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnItemSlotted) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookSectionTileWidget::execOnItemSlotted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortAccountItem,Z_Param_ItemSlotted);
+	P_GET_PROPERTY(UNameProperty,Z_Param_SlotId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnItemSlotted(Z_Param_ItemSlotted,Z_Param_SlotId);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289EED0 (end 0x0289EFC1)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSectionSlotUpdate) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookSectionTileWidget::execOnSectionSlotUpdate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_NumFilledSlots);
+	P_GET_PROPERTY(UIntProperty,Z_Param_NumSlots);
+	P_GET_ENUM(EFortCollectionBookState,Z_Param_SectionState);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSectionSlotUpdate_Implementation(Z_Param_NumFilledSlots,Z_Param_NumSlots,EFortCollectionBookState(Z_Param_SectionState));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCollectionBookSectionTileWidget, 150738247u)
 // Original dynamic initializer: RVA 0x002425D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookSectionTileWidget> AutoInitializeUFortCollectionBookSectionTileWidget(TEXT("UFortCollectionBookSectionTileWidget"), sizeof(UFortCollectionBookSectionTileWidget), 150738247u);

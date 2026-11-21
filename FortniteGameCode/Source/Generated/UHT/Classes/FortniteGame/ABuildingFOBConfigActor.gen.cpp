@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F679A0 (end 0x00F67A36)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAttemptSelectFOBCore) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execAttemptSelectFOBCore(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortFOBCoreDecoItemDefinition,Z_Param_DefToSelect);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->AttemptSelectFOBCore(Z_Param_DefToSelect);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67AF0 (end 0x00F67B1F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execCanPerformIOOperation) | Matching: see analysis/functions-uht-exec.json
 void ABuildingFOBConfigActor::execCanPerformIOOperation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -31,6 +41,15 @@ void ABuildingFOBConfigActor::execCanSaveFOB(UObject* Context, FFrame& Stack, vo
 	*(bool*)Z_Param__Result=P_THIS->CanSaveFOB();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67C40 (end 0x00F67C6F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetFOBMode) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execGetFOBMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(EFOBMode*)Z_Param__Result=P_THIS->GetFOBMode();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F67E20 (end 0x00F67E4F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsFinalized) | Matching: see analysis/functions-uht-exec.json
 void ABuildingFOBConfigActor::execIsFinalized(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -49,6 +68,26 @@ void ABuildingFOBConfigActor::execIsInitialized(UObject* Context, FFrame& Stack,
 	*(bool*)Z_Param__Result=P_THIS->IsInitialized();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024ACD20 (end 0x024ACDA4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCoreInitialized) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execOnCoreInitialized(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ABuildingFOBCoreActor,Z_Param_InitializedCore);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCoreInitialized_Implementation(Z_Param_InitializedCore);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F68270 (end 0x00F682EA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnFOBModeSet) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execOnFOBModeSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFOBMode,Z_Param_ModeThatWasSet);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnFOBModeSet_Implementation(EFOBMode(Z_Param_ModeThatWasSet));
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F682F0 (end 0x00F6830F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnFinalizationFXMulticast) | Matching: see analysis/functions-uht-exec.json
 void ABuildingFOBConfigActor::execOnFinalizationFXMulticast(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -65,6 +104,18 @@ void ABuildingFOBConfigActor::execOnFinalized(UObject* Context, FFrame& Stack, v
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnFinalized_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F68310 (end 0x00F68415)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnIOOperationCompleteMulticast) | Matching: see analysis/functions-uht-exec.json
+void ABuildingFOBConfigActor::execOnIOOperationCompleteMulticast(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFOBIOStatus,Z_Param_IOOperation);
+	P_GET_UBOOL(Z_Param_bSuccess);
+	P_GET_OBJECT(UFortFOBCoreDecoItemDefinition,Z_Param_SelectedCoreDef);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnIOOperationCompleteMulticast_Implementation(EFOBIOStatus(Z_Param_IOOperation),Z_Param_bSuccess,Z_Param_SelectedCoreDef);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AF5B0 (end 0x024AF5CF), leaf (no .pdata)

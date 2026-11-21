@@ -4,6 +4,27 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D7400 (end 0x023D7430)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAnimationAsset) | Matching: see analysis/functions-uht-exec.json
+void UAnimSingleNodeInstance::execGetAnimationAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UAnimationAsset**)Z_Param__Result=P_THIS->GetAnimationAsset();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D75A0 (end 0x023D76A9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetAnimationAsset) | Matching: see analysis/functions-uht-exec.json
+void UAnimSingleNodeInstance::execSetAnimationAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UAnimationAsset,Z_Param_NewAsset);
+	P_GET_UBOOL(Z_Param_bIsLooping);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InPlayRate);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetAnimationAsset(Z_Param_NewAsset,Z_Param_bIsLooping,Z_Param_InPlayRate);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAnimSingleNodeInstance, 4186500650u)
 // Original dynamic initializer: RVA 0x001EFA40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAnimSingleNodeInstance> AutoInitializeUAnimSingleNodeInstance(TEXT("UAnimSingleNodeInstance"), sizeof(UAnimSingleNodeInstance), 4186500650u);

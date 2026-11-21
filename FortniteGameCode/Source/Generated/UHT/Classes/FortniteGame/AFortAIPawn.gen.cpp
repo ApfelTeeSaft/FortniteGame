@@ -4,6 +4,68 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F947D0 (end 0x00F94854)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_CurrentWeapon) | Matching: see analysis/functions-uht-exec.json
+void AFortAIPawn::execOnRep_CurrentWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortWeapon,Z_Param_OldWeapon);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_CurrentWeapon(Z_Param_OldWeapon);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F95340 (end 0x00F953C4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCollisionProfileName) | Matching: see analysis/functions-uht-exec.json
+void AFortAIPawn::execSetCollisionProfileName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_InCollisionProfileName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCollisionProfileName(Z_Param_InCollisionProfileName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F95600 (end 0x00F956C5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetEyeColor) | Matching: see analysis/functions-uht-exec.json
+void AFortAIPawn::execSetEyeColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FLinearColor,Z_Param_NewEyeColor);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewEyeBrightness);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetEyeColor(Z_Param_NewEyeColor,Z_Param_NewEyeBrightness);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F956D0 (end 0x00F95756)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetIsCharging) | Matching: see analysis/functions-uht-exec.json
+void AFortAIPawn::execSetIsCharging(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewIsCharging);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetIsCharging(Z_Param_bNewIsCharging);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F95860 (end 0x00F958DA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetMovementUrgency) | Matching: see analysis/functions-uht-exec.json
+void AFortAIPawn::execSetMovementUrgency(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_Urgency);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetMovementUrgency(EFortMovementUrgency::Type(Z_Param_Urgency));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F95970 (end 0x00F95A35)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSkinColor) | Matching: see analysis/functions-uht-exec.json
+void AFortAIPawn::execSetSkinColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FLinearColor,Z_Param_NewSkinColor);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewSkinBrightness);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSkinColor(Z_Param_NewSkinColor,Z_Param_NewSkinBrightness);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortAIPawn, 2791580142u)
 // Original dynamic initializer: RVA 0x000E3470 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortAIPawn> AutoInitializeAFortAIPawn(TEXT("AFortAIPawn"), sizeof(AFortAIPawn), 2791580142u);

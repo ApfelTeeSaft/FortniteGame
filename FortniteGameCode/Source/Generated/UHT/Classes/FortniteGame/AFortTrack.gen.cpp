@@ -4,6 +4,44 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CD750 (end 0x010CD863)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetOutgoingNeighborFromSpline) | Matching: see analysis/functions-uht-exec.json
+void AFortTrack::execGetOutgoingNeighborFromSpline(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(USplineComponent,Z_Param_InSpline);
+	P_GET_UBOOL(Z_Param_InReverseDirection);
+	P_GET_OBJECT_REF(AFortTrack,Z_Param_Out_OutNeighbor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetOutgoingNeighborFromSpline(Z_Param_InSpline,Z_Param_InReverseDirection,Z_Param_Out_OutNeighbor);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CD9F0 (end 0x010CDB0F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSplineFromIncomingNeighbor) | Matching: see analysis/functions-uht-exec.json
+void AFortTrack::execGetSplineFromIncomingNeighbor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortTrack,Z_Param_InNeighbor);
+	P_GET_OBJECT_REF(USplineComponent,Z_Param_Out_OutSpline);
+	P_GET_UBOOL_REF(Z_Param_Out_OutReverseDirection);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetSplineFromIncomingNeighbor(Z_Param_InNeighbor,Z_Param_Out_OutSpline,Z_Param_Out_OutReverseDirection);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010CDB10 (end 0x010CDD0C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSplineFromPositionAndOrientation) | Matching: see analysis/functions-uht-exec.json
+void AFortTrack::execGetSplineFromPositionAndOrientation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_InLocation);
+	P_GET_STRUCT_REF(FRotator,Z_Param_Out_InRotation);
+	P_GET_OBJECT_REF(USplineComponent,Z_Param_Out_OutSpline);
+	P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_OutDistanceAlongSpline);
+	P_GET_UBOOL_REF(Z_Param_Out_OutReverseDirection);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GetSplineFromPositionAndOrientation(Z_Param_Out_InLocation,Z_Param_Out_InRotation,Z_Param_Out_OutSpline,Z_Param_Out_OutDistanceAlongSpline,Z_Param_Out_OutReverseDirection);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010CE1D0 (end 0x010CE1EF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ConfigurationIdx) | Matching: see analysis/functions-uht-exec.json
 void AFortTrack::execOnRep_ConfigurationIdx(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

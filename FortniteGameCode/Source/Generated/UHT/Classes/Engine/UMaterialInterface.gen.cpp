@@ -4,6 +4,28 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024879F0 (end 0x02487A20)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPhysicalMaterial) | Matching: see analysis/functions-uht-exec.json
+void UMaterialInterface::execGetPhysicalMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPhysicalMaterial**)Z_Param__Result=P_THIS->GetPhysicalMaterial();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02487F80 (end 0x024880D8)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetForceMipLevelsToBeResident) | Matching: see analysis/functions-uht-exec.json
+void UMaterialInterface::execSetForceMipLevelsToBeResident(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_OverrideForceMiplevelsToBeResident);
+	P_GET_UBOOL(Z_Param_bForceMiplevelsToBeResidentValue);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_ForceDuration);
+	P_GET_PROPERTY(UIntProperty,Z_Param_CinematicTextureGroups);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetForceMipLevelsToBeResident(Z_Param_OverrideForceMiplevelsToBeResident,Z_Param_bForceMiplevelsToBeResidentValue,Z_Param_ForceDuration,Z_Param_CinematicTextureGroups);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UMaterialInterface, 2840063775u)
 // Original dynamic initializer: RVA 0x0020AED0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UMaterialInterface> AutoInitializeUMaterialInterface(TEXT("UMaterialInterface"), sizeof(UMaterialInterface), 2840063775u);

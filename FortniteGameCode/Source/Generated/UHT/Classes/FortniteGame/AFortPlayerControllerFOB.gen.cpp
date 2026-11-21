@@ -4,6 +4,67 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107BA30 (end 0x0107BB29)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerAttemptSelectFOBCore) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerFOB::execServerAttemptSelectFOBCore(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ABuildingFOBConfigActor,Z_Param_FOBToSelectOn);
+	P_GET_OBJECT(UFortFOBCoreDecoItemDefinition,Z_Param_DefToSelect);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerAttemptSelectFOBCore_Validate(Z_Param_FOBToSelectOn,Z_Param_DefToSelect))
+	{
+		RPC_ValidateFailed(TEXT("ServerAttemptSelectFOBCore_Validate"));
+		return;
+	}
+	P_THIS->ServerAttemptSelectFOBCore_Implementation(Z_Param_FOBToSelectOn,Z_Param_DefToSelect);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CAD0 (end 0x0107CB85)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerReloadFOB) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerFOB::execServerReloadFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ABuildingFOBConfigActor,Z_Param_FOBToReload);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerReloadFOB_Validate(Z_Param_FOBToReload))
+	{
+		RPC_ValidateFailed(TEXT("ServerReloadFOB_Validate"));
+		return;
+	}
+	P_THIS->ServerReloadFOB_Implementation(Z_Param_FOBToReload);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CBE0 (end 0x0107CC95)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerResetFOB) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerFOB::execServerResetFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ABuildingFOBConfigActor,Z_Param_FOBToReset);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerResetFOB_Validate(Z_Param_FOBToReset))
+	{
+		RPC_ValidateFailed(TEXT("ServerResetFOB_Validate"));
+		return;
+	}
+	P_THIS->ServerResetFOB_Implementation(Z_Param_FOBToReset);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CCA0 (end 0x0107CD55)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSaveFOB) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerFOB::execServerSaveFOB(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ABuildingFOBConfigActor,Z_Param_FOBToSave);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSaveFOB_Validate(Z_Param_FOBToSave))
+	{
+		RPC_ValidateFailed(TEXT("ServerSaveFOB_Validate"));
+		return;
+	}
+	P_THIS->ServerSaveFOB_Implementation(Z_Param_FOBToSave);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerControllerFOB, 593343281u)
 // Original dynamic initializer: RVA 0x0010B840 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerFOB> AutoInitializeAFortPlayerControllerFOB(TEXT("AFortPlayerControllerFOB"), sizeof(AFortPlayerControllerFOB), 593343281u);

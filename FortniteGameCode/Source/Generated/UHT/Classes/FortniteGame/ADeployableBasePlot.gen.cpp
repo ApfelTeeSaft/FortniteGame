@@ -4,6 +4,38 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7EC40 (end 0x00F7ECFB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleBuildingStateTransition) | Matching: see analysis/functions-uht-exec.json
+void ADeployableBasePlot::execHandleBuildingStateTransition(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EDeployableBaseBuildingState,Z_Param_InPreviousState);
+	P_GET_ENUM(EDeployableBaseBuildingState,Z_Param_InCurrentState);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleBuildingStateTransition_Implementation(EDeployableBaseBuildingState(Z_Param_InPreviousState),EDeployableBaseBuildingState(Z_Param_InCurrentState));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7F000 (end 0x00F7F0BB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnBuildingStateTransition) | Matching: see analysis/functions-uht-exec.json
+void ADeployableBasePlot::execOnBuildingStateTransition(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EDeployableBaseBuildingState,Z_Param_InPreviousState);
+	P_GET_ENUM(EDeployableBaseBuildingState,Z_Param_InCurrentState);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnBuildingStateTransition_Implementation(EDeployableBaseBuildingState(Z_Param_InPreviousState),EDeployableBaseBuildingState(Z_Param_InCurrentState));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F7F0C0 (end 0x00F7F13A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCurrentBuildingStateSet) | Matching: see analysis/functions-uht-exec.json
+void ADeployableBasePlot::execOnCurrentBuildingStateSet(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EDeployableBaseBuildingState,Z_Param_InCurrentBuildingState);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCurrentBuildingStateSet_Implementation(EDeployableBaseBuildingState(Z_Param_InCurrentBuildingState));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ADeployableBasePlot, 2814553429u)
 // Original dynamic initializer: RVA 0x000DE740 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ADeployableBasePlot> AutoInitializeADeployableBasePlot(TEXT("ADeployableBasePlot"), sizeof(ADeployableBasePlot), 2814553429u);

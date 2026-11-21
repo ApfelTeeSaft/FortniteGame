@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01081C80 (end 0x01081D04)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientOnPawnRevived) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerZone::execClientOnPawnRevived(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AController,Z_Param_EventInstigator);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientOnPawnRevived_Implementation(Z_Param_EventInstigator);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01081D10 (end 0x01081D2F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientOnPawnSpawned) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerZone::execClientOnPawnSpawned(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -34,6 +44,21 @@ void AFortPlayerControllerZone::execServerSetShouldDisablePlayerTeleportingDurin
 		return;
 	}
 	P_THIS->ServerSetShouldDisablePlayerTeleportingDuringMissionResults_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01085340 (end 0x010853F2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSubmitGameplayVote) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerZone::execServerSubmitGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_VoteDecision);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSubmitGameplayVote_Validate(Z_Param_VoteDecision))
+	{
+		RPC_ValidateFailed(TEXT("ServerSubmitGameplayVote_Validate"));
+		return;
+	}
+	P_THIS->ServerSubmitGameplayVote_Implementation(Z_Param_VoteDecision);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010854A0 (end 0x010854EE)

@@ -4,6 +4,36 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D338C0 (end 0x01D3393F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetPeripheralVisionAngle) | Matching: see analysis/functions-uht-exec.json
+void UPawnSensingComponent::execSetPeripheralVisionAngle(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewPeripheralVisionAngle);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPeripheralVisionAngle(Z_Param_NewPeripheralVisionAngle);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D33940 (end 0x01D339BF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSensingInterval) | Matching: see analysis/functions-uht-exec.json
+void UPawnSensingComponent::execSetSensingInterval(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewSensingInterval);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSensingInterval(Z_Param_NewSensingInterval);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D339C0 (end 0x01D33A46)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSensingUpdatesEnabled) | Matching: see analysis/functions-uht-exec.json
+void UPawnSensingComponent::execSetSensingUpdatesEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bEnabled);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSensingUpdatesEnabled(Z_Param_bEnabled);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPawnSensingComponent, 3028804600u)
 // Original dynamic initializer: RVA 0x001BF520 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPawnSensingComponent> AutoInitializeUPawnSensingComponent(TEXT("UPawnSensingComponent"), sizeof(UPawnSensingComponent), 3028804600u);

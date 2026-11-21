@@ -4,6 +4,28 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D75C0 (end 0x024D7686)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetPhysicsAsset) | Matching: see analysis/functions-uht-exec.json
+void USkinnedMeshComponent::execSetPhysicsAsset(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPhysicsAsset,Z_Param_NewPhysicsAsset);
+	P_GET_UBOOL(Z_Param_bForceReInit);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPhysicsAsset(Z_Param_NewPhysicsAsset,Z_Param_bForceReInit);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D7720 (end 0x024D77E6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSkeletalMesh) | Matching: see analysis/functions-uht-exec.json
+void USkinnedMeshComponent::execSetSkeletalMesh(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(USkeletalMesh,Z_Param_NewMesh);
+	P_GET_UBOOL(Z_Param_bReinitPose);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSkeletalMesh(Z_Param_NewMesh,Z_Param_bReinitPose);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(USkinnedMeshComponent, 986584629u)
 // Original dynamic initializer: RVA 0x0021A990 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USkinnedMeshComponent> AutoInitializeUSkinnedMeshComponent(TEXT("USkinnedMeshComponent"), sizeof(USkinnedMeshComponent), 986584629u);

@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104C1C0 (end 0x0104C24B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetEventHeatPercent) | Matching: see analysis/functions-uht-exec.json
+void AFortMusicManager::execGetEventHeatPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_CombatEvent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetEventHeatPercent(EFortCombatEvents::Type(Z_Param_CombatEvent));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0104C250 (end 0x0104C2DB)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetEventHeatPercentTotal) | Matching: see analysis/functions-uht-exec.json
+void AFortMusicManager::execGetEventHeatPercentTotal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_CombatEvent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetEventHeatPercentTotal(EFortCombatEvents::Type(Z_Param_CombatEvent));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortMusicManager, 3152651992u)
 // Original dynamic initializer: RVA 0x00103FC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortMusicManager> AutoInitializeAFortMusicManager(TEXT("AFortMusicManager"), sizeof(AFortMusicManager), 3152651992u);

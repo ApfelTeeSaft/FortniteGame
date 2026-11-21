@@ -4,6 +4,40 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EF890 (end 0x023EF919)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddForce) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execAddForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Force);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddForce(Z_Param_Force);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EF920 (end 0x023EF9F6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddImpulse) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execAddImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Impulse);
+	P_GET_UBOOL(Z_Param_bVelocityChange);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddImpulse(Z_Param_Impulse,Z_Param_bVelocityChange);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EFAE0 (end 0x023EFC33)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCalcVelocity) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execCalcVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_DeltaTime);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Friction);
+	P_GET_UBOOL(Z_Param_bFluid);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_BrakingDeceleration);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->CalcVelocity(Z_Param_DeltaTime,Z_Param_Friction,Z_Param_bFluid,Z_Param_BrakingDeceleration);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EFE90 (end 0x023EFEAF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClearAccumulatedForces) | Matching: see analysis/functions-uht-exec.json
 void UCharacterMovementComponent::execClearAccumulatedForces(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -20,6 +54,15 @@ void UCharacterMovementComponent::execDisableMovement(UObject* Context, FFrame& 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->DisableMovement();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0E50 (end 0x023F0E90)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetImpartedMovementBaseVelocity) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execGetImpartedMovementBaseVelocity(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetImpartedMovementBaseVelocity();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0E90 (end 0x023F0EC1)
@@ -74,6 +117,17 @@ void UCharacterMovementComponent::execK2_GetModifiedMaxAcceleration(UObject* Con
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(float*)Z_Param__Result=P_THIS->K2_GetModifiedMaxAcceleration();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F50E0 (end 0x023F519B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetMovementMode) | Matching: see analysis/functions-uht-exec.json
+void UCharacterMovementComponent::execSetMovementMode(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_NewMovementMode);
+	P_GET_PROPERTY(UByteProperty,Z_Param_NewCustomMode);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetMovementMode(EMovementMode(Z_Param_NewMovementMode),Z_Param_NewCustomMode);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UCharacterMovementComponent, 3300660237u)

@@ -13,6 +13,47 @@ void UAIHotSpotSlot::execClearSlot(UObject* Context, FFrame& Stack, void* const 
 	P_THIS->ClearSlot();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C350 (end 0x00F5C3E6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsAIAllowed) | Matching: see analysis/functions-uht-exec.json
+void UAIHotSpotSlot::execIsAIAllowed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_AI);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsAIAllowed_Implementation(Z_Param_AI);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02423320 (end 0x024233A6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSlotEnabled) | Matching: see analysis/functions-uht-exec.json
+void UAIHotSpotSlot::execSetSlotEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewEnabled);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSlotEnabled(Z_Param_bNewEnabled);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5D3A0 (end 0x00F5D464)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSlotOwnerAndState) | Matching: see analysis/functions-uht-exec.json
+void UAIHotSpotSlot::execSetSlotOwnerAndState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AAIController,Z_Param_NewOwner);
+	P_GET_ENUM(EAIHotSpotSlot,Z_Param_NewState);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSlotOwnerAndState(Z_Param_NewOwner,EAIHotSpotSlot(Z_Param_NewState));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5D470 (end 0x00F5D4EA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSlotState) | Matching: see analysis/functions-uht-exec.json
+void UAIHotSpotSlot::execSetSlotState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EAIHotSpotSlot,Z_Param_NewState);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSlotState(EAIHotSpotSlot(Z_Param_NewState));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAIHotSpotSlot, 4233074455u)
 // Original dynamic initializer: RVA 0x000D7330 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAIHotSpotSlot> AutoInitializeUAIHotSpotSlot(TEXT("UAIHotSpotSlot"), sizeof(UAIHotSpotSlot), 4233074455u);

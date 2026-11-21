@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C37E0 (end 0x024C3863)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddObjectTypeToAffect) | Matching: see analysis/functions-uht-exec.json
+void URadialForceComponent::execAddObjectTypeToAffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_ObjectType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddObjectTypeToAffect(EObjectTypeQuery(Z_Param_ObjectType));
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024C3870 (end 0x024C388F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execFireImpulse) | Matching: see analysis/functions-uht-exec.json
 void URadialForceComponent::execFireImpulse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +21,16 @@ void URadialForceComponent::execFireImpulse(UObject* Context, FFrame& Stack, voi
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->FireImpulse();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C3940 (end 0x024C39C3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveObjectTypeToAffect) | Matching: see analysis/functions-uht-exec.json
+void URadialForceComponent::execRemoveObjectTypeToAffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_ObjectType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RemoveObjectTypeToAffect(EObjectTypeQuery(Z_Param_ObjectType));
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(URadialForceComponent, 2948086422u)

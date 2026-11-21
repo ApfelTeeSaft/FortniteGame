@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F93B10 (end 0x00F93BD5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execInitializeGoalProvider) | Matching: see analysis/functions-uht-exec.json
+void UFortAIGoalProvider::execInitializeGoalProvider(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UWorld,Z_Param_ContextWorld);
+	P_GET_OBJECT(UFortAIAssignment,Z_Param_Assignment);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->InitializeGoalProvider(Z_Param_ContextWorld,Z_Param_Assignment);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execUpdateGoals) | Matching: see analysis/functions-uht-exec.json
 void UFortAIGoalProvider::execUpdateGoals(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

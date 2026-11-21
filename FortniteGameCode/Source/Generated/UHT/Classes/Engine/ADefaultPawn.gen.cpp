@@ -4,6 +4,36 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02400490 (end 0x0240050F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execMoveForward) | Matching: see analysis/functions-uht-exec.json
+void ADefaultPawn::execMoveForward(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Val);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MoveForward(Z_Param_Val);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02400510 (end 0x0240058F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execMoveRight) | Matching: see analysis/functions-uht-exec.json
+void ADefaultPawn::execMoveRight(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Val);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MoveRight(Z_Param_Val);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BE4D0 (end 0x024BE54F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execMoveUp_World) | Matching: see analysis/functions-uht-exec.json
+void ADefaultPawn::execMoveUp_World(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Val);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MoveUp_World(Z_Param_Val);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ADefaultPawn, 1678617420u)
 // Original dynamic initializer: RVA 0x001F8260 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ADefaultPawn> AutoInitializeADefaultPawn(TEXT("ADefaultPawn"), sizeof(ADefaultPawn), 1678617420u);

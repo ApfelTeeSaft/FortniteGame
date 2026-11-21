@@ -9,27 +9,28 @@ the reference build now supplies plaintext function bodies. Stages 2–4 have no
 | Decrypted reference | Owner-supplied PE dump, SHA-256 `c81fe58a…2f97370`, local only. After un-rebasing all 788,029 DIR64 sites it is byte-identical to the original over 23.5 MB of linker-produced plaintext. Prologues verify for 157,439 of 157,632 primary functions with unwind codes (99.88 %). See `analysis/decrypted-reference.json` |
 | Compiler evidence | Rich header: Utc1900 C/C++ build 24215, Linker 14.00.24215, no LTCG product ids. The local v140 `cl.exe` is 19.00.24215.1 and its objects carry `@comp.id` prodid 261, build 24215 |
 | VS2019 solution | `FortniteGameCode.sln` `ClientShipping\|x64` (toolset v140) builds with 0 errors and 0 warnings |
-| Exact functions | **27,487 / 157,719** primary `.pdata` functions (17.43 %, 1,500,388 bytes):
+| Exact functions | **28,083 / 157,719** primary `.pdata` functions (17.81 %, 1,610,225 bytes):
 - 2 matching on-disk plaintext (SEH filter funclets);
 - 5 hand-reconstructed functions matching the decrypted image;
-- 27,480 generated UHT functions:
+- 28,076 generated UHT functions:
   - classes: 10,534 UFunction creators, 3,227 `Z_Construct_UClass_*`, 1,155 `StaticRegisterNatives*`,
-    1,190 `FCompiledInDefer` initializers and 175 exec thunks of virtual natives;
+    1,189 `FCompiledInDefer` initializers and 768 exec thunks of virtual natives;
   - packages: 551 package-scope delegate creators and 68 `Z_Construct_UPackage_*`;
   - USTRUCTs: 2,097 `Z_Construct_UScriptStruct_*`, 1,860 `StaticStruct`, 1,782 `NewStructOps`,
     1,888 `StaticRegisterNatives` and 1,253 `FCompiledInDeferStruct` initializers;
-  - UENUMs: 1,071 `Z_Construct_UEnum_*`, 378 `<Enum>_StaticEnum` and 251 `FCompiledInDeferEnum` initializers.
+  - UENUMs: 1,071 `Z_Construct_UEnum_*`, 381 `<Enum>_StaticEnum` and 252 `FCompiledInDeferEnum` initializers.
 
 Generated code is compiled in 182 unity units in the reference's recovered source order (`docs/REVERSE_ENGINEERING.md`, "Module layout model"). Every relocation is resolved from independent or leave-one-out evidence. Also exact, outside the denominator: 1,155 `StaticClass` thunks, 1,248 `AutoInitialize` initializers, 202 leaf exec thunks and `FCommandLine::IsInitialized` |
-| Relocation-equivalent | 8,978 in the denominator, mostly:
+| Relocation-equivalent | 8,975 in the denominator, mostly:
 - the 3,283 `GetPrivateStaticClass` bodies (template-instance and literal fields);
 - registration initializers blocked by `&C::StaticClass`, or by package-name literals that
   hand-written code also uses;
 - statics next to items not modelled yet.
 
-Three are `partial`: one enum registration initializer (shared literal copy) and two exec thunks
-whose virtual natives were misidentified (inlined natives; see `docs/REVERSE_ENGINEERING.md`,
-"Class vtables"). The per-manifest counts are in `analysis/functions-uht-*.json` |
+Ten are `partial`: one enum registration initializer (shared literal copy) and nine exec thunks:
+three whose virtual natives were misidentified (inlined natives) and six whose byte-enum parameter
+or return the programmer declared as `TEnumAsByte` (see `docs/REVERSE_ENGINEERING.md`, "Exec thunk
+parameters"). The per-manifest counts are in `analysis/functions-uht-*.json` |
 | Named functions | 27,699 denominator functions (17.56 %):
 - from UHT reflection tables: 7,819 exec thunks, 11,102 `Z_Construct_UFunction_*` creators, and
   registrar/`GetPrivateStaticClass` pairs for 1,155 attributed classes (`analysis/reflection-natives.json`);
@@ -97,12 +98,12 @@ Outside the denominator: 1,374 leaf exec thunks and 1,654 leaf natives. Class vt
      "Class vtables"). A thunk with a direct native depends on the native's address, which
      has no evidence independent of the thunk. Thunks of virtual natives can match: 377 do.
      Next:
-     - decode the parameter properties (`PropPointers`) for the `P_GET_*` reads (982
-       UFunctions' virtual thunks read parameters);
-     - support hidden-pointer and enum returns: 115 of the 679 parameterless virtual thunks
-       are not generated yet (those, or a slot not declared by name);
-     - check whether the 6 `StaticEnum` layout predictions lost to the partial set of thunks
-       return as more thunks are added.
+     - Parameters are decoded (`tools/codegen/uht_props.py`): 1,219 of the 1,661
+       virtual-native UFunctions have thunks, and 970 of their 979 addresses match.
+     - Next: model `FString`, `TArray`, `FText` and `TSubclassOf`, and more structs
+       (`FUniqueNetIdRepl`, `FGameplayCueParameters`, `FTransform`).
+     - Next: recover the `TEnumAsByte` / raw-enum form of byte-enum parameters from the
+       reference's argument setup (6 partial thunks).
 4. Run the IDA export on the decrypted image for call graphs and cross-references.
 
 ## Reproduce

@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02418870 (end 0x024188EF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlay) | Matching: see analysis/functions-uht-exec.json
+void UForceFeedbackComponent::execPlay(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_StartTime);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Play(Z_Param_StartTime);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F68580 (end 0x00F6859F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execStop) | Matching: see analysis/functions-uht-exec.json
 void UForceFeedbackComponent::execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

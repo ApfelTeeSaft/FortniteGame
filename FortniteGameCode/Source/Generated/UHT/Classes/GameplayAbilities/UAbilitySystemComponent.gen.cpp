@@ -4,6 +4,27 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0053B680 (end 0x0053B747)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientActivateAbilityFailed) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execClientActivateAbilityFailed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityToActivate);
+	P_GET_PROPERTY(UInt16Property,Z_Param_PredictionKey);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientActivateAbilityFailed_Implementation(Z_Param_AbilityToActivate,Z_Param_PredictionKey);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0053BEC0 (end 0x0053BF3C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientTryActivateAbility) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execClientTryActivateAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityToActivate);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientTryActivateAbility_Implementation(Z_Param_AbilityToActivate);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00542400 (end 0x0054241F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ClientDebugString) | Matching: see analysis/functions-uht-exec.json
 void UAbilitySystemComponent::execOnRep_ClientDebugString(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -22,6 +43,56 @@ void UAbilitySystemComponent::execOnRep_ServerDebugString(UObject* Context, FFra
 	P_THIS->OnRep_ServerDebugString();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00542DB0 (end 0x00542EA9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerCurrentMontageJumpToSectionName) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerCurrentMontageJumpToSectionName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UAnimMontage,Z_Param_ClientAnimMontage);
+	P_GET_PROPERTY(UNameProperty,Z_Param_SectionName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerCurrentMontageJumpToSectionName_Validate(Z_Param_ClientAnimMontage,Z_Param_SectionName))
+	{
+		RPC_ValidateFailed(TEXT("ServerCurrentMontageJumpToSectionName_Validate"));
+		return;
+	}
+	P_THIS->ServerCurrentMontageJumpToSectionName_Implementation(Z_Param_ClientAnimMontage,Z_Param_SectionName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00542EB0 (end 0x0054302C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerCurrentMontageSetNextSectionName) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerCurrentMontageSetNextSectionName(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UAnimMontage,Z_Param_ClientAnimMontage);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_ClientPosition);
+	P_GET_PROPERTY(UNameProperty,Z_Param_SectionName);
+	P_GET_PROPERTY(UNameProperty,Z_Param_NextSectionName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerCurrentMontageSetNextSectionName_Validate(Z_Param_ClientAnimMontage,Z_Param_ClientPosition,Z_Param_SectionName,Z_Param_NextSectionName))
+	{
+		RPC_ValidateFailed(TEXT("ServerCurrentMontageSetNextSectionName_Validate"));
+		return;
+	}
+	P_THIS->ServerCurrentMontageSetNextSectionName_Implementation(Z_Param_ClientAnimMontage,Z_Param_ClientPosition,Z_Param_SectionName,Z_Param_NextSectionName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00543030 (end 0x0054312F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerCurrentMontageSetPlayRate) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerCurrentMontageSetPlayRate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UAnimMontage,Z_Param_ClientAnimMontage);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InPlayRate);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerCurrentMontageSetPlayRate_Validate(Z_Param_ClientAnimMontage,Z_Param_InPlayRate))
+	{
+		RPC_ValidateFailed(TEXT("ServerCurrentMontageSetPlayRate_Validate"));
+		return;
+	}
+	P_THIS->ServerCurrentMontageSetPlayRate_Implementation(Z_Param_ClientAnimMontage,Z_Param_InPlayRate);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00543300 (end 0x0054334E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPrintDebug_Request) | Matching: see analysis/functions-uht-exec.json
 void UAbilitySystemComponent::execServerPrintDebug_Request(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -34,6 +105,36 @@ void UAbilitySystemComponent::execServerPrintDebug_Request(UObject* Context, FFr
 		return;
 	}
 	P_THIS->ServerPrintDebug_Request_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00543440 (end 0x005434E7)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetInputPressed) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerSetInputPressed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityHandle);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetInputPressed_Validate(Z_Param_AbilityHandle))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetInputPressed_Validate"));
+		return;
+	}
+	P_THIS->ServerSetInputPressed_Implementation(Z_Param_AbilityHandle);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005434F0 (end 0x00543597)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetInputReleased) | Matching: see analysis/functions-uht-exec.json
+void UAbilitySystemComponent::execServerSetInputReleased(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayAbilitySpecHandle,Z_Param_AbilityHandle);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetInputReleased_Validate(Z_Param_AbilityHandle))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetInputReleased_Validate"));
+		return;
+	}
+	P_THIS->ServerSetInputReleased_Implementation(Z_Param_AbilityHandle);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UAbilitySystemComponent, 219976785u)

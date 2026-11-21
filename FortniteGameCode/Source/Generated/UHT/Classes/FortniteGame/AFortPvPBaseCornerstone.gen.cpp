@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108DE20 (end 0x0108DEA6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnInvincibilityChanged) | Matching: see analysis/functions-uht-exec.json
+void AFortPvPBaseCornerstone::execOnInvincibilityChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bIsInvincible);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnInvincibilityChanged_Implementation(Z_Param_bIsInvincible);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPvPBaseCornerstone, 832562157u)
 // Original dynamic initializer: RVA 0x0010D570 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPvPBaseCornerstone> AutoInitializeAFortPvPBaseCornerstone(TEXT("AFortPvPBaseCornerstone"), sizeof(AFortPvPBaseCornerstone), 832562157u);

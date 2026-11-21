@@ -4,6 +4,55 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F93E0 (end 0x023F94B8)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSetLocation) | Matching: see analysis/functions-uht-exec.json
+void AController::execClientSetLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_NewLocation);
+	P_GET_STRUCT(FRotator,Z_Param_NewRotation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientSetLocation_Implementation(Z_Param_NewLocation,Z_Param_NewRotation);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F94C0 (end 0x023F9596)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSetRotation) | Matching: see analysis/functions-uht-exec.json
+void AController::execClientSetRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FRotator,Z_Param_NewRotation);
+	P_GET_UBOOL(Z_Param_bResetCamera);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientSetRotation_Implementation(Z_Param_NewRotation,Z_Param_bResetCamera);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9AD0 (end 0x023F9B10)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetControlRotation) | Matching: see analysis/functions-uht-exec.json
+void AController::execGetControlRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FRotator*)Z_Param__Result=P_THIS->GetControlRotation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9B10 (end 0x023F9B50)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDesiredRotation) | Matching: see analysis/functions-uht-exec.json
+void AController::execGetDesiredRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FRotator*)Z_Param__Result=P_THIS->GetDesiredRotation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9B50 (end 0x023F9B80)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetViewTarget) | Matching: see analysis/functions-uht-exec.json
+void AController::execGetViewTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AActor**)Z_Param__Result=P_THIS->GetViewTarget();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9BD0 (end 0x023F9C17)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsLocalPlayerController) | Matching: see analysis/functions-uht-exec.json
 void AController::execIsLocalPlayerController(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -31,6 +80,18 @@ void AController::execIsMoveInputIgnored(UObject* Context, FFrame& Stack, void* 
 	*(bool*)Z_Param__Result=P_THIS->IsMoveInputIgnored();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9CE0 (end 0x023F9DF5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execLineOfSightTo) | Matching: see analysis/functions-uht-exec.json
+void AController::execLineOfSightTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_Other);
+	P_GET_STRUCT(FVector,Z_Param_ViewPoint);
+	P_GET_UBOOL(Z_Param_bAlternateChecks);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->LineOfSightTo(Z_Param_Other,Z_Param_ViewPoint,Z_Param_bAlternateChecks);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3D60 (end 0x024A3D7F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_Pawn) | Matching: see analysis/functions-uht-exec.json
 void AController::execOnRep_Pawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -47,6 +108,16 @@ void AController::execOnRep_PlayerState(UObject* Context, FFrame& Stack, void* c
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnRep_PlayerState();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9E60 (end 0x023F9EE4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPossess) | Matching: see analysis/functions-uht-exec.json
+void AController::execPossess(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(APawn,Z_Param_InPawn);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Possess(Z_Param_InPawn);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9F10 (end 0x023F9F2F), leaf (no .pdata)
@@ -74,6 +145,47 @@ void AController::execResetIgnoreMoveInput(UObject* Context, FFrame& Stack, void
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->ResetIgnoreMoveInput();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA040 (end 0x023FA0CE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetControlRotation) | Matching: see analysis/functions-uht-exec.json
+void AController::execSetControlRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FRotator,Z_Param_Out_NewRotation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetControlRotation(Z_Param_Out_NewRotation);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA0D0 (end 0x023FA156)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetIgnoreLookInput) | Matching: see analysis/functions-uht-exec.json
+void AController::execSetIgnoreLookInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewLookInput);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetIgnoreLookInput(Z_Param_bNewLookInput);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA160 (end 0x023FA1E6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetIgnoreMoveInput) | Matching: see analysis/functions-uht-exec.json
+void AController::execSetIgnoreMoveInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewMoveInput);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetIgnoreMoveInput(Z_Param_bNewMoveInput);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA1F0 (end 0x023FA2D6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetInitialLocationAndRotation) | Matching: see analysis/functions-uht-exec.json
+void AController::execSetInitialLocationAndRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_NewLocation);
+	P_GET_STRUCT_REF(FRotator,Z_Param_Out_NewRotation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetInitialLocationAndRotation(Z_Param_Out_NewLocation,Z_Param_Out_NewRotation);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA440 (end 0x023FA45F), leaf (no .pdata)

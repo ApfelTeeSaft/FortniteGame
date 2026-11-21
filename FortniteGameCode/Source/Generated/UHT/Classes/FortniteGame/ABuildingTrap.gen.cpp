@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73450 (end 0x00F734D4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddTriggerComponent) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execAddTriggerComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_TriggerComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddTriggerComponent(Z_Param_TriggerComponent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F735B0 (end 0x00F7362F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAttemptRetrigger) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execAttemptRetrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Seconds);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AttemptRetrigger(Z_Param_Seconds);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73A60 (end 0x00F73A7F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execFinishTrigger) | Matching: see analysis/functions-uht-exec.json
 void ABuildingTrap::execFinishTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +31,15 @@ void ABuildingTrap::execFinishTrigger(UObject* Context, FFrame& Stack, void* con
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->FinishTrigger();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F740B0 (end 0x00F740F0)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCenter) | Matching: see analysis/functions-uht-exec.json
+void ABuildingTrap::execGetCenter(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetCenter();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F740F0 (end 0x00F74121)

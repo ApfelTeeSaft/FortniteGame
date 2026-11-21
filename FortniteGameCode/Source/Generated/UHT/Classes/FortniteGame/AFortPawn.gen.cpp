@@ -4,6 +4,24 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010604D0 (end 0x01060510)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDefaultTargetingOrigin) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execGetDefaultTargetingOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetDefaultTargetingOrigin();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01060510 (end 0x01060550)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDefaultTargetingRotation) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execGetDefaultTargetingRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FRotator*)Z_Param__Result=P_THIS->GetDefaultTargetingRotation();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010605C0 (end 0x010605F1)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHealthPercent) | Matching: see analysis/functions-uht-exec.json
 void AFortPawn::execGetHealthPercent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -83,6 +101,99 @@ void AFortPawn::execOnRep_VocalChords(UObject* Context, FFrame& Stack, void* con
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnRep_VocalChords();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01061330 (end 0x010613AA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPawnStartFire) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execPawnStartFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_FireModeNum);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PawnStartFire(Z_Param_FireModeNum);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010613B0 (end 0x0106142A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPawnStopFire) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execPawnStopFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_FireModeNum);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PawnStopFire(Z_Param_FireModeNum);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01061430 (end 0x010614F5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPickUpActor) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execPickUpActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_PickupTarget);
+	P_GET_OBJECT(UFortDecoItemDefinition,Z_Param_PlacementDecoItemDefinition);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->PickUpActor(Z_Param_PickupTarget,Z_Param_PlacementDecoItemDefinition);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01061500 (end 0x01061582)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlayFootStepSound) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execPlayFootStepSound(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_FootDown);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PlayFootStepSound(Z_Param_FootDown);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010616A0 (end 0x01061793)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlaySound) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execPlaySound(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(USoundBase,Z_Param_Sound);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_VolumeMultiplier);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_PitchMultiplier);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PlaySound_Implementation(Z_Param_Sound,Z_Param_VolumeMultiplier,Z_Param_PitchMultiplier);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01061920 (end 0x010619D5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerInternalEquipWeapon) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execServerInternalEquipWeapon(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortWeapon,Z_Param_Weap);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerInternalEquipWeapon_Validate(Z_Param_Weap))
+	{
+		RPC_ValidateFailed(TEXT("ServerInternalEquipWeapon_Validate"));
+		return;
+	}
+	P_THIS->ServerInternalEquipWeapon_Implementation(Z_Param_Weap);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010619E0 (end 0x01061AA9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerTeleportNearLocation) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execServerTeleportNearLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_ActorLocation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerTeleportNearLocation_Validate(Z_Param_ActorLocation))
+	{
+		RPC_ValidateFailed(TEXT("ServerTeleportNearLocation_Validate"));
+		return;
+	}
+	P_THIS->ServerTeleportNearLocation_Implementation(Z_Param_ActorLocation);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010621B0 (end 0x01062234)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSpawnSpot) | Matching: see analysis/functions-uht-exec.json
+void AFortPawn::execSetSpawnSpot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_InSpawnSpot);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSpawnSpot(Z_Param_InSpawnSpot);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(AFortPawn, 3043488547u)

@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02417B40 (end 0x02417BC4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnParticleSystemFinished) | Matching: see analysis/functions-uht-exec.json
+void AEmitter::execOnParticleSystemFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UParticleSystemComponent,Z_Param_FinishedComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnParticleSystemFinished(Z_Param_FinishedComponent);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FE9530 (end 0x00FE954F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_bCurrentlyActive) | Matching: see analysis/functions-uht-exec.json
 void AEmitter::execOnRep_bCurrentlyActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +21,16 @@ void AEmitter::execOnRep_bCurrentlyActive(UObject* Context, FFrame& Stack, void*
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnRep_bCurrentlyActive();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02405F80 (end 0x02406004)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetTemplate) | Matching: see analysis/functions-uht-exec.json
+void AEmitter::execSetTemplate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UParticleSystem,Z_Param_NewTemplate);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetTemplate(Z_Param_NewTemplate);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(AEmitter, 1782085140u)

@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AA560 (end 0x028AA5E4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnLoginFlowModalCreated) | Matching: see analysis/functions-uht-exec.json
+void UFortTwitchLogin::execOnLoginFlowModalCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortTwitchLoginModalWidget,Z_Param_Modal);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnLoginFlowModalCreated_Implementation(Z_Param_Modal);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0290D530 (end 0x0290D5B4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnLoginFlowModalDismissed) | Matching: see analysis/functions-uht-exec.json
+void UFortTwitchLogin::execOnLoginFlowModalDismissed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortTwitchLoginModalWidget,Z_Param_Modal);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnLoginFlowModalDismissed_Implementation(Z_Param_Modal);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortTwitchLogin, 1325318369u)
 // Original dynamic initializer: RVA 0x00260BD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTwitchLogin> AutoInitializeUFortTwitchLogin(TEXT("UFortTwitchLogin"), sizeof(UFortTwitchLogin), 1325318369u);

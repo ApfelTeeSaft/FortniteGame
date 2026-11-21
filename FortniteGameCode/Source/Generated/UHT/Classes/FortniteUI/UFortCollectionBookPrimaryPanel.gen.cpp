@@ -4,6 +4,46 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AA4D0 (end 0x028AA554)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCollectionBookPageClicked) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookPrimaryPanel::execOnCollectionBookPageClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortCollectionBookPage,Z_Param_ClickedPage);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCollectionBookPageClicked_Implementation(Z_Param_ClickedPage);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02896F70 (end 0x02896FF4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCollectionBookPageSelected) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookPrimaryPanel::execOnCollectionBookPageSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortCollectionBookPage,Z_Param_SelectedPage);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCollectionBookPageSelected_Implementation(Z_Param_SelectedPage);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02897110 (end 0x02897194)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCollectionBookSectionClicked) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookPrimaryPanel::execOnCollectionBookSectionClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortCollectionBookSection,Z_Param_ClickedSection);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCollectionBookSectionClicked_Implementation(Z_Param_ClickedSection);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02897B50 (end 0x02897BE3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSummonInfoPanelExecuted) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookPrimaryPanel::execOnSummonInfoPanelExecuted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL_REF(Z_Param_Out_bPassThrough);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSummonInfoPanelExecuted_Implementation(Z_Param_Out_bPassThrough);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCollectionBookPrimaryPanel, 1057926977u)
 // Original dynamic initializer: RVA 0x00240460 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookPrimaryPanel> AutoInitializeUFortCollectionBookPrimaryPanel(TEXT("UFortCollectionBookPrimaryPanel"), sizeof(UFortCollectionBookPrimaryPanel), 1057926977u);

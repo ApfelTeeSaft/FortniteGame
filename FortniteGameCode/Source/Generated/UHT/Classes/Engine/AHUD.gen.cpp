@@ -22,6 +22,16 @@ void AHUD::execPreviousDebugTarget(UObject* Context, FFrame& Stack, void* const 
 	P_THIS->PreviousDebugTarget();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02424060 (end 0x024240E4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShowDebug) | Matching: see analysis/functions-uht-exec.json
+void AHUD::execShowDebug(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_DebugType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ShowDebug(Z_Param_DebugType);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F63160 (end 0x00F6317F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execShowHUD) | Matching: see analysis/functions-uht-exec.json
 void AHUD::execShowHUD(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

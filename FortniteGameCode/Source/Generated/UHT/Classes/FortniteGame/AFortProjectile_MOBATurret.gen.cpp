@@ -4,6 +4,23 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108DBC0 (end 0x0108DE1C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnHomingTargetDied) | Matching: see analysis/functions-uht-exec.json
+void AFortProjectile_MOBATurret::execOnHomingTargetDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_DamagedActor);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Damage);
+	P_GET_OBJECT(AController,Z_Param_InstigatedBy);
+	P_GET_OBJECT(AActor,Z_Param_DamageCauser);
+	P_GET_STRUCT(FVector,Z_Param_HitLocation);
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_FHitComponent);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_GET_STRUCT(FVector,Z_Param_Momentum);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnHomingTargetDied(Z_Param_DamagedActor,Z_Param_Damage,Z_Param_InstigatedBy,Z_Param_DamageCauser,Z_Param_HitLocation,Z_Param_FHitComponent,Z_Param_BoneName,Z_Param_Momentum);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortProjectile_MOBATurret, 425521393u)
 // Original dynamic initializer: RVA 0x0010D550 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortProjectile_MOBATurret> AutoInitializeAFortProjectile_MOBATurret(TEXT("AFortProjectile_MOBATurret"), sizeof(AFortProjectile_MOBATurret), 425521393u);

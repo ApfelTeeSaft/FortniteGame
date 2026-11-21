@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289EE40 (end 0x0289EEC4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSectionChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookSectionPanel::execOnSectionChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortCollectionBookSection,Z_Param_Section);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSectionChanged_Implementation(Z_Param_Section);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCollectionBookSectionPanel, 855791190u)
 // Original dynamic initializer: RVA 0x002425B0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookSectionPanel> AutoInitializeUFortCollectionBookSectionPanel(TEXT("UFortCollectionBookSectionPanel"), sizeof(UFortCollectionBookSectionPanel), 855791190u);

@@ -4,6 +4,29 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6E690 (end 0x00F6E714)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_RemoveGameplayCue) | Matching: see analysis/functions-uht-exec.json
+void ABuildingGameplayActor::execK2_RemoveGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_GameplayCueTag);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->K2_RemoveGameplayCue(Z_Param_GameplayCueTag);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6EB10 (end 0x00F6EC45)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRegisteredTouchComponentEndOverlap) | Matching: see analysis/functions-uht-exec.json
+void ABuildingGameplayActor::execOnRegisteredTouchComponentEndOverlap(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp);
+	P_GET_OBJECT(AActor,Z_Param_Other);
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp);
+	P_GET_PROPERTY(UIntProperty,Z_Param_OtherBodyIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRegisteredTouchComponentEndOverlap(Z_Param_OverlappedComp,Z_Param_Other,Z_Param_OtherComp,Z_Param_OtherBodyIndex);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingGameplayActor, 724305818u)
 // Original dynamic initializer: RVA 0x000DAE90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingGameplayActor> AutoInitializeABuildingGameplayActor(TEXT("ABuildingGameplayActor"), sizeof(ABuildingGameplayActor), 724305818u);

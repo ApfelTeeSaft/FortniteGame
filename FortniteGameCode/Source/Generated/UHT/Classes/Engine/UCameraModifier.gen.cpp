@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023C9E20 (end 0x023C9EA6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDisableModifier) | Matching: see analysis/functions-uht-exec.json
+void UCameraModifier::execDisableModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bImmediate);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DisableModifier(Z_Param_bImmediate);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01D5F130 (end 0x01D5F14F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execEnableModifier) | Matching: see analysis/functions-uht-exec.json
 void UCameraModifier::execEnableModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +21,15 @@ void UCameraModifier::execEnableModifier(UObject* Context, FFrame& Stack, void* 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->EnableModifier();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EB8F0 (end 0x023EB920)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetViewTarget) | Matching: see analysis/functions-uht-exec.json
+void UCameraModifier::execGetViewTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AActor**)Z_Param__Result=P_THIS->GetViewTarget();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EB920 (end 0x023EB94F)

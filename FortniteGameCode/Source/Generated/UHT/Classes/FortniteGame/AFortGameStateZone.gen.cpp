@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF5730 (end 0x00FF5760)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetUIMapManager) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateZone::execGetUIMapManager(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AFortInGameMapManager**)Z_Param__Result=P_THIS->GetUIMapManager();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F08C0 (end 0x023F08DF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execNotifyBeginGameplayVote) | Matching: see analysis/functions-uht-exec.json
 void AFortGameStateZone::execNotifyBeginGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +20,16 @@ void AFortGameStateZone::execNotifyBeginGameplayVote(UObject* Context, FFrame& S
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->NotifyBeginGameplayVote_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF5F50 (end 0x00FF5FD2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execNotifyEndGameplayVote) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateZone::execNotifyEndGameplayVote(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_VoteResult);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->NotifyEndGameplayVote_Implementation(Z_Param_VoteResult);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF6220 (end 0x00FF623F), leaf (no .pdata)
@@ -56,6 +75,34 @@ void AFortGameStateZone::execOnRep_ReplicatedWorldTimeSeconds(UObject* Context, 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnRep_ReplicatedWorldTimeSeconds();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF6950 (end 0x00FF69D6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRunPerfMemCheatScript) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateZone::execRunPerfMemCheatScript(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bStartStatFiles);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RunPerfMemCheatScript_Implementation(Z_Param_bStartStatFiles);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FF69E0 (end 0x00FF6B5D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerFireAIDirectorEvent) | Matching: see analysis/functions-uht-exec.json
+void AFortGameStateZone::execServerFireAIDirectorEvent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortAIDirectorEvent,Z_Param_Event);
+	P_GET_OBJECT(UObject,Z_Param_EventSource);
+	P_GET_OBJECT(UObject,Z_Param_EventTarget);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_EventMultiplier);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerFireAIDirectorEvent_Validate(EFortAIDirectorEvent(Z_Param_Event),Z_Param_EventSource,Z_Param_EventTarget,Z_Param_EventMultiplier))
+	{
+		RPC_ValidateFailed(TEXT("ServerFireAIDirectorEvent_Validate"));
+		return;
+	}
+	P_THIS->ServerFireAIDirectorEvent_Implementation(EFortAIDirectorEvent(Z_Param_Event),Z_Param_EventSource,Z_Param_EventTarget,Z_Param_EventMultiplier);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(AFortGameStateZone, 1421512874u)

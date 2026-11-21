@@ -4,6 +4,204 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A2A60 (end 0x024A2B25)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCreateNamedDynamicMaterialInstance) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execCreateNamedDynamicMaterialInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_InName);
+	P_GET_OBJECT(UMaterialInterface,Z_Param_SourceMaterial);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMaterialInstanceDynamic**)Z_Param__Result=P_THIS->CreateNamedDynamicMaterialInstance(Z_Param_InName,Z_Param_SourceMaterial);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A2D40 (end 0x024A2E1D)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBeamEndPoint) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execGetBeamEndPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_OutEndPoint);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetBeamEndPoint(Z_Param_EmitterIndex,Z_Param_Out_OutEndPoint);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A2E20 (end 0x024A2F2B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBeamSourcePoint) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execGetBeamSourcePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_PROPERTY(UIntProperty,Z_Param_SourceIndex);
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_OutSourcePoint);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetBeamSourcePoint(Z_Param_EmitterIndex,Z_Param_SourceIndex,Z_Param_Out_OutSourcePoint);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A2F30 (end 0x024A3044)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBeamSourceStrength) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execGetBeamSourceStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_PROPERTY(UIntProperty,Z_Param_SourceIndex);
+	P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_OutSourceStrength);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetBeamSourceStrength(Z_Param_EmitterIndex,Z_Param_SourceIndex,Z_Param_Out_OutSourceStrength);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3050 (end 0x024A315B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBeamSourceTangent) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execGetBeamSourceTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_PROPERTY(UIntProperty,Z_Param_SourceIndex);
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_OutTangentPoint);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetBeamSourceTangent(Z_Param_EmitterIndex,Z_Param_SourceIndex,Z_Param_Out_OutTangentPoint);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3160 (end 0x024A326B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBeamTargetPoint) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execGetBeamTargetPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_PROPERTY(UIntProperty,Z_Param_TargetIndex);
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_OutTargetPoint);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetBeamTargetPoint(Z_Param_EmitterIndex,Z_Param_TargetIndex,Z_Param_Out_OutTargetPoint);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3270 (end 0x024A3384)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBeamTargetStrength) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execGetBeamTargetStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_PROPERTY(UIntProperty,Z_Param_TargetIndex);
+	P_GET_PROPERTY_REF(UFloatProperty,Z_Param_Out_OutTargetStrength);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetBeamTargetStrength(Z_Param_EmitterIndex,Z_Param_TargetIndex,Z_Param_Out_OutTargetStrength);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3390 (end 0x024A349B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBeamTargetTangent) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execGetBeamTargetTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_PROPERTY(UIntProperty,Z_Param_TargetIndex);
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_OutTangentPoint);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetBeamTargetTangent(Z_Param_EmitterIndex,Z_Param_TargetIndex,Z_Param_Out_OutTangentPoint);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3860 (end 0x024A38F6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetNamedMaterial) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execGetNamedMaterial(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_InName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMaterialInterface**)Z_Param__Result=P_THIS->GetNamedMaterial(Z_Param_InName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A4B30 (end 0x024A4C00)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetBeamEndPoint) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execSetBeamEndPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_STRUCT(FVector,Z_Param_NewEndPoint);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetBeamEndPoint(Z_Param_EmitterIndex,Z_Param_NewEndPoint);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A4C00 (end 0x024A4D0E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetBeamSourcePoint) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execSetBeamSourcePoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_STRUCT(FVector,Z_Param_NewSourcePoint);
+	P_GET_PROPERTY(UIntProperty,Z_Param_SourceIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetBeamSourcePoint(Z_Param_EmitterIndex,Z_Param_NewSourcePoint,Z_Param_SourceIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A4D10 (end 0x024A4E05)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetBeamSourceStrength) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execSetBeamSourceStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewSourceStrength);
+	P_GET_PROPERTY(UIntProperty,Z_Param_SourceIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetBeamSourceStrength(Z_Param_EmitterIndex,Z_Param_NewSourceStrength,Z_Param_SourceIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A4E10 (end 0x024A4F1E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetBeamSourceTangent) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execSetBeamSourceTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_STRUCT(FVector,Z_Param_NewTangentPoint);
+	P_GET_PROPERTY(UIntProperty,Z_Param_SourceIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetBeamSourceTangent(Z_Param_EmitterIndex,Z_Param_NewTangentPoint,Z_Param_SourceIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A4F20 (end 0x024A502E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetBeamTargetPoint) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execSetBeamTargetPoint(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_STRUCT(FVector,Z_Param_NewTargetPoint);
+	P_GET_PROPERTY(UIntProperty,Z_Param_TargetIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetBeamTargetPoint(Z_Param_EmitterIndex,Z_Param_NewTargetPoint,Z_Param_TargetIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A5030 (end 0x024A5125)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetBeamTargetStrength) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execSetBeamTargetStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewTargetStrength);
+	P_GET_PROPERTY(UIntProperty,Z_Param_TargetIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetBeamTargetStrength(Z_Param_EmitterIndex,Z_Param_NewTargetStrength,Z_Param_TargetIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A5130 (end 0x024A523E)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetBeamTargetTangent) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execSetBeamTargetTangent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_EmitterIndex);
+	P_GET_STRUCT(FVector,Z_Param_NewTangentPoint);
+	P_GET_PROPERTY(UIntProperty,Z_Param_TargetIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetBeamTargetTangent(Z_Param_EmitterIndex,Z_Param_NewTangentPoint,Z_Param_TargetIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024AE810 (end 0x024AE8D6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetEmitterEnable) | Matching: see analysis/functions-uht-exec.json
+void UParticleSystemComponent::execSetEmitterEnable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_EmitterName);
+	P_GET_UBOOL(Z_Param_bNewEnableState);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetEmitterEnable(Z_Param_EmitterName,Z_Param_bNewEnableState);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UParticleSystemComponent, 1437480045u)
 // Original dynamic initializer: RVA 0x00213C70 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UParticleSystemComponent> AutoInitializeUParticleSystemComponent(TEXT("UParticleSystemComponent"), sizeof(UParticleSystemComponent), 1437480045u);

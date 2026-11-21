@@ -4,6 +4,28 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CCF70 (end 0x002CD033)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleTabCreated) | Matching: see analysis/functions-uht-exec.json
+void UCommonTabListWidget::execHandleTabCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_TabNameID);
+	P_GET_OBJECT(UCommonButton,Z_Param_TabButton);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleTabCreated_Implementation(Z_Param_TabNameID,Z_Param_TabButton);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CD040 (end 0x002CD103)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleTabRemoved) | Matching: see analysis/functions-uht-exec.json
+void UCommonTabListWidget::execHandleTabRemoved(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_TabNameID);
+	P_GET_OBJECT(UCommonButton,Z_Param_TabButton);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleTabRemoved_Implementation(Z_Param_TabNameID,Z_Param_TabButton);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonTabListWidget, 4259496370u)
 // Original dynamic initializer: RVA 0x000960E0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonTabListWidget> AutoInitializeUCommonTabListWidget(TEXT("UCommonTabListWidget"), sizeof(UCommonTabListWidget), 4259496370u);

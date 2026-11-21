@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024C8B10 (end 0x024C8BA6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAttemptSetCurrentTarget) | Matching: see analysis/functions-uht-exec.json
+void UBuildingTurretComponent::execAttemptSetCurrentTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_NewTarget);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->AttemptSetCurrentTarget(Z_Param_NewTarget);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79AD0 (end 0x00F79B66)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsValidTarget) | Matching: see analysis/functions-uht-exec.json
+void UBuildingTurretComponent::execIsValidTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_InTarget);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsValidTarget_Implementation(Z_Param_InTarget);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248D450 (end 0x0248D46F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnFiringTimer) | Matching: see analysis/functions-uht-exec.json
 void UBuildingTurretComponent::execOnFiringTimer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -20,6 +40,39 @@ void UBuildingTurretComponent::execOnPerformTargetValidation(UObject* Context, F
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnPerformTargetValidation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79C60 (end 0x00F79CE4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_CurrentTarget) | Matching: see analysis/functions-uht-exec.json
+void UBuildingTurretComponent::execOnRep_CurrentTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_OldTarget);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_CurrentTarget(Z_Param_OldTarget);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F79F00 (end 0x00F7A035)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnTargetingEndOverlap) | Matching: see analysis/functions-uht-exec.json
+void UBuildingTurretComponent::execOnTargetingEndOverlap(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OverlappedComp);
+	P_GET_OBJECT(AActor,Z_Param_OtherActor);
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_OtherComp);
+	P_GET_PROPERTY(UIntProperty,Z_Param_OtherBodyIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnTargetingEndOverlap(Z_Param_OverlappedComp,Z_Param_OtherActor,Z_Param_OtherComp,Z_Param_OtherBodyIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100FB40 (end 0x0100FBC4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetTargetingOverlapComponent) | Matching: see analysis/functions-uht-exec.json
+void UBuildingTurretComponent::execSetTargetingOverlapComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_NewTargetingOverlapComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetTargetingOverlapComponent(Z_Param_NewTargetingOverlapComponent);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UBuildingTurretComponent, 742700684u)

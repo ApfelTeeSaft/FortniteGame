@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023EFA00 (end 0x023EFAD8)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCacheInitialMeshOffset) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execCacheInitialMeshOffset(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_MeshRelativeLocation);
+	P_GET_STRUCT(FRotator,Z_Param_MeshRelativeRotation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->CacheInitialMeshOffset(Z_Param_MeshRelativeLocation,Z_Param_MeshRelativeRotation);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EFC70 (end 0x023EFC9F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execCanJumpInternal) | Matching: see analysis/functions-uht-exec.json
 void ACharacter::execCanJumpInternal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -40,6 +51,25 @@ void ACharacter::execClientCheatWalk(UObject* Context, FFrame& Stack, void* cons
 	P_THIS->ClientCheatWalk_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0C30 (end 0x023F0CB6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execCrouch) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execCrouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bClientSimulation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Crouch(Z_Param_bClientSimulation);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F0D40 (end 0x023F0D90)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBaseRotationOffsetRotator) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execGetBaseRotationOffsetRotator(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FRotator*)Z_Param__Result=P_THIS->GetBaseRotationOffsetRotator();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F16F0 (end 0x023F171F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsJumpProvidingForce) | Matching: see analysis/functions-uht-exec.json
 void ACharacter::execIsJumpProvidingForce(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -56,6 +86,18 @@ void ACharacter::execJump(UObject* Context, FFrame& Stack, void* const Z_Param__
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->Jump();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F3260 (end 0x023F3377)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execLaunchCharacter) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execLaunchCharacter(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_LaunchVelocity);
+	P_GET_UBOOL(Z_Param_bXYOverride);
+	P_GET_UBOOL(Z_Param_bZOverride);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->LaunchCharacter(Z_Param_LaunchVelocity,Z_Param_bXYOverride,Z_Param_bZOverride);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F3380 (end 0x023F339F), leaf (no .pdata)
@@ -85,6 +127,41 @@ void ACharacter::execOnRep_ReplicatedBasedMovement(UObject* Context, FFrame& Sta
 	P_THIS->OnRep_ReplicatedBasedMovement();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F33E0 (end 0x023F3572)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnWalkingOffLedge) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execOnWalkingOffLedge(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_PreviousFloorImpactNormal);
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_PreviousFloorContactNormal);
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_PreviousLocation);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_TimeDelta);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnWalkingOffLedge_Implementation(Z_Param_Out_PreviousFloorImpactNormal,Z_Param_Out_PreviousFloorContactNormal,Z_Param_Out_PreviousLocation,Z_Param_TimeDelta);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F3580 (end 0x023F3689)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlayAnimMontage) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execPlayAnimMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UAnimMontage,Z_Param_AnimMontage);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InPlayRate);
+	P_GET_PROPERTY(UNameProperty,Z_Param_StartSectionName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->PlayAnimMontage(Z_Param_AnimMontage,Z_Param_InPlayRate,Z_Param_StartSectionName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F52A0 (end 0x023F5324)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execStopAnimMontage) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execStopAnimMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UAnimMontage,Z_Param_AnimMontage);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->StopAnimMontage(Z_Param_AnimMontage);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F5330 (end 0x023F534F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execStopJumping) | Matching: see analysis/functions-uht-exec.json
 void ACharacter::execStopJumping(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -92,6 +169,16 @@ void ACharacter::execStopJumping(UObject* Context, FFrame& Stack, void* const Z_
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->StopJumping();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F5350 (end 0x023F53D6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUnCrouch) | Matching: see analysis/functions-uht-exec.json
+void ACharacter::execUnCrouch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bClientSimulation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UnCrouch(Z_Param_bClientSimulation);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(ACharacter, 161091864u)

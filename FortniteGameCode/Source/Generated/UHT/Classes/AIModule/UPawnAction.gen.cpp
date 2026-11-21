@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D33060 (end 0x01D330E3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execFinish) | Matching: see analysis/functions-uht-exec.json
+void UPawnAction::execFinish(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_WithResult);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Finish(EPawnActionResult::Type(Z_Param_WithResult));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPawnAction, 798319730u)
 // Original dynamic initializer: RVA 0x001BF440 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPawnAction> AutoInitializeUPawnAction(TEXT("UPawnAction"), sizeof(UPawnAction), 798319730u);

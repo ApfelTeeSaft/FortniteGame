@@ -4,6 +4,25 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023D1C70 (end 0x023D1CF4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSavePoseSnapshot) | Matching: see analysis/functions-uht-exec.json
+void UAnimInstance::execSavePoseSnapshot(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UNameProperty,Z_Param_SnapshotName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SavePoseSnapshot(Z_Param_SnapshotName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6920 (end 0x010D6950)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execTryGetPawnOwner) | Matching: see analysis/functions-uht-exec.json
+void UAnimInstance::execTryGetPawnOwner(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(APawn**)Z_Param__Result=P_THIS->TryGetPawnOwner();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAnimInstance, 2399105166u)
 // Original dynamic initializer: RVA 0x001EDE40 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAnimInstance> AutoInitializeUAnimInstance(TEXT("UAnimInstance"), sizeof(UAnimInstance), 2399105166u);

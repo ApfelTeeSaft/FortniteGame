@@ -4,6 +4,15 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BFFA0 (end 0x010BFFD7)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPreviousDayPhase) | Matching: see analysis/functions-uht-exec.json
+void AFortTimeOfDayManager::execGetPreviousDayPhase(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<EFortDayPhase::Type>*)Z_Param__Result=P_THIS->GetPreviousDayPhase();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024BCEA0 (end 0x024BCEBF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_HeightFogEnabled) | Matching: see analysis/functions-uht-exec.json
 void AFortTimeOfDayManager::execOnRep_HeightFogEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

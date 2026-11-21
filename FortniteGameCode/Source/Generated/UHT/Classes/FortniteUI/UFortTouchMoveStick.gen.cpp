@@ -22,6 +22,26 @@ void UFortTouchMoveStick::execHandleTouchStarted(UObject* Context, FFrame& Stack
 	P_THIS->HandleTouchStarted_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02908900 (end 0x02908986)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetMovementLockStatus) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchMoveStick::execSetMovementLockStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_MovementIsLocked);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetMovementLockStatus_Implementation(Z_Param_MovementIsLocked);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02908B30 (end 0x02908BA5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetStickPosition) | Matching: see analysis/functions-uht-exec.json
+void UFortTouchMoveStick::execSetStickPosition(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector2D,Z_Param_NewPosition);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetStickPosition_Implementation(Z_Param_NewPosition);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortTouchMoveStick, 848341596u)
 // Original dynamic initializer: RVA 0x0025E550 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortTouchMoveStick> AutoInitializeUFortTouchMoveStick(TEXT("UFortTouchMoveStick"), sizeof(UFortTouchMoveStick), 848341596u);

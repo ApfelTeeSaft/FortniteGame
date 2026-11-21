@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032FB10 (end 0x0032FB8A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientCancelReservationResponse) | Matching: see analysis/functions-uht-exec.json
+void APartyBeaconClient::execClientCancelReservationResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_ReservationResponse);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientCancelReservationResponse_Implementation(EPartyReservationResult::Type(Z_Param_ReservationResponse));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032FB90 (end 0x0032FC0A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientReservationResponse) | Matching: see analysis/functions-uht-exec.json
+void APartyBeaconClient::execClientReservationResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_ReservationResponse);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientReservationResponse_Implementation(EPartyReservationResult::Type(Z_Param_ReservationResponse));
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032FC10 (end 0x0032FC2F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSendReservationFull) | Matching: see analysis/functions-uht-exec.json
 void APartyBeaconClient::execClientSendReservationFull(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +31,16 @@ void APartyBeaconClient::execClientSendReservationFull(UObject* Context, FFrame&
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->ClientSendReservationFull_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0032FC30 (end 0x0032FCB2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSendReservationUpdates) | Matching: see analysis/functions-uht-exec.json
+void APartyBeaconClient::execClientSendReservationUpdates(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_NumRemainingReservations);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientSendReservationUpdates_Implementation(Z_Param_NumRemainingReservations);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(APartyBeaconClient, 378953535u)

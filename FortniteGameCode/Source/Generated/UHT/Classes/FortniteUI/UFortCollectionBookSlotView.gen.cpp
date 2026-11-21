@@ -4,6 +4,39 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289EFD0 (end 0x0289F092)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSelectedSlotButtonChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookSlotView::execOnSelectedSlotButtonChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButton,Z_Param_SelectedButton);
+	P_GET_PROPERTY(UIntProperty,Z_Param_ButtonIdx);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSelectedSlotButtonChanged(Z_Param_SelectedButton,Z_Param_ButtonIdx);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289F0A0 (end 0x0289F162)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSlotButtonClicked) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookSlotView::execOnSlotButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButton,Z_Param_ClickedButton);
+	P_GET_PROPERTY(UIntProperty,Z_Param_ButtonIdx);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSlotButtonClicked(Z_Param_ClickedButton,Z_Param_ButtonIdx);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0289F1F0 (end 0x0289F2B2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSlotButtonCommitted) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookSlotView::execOnSlotButtonCommitted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButton,Z_Param_CommittedButton);
+	P_GET_PROPERTY(UIntProperty,Z_Param_ButtonIdx);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSlotButtonCommitted(Z_Param_CommittedButton,Z_Param_ButtonIdx);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCollectionBookSlotView, 4245492210u)
 // Original dynamic initializer: RVA 0x00242630 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookSlotView> AutoInitializeUFortCollectionBookSlotView(TEXT("UFortCollectionBookSlotView"), sizeof(UFortCollectionBookSlotView), 4245492210u);

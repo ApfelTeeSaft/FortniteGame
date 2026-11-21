@@ -72,7 +72,14 @@ AUTO_INITIALIZER_SIZE = 31
 SYMBOLS = ROOT / "analysis" / "uht-class-symbols.json"
 UNITY_ORDER = ROOT / "analysis" / "unity-order.json"
 # Classes whose extra (non-DECLARE_CLASS) members come from the shim headers.
-EXTRA_MEMBERS = ("UClass", "UScriptStruct", "UEnum")
+EXTRA_MEMBERS = ("UClass", "UScriptStruct", "UEnum", "UByteProperty", "UInt8Property", "UInt16Property",
+                 "UIntProperty", "UInt64Property", "UUInt16Property", "UUInt32Property", "UUInt64Property",
+                 "UFloatProperty", "UDoubleProperty", "UNameProperty")
+# Intrinsic classes whose GetPrivateStaticClass is not decoded, with what the thunks need:
+# UField (Class.h) is UObject plus `UField* Next`; FFrame::StepCompiledIn reads Next at +0x28
+# in the reference's thunks, right after UObject's 0x28 bytes.
+INTRINSIC = {"UField": {"super": "UObject", "size": 0x30,
+                        "members": [("\tUField* Next;  // +0x28", 8)]}}
 CLASS_DEPRECATED = 0x02000000
 
 _G162 = ("4c8bdc4883ec78488b05000000004885c00f858600000088442468"
@@ -242,6 +249,10 @@ def main() -> int:
             c["owns_aro"] = name == c.get("super") or sup is None or not sup.get("decoded") or \
                 sup["decoded"]["aro"] != f["aro"]
 
+    for name, spec in INTRINSIC.items():
+        if name in classes and not classes[name].get("decoded"):
+            classes[name].update(super=spec["super"], size=spec["size"], intrinsic=True)
+
     # Topological order (superclass first); unknown superclasses become roots.
     emitted, out_order = set(), []
 
@@ -273,10 +284,14 @@ def main() -> int:
         "#pragma once",
         "",
         "".join(f"class {n};\n" for n in out_order),
+        "// Enums the declared signatures use, in their UEnum::ECppForm (FEnumParams); only the form",
+        "// and the underlying type are recovered, not the enumerators.",
+        "\n".join(model["enums"]),
+        "",
     ]
     for n in out_order:
         c = classes[n]
-        sup = c.get("super") if c.get("decoded") else None
+        sup = c.get("super") if c.get("decoded") or c.get("intrinsic") else None
         has_base = sup is not None and sup != n and sup in decl_size
         base_size = decl_size.get(sup, 0) if has_base else 0
         size = c.get("size") or c.get("sizeof")
@@ -309,7 +324,10 @@ def main() -> int:
                            for f in nat["functions"]]
         if n in EXTRA_MEMBERS:
             body_lines += [f"#ifdef FNGC_EXTRA_MEMBERS_{n}", f"\tFNGC_EXTRA_MEMBERS_{n}", "#endif"]
-        pad = decl_size[n] - base_size - (8 if n in model["roots_with_vptr"] else 0)
+        members = INTRINSIC.get(n, {}).get("members", []) if c.get("intrinsic") else []
+        body_lines += [m for m, _ in members]
+        pad = (decl_size[n] - base_size - (8 if n in model["roots_with_vptr"] else 0)
+               - sum(size for _, size in members))
         if pad > 0:
             body_lines += ["private:", f"\tunsigned char Opaque[0x{pad:X}];  // sizeof({n}) = 0x{decl_size[n]:X}"
                            + ("" if size is not None else " (not recovered)")]

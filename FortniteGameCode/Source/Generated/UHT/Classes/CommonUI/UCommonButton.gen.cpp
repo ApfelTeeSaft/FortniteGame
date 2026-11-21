@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6440 (end 0x002C64D3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleTriggeringActionCommited) | Matching: see analysis/functions-uht-exec.json
+void UCommonButton::execHandleTriggeringActionCommited(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL_REF(Z_Param_Out_bPassthrough);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleTriggeringActionCommited(Z_Param_Out_bPassthrough);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6A70 (end 0x002C6AF6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnInputMethodChanged) | Matching: see analysis/functions-uht-exec.json
+void UCommonButton::execOnInputMethodChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bUsingGamepad);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnInputMethodChanged(Z_Param_bUsingGamepad);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonButton, 3157155506u)
 // Original dynamic initializer: RVA 0x00095630 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonButton> AutoInitializeUCommonButton(TEXT("UCommonButton"), sizeof(UCommonButton), 3157155506u);

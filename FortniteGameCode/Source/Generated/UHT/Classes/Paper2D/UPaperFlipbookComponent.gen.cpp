@@ -4,6 +4,25 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00669030 (end 0x00669060)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetFlipbook) | Matching: see analysis/functions-uht-exec.json
+void UPaperFlipbookComponent::execGetFlipbook(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPaperFlipbook**)Z_Param__Result=P_THIS->GetFlipbook();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0066A6C0 (end 0x0066A756)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetFlipbook) | Matching: see analysis/functions-uht-exec.json
+void UPaperFlipbookComponent::execSetFlipbook(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPaperFlipbook,Z_Param_NewFlipbook);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->SetFlipbook(Z_Param_NewFlipbook);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPaperFlipbookComponent, 2273606821u)
 // Original dynamic initializer: RVA 0x000AB550 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPaperFlipbookComponent> AutoInitializeUPaperFlipbookComponent(TEXT("UPaperFlipbookComponent"), sizeof(UPaperFlipbookComponent), 2273606821u);

@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DEA00 (end 0x010DEA94)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDPSAtLevel) | Matching: see analysis/functions-uht-exec.json
+void UFortWorldItemDefinition::execGetDPSAtLevel(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ItemLevel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetDPSAtLevel(Z_Param_ItemLevel);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010DEC20 (end 0x010DECB4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxDurability) | Matching: see analysis/functions-uht-exec.json
+void UFortWorldItemDefinition::execGetMaxDurability(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ItemLevel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMaxDurability(Z_Param_ItemLevel);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortWorldItemDefinition, 2925422064u)
 // Original dynamic initializer: RVA 0x0011DA30 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortWorldItemDefinition> AutoInitializeUFortWorldItemDefinition(TEXT("UFortWorldItemDefinition"), sizeof(UFortWorldItemDefinition), 2925422064u);

@@ -13,6 +13,16 @@ void UGameViewportClient::execSSSwapControllers(UObject* Context, FFrame& Stack,
 	P_THIS->SSSwapControllers();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024238B0 (end 0x02423932)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetConsoleTarget) | Matching: see analysis/functions-uht-exec.json
+void UGameViewportClient::execSetConsoleTarget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_PlayerIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetConsoleTarget(Z_Param_PlayerIndex);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01053080 (end 0x0105309F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execShowTitleSafeArea) | Matching: see analysis/functions-uht-exec.json
 void UGameViewportClient::execShowTitleSafeArea(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

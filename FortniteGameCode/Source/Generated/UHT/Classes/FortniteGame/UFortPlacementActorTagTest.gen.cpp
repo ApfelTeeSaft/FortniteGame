@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010670E0 (end 0x010671BF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execShouldApplyTagsToPlacementActor) | Matching: see analysis/functions-uht-exec.json
+void UFortPlacementActorTagTest::execShouldApplyTagsToPlacementActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPlacementActor,Z_Param_FocusPlacementActor);
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_AveragePlacementActorLocation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->ShouldApplyTagsToPlacementActor_Implementation(Z_Param_FocusPlacementActor,Z_Param_Out_AveragePlacementActorLocation);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortPlacementActorTagTest, 2391305371u)
 // Original dynamic initializer: RVA 0x00108E60 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortPlacementActorTagTest> AutoInitializeUFortPlacementActorTagTest(TEXT("UFortPlacementActorTagTest"), sizeof(UFortPlacementActorTagTest), 2391305371u);

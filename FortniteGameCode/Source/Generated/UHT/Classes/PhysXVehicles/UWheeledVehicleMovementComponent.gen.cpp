@@ -4,6 +4,25 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0067C910 (end 0x0067CADF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerUpdateState) | Matching: see analysis/functions-uht-exec.json
+void UWheeledVehicleMovementComponent::execServerUpdateState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InSteeringInput);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InThrottleInput);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InBrakeInput);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InHandbrakeInput);
+	P_GET_PROPERTY(UIntProperty,Z_Param_CurrentGear);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerUpdateState_Validate(Z_Param_InSteeringInput,Z_Param_InThrottleInput,Z_Param_InBrakeInput,Z_Param_InHandbrakeInput,Z_Param_CurrentGear))
+	{
+		RPC_ValidateFailed(TEXT("ServerUpdateState_Validate"));
+		return;
+	}
+	P_THIS->ServerUpdateState_Implementation(Z_Param_InSteeringInput,Z_Param_InThrottleInput,Z_Param_InBrakeInput,Z_Param_InHandbrakeInput,Z_Param_CurrentGear);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UWheeledVehicleMovementComponent, 2625243964u)
 // Original dynamic initializer: RVA 0x000ACAD0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UWheeledVehicleMovementComponent> AutoInitializeUWheeledVehicleMovementComponent(TEXT("UWheeledVehicleMovementComponent"), sizeof(UWheeledVehicleMovementComponent), 2625243964u);

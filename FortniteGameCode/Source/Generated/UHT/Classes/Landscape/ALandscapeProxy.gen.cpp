@@ -4,6 +4,56 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A76740 (end 0x01A767BF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execChangeComponentScreenSizeToUseSubSections) | Matching: see analysis/functions-uht-exec.json
+void ALandscapeProxy::execChangeComponentScreenSizeToUseSubSections(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InComponentScreenSizeToUseSubSections);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ChangeComponentScreenSizeToUseSubSections(Z_Param_InComponentScreenSizeToUseSubSections);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A767C0 (end 0x01A7683F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execChangeLODDistanceFactor) | Matching: see analysis/functions-uht-exec.json
+void ALandscapeProxy::execChangeLODDistanceFactor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InLODDistanceFactor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ChangeLODDistanceFactor(Z_Param_InLODDistanceFactor);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A76840 (end 0x01A768BF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execChangeTessellationComponentScreenSize) | Matching: see analysis/functions-uht-exec.json
+void ALandscapeProxy::execChangeTessellationComponentScreenSize(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InTessellationComponentScreenSize);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ChangeTessellationComponentScreenSize(Z_Param_InTessellationComponentScreenSize);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A768C0 (end 0x01A7693F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execChangeTessellationComponentScreenSizeFalloff) | Matching: see analysis/functions-uht-exec.json
+void ALandscapeProxy::execChangeTessellationComponentScreenSizeFalloff(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InUseTessellationComponentScreenSizeFalloff);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ChangeTessellationComponentScreenSizeFalloff(Z_Param_InUseTessellationComponentScreenSizeFalloff);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01A76940 (end 0x01A769C6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execChangeUseTessellationComponentScreenSizeFalloff) | Matching: see analysis/functions-uht-exec.json
+void ALandscapeProxy::execChangeUseTessellationComponentScreenSizeFalloff(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_InComponentScreenSizeToUseSubSections);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ChangeUseTessellationComponentScreenSizeFalloff(Z_Param_InComponentScreenSizeToUseSubSections);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ALandscapeProxy, 3372119462u)
 // Original dynamic initializer: RVA 0x001A2AF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ALandscapeProxy> AutoInitializeALandscapeProxy(TEXT("ALandscapeProxy"), sizeof(ALandscapeProxy), 3372119462u);

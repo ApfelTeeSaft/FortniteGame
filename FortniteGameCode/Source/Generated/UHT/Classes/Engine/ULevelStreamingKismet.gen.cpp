@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02420DF0 (end 0x02420E76)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetShouldBeLoaded) | Matching: see analysis/functions-uht-exec.json
+void ULevelStreamingKismet::execSetShouldBeLoaded(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bShouldBeLoaded);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetShouldBeLoaded(Z_Param_bShouldBeLoaded);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ULevelStreamingKismet, 3564991402u)
 // Original dynamic initializer: RVA 0x002051F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ULevelStreamingKismet> AutoInitializeULevelStreamingKismet(TEXT("ULevelStreamingKismet"), sizeof(ULevelStreamingKismet), 3564991402u);

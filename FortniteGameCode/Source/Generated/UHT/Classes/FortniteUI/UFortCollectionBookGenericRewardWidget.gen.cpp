@@ -13,6 +13,15 @@ void UFortCollectionBookGenericRewardWidget::execClearRewards(UObject* Context, 
 	P_THIS->ClearRewards();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028965E0 (end 0x0289660F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetRewardStatus) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookGenericRewardWidget::execGetRewardStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(ECollectionBookRewardStatus*)Z_Param__Result=P_THIS->GetRewardStatus();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028969C0 (end 0x028969EF)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execHasRewards) | Matching: see analysis/functions-uht-exec.json
 void UFortCollectionBookGenericRewardWidget::execHasRewards(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -20,6 +29,36 @@ void UFortCollectionBookGenericRewardWidget::execHasRewards(UObject* Context, FF
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->HasRewards();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028977D0 (end 0x0289784A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRewardStatusChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookGenericRewardWidget::execOnRewardStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(ECollectionBookRewardStatus,Z_Param_NewStatus);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRewardStatusChanged_Implementation(ECollectionBookRewardStatus(Z_Param_NewStatus));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB7480 (end 0x00FB7504)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCurrentItemToDisplay) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookGenericRewardWidget::execSetCurrentItemToDisplay(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortItem,Z_Param_ItemToDisplay);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCurrentItemToDisplay(Z_Param_ItemToDisplay);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02898230 (end 0x028982AA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetRewardStatus) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookGenericRewardWidget::execSetRewardStatus(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(ECollectionBookRewardStatus,Z_Param_Status);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetRewardStatus(ECollectionBookRewardStatus(Z_Param_Status));
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UFortCollectionBookGenericRewardWidget, 3287597829u)

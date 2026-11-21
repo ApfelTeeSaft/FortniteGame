@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FC1B40 (end 0x00FC1BBF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetDisplayTime) | Matching: see analysis/functions-uht-exec.json
+void AFortClientAnnouncement_Basic::execSetDisplayTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_DisplayTime);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetDisplayTime(Z_Param_DisplayTime);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortClientAnnouncement_Basic, 154024389u)
 // Original dynamic initializer: RVA 0x000EB0D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortClientAnnouncement_Basic> AutoInitializeAFortClientAnnouncement_Basic(TEXT("AFortClientAnnouncement_Basic"), sizeof(AFortClientAnnouncement_Basic), 154024389u);

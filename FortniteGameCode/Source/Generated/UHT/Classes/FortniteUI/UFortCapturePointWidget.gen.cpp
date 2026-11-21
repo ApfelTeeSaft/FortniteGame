@@ -4,6 +4,20 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02896CC0 (end 0x02896E57)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCapturePointDataChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortCapturePointWidget::execOnCapturePointDataChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bActivated);
+	P_GET_UBOOL(Z_Param_bLocked);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_CapturePercentage);
+	P_GET_PROPERTY(UByteProperty,Z_Param_CaptureState);
+	P_GET_PROPERTY(UByteProperty,Z_Param_ControllingTeam);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCapturePointDataChanged_Implementation(Z_Param_bActivated,Z_Param_bLocked,Z_Param_CapturePercentage,ECaptureState::Type(Z_Param_CaptureState),EFortTeam::Type(Z_Param_ControllingTeam));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCapturePointWidget, 2894992346u)
 // Original dynamic initializer: RVA 0x00240320 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCapturePointWidget> AutoInitializeUFortCapturePointWidget(TEXT("UFortCapturePointWidget"), sizeof(UFortCapturePointWidget), 2894992346u);

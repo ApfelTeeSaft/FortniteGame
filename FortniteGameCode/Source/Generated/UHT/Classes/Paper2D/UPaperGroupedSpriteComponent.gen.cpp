@@ -13,6 +13,28 @@ void UPaperGroupedSpriteComponent::execClearInstances(UObject* Context, FFrame& 
 	P_THIS->ClearInstances();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0066A450 (end 0x0066A4E4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRemoveInstance) | Matching: see analysis/functions-uht-exec.json
+void UPaperGroupedSpriteComponent::execRemoveInstance(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_InstanceIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->RemoveInstance(Z_Param_InstanceIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0066B180 (end 0x0066B28A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUpdateInstanceColor) | Matching: see analysis/functions-uht-exec.json
+void UPaperGroupedSpriteComponent::execUpdateInstanceColor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_InstanceIndex);
+	P_GET_STRUCT(FLinearColor,Z_Param_NewInstanceColor);
+	P_GET_UBOOL(Z_Param_bMarkRenderStateDirty);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->UpdateInstanceColor(Z_Param_InstanceIndex,Z_Param_NewInstanceColor,Z_Param_bMarkRenderStateDirty);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPaperGroupedSpriteComponent, 2653628167u)
 // Original dynamic initializer: RVA 0x000AB570 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPaperGroupedSpriteComponent> AutoInitializeUPaperGroupedSpriteComponent(TEXT("UPaperGroupedSpriteComponent"), sizeof(UPaperGroupedSpriteComponent), 2653628167u);

@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x005A2360 (end 0x005A23DA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientQosResponse) | Matching: see analysis/functions-uht-exec.json
+void AQosBeaconClient::execClientQosResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EQosResponseType,Z_Param_Response);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientQosResponse_Implementation(EQosResponseType(Z_Param_Response));
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AQosBeaconClient, 2022778159u)
 // Original dynamic initializer: RVA 0x000A7940 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AQosBeaconClient> AutoInitializeAQosBeaconClient(TEXT("AQosBeaconClient"), sizeof(AQosBeaconClient), 2022778159u);

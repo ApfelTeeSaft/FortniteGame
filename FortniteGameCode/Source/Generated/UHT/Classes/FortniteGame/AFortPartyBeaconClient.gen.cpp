@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01057EE0 (end 0x01057F5A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientAbandonResponse) | Matching: see analysis/functions-uht-exec.json
+void AFortPartyBeaconClient::execClientAbandonResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_ReservationResponse);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientAbandonResponse_Implementation(EPartyReservationResult::Type(Z_Param_ReservationResponse));
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024AC970 (end 0x024AC98F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientAllowedToProceedFromReservation) | Matching: see analysis/functions-uht-exec.json
 void AFortPartyBeaconClient::execClientAllowedToProceedFromReservation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -20,6 +30,16 @@ void AFortPartyBeaconClient::execClientAllowedToProceedFromReservationTimeout(UO
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->ClientAllowedToProceedFromReservationTimeout_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01057F80 (end 0x01057FFA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientReconnectResponse) | Matching: see analysis/functions-uht-exec.json
+void AFortPartyBeaconClient::execClientReconnectResponse(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_ReservationResponse);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientReconnectResponse_Implementation(EPartyReservationResult::Type(Z_Param_ReservationResponse));
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(AFortPartyBeaconClient, 4065731529u)

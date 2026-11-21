@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028D28B0 (end 0x028D2934)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleItemWidgetCreated) | Matching: see analysis/functions-uht-exec.json
+void UFortItemTileView::execHandleItemWidgetCreated(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UUserWidget,Z_Param_Widget);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleItemWidgetCreated(Z_Param_Widget);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortItemTileView, 902270905u)
 // Original dynamic initializer: RVA 0x0024F370 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortItemTileView> AutoInitializeUFortItemTileView(TEXT("UFortItemTileView"), sizeof(UFortItemTileView), 902270905u);

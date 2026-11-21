@@ -4,6 +4,80 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010797D0 (end 0x0107984A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientOnHordeTierComplete) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerDeployableBase::execClientOnHordeTierComplete(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EFortCompletionResult,Z_Param_Result);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientOnHordeTierComplete_Implementation(EFortCompletionResult(Z_Param_Result));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C160 (end 0x0107C215)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerMoveAllItemsFromDeployableBase) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerDeployableBase::execServerMoveAllItemsFromDeployableBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ADeployableBasePlot,Z_Param_ExpectedPlot);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerMoveAllItemsFromDeployableBase_Validate(Z_Param_ExpectedPlot))
+	{
+		RPC_ValidateFailed(TEXT("ServerMoveAllItemsFromDeployableBase_Validate"));
+		return;
+	}
+	P_THIS->ServerMoveAllItemsFromDeployableBase_Implementation(Z_Param_ExpectedPlot);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C220 (end 0x0107C2D5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerMoveAllItemsToDeployableBase) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerDeployableBase::execServerMoveAllItemsToDeployableBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ADeployableBasePlot,Z_Param_ExpectedPlot);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerMoveAllItemsToDeployableBase_Validate(Z_Param_ExpectedPlot))
+	{
+		RPC_ValidateFailed(TEXT("ServerMoveAllItemsToDeployableBase_Validate"));
+		return;
+	}
+	P_THIS->ServerMoveAllItemsToDeployableBase_Implementation(Z_Param_ExpectedPlot);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C2E0 (end 0x0107C421)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerMoveItemFromDeployableBase) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerDeployableBase::execServerMoveItemFromDeployableBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGuid,Z_Param_ItemOnPlot);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Count);
+	P_GET_OBJECT(ADeployableBasePlot,Z_Param_ExpectedPlot);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerMoveItemFromDeployableBase_Validate(Z_Param_ItemOnPlot,Z_Param_Count,Z_Param_ExpectedPlot))
+	{
+		RPC_ValidateFailed(TEXT("ServerMoveItemFromDeployableBase_Validate"));
+		return;
+	}
+	P_THIS->ServerMoveItemFromDeployableBase_Implementation(Z_Param_ItemOnPlot,Z_Param_Count,Z_Param_ExpectedPlot);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C4F0 (end 0x0107C631)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerMoveItemToDeployableBase) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerDeployableBase::execServerMoveItemToDeployableBase(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGuid,Z_Param_ItemOnPlayer);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Count);
+	P_GET_OBJECT(ADeployableBasePlot,Z_Param_ExpectedPlot);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerMoveItemToDeployableBase_Validate(Z_Param_ItemOnPlayer,Z_Param_Count,Z_Param_ExpectedPlot))
+	{
+		RPC_ValidateFailed(TEXT("ServerMoveItemToDeployableBase_Validate"));
+		return;
+	}
+	P_THIS->ServerMoveItemToDeployableBase_Implementation(Z_Param_ItemOnPlayer,Z_Param_Count,Z_Param_ExpectedPlot);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerControllerDeployableBase, 1159850410u)
 // Original dynamic initializer: RVA 0x0010B820 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerDeployableBase> AutoInitializeAFortPlayerControllerDeployableBase(TEXT("AFortPlayerControllerDeployableBase"), sizeof(AFortPlayerControllerDeployableBase), 1159850410u);

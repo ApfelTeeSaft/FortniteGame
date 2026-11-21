@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0054FB60 (end 0x0054FC22)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGameplayTagCallback) | Matching: see analysis/functions-uht-exec.json
+void UAbilityTask_WaitGameplayTag::execGameplayTagCallback(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_Tag);
+	P_GET_PROPERTY(UIntProperty,Z_Param_NewCount);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GameplayTagCallback(Z_Param_Tag,Z_Param_NewCount);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UAbilityTask_WaitGameplayTag, 3857162920u)
 // Original dynamic initializer: RVA 0x0009DE90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UAbilityTask_WaitGameplayTag> AutoInitializeUAbilityTask_WaitGameplayTag(TEXT("UAbilityTask_WaitGameplayTag"), sizeof(UAbilityTask_WaitGameplayTag), 3857162920u);

@@ -4,6 +4,57 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6830 (end 0x002C68B4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnButtonHovered) | Matching: see analysis/functions-uht-exec.json
+void UCommonButtonGroup::execOnButtonHovered(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButton,Z_Param_BaseButton);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnButtonHovered(Z_Param_BaseButton);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C68C0 (end 0x002C6944)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnButtonUnhovered) | Matching: see analysis/functions-uht-exec.json
+void UCommonButtonGroup::execOnButtonUnhovered(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButton,Z_Param_BaseButton);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnButtonUnhovered(Z_Param_BaseButton);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6950 (end 0x002C69D4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnHandleButtonClicked) | Matching: see analysis/functions-uht-exec.json
+void UCommonButtonGroup::execOnHandleButtonClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButton,Z_Param_BaseButton);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnHandleButtonClicked(Z_Param_BaseButton);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C69E0 (end 0x002C6A64)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnHandleButtonDoubleClicked) | Matching: see analysis/functions-uht-exec.json
+void UCommonButtonGroup::execOnHandleButtonDoubleClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButton,Z_Param_BaseButton);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnHandleButtonDoubleClicked(Z_Param_BaseButton);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002C6B00 (end 0x002C6BC6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnSelectionStateChanged) | Matching: see analysis/functions-uht-exec.json
+void UCommonButtonGroup::execOnSelectionStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButton,Z_Param_BaseButton);
+	P_GET_UBOOL(Z_Param_bIsSelected);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSelectionStateChanged(Z_Param_BaseButton,Z_Param_bIsSelected);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonButtonGroup, 4050680980u)
 // Original dynamic initializer: RVA 0x00095650 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonButtonGroup> AutoInitializeUCommonButtonGroup(TEXT("UCommonButtonGroup"), sizeof(UCommonButtonGroup), 4050680980u);

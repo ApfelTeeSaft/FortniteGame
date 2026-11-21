@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01079700 (end 0x010797C2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientOnBuildingLevelChanged) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execClientOnBuildingLevelChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortOutpostItemDefinition,Z_Param_UpgradedBuilding);
+	P_GET_PROPERTY(UIntProperty,Z_Param_InLevelBeforeUpgrade);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientOnBuildingLevelChanged_Implementation(Z_Param_UpgradedBuilding,Z_Param_InLevelBeforeUpgrade);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010799D0 (end 0x010799EF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientOnOutpostRefundOccurred) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerOutpost::execClientOnOutpostRefundOccurred(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -55,6 +66,53 @@ void AFortPlayerControllerOutpost::execServerDeactivateCraftingTable(UObject* Co
 	P_THIS->ServerDeactivateCraftingTable_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107BD00 (end 0x0107BE13)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerDepositPOSTResource) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execServerDepositPOSTResource(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGuid,Z_Param_ItemGuid);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Count);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerDepositPOSTResource_Validate(Z_Param_ItemGuid,Z_Param_Count))
+	{
+		RPC_ValidateFailed(TEXT("ServerDepositPOSTResource_Validate"));
+		return;
+	}
+	P_THIS->ServerDepositPOSTResource_Implementation(Z_Param_ItemGuid,Z_Param_Count);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107BE20 (end 0x0107BF33)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerDisintegrateItem) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execServerDisintegrateItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGuid,Z_Param_ItemGuid);
+	P_GET_PROPERTY(UIntProperty,Z_Param_Count);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerDisintegrateItem_Validate(Z_Param_ItemGuid,Z_Param_Count))
+	{
+		RPC_ValidateFailed(TEXT("ServerDisintegrateItem_Validate"));
+		return;
+	}
+	P_THIS->ServerDisintegrateItem_Implementation(Z_Param_ItemGuid,Z_Param_Count);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107BF40 (end 0x0107BFF5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerFabricateItem) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execServerFabricateItem(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortWorldItemDefinition,Z_Param_ItemDef);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerFabricateItem_Validate(Z_Param_ItemDef))
+	{
+		RPC_ValidateFailed(TEXT("ServerFabricateItem_Validate"));
+		return;
+	}
+	P_THIS->ServerFabricateItem_Implementation(Z_Param_ItemDef);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C110 (end 0x0107C15E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerLeaveOutpostAsParty) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerOutpost::execServerLeaveOutpostAsParty(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -81,6 +139,21 @@ void AFortPlayerControllerOutpost::execServerNotifyPendingFabricationCompleted(U
 		return;
 	}
 	P_THIS->ServerNotifyPendingFabricationCompleted_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CE20 (end 0x0107CED5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerUpgradeBuilding) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerOutpost::execServerUpgradeBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortOutpostItemDefinition,Z_Param_BuildingToUpgrade);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerUpgradeBuilding_Validate(Z_Param_BuildingToUpgrade))
+	{
+		RPC_ValidateFailed(TEXT("ServerUpgradeBuilding_Validate"));
+		return;
+	}
+	P_THIS->ServerUpgradeBuilding_Implementation(Z_Param_BuildingToUpgrade);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CEE0 (end 0x0107CF2E)

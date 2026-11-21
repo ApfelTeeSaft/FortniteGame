@@ -13,6 +13,15 @@ void UFortUINotification::execClearNotification(UObject* Context, FFrame& Stack,
 	P_THIS->ClearNotification_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6920 (end 0x010D6950)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetImageOverride) | Matching: see analysis/functions-uht-exec.json
+void UFortUINotification::execGetImageOverride(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UTexture2D**)Z_Param__Result=P_THIS->GetImageOverride_Implementation();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023FA590 (end 0x023FA5AF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execNotificationShown) | Matching: see analysis/functions-uht-exec.json
 void UFortUINotification::execNotificationShown(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

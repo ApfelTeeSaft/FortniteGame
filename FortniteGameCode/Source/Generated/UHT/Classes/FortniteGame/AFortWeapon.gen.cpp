@@ -4,6 +4,37 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6290 (end 0x010D6314)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientGivenTo) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execClientGivenTo(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(APawn,Z_Param_P);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientGivenTo_Implementation(Z_Param_P);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5CDC0 (end 0x00F5CE80)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientReportShotFlags) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execClientReportShotFlags(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UUInt32Property,Z_Param_ShotFlags);
+	P_GET_PROPERTY(UIntProperty,Z_Param_ShotIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientReportShotFlags_Implementation(Z_Param_ShotFlags,Z_Param_ShotIndex);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6870 (end 0x010D6920)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetDamageStartLocation) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetDamageStartLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT_REF(FVector,Z_Param_Out_AimDir);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetDamageStartLocation(Z_Param_Out_AimDir);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6950 (end 0x010D697F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLocalMagazineAmmoCount) | Matching: see analysis/functions-uht-exec.json
 void AFortWeapon::execGetLocalMagazineAmmoCount(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -29,6 +60,15 @@ void AFortWeapon::execGetMagazineAmmoCount(UObject* Context, FFrame& Stack, void
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(int32*)Z_Param__Result=P_THIS->GetMagazineAmmoCount();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6A10 (end 0x010D6A50)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMuzzleLocation) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execGetMuzzleLocation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetMuzzleLocation_Implementation();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D6AB0 (end 0x010D6AE1)
@@ -112,6 +152,26 @@ void AFortWeapon::execOnRep_ReplicatedWeaponData(UObject* Context, FFrame& Stack
 	P_THIS->OnRep_ReplicatedWeaponData();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D7650 (end 0x010D76D3)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlayReloadFX) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execPlayReloadFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_ReloadStage);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PlayReloadFX(EFortReloadFXState::Type(Z_Param_ReloadStage));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D76E0 (end 0x010D7766)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPlayWeaponFireFX) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execPlayWeaponFireFX(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bSecondaryFire);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PlayWeaponFireFX(Z_Param_bSecondaryFire);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010D7770 (end 0x010D778F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execReload) | Matching: see analysis/functions-uht-exec.json
 void AFortWeapon::execReload(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -147,6 +207,21 @@ void AFortWeapon::execServerResetShotReport(UObject* Context, FFrame& Stack, voi
 		return;
 	}
 	P_THIS->ServerResetShotReport_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010D7850 (end 0x010D78F6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetChargeState) | Matching: see analysis/functions-uht-exec.json
+void AFortWeapon::execServerSetChargeState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_NewState);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetChargeState_Validate(Z_Param_NewState))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetChargeState_Validate"));
+		return;
+	}
+	P_THIS->ServerSetChargeState_Implementation(Z_Param_NewState);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0032FC10 (end 0x0032FC2F), leaf (no .pdata)

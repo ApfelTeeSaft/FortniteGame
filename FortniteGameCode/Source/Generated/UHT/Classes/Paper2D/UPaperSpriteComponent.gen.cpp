@@ -4,6 +4,25 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00669030 (end 0x00669060)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSprite) | Matching: see analysis/functions-uht-exec.json
+void UPaperSpriteComponent::execGetSprite(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPaperSprite**)Z_Param__Result=P_THIS->GetSprite();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0066A6C0 (end 0x0066A756)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetSprite) | Matching: see analysis/functions-uht-exec.json
+void UPaperSpriteComponent::execSetSprite(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPaperSprite,Z_Param_NewSprite);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->SetSprite(Z_Param_NewSprite);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPaperSpriteComponent, 3683473706u)
 // Original dynamic initializer: RVA 0x000AB610 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPaperSpriteComponent> AutoInitializeUPaperSpriteComponent(TEXT("UPaperSpriteComponent"), sizeof(UPaperSpriteComponent), 3683473706u);

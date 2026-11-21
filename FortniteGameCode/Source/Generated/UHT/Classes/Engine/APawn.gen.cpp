@@ -4,6 +4,57 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A2190 (end 0x024A220F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddControllerPitchInput) | Matching: see analysis/functions-uht-exec.json
+void APawn::execAddControllerPitchInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Val);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddControllerPitchInput(Z_Param_Val);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A2210 (end 0x024A228F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddControllerRollInput) | Matching: see analysis/functions-uht-exec.json
+void APawn::execAddControllerRollInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Val);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddControllerRollInput(Z_Param_Val);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A2290 (end 0x024A230F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddControllerYawInput) | Matching: see analysis/functions-uht-exec.json
+void APawn::execAddControllerYawInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Val);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddControllerYawInput(Z_Param_Val);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A23F0 (end 0x024A250B)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddMovementInput) | Matching: see analysis/functions-uht-exec.json
+void APawn::execAddMovementInput(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_WorldDirection);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_ScaleValue);
+	P_GET_UBOOL(Z_Param_bForce);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddMovementInput(Z_Param_WorldDirection,Z_Param_ScaleValue,Z_Param_bForce);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A2A20 (end 0x024A2A60)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execConsumeMovementInputVector) | Matching: see analysis/functions-uht-exec.json
+void APawn::execConsumeMovementInputVector(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->ConsumeMovementInputVector();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023EFE90 (end 0x023EFEAF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execDetachFromControllerPendingDestroy) | Matching: see analysis/functions-uht-exec.json
 void APawn::execDetachFromControllerPendingDestroy(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +62,24 @@ void APawn::execDetachFromControllerPendingDestroy(UObject* Context, FFrame& Sta
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->DetachFromControllerPendingDestroy();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A2D00 (end 0x024A2D40)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetBaseAimRotation) | Matching: see analysis/functions-uht-exec.json
+void APawn::execGetBaseAimRotation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FRotator*)Z_Param__Result=P_THIS->GetBaseAimRotation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3830 (end 0x024A3860)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMovementComponent) | Matching: see analysis/functions-uht-exec.json
+void APawn::execGetMovementComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPawnMovementComponent**)Z_Param__Result=P_THIS->GetMovementComponent();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024A3A10 (end 0x024A3A3F)

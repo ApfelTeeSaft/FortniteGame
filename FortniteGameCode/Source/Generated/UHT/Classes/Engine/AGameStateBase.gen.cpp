@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024229B0 (end 0x02422A46)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPlayerRespawnDelay) | Matching: see analysis/functions-uht-exec.json
+void AGameStateBase::execGetPlayerRespawnDelay(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AController,Z_Param_Controller);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetPlayerRespawnDelay(Z_Param_Controller);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02422A50 (end 0x02422AE6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPlayerStartTime) | Matching: see analysis/functions-uht-exec.json
+void AGameStateBase::execGetPlayerStartTime(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AController,Z_Param_Controller);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetPlayerStartTime(Z_Param_Controller);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x02422EE0 (end 0x02422F11)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetServerWorldTimeSeconds) | Matching: see analysis/functions-uht-exec.json
 void AGameStateBase::execGetServerWorldTimeSeconds(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

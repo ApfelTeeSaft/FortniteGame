@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BE8AE0 (end 0x01BE8B5F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetBlurStrength) | Matching: see analysis/functions-uht-exec.json
+void UBackgroundBlur::execSetBlurStrength(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InStrength);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetBlurStrength(Z_Param_InStrength);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UBackgroundBlur, 1273417273u)
 // Original dynamic initializer: RVA 0x001B1C20 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBackgroundBlur> AutoInitializeUBackgroundBlur(TEXT("UBackgroundBlur"), sizeof(UBackgroundBlur), 1273417273u);

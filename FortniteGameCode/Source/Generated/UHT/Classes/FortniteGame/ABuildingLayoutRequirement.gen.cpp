@@ -13,6 +13,23 @@ void ABuildingLayoutRequirement::execOnRep_RequirementStatus(UObject* Context, F
 	P_THIS->OnRep_RequirementStatus();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6ED30 (end 0x00F6EF8C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRequirementSatisfyingActorDied) | Matching: see analysis/functions-uht-exec.json
+void ABuildingLayoutRequirement::execOnRequirementSatisfyingActorDied(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_DamagedActor);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_Damage);
+	P_GET_OBJECT(AController,Z_Param_InstigatedBy);
+	P_GET_OBJECT(AActor,Z_Param_DamageCauser);
+	P_GET_STRUCT(FVector,Z_Param_HitLocation);
+	P_GET_OBJECT(UPrimitiveComponent,Z_Param_FHitComponent);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_GET_STRUCT(FVector,Z_Param_Momentum);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRequirementSatisfyingActorDied(Z_Param_DamagedActor,Z_Param_Damage,Z_Param_InstigatedBy,Z_Param_DamageCauser,Z_Param_HitLocation,Z_Param_FHitComponent,Z_Param_BoneName,Z_Param_Momentum);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(ABuildingLayoutRequirement, 891639280u)
 // Original dynamic initializer: RVA 0x000DAEF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<ABuildingLayoutRequirement> AutoInitializeABuildingLayoutRequirement(TEXT("ABuildingLayoutRequirement"), sizeof(ABuildingLayoutRequirement), 891639280u);

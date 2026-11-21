@@ -13,6 +13,16 @@ void AGameplayCueNotify_Actor::execK2_EndGameplayCue(UObject* Context, FFrame& S
 	P_THIS->K2_EndGameplayCue();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0055D4A0 (end 0x0055D524)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnOwnerDestroyed) | Matching: see analysis/functions-uht-exec.json
+void AGameplayCueNotify_Actor::execOnOwnerDestroyed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_DestroyedActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnOwnerDestroyed(Z_Param_DestroyedActor);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AGameplayCueNotify_Actor, 3672328890u)
 // Original dynamic initializer: RVA 0x0009EC00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AGameplayCueNotify_Actor> AutoInitializeAGameplayCueNotify_Actor(TEXT("AGameplayCueNotify_Actor"), sizeof(AGameplayCueNotify_Actor), 3672328890u);

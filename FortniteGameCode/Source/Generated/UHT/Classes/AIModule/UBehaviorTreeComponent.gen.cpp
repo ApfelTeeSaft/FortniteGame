@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D25270 (end 0x01D25333)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetDynamicSubtree) | Matching: see analysis/functions-uht-exec.json
+void UBehaviorTreeComponent::execSetDynamicSubtree(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_InjectTag);
+	P_GET_OBJECT(UBehaviorTree,Z_Param_BehaviorAsset);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetDynamicSubtree(Z_Param_InjectTag,Z_Param_BehaviorAsset);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UBehaviorTreeComponent, 3188839577u)
 // Original dynamic initializer: RVA 0x001BA750 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UBehaviorTreeComponent> AutoInitializeUBehaviorTreeComponent(TEXT("UBehaviorTreeComponent"), sizeof(UBehaviorTreeComponent), 3188839577u);

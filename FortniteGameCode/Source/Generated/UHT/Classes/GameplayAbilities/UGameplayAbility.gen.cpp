@@ -31,6 +31,27 @@ void UGameplayAbility::execK2_CommitAbility(UObject* Context, FFrame& Stack, voi
 	*(bool*)Z_Param__Result=P_THIS->K2_CommitAbility();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00550670 (end 0x00550749)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_CommitAbilityCooldown) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execK2_CommitAbilityCooldown(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_BroadcastCommitEvent);
+	P_GET_UBOOL(Z_Param_ForceCooldown);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->K2_CommitAbilityCooldown(Z_Param_BroadcastCommitEvent,Z_Param_ForceCooldown);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00550750 (end 0x005507E7)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_CommitAbilityCost) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execK2_CommitAbilityCost(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_BroadcastCommitEvent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->K2_CommitAbilityCost(Z_Param_BroadcastCommitEvent);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x005507F0 (end 0x0055080F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_EndAbility) | Matching: see analysis/functions-uht-exec.json
 void UGameplayAbility::execK2_EndAbility(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -38,6 +59,36 @@ void UGameplayAbility::execK2_EndAbility(UObject* Context, FFrame& Stack, void* 
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->K2_EndAbility();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00550B10 (end 0x00550B94)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_RemoveGameplayCue) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execK2_RemoveGameplayCue(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_GameplayCueTag);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->K2_RemoveGameplayCue(Z_Param_GameplayCueTag);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00551BE0 (end 0x00551C66)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCanBeCanceled) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execSetCanBeCanceled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bCanBeCanceled);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCanBeCanceled(Z_Param_bCanBeCanceled);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00551C70 (end 0x00551CF6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetShouldBlockOtherAbilities) | Matching: see analysis/functions-uht-exec.json
+void UGameplayAbility::execSetShouldBlockOtherAbilities(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bShouldBlockAbilities);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetShouldBlockOtherAbilities(Z_Param_bShouldBlockAbilities);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UGameplayAbility, 3497727587u)

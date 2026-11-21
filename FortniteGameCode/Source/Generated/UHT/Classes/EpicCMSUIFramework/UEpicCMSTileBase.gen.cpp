@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002E3FB0 (end 0x002E4036)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDynamicHandleIconLoadingStateChanged) | Matching: see analysis/functions-uht-exec.json
+void UEpicCMSTileBase::execDynamicHandleIconLoadingStateChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bIsLoading);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DynamicHandleIconLoadingStateChanged(Z_Param_bIsLoading);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UEpicCMSTileBase, 957572841u)
 // Original dynamic initializer: RVA 0x00097880 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UEpicCMSTileBase> AutoInitializeUEpicCMSTileBase(TEXT("UEpicCMSTileBase"), sizeof(UEpicCMSTileBase), 957572841u);

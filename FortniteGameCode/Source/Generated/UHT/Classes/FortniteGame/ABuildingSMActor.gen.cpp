@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F734E0 (end 0x00F735A6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAttachBuildingActorToMe) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execAttachBuildingActorToMe(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ABuildingSMActor,Z_Param_ActorToAttach);
+	P_GET_UBOOL(Z_Param_bForceAttachment);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AttachBuildingActorToMe(Z_Param_ActorToAttach,Z_Param_bForceAttachment);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F736F0 (end 0x00F7370F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execBlueprintOnStructurallyStable) | Matching: see analysis/functions-uht-exec.json
 void ABuildingSMActor::execBlueprintOnStructurallyStable(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -22,6 +33,17 @@ void ABuildingSMActor::execBlueprintOnStructurallyUnstable(UObject* Context, FFr
 	P_THIS->BlueprintOnStructurallyUnstable_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73730 (end 0x00F737F6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDetachBuildingActorFromMe) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execDetachBuildingActorFromMe(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ABuildingSMActor,Z_Param_ActorToAttach);
+	P_GET_UBOOL(Z_Param_bBeingDestroyed);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DetachBuildingActorFromMe(Z_Param_ActorToAttach,Z_Param_bBeingDestroyed);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F6D870 (end 0x00F6D88F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execForceIntoStructuralGridDuringRuntime) | Matching: see analysis/functions-uht-exec.json
 void ABuildingSMActor::execForceIntoStructuralGridDuringRuntime(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -31,6 +53,16 @@ void ABuildingSMActor::execForceIntoStructuralGridDuringRuntime(UObject* Context
 	P_THIS->ForceIntoStructuralGridDuringRuntime_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F73EC0 (end 0x00F73F54)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetAnimatingMID) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execGetAnimatingMID(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ElementIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UMaterialInstanceDynamic**)Z_Param__Result=P_THIS->GetAnimatingMID(Z_Param_ElementIndex);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74350 (end 0x00F7437F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetLogicalBuildingIndex) | Matching: see analysis/functions-uht-exec.json
 void ABuildingSMActor::execGetLogicalBuildingIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -38,6 +70,15 @@ void ABuildingSMActor::execGetLogicalBuildingIndex(UObject* Context, FFrame& Sta
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(int32*)Z_Param__Result=P_THIS->GetLogicalBuildingIndex();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F743F0 (end 0x00F74427)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetReplacementDestructionReason) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execGetReplacementDestructionReason(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TEnumAsByte<EBuildingReplacementType>*)Z_Param__Result=P_THIS->GetReplacementDestructionReason();
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74740 (end 0x00F7476F)
@@ -65,6 +106,16 @@ void ABuildingSMActor::execMulticastPlayFullHealthEffects(UObject* Context, FFra
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->MulticastPlayFullHealthEffects_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F748C0 (end 0x00F7493A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execMulticastRequestBuildingAnimation) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execMulticastRequestBuildingAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_RequestedAnimation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->MulticastRequestBuildingAnimation_Implementation(EBuildingAnim(Z_Param_RequestedAnimation));
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01066890 (end 0x010668AF), leaf (no .pdata)
@@ -139,6 +190,16 @@ void ABuildingSMActor::execOnRep_ReplicatedMIC(UObject* Context, FFrame& Stack, 
 	P_THIS->OnRep_ReplicatedMIC();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74A20 (end 0x00F74A9A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_ResourceType) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execOnRep_ResourceType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_OldType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_ResourceType(EFortResourceType::Type(Z_Param_OldType));
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74AA0 (end 0x00F74ABF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_WeakSpotPositions) | Matching: see analysis/functions-uht-exec.json
 void ABuildingSMActor::execOnRep_WeakSpotPositions(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -173,6 +234,57 @@ void ABuildingSMActor::execOnRep_bUnderRepair(UObject* Context, FFrame& Stack, v
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnRep_bUnderRepair();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74D90 (end 0x00F74E52)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRepairBuilding) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execRepairBuilding(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPlayerController,Z_Param_RepairingController);
+	P_GET_PROPERTY(UIntProperty,Z_Param_ResourcesSpent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RepairBuilding(Z_Param_RepairingController,Z_Param_ResourcesSpent);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74E60 (end 0x00F74EE6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetMirrored) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execSetMirrored(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bIsMirrored);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetMirrored(Z_Param_bIsMirrored);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F74FC0 (end 0x00F7503F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUpdateDynamicShrinkAndDestroyEffect) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execUpdateDynamicShrinkAndDestroyEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_CurveValue);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateDynamicShrinkAndDestroyEffect(Z_Param_CurveValue);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F75040 (end 0x00F750BF)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUpdateLODOverrideEffect) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execUpdateLODOverrideEffect(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_CurveValue);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateLODOverrideEffect(Z_Param_CurveValue);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F750C0 (end 0x00F7513F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execUpdateRepairMaterialAnim) | Matching: see analysis/functions-uht-exec.json
+void ABuildingSMActor::execUpdateRepairMaterialAnim(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_CurveValue);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateRepairMaterialAnim(Z_Param_CurveValue);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(ABuildingSMActor, 4124908678u)

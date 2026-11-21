@@ -4,6 +4,25 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108CDE0 (end 0x0108CE64)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientNotifyAwardGranted) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerState::execClientNotifyAwardGranted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortAwardItemDefinition,Z_Param_AwardDefinition);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientNotifyAwardGranted_Implementation(Z_Param_AwardDefinition);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108D230 (end 0x0108D260)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCurrentPawn) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerState::execGetCurrentPawn(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(AFortPlayerPawn**)Z_Param__Result=P_THIS->GetCurrentPawn();
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108DFF0 (end 0x0108E00F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_HeroType) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerState::execOnRep_HeroType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -11,6 +30,16 @@ void AFortPlayerState::execOnRep_HeroType(UObject* Context, FFrame& Stack, void*
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnRep_HeroType();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02419A40 (end 0x02419AC4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_HomeActor) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerState::execOnRep_HomeActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_OldHomeActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnRep_HomeActor(Z_Param_OldHomeActor);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0108E070 (end 0x0108E08F), leaf (no .pdata)
@@ -38,6 +67,36 @@ void AFortPlayerState::execOnRep_PlayerTeam(UObject* Context, FFrame& Stack, voi
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnRep_PlayerTeam();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108E7B0 (end 0x0108E866)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetShowHeroBackpack) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerState::execServerSetShowHeroBackpack(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bShow);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetShowHeroBackpack_Validate(Z_Param_bShow))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetShowHeroBackpack_Validate"));
+		return;
+	}
+	P_THIS->ServerSetShowHeroBackpack_Implementation(Z_Param_bShow);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108E870 (end 0x0108E926)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetShowHeroHeadAccessories) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerState::execServerSetShowHeroHeadAccessories(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bShow);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetShowHeroHeadAccessories_Validate(Z_Param_bShow))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetShowHeroHeadAccessories_Validate"));
+		return;
+	}
+	P_THIS->ServerSetShowHeroHeadAccessories_Implementation(Z_Param_bShow);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x023F33A0 (end 0x023F33BF), leaf (no .pdata)

@@ -4,6 +4,17 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010BF770 (end 0x010BF842)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBeginThreatVisualsPrecursor) | Matching: see analysis/functions-uht-exec.json
+void AFortThreatVisualsManager::execBeginThreatVisualsPrecursor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_SourceActor);
+	P_GET_STRUCT(FVector,Z_Param_ThreatLocation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BeginThreatVisualsPrecursor_Implementation(Z_Param_SourceActor,Z_Param_ThreatLocation);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010859F0 (end 0x01085A0F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRep_GoalActorLocations) | Matching: see analysis/functions-uht-exec.json
 void AFortThreatVisualsManager::execOnRep_GoalActorLocations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -4,6 +4,43 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01079A80 (end 0x01079B43)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientReceiveKillNotification) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerPvP::execClientReceiveKillNotification(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPlayerStateZone,Z_Param_Killer);
+	P_GET_OBJECT(AFortPlayerStateZone,Z_Param_Killed);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientReceiveKillNotification_Implementation(Z_Param_Killer,Z_Param_Killed);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01079F60 (end 0x01079FDA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientShowGameOverWidget) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerPvP::execClientShowGameOverWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_GameResult);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientShowGameOverWidget_Implementation(EFortPvPGameResult::Type(Z_Param_GameResult));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107BA30 (end 0x0107BB29)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerAttemptSelectFOBCore) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerPvP::execServerAttemptSelectFOBCore(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(ABuildingFOBConfigActor,Z_Param_FOBToSelectOn);
+	P_GET_OBJECT(UFortFOBCoreDecoItemDefinition,Z_Param_DefToSelect);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerAttemptSelectFOBCore_Validate(Z_Param_FOBToSelectOn,Z_Param_DefToSelect))
+	{
+		RPC_ValidateFailed(TEXT("ServerAttemptSelectFOBCore_Validate"));
+		return;
+	}
+	P_THIS->ServerAttemptSelectFOBCore_Implementation(Z_Param_FOBToSelectOn,Z_Param_DefToSelect);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerControllerPvP, 3535872190u)
 // Original dynamic initializer: RVA 0x0010B900 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerControllerPvP> AutoInitializeAFortPlayerControllerPvP(TEXT("AFortPlayerControllerPvP"), sizeof(AFortPlayerControllerPvP), 3535872190u);

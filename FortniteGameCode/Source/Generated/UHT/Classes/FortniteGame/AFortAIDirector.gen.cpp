@@ -31,6 +31,18 @@ void AFortAIDirector::execGetNumPlayers(UObject* Context, FFrame& Stack, void* c
 	*(int32*)Z_Param__Result=P_THIS->GetNumPlayers();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F89860 (end 0x00F89959)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnDayPhaseChanged) | Matching: see analysis/functions-uht-exec.json
+void AFortAIDirector::execOnDayPhaseChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_CurrentDayPhase);
+	P_GET_PROPERTY(UByteProperty,Z_Param_PreviousDayPhase);
+	P_GET_UBOOL(Z_Param_bAtCreation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnDayPhaseChanged(EFortDayPhase::Type(Z_Param_CurrentDayPhase),EFortDayPhase::Type(Z_Param_PreviousDayPhase),Z_Param_bAtCreation);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortAIDirector, 1288393449u)
 // Original dynamic initializer: RVA 0x000E0DC0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortAIDirector> AutoInitializeAFortAIDirector(TEXT("AFortAIDirector"), sizeof(AFortAIDirector), 1288393449u);

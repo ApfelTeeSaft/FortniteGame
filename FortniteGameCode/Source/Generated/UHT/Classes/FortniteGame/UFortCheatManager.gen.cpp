@@ -76,6 +76,16 @@ void UFortCheatManager::execDumpAppliedHomebaseEffectsWithCoreAttributes(UObject
 	P_THIS->DumpAppliedHomebaseEffectsWithCoreAttributes();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB61C0 (end 0x00FB6242)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execForceServerShutdown) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execForceServerShutdown(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ExitCode);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ForceServerShutdown(Z_Param_ExitCode);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB93A0 (end 0x00FB93BF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execReviveFromDBNO) | Matching: see analysis/functions-uht-exec.json
 void UFortCheatManager::execReviveFromDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -83,6 +93,26 @@ void UFortCheatManager::execReviveFromDBNO(UObject* Context, FFrame& Stack, void
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->ReviveFromDBNO();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FB9EA0 (end 0x00FB9F22)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetCombatGraphHistoryLength) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execSetCombatGraphHistoryLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_Seconds);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetCombatGraphHistoryLength(Z_Param_Seconds);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FBA2F0 (end 0x00FBA372)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetEncounterGraphsHistoryLength) | Matching: see analysis/functions-uht-exec.json
+void UFortCheatManager::execSetEncounterGraphsHistoryLength(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_Seconds);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetEncounterGraphsHistoryLength(Z_Param_Seconds);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A9D30 (end 0x028A9D4F), leaf (no .pdata)

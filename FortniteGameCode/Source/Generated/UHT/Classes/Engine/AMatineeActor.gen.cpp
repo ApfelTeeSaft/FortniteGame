@@ -40,6 +40,16 @@ void AMatineeActor::execReverse(UObject* Context, FFrame& Stack, void* const Z_P
 	P_THIS->Reverse();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024880E0 (end 0x02488166)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetLoopingState) | Matching: see analysis/functions-uht-exec.json
+void AMatineeActor::execSetLoopingState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewLooping);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetLoopingState(Z_Param_bNewLooping);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00F5C810 (end 0x00F5C82F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execStop) | Matching: see analysis/functions-uht-exec.json
 void AMatineeActor::execStop(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

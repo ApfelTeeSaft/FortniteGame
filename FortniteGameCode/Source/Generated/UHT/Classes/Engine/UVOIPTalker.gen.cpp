@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0100FBD0 (end 0x0100FC54)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBPOnTalkingBegin) | Matching: see analysis/functions-uht-exec.json
+void UVOIPTalker::execBPOnTalkingBegin(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UAudioComponent,Z_Param_AudioComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BPOnTalkingBegin_Implementation(Z_Param_AudioComponent);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x024F1390 (end 0x024F13AF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execBPOnTalkingEnd) | Matching: see analysis/functions-uht-exec.json
 void UVOIPTalker::execBPOnTalkingEnd(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

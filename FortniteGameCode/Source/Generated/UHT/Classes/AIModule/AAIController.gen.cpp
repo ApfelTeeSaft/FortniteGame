@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1D6B0 (end 0x01D1D756)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetFocalPointOnActor) | Matching: see analysis/functions-uht-exec.json
+void AAIController::execGetFocalPointOnActor(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AActor,Z_Param_Actor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->GetFocalPointOnActor(Z_Param_Actor);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01D1F000 (end 0x01D1F096)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execRunBehaviorTree) | Matching: see analysis/functions-uht-exec.json
+void AAIController::execRunBehaviorTree(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UBehaviorTree,Z_Param_BTAsset);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->RunBehaviorTree(Z_Param_BTAsset);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AAIController, 585478183u)
 // Original dynamic initializer: RVA 0x001B8E90 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AAIController> AutoInitializeAAIController(TEXT("AAIController"), sizeof(AAIController), 585478183u);

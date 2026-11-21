@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFDE80 (end 0x01BFDF04)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetActiveWidget) | Matching: see analysis/functions-uht-exec.json
+void UCommonWidgetCarousel::execSetActiveWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UWidget,Z_Param_Widget);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetActiveWidget(Z_Param_Widget);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002D16F0 (end 0x002D1772)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetActiveWidgetIndex) | Matching: see analysis/functions-uht-exec.json
+void UCommonWidgetCarousel::execSetActiveWidgetIndex(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_Index);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetActiveWidgetIndex(Z_Param_Index);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonWidgetCarousel, 4248239053u)
 // Original dynamic initializer: RVA 0x00096BB0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonWidgetCarousel> AutoInitializeUCommonWidgetCarousel(TEXT("UCommonWidgetCarousel"), sizeof(UCommonWidgetCarousel), 4248239053u);

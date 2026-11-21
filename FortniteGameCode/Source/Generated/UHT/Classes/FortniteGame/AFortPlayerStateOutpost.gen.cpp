@@ -4,6 +4,22 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0108E5F0 (end 0x0108E6E5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetCanEditOutpost) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerStateOutpost::execServerSetCanEditOutpost(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPlayerStateOutpost,Z_Param_InPlayer);
+	P_GET_UBOOL(Z_Param_bCanEdit);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetCanEditOutpost_Validate(Z_Param_InPlayer,Z_Param_bCanEdit))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetCanEditOutpost_Validate"));
+		return;
+	}
+	P_THIS->ServerSetCanEditOutpost_Implementation(Z_Param_InPlayer,Z_Param_bCanEdit);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortPlayerStateOutpost, 3913042351u)
 // Original dynamic initializer: RVA 0x0010D490 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortPlayerStateOutpost> AutoInitializeAFortPlayerStateOutpost(TEXT("AFortPlayerStateOutpost"), sizeof(AFortPlayerStateOutpost), 3913042351u);

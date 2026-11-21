@@ -13,6 +13,49 @@ void AStrategicBuildingActor::execApplyProximityPulseEffects(UObject* Context, F
 	P_THIS->ApplyProximityPulseEffects();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2850 (end 0x010F2918)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAttemptIncrementLevelUnlockProgress) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execAttemptIncrementLevelUnlockProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_InLevel);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InProgressDelta);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->AttemptIncrementLevelUnlockProgress(Z_Param_InLevel,Z_Param_InProgressDelta);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2A30 (end 0x010F2AC4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetCurrentLevelUnlockProgress) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execGetCurrentLevelUnlockProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_InLevel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetCurrentLevelUnlockProgress(Z_Param_InLevel);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2BC0 (end 0x010F2C54)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetMaxLevelUnlockProgress) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execGetMaxLevelUnlockProgress(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_InLevel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMaxLevelUnlockProgress(Z_Param_InLevel);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2CE0 (end 0x010F2DD2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGiveItemFromStrategicBuildingToPlayer) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execGiveItemFromStrategicBuildingToPlayer(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPlayerController,Z_Param_PlayerController);
+	P_GET_OBJECT(UFortWorldItemDefinition,Z_Param_ItemDefinition);
+	P_GET_PROPERTY(UIntProperty,Z_Param_NumberToGive);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->GiveItemFromStrategicBuildingToPlayer(Z_Param_PlayerController,Z_Param_ItemDefinition,Z_Param_NumberToGive);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2DE0 (end 0x010F2E0F)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execIsActive) | Matching: see analysis/functions-uht-exec.json
 void AStrategicBuildingActor::execIsActive(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -20,6 +63,52 @@ void AStrategicBuildingActor::execIsActive(UObject* Context, FFrame& Stack, void
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(bool*)Z_Param__Result=P_THIS->IsActive();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2E10 (end 0x010F2E96)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnActiveStatusChanged) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execOnActiveStatusChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewActiveStatus);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnActiveStatusChanged_Implementation(Z_Param_bNewActiveStatus);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2EA0 (end 0x010F2F22)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnConstructionEndedPlayEffects) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execOnConstructionEndedPlayEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ConstructionLevel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnConstructionEndedPlayEffects_Implementation(Z_Param_ConstructionLevel);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F2F30 (end 0x010F30BD)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnConstructionStartedPlayEffects) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execOnConstructionStartedPlayEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_ServerStartTime);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_ServerEndTime);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_CurrentServerTime);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_ElapsedPct);
+	P_GET_PROPERTY(UIntProperty,Z_Param_ConstructionLvl);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnConstructionStartedPlayEffects_Implementation(Z_Param_ServerStartTime,Z_Param_ServerEndTime,Z_Param_CurrentServerTime,Z_Param_ElapsedPct,Z_Param_ConstructionLvl);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010F30C0 (end 0x010F31BC)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnConstructionTickPlayEffects) | Matching: see analysis/functions-uht-exec.json
+void AStrategicBuildingActor::execOnConstructionTickPlayEffects(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_DeltaTime);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_ElapsedPct);
+	P_GET_PROPERTY(UIntProperty,Z_Param_ConstructionLvl);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnConstructionTickPlayEffects_Implementation(Z_Param_DeltaTime,Z_Param_ElapsedPct,Z_Param_ConstructionLvl);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010F33E0 (end 0x010F33FF), leaf (no .pdata)

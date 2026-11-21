@@ -4,6 +4,36 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248C3D0 (end 0x0248C479)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execConstrainDirectionToPlane) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execConstrainDirectionToPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Direction);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->ConstrainDirectionToPlane(Z_Param_Direction);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248C480 (end 0x0248C529)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execConstrainLocationToPlane) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execConstrainLocationToPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Location);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->ConstrainLocationToPlane(Z_Param_Location);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248C530 (end 0x0248C5D9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execConstrainNormalToPlane) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execConstrainNormalToPlane(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Normal);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FVector*)Z_Param__Result=P_THIS->ConstrainNormalToPlane(Z_Param_Normal);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248C7C0 (end 0x0248C7F1)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execGetGravityZ) | Matching: see analysis/functions-uht-exec.json
 void UMovementComponent::execGetGravityZ(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -22,6 +52,25 @@ void UMovementComponent::execGetMaxSpeed(UObject* Context, FFrame& Stack, void* 
 	*(float*)Z_Param__Result=P_THIS->GetMaxSpeed();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248C8A0 (end 0x0248C8D0)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetPhysicsVolume) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execGetPhysicsVolume(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(APhysicsVolume**)Z_Param__Result=P_THIS->GetPhysicsVolume();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248C970 (end 0x0248C9FE)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIsExceedingMaxSpeed) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execIsExceedingMaxSpeed(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_MaxSpeed);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->IsExceedingMaxSpeed(Z_Param_MaxSpeed);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248CA60 (end 0x0248CA91)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execK2_GetMaxSpeedModifier) | Matching: see analysis/functions-uht-exec.json
 void UMovementComponent::execK2_GetMaxSpeedModifier(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -38,6 +87,77 @@ void UMovementComponent::execK2_GetModifiedMaxSpeed(UObject* Context, FFrame& St
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	*(float*)Z_Param__Result=P_THIS->K2_GetModifiedMaxSpeed();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248CF90 (end 0x0248D014)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execPhysicsVolumeChanged) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execPhysicsVolumeChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(APhysicsVolume,Z_Param_NewVolume);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->PhysicsVolumeChanged(Z_Param_NewVolume);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248D090 (end 0x0248D10A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetPlaneConstraintAxisSetting) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execSetPlaneConstraintAxisSetting(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_ENUM(EPlaneConstraintAxisSetting,Z_Param_NewAxisSetting);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPlaneConstraintAxisSetting(EPlaneConstraintAxisSetting(Z_Param_NewAxisSetting));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248D110 (end 0x0248D196)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetPlaneConstraintEnabled) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execSetPlaneConstraintEnabled(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bEnabled);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPlaneConstraintEnabled(Z_Param_bEnabled);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248D1A0 (end 0x0248D278)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetPlaneConstraintFromVectors) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execSetPlaneConstraintFromVectors(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Forward);
+	P_GET_STRUCT(FVector,Z_Param_Up);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPlaneConstraintFromVectors(Z_Param_Forward,Z_Param_Up);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248D280 (end 0x0248D309)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetPlaneConstraintNormal) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execSetPlaneConstraintNormal(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_PlaneNormal);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPlaneConstraintNormal(Z_Param_PlaneNormal);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248D310 (end 0x0248D399)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetPlaneConstraintOrigin) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execSetPlaneConstraintOrigin(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_PlaneOrigin);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetPlaneConstraintOrigin(Z_Param_PlaneOrigin);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0248D3A0 (end 0x0248D424)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetUpdatedComponent) | Matching: see analysis/functions-uht-exec.json
+void UMovementComponent::execSetUpdatedComponent(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(USceneComponent,Z_Param_NewUpdatedComponent);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetUpdatedComponent(Z_Param_NewUpdatedComponent);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0248D430 (end 0x0248D44F), leaf (no .pdata)

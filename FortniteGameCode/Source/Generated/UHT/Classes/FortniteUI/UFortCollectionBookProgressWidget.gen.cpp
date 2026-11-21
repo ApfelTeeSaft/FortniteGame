@@ -4,6 +4,46 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02896E60 (end 0x02896EE2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCollectionBookLevelChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookProgressWidget::execOnCollectionBookLevelChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_NewLevel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCollectionBookLevelChanged_Implementation(Z_Param_NewLevel);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02896EF0 (end 0x02896F6F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCollectionBookLevelProgressionChanged) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookProgressWidget::execOnCollectionBookLevelProgressionChanged(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_NewCompletionPct);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCollectionBookLevelProgressionChanged_Implementation(Z_Param_NewCompletionPct);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02897000 (end 0x02897084)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCollectionBookPageSelected) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookProgressWidget::execOnCollectionBookPageSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortCollectionBookPage,Z_Param_SelectedPage);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCollectionBookPageSelected_Implementation(Z_Param_SelectedPage);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02897090 (end 0x0289710F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnCollectionBookPreviewXPChange) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookProgressWidget::execOnCollectionBookPreviewXPChange(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_PreviewCompletionPct);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnCollectionBookPreviewXPChange_Implementation(Z_Param_PreviewCompletionPct);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCollectionBookProgressWidget, 3150150896u)
 // Original dynamic initializer: RVA 0x00240480 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookProgressWidget> AutoInitializeUFortCollectionBookProgressWidget(TEXT("UFortCollectionBookProgressWidget"), sizeof(UFortCollectionBookProgressWidget), 3150150896u);

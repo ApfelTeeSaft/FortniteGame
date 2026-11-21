@@ -4,6 +4,55 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CDE20 (end 0x024CDF89)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddForceToAllBodiesBelow) | Matching: see analysis/functions-uht-exec.json
+void USkeletalMeshComponent::execAddForceToAllBodiesBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Force);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_GET_UBOOL(Z_Param_bAccelChange);
+	P_GET_UBOOL(Z_Param_bIncludeSelf);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddForceToAllBodiesBelow(Z_Param_Force,Z_Param_BoneName,Z_Param_bAccelChange,Z_Param_bIncludeSelf);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CDF90 (end 0x024CE0F9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execAddImpulseToAllBodiesBelow) | Matching: see analysis/functions-uht-exec.json
+void USkeletalMeshComponent::execAddImpulseToAllBodiesBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_Impulse);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_GET_UBOOL(Z_Param_bVelChange);
+	P_GET_UBOOL(Z_Param_bIncludeSelf);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->AddImpulseToAllBodiesBelow(Z_Param_Impulse,Z_Param_BoneName,Z_Param_bVelChange,Z_Param_bIncludeSelf);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024CFFE0 (end 0x024D00A5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetBodyNotifyRigidBodyCollision) | Matching: see analysis/functions-uht-exec.json
+void USkeletalMeshComponent::execSetBodyNotifyRigidBodyCollision(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewNotifyRigidBodyCollision);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetBodyNotifyRigidBodyCollision(Z_Param_bNewNotifyRigidBodyCollision,Z_Param_BoneName);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024D07A0 (end 0x024D08A7)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetNotifyRigidBodyCollisionBelow) | Matching: see analysis/functions-uht-exec.json
+void USkeletalMeshComponent::execSetNotifyRigidBodyCollisionBelow(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewNotifyRigidBodyCollision);
+	P_GET_PROPERTY(UNameProperty,Z_Param_BoneName);
+	P_GET_UBOOL(Z_Param_bIncludeSelf);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetNotifyRigidBodyCollisionBelow(Z_Param_bNewNotifyRigidBodyCollision,Z_Param_BoneName,Z_Param_bIncludeSelf);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(USkeletalMeshComponent, 2528027780u)
 // Original dynamic initializer: RVA 0x00219FF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<USkeletalMeshComponent> AutoInitializeUSkeletalMeshComponent(TEXT("USkeletalMeshComponent"), sizeof(USkeletalMeshComponent), 2528027780u);

@@ -22,6 +22,27 @@ void UFortCollectionBookOverviewWidget::execOnDeactivated(UObject* Context, FFra
 	P_THIS->OnDeactivated_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028974F0 (end 0x02897574)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnPageItemClicked) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookOverviewWidget::execOnPageItemClicked(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UObject,Z_Param_Item);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnPageItemClicked(Z_Param_Item);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x02897580 (end 0x02897646)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnPageItemSelected) | Matching: see analysis/functions-uht-exec.json
+void UFortCollectionBookOverviewWidget::execOnPageItemSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UObject,Z_Param_Item);
+	P_GET_UBOOL(Z_Param_bSelected);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnPageItemSelected(Z_Param_Item,Z_Param_bSelected);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortCollectionBookOverviewWidget, 3128511534u)
 // Original dynamic initializer: RVA 0x002403C0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortCollectionBookOverviewWidget> AutoInitializeUFortCollectionBookOverviewWidget(TEXT("UFortCollectionBookOverviewWidget"), sizeof(UFortCollectionBookOverviewWidget), 3128511534u);

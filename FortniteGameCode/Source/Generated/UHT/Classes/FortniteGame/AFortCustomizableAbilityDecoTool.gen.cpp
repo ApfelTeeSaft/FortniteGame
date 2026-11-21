@@ -4,6 +4,46 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCCB10 (end 0x00FCCB94)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBPPressSecondaryFire) | Matching: see analysis/functions-uht-exec.json
+void AFortCustomizableAbilityDecoTool::execBPPressSecondaryFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortDecoHelper,Z_Param_FortDecoHelper);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BPPressSecondaryFire_Implementation(Z_Param_FortDecoHelper);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCCBA0 (end 0x00FCCC24)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBPPressTrigger) | Matching: see analysis/functions-uht-exec.json
+void AFortCustomizableAbilityDecoTool::execBPPressTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortDecoHelper,Z_Param_FortDecoHelper);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BPPressTrigger_Implementation(Z_Param_FortDecoHelper);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCCC30 (end 0x00FCCCB4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBPReleaseSecondaryFire) | Matching: see analysis/functions-uht-exec.json
+void AFortCustomizableAbilityDecoTool::execBPReleaseSecondaryFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortDecoHelper,Z_Param_FortDecoHelper);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BPReleaseSecondaryFire_Implementation(Z_Param_FortDecoHelper);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCCCC0 (end 0x00FCCD44)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execBPReleaseTrigger) | Matching: see analysis/functions-uht-exec.json
+void AFortCustomizableAbilityDecoTool::execBPReleaseTrigger(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortDecoHelper,Z_Param_FortDecoHelper);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->BPReleaseTrigger_Implementation(Z_Param_FortDecoHelper);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCD7D0 (end 0x00FCD81E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPressSecondaryFire) | Matching: see analysis/functions-uht-exec.json
 void AFortCustomizableAbilityDecoTool::execServerPressSecondaryFire(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -4,6 +4,23 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FA92D0 (end 0x00FA9429)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerUpdateAthenaState) | Matching: see analysis/functions-uht-exec.json
+void UFortAthenaHoverCarMovementComponent::execServerUpdateAthenaState(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InThrottleInput);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InSteeringInput);
+	P_GET_STRUCT(FVector,Z_Param_InForwardVectorTarget);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerUpdateAthenaState_Validate(Z_Param_InThrottleInput,Z_Param_InSteeringInput,Z_Param_InForwardVectorTarget))
+	{
+		RPC_ValidateFailed(TEXT("ServerUpdateAthenaState_Validate"));
+		return;
+	}
+	P_THIS->ServerUpdateAthenaState_Implementation(Z_Param_InThrottleInput,Z_Param_InSteeringInput,Z_Param_InForwardVectorTarget);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortAthenaHoverCarMovementComponent, 3002001164u)
 // Original dynamic initializer: RVA 0x000E7EF0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortAthenaHoverCarMovementComponent> AutoInitializeUFortAthenaHoverCarMovementComponent(TEXT("UFortAthenaHoverCarMovementComponent"), sizeof(UFortAthenaHoverCarMovementComponent), 3002001164u);

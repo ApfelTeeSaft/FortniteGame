@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x024BF450 (end 0x024BF4D6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSuspendCrowdSteering) | Matching: see analysis/functions-uht-exec.json
+void UCrowdFollowingComponent::execSuspendCrowdSteering(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bSuspend);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SuspendCrowdSteering(Z_Param_bSuspend);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCrowdFollowingComponent, 3805722127u)
 // Original dynamic initializer: RVA 0x001BC520 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCrowdFollowingComponent> AutoInitializeUCrowdFollowingComponent(TEXT("UCrowdFollowingComponent"), sizeof(UCrowdFollowingComponent), 3805722127u);

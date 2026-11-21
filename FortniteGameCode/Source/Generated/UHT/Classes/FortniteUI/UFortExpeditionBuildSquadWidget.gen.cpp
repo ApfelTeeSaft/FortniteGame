@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A9660 (end 0x028A96E2)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execHandleDifferentSquadSlotSelected) | Matching: see analysis/functions-uht-exec.json
+void UFortExpeditionBuildSquadWidget::execHandleDifferentSquadSlotSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_SquadSlotIndex);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HandleDifferentSquadSlotSelected(Z_Param_SquadSlotIndex);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x028A9D30 (end 0x028A9D4F), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execOnRefreshBuildSquadWidget) | Matching: see analysis/functions-uht-exec.json
 void UFortExpeditionBuildSquadWidget::execOnRefreshBuildSquadWidget(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -20,6 +30,16 @@ void UFortExpeditionBuildSquadWidget::execOnStartExpeditionCompleted(UObject* Co
 	P_FINISH;
 	P_NATIVE_BEGIN;
 	P_THIS->OnStartExpeditionCompleted_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028AA4D0 (end 0x028AA554)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetData) | Matching: see analysis/functions-uht-exec.json
+void UFortExpeditionBuildSquadWidget::execSetData(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UFortExpeditionItem,Z_Param_InItem);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetData_Implementation(Z_Param_InItem);
 	P_NATIVE_END;
 }
 // IMPLEMENT_CLASS(UFortExpeditionBuildSquadWidget, 3314966883u)

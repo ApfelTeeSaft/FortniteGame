@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01079610 (end 0x01079699)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientBotStartDogpile) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execClientBotStartDogpile(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FVector,Z_Param_DogpilePosition);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientBotStartDogpile_Implementation(Z_Param_DogpilePosition);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x010796A0 (end 0x010796BF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientBotStopDogpile) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerAthena::execClientBotStopDogpile(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -31,6 +41,21 @@ void AFortPlayerControllerAthena::execClientNotifyWon(UObject* Context, FFrame& 
 	P_THIS->ClientNotifyWon_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107B910 (end 0x0107B9D9)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerAttemptAircraftJump) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execServerAttemptAircraftJump(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_STRUCT(FRotator,Z_Param_ClientRotation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerAttemptAircraftJump_Validate(Z_Param_ClientRotation))
+	{
+		RPC_ValidateFailed(TEXT("ServerAttemptAircraftJump_Validate"));
+		return;
+	}
+	P_THIS->ServerAttemptAircraftJump_Implementation(Z_Param_ClientRotation);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107B9E0 (end 0x0107BA2E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerAttemptExitVehicle) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerAthena::execServerAttemptExitVehicle(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -43,6 +68,51 @@ void AFortPlayerControllerAthena::execServerAttemptExitVehicle(UObject* Context,
 		return;
 	}
 	P_THIS->ServerAttemptExitVehicle_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107BB30 (end 0x0107BBE5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerDBNOReviveInterrupted) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execServerDBNOReviveInterrupted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPlayerPawnAthena,Z_Param_DBNOPawn);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerDBNOReviveInterrupted_Validate(Z_Param_DBNOPawn))
+	{
+		RPC_ValidateFailed(TEXT("ServerDBNOReviveInterrupted_Validate"));
+		return;
+	}
+	P_THIS->ServerDBNOReviveInterrupted_Implementation(Z_Param_DBNOPawn);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107BBF0 (end 0x0107BCA5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerDBNOReviveStarted) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execServerDBNOReviveStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPlayerPawnAthena,Z_Param_DBNOPawn);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerDBNOReviveStarted_Validate(Z_Param_DBNOPawn))
+	{
+		RPC_ValidateFailed(TEXT("ServerDBNOReviveStarted_Validate"));
+		return;
+	}
+	P_THIS->ServerDBNOReviveStarted_Implementation(Z_Param_DBNOPawn);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C000 (end 0x0107C0B6)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerFollowTeammate) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execServerFollowTeammate(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNext);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerFollowTeammate_Validate(Z_Param_bNext))
+	{
+		RPC_ValidateFailed(TEXT("ServerFollowTeammate_Validate"));
+		return;
+	}
+	P_THIS->ServerFollowTeammate_Implementation(Z_Param_bNext);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107C0C0 (end 0x0107C10E)
@@ -71,6 +141,21 @@ void AFortPlayerControllerAthena::execServerRemoveMapCursor(UObject* Context, FF
 		return;
 	}
 	P_THIS->ServerRemoveMapCursor_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CD60 (end 0x0107CE15)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSendSquadFriend) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerAthena::execServerSendSquadFriend(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPlayerStateAthena,Z_Param_FriendInSquad);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSendSquadFriend_Validate(Z_Param_FriendInSquad))
+	{
+		RPC_ValidateFailed(TEXT("ServerSendSquadFriend_Validate"));
+		return;
+	}
+	P_THIS->ServerSendSquadFriend_Implementation(Z_Param_FriendInSquad);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x0107CF30 (end 0x0107CF7E)

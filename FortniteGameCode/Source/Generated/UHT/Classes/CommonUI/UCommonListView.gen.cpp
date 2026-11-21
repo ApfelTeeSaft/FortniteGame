@@ -4,6 +4,46 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9880 (end 0x023F9904)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDynamicHandleItemClickedCommonButton) | Matching: see analysis/functions-uht-exec.json
+void UCommonListView::execDynamicHandleItemClickedCommonButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButton,Z_Param_Button);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DynamicHandleItemClickedCommonButton(Z_Param_Button);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFDE80 (end 0x01BFDF04)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDynamicHandleItemDoubleClickedCommonButton) | Matching: see analysis/functions-uht-exec.json
+void UCommonListView::execDynamicHandleItemDoubleClickedCommonButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButton,Z_Param_Button);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DynamicHandleItemDoubleClickedCommonButton(Z_Param_Button);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CC2D0 (end 0x002CC354)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDynamicHandleItemHoveredCommonButton) | Matching: see analysis/functions-uht-exec.json
+void UCommonListView::execDynamicHandleItemHoveredCommonButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButton,Z_Param_Button);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DynamicHandleItemHoveredCommonButton(Z_Param_Button);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x002CC360 (end 0x002CC3E4)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execDynamicHandleItemUnhoveredCommonButton) | Matching: see analysis/functions-uht-exec.json
+void UCommonListView::execDynamicHandleItemUnhoveredCommonButton(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UCommonButton,Z_Param_Button);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DynamicHandleItemUnhoveredCommonButton(Z_Param_Button);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UCommonListView, 3731617275u)
 // Original dynamic initializer: RVA 0x00095FE0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UCommonListView> AutoInitializeUCommonListView(TEXT("UCommonListView"), sizeof(UCommonListView), 3731617275u);

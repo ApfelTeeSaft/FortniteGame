@@ -13,6 +13,25 @@ void UFortConsumableItemDefinition::execGetAnimPlayRate(UObject* Context, FFrame
 	*(float*)Z_Param__Result=P_THIS->GetAnimPlayRate();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCCFE0 (end 0x00FCD074)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetHealthRestored) | Matching: see analysis/functions-uht-exec.json
+void UFortConsumableItemDefinition::execGetHealthRestored(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UIntProperty,Z_Param_ItemLevel);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetHealthRestored(Z_Param_ItemLevel);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00FCD5A0 (end 0x00FCD5D0)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetUseAnimation) | Matching: see analysis/functions-uht-exec.json
+void UFortConsumableItemDefinition::execGetUseAnimation(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UAnimMontage**)Z_Param__Result=P_THIS->GetUseAnimation();
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortConsumableItemDefinition, 3352232537u)
 // Original dynamic initializer: RVA 0x000EE3F0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortConsumableItemDefinition> AutoInitializeUFortConsumableItemDefinition(TEXT("UFortConsumableItemDefinition"), sizeof(UFortConsumableItemDefinition), 3352232537u);

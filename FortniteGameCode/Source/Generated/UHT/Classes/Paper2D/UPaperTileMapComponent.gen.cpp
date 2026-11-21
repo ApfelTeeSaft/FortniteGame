@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x0066A6C0 (end 0x0066A756)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execSetTileMap) | Matching: see analysis/functions-uht-exec.json
+void UPaperTileMapComponent::execSetTileMap(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UPaperTileMap,Z_Param_NewTileMap);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->SetTileMap(Z_Param_NewTileMap);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UPaperTileMapComponent, 879629547u)
 // Original dynamic initializer: RVA 0x000AB6D0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UPaperTileMapComponent> AutoInitializeUPaperTileMapComponent(TEXT("UPaperTileMapComponent"), sizeof(UPaperTileMapComponent), 879629547u);

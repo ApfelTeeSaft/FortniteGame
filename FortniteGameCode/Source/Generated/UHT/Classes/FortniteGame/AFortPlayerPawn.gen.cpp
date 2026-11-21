@@ -4,6 +4,128 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01082530 (end 0x010825BA)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execGetSkeletalMeshForPartType) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execGetSkeletalMeshForPartType(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_PartType);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(USkeletalMeshComponent**)Z_Param__Result=P_THIS->GetSkeletalMeshForPartType(EFortCustomPartType::Type(Z_Param_PartType));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01082750 (end 0x01082806)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execInternalServerSetTargeting) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execInternalServerSetTargeting(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bNewTargeting);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->InternalServerSetTargeting_Validate(Z_Param_bNewTargeting))
+	{
+		RPC_ValidateFailed(TEXT("InternalServerSetTargeting_Validate"));
+		return;
+	}
+	P_THIS->InternalServerSetTargeting_Implementation(Z_Param_bNewTargeting);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x010845E0 (end 0x01084686)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerChooseGender) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerChooseGender(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_Gender);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerChooseGender_Validate(EFortCustomGender::Type(Z_Param_Gender)))
+	{
+		RPC_ValidateFailed(TEXT("ServerChooseGender_Validate"));
+		return;
+	}
+	P_THIS->ServerChooseGender_Implementation(EFortCustomGender::Type(Z_Param_Gender));
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01084690 (end 0x0108478A)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerChoosePart) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerChoosePart(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_Part);
+	P_GET_OBJECT(UCustomCharacterPart,Z_Param_ChosenCharacterPart);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerChoosePart_Validate(EFortCustomPartType::Type(Z_Param_Part),Z_Param_ChosenCharacterPart))
+	{
+		RPC_ValidateFailed(TEXT("ServerChoosePart_Validate"));
+		return;
+	}
+	P_THIS->ServerChoosePart_Implementation(EFortCustomPartType::Type(Z_Param_Part),Z_Param_ChosenCharacterPart);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01084790 (end 0x01084886)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerCycleAccessoryColorSwatch) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerCycleAccessoryColorSwatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_Part);
+	P_GET_UBOOL(Z_Param_bNext);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerCycleAccessoryColorSwatch_Validate(EFortCustomPartType::Type(Z_Param_Part),Z_Param_bNext))
+	{
+		RPC_ValidateFailed(TEXT("ServerCycleAccessoryColorSwatch_Validate"));
+		return;
+	}
+	P_THIS->ServerCycleAccessoryColorSwatch_Implementation(EFortCustomPartType::Type(Z_Param_Part),Z_Param_bNext);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01084890 (end 0x01084986)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerCycleColorSwatch) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerCycleColorSwatch(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_SwatchType);
+	P_GET_UBOOL(Z_Param_bNext);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerCycleColorSwatch_Validate(EColorSwatchType(Z_Param_SwatchType),Z_Param_bNext))
+	{
+		RPC_ValidateFailed(TEXT("ServerCycleColorSwatch_Validate"));
+		return;
+	}
+	P_THIS->ServerCycleColorSwatch_Implementation(EColorSwatchType(Z_Param_SwatchType),Z_Param_bNext);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01084990 (end 0x01084A86)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerCyclePart) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerCyclePart(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UByteProperty,Z_Param_Part);
+	P_GET_UBOOL(Z_Param_bNextPart);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerCyclePart_Validate(EFortCustomPartType::Type(Z_Param_Part),Z_Param_bNextPart))
+	{
+		RPC_ValidateFailed(TEXT("ServerCyclePart_Validate"));
+		return;
+	}
+	P_THIS->ServerCyclePart_Implementation(EFortCustomPartType::Type(Z_Param_Part),Z_Param_bNextPart);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01084A90 (end 0x01084C1C)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerHandlePickup) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerHandlePickup(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AFortPickup,Z_Param_Pickup);
+	P_GET_PROPERTY(UFloatProperty,Z_Param_InFlyTime);
+	P_GET_STRUCT(FVector,Z_Param_InStartDirection);
+	P_GET_UBOOL(Z_Param_bPlayPickupSound);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerHandlePickup_Validate(Z_Param_Pickup,Z_Param_InFlyTime,Z_Param_InStartDirection,Z_Param_bPlayPickupSound))
+	{
+		RPC_ValidateFailed(TEXT("ServerHandlePickup_Validate"));
+		return;
+	}
+	P_THIS->ServerHandlePickup_Implementation(Z_Param_Pickup,Z_Param_InFlyTime,Z_Param_InStartDirection,Z_Param_bPlayPickupSound);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01084C20 (end 0x01084C6E)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execServerPlayUnableToPerformActionMontage) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerPawn::execServerPlayUnableToPerformActionMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
@@ -30,6 +152,66 @@ void AFortPlayerPawn::execServerRespawnFromDBNO(UObject* Context, FFrame& Stack,
 		return;
 	}
 	P_THIS->ServerRespawnFromDBNO_Implementation();
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01084CC0 (end 0x01084D75)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerReviveFromDBNO) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerReviveFromDBNO(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(AController,Z_Param_EventInstigator);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerReviveFromDBNO_Validate(Z_Param_EventInstigator))
+	{
+		RPC_ValidateFailed(TEXT("ServerReviveFromDBNO_Validate"));
+		return;
+	}
+	P_THIS->ServerReviveFromDBNO_Implementation(Z_Param_EventInstigator);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01084D80 (end 0x01084E35)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerRootMotionInterruptNotifyStopMontage) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerRootMotionInterruptNotifyStopMontage(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UAnimMontage,Z_Param_MontageToStop);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerRootMotionInterruptNotifyStopMontage_Validate(Z_Param_MontageToStop))
+	{
+		RPC_ValidateFailed(TEXT("ServerRootMotionInterruptNotifyStopMontage_Validate"));
+		return;
+	}
+	P_THIS->ServerRootMotionInterruptNotifyStopMontage_Implementation(Z_Param_MontageToStop);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01085170 (end 0x01085226)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetAimbotDetection) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerSetAimbotDetection(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bEnableDetection);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetAimbotDetection_Validate(Z_Param_bEnableDetection))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetAimbotDetection_Validate"));
+		return;
+	}
+	P_THIS->ServerSetAimbotDetection_Implementation(Z_Param_bEnableDetection);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01085230 (end 0x010852E5)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execServerSetAttachment) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerPawn::execServerSetAttachment(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(USkeletalMesh,Z_Param_Attachment);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	if (!P_THIS->ServerSetAttachment_Validate(Z_Param_Attachment))
+	{
+		RPC_ValidateFailed(TEXT("ServerSetAttachment_Validate"));
+		return;
+	}
+	P_THIS->ServerSetAttachment_Implementation(Z_Param_Attachment);
 	P_NATIVE_END;
 }
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01085400 (end 0x0108544E)

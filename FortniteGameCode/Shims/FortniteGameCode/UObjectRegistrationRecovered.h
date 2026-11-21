@@ -19,11 +19,25 @@ enum EFindName
 class FName
 {
 public:
+	// UnrealNames.h, shipping (no WITH_CASE_PRESERVING_NAME): both indexes zero, NAME_NO_NUMBER_INTERNAL.
+	__forceinline FName() : ComparisonIndex(0), Number(0) {}
 	FName(const TCHAR* Name, EFindName FindType = FNAME_Add);
 
 private:
-	int32 ComparisonIndex;
-	int32 Number;
+	// As in UnrealNames.h without WITH_CASE_PRESERVING_NAME: the union makes FName 8-aligned,
+	// as the reference's FStructParams show (FCollisionProfileName, only an FName: AlignOf 8).
+#pragma warning(push)
+#pragma warning(disable : 4201) // nonstandard extension used : nameless struct/union (UE4.20 disables it)
+	union
+	{
+		struct
+		{
+			int32 ComparisonIndex;
+			uint32 Number;
+		};
+		unsigned long long CompositeComparisonValue;
+	};
+#pragma warning(pop)
 };
 
 // UObjectBase.h

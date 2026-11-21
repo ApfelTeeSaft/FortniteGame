@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01079ED0 (end 0x01079F56)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execClientSetPermaniteAvailability) | Matching: see analysis/functions-uht-exec.json
+void AFortPlayerControllerKeep::execClientSetPermaniteAvailability(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_UBOOL(Z_Param_bAvailable);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ClientSetPermaniteAvailability_Implementation(Z_Param_bAvailable);
+	P_NATIVE_END;
+}
 // Original FortniteClient-Win64-Shipping.exe: RVA 0x01079FE0 (end 0x01079FFF), leaf (no .pdata)
 // Recovery: UHT 4.20 DECLARE_FUNCTION(execClientUnloadFoundations) | Matching: see analysis/functions-uht-exec.json
 void AFortPlayerControllerKeep::execClientUnloadFoundations(UObject* Context, FFrame& Stack, void* const Z_Param__Result)

@@ -4,6 +4,26 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x01BFDE80 (end 0x01BFDF04)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnAnimationFinished) | Matching: see analysis/functions-uht-exec.json
+void UUserWidget::execOnAnimationFinished(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UWidgetAnimation,Z_Param_Animation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnAnimationFinished_Implementation(Z_Param_Animation);
+	P_NATIVE_END;
+}
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x023F9880 (end 0x023F9904)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnAnimationStarted) | Matching: see analysis/functions-uht-exec.json
+void UUserWidget::execOnAnimationStarted(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_OBJECT(UWidgetAnimation,Z_Param_Animation);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnAnimationStarted_Implementation(Z_Param_Animation);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UUserWidget, 3843233650u)
 // Original dynamic initializer: RVA 0x001B4250 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UUserWidget> AutoInitializeUUserWidget(TEXT("UUserWidget"), sizeof(UUserWidget), 3843233650u);

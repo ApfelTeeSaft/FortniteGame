@@ -4,6 +4,16 @@
 
 #include "FortniteGameCode/UHTRecovered.h"
 
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x00F89220 (end 0x00F8929F)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execIgnoreProximityForDuration) | Matching: see analysis/functions-uht-exec.json
+void AFortAIController::execIgnoreProximityForDuration(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY(UFloatProperty,Z_Param_DurationToIgnore);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->IgnoreProximityForDuration(Z_Param_DurationToIgnore);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(AFortAIController, 1061589231u)
 // Original dynamic initializer: RVA 0x000E0DA0 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<AFortAIController> AutoInitializeAFortAIController(TEXT("AFortAIController"), sizeof(AFortAIController), 1061589231u);

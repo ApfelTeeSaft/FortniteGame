@@ -13,6 +13,16 @@ void UFortExpeditionOverviewWidget::execOnExpeditionOverviewRefresh(UObject* Con
 	P_THIS->OnExpeditionOverviewRefresh_Implementation();
 	P_NATIVE_END;
 }
+// Original FortniteClient-Win64-Shipping.exe: RVA 0x028A9C90 (end 0x028A9D23)
+// Recovery: UHT 4.20 DECLARE_FUNCTION(execOnExpeditionTabSelected) | Matching: see analysis/functions-uht-exec.json
+void UFortExpeditionOverviewWidget::execOnExpeditionTabSelected(UObject* Context, FFrame& Stack, void* const Z_Param__Result)
+{
+	P_GET_PROPERTY_REF(UNameProperty,Z_Param_Out_TabNameId);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnExpeditionTabSelected_Implementation(Z_Param_Out_TabNameId);
+	P_NATIVE_END;
+}
 // IMPLEMENT_CLASS(UFortExpeditionOverviewWidget, 3523274542u)
 // Original dynamic initializer: RVA 0x00244B00 (leaf; CRC and sizeof are its arguments)
 static TClassCompiledInDefer<UFortExpeditionOverviewWidget> AutoInitializeUFortExpeditionOverviewWidget(TEXT("UFortExpeditionOverviewWidget"), sizeof(UFortExpeditionOverviewWidget), 3523274542u);
